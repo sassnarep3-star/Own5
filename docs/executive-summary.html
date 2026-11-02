@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Executive Summary · Own5 NFL Strategy Lab</title>
+<link rel="stylesheet" href="assets/style.css">
+<script defer src="assets/app.js"></script>
+</head>
+<body>
+<header class="site">
+  <div class="brand">Own5 <span>NFL Strategy Lab</span></div>
+  <nav class="main"><a href="index.html" class="">Dashboard</a>
+<a href="executive-summary.html" class="active">Executive Summary</a>
+<a href="strategies.html" class="">Strategies</a>
+<a href="validation-gates.html" class="">Validation Gates</a>
+<a href="correlation.html" class="">Correlation</a>
+<a href="luck-vs-skill.html" class="">Luck vs Skill</a>
+<a href="leaderboard.html" class="">Leaderboard</a>
+<a href="lines-2026-wk9.html" class="">Week 9 Lines</a>
+<a href="sources.html" class="">Sources</a>
+<a href="flagged.html" class="">Flagged for Review</a></nav>
+</header>
+<main>
+
+<h1>Executive Summary</h1>
+<p class="lead">Own5: NFL Line Origination &amp; Skill-Based Strategy Leaderboard — session arena-f1d30421, 2026-11-02. Full document in the repo: <a href="https://github.com/sassnarep3-star/Own5/blob/main/EXECUTIVE_SUMMARY.md">EXECUTIVE_SUMMARY.md</a>.</p>
+<div class="panel">
+<h3>1. What this project is</h3>
+<p>A self-running system that (a) originates its own NFL lines from official data, (b) tests betting strategies — singles, parlays, player-prop combos — under statistical validation gates that separate skill from luck, and (c) runs them as a leaderboard competition rewarding only gate-passing, luck-adjusted performance. No manual input required.</p>
+<h3>2. Headline findings</h3>
+<ul class="findings">
+<li><b>Market close to efficient, not perfect:</b> favorites cover 48.1%, home underdogs 52.6%, overs 49.1% (10,228 games 1980–2024, excl. pushes). Sign-consistent with independent academic work (Szalkowski et al. 2012; Paul &amp; Weinbach).</li>
+<li><b>The best-looking strategy still fails the luck test:</b> home underdog ≥7 hit 56.37% (n=793, modeled +8.4% ROI at −110) but p = 0.0134 misses the pre-registered Bonferroni threshold α = 0.00625. Zero strategies are certified skill today — by design. S1/S2 continue as Candidates for live CLV tracking.</li>
+<li><b>One season cannot prove skill:</b> a break-even bettor posts ≥55% over 200 bets 20.8% of the time; 2,243 graded bets are needed to detect true 55% skill (80% power).</li>
+<li><b>Parlays punish the naive:</b> cross-game independence confirmed (0.984 ratio) — 2-leg fixed parlays need 27.47% joint hits vs ≈23.6% from break-even legs.</li>
+<li><b>Real correlation is in player props:</b> QB pass yards vs top-WR yards r = 0.76 (n=3,852); QB vs game total r = 0.35; RB rush yards vs margin r = 0.21. Same-game combos require empirical joint pricing.</li>
+<li><b>Our lines are live:</b> v1 model (shrunk net-points ratings + 2.0-pt HFA; measured HFA 2.22) originated all 15 games of 2026 Week 9 from official inputs; market columns blank + flagged (no official market-line source exists).</li>
+</ul>
+<h3>3. How luck is removed</h3>
+<p>Pre-registration + Bonferroni across all variants tried (k=8) · era-stability gates · closing-line-value gate for live promotion · deflated leaderboard scoring (Bailey &amp; López de Prado 2014) · Bayesian shrinkage of displayed win rates · fractional-Kelly bankroll (Thorp 2011) · losers published alongside winners.</p>
+<h3>4. Verification discipline</h3>
+<p>Every table row carries a source link; unverifiable values are blank and flagged on <a href="flagged.html">Flagged for Review</a> (F1–F11). Official verification samples: 2026 standings (32 teams) and 2025 Week 1 (16/16 game scores matched nfl.com game pages).</p>
+<h3>5. Next steps for the owner</h3>
+<ul class="findings">
+<li>Decide the reward pool (blank + flagged until decided — F9).</li>
+<li>Connect a licensed odds feed: the only blocker to live CLV tracking and filled market columns (F1/F7/F8).</li>
+<li>Extend prop-line backtesting when a verifiable prop-line source exists (correlation framework is done).</li>
+<li>Review the <a href="flagged.html">Flagged for Review</a> page and request changes.</li>
+</ul>
+</div>
+
+</main>
+<footer>Own5 · NFL line origination &amp; skill-based strategy leaderboard · generated from verified data files by scripts/build_site.py · session arena-f1d30421 · 2026-11-02<br>
+Community datasets are flagged — see <a href="flagged.html">Flagged for Review</a>. Nothing on this site is betting advice.</footer>
+</body>
+</html>
