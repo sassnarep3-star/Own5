@@ -13,7 +13,7 @@ REPO_URL = "https://github.com/sassnarep3-star/Own5"
 
 
 def load(name: str):
-    return json.loads((ROOT / "data" / name).read_text())
+    return json.loads((ROOT / "data" / "own5_desk" / name).read_text())
 
 
 def e(value: object) -> str:
@@ -144,9 +144,11 @@ def build() -> None:
     DIST.mkdir()
     (DIST / ".nojekyll").touch()
     shutil.copytree(ROOT / "site/assets", DIST / "assets")
-    shutil.copytree(ROOT / "data", DIST / "data")
+    shutil.copytree(ROOT / "data" / "own5_desk", DIST / "data")
     shutil.copytree(ROOT / "research/evidence", DIST / "evidence")
-    shutil.copytree(ROOT / "docs", DIST / "docs")
+    (DIST / "docs").mkdir()
+    for doc_name in ("EXECUTIVE_SUMMARY.md", "METHODOLOGY.md", "REQUIREMENTS.md", "SOURCE_AUDIT.md", "VERIFICATION_REPORT.md"):
+        shutil.copy2(ROOT / "docs" / doc_name, DIST / "docs" / doc_name)
     summary = load("summary.json")
     lines = load("derived_lines.json")
     strategies = load("strategies.json")

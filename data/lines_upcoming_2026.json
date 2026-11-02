@@ -1,0 +1,871 @@
+{
+ "meta": {
+  "season": 2026,
+  "as_of": "2026-11-02",
+  "source_page": "https://www.espn.com/nfl/odds",
+  "source_page_note": "ESPN NFL Odds page (requested /nfl/lines, canonical /nfl/odds). Odds provider displayed: DraftKings (via ESPN betting widget). Each current line cell on the source page is a DraftKings deep link; event ids captured below.",
+  "verification": "Every value below was read directly from the ESPN odds page fetched 2026-11-02. Kickoff timestamps are the ISO values shown in each game's ESPN game link. Current lines attributed per team exactly as the source renders them.",
+  "open_lines_caveat": "The source's 'Open' column renders exactly one line per team cell: one cell holds the game's opening spread (signed) and the other holds the opening total (o/u) \u2014 which cell holds which varies by game. Open spread therefore is stored with the team whose cell displayed it (displayed_under); attribution could not be independently confirmed, so open spreads with large implied movement vs current are FLAGGED (see flags[]), not silently corrected.",
+  "records_note": "Records in parentheses are as displayed by ESPN's odds page. ESPN displayed NYG as (4-2) and WSH as (2-4), omitting each team's tie; official NFL.com standings are NYG 4-2-1 and WSH 2-4-1. Official records are used everywhere else in this dataset.",
+  "tie_handling": "Spread of exactly 0 not present. Push rules: standard (land on number = push, stake returned).",
+  "flags": [
+   {
+    "id": "LINES-OPEN-ATTRIB",
+    "scope": "open.spread fields",
+    "severity": "review",
+    "description": "Open-spread team attribution is ambiguous in the ESPN table rendering (value sits in one team's cell but may describe the other team). Current lines are NOT affected. Games where the implied open->current movement is implausibly large are individually flagged below."
+   },
+   {
+    "id": "LINES-OPEN-JAX-BAL",
+    "scope": "JAX@BAL week 9",
+    "severity": "review",
+    "description": "Open spread cell rendered under BAL shows -4.5; current spread has JAX -8.5. Read literally this is a 13.5-point swing; more likely the open -4.5 described JAX (4-pt move). Verify against archived opening line before use."
+   },
+   {
+    "id": "LINES-OPEN-NYG-PHI",
+    "scope": "NYG@PHI week 9",
+    "severity": "review",
+    "description": "Open spread cell rendered under PHI shows -5.5; current has NYG -3.5 (PHI is +3.5). Read literally a 9-point line flip; more likely open -5.5 described NYG (2-pt move). Also open total44.5 -> current39.5 (-5), a large total move. Verify against archived openers."
+   },
+   {
+    "id": "LINES-OPEN-HOU-LAC",
+    "scope": "HOU@LAC week 9",
+    "severity": "review",
+    "description": "Open spread cell rendered under LAC shows -1.5 (LAC is 0-7); current HOU -4.5. Read literally a flip from LAC -1.5 to HOU -4.5 (6 pts); more likely open -1.5 described HOU. Verify against archived openers."
+   },
+   {
+    "id": "LINES-REC-TIES",
+    "scope": "NYG, WSH records",
+    "severity": "informational",
+    "description": "ESPN odds page records for NYG (4-2) and WSH (2-4) omit the Week-5 tie; official records are 4-2-1 and 2-4-1. Official values used on all other pages."
+   },
+   {
+    "id": "LINES-OPEN-TOTAL-MOVE",
+    "scope": "NYG@PHI, NYJ@KC, LV@SF week 9",
+    "severity": "informational",
+    "description": "Opening total differs from current total by 5 points in these games (44.5->39.5,41.5->46.5,46.5->51.5). Large but possible; flagged for reviewer awareness."
+   },
+   {
+    "id": "LINES-NO-PROPS",
+    "scope": "player props",
+    "severity": "data-gap",
+    "description": "No official/verified source for NFL player-prop odds was reachable in this environment (sportsbook prop pages require interactive sessions). Player-prop tables are therefore left blank and flagged; strategy methodology is documented without fabricated numbers."
+   },
+   {
+    "id": "LINES-NO-HISTORY",
+    "scope": "Weeks 1-8 lines",
+    "severity": "data-gap",
+    "description": "Historical closing lines for Weeks 1-8 could not be confirmed from a reachable official source, so no historical line values are published. CLV/closing-line verification is specified as a validation gate in strategies.md but cannot be populated yet."
+   }
+  ]
+ },
+ "games": [
+  {
+   "week": 8,
+   "kickoff_utc": "2026-11-03T01:15:00Z",
+   "kickoff_et": "Mon Nov 2, 8:15 PM ET",
+   "espn_game": "https://www.espn.com/nfl/game/_/gameId/401873036/bears-seahawks",
+   "dk_event": "34118031",
+   "away": {
+    "abbr": "CHI",
+    "name": "Chicago Bears",
+    "record": "(5-2)",
+    "record_note": ""
+   },
+   "home": {
+    "abbr": "SEA",
+    "name": "Seattle Seahawks",
+    "record": "(4-3)",
+    "record_note": ""
+   },
+   "open": {
+    "away_cell": {
+     "line": "o47.5",
+     "juice": -110
+    },
+    "home_cell": {
+     "line": "-4.5",
+     "juice": -110
+    }
+   },
+   "current": {
+    "away": {
+     "spread": 3.5,
+     "spread_juice": -118,
+     "total_side": "o46.5",
+     "total_juice": -110,
+     "ml": 145
+    },
+    "home": {
+     "spread": -3.5,
+     "spread_juice": -102,
+     "total_side": "u46.5",
+     "total_juice": -110,
+     "ml": -175
+    },
+    "total": 46.5,
+    "total_note": "Current board: CHI o46.5 (-110), SEA u46.5 (-110) => game total46.5 (opened47.5)",
+    "spread_note": "As displayed: CHI +3.5 (-118), SEA -3.5 (-102)"
+   },
+   "flags": []
+  },
+  {
+   "week": 9,
+   "kickoff_utc": "2026-11-06T01:15:00Z",
+   "kickoff_et": "Thu Nov 5, 8:15 PM ET",
+   "espn_game": "https://www.espn.com/nfl/game/_/gameId/401873037/jaguars-ravens",
+   "dk_event": "34118164",
+   "away": {
+    "abbr": "JAX",
+    "name": "Jacksonville Jaguars",
+    "record": "(5-2)",
+    "record_note": ""
+   },
+   "home": {
+    "abbr": "BAL",
+    "name": "Baltimore Ravens",
+    "record": "(4-4)",
+    "record_note": ""
+   },
+   "open": {
+    "away_cell": {
+     "line": "o49.5",
+     "juice": -110
+    },
+    "home_cell": {
+     "line": "-4.5",
+     "juice": -110
+    }
+   },
+   "current": {
+    "away": {
+     "spread": -8.5,
+     "spread_juice": -105,
+     "total_side": "o42.5",
+     "total_juice": -118,
+     "ml": -410
+    },
+    "home": {
+     "spread": 8.5,
+     "spread_juice": -115,
+     "total_side": "u42.5",
+     "total_juice": -102,
+     "ml": 320
+    },
+    "total": 42.5,
+    "spread_note": "As displayed: JAX -8.5 (-105), BAL +8.5 (-115)"
+   },
+   "flags": [
+    "LINES-OPEN-ATTRIB",
+    "LINES-OPEN-JAX-BAL"
+   ]
+  },
+  {
+   "week": 9,
+   "kickoff_utc": "2026-11-08T14:30:00Z",
+   "kickoff_et": "Sun Nov 8, 9:30 AM ET",
+   "espn_game": "https://www.espn.com/nfl/game/_/gameId/401873038/bengals-falcons",
+   "dk_event": "34118128",
+   "away": {
+    "abbr": "CIN",
+    "name": "Cincinnati Bengals",
+    "record": "(5-2)",
+    "record_note": ""
+   },
+   "home": {
+    "abbr": "ATL",
+    "name": "Atlanta Falcons",
+    "record": "(3-5)",
+    "record_note": ""
+   },
+   "open": {
+    "away_cell": {
+     "line": "-4.5",
+     "juice": -115
+    },
+    "home_cell": {
+     "line": "u48.5",
+     "juice": -110
+    }
+   },
+   "current": {
+    "away": {
+     "spread": -3,
+     "spread_juice": -118,
+     "total_side": "o51.5",
+     "total_juice": -105,
+     "ml": -166
+    },
+    "home": {
+     "spread": 3,
+     "spread_juice": -102,
+     "total_side": "u51.5",
+     "total_juice": -115,
+     "ml": 140
+    },
+    "total": 51.5,
+    "spread_note": "As displayed: CIN -3 (-118), ATL +3 (-102)"
+   },
+   "flags": [
+    "LINES-OPEN-ATTRIB"
+   ]
+  },
+  {
+   "week": 9,
+   "kickoff_utc": "2026-11-08T18:00:00Z",
+   "kickoff_et": "Sun Nov 8, 1:00 PM ET",
+   "espn_game": "https://www.espn.com/nfl/game/_/gameId/401873039/browns-saints",
+   "dk_event": "34118008",
+   "away": {
+    "abbr": "CLE",
+    "name": "Cleveland Browns",
+    "record": "(5-3)",
+    "record_note": ""
+   },
+   "home": {
+    "abbr": "NO",
+    "name": "New Orleans Saints",
+    "record": "(2-5)",
+    "record_note": ""
+   },
+   "open": {
+    "away_cell": {
+     "line": "o41.5",
+     "juice": -110
+    },
+    "home_cell": {
+     "line": "-3.5",
+     "juice": -110
+    }
+   },
+   "current": {
+    "away": {
+     "spread": 2.5,
+     "spread_juice": -108,
+     "total_side": "o43.5",
+     "total_juice": -108,
+     "ml": 120
+    },
+    "home": {
+     "spread": -2.5,
+     "spread_juice": -112,
+     "total_side": "u43.5",
+     "total_juice": -112,
+     "ml": -142
+    },
+    "total": 43.5,
+    "spread_note": "As displayed: CLE +2.5 (-108), NO -2.5 (-112)"
+   },
+   "flags": [
+    "LINES-OPEN-ATTRIB"
+   ]
+  },
+  {
+   "week": 9,
+   "kickoff_utc": "2026-11-08T18:00:00Z",
+   "kickoff_et": "Sun Nov 8, 1:00 PM ET",
+   "espn_game": "https://www.espn.com/nfl/game/_/gameId/401873040/cowboys-colts",
+   "dk_event": "34118272",
+   "away": {
+    "abbr": "DAL",
+    "name": "Dallas Cowboys",
+    "record": "(3-5)",
+    "record_note": ""
+   },
+   "home": {
+    "abbr": "IND",
+    "name": "Indianapolis Colts",
+    "record": "(2-6)",
+    "record_note": ""
+   },
+   "open": {
+    "away_cell": {
+     "line": "-1.5",
+     "juice": -110
+    },
+    "home_cell": {
+     "line": "u52.5",
+     "juice": -110
+    }
+   },
+   "current": {
+    "away": {
+     "spread": -6,
+     "spread_juice": -108,
+     "total_side": "o51.5",
+     "total_juice": -110,
+     "ml": -265
+    },
+    "home": {
+     "spread": 6,
+     "spread_juice": -112,
+     "total_side": "u51.5",
+     "total_juice": -110,
+     "ml": 215
+    },
+    "total": 51.5,
+    "spread_note": "As displayed: DAL -6 (-108), IND +6 (-112)"
+   },
+   "flags": [
+    "LINES-OPEN-ATTRIB"
+   ]
+  },
+  {
+   "week": 9,
+   "kickoff_utc": "2026-11-08T18:00:00Z",
+   "kickoff_et": "Sun Nov 8, 1:00 PM ET",
+   "espn_game": "https://www.espn.com/nfl/game/_/gameId/401873041/broncos-panthers",
+   "dk_event": "34118046",
+   "away": {
+    "abbr": "DEN",
+    "name": "Denver Broncos",
+    "record": "(6-2)",
+    "record_note": ""
+   },
+   "home": {
+    "abbr": "CAR",
+    "name": "Carolina Panthers",
+    "record": "(3-4)",
+    "record_note": ""
+   },
+   "open": {
+    "away_cell": {
+     "line": "-3",
+     "juice": -110
+    },
+    "home_cell": {
+     "line": "u42.5",
+     "juice": -110
+    }
+   },
+   "current": {
+    "away": {
+     "spread": -3,
+     "spread_juice": -102,
+     "total_side": "o43.5",
+     "total_juice": -115,
+     "ml": -148
+    },
+    "home": {
+     "spread": 3,
+     "spread_juice": -118,
+     "total_side": "u43.5",
+     "total_juice": -105,
+     "ml": 124
+    },
+    "total": 43.5,
+    "spread_note": "As displayed: DEN -3 (-102), CAR +3 (-118)"
+   },
+   "flags": [
+    "LINES-OPEN-ATTRIB"
+   ]
+  },
+  {
+   "week": 9,
+   "kickoff_utc": "2026-11-08T18:00:00Z",
+   "kickoff_et": "Sun Nov 8, 1:00 PM ET",
+   "espn_game": "https://www.espn.com/nfl/game/_/gameId/401873042/lions-dolphins",
+   "dk_event": "34118198",
+   "away": {
+    "abbr": "DET",
+    "name": "Detroit Lions",
+    "record": "(5-2)",
+    "record_note": ""
+   },
+   "home": {
+    "abbr": "MIA",
+    "name": "Miami Dolphins",
+    "record": "(1-6)",
+    "record_note": ""
+   },
+   "open": {
+    "away_cell": {
+     "line": "-6.5",
+     "juice": -110
+    },
+    "home_cell": {
+     "line": "u47.5",
+     "juice": -110
+    }
+   },
+   "current": {
+    "away": {
+     "spread": -7,
+     "spread_juice": -110,
+     "total_side": "o50.5",
+     "total_juice": -105,
+     "ml": -375
+    },
+    "home": {
+     "spread": 7,
+     "spread_juice": -110,
+     "total_side": "u50.5",
+     "total_juice": -115,
+     "ml": 295
+    },
+    "total": 50.5,
+    "spread_note": "As displayed: DET -7 (-110), MIA +7 (-110)"
+   },
+   "flags": [
+    "LINES-OPEN-ATTRIB"
+   ]
+  },
+  {
+   "week": 9,
+   "kickoff_utc": "2026-11-08T18:00:00Z",
+   "kickoff_et": "Sun Nov 8, 1:00 PM ET",
+   "espn_game": "https://www.espn.com/nfl/game/_/gameId/401873043/rams-commanders",
+   "dk_event": "34118050",
+   "away": {
+    "abbr": "LAR",
+    "name": "Los Angeles Rams",
+    "record": "(4-4)",
+    "record_note": ""
+   },
+   "home": {
+    "abbr": "WSH",
+    "name": "Washington Commanders",
+    "record": "(2-4)",
+    "record_note": "Official record2-4-1 (ESPN omits tie)"
+   },
+   "open": {
+    "away_cell": {
+     "line": "-4.5",
+     "juice": -110
+    },
+    "home_cell": {
+     "line": "u50.5",
+     "juice": -110
+    }
+   },
+   "current": {
+    "away": {
+     "spread": -5.5,
+     "spread_juice": -110,
+     "total_side": "o47.5",
+     "total_juice": -112,
+     "ml": -218
+    },
+    "home": {
+     "spread": 5.5,
+     "spread_juice": -110,
+     "total_side": "u47.5",
+     "total_juice": -108,
+     "ml": 180
+    },
+    "total": 47.5,
+    "spread_note": "As displayed: LAR -5.5 (-110), WSH +5.5 (-110)"
+   },
+   "flags": [
+    "LINES-OPEN-ATTRIB",
+    "LINES-REC-TIES"
+   ]
+  },
+  {
+   "week": 9,
+   "kickoff_utc": "2026-11-08T18:00:00Z",
+   "kickoff_et": "Sun Nov 8, 1:00 PM ET",
+   "espn_game": "https://www.espn.com/nfl/game/_/gameId/401873044/giants-eagles",
+   "dk_event": "34118068",
+   "away": {
+    "abbr": "NYG",
+    "name": "New York Giants",
+    "record": "(4-2)",
+    "record_note": "Official record4-2-1 (ESPN omits tie)"
+   },
+   "home": {
+    "abbr": "PHI",
+    "name": "Philadelphia Eagles",
+    "record": "(2-6)",
+    "record_note": ""
+   },
+   "open": {
+    "away_cell": {
+     "line": "o44.5",
+     "juice": -110
+    },
+    "home_cell": {
+     "line": "-5.5",
+     "juice": -110
+    }
+   },
+   "current": {
+    "away": {
+     "spread": -3.5,
+     "spread_juice": -102,
+     "total_side": "o39.5",
+     "total_juice": -118,
+     "ml": -170
+    },
+    "home": {
+     "spread": 3.5,
+     "spread_juice": -118,
+     "total_side": "u39.5",
+     "total_juice": -102,
+     "ml": 142
+    },
+    "total": 39.5,
+    "spread_note": "As displayed: NYG -3.5 (-102), PHI +3.5 (-118)"
+   },
+   "flags": [
+    "LINES-OPEN-ATTRIB",
+    "LINES-OPEN-NYG-PHI",
+    "LINES-REC-TIES",
+    "LINES-OPEN-TOTAL-MOVE"
+   ]
+  },
+  {
+   "week": 9,
+   "kickoff_utc": "2026-11-08T18:00:00Z",
+   "kickoff_et": "Sun Nov 8, 1:00 PM ET",
+   "espn_game": "https://www.espn.com/nfl/game/_/gameId/401873045/jets-chiefs",
+   "dk_event": "34118259",
+   "away": {
+    "abbr": "NYJ",
+    "name": "New York Jets",
+    "record": "(2-6)",
+    "record_note": ""
+   },
+   "home": {
+    "abbr": "KC",
+    "name": "Kansas City Chiefs",
+    "record": "(5-2)",
+    "record_note": ""
+   },
+   "open": {
+    "away_cell": {
+     "line": "o41.5",
+     "juice": -110
+    },
+    "home_cell": {
+     "line": "-9.5",
+     "juice": -110
+    }
+   },
+   "current": {
+    "away": {
+     "spread": 9.5,
+     "spread_juice": -108,
+     "total_side": "o46.5",
+     "total_juice": -105,
+     "ml": 360
+    },
+    "home": {
+     "spread": -9.5,
+     "spread_juice": -112,
+     "total_side": "u46.5",
+     "total_juice": -115,
+     "ml": -470
+    },
+    "total": 46.5,
+    "spread_note": "As displayed: NYJ +9.5 (-108), KC -9.5 (-112)"
+   },
+   "flags": [
+    "LINES-OPEN-ATTRIB",
+    "LINES-OPEN-TOTAL-MOVE"
+   ]
+  },
+  {
+   "week": 9,
+   "kickoff_utc": "2026-11-08T21:05:00Z",
+   "kickoff_et": "Sun Nov 8, 4:05 PM ET",
+   "espn_game": "https://www.espn.com/nfl/game/_/gameId/401873046/texans-chargers",
+   "dk_event": "34118162",
+   "away": {
+    "abbr": "HOU",
+    "name": "Houston Texans",
+    "record": "(2-5)",
+    "record_note": ""
+   },
+   "home": {
+    "abbr": "LAC",
+    "name": "Los Angeles Chargers",
+    "record": "(0-7)",
+    "record_note": ""
+   },
+   "open": {
+    "away_cell": {
+     "line": "o43.5",
+     "juice": -110
+    },
+    "home_cell": {
+     "line": "-1.5",
+     "juice": -115
+    }
+   },
+   "current": {
+    "away": {
+     "spread": -4.5,
+     "spread_juice": -115,
+     "total_side": "o40.5",
+     "total_juice": -112,
+     "ml": -218
+    },
+    "home": {
+     "spread": 4.5,
+     "spread_juice": -105,
+     "total_side": "u40.5",
+     "total_juice": -108,
+     "ml": 180
+    },
+    "total": 40.5,
+    "spread_note": "As displayed: HOU -4.5 (-115), LAC +4.5 (-105)"
+   },
+   "flags": [
+    "LINES-OPEN-ATTRIB",
+    "LINES-OPEN-HOU-LAC"
+   ]
+  },
+  {
+   "week": 9,
+   "kickoff_utc": "2026-11-08T21:25:00Z",
+   "kickoff_et": "Sun Nov 8, 4:25 PM ET",
+   "espn_game": "https://www.espn.com/nfl/game/_/gameId/401873047/raiders-49ers",
+   "dk_event": "34118070",
+   "away": {
+    "abbr": "LV",
+    "name": "Las Vegas Raiders",
+    "record": "(4-4)",
+    "record_note": ""
+   },
+   "home": {
+    "abbr": "SF",
+    "name": "San Francisco 49ers",
+    "record": "(6-1)",
+    "record_note": ""
+   },
+   "open": {
+    "away_cell": {
+     "line": "o46.5",
+     "juice": -110
+    },
+    "home_cell": {
+     "line": "-8.5",
+     "juice": -110
+    }
+   },
+   "current": {
+    "away": {
+     "spread": 9.5,
+     "spread_juice": -110,
+     "total_side": "o51.5",
+     "total_juice": -110,
+     "ml": 380
+    },
+    "home": {
+     "spread": -9.5,
+     "spread_juice": -110,
+     "total_side": "u51.5",
+     "total_juice": -110,
+     "ml": -500
+    },
+    "total": 51.5,
+    "spread_note": "As displayed: LV +9.5 (-110), SF -9.5 (-110)"
+   },
+   "flags": [
+    "LINES-OPEN-ATTRIB",
+    "LINES-OPEN-TOTAL-MOVE"
+   ]
+  },
+  {
+   "week": 9,
+   "kickoff_utc": "2026-11-08T21:25:00Z",
+   "kickoff_et": "Sun Nov 8, 4:25 PM ET",
+   "espn_game": "https://www.espn.com/nfl/game/_/gameId/401873048/cardinals-seahawks",
+   "dk_event": "34118013",
+   "away": {
+    "abbr": "ARI",
+    "name": "Arizona Cardinals",
+    "record": "(3-5)",
+    "record_note": ""
+   },
+   "home": {
+    "abbr": "SEA",
+    "name": "Seattle Seahawks",
+    "record": "(4-3)",
+    "record_note": ""
+   },
+   "open": {
+    "away_cell": {
+     "line": "o45.5",
+     "juice": -110
+    },
+    "home_cell": {
+     "line": "-13.5",
+     "juice": -110
+    }
+   },
+   "current": {
+    "away": {
+     "spread": 11.5,
+     "spread_juice": -110,
+     "total_side": "o44.5",
+     "total_juice": -110,
+     "ml": 500
+    },
+    "home": {
+     "spread": -11.5,
+     "spread_juice": -110,
+     "total_side": "u44.5",
+     "total_juice": -110,
+     "ml": -700
+    },
+    "total": 44.5,
+    "spread_note": "As displayed: ARI +11.5 (-110), SEA -11.5 (-110)"
+   },
+   "flags": [
+    "LINES-OPEN-ATTRIB"
+   ]
+  },
+  {
+   "week": 9,
+   "kickoff_utc": "2026-11-08T21:25:00Z",
+   "kickoff_et": "Sun Nov 8, 4:25 PM ET",
+   "espn_game": "https://www.espn.com/nfl/game/_/gameId/401873049/packers-patriots",
+   "dk_event": "34118221",
+   "away": {
+    "abbr": "GB",
+    "name": "Green Bay Packers",
+    "record": "(5-3)",
+    "record_note": ""
+   },
+   "home": {
+    "abbr": "NE",
+    "name": "New England Patriots",
+    "record": "(5-3)",
+    "record_note": ""
+   },
+   "open": {
+    "away_cell": {
+     "line": "o46.5",
+     "juice": -110
+    },
+    "home_cell": {
+     "line": "-1.5",
+     "juice": -110
+    }
+   },
+   "current": {
+    "away": {
+     "spread": 3,
+     "spread_juice": -115,
+     "total_side": "o47.5",
+     "total_juice": -102,
+     "ml": 130
+    },
+    "home": {
+     "spread": -3,
+     "spread_juice": -105,
+     "total_side": "u47.5",
+     "total_juice": -118,
+     "ml": -155
+    },
+    "total": 47.5,
+    "spread_note": "As displayed: GB +3 (-115), NE -3 (-105)"
+   },
+   "flags": [
+    "LINES-OPEN-ATTRIB"
+   ]
+  },
+  {
+   "week": 9,
+   "kickoff_utc": "2026-11-09T01:20:00Z",
+   "kickoff_et": "Sun Nov 8, 8:20 PM ET",
+   "espn_game": "https://www.espn.com/nfl/game/_/gameId/401873050/buccaneers-bears",
+   "dk_event": "34118027",
+   "away": {
+    "abbr": "TB",
+    "name": "Tampa Bay Buccaneers",
+    "record": "(3-5)",
+    "record_note": ""
+   },
+   "home": {
+    "abbr": "CHI",
+    "name": "Chicago Bears",
+    "record": "(5-2)",
+    "record_note": ""
+   },
+   "open": {
+    "away_cell": {
+     "line": "o48.5",
+     "juice": -110
+    },
+    "home_cell": {
+     "line": "-3.5",
+     "juice": -110
+    }
+   },
+   "current": {
+    "away": {
+     "spread": 5.5,
+     "spread_juice": -108,
+     "total_side": "o47.5",
+     "total_juice": -102,
+     "ml": 195
+    },
+    "home": {
+     "spread": -5.5,
+     "spread_juice": -112,
+     "total_side": "u47.5",
+     "total_juice": -118,
+     "ml": -238
+    },
+    "total": 47.5,
+    "spread_note": "As displayed: TB +5.5 (-108), CHI -5.5 (-112)"
+   },
+   "flags": [
+    "LINES-OPEN-ATTRIB"
+   ]
+  },
+  {
+   "week": 9,
+   "kickoff_utc": "2026-11-10T01:15:00Z",
+   "kickoff_et": "Mon Nov 9, 8:15 PM ET",
+   "espn_game": "https://www.espn.com/nfl/game/_/gameId/401873051/bills-vikings",
+   "dk_event": "34118167",
+   "away": {
+    "abbr": "BUF",
+    "name": "Buffalo Bills",
+    "record": "(6-1)",
+    "record_note": ""
+   },
+   "home": {
+    "abbr": "MIN",
+    "name": "Minnesota Vikings",
+    "record": "(6-1)",
+    "record_note": ""
+   },
+   "open": {
+    "away_cell": {
+     "line": "-3",
+     "juice": -105
+    },
+    "home_cell": {
+     "line": "u48.5",
+     "juice": -110
+    }
+   },
+   "current": {
+    "away": {
+     "spread": -3.5,
+     "spread_juice": -102,
+     "total_side": "o46.5",
+     "total_juice": -105,
+     "ml": -180
+    },
+    "home": {
+     "spread": 3.5,
+     "spread_juice": -118,
+     "total_side": "u46.5",
+     "total_juice": -115,
+     "ml": 150
+    },
+    "total": 46.5,
+    "spread_note": "As displayed: BUF -3.5 (-102), MIN +3.5 (-118)"
+   },
+   "flags": [
+    "LINES-OPEN-ATTRIB"
+   ]
+  }
+ ]
+}

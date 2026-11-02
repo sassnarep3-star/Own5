@@ -10,6 +10,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+DATA = ROOT / "data" / "own5_desk"
 sys.path.insert(0, str(ROOT))
 from nfl_model.audit import audit_data
 from nfl_model.correlation import analyze_pair
@@ -19,7 +20,7 @@ from nfl_model.validation import GATE_SPECS, build_leaderboard
 
 
 def dump(name: str, value: object) -> None:
-    (ROOT / "data" / name).write_text(json.dumps(value, indent=2, ensure_ascii=False, allow_nan=False) + "\n")
+    (DATA / name).write_text(json.dumps(value, indent=2, ensure_ascii=False, allow_nan=False) + "\n")
 
 
 def main() -> None:
@@ -44,13 +45,13 @@ def main() -> None:
         raise SystemExit("\n".join(report["failures"]))
     summary = {
         "snapshot_date": snapshot["retrieved_utc"], "season": 2026, "week": 9,
-        "official_sources": len(json.loads((ROOT / "data/source_register.json").read_text())),
-        "verified_fact_rows": len(json.loads((ROOT / "data/verified_facts.json").read_text())),
+        "official_sources": len(json.loads((ROOT / "data/own5_desk/source_register.json").read_text())),
+        "verified_fact_rows": len(json.loads((ROOT / "data/own5_desk/verified_facts.json").read_text())),
         "teams": len(snapshot["teams"]), "research_lines": len(lines),
         "historical_paired_games": len(snapshot["paired_player_games"]),
         "strategies": len(strategies), "qualified_strategies": len(leaderboard),
         "reward_points_awarded": sum(r["reward_points"] for r in leaderboard),
-        "review_items": len(json.loads((ROOT / "data/review_items.json").read_text())),
+        "review_items": len(json.loads((ROOT / "data/own5_desk/review_items.json").read_text())),
         "verified_market_quotes": len(snapshot["market_quotes"]),
         "league_mean_points_per_team_game": mu,
         "pearson_r": correlation["pearson_r"], "binary_phi": correlation["binary_phi"],

@@ -1,4 +1,4 @@
-name: Verify and publish dashboard
+name: Verify Own5 evidence desk
 
 on:
   push:
@@ -11,12 +11,13 @@ permissions:
   contents: read
 
 concurrency:
-  group: pages-${{ github.ref }}
+  group: own5-desk-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
-  verify:
+  desk-verify:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -25,59 +26,40 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: npm ci
-      - run: npm test
-      - run: npm run build
-      - name: Verify deterministic data and site rebuild
+      - run: npm ci --ignore-scripts
+      - name: Combined unit tests, desk build and internal-link/provenance audit
+        run: npm run desk:check
+      - name: Verify committed legacy-Pages desk matches the deterministic build
         run: |
-          find data dist -type f -print0 | sort -z | xargs -0 sha256sum > /tmp/own5-first.sha256
-          npm run build
-          find data dist -type f -print0 | sort -z | xargs -0 sha256sum > /tmp/own5-second.sha256
-          diff -u /tmp/own5-first.sha256 /tmp/own5-second.sha256
-      - name: Upload verified site for review
+          npm run desk:publish
+          git diff --exit-code -- own5-desk/
+      - name: Upload verified desk for review
         uses: actions/upload-artifact@v4
         with:
-          name: verified-dashboard
-          path: dist/
-      - name: Upload Pages artifact
-        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist/
+          name: own5-evidence-desk
+          path: own5-desk/
 
-  deploy:
+  legacy-pages-smoke:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-    needs: verify
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Configure GitHub Pages for Actions deployment
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
-      - name: Deploy verified site
-        id: deployment
-        uses: actions/deploy-pages@v4
-
-  smoke:
-    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-    needs: deploy
+    needs: desk-verify
     runs-on: ubuntu-latest
     steps:
-      - name: Check published landing page
+      - name: Check public root and additive desk URLs
         run: |
-          url="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
-          for attempt in $(seq 1 18); do
-            if curl --fail --silent --show-error --location "$url" | grep -q 'Own5'; then
-              echo "Published dashboard responded successfully: $url"
-              exit 0
+          base="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
+          for path in "/" "/own5-desk/" "/own5-desk/lines.html" "/own5-desk/review.html"; do
+            url="$base$path"
+            success=0
+            for attempt in $(seq 1 24); do
+              if curl --fail --silent --show-error --location "$url" | grep -q 'Own5'; then
+                echo "OK $url"
+                success=1
+                break
+              fi
+              sleep 10
+            done
+            if [ "$success" -ne 1 ]; then
+              echo "Published page did not become ready: $url" >&2
+              exit 1
             fi
-            sleep 10
           done
-          echo "Published dashboard did not become ready" >&2
-          exit 1

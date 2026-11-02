@@ -1,51 +1,74 @@
-{
-  "id": "burrow-chase-2024",
-  "season": 2024,
-  "n_games": 17,
-  "passing_threshold": 250,
-  "receiving_threshold": 75,
-  "pearson_r": 0.7515957128976251,
-  "pearson_ci95": [
-    0.5240216168172416,
-    0.9197028515446299
-  ],
-  "spearman_r": 0.7598039215686274,
-  "binary_phi": 0.6038596398555417,
-  "binary_phi_ci95": [
-    0.11236664374387394,
-    0.9999999999999998
-  ],
-  "passing_hits": 12,
-  "receiving_hits": 11,
-  "joint_hits": 10,
-  "passing_rate": 0.7058823529411765,
-  "receiving_rate": 0.6470588235294118,
-  "joint_rate": 0.5882352941176471,
-  "joint_wilson_ci95": [
-    0.3600544264299978,
-    0.7838894320978518
-  ],
-  "independence_product": 0.4567474048442907,
-  "joint_minus_independent": 0.13148788927335636,
-  "joint_lift": 1.2878787878787878,
-  "joint_frechet_bounds": [
-    0.3529411764705883,
-    0.6470588235294118
-  ],
-  "fair_joint_decimal": 1.7,
-  "source_ids": [
-    "S12",
-    "S13"
-  ],
-  "source_urls": [
-    "https://www.nfl.com/players/joe-burrow/stats/logs/2024/",
-    "https://www.nfl.com/players/ja-marr-chase/stats/logs/2024/"
-  ],
-  "derived": true,
-  "status": "Descriptive; not a current betting signal",
-  "current_pair_correlation": null,
-  "sgp_fair_price": null,
-  "bootstrap_draws": 10000,
-  "bootstrap_seed": 20261102,
-  "limitations": "One selected QB–WR pair, one season, 17 games. No current participation, operator price, or out-of-sample joint calibration. Bootstrap intervals do not cure selection bias."
-}
+[
+ {
+  "pair_id": "CORR01",
+  "metric_x": "points scored per game (PF/G)",
+  "metric_y": "winning percentage (PCT)",
+  "n_teams": "32",
+  "pearson_r": "0.6136",
+  "input_data": "data/standings-2026-wk8.csv (32 teams, 2026 season through Week 8)",
+  "computed_by": "tools/compute_correlations.py (Pearson r)",
+  "input_source_url": "https://www.nfl.com/standings/",
+  "computed_on": "2026-11-02",
+  "status": "verified inputs (nfl.com); value computed in-repo"
+ },
+ {
+  "pair_id": "CORR02",
+  "metric_x": "points allowed per game (PA/G)",
+  "metric_y": "winning percentage (PCT)",
+  "n_teams": "32",
+  "pearson_r": "-0.5796",
+  "input_data": "data/standings-2026-wk8.csv (32 teams, 2026 season through Week 8)",
+  "computed_by": "tools/compute_correlations.py (Pearson r)",
+  "input_source_url": "https://www.nfl.com/standings/",
+  "computed_on": "2026-11-02",
+  "status": "verified inputs (nfl.com); value computed in-repo"
+ },
+ {
+  "pair_id": "CORR03",
+  "metric_x": "net points per game (NET/G)",
+  "metric_y": "winning percentage (PCT)",
+  "n_teams": "32",
+  "pearson_r": "0.8391",
+  "input_data": "data/standings-2026-wk8.csv (32 teams, 2026 season through Week 8)",
+  "computed_by": "tools/compute_correlations.py (Pearson r)",
+  "input_source_url": "https://www.nfl.com/standings/",
+  "computed_on": "2026-11-02",
+  "status": "verified inputs (nfl.com); value computed in-repo"
+ },
+ {
+  "pair_id": "CORR04",
+  "metric_x": "total points for (PF)",
+  "metric_y": "total points against (PA)",
+  "n_teams": "32",
+  "pearson_r": "0.0705",
+  "input_data": "data/standings-2026-wk8.csv (32 teams, 2026 season through Week 8)",
+  "computed_by": "tools/compute_correlations.py (Pearson r)",
+  "input_source_url": "https://www.nfl.com/standings/",
+  "computed_on": "2026-11-02",
+  "status": "verified inputs (nfl.com); value computed in-repo"
+ },
+ {
+  "pair_id": "CORR05",
+  "metric_x": "total net points (NET)",
+  "metric_y": "winning percentage (PCT)",
+  "n_teams": "32",
+  "pearson_r": "0.8313",
+  "input_data": "data/standings-2026-wk8.csv (32 teams, 2026 season through Week 8)",
+  "computed_by": "tools/compute_correlations.py (Pearson r)",
+  "input_source_url": "https://www.nfl.com/standings/",
+  "computed_on": "2026-11-02",
+  "status": "verified inputs (nfl.com); value computed in-repo"
+ },
+ {
+  "pair_id": "CORR06",
+  "metric_x": "points scored per game (PF/G)",
+  "metric_y": "points allowed per game (PA/G)",
+  "n_teams": "32",
+  "pearson_r": "-0.0117",
+  "input_data": "data/standings-2026-wk8.csv (32 teams, 2026 season through Week 8)",
+  "computed_by": "tools/compute_correlations.py (Pearson r)",
+  "input_source_url": "https://www.nfl.com/standings/",
+  "computed_on": "2026-11-02",
+  "status": "verified inputs (nfl.com); value computed in-repo"
+ }
+]

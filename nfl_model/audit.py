@@ -8,7 +8,7 @@ from .contracts import official_url
 
 
 def load(root: Path, name: str) -> object:
-    return json.loads((root / "data" / name).read_text())
+    return json.loads((root / "data" / "own5_desk" / name).read_text())
 
 
 def audit_data(root: Path) -> dict:
@@ -96,7 +96,7 @@ def audit_data(root: Path) -> dict:
         if item["status"] != "needs review" or not item["source_urls"] or not all(official_url(u) for u in item["source_urls"]):
             failures.append(f"bad review linkage: {item['id']}")
     checks.append(f"{len(reviews)} review items carry official source links")
-    lines_path = root / "data/derived_lines.json"
+    lines_path = root / "data" / "own5_desk" / "derived_lines.json"
     if lines_path.exists():
         lines = json.loads(lines_path.read_text())
         if len(lines) != len(snapshot["schedule"]):

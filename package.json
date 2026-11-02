@@ -1,17 +1,23 @@
 {
   "name": "own5-nfl-research",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
-  "description": "Evidence-first NFL line research dashboard",
+  "description": "Static evidence-first NFL research dashboard",
   "scripts": {
-    "build:data": "python3 research/build_snapshot.py && python3 scripts/build_data.py",
-    "build:site": "python3 site/build_site.py",
-    "build": "npm run build:data && npm run build:site && python3 scripts/check_site.py",
+    "build": "python3 scripts/build.py",
     "test": "python3 -m unittest discover -s tests -v",
-    "check": "npm test && npm run build",
-    "start": "python3 scripts/serve.py"
+    "test:browser": "node tests/browser.cjs",
+    "preview": "python3 -m http.server 3000 --bind 0.0.0.0",
+    "desk:build:data": "python3 research/build_snapshot.py && python3 scripts/build_data.py",
+    "desk:build:site": "python3 site/build_site.py",
+    "desk:build": "npm run desk:build:data && npm run desk:build:site && python3 scripts/check_site.py",
+    "desk:test": "python3 -m unittest discover -s tests -v",
+    "desk:check": "npm run desk:test && npm run desk:build",
+    "desk:publish": "python3 scripts/publish_desk.py",
+    "desk:start": "python3 scripts/serve.py"
   },
-  "engines": {
-    "node": ">=20"
+  "devDependencies": {
+    "@sparticuz/chromium": "^138.0.2",
+    "playwright-core": "^1.56.1"
   }
 }

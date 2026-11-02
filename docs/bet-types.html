@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bet Types · NBA Line Origination</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+  <div class="hwrap">
+    <h1>NBA Line-Origination Lab</h1>
+    <p>Repo: sassnarep3-star/Own5 · Research, validation gates &amp; leaderboard design for originating NBA lines · Built 2026-11-02</p>
+  </div>
+  <nav><a href="index.html">Dashboard</a><a href="executive-summary.html">Executive Summary</a><a href="strategies.html">Strategies</a><a href="validation.html">Validation Gates</a><a href="correlations.html">Correlations</a><a href="bet-types.html" class="active">Bet Types</a><a href="skill-vs-luck.html">Skill vs Luck</a><a href="leaderboard.html">Leaderboard</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for Review</a></nav>
+</header>
+<main>
+
+<h2>Bet Types — Singles, Parlays, Player-Prop Combos</h2>
+
+<h3>1 · Single bets (sides / totals / moneyline)</h3>
+<p>The cleanest laboratory: one market, one price, direct CLV measurement. Applicable strategies:
+<a href="strategies.html">S1 rest spots, S2 injury latency, S3 home/travel, S4 streaks, S7 origination</a>.</p>
+<div class="tablewrap"><table>
+<tr><th>Property</th><th>Singles</th><th>Source</th></tr>
+<tr><td>Skill metric</td><td>De-vigged CLV per bet; signal in ~200–500 bets</td><td><a class="src" href="https://www.sportsbettingoddscalculator.com/guides/closing-line-value" target="_blank" rel="noopener">oddscalculator</a> <span class="chip industry">INDUSTRY</span></td></tr>
+<tr><td>Example schedule edge to test</td><td>B2B win rate 44% vs ~50% null (must survive vs closing line)</td><td><a class="src" href="https://arxiv.org/html/2606.27957v1" target="_blank" rel="noopener">arXiv:2606.27957</a> <span class="chip primary">PRIMARY</span></td></tr>
+<tr><td>Staking</td><td>Fractional Kelly, f* = (bp−q)/b</td><td><a class="src" href="https://oddscipher.com/the-codex/kelly/" target="_blank" rel="noopener">Kelly 1956 via oddscipher</a> <span class="chip primary">PRIMARY</span></td></tr>
+</table></div>
+
+<h3>2 · Parlays (cross-game)</h3>
+<p>Legs in different games are genuinely independent — joint probability is the product of the legs, and the book
+compounds its vig on every leg. Five 50% legs ⇒ 3.125% (0.5⁵). A cross-game parlay is only +EV when
+<em>each leg is individually +EV</em>; parlays never create edge, they only compound it (and compound variance).
+(<a class="src" href="https://nba-prop-bets.com/articles/nba-same/" target="_blank" rel="noopener">nba-prop-bets</a> <span class="chip industry">INDUSTRY</span>)</p>
+
+<h3>3 · Same-game parlays &amp; player-prop combos</h3>
+<p>Within one game, legs are correlated — positively or negatively — and books apply an imperfect correlation
+adjustment. The only durable SGP edge is modeling the <strong>joint distribution</strong> better than the book
+(strategy <a href="strategies.html">S8</a>, gate <a href="validation.html">G7</a>).</p>
+<div class="tablewrap"><table>
+<tr><th>Rule</th><th>Detail</th><th>Source</th></tr>
+<tr><td>Stack positively correlated legs only</td><td>e.g., star points + team ML; PG assists + shooter points; see <a href="correlations.html">C1–C8</a></td><td><a class="src" href="https://oddsindex.com/guides/nba-same-game-parlay-tips" target="_blank" rel="noopener">oddsindex</a> <span class="chip industry">INDUSTRY</span></td></tr>
+<tr><td>Never combine negative pairs</td><td>e.g., game UNDER + player points OVER (<a href="correlations.html">C9</a>) — internally contradictory</td><td><a class="src" href="https://nba-prop-bets.com/articles/nba-same/" target="_blank" rel="noopener">nba-prop-bets</a> <span class="chip industry">INDUSTRY</span></td></tr>
+<tr><td>Keep leg count low</td><td>Each leg multiplies failure probability; 2–3 stats per player max</td><td><a class="src" href="https://oddsindex.com/guides/nba-same-game-parlay-tips" target="_blank" rel="noopener">oddsindex</a> <span class="chip industry">INDUSTRY</span></td></tr>
+<tr><td>Skip the SGP when correlation tax is huge or legs aren't tightly correlated</td><td>Bet the strong leg straight instead</td><td><a class="src" href="https://oddsindex.com/guides/nba-same-game-parlay-tips" target="_blank" rel="noopener">oddsindex</a> <span class="chip industry">INDUSTRY</span></td></tr>
+<tr><td>Combo stats (PRA/PR/PA/RA) are one line, not independent overs</td><td>Components share minutes/pace/role drivers</td><td><a class="src" href="https://www.edgebetting.ai/betting-education/player-props" target="_blank" rel="noopener">edgebetting</a> <span class="chip industry">INDUSTRY</span></td></tr>
+</table></div>
+
+</main>
+<footer>
+  Every table row carries a source link and tier: <span class="chip official">OFFICIAL</span> NBA league source ·
+  <span class="chip primary">PRIMARY</span> peer-reviewed / preprint / primary author ·
+  <span class="chip industry">INDUSTRY</span> betting-industry convention (listed on <a href="flagged.html">Flagged for Review</a>).
+  Unconfirmable values are left blank — never inferred. No performance claims are made anywhere on this site.<br>
+  This repo also hosts the <a href="../index.html">NFL Research Desk</a> (built by parallel session cd43258e).
+</footer>
+</body>
+</html>

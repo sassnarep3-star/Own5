@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bet Types &amp; Combos · Own5</title>
+<meta name="description" content="Own5 — NFL line origination & skill-based strategy lab. Fully sourced from official NFL and operator sources.">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏈</text></svg>">
+</head><body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html">Own5 <span>· NFL Line Originator</span></a>
+  <nav class="main"><a href="index.html">Overview</a><a href="executive-summary.html">Executive Summary</a><a href="detail-strategies.html">Strategies &amp; Leaderboard</a><a href="signals.html">Signals</a><a href="detail-validation.html">Validation Gates</a><a href="detail-correlations.html">Correlations</a><a href="bet-types.html" class="active">Bet Types &amp; Combos</a><a href="data.html">Data &amp; League Facts</a><a href="detail-sources.html">Sources</a><a href="flagged.html">Flagged for Review</a></nav>
+</div></header>
+<main><section class="page"><div class="wrap"><h2 class="sec">Bet Types &amp; Combos</h2><p class="sub">All factual claims link to official sources; blanks are intentional (see flagged.html).</p></div><div class="wrap"><div class="panel"><h2>Bet Markets &amp; Grading Rules — Verified Research (T3)</h2>
+<p>Definitions and grading rules below are quoted/paraphrased from <strong>official sportsbook operator pages and regulator-approved house rules</strong> — not from third-party blogs. Machine-readable: <code>data/bet-types.csv</code>, <code>data/bet-combos.csv</code>.</p>
+<p><strong>Where lines come from:</strong> the NFL&#x27;s Official Sports Betting Partners (Caesars, DraftKings, FanDuel) all use the NFL&#x27;s official league data feed <a href="https://www.nfl.com/news/nfl-announces-tri-exclusive-sports-betting-partners" target="_blank" rel="noopener">NFL.com &#8599;</a>. Live NFL lines are published on the operators&#x27; own pages, e.g. <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener">DraftKings NFL &#8599;</a> and <a href="https://sportsbook.fanduel.com/navigation/nfl" target="_blank" rel="noopener">FanDuel NFL &#8599;</a>. Line <strong>values</strong> are dynamic and are not snapshotted in this repo (flag F02).</p>
+<h3>Market definitions</h3>
+<ul class="tight">
+<li><strong>Point spread</strong> — wager on margin of victory; favorite gives points (minus), underdog gets points (plus); half-point spreads prevent a push. <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener">DraftKings NFL page &#8599;</a></li>
+<li><strong>Moneyline</strong> — pick the outright winner; margin irrelevant. <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener">DraftKings NFL page &#8599;</a></li>
+<li><strong>Total (over/under)</strong> — combined points of both teams. FanDuel notes these markets are powered by official NFL data. <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener">DraftKings &#8599;</a> · <a href="https://sportsbook.fanduel.com/navigation/nfl" target="_blank" rel="noopener">FanDuel &#8599;</a></li>
+<li><strong>Parlay</strong> — 2+ legs combined into one wager; <strong>every leg must win</strong> (minimum two legs). <a href="https://www.fanduel.com/sports-betting-guide/what-is-a-parlay-bet" target="_blank" rel="noopener">FanDuel parlay guide &#8599;</a></li>
+<li><strong>Same Game Parlay (SGP)</strong> — multiple bets from the <strong>same game</strong> (props, spread, totals); the book builds correlation assumptions into the odds, so check the combined price. <strong>SGP+</strong> stacks multiple SGPs across games. <a href="https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nfl" target="_blank" rel="noopener">FanDuel NFL guide &#8599;</a></li>
+<li><strong>Teaser</strong> — adjust spread/total by a set number of points (typically 6) across ≥2 legs for reduced odds; <strong>most common NFL margins of victory are 3 and 7</strong> — the key numbers teasers cross. <a href="https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nfl" target="_blank" rel="noopener">FanDuel NFL guide &#8599;</a></li>
+<li><strong>Player props</strong> — player/team performance (passing yards, rushing yards, TDs, sacks...). <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener">DraftKings &#8599;</a></li>
+<li><strong>Live (in-play)</strong> — wagers after kickoff across spread/ML/total/period markets/eligible props. <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener">DraftKings &#8599;</a></li>
+<li><strong>Round robin</strong> — multiple smaller parlays built from one selection pool. <a href="https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nfl" target="_blank" rel="noopener">FanDuel NFL guide &#8599;</a></li>
+</ul>
+<h3>Grading rules (what actually settles a bet)</h3>
+<ul class="tight">
+<li><strong>Overtime counts</strong> for full-game spread, moneyline and totals (graded on final official score inclusive of OT). <a href="https://sportsbook.fanduel.com/navigation/nfl" target="_blank" rel="noopener">FanDuel grading FAQ &#8599;</a> · <a href="https://www.fanduel.com/fanduel-sportsbook-house-rules-on" target="_blank" rel="noopener">FanDuel house rules &#8599;</a> · <a href="https://massgaming.com/wp-content/uploads/BetMGM-House-Rules-8.14.25.pdf" target="_blank" rel="noopener">BetMGM rules &#8599;</a></li>
+<li><strong>Push</strong>: whole-number spread or total landing exactly on the number → wager refunded; in a parlay the leg is excluded and the parlay re-priced. <a href="https://www.fanduel.com/fanduel-sportsbook-house-rules-on" target="_blank" rel="noopener">FanDuel house rules &#8599;</a> · <a href="https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nfl" target="_blank" rel="noopener">FanDuel NFL guide &#8599;</a></li>
+<li><strong>Tie after OT</strong>: moneyline wagers void (stake refunded); spread/total settled on posted numbers (push if exactly on the line). <a href="https://sportsbook.fanduel.com/navigation/nfl" target="_blank" rel="noopener">FanDuel grading FAQ &#8599;</a></li>
+<li><strong>Postponed before kickoff → all wagers void</strong>; <strong>relocated but played on the scheduled date → action</strong> (graded on the official league box score, not the venue). <a href="https://sportsbook.fanduel.com/navigation/nfl" target="_blank" rel="noopener">FanDuel grading FAQ &#8599;</a></li>
+<li><strong>Minimum play</strong>: pro football results are official after <strong>55 minutes</strong> unless an official result is declared earlier. <a href="https://massgaming.com/wp-content/uploads/BetMGM-House-Rules-8.14.25.pdf" target="_blank" rel="noopener">BetMGM regulator-approved house rules (MA) &#8599;</a></li>
+<li><strong>Player props</strong>: void if the player is not listed as active by the official league scoring source. <a href="https://massgaming.com/wp-content/uploads/BetMGM-House-Rules-8.14.25.pdf" target="_blank" rel="noopener">BetMGM rules &#8599;</a>; official stats via Elias Sports Bureau <a href="https://fantasy.nfl.com/research/statcorrections" target="_blank" rel="noopener">NFL stat corrections &#8599;</a></li>
+<li><strong>Correlated legs</strong>: parlays containing selections where one outcome directly affects another are <strong>not permitted unless explicitly offered</strong> (e.g., as an SGP); if accepted in error the book may void the bet or settle affected selections as singles. Books also reserve the right to refuse or limit any parlay. <a href="https://www.fanduel.com/fanduel-sportsbook-house-rules-on" target="_blank" rel="noopener">FanDuel house rules &#8599;</a></li>
+</ul>
+<h3>Combo policy used by this project</h3>
+<div class="table-tools"><input type="search" placeholder="Filter rows…" data-filter="tbl-bet-combos-csv"><span class="count"></span></div>
+<div class="tbl-scroll"><table class="data" id="tbl-bet-combos-csv"><thead><tr>
+<th>combo_id</th>
+<th>combo_type</th>
+<th>legs</th>
+<th>correlation_note</th>
+<th>allowed</th>
+<th>source_id</th>
+<th>source_url</th>
+<th>verified_on</th>
+<th>status</th>
+</tr></thead><tbody>
+<tr>
+<td>BC01</td>
+<td>Single bet</td>
+<td>1 leg (spread / ML / total / prop)</td>
+<td>No correlation issue; base unit sizing applies.</td>
+<td><span class="badge mut">allowed</span></td>
+<td>S19; S23</td>
+<td><span class="src"><a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener">https://sportsbook.draftkings.com/leagues/football/nfl &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified (rules); strategy use pending validation</span></td>
+</tr>
+<tr>
+<td>BC02</td>
+<td>2-leg cross-game parlay</td>
+<td>2 legs, different games</td>
+<td>Permitted; legs must be uncorrelated (no shared players/teams). Correlated selections not permitted unless offered as SGP (FanDuel house rules).</td>
+<td><span class="badge mut">allowed with correlation cap</span></td>
+<td>S21; S23</td>
+<td><span class="src"><a href="https://www.fanduel.com/fanduel-sportsbook-house-rules-on" target="_blank" rel="noopener">https://www.fanduel.com/fanduel-sportsbook-house-rules-on &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified (rules); strategy use pending validation</span></td>
+</tr>
+<tr>
+<td>BC03</td>
+<td>3+ leg cross-game parlay</td>
+<td>3 or more legs, different games</td>
+<td>Permitted but each added leg multiplies risk; leaderboard requires stricter validation gates for 3+ legs.</td>
+<td><span class="badge mut">allowed with stricter gates</span></td>
+<td>S21</td>
+<td><span class="src"><a href="https://www.fanduel.com/sports-betting-guide/what-is-a-parlay-bet" target="_blank" rel="noopener">https://www.fanduel.com/sports-betting-guide/what-is-a-parlay-bet &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified (rules); strategy use pending validation</span></td>
+</tr>
+<tr>
+<td>BC04</td>
+<td>Same Game Parlay (SGP)</td>
+<td>2+ legs, same game</td>
+<td>Explicitly offered by sportsbooks; correlation is priced into the odds. Strategy must use reduced stake and treat as high-correlation.</td>
+<td><span class="badge mut">allowed (book-priced correlation)</span></td>
+<td>S20; S21; S23</td>
+<td><span class="src"><a href="https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nfl" target="_blank" rel="noopener">https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nfl &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified (rules); strategy use pending validation</span></td>
+</tr>
+<tr>
+<td>BC05</td>
+<td>SGP+ (multi-game SGP)</td>
+<td>Multiple SGPs across games</td>
+<td>Same rules as SGP; check combined price before committing (FanDuel guide).</td>
+<td><span class="badge mut">allowed (book-priced correlation)</span></td>
+<td>S21</td>
+<td><span class="src"><a href="https://www.fanduel.com/sports-betting-guide/what-is-a-parlay-bet" target="_blank" rel="noopener">https://www.fanduel.com/sports-betting-guide/what-is-a-parlay-bet &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified (rules); strategy use pending validation</span></td>
+</tr>
+<tr>
+<td>BC06</td>
+<td>Player prop combo — same player, same game</td>
+<td>e.g., player passing yards + passing TDs</td>
+<td>Directly correlated outcomes; NOT permitted unless explicitly offered by the sportsbook (house rules); flagged.</td>
+<td><span class="badge warn">restricted / flagged</span></td>
+<td>S23</td>
+<td><span class="src"><a href="https://www.fanduel.com/fanduel-sportsbook-house-rules-on" target="_blank" rel="noopener">https://www.fanduel.com/fanduel-sportsbook-house-rules-on &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified (rules); strategy use pending validation</span></td>
+</tr>
+<tr>
+<td>BC07</td>
+<td>Player prop combo — different players, same game</td>
+<td>e.g., QB passing yards (Team A) + WR receiving yards (Team B)</td>
+<td>Same-game legs: treat as SGP-type correlation; only combine within an offered SGP or cap stake.</td>
+<td><span class="badge info">restricted (SGP only)</span></td>
+<td>S20; S21</td>
+<td><span class="src"><a href="https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nfl" target="_blank" rel="noopener">https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nfl &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified (rules); strategy use pending validation</span></td>
+</tr>
+<tr>
+<td>BC08</td>
+<td>2-team teaser (6-pt)</td>
+<td>2 legs, spread adjusted 6 points</td>
+<td>Crosses key numbers 3 and 7 (most common NFL margins); all legs must win.</td>
+<td><span class="badge mut">allowed</span></td>
+<td>S20</td>
+<td><span class="src"><a href="https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nfl" target="_blank" rel="noopener">https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nfl &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified (rules); strategy use pending validation</span></td>
+</tr>
+<tr>
+<td>BC09</td>
+<td>Round robin</td>
+<td>Multiple parlays from a selection pool</td>
+<td>Reduces all-or-nothing risk vs a single parlay; cost is higher total stake.</td>
+<td><span class="badge mut">allowed</span></td>
+<td>S20</td>
+<td><span class="src"><a href="https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nfl" target="_blank" rel="noopener">https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nfl &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified (rules); strategy use pending validation</span></td>
+</tr>
+</tbody></table></div>
+<div class="table-tools"><input type="search" placeholder="Filter rows…" data-filter="tbl-bet-types-csv"><span class="count"></span></div>
+<div class="tbl-scroll"><table class="data" id="tbl-bet-types-csv"><thead><tr>
+<th>bet_type_id</th>
+<th>bet_type</th>
+<th>definition</th>
+<th>key_rules_examples</th>
+<th>source_id</th>
+<th>source_url</th>
+<th>verified_on</th>
+<th>status</th>
+</tr></thead><tbody>
+<tr>
+<td>BT01</td>
+<td>Point spread</td>
+<td>Wager on whether a team wins by more than a set number of points (favorite, minus) or loses by fewer / wins outright (underdog, plus). Half-point spreads prevent a push.</td>
+<td>DraftKings example: NE -14.5 wins if NE wins by 15+; KC +14.5 wins if KC wins or loses by 14 or fewer. Whole-number spread landing exactly on the number = push, stake refunded.</td>
+<td>S19</td>
+<td><span class="src"><a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener">https://sportsbook.draftkings.com/leagues/football/nfl &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>BT02</td>
+<td>Moneyline</td>
+<td>Wager on which team wins the game outright; margin does not matter.</td>
+<td>Example sheet: NE -200 vs KC +200. If game ends tied after OT, moneyline wagers are void and stakes refunded (FanDuel FAQ).</td>
+<td>S19; S22</td>
+<td><span class="src"><a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener">https://sportsbook.draftkings.com/leagues/football/nfl &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>BT03</td>
+<td>Total (over/under)</td>
+<td>Wager on combined points of both teams. Over wins if combined score is above the total; under if below. Whole-number total landing on the number = push.</td>
+<td>Example: total 47.5 -&gt; over wins at 48+, under at 47 or fewer. FanDuel notes these markets are powered by official NFL data.</td>
+<td>S19; S22</td>
+<td><span class="src"><a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener">https://sportsbook.draftkings.com/leagues/football/nfl &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>BT04</td>
+<td>Parlay</td>
+<td>Combines two or more individual bets into one wager; every selection (leg) must win. Minimum two legs. Can mix spreads, moneylines, totals and eligible props across one or multiple games.</td>
+<td>Void leg in a parlay -&gt; remaining legs re-priced (house rules). Correlated selections are not permitted unless explicitly offered (e.g., as SGP); if accepted in error the book may void or settle as singles.</td>
+<td>S19; S21; S23</td>
+<td><span class="src"><a href="https://www.fanduel.com/sports-betting-guide/what-is-a-parlay-bet" target="_blank" rel="noopener">https://www.fanduel.com/sports-betting-guide/what-is-a-parlay-bet &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>BT05</td>
+<td>Same Game Parlay (SGP)</td>
+<td>Parlay combining multiple bets from the SAME game (player props, spreads, totals). Sportsbooks build correlation assumptions into the odds.</td>
+<td>SGP+ combines multiple SGPs across different games. One missed leg loses the whole bet.</td>
+<td>S20; S21</td>
+<td><span class="src"><a href="https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nfl" target="_blank" rel="noopener">https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nfl &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>BT06</td>
+<td>Teaser</td>
+<td>Adjusts spread or total by a set number of points (typically 6) across multiple legs in exchange for reduced odds. Needs at least two legs; all legs must win.</td>
+<td>FanDuel guide: most common NFL margins of victory are 3 and 7, so moving e.g. -8.5 to -2.5 crosses both key numbers.</td>
+<td>S20</td>
+<td><span class="src"><a href="https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nfl" target="_blank" rel="noopener">https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nfl &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>BT07</td>
+<td>Player prop</td>
+<td>Wager on a specific player/team performance (e.g., passing yards, rushing yards, TDs, sacks).</td>
+<td>If a player is not listed as active by the official league scoring source, the prop is void (BetMGM rules). Official stats: Elias Sports Bureau / NFL.com.</td>
+<td>S19; S24; S17</td>
+<td><span class="src"><a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener">https://sportsbook.draftkings.com/leagues/football/nfl &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>BT08</td>
+<td>Live (in-play) betting</td>
+<td>Wagers placed after a game has started; markets may include game spread, moneyline, total, quarter/half, eligible player props; odds update continuously.</td>
+<td>Example from DraftKings NFL page.</td>
+<td>S19</td>
+<td><span class="src"><a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener">https://sportsbook.draftkings.com/leagues/football/nfl &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>BT09</td>
+<td>Round robin</td>
+<td>Builds multiple smaller parlays from one larger selection pool; you are covered if some but not all picks win.</td>
+<td>FanDuel NFL guide.</td>
+<td>S20</td>
+<td><span class="src"><a href="https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nfl" target="_blank" rel="noopener">https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nfl &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>BT10</td>
+<td>Grading — overtime</td>
+<td>Full-game spread, moneyline and totals are graded on the final official score INCLUSIVE of overtime (FanDuel FAQ; FanDuel house rules; BetMGM: OT included).</td>
+<td>Quarter-specific markets do not include OT; second-half markets include OT if played (house rules).</td>
+<td>S22; S23; S24</td>
+<td><span class="src"><a href="https://sportsbook.fanduel.com/navigation/nfl" target="_blank" rel="noopener">https://sportsbook.fanduel.com/navigation/nfl &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>BT11</td>
+<td>Grading — postponed / relocated</td>
+<td>Game postponed before kickoff -&gt; all wagers void (FanDuel FAQ). Relocated but played on the scheduled date -&gt; bets remain live (graded on official league box score). BetMGM: football results official after 55 minutes of play.</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td>S22; S24</td>
+<td><span class="src"><a href="https://sportsbook.fanduel.com/navigation/nfl" target="_blank" rel="noopener">https://sportsbook.fanduel.com/navigation/nfl &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>BT12</td>
+<td>Grading — minimum play / incomplete games</td>
+<td>BetMGM house rules: pro/college football results are official after 55 minutes of play unless an official result is declared earlier; incomplete matches settle per postponed/resumed rules.</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td>S24</td>
+<td><span class="src"><a href="https://massgaming.com/wp-content/uploads/BetMGM-House-Rules-8.14.25.pdf" target="_blank" rel="noopener">https://massgaming.com/wp-content/uploads/BetMGM-House-Rules-8.14.25.pdf &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+</tbody></table></div></div></div></main>
+<footer><div class="wrap">
+  <div><h4>Own5 — NFL Line Origination Lab</h4>
+    Verified line-by-line against official sources on 2026-11-02. Unverifiable values are blank and listed on the <a href="flagged.html">Flagged for Review</a> page. Live site: <a href="https://sassnarep3-star.github.io/Own5/">https://sassnarep3-star.github.io/Own5/</a></div>
+  <div><h4>Responsible gambling</h4>
+    Analytics research only. Legal age only; never wager more than you can afford to lose. 24/7 confidential help: <a href="https://www.ncpgambling.org/help-treatment/national-helpline-1-800-522-4700/">1-800-GAMBLER (1-800-426-2537)</a>, text 800GAM — NCPG.</div>
+  <div><h4>Data</h4>
+    Machine-readable tables: <a href="data/">data/</a> (CSV + JSON). Every row carries its official <code>source_url</code>.</div>
+</div></footer>
+<script src="assets/js/site.js"></script>
+</body></html>

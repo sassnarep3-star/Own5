@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flagged for Review · NBA Line Origination</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+  <div class="hwrap">
+    <h1>NBA Line-Origination Lab</h1>
+    <p>Repo: sassnarep3-star/Own5 · Research, validation gates &amp; leaderboard design for originating NBA lines · Built 2026-11-02</p>
+  </div>
+  <nav><a href="index.html">Dashboard</a><a href="executive-summary.html">Executive Summary</a><a href="strategies.html">Strategies</a><a href="validation.html">Validation Gates</a><a href="correlations.html">Correlations</a><a href="bet-types.html">Bet Types</a><a href="skill-vs-luck.html">Skill vs Luck</a><a href="leaderboard.html">Leaderboard</a><a href="sources.html">Sources</a><a href="flagged.html" class="active">Flagged for Review</a></nav>
+</header>
+<main>
+
+<h2>Flagged for Review</h2>
+<div class="banner flag"><strong>This page exists so nothing has to be taken on faith.</strong> Items here are
+irregularities, unverified values (always left blank in the main tables), third-party statistics, and
+industry conventions adopted with caveats. None of these block the site; all await owner review.</div>
+<div class="tablewrap"><table>
+<tr><th>ID</th><th>Type</th><th>Item</th><th>Source / location</th><th>Disposition</th></tr>
+<tr><td><strong>R1</strong></td><td><span class="chip flag">FLAGGED</span> Repo irregularity</td><td>GitHub Pages was already enabled on this repo (main branch, root, legacy build) before any site content existed — the site served an auto-generated README page.</td><td>Observed via GitHub API during repo audit; recorded in COORDINATION.md.</td><td>Resolved at integration: Pages continues to serve the repo root (now the NFL Research Desk built by parallel session cd43258e); this NBA dashboard is served from the /docs/ subpath of the same Pages site. No security impact identified.</td></tr><tr><td><strong>F1</strong></td><td><span class="chip flag">FLAGGED</span> Unverified values (blank)</td><td>All numeric prop-correlation coefficients (C1–C10 r column) — no official or primary source publishes them.</td><td><a class="src" href="correlations.html">correlations.html</a>— directions sourced from industry guides only.</td><td>Left blank per project rule. To fill: run analysis/prop_correlations.py on official stats.nba.com box scores.</td></tr><tr><td><strong>F2</strong></td><td><span class="chip flag">FLAGGED</span> Third-party statistic</td><td>Recent NBA home-win percentages (57.5% 1996-97 → 55.4% 2025-26; min 54.3% 2023-24) come from a third-party dataset, not an official NBA publication.</td><td><a class="src" href="https://swishdunk.com/nba-evolution-30-years-stats" target="_blank" rel="noopener">swishdunk.com</a></td><td>Quoted only as flagged; not asserted as verified. Official verification would require NBA.com season splits.</td></tr><tr><td><strong>F3</strong></td><td><span class="chip flag">FLAGGED</span> Industry convention, not law</td><td>CLV thresholds (+1–2% "strong"), sample-size minimums (200–500 CLV / 1,000–3,000 win-rate / 2,000–5,000 ROI), and the 30–40% walk-forward degradation rule.</td><td><a class="src" href="https://www.sportsbettingoddscalculator.com/guides/closing-line-value" target="_blank" rel="noopener">oddscalculator</a> · <a class="src" href="https://fortraders.com/blog/how-to-avoid-bias-in-backtesting" target="_blank" rel="noopener">fortraders</a></td><td>Adopted as project conventions with this flag; no official standard exists.</td></tr><tr><td><strong>F4</strong></td><td><span class="chip flag">FLAGGED</span> Media-reported, not yet official</td><td>December 2025 league memo: public injury-report updates every 15 minutes; resubmission 11 a.m.–1 p.m. game-day.</td><td><a class="src" href="https://sports.yahoo.com/articles/nba-takes-stand-injury-reporting-231429192.html" target="_blank" rel="noopener">Yahoo Sports</a></td><td>Not found on official.nba.com at build time; treat cadence as unconfirmed until the official page reflects it.</td></tr><tr><td><strong>F5</strong></td><td><span class="chip flag">FLAGGED</span> Attribution unconfirmed</td><td>"8,495 regular-season games (1987-88–1994-95): more rest improved performance, peak at 3 days" — study quoted secondhand without full citation in accessible sources.</td><td><a class="src" href="https://www.researchgate.net/publication/373588492_Rest_or_rust_Complex_influence_of_schedule_congestion_on_the_home_advantage_in_the_National_Basketball_Association" target="_blank" rel="noopener">ResearchGate (quoting snippet)</a></td><td>Not used in any strategy table. Needs original-paper verification before use.</td></tr><tr><td><strong>F6</strong></td><td><span class="chip flag">FLAGGED</span> Excluded source</td><td>bettoredge.com CLV article: "positive-CLV bettors see 2–3× higher ROI" and a CLV→ROI rule attributed to "professional bettor Joey Ingram" — quantitative claims without methodology; attribution could not be verified.</td><td><a class="src" href="https://www.bettoredge.com/post/what-is-closing-line-value-in-sports-betting" target="_blank" rel="noopener">bettoredge.com</a></td><td>Excluded from all tables.</td></tr><tr><td><strong>F7</strong></td><td><span class="chip flag">FLAGGED</span> No live data in build sandbox</td><td>The build environment had no network route to stats.nba.com, so no box-score-derived values (correlations, with/without splits) could be computed in-session.</td><td>COORDINATION.md verification log.</td><td>All affected fields left blank; tooling committed so values can be computed and sourced later.</td></tr><tr><td><strong>F9</strong></td><td><span class="chip flag">FLAGGED</span> Parallel-session scope note</td><td>A parallel agent session (cd43258e) built an NFL Research Desk at the repo root (merged to main via PR #1) although the project brief specified NBA. Work preserved per coordination rules; both dashboards now co-exist (NFL at site root, NBA here under /docs/).</td><td><a class="src" href="../index.html">NFL Research Desk</a> · COORDINATION.md</td><td>No work discarded. Owner may decide whether the NFL desk stays, moves, or is removed.</td></tr><tr><td><strong>F8</strong></td><td><span class="chip flag">FLAGGED</span> Empty leaderboard</td><td>Leaderboard standings are intentionally empty — no strategy has passed the gates; no bets have been placed.</td><td><a class="src" href="leaderboard.html">leaderboard.html</a></td><td>Not an error. Guard against anyone "filling it in" without gate-passing records.</td></tr>
+</table></div>
+<h3>Review workflow</h3>
+<ol>
+<li>Open the linked source and compare against the claim text above.</li>
+<li>If verified against an official/primary source, move the value into the relevant table with its link and remove the flag (via PR).</li>
+<li>If contradicted, delete the item from the repo entirely — do not "correct" it in place without a source.</li>
+</ol>
+
+</main>
+<footer>
+  Every table row carries a source link and tier: <span class="chip official">OFFICIAL</span> NBA league source ·
+  <span class="chip primary">PRIMARY</span> peer-reviewed / preprint / primary author ·
+  <span class="chip industry">INDUSTRY</span> betting-industry convention (listed on <a href="flagged.html">Flagged for Review</a>).
+  Unconfirmable values are left blank — never inferred. No performance claims are made anywhere on this site.<br>
+  This repo also hosts the <a href="../index.html">NFL Research Desk</a> (built by parallel session cd43258e).
+</footer>
+</body>
+</html>

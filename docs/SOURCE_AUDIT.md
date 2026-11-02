@@ -41,4 +41,4 @@ Computed sums are derived checks, not separately published official totals. The 
 - FanDuel’s help is an official **operator** source, not a universal rule for all sportsbooks.
 - Community mirrors and scrapers were inspected only to understand public document discovery. They are not used as factual sources in the dataset.
 
-All review items, including the official links needed to inspect them, are in `data/review_items.json` and on the site’s Flagged for Review page.
+All review items, including the official links needed to inspect them, are in `data/own5_desk/review_items.json` and on the site’s Flagged for Review page.

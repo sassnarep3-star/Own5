@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Executive Summary · Own5</title>
+<meta name="description" content="Own5 — NFL line origination & skill-based strategy lab. Fully sourced from official NFL and operator sources.">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏈</text></svg>">
+</head><body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html">Own5 <span>· NFL Line Originator</span></a>
+  <nav class="main"><a href="index.html">Overview</a><a href="executive-summary.html" class="active">Executive Summary</a><a href="detail-strategies.html">Strategies &amp; Leaderboard</a><a href="signals.html">Signals</a><a href="detail-validation.html">Validation Gates</a><a href="detail-correlations.html">Correlations</a><a href="bet-types.html">Bet Types &amp; Combos</a><a href="data.html">Data &amp; League Facts</a><a href="detail-sources.html">Sources</a><a href="flagged.html">Flagged for Review</a></nav>
+</div></header>
+<main><section class="page"><div class="wrap"><h2 class="sec">Executive Summary</h2><p class="sub">All factual claims link to official sources; blanks are intentional (see flagged.html).</p></div><div class="wrap"><div class="panel"><h2>Executive Summary — Own5: NFL Line Origination &amp; Skill-Based Strategy Lab</h2>
+<p><strong>Prepared:</strong> 2026-11-02 (UTC) · <strong>Season context:</strong> 2026 NFL regular season, Week 8 complete (Monday Night Football Nov 2) · <strong>Repo:</strong> sassnarep3-star/Own5 · <strong>Live site:</strong> https://sassnarep3-star.github.io/Own5/</p>
+<h3>What this project is</h3>
+<p>Own5 is an automated research lab for <strong>originating our own NFL betting lines</strong> instead of passively accepting market prices. The goal is to collect, organize, and analyze NFL data from official sources only, generate <strong>useful signals</strong>, run every candidate strategy through <strong>validation gates</strong>, measure and cap <strong>correlations</strong>, and rank surviving strategies on a <strong>leaderboard with reward tiers</strong>. Single bets, parlays, and player-prop combos are all in scope.</p>
+<h3>Key verified facts (all sourced — see <a href="detail-sources.html" target="_blank" rel="noopener">Sources &#8599;</a>)</h3>
+<ul class="tight">
+<li>The 2026 NFL regular season is <strong>18 weeks, 272 games</strong>; each of the <strong>32 teams</strong> plays <strong>17 games</strong> and <strong>3 preseason games</strong>, with <strong>one bye week</strong> (byes run Weeks 5–14; none in Week 12). Kickoff was Wednesday, Sept 9, 2026 in Seattle; Week 18 is Jan 9–10, 2027 with all 16 games intra-division. Nine international games are played in 2026 — the most ever. <a href="https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced" target="_blank" rel="noopener">NFL Media, May 14, 2026 &#8599;</a> · <a href="https://amp.nfl.com/news/2026-nfl-schedule-release-every-team-bye-week" target="_blank" rel="noopener">bye weeks per team &#8599;</a></li>
+<li>Playoffs: <strong>14 teams (7 per conference) since 2020</strong>; only the <strong>No. 1 seed per conference</strong> gets a bye; Wild Card is 2v7, 3v6, 4v5. <a href="https://www.nfl.com/news/owners-approve-expanding-postseason-to-14-teams-0ap3000001107961" target="_blank" rel="noopener">NFL.com &#8599;</a></li>
+<li>A tie counts as <strong>half a win and half a loss</strong>; full official tiebreaking ladder published by the league. <a href="https://www.nfl.com/standings/tie-breaking-procedures" target="_blank" rel="noopener">NFL.com tiebreaking procedures &#8599;</a></li>
+<li><strong>2026 salary cap: $301.2M per club</strong> — first time above $300M (2025: $279.2M). <a href="https://www.nfl.com/news/nfl-announces-2026-salary-cap-set-at-301-2-million-per-team" target="_blank" rel="noopener">NFL.com &#8599;</a></li>
+<li>An NFL game is <strong>60 minutes (four 15-minute periods)</strong>; overtime per Rule 16 of the 2026 Official Playing Rules. <a href="https://operations.nfl.com/rules-officiating/2026-nfl-rulebook" target="_blank" rel="noopener">operations.nfl.com rulebook &#8599;</a></li>
+<li><strong>Next Gen Stats</strong> (Zebra/Wilson sensors on AWS) capture player location, speed and acceleration <strong>10×/second, 200+ data points per play</strong> in every venue. <a href="https://operations.nfl.com/gameday/technology/nfl-next-gen-stats" target="_blank" rel="noopener">NFL Football Operations &#8599;</a></li>
+<li><strong>Elias Sports Bureau</strong> is the official statistician of the NFL; official stat corrections are released by the NFL League Office. <a href="https://fantasy.nfl.com/research/statcorrections" target="_blank" rel="noopener">NFL stat corrections &#8599;</a></li>
+<li>The NFL&#x27;s <strong>Official Sports Betting Partners</strong> are <strong>Caesars, DraftKings and FanDuel</strong>, and all three use the <strong>NFL&#x27;s official league data feed</strong>. <a href="https://www.nfl.com/news/nfl-announces-tri-exclusive-sports-betting-partners" target="_blank" rel="noopener">NFL.com &#8599;</a></li>
+</ul>
+<h3>Current verified snapshot (2026-11-02, through Week 8)</h3>
+<ul class="tight">
+<li>Full 32-team standings captured from <a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">nfl.com/standings &#8599;</a> → <code>data/standings-2026-wk8.csv</code>. Leaders: BUF 6-1, SF 6-1, MIN 6-1, PIT 6-2, DEN 6-2; bottom: LAC 0-7, TEN 1-7, MIA 1-6.</li>
+<li>Week 8 schedule/results captured from <a href="https://www.nfl.com/schedules" target="_blank" rel="noopener">nfl.com/schedules &#8599;</a> → <code>data/week8-2026-results.csv</code> (14 games; byes HOU, NO, NYG, SF; MNF Nov 2 CHI@SEA 8:15 PM ESPN, game card weather note &quot;Clear, night&quot;).</li>
+<li>Official Week 8 injury report: <a href="https://www.nfl.com/injuries/" target="_blank" rel="noopener">nfl.com/injuries &#8599;</a>.</li>
+<li>2026 passing leaders captured from <a href="https://www.nfl.com/stats/player-stats/" target="_blank" rel="noopener">nfl.com/stats/player-stats &#8599;</a> → <code>data/player-passing-2026.csv</code> (1. Jordan Love 2,246 yds … 10. Aaron Rodgers 1,871 yds).</li>
+</ul>
+<h3>Strategy framework (10 strategies, all pending validation)</h3>
+<p>Singles (STR01 rest-edge, STR02 net-points mismatch, STR04 injury-adjusted, STR10 division dogs), player props (STR03 QB prop value), parlays (STR05 two-leg cross-game), same-game combos (STR06 SGP selective, STR07 cross-player prop combos inside SGP only), teasers (STR08 key-number 3/7), and live (STR09). <strong>No performance numbers are shown anywhere: no graded-bet history exists yet, so every leaderboard metric cell is intentionally blank</strong> (flag F07) — fabricating results would violate the project&#x27;s no-hallucination rule.</p>
+<h3>Validation gates (the anti-luck machinery)</h3>
+<p>12 gates (G01–G12): minimum sample (n≥30), backtest ROI&gt;0 with 95% CI above break-even, walk-forward holdout, CLV (defined but <strong>flagged — no official source publishes closing lines</strong>, F01), correlation cap |r|&lt;0.50 between strategies, max drawdown &lt;20%, quarter-Kelly sizing, 100% officially-sourced inputs, parlay correlation rule (house rules void unpermitted correlated legs), grading integrity (OT included; pushes refund; postponed → void; inactive player → prop void), liquidity/limits, and a standing responsible-gambling gate (1-800-GAMBLER, 24/7 confidential — <a href="https://www.ncpgambling.org/help-treatment/national-helpline-1-800-522-4700/" target="_blank" rel="noopener">NCPG &#8599;</a>).</p>
+<h3>Correlation findings (computed in-repo from official standings)</h3>
+<p>Pearson r across all 32 teams (2026 through Week 8, <a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">nfl.com/standings &#8599;</a>, computed by <code>tools/compute_correlations.py</code> → <code>data/correlations.csv</code>):</p>
+<ul class="tight">
+<li><strong>Net points per game vs. winning %: r = 0.839</strong> (strongest single-team signal)</li>
+<li>Points scored per game vs. win%: r = 0.614; points allowed per game vs. win%: r = −0.580</li>
+<li>Offense vs. defense per game (PF/G vs. PA/G): r = −0.012 (essentially independent — supports building separate offensive and defensive signals)</li>
+<li>Same-game betting-leg correlation coefficients: <strong>not available from any official source → left blank, flagged (F03)</strong></li>
+</ul>
+<h3>Bet-type rules that shape the combos</h3>
+<p>From official operator sources (<a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener">DraftKings NFL page &#8599;</a>, <a href="https://sportsbook.fanduel.com/navigation/nfl" target="_blank" rel="noopener">FanDuel guides &amp; grading FAQ &#8599;</a>, <a href="https://www.fanduel.com/fanduel-sportsbook-house-rules-on" target="_blank" rel="noopener">FanDuel house rules &#8599;</a>, <a href="https://massgaming.com/wp-content/uploads/BetMGM-House-Rules-8.14.25.pdf" target="_blank" rel="noopener">BetMGM regulator-approved house rules &#8599;</a>): parlays need ≥2 legs and every leg must win; <strong>correlated selections are not permitted unless explicitly offered (e.g., SGP)</strong>; void legs re-price the parlay; OT counts for full-game spread/ML/totals; whole-number spread/total landing on the number is a push (refund); postponed before kickoff → void; relocated same-day → action; football results official after 55 minutes; player prop void if player not active; most common NFL margins are <strong>3 and 7</strong> (teaser key numbers).</p>
+<h3>Irregularities flagged for review</h3>
+<p>12 items on the <a href="flagged.html" target="_blank" rel="noopener">Flagged for Review &#8599;</a> page — including the standings deep-link rendering &quot;No Standings Available&quot; to automated fetches (F09), injury-URL week-label mismatch (F10), dynamic line values not snapshotted (F02), and all unverifiable market-history items (F01, F03, F04, F06). <strong>None block publication; all unverifiable values are blank, never inferred.</strong></p>
+<h3>Responsible gambling</h3>
+<p>This project is analytics research only. Sports betting is restricted to adults of legal age in their jurisdiction and carries real risk of loss. If gambling stops being fun: <strong>1-800-GAMBLER (1-800-426-2537)</strong>, text 800GAM, or chat — 24/7, confidential, all 50 states. <a href="https://www.ncpgambling.org/help-treatment/national-helpline-1-800-522-4700/" target="_blank" rel="noopener">National Council on Problem Gambling &#8599;</a></p></div></div></main>
+<footer><div class="wrap">
+  <div><h4>Own5 — NFL Line Origination Lab</h4>
+    Verified line-by-line against official sources on 2026-11-02. Unverifiable values are blank and listed on the <a href="flagged.html">Flagged for Review</a> page. Live site: <a href="https://sassnarep3-star.github.io/Own5/">https://sassnarep3-star.github.io/Own5/</a></div>
+  <div><h4>Responsible gambling</h4>
+    Analytics research only. Legal age only; never wager more than you can afford to lose. 24/7 confidential help: <a href="https://www.ncpgambling.org/help-treatment/national-helpline-1-800-522-4700/">1-800-GAMBLER (1-800-426-2537)</a>, text 800GAM — NCPG.</div>
+  <div><h4>Data</h4>
+    Machine-readable tables: <a href="data/">data/</a> (CSV + JSON). Every row carries its official <code>source_url</code>.</div>
+</div></footer>
+<script src="assets/js/site.js"></script>
+</body></html>

@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "season": 2026,
+    "market": "Super Bowl LXI Winner (future)",
+    "as_of": "2026-11-02",
+    "source": "https://www.espn.com/nfl/odds",
+    "provider": "DraftKings (via ESPN betting widget)",
+    "verification": "Odds read directly from the ESPN odds page's 'Super Bowl Winner' tables fetched 2026-11-02; each value cell on the source page is a DraftKings deep link.",
+    "flags": [
+      {"id":"FUT-PARTIAL-FIELD","scope":"field coverage","severity":"data-gap","description":"The source page displayed only the top16 teams by odds. The remaining16 teams' futures were not displayed on the page and are therefore NOT published (left blank) rather than inferred. No values fabricated."}
+    ]
+  },
+  "odds": [
+    {"abbr":"SF","name":"San Francisco 49ers","odds":580,"american":"+580","prob_no_vig":0.1471},
+    {"abbr":"BUF","name":"Buffalo Bills","odds":650,"american":"+650","prob_no_vig":0.1333},
+    {"abbr":"KC","name":"Kansas City Chiefs","odds":950,"american":"+950","prob_no_vig":0.0952},
+    {"abbr":"SEA","name":"Seattle Seahawks","odds":1000,"american":"+1000","prob_no_vig":0.0909},
+    {"abbr":"JAX","name":"Jacksonville Jaguars","odds":1000,"american":"+1000","prob_no_vig":0.0909},
+    {"abbr":"LAR","name":"Los Angeles Rams","odds":1100,"american":"+1100","prob_no_vig":0.0833},
+    {"abbr":"CHI","name":"Chicago Bears","odds":1100,"american":"+1100","prob_no_vig":0.0833},
+    {"abbr":"CIN","name":"Cincinnati Bengals","odds":1500,"american":"+1500","prob_no_vig":0.0625},
+    {"abbr":"DEN","name":"Denver Broncos","odds":1600,"american":"+1600","prob_no_vig":0.0588},
+    {"abbr":"DET","name":"Detroit Lions","odds":1800,"american":"+1800","prob_no_vig":0.0526},
+    {"abbr":"NE","name":"New England Patriots","odds":1900,"american":"+1900","prob_no_vig":0.0500},
+    {"abbr":"MIN","name":"Minnesota Vikings","odds":1900,"american":"+1900","prob_no_vig":0.0500},
+    {"abbr":"GB","name":"Green Bay Packers","odds":3000,"american":"+3000","prob_no_vig":0.0323},
+    {"abbr":"HOU","name":"Houston Texans","odds":3500,"american":"+3500","prob_no_vig":0.0278},
+    {"abbr":"DAL","name":"Dallas Cowboys","odds":5000,"american":"+5000","prob_no_vig":0.0196},
+    {"abbr":"PIT","name":"Pittsburgh Steelers","odds":5000,"american":"+5000","prob_no_vig":0.0196}
+  ],
+  "not_displayed_note": "Teams not shown on source page (blank, flagged FUT-PARTIAL-FIELD): remaining16 NFL clubs including AFC South / NFC South depth etc. Published only what the source displayed."
+}

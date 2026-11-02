@@ -1,0 +1,638 @@
+{
+ "generated": "2026-11-02",
+ "all_pass": true,
+ "final_games_checked": 120,
+ "teams_checked": 32,
+ "score_source_coverage": {
+  "direct_nfl_com_verified": 58,
+  "pfr_plus_standings_reconciliation": 62
+ },
+ "checks": [
+  {
+   "check": "final games have scores",
+   "n": 120,
+   "errors": 0
+  },
+  {
+   "check": "per-team W-L-T vs official",
+   "n": 32,
+   "errors": 0
+  },
+  {
+   "check": "per-team PF/PA vs official",
+   "n": 32,
+   "errors": 0
+  }
+ ],
+ "errors": [],
+ "teams": [
+  {
+   "team": "ARI",
+   "official_wlt": "3-5-0",
+   "computed_wlt": "3-5-0",
+   "official_pf_pa": [
+    175,
+    238
+   ],
+   "computed_pf_pa": [
+    175,
+    238
+   ],
+   "home": "0-3-0",
+   "road": "3-2-0",
+   "div": "1-2-0",
+   "conf": "2-4-0",
+   "l5": "LLWLW",
+   "ok": true
+  },
+  {
+   "team": "ATL",
+   "official_wlt": "3-5-0",
+   "computed_wlt": "3-5-0",
+   "official_pf_pa": [
+    171,
+    189
+   ],
+   "computed_pf_pa": [
+    171,
+    189
+   ],
+   "home": "1-3-0",
+   "road": "2-2-0",
+   "div": "1-2-0",
+   "conf": "3-3-0",
+   "l5": "WLLWL",
+   "ok": true
+  },
+  {
+   "team": "BAL",
+   "official_wlt": "4-4-0",
+   "computed_wlt": "4-4-0",
+   "official_pf_pa": [
+    179,
+    203
+   ],
+   "computed_pf_pa": [
+    179,
+    203
+   ],
+   "home": "1-2-0",
+   "road": "3-2-0",
+   "div": "0-2-0",
+   "conf": "2-3-0",
+   "l5": "WWLLL",
+   "ok": true
+  },
+  {
+   "team": "BUF",
+   "official_wlt": "6-1-0",
+   "computed_wlt": "6-1-0",
+   "official_pf_pa": [
+    233,
+    181
+   ],
+   "computed_pf_pa": [
+    233,
+    181
+   ],
+   "home": "3-1-0",
+   "road": "3-0-0",
+   "div": "0-1-0",
+   "conf": "4-1-0",
+   "l5": "WLWWW",
+   "ok": true
+  },
+  {
+   "team": "CAR",
+   "official_wlt": "3-4-0",
+   "computed_wlt": "3-4-0",
+   "official_pf_pa": [
+    178,
+    193
+   ],
+   "computed_pf_pa": [
+    178,
+    193
+   ],
+   "home": "1-2-0",
+   "road": "2-2-0",
+   "div": "1-1-0",
+   "conf": "3-3-0",
+   "l5": "LWWLL",
+   "ok": true
+  },
+  {
+   "team": "CHI",
+   "official_wlt": "5-2-0",
+   "computed_wlt": "5-2-0",
+   "official_pf_pa": [
+    180,
+    143
+   ],
+   "computed_pf_pa": [
+    180,
+    143
+   ],
+   "home": "3-1-0",
+   "road": "2-1-0",
+   "div": "0-2-0",
+   "conf": "3-2-0",
+   "l5": "WWLWW",
+   "ok": true
+  },
+  {
+   "team": "CIN",
+   "official_wlt": "5-2-0",
+   "computed_wlt": "5-2-0",
+   "official_pf_pa": [
+    206,
+    158
+   ],
+   "computed_pf_pa": [
+    206,
+    158
+   ],
+   "home": "2-1-0",
+   "road": "3-1-0",
+   "div": "1-1-0",
+   "conf": "4-2-0",
+   "l5": "LLWWW",
+   "ok": true
+  },
+  {
+   "team": "CLE",
+   "official_wlt": "5-3-0",
+   "computed_wlt": "5-3-0",
+   "official_pf_pa": [
+    139,
+    173
+   ],
+   "computed_pf_pa": [
+    139,
+    173
+   ],
+   "home": "3-0-0",
+   "road": "2-3-0",
+   "div": "2-1-0",
+   "conf": "3-3-0",
+   "l5": "WLWWL",
+   "ok": true
+  },
+  {
+   "team": "DAL",
+   "official_wlt": "3-5-0",
+   "computed_wlt": "3-5-0",
+   "official_pf_pa": [
+    219,
+    213
+   ],
+   "computed_pf_pa": [
+    219,
+    213
+   ],
+   "home": "1-4-0",
+   "road": "2-1-0",
+   "div": "2-1-0",
+   "conf": "2-4-0",
+   "l5": "WLLWL",
+   "ok": true
+  },
+  {
+   "team": "DEN",
+   "official_wlt": "6-2-0",
+   "computed_wlt": "6-2-0",
+   "official_pf_pa": [
+    172,
+    165
+   ],
+   "computed_pf_pa": [
+    172,
+    165
+   ],
+   "home": "4-0-0",
+   "road": "2-2-0",
+   "div": "2-1-0",
+   "conf": "3-1-0",
+   "l5": "LWWWW",
+   "ok": true
+  },
+  {
+   "team": "DET",
+   "official_wlt": "5-2-0",
+   "computed_wlt": "5-2-0",
+   "official_pf_pa": [
+    203,
+    180
+   ],
+   "computed_pf_pa": [
+    203,
+    180
+   ],
+   "home": "4-0-0",
+   "road": "1-2-0",
+   "div": "2-0-0",
+   "conf": "4-1-0",
+   "l5": "WLWWW",
+   "ok": true
+  },
+  {
+   "team": "GB",
+   "official_wlt": "5-3-0",
+   "computed_wlt": "5-3-0",
+   "official_pf_pa": [
+    171,
+    164
+   ],
+   "computed_pf_pa": [
+    171,
+    164
+   ],
+   "home": "2-1-0",
+   "road": "3-2-0",
+   "div": "1-2-0",
+   "conf": "4-3-0",
+   "l5": "WWWLW",
+   "ok": true
+  },
+  {
+   "team": "HOU",
+   "official_wlt": "2-5-0",
+   "computed_wlt": "2-5-0",
+   "official_pf_pa": [
+    165,
+    170
+   ],
+   "computed_pf_pa": [
+    165,
+    170
+   ],
+   "home": "0-4-0",
+   "road": "2-1-0",
+   "div": "2-1-0",
+   "conf": "2-3-0",
+   "l5": "LLWWL",
+   "ok": true
+  },
+  {
+   "team": "IND",
+   "official_wlt": "2-6-0",
+   "computed_wlt": "2-6-0",
+   "official_pf_pa": [
+    161,
+    222
+   ],
+   "computed_pf_pa": [
+    161,
+    222
+   ],
+   "home": "1-2-0",
+   "road": "1-4-0",
+   "div": "1-2-0",
+   "conf": "1-5-0",
+   "l5": "WLLLL",
+   "ok": true
+  },
+  {
+   "team": "JAX",
+   "official_wlt": "5-2-0",
+   "computed_wlt": "5-2-0",
+   "official_pf_pa": [
+    196,
+    111
+   ],
+   "computed_pf_pa": [
+    196,
+    111
+   ],
+   "home": "4-1-0",
+   "road": "1-1-0",
+   "div": "1-1-0",
+   "conf": "4-2-0",
+   "l5": "WWWLW",
+   "ok": true
+  },
+  {
+   "team": "KC",
+   "official_wlt": "5-2-0",
+   "computed_wlt": "5-2-0",
+   "official_pf_pa": [
+    167,
+    131
+   ],
+   "computed_pf_pa": [
+    167,
+    131
+   ],
+   "home": "3-1-0",
+   "road": "2-1-0",
+   "div": "3-1-0",
+   "conf": "5-1-0",
+   "l5": "WWWLL",
+   "ok": true
+  },
+  {
+   "team": "LAC",
+   "official_wlt": "0-7-0",
+   "computed_wlt": "0-7-0",
+   "official_pf_pa": [
+    99,
+    175
+   ],
+   "computed_pf_pa": [
+    99,
+    175
+   ],
+   "home": "0-3-0",
+   "road": "0-4-0",
+   "div": "0-3-0",
+   "conf": "0-4-0",
+   "l5": "LLLLL",
+   "ok": true
+  },
+  {
+   "team": "LAR",
+   "official_wlt": "4-4-0",
+   "computed_wlt": "4-4-0",
+   "official_pf_pa": [
+    194,
+    168
+   ],
+   "computed_pf_pa": [
+    194,
+    168
+   ],
+   "home": "2-3-0",
+   "road": "2-1-0",
+   "div": "0-2-0",
+   "conf": "2-2-0",
+   "l5": "WLLWW",
+   "ok": true
+  },
+  {
+   "team": "LV",
+   "official_wlt": "4-4-0",
+   "computed_wlt": "4-4-0",
+   "official_pf_pa": [
+    221,
+    230
+   ],
+   "computed_pf_pa": [
+    221,
+    230
+   ],
+   "home": "1-3-0",
+   "road": "3-1-0",
+   "div": "1-1-0",
+   "conf": "3-3-0",
+   "l5": "LLLLW",
+   "ok": true
+  },
+  {
+   "team": "MIA",
+   "official_wlt": "1-6-0",
+   "computed_wlt": "1-6-0",
+   "official_pf_pa": [
+    117,
+    181
+   ],
+   "computed_pf_pa": [
+    117,
+    181
+   ],
+   "home": "0-3-0",
+   "road": "1-3-0",
+   "div": "1-1-0",
+   "conf": "1-4-0",
+   "l5": "LLLWL",
+   "ok": true
+  },
+  {
+   "team": "MIN",
+   "official_wlt": "6-1-0",
+   "computed_wlt": "6-1-0",
+   "official_pf_pa": [
+    140,
+    93
+   ],
+   "computed_pf_pa": [
+    140,
+    93
+   ],
+   "home": "3-0-0",
+   "road": "3-1-0",
+   "div": "2-1-0",
+   "conf": "4-1-0",
+   "l5": "WWWWL",
+   "ok": true
+  },
+  {
+   "team": "NE",
+   "official_wlt": "5-3-0",
+   "computed_wlt": "5-3-0",
+   "official_pf_pa": [
+    184,
+    162
+   ],
+   "computed_pf_pa": [
+    184,
+    162
+   ],
+   "home": "2-0-0",
+   "road": "3-3-0",
+   "div": "3-0-0",
+   "conf": "5-1-0",
+   "l5": "WWWLW",
+   "ok": true
+  },
+  {
+   "team": "NO",
+   "official_wlt": "2-5-0",
+   "computed_wlt": "2-5-0",
+   "official_pf_pa": [
+    162,
+    194
+   ],
+   "computed_pf_pa": [
+    162,
+    194
+   ],
+   "home": "0-4-0",
+   "road": "2-1-0",
+   "div": "0-1-0",
+   "conf": "1-3-0",
+   "l5": "LLLWL",
+   "ok": true
+  },
+  {
+   "team": "NYG",
+   "official_wlt": "4-2-1",
+   "computed_wlt": "4-2-1",
+   "official_pf_pa": [
+    163,
+    161
+   ],
+   "computed_pf_pa": [
+    163,
+    161
+   ],
+   "home": "3-1-0",
+   "road": "1-1-1",
+   "div": "1-0-1",
+   "conf": "2-2-1",
+   "l5": "WWTLW",
+   "ok": true
+  },
+  {
+   "team": "NYJ",
+   "official_wlt": "2-6-0",
+   "computed_wlt": "2-6-0",
+   "official_pf_pa": [
+    170,
+    188
+   ],
+   "computed_pf_pa": [
+    170,
+    188
+   ],
+   "home": "1-4-0",
+   "road": "1-2-0",
+   "div": "0-2-0",
+   "conf": "2-3-0",
+   "l5": "LWLLL",
+   "ok": true
+  },
+  {
+   "team": "PHI",
+   "official_wlt": "2-6-0",
+   "computed_wlt": "2-6-0",
+   "official_pf_pa": [
+    137,
+    202
+   ],
+   "computed_pf_pa": [
+    137,
+    202
+   ],
+   "home": "1-3-0",
+   "road": "1-3-0",
+   "div": "1-2-0",
+   "conf": "1-5-0",
+   "l5": "LLLLL",
+   "ok": true
+  },
+  {
+   "team": "PIT",
+   "official_wlt": "6-2-0",
+   "computed_wlt": "6-2-0",
+   "official_pf_pa": [
+    180,
+    144
+   ],
+   "computed_pf_pa": [
+    180,
+    144
+   ],
+   "home": "4-0-0",
+   "road": "2-2-0",
+   "div": "2-1-0",
+   "conf": "3-2-0",
+   "l5": "LWWWW",
+   "ok": true
+  },
+  {
+   "team": "SEA",
+   "official_wlt": "4-3-0",
+   "computed_wlt": "4-3-0",
+   "official_pf_pa": [
+    168,
+    125
+   ],
+   "computed_pf_pa": [
+    168,
+    125
+   ],
+   "home": "2-1-0",
+   "road": "2-2-0",
+   "div": "1-1-0",
+   "conf": "1-2-0",
+   "l5": "LWLLW",
+   "ok": true
+  },
+  {
+   "team": "SF",
+   "official_wlt": "6-1-0",
+   "computed_wlt": "6-1-0",
+   "official_pf_pa": [
+    197,
+    139
+   ],
+   "computed_pf_pa": [
+    197,
+    139
+   ],
+   "home": "4-0-0",
+   "road": "2-1-0",
+   "div": "3-0-0",
+   "conf": "4-1-0",
+   "l5": "WWWWL",
+   "ok": true
+  },
+  {
+   "team": "TB",
+   "official_wlt": "3-5-0",
+   "computed_wlt": "3-5-0",
+   "official_pf_pa": [
+    178,
+    151
+   ],
+   "computed_pf_pa": [
+    178,
+    151
+   ],
+   "home": "1-4-0",
+   "road": "2-1-0",
+   "div": "2-0-0",
+   "conf": "3-2-0",
+   "l5": "LWLWW",
+   "ok": true
+  },
+  {
+   "team": "TEN",
+   "official_wlt": "1-7-0",
+   "computed_wlt": "1-7-0",
+   "official_pf_pa": [
+    144,
+    199
+   ],
+   "computed_pf_pa": [
+    144,
+    199
+   ],
+   "home": "0-4-0",
+   "road": "1-3-0",
+   "div": "1-1-0",
+   "conf": "1-5-0",
+   "l5": "LLWLL",
+   "ok": true
+  },
+  {
+   "team": "WSH",
+   "official_wlt": "2-4-1",
+   "computed_wlt": "2-4-1",
+   "official_pf_pa": [
+    159,
+    182
+   ],
+   "computed_pf_pa": [
+    159,
+    182
+   ],
+   "home": "2-1-1",
+   "road": "0-3-0",
+   "div": "1-2-1",
+   "conf": "2-3-1",
+   "l5": "WLTLW",
+   "ok": true
+  }
+ ]
+}

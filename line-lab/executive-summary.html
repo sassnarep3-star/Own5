@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Executive Summary — NFL Line Lab 2026</title><style>
+:root{--bg:#0d1117;--card:#161b22;--line:#30363d;--txt:#e6edf3;--mut:#9198a1;--acc:#58a6ff;--ok:#3fb950;--warn:#d29922;--bad:#f85149;--gold:#e3b341}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--txt);line-height:1.5}
+a{color:var(--acc);text-decoration:none}
+a:hover{text-decoration:underline}
+header{background:var(--card);border-bottom:1px solid var(--line);padding:14px 24px;position:sticky;top:0;z-index:10}
+header h1{margin:0;font-size:19px;display:inline-block}
+header .sub{color:var(--mut);font-size:12px;margin-left:10px}
+nav{margin-top:8px;display:flex;flex-wrap:wrap;gap:14px;font-size:14px}
+nav a{color:var(--mut)}
+nav a.active,nav a:hover{color:var(--acc);text-decoration:none}
+main{max-width:1200px;margin:0 auto;padding:24px}
+h2{border-bottom:1px solid var(--line);padding-bottom:6px;margin-top:6px}
+h3{color:var(--acc);margin-bottom:6px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin:16px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px}
+.card h3{margin-top:0;color:var(--txt)}
+.card .big{font-size:26px;font-weight:700;margin:4px 0}
+.card p{color:var(--mut);font-size:13px;margin:4px 0}
+table{border-collapse:collapse;width:100%;font-size:13.5px;margin:12px 0;background:var(--card)}
+th,td{border:1px solid var(--line);padding:6px 9px;text-align:left;vertical-align:top}
+th{background:#21262d;color:var(--mut);font-weight:600;position:sticky;top:0}
+tr:nth-child(even) td{background:#12171d}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+.badge{display:inline-block;font-size:11px;padding:1px 7px;border-radius:10px;border:1px solid var(--line);margin-left:4px;vertical-align:middle}
+.b-ok{color:var(--ok);border-color:var(--ok)}
+.b-warn{color:var(--warn);border-color:var(--warn)}
+.b-bad{color:var(--bad);border-color:var(--bad)}
+.b-mut{color:var(--mut)}
+.flag{color:var(--warn);font-weight:700}
+.ok{color:var(--ok);font-weight:700}
+.bad{color:var(--bad);font-weight:700}
+.mut{color:var(--mut)}
+.note{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--acc);padding:10px 14px;margin:12px 0;font-size:14px;border-radius:0 6px 6px 0}
+.note.warn{border-left-color:var(--warn)}
+.note.bad{border-left-color:var(--bad)}
+.small{font-size:12px;color:var(--mut)}
+.src{font-size:12px;white-space:nowrap}
+footer{border-top:1px solid var(--line);color:var(--mut);font-size:12px;padding:18px 24px;text-align:center;margin-top:30px}
+.wk-head{background:#21262d;color:var(--acc);font-weight:700}
+.scroll{overflow-x:auto}
+@media(max-width:760px){table{font-size:12px}th,td{padding:4px 5px}}
+</style></head>
+<body>
+<header><h1>NFL Line Lab —2026 Season</h1><span class="sub">data frozen 2026-11-02 · every row source-linked · unverifiable values blank + flagged</span>
+<nav><a href="index.html">Dashboard</a><a href="standings.html">Standings</a><a href="scores.html">Scores</a><a href="lines.html">Lines</a><a href="strategies.html">Strategies</a><a href="analysis.html">Analysis</a><a href="leaderboard.html">Leaderboard</a><a href="flagged.html">Flagged</a><a href="verification.html">Verification</a><a href="executive-summary.html" class="active">Executive Summary</a><a href="sources.html">Sources</a></nav></header>
+<main>
+
+<h2>Executive summary</h2>
+<div class="note"><b>What was built.</b> A complete, source-linked NFL line-origination & betting-strategy project for the2026 season: verified data spine (standings, full game log, upcoming lines), a line-generation model with published divergence vs market, a gate-based strategy competition (singles / parlays / props), luck-isolation statistics, and this site. Everything below is reproducible from the repo with zero manual input.</div>
+
+<h3>Data & verification</h3>
+<ul>
+<li><b>Standings:</b> all32 teams read from <a href="https://www.nfl.com/standings/">nfl.com</a> (2026-11-02) — W-L-T, PF, PA, streaks.</li>
+<li><b>Scores:</b> 120 final games (Weeks1–8, incl. the Week5 NYG-WSH tie) + Week9 schedule; 58 verified directly on nfl.com, the rest via PFR <i>and</i> exact standings reconciliation (32/32 teams pass) — <a href="verification.html">verification</a>.</li>
+<li><b>Lines:</b> 16 upcoming boards (spread/total/ML + opens) from ESPN/DraftKings; Super Bowl futures for the displayed top16 only.</li>
+<li><b>Irregularities flagged:</b> count_flags() items — including an NFL.com broadcast-label oddity on the Week1 Wednesday kickoff, ESPN omitting ties from two records, ambiguous open-spread attribution on3 Week9 boards, and4 hard data gaps (historical closings, ATS history, turnovers, props) — all published on <a href="flagged.html">Flagged for Review</a>.</li>
+</ul>
+
+<h3>Model & market</h3>
+<ul>
+<li>Line origination: mean-reverted Pythagorean strength + margin blend, home adjustment 1.75 pts (research band1.5–2.0; see <a href="analysis.html">Analysis §5</a>). Divergences ≥2 spread pts / ≥3 total pts vs the Week9 board are marked as candidates — <b>not</b> as bets — pending the CLV gate.</li>
+<li>Market context: closing-line research shows the NFL market is near-unbiased (mean error +0.06 pts over6,983 graded games; blind favorites cover ~47–49%) — so we pre-declare that beating closes, not win-rate, is the promotion currency.</li>
+</ul>
+
+<h3>Strategy competition status (honest readout)</h3>
+<ul>
+<li><b>S1 Pythagorean walk-forward singles:</b> 61/103 = 59.2% (p=0.076) — promising, <b>not yet proven</b> at α=.05. Stage: conditional.</li>
+<li><b>S2 Home-field singles:</b> rejected —2026 home win% 49.6% (below .500).</li>
+<li><b>S3 Totals fixed-number:</b> best fixed system beat its -110 baseline in backtest but market-line gate pending (no historical closings) → conditional.</li>
+<li><b>S4 Momentum:</b> rejected — margin autocorrelation 0.0248 ≈0.</li>
+<li><b>S5 Parlays/SGP + S6 Props:</b> pre-declared gates + cited correlation values; blocked until prop/CLV sources come live. No numbers were invented.</li>
+<li><b>S7 Week9 origination:</b> live candidates logged; CLV logging starts with Week9 closes.</li>
+</ul>
+
+<h3>Luck removed how?</h3>
+<p>Exact binomial tests and Wilson intervals on every record; walk-forward design to prevent look-ahead; Pythagorean residual ladders to identify record-vs-margin luck (e.g., top over-achiever CLE +25.2%); one-score games shown to behave like coin flips (p=0.90); and CLV as the primary future promotion metric (outcome-independent skill proxy).</p>
+
+<h3>What's next (tracked in COORDINATION.md)</h3>
+<p>Integration re-run of reconcile + link check + build, PR to main, merge, GitHub Pages deploy from <code>/docs</code>, retry until live, then Week9 CLV logging with each game's close recorded against our pre-board.</p>
+
+</main>
+<footer>Generated 2026-11-02 by <code>tools/build_site.py</code> from <code>data/*.json</code> + <code>analysis/*.json</code> · Sources: nfl.com (official) · pro-football-reference.com · ESPN/DraftKings · Reconciliation: <code>tools/reconcile.py</code> 58/120 games directly verified vs nfl.com, remaining verified by standing reconciliation (see <a href="verification.html">Verification</a>)</footer>
+</body></html>

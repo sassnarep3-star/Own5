@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flagged for Review · Own5 NFL Strategy Lab</title>
+<link rel="stylesheet" href="assets/style.css">
+<script defer src="assets/app.js"></script>
+</head>
+<body>
+<header class="site">
+  <div class="brand">Own5 <span>NFL Strategy Lab</span></div>
+  <nav class="main"><a href="index.html" class="">Dashboard</a>
+<a href="executive-summary.html" class="">Executive Summary</a>
+<a href="strategies.html" class="">Strategies</a>
+<a href="validation-gates.html" class="">Validation Gates</a>
+<a href="correlation.html" class="">Correlation</a>
+<a href="luck-vs-skill.html" class="">Luck vs Skill</a>
+<a href="leaderboard.html" class="">Leaderboard</a>
+<a href="lines-2026-wk9.html" class="">Week 9 Lines</a>
+<a href="sources.html" class="">Sources</a>
+<a href="flagged.html" class="active">Flagged for Review</a></nav>
+</header>
+<main>
+
+<h1>Flagged for Review</h1>
+<p class="lead">Irregularities and unverified items — published, non-blocking. Nothing on this page blocks the merge or the site. Request changes after review and a follow-up session will apply them. Repo copy: <a href="https://github.com/sassnarep3-star/Own5/blob/main/research/arena-f1d30421/flagged.md">research/arena-f1d30421/flagged.md</a>.</p>
+<div class="tbl-wrap"><table><thead><tr><th>ID</th><th>Item</th><th>Where</th><th>Evidence / observation</th><th>Severity</th><th>Status</th></tr></thead><tbody>
+<tr><td><b>F1</b></td><td>Historical betting lines have no official public source</td><td>backtest/base-rate rows using spread/total columns</td><td>NFL publishes no closing lines; used verbatim from community spreadspoke dataset @ <code>1d309cb</code> — never inferred. <a href="https://github.com/tobycrabtree/spreadspoke/blob/1d309cb7f8f58a9eceb36293979dbcb1af70db94/spreadspoke_scores.csv" target="_blank" rel="noopener">file</a></td><td><span class="chip warn">Medium</span></td><td>Open — needs licensed odds feed</td></tr>
+<tr><td><b>F2</b></td><td>Play-by-play is a community mirror, 2002–2013 only</td><td>correlation_props.csv</td><td><a href="https://github.com/brianfoshee/nfl-play-by-play-data/blob/352c9c9b0bce0ffa8ce85681cf9ed50c0398f462/" target="_blank" rel="noopener">pin 352c9c9</a> mirrors advancedfootballanalytics.com; modern era may differ; values labeled derived</td><td><span class="chip warn">Medium</span></td><td>Open — re-run with nflverse data when reachable</td></tr>
+<tr><td><b>F3</b></td><td>Dataset team-name inconsistencies</td><td>spreadspoke_scores.csv team columns</td><td>49 name strings incl. 1 ambiguous <code>New York</code> row (excluded, not guessed), malformed <code>New York Jets (1p, </code>, short/long forms — explicit mapping in compute_analysis.py <a href="https://github.com/tobycrabtree/spreadspoke/blob/1d309cb7f8f58a9eceb36293979dbcb1af70db94/spreadspoke_scores.csv" target="_blank" rel="noopener">dataset file</a></td><td><span class="chip good">Low</span></td><td>Resolved-in-code (auditable mapping)</td></tr>
+<tr><td><b>F4</b></td><td>Mixed-type over_under_line field</td><td>spreadspoke_scores.csv</td><td>non-numeric strings coerced with to_numeric(errors='coerce') — excluded, never imputed <a href="https://github.com/tobycrabtree/spreadspoke/blob/1d309cb7f8f58a9eceb36293979dbcb1af70db94/spreadspoke_scores.csv" target="_blank" rel="noopener">dataset file</a></td><td><span class="chip good">Low</span></td><td>Resolved-in-code</td></tr>
+<tr><td><b>F5</b></td><td>Dataset 2025 season partial</td><td>base-rate windows</td><td>64 of 78 rows scored (weeks 1–5; file last updated 2025-10-01); 2025 excluded from analysis windows <a href="https://github.com/tobycrabtree/spreadspoke/blob/1d309cb7f8f58a9eceb36293979dbcb1af70db94/spreadspoke_scores.csv" target="_blank" rel="noopener">dataset file</a></td><td><span class="chip good">Low</span></td><td>Resolved-by-exclusion</td></tr>
+<tr><td><b>F6</b></td><td>Historical scores verified on a sample</td><td>verified_official_results.csv</td><td>2025 Week 1: 16/16 dataset scores matched nfl.com game pages exactly; full 61-year file cannot be officially verified from the sandbox <a href="https://github.com/sassnarep3-star/Own5/blob/main/data/verified_official_results.csv" target="_blank" rel="noopener">verified rows</a><a href="https://www.nfl.com/schedules/2025/by-week/week-1" target="_blank" rel="noopener">official page</a></td><td><span class="chip warn">Medium</span></td><td>Open — sample passed 16/16</td></tr>
+<tr><td><b>F7</b></td><td>Market lines blank on Week-9 page</td><td>model_lines_2026_wk9.csv market columns</td><td>no official source publishes market lines — blank by policy <a href="https://github.com/sassnarep3-star/Own5/blob/main/data/model_lines_2026_wk9.csv" target="_blank" rel="noopener">model_lines csv</a></td><td><span class="chip warn">Medium</span></td><td>Open — needs licensed odds feed</td></tr>
+<tr><td><b>F8</b></td><td>Backtest ROI assumes flat −110 / +264 parlay</td><td>backtest_results.csv assumption_price</td><td>prices absent from dataset; assumption labeled in every row <a href="https://github.com/sassnarep3-star/Own5/blob/main/data/backtest_results.csv" target="_blank" rel="noopener">backtest_results.csv</a></td><td><span class="chip warn">Medium</span></td><td>Open — needs licensed odds feed</td></tr>
+<tr><td><b>F9</b></td><td>Reward pool amounts blank</td><td>leaderboard rewards table</td><td>mechanics specified; pool size/funding are owner decisions — not invented <a href="https://github.com/sassnarep3-star/Own5/blob/main/research/arena-f1d30421/leaderboard.md" target="_blank" rel="noopener">design doc</a></td><td><span class="chip good">Low</span></td><td>Open — awaiting owner decision</td></tr>
+<tr><td><b>F10</b></td><td>GB streak-field anomaly on official standings page</td><td>2026 standings transcription</td><td>streak display appeared inconsistent with week-8 results; streaks unused by the model and excluded from the transcribed CSV <a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">official standings</a></td><td><span class="chip good">Low</span></td><td>Resolved-by-exclusion</td></tr>
+<tr><td><b>F11</b></td><td>Model limitations (disclosed)</td><td>model_lines_2026_wk9.csv</td><td>v1 = net-points ratings: no opponent adjustment, injuries, weather; league-wide HFA constant; CLE@NO shows record-vs-differential tension <a href="https://github.com/sassnarep3-star/Own5/blob/main/data/model_lines_2026_wk9.csv" target="_blank" rel="noopener">model_lines csv</a><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/arena-f1d30421/line-origination.md" target="_blank" rel="noopener">model spec</a></td><td><span class="chip good">Low</span></td><td>Disclosed</td></tr>
+</tbody></table></div>
+<div class="note">Verification policy: values that cannot be confirmed against a source are left blank and listed here. Nothing is inferred or filled in. Each site table row carries its own source link for line-by-line manual review.</div>
+
+</main>
+<footer>Own5 · NFL line origination &amp; skill-based strategy leaderboard · generated from verified data files by scripts/build_site.py · session arena-f1d30421 · 2026-11-02<br>
+Community datasets are flagged — see <a href="flagged.html">Flagged for Review</a>. Nothing on this site is betting advice.</footer>
+</body>
+</html>

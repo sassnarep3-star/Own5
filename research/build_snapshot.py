@@ -188,10 +188,10 @@ def build() -> dict:
     review_items = [dict(id=i, title=t, affected=a, blank_fields=b.split(",") if b else [],
                          source_ids=[s], source_urls=[source[s]["url"]], status="needs review",
                          detail=d, action=act) for i, t, a, b, s, d, act in reviews]
-    dump(ROOT / "data/source_register.json", sources)
+    dump(ROOT / "data" / "own5_desk" / "source_register.json", sources)
     dump(ROOT / "research/official_snapshot.json", snapshot)
-    dump(ROOT / "data/verified_facts.json", facts)
-    dump(ROOT / "data/review_items.json", review_items)
+    dump(ROOT / "data" / "own5_desk" / "verified_facts.json", facts)
+    dump(ROOT / "data" / "own5_desk" / "review_items.json", review_items)
     return dict(sources=len(sources), verified_rows=len(facts), teams=len(teams),
                 schedule=len(schedule), paired_games=len(paired), review_items=len(review_items),
                 points_reconciliation=snapshot["reconciliation"])

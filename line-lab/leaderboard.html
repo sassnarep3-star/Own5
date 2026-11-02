@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Leaderboard — NFL Line Lab 2026</title><style>
+:root{--bg:#0d1117;--card:#161b22;--line:#30363d;--txt:#e6edf3;--mut:#9198a1;--acc:#58a6ff;--ok:#3fb950;--warn:#d29922;--bad:#f85149;--gold:#e3b341}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--txt);line-height:1.5}
+a{color:var(--acc);text-decoration:none}
+a:hover{text-decoration:underline}
+header{background:var(--card);border-bottom:1px solid var(--line);padding:14px 24px;position:sticky;top:0;z-index:10}
+header h1{margin:0;font-size:19px;display:inline-block}
+header .sub{color:var(--mut);font-size:12px;margin-left:10px}
+nav{margin-top:8px;display:flex;flex-wrap:wrap;gap:14px;font-size:14px}
+nav a{color:var(--mut)}
+nav a.active,nav a:hover{color:var(--acc);text-decoration:none}
+main{max-width:1200px;margin:0 auto;padding:24px}
+h2{border-bottom:1px solid var(--line);padding-bottom:6px;margin-top:6px}
+h3{color:var(--acc);margin-bottom:6px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin:16px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px}
+.card h3{margin-top:0;color:var(--txt)}
+.card .big{font-size:26px;font-weight:700;margin:4px 0}
+.card p{color:var(--mut);font-size:13px;margin:4px 0}
+table{border-collapse:collapse;width:100%;font-size:13.5px;margin:12px 0;background:var(--card)}
+th,td{border:1px solid var(--line);padding:6px 9px;text-align:left;vertical-align:top}
+th{background:#21262d;color:var(--mut);font-weight:600;position:sticky;top:0}
+tr:nth-child(even) td{background:#12171d}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+.badge{display:inline-block;font-size:11px;padding:1px 7px;border-radius:10px;border:1px solid var(--line);margin-left:4px;vertical-align:middle}
+.b-ok{color:var(--ok);border-color:var(--ok)}
+.b-warn{color:var(--warn);border-color:var(--warn)}
+.b-bad{color:var(--bad);border-color:var(--bad)}
+.b-mut{color:var(--mut)}
+.flag{color:var(--warn);font-weight:700}
+.ok{color:var(--ok);font-weight:700}
+.bad{color:var(--bad);font-weight:700}
+.mut{color:var(--mut)}
+.note{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--acc);padding:10px 14px;margin:12px 0;font-size:14px;border-radius:0 6px 6px 0}
+.note.warn{border-left-color:var(--warn)}
+.note.bad{border-left-color:var(--bad)}
+.small{font-size:12px;color:var(--mut)}
+.src{font-size:12px;white-space:nowrap}
+footer{border-top:1px solid var(--line);color:var(--mut);font-size:12px;padding:18px 24px;text-align:center;margin-top:30px}
+.wk-head{background:#21262d;color:var(--acc);font-weight:700}
+.scroll{overflow-x:auto}
+@media(max-width:760px){table{font-size:12px}th,td{padding:4px 5px}}
+</style></head>
+<body>
+<header><h1>NFL Line Lab —2026 Season</h1><span class="sub">data frozen 2026-11-02 · every row source-linked · unverifiable values blank + flagged</span>
+<nav><a href="index.html">Dashboard</a><a href="standings.html">Standings</a><a href="scores.html">Scores</a><a href="lines.html">Lines</a><a href="strategies.html">Strategies</a><a href="analysis.html">Analysis</a><a href="leaderboard.html" class="active">Leaderboard</a><a href="flagged.html">Flagged</a><a href="verification.html">Verification</a><a href="executive-summary.html">Executive Summary</a><a href="sources.html">Sources</a></nav></header>
+<main>
+
+<h2>Leaderboard <span class="badge b-warn">PROSPECTIVE — simulated competition scoring</span></h2>
+<div class="note warn"><b>This is a competition framework, not a betting record.</b> Entries are scored on <i>validation gates</i> (sample, luck-adjusted statistics, CLV, out-of-sample design).
+No real-money results are claimed or implied. Promotion happens only when gates pass; until then entries stay in their stage (conditional / prospective / blocked / eliminated).</div>
+<div class="scroll"><table><tr><th class="num">Rank</th><th class="">Entry</th><th class="">Strategy</th><th class="">Result</th><th class="num">Luck-adj. p</th><th class="">Sample</th><th class="">Gate status</th><th class="">Stage</th><th class="">Detail</th></tr><tr><td class='num'>1</td><td><b>TOT fixed over 44.5</b></td><td>S3</td><td>50.0% (60/120)</td><td class='num'>0.648</td><td>W1-8 backtest</td><td>needs market-line gate</td><td><span class='badge b-warn'>conditional</span></td><td class='src'><a href='strategies.html#entry-s3'>gates</a></td></tr><tr><td class='num'>2</td><td><b>PYTH-ML singles</b></td><td>S1</td><td>59.2% (61/103)</td><td class='num'>0.076</td><td>walk-forward</td><td>G2 pending (p≥.05)</td><td><span class='badge b-mut'>prospective</span></td><td class='src'><a href='strategies.html#entry-s1'>gates</a></td></tr><tr><td class='num'>3</td><td><b>SGP correlation basket</b></td><td>S5</td><td>n/a</td><td class='num'>—</td><td>prospective</td><td>P2 pending quotes</td><td><span class='badge b-mut'>prospective</span></td><td class='src'><a href='strategies.html#entry-s5'>gates</a></td></tr><tr><td class='num'>4</td><td><b>W9 line origination</b></td><td>S7</td><td>14 divergence candidates</td><td class='num'>—</td><td>W9 board</td><td>CLV gate pending</td><td><span class='badge b-mut'>prospective</span></td><td class='src'><a href='strategies.html#entry-s7'>gates</a></td></tr><tr><td class='num'>5</td><td><b>PROP combos</b></td><td>S6</td><td>n/a</td><td class='num'>—</td><td>blocked</td><td>Pr1 blocked (no source)</td><td><span class='badge b-bad'>blocked</span></td><td class='src'><a href='strategies.html#entry-s6'>gates</a></td></tr><tr><td class='num'>6</td><td><b>HOME-ML singles</b></td><td>S2</td><td>49.6%</td><td class='num'>0.950</td><td>season-to-date</td><td>REJECTED (below .50)</td><td><span class='badge b-bad'>eliminated</span></td><td class='src'><a href='strategies.html#entry-s2'>gates</a></td></tr><tr><td class='num'>7</td><td><b>MOMENTUM (lag-1 margin)</b></td><td>S4</td><td>autocorr 0.0248</td><td class='num'>1.000</td><td>W1-8</td><td>REJECTED (no signal)</td><td><span class='badge b-bad'>eliminated</span></td><td class='src'><a href='strategies.html#entry-s4'>gates</a></td></tr></table></div>
+<h3>Scoring rules</h3>
+<div class="scroll"><table><tr><th class="">Rule</th><th class="">Meaning</th></tr><tr><td>Stage: proven</td><td>All gates G1–G5 pass (none yet — earliest promotion: after W9+ CLV logging with n≥300 graded picks or p&lt;.05, whichever first)</td></tr><tr><td>Stage: conditional</td><td>Passes sample + statistical gate in backtest, market-line gate pending</td></tr><tr><td>Stage: prospective</td><td>Design pre-declared; awaiting live graded events</td></tr><tr><td>Stage: eliminated</td><td>Failed a hard gate (skill/no-signal); may only return with materially new data</td></tr><tr><td>Luck-adj. p</td><td>Exact two-sided binomial p-value vs stated baseline — high p = result consistent with luck</td></tr></table></div>
+<p class="small">Any site visitor can re-derive every number: scripts <code>tools/reconcile.py</code>, <code>analysis/compute_metrics.py</code>, data <code>data/*.json</code>.</p>
+
+</main>
+<footer>Generated 2026-11-02 by <code>tools/build_site.py</code> from <code>data/*.json</code> + <code>analysis/*.json</code> · Sources: nfl.com (official) · pro-football-reference.com · ESPN/DraftKings · Reconciliation: <code>tools/reconcile.py</code> 58/120 games directly verified vs nfl.com, remaining verified by standing reconciliation (see <a href="verification.html">Verification</a>)</footer>
+</body></html>
