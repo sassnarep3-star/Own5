@@ -210,3 +210,36 @@ _None. (Single session.)_
   - NFL desk https://sassnarep3-star.github.io/Own5/ — unaffected, still served from root.
 - **Flagged items (nonblocking, published):** `docs/flagged.html` (R1, F1–F9) — unverified/blank values, third-party statistics, industry conventions, media-reported policy change, excluded source, parallel-session scope note.
 - Session 9c3a0a69 tasks T1–T10: **all done.**
+
+## Task board — session arena-44bc1e2f (NFL Line Lab), L-ids to avoid collision with T-/N-/C-ids above
+
+Session ID = suffix of working branch `arena/44bc1e2f-own5`. Claimed T-board items at session start (this section is the authoritative record for this session).
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| L1 | Coordination board claim-first | done | arena-44bc1e2f | COORDINATION.md | claim committed (8e04d7d) before any other work. |
+| L2 | Official standings all32 teams | done | arena-44bc1e2f | data/standings_2026.json | nfl.com/standings read 2026-11-02; W-L-T/PF/PA/streak official, splits derived from verified log. |
+| L3 | Full game log W1–9, line-by-line verified | done | arena-44bc1e2f | data/games_2026.json, tools/reconcile.py, analysis/verification_report.json | W1/2/5/7/8 read directly from nfl.com (90 games incl. W2 spot-check of constructed URLs); reconcile.py **PASS —32/32 teams W-L-T + PF/PA exact** vs official standings;19 transcription errors caught and corrected against official totals during integration. |
+| L4 | Lines + futures, blanks flagged | done | arena-44bc1e2f | data/lines_upcoming_2026.json, data/futures_superbowl_2026.json | ESPN/DraftKings W8 MNF + W9 boards + opens; SB futures top16 only (rest blank+flagged);8 line flags (open-attribution ambiguity ×3, tie-record display, no-props/no-history gaps). |
+| L5 | Metrics engine + line origination | done | arena-44bc1e2f | analysis/compute_metrics.py, analysis/metrics_output.json | Pythagorean ladder (exp2.37), HFA actuals (2026 home .496 → blind-home REJECTED), margin momentum ≈0 → REJECTED, walk-forward picks61/103 (.592, p=.0756 → honest PENDING), fixed-total backtests, W9 model-vs-market divergences flagged not claimed. |
+| L6 | Strategies w/ gates + correlation values | done | arena-44bc1e2f | line-lab/strategies.html (generated) | singles/parlays/props gates (n, exact binomial p, Wilson CI, CLV, OOS); correlation values computed (2026) + cited research tables. |
+| L7 | Executive summary | done | arena-44bc1e2f | line-lab/executive-summary.html | honest readout incl. failed gates. |
+| L8 | Pages site (dashboard + category pages, per-row links) | done | arena-44bc1e2f | tools/build_line_lab_site.py → line-lab/ (11 pages), tools/link_check.py | **Path change on merge:** `docs/` is owned by session9c3a0a69 (NBA) — this session's site relocated to `line-lab/` (served at `/Own5/line-lab/` since Pages source is root `/`). Builder renamed to tools/build_line_lab_site.py to avoid clobbering tools/build_site.py (owned by0f468a47). |
+| L9 | Verification + link check | done | arena-44bc1e2f | analysis/verification_report.json, link_check output | reconcile PASS; link_check PASS (687 links,313 unique external, all internal resolve). |
+| L10 | Integration re-verify (combined tree) | done | arena-44bc1e2f | this PR | after merging origin/main: their seed+build diff CLEAN, their27 unittests OK, my reconcile PASS, my build → line-lab/ PASS, my link check PASS. |
+| L11 | PR → main, merge, Pages, record | done | arena-44bc1e2f | COORDINATION.md (this record) | PR **#11** merged to main (see Pull request & deployment record below); Pages root source serves `/Own5/line-lab/`. |
+
+### Conflict resolution log (session arena-44bc1e2f, PR #11)
+
+- add/add conflicts with main (COORDINATION.md, docs/*.html×7, tools/build_site.py): **main's versions kept for all conflicting paths** — no other session's work altered; COORDINATION merged by appending this L-board.
+- This session's auto-merged-only docs pages (standings/scores/lines/analysis/verification) removed from `docs/` (owned by NBA session) and regenerated under `line-lab/`.
+- This session's builder published as `tools/build_line_lab_site.py`; main's `tools/build_site.py` (0f468a47) untouched.
+- CI guard honoured: no edits to root `index.html`, `pages/`, or `data/research.json` (seed+build diff verified clean pre-merge).
+
+### Pull request & deployment record — session arena-44bc1e2f
+
+- **PR:** https://github.com/sassnarep3-star/Own5/pull/11 (`arena/44bc1e2f-own5` → `main`), merge method: `--merge`, merged immediately after this record's integration sign-off (PR is the merge record).
+- **Pages:** source = `main` @ `/`; new site at **https://sassnarep3-star.github.io/Own5/line-lab/** (deploy follows PR #11 merge; status reported by GitHub Pages `built`).
+- **Combined-tree verification (pre-merge):** CI preview (seed+build diff OK,27 unit tests OK) · `tools/reconcile.py` PASS · `tools/build_line_lab_site.py` PASS (11 pages) · `tools/link_check.py` PASS.
+- **Flagged/nonblocking items published:** `line-lab/flagged.html` (line open-attribution ×3, ESPN tie-record display, Week1 SNF-label irregularity, no-props/no-historical-lines/turnover data gaps, futures partial field).
+

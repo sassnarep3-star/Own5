@@ -7,6 +7,7 @@ This repository hosts work from **three parallel agent sessions** (see `COORDINA
 | **NBA Line-Origination Lab** | NBA — singles, parlays, player-prop combos; validation gates; leaderboard design | https://sassnarep3-star.github.io/Own5/docs/ | `9c3a0a69` (`docs/`, `research/nba/`, `analysis/`, `EXECUTIVE_SUMMARY.md`) |
 | **NFL Research Desk** | NFL — line origination, strategy lab, correlation questions, review register | https://sassnarep3-star.github.io/Own5/ | `cd43258e` + `0f468a47` (root, `pages/`, `data/`, `scripts/`, `tools/`, `tests/`) |
 | **NFL Strategy Lab** | NFL — own lines from official data, pre-registered singles/parlays/prop combos, validation gates G0–G7, computed correlations, luck-deflated leaderboard | https://sassnarep3-star.github.io/Own5/nfl-strategy-lab/ | `arena-f1d30421` (`nfl-strategy-lab/`, `research/arena-f1d30421/`, `data/`, `scripts/compute_*`, `scripts/originate_lines.py`) |
+| **NFL Line Lab** | NFL — reconciled W1–9 game log + standings (32/32 exact), W8/W9 lines, model-vs-market origination, gate-scored strategy leaderboard, flagged items | https://sassnarep3-star.github.io/Own5/line-lab/ | `arena-44bc1e2f` (`line-lab/`, `data/standings_2026.json`, `data/games_2026.json`, `data/lines_upcoming_2026.json`, `tools/reconcile.py`, `tools/build_line_lab_site.py`, `analysis/compute_metrics.py`) |
 
 Shared policy: **every table row carries a source link; values that cannot be confirmed from an official/primary source are left blank and published on a Flagged-for-Review page — never inferred. No performance claims; no bets placed; leaderboards empty until strategies pass validation gates.**
 
@@ -79,6 +80,14 @@ python3 scripts/compute_prop_correlations.py && python3 scripts/originate_lines.
 python3 scripts/build_site.py && python3 scripts/verify_site.py
 ```
 
+
+---
+
+## NFL Line Lab (session arena-44bc1e2f)
+
+**Live site:** https://sassnarep3-star.github.io/Own5/line-lab/ · **Executive summary:** [`line-lab/executive-summary.html`](line-lab/executive-summary.html) · **Flagged:** [`line-lab/flagged.html`](line-lab/flagged.html) · **Verification:** [`line-lab/verification.html`](line-lab/verification.html)
+
+Complete 2026 line-origination project built in one autonomous session: official standings (nfl.com) plus a full Weeks1–9 game log reconciled **line-by-line —32/32 teams' W-L-T and PF/PA match official standings exactly** (`python3 tools/reconcile.py`); ESPN/DraftKings Week8+9 boards with open-line attribution flags; Pythagorean walk-forward backtests with luck-adjusted gates (home-field and momentum strategies rejected on2026 data; Pyth picks61/103=.592, p=.0756 → pending); Week9 model-vs-market divergences flagged as candidates, not bets. Rebuild: `python3 tools/build_line_lab_site.py && python3 tools/link_check.py`.
 
 ## Pages
 
