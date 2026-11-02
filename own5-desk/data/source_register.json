@@ -1,0 +1,189 @@
+[
+  {
+    "id": "S01",
+    "publisher": "National Football League",
+    "title": "2026 Official Playing Rules",
+    "url": "https://static.www.nfl.com/image/upload/fl_attachment/league/tqivdkzt9mu6wdgsh1ku.pdf",
+    "access_method": "Official NFL PDF; Rule 11-1-2 extracted by official-domain search",
+    "retrieved_utc": "2026-11-02",
+    "status": "official content inspected",
+    "evidence_file": "research/evidence/nfl_rules.md",
+    "evidence_sha256": "65932c2caacfca7cd1ef6470032dd63ad73423b1c5df2b64d2f84bd66167b257"
+  },
+  {
+    "id": "S02",
+    "publisher": "NFL Football Operations",
+    "title": "Featured rules — 2025 overtime change",
+    "url": "https://operations.nfl.com/rules-officiating/featured-rules",
+    "access_method": "Rendered official page read",
+    "retrieved_utc": "2026-11-02",
+    "status": "official content inspected",
+    "evidence_file": "research/evidence/nfl_rules.md",
+    "evidence_sha256": "65932c2caacfca7cd1ef6470032dd63ad73423b1c5df2b64d2f84bd66167b257"
+  },
+  {
+    "id": "S03",
+    "publisher": "NFL Support",
+    "title": "Game Books",
+    "url": "https://support.nfl.com/hc/en-us/articles/35869678028180-Game-Books",
+    "access_method": "Rendered official page read",
+    "retrieved_utc": "2026-11-02",
+    "status": "official content inspected",
+    "evidence_file": "research/evidence/nfl_rules.md",
+    "evidence_sha256": "65932c2caacfca7cd1ef6470032dd63ad73423b1c5df2b64d2f84bd66167b257"
+  },
+  {
+    "id": "S04",
+    "publisher": "NFL GSIS",
+    "title": "About Game Statistics and Information System",
+    "url": "https://www.nflgsis.com/Help/About.html",
+    "access_method": "Rendered official help read; schedule endpoint requires login",
+    "retrieved_utc": "2026-11-02",
+    "status": "official content inspected",
+    "evidence_file": "research/evidence/nfl_rules.md",
+    "evidence_sha256": "65932c2caacfca7cd1ef6470032dd63ad73423b1c5df2b64d2f84bd66167b257"
+  },
+  {
+    "id": "S05",
+    "publisher": "NFL Support",
+    "title": "Who is making these odds?",
+    "url": "https://support.nfl.com/hc/en-us/articles/35869738523412-Who-is-making-the-odds",
+    "access_method": "Rendered official page read",
+    "retrieved_utc": "2026-11-02",
+    "status": "official content inspected",
+    "evidence_file": "research/evidence/nfl_rules.md",
+    "evidence_sha256": "65932c2caacfca7cd1ef6470032dd63ad73423b1c5df2b64d2f84bd66167b257"
+  },
+  {
+    "id": "S06",
+    "publisher": "NFL Support",
+    "title": "What is a total?",
+    "url": "https://support.nfl.com/hc/en-us/articles/35869727578900-What-is-a-total",
+    "access_method": "Rendered official page read",
+    "retrieved_utc": "2026-11-02",
+    "status": "official content inspected",
+    "evidence_file": "research/evidence/nfl_rules.md",
+    "evidence_sha256": "65932c2caacfca7cd1ef6470032dd63ad73423b1c5df2b64d2f84bd66167b257"
+  },
+  {
+    "id": "S07",
+    "publisher": "NFL Support",
+    "title": "Moneyline explanation under a point-spread URL",
+    "url": "https://support.nfl.com/hc/en-us/articles/35869774194324-What-is-the-point-spread",
+    "access_method": "Rendered official page read; title/content mismatch flagged",
+    "retrieved_utc": "2026-11-02",
+    "status": "official content inspected",
+    "evidence_file": "research/evidence/nfl_rules.md",
+    "evidence_sha256": "65932c2caacfca7cd1ef6470032dd63ad73423b1c5df2b64d2f84bd66167b257"
+  },
+  {
+    "id": "S08",
+    "publisher": "NFL Next Gen Stats",
+    "title": "Introduction to Completion Probability",
+    "url": "https://www.nfl.com/news/next-gen-stats-introduction-to-completion-probability-0ap3000000964655",
+    "access_method": "Rendered official article read",
+    "retrieved_utc": "2026-11-02",
+    "status": "official content inspected",
+    "evidence_file": "research/evidence/nfl_rules.md",
+    "evidence_sha256": "65932c2caacfca7cd1ef6470032dd63ad73423b1c5df2b64d2f84bd66167b257"
+  },
+  {
+    "id": "S09",
+    "publisher": "FanDuel",
+    "title": "Football with FanDuel",
+    "url": "https://support.fanduel.com/s/article/Betting-football-with-FanDuel",
+    "access_method": "Rendered official operator help read",
+    "retrieved_utc": "2026-11-02",
+    "status": "official content inspected",
+    "evidence_file": "research/evidence/fanduel_football.md",
+    "evidence_sha256": "4f275e22b1f3ae412528aef1e57f9c1d26749735f1f461c318f4d782b43fa869"
+  },
+  {
+    "id": "S10",
+    "publisher": "National Football League",
+    "title": "2026 regular-season league standings snapshot",
+    "url": "https://www.nfl.com/standings/league/2026/REG",
+    "access_method": "All 32 rendered rows read; Houston cross-read on official division view",
+    "retrieved_utc": "2026-11-02",
+    "status": "official content inspected",
+    "evidence_file": "research/evidence/nfl_standings_2026.md",
+    "evidence_sha256": "1d43a7f703819e68f313fe64339958338e9361b03d95a43064d2ea4415be6560"
+  },
+  {
+    "id": "S11",
+    "publisher": "National Football League",
+    "title": "2026 Week 9 schedule snapshot",
+    "url": "https://www.nfl.com/schedules/2026/by-week/week-9",
+    "access_method": "All 15 rendered game links and bye teams read",
+    "retrieved_utc": "2026-11-02",
+    "status": "official content inspected",
+    "evidence_file": "research/evidence/nfl_week9_2026.md",
+    "evidence_sha256": "98b460535f744f7d2ae387b0741761c45fefcb88101c31a5a606f760c070b33a"
+  },
+  {
+    "id": "S12",
+    "publisher": "National Football League",
+    "title": "Joe Burrow 2024 regular-season log",
+    "url": "https://www.nfl.com/players/joe-burrow/stats/logs/2024/",
+    "access_method": "All 17 regular-season rows read; preseason excluded",
+    "retrieved_utc": "2026-11-02",
+    "status": "official content inspected",
+    "evidence_file": "research/evidence/burrow_logs_2024.md",
+    "evidence_sha256": "8acc6f052ff5d9ea172b7b92bfa9287c80e9a5cd260d6ee2e5a9e83f84fd2bad"
+  },
+  {
+    "id": "S13",
+    "publisher": "National Football League",
+    "title": "Ja’Marr Chase 2024 regular-season log",
+    "url": "https://www.nfl.com/players/ja-marr-chase/stats/logs/2024/",
+    "access_method": "All 17 regular-season rows read; preseason excluded",
+    "retrieved_utc": "2026-11-02",
+    "status": "official content inspected",
+    "evidence_file": "research/evidence/chase_logs_2024.md",
+    "evidence_sha256": "511ba7aad3955599dee335f2c4a1a5f28cc1be01f8eeb31abcfda56eec044348"
+  },
+  {
+    "id": "S14",
+    "publisher": "National Football League",
+    "title": "Joe Burrow career statistics",
+    "url": "https://www.nfl.com/players/joe-burrow/stats/career",
+    "access_method": "2024 row read as reconciliation control",
+    "retrieved_utc": "2026-11-02",
+    "status": "official content inspected",
+    "evidence_file": "research/evidence/career_reconciliation.md",
+    "evidence_sha256": "f923e6f5e7a40da560d7db1741acfbeb0e3d01ed4fc4ac130a21dea200f3870c"
+  },
+  {
+    "id": "S15",
+    "publisher": "National Football League",
+    "title": "Ja’Marr Chase career statistics",
+    "url": "https://www.nfl.com/players/ja-marr-chase/stats/career",
+    "access_method": "2024 row read as reconciliation control",
+    "retrieved_utc": "2026-11-02",
+    "status": "official content inspected",
+    "evidence_file": "research/evidence/career_reconciliation.md",
+    "evidence_sha256": "f923e6f5e7a40da560d7db1741acfbeb0e3d01ed4fc4ac130a21dea200f3870c"
+  },
+  {
+    "id": "S16",
+    "publisher": "Oxford University Press / Review of Financial Studies",
+    "title": "Harvey, Liu & Zhu — …and the Cross-Section of Expected Returns",
+    "url": "https://academic.oup.com/rfs/issue/29/1",
+    "access_method": "Official publisher issue and DOI verified by search; methodology reference only",
+    "retrieved_utc": "2026-11-02",
+    "status": "official content inspected",
+    "evidence_file": null,
+    "evidence_sha256": null
+  },
+  {
+    "id": "S17",
+    "publisher": "American Meteorological Society",
+    "title": "Brier (1950) bibliographic reference",
+    "url": "https://journals.ametsoc.org/view/journals/mwre/148/9/mwrD190076.xml?tab_body=fulltext-display",
+    "access_method": "Official journal reference list verified by search; not an NFL source",
+    "retrieved_utc": "2026-11-02",
+    "status": "official content inspected",
+    "evidence_file": null,
+    "evidence_sha256": null
+  }
+]

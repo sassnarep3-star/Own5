@@ -1,0 +1,1255 @@
+[
+  {
+    "id": "ST01",
+    "name": "Points-rating singles",
+    "category": "Single bet",
+    "signal": "Shrunken PF/PA ratings versus a verified market; require ≥3 pp probability edge and ≥2.5 points spread disagreement.",
+    "parameters": {
+      "shrinkage_pseudogames": 8,
+      "min_probability_edge": 0.03,
+      "min_spread_disagreement": 2.5
+    },
+    "source_ids": [
+      "S10",
+      "S16"
+    ],
+    "blockers": [
+      "R01",
+      "R03",
+      "R05"
+    ],
+    "metrics": {},
+    "gates": [
+      {
+        "id": "G00",
+        "name": "Official provenance",
+        "requirement": "All inputs have official evidence and reconciliation.",
+        "status": "blocked",
+        "missing": [
+          "provenance_complete"
+        ],
+        "failed": [],
+        "observed": {
+          "provenance_complete": null
+        }
+      },
+      {
+        "id": "G01",
+        "name": "Point-in-time integrity",
+        "requirement": "Features, forecasts and quotes precede kickoff; no leakage.",
+        "status": "blocked",
+        "missing": [
+          "point_in_time_complete"
+        ],
+        "failed": [],
+        "observed": {
+          "point_in_time_complete": null
+        }
+      },
+      {
+        "id": "G02",
+        "name": "Settlement contract",
+        "requirement": "Operator, jurisdiction, rule version and settlement are complete.",
+        "status": "blocked",
+        "missing": [
+          "settlement_complete"
+        ],
+        "failed": [],
+        "observed": {
+          "settlement_complete": null
+        }
+      },
+      {
+        "id": "G03",
+        "name": "Sample size",
+        "requirement": "≥500 selections, ≥100 season-week clusters, ≥3 seasons.",
+        "status": "blocked",
+        "missing": [
+          "settled_bets",
+          "week_clusters",
+          "seasons"
+        ],
+        "failed": [],
+        "observed": {
+          "settled_bets": null,
+          "week_clusters": null,
+          "seasons": null
+        }
+      },
+      {
+        "id": "G04",
+        "name": "Walk-forward holdout",
+        "requirement": "≥3 expanding folds, ≥1-week embargo, untouched final holdout.",
+        "status": "blocked",
+        "missing": [
+          "walk_forward_folds",
+          "embargo_weeks",
+          "holdout_untouched"
+        ],
+        "failed": [],
+        "observed": {
+          "walk_forward_folds": null,
+          "embargo_weeks": null,
+          "holdout_untouched": null
+        }
+      },
+      {
+        "id": "G05",
+        "name": "Forecast skill",
+        "requirement": "Adjusted Brier/log-loss skill lower bounds >0; calibration error ≤0.03.",
+        "status": "blocked",
+        "missing": [
+          "brier_skill_lb",
+          "log_loss_skill_lb",
+          "calibration_error"
+        ],
+        "failed": [],
+        "observed": {
+          "brier_skill_lb": null,
+          "log_loss_skill_lb": null,
+          "calibration_error": null
+        }
+      },
+      {
+        "id": "G06",
+        "name": "Economic skill",
+        "requirement": "Net ROI lower bound >0.5%; CLV lower bound >0.2%.",
+        "status": "blocked",
+        "missing": [
+          "net_roi_lb",
+          "clv_lb"
+        ],
+        "failed": [],
+        "observed": {
+          "net_roi_lb": null,
+          "clv_lb": null
+        }
+      },
+      {
+        "id": "G07",
+        "name": "Multiplicity control",
+        "requirement": "All 6 families registered; one-sided family alpha 0.05; adjustment applied.",
+        "status": "blocked",
+        "missing": [
+          "trials_registered",
+          "family_alpha",
+          "multiplicity_adjusted"
+        ],
+        "failed": [],
+        "observed": {
+          "trials_registered": null,
+          "family_alpha": null,
+          "multiplicity_adjusted": null
+        }
+      },
+      {
+        "id": "G08",
+        "name": "Dependence",
+        "requirement": "Out-of-sample joint calibration and whole-week uncertainty resampling.",
+        "status": "blocked",
+        "missing": [
+          "joint_calibration_pass",
+          "cluster_bootstrap"
+        ],
+        "failed": [],
+        "observed": {
+          "joint_calibration_pass": null,
+          "cluster_bootstrap": null
+        }
+      },
+      {
+        "id": "G09",
+        "name": "Robustness",
+        "requirement": "≥70% positive seasons; drawdown ≤20 units; sensitivity checks pass.",
+        "status": "blocked",
+        "missing": [
+          "positive_season_fraction",
+          "max_drawdown_units",
+          "sensitivity_pass"
+        ],
+        "failed": [],
+        "observed": {
+          "positive_season_fraction": null,
+          "max_drawdown_units": null,
+          "sensitivity_pass": null
+        }
+      },
+      {
+        "id": "G10",
+        "name": "Reproducibility",
+        "requirement": "Locked config; tests, build and deterministic rerun all pass.",
+        "status": "blocked",
+        "missing": [
+          "config_locked",
+          "tests_pass",
+          "build_pass",
+          "deterministic"
+        ],
+        "failed": [],
+        "observed": {
+          "config_locked": null,
+          "tests_pass": null,
+          "build_pass": null,
+          "deterministic": null
+        }
+      }
+    ],
+    "eligible": false,
+    "status": "Blocked — evidence incomplete",
+    "net_roi": null,
+    "net_roi_lb": null,
+    "clv": null,
+    "settled_bets": null,
+    "reward_points": 0,
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG",
+      "https://academic.oup.com/rfs/issue/29/1"
+    ],
+    "derived": true
+  },
+  {
+    "id": "ST02",
+    "name": "Total-distribution singles",
+    "category": "Single bet",
+    "signal": "Full score distribution versus both operator total prices; require ≥4 pp edge with explicit push mass.",
+    "parameters": {
+      "min_probability_edge": 0.04,
+      "max_score_truncated": 100
+    },
+    "source_ids": [
+      "S06",
+      "S10",
+      "S17"
+    ],
+    "blockers": [
+      "R01",
+      "R03",
+      "R05"
+    ],
+    "metrics": {},
+    "gates": [
+      {
+        "id": "G00",
+        "name": "Official provenance",
+        "requirement": "All inputs have official evidence and reconciliation.",
+        "status": "blocked",
+        "missing": [
+          "provenance_complete"
+        ],
+        "failed": [],
+        "observed": {
+          "provenance_complete": null
+        }
+      },
+      {
+        "id": "G01",
+        "name": "Point-in-time integrity",
+        "requirement": "Features, forecasts and quotes precede kickoff; no leakage.",
+        "status": "blocked",
+        "missing": [
+          "point_in_time_complete"
+        ],
+        "failed": [],
+        "observed": {
+          "point_in_time_complete": null
+        }
+      },
+      {
+        "id": "G02",
+        "name": "Settlement contract",
+        "requirement": "Operator, jurisdiction, rule version and settlement are complete.",
+        "status": "blocked",
+        "missing": [
+          "settlement_complete"
+        ],
+        "failed": [],
+        "observed": {
+          "settlement_complete": null
+        }
+      },
+      {
+        "id": "G03",
+        "name": "Sample size",
+        "requirement": "≥500 selections, ≥100 season-week clusters, ≥3 seasons.",
+        "status": "blocked",
+        "missing": [
+          "settled_bets",
+          "week_clusters",
+          "seasons"
+        ],
+        "failed": [],
+        "observed": {
+          "settled_bets": null,
+          "week_clusters": null,
+          "seasons": null
+        }
+      },
+      {
+        "id": "G04",
+        "name": "Walk-forward holdout",
+        "requirement": "≥3 expanding folds, ≥1-week embargo, untouched final holdout.",
+        "status": "blocked",
+        "missing": [
+          "walk_forward_folds",
+          "embargo_weeks",
+          "holdout_untouched"
+        ],
+        "failed": [],
+        "observed": {
+          "walk_forward_folds": null,
+          "embargo_weeks": null,
+          "holdout_untouched": null
+        }
+      },
+      {
+        "id": "G05",
+        "name": "Forecast skill",
+        "requirement": "Adjusted Brier/log-loss skill lower bounds >0; calibration error ≤0.03.",
+        "status": "blocked",
+        "missing": [
+          "brier_skill_lb",
+          "log_loss_skill_lb",
+          "calibration_error"
+        ],
+        "failed": [],
+        "observed": {
+          "brier_skill_lb": null,
+          "log_loss_skill_lb": null,
+          "calibration_error": null
+        }
+      },
+      {
+        "id": "G06",
+        "name": "Economic skill",
+        "requirement": "Net ROI lower bound >0.5%; CLV lower bound >0.2%.",
+        "status": "blocked",
+        "missing": [
+          "net_roi_lb",
+          "clv_lb"
+        ],
+        "failed": [],
+        "observed": {
+          "net_roi_lb": null,
+          "clv_lb": null
+        }
+      },
+      {
+        "id": "G07",
+        "name": "Multiplicity control",
+        "requirement": "All 6 families registered; one-sided family alpha 0.05; adjustment applied.",
+        "status": "blocked",
+        "missing": [
+          "trials_registered",
+          "family_alpha",
+          "multiplicity_adjusted"
+        ],
+        "failed": [],
+        "observed": {
+          "trials_registered": null,
+          "family_alpha": null,
+          "multiplicity_adjusted": null
+        }
+      },
+      {
+        "id": "G08",
+        "name": "Dependence",
+        "requirement": "Out-of-sample joint calibration and whole-week uncertainty resampling.",
+        "status": "blocked",
+        "missing": [
+          "joint_calibration_pass",
+          "cluster_bootstrap"
+        ],
+        "failed": [],
+        "observed": {
+          "joint_calibration_pass": null,
+          "cluster_bootstrap": null
+        }
+      },
+      {
+        "id": "G09",
+        "name": "Robustness",
+        "requirement": "≥70% positive seasons; drawdown ≤20 units; sensitivity checks pass.",
+        "status": "blocked",
+        "missing": [
+          "positive_season_fraction",
+          "max_drawdown_units",
+          "sensitivity_pass"
+        ],
+        "failed": [],
+        "observed": {
+          "positive_season_fraction": null,
+          "max_drawdown_units": null,
+          "sensitivity_pass": null
+        }
+      },
+      {
+        "id": "G10",
+        "name": "Reproducibility",
+        "requirement": "Locked config; tests, build and deterministic rerun all pass.",
+        "status": "blocked",
+        "missing": [
+          "config_locked",
+          "tests_pass",
+          "build_pass",
+          "deterministic"
+        ],
+        "failed": [],
+        "observed": {
+          "config_locked": null,
+          "tests_pass": null,
+          "build_pass": null,
+          "deterministic": null
+        }
+      }
+    ],
+    "eligible": false,
+    "status": "Blocked — evidence incomplete",
+    "net_roi": null,
+    "net_roi_lb": null,
+    "clv": null,
+    "settled_bets": null,
+    "reward_points": 0,
+    "source_urls": [
+      "https://support.nfl.com/hc/en-us/articles/35869727578900-What-is-a-total",
+      "https://www.nfl.com/standings/league/2026/REG",
+      "https://journals.ametsoc.org/view/journals/mwre/148/9/mwrD190076.xml?tab_body=fulltext-display"
+    ],
+    "derived": true
+  },
+  {
+    "id": "ST03",
+    "name": "Cross-game two-leg parlay",
+    "category": "Parlay",
+    "signal": "Two distinct games with no shared team; model residual dependence and require ≥5 pp joint edge.",
+    "parameters": {
+      "legs": 2,
+      "min_joint_edge": 0.05,
+      "shared_team_allowed": false
+    },
+    "source_ids": [
+      "S10",
+      "S11",
+      "S16"
+    ],
+    "blockers": [
+      "R01",
+      "R03",
+      "R11"
+    ],
+    "metrics": {},
+    "gates": [
+      {
+        "id": "G00",
+        "name": "Official provenance",
+        "requirement": "All inputs have official evidence and reconciliation.",
+        "status": "blocked",
+        "missing": [
+          "provenance_complete"
+        ],
+        "failed": [],
+        "observed": {
+          "provenance_complete": null
+        }
+      },
+      {
+        "id": "G01",
+        "name": "Point-in-time integrity",
+        "requirement": "Features, forecasts and quotes precede kickoff; no leakage.",
+        "status": "blocked",
+        "missing": [
+          "point_in_time_complete"
+        ],
+        "failed": [],
+        "observed": {
+          "point_in_time_complete": null
+        }
+      },
+      {
+        "id": "G02",
+        "name": "Settlement contract",
+        "requirement": "Operator, jurisdiction, rule version and settlement are complete.",
+        "status": "blocked",
+        "missing": [
+          "settlement_complete"
+        ],
+        "failed": [],
+        "observed": {
+          "settlement_complete": null
+        }
+      },
+      {
+        "id": "G03",
+        "name": "Sample size",
+        "requirement": "≥500 selections, ≥100 season-week clusters, ≥3 seasons.",
+        "status": "blocked",
+        "missing": [
+          "settled_bets",
+          "week_clusters",
+          "seasons"
+        ],
+        "failed": [],
+        "observed": {
+          "settled_bets": null,
+          "week_clusters": null,
+          "seasons": null
+        }
+      },
+      {
+        "id": "G04",
+        "name": "Walk-forward holdout",
+        "requirement": "≥3 expanding folds, ≥1-week embargo, untouched final holdout.",
+        "status": "blocked",
+        "missing": [
+          "walk_forward_folds",
+          "embargo_weeks",
+          "holdout_untouched"
+        ],
+        "failed": [],
+        "observed": {
+          "walk_forward_folds": null,
+          "embargo_weeks": null,
+          "holdout_untouched": null
+        }
+      },
+      {
+        "id": "G05",
+        "name": "Forecast skill",
+        "requirement": "Adjusted Brier/log-loss skill lower bounds >0; calibration error ≤0.03.",
+        "status": "blocked",
+        "missing": [
+          "brier_skill_lb",
+          "log_loss_skill_lb",
+          "calibration_error"
+        ],
+        "failed": [],
+        "observed": {
+          "brier_skill_lb": null,
+          "log_loss_skill_lb": null,
+          "calibration_error": null
+        }
+      },
+      {
+        "id": "G06",
+        "name": "Economic skill",
+        "requirement": "Net ROI lower bound >0.5%; CLV lower bound >0.2%.",
+        "status": "blocked",
+        "missing": [
+          "net_roi_lb",
+          "clv_lb"
+        ],
+        "failed": [],
+        "observed": {
+          "net_roi_lb": null,
+          "clv_lb": null
+        }
+      },
+      {
+        "id": "G07",
+        "name": "Multiplicity control",
+        "requirement": "All 6 families registered; one-sided family alpha 0.05; adjustment applied.",
+        "status": "blocked",
+        "missing": [
+          "trials_registered",
+          "family_alpha",
+          "multiplicity_adjusted"
+        ],
+        "failed": [],
+        "observed": {
+          "trials_registered": null,
+          "family_alpha": null,
+          "multiplicity_adjusted": null
+        }
+      },
+      {
+        "id": "G08",
+        "name": "Dependence",
+        "requirement": "Out-of-sample joint calibration and whole-week uncertainty resampling.",
+        "status": "blocked",
+        "missing": [
+          "joint_calibration_pass",
+          "cluster_bootstrap"
+        ],
+        "failed": [],
+        "observed": {
+          "joint_calibration_pass": null,
+          "cluster_bootstrap": null
+        }
+      },
+      {
+        "id": "G09",
+        "name": "Robustness",
+        "requirement": "≥70% positive seasons; drawdown ≤20 units; sensitivity checks pass.",
+        "status": "blocked",
+        "missing": [
+          "positive_season_fraction",
+          "max_drawdown_units",
+          "sensitivity_pass"
+        ],
+        "failed": [],
+        "observed": {
+          "positive_season_fraction": null,
+          "max_drawdown_units": null,
+          "sensitivity_pass": null
+        }
+      },
+      {
+        "id": "G10",
+        "name": "Reproducibility",
+        "requirement": "Locked config; tests, build and deterministic rerun all pass.",
+        "status": "blocked",
+        "missing": [
+          "config_locked",
+          "tests_pass",
+          "build_pass",
+          "deterministic"
+        ],
+        "failed": [],
+        "observed": {
+          "config_locked": null,
+          "tests_pass": null,
+          "build_pass": null,
+          "deterministic": null
+        }
+      }
+    ],
+    "eligible": false,
+    "status": "Blocked — evidence incomplete",
+    "net_roi": null,
+    "net_roi_lb": null,
+    "clv": null,
+    "settled_bets": null,
+    "reward_points": 0,
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG",
+      "https://www.nfl.com/schedules/2026/by-week/week-9",
+      "https://academic.oup.com/rfs/issue/29/1"
+    ],
+    "derived": true
+  },
+  {
+    "id": "ST04",
+    "name": "QB–WR same-game combo",
+    "category": "Player-prop combo",
+    "signal": "Historical Burrow passing ≥250 and Chase receiving ≥75; direct joint frequency, never an independence assumption.",
+    "parameters": {
+      "passing_yards_threshold": 250,
+      "receiving_yards_threshold": 75,
+      "historical_season": 2024
+    },
+    "source_ids": [
+      "S09",
+      "S12",
+      "S13"
+    ],
+    "blockers": [
+      "R02",
+      "R03",
+      "R04",
+      "R10",
+      "R11"
+    ],
+    "metrics": {},
+    "gates": [
+      {
+        "id": "G00",
+        "name": "Official provenance",
+        "requirement": "All inputs have official evidence and reconciliation.",
+        "status": "blocked",
+        "missing": [
+          "provenance_complete"
+        ],
+        "failed": [],
+        "observed": {
+          "provenance_complete": null
+        }
+      },
+      {
+        "id": "G01",
+        "name": "Point-in-time integrity",
+        "requirement": "Features, forecasts and quotes precede kickoff; no leakage.",
+        "status": "blocked",
+        "missing": [
+          "point_in_time_complete"
+        ],
+        "failed": [],
+        "observed": {
+          "point_in_time_complete": null
+        }
+      },
+      {
+        "id": "G02",
+        "name": "Settlement contract",
+        "requirement": "Operator, jurisdiction, rule version and settlement are complete.",
+        "status": "blocked",
+        "missing": [
+          "settlement_complete"
+        ],
+        "failed": [],
+        "observed": {
+          "settlement_complete": null
+        }
+      },
+      {
+        "id": "G03",
+        "name": "Sample size",
+        "requirement": "≥500 selections, ≥100 season-week clusters, ≥3 seasons.",
+        "status": "blocked",
+        "missing": [
+          "settled_bets",
+          "week_clusters",
+          "seasons"
+        ],
+        "failed": [],
+        "observed": {
+          "settled_bets": null,
+          "week_clusters": null,
+          "seasons": null
+        }
+      },
+      {
+        "id": "G04",
+        "name": "Walk-forward holdout",
+        "requirement": "≥3 expanding folds, ≥1-week embargo, untouched final holdout.",
+        "status": "blocked",
+        "missing": [
+          "walk_forward_folds",
+          "embargo_weeks",
+          "holdout_untouched"
+        ],
+        "failed": [],
+        "observed": {
+          "walk_forward_folds": null,
+          "embargo_weeks": null,
+          "holdout_untouched": null
+        }
+      },
+      {
+        "id": "G05",
+        "name": "Forecast skill",
+        "requirement": "Adjusted Brier/log-loss skill lower bounds >0; calibration error ≤0.03.",
+        "status": "blocked",
+        "missing": [
+          "brier_skill_lb",
+          "log_loss_skill_lb",
+          "calibration_error"
+        ],
+        "failed": [],
+        "observed": {
+          "brier_skill_lb": null,
+          "log_loss_skill_lb": null,
+          "calibration_error": null
+        }
+      },
+      {
+        "id": "G06",
+        "name": "Economic skill",
+        "requirement": "Net ROI lower bound >0.5%; CLV lower bound >0.2%.",
+        "status": "blocked",
+        "missing": [
+          "net_roi_lb",
+          "clv_lb"
+        ],
+        "failed": [],
+        "observed": {
+          "net_roi_lb": null,
+          "clv_lb": null
+        }
+      },
+      {
+        "id": "G07",
+        "name": "Multiplicity control",
+        "requirement": "All 6 families registered; one-sided family alpha 0.05; adjustment applied.",
+        "status": "blocked",
+        "missing": [
+          "trials_registered",
+          "family_alpha",
+          "multiplicity_adjusted"
+        ],
+        "failed": [],
+        "observed": {
+          "trials_registered": null,
+          "family_alpha": null,
+          "multiplicity_adjusted": null
+        }
+      },
+      {
+        "id": "G08",
+        "name": "Dependence",
+        "requirement": "Out-of-sample joint calibration and whole-week uncertainty resampling.",
+        "status": "blocked",
+        "missing": [
+          "joint_calibration_pass",
+          "cluster_bootstrap"
+        ],
+        "failed": [],
+        "observed": {
+          "joint_calibration_pass": null,
+          "cluster_bootstrap": null
+        }
+      },
+      {
+        "id": "G09",
+        "name": "Robustness",
+        "requirement": "≥70% positive seasons; drawdown ≤20 units; sensitivity checks pass.",
+        "status": "blocked",
+        "missing": [
+          "positive_season_fraction",
+          "max_drawdown_units",
+          "sensitivity_pass"
+        ],
+        "failed": [],
+        "observed": {
+          "positive_season_fraction": null,
+          "max_drawdown_units": null,
+          "sensitivity_pass": null
+        }
+      },
+      {
+        "id": "G10",
+        "name": "Reproducibility",
+        "requirement": "Locked config; tests, build and deterministic rerun all pass.",
+        "status": "blocked",
+        "missing": [
+          "config_locked",
+          "tests_pass",
+          "build_pass",
+          "deterministic"
+        ],
+        "failed": [],
+        "observed": {
+          "config_locked": null,
+          "tests_pass": null,
+          "build_pass": null,
+          "deterministic": null
+        }
+      }
+    ],
+    "eligible": false,
+    "status": "Blocked — evidence incomplete",
+    "net_roi": null,
+    "net_roi_lb": null,
+    "clv": null,
+    "settled_bets": null,
+    "reward_points": 0,
+    "source_urls": [
+      "https://support.fanduel.com/s/article/Betting-football-with-FanDuel",
+      "https://www.nfl.com/players/joe-burrow/stats/logs/2024/",
+      "https://www.nfl.com/players/ja-marr-chase/stats/logs/2024/"
+    ],
+    "derived": true
+  },
+  {
+    "id": "ST05",
+    "name": "Role-stability player props",
+    "category": "Player prop",
+    "signal": "Verified targets, routes, snap share, opponent allowance and participation; training-only shrinkage.",
+    "parameters": {
+      "min_verified_role_games": 8,
+      "tracking_required": true
+    },
+    "source_ids": [
+      "S08",
+      "S09"
+    ],
+    "blockers": [
+      "R02",
+      "R03",
+      "R05"
+    ],
+    "metrics": {},
+    "gates": [
+      {
+        "id": "G00",
+        "name": "Official provenance",
+        "requirement": "All inputs have official evidence and reconciliation.",
+        "status": "blocked",
+        "missing": [
+          "provenance_complete"
+        ],
+        "failed": [],
+        "observed": {
+          "provenance_complete": null
+        }
+      },
+      {
+        "id": "G01",
+        "name": "Point-in-time integrity",
+        "requirement": "Features, forecasts and quotes precede kickoff; no leakage.",
+        "status": "blocked",
+        "missing": [
+          "point_in_time_complete"
+        ],
+        "failed": [],
+        "observed": {
+          "point_in_time_complete": null
+        }
+      },
+      {
+        "id": "G02",
+        "name": "Settlement contract",
+        "requirement": "Operator, jurisdiction, rule version and settlement are complete.",
+        "status": "blocked",
+        "missing": [
+          "settlement_complete"
+        ],
+        "failed": [],
+        "observed": {
+          "settlement_complete": null
+        }
+      },
+      {
+        "id": "G03",
+        "name": "Sample size",
+        "requirement": "≥500 selections, ≥100 season-week clusters, ≥3 seasons.",
+        "status": "blocked",
+        "missing": [
+          "settled_bets",
+          "week_clusters",
+          "seasons"
+        ],
+        "failed": [],
+        "observed": {
+          "settled_bets": null,
+          "week_clusters": null,
+          "seasons": null
+        }
+      },
+      {
+        "id": "G04",
+        "name": "Walk-forward holdout",
+        "requirement": "≥3 expanding folds, ≥1-week embargo, untouched final holdout.",
+        "status": "blocked",
+        "missing": [
+          "walk_forward_folds",
+          "embargo_weeks",
+          "holdout_untouched"
+        ],
+        "failed": [],
+        "observed": {
+          "walk_forward_folds": null,
+          "embargo_weeks": null,
+          "holdout_untouched": null
+        }
+      },
+      {
+        "id": "G05",
+        "name": "Forecast skill",
+        "requirement": "Adjusted Brier/log-loss skill lower bounds >0; calibration error ≤0.03.",
+        "status": "blocked",
+        "missing": [
+          "brier_skill_lb",
+          "log_loss_skill_lb",
+          "calibration_error"
+        ],
+        "failed": [],
+        "observed": {
+          "brier_skill_lb": null,
+          "log_loss_skill_lb": null,
+          "calibration_error": null
+        }
+      },
+      {
+        "id": "G06",
+        "name": "Economic skill",
+        "requirement": "Net ROI lower bound >0.5%; CLV lower bound >0.2%.",
+        "status": "blocked",
+        "missing": [
+          "net_roi_lb",
+          "clv_lb"
+        ],
+        "failed": [],
+        "observed": {
+          "net_roi_lb": null,
+          "clv_lb": null
+        }
+      },
+      {
+        "id": "G07",
+        "name": "Multiplicity control",
+        "requirement": "All 6 families registered; one-sided family alpha 0.05; adjustment applied.",
+        "status": "blocked",
+        "missing": [
+          "trials_registered",
+          "family_alpha",
+          "multiplicity_adjusted"
+        ],
+        "failed": [],
+        "observed": {
+          "trials_registered": null,
+          "family_alpha": null,
+          "multiplicity_adjusted": null
+        }
+      },
+      {
+        "id": "G08",
+        "name": "Dependence",
+        "requirement": "Out-of-sample joint calibration and whole-week uncertainty resampling.",
+        "status": "blocked",
+        "missing": [
+          "joint_calibration_pass",
+          "cluster_bootstrap"
+        ],
+        "failed": [],
+        "observed": {
+          "joint_calibration_pass": null,
+          "cluster_bootstrap": null
+        }
+      },
+      {
+        "id": "G09",
+        "name": "Robustness",
+        "requirement": "≥70% positive seasons; drawdown ≤20 units; sensitivity checks pass.",
+        "status": "blocked",
+        "missing": [
+          "positive_season_fraction",
+          "max_drawdown_units",
+          "sensitivity_pass"
+        ],
+        "failed": [],
+        "observed": {
+          "positive_season_fraction": null,
+          "max_drawdown_units": null,
+          "sensitivity_pass": null
+        }
+      },
+      {
+        "id": "G10",
+        "name": "Reproducibility",
+        "requirement": "Locked config; tests, build and deterministic rerun all pass.",
+        "status": "blocked",
+        "missing": [
+          "config_locked",
+          "tests_pass",
+          "build_pass",
+          "deterministic"
+        ],
+        "failed": [],
+        "observed": {
+          "config_locked": null,
+          "tests_pass": null,
+          "build_pass": null,
+          "deterministic": null
+        }
+      }
+    ],
+    "eligible": false,
+    "status": "Blocked — evidence incomplete",
+    "net_roi": null,
+    "net_roi_lb": null,
+    "clv": null,
+    "settled_bets": null,
+    "reward_points": 0,
+    "source_urls": [
+      "https://www.nfl.com/news/next-gen-stats-introduction-to-completion-probability-0ap3000000964655",
+      "https://support.fanduel.com/s/article/Betting-football-with-FanDuel"
+    ],
+    "derived": true
+  },
+  {
+    "id": "ST06",
+    "name": "Market-disagreement filter",
+    "category": "Single bet",
+    "signal": "Independent model versus de-vigged market disagreement ≥4 pp; reject stale quotes and unexplained moves.",
+    "parameters": {
+      "min_disagreement": 0.04,
+      "max_quote_age_seconds": 900
+    },
+    "source_ids": [
+      "S05",
+      "S16"
+    ],
+    "blockers": [
+      "R01",
+      "R03",
+      "R11"
+    ],
+    "metrics": {},
+    "gates": [
+      {
+        "id": "G00",
+        "name": "Official provenance",
+        "requirement": "All inputs have official evidence and reconciliation.",
+        "status": "blocked",
+        "missing": [
+          "provenance_complete"
+        ],
+        "failed": [],
+        "observed": {
+          "provenance_complete": null
+        }
+      },
+      {
+        "id": "G01",
+        "name": "Point-in-time integrity",
+        "requirement": "Features, forecasts and quotes precede kickoff; no leakage.",
+        "status": "blocked",
+        "missing": [
+          "point_in_time_complete"
+        ],
+        "failed": [],
+        "observed": {
+          "point_in_time_complete": null
+        }
+      },
+      {
+        "id": "G02",
+        "name": "Settlement contract",
+        "requirement": "Operator, jurisdiction, rule version and settlement are complete.",
+        "status": "blocked",
+        "missing": [
+          "settlement_complete"
+        ],
+        "failed": [],
+        "observed": {
+          "settlement_complete": null
+        }
+      },
+      {
+        "id": "G03",
+        "name": "Sample size",
+        "requirement": "≥500 selections, ≥100 season-week clusters, ≥3 seasons.",
+        "status": "blocked",
+        "missing": [
+          "settled_bets",
+          "week_clusters",
+          "seasons"
+        ],
+        "failed": [],
+        "observed": {
+          "settled_bets": null,
+          "week_clusters": null,
+          "seasons": null
+        }
+      },
+      {
+        "id": "G04",
+        "name": "Walk-forward holdout",
+        "requirement": "≥3 expanding folds, ≥1-week embargo, untouched final holdout.",
+        "status": "blocked",
+        "missing": [
+          "walk_forward_folds",
+          "embargo_weeks",
+          "holdout_untouched"
+        ],
+        "failed": [],
+        "observed": {
+          "walk_forward_folds": null,
+          "embargo_weeks": null,
+          "holdout_untouched": null
+        }
+      },
+      {
+        "id": "G05",
+        "name": "Forecast skill",
+        "requirement": "Adjusted Brier/log-loss skill lower bounds >0; calibration error ≤0.03.",
+        "status": "blocked",
+        "missing": [
+          "brier_skill_lb",
+          "log_loss_skill_lb",
+          "calibration_error"
+        ],
+        "failed": [],
+        "observed": {
+          "brier_skill_lb": null,
+          "log_loss_skill_lb": null,
+          "calibration_error": null
+        }
+      },
+      {
+        "id": "G06",
+        "name": "Economic skill",
+        "requirement": "Net ROI lower bound >0.5%; CLV lower bound >0.2%.",
+        "status": "blocked",
+        "missing": [
+          "net_roi_lb",
+          "clv_lb"
+        ],
+        "failed": [],
+        "observed": {
+          "net_roi_lb": null,
+          "clv_lb": null
+        }
+      },
+      {
+        "id": "G07",
+        "name": "Multiplicity control",
+        "requirement": "All 6 families registered; one-sided family alpha 0.05; adjustment applied.",
+        "status": "blocked",
+        "missing": [
+          "trials_registered",
+          "family_alpha",
+          "multiplicity_adjusted"
+        ],
+        "failed": [],
+        "observed": {
+          "trials_registered": null,
+          "family_alpha": null,
+          "multiplicity_adjusted": null
+        }
+      },
+      {
+        "id": "G08",
+        "name": "Dependence",
+        "requirement": "Out-of-sample joint calibration and whole-week uncertainty resampling.",
+        "status": "blocked",
+        "missing": [
+          "joint_calibration_pass",
+          "cluster_bootstrap"
+        ],
+        "failed": [],
+        "observed": {
+          "joint_calibration_pass": null,
+          "cluster_bootstrap": null
+        }
+      },
+      {
+        "id": "G09",
+        "name": "Robustness",
+        "requirement": "≥70% positive seasons; drawdown ≤20 units; sensitivity checks pass.",
+        "status": "blocked",
+        "missing": [
+          "positive_season_fraction",
+          "max_drawdown_units",
+          "sensitivity_pass"
+        ],
+        "failed": [],
+        "observed": {
+          "positive_season_fraction": null,
+          "max_drawdown_units": null,
+          "sensitivity_pass": null
+        }
+      },
+      {
+        "id": "G10",
+        "name": "Reproducibility",
+        "requirement": "Locked config; tests, build and deterministic rerun all pass.",
+        "status": "blocked",
+        "missing": [
+          "config_locked",
+          "tests_pass",
+          "build_pass",
+          "deterministic"
+        ],
+        "failed": [],
+        "observed": {
+          "config_locked": null,
+          "tests_pass": null,
+          "build_pass": null,
+          "deterministic": null
+        }
+      }
+    ],
+    "eligible": false,
+    "status": "Blocked — evidence incomplete",
+    "net_roi": null,
+    "net_roi_lb": null,
+    "clv": null,
+    "settled_bets": null,
+    "reward_points": 0,
+    "source_urls": [
+      "https://support.nfl.com/hc/en-us/articles/35869738523412-Who-is-making-the-odds",
+      "https://academic.oup.com/rfs/issue/29/1"
+    ],
+    "derived": true
+  }
+]

@@ -243,3 +243,33 @@ Session ID = suffix of working branch `arena/44bc1e2f-own5`. Claimed T-board ite
 - **Combined-tree verification (pre-merge):** CI preview (seed+build diff OK,27 unit tests OK) · `tools/reconcile.py` PASS · `tools/build_line_lab_site.py` PASS (11 pages) · `tools/link_check.py` PASS.
 - **Flagged/nonblocking items published:** `line-lab/flagged.html` (line open-attribution ×3, ESPN tie-record display, Week1 SNF-label irregularity, no-props/no-historical-lines/turnover data gaps, futures partial field).
 
+
+---
+
+# Session e0e66278 — Own5 Evidence Desk (additive NFL research desk)
+
+Session ID = suffix of fixed branch `arena/e0e66278-own5`. Platform requires this branch; it serves as the session branch. This session began when its checkout contained only the initial README, but other sessions merged substantial work before this PR could merge. **All existing sessions' work is preserved.** Shared root site/index, Pages source and existing data tables were not overwritten.
+
+## Task board
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| E1 | Claim-first coordination | done | e0e66278 | COORDINATION.md | Initial claim 7651cc3 pushed before implementation. |
+| E2 | Official source register and methodology | done | e0e66278 | research/evidence/, research/build_snapshot.py, research/official_snapshot.json, docs/METHODOLOGY.md, docs/SOURCE_AUDIT.md, docs/REQUIREMENTS.md | 17 official/primary sources; 78 fact rows; 13 review flags. |
+| E3 | Modeling, correlation, gates, leaderboard engine | done | e0e66278 | nfl_model/, tests/test_math.py, tests/test_model.py, tests/test_contracts.py, scripts/build_data.py, scripts/check_site.py | 29 desk tests; fail-closed gates; no synthetic leaderboard results. |
+| E4 | Static desk and publication configuration | done | e0e66278 | site/, scripts/publish_desk.py, scripts/serve.py, .github/workflows/pages.yml, package.json desk:* scripts | 13-page desk; additive legacy-Pages subdirectory. |
+| E5 | Final integration, combined verification, PR/merge, Pages | in progress | e0e66278 | README.md, COORDINATION.md, docs/EXECUTIVE_SUMMARY.md, docs/VERIFICATION_REPORT.md, data/own5_desk/, own5-desk/, artifacts/verification.json | Conflict resolution preserved main; desk data namespaced; publication record appended after live verification. |
+
+## Scope relocation and conflict-resolution log
+
+- PR #13 initially conflicted with `origin/main` after sessions cd43258e, 0f468a47, 9c3a0a69, arena-f1d30421 and arena-44bc1e2f merged. Conflicts: `.gitignore`, `COORDINATION.md`, `README.md`, `package.json`, `package-lock.json`, `data/correlations.json`, `data/leaderboard.json`, `data/strategies.json`.
+- Resolution: **main's versions kept for all shared conflicting paths**. This session's generated tables were relocated to `data/own5_desk/`; the existing root `data/correlations.json`, `data/leaderboard.json` and `data/strategies.json` remain intact. README and COORDINATION are appended, not replaced. Package scripts are additive `desk:*`; existing root scripts/dependencies remain.
+- Root `index.html`, `pages/`, `data/research.json`, `docs/` NBA pages, `nfl-strategy-lab/`, `line-lab/`, `tools/`, `analysis/` and existing CSVs were not edited by this session.
+- GitHub Pages remains **main @ root (legacy)**. An external API attempt to switch build type returned 403; rather than change shared publication settings or overwrite other live sites, this desk is committed to `own5-desk/` and served at `/Own5/own5-desk/`. The workflow verifies the committed desk matches the deterministic build and smoke-checks public URLs after merge.
+- Generated Python bytecode accidentally tracked in an earlier commit was removed and ignored. A signed-margin median indexing bug was caught during integration, fixed, regression-tested and rebuilt before publication. Neutral-site values are null except the explicitly labeled Madrid game.
+
+## Verification log
+
+- 2026-11-02 UTC: 17 official/primary sources inspected; 32 standings rows, 15 Week 9 matchups, 17 paired 2024 player-game rows and 14 quoted facts frozen. Reconciliation: 5,528 league PF = 5,528 PA; Burrow 4,918 passing yards; Chase 1,708 receiving yards / 127 receptions; all paired week/date/opponent/result tuples match.
+- 2026-11-02 UTC: desk build produced 13 HTML pages and 215 table rows with official links; internal links/fragments/assets passed; consecutive builds had identical SHA-256 manifests; 29 desk unit tests passed. Derived correlation: Pearson r=+0.7516, binary phi=+0.6039, joint 10/17=58.8% vs 45.7% independence product. No market quotes, current props or out-of-sample ledger: 0/6 strategies qualify, 0 rewards.
+- 2026-11-02 UTC: combined-tree verification after merging origin/main: 56/56 unit tests pass (29 desk + 27 existing root tests); existing root seed/build guard clean; `tools/reconcile.py` PASS (120 finals, 32/32 teams exact); desk build 13 pages / 215 official-linked rows / internal links pass; `dist/` and committed `own5-desk/` match; `node --check assets/app.js` pass. Existing root/NBA/Strategy Lab/Line Lab outputs preserved. Final PR/merge/Pages result is appended below after execution.

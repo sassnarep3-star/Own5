@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "checks": [
+    "17 official source URLs and excerpt hashes checked",
+    "78 fact rows checked against exact saved evidence",
+    "league PF = PA = 5528",
+    "15 matchups + 2 bye teams cover all 32 teams",
+    "17 paired games reconcile to official career controls",
+    "13 review items carry official source links",
+    "15 derived lines: provenance, blank market fields and probability mass checked"
+  ],
+  "failures": [],
+  "source_count": 17,
+  "fact_rows": 78,
+  "review_items": 13,
+  "snapshot_date": "2026-11-02"
+}

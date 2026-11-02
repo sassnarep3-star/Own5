@@ -1,0 +1,1588 @@
+[
+  {
+    "id": "team-BUF",
+    "category": "Official snapshot",
+    "subject": "Buffalo Bills",
+    "values": {
+      "wins": 6,
+      "losses": 1,
+      "ties": 0,
+      "points_for": 233,
+      "points_against": 181
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ],
+    "evidence_file": "research/evidence/nfl_standings_2026.md",
+    "evidence_line": "| [![](https://static.www.nfl.com/t_q-best/league/api/clubs/logos/BUF)\\<br>\\<br>Buffalo Bills\\<br>\\<br>Bills](https://www.nfl.com/teams/buffalo-bills/) | 6 | 1 | 0 | 0.857 | 233 | 181 | 52 | 3 - 1 - 0 | 3 - 0 - 0 | 0 - 1 - 0 | 0.000 | 4 - 1 - 0 | 0.800 | 2 - 0 - 0 | 3W | 4 - 1 - 0 |",
+    "verified": true
+  },
+  {
+    "id": "team-MIN",
+    "category": "Official snapshot",
+    "subject": "Minnesota Vikings",
+    "values": {
+      "wins": 6,
+      "losses": 1,
+      "ties": 0,
+      "points_for": 140,
+      "points_against": 93
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ],
+    "evidence_file": "research/evidence/nfl_standings_2026.md",
+    "evidence_line": "| [![](https://static.www.nfl.com/t_q-best/league/api/clubs/logos/MIN)\\<br>\\<br>Minnesota Vikings\\<br>\\<br>Vikings](https://www.nfl.com/teams/minnesota-vikings/) | 6 | 1 | 0 | 0.857 | 140 | 93 | 47 | 3 - 0 - 0 | 3 - 1 - 0 | 2 - 1 - 0 | 0.667 | 4 - 1 - 0 | 0.800 | 2 - 0 - 0 | 1L | 4 - 1 - 0 |",
+    "verified": true
+  },
+  {
+    "id": "team-SF",
+    "category": "Official snapshot",
+    "subject": "San Francisco 49ers",
+    "values": {
+      "wins": 6,
+      "losses": 1,
+      "ties": 0,
+      "points_for": 197,
+      "points_against": 139
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ],
+    "evidence_file": "research/evidence/nfl_standings_2026.md",
+    "evidence_line": "| [![](https://static.www.nfl.com/t_q-best/league/api/clubs/logos/SF)\\<br>\\<br>San Francisco 49ers\\<br>\\<br>49ers](https://www.nfl.com/teams/san-francisco-49ers/) | 6 | 1 | 0 | 0.857 | 197 | 139 | 58 | 4 - 0 - 0 | 2 - 1 - 0 | 3 - 0 - 0 | 1.000 | 4 - 1 - 0 | 0.800 | 2 - 0 - 0 | 1L | 4 - 1 - 0 |",
+    "verified": true
+  },
+  {
+    "id": "team-DEN",
+    "category": "Official snapshot",
+    "subject": "Denver Broncos",
+    "values": {
+      "wins": 6,
+      "losses": 2,
+      "ties": 0,
+      "points_for": 172,
+      "points_against": 165
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ],
+    "evidence_file": "research/evidence/nfl_standings_2026.md",
+    "evidence_line": "| [![](https://static.www.nfl.com/t_q-best/league/api/clubs/logos/DEN)\\<br>\\<br>Denver Broncos\\<br>\\<br>Broncos](https://www.nfl.com/teams/denver-broncos/) | 6 | 2 | 0 | 0.750 | 172 | 165 | 7 | 4 - 0 - 0 | 2 - 2 - 0 | 2 - 1 - 0 | 0.667 | 3 - 1 - 0 | 0.750 | 3 - 1 - 0 | 4W | 4 - 1 - 0 |",
+    "verified": true
+  },
+  {
+    "id": "team-PIT",
+    "category": "Official snapshot",
+    "subject": "Pittsburgh Steelers",
+    "values": {
+      "wins": 6,
+      "losses": 2,
+      "ties": 0,
+      "points_for": 180,
+      "points_against": 144
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ],
+    "evidence_file": "research/evidence/nfl_standings_2026.md",
+    "evidence_line": "| [![](https://static.www.nfl.com/t_q-best/league/api/clubs/logos/PIT)\\<br>\\<br>Pittsburgh Steelers\\<br>\\<br>Steelers](https://www.nfl.com/teams/pittsburgh-steelers/) | 6 | 2 | 0 | 0.750 | 180 | 144 | 36 | 4 - 0 - 0 | 2 - 2 - 0 | 2 - 1 - 0 | 0.667 | 3 - 2 - 0 | 0.600 | 3 - 0 - 0 | 4W | 4 - 1 - 0 |",
+    "verified": true
+  },
+  {
+    "id": "team-CHI",
+    "category": "Official snapshot",
+    "subject": "Chicago Bears",
+    "values": {
+      "wins": 5,
+      "losses": 2,
+      "ties": 0,
+      "points_for": 180,
+      "points_against": 143
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ],
+    "evidence_file": "research/evidence/nfl_standings_2026.md",
+    "evidence_line": "| [![](https://static.www.nfl.com/t_q-best/league/api/clubs/logos/CHI)\\<br>\\<br>Chicago Bears\\<br>\\<br>Bears](https://www.nfl.com/teams/chicago-bears/) | 5 | 2 | 0 | 0.714 | 180 | 143 | 37 | 3 - 1 - 0 | 2 - 1 - 0 | 0 - 2 - 0 | 0.000 | 3 - 2 - 0 | 0.600 | 2 - 0 - 0 | 2W | 4 - 1 - 0 |",
+    "verified": true
+  },
+  {
+    "id": "team-CIN",
+    "category": "Official snapshot",
+    "subject": "Cincinnati Bengals",
+    "values": {
+      "wins": 5,
+      "losses": 2,
+      "ties": 0,
+      "points_for": 206,
+      "points_against": 158
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ],
+    "evidence_file": "research/evidence/nfl_standings_2026.md",
+    "evidence_line": "| [![](https://static.www.nfl.com/t_q-best/league/api/clubs/logos/CIN)\\<br>\\<br>Cincinnati Bengals\\<br>\\<br>Bengals](https://www.nfl.com/teams/cincinnati-bengals/) | 5 | 2 | 0 | 0.714 | 206 | 158 | 48 | 2 - 1 - 0 | 3 - 1 - 0 | 1 - 1 - 0 | 0.500 | 4 - 2 - 0 | 0.667 | 1 - 0 - 0 | 3W | 3 - 2 - 0 |",
+    "verified": true
+  },
+  {
+    "id": "team-DET",
+    "category": "Official snapshot",
+    "subject": "Detroit Lions",
+    "values": {
+      "wins": 5,
+      "losses": 2,
+      "ties": 0,
+      "points_for": 203,
+      "points_against": 180
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ],
+    "evidence_file": "research/evidence/nfl_standings_2026.md",
+    "evidence_line": "| [![](https://static.www.nfl.com/t_q-best/league/api/clubs/logos/DET)\\<br>\\<br>Detroit Lions\\<br>\\<br>Lions](https://www.nfl.com/teams/detroit-lions/) | 5 | 2 | 0 | 0.714 | 203 | 180 | 23 | 4 - 0 - 0 | 1 - 2 - 0 | 2 - 0 - 0 | 1.000 | 4 - 1 - 0 | 0.800 | 1 - 0 - 0 | 3W | 4 - 1 - 0 |",
+    "verified": true
+  },
+  {
+    "id": "team-JAX",
+    "category": "Official snapshot",
+    "subject": "Jacksonville Jaguars",
+    "values": {
+      "wins": 5,
+      "losses": 2,
+      "ties": 0,
+      "points_for": 196,
+      "points_against": 111
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ],
+    "evidence_file": "research/evidence/nfl_standings_2026.md",
+    "evidence_line": "| [![](https://static.www.nfl.com/t_q-best/league/api/clubs/logos/JAX)\\<br>\\<br>Jacksonville Jaguars\\<br>\\<br>Jaguars](https://www.nfl.com/teams/jacksonville-jaguars/) | 5 | 2 | 0 | 0.714 | 196 | 111 | 85 | 4 - 1 - 0 | 1 - 1 - 0 | 1 - 1 - 0 | 0.500 | 4 - 2 - 0 | 0.667 | 1 - 0 - 0 | 1W | 4 - 1 - 0 |",
+    "verified": true
+  },
+  {
+    "id": "team-KC",
+    "category": "Official snapshot",
+    "subject": "Kansas City Chiefs",
+    "values": {
+      "wins": 5,
+      "losses": 2,
+      "ties": 0,
+      "points_for": 167,
+      "points_against": 131
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ],
+    "evidence_file": "research/evidence/nfl_standings_2026.md",
+    "evidence_line": "| [![](https://static.www.nfl.com/t_q-best/league/api/clubs/logos/KC)\\<br>\\<br>Kansas City Chiefs\\<br>\\<br>Chiefs](https://www.nfl.com/teams/kansas-city-chiefs/) | 5 | 2 | 0 | 0.714 | 167 | 131 | 36 | 3 - 0 - 0 | 2 - 2 - 0 | 3 - 1 - 0 | 0.750 | 5 - 1 - 0 | 0.833 | 0 - 1 - 0 | 2L | 3 - 2 - 0 |",
+    "verified": true
+  },
+  {
+    "id": "team-NYG",
+    "category": "Official snapshot",
+    "subject": "New York Giants",
+    "values": {
+      "wins": 4,
+      "losses": 2,
+      "ties": 1,
+      "points_for": 163,
+      "points_against": 161
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ],
+    "evidence_file": "research/evidence/nfl_standings_2026.md",
+    "evidence_line": "| [![](https://static.www.nfl.com/t_q-best/league/api/clubs/logos/NYG)\\<br>\\<br>New York Giants\\<br>\\<br>Giants](https://www.nfl.com/teams/new-york-giants/) | 4 | 2 | 1 | 0.643 | 163 | 161 | 2 | 3 - 1 - 0 | 1 - 1 - 1 | 1 - 0 - 1 | 0.750 | 2 - 2 - 1 | 0.500 | 2 - 0 - 0 | 1W | 3 - 1 - 1 |",
+    "verified": true
+  },
+  {
+    "id": "team-CLE",
+    "category": "Official snapshot",
+    "subject": "Cleveland Browns",
+    "values": {
+      "wins": 5,
+      "losses": 3,
+      "ties": 0,
+      "points_for": 139,
+      "points_against": 173
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ],
+    "evidence_file": "research/evidence/nfl_standings_2026.md",
+    "evidence_line": "| [![](https://static.www.nfl.com/t_q-best/league/api/clubs/logos/CLE)\\<br>\\<br>Cleveland Browns\\<br>\\<br>Browns](https://www.nfl.com/teams/cleveland-browns/) | 5 | 3 | 0 | 0.625 | 139 | 173 | -34 | 3 - 0 - 0 | 2 - 3 - 0 | 2 - 1 - 0 | 0.667 | 3 - 3 - 0 | 0.500 | 1 - 1 - 0 | 1L | 3 - 2 - 0 |",
+    "verified": true
+  },
+  {
+    "id": "team-GB",
+    "category": "Official snapshot",
+    "subject": "Green Bay Packers",
+    "values": {
+      "wins": 5,
+      "losses": 3,
+      "ties": 0,
+      "points_for": 171,
+      "points_against": 164
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ],
+    "evidence_file": "research/evidence/nfl_standings_2026.md",
+    "evidence_line": "| [![](https://static.www.nfl.com/t_q-best/league/api/clubs/logos/GB)\\<br>\\<br>Green Bay Packers\\<br>\\<br>Packers](https://www.nfl.com/teams/green-bay-packers/) | 5 | 3 | 0 | 0.625 | 171 | 164 | 7 | 3 - 1 - 0 | 2 - 2 - 0 | 1 - 2 - 0 | 0.333 | 4 - 3 - 0 | 0.571 | 1 - 1 - 0 | 1W | 4 - 1 - 0 |",
+    "verified": true
+  },
+  {
+    "id": "team-NE",
+    "category": "Official snapshot",
+    "subject": "New England Patriots",
+    "values": {
+      "wins": 5,
+      "losses": 3,
+      "ties": 0,
+      "points_for": 184,
+      "points_against": 162
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ],
+    "evidence_file": "research/evidence/nfl_standings_2026.md",
+    "evidence_line": "| [![](https://static.www.nfl.com/t_q-best/league/api/clubs/logos/NE)\\<br>\\<br>New England Patriots\\<br>\\<br>Patriots](https://www.nfl.com/teams/new-england-patriots/) | 5 | 3 | 0 | 0.625 | 184 | 162 | 22 | 3 - 1 - 0 | 2 - 3 - 0 | 3 - 0 - 0 | 1.000 | 5 - 1 - 0 | 0.833 | 0 - 2 - 0 | 1W | 4 - 1 - 0 |",
+    "verified": true
+  },
+  {
+    "id": "team-SEA",
+    "category": "Official snapshot",
+    "subject": "Seattle Seahawks",
+    "values": {
+      "wins": 4,
+      "losses": 3,
+      "ties": 0,
+      "points_for": 168,
+      "points_against": 125
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ],
+    "evidence_file": "research/evidence/nfl_standings_2026.md",
+    "evidence_line": "| [![](https://static.www.nfl.com/t_q-best/league/api/clubs/logos/SEA)\\<br>\\<br>Seattle Seahawks\\<br>\\<br>Seahawks](https://www.nfl.com/teams/seattle-seahawks/) | 4 | 3 | 0 | 0.571 | 168 | 125 | 43 | 3 - 1 - 0 | 1 - 2 - 0 | 1 - 1 - 0 | 0.500 | 1 - 2 - 0 | 0.333 | 1 - 1 - 0 | 1W | 2 - 3 - 0 |",
+    "verified": true
+  },
+  {
+    "id": "team-BAL",
+    "category": "Official snapshot",
+    "subject": "Baltimore Ravens",
+    "values": {
+      "wins": 4,
+      "losses": 4,
+      "ties": 0,
+      "points_for": 179,
+      "points_against": 203
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ],
+    "evidence_file": "research/evidence/nfl_standings_2026.md",
+    "evidence_line": "| [![](https://static.www.nfl.com/t_q-best/league/api/clubs/logos/BAL)\\<br>\\<br>Baltimore Ravens\\<br>\\<br>Ravens](https://www.nfl.com/teams/baltimore-ravens/) | 4 | 4 | 0 | 0.500 | 179 | 203 | -24 | 1 - 2 - 0 | 3 - 2 - 0 | 0 - 2 - 0 | 0.000 | 2 - 3 - 0 | 0.400 | 2 - 1 - 0 | 3L | 2 - 3 - 0 |",
+    "verified": true
+  },
+  {
+    "id": "team-LV",
+    "category": "Official snapshot",
+    "subject": "Las Vegas Raiders",
+    "values": {
+      "wins": 4,
+      "losses": 4,
+      "ties": 0,
+      "points_for": 221,
+      "points_against": 230
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ],
+    "evidence_file": "research/evidence/nfl_standings_2026.md",
+    "evidence_line": "| [![](https://static.www.nfl.com/t_q-best/league/api/clubs/logos/LV)\\<br>\\<br>Las Vegas Raiders\\<br>\\<br>Raiders](https://www.nfl.com/teams/las-vegas-raiders/) | 4 | 4 | 0 | 0.500 | 221 | 230 | -9 | 1 - 3 - 0 | 3 - 1 - 0 | 1 - 1 - 0 | 0.500 | 3 - 3 - 0 | 0.500 | 1 - 1 - 0 | 1W | 1 - 4 - 0 |",
+    "verified": true
+  },
+  {
+    "id": "team-LA",
+    "category": "Official snapshot",
+    "subject": "Los Angeles Rams",
+    "values": {
+      "wins": 4,
+      "losses": 4,
+      "ties": 0,
+      "points_for": 194,
+      "points_against": 168
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ],
+    "evidence_file": "research/evidence/nfl_standings_2026.md",
+    "evidence_line": "| [![](https://static.www.nfl.com/t_q-best/league/api/clubs/logos/LA)\\<br>\\<br>Los Angeles Rams\\<br>\\<br>Rams](https://www.nfl.com/teams/los-angeles-rams/) | 4 | 4 | 0 | 0.500 | 194 | 168 | 26 | 2 - 3 - 0 | 2 - 1 - 0 | 0 - 2 - 0 | 0.000 | 2 - 2 - 0 | 0.500 | 1 - 1 - 0 | 2W | 3 - 2 - 0 |",
+    "verified": true
+  },
+  {
+    "id": "team-CAR",
+    "category": "Official snapshot",
+    "subject": "Carolina Panthers",
+    "values": {
+      "wins": 3,
+      "losses": 4,
+      "ties": 0,
+      "points_for": 178,
+      "points_against": 193
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ],
+    "evidence_file": "research/evidence/nfl_standings_2026.md",
+    "evidence_line": "| [![](https://static.www.nfl.com/t_q-best/league/api/clubs/logos/CAR)\\<br>\\<br>Carolina Panthers\\<br>\\<br>Panthers](https://www.nfl.com/teams/carolina-panthers/) | 3 | 4 | 0 | 0.429 | 178 | 193 | -15 | 1 - 2 - 0 | 2 - 2 - 0 | 1 - 1 - 0 | 0.500 | 3 - 3 - 0 | 0.500 | 0 - 1 - 0 | 2L | 2 - 3 - 0 |",
+    "verified": true
+  },
+  {
+    "id": "team-AZ",
+    "category": "Official snapshot",
+    "subject": "Arizona Cardinals",
+    "values": {
+      "wins": 3,
+      "losses": 5,
+      "ties": 0,
+      "points_for": 175,
+      "points_against": 238
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ],
+    "evidence_file": "research/evidence/nfl_standings_2026.md",
+    "evidence_line": "| [![](https://static.www.nfl.com/t_q-best/league/api/clubs/logos/AZ)\\<br>\\<br>Arizona Cardinals\\<br>\\<br>Cardinals](https://www.nfl.com/teams/arizona-cardinals/) | 3 | 5 | 0 | 0.375 | 175 | 238 | -63 | 0 - 3 - 0 | 3 - 2 - 0 | 1 - 2 - 0 | 0.333 | 2 - 4 - 0 | 0.333 | 1 - 1 - 0 | 1W | 2 - 3 - 0 |",
+    "verified": true
+  },
+  {
+    "id": "team-ATL",
+    "category": "Official snapshot",
+    "subject": "Atlanta Falcons",
+    "values": {
+      "wins": 3,
+      "losses": 5,
+      "ties": 0,
+      "points_for": 171,
+      "points_against": 189
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ],
+    "evidence_file": "research/evidence/nfl_standings_2026.md",
+    "evidence_line": "| [![](https://static.www.nfl.com/t_q-best/league/api/clubs/logos/ATL)\\<br>\\<br>Atlanta Falcons\\<br>\\<br>Falcons](https://www.nfl.com/teams/atlanta-falcons/) | 3 | 5 | 0 | 0.375 | 171 | 189 | -18 | 1 - 3 - 0 | 2 - 2 - 0 | 0 - 2 - 0 | 0.333 | 3 - 2 - 0 | 0.500 | 1 - 1 - 0 | 1L | 2 - 3 - 0 |",
+    "verified": true
+  },
+  {
+    "id": "team-DAL",
+    "category": "Official snapshot",
+    "subject": "Dallas Cowboys",
+    "values": {
+      "wins": 3,
+      "losses": 5,
+      "ties": 0,
+      "points_for": 219,
+      "points_against": 213
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ],
+    "evidence_file": "research/evidence/nfl_standings_2026.md",
+    "evidence_line": "| [![](https://static.www.nfl.com/t_q-best/league/api/clubs/logos/DAL)\\<br>\\<br>Dallas Cowboys\\<br>\\<br>Cowboys](https://www.nfl.com/teams/dallas-cowboys/) | 3 | 5 | 0 | 0.375 | 219 | 213 | 6 | 1 - 3 - 0 | 2 - 2 - 0 | 2 - 1 - 0 | 0.667 | 2 - 4 - 0 | 0.333 | 1 - 1 - 0 | 1L | 2 - 3 - 0 |",
+    "verified": true
+  },
+  {
+    "id": "team-TB",
+    "category": "Official snapshot",
+    "subject": "Tampa Bay Buccaneers",
+    "values": {
+      "wins": 3,
+      "losses": 5,
+      "ties": 0,
+      "points_for": 178,
+      "points_against": 151
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ],
+    "evidence_file": "research/evidence/nfl_standings_2026.md",
+    "evidence_line": "| [![](https://static.www.nfl.com/t_q-best/league/api/clubs/logos/TB)\\<br>\\<br>Tampa Bay Buccaneers\\<br>\\<br>Buccaneers](https://www.nfl.com/teams/tampa-bay-buccaneers/) | 3 | 5 | 0 | 0.375 | 178 | 151 | 27 | 1 - 4 - 0 | 2 - 1 - 0 | 2 - 0 - 0 | 1.000 | 3 - 2 - 0 | 0.600 | 0 - 3 - 0 | 2W | 3 - 2 - 0 |",
+    "verified": true
+  },
+  {
+    "id": "team-WAS",
+    "category": "Official snapshot",
+    "subject": "Washington Commanders",
+    "values": {
+      "wins": 2,
+      "losses": 4,
+      "ties": 1,
+      "points_for": 159,
+      "points_against": 182
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ],
+    "evidence_file": "research/evidence/nfl_standings_2026.md",
+    "evidence_line": "| [![](https://static.www.nfl.com/t_q-best/league/api/clubs/logos/WAS)\\<br>\\<br>Washington Commanders\\<br>\\<br>Commanders](https://www.nfl.com/teams/washington-commanders/) | 2 | 4 | 1 | 0.357 | 159 | 182 | -23 | 2 - 1 - 1 | 0 - 3 - 0 | 1 - 2 - 1 | 0.375 | 2 - 3 - 1 | 0.417 | 0 - 1 - 0 | 1W | 2 - 2 - 1 |",
+    "verified": true
+  },
+  {
+    "id": "team-HOU",
+    "category": "Official snapshot",
+    "subject": "Houston Texans",
+    "values": {
+      "wins": 2,
+      "losses": 5,
+      "ties": 0,
+      "points_for": 165,
+      "points_against": 170
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ],
+    "evidence_file": "research/evidence/nfl_standings_2026.md",
+    "evidence_line": "| [![](https://static.www.nfl.com/t_q-best/league/api/clubs/logos/HOU)\\<br>\\<br>Houston Texans\\<br>\\<br>Texans](https://www.nfl.com/teams/houston-texans/) | 2 | 5 | 0 | 0.286 | 165 | 170 | -5 | 0 - 4 - 0 | 2 - 1 - 0 | 2 - 1 - 0 | 0.667 | 2 - 3 - 0 | 0.400 | 0 - 2 - 0 | 1L | 2 - 3 - 0 |",
+    "verified": true
+  },
+  {
+    "id": "team-NO",
+    "category": "Official snapshot",
+    "subject": "New Orleans Saints",
+    "values": {
+      "wins": 2,
+      "losses": 5,
+      "ties": 0,
+      "points_for": 162,
+      "points_against": 194
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ],
+    "evidence_file": "research/evidence/nfl_standings_2026.md",
+    "evidence_line": "| [![](https://static.www.nfl.com/t_q-best/league/api/clubs/logos/NO)\\<br>\\<br>New Orleans Saints\\<br>\\<br>Saints](https://www.nfl.com/teams/new-orleans-saints/) | 2 | 5 | 0 | 0.286 | 162 | 194 | -32 | 0 - 4 - 0 | 2 - 1 - 0 | 0 - 1 - 0 | 0.000 | 1 - 3 - 0 | 0.250 | 1 - 2 - 0 | 1L | 1 - 4 - 0 |",
+    "verified": true
+  },
+  {
+    "id": "team-IND",
+    "category": "Official snapshot",
+    "subject": "Indianapolis Colts",
+    "values": {
+      "wins": 2,
+      "losses": 6,
+      "ties": 0,
+      "points_for": 161,
+      "points_against": 222
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ],
+    "evidence_file": "research/evidence/nfl_standings_2026.md",
+    "evidence_line": "| [![](https://static.www.nfl.com/t_q-best/league/api/clubs/logos/IND)\\<br>\\<br>Indianapolis Colts\\<br>\\<br>Colts](https://www.nfl.com/teams/indianapolis-colts/) | 2 | 6 | 0 | 0.250 | 161 | 222 | -61 | 1 - 2 - 0 | 1 - 4 - 0 | 1 - 2 - 0 | 0.333 | 1 - 5 - 0 | 0.167 | 1 - 1 - 0 | 4L | 1 - 4 - 0 |",
+    "verified": true
+  },
+  {
+    "id": "team-NYJ",
+    "category": "Official snapshot",
+    "subject": "New York Jets",
+    "values": {
+      "wins": 2,
+      "losses": 6,
+      "ties": 0,
+      "points_for": 170,
+      "points_against": 188
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ],
+    "evidence_file": "research/evidence/nfl_standings_2026.md",
+    "evidence_line": "| [![](https://static.www.nfl.com/t_q-best/league/api/clubs/logos/NYJ)\\<br>\\<br>New York Jets\\<br>\\<br>Jets](https://www.nfl.com/teams/new-york-jets/) | 2 | 6 | 0 | 0.250 | 170 | 188 | -18 | 1 - 3 - 0 | 1 - 3 - 0 | 0 - 2 - 0 | 0.000 | 2 - 3 - 0 | 0.400 | 2 - 1 - 0 | 3L | 1 - 4 - 0 |",
+    "verified": true
+  },
+  {
+    "id": "team-PHI",
+    "category": "Official snapshot",
+    "subject": "Philadelphia Eagles",
+    "values": {
+      "wins": 2,
+      "losses": 6,
+      "ties": 0,
+      "points_for": 137,
+      "points_against": 202
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ],
+    "evidence_file": "research/evidence/nfl_standings_2026.md",
+    "evidence_line": "| [![](https://static.www.nfl.com/t_q-best/league/api/clubs/logos/PHI)\\<br>\\<br>Philadelphia Eagles\\<br>\\<br>Eagles](https://www.nfl.com/teams/philadelphia-eagles/) | 2 | 6 | 0 | 0.250 | 137 | 202 | -65 | 1 - 3 - 0 | 1 - 3 - 0 | 1 - 2 - 0 | 0.333 | 1 - 5 - 0 | 0.167 | 1 - 2 - 0 | 6L | 0 - 5 - 0 |",
+    "verified": true
+  },
+  {
+    "id": "team-MIA",
+    "category": "Official snapshot",
+    "subject": "Miami Dolphins",
+    "values": {
+      "wins": 1,
+      "losses": 6,
+      "ties": 0,
+      "points_for": 117,
+      "points_against": 181
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ],
+    "evidence_file": "research/evidence/nfl_standings_2026.md",
+    "evidence_line": "| [![](https://static.www.nfl.com/t_q-best/league/api/clubs/logos/MIA)\\<br>\\<br>Miami Dolphins\\<br>\\<br>Dolphins](https://www.nfl.com/teams/miami-dolphins/) | 1 | 6 | 0 | 0.143 | 117 | 181 | -64 | 0 - 3 - 0 | 1 - 3 - 0 | 1 - 1 - 0 | 0.500 | 1 - 4 - 0 | 0.200 | 0 - 2 - 0 | 1L | 1 - 4 - 0 |",
+    "verified": true
+  },
+  {
+    "id": "team-TEN",
+    "category": "Official snapshot",
+    "subject": "Tennessee Titans",
+    "values": {
+      "wins": 1,
+      "losses": 7,
+      "ties": 0,
+      "points_for": 144,
+      "points_against": 199
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ],
+    "evidence_file": "research/evidence/nfl_standings_2026.md",
+    "evidence_line": "| [![](https://static.www.nfl.com/t_q-best/league/api/clubs/logos/TEN)\\<br>\\<br>Tennessee Titans\\<br>\\<br>Titans](https://www.nfl.com/teams/tennessee-titans/) | 1 | 7 | 0 | 0.125 | 144 | 199 | -55 | 0 - 4 - 0 | 1 - 3 - 0 | 1 - 1 - 0 | 0.500 | 1 - 5 - 0 | 0.167 | 0 - 2 - 0 | 2L | 1 - 5 - 0 |",
+    "verified": true
+  },
+  {
+    "id": "team-LAC",
+    "category": "Official snapshot",
+    "subject": "Los Angeles Chargers",
+    "values": {
+      "wins": 0,
+      "losses": 7,
+      "ties": 0,
+      "points_for": 99,
+      "points_against": 175
+    },
+    "source_ids": [
+      "S10"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ],
+    "evidence_file": "research/evidence/nfl_standings_2026.md",
+    "evidence_line": "| [![](https://static.www.nfl.com/t_q-best/league/api/clubs/logos/LAC)\\<br>\\<br>Los Angeles Chargers\\<br>\\<br>Chargers](https://www.nfl.com/teams/los-angeles-chargers/) | 0 | 7 | 0 | 0.000 | 99 | 175 | -76 | 0 - 3 - 0 | 0 - 4 - 0 | 0 - 3 - 0 | 0.000 | 0 - 4 - 0 | 0.000 | 0 - 3 - 0 | 7L | 0 - 5 - 0 |",
+    "verified": true
+  },
+  {
+    "id": "schedule-jaguars-at-ravens-2026-reg-9",
+    "category": "Official schedule",
+    "subject": "Jacksonville Jaguars at Baltimore Ravens",
+    "values": {
+      "date": "2026-11-05",
+      "local_time": "8:15 PM",
+      "broadcast": "PRIME"
+    },
+    "source_ids": [
+      "S11"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/games/jaguars-at-ravens-2026-reg-9"
+    ],
+    "evidence_file": "research/evidence/nfl_week9_2026.md",
+    "evidence_line": "[Jaguars at Ravens, Thursday, November 5th, 8:15 PM, PRIME](https://www.nfl.com/games/jaguars-at-ravens-2026-reg-9)",
+    "verified": true
+  },
+  {
+    "id": "schedule-bengals-at-falcons-2026-reg-9",
+    "category": "Official schedule",
+    "subject": "Cincinnati Bengals at Atlanta Falcons",
+    "values": {
+      "date": "2026-11-08",
+      "local_time": "9:30 AM",
+      "broadcast": "NFLN"
+    },
+    "source_ids": [
+      "S11"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/games/bengals-at-falcons-2026-reg-9"
+    ],
+    "evidence_file": "research/evidence/nfl_week9_2026.md",
+    "evidence_line": "[Bengals at Falcons, Sunday, November 8th, 9:30 AM, NFLN](https://www.nfl.com/games/bengals-at-falcons-2026-reg-9)",
+    "verified": true
+  },
+  {
+    "id": "schedule-broncos-at-panthers-2026-reg-9",
+    "category": "Official schedule",
+    "subject": "Denver Broncos at Carolina Panthers",
+    "values": {
+      "date": "2026-11-08",
+      "local_time": "1:00 PM",
+      "broadcast": "CBS"
+    },
+    "source_ids": [
+      "S11"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/games/broncos-at-panthers-2026-reg-9"
+    ],
+    "evidence_file": "research/evidence/nfl_week9_2026.md",
+    "evidence_line": "[Broncos at Panthers, Sunday, November 8th, 1:00 PM, CBS](https://www.nfl.com/games/broncos-at-panthers-2026-reg-9)",
+    "verified": true
+  },
+  {
+    "id": "schedule-cowboys-at-colts-2026-reg-9",
+    "category": "Official schedule",
+    "subject": "Dallas Cowboys at Indianapolis Colts",
+    "values": {
+      "date": "2026-11-08",
+      "local_time": "1:00 PM",
+      "broadcast": "FOX"
+    },
+    "source_ids": [
+      "S11"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/games/cowboys-at-colts-2026-reg-9"
+    ],
+    "evidence_file": "research/evidence/nfl_week9_2026.md",
+    "evidence_line": "[Cowboys at Colts, Sunday, November 8th, 1:00 PM, FOX](https://www.nfl.com/games/cowboys-at-colts-2026-reg-9)",
+    "verified": true
+  },
+  {
+    "id": "schedule-jets-at-chiefs-2026-reg-9",
+    "category": "Official schedule",
+    "subject": "New York Jets at Kansas City Chiefs",
+    "values": {
+      "date": "2026-11-08",
+      "local_time": "1:00 PM",
+      "broadcast": "CBS"
+    },
+    "source_ids": [
+      "S11"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/games/jets-at-chiefs-2026-reg-9"
+    ],
+    "evidence_file": "research/evidence/nfl_week9_2026.md",
+    "evidence_line": "[Jets at Chiefs, Sunday, November 8th, 1:00 PM, CBS](https://www.nfl.com/games/jets-at-chiefs-2026-reg-9)",
+    "verified": true
+  },
+  {
+    "id": "schedule-lions-at-dolphins-2026-reg-9",
+    "category": "Official schedule",
+    "subject": "Detroit Lions at Miami Dolphins",
+    "values": {
+      "date": "2026-11-08",
+      "local_time": "1:00 PM",
+      "broadcast": "CBS"
+    },
+    "source_ids": [
+      "S11"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/games/lions-at-dolphins-2026-reg-9"
+    ],
+    "evidence_file": "research/evidence/nfl_week9_2026.md",
+    "evidence_line": "[Lions at Dolphins, Sunday, November 8th, 1:00 PM, CBS](https://www.nfl.com/games/lions-at-dolphins-2026-reg-9)",
+    "verified": true
+  },
+  {
+    "id": "schedule-browns-at-saints-2026-reg-9",
+    "category": "Official schedule",
+    "subject": "Cleveland Browns at New Orleans Saints",
+    "values": {
+      "date": "2026-11-08",
+      "local_time": "1:00 PM",
+      "broadcast": "CBS"
+    },
+    "source_ids": [
+      "S11"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/games/browns-at-saints-2026-reg-9"
+    ],
+    "evidence_file": "research/evidence/nfl_week9_2026.md",
+    "evidence_line": "[Browns at Saints, Sunday, November 8th, 1:00 PM, CBS](https://www.nfl.com/games/browns-at-saints-2026-reg-9)",
+    "verified": true
+  },
+  {
+    "id": "schedule-giants-at-eagles-2026-reg-9",
+    "category": "Official schedule",
+    "subject": "New York Giants at Philadelphia Eagles",
+    "values": {
+      "date": "2026-11-08",
+      "local_time": "1:00 PM",
+      "broadcast": "FOX"
+    },
+    "source_ids": [
+      "S11"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/games/giants-at-eagles-2026-reg-9"
+    ],
+    "evidence_file": "research/evidence/nfl_week9_2026.md",
+    "evidence_line": "[Giants at Eagles, Sunday, November 8th, 1:00 PM, FOX](https://www.nfl.com/games/giants-at-eagles-2026-reg-9)",
+    "verified": true
+  },
+  {
+    "id": "schedule-rams-at-commanders-2026-reg-9",
+    "category": "Official schedule",
+    "subject": "Los Angeles Rams at Washington Commanders",
+    "values": {
+      "date": "2026-11-08",
+      "local_time": "1:00 PM",
+      "broadcast": "FOX"
+    },
+    "source_ids": [
+      "S11"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/games/rams-at-commanders-2026-reg-9"
+    ],
+    "evidence_file": "research/evidence/nfl_week9_2026.md",
+    "evidence_line": "[Rams at Commanders, Sunday, November 8th, 1:00 PM, FOX](https://www.nfl.com/games/rams-at-commanders-2026-reg-9)",
+    "verified": true
+  },
+  {
+    "id": "schedule-texans-at-chargers-2026-reg-9",
+    "category": "Official schedule",
+    "subject": "Houston Texans at Los Angeles Chargers",
+    "values": {
+      "date": "2026-11-08",
+      "local_time": "4:05 PM",
+      "broadcast": "CBS"
+    },
+    "source_ids": [
+      "S11"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/games/texans-at-chargers-2026-reg-9"
+    ],
+    "evidence_file": "research/evidence/nfl_week9_2026.md",
+    "evidence_line": "[Texans at Chargers, Sunday, November 8th, 4:05 PM, CBS](https://www.nfl.com/games/texans-at-chargers-2026-reg-9)",
+    "verified": true
+  },
+  {
+    "id": "schedule-raiders-at-49ers-2026-reg-9",
+    "category": "Official schedule",
+    "subject": "Las Vegas Raiders at San Francisco 49ers",
+    "values": {
+      "date": "2026-11-08",
+      "local_time": "4:25 PM",
+      "broadcast": "FOX"
+    },
+    "source_ids": [
+      "S11"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/games/raiders-at-49ers-2026-reg-9"
+    ],
+    "evidence_file": "research/evidence/nfl_week9_2026.md",
+    "evidence_line": "[Raiders at 49ers, Sunday, November 8th, 4:25 PM, FOX](https://www.nfl.com/games/raiders-at-49ers-2026-reg-9)",
+    "verified": true
+  },
+  {
+    "id": "schedule-packers-at-patriots-2026-reg-9",
+    "category": "Official schedule",
+    "subject": "Green Bay Packers at New England Patriots",
+    "values": {
+      "date": "2026-11-08",
+      "local_time": "4:25 PM",
+      "broadcast": "FOX"
+    },
+    "source_ids": [
+      "S11"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/games/packers-at-patriots-2026-reg-9"
+    ],
+    "evidence_file": "research/evidence/nfl_week9_2026.md",
+    "evidence_line": "[Packers at Patriots, Sunday, November 8th, 4:25 PM, FOX](https://www.nfl.com/games/packers-at-patriots-2026-reg-9)",
+    "verified": true
+  },
+  {
+    "id": "schedule-cardinals-at-seahawks-2026-reg-9",
+    "category": "Official schedule",
+    "subject": "Arizona Cardinals at Seattle Seahawks",
+    "values": {
+      "date": "2026-11-08",
+      "local_time": "4:25 PM",
+      "broadcast": "FOX"
+    },
+    "source_ids": [
+      "S11"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/games/cardinals-at-seahawks-2026-reg-9"
+    ],
+    "evidence_file": "research/evidence/nfl_week9_2026.md",
+    "evidence_line": "[Cardinals at Seahawks, Sunday, November 8th, 4:25 PM, FOX](https://www.nfl.com/games/cardinals-at-seahawks-2026-reg-9)",
+    "verified": true
+  },
+  {
+    "id": "schedule-buccaneers-at-bears-2026-reg-9",
+    "category": "Official schedule",
+    "subject": "Tampa Bay Buccaneers at Chicago Bears",
+    "values": {
+      "date": "2026-11-08",
+      "local_time": "8:20 PM",
+      "broadcast": "NBC"
+    },
+    "source_ids": [
+      "S11"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/games/buccaneers-at-bears-2026-reg-9"
+    ],
+    "evidence_file": "research/evidence/nfl_week9_2026.md",
+    "evidence_line": "[Buccaneers at Bears, Sunday, November 8th, 8:20 PM, NBC](https://www.nfl.com/games/buccaneers-at-bears-2026-reg-9)",
+    "verified": true
+  },
+  {
+    "id": "schedule-bills-at-vikings-2026-reg-9",
+    "category": "Official schedule",
+    "subject": "Buffalo Bills at Minnesota Vikings",
+    "values": {
+      "date": "2026-11-09",
+      "local_time": "8:15 PM",
+      "broadcast": "ESPN"
+    },
+    "source_ids": [
+      "S11"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/games/bills-at-vikings-2026-reg-9"
+    ],
+    "evidence_file": "research/evidence/nfl_week9_2026.md",
+    "evidence_line": "[Bills at Vikings, Monday, November 9th, 8:15 PM, ESPN](https://www.nfl.com/games/bills-at-vikings-2026-reg-9)",
+    "verified": true
+  },
+  {
+    "id": "paired-2024-01",
+    "category": "Official player logs",
+    "subject": "2024 Week 1 · Bengals Patriots",
+    "values": {
+      "burrow_passing_yards": 164,
+      "chase_receptions": 6,
+      "chase_receiving_yards": 62
+    },
+    "source_ids": [
+      "S12",
+      "S13"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/players/joe-burrow/stats/logs/2024/",
+      "https://www.nfl.com/players/ja-marr-chase/stats/logs/2024/"
+    ],
+    "evidence_file": "research/evidence/burrow_logs_2024.md",
+    "evidence_line": "| 1 | 09/08/2024 | Patriots | L 10 - 16 | 21 | 29 | 164 | 5.7 | 0 | 0 | 3 | 10 | 86 | 4 | 15 | 3.8 | 0 | 1 | 0 |",
+    "additional_evidence_file": "research/evidence/chase_logs_2024.md",
+    "additional_evidence_line": "| 1 | 09/08/2024 | Patriots | L 10 - 16 | 6 | 62 | 10.3 | 28 | 0 |  |  |  |  |  |  |  |",
+    "verified": true
+  },
+  {
+    "id": "paired-2024-02",
+    "category": "Official player logs",
+    "subject": "2024 Week 2 · Bengals @Chiefs",
+    "values": {
+      "burrow_passing_yards": 258,
+      "chase_receptions": 4,
+      "chase_receiving_yards": 35
+    },
+    "source_ids": [
+      "S12",
+      "S13"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/players/joe-burrow/stats/logs/2024/",
+      "https://www.nfl.com/players/ja-marr-chase/stats/logs/2024/"
+    ],
+    "evidence_file": "research/evidence/burrow_logs_2024.md",
+    "evidence_line": "| 2 | 09/15/2024 | @Chiefs | L 25 - 26 | 23 | 36 | 258 | 7.2 | 2 | 0 | 3 | 12 | 103.7 | 6 | 9 | 1.5 | 0 | 2 | 1 |",
+    "additional_evidence_file": "research/evidence/chase_logs_2024.md",
+    "additional_evidence_line": "| 2 | 09/15/2024 | @Chiefs | L 25 - 26 | 4 | 35 | 8.8 | 13 | 0 |  |  |  |  |  |  |  |",
+    "verified": true
+  },
+  {
+    "id": "paired-2024-03",
+    "category": "Official player logs",
+    "subject": "2024 Week 3 · Bengals Commanders",
+    "values": {
+      "burrow_passing_yards": 324,
+      "chase_receptions": 6,
+      "chase_receiving_yards": 118
+    },
+    "source_ids": [
+      "S12",
+      "S13"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/players/joe-burrow/stats/logs/2024/",
+      "https://www.nfl.com/players/ja-marr-chase/stats/logs/2024/"
+    ],
+    "evidence_file": "research/evidence/burrow_logs_2024.md",
+    "evidence_line": "| 3 | 09/23/2024 | Commanders | L 33 - 38 | 29 | 38 | 324 | 8.5 | 3 | 0 | 2 | 12 | 127.5 | 1 | 4 | 4 | 0 |  |  |",
+    "additional_evidence_file": "research/evidence/chase_logs_2024.md",
+    "additional_evidence_line": "| 3 | 09/23/2024 | Commanders | L 33 - 38 | 6 | 118 | 19.7 | 41 | 2 |  |  |  |  |  |  |  |",
+    "verified": true
+  },
+  {
+    "id": "paired-2024-04",
+    "category": "Official player logs",
+    "subject": "2024 Week 4 · Bengals @Panthers",
+    "values": {
+      "burrow_passing_yards": 232,
+      "chase_receptions": 3,
+      "chase_receiving_yards": 85
+    },
+    "source_ids": [
+      "S12",
+      "S13"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/players/joe-burrow/stats/logs/2024/",
+      "https://www.nfl.com/players/ja-marr-chase/stats/logs/2024/"
+    ],
+    "evidence_file": "research/evidence/burrow_logs_2024.md",
+    "evidence_line": "| 4 | 09/29/2024 | @Panthers | W 34 - 24 | 22 | 31 | 232 | 7.5 | 2 | 1 | 0 | 0 | 100.5 | 1 | 10 | 10 | 0 |  |  |",
+    "additional_evidence_file": "research/evidence/chase_logs_2024.md",
+    "additional_evidence_line": "| 4 | 09/29/2024 | @Panthers | W 34 - 24 | 3 | 85 | 28.3 | 63 | 1 |  |  |  |  |  |  |  |",
+    "verified": true
+  },
+  {
+    "id": "paired-2024-05",
+    "category": "Official player logs",
+    "subject": "2024 Week 5 · Bengals Ravens",
+    "values": {
+      "burrow_passing_yards": 392,
+      "chase_receptions": 10,
+      "chase_receiving_yards": 193
+    },
+    "source_ids": [
+      "S12",
+      "S13"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/players/joe-burrow/stats/logs/2024/",
+      "https://www.nfl.com/players/ja-marr-chase/stats/logs/2024/"
+    ],
+    "evidence_file": "research/evidence/burrow_logs_2024.md",
+    "evidence_line": "| 5 | 10/06/2024 | Ravens | L 38 - 41 | 30 | 39 | 392 | 10 | 5 | 1 | 3 | 21 | 137 | 2 | 1 | 0.5 | 0 |  |  |",
+    "additional_evidence_file": "research/evidence/chase_logs_2024.md",
+    "additional_evidence_line": "| 5 | 10/06/2024 | Ravens | L 38 - 41 | 10 | 193 | 19.3 | 70 | 2 |  |  |  |  |  |  |  |",
+    "verified": true
+  },
+  {
+    "id": "paired-2024-06",
+    "category": "Official player logs",
+    "subject": "2024 Week 6 · Bengals @Giants",
+    "values": {
+      "burrow_passing_yards": 208,
+      "chase_receptions": 5,
+      "chase_receiving_yards": 72
+    },
+    "source_ids": [
+      "S12",
+      "S13"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/players/joe-burrow/stats/logs/2024/",
+      "https://www.nfl.com/players/ja-marr-chase/stats/logs/2024/"
+    ],
+    "evidence_file": "research/evidence/burrow_logs_2024.md",
+    "evidence_line": "| 6 | 10/13/2024 | @Giants | W 17 - 7 | 19 | 28 | 208 | 7.4 | 0 | 0 | 4 | 25 | 89.6 | 4 | 55 | 13.8 | 1 |  |  |",
+    "additional_evidence_file": "research/evidence/chase_logs_2024.md",
+    "additional_evidence_line": "| 6 | 10/13/2024 | @Giants | W 17 - 7 | 5 | 72 | 14.4 | 33 | 0 |  |  |  |  |  |  |  |",
+    "verified": true
+  },
+  {
+    "id": "paired-2024-07",
+    "category": "Official player logs",
+    "subject": "2024 Week 7 · Bengals @Browns",
+    "values": {
+      "burrow_passing_yards": 181,
+      "chase_receptions": 5,
+      "chase_receiving_yards": 55
+    },
+    "source_ids": [
+      "S12",
+      "S13"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/players/joe-burrow/stats/logs/2024/",
+      "https://www.nfl.com/players/ja-marr-chase/stats/logs/2024/"
+    ],
+    "evidence_file": "research/evidence/burrow_logs_2024.md",
+    "evidence_line": "| 7 | 10/20/2024 | @Browns | W 21 - 14 | 15 | 25 | 181 | 7.2 | 2 | 0 | 3 | 17 | 108.9 | 3 | -3 | -1 | 0 |  |  |",
+    "additional_evidence_file": "research/evidence/chase_logs_2024.md",
+    "additional_evidence_line": "| 7 | 10/20/2024 | @Browns | W 21 - 14 | 5 | 55 | 11 | 18 | 1 | 1 | 11 | 11 | 11 | 0 |  |  |",
+    "verified": true
+  },
+  {
+    "id": "paired-2024-08",
+    "category": "Official player logs",
+    "subject": "2024 Week 8 · Bengals Eagles",
+    "values": {
+      "burrow_passing_yards": 234,
+      "chase_receptions": 9,
+      "chase_receiving_yards": 54
+    },
+    "source_ids": [
+      "S12",
+      "S13"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/players/joe-burrow/stats/logs/2024/",
+      "https://www.nfl.com/players/ja-marr-chase/stats/logs/2024/"
+    ],
+    "evidence_file": "research/evidence/burrow_logs_2024.md",
+    "evidence_line": "| 8 | 10/27/2024 | Eagles | L 17 - 37 | 26 | 37 | 234 | 6.3 | 1 | 1 | 1 | 12 | 84.7 | 3 | 15 | 5 | 0 |  |  |",
+    "additional_evidence_file": "research/evidence/chase_logs_2024.md",
+    "additional_evidence_line": "| 8 | 10/27/2024 | Eagles | L 17 - 37 | 9 | 54 | 6 | 13 | 1 |  |  |  |  |  |  |  |",
+    "verified": true
+  },
+  {
+    "id": "paired-2024-09",
+    "category": "Official player logs",
+    "subject": "2024 Week 9 · Bengals Raiders",
+    "values": {
+      "burrow_passing_yards": 251,
+      "chase_receptions": 7,
+      "chase_receiving_yards": 43
+    },
+    "source_ids": [
+      "S12",
+      "S13"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/players/joe-burrow/stats/logs/2024/",
+      "https://www.nfl.com/players/ja-marr-chase/stats/logs/2024/"
+    ],
+    "evidence_file": "research/evidence/burrow_logs_2024.md",
+    "evidence_line": "| 9 | 11/03/2024 | Raiders | W 41 - 24 | 27 | 39 | 251 | 6.4 | 5 | 1 | 1 | 8 | 115.5 | 3 | 11 | 3.7 | 0 |  |  |",
+    "additional_evidence_file": "research/evidence/chase_logs_2024.md",
+    "additional_evidence_line": "| 9 | 11/03/2024 | Raiders | W 41 - 24 | 7 | 43 | 6.1 | 11 | 0 |  |  |  |  |  |  |  |",
+    "verified": true
+  },
+  {
+    "id": "paired-2024-10",
+    "category": "Official player logs",
+    "subject": "2024 Week 10 · Bengals @Ravens",
+    "values": {
+      "burrow_passing_yards": 428,
+      "chase_receptions": 11,
+      "chase_receiving_yards": 264
+    },
+    "source_ids": [
+      "S12",
+      "S13"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/players/joe-burrow/stats/logs/2024/",
+      "https://www.nfl.com/players/ja-marr-chase/stats/logs/2024/"
+    ],
+    "evidence_file": "research/evidence/burrow_logs_2024.md",
+    "evidence_line": "| 10 | 11/07/2024 | @Ravens | L 34 - 35 | 34 | 56 | 428 | 7.6 | 4 | 0 | 3 | 7 | 108.3 | 2 | 6 | 3 | 0 | 2 | 0 |",
+    "additional_evidence_file": "research/evidence/chase_logs_2024.md",
+    "additional_evidence_line": "| 10 | 11/07/2024 | @Ravens | L 34 - 35 | 11 | 264 | 24 | 70 | 3 |  |  |  |  |  |  |  |",
+    "verified": true
+  },
+  {
+    "id": "paired-2024-11",
+    "category": "Official player logs",
+    "subject": "2024 Week 11 · Bengals @Chargers",
+    "values": {
+      "burrow_passing_yards": 356,
+      "chase_receptions": 7,
+      "chase_receiving_yards": 75
+    },
+    "source_ids": [
+      "S12",
+      "S13"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/players/joe-burrow/stats/logs/2024/",
+      "https://www.nfl.com/players/ja-marr-chase/stats/logs/2024/"
+    ],
+    "evidence_file": "research/evidence/burrow_logs_2024.md",
+    "evidence_line": "| 11 | 11/17/2024 | @Chargers | L 27 - 34 | 28 | 50 | 356 | 7.1 | 3 | 0 | 3 | 14 | 98.4 | 2 | 28 | 14 | 0 |  |  |",
+    "additional_evidence_file": "research/evidence/chase_logs_2024.md",
+    "additional_evidence_line": "| 11 | 11/17/2024 | @Chargers | L 27 - 34 | 7 | 75 | 10.7 | 32 | 2 |  |  |  |  |  |  |  |",
+    "verified": true
+  },
+  {
+    "id": "paired-2024-13",
+    "category": "Official player logs",
+    "subject": "2024 Week 13 · Bengals Steelers",
+    "values": {
+      "burrow_passing_yards": 309,
+      "chase_receptions": 6,
+      "chase_receiving_yards": 86
+    },
+    "source_ids": [
+      "S12",
+      "S13"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/players/joe-burrow/stats/logs/2024/",
+      "https://www.nfl.com/players/ja-marr-chase/stats/logs/2024/"
+    ],
+    "evidence_file": "research/evidence/burrow_logs_2024.md",
+    "evidence_line": "| 13 | 12/01/2024 | Steelers | L 38 - 44 | 28 | 38 | 309 | 8.1 | 3 | 1 | 4 | 27 | 112.7 | 2 | 9 | 4.5 | 0 | 2 | 2 |",
+    "additional_evidence_file": "research/evidence/chase_logs_2024.md",
+    "additional_evidence_line": "| 13 | 12/01/2024 | Steelers | L 38 - 44 | 6 | 86 | 14.3 | 49 | 1 |  |  |  |  |  |  |  |",
+    "verified": true
+  },
+  {
+    "id": "paired-2024-14",
+    "category": "Official player logs",
+    "subject": "2024 Week 14 · Bengals @Cowboys",
+    "values": {
+      "burrow_passing_yards": 369,
+      "chase_receptions": 14,
+      "chase_receiving_yards": 177
+    },
+    "source_ids": [
+      "S12",
+      "S13"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/players/joe-burrow/stats/logs/2024/",
+      "https://www.nfl.com/players/ja-marr-chase/stats/logs/2024/"
+    ],
+    "evidence_file": "research/evidence/burrow_logs_2024.md",
+    "evidence_line": "| 14 | 12/09/2024 | @Cowboys | W 27 - 20 | 33 | 44 | 369 | 8.4 | 3 | 1 | 2 | 10 | 112.8 | 2 | -2 | -1 | 0 | 1 | 0 |",
+    "additional_evidence_file": "research/evidence/chase_logs_2024.md",
+    "additional_evidence_line": "| 14 | 12/09/2024 | @Cowboys | W 27 - 20 | 14 | 177 | 12.6 | 40 | 2 | 1 | 14 | 14 | 14 | 0 |  |  |",
+    "verified": true
+  },
+  {
+    "id": "paired-2024-15",
+    "category": "Official player logs",
+    "subject": "2024 Week 15 · Bengals @Titans",
+    "values": {
+      "burrow_passing_yards": 271,
+      "chase_receptions": 9,
+      "chase_receiving_yards": 94
+    },
+    "source_ids": [
+      "S12",
+      "S13"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/players/joe-burrow/stats/logs/2024/",
+      "https://www.nfl.com/players/ja-marr-chase/stats/logs/2024/"
+    ],
+    "evidence_file": "research/evidence/burrow_logs_2024.md",
+    "evidence_line": "| 15 | 12/15/2024 | @Titans | W 37 - 27 | 26 | 37 | 271 | 7.3 | 3 | 2 | 1 | 2 | 95.7 |  |  |  |  | 1 | 1 |",
+    "additional_evidence_file": "research/evidence/chase_logs_2024.md",
+    "additional_evidence_line": "| 15 | 12/15/2024 | @Titans | W 37 - 27 | 9 | 94 | 10.4 | 29 | 0 |  |  |  |  |  |  |  |",
+    "verified": true
+  },
+  {
+    "id": "paired-2024-16",
+    "category": "Official player logs",
+    "subject": "2024 Week 16 · Bengals Browns",
+    "values": {
+      "burrow_passing_yards": 252,
+      "chase_receptions": 6,
+      "chase_receiving_yards": 97
+    },
+    "source_ids": [
+      "S12",
+      "S13"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/players/joe-burrow/stats/logs/2024/",
+      "https://www.nfl.com/players/ja-marr-chase/stats/logs/2024/"
+    ],
+    "evidence_file": "research/evidence/burrow_logs_2024.md",
+    "evidence_line": "| 16 | 12/22/2024 | Browns | W 24 - 6 | 23 | 30 | 252 | 8.4 | 3 | 0 | 4 | 42 | 134.3 | 2 | 19 | 9.5 | 0 | 1 | 1 |",
+    "additional_evidence_file": "research/evidence/chase_logs_2024.md",
+    "additional_evidence_line": "| 16 | 12/22/2024 | Browns | W 24 - 6 | 6 | 97 | 16.2 | 32 | 1 | 1 | 7 | 7 | 7 | 0 |  |  |",
+    "verified": true
+  },
+  {
+    "id": "paired-2024-17",
+    "category": "Official player logs",
+    "subject": "2024 Week 17 · Bengals Broncos",
+    "values": {
+      "burrow_passing_yards": 412,
+      "chase_receptions": 9,
+      "chase_receiving_yards": 102
+    },
+    "source_ids": [
+      "S12",
+      "S13"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/players/joe-burrow/stats/logs/2024/",
+      "https://www.nfl.com/players/ja-marr-chase/stats/logs/2024/"
+    ],
+    "evidence_file": "research/evidence/burrow_logs_2024.md",
+    "evidence_line": "| 17 | 12/28/2024 | Broncos | W 30 - 24 | 39 | 49 | 412 | 8.4 | 3 | 0 | 7 | 28 | 122.1 | 4 | 25 | 6.2 | 1 |  |  |",
+    "additional_evidence_file": "research/evidence/chase_logs_2024.md",
+    "additional_evidence_line": "| 17 | 12/28/2024 | Broncos | W 30 - 24 | 9 | 102 | 11.3 | 38 | 0 |  |  |  |  |  |  |  |",
+    "verified": true
+  },
+  {
+    "id": "paired-2024-18",
+    "category": "Official player logs",
+    "subject": "2024 Week 18 · Bengals @Steelers",
+    "values": {
+      "burrow_passing_yards": 277,
+      "chase_receptions": 10,
+      "chase_receiving_yards": 96
+    },
+    "source_ids": [
+      "S12",
+      "S13"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/players/joe-burrow/stats/logs/2024/",
+      "https://www.nfl.com/players/ja-marr-chase/stats/logs/2024/"
+    ],
+    "evidence_file": "research/evidence/burrow_logs_2024.md",
+    "evidence_line": "| 18 | 01/04/2025 | @Steelers | W 19 - 17 | 37 | 46 | 277 | 6 | 1 | 1 | 4 | 31 | 90 | 1 | -1 | -1 | 0 | 1 | 0 |",
+    "additional_evidence_file": "research/evidence/chase_logs_2024.md",
+    "additional_evidence_line": "| 18 | 01/04/2025 | @Steelers | W 19 - 17 | 10 | 96 | 9.6 | 19 | 1 |  |  |  |  |  |  |  |",
+    "verified": true
+  },
+  {
+    "id": "score-touchdown",
+    "category": "Scoring",
+    "subject": "Touchdown",
+    "values": {
+      "value": 6
+    },
+    "source_ids": [
+      "S01"
+    ],
+    "source_urls": [
+      "https://static.www.nfl.com/image/upload/fl_attachment/league/tqivdkzt9mu6wdgsh1ku.pdf"
+    ],
+    "evidence_file": "research/evidence/nfl_rules.md",
+    "evidence_line": "(a) Touchdown: 6 points",
+    "verified": true
+  },
+  {
+    "id": "score-field-goal",
+    "category": "Scoring",
+    "subject": "Field goal",
+    "values": {
+      "value": 3
+    },
+    "source_ids": [
+      "S01"
+    ],
+    "source_urls": [
+      "https://static.www.nfl.com/image/upload/fl_attachment/league/tqivdkzt9mu6wdgsh1ku.pdf"
+    ],
+    "evidence_file": "research/evidence/nfl_rules.md",
+    "evidence_line": "(b) Field goal: 3 points",
+    "verified": true
+  },
+  {
+    "id": "score-safety",
+    "category": "Scoring",
+    "subject": "Safety",
+    "values": {
+      "value": 2
+    },
+    "source_ids": [
+      "S01"
+    ],
+    "source_urls": [
+      "https://static.www.nfl.com/image/upload/fl_attachment/league/tqivdkzt9mu6wdgsh1ku.pdf"
+    ],
+    "evidence_file": "research/evidence/nfl_rules.md",
+    "evidence_line": "(c) Safety: 2 points",
+    "verified": true
+  },
+  {
+    "id": "score-try",
+    "category": "Scoring",
+    "subject": "Try after touchdown",
+    "values": {
+      "value": "1 point (field goal or safety) or 2 points (touchdown)"
+    },
+    "source_ids": [
+      "S01"
+    ],
+    "source_urls": [
+      "https://static.www.nfl.com/image/upload/fl_attachment/league/tqivdkzt9mu6wdgsh1ku.pdf"
+    ],
+    "evidence_file": "research/evidence/nfl_rules.md",
+    "evidence_line": "(d) Try after touchdown: 1 point (field goal or safety) or 2 points (touchdown)",
+    "verified": true
+  },
+  {
+    "id": "ot-2025",
+    "category": "Rules",
+    "subject": "2025 regular-season overtime change",
+    "values": {
+      "value": "Both teams get a possession opportunity, subject to a 10-minute period"
+    },
+    "source_ids": [
+      "S02"
+    ],
+    "source_urls": [
+      "https://operations.nfl.com/rules-officiating/featured-rules"
+    ],
+    "evidence_file": "research/evidence/nfl_rules.md",
+    "evidence_line": "NFL teams adopted to align the postseason and regular season overtime rules by granting both teams an opportunity to possess the ball regardless of the outcome of the first possession, subject to a 10-minute overtime period in the regular season.",
+    "verified": true
+  },
+  {
+    "id": "gamebooks",
+    "category": "Data",
+    "subject": "NFL Game Book",
+    "values": {
+      "value": "PDF containing every score and stat from the game"
+    },
+    "source_ids": [
+      "S03"
+    ],
+    "source_urls": [
+      "https://support.nfl.com/hc/en-us/articles/35869678028180-Game-Books"
+    ],
+    "evidence_file": "research/evidence/nfl_rules.md",
+    "evidence_line": "At the bottom of the Recap, there should be a Download Game Book PDF containing every score and stat from the game.",
+    "verified": true
+  },
+  {
+    "id": "gsis-corrections",
+    "category": "Data",
+    "subject": "GSIS statistical corrections",
+    "values": {
+      "value": "Corrections made with Elias Sports Bureau"
+    },
+    "source_ids": [
+      "S04"
+    ],
+    "source_urls": [
+      "https://www.nflgsis.com/Help/About.html"
+    ],
+    "evidence_file": "research/evidence/nfl_rules.md",
+    "evidence_line": "Corrections to existing game information will be made regularly in conjunction with Elias Sports Bureau, the official statistician of the NFL.",
+    "verified": true
+  },
+  {
+    "id": "odds-providers",
+    "category": "Markets",
+    "subject": "NFL widget odds providers",
+    "values": {
+      "value": "FanDuel, Caesars, and DraftKings"
+    },
+    "source_ids": [
+      "S05"
+    ],
+    "source_urls": [
+      "https://support.nfl.com/hc/en-us/articles/35869738523412-Who-is-making-the-odds"
+    ],
+    "evidence_file": "research/evidence/nfl_rules.md",
+    "evidence_line": "Odds are provided by the official sportsbook partners of the NFL: FanDuel, Caesars, and DraftKings.",
+    "verified": true
+  },
+  {
+    "id": "total-ot",
+    "category": "Markets",
+    "subject": "NFL Support total definition",
+    "values": {
+      "value": "Combined points, including overtime"
+    },
+    "source_ids": [
+      "S06"
+    ],
+    "source_urls": [
+      "https://support.nfl.com/hc/en-us/articles/35869727578900-What-is-a-total"
+    ],
+    "evidence_file": "research/evidence/nfl_rules.md",
+    "evidence_line": "A total is a bet on the number of points scored in the game by both teams combined, including overtime.",
+    "verified": true
+  },
+  {
+    "id": "moneyline-tie",
+    "category": "Markets",
+    "subject": "NFL Support moneyline example",
+    "values": {
+      "value": "Tie returns the stake in this example"
+    },
+    "source_ids": [
+      "S07"
+    ],
+    "source_urls": [
+      "https://support.nfl.com/hc/en-us/articles/35869774194324-What-is-the-point-spread"
+    ],
+    "evidence_file": "research/evidence/nfl_rules.md",
+    "evidence_line": "If the game ends in a tie, the bettor's wager is returned with no loss or profit.",
+    "verified": true
+  },
+  {
+    "id": "ngs-inputs",
+    "category": "Signals",
+    "subject": "Completion Probability inputs",
+    "values": {
+      "value": "Air distance, air yards, receiver/defender separation, pass-rusher distance, QB speed, and other tracking inputs"
+    },
+    "source_ids": [
+      "S08"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/news/next-gen-stats-introduction-to-completion-probability-0ap3000000964655"
+    ],
+    "evidence_file": "research/evidence/nfl_rules.md",
+    "evidence_line": "Those inputs include pass air distance (from quarterback to receiver), air yards, the distance between the receiver and the nearest defender, the distance between the quarterback and the nearest pass rusher, the speed of the quarterback at throw, among several other metrics.",
+    "verified": true
+  },
+  {
+    "id": "fanduel-snap",
+    "category": "Settlement",
+    "subject": "FanDuel NFL player-prop participation",
+    "values": {
+      "value": "Active and at least one snap; otherwise applicable props void"
+    },
+    "source_ids": [
+      "S09"
+    ],
+    "source_urls": [
+      "https://support.fanduel.com/s/article/Betting-football-with-FanDuel"
+    ],
+    "evidence_file": "research/evidence/fanduel_football.md",
+    "evidence_line": "NFL player props are settled as normal if the player is active and plays at least one snap. If the player is inactive, or active but does not play a snap, applicable player prop bets are void.",
+    "verified": true
+  },
+  {
+    "id": "fanduel-td",
+    "category": "Settlement",
+    "subject": "FanDuel touchdown scorer",
+    "values": {
+      "value": "A passing touchdown does not make the passer a touchdown scorer"
+    },
+    "source_ids": [
+      "S09"
+    ],
+    "source_urls": [
+      "https://support.fanduel.com/s/article/Betting-football-with-FanDuel"
+    ],
+    "evidence_file": "research/evidence/fanduel_football.md",
+    "evidence_line": "A player who throws a touchdown pass is NOT considered the touchdown scorer.",
+    "verified": true
+  },
+  {
+    "id": "fanduel-two-point",
+    "category": "Settlement",
+    "subject": "FanDuel two-point conversion statistics",
+    "values": {
+      "value": "Yards and receptions on a two-point attempt excluded from standard totals"
+    },
+    "source_ids": [
+      "S09"
+    ],
+    "source_urls": [
+      "https://support.fanduel.com/s/article/Betting-football-with-FanDuel"
+    ],
+    "evidence_file": "research/evidence/fanduel_football.md",
+    "evidence_line": "Yards and receptions recorded during a two-point attempt do not count toward standard yardage or reception totals.",
+    "verified": true
+  }
+]

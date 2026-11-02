@@ -1,0 +1,232 @@
+[
+  {
+    "id": "R01",
+    "title": "Missing market inputs",
+    "affected": "All Week 9 games",
+    "blank_fields": [
+      "sportsbook_spread",
+      "sportsbook_total",
+      "american_odds",
+      "quote_timestamp",
+      "bookmaker",
+      "limits"
+    ],
+    "source_ids": [
+      "S11"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/schedules/2026/by-week/week-9"
+    ],
+    "status": "needs review",
+    "detail": "No official, timestamped sportsbook quote was captured. NFL schedule pages are not a price archive. Own fair lines are shown separately; market edge and CLV remain blank.",
+    "action": "Collect authorized operator feeds with pre-kickoff timestamps and retain the original response."
+  },
+  {
+    "id": "R02",
+    "title": "Missing player-prop market",
+    "affected": "Current player props",
+    "blank_fields": [
+      "player",
+      "prop_line",
+      "over_price",
+      "under_price",
+      "quote_timestamp",
+      "participation_status"
+    ],
+    "source_ids": [
+      "S09"
+    ],
+    "source_urls": [
+      "https://support.fanduel.com/s/article/Betting-football-with-FanDuel"
+    ],
+    "status": "needs review",
+    "detail": "No current operator prop quote or participation snapshot was verified. Historical 2024 thresholds are research examples, not current betting lines.",
+    "action": "Capture operator-specific props and official participation evidence before evaluation."
+  },
+  {
+    "id": "R03",
+    "title": "No economic validation",
+    "affected": "All strategies",
+    "blank_fields": [
+      "net_roi",
+      "roi_lower_bound",
+      "clv",
+      "clv_lower_bound",
+      "out_of_sample_bets",
+      "holdout_result"
+    ],
+    "source_ids": [
+      "S16"
+    ],
+    "source_urls": [
+      "https://academic.oup.com/rfs/issue/29/1"
+    ],
+    "status": "needs review",
+    "detail": "No strategy has the pre-registered out-of-sample market history required by the gates. No profit, skill, or reward claim is made.",
+    "action": "Run the locked protocol on future, untouched observations; never backfill a holdout with guesses."
+  },
+  {
+    "id": "R04",
+    "title": "Correlation scope",
+    "affected": "Same-game combinations",
+    "blank_fields": [
+      "current_pair_correlation",
+      "joint_probability",
+      "sgp_fair_price"
+    ],
+    "source_ids": [
+      "S12"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/players/joe-burrow/stats/logs/2024/"
+    ],
+    "status": "needs review",
+    "detail": "The 2024 Burrow–Chase correlation is a 17-game, single-team historical estimate. It is not a current-season or universal SGP correlation.",
+    "action": "Estimate on broader matched game logs with uncertainty and out-of-sample joint calibration."
+  },
+  {
+    "id": "R05",
+    "title": "Model assumptions",
+    "affected": "Own game lines",
+    "blank_fields": [
+      "empirical_home_advantage",
+      "injury_adjustment",
+      "weather_adjustment",
+      "starters"
+    ],
+    "source_ids": [
+      "S10"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ],
+    "status": "needs review",
+    "detail": "Home advantage is disabled (zero assumption), not estimated. Injury, weather, roster and quarterback adjustments are unavailable and left blank. International venue is flagged.",
+    "action": "Verify point-in-time inputs; estimate adjustments only in training folds."
+  },
+  {
+    "id": "R06",
+    "title": "Source title mismatch",
+    "affected": "NFL Support point-spread article",
+    "blank_fields": [],
+    "source_ids": [
+      "S07"
+    ],
+    "source_urls": [
+      "https://support.nfl.com/hc/en-us/articles/35869774194324-What-is-the-point-spread"
+    ],
+    "status": "needs review",
+    "detail": "The URL says point spread, but the retrieved article explains moneylines. It is not used as a spread definition.",
+    "action": "Review the official article; obtain a correct spread reference before adding one."
+  },
+  {
+    "id": "R07",
+    "title": "Dynamic-source discrepancy",
+    "affected": "Ja’Marr Chase career page",
+    "blank_fields": [],
+    "source_ids": [
+      "S15"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/players/ja-marr-chase/stats/career"
+    ],
+    "status": "needs review",
+    "detail": "A search-index excerpt showed an older 2026 row than the rendered official page. Only the rendered 2024 row is used here; search snippets are not treated as live data.",
+    "action": "Use frozen rendered evidence and re-read the official page on refresh."
+  },
+  {
+    "id": "R08",
+    "title": "Access limitation",
+    "affected": "NFL GSIS schedule",
+    "blank_fields": [],
+    "source_ids": [
+      "S04"
+    ],
+    "source_urls": [
+      "https://www.nflgsis.com/Help/About.html"
+    ],
+    "status": "needs review",
+    "detail": "The public help page describes official game books, but the schedule endpoint redirected to a login/error page. No authenticated or bulk GSIS data was obtained.",
+    "action": "Use publicly available NFL Game Center links or an authorized GSIS arrangement."
+  },
+  {
+    "id": "R09",
+    "title": "Slug irregularity",
+    "affected": "Chase player logs",
+    "blank_fields": [],
+    "source_ids": [
+      "S13"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/players/ja-marr-chase/stats/logs/2024/"
+    ],
+    "status": "needs review",
+    "detail": "The guessed jamarr-chase URL returned a player.DisplayName placeholder. The verified ja-marr-chase URL returned the actual named log and is the only player-log source used.",
+    "action": "Keep canonical official URLs in the source register; never accept placeholder pages."
+  },
+  {
+    "id": "R10",
+    "title": "Sample selection",
+    "affected": "Historical prop study",
+    "blank_fields": [],
+    "source_ids": [
+      "S12"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/players/joe-burrow/stats/logs/2024/"
+    ],
+    "status": "needs review",
+    "detail": "The study deliberately selects one QB–receiver pair and one completed season. It is descriptive and susceptible to selection bias; it is not a league-wide edge discovery.",
+    "action": "Pre-register a league-wide universe and evaluate untouched seasons."
+  },
+  {
+    "id": "R11",
+    "title": "Settlement variability",
+    "affected": "Parlays and player props",
+    "blank_fields": [
+      "operator_void_rule",
+      "operator_sgp_reprice_rule"
+    ],
+    "source_ids": [
+      "S09"
+    ],
+    "source_urls": [
+      "https://support.fanduel.com/s/article/Betting-football-with-FanDuel"
+    ],
+    "status": "needs review",
+    "detail": "FanDuel help is operator-specific. A universal void/reprice rule is not verified and must not be assumed across books.",
+    "action": "Store the exact operator, jurisdiction, rule version and betslip terms with each quote."
+  },
+  {
+    "id": "R12",
+    "title": "Rule-version control",
+    "affected": "Overtime and future seasons",
+    "blank_fields": [],
+    "source_ids": [
+      "S02"
+    ],
+    "source_urls": [
+      "https://operations.nfl.com/rules-officiating/featured-rules"
+    ],
+    "status": "needs review",
+    "detail": "The explicitly extracted overtime change is labeled 2025. The 2026 scoring PDF is separately verified; do not silently apply historical rules to later seasons.",
+    "action": "Pin the effective rulebook version to each season and re-verify before model updates."
+  },
+  {
+    "id": "R13",
+    "title": "No live ingestion claim",
+    "affected": "Site data freshness",
+    "blank_fields": [
+      "live_refresh_timestamp"
+    ],
+    "source_ids": [
+      "S10"
+    ],
+    "source_urls": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ],
+    "status": "needs review",
+    "detail": "This release is a frozen 2026-11-02 research snapshot. The site does not claim live odds, live injuries, or automatic sportsbook execution.",
+    "action": "Treat every refresh as a new evidence snapshot and rerun all gates."
+  }
+]

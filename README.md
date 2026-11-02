@@ -151,3 +151,29 @@ GitHub Pages was already configured from `main` at repository root. `.nojekyll` 
 ## Responsible gambling
 
 Sports betting is restricted to adults of legal age in their jurisdiction and carries real risk of loss. Help is available 24/7 and confidential: **1-800-GAMBLER (1-800-426-2537)**, text 800GAM, or chat — [National Council on Problem Gambling](https://www.ncpgambling.org/help-treatment/national-helpline-1-800-522-4700/).
+
+---
+
+## Own5 Evidence Desk (session e0e66278)
+
+**Live desk:** https://sassnarep3-star.github.io/Own5/own5-desk/ · **Executive summary:** [docs/EXECUTIVE_SUMMARY.md](docs/EXECUTIVE_SUMMARY.md) · **Flagged for Review:** https://sassnarep3-star.github.io/Own5/own5-desk/review.html
+
+An additive, source-audited NFL research desk that preserves the existing root dashboard, NBA lab, NFL Strategy Lab and NFL Line Lab. It publishes 15 independent Week 9 research lines, six registered strategy families, 11 fail-closed validation gates, a 17-game Burrow–Chase correlation study, 78 verified fact rows and 13 review flags. **0 strategies qualify and 0 rewards are issued.** Market odds, current props, edge and CLV remain blank because no verified sportsbook archive was obtained.
+
+| Path | Contents |
+|---|---|
+| `own5-desk/` | Generated static desk served by legacy Pages at `/Own5/own5-desk/` |
+| `data/own5_desk/` | This session's source register, verified facts, derived lines, correlations, strategies, leaderboard and review items |
+| `research/evidence/`, `research/build_snapshot.py` | Frozen official excerpts and typed extraction/reconciliation |
+| `nfl_model/`, `tests/test_math.py`, `tests/test_model.py`, `tests/test_contracts.py` | Standard-library modeling, settlement, correlation, contracts and gates |
+| `site/`, `scripts/build_data.py`, `scripts/check_site.py`, `scripts/publish_desk.py` | Desk generator, integrity checks and additive legacy-Pages publication |
+| `docs/METHODOLOGY.md`, `docs/SOURCE_AUDIT.md`, `docs/REQUIREMENTS.md`, `docs/VERIFICATION_REPORT.md` | Protocol and verification record |
+
+```sh
+npm ci --ignore-scripts
+npm run desk:check      # combined unit tests + desk data/site build + link/provenance audit
+npm run desk:publish    # copy verified dist/ into own5-desk/ for legacy Pages
+npm run desk:start      # local desk preview on 0.0.0.0:8000
+```
+
+The existing root dashboard and its CI guard are unchanged. This desk is published as an additive subdirectory because GitHub Pages is already served from `main` at `/` by earlier sessions.

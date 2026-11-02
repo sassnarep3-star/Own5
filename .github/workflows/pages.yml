@@ -1,0 +1,65 @@
+name: Verify Own5 evidence desk
+
+on:
+  push:
+    branches: [main, arena/e0e66278-own5]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: own5-desk-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  desk-verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci --ignore-scripts
+      - name: Combined unit tests, desk build and internal-link/provenance audit
+        run: npm run desk:check
+      - name: Verify committed legacy-Pages desk matches the deterministic build
+        run: |
+          npm run desk:publish
+          git diff --exit-code -- own5-desk/
+      - name: Upload verified desk for review
+        uses: actions/upload-artifact@v4
+        with:
+          name: own5-evidence-desk
+          path: own5-desk/
+
+  legacy-pages-smoke:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: desk-verify
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check public root and additive desk URLs
+        run: |
+          base="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
+          for path in "/" "/own5-desk/" "/own5-desk/lines.html" "/own5-desk/review.html"; do
+            url="$base$path"
+            success=0
+            for attempt in $(seq 1 24); do
+              if curl --fail --silent --show-error --location "$url" | grep -q 'Own5'; then
+                echo "OK $url"
+                success=1
+                break
+              fi
+              sleep 10
+            done
+            if [ "$success" -ne 1 ]; then
+              echo "Published page did not become ready: $url" >&2
+              exit 1
+            fi
+          done

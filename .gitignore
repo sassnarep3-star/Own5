@@ -5,3 +5,10 @@ node_modules/
 .cache/
 coverage/
 research/browser-*.png
+*.py[cod]
+.pytest_cache/
+dist/
+build/
+.work/
+.DS_Store
+*.log

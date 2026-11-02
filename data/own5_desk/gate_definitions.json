@@ -1,0 +1,156 @@
+[
+  {
+    "id": "G00",
+    "name": "Official provenance",
+    "requirement": "All inputs have official evidence and reconciliation.",
+    "classification": "Project policy",
+    "source_ids": [
+      "S16",
+      "S17"
+    ],
+    "source_urls": [
+      "https://academic.oup.com/rfs/issue/29/1",
+      "https://journals.ametsoc.org/view/journals/mwre/148/9/mwrD190076.xml?tab_body=fulltext-display"
+    ]
+  },
+  {
+    "id": "G01",
+    "name": "Point-in-time integrity",
+    "requirement": "Features, forecasts and quotes precede kickoff; no leakage.",
+    "classification": "Project policy",
+    "source_ids": [
+      "S16",
+      "S17"
+    ],
+    "source_urls": [
+      "https://academic.oup.com/rfs/issue/29/1",
+      "https://journals.ametsoc.org/view/journals/mwre/148/9/mwrD190076.xml?tab_body=fulltext-display"
+    ]
+  },
+  {
+    "id": "G02",
+    "name": "Settlement contract",
+    "requirement": "Operator, jurisdiction, rule version and settlement are complete.",
+    "classification": "Project policy",
+    "source_ids": [
+      "S16",
+      "S17"
+    ],
+    "source_urls": [
+      "https://academic.oup.com/rfs/issue/29/1",
+      "https://journals.ametsoc.org/view/journals/mwre/148/9/mwrD190076.xml?tab_body=fulltext-display"
+    ]
+  },
+  {
+    "id": "G03",
+    "name": "Sample size",
+    "requirement": "≥500 selections, ≥100 season-week clusters, ≥3 seasons.",
+    "classification": "Project policy",
+    "source_ids": [
+      "S16",
+      "S17"
+    ],
+    "source_urls": [
+      "https://academic.oup.com/rfs/issue/29/1",
+      "https://journals.ametsoc.org/view/journals/mwre/148/9/mwrD190076.xml?tab_body=fulltext-display"
+    ]
+  },
+  {
+    "id": "G04",
+    "name": "Walk-forward holdout",
+    "requirement": "≥3 expanding folds, ≥1-week embargo, untouched final holdout.",
+    "classification": "Project policy",
+    "source_ids": [
+      "S16",
+      "S17"
+    ],
+    "source_urls": [
+      "https://academic.oup.com/rfs/issue/29/1",
+      "https://journals.ametsoc.org/view/journals/mwre/148/9/mwrD190076.xml?tab_body=fulltext-display"
+    ]
+  },
+  {
+    "id": "G05",
+    "name": "Forecast skill",
+    "requirement": "Adjusted Brier/log-loss skill lower bounds >0; calibration error ≤0.03.",
+    "classification": "Project policy",
+    "source_ids": [
+      "S16",
+      "S17"
+    ],
+    "source_urls": [
+      "https://academic.oup.com/rfs/issue/29/1",
+      "https://journals.ametsoc.org/view/journals/mwre/148/9/mwrD190076.xml?tab_body=fulltext-display"
+    ]
+  },
+  {
+    "id": "G06",
+    "name": "Economic skill",
+    "requirement": "Net ROI lower bound >0.5%; CLV lower bound >0.2%.",
+    "classification": "Project policy",
+    "source_ids": [
+      "S16",
+      "S17"
+    ],
+    "source_urls": [
+      "https://academic.oup.com/rfs/issue/29/1",
+      "https://journals.ametsoc.org/view/journals/mwre/148/9/mwrD190076.xml?tab_body=fulltext-display"
+    ]
+  },
+  {
+    "id": "G07",
+    "name": "Multiplicity control",
+    "requirement": "All 6 families registered; one-sided family alpha 0.05; adjustment applied.",
+    "classification": "Project policy",
+    "source_ids": [
+      "S16",
+      "S17"
+    ],
+    "source_urls": [
+      "https://academic.oup.com/rfs/issue/29/1",
+      "https://journals.ametsoc.org/view/journals/mwre/148/9/mwrD190076.xml?tab_body=fulltext-display"
+    ]
+  },
+  {
+    "id": "G08",
+    "name": "Dependence",
+    "requirement": "Out-of-sample joint calibration and whole-week uncertainty resampling.",
+    "classification": "Project policy",
+    "source_ids": [
+      "S16",
+      "S17"
+    ],
+    "source_urls": [
+      "https://academic.oup.com/rfs/issue/29/1",
+      "https://journals.ametsoc.org/view/journals/mwre/148/9/mwrD190076.xml?tab_body=fulltext-display"
+    ]
+  },
+  {
+    "id": "G09",
+    "name": "Robustness",
+    "requirement": "≥70% positive seasons; drawdown ≤20 units; sensitivity checks pass.",
+    "classification": "Project policy",
+    "source_ids": [
+      "S16",
+      "S17"
+    ],
+    "source_urls": [
+      "https://academic.oup.com/rfs/issue/29/1",
+      "https://journals.ametsoc.org/view/journals/mwre/148/9/mwrD190076.xml?tab_body=fulltext-display"
+    ]
+  },
+  {
+    "id": "G10",
+    "name": "Reproducibility",
+    "requirement": "Locked config; tests, build and deterministic rerun all pass.",
+    "classification": "Project policy",
+    "source_ids": [
+      "S16",
+      "S17"
+    ],
+    "source_urls": [
+      "https://academic.oup.com/rfs/issue/29/1",
+      "https://journals.ametsoc.org/view/journals/mwre/148/9/mwrD190076.xml?tab_body=fulltext-display"
+    ]
+  }
+]
