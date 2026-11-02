@@ -7,7 +7,7 @@ Evidence-first research into NFL line origination, singles, parlays, player prop
 
 ## Evidence status · 2026-11-02
 
-- 13 primary sources checked within explicitly documented scopes; 11 source-backed definitions.
+- 14 primary sources checked (including the official initial GitHub repository tree) within explicitly documented scopes; 11 source-backed definitions.
 - 8 **proposed, untrained** strategy candidates; 7 mandatory validation gates; 6 correlation questions.
 - **0 validated strategies, 0 measured correlations, 0 published bets.** Empirical prices, probabilities, samples, returns, ranks and prize amounts are blank (`null`), not inferred.
 - Timestamped historical official-source prices, matched outcomes, pregame features and complete prop/combination settlement rules were not obtained. These gaps are published on [Flagged for Review](https://sassnarep3-star.github.io/Own5/pages/review.html).

@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 
 SOURCES = [
+('REPO-AUDIT','Official project repository · GitHub API','Initial repository tree','https://api.github.com/repos/sassnarep3-star/Own5/git/trees/426b19d4981627243aa21b324903eab97cfb9d13','The official repository Git tree contains only README.md, a blob of size 6 bytes. Local inspection confirms its content is # Own5.','Repository audit only; this is not an NFL statistical source or evidence of a strategy edge.'),
 ('NFL-RULES','NFL Football Operations','2026 NFL rulebook','https://operations.nfl.com/rules-officiating/2026-nfl-rulebook','The page labels itself “2026 NFL RULEBOOK” and links the official PDF.','Rules and scoring context only; not sportsbook settlement rules.'),
 ('NFL-NGS','NFL Next Gen Stats','Metric glossary','https://nextgenstats.nfl.com/glossary','Time to Throw excludes sacks; the glossary defines CPOE, targeted air yards and YAC above expectation.','Definitions verified; no player-level historical tracking dataset acquired.'),
 ('NFL-INJ','NFL.com','Official injury report','https://www.nfl.com/injuries/','The retrieved page shows a 2026 week 8 injury report with practice and game status columns.','Live page, not an archived pre-kickoff injury feed; no historical availability inference.'),
@@ -79,7 +80,7 @@ flags=[
 ('R07','Rewards are not funded','Medium','A paper competition policy is specified, but no sponsor, budget, prize amount or payment mechanism is verified. Reward amounts stay blank; no cash contest is running.','Leaderboard',['SK-CV']),
 ('R08','Jurisdiction not established','High','Retrieved operator general rules explicitly apply to Virginia. This is research only, not an eligibility determination or betting service for any location.','All markets',['DK-GENERAL']),
 ('R09','Live-source drift & incomplete headers','Medium','Source checks are dated snapshots of visible text, not a continuous feed. The extracted NFL player table omitted headers; numeric player rows were excluded rather than guessed.','Source register / NFL statistics',['NFL-STATS']),
-('R10','Empty starting repository','Low','Initial repository contained only README.md (# Own5); no preexisting datasets, algorithms or applications existed to audit. All new empirical fields remain blank.','Repository audit',['NFL-STATS']),
+('R10','Empty starting repository','Low','Initial repository contained only README.md (# Own5); no preexisting datasets, algorithms or applications existed to audit. All new empirical fields remain blank.','Repository audit',['REPO-AUDIT']),
 ]
 flags=[dict(id=i,issue=t,severity=s,detail=d,scope=sc,status='Needs review',sources=src) for i,t,s,d,sc,src in flags]
 competition=[
