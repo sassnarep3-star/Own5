@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skill vs Luck · NBA Line Origination</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+  <div class="hwrap">
+    <h1>NBA Line-Origination Lab</h1>
+    <p>Repo: sassnarep3-star/Own5 · Research, validation gates &amp; leaderboard design for originating NBA lines · Built 2026-11-02</p>
+  </div>
+  <nav><a href="index.html">Dashboard</a><a href="executive-summary.html">Executive Summary</a><a href="strategies.html">Strategies</a><a href="validation.html">Validation Gates</a><a href="correlations.html">Correlations</a><a href="bet-types.html">Bet Types</a><a href="skill-vs-luck.html" class="active">Skill vs Luck</a><a href="leaderboard.html">Leaderboard</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for Review</a></nav>
+</header>
+<main>
+
+<h2>Removing Luck: Skill-vs-Variance Separation</h2>
+<p>Betting outcomes are variance-dominated on human horizons. "Removing luck" means grading on metrics whose
+expectation reflects skill and whose noise shrinks fast. Repo detail: <code>research/skill-vs-luck.md</code>.</p>
+
+<h3>1 · Grade on de-vigged CLV, not results</h3>
+<div class="tablewrap"><table>
+<tr><th>Metric</th><th>Measures</th><th>Bets needed for signal</th><th>Luck contamination</th><th>Source</th></tr>
+<tr><td><strong>CLV</strong></td><td>Skill at beating the market's final price</td><td>~200–500</td><td>Minimal</td><td><a class="src" href="https://www.sportsbettingoddscalculator.com/guides/closing-line-value" target="_blank" rel="noopener">oddscalculator</a> <span class="chip industry">INDUSTRY</span></td></tr>
+<tr><td>ROI</td><td>Realized profit</td><td>~2,000–5,000</td><td>Heavy</td><td><a class="src" href="https://www.sportsbettingoddscalculator.com/guides/closing-line-value" target="_blank" rel="noopener">oddscalculator</a> <span class="chip industry">INDUSTRY</span></td></tr>
+<tr><td>Win rate</td><td>Games won</td><td>~1,000–3,000</td><td>Heavy</td><td><a class="src" href="https://www.sportsbettingoddscalculator.com/guides/closing-line-value" target="_blank" rel="noopener">oddscalculator</a> <span class="chip industry">INDUSTRY</span></td></tr>
+</table></div>
+<p>CLV% = (de-vigged closing odds / bet odds) − 1; always strip the book's margin first so vig isn't mistaken for
+edge (<a class="src" href="https://www.pinnacleoddsdropper.com/blog/closing-line-value" target="_blank" rel="noopener">pinnacleoddsdropper</a>
+<span class="chip industry">INDUSTRY</span>). Sample-size thresholds are conventions and are <a href="flagged.html">flagged</a>.</p>
+
+<h3>2 · Statistical tests applied to every record</h3>
+<div class="tablewrap"><table>
+<tr><th>Test</th><th>What it kills</th><th>Rule</th><th>Source</th></tr>
+<tr><td>Bootstrap CI on mean CLV</td><td>Small-sample flukes</td><td>95% CI must exclude 0 (Gate G3)</td><td>implemented in <code>analysis/validation_gates.py</code></td></tr>
+<tr><td>Binomial beat-close test</td><td>"Hot streak" narratives</td><td>Beat-close share tested vs 50%</td><td>implemented in <code>analysis/validation_gates.py</code></td></tr>
+<tr><td>Monte-Carlo permutation null</td><td>Pattern-mining luck</td><td>Beat 95th percentile of shuffled null (G5)</td><td><a class="src" href="https://backtrex.com/en/blog/overfitting-backtesting-detect-prevent" target="_blank" rel="noopener">backtrex</a> <span class="chip industry">INDUSTRY</span></td></tr>
+<tr><td>Deflated Sharpe / PBO (CSCV)</td><td>Selection bias across tried variants</td><td>PBO &lt; 10%; selection-aware t ≳ 3 (G4)</td><td><a class="src" href="https://www.davidhbailey.com/dhbpapers/backtest-prob.pdf" target="_blank" rel="noopener">Bailey &amp; López de Prado</a> <span class="chip primary">PRIMARY</span></td></tr>
+</table></div>
+
+<h3>3 · Shrinkage scoring</h3>
+<p>Leaderboard skill = sample mean CLV pulled toward 0 in proportion to noise (few bets ⇒ heavy pull). Climbing
+the board on a short lucky run is mathematically unattractive — the anti-luck mechanism lives in the scoring rule.</p>
+
+<h3>4 · Stake standardization &amp; Kelly constraint</h3>
+<p>Flat-stake (1-unit) performance is computed alongside actual staking so one lucky max-bet can't dominate.
+Staking is capped at fractional Kelly — half Kelly keeps ≈75% of growth at a fraction of the variance
+(<a class="src" href="https://marketmath.io/blog/kelly-criterion-guide" target="_blank" rel="noopener">marketmath</a> <span class="chip industry">INDUSTRY</span>;
+Kelly 1956 <a class="src" href="https://oddscipher.com/the-codex/kelly/" target="_blank" rel="noopener">via oddscipher</a> <span class="chip primary">PRIMARY</span>).</p>
+
+<h3>5 · "Real effect" ≠ "market misses it"</h3>
+<p>B2B fatigue is real (44% vs 50%, <a class="src" href="https://arxiv.org/html/2606.27957v1" target="_blank" rel="noopener">arXiv:2606.27957</a>
+<span class="chip primary">PRIMARY</span>) — but it's only an edge if the closing line underprices it. All strategies are evaluated on
+residual power <em>versus the closing line</em>, which removes the largest class of false systems.</p>
+
+<h3>6 · Falsification required</h3>
+<p>Each pre-registered spec must state its own kill criteria (e.g., "mean CLV &lt; 0 over any rolling 300-bet
+window ⇒ retire"). Unfalsifiable systems are not eligible.</p>
+
+</main>
+<footer>
+  Every table row carries a source link and tier: <span class="chip official">OFFICIAL</span> NBA league source ·
+  <span class="chip primary">PRIMARY</span> peer-reviewed / preprint / primary author ·
+  <span class="chip industry">INDUSTRY</span> betting-industry convention (listed on <a href="flagged.html">Flagged for Review</a>).
+  Unconfirmable values are left blank — never inferred. No performance claims are made anywhere on this site.
+</footer>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leaderboard · NBA Line Origination</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+  <div class="hwrap">
+    <h1>NBA Line-Origination Lab</h1>
+    <p>Repo: sassnarep3-star/Own5 · Research, validation gates &amp; leaderboard design for originating NBA lines · Built 2026-11-02</p>
+  </div>
+  <nav><a href="index.html">Dashboard</a><a href="executive-summary.html">Executive Summary</a><a href="strategies.html">Strategies</a><a href="validation.html">Validation Gates</a><a href="correlations.html">Correlations</a><a href="bet-types.html">Bet Types</a><a href="skill-vs-luck.html">Skill vs Luck</a><a href="leaderboard.html" class="active">Leaderboard</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for Review</a></nav>
+</header>
+<main>
+
+<h2>Leaderboard Competition</h2>
+<p>A standing competition rewarding <strong>repeatable, skill-based origination</strong> — not hot streaks.
+Repo detail: <code>research/leaderboard.md</code>.</p>
+
+<h3>Entry requirements</h3>
+<ol>
+<li>Strategy pre-registered in repo with version hash (Gate G0).</li>
+<li>All <a href="validation.html">gates G1–G8</a> passed.</li>
+<li>Every bet logged pre-game (timestamp, market, line/price, stake, hash). Retroactive entries void — no cherry-picking by construction.</li>
+</ol>
+
+<h3>Scoring</h3>
+<div class="tablewrap"><table>
+<tr><th>Component</th><th>Weight</th><th>Definition</th></tr>
+<tr><td><strong>Shrunken CLV score</strong></td><td>70%</td><td>Mean de-vigged CLV (bps), empirical-Bayes shrunk toward 0 by sample size — primary skill metric (<a href="skill-vs-luck.html">method</a>)</td></tr>
+<tr><td>Flat-stake yield</td><td>20%</td><td>1-unit ROI with bootstrap 95% CI; informational, cannot rescue negative CLV</td></tr>
+<tr><td>Process score</td><td>10%</td><td>Gate-compliance audit: timestamps, spec adherence, falsification honored</td></tr>
+</table></div>
+<p class="muted">Minimums: 200 graded bets to appear; 500 to be reward-eligible (sample-size convention:
+<a class="src" href="https://www.sportsbettingoddscalculator.com/guides/closing-line-value" target="_blank" rel="noopener">source</a> <span class="chip industry">INDUSTRY</span>, flagged).</p>
+
+<h3>Divisions</h3>
+<ul>
+<li><strong>Singles</strong> — sides / totals / moneyline</li>
+<li><strong>Player props</strong> — single-leg props</li>
+<li><strong>Parlays &amp; SGP combos</strong> — must also pass Gate G7; scored on parlay-level CLV vs the book's correlated price</li>
+</ul>
+
+<h3>Reward tiers</h3>
+<div class="tablewrap"><table>
+<tr><th>Tier</th><th>Requirement</th><th>Reward</th></tr>
+<tr><td>🥇 Gold</td><td>#1 shrunken CLV in division · ≥500 bets · PBO &lt; 5%</td><td>Full prize share + spec published as reference strategy</td></tr>
+<tr><td>🥈 Silver</td><td>Top 3 · ≥500 bets</td><td>Partial prize share</td></tr>
+<tr><td>🥉 Bronze</td><td>Positive shrunken CLV · ≥200 bets · all gates passed</td><td>Recognition + priority data access</td></tr>
+</table></div>
+<p class="muted">Reward amounts are an operator decision; nothing here implies a funded prize pool exists today.</p>
+
+<h3>Anti-gaming rules</h3>
+<ul>
+<li>Profit alone never moves rank — only shrunken CLV + process.</li>
+<li>Every tried variant must be registered; the count feeds Gate G4 (DSR/PBO — <a class="src" href="https://www.davidhbailey.com/dhbpapers/backtest-prob.pdf" target="_blank" rel="noopener">Bailey &amp; López de Prado</a> <span class="chip primary">PRIMARY</span>). Hiding failed variants = disqualification.</li>
+<li>Stake caps: ≤2% bankroll nominal; fractional Kelly enforced (Gate G8).</li>
+<li>Rolling 2-season scoring window so retired edges age off.</li>
+<li>Bets whose captured line/price can't be verified are excluded and listed on <a href="flagged.html">Flagged for Review</a>.</li>
+</ul>
+
+<h3>Current standings</h3>
+<div class="tablewrap"><table>
+<tr><th>Rank</th><th>Strategy</th><th>Division</th><th>Bets</th><th>Shrunken CLV</th><th>Status</th></tr>
+<tr><td colspan="6"><em>EMPTY — by design. No strategy has passed the validation gates yet. Publishing a fabricated
+leaderboard would violate this project's no-fabrication rule. The board populates only from logged,
+gate-passing records.</em></td></tr>
+</table></div>
+
+</main>
+<footer>
+  Every table row carries a source link and tier: <span class="chip official">OFFICIAL</span> NBA league source ·
+  <span class="chip primary">PRIMARY</span> peer-reviewed / preprint / primary author ·
+  <span class="chip industry">INDUSTRY</span> betting-industry convention (listed on <a href="flagged.html">Flagged for Review</a>).
+  Unconfirmable values are left blank — never inferred. No performance claims are made anywhere on this site.
+</footer>
+</body>
+</html>

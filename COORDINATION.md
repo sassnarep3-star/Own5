@@ -58,16 +58,16 @@ This file is the shared task board for all agent sessions working on this reposi
 
 | # | Task | Status | Owner (session) | File scope |
 |---|---|---|---|---|
-| T1 | Repo review (line-by-line audit of existing files, flag irregularities) | in progress | 9c3a0a69 | `docs/flagged.html`, `COORDINATION.md` |
-| T2 | Research: signal-generation strategies (singles, parlays, player-prop combos) with source links | in progress | 9c3a0a69 | `research/strategies.md` |
-| T3 | Research: validation gates (anti-overfitting, sample size, CLV benchmark) | in progress | 9c3a0a69 | `research/validation-gates.md` |
-| T4 | Research: correlation framework & reported correlation values for props/parlays | in progress | 9c3a0a69 | `research/correlations.md` |
-| T5 | Skill-vs-luck separation methodology (CLV, variance decomposition, multiple-testing control) | in progress | 9c3a0a69 | `research/skill-vs-luck.md` |
-| T6 | Leaderboard competition design (scoring, rewards, entry gates) | in progress | 9c3a0a69 | `research/leaderboard.md` |
-| T7 | Executive summary | unclaimed → claimed 9c3a0a69 | 9c3a0a69 | `EXECUTIVE_SUMMARY.md` |
-| T8 | Analysis tooling (correlation/validation scripts, runnable when data access is available) | in progress | 9c3a0a69 | `analysis/` |
-| T9 | Site build: landing page + subpages (dashboard UI, tables, Flagged for Review page) | in progress | 9c3a0a69 | `docs/` |
-| T10 | Integration: line-by-line re-verification, link check, PR to main, merge, Pages deploy | queued (runs last) | 9c3a0a69 | all of the above + Pages settings |
+| T1 | Repo review (line-by-line audit of existing files, flag irregularities) | done | 9c3a0a69 | `docs/flagged.html`, `COORDINATION.md` |
+| T2 | Research: signal-generation strategies (singles, parlays, player-prop combos) with source links | done | 9c3a0a69 | `research/strategies.md` |
+| T3 | Research: validation gates (anti-overfitting, sample size, CLV benchmark) | done | 9c3a0a69 | `research/validation-gates.md` |
+| T4 | Research: correlation framework & reported correlation values for props/parlays | done | 9c3a0a69 | `research/correlations.md` |
+| T5 | Skill-vs-luck separation methodology (CLV, variance decomposition, multiple-testing control) | done | 9c3a0a69 | `research/skill-vs-luck.md` |
+| T6 | Leaderboard competition design (scoring, rewards, entry gates) | done | 9c3a0a69 | `research/leaderboard.md` |
+| T7 | Executive summary | done | 9c3a0a69 | `EXECUTIVE_SUMMARY.md` |
+| T8 | Analysis tooling (correlation/validation scripts, runnable when data access is available) | done | 9c3a0a69 | `analysis/` |
+| T9 | Site build: landing page + subpages (dashboard UI, tables, Flagged for Review page) | done | 9c3a0a69 | `docs/` |
+| T10 | Integration: line-by-line re-verification, link check, PR to main, merge, Pages deploy | in progress | 9c3a0a69 | all of the above + Pages settings |
 
 ---
 
@@ -82,6 +82,13 @@ _None. (Single session.)_
 - **Repo state at start:** commit `426b19d` ("Initial commit"), single file `README.md` containing only `# Own5` (6 bytes). No code, no data, no COORDINATION.md. Nothing to verify beyond this; no irregularities in pre-existing content.
 - **Irregularity R1:** GitHub Pages was already enabled for this repo (source: `main` branch, root path, legacy/Jekyll build) before any site content existed — site served an auto-generated page from README. Not harmful; integration session will repoint source to `/docs` after merge. Flagged on the Flagged for Review page.
 - (Further entries appended as tasks complete.)
+
+- **T2–T9 verification performed (2026-11-02, session 9c3a0a69):**
+  - Every factual claim in `research/` and `docs/` traced to a source gathered this session; 22 unique external source links; tier labels (OFFICIAL/PRIMARY/INDUSTRY) applied per row.
+  - OFFICIAL: official.nba.com injury-report deadlines. PRIMARY: PubMed 32172667 (Esteves 2021); arXiv:2606.27957 (B2B 44%, P(W|W)=54.5%); arXiv:1910.08858; Bailey & López de Prado PBO (davidhbailey.com); IJRSS Finals HCA study.
+  - Automated checks: HTML parser pass (no unclosed/mismatched tags), internal link check (0 broken across 10 pages), all pages + CSS return HTTP 200 on local serve; both analysis scripts syntax-checked and `validation_gates.py` smoke-tested on throwaway data (not committed).
+  - **Irregularity F1–F8 register** published at `docs/flagged.html`: blank correlation coefficients (no official source publishes them), third-party home-win% figures, industry-convention thresholds, media-reported injury-cadence memo, unconfirmed 8,495-game study attribution, excluded low-credibility source (bettoredge), no stats.nba.com route from sandbox, intentionally empty leaderboard.
+  - Nothing inferred: all unverifiable values left blank and flagged.
 
 ## PR / merge record
 

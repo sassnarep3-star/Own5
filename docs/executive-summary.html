@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Executive Summary · NBA Line Origination</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+  <div class="hwrap">
+    <h1>NBA Line-Origination Lab</h1>
+    <p>Repo: sassnarep3-star/Own5 · Research, validation gates &amp; leaderboard design for originating NBA lines · Built 2026-11-02</p>
+  </div>
+  <nav><a href="index.html">Dashboard</a><a href="executive-summary.html" class="active">Executive Summary</a><a href="strategies.html">Strategies</a><a href="validation.html">Validation Gates</a><a href="correlations.html">Correlations</a><a href="bet-types.html">Bet Types</a><a href="skill-vs-luck.html">Skill vs Luck</a><a href="leaderboard.html">Leaderboard</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for Review</a></nav>
+</header>
+<main>
+
+<h2>Executive Summary</h2>
+<p class="muted">Full text also in the repo: <code>EXECUTIVE_SUMMARY.md</code></p>
+
+<h3>Objective</h3>
+<p>Build the research foundation, validation machinery, and competition structure for <strong>originating NBA
+betting lines</strong> — pricing markets independently and betting only when our price beats the available price —
+across <strong>singles</strong> (sides/totals/moneyline), <strong>player props</strong>, and
+<strong>parlays / correlated prop combos (SGP)</strong>.</p>
+
+<h3>What was produced</h3>
+<ol>
+<li><strong><a href="strategies.html">Strategy catalog</a> — 8 candidate signal families</strong>: rest/schedule spots, official-injury-report latency, home/travel context, streak persistence, pace-interaction props, usage-vacuum props, CLV-based origination, correlated-SGP construction. None is claimed profitable; all are candidates pending validation.</li>
+<li><strong><a href="validation.html">Nine validation gates (G0–G8)</a></strong>: pre-registration, parameter budget, walk-forward out-of-sample, de-vigged CLV with bootstrap CI, deflated-Sharpe/PBO multiplicity control, Monte-Carlo permutation nulls, economic realism, parlay correlation audit, fractional-Kelly staking.</li>
+<li><strong><a href="correlations.html">Correlation framework</a></strong>: a 10-pair direction taxonomy, a ban on negatively correlated legs, and tooling (<code>analysis/prop_correlations.py</code>) to compute coefficients from official box scores. Numeric r values are intentionally blank — never inferred.</li>
+<li><strong><a href="skill-vs-luck.html">Luck-removal methodology</a></strong>: grade on de-vigged closing-line value (signal in ~200–500 bets) instead of W/L (needs thousands); empirical-Bayes shrinkage; permutation nulls; mandatory falsification criteria.</li>
+<li><strong><a href="leaderboard.html">Leaderboard competition</a></strong>: divisions per bet class; score = 70% shrunken CLV + 20% flat-stake yield + 10% process compliance; Gold/Silver/Bronze tiers; anti-gaming rules. Board currently empty by design.</li>
+<li><strong>This dashboard site</strong>, with a dedicated <a href="flagged.html">Flagged for Review</a> page.</li>
+</ol>
+
+<h3>Key verified findings</h3>
+<ul>
+<li><strong>Back-to-backs are the most consistent schedule depressant</strong>: 44% win rate vs ~50% null across 2019/20–2024/25 (<a class="src" href="https://arxiv.org/html/2606.27957v1" target="_blank" rel="noopener">arXiv:2606.27957</a>); winning likelihood rises significantly from B2B to one rest day (<a class="src" href="https://pubmed.ncbi.nlm.nih.gov/32172667/" target="_blank" rel="noopener">Esteves et al. 2021</a>).</li>
+<li><strong>Official injury-report timing creates a defined reaction window</strong>: statuses due 5 p.m. local the day before; 1 p.m. game-day for back-to-back second games; game-day reports 11 a.m.–1 p.m. (<a class="src" href="https://official.nba.com/nba-injury-report-2025-26-season/" target="_blank" rel="noopener">official.nba.com</a>).</li>
+<li><strong>Short-horizon persistence exists</strong>: P(win | previous win) = 54.5% vs 50% null (<a class="src" href="https://arxiv.org/html/2606.27957v1" target="_blank" rel="noopener">arXiv:2606.27957</a>) — an edge only if the closing line misses it.</li>
+<li><strong>Home advantage is real but shrinking</strong>: ~64% (1980s) → ~57% (2010s) across major sports (<a class="src" href="https://www.ijrss.org/index.php/ijrss/article/download/958/572/1494" target="_blank" rel="noopener">Pollard &amp; Gómez 2021, as cited</a>); recent NBA-specific percentages are third-party and <a href="flagged.html">flagged</a>, not asserted.</li>
+<li><strong>CLV is the accepted skill metric</strong>: de-vig first, benchmark a sharp close, expect signal in hundreds of bets (industry convention, flagged as such).</li>
+</ul>
+
+<h3>Honest limitations</h3>
+<ul>
+<li>No numeric prop correlations yet — blank until computed from official NBA box scores (build sandbox had no network route to stats.nba.com).</li>
+<li>No performance claims — no bets placed; leaderboard empty until strategies pass gates.</li>
+<li>Industry thresholds (e.g., "+1–2% CLV is strong") are conventions, listed on <a href="flagged.html">Flagged for Review</a>.</li>
+<li>Pre-existing irregularity: GitHub Pages was enabled on this repo before any content existed (see COORDINATION.md / <a href="flagged.html">R1</a>).</li>
+</ul>
+
+<h3>Recommended next steps</h3>
+<ol>
+<li>Stand up official box-score ingestion (nba_api → stats.nba.com) and fill the correlation table with computed, sourced values.</li>
+<li>Pre-register (G0) the two highest-prior strategies — S2 injury-report latency and S8 correlated-SGP — and begin timestamped paper-trading toward the 200-bet CLV sample.</li>
+<li>Add automated odds capture (bet-time and closing) to make Gates G3/G6 auditable.</li>
+</ol>
+
+</main>
+<footer>
+  Every table row carries a source link and tier: <span class="chip official">OFFICIAL</span> NBA league source ·
+  <span class="chip primary">PRIMARY</span> peer-reviewed / preprint / primary author ·
+  <span class="chip industry">INDUSTRY</span> betting-industry convention (listed on <a href="flagged.html">Flagged for Review</a>).
+  Unconfirmable values are left blank — never inferred. No performance claims are made anywhere on this site.
+</footer>
+</body>
+</html>

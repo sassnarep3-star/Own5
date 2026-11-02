@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Correlations · NBA Line Origination</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+  <div class="hwrap">
+    <h1>NBA Line-Origination Lab</h1>
+    <p>Repo: sassnarep3-star/Own5 · Research, validation gates &amp; leaderboard design for originating NBA lines · Built 2026-11-02</p>
+  </div>
+  <nav><a href="index.html">Dashboard</a><a href="executive-summary.html">Executive Summary</a><a href="strategies.html">Strategies</a><a href="validation.html">Validation Gates</a><a href="correlations.html" class="active">Correlations</a><a href="bet-types.html">Bet Types</a><a href="skill-vs-luck.html">Skill vs Luck</a><a href="leaderboard.html">Leaderboard</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for Review</a></nav>
+</header>
+<main>
+
+<h2>Correlation Framework — Parlays &amp; Prop Combos</h2>
+<p>A parlay of <strong>positively correlated</strong> legs has a higher true joint probability than independence
+pricing implies (underpriced unless the book's "correlation tax" is big enough). <strong>Negatively
+correlated</strong> legs make a parlay structurally bad at any normal price. Exact reference arithmetic: five
+independent 50% legs ⇒ 0.5⁵ = <strong>3.125%</strong> joint probability.</p>
+<div class="banner flag"><strong>Verification notice:</strong> no official or primary source publishes numeric NBA
+prop-correlation coefficients. Per project rules the <em>r</em> column is <strong>blank</strong> — values will be
+computed from official NBA box scores with <code>analysis/prop_correlations.py</code> and published only with
+sample size, season range, and source link. This table is mirrored on <a href="flagged.html">Flagged for
+Review</a>. Direction/strength labels below are industry-sourced concepts, not measurements.</div>
+<div class="tablewrap"><table>
+<tr><th>#</th><th>Leg A</th><th>Leg B</th><th>Direction</th><th>Strength (qualitative, per source)</th><th>Mechanism</th><th>r (Pearson)</th><th>Source</th></tr>
+<tr><td><strong>C1</strong></td><td>Star points OVER</td><td>Same team moneyline</td><td><span class="chip">Positive</span></td><td>Strong</td><td>Big scoring night → good offensive night → win</td><td><em class='muted'>blank — unverified</em> <span class="chip flag">FLAGGED</span></td><td><a class="src" href="https://nba-prop-bets.com/articles/nba-same/" target="_blank" rel="noopener">nba-prop-bets</a></td></tr><tr><td><strong>C2</strong></td><td>Star points OVER</td><td>Star assists OVER (same player, high-usage)</td><td><span class="chip">Positive</span></td><td>High</td><td>Offense runs through him: scores and creates</td><td><em class='muted'>blank — unverified</em> <span class="chip flag">FLAGGED</span></td><td><a class="src" href="https://oddsindex.com/guides/nba-same-game-parlay-tips" target="_blank" rel="noopener">oddsindex</a></td></tr><tr><td><strong>C3</strong></td><td>Star points OVER</td><td>Star rebounds OVER (bigs/wings)</td><td><span class="chip">Positive</span></td><td>Moderate</td><td>Paint scorers positioned for boards</td><td><em class='muted'>blank — unverified</em> <span class="chip flag">FLAGGED</span></td><td><a class="src" href="https://oddsindex.com/guides/nba-same-game-parlay-tips" target="_blank" rel="noopener">oddsindex</a></td></tr><tr><td><strong>C4</strong></td><td>Assists OVER</td><td>Rebounds OVER (same player)</td><td><span class="chip">Positive</span></td><td>Low–moderate</td><td>Weakest of the three pairings</td><td><em class='muted'>blank — unverified</em> <span class="chip flag">FLAGGED</span></td><td><a class="src" href="https://oddsindex.com/guides/nba-same-game-parlay-tips" target="_blank" rel="noopener">oddsindex</a></td></tr><tr><td><strong>C5</strong></td><td>Threes made OVER</td><td>Same player points OVER</td><td><span class="chip">Positive</span></td><td>High (volume shooters)</td><td>Threes are points</td><td><em class='muted'>blank — unverified</em> <span class="chip flag">FLAGGED</span></td><td><a class="src" href="https://oddsindex.com/guides/nba-same-game-parlay-tips" target="_blank" rel="noopener">oddsindex</a></td></tr><tr><td><strong>C6</strong></td><td>PG assists OVER</td><td>Teammate shooter points OVER</td><td><span class="chip">Positive</span></td><td>Moderate</td><td>Assists convert to teammate buckets</td><td><em class='muted'>blank — unverified</em> <span class="chip flag">FLAGGED</span></td><td><a class="src" href="https://nba-prop-bets.com/articles/nba-same/" target="_blank" rel="noopener">nba-prop-bets</a></td></tr><tr><td><strong>C7</strong></td><td>Game total OVER</td><td>Team threes made OVER</td><td><span class="chip">Positive</span></td><td>Moderate</td><td>High-scoring games carry 3pt volume</td><td><em class='muted'>blank — unverified</em> <span class="chip flag">FLAGGED</span></td><td><a class="src" href="https://oddsindex.com/guides/nba-same-game-parlay-tips" target="_blank" rel="noopener">oddsindex</a></td></tr><tr><td><strong>C8</strong></td><td>Projected pace UP</td><td>Multiple counting-stat OVERs</td><td><span class="chip">Positive</span></td><td>Moderate</td><td>More possessions → more of everything</td><td><em class='muted'>blank — unverified</em> <span class="chip flag">FLAGGED</span></td><td><a class="src" href="https://oddsindex.com/guides/nba-same-game-parlay-tips" target="_blank" rel="noopener">oddsindex</a></td></tr><tr><td><strong>C9</strong></td><td>Game total UNDER</td><td>Any player points OVER</td><td><span class="chip neg">NEGATIVE</span></td><td>— (prohibited, Gate G7)</td><td>Low-scoring games starve everyone</td><td><em class='muted'>blank — unverified</em> <span class="chip flag">FLAGGED</span></td><td><a class="src" href="https://nba-prop-bets.com/articles/nba-same/" target="_blank" rel="noopener">nba-prop-bets</a></td></tr><tr><td><strong>C10</strong></td><td>Center post points OVER</td><td>Perimeter teammate points OVER</td><td><span class="chip neg">NEGATIVE</span></td><td>— (context-dependent)</td><td>Usage competition for possessions</td><td><em class='muted'>blank — unverified</em> <span class="chip flag">FLAGGED</span></td><td><a class="src" href="https://nba-prop-bets.com/articles/nba-same/" target="_blank" rel="noopener">nba-prop-bets</a> · <a class="src" href="https://www.edgebetting.ai/betting-education/player-props" target="_blank" rel="noopener">edgebetting</a></td></tr>
+</table></div>
+<h3>Combo-stat caution (PRA / PR / PA / RA)</h3>
+<p>A combined line (e.g., PRA 41.5) is <strong>not</strong> three independent overs: components share minutes,
+pace, role and game script, so you cannot sum over-probabilities or assume independence
+(<a class="src" href="https://www.edgebetting.ai/betting-education/player-props" target="_blank" rel="noopener">edgebetting.ai</a>).</p>
+<h3>How numbers get filled in</h3>
+<ol>
+<li>Pull per-game player box scores from the official NBA statistics feed (stats.nba.com via <code>nba_api</code>), ≥ 2 seasons.</li>
+<li>Run <code>analysis/prop_correlations.py</code> — per-player (min 40 games) and league-wide Pearson/Spearman r for PTS↔AST, PTS↔REB, AST↔REB, 3PM↔PTS.</li>
+<li>Publish only with n, season range, and official source link. Everything else stays blank.</li>
+<li>Parlay pricing uses the empirical joint distribution (resampling real stat vectors preserves full dependence, not just pairwise r).</li>
+</ol>
+
+</main>
+<footer>
+  Every table row carries a source link and tier: <span class="chip official">OFFICIAL</span> NBA league source ·
+  <span class="chip primary">PRIMARY</span> peer-reviewed / preprint / primary author ·
+  <span class="chip industry">INDUSTRY</span> betting-industry convention (listed on <a href="flagged.html">Flagged for Review</a>).
+  Unconfirmable values are left blank — never inferred. No performance claims are made anywhere on this site.
+</footer>
+</body>
+</html>
