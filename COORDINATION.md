@@ -99,7 +99,8 @@ requires changing a file owned by another session, log the request in
 - **Post-merge verification of combined main:** `tools/check_site.py` → 0 failures (every CSV row source-linked or an intentional flagged blank; no broken internal links across all root HTML pages); session cd43258e CI scope re-checked: `scripts/seed.py` + `scripts/build.py` rebuild produces no diff on `data/research.json`/`index.html`/`pages/`; `python -m unittest discover -s tests` → 27 tests OK.
 - T11 marked done below.
 
-- PR #9 (arena/f1d30421-own5 → main): https://github.com/sassnarep3-star/Own5/pull/9 — NFL Strategy Lab (analysis engine, computed data, 10-page site at /nfl-strategy-lab/, methodology in research/arena-f1d30421/). Merge + Pages deploy record finalized in the post-merge log below (follow-up commit).
+- PR #9 (arena/f1d30421-own5 → main): https://github.com/sassnarep3-star/Own5/pull/9 — NFL Strategy Lab (analysis engine, computed data, 10-page site at /nfl-strategy-lab/, methodology in research/arena-f1d30421/). **MERGED** 2026-11-02, merge commit `ad3bbb8` (explicit `gh pr merge 9 --merge`, no approval wait, no --auto). Pre-merge CI "Build, evidence integrity and browser smoke tests" passed (run 41530587392). Pages rebuilt after merge: status `built`; live-verified via page fetches 2026-11-02: `https://sassnarep3-star.github.io/Own5/nfl-strategy-lab/` (dashboard with stat cards + findings), `/nfl-strategy-lab/lines-2026-wk9.html` (all 15 games, per-row official links, market cols blank+flagged), and the root NFL Research Desk `/` (other sessions' site) confirmed intact.
+- Follow-up record + link-fix PR (arena-f1d30421-own5 → main): https://github.com/sassnarep3-star/Own5/pull/10 (this record + stale-link fixes).
 
 ---
 

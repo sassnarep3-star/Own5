@@ -252,7 +252,7 @@ def build_strategies():
         table_id='backtest', transform=badge_gates)
     body = f"""
 <h1>Strategy Catalog</h1>
-<p class="lead">8 pre-registered variants · backtested 1980–2024 regular seasons · prices not in dataset → modeled at flat −110 (flag F8) · all outcomes published, winners and losers. Full research notes: <a href="https://github.com/sassnarep3-star/Own5/blob/main/research/strategies.md">research/strategies.md</a>.</p>
+<p class="lead">8 pre-registered variants · backtested 1980–2024 regular seasons · prices not in dataset → modeled at flat −110 (flag F8) · all outcomes published, winners and losers. Full research notes: <a href="https://github.com/sassnarep3-star/Own5/blob/main/research/arena-f1d30421/strategies.md">research/arena-f1d30421/strategies.md</a>.</p>
 <div class="note"><b>Headline:</b> S2 (home underdog ≥7) is the strongest signal at 56.37% (n=793) and still FAILS the corrected significance gate (p=0.0134 &gt; α=0.00625). No single-bet strategy is certified as skill — S1/S2 continue as <b>Candidate</b> entries for live CLV tracking on the <a href="leaderboard.html">leaderboard</a>.</div>
 <h2>Singles — backtest results (computed)</h2>
 {backtest}
@@ -275,7 +275,7 @@ def build_strategies():
 def build_gates():
     body = """
 <h1>Validation Gates</h1>
-<p class="lead">A strategy must pass every gate to be marked <b>Validated</b>. Thresholds are pre-registered. Full definitions: <a href="https://github.com/sassnarep3-star/Own5/blob/main/research/validation-gates.md">research/validation-gates.md</a>.</p>
+<p class="lead">A strategy must pass every gate to be marked <b>Validated</b>. Thresholds are pre-registered. Full definitions: <a href="https://github.com/sassnarep3-star/Own5/blob/main/research/arena-f1d30421/validation-gates.md">research/arena-f1d30421/validation-gates.md</a>.</p>
 <div class="tbl-wrap"><table><thead><tr><th>Gate</th><th>Requirement</th><th>Threshold</th><th>Basis / source</th></tr></thead><tbody>
 <tr><td><b>G0</b> Provenance</td><td>Every input pinned (repo@SHA) or official URL; unknowns blank + flagged</td><td>100% of rows sourced</td><td class="src"><a href="https://www.nfl.com/" target="_blank" rel="noopener">nfl.com</a><a href="flagged.html">flag policy</a></td></tr>
 <tr><td><b>G1</b> Sample size</td><td>graded bets per strategy</td><td>n ≥ 200 (entry floor)</td><td class="src"><a href="luck-vs-skill.html">power analysis (computed)</a></td></tr>
@@ -317,7 +317,7 @@ def build_correlation():
                            table_id='corr-props')
     body = f"""
 <h1>Correlation Values</h1>
-<p class="lead">Computed by <code>scripts/compute_analysis.py</code> (game level) and <code>scripts/compute_prop_correlations.py</code> (player level) from pinned datasets. Methodology: <a href="https://github.com/sassnarep3-star/Own5/blob/main/research/correlation.md">research/correlation.md</a>.</p>
+<p class="lead">Computed by <code>scripts/compute_analysis.py</code> (game level) and <code>scripts/compute_prop_correlations.py</code> (player level) from pinned datasets. Methodology: <a href="https://github.com/sassnarep3-star/Own5/blob/main/research/arena-f1d30421/correlation.md">research/arena-f1d30421/correlation.md</a>.</p>
 <div class="note"><b>Three regimes:</b> game-line legs are ≈ independent (phi ≈ 0.01) · favorite ML + favorite spread are near-duplicates (phi 0.71) · player-prop legs are strongly correlated (QB↔WR r = 0.76). Gate G5 prices each regime accordingly.</div>
 <h2>Same-game bet-outcome correlations (1980–2024)</h2>
 {bets}
@@ -337,7 +337,7 @@ def build_luck():
                         table_id='luck')
     body = f"""
 <h1>Luck vs Skill</h1>
-<p class="lead">Exact binomial and power-analysis math computed by <code>scripts/compute_analysis.py</code> into <code>data/luck_skill.csv</code>. Methodology: <a href="https://github.com/sassnarep3-star/Own5/blob/main/research/luck-vs-skill.md">research/luck-vs-skill.md</a>.</p>
+<p class="lead">Exact binomial and power-analysis math computed by <code>scripts/compute_analysis.py</code> into <code>data/luck_skill.csv</code>. Methodology: <a href="https://github.com/sassnarep3-star/Own5/blob/main/research/arena-f1d30421/luck-vs-skill.md">research/arena-f1d30421/luck-vs-skill.md</a>.</p>
 <div class="cards">
   <div class="card"><div class="k">Break-even at −110</div><div class="v">52.38%</div><div class="s">exact definition</div></div>
   <div class="card"><div class="k">2-leg parlay −110/−110</div><div class="v">27.47%</div><div class="s">joint rate needed; legs give ≈23.6%</div></div>
@@ -353,7 +353,7 @@ def build_luck():
 def build_leaderboard():
     body = """
 <h1>Leaderboard &amp; Rewards</h1>
-<p class="lead">Strategies compete — not people. Score is deflated for luck; rewards vest only for gate-passing entries. Design: <a href="https://github.com/sassnarep3-star/Own5/blob/main/research/leaderboard.md">research/leaderboard.md</a>.</p>
+<p class="lead">Strategies compete — not people. Score is deflated for luck; rewards vest only for gate-passing entries. Design: <a href="https://github.com/sassnarep3-star/Own5/blob/main/research/arena-f1d30421/leaderboard.md">research/arena-f1d30421/leaderboard.md</a>.</p>
 <div class="panel">
 <h3>Scoring (luck-deflated)</h3>
 <p><code>Score = 100 × [0.40 × CLV_index + 0.30 × DSR_index + 0.20 × Sample_discipline + 0.10 × Calibration]</code></p>
@@ -361,7 +361,7 @@ def build_leaderboard():
 <tr><td>CLV_index</td><td>share of picks beating the closing number, Beta-shrunk toward 50%</td><td>converges fast; hard to fake (G3)</td><td class="src"><a href="https://arxiv.org/abs/1710.02824" target="_blank" rel="noopener">Kaunitz et al. 2017</a></td></tr>
 <tr><td>DSR_index</td><td>deflated-Sharpe-style P(true edge &gt; 0) given n, skew/kurtosis, variants tried</td><td>subtracts best-of-luck score</td><td class="src"><a href="https://doi.org/10.3905/jpm.2014.40.5.094" target="_blank" rel="noopener">Bailey &amp; López de Prado 2014</a></td></tr>
 <tr><td>Sample_discipline</td><td>min(n/500, 1) × stake-consistency</td><td>rewards flat pre-registered staking</td><td class="src"><a href="https://www.davidhbailey.com/dhbpapers/overfit-tools-at.pdf" target="_blank" rel="noopener">overfitting literature</a></td></tr>
-<tr><td>Calibration</td><td>Brier skill of entry's stated probabilities</td><td>punishes overconfidence</td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/leaderboard.md" target="_blank" rel="noopener">design doc</a></td></tr>
+<tr><td>Calibration</td><td>Brier skill of entry's stated probabilities</td><td>punishes overconfidence</td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/arena-f1d30421/leaderboard.md" target="_blank" rel="noopener">design doc</a></td></tr>
 </tbody></table></div>
 </div>
 <h2>Current board (2026-11-02)</h2>
@@ -376,11 +376,11 @@ def build_leaderboard():
 <p class="small">Rank is by gate progress until Finals begin; backtest ROI never outranks live scores.</p>
 <h2>Rewards <span class="chip flag">PROPOSAL — amounts blank pending owner decision (F9)</span></h2>
 <div class="tbl-wrap"><table><thead><tr><th>Rank (Finals)</th><th>Proposed share</th><th>Condition</th><th>Source</th></tr></thead><tbody>
-<tr><td>1st</td><td>40% of pool</td><td>must be Validated</td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/leaderboard.md" target="_blank" rel="noopener">design doc (proposal)</a></td></tr>
-<tr><td>2nd</td><td>25%</td><td>must be Validated</td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/leaderboard.md" target="_blank" rel="noopener">design doc (proposal)</a></td></tr>
-<tr><td>3rd</td><td>15%</td><td>must be Validated</td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/leaderboard.md" target="_blank" rel="noopener">design doc (proposal)</a></td></tr>
-<tr><td>4th–10th</td><td>2% each</td><td>Candidate or better</td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/leaderboard.md" target="_blank" rel="noopener">design doc (proposal)</a></td></tr>
-<tr><td>Participation</td><td>0.25% per gate-passing season entry</td><td>publishing losers rewarded</td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/leaderboard.md" target="_blank" rel="noopener">design doc (proposal)</a></td></tr>
+<tr><td>1st</td><td>40% of pool</td><td>must be Validated</td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/arena-f1d30421/leaderboard.md" target="_blank" rel="noopener">design doc (proposal)</a></td></tr>
+<tr><td>2nd</td><td>25%</td><td>must be Validated</td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/arena-f1d30421/leaderboard.md" target="_blank" rel="noopener">design doc (proposal)</a></td></tr>
+<tr><td>3rd</td><td>15%</td><td>must be Validated</td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/arena-f1d30421/leaderboard.md" target="_blank" rel="noopener">design doc (proposal)</a></td></tr>
+<tr><td>4th–10th</td><td>2% each</td><td>Candidate or better</td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/arena-f1d30421/leaderboard.md" target="_blank" rel="noopener">design doc (proposal)</a></td></tr>
+<tr><td>Participation</td><td>0.25% per gate-passing season entry</td><td>publishing losers rewarded</td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/arena-f1d30421/leaderboard.md" target="_blank" rel="noopener">design doc (proposal)</a></td></tr>
 <tr><td>Pool size / funding</td><td><span class="chip flag">BLANK — owner decision (F9)</span></td><td>not invented</td><td class="src"><a href="flagged.html">flagged</a></td></tr>
 </tbody></table></div>
 <div class="note">Anti-luck clawback: rewards vest 50% at Finals win, 50% only after the entry passes G3 the following season — a lucky run cannot cash out fully.</div>
@@ -397,7 +397,7 @@ def build_lines():
                            table_id='lines', flag_cols=('market_spread', 'market_total'))
     body = f"""
 <h1>Our Lines — 2026 Week 9</h1>
-<p class="lead">Originated by <code>scripts/originate_lines.py</code> from official inputs only: 2026 standings (W-L-T, PF-PA through Week 8, nfl.com) + official Week 9 schedule + measured home-field advantage (2.22 pts, 2002–2024, derived). Model spec: <a href="https://github.com/sassnarep3-star/Own5/blob/main/research/line-origination.md">research/line-origination.md</a>.</p>
+<p class="lead">Originated by <code>scripts/originate_lines.py</code> from official inputs only: 2026 standings (W-L-T, PF-PA through Week 8, nfl.com) + official Week 9 schedule + measured home-field advantage (2.22 pts, 2002–2024, derived). Model spec: <a href="https://github.com/sassnarep3-star/Own5/blob/main/research/arena-f1d30421/line-origination.md">research/arena-f1d30421/line-origination.md</a>.</p>
 <div class="note"><b>Model:</b> <code>margin = shrunk(home) − shrunk(away) + HFA</code>, <code>shrunk = net_pts_per_game × G/(G+4)</code>, <code>total = mean(PPG scored/allowed, both teams)</code>. HFA = 0 for neutral-site games (Madrid). Lines rounded to nearest 0.5.</div>
 <div class="warnbox"><b>Market columns are intentionally blank</b> — no official public source publishes market lines (flag F7). They are never inferred; when a licensed feed is connected, edge = our line − market line becomes the live signal.</div>
 {lines}
@@ -460,9 +460,9 @@ def build_flagged():
 <tr><td><b>F6</b></td><td>Historical scores verified on a sample</td><td>verified_official_results.csv</td><td>2025 Week 1: 16/16 dataset scores matched nfl.com game pages exactly; full 61-year file cannot be officially verified from the sandbox <a href="https://github.com/sassnarep3-star/Own5/blob/main/data/verified_official_results.csv" target="_blank" rel="noopener">verified rows</a><a href="https://www.nfl.com/schedules/2025/by-week/week-1" target="_blank" rel="noopener">official page</a></td><td><span class="chip warn">Medium</span></td><td>Open — sample passed 16/16</td></tr>
 <tr><td><b>F7</b></td><td>Market lines blank on Week-9 page</td><td>model_lines_2026_wk9.csv market columns</td><td>no official source publishes market lines — blank by policy <a href="https://github.com/sassnarep3-star/Own5/blob/main/data/model_lines_2026_wk9.csv" target="_blank" rel="noopener">model_lines csv</a></td><td><span class="chip warn">Medium</span></td><td>Open — needs licensed odds feed</td></tr>
 <tr><td><b>F8</b></td><td>Backtest ROI assumes flat −110 / +264 parlay</td><td>backtest_results.csv assumption_price</td><td>prices absent from dataset; assumption labeled in every row <a href="https://github.com/sassnarep3-star/Own5/blob/main/data/backtest_results.csv" target="_blank" rel="noopener">backtest_results.csv</a></td><td><span class="chip warn">Medium</span></td><td>Open — needs licensed odds feed</td></tr>
-<tr><td><b>F9</b></td><td>Reward pool amounts blank</td><td>leaderboard rewards table</td><td>mechanics specified; pool size/funding are owner decisions — not invented <a href="https://github.com/sassnarep3-star/Own5/blob/main/research/leaderboard.md" target="_blank" rel="noopener">design doc</a></td><td><span class="chip good">Low</span></td><td>Open — awaiting owner decision</td></tr>
+<tr><td><b>F9</b></td><td>Reward pool amounts blank</td><td>leaderboard rewards table</td><td>mechanics specified; pool size/funding are owner decisions — not invented <a href="https://github.com/sassnarep3-star/Own5/blob/main/research/arena-f1d30421/leaderboard.md" target="_blank" rel="noopener">design doc</a></td><td><span class="chip good">Low</span></td><td>Open — awaiting owner decision</td></tr>
 <tr><td><b>F10</b></td><td>GB streak-field anomaly on official standings page</td><td>2026 standings transcription</td><td>streak display appeared inconsistent with week-8 results; streaks unused by the model and excluded from the transcribed CSV <a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">official standings</a></td><td><span class="chip good">Low</span></td><td>Resolved-by-exclusion</td></tr>
-<tr><td><b>F11</b></td><td>Model limitations (disclosed)</td><td>model_lines_2026_wk9.csv</td><td>v1 = net-points ratings: no opponent adjustment, injuries, weather; league-wide HFA constant; CLE@NO shows record-vs-differential tension <a href="https://github.com/sassnarep3-star/Own5/blob/main/data/model_lines_2026_wk9.csv" target="_blank" rel="noopener">model_lines csv</a><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/line-origination.md" target="_blank" rel="noopener">model spec</a></td><td><span class="chip good">Low</span></td><td>Disclosed</td></tr>
+<tr><td><b>F11</b></td><td>Model limitations (disclosed)</td><td>model_lines_2026_wk9.csv</td><td>v1 = net-points ratings: no opponent adjustment, injuries, weather; league-wide HFA constant; CLE@NO shows record-vs-differential tension <a href="https://github.com/sassnarep3-star/Own5/blob/main/data/model_lines_2026_wk9.csv" target="_blank" rel="noopener">model_lines csv</a><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/arena-f1d30421/line-origination.md" target="_blank" rel="noopener">model spec</a></td><td><span class="chip good">Low</span></td><td>Disclosed</td></tr>
 </tbody></table></div>
 <div class="note">Verification policy: values that cannot be confirmed against a source are left blank and listed here. Nothing is inferred or filled in. Each site table row carries its own source link for line-by-line manual review.</div>
 """
