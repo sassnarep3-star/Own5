@@ -33,3 +33,56 @@ No empirical edge, odds, correlation, player statistic, payout, or performance r
 | R09 live-source drift/headers; R10 empty initial repository | needs review | arena-cd43258e | `pages/review.html` (R09–R10) |
 
 No actual NFL edge, ROI, empirical coefficient, ranking, cash payout or recommendation is claimed. Empty empirical fields remain null/blank. Research specification and site completion do not imply empirical strategy validation.
+
+---
+
+# Session 9c3a0a69 board (NBA Line-Origination Lab)
+
+This file is the shared task board for all agent sessions working on this repository.
+
+**Rules (summary):** Claim a task by writing your session ID and file scope here, commit and push the claim immediately. Never start a task another session has claimed. Keep file scopes non-overlapping. Run `git pull --rebase` before every push. Shared outputs (site index/navigation, combined tables) are changed only by the final integration session. If a claim is >60 minutes old with no commits, any session may take over and note the handoff below.
+
+---
+
+## Sessions
+
+| Session ID | Branch | Started (UTC) | Status |
+|---|---|---|---|
+| 9c3a0a69 | `arena/9c3a0a69-own5` | 2026-11-02 | active — sole session at claim time; acting as worker **and** final integration session |
+
+> Note: This session was the only active session when work began (repo contained only README.md, no COORDINATION.md existed). Per Arena platform constraints this session must work on its fixed branch `arena/9c3a0a69-own5`; that branch serves as the `session-9c3a0a69/*` branch for all tasks below.
+
+---
+
+## Task Board
+
+| # | Task | Status | Owner (session) | File scope |
+|---|---|---|---|---|
+| T1 | Repo review (line-by-line audit of existing files, flag irregularities) | in progress | 9c3a0a69 | `docs/flagged.html`, `COORDINATION.md` |
+| T2 | Research: signal-generation strategies (singles, parlays, player-prop combos) with source links | in progress | 9c3a0a69 | `research/strategies.md` |
+| T3 | Research: validation gates (anti-overfitting, sample size, CLV benchmark) | in progress | 9c3a0a69 | `research/validation-gates.md` |
+| T4 | Research: correlation framework & reported correlation values for props/parlays | in progress | 9c3a0a69 | `research/correlations.md` |
+| T5 | Skill-vs-luck separation methodology (CLV, variance decomposition, multiple-testing control) | in progress | 9c3a0a69 | `research/skill-vs-luck.md` |
+| T6 | Leaderboard competition design (scoring, rewards, entry gates) | in progress | 9c3a0a69 | `research/leaderboard.md` |
+| T7 | Executive summary | unclaimed → claimed 9c3a0a69 | 9c3a0a69 | `EXECUTIVE_SUMMARY.md` |
+| T8 | Analysis tooling (correlation/validation scripts, runnable when data access is available) | in progress | 9c3a0a69 | `analysis/` |
+| T9 | Site build: landing page + subpages (dashboard UI, tables, Flagged for Review page) | in progress | 9c3a0a69 | `docs/` |
+| T10 | Integration: line-by-line re-verification, link check, PR to main, merge, Pages deploy | queued (runs last) | 9c3a0a69 | all of the above + Pages settings |
+
+---
+
+## Change requests to files owned by other sessions
+
+_None. (Single session.)_
+
+---
+
+## Verification & irregularities log
+
+- **Repo state at start:** commit `426b19d` ("Initial commit"), single file `README.md` containing only `# Own5` (6 bytes). No code, no data, no COORDINATION.md. Nothing to verify beyond this; no irregularities in pre-existing content.
+- **Irregularity R1:** GitHub Pages was already enabled for this repo (source: `main` branch, root path, legacy/Jekyll build) before any site content existed — site served an auto-generated page from README. Not harmful; integration session will repoint source to `/docs` after merge. Flagged on the Flagged for Review page.
+- (Further entries appended as tasks complete.)
+
+## PR / merge record
+
+- _Pending — recorded by integration step (T10)._
