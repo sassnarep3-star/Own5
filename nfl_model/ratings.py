@@ -77,7 +77,9 @@ def project_game(game: dict, ratings: dict[str, dict], league_mean: float,
             else:
                 loss += p
     fair_total = median_from_pmf(convolution)
-    fair_spread = -median_from_pmf([margin_pmf.get(m, 0.0) for m in range(-MAX_SCORE, MAX_SCORE + 1)])
+    margin_median_index = median_from_pmf([margin_pmf.get(m, 0.0) for m in range(-MAX_SCORE, MAX_SCORE + 1)])
+    median_margin_home = margin_median_index - MAX_SCORE
+    fair_spread = -median_margin_home
     for total, p in total_pmf.items():
         if total > fair_total:
             over += p

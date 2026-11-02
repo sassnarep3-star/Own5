@@ -49,6 +49,8 @@ class ModelTests(unittest.TestCase):
             self.assertAlmostEqual(line["home_win_probability"] + line["tie_probability"] + line["away_win_probability"], 1)
             self.assertAlmostEqual(line["over_probability_at_fair_total"] + line["under_probability_at_fair_total"] + line["total_push_probability"], 1)
             self.assertLess(line["truncation_tail_mass"], 1e-12)
+            self.assertLessEqual(abs(line["fair_spread_home"]), MAX_SCORE)
+            self.assertLessEqual(abs(line["fair_spread_home"] + line["expected_margin_home"]), 3)
             self.assertEqual(line["home_advantage_assumption"], 0)
         madrid = next(g for g in self.snapshot["schedule"] if g["neutral_site"])
         self.assertTrue(project_game(madrid, self.ratings, self.mu)["neutral_site"])
