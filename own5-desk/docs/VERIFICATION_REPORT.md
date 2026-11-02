@@ -41,4 +41,7 @@ Release snapshot: **2026-11-02 UTC**. This report distinguishes local verificati
 
 ## Publication record
 
-Pending final PR/merge and GitHub Pages deployment. The authoritative final result will be appended here and in `COORDINATION.md` after the live site is verified.
+- **PR:** https://github.com/sassnarep3-star/Own5/pull/13 — merged to `main` at 2026-11-02T23:18:47Z; merge commit `d4928bc3ae092404f3b4a8d48868dbbb602763aa`.
+- **CI:** desk workflow run https://github.com/sassnarep3-star/Own5/actions/runs/41544443092 succeeded (`desk-verify`, `legacy-pages-smoke`); existing root dashboard workflow run 41544442766 succeeded; legacy Pages build run 41544441667 succeeded.
+- **Pages:** API status `built`, source `main` @ `/`, build type `legacy`. Public desk verified by rendered fetch: https://sassnarep3-star.github.io/Own5/own5-desk/ , `/lines.html` and `/review.html`. Existing root dashboard remains live at https://sassnarep3-star.github.io/Own5/ .
+- **Preservation:** all earlier sessions' root/NBA/Strategy Lab/Line Lab work was retained; this desk is additive at `own5-desk/` and its data is namespaced under `data/own5_desk/`.

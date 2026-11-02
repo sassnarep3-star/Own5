@@ -64,5 +64,18 @@
     "own5-desk/strategies.html": "d7a60a4d198f7d57c4d4c71ba118b7bf5d6b8ecdb85a8b424c338840251f4ddb",
     "own5-desk/validation.html": "2b29ef0d4ead499bc355c907de33472e6075bfa0dc20c16e6fa835502b2387f4"
   },
-  "publication": "pending PR #13 merge and legacy Pages smoke check"
+  "publication": "success",
+  "pr": "https://github.com/sassnarep3-star/Own5/pull/13",
+  "merge_commit": "d4928bc3ae092404f3b4a8d48868dbbb602763aa",
+  "pages_status": "built",
+  "live_urls": [
+    "https://sassnarep3-star.github.io/Own5/own5-desk/",
+    "https://sassnarep3-star.github.io/Own5/own5-desk/lines.html",
+    "https://sassnarep3-star.github.io/Own5/own5-desk/review.html"
+  ],
+  "workflow_runs": {
+    "desk": "41544443092",
+    "root": "41544442766",
+    "pages_build": "41544441667"
+  }
 }
