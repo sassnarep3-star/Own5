@@ -678,8 +678,7 @@
     "values": {
       "date": "2026-11-05",
       "local_time": "8:15 PM",
-      "broadcast": "PRIME",
-      "neutral_site": false
+      "broadcast": "PRIME"
     },
     "source_ids": [
       "S11"
@@ -698,8 +697,7 @@
     "values": {
       "date": "2026-11-08",
       "local_time": "9:30 AM",
-      "broadcast": "NFLN",
-      "neutral_site": true
+      "broadcast": "NFLN"
     },
     "source_ids": [
       "S11"
@@ -718,8 +716,7 @@
     "values": {
       "date": "2026-11-08",
       "local_time": "1:00 PM",
-      "broadcast": "CBS",
-      "neutral_site": false
+      "broadcast": "CBS"
     },
     "source_ids": [
       "S11"
@@ -738,8 +735,7 @@
     "values": {
       "date": "2026-11-08",
       "local_time": "1:00 PM",
-      "broadcast": "FOX",
-      "neutral_site": false
+      "broadcast": "FOX"
     },
     "source_ids": [
       "S11"
@@ -758,8 +754,7 @@
     "values": {
       "date": "2026-11-08",
       "local_time": "1:00 PM",
-      "broadcast": "CBS",
-      "neutral_site": false
+      "broadcast": "CBS"
     },
     "source_ids": [
       "S11"
@@ -778,8 +773,7 @@
     "values": {
       "date": "2026-11-08",
       "local_time": "1:00 PM",
-      "broadcast": "CBS",
-      "neutral_site": false
+      "broadcast": "CBS"
     },
     "source_ids": [
       "S11"
@@ -798,8 +792,7 @@
     "values": {
       "date": "2026-11-08",
       "local_time": "1:00 PM",
-      "broadcast": "CBS",
-      "neutral_site": false
+      "broadcast": "CBS"
     },
     "source_ids": [
       "S11"
@@ -818,8 +811,7 @@
     "values": {
       "date": "2026-11-08",
       "local_time": "1:00 PM",
-      "broadcast": "FOX",
-      "neutral_site": false
+      "broadcast": "FOX"
     },
     "source_ids": [
       "S11"
@@ -838,8 +830,7 @@
     "values": {
       "date": "2026-11-08",
       "local_time": "1:00 PM",
-      "broadcast": "FOX",
-      "neutral_site": false
+      "broadcast": "FOX"
     },
     "source_ids": [
       "S11"
@@ -858,8 +849,7 @@
     "values": {
       "date": "2026-11-08",
       "local_time": "4:05 PM",
-      "broadcast": "CBS",
-      "neutral_site": false
+      "broadcast": "CBS"
     },
     "source_ids": [
       "S11"
@@ -878,8 +868,7 @@
     "values": {
       "date": "2026-11-08",
       "local_time": "4:25 PM",
-      "broadcast": "FOX",
-      "neutral_site": false
+      "broadcast": "FOX"
     },
     "source_ids": [
       "S11"
@@ -898,8 +887,7 @@
     "values": {
       "date": "2026-11-08",
       "local_time": "4:25 PM",
-      "broadcast": "FOX",
-      "neutral_site": false
+      "broadcast": "FOX"
     },
     "source_ids": [
       "S11"
@@ -918,8 +906,7 @@
     "values": {
       "date": "2026-11-08",
       "local_time": "4:25 PM",
-      "broadcast": "FOX",
-      "neutral_site": false
+      "broadcast": "FOX"
     },
     "source_ids": [
       "S11"
@@ -938,8 +925,7 @@
     "values": {
       "date": "2026-11-08",
       "local_time": "8:20 PM",
-      "broadcast": "NBC",
-      "neutral_site": false
+      "broadcast": "NBC"
     },
     "source_ids": [
       "S11"
@@ -958,8 +944,7 @@
     "values": {
       "date": "2026-11-09",
       "local_time": "8:15 PM",
-      "broadcast": "ESPN",
-      "neutral_site": false
+      "broadcast": "ESPN"
     },
     "source_ids": [
       "S11"
