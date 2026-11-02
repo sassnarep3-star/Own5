@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard · Own5</title>
+<meta name="description" content="Own5 — NFL line origination & skill-based strategy lab. Fully sourced from official NFL and operator sources.">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏈</text></svg>">
+</head><body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html">Own5 <span>· NFL Line Originator</span></a>
+  <nav class="main"><a href="index.html" class="active">Dashboard</a><a href="executive-summary.html">Executive Summary</a><a href="strategies.html">Strategies &amp; Leaderboard</a><a href="signals.html">Signals</a><a href="validation.html">Validation Gates</a><a href="correlations.html">Correlations</a><a href="bet-types.html">Bet Types &amp; Combos</a><a href="data.html">Data &amp; League Facts</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for Review</a></nav>
+</div></header>
+<main>
+<div class="hero"><div class="wrap">
+  <h1>Own5 — Originate Your Own NFL Lines</h1>
+  <p>Collect, organize and analyze NFL data from official sources only; generate signals; validate every strategy through gates; measure correlations; rank what survives on a leaderboard. Singles, parlays and player-prop combos. No manual input, no hallucinations — every table row links to its official source, and anything unverifiable is left blank and flagged.</p>
+  <div class="meta">Data verified 2026-11-02 · 2026 NFL season, Week 8 · Site served from this repo via GitHub Pages</div>
+</div></div>
+<div class="wrap">
+  <div class="kpis">
+    <div class="kpi"><div class="v">32</div><div class="l">teams</div><div class="s src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></div></div>
+    <div class="kpi"><div class="v">272</div><div class="l">reg-season games (2026)</div><div class="s src"><a href="https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced" target="_blank" rel="noopener">https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced &#8599;</a></div></div>
+    <div class="kpi"><div class="v">17</div><div class="l">games per team / 18 weeks</div><div class="s src"><a href="https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced" target="_blank" rel="noopener">https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced &#8599;</a></div></div>
+    <div class="kpi"><div class="v">14</div><div class="l">playoff teams (7/conf)</div><div class="s src"><a href="https://www.nfl.com/news/owners-approve-expanding-postseason-to-14-teams-0ap3000001107961" target="_blank" rel="noopener">https://www.nfl.com/news/owners-approve-expanding-postseason-to-14-teams-0ap3000001107961 &#8599;</a></div></div>
+    <div class="kpi"><div class="v">$301.2M</div><div class="l">2026 salary cap / club</div><div class="s src"><a href="https://www.nfl.com/news/nfl-announces-2026-salary-cap-set-at-301-2-million-per-team" target="_blank" rel="noopener">https://www.nfl.com/news/nfl-announces-2026-salary-cap-set-at-301-2-million-per-team &#8599;</a></div></div>
+    <div class="kpi"><div class="v">0.8391</div><div class="l">r(net pts/game, win%)</div><div class="s src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a> · computed in-repo</div></div>
+    <div class="kpi"><div class="v">10</div><div class="l">strategies (all pending validation)</div><div class="s src"><a href="strategies.html">leaderboard</a></div></div>
+    <div class="kpi"><div class="v">12</div><div class="l">items flagged for review</div><div class="s src"><a href="flagged.html">flagged.html</a></div></div>
+  </div>
+  <div class="cards">
+    <div class="card"><h3>📊 Executive Summary</h3><p>The whole project on one page: verified facts, snapshot, strategy framework, gates, correlations, flags.</p><a class="more" href="executive-summary.html">Open →</a></div>
+    <div class="card"><h3>🏆 Strategies & Leaderboard</h3><p>10 candidate strategies (singles, props, parlays, SGP combos, teasers, live). Leaderboard metric cells are blank until strategies pass the gates — no fabricated results.</p><a class="more" href="strategies.html">Open →</a></div>
+    <div class="card"><h3>📡 Signals</h3><p>14 signals, each tied to an official data source (injuries, standings, stats, NGS, schedule). Unsourced market signals are excluded and flagged.</p><a class="more" href="signals.html">Open →</a></div>
+    <div class="card"><h3>🛡️ Validation Gates</h3><p>12 gates that remove luck: sample size, 95% CI above break-even, walk-forward holdout, correlation cap, drawdown, quarter-Kelly, source integrity.</p><a class="more" href="validation.html">Open →</a></div>
+    <div class="card"><h3>🔗 Correlations</h3><p>Pearson r computed in-repo from the official 2026 standings snapshot (n=32). Net points/game vs win% r=0.839; offense vs defense r≈−0.01.</p><a class="more" href="correlations.html">Open →</a></div>
+    <div class="card"><h3>🎯 Bet Types & Combos</h3><p>Spread/ML/total/parlay/SGP/teaser/props with official operator definitions and grading rules (OT counts, pushes, voids, correlated-leg rule).</p><a class="more" href="bet-types.html">Open →</a></div>
+    <div class="card"><h3>🗂️ Data & League Facts</h3><p>All tables: league facts, 32 teams, byes, standings snapshot, Week 8 results. CSV + JSON in <a href="data/">data/</a>.</p><a class="more" href="data.html">Open →</a></div>
+    <div class="card"><h3>🔎 Sources</h3><p>Registry of the 27 official sources used, with what each one verifies.</p><a class="more" href="sources.html">Open →</a></div>
+    <div class="card"><h3>⚠️ Flagged for Review</h3><p>12 unverified items and irregularities with links for manual review. Blanks are intentional — nothing inferred.</p><a class="more" href="flagged.html">Open →</a></div>
+  </div>
+  <div class="panel">
+    <h3>Top of the 2026 standings (through Week 8) — <a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">nfl.com/standings &#8599;</a></h3>
+    <p class="sub">Snapshot 2026-11-02; full 32-team table on <a href="correlations.html">Correlations</a> / <a href="data.html">Data</a>.</p>
+    <div class="tbl-scroll"><table class="data"><thead><tr><th>Team</th><th>W</th><th>L</th><th>T</th><th>PCT</th><th>PF</th><th>PA</th><th>NET</th><th>STRK</th></tr></thead><tbody>
+    <tr><td><a href="https://www.nfl.com/teams/buffalo-bills/" target="_blank" rel="noopener">Buffalo Bills &#8599;</a></td><td class="num">6</td><td class="num">1</td><td class="num">0</td><td class="num">0.857</td><td class="num">233</td><td class="num">181</td><td class="num">52</td><td>3W</td></tr><tr><td><a href="https://www.nfl.com/teams/minnesota-vikings/" target="_blank" rel="noopener">Minnesota Vikings &#8599;</a></td><td class="num">6</td><td class="num">1</td><td class="num">0</td><td class="num">0.857</td><td class="num">140</td><td class="num">93</td><td class="num">47</td><td>1L</td></tr><tr><td><a href="https://www.nfl.com/teams/san-francisco-49ers/" target="_blank" rel="noopener">San Francisco 49ers &#8599;</a></td><td class="num">6</td><td class="num">1</td><td class="num">0</td><td class="num">0.857</td><td class="num">197</td><td class="num">139</td><td class="num">58</td><td>1L</td></tr><tr><td><a href="https://www.nfl.com/teams/pittsburgh-steelers/" target="_blank" rel="noopener">Pittsburgh Steelers &#8599;</a></td><td class="num">6</td><td class="num">2</td><td class="num">0</td><td class="num">0.75</td><td class="num">180</td><td class="num">144</td><td class="num">36</td><td>4W</td></tr><tr><td><a href="https://www.nfl.com/teams/denver-broncos/" target="_blank" rel="noopener">Denver Broncos &#8599;</a></td><td class="num">6</td><td class="num">2</td><td class="num">0</td><td class="num">0.75</td><td class="num">172</td><td class="num">165</td><td class="num">7</td><td>4W</td></tr><tr><td><a href="https://www.nfl.com/teams/cincinnati-bengals/" target="_blank" rel="noopener">Cincinnati Bengals &#8599;</a></td><td class="num">5</td><td class="num">2</td><td class="num">0</td><td class="num">0.714</td><td class="num">206</td><td class="num">158</td><td class="num">48</td><td>3W</td></tr><tr><td><a href="https://www.nfl.com/teams/jacksonville-jaguars/" target="_blank" rel="noopener">Jacksonville Jaguars &#8599;</a></td><td class="num">5</td><td class="num">2</td><td class="num">0</td><td class="num">0.714</td><td class="num">196</td><td class="num">111</td><td class="num">85</td><td>1W</td></tr><tr><td><a href="https://www.nfl.com/teams/kansas-city-chiefs/" target="_blank" rel="noopener">Kansas City Chiefs &#8599;</a></td><td class="num">5</td><td class="num">2</td><td class="num">0</td><td class="num">0.714</td><td class="num">167</td><td class="num">131</td><td class="num">36</td><td>2L</td></tr>
+    </tbody></table></div>
+  </div>
+  <div class="note">Verification policy: every table row on this site carries an official <code>source_url</code>. Values that can't be confirmed from an official source are blank (—) and published on <a href="flagged.html">Flagged for Review</a>. Never inferred. 21+ only; help: <a href="https://www.ncpgambling.org/help-treatment/national-helpline-1-800-522-4700/" target="_blank" rel="noopener">1-800-GAMBLER</a>.</div>
+</div>
+</main>
+<footer><div class="wrap">
+  <div><h4>Own5 — NFL Line Origination Lab</h4>
+    Verified line-by-line against official sources on 2026-11-02. Unverifiable values are blank and listed on the <a href="flagged.html">Flagged for Review</a> page. Live site: <a href="https://sassnarep3-star.github.io/Own5/">https://sassnarep3-star.github.io/Own5/</a></div>
+  <div><h4>Responsible gambling</h4>
+    Analytics research only. Legal age only; never wager more than you can afford to lose. 24/7 confidential help: <a href="https://www.ncpgambling.org/help-treatment/national-helpline-1-800-522-4700/">1-800-GAMBLER (1-800-426-2537)</a>, text 800GAM — NCPG.</div>
+  <div><h4>Data</h4>
+    Machine-readable tables: <a href="data/">data/</a> (CSV + JSON). Every row carries its official <code>source_url</code>.</div>
+</div></footer>
+<script src="assets/js/site.js"></script>
+</body></html>

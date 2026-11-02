@@ -1,0 +1,33 @@
+team,abbr,conference,division,W,L,T,GP,PCT,PF,PA,NET,STRK,source_id,source_url,snapshot_on,status
+Buffalo Bills,BUF,AFC,East,6,1,0,7,0.857,233,181,52,3W,S04,https://www.nfl.com/standings/,2026-11-02,verified
+New England Patriots,NE,AFC,East,5,3,0,8,0.625,184,162,22,1W,S04,https://www.nfl.com/standings/,2026-11-02,verified
+New York Jets,NYJ,AFC,East,2,6,0,8,0.25,170,188,-18,3L,S04,https://www.nfl.com/standings/,2026-11-02,verified
+Miami Dolphins,MIA,AFC,East,1,6,0,7,0.143,117,181,-64,1L,S04,https://www.nfl.com/standings/,2026-11-02,verified
+Pittsburgh Steelers,PIT,AFC,North,6,2,0,8,0.75,180,144,36,4W,S04,https://www.nfl.com/standings/,2026-11-02,verified
+Cincinnati Bengals,CIN,AFC,North,5,2,0,7,0.714,206,158,48,3W,S04,https://www.nfl.com/standings/,2026-11-02,verified
+Cleveland Browns,CLE,AFC,North,5,3,0,8,0.625,139,173,-34,1L,S04,https://www.nfl.com/standings/,2026-11-02,verified
+Baltimore Ravens,BAL,AFC,North,4,4,0,8,0.5,179,203,-24,3L,S04,https://www.nfl.com/standings/,2026-11-02,verified
+Jacksonville Jaguars,JAX,AFC,South,5,2,0,7,0.714,196,111,85,1W,S04,https://www.nfl.com/standings/,2026-11-02,verified
+Houston Texans,HOU,AFC,South,2,5,0,7,0.286,165,170,-5,1L,S04,https://www.nfl.com/standings/,2026-11-02,verified
+Indianapolis Colts,IND,AFC,South,2,6,0,8,0.25,161,222,-61,4L,S04,https://www.nfl.com/standings/,2026-11-02,verified
+Tennessee Titans,TEN,AFC,South,1,7,0,8,0.125,144,199,-55,2L,S04,https://www.nfl.com/standings/,2026-11-02,verified
+Denver Broncos,DEN,AFC,West,6,2,0,8,0.75,172,165,7,4W,S04,https://www.nfl.com/standings/,2026-11-02,verified
+Kansas City Chiefs,KC,AFC,West,5,2,0,7,0.714,167,131,36,2L,S04,https://www.nfl.com/standings/,2026-11-02,verified
+Las Vegas Raiders,LV,AFC,West,4,4,0,8,0.5,221,230,-9,1W,S04,https://www.nfl.com/standings/,2026-11-02,verified
+Los Angeles Chargers,LAC,AFC,West,0,7,0,7,0.0,99,175,-76,7L,S04,https://www.nfl.com/standings/,2026-11-02,verified
+New York Giants,NYG,NFC,East,4,2,1,7,0.643,163,161,2,1W,S04,https://www.nfl.com/standings/,2026-11-02,verified
+Dallas Cowboys,DAL,NFC,East,3,5,0,8,0.375,219,213,6,1L,S04,https://www.nfl.com/standings/,2026-11-02,verified
+Washington Commanders,WAS,NFC,East,2,4,1,7,0.357,159,182,-23,1W,S04,https://www.nfl.com/standings/,2026-11-02,verified
+Philadelphia Eagles,PHI,NFC,East,2,6,0,8,0.25,137,202,-65,6L,S04,https://www.nfl.com/standings/,2026-11-02,verified
+Minnesota Vikings,MIN,NFC,North,6,1,0,7,0.857,140,93,47,1L,S04,https://www.nfl.com/standings/,2026-11-02,verified
+Detroit Lions,DET,NFC,North,5,2,0,7,0.714,203,180,23,3W,S04,https://www.nfl.com/standings/,2026-11-02,verified
+Chicago Bears,CHI,NFC,North,5,2,0,7,0.714,180,143,37,2W,S04,https://www.nfl.com/standings/,2026-11-02,verified
+Green Bay Packers,GB,NFC,North,5,3,0,8,0.625,171,164,7,1W,S04,https://www.nfl.com/standings/,2026-11-02,verified
+Carolina Panthers,CAR,NFC,South,3,4,0,7,0.429,178,193,-15,2L,S04,https://www.nfl.com/standings/,2026-11-02,verified
+Tampa Bay Buccaneers,TB,NFC,South,3,5,0,8,0.375,178,151,27,2W,S04,https://www.nfl.com/standings/,2026-11-02,verified
+Atlanta Falcons,ATL,NFC,South,3,5,0,8,0.375,171,189,-18,1L,S04,https://www.nfl.com/standings/,2026-11-02,verified
+New Orleans Saints,NO,NFC,South,2,5,0,7,0.286,162,194,-32,1L,S04,https://www.nfl.com/standings/,2026-11-02,verified
+San Francisco 49ers,SF,NFC,West,6,1,0,7,0.857,197,139,58,1L,S04,https://www.nfl.com/standings/,2026-11-02,verified
+Seattle Seahawks,SEA,NFC,West,4,3,0,7,0.571,168,125,43,1W,S04,https://www.nfl.com/standings/,2026-11-02,verified
+Los Angeles Rams,LAR,NFC,West,4,4,0,8,0.5,194,168,26,2W,S04,https://www.nfl.com/standings/,2026-11-02,verified
+Arizona Cardinals,AZ,NFC,West,3,5,0,8,0.375,175,238,-63,1W,S04,https://www.nfl.com/standings/,2026-11-02,verified

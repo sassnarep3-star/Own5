@@ -1,0 +1,112 @@
+[
+ {
+  "rank": "1",
+  "player": "Jordan Love",
+  "passing_yards": "2246",
+  "season": "2026",
+  "stat_window": "REG through Week 8 (as displayed 2026-11-02)",
+  "source_id": "S07",
+  "source_url": "https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc",
+  "verified_on": "2026-11-02",
+  "status": "verified"
+ },
+ {
+  "rank": "2",
+  "player": "Matthew Stafford",
+  "passing_yards": "2146",
+  "season": "2026",
+  "stat_window": "REG through Week 8 (as displayed 2026-11-02)",
+  "source_id": "S07",
+  "source_url": "https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc",
+  "verified_on": "2026-11-02",
+  "status": "verified"
+ },
+ {
+  "rank": "3",
+  "player": "Kirk Cousins",
+  "passing_yards": "2124",
+  "season": "2026",
+  "stat_window": "REG through Week 8 (as displayed 2026-11-02)",
+  "source_id": "S07",
+  "source_url": "https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc",
+  "verified_on": "2026-11-02",
+  "status": "verified"
+ },
+ {
+  "rank": "4",
+  "player": "Joe Burrow",
+  "passing_yards": "2115",
+  "season": "2026",
+  "stat_window": "REG through Week 8 (as displayed 2026-11-02)",
+  "source_id": "S07",
+  "source_url": "https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc",
+  "verified_on": "2026-11-02",
+  "status": "verified"
+ },
+ {
+  "rank": "5",
+  "player": "Dak Prescott",
+  "passing_yards": "2046",
+  "season": "2026",
+  "stat_window": "REG through Week 8 (as displayed 2026-11-02)",
+  "source_id": "S07",
+  "source_url": "https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc",
+  "verified_on": "2026-11-02",
+  "status": "verified"
+ },
+ {
+  "rank": "6",
+  "player": "Drake Maye",
+  "passing_yards": "1983",
+  "season": "2026",
+  "stat_window": "REG through Week 8 (as displayed 2026-11-02)",
+  "source_id": "S07",
+  "source_url": "https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc",
+  "verified_on": "2026-11-02",
+  "status": "verified"
+ },
+ {
+  "rank": "7",
+  "player": "Jared Goff",
+  "passing_yards": "1964",
+  "season": "2026",
+  "stat_window": "REG through Week 8 (as displayed 2026-11-02)",
+  "source_id": "S07",
+  "source_url": "https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc",
+  "verified_on": "2026-11-02",
+  "status": "verified"
+ },
+ {
+  "rank": "8",
+  "player": "Bryce Young",
+  "passing_yards": "1921",
+  "season": "2026",
+  "stat_window": "REG through Week 8 (as displayed 2026-11-02)",
+  "source_id": "S07",
+  "source_url": "https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc",
+  "verified_on": "2026-11-02",
+  "status": "verified"
+ },
+ {
+  "rank": "9",
+  "player": "Geno Smith",
+  "passing_yards": "1913",
+  "season": "2026",
+  "stat_window": "REG through Week 8 (as displayed 2026-11-02)",
+  "source_id": "S07",
+  "source_url": "https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc",
+  "verified_on": "2026-11-02",
+  "status": "verified"
+ },
+ {
+  "rank": "10",
+  "player": "Aaron Rodgers",
+  "passing_yards": "1871",
+  "season": "2026",
+  "stat_window": "REG through Week 8 (as displayed 2026-11-02)",
+  "source_id": "S07",
+  "source_url": "https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc",
+  "verified_on": "2026-11-02",
+  "status": "verified"
+ }
+]

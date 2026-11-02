@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Strategies &amp; Leaderboard · Own5</title>
+<meta name="description" content="Own5 — NFL line origination & skill-based strategy lab. Fully sourced from official NFL and operator sources.">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏈</text></svg>">
+</head><body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html">Own5 <span>· NFL Line Originator</span></a>
+  <nav class="main"><a href="index.html">Dashboard</a><a href="executive-summary.html">Executive Summary</a><a href="strategies.html" class="active">Strategies &amp; Leaderboard</a><a href="signals.html">Signals</a><a href="validation.html">Validation Gates</a><a href="correlations.html">Correlations</a><a href="bet-types.html">Bet Types &amp; Combos</a><a href="data.html">Data &amp; League Facts</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for Review</a></nav>
+</div></header>
+<main><section class="page"><div class="wrap"><h2 class="sec">Strategies &amp; Leaderboard</h2><p class="sub">All factual claims link to official sources; blanks are intentional (see flagged.html).</p></div><div class="wrap"><div class="panel"><h2>Strategy Leaderboard — Line Origination Competition (T4/T6)</h2>
+<p>Ten candidate strategies for originating our own NFL lines. <strong>Every strategy must pass all validation gates (G01–G12) before it can appear ranked on the leaderboard.</strong> As of 2026-11-02 no strategy has graded-bet history yet, so <strong>all performance cells are intentionally blank</strong> (flag F07) — blanks are a feature: they mean &quot;not yet validated&quot;, never &quot;estimated&quot;.</p>
+<h3>Leaderboard</h3>
+<div class="table-tools"><input type="search" placeholder="Filter rows…" data-filter="tbl-leaderboard-csv"><span class="count"></span></div>
+<div class="tbl-scroll"><table class="data" id="tbl-leaderboard-csv"><thead><tr>
+<th>entry_id</th>
+<th>strategy_ref</th>
+<th>name</th>
+<th>rank</th>
+<th>graded_bets</th>
+<th>win_rate</th>
+<th>roi</th>
+<th>risk_adjusted_return</th>
+<th>max_drawdown</th>
+<th>clv</th>
+<th>gates_passed</th>
+<th>reward_tier</th>
+<th>status</th>
+<th>note</th>
+<th>source_url</th>
+<th>verified_on</th>
+</tr></thead><tbody>
+<tr>
+<td>LB-T1</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td>Tier 1 (top 3 strategies by risk-adjusted return)</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td>Reward: featured placement + largest research allocation</td>
+<td><span class="badge mut">tier rule</span></td>
+<td>reward tier definition — no performance data</td>
+<td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/strategies.md" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/research/strategies.md &#8599;</a></span></td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>LB-T2</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td>Tier 2 (next 4)</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td>Reward: standard research allocation</td>
+<td><span class="badge mut">tier rule</span></td>
+<td>reward tier definition — no performance data</td>
+<td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/strategies.md" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/research/strategies.md &#8599;</a></span></td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>LB-T3</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td>Tier 3 (validated but lower ranked)</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td>Reward: honorable mention</td>
+<td><span class="badge mut">tier rule</span></td>
+<td>reward tier definition — no performance data</td>
+<td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/strategies.md" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/research/strategies.md &#8599;</a></span></td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>LB-STR01</td>
+<td>STR01</td>
+<td>Rest-Edge Singles</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="badge info">pending</span></td>
+<td>metric cells intentionally blank: no verified graded-bet data exists; flagged F07 — never fabricated</td>
+<td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/strategies.md" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/research/strategies.md &#8599;</a></span></td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>LB-STR02</td>
+<td>STR02</td>
+<td>Net-Points Mismatch</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="badge info">pending</span></td>
+<td>metric cells intentionally blank: no verified graded-bet data exists; flagged F07 — never fabricated</td>
+<td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/strategies.md" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/research/strategies.md &#8599;</a></span></td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>LB-STR03</td>
+<td>STR03</td>
+<td>QB Prop Value</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="badge info">pending</span></td>
+<td>metric cells intentionally blank: no verified graded-bet data exists; flagged F07 — never fabricated</td>
+<td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/strategies.md" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/research/strategies.md &#8599;</a></span></td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>LB-STR04</td>
+<td>STR04</td>
+<td>Injury-Adjusted Team Rating</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="badge info">pending</span></td>
+<td>metric cells intentionally blank: no verified graded-bet data exists; flagged F07 — never fabricated</td>
+<td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/strategies.md" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/research/strategies.md &#8599;</a></span></td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>LB-STR05</td>
+<td>STR05</td>
+<td>Two-Leg Cross-Game Parlays</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="badge info">pending</span></td>
+<td>metric cells intentionally blank: no verified graded-bet data exists; flagged F07 — never fabricated</td>
+<td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/strategies.md" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/research/strategies.md &#8599;</a></span></td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>LB-STR06</td>
+<td>STR06</td>
+<td>SGP Selective</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="badge info">pending</span></td>
+<td>metric cells intentionally blank: no verified graded-bet data exists; flagged F07 — never fabricated</td>
+<td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/strategies.md" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/research/strategies.md &#8599;</a></span></td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>LB-STR07</td>
+<td>STR07</td>
+<td>Cross-Player Prop Combos</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="badge info">pending</span></td>
+<td>metric cells intentionally blank: no verified graded-bet data exists; flagged F07 — never fabricated</td>
+<td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/strategies.md" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/research/strategies.md &#8599;</a></span></td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>LB-STR08</td>
+<td>STR08</td>
+<td>Key-Number Teasers</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="badge info">pending</span></td>
+<td>metric cells intentionally blank: no verified graded-bet data exists; flagged F07 — never fabricated</td>
+<td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/strategies.md" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/research/strategies.md &#8599;</a></span></td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>LB-STR09</td>
+<td>STR09</td>
+<td>Live Value After News</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="badge info">pending</span></td>
+<td>metric cells intentionally blank: no verified graded-bet data exists; flagged F07 — never fabricated</td>
+<td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/strategies.md" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/research/strategies.md &#8599;</a></span></td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>LB-STR10</td>
+<td>STR10</td>
+<td>Division Dog Value</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="badge info">pending</span></td>
+<td>metric cells intentionally blank: no verified graded-bet data exists; flagged F07 — never fabricated</td>
+<td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/strategies.md" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/research/strategies.md &#8599;</a></span></td>
+<td>2026-11-02</td>
+</tr>
+</tbody></table></div>
+<h3>Strategy catalog</h3>
+<div class="table-tools"><input type="search" placeholder="Filter rows…" data-filter="tbl-strategies-csv"><span class="count"></span></div>
+<div class="tbl-scroll"><table class="data" id="tbl-strategies-csv"><thead><tr>
+<th>strategy_id</th>
+<th>name</th>
+<th>bet_types</th>
+<th>description</th>
+<th>signals</th>
+<th>gates_required</th>
+<th>correlation_with_portfolio</th>
+<th>status</th>
+<th>source_url</th>
+<th>verified_on</th>
+</tr></thead><tbody>
+<tr>
+<td>STR01</td>
+<td>Rest-Edge Singles</td>
+<td>Singles (spread/ML)</td>
+<td>Teams coming off a bye or with more rest days vs. opponent, filtered by points-for/against rank.</td>
+<td>SIG03; SIG04; SIG08</td>
+<td>G01-G03, G05-G08, G12</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="badge info">pending validation — no graded-bet data yet</span></td>
+<td><span class="src"><a href="https://www.nfl.com/" target="_blank" rel="noopener">https://www.nfl.com/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>STR02</td>
+<td>Net-Points Mismatch</td>
+<td>Singles (spread)</td>
+<td>Back the team with the better net points per game when the mismatch exceeds a set threshold vs. opponent.</td>
+<td>SIG03; SIG04</td>
+<td>G01-G03, G05-G08, G12</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="badge info">pending validation — no graded-bet data yet</span></td>
+<td><span class="src"><a href="https://www.nfl.com/" target="_blank" rel="noopener">https://www.nfl.com/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>STR03</td>
+<td>QB Prop Value</td>
+<td>Player props (passing yards/TDs)</td>
+<td>Model QB prop lines from official player stat trends + NGS metrics; bet only when model price beats book price by threshold.</td>
+<td>SIG05; SIG06; SIG07; SIG11</td>
+<td>G01-G03, G05-G08, G12</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="badge warn">pending validation — line values flagged F02</span></td>
+<td><span class="src"><a href="https://www.nfl.com/" target="_blank" rel="noopener">https://www.nfl.com/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>STR04</td>
+<td>Injury-Adjusted Team Rating</td>
+<td>Singles + totals</td>
+<td>Adjust team strength by official injury report (Out/Questionable at key positions); bet totals/spreads off the adjusted matchup.</td>
+<td>SIG01; SIG02; SIG03; SIG09</td>
+<td>G01-G03, G05-G08, G12</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="badge info">pending validation</span></td>
+<td><span class="src"><a href="https://www.nfl.com/" target="_blank" rel="noopener">https://www.nfl.com/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>STR05</td>
+<td>Two-Leg Cross-Game Parlays</td>
+<td>Parlay (2 legs, different games)</td>
+<td>Only uncorrelated games (no shared teams/players); both legs must pass single-bet gates; quarter-Kelly on combined price.</td>
+<td>SIG03; SIG08</td>
+<td>G01-G03, G05-G09, G12</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="badge info">pending validation</span></td>
+<td><span class="src"><a href="https://www.nfl.com/" target="_blank" rel="noopener">https://www.nfl.com/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>STR06</td>
+<td>Same-Game Parlay (SGP) Selective</td>
+<td>SGP</td>
+<td>Use only where the book prices correlation (offered SGP); reduced stake (0.25x) due to high same-game correlation.</td>
+<td>SIG01; SIG06; SIG11</td>
+<td>G01-G03, G05, G07-G09, G12</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="badge info">pending validation</span></td>
+<td><span class="src"><a href="https://www.nfl.com/" target="_blank" rel="noopener">https://www.nfl.com/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>STR07</td>
+<td>Cross-Player Prop Combos (SGP only)</td>
+<td>Prop combo within SGP</td>
+<td>Different players, same game, only inside an offered SGP; same-player combos excluded (BC06 restricted).</td>
+<td>SIG06; SIG07</td>
+<td>G01-G03, G05, G07-G09, G12</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="badge info">pending validation</span></td>
+<td><span class="src"><a href="https://www.nfl.com/" target="_blank" rel="noopener">https://www.nfl.com/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>STR08</td>
+<td>Key-Number Teasers</td>
+<td>Teaser (2-team, 6-pt)</td>
+<td>Tease through key margins 3 and 7 (most common NFL margins per FanDuel guide); both legs must be model-validated.</td>
+<td>SIG03; SIG04</td>
+<td>G01-G03, G05-G08, G12</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="badge info">pending validation</span></td>
+<td><span class="src"><a href="https://www.nfl.com/" target="_blank" rel="noopener">https://www.nfl.com/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>STR09</td>
+<td>Live Value After News</td>
+<td>Live (in-play)</td>
+<td>React to official injury/news flow during the week and in-game; bet live lines only when model price beats live price by threshold.</td>
+<td>SIG01; SIG02; SIG11</td>
+<td>G01-G03, G05-G08, G11, G12</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="badge warn">pending validation — live values flagged F02</span></td>
+<td><span class="src"><a href="https://www.nfl.com/" target="_blank" rel="noopener">https://www.nfl.com/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>STR10</td>
+<td>Division Dog Value</td>
+<td>Singles (ML)</td>
+<td>Underdog moneylines in division games where the dog&#x27;s net-points rank is within a set band of the favorite&#x27;s.</td>
+<td>SIG03; SIG04; SIG08</td>
+<td>G01-G03, G05-G08, G12</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="badge info">pending validation</span></td>
+<td><span class="src"><a href="https://www.nfl.com/" target="_blank" rel="noopener">https://www.nfl.com/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+</tr>
+</tbody></table></div>
+<h3>Reward tiers</h3>
+<div class="tbl-scroll"><table class="data"><tbody>
+<tr><td>Tier</td><td>Rank rule</td><td>Reward</td></tr>
+<tr><td>Tier 1</td><td>Top 3 strategies by risk-adjusted return (Sharpe-style: ROI / stdev of bet outcomes) after gates</td><td>Featured placement + largest research allocation</td></tr>
+<tr><td>Tier 2</td><td>Next 4 validated strategies</td><td>Standard research allocation</td></tr>
+<tr><td>Tier 3</td><td>Remaining validated strategies</td><td>Honorable mention</td></tr>
+</tbody></table></div>
+<p>Ranking metrics (graded bets, win rate, ROI, risk-adjusted return, max drawdown, CLV) are computed only from graded bets that passed the gates; CLV remains flagged (F01) because no official source publishes closing lines.</p></div></div></main>
+<footer><div class="wrap">
+  <div><h4>Own5 — NFL Line Origination Lab</h4>
+    Verified line-by-line against official sources on 2026-11-02. Unverifiable values are blank and listed on the <a href="flagged.html">Flagged for Review</a> page. Live site: <a href="https://sassnarep3-star.github.io/Own5/">https://sassnarep3-star.github.io/Own5/</a></div>
+  <div><h4>Responsible gambling</h4>
+    Analytics research only. Legal age only; never wager more than you can afford to lose. 24/7 confidential help: <a href="https://www.ncpgambling.org/help-treatment/national-helpline-1-800-522-4700/">1-800-GAMBLER (1-800-426-2537)</a>, text 800GAM — NCPG.</div>
+  <div><h4>Data</h4>
+    Machine-readable tables: <a href="data/">data/</a> (CSV + JSON). Every row carries its official <code>source_url</code>.</div>
+</div></footer>
+<script src="assets/js/site.js"></script>
+</body></html>
