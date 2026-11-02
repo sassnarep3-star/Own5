@@ -1,0 +1,7 @@
+{
+  "pairs_measured": 12,
+  "bootstrap_replicates": 4000,
+  "seed": 20261102,
+  "same_game_pairs_rejecting_independence": 1,
+  "cross_game_pairs_rejecting_independence": 0
+}

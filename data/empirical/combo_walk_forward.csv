@@ -1,0 +1,7 @@
+season,train_n,test_n,train_joint_prior,train_naive_prior,test_joint_actual,test_joint_ci_low,test_joint_ci_high,naive_decimal_offered,breakeven_decimal,ev_per_unit_vs_naive_price,source_url
+2016,399,403,0.25815,0.19334,0.25558,0.21485,0.29981,5.1722,3.9126,0.32193,https://www.nfl.com/stats/player-stats/
+2017,802,394,0.25686,0.19253,0.26904,0.22705,0.3144,5.194,3.717,0.39737,https://www.nfl.com/stats/player-stats/
+2018,1196,410,0.26087,0.19547,0.24634,0.20652,0.28973,5.1159,4.0594,0.26025,https://www.nfl.com/stats/player-stats/
+2019,1606,410,0.25716,0.19276,0.26341,0.22255,0.30761,5.1879,3.7963,0.36657,https://www.nfl.com/stats/player-stats/
+2020,2016,428,0.25843,0.19474,0.28037,0.2394,0.3243,5.135,3.5667,0.43972,https://www.nfl.com/stats/player-stats/
+2021,2444,431,0.26227,0.20044,0.2413,0.20273,0.28333,4.9891,4.1442,0.20386,https://www.nfl.com/stats/player-stats/

@@ -1,0 +1,8 @@
+{
+  "strategies_tested": 7,
+  "bootstrap_replicates": 10000,
+  "fdr_alpha": 0.1,
+  "surviving_fdr": 0,
+  "positive_roi": 1,
+  "note": "Luck cannot be removed from outcomes; it can only be bounded. No strategy is promoted on point estimate alone."
+}

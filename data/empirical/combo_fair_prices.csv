@@ -1,0 +1,13 @@
+pair_id,label,scope,n,observed_joint,fair_decimal,fair_american,naive_independent_joint,naive_decimal,naive_american,mispricing_pct_of_stake,phi_correlation,independence_rejected,source_url
+X01,Favorite covers & OVER,same game,4804,0.24209,4.1307,313.1,0.24316,4.1125,311.3,-0.44,-0.0043,False,https://www.nfl.com/scores/
+X02,Favorite covers & UNDER,same game,4804,0.24729,4.0438,304.4,0.24622,4.0614,306.1,0.435,0.0043,False,https://www.nfl.com/scores/
+X03,Underdog covers & OVER,same game,4804,0.25479,3.9248,292.5,0.25371,3.9415,294.2,0.426,0.0043,False,https://www.nfl.com/scores/
+X04,Underdog covers & UNDER,same game,4804,0.25583,3.9088,290.9,0.2569,3.8926,289.3,-0.417,-0.0043,False,https://www.nfl.com/scores/
+X05,Home wins & OVER,same game,4804,0.2756,3.6284,262.8,0.27419,3.6471,264.7,0.514,0.00567,False,https://www.nfl.com/scores/
+X06,Home covers & OVER,same game,4804,0.24646,4.0575,305.7,0.24213,4.13,313.0,1.788,0.01733,False,https://www.nfl.com/scores/
+X07,Favorite covers (game A) & favorite covers (game B),cross game,4473,0.23564,4.2438,324.4,0.24202,4.1319,313.2,-2.636,-0.02553,False,https://www.nfl.com/scores/
+X08,OVER (game A) & OVER (game B),cross game,4473,0.24927,4.0117,301.2,0.24799,4.0324,303.2,0.516,0.00513,False,https://www.nfl.com/scores/
+PP01,QB passing over & same-team RB rushing over,"same game, same team",6401,0.222,4.5045,350.5,0.23149,4.3198,332.0,-4.1,-0.03804,False,https://www.nfl.com/stats/player-stats/
+PP02,QB passing over & same-team WR1 receiving over,"same game, same team",2875,0.25913,3.8591,285.9,0.19785,5.0543,405.4,30.973,0.2486,True,https://www.nfl.com/stats/player-stats/
+PP03,WR1 receiving over & WR2 receiving over (same team),"same game, same team",2849,0.20604,4.8534,385.3,0.20028,4.993,399.3,2.876,0.02339,False,https://www.nfl.com/stats/player-stats/
+PP04,QB passing over (team A) & QB passing over (team B),cross game,2609,0.24684,4.0512,305.1,0.2336,4.2808,328.1,5.668,0.05299,False,https://www.nfl.com/stats/player-stats/

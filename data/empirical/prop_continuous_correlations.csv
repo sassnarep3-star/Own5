@@ -1,0 +1,4 @@
+pair_id,label,n,pearson_r,spearman_r,source_url
+PC01,QB passing yards vs same-team RB rushing yards,6401,-0.05624,-0.04642,https://www.nfl.com/stats/player-stats/
+PC02,QB passing yards vs same-team WR1 receiving yards,2875,0.35279,0.38469,https://www.nfl.com/stats/player-stats/
+PC03,WR1 vs WR2 receiving yards (same team),2849,-0.00736,0.01663,https://www.nfl.com/stats/player-stats/

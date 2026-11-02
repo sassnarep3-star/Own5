@@ -12,3 +12,6 @@ build/
 .work/
 .DS_Store
 *.log
+
+# session 55e682dd-own5: local scratch only
+engine/__pycache__/

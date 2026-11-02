@@ -1,0 +1,32 @@
+{
+  "datasets": [
+    {
+      "file": "games.csv",
+      "upstream_repo": "https://github.com/nflverse/nfldata",
+      "upstream_commit": "3cd32debd8c1bb0eb71ac4092584524e8d2c9cde",
+      "upstream_commit_date": "2026-11-02T20:45:18Z",
+      "retrieved_via": "https://codeload.github.com/nflverse/nfldata/tar.gz/refs/heads/master",
+      "retrieved_on": "2026-11-02",
+      "official_status": "THIRD-PARTY. Not an official NFL publication.",
+      "official_cross_check": "Every game is compared to official NFL.com scores by engine/verify_official.py; see data/empirical/official_verification.csv",
+      "field_conventions_source": "https://github.com/nflverse/nfldata/blob/master/DATASETS.md",
+      "conventions_verified": {
+        "result": "home_score - away_score",
+        "spread_line": "positive = HOME team favored (documented upstream, confirmed empirically: corr(result, spread_line)=+0.43)",
+        "total_line": "posted game total"
+      }
+    },
+    {
+      "file": "player_weekly/**",
+      "upstream_repo": "https://github.com/bendominguez0111/fantasy-csv-data",
+      "upstream_branch": "master",
+      "retrieved_via": "https://codeload.github.com/bendominguez0111/fantasy-csv-data/tar.gz/refs/heads/master",
+      "retrieved_on": "2026-11-02",
+      "seasons": "2015-2021",
+      "official_status": "THIRD-PARTY (Pro-Football-Reference derived). Not official.",
+      "limitation": "No official or verified sportsbook PLAYER PROP LINES exist in this dataset. Prop lines used in analysis are ORIGINATED in-repo as trailing medians and are labelled as such. No ROI is claimed on player props."
+    }
+  ],
+  "closing_lines_note": "spread_line/total_line/moneyline fields in games.csv are third-party consensus closing prices. No official league source publishes betting lines. All price-dependent results are flagged accordingly.",
+  "license_note": "Upstream datasets are community open data. Vendored here for reproducible research with attribution."
+}

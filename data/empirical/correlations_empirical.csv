@@ -1,0 +1,13 @@
+pair_id,label,scope,n,p_a,p_b,naive_independent_joint,observed_joint,joint_ci_low,joint_ci_high,lift_vs_independent,lift_ratio,phi_correlation,independence_rejected,source_url,note
+X01,Favorite covers & OVER,same game,4804,0.48938,0.49688,0.24316,0.24209,0.22978,0.2542,-0.00107,0.99558,-0.0043,False,https://www.nfl.com/scores/,Same-game parlay staple. Naive product misprices this.
+X02,Favorite covers & UNDER,same game,4804,0.48938,0.50312,0.24622,0.24729,0.23623,0.25855,0.00107,1.00436,0.0043,False,https://www.nfl.com/scores/,
+X03,Underdog covers & OVER,same game,4804,0.51062,0.49688,0.25371,0.25479,0.24275,0.26704,0.00107,1.00423,0.0043,False,https://www.nfl.com/scores/,
+X04,Underdog covers & UNDER,same game,4804,0.51062,0.50312,0.2569,0.25583,0.24428,0.26763,-0.00107,0.99582,-0.0043,False,https://www.nfl.com/scores/,
+X05,Home wins & OVER,same game,4804,0.55183,0.49688,0.27419,0.2756,0.26323,0.28828,0.00141,1.00515,0.00567,False,https://www.nfl.com/scores/,Moneyline + total combo.
+X06,Home covers & OVER,same game,4804,0.4873,0.49688,0.24213,0.24646,0.2344,0.25883,0.00433,1.01789,0.01733,False,https://www.nfl.com/scores/,
+X07,Favorite covers (game A) & favorite covers (game B),cross game,4473,0.49162,0.49229,0.24202,0.23564,0.22077,0.2513,-0.00638,0.97364,-0.02553,False,https://www.nfl.com/scores/,"Different games, same week. Tests the independence assumption used for cross-game parlays."
+X08,OVER (game A) & OVER (game B),cross game,4473,0.49743,0.49855,0.24799,0.24927,0.2337,0.26502,0.00128,1.00517,0.00513,False,https://www.nfl.com/scores/,Weather/league-wide scoring environment can induce weak dependence.
+PP01,QB passing over & same-team RB rushing over,"same game, same team",6401,0.47055,0.49195,0.23149,0.222,0.20766,0.23635,-0.00949,0.95899,-0.03804,False,https://www.nfl.com/stats/player-stats/,Game-script substitution: passing and rushing volume compete.
+PP02,QB passing over & same-team WR1 receiving over,"same game, same team",2875,0.46817,0.42261,0.19785,0.25913,0.24471,0.27339,0.06128,1.3097,0.2486,True,https://www.nfl.com/stats/player-stats/,Shared cause: the same completions drive both legs.
+PP03,WR1 receiving over & WR2 receiving over (same team),"same game, same team",2849,0.41348,0.48438,0.20028,0.20604,0.19251,0.22054,0.00576,1.02874,0.02339,False,https://www.nfl.com/stats/player-stats/,Target competition between two receivers on the same offense.
+PP04,QB passing over (team A) & QB passing over (team B),cross game,2609,0.48256,0.48409,0.2336,0.24684,0.22467,0.26882,0.01323,1.05665,0.05299,False,https://www.nfl.com/stats/player-stats/,Different games. Baseline for cross-game prop parlays.
