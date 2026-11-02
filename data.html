@@ -1,0 +1,1700 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data &amp; League Facts · Own5</title>
+<meta name="description" content="Own5 — NFL line origination & skill-based strategy lab. Fully sourced from official NFL and operator sources.">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏈</text></svg>">
+</head><body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html">Own5 <span>· NFL Line Originator</span></a>
+  <nav class="main"><a href="index.html">Overview</a><a href="executive-summary.html">Executive Summary</a><a href="detail-strategies.html">Strategies &amp; Leaderboard</a><a href="signals.html">Signals</a><a href="detail-validation.html">Validation Gates</a><a href="detail-correlations.html">Correlations</a><a href="bet-types.html">Bet Types &amp; Combos</a><a href="data.html" class="active">Data &amp; League Facts</a><a href="detail-sources.html">Sources</a><a href="flagged.html">Flagged for Review</a></nav>
+</div></header>
+<main><section class="page"><div class="wrap"><h2 class="sec">Data &amp; League Facts</h2><p class="sub">Machine-readable mirrors: data/*.csv and data/*.json. Snapshot 2026-11-02. Full research write-up: research/league-structure.md.</p></div><div class="wrap">
+  <div class="panel"><h3>League facts</h3><div class="table-tools"><input type="search" placeholder="Filter rows…" data-filter="tbl-league-facts-csv"><span class="count"></span></div>
+<div class="tbl-scroll"><table class="data" id="tbl-league-facts-csv"><thead><tr>
+<th>fact_id</th>
+<th>category</th>
+<th>fact</th>
+<th>value</th>
+<th>unit</th>
+<th>source_id</th>
+<th>source_url</th>
+<th>verified_on</th>
+<th>status</th>
+</tr></thead><tbody>
+<tr>
+<td>LF01</td>
+<td>Structure</td>
+<td>Teams in the NFL</td>
+<td class="num">32</td>
+<td>teams</td>
+<td>S09</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>LF02</td>
+<td>Structure</td>
+<td>Conferences</td>
+<td>2 (AFC, NFC)</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>LF03</td>
+<td>Structure</td>
+<td>Divisions per conference</td>
+<td>4 (East, North, South, West)</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>LF04</td>
+<td>Structure</td>
+<td>Teams per division</td>
+<td class="num">4</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>LF05</td>
+<td>Season</td>
+<td>Regular-season games per team</td>
+<td class="num">17</td>
+<td>games</td>
+<td>S11</td>
+<td><span class="src"><a href="https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced" target="_blank" rel="noopener">https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>LF06</td>
+<td>Season</td>
+<td>Regular-season weeks</td>
+<td class="num">18</td>
+<td>weeks</td>
+<td>S11</td>
+<td><span class="src"><a href="https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced" target="_blank" rel="noopener">https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>LF07</td>
+<td>Season</td>
+<td>Total regular-season games (2026)</td>
+<td class="num">272</td>
+<td>games</td>
+<td>S11</td>
+<td><span class="src"><a href="https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced" target="_blank" rel="noopener">https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>LF08</td>
+<td>Season</td>
+<td>Bye weeks per team</td>
+<td class="num">1</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td>S11</td>
+<td><span class="src"><a href="https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced" target="_blank" rel="noopener">https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>LF09</td>
+<td>Season</td>
+<td>Bye-week window (2026)</td>
+<td>Weeks 5-14 (no byes in Week 12)</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td>S12</td>
+<td><span class="src"><a href="https://amp.nfl.com/news/2026-nfl-schedule-release-every-team-bye-week" target="_blank" rel="noopener">https://amp.nfl.com/news/2026-nfl-schedule-release-every-team-bye-week &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>LF10</td>
+<td>Season</td>
+<td>Preseason games per team (2026)</td>
+<td class="num">3</td>
+<td>games</td>
+<td>S11</td>
+<td><span class="src"><a href="https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced" target="_blank" rel="noopener">https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>LF11</td>
+<td>Season</td>
+<td>2026 regular-season kickoff</td>
+<td>Wednesday, September 9, 2026, Seattle</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td>S11</td>
+<td><span class="src"><a href="https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced" target="_blank" rel="noopener">https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>LF12</td>
+<td>Season</td>
+<td>2026 Week 18 dates</td>
+<td>Saturday Jan 9 - Sunday Jan 10, 2027; all 16 games are division games</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td>S11</td>
+<td><span class="src"><a href="https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced" target="_blank" rel="noopener">https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>LF13</td>
+<td>Season</td>
+<td>International regular-season games (2026)</td>
+<td>9 (most ever in a season)</td>
+<td>games</td>
+<td>S11</td>
+<td><span class="src"><a href="https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced" target="_blank" rel="noopener">https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>LF14</td>
+<td>Schedule formula</td>
+<td>Each team plays every division in the other conference once every four years</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td>S18</td>
+<td><span class="src"><a href="https://operations.nfl.com/calendar-events/nfl-schedule/making-the-schedule" target="_blank" rel="noopener">https://operations.nfl.com/calendar-events/nfl-schedule/making-the-schedule &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>LF15</td>
+<td>Playoffs</td>
+<td>Playoff teams</td>
+<td>14 (7 per conference), format since 2020 season</td>
+<td>teams</td>
+<td>S13</td>
+<td><span class="src"><a href="https://www.nfl.com/news/owners-approve-expanding-postseason-to-14-teams-0ap3000001107961" target="_blank" rel="noopener">https://www.nfl.com/news/owners-approve-expanding-postseason-to-14-teams-0ap3000001107961 &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>LF16</td>
+<td>Playoffs</td>
+<td>First-round bye</td>
+<td>Only the No. 1 seed in each conference</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td>S13</td>
+<td><span class="src"><a href="https://www.nfl.com/news/owners-approve-expanding-postseason-to-14-teams-0ap3000001107961" target="_blank" rel="noopener">https://www.nfl.com/news/owners-approve-expanding-postseason-to-14-teams-0ap3000001107961 &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>LF17</td>
+<td>Playoffs</td>
+<td>Wild Card matchups</td>
+<td>No.2 hosts No.7; No.3 hosts No.6; No.4 hosts No.5 (per conference)</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td>S13</td>
+<td><span class="src"><a href="https://www.nfl.com/news/owners-approve-expanding-postseason-to-14-teams-0ap3000001107961" target="_blank" rel="noopener">https://www.nfl.com/news/owners-approve-expanding-postseason-to-14-teams-0ap3000001107961 &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>LF18</td>
+<td>Standings</td>
+<td>Tie game value</td>
+<td>Counts as one-half win and one-half loss for both clubs</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td>S10</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/tie-breaking-procedures" target="_blank" rel="noopener">https://www.nfl.com/standings/tie-breaking-procedures &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>LF19</td>
+<td>Finance</td>
+<td>2026 salary cap</td>
+<td>$301.2 million per club (first time above $300M)</td>
+<td>USD</td>
+<td>S14</td>
+<td><span class="src"><a href="https://www.nfl.com/news/nfl-announces-2026-salary-cap-set-at-301-2-million-per-team" target="_blank" rel="noopener">https://www.nfl.com/news/nfl-announces-2026-salary-cap-set-at-301-2-million-per-team &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>LF20</td>
+<td>Finance</td>
+<td>2025 salary cap (comparison)</td>
+<td>$279.2 million per club (+$22M to 2026)</td>
+<td>USD</td>
+<td>S14</td>
+<td><span class="src"><a href="https://www.nfl.com/news/nfl-announces-2026-salary-cap-set-at-301-2-million-per-team" target="_blank" rel="noopener">https://www.nfl.com/news/nfl-announces-2026-salary-cap-set-at-301-2-million-per-team &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>LF21</td>
+<td>Rules</td>
+<td>Length of an NFL game</td>
+<td>60 minutes, four periods of 15 minutes each (Rule 4)</td>
+<td>minutes</td>
+<td>S15</td>
+<td><span class="src"><a href="https://operations.nfl.com/rules-officiating/2026-nfl-rulebook" target="_blank" rel="noopener">https://operations.nfl.com/rules-officiating/2026-nfl-rulebook &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>LF22</td>
+<td>Rules</td>
+<td>Overtime</td>
+<td>Governed by Rule 16 (Overtime Procedures), 2026 Official Playing Rules</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td>S15</td>
+<td><span class="src"><a href="https://operations.nfl.com/rules-officiating/2026-nfl-rulebook" target="_blank" rel="noopener">https://operations.nfl.com/rules-officiating/2026-nfl-rulebook &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>LF23</td>
+<td>Data</td>
+<td>Next Gen Stats tracking rate</td>
+<td>Player location/speed/acceleration captured 10 times per second; 200+ data points per play</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td>S16</td>
+<td><span class="src"><a href="https://operations.nfl.com/gameday/technology/nfl-next-gen-stats" target="_blank" rel="noopener">https://operations.nfl.com/gameday/technology/nfl-next-gen-stats &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>LF24</td>
+<td>Data</td>
+<td>Official statistician of the NFL</td>
+<td>Elias Sports Bureau; official stat corrections released by NFL League Office</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td>S17</td>
+<td><span class="src"><a href="https://fantasy.nfl.com/research/statcorrections" target="_blank" rel="noopener">https://fantasy.nfl.com/research/statcorrections &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>LF25</td>
+<td>Betting data</td>
+<td>NFL Official Sports Betting Partners</td>
+<td>Caesars, DraftKings, FanDuel; all use the NFL&#x27;s official league data feed</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td>S26</td>
+<td><span class="src"><a href="https://www.nfl.com/news/nfl-announces-tri-exclusive-sports-betting-partners" target="_blank" rel="noopener">https://www.nfl.com/news/nfl-announces-tri-exclusive-sports-betting-partners &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>LF26</td>
+<td>Responsible gambling</td>
+<td>National Problem Gambling Helpline</td>
+<td>1-800-GAMBLER (1-800-426-2537); text 800GAM; chat via NCPG; 24/7 confidential</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td>S25</td>
+<td><span class="src"><a href="https://www.ncpgambling.org/help-treatment/national-helpline-1-800-522-4700/" target="_blank" rel="noopener">https://www.ncpgambling.org/help-treatment/national-helpline-1-800-522-4700/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+</tbody></table></div></div>
+  <div class="panel"><h3>Standings — 2026 through Week 8 <span class="src">(<a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a>)</span></h3><div class="table-tools"><input type="search" placeholder="Filter rows…" data-filter="tbl-standings-2026-wk8-csv"><span class="count"></span></div>
+<div class="tbl-scroll"><table class="data" id="tbl-standings-2026-wk8-csv"><thead><tr>
+<th>team</th>
+<th>abbr</th>
+<th>conference</th>
+<th>division</th>
+<th>W</th>
+<th>L</th>
+<th>T</th>
+<th>GP</th>
+<th>PCT</th>
+<th>PF</th>
+<th>PA</th>
+<th>NET</th>
+<th>STRK</th>
+<th>source_id</th>
+<th>source_url</th>
+<th>snapshot_on</th>
+<th>status</th>
+</tr></thead><tbody>
+<tr>
+<td>Buffalo Bills</td>
+<td>BUF</td>
+<td>AFC</td>
+<td>East</td>
+<td class="num">6</td>
+<td class="num">1</td>
+<td class="num">0</td>
+<td class="num">7</td>
+<td class="num">0.857</td>
+<td class="num">233</td>
+<td class="num">181</td>
+<td class="num">52</td>
+<td>3W</td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>New England Patriots</td>
+<td>NE</td>
+<td>AFC</td>
+<td>East</td>
+<td class="num">5</td>
+<td class="num">3</td>
+<td class="num">0</td>
+<td class="num">8</td>
+<td class="num">0.625</td>
+<td class="num">184</td>
+<td class="num">162</td>
+<td class="num">22</td>
+<td>1W</td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>New York Jets</td>
+<td>NYJ</td>
+<td>AFC</td>
+<td>East</td>
+<td class="num">2</td>
+<td class="num">6</td>
+<td class="num">0</td>
+<td class="num">8</td>
+<td class="num">0.25</td>
+<td class="num">170</td>
+<td class="num">188</td>
+<td class="num">-18</td>
+<td>3L</td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Miami Dolphins</td>
+<td>MIA</td>
+<td>AFC</td>
+<td>East</td>
+<td class="num">1</td>
+<td class="num">6</td>
+<td class="num">0</td>
+<td class="num">7</td>
+<td class="num">0.143</td>
+<td class="num">117</td>
+<td class="num">181</td>
+<td class="num">-64</td>
+<td>1L</td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Pittsburgh Steelers</td>
+<td>PIT</td>
+<td>AFC</td>
+<td>North</td>
+<td class="num">6</td>
+<td class="num">2</td>
+<td class="num">0</td>
+<td class="num">8</td>
+<td class="num">0.75</td>
+<td class="num">180</td>
+<td class="num">144</td>
+<td class="num">36</td>
+<td>4W</td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Cincinnati Bengals</td>
+<td>CIN</td>
+<td>AFC</td>
+<td>North</td>
+<td class="num">5</td>
+<td class="num">2</td>
+<td class="num">0</td>
+<td class="num">7</td>
+<td class="num">0.714</td>
+<td class="num">206</td>
+<td class="num">158</td>
+<td class="num">48</td>
+<td>3W</td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Cleveland Browns</td>
+<td>CLE</td>
+<td>AFC</td>
+<td>North</td>
+<td class="num">5</td>
+<td class="num">3</td>
+<td class="num">0</td>
+<td class="num">8</td>
+<td class="num">0.625</td>
+<td class="num">139</td>
+<td class="num">173</td>
+<td class="num">-34</td>
+<td>1L</td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Baltimore Ravens</td>
+<td>BAL</td>
+<td>AFC</td>
+<td>North</td>
+<td class="num">4</td>
+<td class="num">4</td>
+<td class="num">0</td>
+<td class="num">8</td>
+<td class="num">0.5</td>
+<td class="num">179</td>
+<td class="num">203</td>
+<td class="num">-24</td>
+<td>3L</td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Jacksonville Jaguars</td>
+<td>JAX</td>
+<td>AFC</td>
+<td>South</td>
+<td class="num">5</td>
+<td class="num">2</td>
+<td class="num">0</td>
+<td class="num">7</td>
+<td class="num">0.714</td>
+<td class="num">196</td>
+<td class="num">111</td>
+<td class="num">85</td>
+<td>1W</td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Houston Texans</td>
+<td>HOU</td>
+<td>AFC</td>
+<td>South</td>
+<td class="num">2</td>
+<td class="num">5</td>
+<td class="num">0</td>
+<td class="num">7</td>
+<td class="num">0.286</td>
+<td class="num">165</td>
+<td class="num">170</td>
+<td class="num">-5</td>
+<td>1L</td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Indianapolis Colts</td>
+<td>IND</td>
+<td>AFC</td>
+<td>South</td>
+<td class="num">2</td>
+<td class="num">6</td>
+<td class="num">0</td>
+<td class="num">8</td>
+<td class="num">0.25</td>
+<td class="num">161</td>
+<td class="num">222</td>
+<td class="num">-61</td>
+<td>4L</td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Tennessee Titans</td>
+<td>TEN</td>
+<td>AFC</td>
+<td>South</td>
+<td class="num">1</td>
+<td class="num">7</td>
+<td class="num">0</td>
+<td class="num">8</td>
+<td class="num">0.125</td>
+<td class="num">144</td>
+<td class="num">199</td>
+<td class="num">-55</td>
+<td>2L</td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Denver Broncos</td>
+<td>DEN</td>
+<td>AFC</td>
+<td>West</td>
+<td class="num">6</td>
+<td class="num">2</td>
+<td class="num">0</td>
+<td class="num">8</td>
+<td class="num">0.75</td>
+<td class="num">172</td>
+<td class="num">165</td>
+<td class="num">7</td>
+<td>4W</td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Kansas City Chiefs</td>
+<td>KC</td>
+<td>AFC</td>
+<td>West</td>
+<td class="num">5</td>
+<td class="num">2</td>
+<td class="num">0</td>
+<td class="num">7</td>
+<td class="num">0.714</td>
+<td class="num">167</td>
+<td class="num">131</td>
+<td class="num">36</td>
+<td>2L</td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Las Vegas Raiders</td>
+<td>LV</td>
+<td>AFC</td>
+<td>West</td>
+<td class="num">4</td>
+<td class="num">4</td>
+<td class="num">0</td>
+<td class="num">8</td>
+<td class="num">0.5</td>
+<td class="num">221</td>
+<td class="num">230</td>
+<td class="num">-9</td>
+<td>1W</td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Los Angeles Chargers</td>
+<td>LAC</td>
+<td>AFC</td>
+<td>West</td>
+<td class="num">0</td>
+<td class="num">7</td>
+<td class="num">0</td>
+<td class="num">7</td>
+<td class="num">0.0</td>
+<td class="num">99</td>
+<td class="num">175</td>
+<td class="num">-76</td>
+<td>7L</td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>New York Giants</td>
+<td>NYG</td>
+<td>NFC</td>
+<td>East</td>
+<td class="num">4</td>
+<td class="num">2</td>
+<td class="num">1</td>
+<td class="num">7</td>
+<td class="num">0.643</td>
+<td class="num">163</td>
+<td class="num">161</td>
+<td class="num">2</td>
+<td>1W</td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Dallas Cowboys</td>
+<td>DAL</td>
+<td>NFC</td>
+<td>East</td>
+<td class="num">3</td>
+<td class="num">5</td>
+<td class="num">0</td>
+<td class="num">8</td>
+<td class="num">0.375</td>
+<td class="num">219</td>
+<td class="num">213</td>
+<td class="num">6</td>
+<td>1L</td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Washington Commanders</td>
+<td>WAS</td>
+<td>NFC</td>
+<td>East</td>
+<td class="num">2</td>
+<td class="num">4</td>
+<td class="num">1</td>
+<td class="num">7</td>
+<td class="num">0.357</td>
+<td class="num">159</td>
+<td class="num">182</td>
+<td class="num">-23</td>
+<td>1W</td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Philadelphia Eagles</td>
+<td>PHI</td>
+<td>NFC</td>
+<td>East</td>
+<td class="num">2</td>
+<td class="num">6</td>
+<td class="num">0</td>
+<td class="num">8</td>
+<td class="num">0.25</td>
+<td class="num">137</td>
+<td class="num">202</td>
+<td class="num">-65</td>
+<td>6L</td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Minnesota Vikings</td>
+<td>MIN</td>
+<td>NFC</td>
+<td>North</td>
+<td class="num">6</td>
+<td class="num">1</td>
+<td class="num">0</td>
+<td class="num">7</td>
+<td class="num">0.857</td>
+<td class="num">140</td>
+<td class="num">93</td>
+<td class="num">47</td>
+<td>1L</td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Detroit Lions</td>
+<td>DET</td>
+<td>NFC</td>
+<td>North</td>
+<td class="num">5</td>
+<td class="num">2</td>
+<td class="num">0</td>
+<td class="num">7</td>
+<td class="num">0.714</td>
+<td class="num">203</td>
+<td class="num">180</td>
+<td class="num">23</td>
+<td>3W</td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Chicago Bears</td>
+<td>CHI</td>
+<td>NFC</td>
+<td>North</td>
+<td class="num">5</td>
+<td class="num">2</td>
+<td class="num">0</td>
+<td class="num">7</td>
+<td class="num">0.714</td>
+<td class="num">180</td>
+<td class="num">143</td>
+<td class="num">37</td>
+<td>2W</td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Green Bay Packers</td>
+<td>GB</td>
+<td>NFC</td>
+<td>North</td>
+<td class="num">5</td>
+<td class="num">3</td>
+<td class="num">0</td>
+<td class="num">8</td>
+<td class="num">0.625</td>
+<td class="num">171</td>
+<td class="num">164</td>
+<td class="num">7</td>
+<td>1W</td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Carolina Panthers</td>
+<td>CAR</td>
+<td>NFC</td>
+<td>South</td>
+<td class="num">3</td>
+<td class="num">4</td>
+<td class="num">0</td>
+<td class="num">7</td>
+<td class="num">0.429</td>
+<td class="num">178</td>
+<td class="num">193</td>
+<td class="num">-15</td>
+<td>2L</td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Tampa Bay Buccaneers</td>
+<td>TB</td>
+<td>NFC</td>
+<td>South</td>
+<td class="num">3</td>
+<td class="num">5</td>
+<td class="num">0</td>
+<td class="num">8</td>
+<td class="num">0.375</td>
+<td class="num">178</td>
+<td class="num">151</td>
+<td class="num">27</td>
+<td>2W</td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Atlanta Falcons</td>
+<td>ATL</td>
+<td>NFC</td>
+<td>South</td>
+<td class="num">3</td>
+<td class="num">5</td>
+<td class="num">0</td>
+<td class="num">8</td>
+<td class="num">0.375</td>
+<td class="num">171</td>
+<td class="num">189</td>
+<td class="num">-18</td>
+<td>1L</td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>New Orleans Saints</td>
+<td>NO</td>
+<td>NFC</td>
+<td>South</td>
+<td class="num">2</td>
+<td class="num">5</td>
+<td class="num">0</td>
+<td class="num">7</td>
+<td class="num">0.286</td>
+<td class="num">162</td>
+<td class="num">194</td>
+<td class="num">-32</td>
+<td>1L</td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>San Francisco 49ers</td>
+<td>SF</td>
+<td>NFC</td>
+<td>West</td>
+<td class="num">6</td>
+<td class="num">1</td>
+<td class="num">0</td>
+<td class="num">7</td>
+<td class="num">0.857</td>
+<td class="num">197</td>
+<td class="num">139</td>
+<td class="num">58</td>
+<td>1L</td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Seattle Seahawks</td>
+<td>SEA</td>
+<td>NFC</td>
+<td>West</td>
+<td class="num">4</td>
+<td class="num">3</td>
+<td class="num">0</td>
+<td class="num">7</td>
+<td class="num">0.571</td>
+<td class="num">168</td>
+<td class="num">125</td>
+<td class="num">43</td>
+<td>1W</td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Los Angeles Rams</td>
+<td>LAR</td>
+<td>NFC</td>
+<td>West</td>
+<td class="num">4</td>
+<td class="num">4</td>
+<td class="num">0</td>
+<td class="num">8</td>
+<td class="num">0.5</td>
+<td class="num">194</td>
+<td class="num">168</td>
+<td class="num">26</td>
+<td>2W</td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Arizona Cardinals</td>
+<td>AZ</td>
+<td>NFC</td>
+<td>West</td>
+<td class="num">3</td>
+<td class="num">5</td>
+<td class="num">0</td>
+<td class="num">8</td>
+<td class="num">0.375</td>
+<td class="num">175</td>
+<td class="num">238</td>
+<td class="num">-63</td>
+<td>1W</td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+</tbody></table></div></div>
+  <div class="panel"><h3>Week 8 results <span class="src">(<a href="https://www.nfl.com/schedules" target="_blank" rel="noopener">https://www.nfl.com/schedules &#8599;</a>)</span></h3><div class="table-tools"><input type="search" placeholder="Filter rows…" data-filter="tbl-week8-2026-results-csv"><span class="count"></span></div>
+<div class="tbl-scroll"><table class="data" id="tbl-week8-2026-results-csv"><thead><tr>
+<th>season_week</th>
+<th>kickoff</th>
+<th>away</th>
+<th>at</th>
+<th>home</th>
+<th>away_pts</th>
+<th>home_pts</th>
+<th>status</th>
+<th>network</th>
+<th>source_id</th>
+<th>source_url</th>
+<th>verified_on</th>
+<th>row_status</th>
+</tr></thead><tbody>
+<tr>
+<td>2026-REG-8</td>
+<td>Thu Oct 29, 8:15 PM</td>
+<td>Carolina Panthers</td>
+<td>at</td>
+<td>Green Bay Packers</td>
+<td class="num">19</td>
+<td class="num">27</td>
+<td><span class="badge mut">Final</span></td>
+<td>Prime Video</td>
+<td>S05</td>
+<td><span class="src"><a href="https://www.nfl.com/schedules" target="_blank" rel="noopener">https://www.nfl.com/schedules &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>2026-REG-8</td>
+<td>Sun Nov 1, 1:00 PM</td>
+<td>Baltimore Ravens</td>
+<td>at</td>
+<td>Buffalo Bills</td>
+<td class="num">10</td>
+<td class="num">36</td>
+<td><span class="badge mut">Final</span></td>
+<td>CBS</td>
+<td>S05</td>
+<td><span class="src"><a href="https://www.nfl.com/schedules" target="_blank" rel="noopener">https://www.nfl.com/schedules &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>2026-REG-8</td>
+<td>Sun Nov 1, 1:00 PM</td>
+<td>Tennessee Titans</td>
+<td>at</td>
+<td>Cincinnati Bengals</td>
+<td class="num">36</td>
+<td class="num">43</td>
+<td><span class="badge mut">Final</span></td>
+<td>CBS</td>
+<td>S05</td>
+<td><span class="src"><a href="https://www.nfl.com/schedules" target="_blank" rel="noopener">https://www.nfl.com/schedules &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>2026-REG-8</td>
+<td>Sun Nov 1, 1:00 PM</td>
+<td>Arizona Cardinals</td>
+<td>at</td>
+<td>Dallas Cowboys</td>
+<td class="num">33</td>
+<td class="num">30</td>
+<td><span class="badge mut">Final</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td>S05</td>
+<td><span class="src"><a href="https://www.nfl.com/schedules" target="_blank" rel="noopener">https://www.nfl.com/schedules &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>2026-REG-8</td>
+<td>Sun Nov 1, 1:00 PM</td>
+<td>Minnesota Vikings</td>
+<td>at</td>
+<td>Detroit Lions</td>
+<td class="num">15</td>
+<td class="num">19</td>
+<td><span class="badge mut">Final</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td>S05</td>
+<td><span class="src"><a href="https://www.nfl.com/schedules" target="_blank" rel="noopener">https://www.nfl.com/schedules &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>2026-REG-8</td>
+<td>Sun Nov 1, 1:00 PM</td>
+<td>Indianapolis Colts</td>
+<td>at</td>
+<td>Jacksonville Jaguars</td>
+<td class="num">7</td>
+<td class="num">42</td>
+<td><span class="badge mut">Final</span></td>
+<td>CBS</td>
+<td>S05</td>
+<td><span class="src"><a href="https://www.nfl.com/schedules" target="_blank" rel="noopener">https://www.nfl.com/schedules &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>2026-REG-8</td>
+<td>Sun Nov 1, 1:00 PM</td>
+<td>Las Vegas Raiders</td>
+<td>at</td>
+<td>New York Jets</td>
+<td class="num">38</td>
+<td class="num">33</td>
+<td><span class="badge mut">Final</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td>S05</td>
+<td><span class="src"><a href="https://www.nfl.com/schedules" target="_blank" rel="noopener">https://www.nfl.com/schedules &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>2026-REG-8</td>
+<td>Sun Nov 1, 1:00 PM</td>
+<td>Cleveland Browns</td>
+<td>at</td>
+<td>Pittsburgh Steelers</td>
+<td class="num">6</td>
+<td class="num">27</td>
+<td><span class="badge mut">Final</span></td>
+<td>CBS</td>
+<td>S05</td>
+<td><span class="src"><a href="https://www.nfl.com/schedules" target="_blank" rel="noopener">https://www.nfl.com/schedules &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>2026-REG-8</td>
+<td>Sun Nov 1, 1:00 PM</td>
+<td>Atlanta Falcons</td>
+<td>at</td>
+<td>Tampa Bay Buccaneers</td>
+<td class="num">0</td>
+<td class="num">16</td>
+<td><span class="badge mut">Final</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td>S05</td>
+<td><span class="src"><a href="https://www.nfl.com/schedules" target="_blank" rel="noopener">https://www.nfl.com/schedules &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>2026-REG-8</td>
+<td>Sun Nov 1, 4:25 PM</td>
+<td>Los Angeles Chargers</td>
+<td>at</td>
+<td>Los Angeles Rams</td>
+<td class="num">9</td>
+<td class="num">24</td>
+<td><span class="badge mut">Final</span></td>
+<td>FOX</td>
+<td>S05</td>
+<td><span class="src"><a href="https://www.nfl.com/schedules" target="_blank" rel="noopener">https://www.nfl.com/schedules &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>2026-REG-8</td>
+<td>Sun Nov 1, 4:25 PM</td>
+<td>Kansas City Chiefs</td>
+<td>at</td>
+<td>Denver Broncos</td>
+<td class="num">24</td>
+<td class="num">28</td>
+<td><span class="badge mut">Final</span></td>
+<td>CBS</td>
+<td>S05</td>
+<td><span class="src"><a href="https://www.nfl.com/schedules" target="_blank" rel="noopener">https://www.nfl.com/schedules &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>2026-REG-8</td>
+<td>Sun Nov 1, 4:25 PM</td>
+<td>New England Patriots</td>
+<td>at</td>
+<td>Miami Dolphins</td>
+<td class="num">24</td>
+<td class="num">19</td>
+<td><span class="badge mut">Final</span></td>
+<td>CBS</td>
+<td>S05</td>
+<td><span class="src"><a href="https://www.nfl.com/schedules" target="_blank" rel="noopener">https://www.nfl.com/schedules &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>2026-REG-8</td>
+<td>Sun Nov 1, 8:20 PM (SNF)</td>
+<td>Philadelphia Eagles</td>
+<td>at</td>
+<td>Washington Commanders</td>
+<td class="num">10</td>
+<td class="num">27</td>
+<td><span class="badge mut">Final</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td>S05</td>
+<td><span class="src"><a href="https://www.nfl.com/schedules" target="_blank" rel="noopener">https://www.nfl.com/schedules &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>2026-REG-8</td>
+<td>Mon Nov 2, 8:15 PM (MNF)</td>
+<td>Chicago Bears</td>
+<td>at</td>
+<td>Seattle Seahawks</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="badge mut">Scheduled as of 2026-11-02; game card shows weather: Clear, night</span></td>
+<td>ESPN</td>
+<td>S05</td>
+<td><span class="src"><a href="https://www.nfl.com/schedules" target="_blank" rel="noopener">https://www.nfl.com/schedules &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified (status only; score blank until played)</span></td>
+</tr>
+</tbody></table></div></div>
+  <div class="panel"><h3>Bye weeks 2026 <span class="src">(<a href="https://amp.nfl.com/news/2026-nfl-schedule-release-every-team-bye-week" target="_blank" rel="noopener">https://amp.nfl.com/news/2026-nfl-schedule-release-every-team-bye-week &#8599;</a>)</span></h3><div class="table-tools"><input type="search" placeholder="Filter rows…" data-filter="tbl-bye-weeks-2026-csv"><span class="count"></span></div>
+<div class="tbl-scroll"><table class="data" id="tbl-bye-weeks-2026-csv"><thead><tr>
+<th>week</th>
+<th>teams_on_bye</th>
+<th>source_id</th>
+<th>source_url</th>
+<th>verified_on</th>
+<th>status</th>
+</tr></thead><tbody>
+<tr>
+<td class="num">5</td>
+<td>Carolina Panthers; Kansas City Chiefs</td>
+<td>S12</td>
+<td><span class="src"><a href="https://amp.nfl.com/news/2026-nfl-schedule-release-every-team-bye-week" target="_blank" rel="noopener">https://amp.nfl.com/news/2026-nfl-schedule-release-every-team-bye-week &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td class="num">6</td>
+<td>Cincinnati Bengals; Detroit Lions; Miami Dolphins; Minnesota Vikings</td>
+<td>S12</td>
+<td><span class="src"><a href="https://amp.nfl.com/news/2026-nfl-schedule-release-every-team-bye-week" target="_blank" rel="noopener">https://amp.nfl.com/news/2026-nfl-schedule-release-every-team-bye-week &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td class="num">7</td>
+<td>Buffalo Bills; Jacksonville Jaguars; Los Angeles Chargers; Washington Commanders</td>
+<td>S12</td>
+<td><span class="src"><a href="https://amp.nfl.com/news/2026-nfl-schedule-release-every-team-bye-week" target="_blank" rel="noopener">https://amp.nfl.com/news/2026-nfl-schedule-release-every-team-bye-week &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td class="num">8</td>
+<td>Houston Texans; New Orleans Saints; New York Giants; San Francisco 49ers</td>
+<td>S12</td>
+<td><span class="src"><a href="https://amp.nfl.com/news/2026-nfl-schedule-release-every-team-bye-week" target="_blank" rel="noopener">https://amp.nfl.com/news/2026-nfl-schedule-release-every-team-bye-week &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td class="num">9</td>
+<td>Pittsburgh Steelers; Tennessee Titans</td>
+<td>S12</td>
+<td><span class="src"><a href="https://amp.nfl.com/news/2026-nfl-schedule-release-every-team-bye-week" target="_blank" rel="noopener">https://amp.nfl.com/news/2026-nfl-schedule-release-every-team-bye-week &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td class="num">10</td>
+<td>Chicago Bears; Denver Broncos; Philadelphia Eagles; Tampa Bay Buccaneers</td>
+<td>S12</td>
+<td><span class="src"><a href="https://amp.nfl.com/news/2026-nfl-schedule-release-every-team-bye-week" target="_blank" rel="noopener">https://amp.nfl.com/news/2026-nfl-schedule-release-every-team-bye-week &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td class="num">11</td>
+<td>Atlanta Falcons; Cleveland Browns; Green Bay Packers; Los Angeles Rams; New England Patriots; Seattle Seahawks</td>
+<td>S12</td>
+<td><span class="src"><a href="https://amp.nfl.com/news/2026-nfl-schedule-release-every-team-bye-week" target="_blank" rel="noopener">https://amp.nfl.com/news/2026-nfl-schedule-release-every-team-bye-week &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td class="num">12</td>
+<td>(none - every club plays)</td>
+<td>S12</td>
+<td><span class="src"><a href="https://amp.nfl.com/news/2026-nfl-schedule-release-every-team-bye-week" target="_blank" rel="noopener">https://amp.nfl.com/news/2026-nfl-schedule-release-every-team-bye-week &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td class="num">13</td>
+<td>Baltimore Ravens; Indianapolis Colts; Las Vegas Raiders; New York Jets</td>
+<td>S12</td>
+<td><span class="src"><a href="https://amp.nfl.com/news/2026-nfl-schedule-release-every-team-bye-week" target="_blank" rel="noopener">https://amp.nfl.com/news/2026-nfl-schedule-release-every-team-bye-week &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td class="num">14</td>
+<td>Arizona Cardinals; Dallas Cowboys</td>
+<td>S12</td>
+<td><span class="src"><a href="https://amp.nfl.com/news/2026-nfl-schedule-release-every-team-bye-week" target="_blank" rel="noopener">https://amp.nfl.com/news/2026-nfl-schedule-release-every-team-bye-week &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+</tbody></table></div></div>
+  <div class="panel"><h3>Teams & official sites <span class="src">(<a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a>)</span></h3><div class="table-tools"><input type="search" placeholder="Filter rows…" data-filter="tbl-teams-csv"><span class="count"></span></div>
+<div class="tbl-scroll"><table class="data" id="tbl-teams-csv"><thead><tr>
+<th>team</th>
+<th>abbr</th>
+<th>conference</th>
+<th>division</th>
+<th>official_site</th>
+<th>bye_week_2026</th>
+<th>nfl_profile</th>
+<th>source_id</th>
+<th>source_url</th>
+<th>verified_on</th>
+<th>status</th>
+</tr></thead><tbody>
+<tr>
+<td>Arizona Cardinals</td>
+<td>ARI</td>
+<td>NFC</td>
+<td>West</td>
+<td><span class="src"><a href="https://www.azcardinals.com/" target="_blank" rel="noopener">https://www.azcardinals.com/ &#8599;</a></span></td>
+<td class="num">14</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/arizona-cardinals/" target="_blank" rel="noopener">https://www.nfl.com/teams/arizona-cardinals/ &#8599;</a></span></td>
+<td>S09</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Atlanta Falcons</td>
+<td>ATL</td>
+<td>NFC</td>
+<td>South</td>
+<td><span class="src"><a href="https://www.atlantafalcons.com/" target="_blank" rel="noopener">https://www.atlantafalcons.com/ &#8599;</a></span></td>
+<td class="num">11</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/atlanta-falcons/" target="_blank" rel="noopener">https://www.nfl.com/teams/atlanta-falcons/ &#8599;</a></span></td>
+<td>S09</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Baltimore Ravens</td>
+<td>BAL</td>
+<td>AFC</td>
+<td>North</td>
+<td><span class="src"><a href="https://www.baltimoreravens.com/" target="_blank" rel="noopener">https://www.baltimoreravens.com/ &#8599;</a></span></td>
+<td class="num">13</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/baltimore-ravens/" target="_blank" rel="noopener">https://www.nfl.com/teams/baltimore-ravens/ &#8599;</a></span></td>
+<td>S09</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Buffalo Bills</td>
+<td>BUF</td>
+<td>AFC</td>
+<td>East</td>
+<td><span class="src"><a href="https://www.buffalobills.com/" target="_blank" rel="noopener">https://www.buffalobills.com/ &#8599;</a></span></td>
+<td class="num">7</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/buffalo-bills/" target="_blank" rel="noopener">https://www.nfl.com/teams/buffalo-bills/ &#8599;</a></span></td>
+<td>S09</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Carolina Panthers</td>
+<td>CAR</td>
+<td>NFC</td>
+<td>South</td>
+<td><span class="src"><a href="https://www.panthers.com/" target="_blank" rel="noopener">https://www.panthers.com/ &#8599;</a></span></td>
+<td class="num">5</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/carolina-panthers/" target="_blank" rel="noopener">https://www.nfl.com/teams/carolina-panthers/ &#8599;</a></span></td>
+<td>S09</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Chicago Bears</td>
+<td>CHI</td>
+<td>NFC</td>
+<td>North</td>
+<td><span class="src"><a href="https://www.chicagobears.com/" target="_blank" rel="noopener">https://www.chicagobears.com/ &#8599;</a></span></td>
+<td class="num">10</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/chicago-bears/" target="_blank" rel="noopener">https://www.nfl.com/teams/chicago-bears/ &#8599;</a></span></td>
+<td>S09</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Cincinnati Bengals</td>
+<td>CIN</td>
+<td>AFC</td>
+<td>North</td>
+<td><span class="src"><a href="https://www.bengals.com/" target="_blank" rel="noopener">https://www.bengals.com/ &#8599;</a></span></td>
+<td class="num">6</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/cincinnati-bengals/" target="_blank" rel="noopener">https://www.nfl.com/teams/cincinnati-bengals/ &#8599;</a></span></td>
+<td>S09</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Cleveland Browns</td>
+<td>CLE</td>
+<td>AFC</td>
+<td>North</td>
+<td><span class="src"><a href="https://www.clevelandbrowns.com/" target="_blank" rel="noopener">https://www.clevelandbrowns.com/ &#8599;</a></span></td>
+<td class="num">11</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/cleveland-browns/" target="_blank" rel="noopener">https://www.nfl.com/teams/cleveland-browns/ &#8599;</a></span></td>
+<td>S09</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Dallas Cowboys</td>
+<td>DAL</td>
+<td>NFC</td>
+<td>East</td>
+<td><span class="src"><a href="https://www.dallascowboys.com/" target="_blank" rel="noopener">https://www.dallascowboys.com/ &#8599;</a></span></td>
+<td class="num">14</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/dallas-cowboys/" target="_blank" rel="noopener">https://www.nfl.com/teams/dallas-cowboys/ &#8599;</a></span></td>
+<td>S09</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Denver Broncos</td>
+<td>DEN</td>
+<td>AFC</td>
+<td>West</td>
+<td><span class="src"><a href="https://www.denverbroncos.com/" target="_blank" rel="noopener">https://www.denverbroncos.com/ &#8599;</a></span></td>
+<td class="num">10</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/denver-broncos/" target="_blank" rel="noopener">https://www.nfl.com/teams/denver-broncos/ &#8599;</a></span></td>
+<td>S09</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Detroit Lions</td>
+<td>DET</td>
+<td>NFC</td>
+<td>North</td>
+<td><span class="src"><a href="https://www.detroitlions.com/" target="_blank" rel="noopener">https://www.detroitlions.com/ &#8599;</a></span></td>
+<td class="num">6</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/detroit-lions/" target="_blank" rel="noopener">https://www.nfl.com/teams/detroit-lions/ &#8599;</a></span></td>
+<td>S09</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Green Bay Packers</td>
+<td>GB</td>
+<td>NFC</td>
+<td>North</td>
+<td><span class="src"><a href="https://www.packers.com/" target="_blank" rel="noopener">https://www.packers.com/ &#8599;</a></span></td>
+<td class="num">11</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/green-bay-packers/" target="_blank" rel="noopener">https://www.nfl.com/teams/green-bay-packers/ &#8599;</a></span></td>
+<td>S09</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Houston Texans</td>
+<td>HOU</td>
+<td>AFC</td>
+<td>South</td>
+<td><span class="src"><a href="https://www.houstontexans.com/" target="_blank" rel="noopener">https://www.houstontexans.com/ &#8599;</a></span></td>
+<td class="num">8</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/houston-texans/" target="_blank" rel="noopener">https://www.nfl.com/teams/houston-texans/ &#8599;</a></span></td>
+<td>S09</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Indianapolis Colts</td>
+<td>IND</td>
+<td>AFC</td>
+<td>South</td>
+<td><span class="src"><a href="https://www.colts.com/" target="_blank" rel="noopener">https://www.colts.com/ &#8599;</a></span></td>
+<td class="num">13</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/indianapolis-colts/" target="_blank" rel="noopener">https://www.nfl.com/teams/indianapolis-colts/ &#8599;</a></span></td>
+<td>S09</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Jacksonville Jaguars</td>
+<td>JAX</td>
+<td>AFC</td>
+<td>South</td>
+<td><span class="src"><a href="https://www.jaguars.com/" target="_blank" rel="noopener">https://www.jaguars.com/ &#8599;</a></span></td>
+<td class="num">7</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/jacksonville-jaguars/" target="_blank" rel="noopener">https://www.nfl.com/teams/jacksonville-jaguars/ &#8599;</a></span></td>
+<td>S09</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Kansas City Chiefs</td>
+<td>KC</td>
+<td>AFC</td>
+<td>West</td>
+<td><span class="src"><a href="https://www.chiefs.com/" target="_blank" rel="noopener">https://www.chiefs.com/ &#8599;</a></span></td>
+<td class="num">5</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/kansas-city-chiefs/" target="_blank" rel="noopener">https://www.nfl.com/teams/kansas-city-chiefs/ &#8599;</a></span></td>
+<td>S09</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Las Vegas Raiders</td>
+<td>LV</td>
+<td>AFC</td>
+<td>West</td>
+<td><span class="src"><a href="https://www.raiders.com/" target="_blank" rel="noopener">https://www.raiders.com/ &#8599;</a></span></td>
+<td class="num">13</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/las-vegas-raiders/" target="_blank" rel="noopener">https://www.nfl.com/teams/las-vegas-raiders/ &#8599;</a></span></td>
+<td>S09</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Los Angeles Chargers</td>
+<td>LAC</td>
+<td>AFC</td>
+<td>West</td>
+<td><span class="src"><a href="https://www.chargers.com/" target="_blank" rel="noopener">https://www.chargers.com/ &#8599;</a></span></td>
+<td class="num">7</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/los-angeles-chargers/" target="_blank" rel="noopener">https://www.nfl.com/teams/los-angeles-chargers/ &#8599;</a></span></td>
+<td>S09</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Los Angeles Rams</td>
+<td>LAR</td>
+<td>NFC</td>
+<td>West</td>
+<td><span class="src"><a href="https://www.therams.com/" target="_blank" rel="noopener">https://www.therams.com/ &#8599;</a></span></td>
+<td class="num">11</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/los-angeles-rams/" target="_blank" rel="noopener">https://www.nfl.com/teams/los-angeles-rams/ &#8599;</a></span></td>
+<td>S09</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Miami Dolphins</td>
+<td>MIA</td>
+<td>AFC</td>
+<td>East</td>
+<td><span class="src"><a href="https://www.miamidolphins.com/" target="_blank" rel="noopener">https://www.miamidolphins.com/ &#8599;</a></span></td>
+<td class="num">6</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/miami-dolphins/" target="_blank" rel="noopener">https://www.nfl.com/teams/miami-dolphins/ &#8599;</a></span></td>
+<td>S09</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Minnesota Vikings</td>
+<td>MIN</td>
+<td>NFC</td>
+<td>North</td>
+<td><span class="src"><a href="https://www.vikings.com/" target="_blank" rel="noopener">https://www.vikings.com/ &#8599;</a></span></td>
+<td class="num">6</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/minnesota-vikings/" target="_blank" rel="noopener">https://www.nfl.com/teams/minnesota-vikings/ &#8599;</a></span></td>
+<td>S09</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>New England Patriots</td>
+<td>NE</td>
+<td>AFC</td>
+<td>East</td>
+<td><span class="src"><a href="https://www.patriots.com/" target="_blank" rel="noopener">https://www.patriots.com/ &#8599;</a></span></td>
+<td class="num">11</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/new-england-patriots/" target="_blank" rel="noopener">https://www.nfl.com/teams/new-england-patriots/ &#8599;</a></span></td>
+<td>S09</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>New Orleans Saints</td>
+<td>NO</td>
+<td>NFC</td>
+<td>South</td>
+<td><span class="src"><a href="https://www.neworleanssaints.com/" target="_blank" rel="noopener">https://www.neworleanssaints.com/ &#8599;</a></span></td>
+<td class="num">8</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/new-orleans-saints/" target="_blank" rel="noopener">https://www.nfl.com/teams/new-orleans-saints/ &#8599;</a></span></td>
+<td>S09</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>New York Giants</td>
+<td>NYG</td>
+<td>NFC</td>
+<td>East</td>
+<td><span class="src"><a href="https://www.giants.com/" target="_blank" rel="noopener">https://www.giants.com/ &#8599;</a></span></td>
+<td class="num">8</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/new-york-giants/" target="_blank" rel="noopener">https://www.nfl.com/teams/new-york-giants/ &#8599;</a></span></td>
+<td>S09</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>New York Jets</td>
+<td>NYJ</td>
+<td>AFC</td>
+<td>East</td>
+<td><span class="src"><a href="https://www.nyjets.com/" target="_blank" rel="noopener">https://www.nyjets.com/ &#8599;</a></span></td>
+<td class="num">13</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/new-york-jets/" target="_blank" rel="noopener">https://www.nfl.com/teams/new-york-jets/ &#8599;</a></span></td>
+<td>S09</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Philadelphia Eagles</td>
+<td>PHI</td>
+<td>NFC</td>
+<td>East</td>
+<td><span class="src"><a href="https://www.philadelphiaeagles.com/" target="_blank" rel="noopener">https://www.philadelphiaeagles.com/ &#8599;</a></span></td>
+<td class="num">10</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/philadelphia-eagles/" target="_blank" rel="noopener">https://www.nfl.com/teams/philadelphia-eagles/ &#8599;</a></span></td>
+<td>S09</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Pittsburgh Steelers</td>
+<td>PIT</td>
+<td>AFC</td>
+<td>North</td>
+<td><span class="src"><a href="https://www.steelers.com/" target="_blank" rel="noopener">https://www.steelers.com/ &#8599;</a></span></td>
+<td class="num">9</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/pittsburgh-steelers/" target="_blank" rel="noopener">https://www.nfl.com/teams/pittsburgh-steelers/ &#8599;</a></span></td>
+<td>S09</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>San Francisco 49ers</td>
+<td>SF</td>
+<td>NFC</td>
+<td>West</td>
+<td><span class="src"><a href="https://www.49ers.com/" target="_blank" rel="noopener">https://www.49ers.com/ &#8599;</a></span></td>
+<td class="num">8</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/san-francisco-49ers/" target="_blank" rel="noopener">https://www.nfl.com/teams/san-francisco-49ers/ &#8599;</a></span></td>
+<td>S09</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Seattle Seahawks</td>
+<td>SEA</td>
+<td>NFC</td>
+<td>West</td>
+<td><span class="src"><a href="https://www.seahawks.com/" target="_blank" rel="noopener">https://www.seahawks.com/ &#8599;</a></span></td>
+<td class="num">11</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/seattle-seahawks/" target="_blank" rel="noopener">https://www.nfl.com/teams/seattle-seahawks/ &#8599;</a></span></td>
+<td>S09</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Tampa Bay Buccaneers</td>
+<td>TB</td>
+<td>NFC</td>
+<td>South</td>
+<td><span class="src"><a href="https://www.buccaneers.com/" target="_blank" rel="noopener">https://www.buccaneers.com/ &#8599;</a></span></td>
+<td class="num">10</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/tampa-bay-buccaneers/" target="_blank" rel="noopener">https://www.nfl.com/teams/tampa-bay-buccaneers/ &#8599;</a></span></td>
+<td>S09</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Tennessee Titans</td>
+<td>TEN</td>
+<td>AFC</td>
+<td>South</td>
+<td><span class="src"><a href="https://www.tennesseetitans.com/" target="_blank" rel="noopener">https://www.tennesseetitans.com/ &#8599;</a></span></td>
+<td class="num">9</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/tennessee-titans/" target="_blank" rel="noopener">https://www.nfl.com/teams/tennessee-titans/ &#8599;</a></span></td>
+<td>S09</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td>Washington Commanders</td>
+<td>WAS</td>
+<td>NFC</td>
+<td>East</td>
+<td><span class="src"><a href="https://www.commanders.com/" target="_blank" rel="noopener">https://www.commanders.com/ &#8599;</a></span></td>
+<td class="num">7</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/washington-commanders/" target="_blank" rel="noopener">https://www.nfl.com/teams/washington-commanders/ &#8599;</a></span></td>
+<td>S09</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+</tbody></table></div></div>
+</div></main>
+<footer><div class="wrap">
+  <div><h4>Own5 — NFL Line Origination Lab</h4>
+    Verified line-by-line against official sources on 2026-11-02. Unverifiable values are blank and listed on the <a href="flagged.html">Flagged for Review</a> page. Live site: <a href="https://sassnarep3-star.github.io/Own5/">https://sassnarep3-star.github.io/Own5/</a></div>
+  <div><h4>Responsible gambling</h4>
+    Analytics research only. Legal age only; never wager more than you can afford to lose. 24/7 confidential help: <a href="https://www.ncpgambling.org/help-treatment/national-helpline-1-800-522-4700/">1-800-GAMBLER (1-800-426-2537)</a>, text 800GAM — NCPG.</div>
+  <div><h4>Data</h4>
+    Machine-readable tables: <a href="data/">data/</a> (CSV + JSON). Every row carries its official <code>source_url</code>.</div>
+</div></footer>
+<script src="assets/js/site.js"></script>
+</body></html>
