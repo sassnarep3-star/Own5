@@ -120,7 +120,7 @@ Scores, standings and lines are transcribed from official/primary sources and ma
     <p>Game log W-L-T and PF/PA match official NFL.com standings exactly for all 32 teams.</p>
     <p><a href="verification.html">See line-by-line verification →</a></p></div>
   <div class="card"><h3>Games captured</h3>
-    <div class="big">{v['final_games_checked']} finals + {15} scheduled</div>
+    <div class="big">{v['final_games_checked']} finals + {sum(1 for g in GAMES['games'] if g['st']=='scheduled')} scheduled</div>
     <p>Weeks1–8 complete (incl.1 tie); Week9 slate + MNF lines captured. {v['score_source_coverage']['direct_nfl_com_verified']} games verified directly on nfl.com.</p>
     <p><a href="scores.html">Game-by-game table →</a></p></div>
   <div class="card"><h3>Home field,2026</h3>
