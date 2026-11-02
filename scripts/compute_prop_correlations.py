@@ -105,7 +105,7 @@ def main():
         a, b = d[x].values, d[y].values
         r, p = stats.pearsonr(a, b)
         return dict(pair=label, pearson_r=round(float(r), 4), p_value=float('%.3g' % p), n_team_games=len(d),
-                    note=note, source_dataset=SRC_DATA, source_script=SRC_SCRIPT)
+                    note=note, source_url=SRC_DATA, source_dataset=SRC_DATA, source_script=SRC_SCRIPT)
 
     rows = [
         corr('qb_pass_yds', 'points', 'QB_pass_yds_vs_team_points', 'QB passing prop vs team total', ('qb_pass_yds', 100)),

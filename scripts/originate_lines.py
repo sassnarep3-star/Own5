@@ -68,7 +68,7 @@ def main():
             model_favorite=fav, model_underdog=dog,
             market_spread='', market_total='',  # BLANK: no official market-line source exists
             inputs=f'official standings (W-L-T, PF-PA thru wk8) + official schedule; HFA={HFA:g} (derived 2002-2024 mean home margin)',
-            source_schedule=g.source_url, source_standings=SRC_STANDINGS, source_script=SRC_SCRIPT,
+            source_url=g.source_url, source_schedule=g.source_url, source_standings=SRC_STANDINGS, source_script=SRC_SCRIPT,
             verification_status='Model output (derived); market columns UNVERIFIED (blank per policy)',
         ))
     out = pd.DataFrame(rows)

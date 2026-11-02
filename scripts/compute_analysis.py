@@ -115,7 +115,7 @@ def main():
     def add(metric, val, n, window, note=""):
         rows.append(dict(metric=metric, value=round(float(val), 4) if val == val else "",
                          n=int(n), window=window, note=note,
-                         source_dataset=SRC_DATASET, source_script=SRC_SCRIPT))
+                         source_url=SRC_DATASET, source_dataset=SRC_DATASET, source_script=SRC_SCRIPT))
     for wname, w in S.items():
         nb = len(w)
         w_nopush = w[w.ats_margin != 0]
@@ -145,7 +145,7 @@ def main():
     def cadd(pair, value, n, window, kind, note=''):
         crows.append(dict(pair=pair, value=round(float(value), 4) if value == value else "",
                           n=int(n), window=window, kind=kind, note=note,
-                          source_dataset=SRC_DATASET, source_script=SRC_SCRIPT))
+                          source_url=SRC_DATASET, source_dataset=SRC_DATASET, source_script=SRC_SCRIPT))
     for wname, w in S.items():
         sub = w[(w.ats_margin != 0) & (w.tot_diff != 0)]
         cadd('fav_cover_vs_over', phi_binary(sub.fav_cover, sub.over_hit), len(sub), wname, 'phi')
@@ -169,7 +169,7 @@ def main():
                           p_joint=round(pab, 4), p_independent=round(pa * pb, 4),
                           joint_over_independent=round(pab / (pa * pb), 4) if pa * pb > 0 else "",
                           n=int(n), window=window,
-                          source_dataset=SRC_DATASET, source_script=SRC_SCRIPT))
+                          source_url=SRC_DATASET, source_dataset=SRC_DATASET, source_script=SRC_SCRIPT))
     for wname, w in S.items():
         sub = w[(w.ats_margin != 0) & (w.tot_diff != 0)]
         n = len(sub)
@@ -238,7 +238,7 @@ def main():
             era_win_rates=json.dumps(eras),
             gates_G1_G2_G4=('PASS' if all(gates.values()) else 'FAIL: ' + ','.join(k for k, v in gates.items() if not v)),
             assumption_price=price_desc,
-            source_dataset=SRC_DATASET, source_script=SRC_SCRIPT,
+            source_url=SRC_DATASET, source_dataset=SRC_DATASET, source_script=SRC_SCRIPT,
         )
 
     def subset(mask):
@@ -306,14 +306,14 @@ def main():
         binomial_p_vs_breakeven=round(float(pval8), 5), alpha_bonferroni_k8=round(alpha_adj, 5),
         era_win_rates=json.dumps({}), gates_G1_G2_G4=('PASS' if (n8 >= 200 and pval8 < alpha_adj) else 'FAIL: see p-value/sample'),
         assumption_price='2-leg parlay -110/-110 => +264 modeled payout (price not in source dataset)',
-        source_dataset=SRC_DATASET, source_script=SRC_SCRIPT))
+        source_url=SRC_DATASET, source_dataset=SRC_DATASET, source_script=SRC_SCRIPT))
     pd.DataFrame(strategies).to_csv(OUT + 'backtest_results.csv', index=False)
 
     # ---------------- luck vs skill ----------------
     lrows = []
 
     def ladd(**kw):
-        lrows.append(dict(**kw, source_script=SRC_SCRIPT))
+        lrows.append(dict(**kw, source_url=SRC_SCRIPT, source_script=SRC_SCRIPT))
     for price in [-105, -110, -115, -120, -125, -130]:
         be = abs(price) / (abs(price) + 100)
         ladd(table='breakeven_win_rate', parameter=f'price {price}', value=round(be, 4),
