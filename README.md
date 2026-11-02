@@ -61,5 +61,30 @@ python scripts/seed.py                 # Deterministic reviewed register; not a 
 python scripts/build.py                # Rebuild 8 static HTML pages
 python -m unittest discover -s tests -v
 node --check assets/app.js
-npm ci && npm run test:browser         # Optional Chromium link/render checks
+npm ci --ignore-scripts                 # Test-only Chromium and Playwright dependencies
+python -m http.server 3000 --bind 0.0.0.0
+# In another terminal:
+npm run test:browser
 ```
+
+Open http://localhost:3000 locally. All browser assets and page navigation use relative URLs, including GitHub Pages project-path hosting. The production site has no npm runtime dependency. No external fonts, analytics or third-party JavaScript are loaded. Tables and source links remain available without JavaScript; search, filters and CSV require it.
+
+`npm run test:browser` requires Linux/Chromium-compatible runtime libraries. Bundled NSS/NSPR support is extracted to an OS temporary directory by the test harness. Screenshots are ignored scratch artifacts.
+
+### Repository map (NFL desk)
+
+- `data/research.json`: reviewed records, primary-source scopes, missing empirical fields and review items.
+- `scripts/seed.py`: canonical reviewed register generator. Change this first if revising research, then regenerate.
+- `scripts/build.py`: deterministic static page generator. HTML in root and `pages/` is generated output, committed for Pages.
+- `scripts/analytics.py`: input-checked pricing, de-vig, Pearson, Brier, Holm and fail-closed audit-declaration utilities. Synthetic tests are not NFL results.
+- `assets/`: dependency-free responsive UI and client-side table tools.
+- `research/`: executive summary, methodology/data contracts and source-verification record (plus the NBA lab's `research/*.md` files listed above).
+- `tests/`: Python integrity/math tests and Chromium desktop/mobile interaction tests.
+- `.github/workflows/verify.yml`: rebuild, row/link checks, math tests and browser smoke tests on pushes and PRs.
+- `COORDINATION.md`: ownership, verification, integration and publication history for both sessions.
+
+### Verification and deployment (NFL desk)
+
+Every data-table row carries an official source link. On project-policy and strategy rows, those links are methodological references, **not verification that the policy is officially endorsed or the strategy profitable**. The external review scope is the precise finding recorded in each source entry, not every line of every linked website. See [the verification log](research/VERIFICATION.md).
+
+GitHub Pages was already configured from `main` at repository root. `.nojekyll` publishes the committed static files directly; the separate verification workflow checks them before integration. The integration PR, checks and Pages build result are recorded in [COORDINATION.md](COORDINATION.md). No API keys or betting credentials are stored or requested. Nothing places bets or sends financial transactions.
