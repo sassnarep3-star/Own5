@@ -1,0 +1,16 @@
+{
+  "name": "own5-nfl-research",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static evidence-first NFL research dashboard",
+  "scripts": {
+    "build": "python3 scripts/build.py",
+    "test": "python3 -m unittest discover -s tests -v",
+    "test:browser": "node tests/browser.cjs",
+    "preview": "python3 -m http.server 3000 --bind 0.0.0.0"
+  },
+  "devDependencies": {
+    "@sparticuz/chromium": "^138.0.2",
+    "playwright-core": "^1.56.1"
+  }
+}
