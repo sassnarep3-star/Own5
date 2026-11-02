@@ -1,0 +1,17 @@
+{
+  "name": "own5-nfl-research",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Evidence-first NFL line research dashboard",
+  "scripts": {
+    "build:data": "python3 research/build_snapshot.py && python3 scripts/build_data.py",
+    "build:site": "python3 site/build_site.py",
+    "build": "npm run build:data && npm run build:site && python3 scripts/check_site.py",
+    "test": "python3 -m unittest discover -s tests -v",
+    "check": "npm test && npm run build",
+    "start": "python3 scripts/serve.py"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -85,7 +85,7 @@ def build() -> dict:
                              date=f"2026-11-{int(day):02d}", local_time=time,
                              timezone_label="LOCAL (venue local; not converted)",
                              broadcast=channel,
-                             neutral_site=slug == "bengals-at-falcons-2026-reg-9",
+                             neutral_site=True if slug == "bengals-at-falcons-2026-reg-9" else None,
                              source_id="S11", source_url=url,
                              evidence_file="research/evidence/nfl_week9_2026.md",
                              evidence_line=line, verified=True))
@@ -139,7 +139,7 @@ def build() -> dict:
     for g in schedule:
         facts.append(dict(id="schedule-" + g["game_id"], category="Official schedule",
                           subject=g["away_name"] + " at " + g["home_name"],
-                          values={k: g[k] for k in ("date", "local_time", "broadcast", "neutral_site")},
+                          values={k: g[k] for k in ("date", "local_time", "broadcast")},
                           source_ids=["S11"], source_urls=[g["source_url"]],
                           evidence_file=g["evidence_file"], evidence_line=g["evidence_line"], verified=True))
     for r in paired:
