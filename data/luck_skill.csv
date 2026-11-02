@@ -1,0 +1,19 @@
+table,parameter,value,detail,basis,source_script
+breakeven_win_rate,price -105,0.5122,win rate needed to break even at -105,exact definition,https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py
+breakeven_win_rate,price -110,0.5238,win rate needed to break even at -110,exact definition,https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py
+breakeven_win_rate,price -115,0.5349,win rate needed to break even at -115,exact definition,https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py
+breakeven_win_rate,price -120,0.5455,win rate needed to break even at -120,exact definition,https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py
+breakeven_win_rate,price -125,0.5556,win rate needed to break even at -125,exact definition,https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py
+breakeven_win_rate,price -130,0.5652,win rate needed to break even at -130,exact definition,https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py
+breakeven_win_rate,2-leg parlay -110/-110 (+264),0.2747,joint hit rate needed to break even,exact definition,https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py
+breakeven_win_rate,3-leg parlay -110 x3 (+596),0.1437,joint hit rate needed to break even,exact definition,https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py
+luck_probability,"P(win_rate>=55% given true p=52.38%, n=50)",0.356326,probability a break-even bettor looks like a 55% handicapper,exact binomial,https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py
+luck_probability,"P(win_rate>=55% given true p=52.38%, n=100)",0.266571,probability a break-even bettor looks like a 55% handicapper,exact binomial,https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py
+luck_probability,"P(win_rate>=55% given true p=52.38%, n=200)",0.208422,probability a break-even bettor looks like a 55% handicapper,exact binomial,https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py
+luck_probability,"P(win_rate>=55% given true p=52.38%, n=300)",0.197614,probability a break-even bettor looks like a 55% handicapper,exact binomial,https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py
+luck_probability,"P(win_rate>=55% given true p=52.38%, n=500)",0.129644,probability a break-even bettor looks like a 55% handicapper,exact binomial,https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py
+luck_probability,"P(win_rate>=55% given true p=52.38%, n=1000)",0.0517935,probability a break-even bettor looks like a 55% handicapper,exact binomial,https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py
+required_sample_size,detect true p=0.53 vs 0.5238,40224.0,"one-sided alpha=0.05, power=0.80, normal approximation",statistical power analysis (computed),https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py
+required_sample_size,detect true p=0.54 vs 0.5238,5875.0,"one-sided alpha=0.05, power=0.80, normal approximation",statistical power analysis (computed),https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py
+required_sample_size,detect true p=0.55 vs 0.5238,2243.0,"one-sided alpha=0.05, power=0.80, normal approximation",statistical power analysis (computed),https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py
+required_sample_size,detect true p=0.56 vs 0.5238,1173.0,"one-sided alpha=0.05, power=0.80, normal approximation",statistical power analysis (computed),https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py
