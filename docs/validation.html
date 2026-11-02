@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Validation Gates · NBA Line Origination</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+  <div class="hwrap">
+    <h1>NBA Line-Origination Lab</h1>
+    <p>Repo: sassnarep3-star/Own5 · Research, validation gates &amp; leaderboard design for originating NBA lines · Built 2026-11-02</p>
+  </div>
+  <nav><a href="index.html">Dashboard</a><a href="executive-summary.html">Executive Summary</a><a href="strategies.html">Strategies</a><a href="validation.html" class="active">Validation Gates</a><a href="correlations.html">Correlations</a><a href="bet-types.html">Bet Types</a><a href="skill-vs-luck.html">Skill vs Luck</a><a href="leaderboard.html">Leaderboard</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for Review</a></nav>
+</header>
+<main>
+
+<h2>Validation Gates</h2>
+<p>Every strategy must pass <strong>all</strong> gates, in order, before leaderboard entry. A strategy failing any
+gate returns to candidate status. Repo detail: <code>research/nba/validation-gates.md</code>; runnable checker:
+<code>analysis/validation_gates.py</code> (implements G3 and G5 on a logged bet CSV).</p>
+<div class="tablewrap"><table>
+<tr><th>Gate</th><th>Name</th><th>Rule</th><th>Source tier</th><th>Sources</th></tr>
+<tr><td><strong>G0</strong></td><td>Pre-registration</td><td>Full spec committed before evaluation data is scored; spec frozen; changes restart the clock.</td><td><span class="chip industry">INDUSTRY</span></td><td><a class="src" href="https://fortraders.com/blog/how-to-avoid-bias-in-backtesting" target="_blank" rel="noopener">fortraders.com</a></td></tr><tr><td><strong>G1</strong></td><td>Parameter budget</td><td>≤ 5 free parameters; ≥ 30 observations per parameter.</td><td><span class="chip industry">INDUSTRY</span></td><td><a class="src" href="https://backtrex.com/en/blog/overfitting-backtesting-detect-prevent" target="_blank" rel="noopener">backtrex.com</a> · <a class="src" href="https://fortraders.com/blog/how-to-avoid-bias-in-backtesting" target="_blank" rel="noopener">fortraders.com</a></td></tr><tr><td><strong>G2</strong></td><td>Walk-forward OOS</td><td>Rolling optimize/test windows across seasons; holdout opened once; IS→OOS degradation &gt; 30–40% ⇒ fail.</td><td><span class="chip industry">INDUSTRY</span></td><td><a class="src" href="https://backtrex.com/en/blog/overfitting-backtesting-detect-prevent" target="_blank" rel="noopener">backtrex.com</a> · <a class="src" href="https://wagerproof.ghost.io/walk-forward-vs-backtesting-key-differences/" target="_blank" rel="noopener">wagerproof</a></td></tr><tr><td><strong>G3</strong></td><td>CLV gate (luck remover)</td><td>≥ 200 logged bets; mean de-vigged CLV &gt; 0 with bootstrap 95% CI excluding 0. CLV% = (de-vigged close / bet odds) − 1.</td><td><span class="chip industry">INDUSTRY</span></td><td><a class="src" href="https://www.pinnacleoddsdropper.com/blog/closing-line-value" target="_blank" rel="noopener">pinnacleoddsdropper</a> · <a class="src" href="https://www.sportsbettingoddscalculator.com/guides/closing-line-value" target="_blank" rel="noopener">oddscalculator</a> · <a class="src" href="https://pikkit.com/blog/how-to-track-closing-line-value-clv-in-sports-betting" target="_blank" rel="noopener">pikkit</a></td></tr><tr><td><strong>G4</strong></td><td>Multiple-testing control</td><td>Register every variant tried; Deflated Sharpe / PBO via CSCV; PBO &lt; 10%; selection-aware t ≳ 3.</td><td><span class="chip primary">PRIMARY</span></td><td><a class="src" href="https://www.davidhbailey.com/dhbpapers/backtest-prob.pdf" target="_blank" rel="noopener">Bailey &amp; López de Prado (PBO paper)</a></td></tr><tr><td><strong>G5</strong></td><td>Monte Carlo null</td><td>Backtest metric must beat the 95th percentile of the outcome-shuffled null distribution.</td><td><span class="chip industry">INDUSTRY</span></td><td><a class="src" href="https://backtrex.com/en/blog/overfitting-backtesting-detect-prevent" target="_blank" rel="noopener">backtrex.com</a></td></tr><tr><td><strong>G6</strong></td><td>Economic realism</td><td>Timestamped bet-time prices only; full vig; realistic limits; no closing-price fills.</td><td><span class="chip industry">INDUSTRY</span></td><td><a class="src" href="https://fortraders.com/blog/how-to-avoid-bias-in-backtesting" target="_blank" rel="noopener">fortraders.com</a></td></tr><tr><td><strong>G7</strong></td><td>Correlation audit (parlays)</td><td>Joint probability from a fitted joint distribution, never multiplied marginals; negative-correlation pairs prohibited; +EV after correlation tax.</td><td><span class="chip industry">INDUSTRY</span></td><td><a class="src" href="https://nba-prop-bets.com/articles/nba-same/" target="_blank" rel="noopener">nba-prop-bets</a> · <a class="src" href="https://oddsindex.com/guides/nba-same-game-parlay-tips" target="_blank" rel="noopener">oddsindex</a></td></tr><tr><td><strong>G8</strong></td><td>Risk &amp; staking</td><td>Fractional Kelly only (≤ ½; ¼ when edge uncertain / correlated). f* = (bp − q)/b. Pre-committed drawdown kill-switch.</td><td><span class="chip primary">PRIMARY</span></td><td>Kelly (1956) via <a class="src" href="https://oddscipher.com/the-codex/kelly/" target="_blank" rel="noopener">oddscipher</a> · <a class="src" href="https://marketmath.io/blog/kelly-criterion-guide" target="_blank" rel="noopener">marketmath</a> · <a class="src" href="https://expectedvalue.co.uk/blog/kelly-criterion-optimal-bet-sizing/" target="_blank" rel="noopener">expectedvalue</a></td></tr>
+</table></div>
+<h3>Lifecycle</h3>
+<pre>Candidate → G0 pre-register → G1–G2 backtest hygiene → G5 null test → G4 multiplicity
+→ paper-trade live (timestamped) → G3 CLV over ≥200 bets → G6 realism audit
+→ (parlays: G7) → G8 staking plan → LEADERBOARD-ELIGIBLE</pre>
+<h3>Hard rules</h3>
+<ul>
+<li>No strategy is ever graded on W/L alone — win rate needs 1,000–3,000 bets to mean anything (<a class="src" href="https://www.sportsbettingoddscalculator.com/guides/closing-line-value" target="_blank" rel="noopener">source</a>, convention, flagged).</li>
+<li>Every logged bet records timestamp, market, line/price at bet, de-vigged fair close, stake, strategy hash.</li>
+<li>Unverifiable inputs are blank, never guessed — if lineup/injury status can't be confirmed officially at bet time, no bet.</li>
+</ul>
+
+</main>
+<footer>
+  Every table row carries a source link and tier: <span class="chip official">OFFICIAL</span> NBA league source ·
+  <span class="chip primary">PRIMARY</span> peer-reviewed / preprint / primary author ·
+  <span class="chip industry">INDUSTRY</span> betting-industry convention (listed on <a href="flagged.html">Flagged for Review</a>).
+  Unconfirmable values are left blank — never inferred. No performance claims are made anywhere on this site.<br>
+  This repo also hosts the <a href="../index.html">NFL Research Desk</a> (built by parallel session cd43258e).
+</footer>
+</body>
+</html>

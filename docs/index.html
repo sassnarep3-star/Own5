@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard · NBA Line Origination</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+  <div class="hwrap">
+    <h1>NBA Line-Origination Lab</h1>
+    <p>Repo: sassnarep3-star/Own5 · Research, validation gates &amp; leaderboard design for originating NBA lines · Built 2026-11-02</p>
+  </div>
+  <nav><a href="index.html" class="active">Dashboard</a><a href="executive-summary.html">Executive Summary</a><a href="strategies.html">Strategies</a><a href="validation.html">Validation Gates</a><a href="correlations.html">Correlations</a><a href="bet-types.html">Bet Types</a><a href="skill-vs-luck.html">Skill vs Luck</a><a href="leaderboard.html">Leaderboard</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for Review</a></nav>
+</header>
+<main>
+
+<h2>Dashboard</h2>
+<p class="muted">A research framework for originating NBA betting lines — singles, parlays, and player-prop combos —
+where every strategy must pass validation gates before it can appear on the leaderboard, and every published value
+is tied to a linked source.</p>
+
+<div class="cards">
+  <div class="card"><div class="stat">8</div><div class="statlabel">Candidate signal strategies</div></div>
+  <div class="card"><div class="stat">9</div><div class="statlabel">Validation gates (G0–G8)</div></div>
+  <div class="card"><div class="stat">10</div><div class="statlabel">Correlation pairs mapped</div></div>
+  <div class="card"><div class="stat">0</div><div class="statlabel">Leaderboard entries (none passed gates yet — by design)</div></div>
+</div>
+
+<div class="banner info"><strong>Core principle:</strong> strategies are graded on de-vigged
+<a href="skill-vs-luck.html">closing-line value</a>, not wins and losses — the accepted way to measure skill and
+remove luck from the evaluation.</div>
+
+<div class="banner flag"><strong>Transparency:</strong> values that could not be confirmed from an official or
+primary source are left blank and listed on the <a href="flagged.html">Flagged for Review</a> page. The
+leaderboard is empty because no strategy has passed the gates; nothing here claims betting profits.</div>
+
+<div class="banner info"><strong>Sibling project:</strong> this repository also hosts an
+<a href="../index.html">NFL Research Desk</a> built by a parallel session (see COORDINATION.md); this NBA lab is
+independent of it.</div>
+
+<h2>Sections</h2>
+<div class="cards">
+  <div class="card"><h3><a href="executive-summary.html">Executive Summary</a></h3><p>What was built, key verified findings, limitations, next steps.</p></div>
+  <div class="card"><h3><a href="strategies.html">Strategies</a></h3><p>8 signal families: rest spots, injury-report latency, pace, usage vacuums, correlated SGPs, and more.</p></div>
+  <div class="card"><h3><a href="validation.html">Validation Gates</a></h3><p>G0–G8: pre-registration, walk-forward, CLV, deflated Sharpe/PBO, permutation nulls, Kelly staking.</p></div>
+  <div class="card"><h3><a href="correlations.html">Correlations</a></h3><p>Direction taxonomy for prop/parlay legs; numeric values pending official-data computation.</p></div>
+  <div class="card"><h3><a href="bet-types.html">Bet Types</a></h3><p>Singles vs parlays vs prop combos — math, structure, and which strategies apply.</p></div>
+  <div class="card"><h3><a href="skill-vs-luck.html">Skill vs Luck</a></h3><p>How luck is removed: CLV grading, shrinkage, permutation tests, falsification rules.</p></div>
+  <div class="card"><h3><a href="leaderboard.html">Leaderboard</a></h3><p>Competition design: scoring, divisions, reward tiers, anti-gaming rules.</p></div>
+  <div class="card"><h3><a href="sources.html">Sources</a></h3><p>Every source used, tiered OFFICIAL / PRIMARY / INDUSTRY, with links.</p></div>
+  <div class="card"><h3><a href="flagged.html">Flagged for Review</a></h3><p>Irregularities and unverified items, published for manual review.</p></div>
+</div>
+
+<h2>Key verified findings</h2>
+<div class="tablewrap"><table>
+<tr><th>Finding</th><th>Value</th><th>Tier</th><th>Source</th></tr>
+<tr><td>Back-to-back (0 rest days) win rate, 2019/20–2024/25</td><td>44% vs ~50% null</td><td><span class="chip primary">PRIMARY</span></td><td><a class="src" href="https://arxiv.org/html/2606.27957v1" target="_blank" rel="noopener">arXiv:2606.27957</a></td></tr>
+<tr><td>Win likelihood rises significantly from B2B to 1 rest day (2016-17 data)</td><td>significant (χ², logistic regression)</td><td><span class="chip primary">PRIMARY</span></td><td><a class="src" href="https://pubmed.ncbi.nlm.nih.gov/32172667/" target="_blank" rel="noopener">Esteves et al. 2021, PubMed 32172667</a></td></tr>
+<tr><td>P(win | won previous game), 2019/20–2024/25</td><td>54.5%</td><td><span class="chip primary">PRIMARY</span></td><td><a class="src" href="https://arxiv.org/html/2606.27957v1" target="_blank" rel="noopener">arXiv:2606.27957</a></td></tr>
+<tr><td>Official injury report: status deadline day before game</td><td>5 p.m. local</td><td><span class="chip official">OFFICIAL</span></td><td><a class="src" href="https://official.nba.com/nba-injury-report-2025-26-season/" target="_blank" rel="noopener">official.nba.com</a></td></tr>
+<tr><td>Official injury report: 2nd game of back-to-back deadline</td><td>1 p.m. local, game day</td><td><span class="chip official">OFFICIAL</span></td><td><a class="src" href="https://official.nba.com/nba-injury-report-2025-26-season/" target="_blank" rel="noopener">official.nba.com</a></td></tr>
+<tr><td>Home advantage, major NA sports: 1980s → 2010s</td><td>~64% → ~57%</td><td><span class="chip primary">PRIMARY</span></td><td><a class="src" href="https://www.ijrss.org/index.php/ijrss/article/download/958/572/1494" target="_blank" rel="noopener">Pollard &amp; Gómez 2021, cited in IJRSS</a></td></tr>
+<tr><td>Five independent 50% parlay legs: joint probability</td><td>3.125% (0.5⁵)</td><td><span class="chip primary">ARITHMETIC</span></td><td><a class="src" href="https://nba-prop-bets.com/articles/nba-same/" target="_blank" rel="noopener">nba-prop-bets.com</a> (verifiable arithmetic)</td></tr>
+</table></div>
+
+</main>
+<footer>
+  Every table row carries a source link and tier: <span class="chip official">OFFICIAL</span> NBA league source ·
+  <span class="chip primary">PRIMARY</span> peer-reviewed / preprint / primary author ·
+  <span class="chip industry">INDUSTRY</span> betting-industry convention (listed on <a href="flagged.html">Flagged for Review</a>).
+  Unconfirmable values are left blank — never inferred. No performance claims are made anywhere on this site.<br>
+  This repo also hosts the <a href="../index.html">NFL Research Desk</a> (built by parallel session cd43258e).
+</footer>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Strategies · NBA Line Origination</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+  <div class="hwrap">
+    <h1>NBA Line-Origination Lab</h1>
+    <p>Repo: sassnarep3-star/Own5 · Research, validation gates &amp; leaderboard design for originating NBA lines · Built 2026-11-02</p>
+  </div>
+  <nav><a href="index.html">Dashboard</a><a href="executive-summary.html">Executive Summary</a><a href="strategies.html" class="active">Strategies</a><a href="validation.html">Validation Gates</a><a href="correlations.html">Correlations</a><a href="bet-types.html">Bet Types</a><a href="skill-vs-luck.html">Skill vs Luck</a><a href="leaderboard.html">Leaderboard</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for Review</a></nav>
+</header>
+<main>
+
+<h2>Signal-Generation Strategies</h2>
+<div class="banner warn"><strong>Status:</strong> every strategy below is a <em>candidate</em>. None has passed the
+<a href="validation.html">validation gates</a>; none is claimed to be profitable. No performance numbers exist yet,
+so none are shown. Full detail: <code>research/nba/strategies.md</code>.</div>
+<div class="tablewrap"><table>
+<tr><th>ID</th><th>Strategy</th><th>Bet class</th><th>Hypothesis</th><th>Best evidence tier</th><th>Status</th><th>Sources</th></tr>
+<tr><td><strong>S1</strong></td><td>Rest &amp; schedule spots</td><td>Singles (spread/ML/totals)</td><td>Second-night-of-B2B teams underperform; rest differential predictive beyond market pricing</td><td><span class="chip primary">PRIMARY</span></td><td><span class='chip'>CANDIDATE</span></td><td><a class="src" href="https://pubmed.ncbi.nlm.nih.gov/32172667/" target="_blank" rel="noopener">Esteves et al. 2021</a> · <a class="src" href="https://arxiv.org/html/2606.27957v1" target="_blank" rel="noopener">arXiv:2606.27957</a></td></tr><tr><td><strong>S2</strong></td><td>Injury-report latency</td><td>Singles + props</td><td>React to official injury-report changes before props/sides fully reprice; scan at official deadlines</td><td><span class="chip official">OFFICIAL</span></td><td><span class='chip'>CANDIDATE</span></td><td><a class="src" href="https://official.nba.com/nba-injury-report-2025-26-season/" target="_blank" rel="noopener">official.nba.com injury report</a></td></tr><tr><td><strong>S3</strong></td><td>Home/travel/altitude context</td><td>Singles</td><td>HCA shrinking &amp; heterogeneous; stale league-average HCA misprices specific games</td><td><span class="chip primary">PRIMARY</span></td><td><span class='chip'>CANDIDATE</span></td><td><a class="src" href="https://arxiv.org/html/2606.27957v1" target="_blank" rel="noopener">arXiv:2606.27957</a> · <a class="src" href="https://www.ijrss.org/index.php/ijrss/article/download/958/572/1494" target="_blank" rel="noopener">IJRSS / Pollard &amp; Gómez</a></td></tr><tr><td><strong>S4</strong></td><td>Streak persistence</td><td>Singles</td><td>P(W|W)=54.5% vs 50% null; test whether market under- or over-prices streaks</td><td><span class="chip primary">PRIMARY</span></td><td><span class='chip'>CANDIDATE</span></td><td><a class="src" href="https://arxiv.org/html/2606.27957v1" target="_blank" rel="noopener">arXiv:2606.27957</a></td></tr><tr><td><strong>S5</strong></td><td>Pace-interaction props</td><td>Totals + prop overs</td><td>Pace (possessions) is the shared driver of counting-stat props; pace mismatches ripple across a game's props</td><td><span class="chip industry">INDUSTRY</span></td><td><span class='chip'>CANDIDATE</span></td><td><a class="src" href="https://oddsindex.com/guides/nba-same-game-parlay-tips" target="_blank" rel="noopener">oddsindex.com</a> · <a class="src" href="https://www.edgebetting.ai/betting-education/player-props" target="_blank" rel="noopener">edgebetting.ai</a></td></tr><tr><td><strong>S6</strong></td><td>Usage-vacuum props</td><td>Player props</td><td>Star OUT (per official report) → teammates' usage/minutes rise in player-specific patterns props partially price</td><td><span class="chip industry">INDUSTRY</span></td><td><span class='chip'>CANDIDATE</span></td><td><a class="src" href="https://www.edgebetting.ai/betting-education/player-props" target="_blank" rel="noopener">edgebetting.ai</a></td></tr><tr><td><strong>S7</strong></td><td>Line origination / CLV</td><td>Meta — all types</td><td>Price every market before seeing it; bet only when de-vigged gap &gt; vig; grade on CLV</td><td><span class="chip primary">PRIMARY</span></td><td><span class='chip'>CANDIDATE</span></td><td><a class="src" href="https://arxiv.org/abs/1910.08858" target="_blank" rel="noopener">arXiv:1910.08858</a> · <a class="src" href="https://www.pinnacleoddsdropper.com/blog/closing-line-value" target="_blank" rel="noopener">CLV definition</a></td></tr><tr><td><strong>S8</strong></td><td>Correlated SGP construction</td><td>Parlays / prop combos</td><td>Model joint distribution of legs better than the book's correlation tax; never combine negative pairs</td><td><span class="chip industry">INDUSTRY</span></td><td><span class='chip'>CANDIDATE</span></td><td><a class="src" href="https://nba-prop-bets.com/articles/nba-same/" target="_blank" rel="noopener">nba-prop-bets.com</a> · <a class="src" href="https://oddsindex.com/guides/nba-same-game-parlay-tips" target="_blank" rel="noopener">oddsindex.com</a></td></tr>
+</table></div>
+
+<h3>Design rules common to all strategies</h3>
+<ul>
+<li>Evaluate against the <strong>closing line</strong>, never raw outcomes — a real basketball effect the market already prices is worth nothing (see <a href="skill-vs-luck.html">Skill vs Luck</a>).</li>
+<li>Inputs must come from official sources at bet time (e.g., the official injury report); unconfirmable inputs ⇒ no bet.</li>
+<li>Every bet is logged pre-game with timestamp, line, price, stake, and strategy version hash.</li>
+</ul>
+
+</main>
+<footer>
+  Every table row carries a source link and tier: <span class="chip official">OFFICIAL</span> NBA league source ·
+  <span class="chip primary">PRIMARY</span> peer-reviewed / preprint / primary author ·
+  <span class="chip industry">INDUSTRY</span> betting-industry convention (listed on <a href="flagged.html">Flagged for Review</a>).
+  Unconfirmable values are left blank — never inferred. No performance claims are made anywhere on this site.<br>
+  This repo also hosts the <a href="../index.html">NFL Research Desk</a> (built by parallel session cd43258e).
+</footer>
+</body>
+</html>

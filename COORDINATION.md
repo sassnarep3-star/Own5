@@ -99,3 +99,76 @@ After the first successful deployment, discovered two additional PRs opened by c
 
 **Request, needs review:** their owning sessions should preserve the existing coordination history/live root dashboard, retain their own additive files, and request a combined landing/navigation integration before changing shared publication settings. This session did not edit their `docs/`, `analysis/`, CSVs, `tools/`, or lowercase research files and did not discard their work. Coordination notices were posted at https://github.com/sassnarep3-star/Own5/pull/2#issuecomment-6588353461 and https://github.com/sassnarep3-star/Own5/pull/3#issuecomment-6588353886. This is an outstanding cross-session integration request, not a blocker to the already verified site. The non-overlapping source-audit/deployment-record follow-up is [PR #4](https://github.com/sassnarep3-star/Own5/pull/4); its merge outcome is available from that PR's GitHub record.
 
+---
+
+# Session 9c3a0a69 board (NBA Line-Origination Lab)
+
+This file is the shared task board for all agent sessions working on this repository.
+
+**Rules (summary):** Claim a task by writing your session ID and file scope here, commit and push the claim immediately. Never start a task another session has claimed. Keep file scopes non-overlapping. Run `git pull --rebase` before every push. Shared outputs (site index/navigation, combined tables) are changed only by the final integration session. If a claim is >60 minutes old with no commits, any session may take over and note the handoff below.
+
+---
+
+## Sessions
+
+| Session ID | Branch | Started (UTC) | Status |
+|---|---|---|---|
+| 9c3a0a69 | `arena/9c3a0a69-own5` | 2026-11-02 | active — sole session at claim time; acting as worker **and** final integration session |
+
+> Note: This session was the only active session when work began (repo contained only README.md, no COORDINATION.md existed). Per Arena platform constraints this session must work on its fixed branch `arena/9c3a0a69-own5`; that branch serves as the `session-9c3a0a69/*` branch for all tasks below.
+
+---
+
+## Task Board
+
+| # | Task | Status | Owner (session) | File scope |
+|---|---|---|---|---|
+| T1 | Repo review (line-by-line audit of existing files, flag irregularities) | done | 9c3a0a69 | `docs/flagged.html`, `COORDINATION.md` |
+| T2 | Research: signal-generation strategies (singles, parlays, player-prop combos) with source links | done | 9c3a0a69 | `research/nba/strategies.md` |
+| T3 | Research: validation gates (anti-overfitting, sample size, CLV benchmark) | done | 9c3a0a69 | `research/nba/validation-gates.md` |
+| T4 | Research: correlation framework & reported correlation values for props/parlays | done | 9c3a0a69 | `research/nba/correlations.md` |
+| T5 | Skill-vs-luck separation methodology (CLV, variance decomposition, multiple-testing control) | done | 9c3a0a69 | `research/nba/skill-vs-luck.md` |
+| T6 | Leaderboard competition design (scoring, rewards, entry gates) | done | 9c3a0a69 | `research/nba/leaderboard.md` |
+| T7 | Executive summary | done | 9c3a0a69 | `EXECUTIVE_SUMMARY.md` |
+| T8 | Analysis tooling (correlation/validation scripts, runnable when data access is available) | done | 9c3a0a69 | `analysis/` |
+| T9 | Site build: landing page + subpages (dashboard UI, tables, Flagged for Review page) | done | 9c3a0a69 | `docs/` |
+| T10 | Integration: line-by-line re-verification, link check, PR to main, merge, Pages deploy | in progress | 9c3a0a69 | all of the above + Pages settings |
+
+---
+
+## Change requests to files owned by other sessions
+
+_None. (Single session.)_
+
+---
+
+## Verification & irregularities log
+
+- **Repo state at start:** commit `426b19d` ("Initial commit"), single file `README.md` containing only `# Own5` (6 bytes). No code, no data, no COORDINATION.md. Nothing to verify beyond this; no irregularities in pre-existing content.
+- **Irregularity R1:** GitHub Pages was already enabled for this repo (source: `main` branch, root path, legacy/Jekyll build) before any site content existed — site served an auto-generated page from README. Not harmful; integration session will repoint source to `/docs` after merge. Flagged on the Flagged for Review page.
+- (Further entries appended as tasks complete.)
+
+- **T2–T9 verification performed (2026-11-02, session 9c3a0a69):**
+  - Every factual claim in `research/` and `docs/` traced to a source gathered this session; 22 unique external source links; tier labels (OFFICIAL/PRIMARY/INDUSTRY) applied per row.
+  - OFFICIAL: official.nba.com injury-report deadlines. PRIMARY: PubMed 32172667 (Esteves 2021); arXiv:2606.27957 (B2B 44%, P(W|W)=54.5%); arXiv:1910.08858; Bailey & López de Prado PBO (davidhbailey.com); IJRSS Finals HCA study.
+  - Automated checks: HTML parser pass (no unclosed/mismatched tags), internal link check (0 broken across 10 pages), all pages + CSS return HTTP 200 on local serve; both analysis scripts syntax-checked and `validation_gates.py` smoke-tested on throwaway data (not committed).
+  - **Irregularity F1–F8 register** published at `docs/flagged.html`: blank correlation coefficients (no official source publishes them), third-party home-win% figures, industry-convention thresholds, media-reported injury-cadence memo, unconfirmed 8,495-game study attribution, excluded low-credibility source (bettoredge), no stats.nba.com route from sandbox, intentionally empty leaderboard.
+  - Nothing inferred: all unverifiable values left blank and flagged.
+
+- **2026-11-02 integration & conflict resolution (session 9c3a0a69):** While this session worked, session cd43258e merged PR #1 (NFL Research Desk at repo root). Rebasing `arena/9c3a0a69-own5` onto `main` produced conflicts in `COORDINATION.md` and `README.md` only (no file-scope overlap otherwise). Resolution: both boards preserved in this file (cd43258e board above, 9c3a0a69 board below); README rewritten as a two-dashboard hub keeping all cd43258e content. Nothing from either session was discarded.
+- **Scope note:** the project brief specified NBA; cd43258e delivered NFL. Preserved per coordination rules and published as flag F9 on docs/flagged.html; owner decides its future.
+- **Shared-output changes by integration session:** (1) root `index.html` footer gained one cross-link to `docs/index.html` (NBA lab) — cd43258e's 27 Python tests re-run afterward: **27/27 OK**; `node --check assets/app.js` OK. (2) NBA docs pages link back to the NFL desk. (3) GitHub Pages config left at `main` root (serves both: NFL at `/`, NBA at `/docs/`) — earlier plan to repoint to `/docs` dropped to avoid breaking the NFL desk.
+- **Integration re-verification:** docs/ internal link check 0 broken; HTML parser clean; root+pages suite 27/27.
+
+## PR / merge record
+
+- _Pending — recorded by integration step (T10)._
+
+### Integration log — merge of main (PR #1 + PR #3 work) into `arena/9c3a0a69-own5` (2026-11-02)
+
+- Merged `origin/main` (now containing sessions cd43258e and 0f468a47, both NFL) into this NBA session branch. Conflicts and resolutions:
+  - `research/{strategies,validation-gates,correlations}.md` (add/add with 0f468a47's NFL files): **kept 0f468a47's files at the original paths**; NBA versions relocated to `research/nba/` (all five NBA research docs now live there). Nothing deleted.
+  - `pages/review.html`, `pages/sources.html`, `index.html`, `data/research.json`: regenerated deterministically from the auto-merged `scripts/seed.py` + `scripts/build.py` (preserves 0f468a47's R05/REPO-AUDIT changes **and** this session's footer cross-link to the NBA lab).
+  - `README.md` / `COORDINATION.md`: combined; all three sessions' content preserved.
+- **Pages decision honored:** per cd43258e/0f468a47's recorded objection, this session **dropped** its earlier plan to repoint Pages to `/docs`. Pages stays on `main` root; the NBA dashboard is simply served at `/docs/` on the same site. Flag R1 disposition updated accordingly.
+- Scope note (flag F9 on `docs/flagged.html`): project brief specified NBA; sessions cd43258e and 0f468a47 delivered NFL. All work preserved; owner decides disposition.

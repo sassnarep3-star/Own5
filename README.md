@@ -1,3 +1,36 @@
+# Own5 — Sports Line-Origination Research (multi-session)
+
+This repository hosts work from **three parallel agent sessions** (see `COORDINATION.md`): an **NBA Line-Origination Lab** (session `9c3a0a69`, served at `/docs/`) and an **NFL Research Desk** with detail pages (sessions `cd43258e` and `0f468a47`, served at the site root).
+
+| Dashboard | Scope | Live URL | Session |
+|---|---|---|---|
+| **NBA Line-Origination Lab** | NBA — singles, parlays, player-prop combos; validation gates; leaderboard design | https://sassnarep3-star.github.io/Own5/docs/ | `9c3a0a69` (`docs/`, `research/nba/`, `analysis/`, `EXECUTIVE_SUMMARY.md`) |
+| **NFL Research Desk** | NFL — line origination, strategy lab, correlation questions, review register | https://sassnarep3-star.github.io/Own5/ | `cd43258e` + `0f468a47` (root, `pages/`, `data/`, `scripts/`, `tools/`, `tests/`) |
+
+Shared policy: **every table row carries a source link; values that cannot be confirmed from an official/primary source are left blank and published on a Flagged-for-Review page — never inferred. No performance claims; no bets placed; leaderboards empty until strategies pass validation gates.**
+
+---
+
+## NBA Line-Origination Lab (session 9c3a0a69)
+
+**Live site:** https://sassnarep3-star.github.io/Own5/docs/ · **Executive summary:** [`EXECUTIVE_SUMMARY.md`](EXECUTIVE_SUMMARY.md)
+
+| Path | Contents |
+|---|---|
+| `EXECUTIVE_SUMMARY.md` | Objective, deliverables, key verified findings, limitations, next steps |
+| `research/nba/strategies.md` | 8 candidate signal strategies (S1–S8) with hypotheses and sources |
+| `research/nba/validation-gates.md` | 9 validation gates (G0–G8) every strategy must pass |
+| `research/nba/correlations.md` | Correlation framework C1–C10; numeric values intentionally blank pending official-data computation |
+| `research/nba/skill-vs-luck.md` | Luck removal: de-vigged CLV grading, shrinkage, permutation nulls, falsification |
+| `research/nba/leaderboard.md` | Competition design: scoring, divisions, reward tiers, anti-gaming rules |
+| `analysis/prop_correlations.py` | Computes prop correlations from official NBA box scores (nba_api / CSV); never emits placeholders |
+| `analysis/validation_gates.py` | Gate checker (G3 CLV bootstrap, G5 permutation null) for a logged-bet CSV |
+| `docs/` | Static NBA dashboard (10 pages) |
+
+Source tiers: **OFFICIAL** (NBA league sources) · **PRIMARY** (peer-reviewed / preprint / author-hosted research) · **INDUSTRY** (betting-industry conventions, concepts only — flagged where they carry numbers).
+
+---
+
 # OWN5 · NFL Research Desk
 
 **Live dashboard:** https://sassnarep3-star.github.io/Own5/
