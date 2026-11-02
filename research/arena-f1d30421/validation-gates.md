@@ -3,7 +3,7 @@
 Status: done | Owner: session arena-f1d30421 | Verified: 2026-11-02
 
 A strategy must pass **every gate** to be marked `Validated`. Gates are evaluated mechanically by
-[`scripts/compute_analysis.py`](../scripts/compute_analysis.py); thresholds below are pre-registered
+[`scripts/compute_analysis.py`](../../scripts/compute_analysis.py); thresholds below are pre-registered
 (design choices where noted). Statistical machinery references are listed per gate.
 
 | Gate | Requirement | Threshold (pre-registered) | Basis / source | Rationale |
@@ -25,7 +25,7 @@ A strategy must pass **every gate** to be marked `Validated`. Gates are evaluate
 * `Live-tracked`: `Validated` + forward record with G3 active; reverts to `Research` if G3 fails
   over ≥ 100 live picks.
 
-## Current gate outcomes (computed 2026-11-02, full rows in [`data/backtest_results.csv`](../data/backtest_results.csv))
+## Current gate outcomes (computed 2026-11-02, full rows in [`data/backtest_results.csv`](../../data/backtest_results.csv))
 
 | Strategy | G1 | G2 | G4 | State |
 |---|---|---|---|---|

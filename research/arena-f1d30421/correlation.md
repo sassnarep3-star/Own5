@@ -4,12 +4,12 @@ Status: done | Owner: session arena-f1d30421 | Verified: 2026-11-02
 
 Correlation values decide (a) whether parlay payouts are fair, (b) whether "hedges" actually hedge,
 and (c) how to price same-game combos (SGPs). **Every number on this page is computed** by
-[`scripts/compute_analysis.py`](../scripts/compute_analysis.py) (game level) and
-[`scripts/compute_prop_correlations.py`](../scripts/compute_prop_correlations.py) (player level) from
-pinned datasets; outputs in [`data/correlation_bets.csv`](../data/correlation_bets.csv),
-[`data/correlation_parlays.csv`](../data/correlation_parlays.csv),
-[`data/correlation_props.csv`](../data/correlation_props.csv). Derived values are labeled as such
-(dataset sources are community datasets — see [flagged](../docs/flagged.md)).
+[`scripts/compute_analysis.py`](../../scripts/compute_analysis.py) (game level) and
+[`scripts/compute_prop_correlations.py`](../../scripts/compute_prop_correlations.py) (player level) from
+pinned datasets; outputs in [`data/correlation_bets.csv`](../../data/correlation_bets.csv),
+[`data/correlation_parlays.csv`](../../data/correlation_parlays.csv),
+[`data/correlation_props.csv`](../../data/correlation_props.csv). Derived values are labeled as such
+(dataset sources are community datasets — see [flagged](flagged.md)).
 
 ## 1. Same-game bet-outcome correlations (1980–2024, n = 10,228 games)
 
@@ -27,7 +27,7 @@ pinned datasets; outputs in [`data/correlation_bets.csv`](../data/correlation_be
 
 ## 2. Parlay joint probabilities (why fixed parlays lose)
 
-Full table: [`data/correlation_parlays.csv`](../data/correlation_parlays.csv). Selected rows
+Full table: [`data/correlation_parlays.csv`](../../data/correlation_parlays.csv). Selected rows
 (full window):
 
 | Leg A | Leg B | P(A) | P(B) | P(both) measured | P(A)×P(B) | ratio |
@@ -49,7 +49,7 @@ Takeaways:
 
 ## 3. Player-prop correlations (2002–2013 play-by-play, 6,186 team-games)
 
-Full table: [`data/correlation_props.csv`](../data/correlation_props.csv). Key rows:
+Full table: [`data/correlation_props.csv`](../../data/correlation_props.csv). Key rows:
 
 | Pair | Pearson r | n | Why it matters |
 |---|---|---|---|

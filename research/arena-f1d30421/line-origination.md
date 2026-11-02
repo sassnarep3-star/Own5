@@ -20,8 +20,8 @@ flagged (see site page "Flagged for Review"). No value is inferred.
 
 ## 2. Game-line model (transparent baseline)
 
-Implemented in [`scripts/originate_lines.py`](../scripts/originate_lines.py); produced
-[`data/model_lines_2026_wk9.csv`](../data/model_lines_2026_wk9.csv).
+Implemented in [`scripts/originate_lines.py`](../../scripts/originate_lines.py); produced
+[`data/model_lines_2026_wk9.csv`](../../data/model_lines_2026_wk9.csv).
 
 ```
 rating(team) = (PF - PA) / G                    # net points per game, from official standings
@@ -56,7 +56,7 @@ bet side = model side, when |edge| >= threshold AND price makes EV positive
 
 * Threshold candidates (pre-registered, tested via gates): 1.0, 1.5, 2.0 points.
 * EV must be computed with the *actual* price; break-even rates per price are in
-  [`data/luck_skill.csv`](../data/luck_skill.csv) (e.g. 52.38% at −110).
+  [`data/luck_skill.csv`](../../data/luck_skill.csv) (e.g. 52.38% at −110).
 * **Market lines cannot currently be verified from an official source** — market columns in our
   line table are intentionally blank and flagged. Until a licensed/verifiable odds feed is connected,
   live edge computation is defined but not executed. This is policy, not a gap in the method.
@@ -75,7 +75,7 @@ bet side = model side, when |edge| >= threshold AND price makes EV positive
 
 ## 5. What the model produced this week (2026 Week 9)
 
-Full table with per-row official schedule/standings links: [`data/model_lines_2026_wk9.csv`](../data/model_lines_2026_wk9.csv)
+Full table with per-row official schedule/standings links: [`data/model_lines_2026_wk9.csv`](../../data/model_lines_2026_wk9.csv)
 (15 games). Market columns blank + flagged per policy.
 
 ## 6. Limitations (honest list)

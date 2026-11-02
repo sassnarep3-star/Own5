@@ -17,7 +17,7 @@ import os
 import re
 import sys
 
-DOCS = 'docs/'
+DOCS = 'nfl-strategy-lab/'
 problems = []
 
 

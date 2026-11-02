@@ -5,7 +5,7 @@ Status: done | Owner: session arena-f1d30421 | Verified: 2026-11-02
 Every strategy below is *pre-registered* (rule written before the backtest ran), backtested on the
 pinned dataset (1980–2024 regular seasons, n recorded per row), and scored against the validation
 gates in [validation-gates.md](validation-gates.md). Backtest outputs:
-[`data/backtest_results.csv`](../data/backtest_results.csv) (each row carries dataset + script links).
+[`data/backtest_results.csv`](../../data/backtest_results.csv) (each row carries dataset + script links).
 Prices are not present in the source dataset, so modeled ROI assumes flat −110 (flagged in every row).
 
 ## A. Single bets (game lines)

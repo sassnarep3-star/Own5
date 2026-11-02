@@ -4,7 +4,7 @@ build_site.py — generate the GitHub Pages site in docs/ from the verified data
 
 The site tables are GENERATED from data/*.csv so the site cannot drift from the computed data.
 Every data row renders its source links (dataset pin + script) as clickable links; rows with
-unverifiable values render blank + a FLAG chip (see docs/flagged.md).
+unverifiable values render blank + a FLAG chip (see research/arena-f1d30421/flagged.md).
 
 Usage: python3 scripts/build_site.py   (writes docs/*.html, docs/assets/*, docs/.nojekyll)
 """
@@ -13,7 +13,7 @@ import html
 import os
 
 DATA = 'data/'
-DOCS = 'docs/'
+DOCS = 'nfl-strategy-lab/'
 REPO = 'https://github.com/sassnarep3-star/Own5/blob/main/'
 
 NAV = [
@@ -206,7 +206,7 @@ def build_exec():
     lk_rows = read_csv('luck_skill.csv')
     body = """
 <h1>Executive Summary</h1>
-<p class="lead">Own5: NFL Line Origination &amp; Skill-Based Strategy Leaderboard — session arena-f1d30421, 2026-11-02. Full document in the repo: <a href="https://github.com/sassnarep3-star/Own5/blob/main/EXECUTIVE_SUMMARY.md">EXECUTIVE_SUMMARY.md</a>.</p>
+<p class="lead">Own5: NFL Line Origination &amp; Skill-Based Strategy Leaderboard — session arena-f1d30421, 2026-11-02. Full document in the repo: <a href="https://github.com/sassnarep3-star/Own5/blob/main/research/arena-f1d30421/EXECUTIVE_SUMMARY.md">EXECUTIVE_SUMMARY.md</a>.</p>
 <div class="panel">
 <h3>1. What this project is</h3>
 <p>A self-running system that (a) originates its own NFL lines from official data, (b) tests betting strategies — singles, parlays, player-prop combos — under statistical validation gates that separate skill from luck, and (c) runs them as a leaderboard competition rewarding only gate-passing, luck-adjusted performance. No manual input required.</p>
@@ -450,7 +450,7 @@ def build_sources():
 def build_flagged():
     body = """
 <h1>Flagged for Review</h1>
-<p class="lead">Irregularities and unverified items — published, non-blocking. Nothing on this page blocks the merge or the site. Request changes after review and a follow-up session will apply them. Repo copy: <a href="https://github.com/sassnarep3-star/Own5/blob/main/docs/flagged.md">docs/flagged.md</a>.</p>
+<p class="lead">Irregularities and unverified items — published, non-blocking. Nothing on this page blocks the merge or the site. Request changes after review and a follow-up session will apply them. Repo copy: <a href="https://github.com/sassnarep3-star/Own5/blob/main/research/arena-f1d30421/flagged.md">research/arena-f1d30421/flagged.md</a>.</p>
 <div class="tbl-wrap"><table><thead><tr><th>ID</th><th>Item</th><th>Where</th><th>Evidence / observation</th><th>Severity</th><th>Status</th></tr></thead><tbody>
 <tr><td><b>F1</b></td><td>Historical betting lines have no official public source</td><td>backtest/base-rate rows using spread/total columns</td><td>NFL publishes no closing lines; used verbatim from community spreadspoke dataset @ <code>1d309cb</code> — never inferred. <a href="https://github.com/tobycrabtree/spreadspoke/blob/1d309cb7f8f58a9eceb36293979dbcb1af70db94/spreadspoke_scores.csv" target="_blank" rel="noopener">file</a></td><td><span class="chip warn">Medium</span></td><td>Open — needs licensed odds feed</td></tr>
 <tr><td><b>F2</b></td><td>Play-by-play is a community mirror, 2002–2013 only</td><td>correlation_props.csv</td><td><a href="https://github.com/brianfoshee/nfl-play-by-play-data/blob/352c9c9b0bce0ffa8ce85681cf9ed50c0398f462/" target="_blank" rel="noopener">pin 352c9c9</a> mirrors advancedfootballanalytics.com; modern era may differ; values labeled derived</td><td><span class="chip warn">Medium</span></td><td>Open — re-run with nflverse data when reachable</td></tr>

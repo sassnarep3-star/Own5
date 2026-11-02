@@ -1,7 +1,7 @@
 # Own5 — NFL Line Origination & Skill-Based Strategy Leaderboard
 
-**Live site (GitHub Pages):** https://sassnarep3-star.github.io/Own5/
-**Executive summary:** [EXECUTIVE_SUMMARY.md](EXECUTIVE_SUMMARY.md) · **Flagged for Review:** [docs/flagged.md](docs/flagged.md)
+**Live site (GitHub Pages):** https://sassnarep3-star.github.io/Own5/nfl-strategy-lab/
+**Executive summary:** [research/arena-f1d30421/EXECUTIVE_SUMMARY.md](research/arena-f1d30421/EXECUTIVE_SUMMARY.md) · **Flagged for Review:** [research/arena-f1d30421/flagged.md](research/arena-f1d30421/flagged.md)
 
 A self-running analytics project that:
 
@@ -27,17 +27,17 @@ A self-running analytics project that:
 
 | Path | Contents |
 |---|---|
-| `research/` | methodology: line origination, strategies, validation gates, correlation, luck-vs-skill, leaderboard |
+| `research/arena-f1d30421/` | methodology: line origination, strategies, validation gates, correlation, luck-vs-skill, leaderboard |
 | `data/` | computed CSVs + verified official tables (every row carries source links) · [data/README.md](data/README.md) |
 | `scripts/` | analysis, prop correlations, line origination, site build + verification (inputs pinned to commit SHAs) |
-| `docs/` | GitHub Pages site (generated from the CSVs by `scripts/build_site.py`) |
-| `EXECUTIVE_SUMMARY.md` | the summary |
+| `nfl-strategy-lab/` | this project's Pages sub-site (generated from the CSVs by `scripts/build_site.py`); the repo root and `docs/` host other sessions' sites |
+| `research/arena-f1d30421/EXECUTIVE_SUMMARY.md` | the summary |
 | `COORDINATION.md` | shared task board (parallel-session protocol), sources, verification log |
 
 ## Verification policy
 
 Every table row has a source link to an official site or a pinned source. Values that cannot be
-confirmed are **left blank and flagged** ([docs/flagged.md](docs/flagged.md) — F1–F11) — nothing is
+confirmed are **left blank and flagged** ([research/arena-f1d30421/flagged.md](research/arena-f1d30421/flagged.md) — F1–F11) — nothing is
 ever inferred or filled in. Community datasets (historical lines, archived play-by-play) are pinned
 to commit SHAs and flagged; game scores were spot-verified 16/16 against official nfl.com pages.
 
@@ -48,7 +48,7 @@ python3 scripts/download_data.sh        # pinned inputs (play-by-play mirror; sp
 python3 scripts/compute_analysis.py     # base rates, correlations, backtests, luck tables
 python3 scripts/compute_prop_correlations.py
 python3 scripts/originate_lines.py
-python3 scripts/build_site.py           # regenerate docs/ site from the CSVs
+python3 scripts/build_site.py           # regenerate nfl-strategy-lab/ site from the CSVs
 python3 scripts/verify_site.py          # line-by-line site check (links + sources)
 ```
 
