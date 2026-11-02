@@ -1,0 +1,2 @@
+# Runtime and test suite use the Python 3.11+ standard library only.
+# No third-party packages, credentials, or sportsbook APIs are required.
