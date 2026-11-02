@@ -1,6 +1,6 @@
 # Signal Research — Generating Useful Signals (T4)
 
-A **signal** is any measurable, officially-sourced input that can move our own line estimate away from the market line. Signals are only useful if they are (a) sourced from official data, (b) fresh, and (c) validated through the gates on the [Validation](validation.html) page. Anything that cannot be sourced officially is **excluded or flagged** — never estimated.
+A **signal** is any measurable, officially-sourced input that can move our own line estimate away from the market line. Signals are only useful if they are (a) sourced from official data, (b) fresh, and (c) validated through the gates on the [Validation](detail-validation.html) page. Anything that cannot be sourced officially is **excluded or flagged** — never estimated.
 
 ## Signal inventory
 

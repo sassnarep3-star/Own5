@@ -1,0 +1,825 @@
+{
+  "as_of": "2026-11-02",
+  "sources": [
+    {
+      "id": "NFL-RULES",
+      "publisher": "NFL Football Operations",
+      "title": "2026 NFL rulebook",
+      "url": "https://operations.nfl.com/rules-officiating/2026-nfl-rulebook",
+      "checked": "2026-11-02",
+      "status": "Checked",
+      "finding": "The page labels itself “2026 NFL RULEBOOK” and links the official PDF.",
+      "limitation": "Rules and scoring context only; not sportsbook settlement rules."
+    },
+    {
+      "id": "NFL-NGS",
+      "publisher": "NFL Next Gen Stats",
+      "title": "Metric glossary",
+      "url": "https://nextgenstats.nfl.com/glossary",
+      "checked": "2026-11-02",
+      "status": "Checked",
+      "finding": "Time to Throw excludes sacks; the glossary defines CPOE, targeted air yards and YAC above expectation.",
+      "limitation": "Definitions verified; no player-level historical tracking dataset acquired."
+    },
+    {
+      "id": "NFL-INJ",
+      "publisher": "NFL.com",
+      "title": "Official injury report",
+      "url": "https://www.nfl.com/injuries/",
+      "checked": "2026-11-02",
+      "status": "Checked",
+      "finding": "The retrieved page shows a 2026 week 8 injury report with practice and game status columns.",
+      "limitation": "Live page, not an archived pre-kickoff injury feed; no historical availability inference."
+    },
+    {
+      "id": "NFL-SCHED",
+      "publisher": "NFL.com",
+      "title": "NFL schedules",
+      "url": "https://www.nfl.com/schedules/",
+      "checked": "2026-11-02",
+      "status": "Checked",
+      "finding": "The schedule page exposes year and week navigation and game links.",
+      "limitation": "Not an immutable schedule archive; no result rows imported into a model."
+    },
+    {
+      "id": "NFL-STATS",
+      "publisher": "NFL.com",
+      "title": "Player statistics",
+      "url": "https://www.nfl.com/stats/player-stats/",
+      "checked": "2026-11-02",
+      "status": "Checked",
+      "finding": "The page provides passing, rushing and receiving categories and year navigation.",
+      "limitation": "Fetched table lacks column headers in the text extraction. Numeric rows deliberately not imported."
+    },
+    {
+      "id": "DK-GENERAL",
+      "publisher": "DraftKings Sportsbook",
+      "title": "General rules · Virginia",
+      "url": "https://sportsbook.draftkings.com/help/general-betting-rules/general-rules",
+      "checked": "2026-11-02",
+      "status": "Checked",
+      "finding": "The retrieved introduction explicitly identifies DraftKings Virginia house rules and a hierarchy of rules.",
+      "limitation": "Virginia-specific example, not universal rules or evidence of local eligibility. No odds feed obtained."
+    },
+    {
+      "id": "DK-MARKET",
+      "publisher": "DraftKings Sportsbook",
+      "title": "Bet types and market rules",
+      "url": "https://sportsbook.draftkings.com/help/general-betting-rules/market-rules",
+      "checked": "2026-11-02",
+      "status": "Checked",
+      "finding": "Whole-number two-way spreads and totals settle as Push when tied to the specified line.",
+      "limitation": "Only the cited market definitions were checked. Exact prop/SGP void and participation rules remain unverified."
+    },
+    {
+      "id": "SK-CV",
+      "publisher": "scikit-learn maintainers",
+      "title": "Cross-validation",
+      "url": "https://scikit-learn.org/stable/modules/cross_validation.html",
+      "checked": "2026-11-02",
+      "status": "Checked",
+      "finding": "Training and testing on the same data is a methodological mistake; a test set is held out for final evaluation.",
+      "limitation": "Official library documentation supports methodology, not evidence of NFL profitability."
+    },
+    {
+      "id": "SK-TIME",
+      "publisher": "scikit-learn maintainers",
+      "title": "TimeSeriesSplit",
+      "url": "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html",
+      "checked": "2026-11-02",
+      "status": "Checked",
+      "finding": "Other CV methods can train on future data and evaluate on past data; comparable folds require equally spaced samples.",
+      "limitation": "NFL records require custom chronological game/week grouping; do not blindly split irregular rows."
+    },
+    {
+      "id": "SK-CAL",
+      "publisher": "scikit-learn maintainers",
+      "title": "Probability calibration",
+      "url": "https://scikit-learn.org/stable/modules/calibration.html",
+      "checked": "2026-11-02",
+      "status": "Checked",
+      "finding": "Brier and log loss assess reliability, resolution and uncertainty; lower Brier alone does not prove better calibration.",
+      "limitation": "Reliability diagrams and held-out evaluation are also needed."
+    },
+    {
+      "id": "SC-CORR",
+      "publisher": "SciPy maintainers",
+      "title": "Pearson correlation",
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html",
+      "checked": "2026-11-02",
+      "status": "Checked",
+      "finding": "Pearson measures linear relationship; constant input has undefined correlation; confidence intervals are available.",
+      "limitation": "Zero Pearson correlation does not establish independence; default parametric p-values need assumptions."
+    },
+    {
+      "id": "SC-BOOT",
+      "publisher": "SciPy maintainers",
+      "title": "Bootstrap confidence intervals",
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html",
+      "checked": "2026-11-02",
+      "status": "Checked",
+      "finding": "Resamples with replacement; paired=True resamples common indices across paired arrays.",
+      "limitation": "Game/week clustered resampling is a project adaptation, not a property of the default iid API."
+    },
+    {
+      "id": "SM-MULTI",
+      "publisher": "statsmodels maintainers",
+      "title": "Multiple-testing corrections",
+      "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html",
+      "checked": "2026-11-02",
+      "status": "Checked",
+      "finding": "Documents Holm, Benjamini/Hochberg and Benjamini/Yekutieli adjustments.",
+      "limitation": "Use Holm as the project default; neither adjustment repairs leakage or invalid p-values."
+    }
+  ],
+  "facts": [
+    {
+      "id": "F01",
+      "metric": "Time to Throw",
+      "definition": "Average time from snap to throw on pass attempts; sacks excluded.",
+      "scope": "Passing",
+      "status": "Definition checked",
+      "sources": [
+        "NFL-NGS"
+      ]
+    },
+    {
+      "id": "F02",
+      "metric": "Intended Air Yards",
+      "definition": "Average air yards on all pass attempts; negative behind the line of scrimmage.",
+      "scope": "Passing",
+      "status": "Definition checked",
+      "sources": [
+        "NFL-NGS"
+      ]
+    },
+    {
+      "id": "F03",
+      "metric": "Completion Probability",
+      "definition": "Completion probability based on tracking factors including separation and field location.",
+      "scope": "Passing",
+      "status": "Definition checked",
+      "sources": [
+        "NFL-NGS"
+      ]
+    },
+    {
+      "id": "F04",
+      "metric": "Completion % Above Expectation",
+      "definition": "Actual completion percentage compared with expected completion percentage.",
+      "scope": "Passing",
+      "status": "Definition checked",
+      "sources": [
+        "NFL-NGS"
+      ]
+    },
+    {
+      "id": "F05",
+      "metric": "Targeted Air Yards",
+      "definition": "Average passing air yards per target for a receiver.",
+      "scope": "Receiving",
+      "status": "Definition checked",
+      "sources": [
+        "NFL-NGS"
+      ]
+    },
+    {
+      "id": "F06",
+      "metric": "Share of Team Air Yards",
+      "definition": "Receiver intended air yards divided by team intended air yards, expressed as a percentage.",
+      "scope": "Receiving",
+      "status": "Definition checked",
+      "sources": [
+        "NFL-NGS"
+      ]
+    },
+    {
+      "id": "F07",
+      "metric": "YAC Above Expectation",
+      "definition": "Receiver yards after catch compared with expected yards after catch.",
+      "scope": "Receiving",
+      "status": "Definition checked",
+      "sources": [
+        "NFL-NGS"
+      ]
+    },
+    {
+      "id": "F08",
+      "metric": "Rushing Efficiency",
+      "definition": "Total distance traveled as a ball carrier divided by rushing yards gained.",
+      "scope": "Rushing",
+      "status": "Definition checked",
+      "sources": [
+        "NFL-NGS"
+      ]
+    },
+    {
+      "id": "F09",
+      "metric": "8+ Defenders in the Box",
+      "definition": "Frequency with which a rusher faces eight or more defenders in the box.",
+      "scope": "Rushing",
+      "status": "Definition checked",
+      "sources": [
+        "NFL-NGS"
+      ]
+    },
+    {
+      "id": "F10",
+      "metric": "Whole-number two-way spread",
+      "definition": "A tie after applying the spread settles as Push under the cited rules.",
+      "scope": "Settlement · cited operator only",
+      "status": "Definition checked",
+      "sources": [
+        "DK-MARKET"
+      ]
+    },
+    {
+      "id": "F11",
+      "metric": "Total points",
+      "definition": "Over/Under on a specified total; equality settles as Push under the cited rules.",
+      "scope": "Settlement · cited operator only",
+      "status": "Definition checked",
+      "sources": [
+        "DK-MARKET"
+      ]
+    }
+  ],
+  "strategies": [
+    {
+      "id": "S01",
+      "name": "Opponent-adjusted team strength",
+      "market": "Single",
+      "signal": "Lagged team scoring and opponent strength; shrink early-season estimates.",
+      "model": "Regularized home/away score distribution; price moneyline and spread from joint score samples.",
+      "risk": "Roster drift, schedule strength and rule changes.",
+      "status": "Blocked · data",
+      "gates_passed": 0,
+      "sample": null,
+      "roi": null,
+      "brier": null,
+      "edge": null,
+      "rank": null,
+      "reward": null,
+      "sources": [
+        "NFL-RULES",
+        "NFL-SCHED",
+        "SK-TIME"
+      ]
+    },
+    {
+      "id": "S02",
+      "name": "Possession & pace totals",
+      "market": "Single",
+      "signal": "Lagged play volume and scoring efficiency, conditioned on game context.",
+      "model": "Hierarchical possession and points model; retain discrete total and push probability.",
+      "risk": "Pace may change with score; do not use realized game pace as a pregame feature.",
+      "status": "Blocked · data",
+      "gates_passed": 0,
+      "sample": null,
+      "roi": null,
+      "brier": null,
+      "edge": null,
+      "rank": null,
+      "reward": null,
+      "sources": [
+        "NFL-SCHED",
+        "DK-MARKET",
+        "SK-CV"
+      ]
+    },
+    {
+      "id": "S03",
+      "name": "Availability repricing",
+      "market": "Single",
+      "signal": "Official injury updates available before the prediction cutoff.",
+      "model": "Scenario-weighted lineup forecasts with explicit unknown-status uncertainty.",
+      "risk": "Questionable is not a measured probability of absence; no automatic numeric conversion.",
+      "status": "Blocked · data",
+      "gates_passed": 0,
+      "sample": null,
+      "roi": null,
+      "brier": null,
+      "edge": null,
+      "rank": null,
+      "reward": null,
+      "sources": [
+        "NFL-INJ",
+        "SK-TIME"
+      ]
+    },
+    {
+      "id": "S04",
+      "name": "Receiver opportunity",
+      "market": "Player prop",
+      "signal": "Lagged targets, intended air yards share and receiving opportunity.",
+      "model": "Separate volume from efficiency; predict an integer reception distribution and yards distribution.",
+      "risk": "Role changes, target competition and incomplete as-of data.",
+      "status": "Blocked · data",
+      "gates_passed": 0,
+      "sample": null,
+      "roi": null,
+      "brier": null,
+      "edge": null,
+      "rank": null,
+      "reward": null,
+      "sources": [
+        "NFL-NGS",
+        "NFL-STATS",
+        "SK-CAL"
+      ]
+    },
+    {
+      "id": "S05",
+      "name": "Rushing workload",
+      "market": "Player prop",
+      "signal": "Lagged rushing volume, efficiency and box-count context.",
+      "model": "Hierarchical workload model; scenario-based attempts and yards.",
+      "risk": "Game-script dependence; rushing efficiency is not a standalone causal signal.",
+      "status": "Blocked · data",
+      "gates_passed": 0,
+      "sample": null,
+      "roi": null,
+      "brier": null,
+      "edge": null,
+      "rank": null,
+      "reward": null,
+      "sources": [
+        "NFL-NGS",
+        "NFL-STATS",
+        "SK-CV"
+      ]
+    },
+    {
+      "id": "S06",
+      "name": "Cross-game value basket",
+      "market": "Parlay",
+      "signal": "Individually qualified legs with synchronized executable prices.",
+      "model": "Estimate joint win probability; multiply marginals only with justified independence.",
+      "risk": "Common weather/regime exposure and offered parlay price can erase single-leg edge.",
+      "status": "Blocked · data",
+      "gates_passed": 0,
+      "sample": null,
+      "roi": null,
+      "brier": null,
+      "edge": null,
+      "rank": null,
+      "reward": null,
+      "sources": [
+        "SC-CORR",
+        "DK-GENERAL",
+        "SK-CAL"
+      ]
+    },
+    {
+      "id": "S07",
+      "name": "Quarterback × receiver",
+      "market": "Prop combo",
+      "signal": "Joint passing and receiving opportunities within the same game.",
+      "model": "Shared game/drive simulation; count simulations where every leg wins.",
+      "risk": "No fixed positive correlation assumption; pairwise correlation alone cannot price a combo.",
+      "status": "Blocked · data",
+      "gates_passed": 0,
+      "sample": null,
+      "roi": null,
+      "brier": null,
+      "edge": null,
+      "rank": null,
+      "reward": null,
+      "sources": [
+        "NFL-NGS",
+        "SC-CORR",
+        "DK-MARKET"
+      ]
+    },
+    {
+      "id": "S08",
+      "name": "Game-script combo",
+      "market": "Prop combo",
+      "signal": "Team score scenarios jointly with rushing or receiving workload.",
+      "model": "Joint discrete outcomes; use actual quoted combo payout and exact settlement rules.",
+      "risk": "Selection bias, unsupported correlation assumptions and operator repricing.",
+      "status": "Blocked · data",
+      "gates_passed": 0,
+      "sample": null,
+      "roi": null,
+      "brier": null,
+      "edge": null,
+      "rank": null,
+      "reward": null,
+      "sources": [
+        "NFL-RULES",
+        "SC-CORR",
+        "DK-GENERAL"
+      ]
+    }
+  ],
+  "gates": [
+    {
+      "id": "G01",
+      "name": "Provenance & settlement",
+      "rule": "Every observation has an official URL, captured timestamp, stable event/player ID and applicable settlement version. Missing values block that market.",
+      "applies": "All",
+      "status": "Not run",
+      "basis": "Project policy · proposed",
+      "sources": [
+        "NFL-STATS"
+      ]
+    },
+    {
+      "id": "G02",
+      "name": "As-of integrity",
+      "rule": "Features, injury updates and odds must be captured before prediction time; prediction before kickoff. Deduplicate records and keep each game in one fold.",
+      "applies": "All",
+      "status": "Not run",
+      "basis": "Project policy · proposed",
+      "sources": [
+        "SK-TIME"
+      ]
+    },
+    {
+      "id": "G03",
+      "name": "Preregistered walk-forward",
+      "rule": "Freeze candidate code, features, selection rule, folds and test family before the untouched holdout. Tune only inside chronological training windows.",
+      "applies": "All",
+      "status": "Not run",
+      "basis": "Project policy · proposed",
+      "sources": [
+        "SK-CV"
+      ]
+    },
+    {
+      "id": "G04",
+      "name": "Predictive quality",
+      "rule": "Held-out Brier and log loss must beat preregistered naive and available no-vig market baselines; inspect reliability diagrams and subgroup uncertainty.",
+      "applies": "All",
+      "status": "Not run",
+      "basis": "Project policy · proposed",
+      "sources": [
+        "SK-CAL"
+      ]
+    },
+    {
+      "id": "G05",
+      "name": "Dependence & payout",
+      "rule": "Estimate held-out joint outcomes, sample size and game/week-clustered confidence intervals. No independence shortcut without evidence; quote exact combo price.",
+      "applies": "Parlays / combos",
+      "status": "Not run",
+      "basis": "Project policy · proposed",
+      "sources": [
+        "SC-CORR"
+      ]
+    },
+    {
+      "id": "G06",
+      "name": "Skill evidence",
+      "rule": "Positive lower bound of a preregistered 95% game/week-block bootstrap interval for net flat-stake return; Holm-adjusted p ≤ 0.05 across all tried candidates. Power analysis determines sample size, not an arbitrary bet count.",
+      "applies": "All",
+      "status": "Not run",
+      "basis": "Project policy · proposed",
+      "sources": [
+        "SM-MULTI"
+      ]
+    },
+    {
+      "id": "G07",
+      "name": "Forward replication & risk",
+      "rule": "Freeze before prospective paper testing. Require a second nonoverlapping evaluation window, verified costs/limits, robustness checks and preregistered exposure/drawdown limits. No real-money deployment here.",
+      "applies": "All",
+      "status": "Not run",
+      "basis": "Project policy · proposed",
+      "sources": [
+        "SC-BOOT"
+      ]
+    }
+  ],
+  "correlations": [
+    {
+      "id": "C01",
+      "pair": "QB passing yards × receiver receiving yards",
+      "unit": "Paired player-game outcomes",
+      "controls": "QB/receiver identity, opportunity and opponent",
+      "pearson": null,
+      "ci": null,
+      "n": null,
+      "joint_win": null,
+      "status": "Unverified · no matched sample",
+      "sources": [
+        "SC-CORR",
+        "SC-BOOT"
+      ]
+    },
+    {
+      "id": "C02",
+      "pair": "Team points × RB rushing attempts",
+      "unit": "Paired team/player-game outcomes",
+      "controls": "Pregame strength, opponent and availability",
+      "pearson": null,
+      "ci": null,
+      "n": null,
+      "joint_win": null,
+      "status": "Unverified · no matched sample",
+      "sources": [
+        "SC-CORR",
+        "SC-BOOT"
+      ]
+    },
+    {
+      "id": "C03",
+      "pair": "Receiver A × receiver B receptions",
+      "unit": "Paired teammate-game outcomes",
+      "controls": "Shared passing volume and competition for targets",
+      "pearson": null,
+      "ci": null,
+      "n": null,
+      "joint_win": null,
+      "status": "Unverified · no matched sample",
+      "sources": [
+        "SC-CORR",
+        "SC-BOOT"
+      ]
+    },
+    {
+      "id": "C04",
+      "pair": "Game total × QB passing yards",
+      "unit": "Paired game/player outcomes",
+      "controls": "Opponent, pace and availability",
+      "pearson": null,
+      "ci": null,
+      "n": null,
+      "joint_win": null,
+      "status": "Unverified · no matched sample",
+      "sources": [
+        "SC-CORR",
+        "SC-BOOT"
+      ]
+    },
+    {
+      "id": "C05",
+      "pair": "Cross-game leg wins",
+      "unit": "Binary outcomes at frozen bet thresholds",
+      "controls": "Week-level regime and synchronized decision time",
+      "pearson": null,
+      "ci": null,
+      "n": null,
+      "joint_win": null,
+      "status": "Unverified · no matched sample",
+      "sources": [
+        "SC-CORR",
+        "SC-BOOT"
+      ]
+    },
+    {
+      "id": "C06",
+      "pair": "Strategy net returns",
+      "unit": "Game/week aggregated flat-stake returns",
+      "controls": "Overlapping legs, stakes and market exposure",
+      "pearson": null,
+      "ci": null,
+      "n": null,
+      "joint_win": null,
+      "status": "Unverified · no matched sample",
+      "sources": [
+        "SC-CORR",
+        "SC-BOOT"
+      ]
+    }
+  ],
+  "markets": [
+    {
+      "id": "M01",
+      "market": "Moneyline",
+      "output": "P(home win), P(tie), P(away win)",
+      "method": "For no-push binary markets: fair decimal = 1 / p. For tie-as-push: fair decimal = (1 − p_push) / p_win.",
+      "caution": "Freeze the market’s tie and overtime treatment.",
+      "probability": null,
+      "fair_odds": null,
+      "status": "Method only · not fitted",
+      "sources": [
+        "DK-MARKET",
+        "NFL-RULES"
+      ]
+    },
+    {
+      "id": "M02",
+      "market": "Point spread",
+      "output": "Distribution of home score − away score",
+      "method": "For home handicap h, win if margin + h > 0; push if = 0. Fair decimal = (1 − p_push) / p_win.",
+      "caution": "Report a handicap and side price, not a mean margin alone.",
+      "probability": null,
+      "fair_odds": null,
+      "status": "Method only · not fitted",
+      "sources": [
+        "DK-MARKET",
+        "NFL-RULES"
+      ]
+    },
+    {
+      "id": "M03",
+      "market": "Game total",
+      "output": "Distribution of home score + away score",
+      "method": "For over line t, win if total > t; push if = t. Fair decimal = (1 − p_push) / p_win.",
+      "caution": "Keep integer score mass and overtime rules.",
+      "probability": null,
+      "fair_odds": null,
+      "status": "Method only · not fitted",
+      "sources": [
+        "DK-MARKET",
+        "NFL-RULES"
+      ]
+    },
+    {
+      "id": "M04",
+      "market": "Player prop",
+      "output": "Player outcome distribution conditional on participation",
+      "method": "Evaluate probability at the exact threshold; retain equality mass when push is possible.",
+      "caution": "DNP, stat corrections and void rules not yet verified.",
+      "probability": null,
+      "fair_odds": null,
+      "status": "Method only · not fitted",
+      "sources": [
+        "NFL-STATS",
+        "DK-GENERAL"
+      ]
+    },
+    {
+      "id": "M05",
+      "market": "Parlay / prop combo",
+      "output": "Full joint settlement distribution",
+      "method": "For all-win/no-push only: fair decimal = 1 / P(all win). General EV = Σ P(state) × net return(state).",
+      "caution": "Actual quote required; pushes/voids can alter the payout.",
+      "probability": null,
+      "fair_odds": null,
+      "status": "Method only · not fitted",
+      "sources": [
+        "SC-CORR",
+        "DK-GENERAL"
+      ]
+    }
+  ],
+  "flags": [
+    {
+      "id": "R01",
+      "issue": "Historical prices missing",
+      "severity": "High",
+      "detail": "No official, timestamped executable odds archive was obtained. No EV, closing-line value or ROI can be reported.",
+      "scope": "S01–S08 / all markets",
+      "status": "Needs review",
+      "sources": [
+        "DK-GENERAL"
+      ]
+    },
+    {
+      "id": "R02",
+      "issue": "As-of outcome dataset missing",
+      "severity": "High",
+      "detail": "Official pages were inspected, but no complete game/player history with pregame feature snapshots was acquired. All candidate strategies remain untrained.",
+      "scope": "All validation gates",
+      "status": "Needs review",
+      "sources": [
+        "NFL-STATS",
+        "NFL-SCHED"
+      ]
+    },
+    {
+      "id": "R03",
+      "issue": "Correlation values unavailable",
+      "severity": "High",
+      "detail": "No matched held-out samples. All coefficients, sample sizes, joint hit rates and intervals are blank. Do not substitute intuitive signs.",
+      "scope": "C01–C06",
+      "status": "Needs review",
+      "sources": [
+        "SC-CORR"
+      ]
+    },
+    {
+      "id": "R04",
+      "issue": "Prop & combo settlement incomplete",
+      "severity": "High",
+      "detail": "Exact participation, void, overtime and stat-correction rules for each proposed prop/combo are not verified.",
+      "scope": "M04–M05",
+      "status": "Needs review",
+      "sources": [
+        "DK-GENERAL",
+        "DK-MARKET"
+      ]
+    },
+    {
+      "id": "R05",
+      "issue": "Injury policy URL unreadable",
+      "severity": "Medium",
+      "detail": "An attempted NFL Football Operations injury-policy URL returned only “Skip to main content”. No policy claims were taken from it; the official injury report was inspected instead.",
+      "scope": "Availability research",
+      "status": "Needs review",
+      "sources": [
+        "NFL-INJ"
+      ]
+    },
+    {
+      "id": "R06",
+      "issue": "No validation or skill claim",
+      "severity": "High",
+      "detail": "No empirical gates have run. An attractive backtest alone would not remove luck; uncertainty, multiple testing and prospective replication remain necessary.",
+      "scope": "Leaderboard and strategies",
+      "status": "Needs review",
+      "sources": [
+        "SK-CV",
+        "SM-MULTI",
+        "SC-BOOT"
+      ]
+    },
+    {
+      "id": "R07",
+      "issue": "Rewards are not funded",
+      "severity": "Medium",
+      "detail": "A paper competition policy is specified, but no sponsor, budget, prize amount or payment mechanism is verified. Reward amounts stay blank; no cash contest is running.",
+      "scope": "Leaderboard",
+      "status": "Needs review",
+      "sources": [
+        "SK-CV"
+      ]
+    },
+    {
+      "id": "R08",
+      "issue": "Jurisdiction not established",
+      "severity": "High",
+      "detail": "Retrieved operator general rules explicitly apply to Virginia. This is research only, not an eligibility determination or betting service for any location.",
+      "scope": "All markets",
+      "status": "Needs review",
+      "sources": [
+        "DK-GENERAL"
+      ]
+    },
+    {
+      "id": "R09",
+      "issue": "Live-source drift & incomplete headers",
+      "severity": "Medium",
+      "detail": "Source checks are dated snapshots of visible text, not a continuous feed. The extracted NFL player table omitted headers; numeric player rows were excluded rather than guessed.",
+      "scope": "Source register / NFL statistics",
+      "status": "Needs review",
+      "sources": [
+        "NFL-STATS"
+      ]
+    },
+    {
+      "id": "R10",
+      "issue": "Empty starting repository",
+      "severity": "Low",
+      "detail": "Initial repository contained only README.md (# Own5); no preexisting datasets, algorithms or applications existed to audit. All new empirical fields remain blank.",
+      "scope": "Repository audit",
+      "status": "Needs review",
+      "sources": [
+        "NFL-STATS"
+      ]
+    }
+  ],
+  "competition": [
+    {
+      "id": "L01",
+      "topic": "Eligibility",
+      "rule": "All seven gates must pass with independent audit artifacts. Singles, parlays and prop combos are separate divisions. No candidate is currently eligible.",
+      "basis": "Project policy · proposed",
+      "sources": [
+        "SK-CV"
+      ]
+    },
+    {
+      "id": "L02",
+      "topic": "Ranking",
+      "rule": "Within a division, rank eligible candidates by the lower 95% clustered net-return bound on the same preregistered evaluation window; tie-break with lower log loss, then lower drawdown.",
+      "basis": "Project policy · proposed",
+      "sources": [
+        "SC-BOOT",
+        "SK-CAL"
+      ]
+    },
+    {
+      "id": "L03",
+      "topic": "Anti-gaming",
+      "rule": "Log all trials, including abandoned candidates; one frozen submission per strategy version. Apply Holm correction across the registered family. Deduplicate overlapping bets.",
+      "basis": "Project policy · proposed",
+      "sources": [
+        "SM-MULTI"
+      ]
+    },
+    {
+      "id": "L04",
+      "topic": "Rewards",
+      "rule": "Proposed non-cash research badges: Evidence Leader (rank 1), Replicated (forward gate), Transparent (complete audit). Monetary rewards disabled until terms, sponsor and eligibility are verified.",
+      "basis": "Project policy · proposed",
+      "sources": [
+        "SK-CV"
+      ]
+    },
+    {
+      "id": "L05",
+      "topic": "Risk accounting",
+      "rule": "Use flat 1-unit paper stakes for comparability, record all costs, pushes, voids and rejected quotes. Aggregate correlated exposure by game and week; compare with abstain and market baselines.",
+      "basis": "Project policy · proposed",
+      "sources": [
+        "DK-GENERAL",
+        "SC-CORR"
+      ]
+    }
+  ],
+  "predictions": []
+}

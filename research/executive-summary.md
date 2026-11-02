@@ -6,7 +6,7 @@
 
 Own5 is an automated research lab for **originating our own NFL betting lines** instead of passively accepting market prices. The goal is to collect, organize, and analyze NFL data from official sources only, generate **useful signals**, run every candidate strategy through **validation gates**, measure and cap **correlations**, and rank surviving strategies on a **leaderboard with reward tiers**. Single bets, parlays, and player-prop combos are all in scope.
 
-## Key verified facts (all sourced — see [Sources](sources.html))
+## Key verified facts (all sourced — see [Sources](detail-sources.html))
 
 - The 2026 NFL regular season is **18 weeks, 272 games**; each of the **32 teams** plays **17 games** and **3 preseason games**, with **one bye week** (byes run Weeks 5–14; none in Week 12). Kickoff was Wednesday, Sept 9, 2026 in Seattle; Week 18 is Jan 9–10, 2027 with all 16 games intra-division. Nine international games are played in 2026 — the most ever. [NFL Media, May 14, 2026](https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced) · [bye weeks per team](https://amp.nfl.com/news/2026-nfl-schedule-release-every-team-bye-week)
 - Playoffs: **14 teams (7 per conference) since 2020**; only the **No. 1 seed per conference** gets a bye; Wild Card is 2v7, 3v6, 4v5. [NFL.com](https://www.nfl.com/news/owners-approve-expanding-postseason-to-14-teams-0ap3000001107961)

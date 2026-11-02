@@ -17,15 +17,15 @@ ACCESSED = "2026-11-02"
 SITE = "https://sassnarep3-star.github.io/Own5/"
 
 NAV = [
-    ("index.html", "Dashboard"),
+    ("index.html", "Overview"),
     ("executive-summary.html", "Executive Summary"),
-    ("strategies.html", "Strategies & Leaderboard"),
+    ("detail-strategies.html", "Strategies & Leaderboard"),
     ("signals.html", "Signals"),
-    ("validation.html", "Validation Gates"),
-    ("correlations.html", "Correlations"),
+    ("detail-validation.html", "Validation Gates"),
+    ("detail-correlations.html", "Correlations"),
     ("bet-types.html", "Bet Types & Combos"),
     ("data.html", "Data & League Facts"),
-    ("sources.html", "Sources"),
+    ("detail-sources.html", "Sources"),
     ("flagged.html", "Flagged for Review"),
 ]
 
@@ -229,54 +229,13 @@ def fact(fid):
             return r["value"]
     return ""
 
-# ---------------------------------------------------------------- index
-net_corr = next((r for r in corr if r["pair_id"] == "CORR03"), None)
-index_body = f"""
-<div class="hero"><div class="wrap">
-  <h1>Own5 — Originate Your Own NFL Lines</h1>
-  <p>Collect, organize and analyze NFL data from official sources only; generate signals; validate every strategy through gates; measure correlations; rank what survives on a leaderboard. Singles, parlays and player-prop combos. No manual input, no hallucinations — every table row links to its official source, and anything unverifiable is left blank and flagged.</p>
-  <div class="meta">Data verified {ACCESSED} · 2026 NFL season, Week 8 · Site served from this repo via GitHub Pages</div>
-</div></div>
-<div class="wrap">
-  <div class="kpis">
-    {kpi(fact("LF01"), "teams", src_link("https://www.nfl.com/teams/"))}
-    {kpi(fact("LF07"), "reg-season games (2026)", src_link("https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced"))}
-    {kpi(fact("LF05"), "games per team / 18 weeks", src_link("https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced"))}
-    {kpi(fact("LF15").split(" (")[0], "playoff teams (7/conf)", src_link("https://www.nfl.com/news/owners-approve-expanding-postseason-to-14-teams-0ap3000001107961"))}
-    {kpi("$301.2M", "2026 salary cap / club", src_link("https://www.nfl.com/news/nfl-announces-2026-salary-cap-set-at-301-2-million-per-team"))}
-    {kpi((net_corr["pearson_r"] if net_corr else "—"), "r(net pts/game, win%)", src_link("https://www.nfl.com/standings/") + " · computed in-repo")}
-    {kpi(str(len(strategies)), "strategies (all pending validation)", '<a href="strategies.html">leaderboard</a>')}
-    {kpi(str(len(flagged)), "items flagged for review", '<a href="flagged.html">flagged.html</a>')}
-  </div>
-  <div class="cards">
-    <div class="card"><h3>📊 Executive Summary</h3><p>The whole project on one page: verified facts, snapshot, strategy framework, gates, correlations, flags.</p><a class="more" href="executive-summary.html">Open →</a></div>
-    <div class="card"><h3>🏆 Strategies & Leaderboard</h3><p>10 candidate strategies (singles, props, parlays, SGP combos, teasers, live). Leaderboard metric cells are blank until strategies pass the gates — no fabricated results.</p><a class="more" href="strategies.html">Open →</a></div>
-    <div class="card"><h3>📡 Signals</h3><p>14 signals, each tied to an official data source (injuries, standings, stats, NGS, schedule). Unsourced market signals are excluded and flagged.</p><a class="more" href="signals.html">Open →</a></div>
-    <div class="card"><h3>🛡️ Validation Gates</h3><p>12 gates that remove luck: sample size, 95% CI above break-even, walk-forward holdout, correlation cap, drawdown, quarter-Kelly, source integrity.</p><a class="more" href="validation.html">Open →</a></div>
-    <div class="card"><h3>🔗 Correlations</h3><p>Pearson r computed in-repo from the official 2026 standings snapshot (n=32). Net points/game vs win% r=0.839; offense vs defense r≈−0.01.</p><a class="more" href="correlations.html">Open →</a></div>
-    <div class="card"><h3>🎯 Bet Types & Combos</h3><p>Spread/ML/total/parlay/SGP/teaser/props with official operator definitions and grading rules (OT counts, pushes, voids, correlated-leg rule).</p><a class="more" href="bet-types.html">Open →</a></div>
-    <div class="card"><h3>🗂️ Data & League Facts</h3><p>All tables: league facts, 32 teams, byes, standings snapshot, Week 8 results. CSV + JSON in <a href="data/">data/</a>.</p><a class="more" href="data.html">Open →</a></div>
-    <div class="card"><h3>🔎 Sources</h3><p>Registry of the 27 official sources used, with what each one verifies.</p><a class="more" href="sources.html">Open →</a></div>
-    <div class="card"><h3>⚠️ Flagged for Review</h3><p>12 unverified items and irregularities with links for manual review. Blanks are intentional — nothing inferred.</p><a class="more" href="flagged.html">Open →</a></div>
-  </div>
-  <div class="panel">
-    <h3>Top of the 2026 standings (through Week 8) — <a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">nfl.com/standings &#8599;</a></h3>
-    <p class="sub">Snapshot {ACCESSED}; full 32-team table on <a href="correlations.html">Correlations</a> / <a href="data.html">Data</a>.</p>
-    <div class="tbl-scroll"><table class="data"><thead><tr><th>Team</th><th>W</th><th>L</th><th>T</th><th>PCT</th><th>PF</th><th>PA</th><th>NET</th><th>STRK</th></tr></thead><tbody>
-    {''.join(f'<tr><td><a href="https://www.nfl.com/teams/{r["team"].lower().replace(" ","-")}/" target="_blank" rel="noopener">{esc(r["team"])} &#8599;</a></td><td class="num">{r["W"]}</td><td class="num">{r["L"]}</td><td class="num">{r["T"]}</td><td class="num">{r["PCT"]}</td><td class="num">{r["PF"]}</td><td class="num">{r["PA"]}</td><td class="num">{r["NET"]}</td><td>{r["STRK"]}</td></tr>' for r in sorted(standings, key=lambda r: -float(r["PCT"]))[:8])}
-    </tbody></table></div>
-  </div>
-  <div class="note">Verification policy: every table row on this site carries an official <code>source_url</code>. Values that can't be confirmed from an official source are blank (—) and published on <a href="flagged.html">Flagged for Review</a>. Never inferred. 21+ only; help: <a href="https://www.ncpgambling.org/help-treatment/national-helpline-1-800-522-4700/" target="_blank" rel="noopener">1-800-GAMBLER</a>.</div>
-</div>
-"""
-
 # ---------------------------------------------------------------- pages from research md
 pages = {
     "executive-summary.html": ("executive-summary.md", "Executive Summary"),
-    "strategies.html": ("strategies.md", "Strategies & Leaderboard"),
+    "detail-strategies.html": ("strategies.md", "Strategies & Leaderboard"),
     "signals.html": ("signals.md", "Signals"),
-    "validation.html": ("validation-gates.md", "Validation Gates"),
-    "correlations.html": ("correlations.md", "Correlations"),
+    "detail-validation.html": ("validation-gates.md", "Validation Gates"),
+    "detail-correlations.html": ("correlations.md", "Correlations"),
     "bet-types.html": ("bet-markets.md", "Bet Types & Combos"),
     "flagged.html": ("flagged.md", "Flagged for Review"),
 }
@@ -304,14 +263,11 @@ print("wrote data.html")
 # ---------------------------------------------------------------- sources.html
 sources_body = section("Source Registry", "27 official sources. Every data-table row references one of these via source_id + its own source_url.") \
     + f'<div class="wrap"><div class="panel">{render_table("sources.csv")}</div></div>'
-with open(os.path.join(ROOT, "sources.html"), "w", encoding="utf-8") as f:
-    f.write(page("Sources", sources_body, active="sources.html"))
-print("wrote sources.html")
+with open(os.path.join(ROOT, "detail-sources.html"), "w", encoding="utf-8") as f:
+    f.write(page("Sources", sources_body, active="detail-sources.html"))
+print("wrote detail-sources.html")
 
-# ---------------------------------------------------------------- index
-with open(os.path.join(ROOT, "index.html"), "w", encoding="utf-8") as f:
-    f.write(page("Dashboard", index_body, active="index.html"))
-print("wrote index.html")
+# index.html is owned by session arena-cd43258e (CI-locked); this session does not regenerate it.
 
 # ---------------------------------------------------------------- json mirrors + _config.yml
 for fn in os.listdir(DATA):
