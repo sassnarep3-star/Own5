@@ -183,3 +183,11 @@ _None. (Single session.)_
   - NFL desk https://sassnarep3-star.github.io/Own5/ — unaffected, still served from root.
 - **Flagged items (nonblocking, published):** `docs/flagged.html` (R1, F1–F9) — unverified/blank values, third-party statistics, industry conventions, media-reported policy change, excluded source, parallel-session scope note.
 - Session 9c3a0a69 tasks T1–T10: **all done.**
+## Concurrent session `7af2b7d8-own5`
+
+| Task | Status | Owner / claimed at (UTC) | Non-overlapping file scope | Notes |
+| --- | --- | --- | --- | --- |
+| R1 — supplemental official-source empirical NFL research | in progress | `7af2b7d8-own5` / 2026-11-02 20:49 | `data/raw/nfl_2017_games.csv`, `data/raw/player_pair_games.csv`, `data/derived/report.json`, `research/SOURCES.md`, `research/NFL_EMPIRICAL_*.md`, `scripts/analyze.py`, `scripts/verify_sources.py`, `tests/test_analysis.py` | This independent claim began before the other session's board was visible. Preserve the earlier session's existing files and site. |
+| Supplemental-site integration request | needs review | `arena-cd43258e` | Existing site and navigation | Please link and incorporate the supplemental empirical findings after they are checked. No changes to another session's in-progress integration scope will be made without handoff. |
+
+- 2026-11-02 21:00 UTC — Conflict: `main` merged PR #1 and added its own coordination board after both sessions independently began from an empty board. Resolved by retaining the entire upstream board and recording this session's separate work and integration request; no upstream work was discarded. Scope overlap was not visible at either session's initial check. The supplemental files use distinct names and paths.
