@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Signals · Own5</title>
+<meta name="description" content="Own5 — NFL line origination & skill-based strategy lab. Fully sourced from official NFL and operator sources.">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏈</text></svg>">
+</head><body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html">Own5 <span>· NFL Line Originator</span></a>
+  <nav class="main"><a href="index.html">Overview</a><a href="executive-summary.html">Executive Summary</a><a href="detail-strategies.html">Strategies &amp; Leaderboard</a><a href="signals.html" class="active">Signals</a><a href="detail-validation.html">Validation Gates</a><a href="detail-correlations.html">Correlations</a><a href="bet-types.html">Bet Types &amp; Combos</a><a href="data.html">Data &amp; League Facts</a><a href="detail-sources.html">Sources</a><a href="flagged.html">Flagged for Review</a></nav>
+</div></header>
+<main><section class="page"><div class="wrap"><h2 class="sec">Signals</h2><p class="sub">All factual claims link to official sources; blanks are intentional (see flagged.html).</p></div><div class="wrap"><div class="panel"><h2>Signal Research — Generating Useful Signals (T4)</h2>
+<p>A <strong>signal</strong> is any measurable, officially-sourced input that can move our own line estimate away from the market line. Signals are only useful if they are (a) sourced from official data, (b) fresh, and (c) validated through the gates on the <a href="detail-validation.html" target="_blank" rel="noopener">Validation &#8599;</a> page. Anything that cannot be sourced officially is <strong>excluded or flagged</strong> — never estimated.</p>
+<h3>Signal inventory</h3>
+<div class="table-tools"><input type="search" placeholder="Filter rows…" data-filter="tbl-signals-csv"><span class="count"></span></div>
+<div class="tbl-scroll"><table class="data" id="tbl-signals-csv"><thead><tr>
+<th>signal_id</th>
+<th>category</th>
+<th>name</th>
+<th>description</th>
+<th>data_source</th>
+<th>source_id</th>
+<th>source_url</th>
+<th>freshness</th>
+<th>verification_status</th>
+<th>verified_on</th>
+</tr></thead><tbody>
+<tr>
+<td>SIG01</td>
+<td>Injuries</td>
+<td>Official injury report delta</td>
+<td>Count of Out/Doubtful/Questionable by team from the official weekly NFL injury report; compare against opponent&#x27;s report and against the line.</td>
+<td>NFL.com injury report</td>
+<td>S06</td>
+<td><span class="src"><a href="https://www.nfl.com/injuries/" target="_blank" rel="noopener">https://www.nfl.com/injuries/ &#8599;</a></span></td>
+<td>weekly (Wed-Sun)</td>
+<td><span class="badge ok">verified</span></td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>SIG02</td>
+<td>Injuries</td>
+<td>Practice-status trend</td>
+<td>Change in practice participation (DNP -&gt; Limited -&gt; Full) across the week for key positions (QB, LT, WR1, EDGE).</td>
+<td>NFL.com injury report</td>
+<td>S06</td>
+<td><span class="src"><a href="https://www.nfl.com/injuries/" target="_blank" rel="noopener">https://www.nfl.com/injuries/ &#8599;</a></span></td>
+<td>weekly</td>
+<td><span class="badge ok">verified</span></td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>SIG03</td>
+<td>Team form</td>
+<td>Points for / against and net points</td>
+<td>PF, PA, NET PTS and per-game values from official standings; rank all 32 teams.</td>
+<td>NFL.com standings</td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>updates after each game</td>
+<td><span class="badge ok">verified</span></td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>SIG04</td>
+<td>Team form</td>
+<td>Winning percentage &amp; streak</td>
+<td>PCT and STRK from official standings (e.g., 2026-11-02 snapshot in data/standings-2026-wk8.csv).</td>
+<td>NFL.com standings</td>
+<td>S04</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>updates after each game</td>
+<td><span class="badge ok">verified</span></td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>SIG05</td>
+<td>Team stats</td>
+<td>Offense/defense unit stats</td>
+<td>Official team passing/rushing/receiving/scoring/downs and defensive equivalents (nfl.com team stats).</td>
+<td>NFL.com team stats</td>
+<td>S08</td>
+<td><span class="src"><a href="https://www.nfl.com/stats/team-stats/" target="_blank" rel="noopener">https://www.nfl.com/stats/team-stats/ &#8599;</a></span></td>
+<td>updates after each game</td>
+<td><span class="badge ok">verified</span></td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>SIG06</td>
+<td>Player props</td>
+<td>Player stat leaders &amp; trends</td>
+<td>Official player stat leaderboards (passing yards, rushing, receiving, ... 2026 leaders in data/player-passing-2026.csv).</td>
+<td>NFL.com player stats</td>
+<td>S07</td>
+<td><span class="src"><a href="https://www.nfl.com/stats/player-stats/" target="_blank" rel="noopener">https://www.nfl.com/stats/player-stats/ &#8599;</a></span></td>
+<td>updates after each game</td>
+<td><span class="badge ok">verified</span></td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>SIG07</td>
+<td>Advanced</td>
+<td>Next Gen Stats tracking metrics</td>
+<td>NFL NGS: completion probability, expected rushing yards, win probability, speed, separation, etc. Captured 10x/second, 200+ data points per play, on AWS.</td>
+<td>NFL Football Operations — NGS</td>
+<td>S16</td>
+<td><span class="src"><a href="https://operations.nfl.com/gameday/technology/nfl-next-gen-stats" target="_blank" rel="noopener">https://operations.nfl.com/gameday/technology/nfl-next-gen-stats &#8599;</a></span></td>
+<td>per play</td>
+<td><span class="badge ok">verified</span></td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>SIG08</td>
+<td>Schedule</td>
+<td>Rest / bye / travel context</td>
+<td>Rest days between games and bye placement from the official schedule and official bye list (2026 byes in data/bye-weeks-2026.csv).</td>
+<td>NFL.com schedules + bye list</td>
+<td>S05; S12</td>
+<td><span class="src"><a href="https://www.nfl.com/schedules" target="_blank" rel="noopener">https://www.nfl.com/schedules &#8599;</a></span></td>
+<td>per week</td>
+<td><span class="badge ok">verified</span></td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>SIG09</td>
+<td>Data integrity</td>
+<td>Official stat corrections</td>
+<td>Use only corrected official stats (Elias Sports Bureau / NFL League Office) when grading any stat-based signal.</td>
+<td>NFL stat corrections</td>
+<td>S17</td>
+<td><span class="src"><a href="https://fantasy.nfl.com/research/statcorrections" target="_blank" rel="noopener">https://fantasy.nfl.com/research/statcorrections &#8599;</a></span></td>
+<td>as released</td>
+<td><span class="badge ok">verified</span></td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>SIG10</td>
+<td>Roster/cap</td>
+<td>Salary cap &amp; roster moves</td>
+<td>2026 salary cap $301.2M per club; roster transactions on official club sites (linked from nfl.com/teams/).</td>
+<td>NFL.com news + club sites</td>
+<td>S14; S09</td>
+<td><span class="src"><a href="https://www.nfl.com/news/nfl-announces-2026-salary-cap-set-at-301-2-million-per-team" target="_blank" rel="noopener">https://www.nfl.com/news/nfl-announces-2026-salary-cap-set-at-301-2-million-per-team &#8599;</a></span></td>
+<td>seasonal</td>
+<td><span class="badge ok">verified</span></td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>SIG11</td>
+<td>Market</td>
+<td>Line vs. own model (value)</td>
+<td>Compare the sportsbook line (official operator pages) against the strategy&#x27;s own model price. Live line VALUES are dynamic and not snapshotted here — see flagged F02.</td>
+<td>Official sportsbook NFL pages</td>
+<td>S22; S19</td>
+<td><span class="src"><a href="https://sportsbook.fanduel.com/navigation/nfl" target="_blank" rel="noopener">https://sportsbook.fanduel.com/navigation/nfl &#8599;</a></span></td>
+<td>real-time</td>
+<td><span class="badge warn">partial — value snapshot flagged</span></td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>SIG12</td>
+<td>Market</td>
+<td>Line movement / closing line value (CLV)</td>
+<td>Historical line moves and closing lines are NOT published by any official NFL source. Signal defined but unverifiable from official sources — flagged F01.</td>
+<td>(none official)</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="badge warn">flagged — unverified</span></td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>SIG13</td>
+<td>Environment</td>
+<td>Weather</td>
+<td>nfl.com game cards show a weather note for upcoming games (e.g., MNF Nov 2: &#x27;Clear, night&#x27;), but there is no structured official NFL weather field per game. Per-game values left blank — flagged F05.</td>
+<td>NFL.com game cards</td>
+<td>S05</td>
+<td><span class="src"><a href="https://www.nfl.com/schedules" target="_blank" rel="noopener">https://www.nfl.com/schedules &#8599;</a></span></td>
+<td>per game</td>
+<td><span class="badge warn">partial — flagged</span></td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>SIG14</td>
+<td>Market</td>
+<td>Public betting % / &#x27;sharp&#x27; indicators</td>
+<td>Not published by official sources. Excluded from all strategies — flagged F06.</td>
+<td>(none official)</td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="empty" title="intentionally blank — not confirmable from an official source">—</span></td>
+<td><span class="badge warn">flagged — excluded</span></td>
+<td>2026-11-02</td>
+</tr>
+</tbody></table></div>
+<h3>Example verified inputs (2026-11-02)</h3>
+<p>2026 passing leaders (official NFL player stats, REG through Week 8, sorted by passing yards): <a href="https://www.nfl.com/stats/player-stats/" target="_blank" rel="noopener">nfl.com/stats/player-stats &#8599;</a></p>
+<div class="table-tools"><input type="search" placeholder="Filter rows…" data-filter="tbl-player-passing-2026-csv"><span class="count"></span></div>
+<div class="tbl-scroll"><table class="data" id="tbl-player-passing-2026-csv"><thead><tr>
+<th>rank</th>
+<th>player</th>
+<th>passing_yards</th>
+<th>season</th>
+<th>stat_window</th>
+<th>source_id</th>
+<th>source_url</th>
+<th>verified_on</th>
+<th>status</th>
+</tr></thead><tbody>
+<tr>
+<td class="num">1</td>
+<td>Jordan Love</td>
+<td class="num">2246</td>
+<td class="num">2026</td>
+<td>REG through Week 8 (as displayed 2026-11-02)</td>
+<td>S07</td>
+<td><span class="src"><a href="https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc" target="_blank" rel="noopener">https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td class="num">2</td>
+<td>Matthew Stafford</td>
+<td class="num">2146</td>
+<td class="num">2026</td>
+<td>REG through Week 8 (as displayed 2026-11-02)</td>
+<td>S07</td>
+<td><span class="src"><a href="https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc" target="_blank" rel="noopener">https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td class="num">3</td>
+<td>Kirk Cousins</td>
+<td class="num">2124</td>
+<td class="num">2026</td>
+<td>REG through Week 8 (as displayed 2026-11-02)</td>
+<td>S07</td>
+<td><span class="src"><a href="https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc" target="_blank" rel="noopener">https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td class="num">4</td>
+<td>Joe Burrow</td>
+<td class="num">2115</td>
+<td class="num">2026</td>
+<td>REG through Week 8 (as displayed 2026-11-02)</td>
+<td>S07</td>
+<td><span class="src"><a href="https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc" target="_blank" rel="noopener">https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td class="num">5</td>
+<td>Dak Prescott</td>
+<td class="num">2046</td>
+<td class="num">2026</td>
+<td>REG through Week 8 (as displayed 2026-11-02)</td>
+<td>S07</td>
+<td><span class="src"><a href="https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc" target="_blank" rel="noopener">https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td class="num">6</td>
+<td>Drake Maye</td>
+<td class="num">1983</td>
+<td class="num">2026</td>
+<td>REG through Week 8 (as displayed 2026-11-02)</td>
+<td>S07</td>
+<td><span class="src"><a href="https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc" target="_blank" rel="noopener">https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td class="num">7</td>
+<td>Jared Goff</td>
+<td class="num">1964</td>
+<td class="num">2026</td>
+<td>REG through Week 8 (as displayed 2026-11-02)</td>
+<td>S07</td>
+<td><span class="src"><a href="https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc" target="_blank" rel="noopener">https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td class="num">8</td>
+<td>Bryce Young</td>
+<td class="num">1921</td>
+<td class="num">2026</td>
+<td>REG through Week 8 (as displayed 2026-11-02)</td>
+<td>S07</td>
+<td><span class="src"><a href="https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc" target="_blank" rel="noopener">https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td class="num">9</td>
+<td>Geno Smith</td>
+<td class="num">1913</td>
+<td class="num">2026</td>
+<td>REG through Week 8 (as displayed 2026-11-02)</td>
+<td>S07</td>
+<td><span class="src"><a href="https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc" target="_blank" rel="noopener">https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+<tr>
+<td class="num">10</td>
+<td>Aaron Rodgers</td>
+<td class="num">1871</td>
+<td class="num">2026</td>
+<td>REG through Week 8 (as displayed 2026-11-02)</td>
+<td>S07</td>
+<td><span class="src"><a href="https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc" target="_blank" rel="noopener">https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc &#8599;</a></span></td>
+<td>2026-11-02</td>
+<td><span class="badge ok">verified</span></td>
+</tr>
+</tbody></table></div>
+<h3>How signals become a line</h3>
+<p>1. Collect official inputs only: standings/stats <a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">nfl.com/standings &#8599;</a>, <a href="https://www.nfl.com/stats/" target="_blank" rel="noopener">nfl.com/stats &#8599;</a>, injury report <a href="https://www.nfl.com/injuries/" target="_blank" rel="noopener">nfl.com/injuries &#8599;</a>, schedule/byes <a href="https://www.nfl.com/schedules" target="_blank" rel="noopener">nfl.com/schedules &#8599;</a>, NGS <a href="https://operations.nfl.com/gameday/technology/nfl-next-gen-stats" target="_blank" rel="noopener">operations.nfl.com &#8599;</a>, stat corrections <a href="https://fantasy.nfl.com/research/statcorrections" target="_blank" rel="noopener">fantasy.nfl.com &#8599;</a>.</p>
+<p>2. Build a model price per game (our own line) from those inputs.</p>
+<p>3. Compare with the operator-published line on official sportsbook pages (<a href="https://sportsbook.fanduel.com/navigation/nfl" target="_blank" rel="noopener">FanDuel NFL &#8599;</a>, <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener">DraftKings NFL &#8599;</a>) — value exists only when model price and market price disagree by more than the gate threshold.</p>
+<p>4. Size with quarter-Kelly (gate G07); never exceed correlation caps (G05, G09).</p>
+<p><strong>Excluded by rule:</strong> public betting percentages, &quot;sharp money&quot; claims, historical closing lines, weather values per game (no structured official field), sportsbook hold % — all flagged on the <a href="flagged.html" target="_blank" rel="noopener">Flagged for Review &#8599;</a> page, all left blank in the data tables.</p></div></div></main>
+<footer><div class="wrap">
+  <div><h4>Own5 — NFL Line Origination Lab</h4>
+    Verified line-by-line against official sources on 2026-11-02. Unverifiable values are blank and listed on the <a href="flagged.html">Flagged for Review</a> page. Live site: <a href="https://sassnarep3-star.github.io/Own5/">https://sassnarep3-star.github.io/Own5/</a></div>
+  <div><h4>Responsible gambling</h4>
+    Analytics research only. Legal age only; never wager more than you can afford to lose. 24/7 confidential help: <a href="https://www.ncpgambling.org/help-treatment/national-helpline-1-800-522-4700/">1-800-GAMBLER (1-800-426-2537)</a>, text 800GAM — NCPG.</div>
+  <div><h4>Data</h4>
+    Machine-readable tables: <a href="data/">data/</a> (CSV + JSON). Every row carries its official <code>source_url</code>.</div>
+</div></footer>
+<script src="assets/js/site.js"></script>
+</body></html>

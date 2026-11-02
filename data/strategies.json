@@ -1,0 +1,122 @@
+[
+ {
+  "strategy_id": "STR01",
+  "name": "Rest-Edge Singles",
+  "bet_types": "Singles (spread/ML)",
+  "description": "Teams coming off a bye or with more rest days vs. opponent, filtered by points-for/against rank.",
+  "signals": "SIG03; SIG04; SIG08",
+  "gates_required": "G01-G03, G05-G08, G12",
+  "correlation_with_portfolio": "",
+  "status": "pending validation — no graded-bet data yet",
+  "source_url": "https://www.nfl.com/",
+  "verified_on": "2026-11-02"
+ },
+ {
+  "strategy_id": "STR02",
+  "name": "Net-Points Mismatch",
+  "bet_types": "Singles (spread)",
+  "description": "Back the team with the better net points per game when the mismatch exceeds a set threshold vs. opponent.",
+  "signals": "SIG03; SIG04",
+  "gates_required": "G01-G03, G05-G08, G12",
+  "correlation_with_portfolio": "",
+  "status": "pending validation — no graded-bet data yet",
+  "source_url": "https://www.nfl.com/",
+  "verified_on": "2026-11-02"
+ },
+ {
+  "strategy_id": "STR03",
+  "name": "QB Prop Value",
+  "bet_types": "Player props (passing yards/TDs)",
+  "description": "Model QB prop lines from official player stat trends + NGS metrics; bet only when model price beats book price by threshold.",
+  "signals": "SIG05; SIG06; SIG07; SIG11",
+  "gates_required": "G01-G03, G05-G08, G12",
+  "correlation_with_portfolio": "",
+  "status": "pending validation — line values flagged F02",
+  "source_url": "https://www.nfl.com/",
+  "verified_on": "2026-11-02"
+ },
+ {
+  "strategy_id": "STR04",
+  "name": "Injury-Adjusted Team Rating",
+  "bet_types": "Singles + totals",
+  "description": "Adjust team strength by official injury report (Out/Questionable at key positions); bet totals/spreads off the adjusted matchup.",
+  "signals": "SIG01; SIG02; SIG03; SIG09",
+  "gates_required": "G01-G03, G05-G08, G12",
+  "correlation_with_portfolio": "",
+  "status": "pending validation",
+  "source_url": "https://www.nfl.com/",
+  "verified_on": "2026-11-02"
+ },
+ {
+  "strategy_id": "STR05",
+  "name": "Two-Leg Cross-Game Parlays",
+  "bet_types": "Parlay (2 legs, different games)",
+  "description": "Only uncorrelated games (no shared teams/players); both legs must pass single-bet gates; quarter-Kelly on combined price.",
+  "signals": "SIG03; SIG08",
+  "gates_required": "G01-G03, G05-G09, G12",
+  "correlation_with_portfolio": "",
+  "status": "pending validation",
+  "source_url": "https://www.nfl.com/",
+  "verified_on": "2026-11-02"
+ },
+ {
+  "strategy_id": "STR06",
+  "name": "Same-Game Parlay (SGP) Selective",
+  "bet_types": "SGP",
+  "description": "Use only where the book prices correlation (offered SGP); reduced stake (0.25x) due to high same-game correlation.",
+  "signals": "SIG01; SIG06; SIG11",
+  "gates_required": "G01-G03, G05, G07-G09, G12",
+  "correlation_with_portfolio": "",
+  "status": "pending validation",
+  "source_url": "https://www.nfl.com/",
+  "verified_on": "2026-11-02"
+ },
+ {
+  "strategy_id": "STR07",
+  "name": "Cross-Player Prop Combos (SGP only)",
+  "bet_types": "Prop combo within SGP",
+  "description": "Different players, same game, only inside an offered SGP; same-player combos excluded (BC06 restricted).",
+  "signals": "SIG06; SIG07",
+  "gates_required": "G01-G03, G05, G07-G09, G12",
+  "correlation_with_portfolio": "",
+  "status": "pending validation",
+  "source_url": "https://www.nfl.com/",
+  "verified_on": "2026-11-02"
+ },
+ {
+  "strategy_id": "STR08",
+  "name": "Key-Number Teasers",
+  "bet_types": "Teaser (2-team, 6-pt)",
+  "description": "Tease through key margins 3 and 7 (most common NFL margins per FanDuel guide); both legs must be model-validated.",
+  "signals": "SIG03; SIG04",
+  "gates_required": "G01-G03, G05-G08, G12",
+  "correlation_with_portfolio": "",
+  "status": "pending validation",
+  "source_url": "https://www.nfl.com/",
+  "verified_on": "2026-11-02"
+ },
+ {
+  "strategy_id": "STR09",
+  "name": "Live Value After News",
+  "bet_types": "Live (in-play)",
+  "description": "React to official injury/news flow during the week and in-game; bet live lines only when model price beats live price by threshold.",
+  "signals": "SIG01; SIG02; SIG11",
+  "gates_required": "G01-G03, G05-G08, G11, G12",
+  "correlation_with_portfolio": "",
+  "status": "pending validation — live values flagged F02",
+  "source_url": "https://www.nfl.com/",
+  "verified_on": "2026-11-02"
+ },
+ {
+  "strategy_id": "STR10",
+  "name": "Division Dog Value",
+  "bet_types": "Singles (ML)",
+  "description": "Underdog moneylines in division games where the dog's net-points rank is within a set band of the favorite's.",
+  "signals": "SIG03; SIG04; SIG08",
+  "gates_required": "G01-G03, G05-G08, G12",
+  "correlation_with_portfolio": "",
+  "status": "pending validation",
+  "source_url": "https://www.nfl.com/",
+  "verified_on": "2026-11-02"
+ }
+]

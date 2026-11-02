@@ -1,61 +1,43 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Flagged for Review — NFL Line Lab 2026</title><style>
-:root{--bg:#0d1117;--card:#161b22;--line:#30363d;--txt:#e6edf3;--mut:#9198a1;--acc:#58a6ff;--ok:#3fb950;--warn:#d29922;--bad:#f85149;--gold:#e3b341}
-*{box-sizing:border-box}
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--txt);line-height:1.5}
-a{color:var(--acc);text-decoration:none}
-a:hover{text-decoration:underline}
-header{background:var(--card);border-bottom:1px solid var(--line);padding:14px 24px;position:sticky;top:0;z-index:10}
-header h1{margin:0;font-size:19px;display:inline-block}
-header .sub{color:var(--mut);font-size:12px;margin-left:10px}
-nav{margin-top:8px;display:flex;flex-wrap:wrap;gap:14px;font-size:14px}
-nav a{color:var(--mut)}
-nav a.active,nav a:hover{color:var(--acc);text-decoration:none}
-main{max-width:1200px;margin:0 auto;padding:24px}
-h2{border-bottom:1px solid var(--line);padding-bottom:6px;margin-top:6px}
-h3{color:var(--acc);margin-bottom:6px}
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin:16px 0}
-.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px}
-.card h3{margin-top:0;color:var(--txt)}
-.card .big{font-size:26px;font-weight:700;margin:4px 0}
-.card p{color:var(--mut);font-size:13px;margin:4px 0}
-table{border-collapse:collapse;width:100%;font-size:13.5px;margin:12px 0;background:var(--card)}
-th,td{border:1px solid var(--line);padding:6px 9px;text-align:left;vertical-align:top}
-th{background:#21262d;color:var(--mut);font-weight:600;position:sticky;top:0}
-tr:nth-child(even) td{background:#12171d}
-td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
-.badge{display:inline-block;font-size:11px;padding:1px 7px;border-radius:10px;border:1px solid var(--line);margin-left:4px;vertical-align:middle}
-.b-ok{color:var(--ok);border-color:var(--ok)}
-.b-warn{color:var(--warn);border-color:var(--warn)}
-.b-bad{color:var(--bad);border-color:var(--bad)}
-.b-mut{color:var(--mut)}
-.flag{color:var(--warn);font-weight:700}
-.ok{color:var(--ok);font-weight:700}
-.bad{color:var(--bad);font-weight:700}
-.mut{color:var(--mut)}
-.note{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--acc);padding:10px 14px;margin:12px 0;font-size:14px;border-radius:0 6px 6px 0}
-.note.warn{border-left-color:var(--warn)}
-.note.bad{border-left-color:var(--bad)}
-.small{font-size:12px;color:var(--mut)}
-.src{font-size:12px;white-space:nowrap}
-footer{border-top:1px solid var(--line);color:var(--mut);font-size:12px;padding:18px 24px;text-align:center;margin-top:30px}
-.wk-head{background:#21262d;color:var(--acc);font-weight:700}
-.scroll{overflow-x:auto}
-@media(max-width:760px){table{font-size:12px}th,td{padding:4px 5px}}
-</style></head>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flagged for Review · NBA Line Origination</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
 <body>
-<header><h1>NFL Line Lab —2026 Season</h1><span class="sub">data frozen 2026-11-02 · every row source-linked · unverifiable values blank + flagged</span>
-<nav><a href="index.html">Dashboard</a><a href="standings.html">Standings</a><a href="scores.html">Scores</a><a href="lines.html">Lines</a><a href="strategies.html">Strategies</a><a href="analysis.html">Analysis</a><a href="leaderboard.html">Leaderboard</a><a href="flagged.html" class="active">Flagged</a><a href="verification.html">Verification</a><a href="executive-summary.html">Executive Summary</a><a href="sources.html">Sources</a></nav></header>
+<header>
+  <div class="hwrap">
+    <h1>NBA Line-Origination Lab</h1>
+    <p>Repo: sassnarep3-star/Own5 · Research, validation gates &amp; leaderboard design for originating NBA lines · Built 2026-11-02</p>
+  </div>
+  <nav><a href="index.html">Dashboard</a><a href="executive-summary.html">Executive Summary</a><a href="strategies.html">Strategies</a><a href="validation.html">Validation Gates</a><a href="correlations.html">Correlations</a><a href="bet-types.html">Bet Types</a><a href="skill-vs-luck.html">Skill vs Luck</a><a href="leaderboard.html">Leaderboard</a><a href="sources.html">Sources</a><a href="flagged.html" class="active">Flagged for Review</a></nav>
+</header>
 <main>
 
-<h2>Flagged for review <span class="badge b-warn">16+ items</span></h2>
-<div class="note warn">Every irregularity, ambiguous attribution and data gap is published here with links. Nothing flagged was "fixed" by inference; flagged items do not block the site merge but must remain visible.</div>
-<div class="scroll"><table><tr><th class="">ID</th><th class="">Scope</th><th class="">Severity</th><th class="">Description</th><th class="">Action</th></tr><tr id='LINES-OPEN-ATTRIB'><td><b>LINES-OPEN-ATTRIB</b></td><td>open.spread fields</td><td><span class='badge b-warn'>review</span></td><td>Open-spread team attribution is ambiguous in the ESPN table rendering (value sits in one team&#x27;s cell but may describe the other team). Current lines are NOT affected. Games where the implied open-&gt;current movement is implausibly large are individually flagged below.</td><td class='src'><a href='lines.html'>lines</a></td></tr><tr id='LINES-OPEN-JAX-BAL'><td><b>LINES-OPEN-JAX-BAL</b></td><td>JAX@BAL week 9</td><td><span class='badge b-warn'>review</span></td><td>Open spread cell rendered under BAL shows -4.5; current spread has JAX -8.5. Read literally this is a 13.5-point swing; more likely the open -4.5 described JAX (4-pt move). Verify against archived opening line before use.</td><td class='src'><a href='lines.html'>lines</a></td></tr><tr id='LINES-OPEN-NYG-PHI'><td><b>LINES-OPEN-NYG-PHI</b></td><td>NYG@PHI week 9</td><td><span class='badge b-warn'>review</span></td><td>Open spread cell rendered under PHI shows -5.5; current has NYG -3.5 (PHI is +3.5). Read literally a 9-point line flip; more likely open -5.5 described NYG (2-pt move). Also open total44.5 -&gt; current39.5 (-5), a large total move. Verify against archived openers.</td><td class='src'><a href='lines.html'>lines</a></td></tr><tr id='LINES-OPEN-HOU-LAC'><td><b>LINES-OPEN-HOU-LAC</b></td><td>HOU@LAC week 9</td><td><span class='badge b-warn'>review</span></td><td>Open spread cell rendered under LAC shows -1.5 (LAC is 0-7); current HOU -4.5. Read literally a flip from LAC -1.5 to HOU -4.5 (6 pts); more likely open -1.5 described HOU. Verify against archived openers.</td><td class='src'><a href='lines.html'>lines</a></td></tr><tr id='LINES-REC-TIES'><td><b>LINES-REC-TIES</b></td><td>NYG, WSH records</td><td><span class='badge b-warn'>informational</span></td><td>ESPN odds page records for NYG (4-2) and WSH (2-4) omit the Week-5 tie; official records are 4-2-1 and 2-4-1. Official values used on all other pages.</td><td class='src'><a href='lines.html'>lines</a></td></tr><tr id='LINES-OPEN-TOTAL-MOVE'><td><b>LINES-OPEN-TOTAL-MOVE</b></td><td>NYG@PHI, NYJ@KC, LV@SF week 9</td><td><span class='badge b-warn'>informational</span></td><td>Opening total differs from current total by 5 points in these games (44.5-&gt;39.5,41.5-&gt;46.5,46.5-&gt;51.5). Large but possible; flagged for reviewer awareness.</td><td class='src'><a href='lines.html'>lines</a></td></tr><tr id='LINES-NO-PROPS'><td><b>LINES-NO-PROPS</b></td><td>player props</td><td><span class='badge b-bad'>data-gap</span></td><td>No official/verified source for NFL player-prop odds was reachable in this environment (sportsbook prop pages require interactive sessions). Player-prop tables are therefore left blank and flagged; strategy methodology is documented without fabricated numbers.</td><td class='src'><a href='lines.html'>lines</a></td></tr><tr id='LINES-NO-HISTORY'><td><b>LINES-NO-HISTORY</b></td><td>Weeks 1-8 lines</td><td><span class='badge b-bad'>data-gap</span></td><td>Historical closing lines for Weeks 1-8 could not be confirmed from a reachable official source, so no historical line values are published. CLV/closing-line verification is specified as a validation gate in strategies.md but cannot be populated yet.</td><td class='src'><a href='lines.html'>lines</a></td></tr><tr id='FUT-PARTIAL-FIELD'><td><b>FUT-PARTIAL-FIELD</b></td><td>field coverage</td><td><span class='badge b-bad'>data-gap</span></td><td>The source page displayed only the top16 teams by odds. The remaining16 teams&#x27; futures were not displayed on the page and are therefore NOT published (left blank) rather than inferred. No values fabricated.</td><td class='src'><a href='lines.html'>futures</a></td></tr><tr id='GAME-W1-NE-SEA'><td><b>GAME-W1-NE-SEA</b></td><td>W1 NE@SEA</td><td><span class='badge b-warn'>review</span></td><td>NFL.com page header labels this &#x27;Sunday Night Football, September 9th&#x27; while the same page dates it Wednesday; PFR confirms Wed 2026-09-09. Labeling irregularity flagged.</td><td class='src'><a href='https://www.nfl.com/games/patriots-at-seahawks-2026-reg-1'>nfl.com</a> · <a href='scores.html'>scores</a></td></tr><tr id='GAME-W4-IND-WSH'><td><b>GAME-W4-IND-WSH</b></td><td>W4 IND@WSH</td><td><span class='badge b-warn'>review</span></td><td>9:30 AM ET kickoff (international window per PFR); venue not independently confirmed on an official page.</td><td class='src'><a href='https://www.nfl.com/games/colts-at-commanders-2026-reg-4'>nfl.com</a> · <a href='scores.html'>scores</a></td></tr><tr id='GAME-W6-HOU-JAX'><td><b>GAME-W6-HOU-JAX</b></td><td>W6 HOU@JAX</td><td><span class='badge b-warn'>review</span></td><td>9:30 AM ET kickoff (international window per PFR); venue not independently confirmed on an official page.</td><td class='src'><a href='https://www.nfl.com/games/texans-at-jaguars-2026-reg-6'>nfl.com</a> · <a href='scores.html'>scores</a></td></tr><tr id='GAP-1'><td><b>GAP-1</b></td><td>metrics</td><td><span class='badge b-bad'>data-gap</span></td><td>Historical ATS results for W1-8 (no reachable source) -&gt; ATS gates pending; flagged LINES-NO-HISTORY.</td><td class='src'><a href='analysis.html'>analysis</a></td></tr><tr id='GAP-2'><td><b>GAP-2</b></td><td>metrics</td><td><span class='badge b-bad'>data-gap</span></td><td>Closing lines / CLV for W1-8 -&gt; CLV gate prospective for W9+; flagged LINES-NO-HISTORY.</td><td class='src'><a href='analysis.html'>analysis</a></td></tr><tr id='GAP-3'><td><b>GAP-3</b></td><td>metrics</td><td><span class='badge b-bad'>data-gap</span></td><td>Turnover columns not in dataset -&gt; TO-margin correlation omitted; flagged.</td><td class='src'><a href='analysis.html'>analysis</a></td></tr><tr id='GAP-4'><td><b>GAP-4</b></td><td>metrics</td><td><span class='badge b-bad'>data-gap</span></td><td>Player prop odds no reachable source -&gt; props tables blank; flagged LINES-NO-PROPS.</td><td class='src'><a href='analysis.html'>analysis</a></td></tr></table></div>
-<h3>What was verified instead of flagged</h3>
-<p class="small">The initial apparent conflict on New England's Week4 game and every other transcription caught during reconciliation was resolved against official standings — see the pre-fix error log in <code>analysis/verification_report.json</code> history and the passing report on <a href="verification.html">Verification</a>. Reconciliation is rerunnable: <code>python3 tools/reconcile.py</code>.</p>
+<h2>Flagged for Review</h2>
+<div class="banner flag"><strong>This page exists so nothing has to be taken on faith.</strong> Items here are
+irregularities, unverified values (always left blank in the main tables), third-party statistics, and
+industry conventions adopted with caveats. None of these block the site; all await owner review.</div>
+<div class="tablewrap"><table>
+<tr><th>ID</th><th>Type</th><th>Item</th><th>Source / location</th><th>Disposition</th></tr>
+<tr><td><strong>R1</strong></td><td><span class="chip flag">FLAGGED</span> Repo irregularity</td><td>GitHub Pages was already enabled on this repo (main branch, root, legacy build) before any site content existed — the site served an auto-generated README page.</td><td>Observed via GitHub API during repo audit; recorded in COORDINATION.md.</td><td>Resolved at integration: Pages continues to serve the repo root (now the NFL Research Desk built by parallel session cd43258e); this NBA dashboard is served from the /docs/ subpath of the same Pages site. No security impact identified.</td></tr><tr><td><strong>F1</strong></td><td><span class="chip flag">FLAGGED</span> Unverified values (blank)</td><td>All numeric prop-correlation coefficients (C1–C10 r column) — no official or primary source publishes them.</td><td><a class="src" href="correlations.html">correlations.html</a>— directions sourced from industry guides only.</td><td>Left blank per project rule. To fill: run analysis/prop_correlations.py on official stats.nba.com box scores.</td></tr><tr><td><strong>F2</strong></td><td><span class="chip flag">FLAGGED</span> Third-party statistic</td><td>Recent NBA home-win percentages (57.5% 1996-97 → 55.4% 2025-26; min 54.3% 2023-24) come from a third-party dataset, not an official NBA publication.</td><td><a class="src" href="https://swishdunk.com/nba-evolution-30-years-stats" target="_blank" rel="noopener">swishdunk.com</a></td><td>Quoted only as flagged; not asserted as verified. Official verification would require NBA.com season splits.</td></tr><tr><td><strong>F3</strong></td><td><span class="chip flag">FLAGGED</span> Industry convention, not law</td><td>CLV thresholds (+1–2% "strong"), sample-size minimums (200–500 CLV / 1,000–3,000 win-rate / 2,000–5,000 ROI), and the 30–40% walk-forward degradation rule.</td><td><a class="src" href="https://www.sportsbettingoddscalculator.com/guides/closing-line-value" target="_blank" rel="noopener">oddscalculator</a> · <a class="src" href="https://fortraders.com/blog/how-to-avoid-bias-in-backtesting" target="_blank" rel="noopener">fortraders</a></td><td>Adopted as project conventions with this flag; no official standard exists.</td></tr><tr><td><strong>F4</strong></td><td><span class="chip flag">FLAGGED</span> Media-reported, not yet official</td><td>December 2025 league memo: public injury-report updates every 15 minutes; resubmission 11 a.m.–1 p.m. game-day.</td><td><a class="src" href="https://sports.yahoo.com/articles/nba-takes-stand-injury-reporting-231429192.html" target="_blank" rel="noopener">Yahoo Sports</a></td><td>Not found on official.nba.com at build time; treat cadence as unconfirmed until the official page reflects it.</td></tr><tr><td><strong>F5</strong></td><td><span class="chip flag">FLAGGED</span> Attribution unconfirmed</td><td>"8,495 regular-season games (1987-88–1994-95): more rest improved performance, peak at 3 days" — study quoted secondhand without full citation in accessible sources.</td><td><a class="src" href="https://www.researchgate.net/publication/373588492_Rest_or_rust_Complex_influence_of_schedule_congestion_on_the_home_advantage_in_the_National_Basketball_Association" target="_blank" rel="noopener">ResearchGate (quoting snippet)</a></td><td>Not used in any strategy table. Needs original-paper verification before use.</td></tr><tr><td><strong>F6</strong></td><td><span class="chip flag">FLAGGED</span> Excluded source</td><td>bettoredge.com CLV article: "positive-CLV bettors see 2–3× higher ROI" and a CLV→ROI rule attributed to "professional bettor Joey Ingram" — quantitative claims without methodology; attribution could not be verified.</td><td><a class="src" href="https://www.bettoredge.com/post/what-is-closing-line-value-in-sports-betting" target="_blank" rel="noopener">bettoredge.com</a></td><td>Excluded from all tables.</td></tr><tr><td><strong>F7</strong></td><td><span class="chip flag">FLAGGED</span> No live data in build sandbox</td><td>The build environment had no network route to stats.nba.com, so no box-score-derived values (correlations, with/without splits) could be computed in-session.</td><td>COORDINATION.md verification log.</td><td>All affected fields left blank; tooling committed so values can be computed and sourced later.</td></tr><tr><td><strong>F9</strong></td><td><span class="chip flag">FLAGGED</span> Parallel-session scope note</td><td>A parallel agent session (cd43258e) built an NFL Research Desk at the repo root (merged to main via PR #1) although the project brief specified NBA. Work preserved per coordination rules; both dashboards now co-exist (NFL at site root, NBA here under /docs/).</td><td><a class="src" href="../index.html">NFL Research Desk</a> · COORDINATION.md</td><td>No work discarded. Owner may decide whether the NFL desk stays, moves, or is removed.</td></tr><tr><td><strong>F8</strong></td><td><span class="chip flag">FLAGGED</span> Empty leaderboard</td><td>Leaderboard standings are intentionally empty — no strategy has passed the gates; no bets have been placed.</td><td><a class="src" href="leaderboard.html">leaderboard.html</a></td><td>Not an error. Guard against anyone "filling it in" without gate-passing records.</td></tr>
+</table></div>
+<h3>Review workflow</h3>
+<ol>
+<li>Open the linked source and compare against the claim text above.</li>
+<li>If verified against an official/primary source, move the value into the relevant table with its link and remove the flag (via PR).</li>
+<li>If contradicted, delete the item from the repo entirely — do not "correct" it in place without a source.</li>
+</ol>
 
 </main>
-<footer>Generated 2026-11-02 by <code>tools/build_site.py</code> from <code>data/*.json</code> + <code>analysis/*.json</code> · Sources: nfl.com (official) · pro-football-reference.com · ESPN/DraftKings · Reconciliation: <code>tools/reconcile.py</code> 58/120 games directly verified vs nfl.com, remaining verified by standing reconciliation (see <a href="verification.html">Verification</a>)</footer>
-</body></html>
+<footer>
+  Every table row carries a source link and tier: <span class="chip official">OFFICIAL</span> NBA league source ·
+  <span class="chip primary">PRIMARY</span> peer-reviewed / preprint / primary author ·
+  <span class="chip industry">INDUSTRY</span> betting-industry convention (listed on <a href="flagged.html">Flagged for Review</a>).
+  Unconfirmable values are left blank — never inferred. No performance claims are made anywhere on this site.<br>
+  This repo also hosts the <a href="../index.html">NFL Research Desk</a> (built by parallel session cd43258e).
+</footer>
+</body>
+</html>

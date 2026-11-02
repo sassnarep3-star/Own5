@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 9 Lines · Own5 NFL Strategy Lab</title>
+<link rel="stylesheet" href="assets/style.css">
+<script defer src="assets/app.js"></script>
+</head>
+<body>
+<header class="site">
+  <div class="brand">Own5 <span>NFL Strategy Lab</span></div>
+  <nav class="main"><a href="index.html" class="">Dashboard</a>
+<a href="executive-summary.html" class="">Executive Summary</a>
+<a href="strategies.html" class="">Strategies</a>
+<a href="validation-gates.html" class="">Validation Gates</a>
+<a href="correlation.html" class="">Correlation</a>
+<a href="luck-vs-skill.html" class="">Luck vs Skill</a>
+<a href="leaderboard.html" class="">Leaderboard</a>
+<a href="lines-2026-wk9.html" class="active">Week 9 Lines</a>
+<a href="sources.html" class="">Sources</a>
+<a href="flagged.html" class="">Flagged for Review</a></nav>
+</header>
+<main>
+
+<h1>Our Lines — 2026 Week 9</h1>
+<p class="lead">Originated by <code>scripts/originate_lines.py</code> from official inputs only: 2026 standings (W-L-T, PF-PA through Week 8, nfl.com) + official Week 9 schedule + measured home-field advantage (2.22 pts, 2002–2024, derived). Model spec: <a href="https://github.com/sassnarep3-star/Own5/blob/main/research/arena-f1d30421/line-origination.md">research/arena-f1d30421/line-origination.md</a>.</p>
+<div class="note"><b>Model:</b> <code>margin = shrunk(home) − shrunk(away) + HFA</code>, <code>shrunk = net_pts_per_game × G/(G+4)</code>, <code>total = mean(PPG scored/allowed, both teams)</code>. HFA = 0 for neutral-site games (Madrid). Lines rounded to nearest 0.5.</div>
+<div class="warnbox"><b>Market columns are intentionally blank</b> — no official public source publishes market lines (flag F7). They are never inferred; when a licensed feed is connected, edge = our line − market line becomes the live signal.</div>
+<div class="filter"><input type="search" placeholder="Filter table…" oninput="tableFilter(this,'lines')"></div>
+<div class="tbl-wrap"><table id="lines"><thead><tr>
+<th>Date</th>
+<th>Away</th>
+<th>Home</th>
+<th>Site</th>
+<th>Our spread</th>
+<th>Our total</th>
+<th>Market spread</th>
+<th>Market total</th>
+<th>Source: official schedule</th>
+<th>Source: official standings</th>
+<th>Source: script</th>
+</tr></thead><tbody>
+<tr>
+<td>2026-11-05</td>
+<td>Jacksonville Jaguars</td>
+<td>Baltimore Ravens</td>
+<td>home</td>
+<td>Jacksonville Jaguars -7.5</td>
+<td>46.0</td>
+<td><span class="chip flag">BLANK — no official source (F7/F8)</span></td>
+<td><span class="chip flag">BLANK — no official source (F7/F8)</span></td>
+<td><a href="https://www.nfl.com/games/jaguars-at-ravens-2026-reg-9" target="_blank" rel="noopener">https://www.nfl.com/games/jaguars-at-ravens-2026-reg-9</a></td>
+<td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">https://www.nfl.com/standings/league/2026/REG</a></td>
+<td><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/originate_lines.py" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/scripts…</a></td>
+</tr>
+<tr>
+<td>2026-11-08</td>
+<td>Cincinnati Bengals</td>
+<td>Atlanta Falcons</td>
+<td>neutral (Madrid)</td>
+<td>Cincinnati Bengals -6</td>
+<td>48.5</td>
+<td><span class="chip flag">BLANK — no official source (F7/F8)</span></td>
+<td><span class="chip flag">BLANK — no official source (F7/F8)</span></td>
+<td><a href="https://www.nfl.com/games/bengals-at-falcons-2026-reg-9" target="_blank" rel="noopener">https://www.nfl.com/games/bengals-at-falcons-2026-reg-9</a></td>
+<td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">https://www.nfl.com/standings/league/2026/REG</a></td>
+<td><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/originate_lines.py" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/scripts…</a></td>
+</tr>
+<tr>
+<td>2026-11-08</td>
+<td>Denver Broncos</td>
+<td>Carolina Panthers</td>
+<td>home</td>
+<td>PK</td>
+<td>47.5</td>
+<td><span class="chip flag">BLANK — no official source (F7/F8)</span></td>
+<td><span class="chip flag">BLANK — no official source (F7/F8)</span></td>
+<td><a href="https://www.nfl.com/games/broncos-at-panthers-2026-reg-9" target="_blank" rel="noopener">https://www.nfl.com/games/broncos-at-panthers-2026-reg-9</a></td>
+<td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">https://www.nfl.com/standings/league/2026/REG</a></td>
+<td><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/originate_lines.py" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/scripts…</a></td>
+</tr>
+<tr>
+<td>2026-11-08</td>
+<td>Dallas Cowboys</td>
+<td>Indianapolis Colts</td>
+<td>home</td>
+<td>Dallas Cowboys -3.5</td>
+<td>51.0</td>
+<td><span class="chip flag">BLANK — no official source (F7/F8)</span></td>
+<td><span class="chip flag">BLANK — no official source (F7/F8)</span></td>
+<td><a href="https://www.nfl.com/games/cowboys-at-colts-2026-reg-9" target="_blank" rel="noopener">https://www.nfl.com/games/cowboys-at-colts-2026-reg-9</a></td>
+<td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">https://www.nfl.com/standings/league/2026/REG</a></td>
+<td><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/originate_lines.py" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/scripts…</a></td>
+</tr>
+<tr>
+<td>2026-11-08</td>
+<td>New York Jets</td>
+<td>Kansas City Chiefs</td>
+<td>home</td>
+<td>Kansas City Chiefs -7</td>
+<td>43.5</td>
+<td><span class="chip flag">BLANK — no official source (F7/F8)</span></td>
+<td><span class="chip flag">BLANK — no official source (F7/F8)</span></td>
+<td><a href="https://www.nfl.com/games/jets-at-chiefs-2026-reg-9" target="_blank" rel="noopener">https://www.nfl.com/games/jets-at-chiefs-2026-reg-9</a></td>
+<td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">https://www.nfl.com/standings/league/2026/REG</a></td>
+<td><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/originate_lines.py" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/scripts…</a></td>
+</tr>
+<tr>
+<td>2026-11-08</td>
+<td>Detroit Lions</td>
+<td>Miami Dolphins</td>
+<td>home</td>
+<td>Detroit Lions -6</td>
+<td>48.5</td>
+<td><span class="chip flag">BLANK — no official source (F7/F8)</span></td>
+<td><span class="chip flag">BLANK — no official source (F7/F8)</span></td>
+<td><a href="https://www.nfl.com/games/lions-at-dolphins-2026-reg-9" target="_blank" rel="noopener">https://www.nfl.com/games/lions-at-dolphins-2026-reg-9</a></td>
+<td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">https://www.nfl.com/standings/league/2026/REG</a></td>
+<td><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/originate_lines.py" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/scripts…</a></td>
+</tr>
+<tr>
+<td>2026-11-08</td>
+<td>Cleveland Browns</td>
+<td>New Orleans Saints</td>
+<td>home</td>
+<td>New Orleans Saints -2</td>
+<td>45.0</td>
+<td><span class="chip flag">BLANK — no official source (F7/F8)</span></td>
+<td><span class="chip flag">BLANK — no official source (F7/F8)</span></td>
+<td><a href="https://www.nfl.com/games/browns-at-saints-2026-reg-9" target="_blank" rel="noopener">https://www.nfl.com/games/browns-at-saints-2026-reg-9</a></td>
+<td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">https://www.nfl.com/standings/league/2026/REG</a></td>
+<td><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/originate_lines.py" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/scripts…</a></td>
+</tr>
+<tr>
+<td>2026-11-08</td>
+<td>New York Giants</td>
+<td>Philadelphia Eagles</td>
+<td>home</td>
+<td>New York Giants -3.5</td>
+<td>44.5</td>
+<td><span class="chip flag">BLANK — no official source (F7/F8)</span></td>
+<td><span class="chip flag">BLANK — no official source (F7/F8)</span></td>
+<td><a href="https://www.nfl.com/games/giants-at-eagles-2026-reg-9" target="_blank" rel="noopener">https://www.nfl.com/games/giants-at-eagles-2026-reg-9</a></td>
+<td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">https://www.nfl.com/standings/league/2026/REG</a></td>
+<td><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/originate_lines.py" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/scripts…</a></td>
+</tr>
+<tr>
+<td>2026-11-08</td>
+<td>Los Angeles Rams</td>
+<td>Washington Commanders</td>
+<td>home</td>
+<td>Los Angeles Rams -2.5</td>
+<td>47.0</td>
+<td><span class="chip flag">BLANK — no official source (F7/F8)</span></td>
+<td><span class="chip flag">BLANK — no official source (F7/F8)</span></td>
+<td><a href="https://www.nfl.com/games/rams-at-commanders-2026-reg-9" target="_blank" rel="noopener">https://www.nfl.com/games/rams-at-commanders-2026-reg-9</a></td>
+<td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">https://www.nfl.com/standings/league/2026/REG</a></td>
+<td><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/originate_lines.py" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/scripts…</a></td>
+</tr>
+<tr>
+<td>2026-11-08</td>
+<td>Houston Texans</td>
+<td>Los Angeles Chargers</td>
+<td>home</td>
+<td>Houston Texans -4.5</td>
+<td>43.5</td>
+<td><span class="chip flag">BLANK — no official source (F7/F8)</span></td>
+<td><span class="chip flag">BLANK — no official source (F7/F8)</span></td>
+<td><a href="https://www.nfl.com/games/texans-at-chargers-2026-reg-9" target="_blank" rel="noopener">https://www.nfl.com/games/texans-at-chargers-2026-reg-9</a></td>
+<td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">https://www.nfl.com/standings/league/2026/REG</a></td>
+<td><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/originate_lines.py" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/scripts…</a></td>
+</tr>
+<tr>
+<td>2026-11-08</td>
+<td>Las Vegas Raiders</td>
+<td>San Francisco 49ers</td>
+<td>home</td>
+<td>San Francisco 49ers -8</td>
+<td>52.0</td>
+<td><span class="chip flag">BLANK — no official source (F7/F8)</span></td>
+<td><span class="chip flag">BLANK — no official source (F7/F8)</span></td>
+<td><a href="https://www.nfl.com/games/raiders-at-49ers-2026-reg-9" target="_blank" rel="noopener">https://www.nfl.com/games/raiders-at-49ers-2026-reg-9</a></td>
+<td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">https://www.nfl.com/standings/league/2026/REG</a></td>
+<td><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/originate_lines.py" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/scripts…</a></td>
+</tr>
+<tr>
+<td>2026-11-08</td>
+<td>Green Bay Packers</td>
+<td>New England Patriots</td>
+<td>home</td>
+<td>New England Patriots -3</td>
+<td>42.5</td>
+<td><span class="chip flag">BLANK — no official source (F7/F8)</span></td>
+<td><span class="chip flag">BLANK — no official source (F7/F8)</span></td>
+<td><a href="https://www.nfl.com/games/packers-at-patriots-2026-reg-9" target="_blank" rel="noopener">https://www.nfl.com/games/packers-at-patriots-2026-reg-9</a></td>
+<td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">https://www.nfl.com/standings/league/2026/REG</a></td>
+<td><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/originate_lines.py" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/scripts…</a></td>
+</tr>
+<tr>
+<td>2026-11-08</td>
+<td>Arizona Cardinals</td>
+<td>Seattle Seahawks</td>
+<td>home</td>
+<td>Seattle Seahawks -11</td>
+<td>46.5</td>
+<td><span class="chip flag">BLANK — no official source (F7/F8)</span></td>
+<td><span class="chip flag">BLANK — no official source (F7/F8)</span></td>
+<td><a href="https://www.nfl.com/games/cardinals-at-seahawks-2026-reg-9" target="_blank" rel="noopener">https://www.nfl.com/games/cardinals-at-seahawks-2026-reg-9</a></td>
+<td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">https://www.nfl.com/standings/league/2026/REG</a></td>
+<td><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/originate_lines.py" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/scripts…</a></td>
+</tr>
+<tr>
+<td>2026-11-08</td>
+<td>Tampa Bay Buccaneers</td>
+<td>Chicago Bears</td>
+<td>home</td>
+<td>Chicago Bears -3</td>
+<td>43.5</td>
+<td><span class="chip flag">BLANK — no official source (F7/F8)</span></td>
+<td><span class="chip flag">BLANK — no official source (F7/F8)</span></td>
+<td><a href="https://www.nfl.com/games/buccaneers-at-bears-2026-reg-9" target="_blank" rel="noopener">https://www.nfl.com/games/buccaneers-at-bears-2026-reg-9</a></td>
+<td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">https://www.nfl.com/standings/league/2026/REG</a></td>
+<td><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/originate_lines.py" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/scripts…</a></td>
+</tr>
+<tr>
+<td>2026-11-09</td>
+<td>Buffalo Bills</td>
+<td>Minnesota Vikings</td>
+<td>home</td>
+<td>Minnesota Vikings -1.5</td>
+<td>46.0</td>
+<td><span class="chip flag">BLANK — no official source (F7/F8)</span></td>
+<td><span class="chip flag">BLANK — no official source (F7/F8)</span></td>
+<td><a href="https://www.nfl.com/games/bills-at-vikings-2026-reg-9" target="_blank" rel="noopener">https://www.nfl.com/games/bills-at-vikings-2026-reg-9</a></td>
+<td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">https://www.nfl.com/standings/league/2026/REG</a></td>
+<td><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/originate_lines.py" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/scripts…</a></td>
+</tr>
+</tbody></table></div>
+<p class="small">Example tensions disclosed (flag F11): v1 ratings are net-points based — no opponent adjustment, injuries, or weather. CLE @ NO shows record-vs-point-differential tension (5-3 CLE at 2-5 NO is a near pick according to raw net points).</p>
+
+</main>
+<footer>Own5 · NFL line origination &amp; skill-based strategy leaderboard · generated from verified data files by scripts/build_site.py · session arena-f1d30421 · 2026-11-02<br>
+Community datasets are flagged — see <a href="flagged.html">Flagged for Review</a>. Nothing on this site is betting advice.</footer>
+</body>
+</html>

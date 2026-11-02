@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Validation Gates · Own5 NFL Strategy Lab</title>
+<link rel="stylesheet" href="assets/style.css">
+<script defer src="assets/app.js"></script>
+</head>
+<body>
+<header class="site">
+  <div class="brand">Own5 <span>NFL Strategy Lab</span></div>
+  <nav class="main"><a href="index.html" class="">Dashboard</a>
+<a href="executive-summary.html" class="">Executive Summary</a>
+<a href="strategies.html" class="">Strategies</a>
+<a href="validation-gates.html" class="active">Validation Gates</a>
+<a href="correlation.html" class="">Correlation</a>
+<a href="luck-vs-skill.html" class="">Luck vs Skill</a>
+<a href="leaderboard.html" class="">Leaderboard</a>
+<a href="lines-2026-wk9.html" class="">Week 9 Lines</a>
+<a href="sources.html" class="">Sources</a>
+<a href="flagged.html" class="">Flagged for Review</a></nav>
+</header>
+<main>
+
+<h1>Validation Gates</h1>
+<p class="lead">A strategy must pass every gate to be marked <b>Validated</b>. Thresholds are pre-registered. Full definitions: <a href="https://github.com/sassnarep3-star/Own5/blob/main/research/arena-f1d30421/validation-gates.md">research/arena-f1d30421/validation-gates.md</a>.</p>
+<div class="tbl-wrap"><table><thead><tr><th>Gate</th><th>Requirement</th><th>Threshold</th><th>Basis / source</th></tr></thead><tbody>
+<tr><td><b>G0</b> Provenance</td><td>Every input pinned (repo@SHA) or official URL; unknowns blank + flagged</td><td>100% of rows sourced</td><td class="src"><a href="https://www.nfl.com/" target="_blank" rel="noopener">nfl.com</a><a href="flagged.html">flag policy</a></td></tr>
+<tr><td><b>G1</b> Sample size</td><td>graded bets per strategy</td><td>n ≥ 200 (entry floor)</td><td class="src"><a href="luck-vs-skill.html">power analysis (computed)</a></td></tr>
+<tr><td><b>G2</b> Significance</td><td>one-sided binomial vs break-even, Bonferroni-corrected</td><td>p &lt; 0.05/8 = 0.00625</td><td class="src"><a href="https://www.davidhbailey.com/dhbpapers/overfit-tools-at.pdf" target="_blank" rel="noopener">Bailey–Borwein–López de Prado–Zhu 2014</a><a href="https://doi.org/10.3905/jpm.2014.40.5.094" target="_blank" rel="noopener">DSR 2014</a></td></tr>
+<tr><td><b>G3</b> Closing line value</td><td>live entries beat the closing number</td><td>≥ 55% over ≥ 100 live picks</td><td class="src"><a href="https://arxiv.org/abs/1710.02824" target="_blank" rel="noopener">Kaunitz et al. 2017</a></td></tr>
+<tr><td><b>G4</b> Era stability</td><td>win rate &gt; 50% in ≥ 3 of 4 pre-registered era splits</td><td>sign-consistent</td><td class="src"><a href="https://www.davidhbailey.com/dhbpapers/backtest-prob.pdf" target="_blank" rel="noopener">backtest-overfitting literature</a></td></tr>
+<tr><td><b>G5</b> Correlation</td><td>parlay legs priced with measured correlation; SGP legs empirical</td><td>no naive independence when |phi| &gt; 0.05</td><td class="src"><a href="correlation.html">measured values (computed)</a></td></tr>
+<tr><td><b>G6</b> Robustness</td><td>±10% parameter perturbation; drop best season</td><td>≥ 80% of variants same sign</td><td class="src"><a href="https://www.davidhbailey.com/dhbpapers/overfit-tools-at.pdf" target="_blank" rel="noopener">overfitting literature</a></td></tr>
+<tr><td><b>G7</b> Execution</td><td>minimum acceptable price + max stake defined per entry</td><td>recorded per entry</td><td class="src"><a href="https://ideas.repec.org/h/wsi/wschap/9789814293501_0054.html" target="_blank" rel="noopener">Thorp 2011 (Kelly)</a></td></tr>
+</tbody></table></div>
+<h2>Current gate outcomes (computed 2026-11-02)</h2>
+<div class="tbl-wrap"><table><thead><tr><th>Strategy</th><th>G1 sample</th><th>G2 significance</th><th>G4 era stability</th><th>Entry state</th><th>Source</th></tr></thead><tbody>
+<tr><td>S1 home underdog</td><td><span class="chip good">PASS</span></td><td><span class="chip bad">FAIL p=0.404</span></td><td><span class="chip good">PASS</span></td><td><span class="chip info">Candidate</span></td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/backtest_results.csv" target="_blank" rel="noopener">backtest_results.csv</a></td></tr>
+<tr><td>S2 home dog ≥7</td><td><span class="chip good">PASS</span></td><td><span class="chip bad">FAIL p=0.0134 &gt; 0.00625</span></td><td><span class="chip good">PASS</span></td><td><span class="chip info">Candidate</span></td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/backtest_results.csv" target="_blank" rel="noopener">backtest_results.csv</a></td></tr>
+<tr><td>S3 home fav ≥7</td><td><span class="chip good">PASS</span></td><td><span class="chip bad">FAIL</span></td><td><span class="chip bad">FAIL</span></td><td><span class="chip">Research</span></td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/backtest_results.csv" target="_blank" rel="noopener">backtest_results.csv</a></td></tr>
+<tr><td>S4 low total over</td><td><span class="chip good">PASS</span></td><td><span class="chip bad">FAIL</span></td><td><span class="chip bad">FAIL</span></td><td><span class="chip">Research</span></td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/backtest_results.csv" target="_blank" rel="noopener">backtest_results.csv</a></td></tr>
+<tr><td>S5 high total under</td><td><span class="chip good">PASS</span></td><td><span class="chip bad">FAIL p=0.216</span></td><td><span class="chip good">PASS</span></td><td><span class="chip">Research</span></td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/backtest_results.csv" target="_blank" rel="noopener">backtest_results.csv</a></td></tr>
+<tr><td>S6 divisional home dog</td><td><span class="chip good">PASS</span></td><td><span class="chip bad">FAIL</span></td><td><span class="chip bad">FAIL</span></td><td><span class="chip">Research</span></td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/backtest_results.csv" target="_blank" rel="noopener">backtest_results.csv</a></td></tr>
+<tr><td>S7 road dog ≥7</td><td><span class="chip good">PASS</span></td><td><span class="chip bad">FAIL</span></td><td><span class="chip bad">FAIL</span></td><td><span class="chip">Research</span></td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/backtest_results.csv" target="_blank" rel="noopener">backtest_results.csv</a></td></tr>
+<tr><td>S8 SGP fav+over</td><td><span class="chip good">PASS</span></td><td><span class="chip bad">FAIL p=1.0</span></td><td><span class="chip">n/a</span></td><td><span class="chip">Research</span></td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/backtest_results.csv" target="_blank" rel="noopener">backtest_results.csv</a></td></tr>
+</tbody></table></div>
+<div class="note"><b>No strategy is Validated in the opening catalog.</b> That is the system working: promotion requires live closing-line value (G3) plus corrected significance.</div>
+
+</main>
+<footer>Own5 · NFL line origination &amp; skill-based strategy leaderboard · generated from verified data files by scripts/build_site.py · session arena-f1d30421 · 2026-11-02<br>
+Community datasets are flagged — see <a href="flagged.html">Flagged for Review</a>. Nothing on this site is betting advice.</footer>
+</body>
+</html>

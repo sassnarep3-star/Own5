@@ -10,12 +10,12 @@ link_check.py — validates the generated docs/ site.
   interactively via page fetches (recorded in COORDINATION.md / verification page).
   Exit code reflects INTERNAL link integrity only.
 
-Run: python3 tools/link_check.py
+Run: python3 tools/link_check.py   (add SITE_DIR=docs to check another site dir)
 """
 import os, re, sys, collections
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DOCS = os.path.join(ROOT, "docs")
+DOCS = os.path.join(ROOT, os.environ.get("SITE_DIR", "line-lab"))
 
 def main():
     files = sorted(f for f in os.listdir(DOCS) if f.endswith(".html"))

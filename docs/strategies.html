@@ -1,102 +1,44 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Strategies — NFL Line Lab 2026</title><style>
-:root{--bg:#0d1117;--card:#161b22;--line:#30363d;--txt:#e6edf3;--mut:#9198a1;--acc:#58a6ff;--ok:#3fb950;--warn:#d29922;--bad:#f85149;--gold:#e3b341}
-*{box-sizing:border-box}
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--txt);line-height:1.5}
-a{color:var(--acc);text-decoration:none}
-a:hover{text-decoration:underline}
-header{background:var(--card);border-bottom:1px solid var(--line);padding:14px 24px;position:sticky;top:0;z-index:10}
-header h1{margin:0;font-size:19px;display:inline-block}
-header .sub{color:var(--mut);font-size:12px;margin-left:10px}
-nav{margin-top:8px;display:flex;flex-wrap:wrap;gap:14px;font-size:14px}
-nav a{color:var(--mut)}
-nav a.active,nav a:hover{color:var(--acc);text-decoration:none}
-main{max-width:1200px;margin:0 auto;padding:24px}
-h2{border-bottom:1px solid var(--line);padding-bottom:6px;margin-top:6px}
-h3{color:var(--acc);margin-bottom:6px}
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin:16px 0}
-.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px}
-.card h3{margin-top:0;color:var(--txt)}
-.card .big{font-size:26px;font-weight:700;margin:4px 0}
-.card p{color:var(--mut);font-size:13px;margin:4px 0}
-table{border-collapse:collapse;width:100%;font-size:13.5px;margin:12px 0;background:var(--card)}
-th,td{border:1px solid var(--line);padding:6px 9px;text-align:left;vertical-align:top}
-th{background:#21262d;color:var(--mut);font-weight:600;position:sticky;top:0}
-tr:nth-child(even) td{background:#12171d}
-td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
-.badge{display:inline-block;font-size:11px;padding:1px 7px;border-radius:10px;border:1px solid var(--line);margin-left:4px;vertical-align:middle}
-.b-ok{color:var(--ok);border-color:var(--ok)}
-.b-warn{color:var(--warn);border-color:var(--warn)}
-.b-bad{color:var(--bad);border-color:var(--bad)}
-.b-mut{color:var(--mut)}
-.flag{color:var(--warn);font-weight:700}
-.ok{color:var(--ok);font-weight:700}
-.bad{color:var(--bad);font-weight:700}
-.mut{color:var(--mut)}
-.note{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--acc);padding:10px 14px;margin:12px 0;font-size:14px;border-radius:0 6px 6px 0}
-.note.warn{border-left-color:var(--warn)}
-.note.bad{border-left-color:var(--bad)}
-.small{font-size:12px;color:var(--mut)}
-.src{font-size:12px;white-space:nowrap}
-footer{border-top:1px solid var(--line);color:var(--mut);font-size:12px;padding:18px 24px;text-align:center;margin-top:30px}
-.wk-head{background:#21262d;color:var(--acc);font-weight:700}
-.scroll{overflow-x:auto}
-@media(max-width:760px){table{font-size:12px}th,td{padding:4px 5px}}
-</style></head>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Strategies · NBA Line Origination</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
 <body>
-<header><h1>NFL Line Lab —2026 Season</h1><span class="sub">data frozen 2026-11-02 · every row source-linked · unverifiable values blank + flagged</span>
-<nav><a href="index.html">Dashboard</a><a href="standings.html">Standings</a><a href="scores.html">Scores</a><a href="lines.html">Lines</a><a href="strategies.html" class="active">Strategies</a><a href="analysis.html">Analysis</a><a href="leaderboard.html">Leaderboard</a><a href="flagged.html">Flagged</a><a href="verification.html">Verification</a><a href="executive-summary.html">Executive Summary</a><a href="sources.html">Sources</a></nav></header>
+<header>
+  <div class="hwrap">
+    <h1>NBA Line-Origination Lab</h1>
+    <p>Repo: sassnarep3-star/Own5 · Research, validation gates &amp; leaderboard design for originating NBA lines · Built 2026-11-02</p>
+  </div>
+  <nav><a href="index.html">Dashboard</a><a href="executive-summary.html">Executive Summary</a><a href="strategies.html" class="active">Strategies</a><a href="validation.html">Validation Gates</a><a href="correlations.html">Correlations</a><a href="bet-types.html">Bet Types</a><a href="skill-vs-luck.html">Skill vs Luck</a><a href="leaderboard.html">Leaderboard</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for Review</a></nav>
+</header>
 <main>
 
-<h2>Strategy research & validation gates</h2>
-<p>Treated as a leaderboard competition: every candidate signal must pass pre-declared gates before it may be shown as a pick.
-Luck is isolated with exact binomial tests, Wilson intervals, look-ahead-free walk-forward design, and Pythagorean residuals —
-raw win records alone are never accepted as skill.</p>
+<h2>Signal-Generation Strategies</h2>
+<div class="banner warn"><strong>Status:</strong> every strategy below is a <em>candidate</em>. None has passed the
+<a href="validation.html">validation gates</a>; none is claimed to be profitable. No performance numbers exist yet,
+so none are shown. Full detail: <code>research/nba/strategies.md</code>.</div>
+<div class="tablewrap"><table>
+<tr><th>ID</th><th>Strategy</th><th>Bet class</th><th>Hypothesis</th><th>Best evidence tier</th><th>Status</th><th>Sources</th></tr>
+<tr><td><strong>S1</strong></td><td>Rest &amp; schedule spots</td><td>Singles (spread/ML/totals)</td><td>Second-night-of-B2B teams underperform; rest differential predictive beyond market pricing</td><td><span class="chip primary">PRIMARY</span></td><td><span class='chip'>CANDIDATE</span></td><td><a class="src" href="https://pubmed.ncbi.nlm.nih.gov/32172667/" target="_blank" rel="noopener">Esteves et al. 2021</a> · <a class="src" href="https://arxiv.org/html/2606.27957v1" target="_blank" rel="noopener">arXiv:2606.27957</a></td></tr><tr><td><strong>S2</strong></td><td>Injury-report latency</td><td>Singles + props</td><td>React to official injury-report changes before props/sides fully reprice; scan at official deadlines</td><td><span class="chip official">OFFICIAL</span></td><td><span class='chip'>CANDIDATE</span></td><td><a class="src" href="https://official.nba.com/nba-injury-report-2025-26-season/" target="_blank" rel="noopener">official.nba.com injury report</a></td></tr><tr><td><strong>S3</strong></td><td>Home/travel/altitude context</td><td>Singles</td><td>HCA shrinking &amp; heterogeneous; stale league-average HCA misprices specific games</td><td><span class="chip primary">PRIMARY</span></td><td><span class='chip'>CANDIDATE</span></td><td><a class="src" href="https://arxiv.org/html/2606.27957v1" target="_blank" rel="noopener">arXiv:2606.27957</a> · <a class="src" href="https://www.ijrss.org/index.php/ijrss/article/download/958/572/1494" target="_blank" rel="noopener">IJRSS / Pollard &amp; Gómez</a></td></tr><tr><td><strong>S4</strong></td><td>Streak persistence</td><td>Singles</td><td>P(W|W)=54.5% vs 50% null; test whether market under- or over-prices streaks</td><td><span class="chip primary">PRIMARY</span></td><td><span class='chip'>CANDIDATE</span></td><td><a class="src" href="https://arxiv.org/html/2606.27957v1" target="_blank" rel="noopener">arXiv:2606.27957</a></td></tr><tr><td><strong>S5</strong></td><td>Pace-interaction props</td><td>Totals + prop overs</td><td>Pace (possessions) is the shared driver of counting-stat props; pace mismatches ripple across a game's props</td><td><span class="chip industry">INDUSTRY</span></td><td><span class='chip'>CANDIDATE</span></td><td><a class="src" href="https://oddsindex.com/guides/nba-same-game-parlay-tips" target="_blank" rel="noopener">oddsindex.com</a> · <a class="src" href="https://www.edgebetting.ai/betting-education/player-props" target="_blank" rel="noopener">edgebetting.ai</a></td></tr><tr><td><strong>S6</strong></td><td>Usage-vacuum props</td><td>Player props</td><td>Star OUT (per official report) → teammates' usage/minutes rise in player-specific patterns props partially price</td><td><span class="chip industry">INDUSTRY</span></td><td><span class='chip'>CANDIDATE</span></td><td><a class="src" href="https://www.edgebetting.ai/betting-education/player-props" target="_blank" rel="noopener">edgebetting.ai</a></td></tr><tr><td><strong>S7</strong></td><td>Line origination / CLV</td><td>Meta — all types</td><td>Price every market before seeing it; bet only when de-vigged gap &gt; vig; grade on CLV</td><td><span class="chip primary">PRIMARY</span></td><td><span class='chip'>CANDIDATE</span></td><td><a class="src" href="https://arxiv.org/abs/1910.08858" target="_blank" rel="noopener">arXiv:1910.08858</a> · <a class="src" href="https://www.pinnacleoddsdropper.com/blog/closing-line-value" target="_blank" rel="noopener">CLV definition</a></td></tr><tr><td><strong>S8</strong></td><td>Correlated SGP construction</td><td>Parlays / prop combos</td><td>Model joint distribution of legs better than the book's correlation tax; never combine negative pairs</td><td><span class="chip industry">INDUSTRY</span></td><td><span class='chip'>CANDIDATE</span></td><td><a class="src" href="https://nba-prop-bets.com/articles/nba-same/" target="_blank" rel="noopener">nba-prop-bets.com</a> · <a class="src" href="https://oddsindex.com/guides/nba-same-game-parlay-tips" target="_blank" rel="noopener">oddsindex.com</a></td></tr>
+</table></div>
 
-<h3 id="entry-s1">Entry S1 — Pythagorean walk-forward singles (moneyline picks)</h3>
-<div class="note">Model: Pythagorean win% (exp 2.37) blended (75% pyth / 25% margin), mean-reverted by k=8, trained only on games prior to the predicted week. Home adjustment 1.75 pts (research band1.5–2.0). Source basis: <a href="https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2025.1638446/pdf">Frontiers in Sports & Active Living (2025)</a>, <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6926058">WARPS-NFL (SSRN,2026)</a> (75/25 pyth/margin blend beats pure Pyth in25/26 seasons).</div>
-<div class="scroll"><table><tr><th class="">Gate</th><th class="">Requirement</th><th class="">Result</th><th class="">Verdict</th></tr><tr><td>G1 · Sample size</td><td>n ≥100 graded events</td><td>n = 103 look-ahead-free picks (W2–8)</td><td class='ok'><b>PASS</b></td></tr><tr><td>G2 · Skill vs coin flip</td><td>two-sided binomial p < .05 OR Wilson CI lower > .50</td><td>hit 61/103 = 59.2%; p=0.076; Wilson95 [0.4957, 0.6822]</td><td class='bad'><b>FAIL (not proven)</b></td></tr><tr><td>G3 · Luck isolation</td><td>result must survive mean-reversion check (Pyth vs actual residual)</td><td>Pyth ladder top over-achiever: CLE +25.2% residual</td><td class='bad'><b>REPORTED</b></td></tr><tr><td>G4 · Closing-line value (CLV)</td><td>≥ +1% avg no-vig CLV over ≥300 bets vs closing number</td><td>Historical closings unreachable this session → prospective for W9+ (flagged LINES-NO-HISTORY)</td><td class='bad'><b>PENDING — data gap</b></td></tr><tr><td>G5 · Out-of-sample</td><td>walk-forward (train W1–n-1, predict Wn) — enforced by construction</td><td>rolling window implemented; W2–8 graded</td><td class='ok'><b>PASS (design)</b></td></tr></table></div>
-<p class="small">Honest status: 61/103 (59.2%), p=0.076 — positive point estimate, <b>does not yet clear α=.05</b>; promoted to "proven" only if it does. Model MAE vs actual home margin: 10.88 pts.</p>
-
-<h3 id="entry-s2">Entry S2 — Home-field singles</h3>
-<p>2026 actuals: home teams <b>59-60-1</b> (49.6%, Wilson95 [0.4075, 0.5843], avg margin +0.15).
-Research benchmark: league home win% has declined from ~57% (2000–2014) to ~53% (2020–2025), implied HFA1.5–2.0 pts
-(<a href="https://app.olympus-bets.com/guides/home-court-advantage">Olympus Bets2026 data analysis</a>, <a href="https://nflbettingstrategies.com/">nflbettingstrategies.com era table</a>).
-Gate verdict: <span class="bad">FAIL</span> —2026 home win% is below .500; blind home betting rejected.</p>
-
-<h3 id="entry-s3">Entry S3 — Totals (fixed-number backtest)</h3>
-<div class="note warn">Graded against fixed thresholds at -110 on all 120 W1–8 finals. This is <b>not</b> a claim vs market closings (historical market totals unreachable → flagged). Market-verified totals remain a pending gate.</div>
-<div class="scroll"><table><tr><th class="">System</th><th class="num">Hits</th><th class="num">Hit rate</th><th class="num">Wilson95</th><th class="num">Profit/100u at -110</th><th class="num">p vs52.38%</th><th class="">Verdict</th></tr><tr><td>OVER 44.5 (fixed)</td><td class='num'>60/120</td><td class='num'>50.0%</td><td class='num'>[0.4119, 0.5881]</td><td class='num' style='color:#f85149'>-600</td><td class='num'>0.648</td><td class='bad'>FAIL</td></tr><tr><td>OVER 48.5 (fixed)</td><td class='num'>49/120</td><td class='num'>40.8%</td><td class='num'>[0.3246, 0.4978]</td><td class='num' style='color:#f85149'>-2910</td><td class='num'>0.013</td><td class='ok'>PASS (pending market gate)</td></tr><tr><td>UNDER 48.5 (fixed)</td><td class='num'>71/120</td><td class='num'>59.2%</td><td class='num'>[0.5022, 0.6754]</td><td class='num' style='color:#3fb950'>+1710</td><td class='num'>0.144</td><td class='bad'>FAIL</td></tr><tr><td>UNDER 52.5 (fixed)</td><td class='num'>77/120</td><td class='num'>64.2%</td><td class='num'>[0.5527, 0.7218]</td><td class='num' style='color:#3fb950'>+2970</td><td class='num'>0.010</td><td class='ok'>PASS (pending market gate)</td></tr></table></div>
-<p class="small">2026 average game total 46.07 (median 44.5).</p>
-
-<h3 id="entry-s4">Entry S4 — In-season margin momentum</h3>
-<p>Week-to-week margin lag-1 autocorrelation = <b>0.0248</b> over 198 team-week pairs.
-Gate: positive with n≥100 → <span class="bad">FAIL (≈0, no momentum signal)</span>. Momentum singles rejected.</p>
-
-<h3 id="entry-s5">Entry S5 — Parlays & same-game parlays (correlation-aware)</h3>
-<div class="note">Math: a parlay compounds vig — at -110/leg a2-leg needs56.4% per leg to break even,4-leg64.1%,6-leg ~70%
-(<a href="https://nflsportsbettingstats.com/articles/nfl-betting-math-vig-clv/">NFL betting math: vig &52.4%</a>).
-SGP typical hold12–18% vs4.8% straight (<a href="https://www.oddsshopper.com/articles/betting-101/nfl-parlay-betting">OddsShopper parlay guide</a>).
-Rule adopted: <b>+EV legs only</b> — a parlay multiplies leg edge, it never creates it; SGP allowed only when our estimated correlation exceeds the book's correlation tax
-(<a href="https://www.oddsshopper.com/articles/betting-101/nfl-same-game-parlay-guide">OddsShopper SGP guide</a>).</div>
-<div class="scroll"><table><tr><th class="">Leg pair (same game)</th><th class="">Measured/estimated correlation</th><th class="">Book pricing treatment</th><th class="">Gate</th></tr><tr><td>Spread Ml Same Team</td><td>~0.90 (sportsbettingoddscalculator SGP table)</td><td>priced highly correlated (~90%)</td><td>Avoid — tax near total</td></tr><tr><td>Qb Pass Yds Wr Rec Yds Same Team</td><td>0.65-0.75</td><td>correlation tax applied; often underpriced vs true</td><td>Candidate if fair joint > implied</td></tr><tr><td>Game Total Over Vs Pass Props Over</td><td>0.55-0.65</td><td>moderate tax</td><td>Candidate if +EV legs</td></tr><tr><td>Spread Vs Total</td><td>0.10-0.20 (near-neutral)</td><td>near-independent</td><td>Neutral — parlay ≈ product of legs</td></tr><tr><td>Margin Vs Total (Computed2026)</td><td>-0.0472 (|margin| vs total), -0.1188 (signed)</td><td>n/a — our data</td><td>Feeds model scripts</td></tr></table></div>
-<p class="small">Correlation reference table source: <a href="https://www.sportsbettingoddscalculator.com/guides/sgp-correlation">sportsbettingoddscalculator SGP correlation guide</a>. Correlation values for leg pairs are cited from that source; game-level correlations are computed from the verified2026 log.</p>
-<h4>Parlay validation gates</h4>
-<div class="scroll"><table><tr><th class="">Gate</th><th class="">Requirement</th><th class="">Status</th></tr><tr><td>P1</td><td>Every leg individually passes S1–S4 gates (or is +EV vs our fair price)</td><td class='bad'>S1 not yet proven → multi-leg entries held</td></tr><tr><td>P2</td><td>Fair joint probability (de-vigged product + correlation) > book implied</td><td class='mut'>prospective — needs SGP quotes</td></tr><tr><td>P3</td><td>Max3 legs; stake ≤¼ Kelly; log CLV per leg</td><td class='mut'>prospective — CLV logging starts W9</td></tr></table></div>
-
-<h3 id="entry-s6">Entry S6 — Player prop combos</h3>
-<div class="note warn">Methodology only — no prop numbers published (no reachable verified source; <a href="flagged.html#LINES-NO-PROPS">LINES-NO-PROPS</a>).
-Process when live: (1) build fair line from team pace + usage (QB pass-yds vs opponent PA, game total); (2) line-shop ≥3 books — research shows5–10 yard discrepancies between books are common
-(<a href="https://www.sportswagerblog.com/guides/prop-betting-strategy/">sportswagerblog prop strategy</a>); (3) props carry ~5–6% vig vs4.8% spreads and lower limits — beats come from slower-moving weather/usage updates
-(<a href="https://predictionengine.app/learn/nfl-player-props-guide">predictionengine props guide</a>, <a href="https://www.squawka.com/us/nfl/props/">squawka props pricing</a>); (4) combine into combos only under P2 correlation gate (QB+WR pair65–75% correlated — book usually taxes it).</div>
-<div class="scroll"><table><tr><th class="">Prop-combo gate</th><th class="">Requirement</th><th class="">Status</th></tr><tr><td>Pr1</td><td>Fair line within1.5σ of at least one market while beating2 others</td><td class='bad'>blocked — no source data</td></tr><tr><td>Pr2</td><td>Beat prop closing line on ≥55% of ≥100 graded props</td><td class='mut'>prospective</td></tr><tr><td>Pr3</td><td>Daily exposure ≤8–10% bankroll (risk cap from research)</td><td class='ok'>policy set</td></tr></table></div>
-
-<h3 id="entry-s7">Entry S7 — Week9 line origination vs market</h3>
-<p>Our lines are generated from verified standings (see <a href="analysis.html">Analysis</a> for the full model-vs-market table).
-Gate: record every pick at close, measure CLV vs no-vig close and ATS result; promote only after G1–G4. Current model-vs-market divergences ≥2 pts are flagged ⚑ as <i>origination candidates</i>, not bets.</p>
+<h3>Design rules common to all strategies</h3>
+<ul>
+<li>Evaluate against the <strong>closing line</strong>, never raw outcomes — a real basketball effect the market already prices is worth nothing (see <a href="skill-vs-luck.html">Skill vs Luck</a>).</li>
+<li>Inputs must come from official sources at bet time (e.g., the official injury report); unconfirmable inputs ⇒ no bet.</li>
+<li>Every bet is logged pre-game with timestamp, line, price, stake, and strategy version hash.</li>
+</ul>
 
 </main>
-<footer>Generated 2026-11-02 by <code>tools/build_site.py</code> from <code>data/*.json</code> + <code>analysis/*.json</code> · Sources: nfl.com (official) · pro-football-reference.com · ESPN/DraftKings · Reconciliation: <code>tools/reconcile.py</code> 58/120 games directly verified vs nfl.com, remaining verified by standing reconciliation (see <a href="verification.html">Verification</a>)</footer>
-</body></html>
+<footer>
+  Every table row carries a source link and tier: <span class="chip official">OFFICIAL</span> NBA league source ·
+  <span class="chip primary">PRIMARY</span> peer-reviewed / preprint / primary author ·
+  <span class="chip industry">INDUSTRY</span> betting-industry convention (listed on <a href="flagged.html">Flagged for Review</a>).
+  Unconfirmable values are left blank — never inferred. No performance claims are made anywhere on this site.<br>
+  This repo also hosts the <a href="../index.html">NFL Research Desk</a> (built by parallel session cd43258e).
+</footer>
+</body>
+</html>

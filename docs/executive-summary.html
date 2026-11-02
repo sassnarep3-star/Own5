@@ -1,88 +1,71 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Executive Summary — NFL Line Lab 2026</title><style>
-:root{--bg:#0d1117;--card:#161b22;--line:#30363d;--txt:#e6edf3;--mut:#9198a1;--acc:#58a6ff;--ok:#3fb950;--warn:#d29922;--bad:#f85149;--gold:#e3b341}
-*{box-sizing:border-box}
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--txt);line-height:1.5}
-a{color:var(--acc);text-decoration:none}
-a:hover{text-decoration:underline}
-header{background:var(--card);border-bottom:1px solid var(--line);padding:14px 24px;position:sticky;top:0;z-index:10}
-header h1{margin:0;font-size:19px;display:inline-block}
-header .sub{color:var(--mut);font-size:12px;margin-left:10px}
-nav{margin-top:8px;display:flex;flex-wrap:wrap;gap:14px;font-size:14px}
-nav a{color:var(--mut)}
-nav a.active,nav a:hover{color:var(--acc);text-decoration:none}
-main{max-width:1200px;margin:0 auto;padding:24px}
-h2{border-bottom:1px solid var(--line);padding-bottom:6px;margin-top:6px}
-h3{color:var(--acc);margin-bottom:6px}
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin:16px 0}
-.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px}
-.card h3{margin-top:0;color:var(--txt)}
-.card .big{font-size:26px;font-weight:700;margin:4px 0}
-.card p{color:var(--mut);font-size:13px;margin:4px 0}
-table{border-collapse:collapse;width:100%;font-size:13.5px;margin:12px 0;background:var(--card)}
-th,td{border:1px solid var(--line);padding:6px 9px;text-align:left;vertical-align:top}
-th{background:#21262d;color:var(--mut);font-weight:600;position:sticky;top:0}
-tr:nth-child(even) td{background:#12171d}
-td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
-.badge{display:inline-block;font-size:11px;padding:1px 7px;border-radius:10px;border:1px solid var(--line);margin-left:4px;vertical-align:middle}
-.b-ok{color:var(--ok);border-color:var(--ok)}
-.b-warn{color:var(--warn);border-color:var(--warn)}
-.b-bad{color:var(--bad);border-color:var(--bad)}
-.b-mut{color:var(--mut)}
-.flag{color:var(--warn);font-weight:700}
-.ok{color:var(--ok);font-weight:700}
-.bad{color:var(--bad);font-weight:700}
-.mut{color:var(--mut)}
-.note{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--acc);padding:10px 14px;margin:12px 0;font-size:14px;border-radius:0 6px 6px 0}
-.note.warn{border-left-color:var(--warn)}
-.note.bad{border-left-color:var(--bad)}
-.small{font-size:12px;color:var(--mut)}
-.src{font-size:12px;white-space:nowrap}
-footer{border-top:1px solid var(--line);color:var(--mut);font-size:12px;padding:18px 24px;text-align:center;margin-top:30px}
-.wk-head{background:#21262d;color:var(--acc);font-weight:700}
-.scroll{overflow-x:auto}
-@media(max-width:760px){table{font-size:12px}th,td{padding:4px 5px}}
-</style></head>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Executive Summary · NBA Line Origination</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
 <body>
-<header><h1>NFL Line Lab —2026 Season</h1><span class="sub">data frozen 2026-11-02 · every row source-linked · unverifiable values blank + flagged</span>
-<nav><a href="index.html">Dashboard</a><a href="standings.html">Standings</a><a href="scores.html">Scores</a><a href="lines.html">Lines</a><a href="strategies.html">Strategies</a><a href="analysis.html">Analysis</a><a href="leaderboard.html">Leaderboard</a><a href="flagged.html">Flagged</a><a href="verification.html">Verification</a><a href="executive-summary.html" class="active">Executive Summary</a><a href="sources.html">Sources</a></nav></header>
+<header>
+  <div class="hwrap">
+    <h1>NBA Line-Origination Lab</h1>
+    <p>Repo: sassnarep3-star/Own5 · Research, validation gates &amp; leaderboard design for originating NBA lines · Built 2026-11-02</p>
+  </div>
+  <nav><a href="index.html">Dashboard</a><a href="executive-summary.html" class="active">Executive Summary</a><a href="strategies.html">Strategies</a><a href="validation.html">Validation Gates</a><a href="correlations.html">Correlations</a><a href="bet-types.html">Bet Types</a><a href="skill-vs-luck.html">Skill vs Luck</a><a href="leaderboard.html">Leaderboard</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for Review</a></nav>
+</header>
 <main>
 
-<h2>Executive summary</h2>
-<div class="note"><b>What was built.</b> A complete, source-linked NFL line-origination & betting-strategy project for the2026 season: verified data spine (standings, full game log, upcoming lines), a line-generation model with published divergence vs market, a gate-based strategy competition (singles / parlays / props), luck-isolation statistics, and this site. Everything below is reproducible from the repo with zero manual input.</div>
+<h2>Executive Summary</h2>
+<p class="muted">Full text also in the repo: <code>EXECUTIVE_SUMMARY.md</code></p>
 
-<h3>Data & verification</h3>
+<h3>Objective</h3>
+<p>Build the research foundation, validation machinery, and competition structure for <strong>originating NBA
+betting lines</strong> — pricing markets independently and betting only when our price beats the available price —
+across <strong>singles</strong> (sides/totals/moneyline), <strong>player props</strong>, and
+<strong>parlays / correlated prop combos (SGP)</strong>.</p>
+
+<h3>What was produced</h3>
+<ol>
+<li><strong><a href="strategies.html">Strategy catalog</a> — 8 candidate signal families</strong>: rest/schedule spots, official-injury-report latency, home/travel context, streak persistence, pace-interaction props, usage-vacuum props, CLV-based origination, correlated-SGP construction. None is claimed profitable; all are candidates pending validation.</li>
+<li><strong><a href="validation.html">Nine validation gates (G0–G8)</a></strong>: pre-registration, parameter budget, walk-forward out-of-sample, de-vigged CLV with bootstrap CI, deflated-Sharpe/PBO multiplicity control, Monte-Carlo permutation nulls, economic realism, parlay correlation audit, fractional-Kelly staking.</li>
+<li><strong><a href="correlations.html">Correlation framework</a></strong>: a 10-pair direction taxonomy, a ban on negatively correlated legs, and tooling (<code>analysis/prop_correlations.py</code>) to compute coefficients from official box scores. Numeric r values are intentionally blank — never inferred.</li>
+<li><strong><a href="skill-vs-luck.html">Luck-removal methodology</a></strong>: grade on de-vigged closing-line value (signal in ~200–500 bets) instead of W/L (needs thousands); empirical-Bayes shrinkage; permutation nulls; mandatory falsification criteria.</li>
+<li><strong><a href="leaderboard.html">Leaderboard competition</a></strong>: divisions per bet class; score = 70% shrunken CLV + 20% flat-stake yield + 10% process compliance; Gold/Silver/Bronze tiers; anti-gaming rules. Board currently empty by design.</li>
+<li><strong>This dashboard site</strong>, with a dedicated <a href="flagged.html">Flagged for Review</a> page.</li>
+</ol>
+
+<h3>Key verified findings</h3>
 <ul>
-<li><b>Standings:</b> all32 teams read from <a href="https://www.nfl.com/standings/">nfl.com</a> (2026-11-02) — W-L-T, PF, PA, streaks.</li>
-<li><b>Scores:</b> 120 final games (Weeks1–8, incl. the Week5 NYG-WSH tie) + Week9 schedule; 58 verified directly on nfl.com, the rest via PFR <i>and</i> exact standings reconciliation (32/32 teams pass) — <a href="verification.html">verification</a>.</li>
-<li><b>Lines:</b> 16 upcoming boards (spread/total/ML + opens) from ESPN/DraftKings; Super Bowl futures for the displayed top16 only.</li>
-<li><b>Irregularities flagged:</b> count_flags() items — including an NFL.com broadcast-label oddity on the Week1 Wednesday kickoff, ESPN omitting ties from two records, ambiguous open-spread attribution on3 Week9 boards, and4 hard data gaps (historical closings, ATS history, turnovers, props) — all published on <a href="flagged.html">Flagged for Review</a>.</li>
+<li><strong>Back-to-backs are the most consistent schedule depressant</strong>: 44% win rate vs ~50% null across 2019/20–2024/25 (<a class="src" href="https://arxiv.org/html/2606.27957v1" target="_blank" rel="noopener">arXiv:2606.27957</a>); winning likelihood rises significantly from B2B to one rest day (<a class="src" href="https://pubmed.ncbi.nlm.nih.gov/32172667/" target="_blank" rel="noopener">Esteves et al. 2021</a>).</li>
+<li><strong>Official injury-report timing creates a defined reaction window</strong>: statuses due 5 p.m. local the day before; 1 p.m. game-day for back-to-back second games; game-day reports 11 a.m.–1 p.m. (<a class="src" href="https://official.nba.com/nba-injury-report-2025-26-season/" target="_blank" rel="noopener">official.nba.com</a>).</li>
+<li><strong>Short-horizon persistence exists</strong>: P(win | previous win) = 54.5% vs 50% null (<a class="src" href="https://arxiv.org/html/2606.27957v1" target="_blank" rel="noopener">arXiv:2606.27957</a>) — an edge only if the closing line misses it.</li>
+<li><strong>Home advantage is real but shrinking</strong>: ~64% (1980s) → ~57% (2010s) across major sports (<a class="src" href="https://www.ijrss.org/index.php/ijrss/article/download/958/572/1494" target="_blank" rel="noopener">Pollard &amp; Gómez 2021, as cited</a>); recent NBA-specific percentages are third-party and <a href="flagged.html">flagged</a>, not asserted.</li>
+<li><strong>CLV is the accepted skill metric</strong>: de-vig first, benchmark a sharp close, expect signal in hundreds of bets (industry convention, flagged as such).</li>
 </ul>
 
-<h3>Model & market</h3>
+<h3>Honest limitations</h3>
 <ul>
-<li>Line origination: mean-reverted Pythagorean strength + margin blend, home adjustment 1.75 pts (research band1.5–2.0; see <a href="analysis.html">Analysis §5</a>). Divergences ≥2 spread pts / ≥3 total pts vs the Week9 board are marked as candidates — <b>not</b> as bets — pending the CLV gate.</li>
-<li>Market context: closing-line research shows the NFL market is near-unbiased (mean error +0.06 pts over6,983 graded games; blind favorites cover ~47–49%) — so we pre-declare that beating closes, not win-rate, is the promotion currency.</li>
+<li>No numeric prop correlations yet — blank until computed from official NBA box scores (build sandbox had no network route to stats.nba.com).</li>
+<li>No performance claims — no bets placed; leaderboard empty until strategies pass gates.</li>
+<li>Industry thresholds (e.g., "+1–2% CLV is strong") are conventions, listed on <a href="flagged.html">Flagged for Review</a>.</li>
+<li>Pre-existing irregularity: GitHub Pages was enabled on this repo before any content existed (see COORDINATION.md / <a href="flagged.html">R1</a>).</li>
 </ul>
 
-<h3>Strategy competition status (honest readout)</h3>
-<ul>
-<li><b>S1 Pythagorean walk-forward singles:</b> 61/103 = 59.2% (p=0.076) — promising, <b>not yet proven</b> at α=.05. Stage: conditional.</li>
-<li><b>S2 Home-field singles:</b> rejected —2026 home win% 49.6% (below .500).</li>
-<li><b>S3 Totals fixed-number:</b> best fixed system beat its -110 baseline in backtest but market-line gate pending (no historical closings) → conditional.</li>
-<li><b>S4 Momentum:</b> rejected — margin autocorrelation 0.0248 ≈0.</li>
-<li><b>S5 Parlays/SGP + S6 Props:</b> pre-declared gates + cited correlation values; blocked until prop/CLV sources come live. No numbers were invented.</li>
-<li><b>S7 Week9 origination:</b> live candidates logged; CLV logging starts with Week9 closes.</li>
-</ul>
-
-<h3>Luck removed how?</h3>
-<p>Exact binomial tests and Wilson intervals on every record; walk-forward design to prevent look-ahead; Pythagorean residual ladders to identify record-vs-margin luck (e.g., top over-achiever CLE +25.2%); one-score games shown to behave like coin flips (p=0.90); and CLV as the primary future promotion metric (outcome-independent skill proxy).</p>
-
-<h3>What's next (tracked in COORDINATION.md)</h3>
-<p>Integration re-run of reconcile + link check + build, PR to main, merge, GitHub Pages deploy from <code>/docs</code>, retry until live, then Week9 CLV logging with each game's close recorded against our pre-board.</p>
+<h3>Recommended next steps</h3>
+<ol>
+<li>Stand up official box-score ingestion (nba_api → stats.nba.com) and fill the correlation table with computed, sourced values.</li>
+<li>Pre-register (G0) the two highest-prior strategies — S2 injury-report latency and S8 correlated-SGP — and begin timestamped paper-trading toward the 200-bet CLV sample.</li>
+<li>Add automated odds capture (bet-time and closing) to make Gates G3/G6 auditable.</li>
+</ol>
 
 </main>
-<footer>Generated 2026-11-02 by <code>tools/build_site.py</code> from <code>data/*.json</code> + <code>analysis/*.json</code> · Sources: nfl.com (official) · pro-football-reference.com · ESPN/DraftKings · Reconciliation: <code>tools/reconcile.py</code> 58/120 games directly verified vs nfl.com, remaining verified by standing reconciliation (see <a href="verification.html">Verification</a>)</footer>
-</body></html>
+<footer>
+  Every table row carries a source link and tier: <span class="chip official">OFFICIAL</span> NBA league source ·
+  <span class="chip primary">PRIMARY</span> peer-reviewed / preprint / primary author ·
+  <span class="chip industry">INDUSTRY</span> betting-industry convention (listed on <a href="flagged.html">Flagged for Review</a>).
+  Unconfirmable values are left blank — never inferred. No performance claims are made anywhere on this site.<br>
+  This repo also hosts the <a href="../index.html">NFL Research Desk</a> (built by parallel session cd43258e).
+</footer>
+</body>
+</html>

@@ -1,0 +1,122 @@
+[
+ {
+  "bet_type_id": "BT01",
+  "bet_type": "Point spread",
+  "definition": "Wager on whether a team wins by more than a set number of points (favorite, minus) or loses by fewer / wins outright (underdog, plus). Half-point spreads prevent a push.",
+  "key_rules_examples": "DraftKings example: NE -14.5 wins if NE wins by 15+; KC +14.5 wins if KC wins or loses by 14 or fewer. Whole-number spread landing exactly on the number = push, stake refunded.",
+  "source_id": "S19",
+  "source_url": "https://sportsbook.draftkings.com/leagues/football/nfl",
+  "verified_on": "2026-11-02",
+  "status": "verified"
+ },
+ {
+  "bet_type_id": "BT02",
+  "bet_type": "Moneyline",
+  "definition": "Wager on which team wins the game outright; margin does not matter.",
+  "key_rules_examples": "Example sheet: NE -200 vs KC +200. If game ends tied after OT, moneyline wagers are void and stakes refunded (FanDuel FAQ).",
+  "source_id": "S19; S22",
+  "source_url": "https://sportsbook.draftkings.com/leagues/football/nfl",
+  "verified_on": "2026-11-02",
+  "status": "verified"
+ },
+ {
+  "bet_type_id": "BT03",
+  "bet_type": "Total (over/under)",
+  "definition": "Wager on combined points of both teams. Over wins if combined score is above the total; under if below. Whole-number total landing on the number = push.",
+  "key_rules_examples": "Example: total 47.5 -> over wins at 48+, under at 47 or fewer. FanDuel notes these markets are powered by official NFL data.",
+  "source_id": "S19; S22",
+  "source_url": "https://sportsbook.draftkings.com/leagues/football/nfl",
+  "verified_on": "2026-11-02",
+  "status": "verified"
+ },
+ {
+  "bet_type_id": "BT04",
+  "bet_type": "Parlay",
+  "definition": "Combines two or more individual bets into one wager; every selection (leg) must win. Minimum two legs. Can mix spreads, moneylines, totals and eligible props across one or multiple games.",
+  "key_rules_examples": "Void leg in a parlay -> remaining legs re-priced (house rules). Correlated selections are not permitted unless explicitly offered (e.g., as SGP); if accepted in error the book may void or settle as singles.",
+  "source_id": "S19; S21; S23",
+  "source_url": "https://www.fanduel.com/sports-betting-guide/what-is-a-parlay-bet",
+  "verified_on": "2026-11-02",
+  "status": "verified"
+ },
+ {
+  "bet_type_id": "BT05",
+  "bet_type": "Same Game Parlay (SGP)",
+  "definition": "Parlay combining multiple bets from the SAME game (player props, spreads, totals). Sportsbooks build correlation assumptions into the odds.",
+  "key_rules_examples": "SGP+ combines multiple SGPs across different games. One missed leg loses the whole bet.",
+  "source_id": "S20; S21",
+  "source_url": "https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nfl",
+  "verified_on": "2026-11-02",
+  "status": "verified"
+ },
+ {
+  "bet_type_id": "BT06",
+  "bet_type": "Teaser",
+  "definition": "Adjusts spread or total by a set number of points (typically 6) across multiple legs in exchange for reduced odds. Needs at least two legs; all legs must win.",
+  "key_rules_examples": "FanDuel guide: most common NFL margins of victory are 3 and 7, so moving e.g. -8.5 to -2.5 crosses both key numbers.",
+  "source_id": "S20",
+  "source_url": "https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nfl",
+  "verified_on": "2026-11-02",
+  "status": "verified"
+ },
+ {
+  "bet_type_id": "BT07",
+  "bet_type": "Player prop",
+  "definition": "Wager on a specific player/team performance (e.g., passing yards, rushing yards, TDs, sacks).",
+  "key_rules_examples": "If a player is not listed as active by the official league scoring source, the prop is void (BetMGM rules). Official stats: Elias Sports Bureau / NFL.com.",
+  "source_id": "S19; S24; S17",
+  "source_url": "https://sportsbook.draftkings.com/leagues/football/nfl",
+  "verified_on": "2026-11-02",
+  "status": "verified"
+ },
+ {
+  "bet_type_id": "BT08",
+  "bet_type": "Live (in-play) betting",
+  "definition": "Wagers placed after a game has started; markets may include game spread, moneyline, total, quarter/half, eligible player props; odds update continuously.",
+  "key_rules_examples": "Example from DraftKings NFL page.",
+  "source_id": "S19",
+  "source_url": "https://sportsbook.draftkings.com/leagues/football/nfl",
+  "verified_on": "2026-11-02",
+  "status": "verified"
+ },
+ {
+  "bet_type_id": "BT09",
+  "bet_type": "Round robin",
+  "definition": "Builds multiple smaller parlays from one larger selection pool; you are covered if some but not all picks win.",
+  "key_rules_examples": "FanDuel NFL guide.",
+  "source_id": "S20",
+  "source_url": "https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nfl",
+  "verified_on": "2026-11-02",
+  "status": "verified"
+ },
+ {
+  "bet_type_id": "BT10",
+  "bet_type": "Grading — overtime",
+  "definition": "Full-game spread, moneyline and totals are graded on the final official score INCLUSIVE of overtime (FanDuel FAQ; FanDuel house rules; BetMGM: OT included).",
+  "key_rules_examples": "Quarter-specific markets do not include OT; second-half markets include OT if played (house rules).",
+  "source_id": "S22; S23; S24",
+  "source_url": "https://sportsbook.fanduel.com/navigation/nfl",
+  "verified_on": "2026-11-02",
+  "status": "verified"
+ },
+ {
+  "bet_type_id": "BT11",
+  "bet_type": "Grading — postponed / relocated",
+  "definition": "Game postponed before kickoff -> all wagers void (FanDuel FAQ). Relocated but played on the scheduled date -> bets remain live (graded on official league box score). BetMGM: football results official after 55 minutes of play.",
+  "key_rules_examples": "",
+  "source_id": "S22; S24",
+  "source_url": "https://sportsbook.fanduel.com/navigation/nfl",
+  "verified_on": "2026-11-02",
+  "status": "verified"
+ },
+ {
+  "bet_type_id": "BT12",
+  "bet_type": "Grading — minimum play / incomplete games",
+  "definition": "BetMGM house rules: pro/college football results are official after 55 minutes of play unless an official result is declared earlier; incomplete matches settle per postponed/resumed rules.",
+  "key_rules_examples": "",
+  "source_id": "S24",
+  "source_url": "https://massgaming.com/wp-content/uploads/BetMGM-House-Rules-8.14.25.pdf",
+  "verified_on": "2026-11-02",
+  "status": "verified"
+ }
+]
