@@ -1,0 +1,9 @@
+# Raw data pulls are large and reproducible from the sources listed in DATA_SOURCES.md
+data/raw/
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+# OS
+.DS_Store
