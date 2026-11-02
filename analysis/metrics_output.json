@@ -1,0 +1,1851 @@
+{
+ "generated": "2026-11-02",
+ "input_games": 120,
+ "input_teams": 32,
+ "model": {
+  "pythagorean_exponent": 2.37,
+  "home_adjustment_pts": 1.75,
+  "mean_reversion_k": 8.0,
+  "strength_blend": "75% pyth / 25% margin"
+ },
+ "pythagorean": {
+  "exponent": 2.37,
+  "source_basis": "Pythagorean expectation adapted to NFL with exponent 2.37 (Bill James / Aaron Schatz; academic use: Frontiers in Sports & Active Living 2025,10.3389/fspor.2025.1638446)",
+  "teams": {
+   "BUF": {
+    "name": "Buffalo Bills",
+    "conf": "AFC",
+    "div": "AFC East",
+    "actual_wlt": "6-1-0",
+    "games": 7,
+    "pf": 233,
+    "pa": 181,
+    "avg_margin": 7.43,
+    "pyth_pct": 0.6453,
+    "pyth_exp_wins_8": 4.52,
+    "actual_pct": 0.8571,
+    "luck_residual_pct": 0.2118,
+    "regressed_pct": 0.5678
+   },
+   "NE": {
+    "name": "New England Patriots",
+    "conf": "AFC",
+    "div": "AFC East",
+    "actual_wlt": "5-3-0",
+    "games": 8,
+    "pf": 184,
+    "pa": 162,
+    "avg_margin": 2.75,
+    "pyth_pct": 0.5749,
+    "pyth_exp_wins_8": 4.6,
+    "actual_pct": 0.625,
+    "luck_residual_pct": 0.0501,
+    "regressed_pct": 0.5374
+   },
+   "NYJ": {
+    "name": "New York Jets",
+    "conf": "AFC",
+    "div": "AFC East",
+    "actual_wlt": "2-6-0",
+    "games": 8,
+    "pf": 170,
+    "pa": 188,
+    "avg_margin": -2.25,
+    "pyth_pct": 0.4406,
+    "pyth_exp_wins_8": 3.53,
+    "actual_pct": 0.25,
+    "luck_residual_pct": -0.1906,
+    "regressed_pct": 0.4703
+   },
+   "MIA": {
+    "name": "Miami Dolphins",
+    "conf": "AFC",
+    "div": "AFC East",
+    "actual_wlt": "1-6-0",
+    "games": 7,
+    "pf": 117,
+    "pa": 181,
+    "avg_margin": -9.14,
+    "pyth_pct": 0.2623,
+    "pyth_exp_wins_8": 1.84,
+    "actual_pct": 0.1429,
+    "luck_residual_pct": -0.1194,
+    "regressed_pct": 0.3891
+   },
+   "PIT": {
+    "name": "Pittsburgh Steelers",
+    "conf": "AFC",
+    "div": "AFC North",
+    "actual_wlt": "6-2-0",
+    "games": 8,
+    "pf": 180,
+    "pa": 144,
+    "avg_margin": 4.5,
+    "pyth_pct": 0.6292,
+    "pyth_exp_wins_8": 5.03,
+    "actual_pct": 0.75,
+    "luck_residual_pct": 0.1208,
+    "regressed_pct": 0.5646
+   },
+   "CIN": {
+    "name": "Cincinnati Bengals",
+    "conf": "AFC",
+    "div": "AFC North",
+    "actual_wlt": "5-2-0",
+    "games": 7,
+    "pf": 206,
+    "pa": 158,
+    "avg_margin": 6.86,
+    "pyth_pct": 0.6522,
+    "pyth_exp_wins_8": 4.57,
+    "actual_pct": 0.7143,
+    "luck_residual_pct": 0.0621,
+    "regressed_pct": 0.571
+   },
+   "CLE": {
+    "name": "Cleveland Browns",
+    "conf": "AFC",
+    "div": "AFC North",
+    "actual_wlt": "5-3-0",
+    "games": 8,
+    "pf": 139,
+    "pa": 173,
+    "avg_margin": -4.25,
+    "pyth_pct": 0.3732,
+    "pyth_exp_wins_8": 2.99,
+    "actual_pct": 0.625,
+    "luck_residual_pct": 0.2518,
+    "regressed_pct": 0.4366
+   },
+   "BAL": {
+    "name": "Baltimore Ravens",
+    "conf": "AFC",
+    "div": "AFC North",
+    "actual_wlt": "4-4-0",
+    "games": 8,
+    "pf": 179,
+    "pa": 203,
+    "avg_margin": -3.0,
+    "pyth_pct": 0.426,
+    "pyth_exp_wins_8": 3.41,
+    "actual_pct": 0.5,
+    "luck_residual_pct": 0.074,
+    "regressed_pct": 0.463
+   },
+   "JAX": {
+    "name": "Jacksonville Jaguars",
+    "conf": "AFC",
+    "div": "AFC South",
+    "actual_wlt": "5-2-0",
+    "games": 7,
+    "pf": 196,
+    "pa": 111,
+    "avg_margin": 12.14,
+    "pyth_pct": 0.7937,
+    "pyth_exp_wins_8": 5.56,
+    "actual_pct": 0.7143,
+    "luck_residual_pct": -0.0794,
+    "regressed_pct": 0.6371
+   },
+   "HOU": {
+    "name": "Houston Texans",
+    "conf": "AFC",
+    "div": "AFC South",
+    "actual_wlt": "2-5-0",
+    "games": 7,
+    "pf": 165,
+    "pa": 170,
+    "avg_margin": -0.71,
+    "pyth_pct": 0.4823,
+    "pyth_exp_wins_8": 3.38,
+    "actual_pct": 0.2857,
+    "luck_residual_pct": -0.1966,
+    "regressed_pct": 0.4917
+   },
+   "IND": {
+    "name": "Indianapolis Colts",
+    "conf": "AFC",
+    "div": "AFC South",
+    "actual_wlt": "2-6-0",
+    "games": 8,
+    "pf": 161,
+    "pa": 222,
+    "avg_margin": -7.62,
+    "pyth_pct": 0.3183,
+    "pyth_exp_wins_8": 2.55,
+    "actual_pct": 0.25,
+    "luck_residual_pct": -0.0683,
+    "regressed_pct": 0.4092
+   },
+   "TEN": {
+    "name": "Tennessee Titans",
+    "conf": "AFC",
+    "div": "AFC South",
+    "actual_wlt": "1-7-0",
+    "games": 8,
+    "pf": 144,
+    "pa": 199,
+    "avg_margin": -6.88,
+    "pyth_pct": 0.3172,
+    "pyth_exp_wins_8": 2.54,
+    "actual_pct": 0.125,
+    "luck_residual_pct": -0.1922,
+    "regressed_pct": 0.4086
+   },
+   "DEN": {
+    "name": "Denver Broncos",
+    "conf": "AFC",
+    "div": "AFC West",
+    "actual_wlt": "6-2-0",
+    "games": 8,
+    "pf": 172,
+    "pa": 165,
+    "avg_margin": 0.88,
+    "pyth_pct": 0.5246,
+    "pyth_exp_wins_8": 4.2,
+    "actual_pct": 0.75,
+    "luck_residual_pct": 0.2254,
+    "regressed_pct": 0.5123
+   },
+   "KC": {
+    "name": "Kansas City Chiefs",
+    "conf": "AFC",
+    "div": "AFC West",
+    "actual_wlt": "5-2-0",
+    "games": 7,
+    "pf": 167,
+    "pa": 131,
+    "avg_margin": 5.14,
+    "pyth_pct": 0.64,
+    "pyth_exp_wins_8": 4.48,
+    "actual_pct": 0.7143,
+    "luck_residual_pct": 0.0743,
+    "regressed_pct": 0.5653
+   },
+   "LV": {
+    "name": "Las Vegas Raiders",
+    "conf": "AFC",
+    "div": "AFC West",
+    "actual_wlt": "4-4-0",
+    "games": 8,
+    "pf": 221,
+    "pa": 230,
+    "avg_margin": -1.12,
+    "pyth_pct": 0.4764,
+    "pyth_exp_wins_8": 3.81,
+    "actual_pct": 0.5,
+    "luck_residual_pct": 0.0236,
+    "regressed_pct": 0.4882
+   },
+   "LAC": {
+    "name": "Los Angeles Chargers",
+    "conf": "AFC",
+    "div": "AFC West",
+    "actual_wlt": "0-7-0",
+    "games": 7,
+    "pf": 99,
+    "pa": 175,
+    "avg_margin": -10.86,
+    "pyth_pct": 0.2059,
+    "pyth_exp_wins_8": 1.44,
+    "actual_pct": 0.0,
+    "luck_residual_pct": -0.2059,
+    "regressed_pct": 0.3627
+   },
+   "NYG": {
+    "name": "New York Giants",
+    "conf": "NFC",
+    "div": "NFC East",
+    "actual_wlt": "4-2-1",
+    "games": 7,
+    "pf": 163,
+    "pa": 161,
+    "avg_margin": 0.29,
+    "pyth_pct": 0.5073,
+    "pyth_exp_wins_8": 3.55,
+    "actual_pct": 0.6429,
+    "luck_residual_pct": 0.1355,
+    "regressed_pct": 0.5034
+   },
+   "DAL": {
+    "name": "Dallas Cowboys",
+    "conf": "NFC",
+    "div": "NFC East",
+    "actual_wlt": "3-5-0",
+    "games": 8,
+    "pf": 219,
+    "pa": 213,
+    "avg_margin": 0.75,
+    "pyth_pct": 0.5165,
+    "pyth_exp_wins_8": 4.13,
+    "actual_pct": 0.375,
+    "luck_residual_pct": -0.1415,
+    "regressed_pct": 0.5082
+   },
+   "WSH": {
+    "name": "Washington Commanders",
+    "conf": "NFC",
+    "div": "NFC East",
+    "actual_wlt": "2-4-1",
+    "games": 7,
+    "pf": 159,
+    "pa": 182,
+    "avg_margin": -3.29,
+    "pyth_pct": 0.4206,
+    "pyth_exp_wins_8": 2.94,
+    "actual_pct": 0.3571,
+    "luck_residual_pct": -0.0635,
+    "regressed_pct": 0.463
+   },
+   "PHI": {
+    "name": "Philadelphia Eagles",
+    "conf": "NFC",
+    "div": "NFC East",
+    "actual_wlt": "2-6-0",
+    "games": 8,
+    "pf": 137,
+    "pa": 202,
+    "avg_margin": -8.12,
+    "pyth_pct": 0.2849,
+    "pyth_exp_wins_8": 2.28,
+    "actual_pct": 0.25,
+    "luck_residual_pct": -0.0349,
+    "regressed_pct": 0.3925
+   },
+   "MIN": {
+    "name": "Minnesota Vikings",
+    "conf": "NFC",
+    "div": "NFC North",
+    "actual_wlt": "6-1-0",
+    "games": 7,
+    "pf": 140,
+    "pa": 93,
+    "avg_margin": 6.71,
+    "pyth_pct": 0.725,
+    "pyth_exp_wins_8": 5.08,
+    "actual_pct": 0.8571,
+    "luck_residual_pct": 0.1321,
+    "regressed_pct": 0.605
+   },
+   "DET": {
+    "name": "Detroit Lions",
+    "conf": "NFC",
+    "div": "NFC North",
+    "actual_wlt": "5-2-0",
+    "games": 7,
+    "pf": 203,
+    "pa": 180,
+    "avg_margin": 3.29,
+    "pyth_pct": 0.5708,
+    "pyth_exp_wins_8": 4.0,
+    "actual_pct": 0.7143,
+    "luck_residual_pct": 0.1435,
+    "regressed_pct": 0.533
+   },
+   "CHI": {
+    "name": "Chicago Bears",
+    "conf": "NFC",
+    "div": "NFC North",
+    "actual_wlt": "5-2-0",
+    "games": 7,
+    "pf": 180,
+    "pa": 143,
+    "avg_margin": 5.29,
+    "pyth_pct": 0.6331,
+    "pyth_exp_wins_8": 4.43,
+    "actual_pct": 0.7143,
+    "luck_residual_pct": 0.0812,
+    "regressed_pct": 0.5621
+   },
+   "GB": {
+    "name": "Green Bay Packers",
+    "conf": "NFC",
+    "div": "NFC North",
+    "actual_wlt": "5-3-0",
+    "games": 8,
+    "pf": 171,
+    "pa": 164,
+    "avg_margin": 0.88,
+    "pyth_pct": 0.5247,
+    "pyth_exp_wins_8": 4.2,
+    "actual_pct": 0.625,
+    "luck_residual_pct": 0.1003,
+    "regressed_pct": 0.5124
+   },
+   "NO": {
+    "name": "New Orleans Saints",
+    "conf": "NFC",
+    "div": "NFC South",
+    "actual_wlt": "2-5-0",
+    "games": 7,
+    "pf": 162,
+    "pa": 194,
+    "avg_margin": -4.57,
+    "pyth_pct": 0.3948,
+    "pyth_exp_wins_8": 2.76,
+    "actual_pct": 0.2857,
+    "luck_residual_pct": -0.1091,
+    "regressed_pct": 0.4509
+   },
+   "TB": {
+    "name": "Tampa Bay Buccaneers",
+    "conf": "NFC",
+    "div": "NFC South",
+    "actual_wlt": "3-5-0",
+    "games": 8,
+    "pf": 178,
+    "pa": 151,
+    "avg_margin": 3.38,
+    "pyth_pct": 0.5963,
+    "pyth_exp_wins_8": 4.77,
+    "actual_pct": 0.375,
+    "luck_residual_pct": -0.2213,
+    "regressed_pct": 0.5481
+   },
+   "ATL": {
+    "name": "Atlanta Falcons",
+    "conf": "NFC",
+    "div": "NFC South",
+    "actual_wlt": "3-5-0",
+    "games": 8,
+    "pf": 171,
+    "pa": 189,
+    "avg_margin": -2.25,
+    "pyth_pct": 0.441,
+    "pyth_exp_wins_8": 3.53,
+    "actual_pct": 0.375,
+    "luck_residual_pct": -0.066,
+    "regressed_pct": 0.4705
+   },
+   "CAR": {
+    "name": "Carolina Panthers",
+    "conf": "NFC",
+    "div": "NFC South",
+    "actual_wlt": "3-4-0",
+    "games": 7,
+    "pf": 178,
+    "pa": 193,
+    "avg_margin": -2.14,
+    "pyth_pct": 0.4522,
+    "pyth_exp_wins_8": 3.17,
+    "actual_pct": 0.4286,
+    "luck_residual_pct": -0.0236,
+    "regressed_pct": 0.4777
+   },
+   "SF": {
+    "name": "San Francisco 49ers",
+    "conf": "NFC",
+    "div": "NFC West",
+    "actual_wlt": "6-1-0",
+    "games": 7,
+    "pf": 197,
+    "pa": 139,
+    "avg_margin": 8.29,
+    "pyth_pct": 0.6956,
+    "pyth_exp_wins_8": 4.87,
+    "actual_pct": 0.8571,
+    "luck_residual_pct": 0.1615,
+    "regressed_pct": 0.5913
+   },
+   "SEA": {
+    "name": "Seattle Seahawks",
+    "conf": "NFC",
+    "div": "NFC West",
+    "actual_wlt": "4-3-0",
+    "games": 7,
+    "pf": 168,
+    "pa": 125,
+    "avg_margin": 6.14,
+    "pyth_pct": 0.6683,
+    "pyth_exp_wins_8": 4.68,
+    "actual_pct": 0.5714,
+    "luck_residual_pct": -0.0969,
+    "regressed_pct": 0.5786
+   },
+   "LAR": {
+    "name": "Los Angeles Rams",
+    "conf": "NFC",
+    "div": "NFC West",
+    "actual_wlt": "4-4-0",
+    "games": 8,
+    "pf": 194,
+    "pa": 168,
+    "avg_margin": 3.25,
+    "pyth_pct": 0.5844,
+    "pyth_exp_wins_8": 4.68,
+    "actual_pct": 0.5,
+    "luck_residual_pct": -0.0844,
+    "regressed_pct": 0.5422
+   },
+   "ARI": {
+    "name": "Arizona Cardinals",
+    "conf": "NFC",
+    "div": "NFC West",
+    "actual_wlt": "3-5-0",
+    "games": 8,
+    "pf": 175,
+    "pa": 238,
+    "avg_margin": -7.88,
+    "pyth_pct": 0.3255,
+    "pyth_exp_wins_8": 2.6,
+    "actual_pct": 0.375,
+    "luck_residual_pct": 0.0495,
+    "regressed_pct": 0.4127
+   }
+  },
+  "luck_ladder_overachievers": [
+   {
+    "team": "CLE",
+    "residual": 0.2518
+   },
+   {
+    "team": "DEN",
+    "residual": 0.2254
+   },
+   {
+    "team": "BUF",
+    "residual": 0.2118
+   },
+   {
+    "team": "SF",
+    "residual": 0.1615
+   },
+   {
+    "team": "DET",
+    "residual": 0.1435
+   },
+   {
+    "team": "NYG",
+    "residual": 0.1355
+   }
+  ],
+  "luck_ladder_underachievers": [
+   {
+    "team": "DAL",
+    "residual": -0.1415
+   },
+   {
+    "team": "NYJ",
+    "residual": -0.1906
+   },
+   {
+    "team": "TEN",
+    "residual": -0.1922
+   },
+   {
+    "team": "HOU",
+    "residual": -0.1966
+   },
+   {
+    "team": "LAC",
+    "residual": -0.2059
+   },
+   {
+    "team": "TB",
+    "residual": -0.2213
+   }
+  ],
+  "note": "Positive residual = more wins than scoring margin implies (short-sample good luck or clutch skill; regression candidates)."
+ },
+ "home_field": {
+  "home_w": 59,
+  "home_l": 60,
+  "home_t": 1,
+  "home_win_pct_excl_ties": 0.4958,
+  "avg_home_margin": 0.15,
+  "median_home_margin": -1.0,
+  "n": 120,
+  "wilson95_win_pct": [
+   0.4075,
+   0.5843
+  ],
+  "research_benchmark": "2020s NFL home win rate ~52-54%, implied spread1.5-2.0 pts (olympus-bets2026 analysis:57.1% in2000-2014 ->53.2% in2020-2025; nflbettingstrategies.com: era table1990s60%/3.6 margin ->2020s53%/1.4 margin)",
+  "gate": "Home-strategy only live if 2026 home win% Wilson CI lower bound >0.50 AND research benchmark agrees."
+ },
+ "margin_persistence": {
+  "lag1_autocorr": 0.0248,
+  "n_pairs": 198,
+  "interpretation": "Positive autocorr => last week's margin carries signal for this week's margin (in-season momentum in scoring margin).",
+  "gate": "Strategy uses margin momentum only if autocorr >0 with n>=100 pairs."
+ },
+ "pyth_game_picks": {
+  "weeks": "2-8 (model trained only on prior weeks; no look-ahead)",
+  "n": 103,
+  "hits": 61,
+  "hit_rate": 0.5922,
+  "wilson95": [
+   0.4957,
+   0.6822
+  ],
+  "binomial_p_vs_50": 0.0756,
+  "model_home_margin_mae": 10.88,
+  "coin_flip_baseline": 0.5,
+  "gate": "PASS if binomial p<0.05 or Wilson CI lower bound >0.50 (skill beyond coin flip); report regardless.",
+  "detail": [
+   {
+    "wk": 2,
+    "game": "DET@BUF",
+    "pick": "BUF",
+    "correct": true,
+    "model_home_margin": 1.47,
+    "actual_home_margin": 10,
+    "abs_err": 8.533100849940126
+   },
+   {
+    "wk": 2,
+    "game": "CAR@ATL",
+    "pick": "ATL",
+    "correct": false,
+    "model_home_margin": 1.49,
+    "actual_home_margin": -31,
+    "abs_err": 32.487656375478394
+   },
+   {
+    "wk": 2,
+    "game": "MIN@CHI",
+    "pick": "MIN",
+    "correct": true,
+    "model_home_margin": 1.83,
+    "actual_home_margin": -6,
+    "abs_err": 7.826851662288546
+   },
+   {
+    "wk": 2,
+    "game": "CIN@HOU",
+    "pick": "CIN",
+    "correct": true,
+    "model_home_margin": 2.58,
+    "actual_home_margin": -14,
+    "abs_err": 16.584069971975797
+   },
+   {
+    "wk": 2,
+    "game": "CLE@TB",
+    "pick": "TB",
+    "correct": false,
+    "model_home_margin": 0.4,
+    "actual_home_margin": -4,
+    "abs_err": 4.396140818216248
+   },
+   {
+    "wk": 2,
+    "game": "GB@NYJ",
+    "pick": "NYJ",
+    "correct": false,
+    "model_home_margin": -0.91,
+    "actual_home_margin": -3,
+    "abs_err": 2.089032909710115
+   },
+   {
+    "wk": 2,
+    "game": "NO@BAL",
+    "pick": "BAL",
+    "correct": false,
+    "model_home_margin": 0.43,
+    "actual_home_margin": -7,
+    "abs_err": 7.430092635380707
+   },
+   {
+    "wk": 2,
+    "game": "PIT@NE",
+    "pick": "PIT",
+    "correct": false,
+    "model_home_margin": 3.17,
+    "actual_home_margin": 17,
+    "abs_err": 13.825153607687023
+   },
+   {
+    "wk": 2,
+    "game": "PHI@TEN",
+    "pick": "PHI",
+    "correct": true,
+    "model_home_margin": 3.39,
+    "actual_home_margin": -4,
+    "abs_err": 7.3897061510035105
+   },
+   {
+    "wk": 2,
+    "game": "JAX@DEN",
+    "pick": "JAX",
+    "correct": false,
+    "model_home_margin": 5.32,
+    "actual_home_margin": 7,
+    "abs_err": 1.6790495217451298
+   },
+   {
+    "wk": 2,
+    "game": "LV@LAC",
+    "pick": "LV",
+    "correct": true,
+    "model_home_margin": 4.32,
+    "actual_home_margin": -12,
+    "abs_err": 16.318823552583464
+   },
+   {
+    "wk": 2,
+    "game": "SEA@ARI",
+    "pick": "ARI",
+    "correct": false,
+    "model_home_margin": 1.09,
+    "actual_home_margin": -24,
+    "abs_err": 25.08502960216364
+   },
+   {
+    "wk": 2,
+    "game": "WSH@DAL",
+    "pick": "WSH",
+    "correct": false,
+    "model_home_margin": 2.29,
+    "actual_home_margin": 17,
+    "abs_err": 14.706486274074383
+   },
+   {
+    "wk": 2,
+    "game": "MIA@SF",
+    "pick": "SF",
+    "correct": true,
+    "model_home_margin": -1.42,
+    "actual_home_margin": 22,
+    "abs_err": 23.423898753068553
+   },
+   {
+    "wk": 2,
+    "game": "IND@KC",
+    "pick": "KC",
+    "correct": true,
+    "model_home_margin": -1.24,
+    "actual_home_margin": 3,
+    "abs_err": 4.236029539054735
+   },
+   {
+    "wk": 2,
+    "game": "NYG@LAR",
+    "pick": "NYG",
+    "correct": false,
+    "model_home_margin": 4.31,
+    "actual_home_margin": 22,
+    "abs_err": 17.69365993591618
+   },
+   {
+    "wk": 3,
+    "game": "ATL@GB",
+    "pick": "GB",
+    "correct": false,
+    "model_home_margin": -0.25,
+    "actual_home_margin": -21,
+    "abs_err": 20.752895890113326
+   },
+   {
+    "wk": 3,
+    "game": "LAC@BUF",
+    "pick": "BUF",
+    "correct": true,
+    "model_home_margin": -1.37,
+    "actual_home_margin": 8,
+    "abs_err": 9.366992281912088
+   },
+   {
+    "wk": 3,
+    "game": "CAR@CLE",
+    "pick": "CAR",
+    "correct": false,
+    "model_home_margin": 4.12,
+    "actual_home_margin": 3,
+    "abs_err": 1.1173855328913795
+   },
+   {
+    "wk": 3,
+    "game": "CIN@PIT",
+    "pick": "CIN",
+    "correct": false,
+    "model_home_margin": 4.86,
+    "actual_home_margin": 3,
+    "abs_err": 1.8625682378289765
+   },
+   {
+    "wk": 3,
+    "game": "HOU@IND",
+    "pick": "IND",
+    "correct": true,
+    "model_home_margin": 1.54,
+    "actual_home_margin": 2,
+    "abs_err": 0.4619460290413655
+   },
+   {
+    "wk": 3,
+    "game": "NYJ@DET",
+    "pick": "NYJ",
+    "correct": false,
+    "model_home_margin": 3.45,
+    "actual_home_margin": 7,
+    "abs_err": 3.5498867271610455
+   },
+   {
+    "wk": 3,
+    "game": "NE@JAX",
+    "pick": "NE",
+    "correct": false,
+    "model_home_margin": 2.15,
+    "actual_home_margin": 29,
+    "abs_err": 26.851947223090615
+   },
+   {
+    "wk": 3,
+    "game": "KC@MIA",
+    "pick": "KC",
+    "correct": true,
+    "model_home_margin": 6.34,
+    "actual_home_margin": -14,
+    "abs_err": 20.33863865968904
+   },
+   {
+    "wk": 3,
+    "game": "TEN@NYG",
+    "pick": "NYG",
+    "correct": true,
+    "model_home_margin": 1.41,
+    "actual_home_margin": 5,
+    "abs_err": 3.5862973378735856
+   },
+   {
+    "wk": 3,
+    "game": "SEA@WSH",
+    "pick": "SEA",
+    "correct": false,
+    "model_home_margin": 6.0,
+    "actual_home_margin": 2,
+    "abs_err": 4.001389803397789
+   },
+   {
+    "wk": 3,
+    "game": "ARI@SF",
+    "pick": "SF",
+    "correct": true,
+    "model_home_margin": -2.6,
+    "actual_home_margin": 6,
+    "abs_err": 8.59602656902551
+   },
+   {
+    "wk": 3,
+    "game": "MIN@TB",
+    "pick": "MIN",
+    "correct": true,
+    "model_home_margin": 4.8,
+    "actual_home_margin": -7,
+    "abs_err": 11.795429380129924
+   },
+   {
+    "wk": 3,
+    "game": "BAL@DAL",
+    "pick": "BAL",
+    "correct": true,
+    "model_home_margin": 1.9,
+    "actual_home_margin": -3,
+    "abs_err": 4.904879354168251
+   },
+   {
+    "wk": 3,
+    "game": "LV@NO",
+    "pick": "LV",
+    "correct": true,
+    "model_home_margin": 3.57,
+    "actual_home_margin": -8,
+    "abs_err": 11.57479619257116
+   },
+   {
+    "wk": 3,
+    "game": "LAR@DEN",
+    "pick": "LAR",
+    "correct": false,
+    "model_home_margin": 3.43,
+    "actual_home_margin": 4,
+    "abs_err": 0.5659949425218738
+   },
+   {
+    "wk": 3,
+    "game": "PHI@CHI",
+    "pick": "CHI",
+    "correct": true,
+    "model_home_margin": 1.08,
+    "actual_home_margin": 20,
+    "abs_err": 18.923214598676974
+   },
+   {
+    "wk": 4,
+    "game": "PIT@CLE",
+    "pick": "PIT",
+    "correct": false,
+    "model_home_margin": 2.55,
+    "actual_home_margin": 3,
+    "abs_err": 0.4512840484770475
+   },
+   {
+    "wk": 4,
+    "game": "IND@WSH",
+    "pick": "WSH",
+    "correct": false,
+    "model_home_margin": 1.59,
+    "actual_home_margin": -17,
+    "abs_err": 18.591729112340897
+   },
+   {
+    "wk": 4,
+    "game": "NE@BUF",
+    "pick": "BUF",
+    "correct": false,
+    "model_home_margin": -1.5,
+    "actual_home_margin": -3,
+    "abs_err": 1.5044870639427512
+   },
+   {
+    "wk": 4,
+    "game": "NYJ@CHI",
+    "pick": "CHI",
+    "correct": true,
+    "model_home_margin": -0.63,
+    "actual_home_margin": 11,
+    "abs_err": 11.630666176957064
+   },
+   {
+    "wk": 4,
+    "game": "JAX@CIN",
+    "pick": "JAX",
+    "correct": true,
+    "model_home_margin": 4.02,
+    "actual_home_margin": -5,
+    "abs_err": 9.02415205727041
+   },
+   {
+    "wk": 4,
+    "game": "ARI@NYG",
+    "pick": "NYG",
+    "correct": true,
+    "model_home_margin": 1.32,
+    "actual_home_margin": 12,
+    "abs_err": 10.68226294372943
+   },
+   {
+    "wk": 4,
+    "game": "DAL@HOU",
+    "pick": "DAL",
+    "correct": true,
+    "model_home_margin": 3.92,
+    "actual_home_margin": -4,
+    "abs_err": 7.915007580304879
+   },
+   {
+    "wk": 4,
+    "game": "GB@TB",
+    "pick": "TB",
+    "correct": false,
+    "model_home_margin": 0.56,
+    "actual_home_margin": -3,
+    "abs_err": 3.5646229449487135
+   },
+   {
+    "wk": 4,
+    "game": "TEN@BAL",
+    "pick": "BAL",
+    "correct": true,
+    "model_home_margin": -1.51,
+    "actual_home_margin": 6,
+    "abs_err": 7.505894791468242
+   },
+   {
+    "wk": 4,
+    "game": "LAR@PHI",
+    "pick": "LAR",
+    "correct": true,
+    "model_home_margin": 2.8,
+    "actual_home_margin": -4,
+    "abs_err": 6.803663380320238
+   },
+   {
+    "wk": 4,
+    "game": "MIA@MIN",
+    "pick": "MIN",
+    "correct": true,
+    "model_home_margin": -4.67,
+    "actual_home_margin": 5,
+    "abs_err": 9.668801001882496
+   },
+   {
+    "wk": 4,
+    "game": "DEN@SF",
+    "pick": "SF",
+    "correct": true,
+    "model_home_margin": -2.36,
+    "actual_home_margin": 10,
+    "abs_err": 12.358816557767582
+   },
+   {
+    "wk": 4,
+    "game": "KC@LV",
+    "pick": "KC",
+    "correct": true,
+    "model_home_margin": 2.05,
+    "actual_home_margin": -3,
+    "abs_err": 5.053973609632662
+   },
+   {
+    "wk": 4,
+    "game": "LAC@SEA",
+    "pick": "SEA",
+    "correct": true,
+    "model_home_margin": -3.06,
+    "actual_home_margin": 7,
+    "abs_err": 10.057010172489111
+   },
+   {
+    "wk": 4,
+    "game": "DET@CAR",
+    "pick": "CAR",
+    "correct": true,
+    "model_home_margin": 1.22,
+    "actual_home_margin": 6,
+    "abs_err": 4.7816156785151005
+   },
+   {
+    "wk": 4,
+    "game": "ATL@NO",
+    "pick": "NO",
+    "correct": false,
+    "model_home_margin": 0.35,
+    "actual_home_margin": -21,
+    "abs_err": 21.35477750918873
+   },
+   {
+    "wk": 5,
+    "game": "TB@DAL",
+    "pick": "DAL",
+    "correct": false,
+    "model_home_margin": -0.42,
+    "actual_home_margin": -8,
+    "abs_err": 7.582648891962101
+   },
+   {
+    "wk": 5,
+    "game": "PHI@JAX",
+    "pick": "JAX",
+    "correct": true,
+    "model_home_margin": -3.53,
+    "actual_home_margin": 2,
+    "abs_err": 5.53322591515658
+   },
+   {
+    "wk": 5,
+    "game": "CHI@GB",
+    "pick": "CHI",
+    "correct": false,
+    "model_home_margin": 7.44,
+    "actual_home_margin": 24,
+    "abs_err": 16.556648951693134
+   },
+   {
+    "wk": 5,
+    "game": "CIN@MIA",
+    "pick": "CIN",
+    "correct": true,
+    "model_home_margin": 6.88,
+    "actual_home_margin": -7,
+    "abs_err": 13.88161850570242
+   },
+   {
+    "wk": 5,
+    "game": "CLE@NYJ",
+    "pick": "NYJ",
+    "correct": true,
+    "model_home_margin": 1.34,
+    "actual_home_margin": 5,
+    "abs_err": 3.6557995809736425
+   },
+   {
+    "wk": 5,
+    "game": "IND@PIT",
+    "pick": "IND",
+    "correct": false,
+    "model_home_margin": 2.44,
+    "actual_home_margin": 12,
+    "abs_err": 9.563246821285732
+   },
+   {
+    "wk": 5,
+    "game": "HOU@TEN",
+    "pick": "HOU",
+    "correct": true,
+    "model_home_margin": 2.55,
+    "actual_home_margin": -23,
+    "abs_err": 25.54653846956785
+   },
+   {
+    "wk": 5,
+    "game": "MIN@NO",
+    "pick": "MIN",
+    "correct": true,
+    "model_home_margin": 6.26,
+    "actual_home_margin": -10,
+    "abs_err": 16.25945750654264
+   },
+   {
+    "wk": 5,
+    "game": "LV@NE",
+    "pick": "LV",
+    "correct": false,
+    "model_home_margin": 4.97,
+    "actual_home_margin": 28,
+    "abs_err": 23.031863781874026
+   },
+   {
+    "wk": 5,
+    "game": "DEN@LAC",
+    "pick": "DEN",
+    "correct": true,
+    "model_home_margin": 3.05,
+    "actual_home_margin": -6,
+    "abs_err": 9.045865267014593
+   },
+   {
+    "wk": 5,
+    "game": "DET@ARI",
+    "pick": "DET",
+    "correct": true,
+    "model_home_margin": 3.28,
+    "actual_home_margin": -24,
+    "abs_err": 27.281069720130475
+   },
+   {
+    "wk": 5,
+    "game": "SF@SEA",
+    "pick": "SF",
+    "correct": true,
+    "model_home_margin": 3.21,
+    "actual_home_margin": -3,
+    "abs_err": 6.209665586530394
+   },
+   {
+    "wk": 5,
+    "game": "BAL@ATL",
+    "pick": "BAL",
+    "correct": true,
+    "model_home_margin": 2.77,
+    "actual_home_margin": -7,
+    "abs_err": 9.767548309811875
+   },
+   {
+    "wk": 5,
+    "game": "BUF@LAR",
+    "pick": "BUF",
+    "correct": true,
+    "model_home_margin": 2.8,
+    "actual_home_margin": -3,
+    "abs_err": 5.7980287082013096
+   },
+   {
+    "wk": 6,
+    "game": "SEA@DEN",
+    "pick": "SEA",
+    "correct": false,
+    "model_home_margin": 4.7,
+    "actual_home_margin": 3,
+    "abs_err": 1.6997701288698464
+   },
+   {
+    "wk": 6,
+    "game": "HOU@JAX",
+    "pick": "JAX",
+    "correct": false,
+    "model_home_margin": -2.27,
+    "actual_home_margin": -3,
+    "abs_err": 0.7308113150584985
+   },
+   {
+    "wk": 6,
+    "game": "CAR@PHI",
+    "pick": "CAR",
+    "correct": true,
+    "model_home_margin": 4.0,
+    "actual_home_margin": -11,
+    "abs_err": 15.003968057981828
+   },
+   {
+    "wk": 6,
+    "game": "CHI@ATL",
+    "pick": "CHI",
+    "correct": true,
+    "model_home_margin": 3.61,
+    "actual_home_margin": -8,
+    "abs_err": 11.607580433900656
+   },
+   {
+    "wk": 6,
+    "game": "BAL@CLE",
+    "pick": "BAL",
+    "correct": false,
+    "model_home_margin": 4.81,
+    "actual_home_margin": 3,
+    "abs_err": 1.8142730348175817
+   },
+   {
+    "wk": 6,
+    "game": "TEN@IND",
+    "pick": "IND",
+    "correct": false,
+    "model_home_margin": -1.53,
+    "actual_home_margin": -6,
+    "abs_err": 4.465532945595479
+   },
+   {
+    "wk": 6,
+    "game": "NO@NYG",
+    "pick": "NYG",
+    "correct": false,
+    "model_home_margin": -0.43,
+    "actual_home_margin": -7,
+    "abs_err": 6.573659323369134
+   },
+   {
+    "wk": 6,
+    "game": "NE@NYJ",
+    "pick": "NE",
+    "correct": true,
+    "model_home_margin": 3.21,
+    "actual_home_margin": -7,
+    "abs_err": 10.211988850391172
+   },
+   {
+    "wk": 6,
+    "game": "PIT@TB",
+    "pick": "PIT",
+    "correct": true,
+    "model_home_margin": 2.78,
+    "actual_home_margin": -7,
+    "abs_err": 9.779051852350545
+   },
+   {
+    "wk": 6,
+    "game": "ARI@LAR",
+    "pick": "LAR",
+    "correct": false,
+    "model_home_margin": -1.28,
+    "actual_home_margin": -2,
+    "abs_err": 0.7209106912347307
+   },
+   {
+    "wk": 6,
+    "game": "LAC@KC",
+    "pick": "KC",
+    "correct": true,
+    "model_home_margin": -4.15,
+    "actual_home_margin": 16,
+    "abs_err": 20.147153713884755
+   },
+   {
+    "wk": 6,
+    "game": "BUF@LV",
+    "pick": "BUF",
+    "correct": true,
+    "model_home_margin": 2.81,
+    "actual_home_margin": -3,
+    "abs_err": 5.807322454409868
+   },
+   {
+    "wk": 6,
+    "game": "GB@DAL",
+    "pick": "DAL",
+    "correct": false,
+    "model_home_margin": 1.05,
+    "actual_home_margin": -10,
+    "abs_err": 11.048707254569635
+   },
+   {
+    "wk": 6,
+    "game": "WSH@SF",
+    "pick": "SF",
+    "correct": true,
+    "model_home_margin": -3.97,
+    "actual_home_margin": 6,
+    "abs_err": 9.969372348160046
+   },
+   {
+    "wk": 7,
+    "game": "NE@CHI",
+    "pick": "CHI",
+    "correct": true,
+    "model_home_margin": 1.35,
+    "actual_home_margin": 6,
+    "abs_err": 4.6530076195265675
+   },
+   {
+    "wk": 7,
+    "game": "PIT@NO",
+    "pick": "PIT",
+    "correct": true,
+    "model_home_margin": 3.77,
+    "actual_home_margin": -6,
+    "abs_err": 9.768060702227128
+   },
+   {
+    "wk": 7,
+    "game": "TB@CAR",
+    "pick": "CAR",
+    "correct": false,
+    "model_home_margin": -0.91,
+    "actual_home_margin": -30,
+    "abs_err": 29.086140411694885
+   },
+   {
+    "wk": 7,
+    "game": "CIN@BAL",
+    "pick": "BAL",
+    "correct": false,
+    "model_home_margin": 1.55,
+    "actual_home_margin": -22,
+    "abs_err": 23.547604678259503
+   },
+   {
+    "wk": 7,
+    "game": "MIA@NYJ",
+    "pick": "NYJ",
+    "correct": false,
+    "model_home_margin": -1.78,
+    "actual_home_margin": -3,
+    "abs_err": 1.222400583489466
+   },
+   {
+    "wk": 7,
+    "game": "SF@ATL",
+    "pick": "SF",
+    "correct": false,
+    "model_home_margin": 6.3,
+    "actual_home_margin": 9,
+    "abs_err": 2.7036399730931873
+   },
+   {
+    "wk": 7,
+    "game": "CLE@TEN",
+    "pick": "CLE",
+    "correct": true,
+    "model_home_margin": 3.96,
+    "actual_home_margin": -3,
+    "abs_err": 6.960647909629754
+   },
+   {
+    "wk": 7,
+    "game": "IND@MIN",
+    "pick": "MIN",
+    "correct": true,
+    "model_home_margin": -3.07,
+    "actual_home_margin": 6,
+    "abs_err": 9.067606616007579
+   },
+   {
+    "wk": 7,
+    "game": "NYG@HOU",
+    "pick": "HOU",
+    "correct": false,
+    "model_home_margin": 1.43,
+    "actual_home_margin": -6,
+    "abs_err": 7.431535918875617
+   },
+   {
+    "wk": 7,
+    "game": "DEN@ARI",
+    "pick": "DEN",
+    "correct": true,
+    "model_home_margin": 3.91,
+    "actual_home_margin": -14,
+    "abs_err": 17.911278891844656
+   },
+   {
+    "wk": 7,
+    "game": "GB@DET",
+    "pick": "DET",
+    "correct": true,
+    "model_home_margin": 1.04,
+    "actual_home_margin": 3,
+    "abs_err": 1.9634401686589653
+   },
+   {
+    "wk": 7,
+    "game": "LAR@LV",
+    "pick": "LV",
+    "correct": false,
+    "model_home_margin": 1.56,
+    "actual_home_margin": -14,
+    "abs_err": 15.555819962677212
+   },
+   {
+    "wk": 7,
+    "game": "SEA@KC",
+    "pick": "KC",
+    "correct": false,
+    "model_home_margin": -0.3,
+    "actual_home_margin": -17,
+    "abs_err": 16.702929639474252
+   },
+   {
+    "wk": 7,
+    "game": "DAL@PHI",
+    "pick": "DAL",
+    "correct": true,
+    "model_home_margin": 3.46,
+    "actual_home_margin": -17,
+    "abs_err": 20.458820620955418
+   },
+   {
+    "wk": 8,
+    "game": "CAR@GB",
+    "pick": "GB",
+    "correct": true,
+    "model_home_margin": 1.43,
+    "actual_home_margin": 8,
+    "abs_err": 6.574682624635808
+   },
+   {
+    "wk": 8,
+    "game": "BAL@BUF",
+    "pick": "BUF",
+    "correct": true,
+    "model_home_margin": 0.57,
+    "actual_home_margin": 26,
+    "abs_err": 25.434966035535364
+   },
+   {
+    "wk": 8,
+    "game": "TEN@CIN",
+    "pick": "CIN",
+    "correct": true,
+    "model_home_margin": -4.01,
+    "actual_home_margin": 7,
+    "abs_err": 11.011198926925942
+   },
+   {
+    "wk": 8,
+    "game": "MIN@DET",
+    "pick": "MIN",
+    "correct": false,
+    "model_home_margin": 4.76,
+    "actual_home_margin": 4,
+    "abs_err": 0.7585160965316682
+   },
+   {
+    "wk": 8,
+    "game": "ATL@TB",
+    "pick": "TB",
+    "correct": true,
+    "model_home_margin": 0.96,
+    "actual_home_margin": 16,
+    "abs_err": 15.036710991261447
+   },
+   {
+    "wk": 8,
+    "game": "CLE@PIT",
+    "pick": "PIT",
+    "correct": true,
+    "model_home_margin": -0.11,
+    "actual_home_margin": 21,
+    "abs_err": 21.10544355008135
+   },
+   {
+    "wk": 8,
+    "game": "IND@JAX",
+    "pick": "JAX",
+    "correct": true,
+    "model_home_margin": -2.98,
+    "actual_home_margin": 35,
+    "abs_err": 37.984543990843726
+   },
+   {
+    "wk": 8,
+    "game": "ARI@DAL",
+    "pick": "DAL",
+    "correct": false,
+    "model_home_margin": -2.25,
+    "actual_home_margin": -3,
+    "abs_err": 0.7540632554177487
+   },
+   {
+    "wk": 8,
+    "game": "LV@NYJ",
+    "pick": "LV",
+    "correct": true,
+    "model_home_margin": 1.88,
+    "actual_home_margin": -5,
+    "abs_err": 6.880828662972542
+   },
+   {
+    "wk": 8,
+    "game": "LAC@LAR",
+    "pick": "LAR",
+    "correct": true,
+    "model_home_margin": -2.95,
+    "actual_home_margin": 15,
+    "abs_err": 17.952463012146318
+   },
+   {
+    "wk": 8,
+    "game": "NE@MIA",
+    "pick": "NE",
+    "correct": true,
+    "model_home_margin": 6.6,
+    "actual_home_margin": -5,
+    "abs_err": 11.602999651903058
+   },
+   {
+    "wk": 8,
+    "game": "KC@DEN",
+    "pick": "KC",
+    "correct": false,
+    "model_home_margin": 4.29,
+    "actual_home_margin": 4,
+    "abs_err": 0.28829791569680996
+   },
+   {
+    "wk": 8,
+    "game": "PHI@WSH",
+    "pick": "WSH",
+    "correct": true,
+    "model_home_margin": 1.12,
+    "actual_home_margin": 17,
+    "abs_err": 15.878493836687127
+   }
+  ]
+ },
+ "fixed_total_systems": {
+  "disclaimer": "Graded against a FIXED number at -110 on all W1-8 finals \u2014 no historical market totals were available, so this is a fixed-threshold backtest, not proof vs the closing number. Market-verified totals gate stays flagged (LINES-NO-HISTORY).",
+  "avg_total_2026": 46.07,
+  "median_total": 44.5,
+  "grades": [
+   {
+    "threshold": 44.5,
+    "side": "over",
+    "n": 120,
+    "hits": 60,
+    "hit_rate": 0.5,
+    "wilson95": [
+     0.4119,
+     0.5881
+    ],
+    "profit_at_-110_per100": -600,
+    "binom_p_vs_52.38": 0.648
+   },
+   {
+    "threshold": 48.5,
+    "side": "over",
+    "n": 120,
+    "hits": 49,
+    "hit_rate": 0.4083,
+    "wilson95": [
+     0.3246,
+     0.4978
+    ],
+    "profit_at_-110_per100": -2910,
+    "binom_p_vs_52.38": 0.0133
+   },
+   {
+    "threshold": 48.5,
+    "side": "under",
+    "n": 120,
+    "hits": 71,
+    "hit_rate": 0.5917,
+    "wilson95": [
+     0.5022,
+     0.6754
+    ],
+    "profit_at_-110_per100": 1710,
+    "binom_p_vs_52.38": 0.1442
+   },
+   {
+    "threshold": 52.5,
+    "side": "under",
+    "n": 120,
+    "hits": 77,
+    "hit_rate": 0.6417,
+    "wilson95": [
+     0.5527,
+     0.7218
+    ],
+    "profit_at_-110_per100": 2970,
+    "binom_p_vs_52.38": 0.0103
+   }
+  ]
+ },
+ "one_score_games": {
+  "n": 65,
+  "decided": 64,
+  "home_won": 31,
+  "home_win_pct": 0.4844,
+  "wilson95": [
+   0.3663,
+   0.6042
+  ],
+  "binom_p_vs_50": 0.9007,
+  "note": "One-score games are treated as near coin flips; deviation from .500 in a single season is sampling noise unless p<0.05."
+ },
+ "correlations": {
+  "game_margin_vs_total": -0.1188,
+  "abs_margin_vs_total": -0.0472,
+  "week1_vs_week2_margin": 0.0248,
+  "research_correlations": {
+   "spread_ml_same_team": "~0.90 (sportsbettingoddscalculator SGP table)",
+   "qb_pass_yds_wr_rec_yds_same_team": "0.65-0.75",
+   "game_total_over_vs_pass_props_over": "0.55-0.65",
+   "spread_vs_total": "0.10-0.20 (near-neutral)",
+   "favorite_big_spread_vs_star_props_over": "-0.20 to -0.40",
+   "source": "https://www.sportsbettingoddscalculator.com/guides/sgp-correlation"
+  },
+  "data_gap": "turnover-margin correlation not computed: turnover columns (TOW/TOL) were not transcribed into the dataset \u2014 flagged, never inferred."
+ },
+ "week9_line_origination": {
+  "method": "Team strength = mean-reverted Pythagorean win% (exp2.37, k=8) blended with average margin; home adjustment +1.75 (research band1.5-2.0). Model total = avg of teams' combined scoring rate.",
+  "caveat": "Model uses standings through Week 8 (verified). Value flags are model-vs-market differences, NOT proof of +EV: grading gate is closing-line comparison and results, tracked prospectively.",
+  "games": [
+   {
+    "week": 8,
+    "matchup": "CHI @ SEA",
+    "kickoff_utc": "2026-11-03T01:15:00Z",
+    "model_home_spread": 2.4,
+    "market_home_spread": 3.5,
+    "spread_delta": -1.1,
+    "model_total": 44.0,
+    "market_total": 46.5,
+    "total_delta": -2.5,
+    "model_side": "SEA",
+    "market_side": "SEA",
+    "value_flag": false,
+    "espn_game": "https://www.espn.com/nfl/game/_/gameId/401873036/bears-seahawks"
+   },
+   {
+    "week": 9,
+    "matchup": "JAX @ BAL",
+    "kickoff_utc": "2026-11-06T01:15:00Z",
+    "model_home_spread": -5.2,
+    "market_home_spread": -8.5,
+    "spread_delta": 3.3,
+    "model_total": 45.8,
+    "market_total": 42.5,
+    "total_delta": 3.3,
+    "model_side": "JAX",
+    "market_side": "JAX",
+    "value_flag": true,
+    "espn_game": "https://www.espn.com/nfl/game/_/gameId/401873037/jaguars-ravens"
+   },
+   {
+    "week": 9,
+    "matchup": "CIN @ ATL",
+    "kickoff_utc": "2026-11-08T14:30:00Z",
+    "model_home_spread": -2.3,
+    "market_home_spread": -3,
+    "spread_delta": 0.7,
+    "model_total": 48.5,
+    "market_total": 51.5,
+    "total_delta": -3.0,
+    "model_side": "CIN",
+    "market_side": "CIN",
+    "value_flag": true,
+    "espn_game": "https://www.espn.com/nfl/game/_/gameId/401873038/bengals-falcons"
+   },
+   {
+    "week": 9,
+    "matchup": "CLE @ NO",
+    "kickoff_utc": "2026-11-08T18:00:00Z",
+    "model_home_spread": 2.3,
+    "market_home_spread": 2.5,
+    "spread_delta": -0.2,
+    "model_total": 44.9,
+    "market_total": 43.5,
+    "total_delta": 1.4,
+    "model_side": "NO",
+    "market_side": "NO",
+    "value_flag": false,
+    "espn_game": "https://www.espn.com/nfl/game/_/gameId/401873039/browns-saints"
+   },
+   {
+    "week": 9,
+    "matchup": "DAL @ IND",
+    "kickoff_utc": "2026-11-08T18:00:00Z",
+    "model_home_spread": -2.2,
+    "market_home_spread": -6,
+    "spread_delta": 3.8,
+    "model_total": 50.9,
+    "market_total": 51.5,
+    "total_delta": -0.6,
+    "model_side": "DAL",
+    "market_side": "DAL",
+    "value_flag": true,
+    "espn_game": "https://www.espn.com/nfl/game/_/gameId/401873040/cowboys-colts"
+   },
+   {
+    "week": 9,
+    "matchup": "DEN @ CAR",
+    "kickoff_utc": "2026-11-08T18:00:00Z",
+    "model_home_spread": 0.4,
+    "market_home_spread": -3,
+    "spread_delta": 3.4,
+    "model_total": 47.6,
+    "market_total": 43.5,
+    "total_delta": 4.1,
+    "model_side": "CAR",
+    "market_side": "DEN",
+    "value_flag": true,
+    "espn_game": "https://www.espn.com/nfl/game/_/gameId/401873041/broncos-panthers"
+   },
+   {
+    "week": 9,
+    "matchup": "DET @ MIA",
+    "kickoff_utc": "2026-11-08T18:00:00Z",
+    "model_home_spread": -4.0,
+    "market_home_spread": -7,
+    "spread_delta": 3.0,
+    "model_total": 48.6,
+    "market_total": 50.5,
+    "total_delta": -1.9,
+    "model_side": "DET",
+    "market_side": "DET",
+    "value_flag": true,
+    "espn_game": "https://www.espn.com/nfl/game/_/gameId/401873042/lions-dolphins"
+   },
+   {
+    "week": 9,
+    "matchup": "LAR @ WSH",
+    "kickoff_utc": "2026-11-08T18:00:00Z",
+    "model_home_spread": -1.4,
+    "market_home_spread": -5.5,
+    "spread_delta": 4.1,
+    "model_total": 47.0,
+    "market_total": 47.5,
+    "total_delta": -0.5,
+    "model_side": "LAR",
+    "market_side": "LAR",
+    "value_flag": true,
+    "espn_game": "https://www.espn.com/nfl/game/_/gameId/401873043/rams-commanders"
+   },
+   {
+    "week": 9,
+    "matchup": "NYG @ PHI",
+    "kickoff_utc": "2026-11-08T18:00:00Z",
+    "model_home_spread": -2.7,
+    "market_home_spread": -3.5,
+    "spread_delta": 0.8,
+    "model_total": 44.3,
+    "market_total": 39.5,
+    "total_delta": 4.8,
+    "model_side": "NYG",
+    "market_side": "NYG",
+    "value_flag": true,
+    "espn_game": "https://www.espn.com/nfl/game/_/gameId/401873044/giants-eagles"
+   },
+   {
+    "week": 9,
+    "matchup": "NYJ @ KC",
+    "kickoff_utc": "2026-11-08T18:00:00Z",
+    "model_home_spread": 5.6,
+    "market_home_spread": 9.5,
+    "spread_delta": -3.9,
+    "model_total": 43.7,
+    "market_total": 46.5,
+    "total_delta": -2.8,
+    "model_side": "KC",
+    "market_side": "KC",
+    "value_flag": true,
+    "espn_game": "https://www.espn.com/nfl/game/_/gameId/401873045/jets-chiefs"
+   },
+   {
+    "week": 9,
+    "matchup": "HOU @ LAC",
+    "kickoff_utc": "2026-11-08T21:05:00Z",
+    "model_home_spread": -3.4,
+    "market_home_spread": -4.5,
+    "spread_delta": 1.1,
+    "model_total": 43.5,
+    "market_total": 40.5,
+    "total_delta": 3.0,
+    "model_side": "HOU",
+    "market_side": "HOU",
+    "value_flag": true,
+    "espn_game": "https://www.espn.com/nfl/game/_/gameId/401873046/texans-chargers"
+   },
+   {
+    "week": 9,
+    "matchup": "LV @ SF",
+    "kickoff_utc": "2026-11-08T21:25:00Z",
+    "model_home_spread": 5.9,
+    "market_home_spread": 9.5,
+    "spread_delta": -3.6,
+    "model_total": 52.2,
+    "market_total": 51.5,
+    "total_delta": 0.7,
+    "model_side": "SF",
+    "market_side": "SF",
+    "value_flag": true,
+    "espn_game": "https://www.espn.com/nfl/game/_/gameId/401873047/raiders-49ers"
+   },
+   {
+    "week": 9,
+    "matchup": "ARI @ SEA",
+    "kickoff_utc": "2026-11-08T21:25:00Z",
+    "model_home_spread": 8.4,
+    "market_home_spread": 11.5,
+    "spread_delta": -3.1,
+    "model_total": 46.7,
+    "market_total": 44.5,
+    "total_delta": 2.2,
+    "model_side": "SEA",
+    "market_side": "SEA",
+    "value_flag": true,
+    "espn_game": "https://www.espn.com/nfl/game/_/gameId/401873048/cardinals-seahawks"
+   },
+   {
+    "week": 9,
+    "matchup": "GB @ NE",
+    "kickoff_utc": "2026-11-08T21:25:00Z",
+    "model_home_spread": 2.8,
+    "market_home_spread": 3,
+    "spread_delta": -0.2,
+    "model_total": 42.6,
+    "market_total": 47.5,
+    "total_delta": -4.9,
+    "model_side": "NE",
+    "market_side": "NE",
+    "value_flag": true,
+    "espn_game": "https://www.espn.com/nfl/game/_/gameId/401873049/packers-patriots"
+   },
+   {
+    "week": 9,
+    "matchup": "TB @ CHI",
+    "kickoff_utc": "2026-11-09T01:20:00Z",
+    "model_home_spread": 2.3,
+    "market_home_spread": 5.5,
+    "spread_delta": -3.2,
+    "model_total": 43.6,
+    "market_total": 47.5,
+    "total_delta": -3.9,
+    "model_side": "CHI",
+    "market_side": "CHI",
+    "value_flag": true,
+    "espn_game": "https://www.espn.com/nfl/game/_/gameId/401873050/buccaneers-bears"
+   },
+   {
+    "week": 9,
+    "matchup": "BUF @ MIN",
+    "kickoff_utc": "2026-11-10T01:15:00Z",
+    "model_home_spread": 3.2,
+    "market_home_spread": -3.5,
+    "spread_delta": 6.7,
+    "model_total": 46.2,
+    "market_total": 46.5,
+    "total_delta": -0.3,
+    "model_side": "MIN",
+    "market_side": "BUF",
+    "value_flag": true,
+    "espn_game": "https://www.espn.com/nfl/game/_/gameId/401873051/bills-vikings"
+   }
+  ]
+ },
+ "data_gaps": [
+  "Historical ATS results for W1-8 (no reachable source) -> ATS gates pending; flagged LINES-NO-HISTORY.",
+  "Closing lines / CLV for W1-8 -> CLV gate prospective for W9+; flagged LINES-NO-HISTORY.",
+  "Turnover columns not in dataset -> TO-margin correlation omitted; flagged.",
+  "Player prop odds no reachable source -> props tables blank; flagged LINES-NO-PROPS."
+ ]
+}

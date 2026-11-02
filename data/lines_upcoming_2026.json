@@ -90,14 +90,14 @@
    },
    "current": {
     "away": {
-     "spread": -3.5,
+     "spread": 3.5,
      "spread_juice": -118,
      "total_side": "o46.5",
      "total_juice": -110,
      "ml": 145
     },
     "home": {
-     "spread": 3.5,
+     "spread": -3.5,
      "spread_juice": -102,
      "total_side": "u46.5",
      "total_juice": -110,
