@@ -188,6 +188,7 @@ _None. (Single session.)_
 | Task | Status | Owner / claimed at (UTC) | Non-overlapping file scope | Notes |
 | --- | --- | --- | --- | --- |
 | R1 — supplemental official-source empirical NFL research | done | `7af2b7d8-own5` / 2026-11-02 20:49 | `data/raw/nfl_2017_games.csv`, `data/raw/player_pair_games.csv`, `data/derived/report.json`, `research/SOURCES.md`, `research/NFL_EMPIRICAL_*.md`, `scripts/analyze.py`, `scripts/verify_sources.py`, `tests/test_analysis.py` | This independent claim began before the other session's board was visible. Preserve the earlier session's existing files and site. |
+| S1 — supplemental historical evidence pages | in progress | `7af2b7d8-own5` / 2026-11-02 21:02 | `empirical/**`, `scripts/build_empirical.py`, `tests/test_empirical_site.py` | Standalone, additive pages only; no changes to another session’s site, navigation, shared data, or active integration scope. |
 
 - 2026-11-02 21:00 UTC — Conflict: `main` merged PR #1 and added its own coordination board after both sessions independently began from an empty board. Resolved by retaining the entire upstream board and recording this session's separate work and integration request; no upstream work was discarded. Scope overlap was not visible at either session's initial check. The supplemental files use distinct names and paths.
 
@@ -201,3 +202,5 @@ _None. (Single session.)_
 - Additional add/add conflicts in `research/EXECUTIVE_SUMMARY.md` and `research/METHODOLOGY.md` were resolved by preserving the upstream versions and retaining this session's distinct versions as `research/NFL_EMPIRICAL_SUMMARY.md` and `research/NFL_EMPIRICAL_METHODS.md`.
 
 - 2026-11-02 21:01 UTC — After resolving the rebase, the session will update only its own branch using a lease-protected push because rebasing rewrote its already-pushed claim; the lease prevents overwriting any intervening remote change.
+
+- 2026-11-02 21:02 UTC — Claimed the non-overlapping S1 scope for an additive empirical evidence view. Requested a navigation handoff from the active integration owner in PR #4; existing index and navigation remain untouched.
