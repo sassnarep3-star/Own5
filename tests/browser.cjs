@@ -65,7 +65,7 @@ const base = process.env.TEST_BASE_URL || 'http://127.0.0.1:3000';
   const nojs=await browser.newContext({javaScriptEnabled:false});
   const staticPage=await nojs.newPage();
   await staticPage.goto(`${base}/pages/sources.html`);
-  assert.equal(await staticPage.locator('#sources tbody tr').count(),13);
+  assert.equal(await staticPage.locator('#sources tbody tr').count(),14);
   assert.equal(await staticPage.locator('#facts tbody tr').count(),11);
   assert.deepEqual(errors,[]);
   console.log('PASS: eight desktop/mobile routes, no runtime errors, source links, search, category filters, empty state, filtered CSV, blank values and no-JS rendering.');

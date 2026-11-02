@@ -7,7 +7,7 @@
 
 A clean GitHub Pages dashboard with eight category pages: Overview, Strategy Lab, Line Origination, Correlations, Validation Gates, Leaderboard, Sources & Findings, and Flagged for Review. Tables are searchable and exportable; they retain official source links and render without JavaScript. Unknown empirical values are blank, never invented.
 
-The research register contains **13 checked primary sources, 11 sourced definitions, 8 candidate strategies, 7 validation gates, 6 correlation research questions, 5 pricing frameworks, 5 competition policies and 10 review items**. These counts describe repository contents, not a statistical sample.
+The research register contains **14 checked primary sources (including the official initial GitHub repository tree), 11 sourced definitions, 8 candidate strategies, 7 validation gates, 6 correlation research questions, 5 pricing frameworks, 5 competition policies and 10 review items**. These counts describe repository contents, not a statistical sample.
 
 ## Origination strategy
 
