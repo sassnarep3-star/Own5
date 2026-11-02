@@ -6,6 +6,7 @@ This repository hosts work from **three parallel agent sessions** (see `COORDINA
 |---|---|---|---|
 | **NBA Line-Origination Lab** | NBA — singles, parlays, player-prop combos; validation gates; leaderboard design | https://sassnarep3-star.github.io/Own5/docs/ | `9c3a0a69` (`docs/`, `research/nba/`, `analysis/`, `EXECUTIVE_SUMMARY.md`) |
 | **NFL Research Desk** | NFL — line origination, strategy lab, correlation questions, review register | https://sassnarep3-star.github.io/Own5/ | `cd43258e` + `0f468a47` (root, `pages/`, `data/`, `scripts/`, `tools/`, `tests/`) |
+| **NFL Strategy Lab** | NFL — own lines from official data, pre-registered singles/parlays/prop combos, validation gates G0–G7, computed correlations, luck-deflated leaderboard | https://sassnarep3-star.github.io/Own5/nfl-strategy-lab/ | `arena-f1d30421` (`nfl-strategy-lab/`, `research/arena-f1d30421/`, `data/`, `scripts/compute_*`, `scripts/originate_lines.py`) |
 
 Shared policy: **every table row carries a source link; values that cannot be confirmed from an official/primary source are left blank and published on a Flagged-for-Review page — never inferred. No performance claims; no bets placed; leaderboards empty until strategies pass validation gates.**
 
@@ -47,6 +48,37 @@ Evidence-first research into NFL line origination, singles, parlays, player prop
 - Competition governance and non-cash badges are proposals. No funded cash rewards or actual payout service.
 
 Luck cannot be eliminated from sports outcomes. Statistical evidence and prospective replication reduce false confidence; they do not guarantee future returns. This is research, not betting advice, a live sportsbook, or a jurisdictional eligibility determination.
+
+---
+
+## NFL Strategy Lab (session arena-f1d30421)
+
+**Live site:** https://sassnarep3-star.github.io/Own5/nfl-strategy-lab/ · **Executive summary:** [`research/arena-f1d30421/EXECUTIVE_SUMMARY.md`](research/arena-f1d30421/EXECUTIVE_SUMMARY.md) · **Flagged for Review:** [`research/arena-f1d30421/flagged.md`](research/arena-f1d30421/flagged.md)
+
+Self-running line origination + skill-based strategy leaderboard: our own lines for all 15 games of
+2026 Week 9 (official standings/schedule inputs, measured HFA 2.22→2.0 pts), 8 pre-registered
+backtested strategies (1980–2024), validation gates G0–G7, and computed correlation values.
+
+**Computed findings (reproducible via `scripts/`):** favorites cover 48.1% / home underdogs 52.6% /
+overs 49.1% (10,729 games); best strategy (home dog ≥7, 56.37%, n=793) **fails** Bonferroni gate
+(p=0.0134 > 0.00625) → zero strategies certified as skill, by design; a break-even bettor posts a
+55% season over 200 bets 20.8% of the time (needs ~2,243 bets to prove true 55% skill);
+2-leg −110 parlays need 27.47% joint vs ≈23.6% from break-even legs; QB passing yards vs top-WR
+yards r = 0.76 (n=3,852 team-games) → same-game prop legs need empirical joint pricing.
+
+| Path | Contents |
+|---|---|
+| `research/arena-f1d30421/` | methodology: line origination, strategies, validation gates, correlation, luck-vs-skill, leaderboard, flagged registry, executive summary |
+| `data/` (base_rates, correlation_*, backtest_results, luck_skill, model_lines_2026_wk9, verified_official_results) | computed CSVs + verified official tables, every row source-linked |
+| `scripts/compute_analysis.py`, `compute_prop_correlations.py`, `originate_lines.py` | analysis engine + line origination (inputs pinned to commit SHAs) |
+| `scripts/build_site.py`, `verify_site.py` | generates `nfl-strategy-lab/` from the CSVs; line-by-line check (every row sourced or explicitly blank+flagged) |
+
+```sh
+python3 scripts/download_data.sh && python3 scripts/compute_analysis.py
+python3 scripts/compute_prop_correlations.py && python3 scripts/originate_lines.py
+python3 scripts/build_site.py && python3 scripts/verify_site.py
+```
+
 
 ## Pages
 
@@ -98,7 +130,8 @@ python3 tools/check_site.py             # verifies every CSV row has a source li
 - `research/`: executive summary, methodology/data contracts and source-verification record (uppercase files = session `arena-cd43258e`; lowercase files = session `0f468a47-own5`, incl. `verification-log.md`).
 - `tests/`: Python integrity/math tests and Chromium desktop/mobile interaction tests.
 - `.github/workflows/verify.yml`: rebuild, row/link checks, math tests and browser smoke tests on pushes and PRs.
-- `COORDINATION.md`: ownership, verification, integration and publication history (both sessions).
+- `COORDINATION.md`: ownership, verification, integration and publication history (all sessions).
+- `nfl-strategy-lab/` + `research/arena-f1d30421/` (session `arena-f1d30421`): NFL Strategy Lab site and methodology; `scripts/compute_analysis.py`, `compute_prop_correlations.py`, `originate_lines.py`, `build_site.py`, `verify_site.py`.
 
 ## Verification and deployment
 

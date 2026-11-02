@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sources · Own5 NFL Strategy Lab</title>
+<link rel="stylesheet" href="assets/style.css">
+<script defer src="assets/app.js"></script>
+</head>
+<body>
+<header class="site">
+  <div class="brand">Own5 <span>NFL Strategy Lab</span></div>
+  <nav class="main"><a href="index.html" class="">Dashboard</a>
+<a href="executive-summary.html" class="">Executive Summary</a>
+<a href="strategies.html" class="">Strategies</a>
+<a href="validation-gates.html" class="">Validation Gates</a>
+<a href="correlation.html" class="">Correlation</a>
+<a href="luck-vs-skill.html" class="">Luck vs Skill</a>
+<a href="leaderboard.html" class="">Leaderboard</a>
+<a href="lines-2026-wk9.html" class="">Week 9 Lines</a>
+<a href="sources.html" class="active">Sources</a>
+<a href="flagged.html" class="">Flagged for Review</a></nav>
+</header>
+<main>
+
+<h1>Sources Registry</h1>
+<p class="lead">Every source used in this project, what it verifies, and its verification class. Rows on every site table link here or to their direct source.</p>
+<h2>Official NFL sources <span class="chip good">Verified — official</span></h2>
+<div class="tbl-wrap"><table><thead><tr><th>Source</th><th>URL</th><th>Verifies</th><th>Checked</th></tr></thead><tbody>
+<tr><td>NFL League Standings 2026 (REG)</td><td class="src"><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">nfl.com/standings/league/2026/REG</a></td><td>32-team W-L-T, PF/PA (through Week 8) → model line inputs</td><td>2026-11-02</td></tr>
+<tr><td>NFL Schedules &amp; Scores 2025 Week 1</td><td class="src"><a href="https://www.nfl.com/schedules/2025/by-week/week-1" target="_blank" rel="noopener">nfl.com/schedules/2025/by-week/week-1</a></td><td>16 official game results (per-game links in verified_official_results.csv)</td><td>2026-11-02</td></tr>
+<tr><td>NFL Schedules &amp; Scores 2026 Week 8</td><td class="src"><a href="https://www.nfl.com/schedules" target="_blank" rel="noopener">nfl.com/schedules</a></td><td>13 final results + MNF listing (per-game links in verified_official_results.csv)</td><td>2026-11-02</td></tr>
+<tr><td>NFL Schedules 2026 Week 9</td><td class="src"><a href="https://www.nfl.com/schedules/2026/by-week/week-9" target="_blank" rel="noopener">nfl.com/schedules/2026/by-week/week-9</a></td><td>15 upcoming matchups (per-game links in schedule_2026_wk9.csv)</td><td>2026-11-02</td></tr>
+<tr><td>2025 NFL Record &amp; Fact Book</td><td class="src"><a href="https://static.clubs.nfl.com/image/upload/patriots/fvc6qgwyqlztq1muztpi.pdf" target="_blank" rel="noopener">static.clubs.nfl.com …fact book.pdf</a></td><td>official league records/facts reference</td><td>2026-11-02</td></tr>
+</tbody></table></div>
+<h2>Pinned datasets <span class="chip info">Derived inputs — community sources flagged</span></h2>
+<div class="tbl-wrap"><table><thead><tr><th>Dataset</th><th>Pin (commit)</th><th>URL</th><th>Used for</th><th>Flag</th></tr></thead><tbody>
+<tr><td>spreadspoke scores + closing lines (1966–2025 wk5)</td><td><code>1d309cb7f8f58…</code></td><td class="src"><a href="https://github.com/tobycrabtree/spreadspoke/blob/1d309cb7f8f58a9eceb36293979dbcb1af70db94/spreadspoke_scores.csv" target="_blank" rel="noopener">spreadspoke_scores.csv</a></td><td>base rates, correlations, backtests, HFA</td><td><a href="flagged.html">F1</a></td></tr>
+<tr><td>play-by-play archive (2002–2013)</td><td><code>352c9c9b0bce…</code></td><td class="src"><a href="https://github.com/brianfoshee/nfl-play-by-play-data/blob/352c9c9b0bce0ffa8ce85681cf9ed50c0398f462/" target="_blank" rel="noopener">nfl-play-by-play-data</a></td><td>player-prop correlations</td><td><a href="flagged.html">F2</a></td></tr>
+</tbody></table></div>
+<h2>Methodology literature</h2>
+<div class="tbl-wrap"><table><thead><tr><th>Reference</th><th>URL</th><th>Used for</th><th>Checked</th></tr></thead><tbody>
+<tr><td>Bailey, Borwein, López de Prado &amp; Zhu (2014), <i>Pseudo-Mathematics and Financial Charlatanism</i>, Notices of the AMS 61(5) 458–471</td><td class="src"><a href="https://www.davidhbailey.com/dhbpapers/overfit-tools-at.pdf" target="_blank" rel="noopener">paper PDF</a></td><td>gate G2/G6, multiple-testing correction, MinBTL</td><td>2026-11-02</td></tr>
+<tr><td>Bailey &amp; López de Prado (2014), <i>The Deflated Sharpe Ratio</i>, J. Portfolio Management 40(5) 94–107</td><td class="src"><a href="https://doi.org/10.3905/jpm.2014.40.5.094" target="_blank" rel="noopener">doi:10.3905/jpm.2014.40.5.094</a></td><td>DSR_index scoring, luck removal</td><td>2026-11-02</td></tr>
+<tr><td>Bailey, Borwein, López de Prado &amp; Zhu (2017), <i>The Probability of Backtest Overfitting</i>, J. Computational Finance 20(4) 39–69</td><td class="src"><a href="https://www.davidhbailey.com/dhbpapers/backtest-prob.pdf" target="_blank" rel="noopener">paper PDF</a></td><td>gate G4, overfitting probability</td><td>2026-11-02</td></tr>
+<tr><td>Kaunitz, Zhong &amp; Kreiner (2017), <i>Beating the bookies with their own numbers</i></td><td class="src"><a href="https://arxiv.org/abs/1710.02824" target="_blank" rel="noopener">arXiv:1710.02824</a></td><td>CLV gate G3, market-efficiency context</td><td>2026-11-02</td></tr>
+<tr><td>Thorp (2011), <i>The Kelly Criterion in Blackjack, Sports Betting, and the Stock Market</i>, World Scientific, ch. 54, 789–832</td><td class="src"><a href="https://ideas.repec.org/h/wsi/wschap/9789814293501_0054.html" target="_blank" rel="noopener">bibliographic record</a></td><td>bankroll sizing (gate G7), fractional Kelly</td><td>2026-11-02</td></tr>
+<tr><td>Szalkowski et al. (2012), <i>The Performance of Betting Lines for Predicting the Outcome of NFL Games</i></td><td class="src"><a href="https://www.researchgate.net/publication/233427163_The_Performance_of_Betting_Lines_for_Predicting_the_Outcome_of_NFL_Games" target="_blank" rel="noopener">record</a></td><td>cross-check of home-dog cover rates, 52.38% break-even</td><td>2026-11-02</td></tr>
+<tr><td>Paul &amp; Weinbach et al., <i>NFL Betting Biases, Profitable Strategies, and the Wisdom of the Crowd</i></td><td class="src"><a href="https://www.researchgate.net/publication/329796231_NFL_Betting_Biases_Profitable_Strategies_and_the_Wisdom_of_the_Crowd" target="_blank" rel="noopener">record</a></td><td>underdog/large-line strategy literature cross-check</td><td>2026-11-02</td></tr>
+<tr><td>CLV explainer (secondary source, labeled as such)</td><td class="src"><a href="https://bodog.com/sports-betting/why-clv-matters" target="_blank" rel="noopener">bodog.com/…/why-clv-matters</a></td><td>CLV threshold rationale (G3) — commercial source, flagged as secondary</td><td>2026-11-02</td></tr>
+</tbody></table></div>
+<h2>Generated artifacts (reproducible)</h2>
+<div class="tbl-wrap"><table><thead><tr><th>Artifact</th><th>Generator</th><th>Inputs</th></tr></thead><tbody>
+<tr><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/base_rates.csv" target="_blank" rel="noopener">base_rates.csv</a></td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py" target="_blank" rel="noopener">compute_analysis.py</a></td><td>spreadspoke @ <code>1d309cb</code></td></tr>
+<tr><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/correlation_bets.csv" target="_blank" rel="noopener">correlation_bets.csv</a> · <a href="https://github.com/sassnarep3-star/Own5/blob/main/data/correlation_parlays.csv" target="_blank" rel="noopener">parlays</a></td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py" target="_blank" rel="noopener">compute_analysis.py</a></td><td>spreadspoke @ <code>1d309cb</code></td></tr>
+<tr><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/correlation_props.csv" target="_blank" rel="noopener">correlation_props.csv</a></td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_prop_correlations.py" target="_blank" rel="noopener">compute_prop_correlations.py</a></td><td>pbp @ <code>352c9c9</code></td></tr>
+<tr><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/backtest_results.csv" target="_blank" rel="noopener">backtest_results.csv</a> · <a href="https://github.com/sassnarep3-star/Own5/blob/main/data/luck_skill.csv" target="_blank" rel="noopener">luck_skill.csv</a></td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py" target="_blank" rel="noopener">compute_analysis.py</a></td><td>spreadspoke @ <code>1d309cb</code></td></tr>
+<tr><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/model_lines_2026_wk9.csv" target="_blank" rel="noopener">model_lines_2026_wk9.csv</a></td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/originate_lines.py" target="_blank" rel="noopener">originate_lines.py</a></td><td>official standings + schedule + derived HFA</td></tr>
+<tr><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/verified_official_results.csv" target="_blank" rel="noopener">verified_official_results.csv</a></td><td>transcribed from nfl.com game pages</td><td>official</td></tr>
+</tbody></table></div>
+
+</main>
+<footer>Own5 · NFL line origination &amp; skill-based strategy leaderboard · generated from verified data files by scripts/build_site.py · session arena-f1d30421 · 2026-11-02<br>
+Community datasets are flagged — see <a href="flagged.html">Flagged for Review</a>. Nothing on this site is betting advice.</footer>
+</body>
+</html>

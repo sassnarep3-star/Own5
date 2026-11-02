@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luck vs Skill · Own5 NFL Strategy Lab</title>
+<link rel="stylesheet" href="assets/style.css">
+<script defer src="assets/app.js"></script>
+</head>
+<body>
+<header class="site">
+  <div class="brand">Own5 <span>NFL Strategy Lab</span></div>
+  <nav class="main"><a href="index.html" class="">Dashboard</a>
+<a href="executive-summary.html" class="">Executive Summary</a>
+<a href="strategies.html" class="">Strategies</a>
+<a href="validation-gates.html" class="">Validation Gates</a>
+<a href="correlation.html" class="">Correlation</a>
+<a href="luck-vs-skill.html" class="active">Luck vs Skill</a>
+<a href="leaderboard.html" class="">Leaderboard</a>
+<a href="lines-2026-wk9.html" class="">Week 9 Lines</a>
+<a href="sources.html" class="">Sources</a>
+<a href="flagged.html" class="">Flagged for Review</a></nav>
+</header>
+<main>
+
+<h1>Luck vs Skill</h1>
+<p class="lead">Exact binomial and power-analysis math computed by <code>scripts/compute_analysis.py</code> into <code>data/luck_skill.csv</code>. Methodology: <a href="https://github.com/sassnarep3-star/Own5/blob/main/research/luck-vs-skill.md">research/luck-vs-skill.md</a>.</p>
+<div class="cards">
+  <div class="card"><div class="k">Break-even at −110</div><div class="v">52.38%</div><div class="s">exact definition</div></div>
+  <div class="card"><div class="k">2-leg parlay −110/−110</div><div class="v">27.47%</div><div class="s">joint rate needed; legs give ≈23.6%</div></div>
+  <div class="card"><div class="k">Lucky ≥55% over 200 bets</div><div class="v">20.8%</div><div class="s">for a true break-even bettor</div></div>
+  <div class="card"><div class="k">Bets to detect true 55%</div><div class="v">2,243</div><div class="s">80% power, α=0.05 ≈ 8 NFL seasons</div></div>
+</div>
+<div class="filter"><input type="search" placeholder="Filter table…" oninput="tableFilter(this,'luck')"></div>
+<div class="tbl-wrap"><table id="luck"><thead><tr>
+<th>Table</th>
+<th>Parameter</th>
+<th>Value</th>
+<th>Detail</th>
+<th>Basis</th>
+<th>Source: script</th>
+</tr></thead><tbody>
+<tr>
+<td>breakeven_win_rate</td>
+<td>price -105</td>
+<td>0.5122</td>
+<td>win rate needed to break even at -105</td>
+<td>exact definition</td>
+<td><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/scripts…</a></td>
+</tr>
+<tr>
+<td>breakeven_win_rate</td>
+<td>price -110</td>
+<td>0.5238</td>
+<td>win rate needed to break even at -110</td>
+<td>exact definition</td>
+<td><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/scripts…</a></td>
+</tr>
+<tr>
+<td>breakeven_win_rate</td>
+<td>price -115</td>
+<td>0.5349</td>
+<td>win rate needed to break even at -115</td>
+<td>exact definition</td>
+<td><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/scripts…</a></td>
+</tr>
+<tr>
+<td>breakeven_win_rate</td>
+<td>price -120</td>
+<td>0.5455</td>
+<td>win rate needed to break even at -120</td>
+<td>exact definition</td>
+<td><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/scripts…</a></td>
+</tr>
+<tr>
+<td>breakeven_win_rate</td>
+<td>price -125</td>
+<td>0.5556</td>
+<td>win rate needed to break even at -125</td>
+<td>exact definition</td>
+<td><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/scripts…</a></td>
+</tr>
+<tr>
+<td>breakeven_win_rate</td>
+<td>price -130</td>
+<td>0.5652</td>
+<td>win rate needed to break even at -130</td>
+<td>exact definition</td>
+<td><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/scripts…</a></td>
+</tr>
+<tr>
+<td>breakeven_win_rate</td>
+<td>2-leg parlay -110/-110 (+264)</td>
+<td>0.2747</td>
+<td>joint hit rate needed to break even</td>
+<td>exact definition</td>
+<td><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/scripts…</a></td>
+</tr>
+<tr>
+<td>breakeven_win_rate</td>
+<td>3-leg parlay -110 x3 (+596)</td>
+<td>0.1437</td>
+<td>joint hit rate needed to break even</td>
+<td>exact definition</td>
+<td><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/scripts…</a></td>
+</tr>
+<tr>
+<td>luck_probability</td>
+<td>P(win_rate&gt;=55% given true p=52.38%, n=50)</td>
+<td>0.356326</td>
+<td>probability a break-even bettor looks like a 55% handicapper</td>
+<td>exact binomial</td>
+<td><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/scripts…</a></td>
+</tr>
+<tr>
+<td>luck_probability</td>
+<td>P(win_rate&gt;=55% given true p=52.38%, n=100)</td>
+<td>0.266571</td>
+<td>probability a break-even bettor looks like a 55% handicapper</td>
+<td>exact binomial</td>
+<td><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/scripts…</a></td>
+</tr>
+<tr>
+<td>luck_probability</td>
+<td>P(win_rate&gt;=55% given true p=52.38%, n=200)</td>
+<td>0.208422</td>
+<td>probability a break-even bettor looks like a 55% handicapper</td>
+<td>exact binomial</td>
+<td><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/scripts…</a></td>
+</tr>
+<tr>
+<td>luck_probability</td>
+<td>P(win_rate&gt;=55% given true p=52.38%, n=300)</td>
+<td>0.197614</td>
+<td>probability a break-even bettor looks like a 55% handicapper</td>
+<td>exact binomial</td>
+<td><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/scripts…</a></td>
+</tr>
+<tr>
+<td>luck_probability</td>
+<td>P(win_rate&gt;=55% given true p=52.38%, n=500)</td>
+<td>0.129644</td>
+<td>probability a break-even bettor looks like a 55% handicapper</td>
+<td>exact binomial</td>
+<td><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/scripts…</a></td>
+</tr>
+<tr>
+<td>luck_probability</td>
+<td>P(win_rate&gt;=55% given true p=52.38%, n=1000)</td>
+<td>0.0517935</td>
+<td>probability a break-even bettor looks like a 55% handicapper</td>
+<td>exact binomial</td>
+<td><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/scripts…</a></td>
+</tr>
+<tr>
+<td>required_sample_size</td>
+<td>detect true p=0.53 vs 0.5238</td>
+<td>40224.0</td>
+<td>one-sided alpha=0.05, power=0.80, normal approximation</td>
+<td>statistical power analysis (computed)</td>
+<td><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/scripts…</a></td>
+</tr>
+<tr>
+<td>required_sample_size</td>
+<td>detect true p=0.54 vs 0.5238</td>
+<td>5875.0</td>
+<td>one-sided alpha=0.05, power=0.80, normal approximation</td>
+<td>statistical power analysis (computed)</td>
+<td><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/scripts…</a></td>
+</tr>
+<tr>
+<td>required_sample_size</td>
+<td>detect true p=0.55 vs 0.5238</td>
+<td>2243.0</td>
+<td>one-sided alpha=0.05, power=0.80, normal approximation</td>
+<td>statistical power analysis (computed)</td>
+<td><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/scripts…</a></td>
+</tr>
+<tr>
+<td>required_sample_size</td>
+<td>detect true p=0.56 vs 0.5238</td>
+<td>1173.0</td>
+<td>one-sided alpha=0.05, power=0.80, normal approximation</td>
+<td>statistical power analysis (computed)</td>
+<td><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/compute_analysis.py" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/scripts…</a></td>
+</tr>
+</tbody></table></div>
+<div class="note">Consequences: Bonferroni correction (G2), CLV gate (G3), deflated leaderboard scoring, Bayesian shrinkage of displayed win rates, fractional-Kelly sizing (Thorp 2011, <a href="https://ideas.repec.org/h/wsi/wschap/9789814293501_0054.html" target="_blank" rel="noopener">record</a>).</div>
+
+</main>
+<footer>Own5 · NFL line origination &amp; skill-based strategy leaderboard · generated from verified data files by scripts/build_site.py · session arena-f1d30421 · 2026-11-02<br>
+Community datasets are flagged — see <a href="flagged.html">Flagged for Review</a>. Nothing on this site is betting advice.</footer>
+</body>
+</html>

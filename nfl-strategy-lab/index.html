@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard · Own5 NFL Strategy Lab</title>
+<link rel="stylesheet" href="assets/style.css">
+<script defer src="assets/app.js"></script>
+</head>
+<body>
+<header class="site">
+  <div class="brand">Own5 <span>NFL Strategy Lab</span></div>
+  <nav class="main"><a href="index.html" class="active">Dashboard</a>
+<a href="executive-summary.html" class="">Executive Summary</a>
+<a href="strategies.html" class="">Strategies</a>
+<a href="validation-gates.html" class="">Validation Gates</a>
+<a href="correlation.html" class="">Correlation</a>
+<a href="luck-vs-skill.html" class="">Luck vs Skill</a>
+<a href="leaderboard.html" class="">Leaderboard</a>
+<a href="lines-2026-wk9.html" class="">Week 9 Lines</a>
+<a href="sources.html" class="">Sources</a>
+<a href="flagged.html" class="">Flagged for Review</a></nav>
+</header>
+<main>
+
+<h1>NFL Line Origination &amp; Skill-Based Strategy Lab</h1>
+<p class="lead">Own lines from official data · pre-registered strategies with validation gates · correlation-aware parlays &amp; prop combos · luck-deflated leaderboard. Every table row links to its source; unverifiable values are blank and flagged.</p>
+
+<div class="cards">
+  <div class="card"><div class="k">Games analyzed (1980–2024)</div><div class="v">10,729</div><div class="s">closing lines &amp; scores, pinned dataset</div></div>
+  <div class="card"><div class="k">Favorite cover rate</div><div class="v">0.481</div><div class="s">excl. pushes · dogs cover 0.519</div></div>
+  <div class="card"><div class="k">Home-field advantage</div><div class="v">2.2219 pts</div><div class="s">mean home margin 2002–2024 (used in our lines)</div></div>
+  <div class="card"><div class="k">Best strategy vs luck gate</div><div class="v">FAIL</div><div class="s">S2 p=0.0134 &gt; α=0.00625 (Bonferroni, k=8)</div></div>
+  <div class="card"><div class="k">Lucky 55% after 200 bets?</div><div class="v">20.8%</div><div class="s">probability for a break-even bettor (exact binomial)</div></div>
+  <div class="card"><div class="k">Bets to prove 55% skill</div><div class="v">2243</div><div class="s">80% power, α=0.05 (computed)</div></div>
+</div>
+<div class="grid2">
+  <div class="panel">
+    <h3>Key findings</h3>
+    <ul class="findings">
+      <li><b>Market efficiency:</b> closing favorites cover 48.1%; home underdogs 52.6%; overs 49.1% (10,228 games, excl. pushes). <a href="strategies.html">details →</a></li>
+      <li><b>Luck removal works:</b> the best catalog strategy (home dog ≥7, 56.37%, n=793) <i>fails</i> the corrected significance gate — zero strategies certified as skill today. <a href="validation-gates.html">gate matrix →</a></li>
+      <li><b>Proof burden is real:</b> ~2,243 graded bets to detect a true 55% handicapper at 80% power. <a href="luck-vs-skill.html">luck tables →</a></li>
+      <li><b>Parlays:</b> cross-game legs are independent (ratio 0.984) — fixed 2-leg payouts need 27.47% but break-even legs give ~23.6%. <a href="correlation.html">correlation →</a></li>
+      <li><b>Prop combos:</b> QB passing yards vs top-WR yards r = 0.76 — same-game legs need empirical joint pricing (gate G5). <a href="correlation.html">values →</a></li>
+      <li><b>Live output:</b> our own lines for all 15 games of 2026 Week 9. <a href="lines-2026-wk9.html">our lines →</a></li>
+    </ul>
+  </div>
+  <div class="panel">
+    <h3>How to read this site</h3>
+    <p>Every data table ends in a <b>Source</b> column. Verification labels:</p>
+    <p><span class="chip good">Official NFL</span> transcribed from nfl.com with per-row link &nbsp;
+       <span class="chip info">Derived</span> computed by a repo script from pinned inputs &nbsp;
+       <span class="chip flag">Blank + flagged</span> no official source exists — never inferred</p>
+    <p class="small">Community datasets (historical lines, archived play-by-play) are pinned to commit SHAs and flagged on the <a href="flagged.html">Flagged for Review</a> page (F1, F2). Methodology lives in the repo's <code>research/</code> folder and is summarized on each page.</p>
+    <p><a href="executive-summary.html"><b>Executive Summary →</b></a><br>
+       <a href="leaderboard.html"><b>Leaderboard &amp; rewards →</b></a><br>
+       <a href="sources.html"><b>Sources registry →</b></a></p>
+  </div>
+</div>
+<div class="warnbox"><b>Disclaimer:</b> research &amp; analytics project. Nothing here is betting advice; modeled ROI assumes standard prices because prices are absent from the source dataset (flag F8).</div>
+
+</main>
+<footer>Own5 · NFL line origination &amp; skill-based strategy leaderboard · generated from verified data files by scripts/build_site.py · session arena-f1d30421 · 2026-11-02<br>
+Community datasets are flagged — see <a href="flagged.html">Flagged for Review</a>. Nothing on this site is betting advice.</footer>
+</body>
+</html>

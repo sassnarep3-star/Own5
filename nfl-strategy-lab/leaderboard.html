@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leaderboard · Own5 NFL Strategy Lab</title>
+<link rel="stylesheet" href="assets/style.css">
+<script defer src="assets/app.js"></script>
+</head>
+<body>
+<header class="site">
+  <div class="brand">Own5 <span>NFL Strategy Lab</span></div>
+  <nav class="main"><a href="index.html" class="">Dashboard</a>
+<a href="executive-summary.html" class="">Executive Summary</a>
+<a href="strategies.html" class="">Strategies</a>
+<a href="validation-gates.html" class="">Validation Gates</a>
+<a href="correlation.html" class="">Correlation</a>
+<a href="luck-vs-skill.html" class="">Luck vs Skill</a>
+<a href="leaderboard.html" class="active">Leaderboard</a>
+<a href="lines-2026-wk9.html" class="">Week 9 Lines</a>
+<a href="sources.html" class="">Sources</a>
+<a href="flagged.html" class="">Flagged for Review</a></nav>
+</header>
+<main>
+
+<h1>Leaderboard &amp; Rewards</h1>
+<p class="lead">Strategies compete — not people. Score is deflated for luck; rewards vest only for gate-passing entries. Design: <a href="https://github.com/sassnarep3-star/Own5/blob/main/research/leaderboard.md">research/leaderboard.md</a>.</p>
+<div class="panel">
+<h3>Scoring (luck-deflated)</h3>
+<p><code>Score = 100 × [0.40 × CLV_index + 0.30 × DSR_index + 0.20 × Sample_discipline + 0.10 × Calibration]</code></p>
+<div class="tbl-wrap"><table><thead><tr><th>Component</th><th>Definition</th><th>Luck control</th><th>Source</th></tr></thead><tbody>
+<tr><td>CLV_index</td><td>share of picks beating the closing number, Beta-shrunk toward 50%</td><td>converges fast; hard to fake (G3)</td><td class="src"><a href="https://arxiv.org/abs/1710.02824" target="_blank" rel="noopener">Kaunitz et al. 2017</a></td></tr>
+<tr><td>DSR_index</td><td>deflated-Sharpe-style P(true edge &gt; 0) given n, skew/kurtosis, variants tried</td><td>subtracts best-of-luck score</td><td class="src"><a href="https://doi.org/10.3905/jpm.2014.40.5.094" target="_blank" rel="noopener">Bailey &amp; López de Prado 2014</a></td></tr>
+<tr><td>Sample_discipline</td><td>min(n/500, 1) × stake-consistency</td><td>rewards flat pre-registered staking</td><td class="src"><a href="https://www.davidhbailey.com/dhbpapers/overfit-tools-at.pdf" target="_blank" rel="noopener">overfitting literature</a></td></tr>
+<tr><td>Calibration</td><td>Brier skill of entry's stated probabilities</td><td>punishes overconfidence</td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/leaderboard.md" target="_blank" rel="noopener">design doc</a></td></tr>
+</tbody></table></div>
+</div>
+<h2>Current board (2026-11-02)</h2>
+<div class="tbl-wrap"><table><thead><tr><th>Rank</th><th>Entry</th><th>Class</th><th>Gates</th><th>State</th><th>Source</th></tr></thead><tbody>
+<tr><td>1</td><td>S2 home dog ≥7</td><td>Single</td><td>G1 ✓ · G2 ✗ (p=0.0134) · G4 ✓</td><td><span class="chip info">Candidate</span></td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/backtest_results.csv" target="_blank" rel="noopener">backtest_results.csv</a></td></tr>
+<tr><td>2</td><td>S1 home underdog</td><td>Single</td><td>G1 ✓ · G2 ✗ · G4 ✓</td><td><span class="chip info">Candidate</span></td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/backtest_results.csv" target="_blank" rel="noopener">backtest_results.csv</a></td></tr>
+<tr><td>3</td><td>S5 high-total under</td><td>Single</td><td>G1 ✓ · G2 ✗ · G4 ✓</td><td><span class="chip">Research</span></td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/backtest_results.csv" target="_blank" rel="noopener">backtest_results.csv</a></td></tr>
+<tr><td>—</td><td>S3, S4, S6, S7</td><td>Single</td><td>G4 ✗</td><td><span class="chip">Research</span></td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/backtest_results.csv" target="_blank" rel="noopener">backtest_results.csv</a></td></tr>
+<tr><td>—</td><td>P1/P2 parlay framework</td><td>Parlay</td><td>framework (no qualifying legs)</td><td><span class="chip">Research</span></td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/correlation_parlays.csv" target="_blank" rel="noopener">correlation_parlays.csv</a></td></tr>
+<tr><td>—</td><td>X1–X3 prop combos</td><td>Prop-combo</td><td>G5 values measured</td><td><span class="chip">Research</span></td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/correlation_props.csv" target="_blank" rel="noopener">correlation_props.csv</a></td></tr>
+</tbody></table></div>
+<p class="small">Rank is by gate progress until Finals begin; backtest ROI never outranks live scores.</p>
+<h2>Rewards <span class="chip flag">PROPOSAL — amounts blank pending owner decision (F9)</span></h2>
+<div class="tbl-wrap"><table><thead><tr><th>Rank (Finals)</th><th>Proposed share</th><th>Condition</th><th>Source</th></tr></thead><tbody>
+<tr><td>1st</td><td>40% of pool</td><td>must be Validated</td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/leaderboard.md" target="_blank" rel="noopener">design doc (proposal)</a></td></tr>
+<tr><td>2nd</td><td>25%</td><td>must be Validated</td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/leaderboard.md" target="_blank" rel="noopener">design doc (proposal)</a></td></tr>
+<tr><td>3rd</td><td>15%</td><td>must be Validated</td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/leaderboard.md" target="_blank" rel="noopener">design doc (proposal)</a></td></tr>
+<tr><td>4th–10th</td><td>2% each</td><td>Candidate or better</td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/leaderboard.md" target="_blank" rel="noopener">design doc (proposal)</a></td></tr>
+<tr><td>Participation</td><td>0.25% per gate-passing season entry</td><td>publishing losers rewarded</td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/leaderboard.md" target="_blank" rel="noopener">design doc (proposal)</a></td></tr>
+<tr><td>Pool size / funding</td><td><span class="chip flag">BLANK — owner decision (F9)</span></td><td>not invented</td><td class="src"><a href="flagged.html">flagged</a></td></tr>
+</tbody></table></div>
+<div class="note">Anti-luck clawback: rewards vest 50% at Finals win, 50% only after the entry passes G3 the following season — a lucky run cannot cash out fully.</div>
+
+</main>
+<footer>Own5 · NFL line origination &amp; skill-based strategy leaderboard · generated from verified data files by scripts/build_site.py · session arena-f1d30421 · 2026-11-02<br>
+Community datasets are flagged — see <a href="flagged.html">Flagged for Review</a>. Nothing on this site is betting advice.</footer>
+</body>
+</html>

@@ -8,7 +8,7 @@ requires changing a file owned by another session, log the request in
 "Cross-session requests" instead of editing it.
 
 - Session ID convention: the suffix of the working branch `arena/<id>-own5`.
-- Sessions active on 2026-11-02: **`arena-cd43258e`** (merged via PR #1) and **`0f468a47-own5`** (this branch, PR #3).
+- Sessions active on 2026-11-02: **`arena-cd43258e`** (merged via PR #1), **`0f468a47-own5`** (PR #3), **`9c3a0a69-own5`** (NBA lab, PR #7), and **`arena-f1d30421`** (NFL Strategy Lab, branch `arena/f1d30421-own5`, PR #9).
 - Current date for all work: **2026-11-02 (UTC)** — NFL 2026 season, Week 8.
 - Verification rule (hard): every factual value in any table/row must link to an
   official, verified source. If it cannot be confirmed from an official source,
@@ -35,6 +35,22 @@ requires changing a file owned by another session, log the request in
 | T10 | Flagged-for-review page (irregularities, unverified blanks) | done | 0f468a47-own5 | flagged.html, data/flagged.csv (12 items F01–F12), research/flagged.md | Nonblocking; published with source links. |
 | T11 | Final integration, PR to main, merge, Pages deploy verification | done | 0f468a47-own5 | COORDINATION.md (this log), README.md | PR #3 merged (1c0cc12), PR #5 merged (8a0be18, this record); conflicts with PR #1/#4/#2 resolved preserving all sessions' work; combined tree re-verified (check_site 0 failures; cd43258e rebuild+27 tests OK); Pages built + live-verified. Full record in "Pull request & deployment record". |
 
+## Task board — session arena-f1d30421 (NFL Strategy Lab), N-ids to avoid collision with T-ids above
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| N1 | Coordination claim | done | arena-f1d30421 | COORDINATION.md | Claimed at session start; claim pushed before work began. |
+| N2 | Line-origination methodology + live lines | done | arena-f1d30421 | research/arena-f1d30421/line-origination.md, scripts/originate_lines.py, data/model_lines_2026_wk9.csv, data/raw/standings_2026_reg.csv, data/raw/schedule_2026_wk9.csv | Own lines for all 15 games of 2026 Wk9 from official nfl.com standings+schedule + derived HFA (2.22→2.0). Market cols blank+flagged (F7). |
+| N3 | Strategy catalog + backtests | done | arena-f1d30421 | research/arena-f1d30421/strategies.md, scripts/compute_analysis.py, data/backtest_results.csv | 8 pre-registered variants, 1980–2024 (n recorded per row); best (home dog ≥7, 56.37%, n=793) FAILS Bonferroni α=0.00625 (p=0.0134) → 0 certified strategies. |
+| N4 | Validation gates G0–G7 | done | arena-f1d30421 | research/arena-f1d30421/validation-gates.md | Thresholds verified vs Bailey–Borwein–López de Prado–Zhu 2014, DSR 2014, PBO 2017, Kaunitz 2017, Thorp 2011. |
+| N5 | Correlation analysis | done | arena-f1d30421 | research/arena-f1d30421/correlation.md, data/correlation_bets.csv, data/correlation_parlays.csv, data/correlation_props.csv | Game-line legs ≈ independent (phi 0.01; cross-game ratio 0.984, n=9,479); QB↔top-WR yards r=0.76 (n=3,852). Inputs pinned: spreadspoke@1d309cb, pbp@352c9c9 (flags F1/F2). |
+| N6 | Luck-vs-skill | done | arena-f1d30421 | research/arena-f1d30421/luck-vs-skill.md, data/luck_skill.csv | Exact binomial + power analysis: break-even bettor ≥55% over 200 bets = 20.8%; 2,243 bets to prove 55% skill (80% power). |
+| N7 | Leaderboard & rewards | done | arena-f1d30421 | research/arena-f1d30421/leaderboard.md | Deflated scoring (CLV/DSR/sample/calibration); reward amounts proposals, pool blank (F9). |
+| N8 | Executive summary | done | arena-f1d30421 | research/arena-f1d30421/EXECUTIVE_SUMMARY.md | Restates only computed/verified values. |
+| N9 | Site (dashboard, 10 pages) | done | arena-f1d30421 | nfl-strategy-lab/**, scripts/build_site.py | Generated from verified CSVs; relocated from docs/ to nfl-strategy-lab/ to avoid collision with the NBA lab (see merge log). |
+| N10 | Line-by-line verification + sources registry | done | arena-f1d30421 | scripts/verify_site.py, nfl-strategy-lab/sources.html, nfl-strategy-lab/flagged.html, research/arena-f1d30421/flagged.md | verify_site.py PASS: 10 pages / 50 external links; every table row has source link or explicit BLANK-flag; F1–F11 published. |
+| N11 | Integration, PR, merge, Pages | done | arena-f1d30421 | COORDINATION.md (this log), README.md | PR #9 → main (record below); conflicts resolved preserving all sessions (merge log below). |
+
 ## Cross-session requests
 
 - (none outstanding)
@@ -48,6 +64,14 @@ requires changing a file owned by another session, log the request in
   - `COORDINATION.md`: merged into the combined board above; both sessions' claims, rules, review items and activity preserved.
   - Session 0f468a47-own5 pages live at repo root (detail-*.html etc.) so the `pages/` count asserted by tests (8) is untouched.
 - After the merge, the combined tree was re-verified: `python3 tools/seed_data.py && tools/compute_correlations.py && tools/build_site.py && tools/check_site.py` → ALL CHECKS PASSED, 0 failures; their CI scope (index.html, pages/, data/research.json) untouched.
+
+- 2026-11-02: Session `arena-f1d30421` (branch `arena/f1d30421-own5`, base 426b19d) hit merge conflicts with main (PRs #1–#7 from sessions cd43258e, 0f468a47, 9c3a0a69 all landed). Resolved on its branch keeping ALL sessions' work:
+  - Collision map: `docs/` = NBA lab (9c3a0a69) → **my site moved to `nfl-strategy-lab/`**; `research/strategies.md` + `research/validation-gates.md` = 0f468a47 → **my research moved to `research/arena-f1d30421/`**; `EXECUTIVE_SUMMARY.md` (root) = cd43258e/collaborative → my summary kept at `research/arena-f1d30421/EXECUTIVE_SUMMARY.md`, root file untouched.
+  - `README.md`: merged — main's multi-session README kept in full; my lab added as a third dashboard row + its own section.
+  - `COORDINATION.md`: merged — this board (main's) kept in full; my N1–N11 rows + logs appended below.
+  - `.gitignore`: union of both sessions' entries.
+  - No file from any other session was deleted or overwritten; my relocations are renames of my own files only.
+  - Post-merge verification: `scripts/verify_site.py` PASS (my lab); their pipelines re-run — see session log below.
 
 ## Session logs
 
@@ -74,6 +98,8 @@ requires changing a file owned by another session, log the request in
 - **Pages deploy after PR #3:** Pages API status `built` (https://sassnarep3-star.github.io/Own5/); github-pages deployment for sha `1c0cc12c14b5` created 2026-11-02T21:04:17Z. Live verification via page fetches on 2026-11-02: `/` (Overview dashboard, session cd43258e), `/executive-summary.html`, `/detail-strategies.html` (13-row leaderboard, metrics blank by design), `/detail-correlations.html` (CORR01–06 + 32-team standings, each row source-linked), `/flagged.html` (F01–F12 with links), `/data/correlations.json` — all served correctly; no broken site was merged.
 - **Post-merge verification of combined main:** `tools/check_site.py` → 0 failures (every CSV row source-linked or an intentional flagged blank; no broken internal links across all root HTML pages); session cd43258e CI scope re-checked: `scripts/seed.py` + `scripts/build.py` rebuild produces no diff on `data/research.json`/`index.html`/`pages/`; `python -m unittest discover -s tests` → 27 tests OK.
 - T11 marked done below.
+
+- PR #9 (arena/f1d30421-own5 → main): https://github.com/sassnarep3-star/Own5/pull/9 — NFL Strategy Lab (analysis engine, computed data, 10-page site at /nfl-strategy-lab/, methodology in research/arena-f1d30421/). Merge + Pages deploy record finalized in the post-merge log below (follow-up commit).
 
 ---
 
