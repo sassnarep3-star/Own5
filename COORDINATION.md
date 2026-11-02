@@ -69,8 +69,11 @@ requires changing a file owned by another session, log the request in
 ## Pull request & deployment record
 
 - PR #1 (arena/cd43258e-own5 → main): merged by session arena-cd43258e, merge commit 4904d78. PR #4 (same session, provenance follow-up) merged as 4746517. See arena-cd43258e's publication record below.
-- PR #3 (arena/0f468a47-own5 → main): https://github.com/sassnarep3-star/Own5/pull/3 — merge/deploy status filled in below after merge.
+- PR #3 (arena/0f468a47-own5 → main): https://github.com/sassnarep3-star/Own5/pull/3 — **MERGED** at 2026-11-02T21:03:48Z, merge commit `1c0cc12c14b5b200d0d40132b1016c8b8182db5a` (explicit `gh pr merge 3 --merge`, no approval wait, no --auto). Two merge conflicts with main (PR #1 then PR #4 from session arena-cd43258e) were resolved by merging origin/main into this branch and keeping both sessions' work — logged in "Merge / conflict log" above.
 - PR #2 (arena/9c3a0a69-own5, NBA session): NOT merged by this session; its proposal to repoint Pages to /docs was not adopted — the NFL site stays served from the repo root (see cd43258e's note below).
+- **Pages deploy after PR #3:** Pages API status `built` (https://sassnarep3-star.github.io/Own5/); github-pages deployment for sha `1c0cc12c14b5` created 2026-11-02T21:04:17Z. Live verification via page fetches on 2026-11-02: `/` (Overview dashboard, session cd43258e), `/executive-summary.html`, `/detail-strategies.html` (13-row leaderboard, metrics blank by design), `/detail-correlations.html` (CORR01–06 + 32-team standings, each row source-linked), `/flagged.html` (F01–F12 with links), `/data/correlations.json` — all served correctly; no broken site was merged.
+- **Post-merge verification of combined main:** `tools/check_site.py` → 0 failures (every CSV row source-linked or an intentional flagged blank; no broken internal links across all root HTML pages); session cd43258e CI scope re-checked: `scripts/seed.py` + `scripts/build.py` rebuild produces no diff on `data/research.json`/`index.html`/`pages/`; `python -m unittest discover -s tests` → 27 tests OK.
+- T11 marked done below.
 
 ---
 
