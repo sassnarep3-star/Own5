@@ -1,0 +1,38 @@
+# Repo Review — `sassnarep3-star/Own5` (line by line)
+
+**Reviewed:** 2026-11-02 (UTC) by session `arena-09d847e1-own5` on branch `arena/09d847e1-own5` (base commit `426b19d4981627243aa21b324903eab97cfb9d13` on `main`, plus this branch's commits).
+**Method:** every file in the repo was read in full (`git ls-files` + `read_file`/`wc -l`); every external value used in the project was checked against an official NFL source (see `data/sources.json` / `docs/sources.md`). Irregularities are flagged below and cross-referenced to `data/flagged.json`.
+
+## File-by-file review
+
+| File | Lines | Status | Link / location | Notes & irregularities |
+|---|---|---|---|---|
+| `README.md` | 0 | **IRREGULAR — was empty** | repo root | 0 bytes at review time (flag **F14**). No project description, no build/run instructions, no links. Fixed by this project: README now describes the project, structure, reproduction steps, and links. |
+| `COORDINATION.md` | 44 | reviewed | repo root | Task board + rules present and consistent (session claims, non-overlapping scopes, small frequent commits, `git pull --rebase` before push, handoff log). No irregularities; handoff log updated as work progressed. |
+| `data/sources.json` | registry | reviewed | `data/sources.json` | 18 official sources (SRC-NFL-*), each with URL, publisher, `official: true`, and the items it verifies. All URLs are nfl.com / media.nfl.com / operations.nfl.com. No non-official source is used anywhere for a table value. |
+| `data/standings_2025.json` | 32 teams | reviewed, verified | source: <https://www.nfl.com/standings/league/2025/REG> | All fields transcribed from the official 2025 final REG standings. Automated checks pass: W+L+T=17 for all 32; sum(W)=sum(L)=271; PCT=(W+½T)/17; NET=PF−PA; HOME+ROAD=17; DIV=6; CONF=12. Column-mapping note recorded in-file (HOME then ROAD); streak/last-5 semantics not documented by the page → kept but marked unmapped (**F11**), never re-interpreted. |
+| `data/standings_2026_w8.json` | 32 teams | reviewed, verified | source: <https://www.nfl.com/standings/league/2026/REG> | Through Week 8, `as_of` 2026-11-02; CHI@SEA (W8 MNF) pending → excluded from derived aggregates (flag **F05**). Cross-checked against the 120 final game entries: GP, W/L/T, PF/PA, HOME/ROAD match for all 32 teams exactly (see `analysis/verification_report.json`). |
+| `data/games_2026_w1_w8.json` | 121 games | reviewed, verified | per-game URLs, e.g. <https://www.nfl.com/games/giants-at-commanders-2026-reg-5>; weekly index <https://www.nfl.com/schedules/2026/by-week/week-1> … `week-8` | 120 Final + 1 Scheduled (CHI@SEA, excluded). Scores cross-foot to standings PF/PA/W/L/T/HOME/ROAD for every team. **Irregularity during capture:** one fetch chunk truncated mid-string, dropping the `date` field of NYG@WAS W5 — detected by the consistency check and repaired from the week-5 schedule page (<https://www.nfl.com/schedules/2026/by-week/week-5>); no value was guessed. |
+| `data/schedule_2026_w9.json` | 15 games | reviewed, verified | <https://www.nfl.com/schedules/2026/by-week/week-9> (+ media.nfl.com schedule announcement) | Week 9 slate with dates/times/networks and per-game URLs; byes PIT, TEN. International game CIN@ATL in Madrid 9:30 AM ET noted. |
+| `data/players_2026.json` | 3 tables | reviewed, verified | <https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc> (and rushing/receiving equivalents) | Top-24/25/26 leaders. Passing columns arithmetically consistent. **Irregularities:** team column not rendered in the fetched view → `team` filled only where another official nfl.com source confirmed it (`team_source` per row); Brissett/Willis team = null (**F04**). GP column not rendered (**F03**). Table is top-N only → QBs outside the top 24 have no 2026 totals here (**F07**). |
+| `data/players_2025.json` | 3 tables | reviewed, verified | <https://www.nfl.com/stats/player-stats/category/passing/2025/reg/all/passingyards/desc> (and equivalents) | Same schema as 2026. **Irregularity:** chunk boundary truncated the Tyler Shough row mid-string (INT/RATING/LNG) → set to `null` with an in-row note; never inferred. |
+| `data/season_facts_2026.json` | — | reviewed, verified | <https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced>, <https://www.nfl.com/legal/flexible-scheduling-procedures>, <https://operations.nfl.com/rules-officiating/2026-nfl-rulebook> | 18 weeks / 272 games / 17 per team; kickoff, byes, Week 18, playoff format and dates, Super Bowl LXI, Thanksgiving tripleheader, 9 international games, 2026 rulebook changes (onside kick etc.). |
+| `data/flagged.json` | F01–F15 | reviewed | `data/flagged.json` | Register of everything unverifiable from official sources or assumption-based. Published on the site's "Flagged for Review" page. Includes F01 (no official market odds → all market fields blank), F02 (−110 convention), F05 (CHI@SEA pending), F06 (BAL/MIA/PHI/AZ W9 starters; Jackson IR news link), F14 (empty README), F15 (South Korea legal note — analytics only). |
+| `scripts/analyze.py` | ~430 | reviewed | `scripts/analyze.py` | Pure stdlib, no network. Walk-forward model (no lookahead), verification checks, backtest, correlations, gates, leaderboard, W9 lines. Deterministic: re-running reproduces `analysis/*.json` exactly. |
+| `analysis/*.json` (6 files) | — | generated | `analysis/` | Generated by `scripts/analyze.py` from `data/` only. `verification_report.json`: 10/10 checks pass. |
+| `EXECUTIVE_SUMMARY.md`, `docs/repo-review.md`, `docs/sources.md` | — | reviewed | repo root / `docs/` | This document, the summary, and the rendered source registry. |
+| `index.html`, `pages/*.html`, `assets/*`, `.nojekyll` | — | generated | repo root | Generated by `scripts/build_site.py`. Inline styles only; no external assets (renders with no network); every table row links to an official source; unverifiable cells are blank + "unverified" and cross-referenced to the Flagged page. |
+
+## Irregularities found (summary)
+
+1. **F14 — `README.md` was empty (0 bytes)** at review time. Fixed in this branch.
+2. **F11 — standings columns without published semantics** (streak, last-5, some record fields) are stored with an explicit "unmapped" note; never re-interpreted or used in models.
+3. **Capture truncation** — two fetch chunk boundaries cut values mid-string (2025 Shough row; one game's date field). Both detected by consistency checks; affected values set to `null`/repaired from the entity's own official page; never guessed.
+4. **F03/F04/F07 — player-stats table limitations** — GP and team columns not rendered in the fetched view; table is top-N only. Team filled only with a second official source (`team_source` recorded per row); otherwise `null`. QB prop lines use team GP (labeled assumption F03).
+5. **F01 — no official betting lines exist** → every market-odds/CLV field in the project is blank and flagged; strategies are validated against our own originated lines only.
+6. **F05 — CHI@SEA W8 MNF pending** at the 2026-11-02 cutoff → excluded from backtest and model inputs.
+7. **F06 — BAL/MIA/PHI/AZ Week 9 starters unconfirmed** (Jackson IR per official nfl.com news, 2026-11-01) → no prop lines originated for those slots; rows blank.
+
+## Verification statement
+
+Every table row in the published site carries a link to an official NFL source (per-row `source_url`/`game_url` fields in `data/` and `analysis/`). Values that could not be confirmed from an official source are **blank**, marked "unverified", and listed on the Flagged for Review page. No value in this repository was inferred, estimated, or back-filled.
