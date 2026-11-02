@@ -1,0 +1,55 @@
+{
+  "checks": [
+    {
+      "check": "2025: every team played 17 games (W+L+T=17)",
+      "passed": true,
+      "detail": "teams checked: 32"
+    },
+    {
+      "check": "2025: sum(W) == sum(L)",
+      "passed": true,
+      "detail": "sumW=271 sumL=271"
+    },
+    {
+      "check": "2025: PCT == (W+0.5*T)/17 rounded to 3dp",
+      "passed": true,
+      "detail": "mismatches: []"
+    },
+    {
+      "check": "2025: NET == PF-PA for all teams",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "2025: HOME+ROAD=17, DIV=6 games, CONF=12 games",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "2026: games played per team from game list == W+L+T from standings",
+      "passed": true,
+      "detail": "mismatches: []"
+    },
+    {
+      "check": "2026: per-team PF/PA from game list == standings PF/PA (all 32 teams)",
+      "passed": true,
+      "detail": "mismatches: []"
+    },
+    {
+      "check": "2026: per-team W/L/T from game list == standings W/L/T",
+      "passed": true,
+      "detail": "mismatches: []"
+    },
+    {
+      "check": "2026: per-team HOME/ROAD records from game list == standings",
+      "passed": true,
+      "detail": "mismatches: []"
+    },
+    {
+      "check": "2026: sum(W)==sum(L)==decided games; sum(T)=2*ties",
+      "passed": true,
+      "detail": "final_games=120, ties=1, pending_excluded=1"
+    }
+  ],
+  "all_passed": true
+}

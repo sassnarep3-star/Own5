@@ -1,0 +1,182 @@
+{
+  "project": "Own5 - NFL line origination & strategy research",
+  "note": "Source registry. 'official' = operated by the NFL (nfl.com, media.nfl.com, operations.nfl.com, nextgenstats.nfl.com). Every data row in this repo carries a source_id referencing this registry. Fetched/verified on 2026-11-02 (UTC) by session arena-09d847e1-own5.",
+  "sources": [
+    {
+      "id": "SRC-NFL-STANDINGS-2025",
+      "title": "2025 NFL League Standings (final regular season)",
+      "url": "https://www.nfl.com/standings/league/2025/REG",
+      "publisher": "NFL.com (official)",
+      "official": true,
+      "verifies": "2025 W/L/T, PCT, PF, PA, NET, home/road/div/conf records, streak, last-5 for all 32 teams"
+    },
+    {
+      "id": "SRC-NFL-STANDINGS-2026",
+      "title": "2026 NFL League Standings (through Week 8, as of 2026-11-02)",
+      "url": "https://www.nfl.com/standings/league/2026/REG",
+      "publisher": "NFL.com (official)",
+      "official": true,
+      "verifies": "2026 W/L/T, PCT, PF, PA, NET, home/road/div/conf records, streak, last-5 for all 32 teams through Week 8"
+    },
+    {
+      "id": "SRC-NFL-SCHED-2026-W1",
+      "title": "2026 NFL Week 1 schedule & results (by week)",
+      "url": "https://www.nfl.com/schedules/2026/by-week/week-1",
+      "publisher": "NFL.com (official)",
+      "official": true,
+      "verifies": "Week 1 2026 matchups, dates, final scores (16 games)"
+    },
+    {
+      "id": "SRC-NFL-SCHED-2026-W2",
+      "title": "2026 NFL Week 2 schedule & results (by week)",
+      "url": "https://www.nfl.com/schedules/2026/by-week/week-2",
+      "publisher": "NFL.com (official)",
+      "official": true,
+      "verifies": "Week 2 2026 matchups, dates, final scores (16 games; WAS@DAL score confirmed via game page SRC-NFL-GAME-WAS-DAL-W2)"
+    },
+    {
+      "id": "SRC-NFL-GAME-WAS-DAL-W2",
+      "title": "Washington Commanders at Dallas Cowboys, 2026 REG Week 2 - Game Center",
+      "url": "https://www.nfl.com/games/commanders-at-cowboys-2026-reg-2",
+      "publisher": "NFL.com (official)",
+      "official": true,
+      "verifies": "WAS 20, DAL 37, Final (Week 2) - used because the week-2 list link text was split across page chunks"
+    },
+    {
+      "id": "SRC-NFL-SCHED-2026-W3",
+      "title": "2026 NFL Week 3 schedule & results (by week)",
+      "url": "https://www.nfl.com/schedules/2026/by-week/week-3",
+      "publisher": "NFL.com (official)",
+      "official": true,
+      "verifies": "Week 3 2026 matchups, dates, final scores (16 games)"
+    },
+    {
+      "id": "SRC-NFL-SCHED-2026-W4",
+      "title": "2026 NFL Week 4 schedule & results (by week)",
+      "url": "https://www.nfl.com/schedules/2026/by-week/week-4",
+      "publisher": "NFL.com (official)",
+      "official": true,
+      "verifies": "Week 4 2026 matchups, dates, final scores (16 games)"
+    },
+    {
+      "id": "SRC-NFL-SCHED-2026-W5",
+      "title": "2026 NFL Week 5 schedule & results (by week)",
+      "url": "https://www.nfl.com/schedules/2026/by-week/week-5",
+      "publisher": "NFL.com (official)",
+      "official": true,
+      "verifies": "Week 5 2026 matchups, dates, final scores (15 games; CAR, KC bye; NYG@WAS tie 27-27)"
+    },
+    {
+      "id": "SRC-NFL-SCHED-2026-W6",
+      "title": "2026 NFL Week 6 schedule & results (by week)",
+      "url": "https://www.nfl.com/schedules/2026/by-week/week-6",
+      "publisher": "NFL.com (official)",
+      "official": true,
+      "verifies": "Week 6 2026 matchups, dates, final scores (14 games; CIN, DET, MIA, MIN bye)"
+    },
+    {
+      "id": "SRC-NFL-SCHED-2026-W7",
+      "title": "2026 NFL Week 7 schedule & results (by week)",
+      "url": "https://www.nfl.com/schedules/2026/by-week/week-7",
+      "publisher": "NFL.com (official)",
+      "official": true,
+      "verifies": "Week 7 2026 matchups, dates, final scores (14 games; BUF, JAX, LAC, WAS bye)"
+    },
+    {
+      "id": "SRC-NFL-SCHED-2026-W8",
+      "title": "2026 NFL Week 8 schedule & results (by week)",
+      "url": "https://www.nfl.com/schedules/2026/by-week/week-8",
+      "publisher": "NFL.com (official)",
+      "official": true,
+      "verifies": "Week 8 2026 matchups, dates, final scores (14 final games; HOU, NO, NYG, SF bye; CHI@SEA MNF 2026-11-02 8:15 PM ET still pending at data cutoff)"
+    },
+    {
+      "id": "SRC-NFL-SCHED-2026-W9",
+      "title": "2026 NFL Week 9 schedule (by week) - upcoming slate",
+      "url": "https://www.nfl.com/schedules/2026/by-week/week-9",
+      "publisher": "NFL.com (official)",
+      "official": true,
+      "verifies": "Week 9 2026 matchups, dates, times, networks (15 games; PIT, TEN bye) - target slate for originated lines"
+    },
+    {
+      "id": "SRC-NFL-MEDIA-2026-SCHED",
+      "title": "2026 NFL Schedule Announced (official league press release, May 14, 2026)",
+      "url": "https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced",
+      "publisher": "NFL Media / media.nfl.com (official)",
+      "official": true,
+      "verifies": "2026 season structure: 18 weeks / 272 games / 17 games per team; kickoff Wed Sep 9 SEA vs NE 8:20 p.m. ET NBC (Super Bowl LX rematch); Week 18 Jan 9-10 all division games; byes Weeks 5-14; 9 international games (Melbourne W1, Rio W3, London W4-6, Paris W7, Madrid W9, Munich W10, Mexico City W11); Thanksgiving tripleheader Nov 26; 14-team playoff format, WC 2v7/3v6/4v5, Wild Card Weekend from Sat Jan 16, Divisional Jan 23-24, Championships Jan 31, Super Bowl LXI Sun Feb 14 2027 SoFi Stadium (ESPN)"
+    },
+    {
+      "id": "SRC-NFL-PLAYERSTATS-2026-PASS",
+      "title": "2026 NFL player stats - Passing leaders (regular season, through Week 8)",
+      "url": "https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc",
+      "publisher": "NFL.com (official)",
+      "official": true,
+      "verifies": "2026 QB passing YDS, YPA, ATT, CMP, CMP%, TD, INT, RATING, LNG (top 24 by yards; column mapping arithmetically verified: YPA=YDS/ATT, CMP%=CMP/ATT)"
+    },
+    {
+      "id": "SRC-NFL-PLAYERSTATS-2025-PASS",
+      "title": "2025 NFL player stats - Passing leaders (regular season, final)",
+      "url": "https://www.nfl.com/stats/player-stats/category/passing/2025/reg/all/passingyards/desc",
+      "publisher": "NFL.com (official)",
+      "official": true,
+      "verifies": "2025 QB passing YDS, YPA, ATT, CMP, CMP%, TD, INT, RATING, LNG (top 24 by yards)"
+    },
+    {
+      "id": "SRC-NFL-PLAYERSTATS-2026-RUSH",
+      "title": "2026 NFL player stats - Rushing leaders (regular season, through Week 8)",
+      "url": "https://www.nfl.com/stats/player-stats/category/rushing/2026/reg/all/rushingyards/desc",
+      "publisher": "NFL.com (official)",
+      "official": true,
+      "verifies": "2026 rushing YDS leaders (top 24 by rushing yards; first column = YDS sort key)"
+    },
+    {
+      "id": "SRC-NFL-PLAYERSTATS-2025-RUSH",
+      "title": "2025 NFL player stats - Rushing leaders (regular season, final)",
+      "url": "https://www.nfl.com/stats/player-stats/category/rushing/2025/reg/all/rushingyards/desc",
+      "publisher": "NFL.com (official)",
+      "official": true,
+      "verifies": "2025 rushing YDS leaders (top 24 by rushing yards)"
+    },
+    {
+      "id": "SRC-NFL-PLAYERSTATS-2026-REC",
+      "title": "2026 NFL player stats - Receiving leaders (regular season, through Week 8)",
+      "url": "https://www.nfl.com/stats/player-stats/category/receiving/2026/reg/all/receivingyards/desc",
+      "publisher": "NFL.com (official)",
+      "official": true,
+      "verifies": "2026 receiving REC and YDS leaders (top 24 by receiving yards; first two columns = REC, YDS)"
+    },
+    {
+      "id": "SRC-NFL-PLAYERSTATS-2025-REC",
+      "title": "2025 NFL player stats - Receiving leaders (regular season, final)",
+      "url": "https://www.nfl.com/stats/player-stats/category/receiving/2025/reg/all/receivingyards/desc",
+      "publisher": "NFL.com (official)",
+      "official": true,
+      "verifies": "2025 receiving REC and YDS leaders (top 24 by receiving yards)"
+    },
+    {
+      "id": "SRC-NFL-RULEBOOK-2026",
+      "title": "2026 NFL Rulebook (official playing rules)",
+      "url": "https://operations.nfl.com/rules-officiating/2026-nfl-rulebook",
+      "publisher": "NFL Football Operations / operations.nfl.com (official)",
+      "official": true,
+      "verifies": "Official 2026 playing rules incl. 2026 rule changes (6-1-3, 6-1-5, 6-1-6, 19-2); game timing/overtime rules (Rule 3), scoring rules (Rule 4/38)"
+    },
+    {
+      "id": "SRC-NFL-FLEX-SCHED",
+      "title": "NFL flexible scheduling procedures (2026)",
+      "url": "https://www.nfl.com/legal/flexible-scheduling-procedures",
+      "publisher": "NFL.com legal (official)",
+      "official": true,
+      "verifies": "Flexible scheduling windows for Weeks 16-18 (Sat/Thu/Sun/Mon slots) as published on nfl.com schedule pages"
+    },
+    {
+      "id": "SRC-NFL-NEWS-LAMAR-IR",
+      "title": "Lamar to IR: Ravens QB to undergo surgery on season-ending thumb injury",
+      "url": "https://www.nfl.com/news/ravens-qb-lamar-jackson-suffers-right-thumb-injury-bills",
+      "publisher": "NFL.com News (official)",
+      "official": true,
+      "verifies": "Lamar Jackson (BAL) placed on IR after Week 8 thumb injury - relevant to BAL Week 9 starter props (flagged context)"
+    }
+  ]
+}

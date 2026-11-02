@@ -1,0 +1,25 @@
+{
+  "season": 2026,
+  "week": 9,
+  "as_of": "2026-11-02",
+  "source_id": "SRC-NFL-SCHED-2026-W9",
+  "source_url": "https://www.nfl.com/schedules/2026/by-week/week-9",
+  "byes": ["PIT", "TEN"],
+  "games": [
+    {"away": "JAX", "home": "BAL", "date": "2026-11-05", "time_et": "8:15 PM", "network": "TNF", "note": "Thursday Night Football", "game_url": "https://www.nfl.com/games/jaguars-at-ravens-2026-reg-9"},
+    {"away": "CIN", "home": "ATL", "date": "2026-11-08", "time_et": "9:30 AM", "network": "NFLN", "note": "International game, Madrid (Bernabeu Stadium)", "game_url": "https://www.nfl.com/games/bengals-at-falcons-2026-reg-9"},
+    {"away": "DEN", "home": "CAR", "date": "2026-11-08", "time_et": "1:00 PM", "network": "CBS", "game_url": "https://www.nfl.com/games/broncos-at-panthers-2026-reg-9"},
+    {"away": "DAL", "home": "IND", "date": "2026-11-08", "time_et": "1:00 PM", "network": "FOX", "game_url": "https://www.nfl.com/games/cowboys-at-colts-2026-reg-9"},
+    {"away": "NYJ", "home": "KC", "date": "2026-11-08", "time_et": "1:00 PM", "network": "CBS", "game_url": "https://www.nfl.com/games/jets-at-chiefs-2026-reg-9"},
+    {"away": "DET", "home": "MIA", "date": "2026-11-08", "time_et": "1:00 PM", "network": "CBS", "game_url": "https://www.nfl.com/games/lions-at-dolphins-2026-reg-9"},
+    {"away": "CLE", "home": "NO", "date": "2026-11-08", "time_et": "1:00 PM", "network": "CBS", "game_url": "https://www.nfl.com/games/browns-at-saints-2026-reg-9"},
+    {"away": "NYG", "home": "PHI", "date": "2026-11-08", "time_et": "1:00 PM", "network": "FOX", "game_url": "https://www.nfl.com/games/giants-at-eagles-2026-reg-9"},
+    {"away": "LA", "home": "WAS", "date": "2026-11-08", "time_et": "1:00 PM", "network": "FOX", "game_url": "https://www.nfl.com/games/rams-at-commanders-2026-reg-9"},
+    {"away": "HOU", "home": "LAC", "date": "2026-11-08", "time_et": "4:05 PM", "network": "CBS", "game_url": "https://www.nfl.com/games/texans-at-chargers-2026-reg-9"},
+    {"away": "LV", "home": "SF", "date": "2026-11-08", "time_et": "4:25 PM", "network": "FOX", "game_url": "https://www.nfl.com/games/raiders-at-49ers-2026-reg-9"},
+    {"away": "GB", "home": "NE", "date": "2026-11-08", "time_et": "4:25 PM", "network": "FOX", "game_url": "https://www.nfl.com/games/packers-at-patriots-2026-reg-9"},
+    {"away": "AZ", "home": "SEA", "date": "2026-11-08", "time_et": "4:25 PM", "network": "FOX", "game_url": "https://www.nfl.com/games/cardinals-at-seahawks-2026-reg-9"},
+    {"away": "TB", "home": "CHI", "date": "2026-11-08", "time_et": "8:20 PM", "network": "NBC", "note": "SNF", "game_url": "https://www.nfl.com/games/buccaneers-at-bears-2026-reg-9"},
+    {"away": "BUF", "home": "MIN", "date": "2026-11-09", "time_et": "8:15 PM", "network": "ESPN", "note": "MNF", "game_url": "https://www.nfl.com/games/bills-at-vikings-2026-reg-9"}
+  ]
+}

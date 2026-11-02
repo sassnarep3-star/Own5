@@ -1,0 +1,75 @@
+{
+  "as_of": "2026-11-02 (regular season through Week 8)",
+  "passing": {
+    "source_id": "SRC-NFL-PLAYERSTATS-2026-PASS",
+    "source_url": "https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc",
+    "column_mapping": "YDS, YPA, ATT, CMP, CMP%, TD, INT, RATING, LNG — verified arithmetically (YPA = YDS/ATT, CMP% = CMP/ATT for every recorded row). Team column not rendered in fetched table; 'team' filled only where confirmed by another official nfl.com source (noted in team_source).",
+    "leaders": [
+      {"player": "Jordan Love", "team": "GB", "yds": 2246, "ypa": 7.2, "att": 312, "cmp": 192, "cmp_pct": 61.5, "td": 16, "int": 6, "rating": 92.4, "lng": 97, "team_source": "nfl.com contracts article (Love, Green Bay Packers)"},
+      {"player": "Matthew Stafford", "team": "LA", "yds": 2146, "ypa": 7.1, "att": 303, "cmp": 204, "cmp_pct": 67.3, "td": 15, "int": 8, "rating": 93.2, "lng": 107, "team_source": "nfl.com player logs page (2026 Los Angeles Rams QB)"},
+      {"player": "Kirk Cousins", "team": "LV", "yds": 2124, "ypa": 7.5, "att": 283, "cmp": 180, "cmp_pct": 63.6, "td": 19, "int": 5, "rating": 101.4, "lng": 106, "team_source": "nfl.com QB rankings (Las Vegas Raiders quarterback Kirk Cousins)"},
+      {"player": "Joe Burrow", "team": "CIN", "yds": 2115, "ypa": 7.9, "att": 267, "cmp": 195, "cmp_pct": 73.0, "td": 20, "int": 6, "rating": 111.6, "lng": 104, "team_source": "nfl.com news (Cincinnati Bengals quarterback Joe Burrow)"},
+      {"player": "Dak Prescott", "team": "DAL", "yds": 2046, "ypa": 6.8, "att": 302, "cmp": 197, "cmp_pct": 65.2, "td": 14, "int": 5, "rating": 93.2, "lng": 108, "team_source": "nfl.com contracts article (Dak Prescott, Dallas Cowboys)"},
+      {"player": "Drake Maye", "team": "NE", "yds": 1983, "ypa": 8.5, "att": 234, "cmp": 157, "cmp_pct": 67.1, "td": 15, "int": 8, "rating": 100.4, "lng": 87, "team_source": "nfl.com QB rankings Week 8 (Drake Maye, NE)"},
+      {"player": "Jared Goff", "team": "DET", "yds": 1964, "ypa": 7.9, "att": 248, "cmp": 168, "cmp_pct": 67.7, "td": 15, "int": 1, "rating": 110.0, "lng": 96, "team_source": "nfl.com QB rankings Week 8 (Jared Goff, DET)"},
+      {"player": "Bryce Young", "team": "CAR", "yds": 1921, "ypa": 7.1, "att": 269, "cmp": 158, "cmp_pct": 58.7, "td": 13, "int": 5, "rating": 89.2, "lng": 91, "team_source": "nfl.com QB rankings Week 7 (Bryce Young, CAR)"},
+      {"player": "Geno Smith", "team": "NYJ", "yds": 1913, "ypa": 8.0, "att": 239, "cmp": 165, "cmp_pct": 69.0, "td": 12, "int": 3, "rating": 104.5, "lng": 80, "team_source": "nfl.com QB rankings Week 4 (Geno Smith, NYJ)"},
+      {"player": "Aaron Rodgers", "team": "PIT", "yds": 1871, "ypa": 6.5, "att": 288, "cmp": 175, "cmp_pct": 60.8, "td": 13, "int": 6, "rating": 86.2, "lng": 82, "team_source": "nfl.com QB rankings (Rodgers, Steelers)"},
+      {"player": "C.J. Stroud", "team": "HOU", "yds": 1867, "ypa": 7.6, "att": 247, "cmp": 160, "cmp_pct": 64.8, "td": 11, "int": 1, "rating": 100.7, "lng": 83, "team_source": "nfl.com QB rankings Week 7 (C.J. Stroud, HOU)"},
+      {"player": "Deshaun Watson", "team": "CLE", "yds": 1806, "ypa": 7.2, "att": 249, "cmp": 163, "cmp_pct": 65.5, "td": 7, "int": 3, "rating": 91.2, "lng": 83, "team_source": "nfl.com QB rankings Week 7 (Deshaun Watson, CLE)"},
+      {"player": "Patrick Mahomes", "team": "KC", "yds": 1795, "ypa": 7.7, "att": 232, "cmp": 154, "cmp_pct": 66.4, "td": 12, "int": 4, "rating": 99.7, "lng": 78, "team_source": "nfl.com contracts article (Patrick Mahomes, Kansas City Chiefs)"},
+      {"player": "Josh Allen", "team": "BUF", "yds": 1793, "ypa": 8.8, "att": 205, "cmp": 135, "cmp_pct": 65.8, "td": 11, "int": 5, "rating": 101.1, "lng": 79, "team_source": "nfl.com contracts article (Josh Allen, Buffalo Bills)"},
+      {"player": "Brock Purdy", "team": "SF", "yds": 1748, "ypa": 8.3, "att": 211, "cmp": 146, "cmp_pct": 69.2, "td": 15, "int": 4, "rating": 110.1, "lng": 85, "team_source": "nfl.com QB rankings Week 4 (Brock Purdy, SF)"},
+      {"player": "Tyler Shough", "team": "NO", "yds": 1721, "ypa": 6.3, "att": 273, "cmp": 183, "cmp_pct": 67.0, "td": 13, "int": 6, "rating": 90.9, "lng": 90, "team_source": "nfl.com QB rankings Week 4 (Tyler Shough, NO)"},
+      {"player": "Jacoby Brissett", "team": null, "yds": 1719, "ypa": 5.6, "att": 305, "cmp": 193, "cmp_pct": 63.3, "td": 10, "int": 7, "rating": 79.7, "lng": 94, "team_source": null},
+      {"player": "Trevor Lawrence", "team": "JAX", "yds": 1690, "ypa": 8.5, "att": 198, "cmp": 130, "cmp_pct": 65.7, "td": 17, "int": 4, "rating": 112.6, "lng": 80, "team_source": "nfl.com player logs (2026 Jacksonville Jaguars QB Trevor Lawrence)"},
+      {"player": "Daniel Jones", "team": "IND", "yds": 1542, "ypa": 5.8, "att": 268, "cmp": 162, "cmp_pct": 60.4, "td": 5, "int": 9, "rating": 68.7, "lng": 79, "team_source": "nfl.com QB rankings Week 7 (Daniel Jones, IND)"},
+      {"player": "Bo Nix", "team": "DEN", "yds": 1493, "ypa": 6.0, "att": 250, "cmp": 149, "cmp_pct": 59.6, "td": 9, "int": 3, "rating": 83.6, "lng": 68, "team_source": "nfl.com QB rankings Week 7 (Bo Nix, DEN)"},
+      {"player": "Cam Ward", "team": "TEN", "yds": 1483, "ypa": 6.0, "att": 248, "cmp": 155, "cmp_pct": 62.5, "td": 6, "int": 5, "rating": 78.8, "lng": 73, "team_source": "nfl.com kickoff-weekend rosters QB breakdown (Cam Ward, Titans)"},
+      {"player": "Justin Herbert", "team": "LAC", "yds": 1398, "ypa": 6.6, "att": 212, "cmp": 131, "cmp_pct": 61.8, "td": 5, "int": 10, "rating": 69.3, "lng": 64, "team_source": "nfl.com contracts article (Justin Herbert, Los Angeles Chargers)"},
+      {"player": "Sam Darnold", "team": "SEA", "yds": 1290, "ypa": 7.3, "att": 177, "cmp": 110, "cmp_pct": 62.2, "td": 8, "int": 8, "rating": 80.5, "lng": 68, "team_source": "nfl.com game center team leaders (Seahawks: S. Darnold 1290 YDS); kickoff rosters (Sam Darnold, Seahawks)"},
+      {"player": "Michael Penix Jr.", "team": "ATL", "yds": 1282, "ypa": 7.6, "att": 168, "cmp": 104, "cmp_pct": 61.9, "td": 9, "int": 5, "rating": 90.9, "lng": 52, "team_source": "nfl.com QB rankings Week 7 (Michael Penix Jr., ATL)"},
+      {"player": "Malik Willis", "team": null, "yds": 1268, "ypa": 6.9, "att": 183, "cmp": 108, "cmp_pct": 59.0, "td": 6, "int": 5, "rating": 79.7, "lng": 56, "team_source": null}
+    ]
+  },
+  "rushing": {
+    "source_id": "SRC-NFL-PLAYERSTATS-2026-RUSH",
+    "source_url": "https://www.nfl.com/stats/player-stats/category/rushing/2026/reg/all/rushingyards/desc",
+    "column_mapping": "First column = YDS (sort key rushingyards/desc). Additional columns not label-mapped in fetched view; only YDS recorded.",
+    "leaders_yds": [
+      {"player": "Bijan Robinson", "yds": 780}, {"player": "Jahmyr Gibbs", "yds": 773}, {"player": "Kenneth Walker III", "yds": 770}, {"player": "Bucky Irving", "yds": 728}, {"player": "James Cook", "yds": 707}, {"player": "Jaylen Warren", "yds": 704}, {"player": "Derrick Henry", "yds": 632}, {"player": "Jonathan Taylor", "yds": 610}, {"player": "Tony Pollard", "yds": 595}, {"player": "Braelon Allen", "yds": 565}, {"player": "Kyren Williams", "yds": 548}, {"player": "Chuba Hubbard", "yds": 540}, {"player": "Javonte Williams", "yds": 528}, {"player": "Bhayshul Tuten", "yds": 492}, {"player": "D'Andre Swift", "yds": 476}, {"player": "Aaron Jones", "yds": 458}, {"player": "Cam Skattebo", "yds": 418}, {"player": "Ollie Gordon II", "yds": 408}, {"player": "Emanuel Wilson", "yds": 403}, {"player": "Blake Corum", "yds": 389}, {"player": "Christian McCaffrey", "yds": 389}, {"player": "Rhamondre Stevenson", "yds": 367}, {"player": "Quinshon Judkins", "yds": 342}, {"player": "Chase Brown", "yds": 340}, {"player": "Ashton Jeanty", "yds": 337}
+    ]
+  },
+  "receiving": {
+    "source_id": "SRC-NFL-PLAYERSTATS-2026-REC",
+    "source_url": "https://www.nfl.com/stats/player-stats/category/receiving/2026/reg/all/receivingyards/desc",
+    "column_mapping": "First two columns = REC, YDS (sort key receivingyards/desc).",
+    "leaders": [
+      {"player": "Jaxon Smith-Njigba", "rec": 58, "yds": 867, "team": "SEA", "team_source": "nfl.com game center team leaders (Seahawks: J. Smith-Njigba 867 YDS)"},
+      {"player": "Tee Higgins", "rec": 43, "yds": 726},
+      {"player": "CeeDee Lamb", "rec": 60, "yds": 709},
+      {"player": "Christian Watson", "rec": 42, "yds": 708},
+      {"player": "Chris Olave", "rec": 49, "yds": 636},
+      {"player": "Drake London", "rec": 39, "yds": 624},
+      {"player": "Matthew Golden", "rec": 43, "yds": 619},
+      {"player": "Zay Flowers", "rec": 40, "yds": 608},
+      {"player": "Malik Nabers", "rec": 48, "yds": 605},
+      {"player": "Amon-Ra St. Brown", "rec": 53, "yds": 571},
+      {"player": "Tetairoa McMillan", "rec": 42, "yds": 569},
+      {"player": "Puka Nacua", "rec": 56, "yds": 565},
+      {"player": "Brock Bowers", "rec": 41, "yds": 547},
+      {"player": "Trey McBride", "rec": 66, "yds": 544},
+      {"player": "George Pickens", "rec": 39, "yds": 533},
+      {"player": "Garrett Wilson", "rec": 43, "yds": 527},
+      {"player": "Ja'Marr Chase", "rec": 43, "yds": 492},
+      {"player": "Luther Burden III", "rec": 35, "yds": 491, "team": "CHI", "team_source": "nfl.com game center team leaders (Bears: L. Burden 491 YDS)"},
+      {"player": "Michael Wilson", "rec": 45, "yds": 486},
+      {"player": "Davante Adams", "rec": 30, "yds": 480},
+      {"player": "Tre Tucker", "rec": 29, "yds": 474},
+      {"player": "Jameson Williams", "rec": 27, "yds": 437},
+      {"player": "Parker Washington", "rec": 27, "yds": 432},
+      {"player": "George Kittle", "rec": 34, "yds": 425},
+      {"player": "Mike Evans", "rec": 27, "yds": 420}
+    ]
+  }
+}

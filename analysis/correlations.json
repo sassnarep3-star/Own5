@@ -1,0 +1,48 @@
+{
+  "note": "All values are Pearson r computed from verified official data only; n = sample size. C7 is a mean, not r.",
+  "correlations": {
+    "C1_net_vs_winpct_2025": {
+      "n": 32,
+      "r": 0.9191,
+      "desc": "Pearson r between 2025 NET points and win percentage (32 teams, official standings)",
+      "source_url": "https://www.nfl.com/standings/league/2025/REG"
+    },
+    "C2_net_vs_winpct_2026_w8": {
+      "n": 32,
+      "r": 0.8314,
+      "desc": "Pearson r between 2026 NET points and win percentage through Week 8 (32 teams, official standings)",
+      "source_url": "https://www.nfl.com/standings/league/2026/REG"
+    },
+    "C3_model_vs_actual_margin_2026": {
+      "n": 120,
+      "r": 0.2885,
+      "desc": "Pearson r between walk-forward model margin and actual margin, 2026 W1-W8 (predictive skill of originated spread)",
+      "source_url": "https://www.nfl.com/schedules/2026/by-week/week-1"
+    },
+    "C4_samegame_margin_vs_total": {
+      "n": 120,
+      "r": -0.1639,
+      "desc": "Pearson r between game margin and game total, same game (parlay leg correlation, gate G6)",
+      "source_url": "https://www.nfl.com/schedules/2026/by-week/week-1"
+    },
+    "C5_spreadbet_vs_totalbet_result": {
+      "n": 120,
+      "r": 0.0874,
+      "desc": "Pearson r between spread-direction and total-direction results on the same game (same-game parlay leg correlation, gate G6)",
+      "source_url": "https://www.nfl.com/schedules/2026/by-week/week-1"
+    },
+    "C6_persistence_2025diff_vs_2026winpct": {
+      "n": 32,
+      "r": 0.3966,
+      "desc": "Pearson r between 2025 point differential per game and 2026 win percentage (year-to-year persistence)",
+      "source_url": "https://www.nfl.com/standings/league/2025/REG"
+    },
+    "C7_home_field_2026": {
+      "n": 120,
+      "mean_home_margin": 0.7167,
+      "home_win_rate": 0.5167,
+      "desc": "Empirical home-field advantage 2026 W1-W8: mean home margin = 0.717 pts; home win rate = 62/120 = 0.5167 (assumption F09)",
+      "source_url": "https://www.nfl.com/schedules/2026/by-week/week-1"
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "as_of": "2025 regular season final",
+  "passing": {
+    "source_id": "SRC-NFL-PLAYERSTATS-2025-PASS",
+    "source_url": "https://www.nfl.com/stats/player-stats/category/passing/2025/reg/all/passingyards/desc",
+    "column_mapping": "YDS, YPA, ATT, CMP, CMP%, TD, INT, RATING, LNG (same layout as 2026 page; arithmetically consistent).",
+    "leaders": [
+      {"player": "Matthew Stafford", "yds": 4707, "ypa": 7.9, "att": 597, "cmp": 388, "cmp_pct": 65.0, "td": 46, "int": 8, "rating": 109.2, "lng": 236},
+      {"player": "Jared Goff", "yds": 4564, "ypa": 7.9, "att": 578, "cmp": 393, "cmp_pct": 68.0, "td": 34, "int": 8, "rating": 105.5, "lng": 223},
+      {"player": "Dak Prescott", "yds": 4552, "ypa": 7.6, "att": 600, "cmp": 404, "cmp_pct": 67.3, "td": 30, "int": 10, "rating": 99.5, "lng": 220},
+      {"player": "Drake Maye", "yds": 4394, "ypa": 8.9, "att": 492, "cmp": 354, "cmp_pct": 72.0, "td": 31, "int": 8, "rating": 113.5, "lng": 203},
+      {"player": "Sam Darnold", "yds": 4048, "ypa": 8.5, "att": 477, "cmp": 323, "cmp_pct": 67.7, "td": 25, "int": 14, "rating": 99.1, "lng": 178},
+      {"player": "Trevor Lawrence", "yds": 4007, "ypa": 7.2, "att": 560, "cmp": 341, "cmp_pct": 60.9, "td": 29, "int": 12, "rating": 91.0, "lng": 194},
+      {"player": "Caleb Williams", "yds": 3942, "ypa": 6.9, "att": 568, "cmp": 330, "cmp_pct": 58.1, "td": 27, "int": 7, "rating": 90.1, "lng": 187},
+      {"player": "Bo Nix", "yds": 3931, "ypa": 6.4, "att": 612, "cmp": 388, "cmp_pct": 63.4, "td": 25, "int": 11, "rating": 87.8, "lng": 196},
+      {"player": "Justin Herbert", "yds": 3727, "ypa": 7.3, "att": 512, "cmp": 340, "cmp_pct": 66.4, "td": 26, "int": 13, "rating": 94.1, "lng": 175},
+      {"player": "Baker Mayfield", "yds": 3693, "ypa": 6.8, "att": 543, "cmp": 343, "cmp_pct": 63.2, "td": 26, "int": 11, "rating": 90.6, "lng": 172},
+      {"player": "Josh Allen", "yds": 3668, "ypa": 8.0, "att": 460, "cmp": 319, "cmp_pct": 69.4, "td": 25, "int": 10, "rating": 102.2, "lng": 177},
+      {"player": "Patrick Mahomes", "yds": 3587, "ypa": 7.2, "att": 502, "cmp": 315, "cmp_pct": 62.8, "td": 22, "int": 11, "rating": 89.6, "lng": 173},
+      {"player": "Jordan Love", "yds": 3381, "ypa": 7.7, "att": 439, "cmp": 291, "cmp_pct": 66.3, "td": 23, "int": 6, "rating": 101.2, "lng": 159},
+      {"player": "Jacoby Brissett", "yds": 3366, "ypa": 6.9, "att": 485, "cmp": 315, "cmp_pct": 65.0, "td": 23, "int": 8, "rating": 94.1, "lng": 165},
+      {"player": "Aaron Rodgers", "yds": 3322, "ypa": 6.7, "att": 498, "cmp": 327, "cmp_pct": 65.7, "td": 24, "int": 7, "rating": 94.8, "lng": 143},
+      {"player": "Jalen Hurts", "yds": 3224, "ypa": 7.1, "att": 454, "cmp": 294, "cmp_pct": 64.8, "td": 25, "int": 6, "rating": 98.5, "lng": 150},
+      {"player": "Cam Ward", "yds": 3169, "ypa": 5.9, "att": 540, "cmp": 323, "cmp_pct": 59.8, "td": 15, "int": 7, "rating": 80.2, "lng": 153},
+      {"player": "Daniel Jones", "yds": 3101, "ypa": 8.1, "att": 384, "cmp": 261, "cmp_pct": 68.0, "td": 19, "int": 8, "rating": 100.2, "lng": 149},
+      {"player": "C.J. Stroud", "yds": 3041, "ypa": 7.2, "att": 423, "cmp": 273, "cmp_pct": 64.5, "td": 19, "int": 8, "rating": 92.9, "lng": 136},
+      {"player": "Geno Smith", "yds": 3025, "ypa": 6.8, "att": 448, "cmp": 302, "cmp_pct": 67.4, "td": 19, "int": 17, "rating": 84.7, "lng": 148},
+      {"player": "Bryce Young", "yds": 3011, "ypa": 6.3, "att": 478, "cmp": 304, "cmp_pct": 63.6, "td": 23, "int": 11, "rating": 87.8, "lng": 153},
+      {"player": "Tua Tagovailoa", "yds": 2660, "ypa": 6.9, "att": 384, "cmp": 260, "cmp_pct": 67.7, "td": 20, "int": 15, "rating": 88.4, "lng": 142},
+      {"player": "Lamar Jackson", "yds": 2549, "ypa": 8.4, "att": 302, "cmp": 192, "cmp_pct": 63.6, "td": 21, "int": 7, "rating": 103.8, "lng": 109},
+      {"player": "Joe Flacco", "yds": 2479, "ypa": 6.0, "att": 416, "cmp": 251, "cmp_pct": 60.3, "td": 15, "int": 10, "rating": 79.1, "lng": 115},
+      {"player": "Tyler Shough", "yds": 2384, "ypa": 7.3, "att": 327, "cmp": 221, "cmp_pct": 67.6, "td": 10, "int": null, "rating": null, "lng": null, "note": "row truncated at page-chunk boundary in fetched view; INT/RATING/LNG not captured - left blank (unverified)"}
+    ]
+  },
+  "rushing": {
+    "source_id": "SRC-NFL-PLAYERSTATS-2025-RUSH",
+    "source_url": "https://www.nfl.com/stats/player-stats/category/rushing/2025/reg/all/rushingyards/desc",
+    "leaders_yds": [
+      {"player": "James Cook", "yds": 1621}, {"player": "Derrick Henry", "yds": 1595}, {"player": "Jonathan Taylor", "yds": 1585}, {"player": "Bijan Robinson", "yds": 1478}, {"player": "De'Von Achane", "yds": 1350}, {"player": "Kyren Williams", "yds": 1252}, {"player": "Jahmyr Gibbs", "yds": 1223}, {"player": "Christian McCaffrey", "yds": 1202}, {"player": "Javonte Williams", "yds": 1201}, {"player": "Saquon Barkley", "yds": 1140}, {"player": "Travis Etienne", "yds": 1107}, {"player": "D'Andre Swift", "yds": 1087}, {"player": "Tony Pollard", "yds": 1082}, {"player": "Rico Dowdle", "yds": 1076}, {"player": "Breece Hall", "yds": 1065}, {"player": "Kenneth Walker III", "yds": 1027}, {"player": "Chase Brown", "yds": 1019}, {"player": "Ashton Jeanty", "yds": 975}, {"player": "Jaylen Warren", "yds": 958}, {"player": "Josh Jacobs", "yds": 929}, {"player": "TreVeyon Henderson", "yds": 911}, {"player": "Quinshon Judkins", "yds": 827}, {"player": "Jacory Croskey-Merritt", "yds": 805}, {"player": "Kyle Monangai", "yds": 783}, {"player": "J.K. Dobbins", "yds": 772}
+    ]
+  },
+  "receiving": {
+    "source_id": "SRC-NFL-PLAYERSTATS-2025-REC",
+    "source_url": "https://www.nfl.com/stats/player-stats/category/receiving/2025/reg/all/receivingyards/desc",
+    "leaders": [
+      {"player": "Jaxon Smith-Njigba", "rec": 119, "yds": 1793},
+      {"player": "Puka Nacua", "rec": 129, "yds": 1715},
+      {"player": "George Pickens", "rec": 93, "yds": 1429},
+      {"player": "Ja'Marr Chase", "rec": 125, "yds": 1412},
+      {"player": "Amon-Ra St. Brown", "rec": 117, "yds": 1401},
+      {"player": "Trey McBride", "rec": 126, "yds": 1239},
+      {"player": "Zay Flowers", "rec": 86, "yds": 1211},
+      {"player": "Chris Olave", "rec": 100, "yds": 1163},
+      {"player": "Nico Collins", "rec": 71, "yds": 1117},
+      {"player": "Jameson Williams", "rec": 65, "yds": 1117},
+      {"player": "CeeDee Lamb", "rec": 75, "yds": 1077},
+      {"player": "Justin Jefferson", "rec": 84, "yds": 1048},
+      {"player": "Courtland Sutton", "rec": 74, "yds": 1017},
+      {"player": "Tetairoa McMillan", "rec": 70, "yds": 1014},
+      {"player": "Wan'Dale Robinson", "rec": 92, "yds": 1014},
+      {"player": "Stefon Diggs", "rec": 85, "yds": 1013},
+      {"player": "DeVonta Smith", "rec": 77, "yds": 1008},
+      {"player": "Michael Wilson", "rec": 78, "yds": 1006},
+      {"player": "A.J. Brown", "rec": 78, "yds": 1003},
+      {"player": "Alec Pierce", "rec": 47, "yds": 1003},
+      {"player": "Emeka Egbuka", "rec": 63, "yds": 938},
+      {"player": "Kyle Pitts", "rec": 88, "yds": 928},
+      {"player": "Christian McCaffrey", "rec": 102, "yds": 924},
+      {"player": "Drake London", "rec": 68, "yds": 919},
+      {"player": "Jaylen Waddle", "rec": 64, "yds": 910}
+    ]
+  }
+}
