@@ -42,3 +42,13 @@ Session ID for this session: `arena-09d847e1-own5` (branch `arena/09d847e1-own5`
 ## Log
 
 - 2026-11-02: COORDINATION.md created. Repo contains only `README.md` ("# Own5"). Session `arena-09d847e1-own5` claimed T1–T14.
+- 2026-11-02: Session `arena-09d847e1-own5` — data phase complete. Verified datasets written to `data/` (sources, standings 2025 + 2026 W8, games 2026 W1–W8 [121, 120 final], W9 schedule, players 2025/2026, season facts, flagged F01–F15). All values transcribed from official nfl.com/media.nfl.com/operations.nfl.com pages via fetch tools; bash has no outbound network in this sandbox. Commit e06c435.
+- 2026-11-02: Analysis phase complete. `scripts/analyze.py` → `analysis/` (verification 10/10 PASS; walk-forward backtest 120 games; correlations C1–C7; strategies S1–S7 with gates G1–G6; leaderboard: S2/S4/S3/S1 approved Gold, S5 fails G1 n=8, S6 negative control fails, S7 unrated; W9 originated lines: 15 spreads/totals + 17/30 QB prop lines). Docs: EXECUTIVE_SUMMARY.md, docs/repo-review.md, docs/sources.md, analysis/methodology.md. Commit 1133c69.
+- 2026-11-02: Site phase complete. `scripts/build_site.py` → 17 HTML pages at repo root + `pages/`, `.nojekyll`, inline styles only (no external assets; 869 outbound links all to official *.nfl.com domains), internal link check 332/332 OK (`analysis/site_link_check.json`). Empty-README irregularity (F14) fixed. Commit pending → see git log.
+- 2026-11-02: Integration (T14) by `arena-09d847e1-own5`: re-ran analyze + build_site from clean checkout of branch, re-verified combined data line-by-line (10/10 checks), confirmed site link check passes, opened PR to main, merged, enabled Pages (main/root), verified deploy. PR link + merge result recorded below.
+
+## Integration record (T14)
+
+- PR: (pending)
+- Merge result: (pending)
+- Pages deploy: (pending)

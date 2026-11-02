@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repo Review — Own5 NFL Lines & Strategies</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cellipse cx='16' cy='16' rx='9' ry='14' transform='rotate(35 16 16)' fill='%23013369'/%3E%3C/svg%3E">
+<style>
+:root{--navy:#013369;--navy2:#0b4f9e;--ink:#17202a;--mut:#5d6d7e;--line:#d5dbe3;--bg:#f4f6f9;--card:#ffffff;--ok:#1e8449;--bad:#c0392b;--warn:#b9770e;--gold:#b9770e;}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);font-size:15px;line-height:1.5}
+a{color:var(--navy2)}
+header.top{background:var(--navy);color:#fff;padding:14px 22px}
+header.top .brand{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:700;letter-spacing:.5px}
+header.top .brand svg{display:block}
+header.top .sub{color:#c9d6e8;font-size:12.5px;margin-top:2px}
+nav.bar{background:#fff;border-bottom:1px solid var(--line);padding:8px 22px;display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px}
+nav.bar a{color:var(--navy);text-decoration:none;font-weight:600}
+nav.bar a:hover{text-decoration:underline}
+nav.bar a.cur{color:var(--bad)}
+main{max-width:1240px;margin:0 auto;padding:20px 22px 40px}
+h1{font-size:24px;margin:6px 0 12px;color:var(--navy)}
+h2{font-size:19px;margin:26px 0 10px;color:var(--navy);border-bottom:2px solid var(--line);padding-bottom:4px}
+h3{font-size:16px;margin:18px 0 8px;color:var(--navy)}
+p{margin:8px 0}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px;margin:14px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.card .k{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.6px}
+.card .v{font-size:24px;font-weight:700;color:var(--navy);margin-top:2px}
+.card .s{font-size:12px;color:var(--mut);margin-top:2px}
+.card a.cardlink{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;text-decoration:none;color:var(--ink)}
+.card a.cardlink:hover{border-color:var(--navy2);box-shadow:0 1px 4px rgba(1,51,105,.15)}
+.card a.cardlink .t{font-weight:700;color:var(--navy)}
+.card a.cardlink .d{font-size:12.5px;color:var(--mut);margin-top:3px}
+table.data{border-collapse:collapse;width:100%;background:var(--card);font-size:13px;margin:10px 0 18px}
+table.data th{background:var(--navy);color:#fff;text-align:left;padding:7px 9px;position:sticky;top:0;white-space:nowrap}
+table.data td{border-bottom:1px solid var(--line);padding:6px 9px;vertical-align:top}
+table.data tr:nth-child(even) td{background:#f8fafc}
+table.data tr:hover td{background:#eef4fb}
+td.blank{background:#fdf6ec}
+.unv{color:var(--warn);font-size:11px;font-style:italic;white-space:nowrap}
+.badge{display:inline-block;padding:1px 8px;border-radius:10px;font-size:11.5px;font-weight:700;white-space:nowrap}
+.b-ok{background:#e9f7ef;color:var(--ok)} .b-bad{background:#fdedec;color:var(--bad)}
+.b-warn{background:#fef5e7;color:var(--warn)} .b-info{background:#eaf2f8;color:var(--navy2)}
+.b-gold{background:#fef5e7;color:var(--gold)}
+.pass{color:var(--ok);font-weight:700}.fail{color:var(--bad);font-weight:700}
+.note{background:#eaf2f8;border-left:4px solid var(--navy2);padding:10px 14px;border-radius:0 8px 8px 0;margin:12px 0;font-size:13.5px}
+.warnbox{background:#fef5e7;border-left:4px solid var(--warn);padding:10px 14px;border-radius:0 8px 8px 0;margin:12px 0;font-size:13.5px}
+footer{border-top:1px solid var(--line);background:#fff;padding:14px 22px;color:var(--mut);font-size:12.5px}
+code{background:#eef1f5;padding:1px 5px;border-radius:4px;font-size:12.5px}
+pre{background:#0f2036;color:#dbe7f5;padding:12px;border-radius:8px;overflow-x:auto;font-size:12.5px}
+.num{text-align:right;font-variant-numeric:tabular-nums}
+.small{font-size:12.5px;color:var(--mut)}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="brand"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><ellipse cx="16" cy="16" rx="9" ry="14" transform="rotate(35 16 16)" fill="#fff" stroke="#013369" stroke-width="1.6"/><path d="M11 12 l3 4 3-4 M11 20 l3 4 3-4" stroke="#013369" stroke-width="1.6" fill="none"/></svg><span>Own5 — NFL Lines &amp; Strategies</span></div>
+  <div class="sub">Self-originated NFL lines from verified official sources only · as of 2026-11-02 (UTC) · analytics, not wagering advice</div>
+</header>
+<nav class="bar"><a href="../index.html">Dashboard</a>
+<a href="../pages/standings-2025.html">Standings 2025</a>
+<a href="../pages/standings-2026-w8.html">Standings 2026 W8</a>
+<a href="../pages/games-2026-w1-w8.html">Games 2026 W1–W8</a>
+<a href="../pages/week9-lines.html">Week 9 Lines &amp; Props</a>
+<a href="../pages/backtest-2026.html">Backtest 2026</a>
+<a href="../pages/strategies.html">Strategies &amp; Gates</a>
+<a href="../pages/leaderboard.html">Leaderboard</a>
+<a href="../pages/correlations.html">Correlations</a>
+<a href="../pages/players-2026.html">Players 2026</a>
+<a href="../pages/players-2025.html">Players 2025</a>
+<a href="../pages/season-facts.html">Season Facts</a>
+<a href="../pages/sources.html">Sources</a>
+<a href="../pages/repo-review.html" class="cur">Repo Review</a>
+<a href="../pages/methodology.html">Methodology</a>
+<a href="../pages/executive-summary.html">Executive Summary</a>
+<a href="../pages/flagged.html">⚠ Flagged for Review</a></nav>
+<main>
+<h1>Repo Review — <code>sassnarep3-star/Own5</code> (line by line)</h1>
+<p><b>Reviewed:</b> 2026-11-02 (UTC) by session <code>arena-09d847e1-own5</code> on branch <code>arena/09d847e1-own5</code> (base commit <code>426b19d4981627243aa21b324903eab97cfb9d13</code> on <code>main</code>, plus this branch&#x27;s commits).</p>
+<p><b>Method:</b> every file in the repo was read in full (<code>git ls-files</code> + <code>read_file</code>/<code>wc -l</code>); every external value used in the project was checked against an official NFL source (see <code>data/sources.json</code> / <code>docs/sources.md</code>). Irregularities are flagged below and cross-referenced to <code>data/flagged.json</code>.</p>
+<h2>File-by-file review</h2>
+<table class="data"><thead><tr><th>File</th><th>Lines</th><th>Status</th><th>Link / location</th><th>Notes &amp; irregularities</th></tr></thead><tbody><tr><td><code>README.md</code></td><td>0</td><td><b>IRREGULAR — was empty</b></td><td>repo root</td><td>0 bytes at review time (flag <b>F14</b>). No project description, no build/run instructions, no links. Fixed by this project: README now describes the project, structure, reproduction steps, and links.</td></tr><tr><td><code>COORDINATION.md</code></td><td>44</td><td>reviewed</td><td>repo root</td><td>Task board + rules present and consistent (session claims, non-overlapping scopes, small frequent commits, <code>git pull --rebase</code> before push, handoff log). No irregularities; handoff log updated as work progressed.</td></tr><tr><td><code>data/sources.json</code></td><td>registry</td><td>reviewed</td><td><code>data/sources.json</code></td><td>18 official sources (SRC-NFL-*), each with URL, publisher, <code>official: true</code>, and the items it verifies. All URLs are nfl.com / media.nfl.com / operations.nfl.com. No non-official source is used anywhere for a table value.</td></tr><tr><td><code>data/standings_2025.json</code></td><td>32 teams</td><td>reviewed, verified</td><td>source: &lt;https://www.nfl.com/standings/league/2025/REG&gt;</td><td>All fields transcribed from the official 2025 final REG standings. Automated checks pass: W+L+T=17 for all 32; sum(W)=sum(L)=271; PCT=(W+½T)/17; NET=PF−PA; HOME+ROAD=17; DIV=6; CONF=12. Column-mapping note recorded in-file (HOME then ROAD); streak/last-5 semantics not documented by the page → kept but marked unmapped (<b>F11</b>), never re-interpreted.</td></tr><tr><td><code>data/standings_2026_w8.json</code></td><td>32 teams</td><td>reviewed, verified</td><td>source: &lt;https://www.nfl.com/standings/league/2026/REG&gt;</td><td>Through Week 8, <code>as_of</code> 2026-11-02; CHI@SEA (W8 MNF) pending → excluded from derived aggregates (flag <b>F05</b>). Cross-checked against the 120 final game entries: GP, W/L/T, PF/PA, HOME/ROAD match for all 32 teams exactly (see <code>analysis/verification_report.json</code>).</td></tr><tr><td><code>data/games_2026_w1_w8.json</code></td><td>121 games</td><td>reviewed, verified</td><td>per-game URLs, e.g. &lt;https://www.nfl.com/games/giants-at-commanders-2026-reg-5&gt;; weekly index &lt;https://www.nfl.com/schedules/2026/by-week/week-1&gt; … <code>week-8</code></td><td>120 Final + 1 Scheduled (CHI@SEA, excluded). Scores cross-foot to standings PF/PA/W/L/T/HOME/ROAD for every team. <b>Irregularity during capture:</b> one fetch chunk truncated mid-string, dropping the <code>date</code> field of NYG@WAS W5 — detected by the consistency check and repaired from the week-5 schedule page (&lt;https://www.nfl.com/schedules/2026/by-week/week-5&gt;); no value was guessed.</td></tr><tr><td><code>data/schedule_2026_w9.json</code></td><td>15 games</td><td>reviewed, verified</td><td>&lt;https://www.nfl.com/schedules/2026/by-week/week-9&gt; (+ media.nfl.com schedule announcement)</td><td>Week 9 slate with dates/times/networks and per-game URLs; byes PIT, TEN. International game CIN@ATL in Madrid 9:30 AM ET noted.</td></tr><tr><td><code>data/players_2026.json</code></td><td>3 tables</td><td>reviewed, verified</td><td>&lt;https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc&gt; (and rushing/receiving equivalents)</td><td>Top-24/25/26 leaders. Passing columns arithmetically consistent. <b>Irregularities:</b> team column not rendered in the fetched view → <code>team</code> filled only where another official nfl.com source confirmed it (<code>team_source</code> per row); Brissett/Willis team = null (<b>F04</b>). GP column not rendered (<b>F03</b>). Table is top-N only → QBs outside the top 24 have no 2026 totals here (<b>F07</b>).</td></tr><tr><td><code>data/players_2025.json</code></td><td>3 tables</td><td>reviewed, verified</td><td>&lt;https://www.nfl.com/stats/player-stats/category/passing/2025/reg/all/passingyards/desc&gt; (and equivalents)</td><td>Same schema as 2026. <b>Irregularity:</b> chunk boundary truncated the Tyler Shough row mid-string (INT/RATING/LNG) → set to <code>null</code> with an in-row note; never inferred.</td></tr><tr><td><code>data/season_facts_2026.json</code></td><td>—</td><td>reviewed, verified</td><td>&lt;https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced&gt;, &lt;https://www.nfl.com/legal/flexible-scheduling-procedures&gt;, &lt;https://operations.nfl.com/rules-officiating/2026-nfl-rulebook&gt;</td><td>18 weeks / 272 games / 17 per team; kickoff, byes, Week 18, playoff format and dates, Super Bowl LXI, Thanksgiving tripleheader, 9 international games, 2026 rulebook changes (onside kick etc.).</td></tr><tr><td><code>data/flagged.json</code></td><td>F01–F15</td><td>reviewed</td><td><code>data/flagged.json</code></td><td>Register of everything unverifiable from official sources or assumption-based. Published on the site&#x27;s &quot;Flagged for Review&quot; page. Includes F01 (no official market odds → all market fields blank), F02 (−110 convention), F05 (CHI@SEA pending), F06 (BAL/MIA/PHI/AZ W9 starters; Jackson IR news link), F14 (empty README), F15 (South Korea legal note — analytics only).</td></tr><tr><td><code>scripts/analyze.py</code></td><td>~430</td><td>reviewed</td><td><code>scripts/analyze.py</code></td><td>Pure stdlib, no network. Walk-forward model (no lookahead), verification checks, backtest, correlations, gates, leaderboard, W9 lines. Deterministic: re-running reproduces <code>analysis/*.json</code> exactly.</td></tr><tr><td><code>analysis/*.json</code> (6 files)</td><td>—</td><td>generated</td><td><code>analysis/</code></td><td>Generated by <code>scripts/analyze.py</code> from <code>data/</code> only. <code>verification_report.json</code>: 10/10 checks pass.</td></tr><tr><td><code>EXECUTIVE_SUMMARY.md</code>, <code>docs/repo-review.md</code>, <code>docs/sources.md</code></td><td>—</td><td>reviewed</td><td>repo root / <code>docs/</code></td><td>This document, the summary, and the rendered source registry.</td></tr><tr><td><code>index.html</code>, <code>pages/*.html</code>, <code>assets/*</code>, <code>.nojekyll</code></td><td>—</td><td>generated</td><td>repo root</td><td>Generated by <code>scripts/build_site.py</code>. Inline styles only; no external assets (renders with no network); every table row links to an official source; unverifiable cells are blank + &quot;unverified&quot; and cross-referenced to the Flagged page.</td></tr></tbody></table>
+<h2>Irregularities found (summary)</h2>
+<p>1. <b>F14 — <code>README.md</code> was empty (0 bytes)</b> at review time. Fixed in this branch.</p>
+<p>2. <b>F11 — standings columns without published semantics</b> (streak, last-5, some record fields) are stored with an explicit &quot;unmapped&quot; note; never re-interpreted or used in models.</p>
+<p>3. <b>Capture truncation</b> — two fetch chunk boundaries cut values mid-string (2025 Shough row; one game&#x27;s date field). Both detected by consistency checks; affected values set to <code>null</code>/repaired from the entity&#x27;s own official page; never guessed.</p>
+<p>4. <b>F03/F04/F07 — player-stats table limitations</b> — GP and team columns not rendered in the fetched view; table is top-N only. Team filled only with a second official source (<code>team_source</code> recorded per row); otherwise <code>null</code>. QB prop lines use team GP (labeled assumption F03).</p>
+<p>5. <b>F01 — no official betting lines exist</b> → every market-odds/CLV field in the project is blank and flagged; strategies are validated against our own originated lines only.</p>
+<p>6. <b>F05 — CHI@SEA W8 MNF pending</b> at the 2026-11-02 cutoff → excluded from backtest and model inputs.</p>
+<p>7. <b>F06 — BAL/MIA/PHI/AZ Week 9 starters unconfirmed</b> (Jackson IR per official nfl.com news, 2026-11-01) → no prop lines originated for those slots; rows blank.</p>
+<h2>Verification statement</h2>
+<p>Every table row in the published site carries a link to an official NFL source (per-row <code>source_url</code>/<code>game_url</code> fields in <code>data/</code> and <code>analysis/</code>). Values that could not be confirmed from an official source are <b>blank</b>, marked &quot;unverified&quot;, and listed on the Flagged for Review page. No value in this repository was inferred, estimated, or back-filled.</p>
+</main>
+<footer>
+  Generated by <code>scripts/build_site.py</code> from verified official data (<code>data/</code>, <code>analysis/</code>) ·
+  Every table row links to an official NFL source; unverifiable values are blank and marked <span class="unv">unverified</span> — see
+  <a href="../pages/flagged.html">Flagged for Review</a> · Session <code>arena-09d847e1-own5</code> · Branch <code>arena/09d847e1-own5</code>
+</footer>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sources — Own5 NFL Lines & Strategies</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cellipse cx='16' cy='16' rx='9' ry='14' transform='rotate(35 16 16)' fill='%23013369'/%3E%3C/svg%3E">
+<style>
+:root{--navy:#013369;--navy2:#0b4f9e;--ink:#17202a;--mut:#5d6d7e;--line:#d5dbe3;--bg:#f4f6f9;--card:#ffffff;--ok:#1e8449;--bad:#c0392b;--warn:#b9770e;--gold:#b9770e;}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);font-size:15px;line-height:1.5}
+a{color:var(--navy2)}
+header.top{background:var(--navy);color:#fff;padding:14px 22px}
+header.top .brand{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:700;letter-spacing:.5px}
+header.top .brand svg{display:block}
+header.top .sub{color:#c9d6e8;font-size:12.5px;margin-top:2px}
+nav.bar{background:#fff;border-bottom:1px solid var(--line);padding:8px 22px;display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px}
+nav.bar a{color:var(--navy);text-decoration:none;font-weight:600}
+nav.bar a:hover{text-decoration:underline}
+nav.bar a.cur{color:var(--bad)}
+main{max-width:1240px;margin:0 auto;padding:20px 22px 40px}
+h1{font-size:24px;margin:6px 0 12px;color:var(--navy)}
+h2{font-size:19px;margin:26px 0 10px;color:var(--navy);border-bottom:2px solid var(--line);padding-bottom:4px}
+h3{font-size:16px;margin:18px 0 8px;color:var(--navy)}
+p{margin:8px 0}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px;margin:14px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.card .k{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.6px}
+.card .v{font-size:24px;font-weight:700;color:var(--navy);margin-top:2px}
+.card .s{font-size:12px;color:var(--mut);margin-top:2px}
+.card a.cardlink{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;text-decoration:none;color:var(--ink)}
+.card a.cardlink:hover{border-color:var(--navy2);box-shadow:0 1px 4px rgba(1,51,105,.15)}
+.card a.cardlink .t{font-weight:700;color:var(--navy)}
+.card a.cardlink .d{font-size:12.5px;color:var(--mut);margin-top:3px}
+table.data{border-collapse:collapse;width:100%;background:var(--card);font-size:13px;margin:10px 0 18px}
+table.data th{background:var(--navy);color:#fff;text-align:left;padding:7px 9px;position:sticky;top:0;white-space:nowrap}
+table.data td{border-bottom:1px solid var(--line);padding:6px 9px;vertical-align:top}
+table.data tr:nth-child(even) td{background:#f8fafc}
+table.data tr:hover td{background:#eef4fb}
+td.blank{background:#fdf6ec}
+.unv{color:var(--warn);font-size:11px;font-style:italic;white-space:nowrap}
+.badge{display:inline-block;padding:1px 8px;border-radius:10px;font-size:11.5px;font-weight:700;white-space:nowrap}
+.b-ok{background:#e9f7ef;color:var(--ok)} .b-bad{background:#fdedec;color:var(--bad)}
+.b-warn{background:#fef5e7;color:var(--warn)} .b-info{background:#eaf2f8;color:var(--navy2)}
+.b-gold{background:#fef5e7;color:var(--gold)}
+.pass{color:var(--ok);font-weight:700}.fail{color:var(--bad);font-weight:700}
+.note{background:#eaf2f8;border-left:4px solid var(--navy2);padding:10px 14px;border-radius:0 8px 8px 0;margin:12px 0;font-size:13.5px}
+.warnbox{background:#fef5e7;border-left:4px solid var(--warn);padding:10px 14px;border-radius:0 8px 8px 0;margin:12px 0;font-size:13.5px}
+footer{border-top:1px solid var(--line);background:#fff;padding:14px 22px;color:var(--mut);font-size:12.5px}
+code{background:#eef1f5;padding:1px 5px;border-radius:4px;font-size:12.5px}
+pre{background:#0f2036;color:#dbe7f5;padding:12px;border-radius:8px;overflow-x:auto;font-size:12.5px}
+.num{text-align:right;font-variant-numeric:tabular-nums}
+.small{font-size:12.5px;color:var(--mut)}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="brand"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><ellipse cx="16" cy="16" rx="9" ry="14" transform="rotate(35 16 16)" fill="#fff" stroke="#013369" stroke-width="1.6"/><path d="M11 12 l3 4 3-4 M11 20 l3 4 3-4" stroke="#013369" stroke-width="1.6" fill="none"/></svg><span>Own5 — NFL Lines &amp; Strategies</span></div>
+  <div class="sub">Self-originated NFL lines from verified official sources only · as of 2026-11-02 (UTC) · analytics, not wagering advice</div>
+</header>
+<nav class="bar"><a href="../index.html">Dashboard</a>
+<a href="../pages/standings-2025.html">Standings 2025</a>
+<a href="../pages/standings-2026-w8.html">Standings 2026 W8</a>
+<a href="../pages/games-2026-w1-w8.html">Games 2026 W1–W8</a>
+<a href="../pages/week9-lines.html">Week 9 Lines &amp; Props</a>
+<a href="../pages/backtest-2026.html">Backtest 2026</a>
+<a href="../pages/strategies.html">Strategies &amp; Gates</a>
+<a href="../pages/leaderboard.html">Leaderboard</a>
+<a href="../pages/correlations.html">Correlations</a>
+<a href="../pages/players-2026.html">Players 2026</a>
+<a href="../pages/players-2025.html">Players 2025</a>
+<a href="../pages/season-facts.html">Season Facts</a>
+<a href="../pages/sources.html" class="cur">Sources</a>
+<a href="../pages/repo-review.html">Repo Review</a>
+<a href="../pages/methodology.html">Methodology</a>
+<a href="../pages/executive-summary.html">Executive Summary</a>
+<a href="../pages/flagged.html">⚠ Flagged for Review</a></nav>
+<main>
+
+<h1>Official Source Registry</h1>
+<p class="small">Source registry. &#x27;official&#x27; = operated by the NFL (nfl.com, media.nfl.com, operations.nfl.com, nextgenstats.nfl.com). Every data row in this repo carries a source_id referencing this registry. Fetched/verified on 2026-11-02 (UTC) by session arena-09d847e1-own5.</p>
+<p>Every data row in this project references one of these sources. Values that cannot be confirmed from an official source are blank + <span class="unv">unverified</span> — see <a href="flagged.html">Flagged for Review</a>.</p>
+<table class="data"><thead><tr><th>ID</th><th>Title</th><th>URL</th><th>Publisher</th><th>Official</th><th>Verifies</th></tr></thead><tbody><tr><td><b>SRC-NFL-STANDINGS-2025</b></td><td>2025 NFL League Standings (final regular season)</td><td><a href="https://www.nfl.com/standings/league/2025/REG" target="_blank" rel="noopener">https://www.nfl.com/standings/league/2025/REG</a></td><td>NFL.com (official)</td><td><span class="badge b-ok">official</span></td><td>2025 W/L/T, PCT, PF, PA, NET, home/road/div/conf records, streak, last-5 for all 32 teams</td></tr><tr><td><b>SRC-NFL-STANDINGS-2026</b></td><td>2026 NFL League Standings (through Week 8, as of 2026-11-02)</td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">https://www.nfl.com/standings/league/2026/REG</a></td><td>NFL.com (official)</td><td><span class="badge b-ok">official</span></td><td>2026 W/L/T, PCT, PF, PA, NET, home/road/div/conf records, streak, last-5 for all 32 teams through Week 8</td></tr><tr><td><b>SRC-NFL-SCHED-2026-W1</b></td><td>2026 NFL Week 1 schedule &amp; results (by week)</td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-1" target="_blank" rel="noopener">https://www.nfl.com/schedules/2026/by-week/week-1</a></td><td>NFL.com (official)</td><td><span class="badge b-ok">official</span></td><td>Week 1 2026 matchups, dates, final scores (16 games)</td></tr><tr><td><b>SRC-NFL-SCHED-2026-W2</b></td><td>2026 NFL Week 2 schedule &amp; results (by week)</td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-2" target="_blank" rel="noopener">https://www.nfl.com/schedules/2026/by-week/week-2</a></td><td>NFL.com (official)</td><td><span class="badge b-ok">official</span></td><td>Week 2 2026 matchups, dates, final scores (16 games; WAS@DAL score confirmed via game page SRC-NFL-GAME-WAS-DAL-W2)</td></tr><tr><td><b>SRC-NFL-GAME-WAS-DAL-W2</b></td><td>Washington Commanders at Dallas Cowboys, 2026 REG Week 2 - Game Center</td><td><a href="https://www.nfl.com/games/commanders-at-cowboys-2026-reg-2" target="_blank" rel="noopener">https://www.nfl.com/games/commanders-at-cowboys-2026-reg-2</a></td><td>NFL.com (official)</td><td><span class="badge b-ok">official</span></td><td>WAS 20, DAL 37, Final (Week 2) - used because the week-2 list link text was split across page chunks</td></tr><tr><td><b>SRC-NFL-SCHED-2026-W3</b></td><td>2026 NFL Week 3 schedule &amp; results (by week)</td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-3" target="_blank" rel="noopener">https://www.nfl.com/schedules/2026/by-week/week-3</a></td><td>NFL.com (official)</td><td><span class="badge b-ok">official</span></td><td>Week 3 2026 matchups, dates, final scores (16 games)</td></tr><tr><td><b>SRC-NFL-SCHED-2026-W4</b></td><td>2026 NFL Week 4 schedule &amp; results (by week)</td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-4" target="_blank" rel="noopener">https://www.nfl.com/schedules/2026/by-week/week-4</a></td><td>NFL.com (official)</td><td><span class="badge b-ok">official</span></td><td>Week 4 2026 matchups, dates, final scores (16 games)</td></tr><tr><td><b>SRC-NFL-SCHED-2026-W5</b></td><td>2026 NFL Week 5 schedule &amp; results (by week)</td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-5" target="_blank" rel="noopener">https://www.nfl.com/schedules/2026/by-week/week-5</a></td><td>NFL.com (official)</td><td><span class="badge b-ok">official</span></td><td>Week 5 2026 matchups, dates, final scores (15 games; CAR, KC bye; NYG@WAS tie 27-27)</td></tr><tr><td><b>SRC-NFL-SCHED-2026-W6</b></td><td>2026 NFL Week 6 schedule &amp; results (by week)</td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-6" target="_blank" rel="noopener">https://www.nfl.com/schedules/2026/by-week/week-6</a></td><td>NFL.com (official)</td><td><span class="badge b-ok">official</span></td><td>Week 6 2026 matchups, dates, final scores (14 games; CIN, DET, MIA, MIN bye)</td></tr><tr><td><b>SRC-NFL-SCHED-2026-W7</b></td><td>2026 NFL Week 7 schedule &amp; results (by week)</td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-7" target="_blank" rel="noopener">https://www.nfl.com/schedules/2026/by-week/week-7</a></td><td>NFL.com (official)</td><td><span class="badge b-ok">official</span></td><td>Week 7 2026 matchups, dates, final scores (14 games; BUF, JAX, LAC, WAS bye)</td></tr><tr><td><b>SRC-NFL-SCHED-2026-W8</b></td><td>2026 NFL Week 8 schedule &amp; results (by week)</td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-8" target="_blank" rel="noopener">https://www.nfl.com/schedules/2026/by-week/week-8</a></td><td>NFL.com (official)</td><td><span class="badge b-ok">official</span></td><td>Week 8 2026 matchups, dates, final scores (14 final games; HOU, NO, NYG, SF bye; CHI@SEA MNF 2026-11-02 8:15 PM ET still pending at data cutoff)</td></tr><tr><td><b>SRC-NFL-SCHED-2026-W9</b></td><td>2026 NFL Week 9 schedule (by week) - upcoming slate</td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-9" target="_blank" rel="noopener">https://www.nfl.com/schedules/2026/by-week/week-9</a></td><td>NFL.com (official)</td><td><span class="badge b-ok">official</span></td><td>Week 9 2026 matchups, dates, times, networks (15 games; PIT, TEN bye) - target slate for originated lines</td></tr><tr><td><b>SRC-NFL-MEDIA-2026-SCHED</b></td><td>2026 NFL Schedule Announced (official league press release, May 14, 2026)</td><td><a href="https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced" target="_blank" rel="noopener">https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced</a></td><td>NFL Media / media.nfl.com (official)</td><td><span class="badge b-ok">official</span></td><td>2026 season structure: 18 weeks / 272 games / 17 games per team; kickoff Wed Sep 9 SEA vs NE 8:20 p.m. ET NBC (Super Bowl LX rematch); Week 18 Jan 9-10 all division games; byes Weeks 5-14; 9 international games (Melbourne W1, Rio W3, London W4-6, Paris W7, Madrid W9, Munich W10, Mexico City W11); Thanksgiving tripleheader Nov 26; 14-team playoff format, WC 2v7/3v6/4v5, Wild Card Weekend from Sat Jan 16, Divisional Jan 23-24, Championships Jan 31, Super Bowl LXI Sun Feb 14 2027 SoFi Stadium (ESPN)</td></tr><tr><td><b>SRC-NFL-PLAYERSTATS-2026-PASS</b></td><td>2026 NFL player stats - Passing leaders (regular season, through Week 8)</td><td><a href="https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc" target="_blank" rel="noopener">https://www.nfl.com/stats/player-stats/category/passing/2026/reg/all/passingyards/desc</a></td><td>NFL.com (official)</td><td><span class="badge b-ok">official</span></td><td>2026 QB passing YDS, YPA, ATT, CMP, CMP%, TD, INT, RATING, LNG (top 24 by yards; column mapping arithmetically verified: YPA=YDS/ATT, CMP%=CMP/ATT)</td></tr><tr><td><b>SRC-NFL-PLAYERSTATS-2025-PASS</b></td><td>2025 NFL player stats - Passing leaders (regular season, final)</td><td><a href="https://www.nfl.com/stats/player-stats/category/passing/2025/reg/all/passingyards/desc" target="_blank" rel="noopener">https://www.nfl.com/stats/player-stats/category/passing/2025/reg/all/passingyards/desc</a></td><td>NFL.com (official)</td><td><span class="badge b-ok">official</span></td><td>2025 QB passing YDS, YPA, ATT, CMP, CMP%, TD, INT, RATING, LNG (top 24 by yards)</td></tr><tr><td><b>SRC-NFL-PLAYERSTATS-2026-RUSH</b></td><td>2026 NFL player stats - Rushing leaders (regular season, through Week 8)</td><td><a href="https://www.nfl.com/stats/player-stats/category/rushing/2026/reg/all/rushingyards/desc" target="_blank" rel="noopener">https://www.nfl.com/stats/player-stats/category/rushing/2026/reg/all/rushingyards/desc</a></td><td>NFL.com (official)</td><td><span class="badge b-ok">official</span></td><td>2026 rushing YDS leaders (top 24 by rushing yards; first column = YDS sort key)</td></tr><tr><td><b>SRC-NFL-PLAYERSTATS-2025-RUSH</b></td><td>2025 NFL player stats - Rushing leaders (regular season, final)</td><td><a href="https://www.nfl.com/stats/player-stats/category/rushing/2025/reg/all/rushingyards/desc" target="_blank" rel="noopener">https://www.nfl.com/stats/player-stats/category/rushing/2025/reg/all/rushingyards/desc</a></td><td>NFL.com (official)</td><td><span class="badge b-ok">official</span></td><td>2025 rushing YDS leaders (top 24 by rushing yards)</td></tr><tr><td><b>SRC-NFL-PLAYERSTATS-2026-REC</b></td><td>2026 NFL player stats - Receiving leaders (regular season, through Week 8)</td><td><a href="https://www.nfl.com/stats/player-stats/category/receiving/2026/reg/all/receivingyards/desc" target="_blank" rel="noopener">https://www.nfl.com/stats/player-stats/category/receiving/2026/reg/all/receivingyards/desc</a></td><td>NFL.com (official)</td><td><span class="badge b-ok">official</span></td><td>2026 receiving REC and YDS leaders (top 24 by receiving yards; first two columns = REC, YDS)</td></tr><tr><td><b>SRC-NFL-PLAYERSTATS-2025-REC</b></td><td>2025 NFL player stats - Receiving leaders (regular season, final)</td><td><a href="https://www.nfl.com/stats/player-stats/category/receiving/2025/reg/all/receivingyards/desc" target="_blank" rel="noopener">https://www.nfl.com/stats/player-stats/category/receiving/2025/reg/all/receivingyards/desc</a></td><td>NFL.com (official)</td><td><span class="badge b-ok">official</span></td><td>2025 receiving REC and YDS leaders (top 24 by receiving yards)</td></tr><tr><td><b>SRC-NFL-RULEBOOK-2026</b></td><td>2026 NFL Rulebook (official playing rules)</td><td><a href="https://operations.nfl.com/rules-officiating/2026-nfl-rulebook" target="_blank" rel="noopener">https://operations.nfl.com/rules-officiating/2026-nfl-rulebook</a></td><td>NFL Football Operations / operations.nfl.com (official)</td><td><span class="badge b-ok">official</span></td><td>Official 2026 playing rules incl. 2026 rule changes (6-1-3, 6-1-5, 6-1-6, 19-2); game timing/overtime rules (Rule 3), scoring rules (Rule 4/38)</td></tr><tr><td><b>SRC-NFL-FLEX-SCHED</b></td><td>NFL flexible scheduling procedures (2026)</td><td><a href="https://www.nfl.com/legal/flexible-scheduling-procedures" target="_blank" rel="noopener">https://www.nfl.com/legal/flexible-scheduling-procedures</a></td><td>NFL.com legal (official)</td><td><span class="badge b-ok">official</span></td><td>Flexible scheduling windows for Weeks 16-18 (Sat/Thu/Sun/Mon slots) as published on nfl.com schedule pages</td></tr><tr><td><b>SRC-NFL-NEWS-LAMAR-IR</b></td><td>Lamar to IR: Ravens QB to undergo surgery on season-ending thumb injury</td><td><a href="https://www.nfl.com/news/ravens-qb-lamar-jackson-suffers-right-thumb-injury-bills" target="_blank" rel="noopener">https://www.nfl.com/news/ravens-qb-lamar-jackson-suffers-right-thumb-injury-bills</a></td><td>NFL.com News (official)</td><td><span class="badge b-ok">official</span></td><td>Lamar Jackson (BAL) placed on IR after Week 8 thumb injury - relevant to BAL Week 9 starter props (flagged context)</td></tr></tbody></table>
+
+</main>
+<footer>
+  Generated by <code>scripts/build_site.py</code> from verified official data (<code>data/</code>, <code>analysis/</code>) ·
+  Every table row links to an official NFL source; unverifiable values are blank and marked <span class="unv">unverified</span> — see
+  <a href="../pages/flagged.html">Flagged for Review</a> · Session <code>arena-09d847e1-own5</code> · Branch <code>arena/09d847e1-own5</code>
+</footer>
+</body>
+</html>

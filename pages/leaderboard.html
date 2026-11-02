@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leaderboard — Own5 NFL Lines & Strategies</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cellipse cx='16' cy='16' rx='9' ry='14' transform='rotate(35 16 16)' fill='%23013369'/%3E%3C/svg%3E">
+<style>
+:root{--navy:#013369;--navy2:#0b4f9e;--ink:#17202a;--mut:#5d6d7e;--line:#d5dbe3;--bg:#f4f6f9;--card:#ffffff;--ok:#1e8449;--bad:#c0392b;--warn:#b9770e;--gold:#b9770e;}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);font-size:15px;line-height:1.5}
+a{color:var(--navy2)}
+header.top{background:var(--navy);color:#fff;padding:14px 22px}
+header.top .brand{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:700;letter-spacing:.5px}
+header.top .brand svg{display:block}
+header.top .sub{color:#c9d6e8;font-size:12.5px;margin-top:2px}
+nav.bar{background:#fff;border-bottom:1px solid var(--line);padding:8px 22px;display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px}
+nav.bar a{color:var(--navy);text-decoration:none;font-weight:600}
+nav.bar a:hover{text-decoration:underline}
+nav.bar a.cur{color:var(--bad)}
+main{max-width:1240px;margin:0 auto;padding:20px 22px 40px}
+h1{font-size:24px;margin:6px 0 12px;color:var(--navy)}
+h2{font-size:19px;margin:26px 0 10px;color:var(--navy);border-bottom:2px solid var(--line);padding-bottom:4px}
+h3{font-size:16px;margin:18px 0 8px;color:var(--navy)}
+p{margin:8px 0}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px;margin:14px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.card .k{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.6px}
+.card .v{font-size:24px;font-weight:700;color:var(--navy);margin-top:2px}
+.card .s{font-size:12px;color:var(--mut);margin-top:2px}
+.card a.cardlink{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;text-decoration:none;color:var(--ink)}
+.card a.cardlink:hover{border-color:var(--navy2);box-shadow:0 1px 4px rgba(1,51,105,.15)}
+.card a.cardlink .t{font-weight:700;color:var(--navy)}
+.card a.cardlink .d{font-size:12.5px;color:var(--mut);margin-top:3px}
+table.data{border-collapse:collapse;width:100%;background:var(--card);font-size:13px;margin:10px 0 18px}
+table.data th{background:var(--navy);color:#fff;text-align:left;padding:7px 9px;position:sticky;top:0;white-space:nowrap}
+table.data td{border-bottom:1px solid var(--line);padding:6px 9px;vertical-align:top}
+table.data tr:nth-child(even) td{background:#f8fafc}
+table.data tr:hover td{background:#eef4fb}
+td.blank{background:#fdf6ec}
+.unv{color:var(--warn);font-size:11px;font-style:italic;white-space:nowrap}
+.badge{display:inline-block;padding:1px 8px;border-radius:10px;font-size:11.5px;font-weight:700;white-space:nowrap}
+.b-ok{background:#e9f7ef;color:var(--ok)} .b-bad{background:#fdedec;color:var(--bad)}
+.b-warn{background:#fef5e7;color:var(--warn)} .b-info{background:#eaf2f8;color:var(--navy2)}
+.b-gold{background:#fef5e7;color:var(--gold)}
+.pass{color:var(--ok);font-weight:700}.fail{color:var(--bad);font-weight:700}
+.note{background:#eaf2f8;border-left:4px solid var(--navy2);padding:10px 14px;border-radius:0 8px 8px 0;margin:12px 0;font-size:13.5px}
+.warnbox{background:#fef5e7;border-left:4px solid var(--warn);padding:10px 14px;border-radius:0 8px 8px 0;margin:12px 0;font-size:13.5px}
+footer{border-top:1px solid var(--line);background:#fff;padding:14px 22px;color:var(--mut);font-size:12.5px}
+code{background:#eef1f5;padding:1px 5px;border-radius:4px;font-size:12.5px}
+pre{background:#0f2036;color:#dbe7f5;padding:12px;border-radius:8px;overflow-x:auto;font-size:12.5px}
+.num{text-align:right;font-variant-numeric:tabular-nums}
+.small{font-size:12.5px;color:var(--mut)}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="brand"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><ellipse cx="16" cy="16" rx="9" ry="14" transform="rotate(35 16 16)" fill="#fff" stroke="#013369" stroke-width="1.6"/><path d="M11 12 l3 4 3-4 M11 20 l3 4 3-4" stroke="#013369" stroke-width="1.6" fill="none"/></svg><span>Own5 — NFL Lines &amp; Strategies</span></div>
+  <div class="sub">Self-originated NFL lines from verified official sources only · as of 2026-11-02 (UTC) · analytics, not wagering advice</div>
+</header>
+<nav class="bar"><a href="../index.html">Dashboard</a>
+<a href="../pages/standings-2025.html">Standings 2025</a>
+<a href="../pages/standings-2026-w8.html">Standings 2026 W8</a>
+<a href="../pages/games-2026-w1-w8.html">Games 2026 W1–W8</a>
+<a href="../pages/week9-lines.html">Week 9 Lines &amp; Props</a>
+<a href="../pages/backtest-2026.html">Backtest 2026</a>
+<a href="../pages/strategies.html">Strategies &amp; Gates</a>
+<a href="../pages/leaderboard.html" class="cur">Leaderboard</a>
+<a href="../pages/correlations.html">Correlations</a>
+<a href="../pages/players-2026.html">Players 2026</a>
+<a href="../pages/players-2025.html">Players 2025</a>
+<a href="../pages/season-facts.html">Season Facts</a>
+<a href="../pages/sources.html">Sources</a>
+<a href="../pages/repo-review.html">Repo Review</a>
+<a href="../pages/methodology.html">Methodology</a>
+<a href="../pages/executive-summary.html">Executive Summary</a>
+<a href="../pages/flagged.html">⚠ Flagged for Review</a></nav>
+<main>
+
+<h1>Leaderboard — strategy competition</h1>
+<p class="small">score = 100*ROI + 10*Sharpe + 50*(win_rate - breakeven), computed on the walk-forward 2026 W1-W8 backtest (SU strategies at even money; -110 at -110; parlays as 2-leg -110). Project-defined competition scoring, not an official NFL metric. Reward tiers: Gold = approved and ROI&gt;10%; Silver = approved and ROI&gt;0; Bronze = approved; Not approved = a gate failed; Unrated = no verified backtest.</p>
+<div class="note">Gate-approved strategies rank above non-approved ones; rewards (Gold/Silver/Bronze tiers) are assigned <b>only</b> to strategies
+that passed all six validation gates (G1 sample ≥30, G2 win rate ≥ breakeven, G3 binomial p&lt;0.05, G4 W7–W8 holdout, G5 drawdown ≤15u, G6 parlay correlation guard).
+S5 has the highest raw score but only 8 bets → fails G1, so it is not approved — a deliberate guard against small-sample luck.</div>
+<table class="data"><thead><tr><th>Rank</th><th>ID</th><th>Strategy</th><th>Type</th><th>Score</th><th>Win rate</th><th>ROI</th><th>Sharpe</th><th>Bets</th><th>Binomial p</th><th>Gates</th><th>Reward tier</th></tr></thead><tbody><tr><td class="num"><b>1</b></td><td><b>S2</b></td><td>Spread direction - selective |line| &gt;= 6 (SU)</td><td>single bet, filtered</td><td class="num">75.23</td><td class="num">0.6863</td><td class="num">0.3725</td><td class="num">2.867</td><td class="num">51</td><td class="num">0.00549</td><td><span class="pass">approved</span></td><td><span class="badge b-gold">Gold</span></td></tr><tr><td class="num"><b>2</b></td><td><b>S4</b></td><td>Same-game 2-leg parlay (spread direction + total direction)</td><td>parlay (2-leg, same game)</td><td class="num">71.27</td><td class="num">0.3866</td><td class="num">0.4054</td><td class="num">2.512</td><td class="num">120</td><td class="num">0.00515</td><td><span class="pass">approved</span></td><td><span class="badge b-gold">Gold</span></td></tr><tr><td class="num"><b>3</b></td><td><b>S3</b></td><td>Total direction vs league reference (SU)</td><td>single bet</td><td class="num">63.65</td><td class="num">0.6333</td><td class="num">0.2667</td><td class="num">3.031</td><td class="num">120</td><td class="num">0.00223</td><td><span class="pass">approved</span></td><td><span class="badge b-gold">Gold</span></td></tr><tr><td class="num"><b>4</b></td><td><b>S1</b></td><td>Spread direction - all games (SU)</td><td>single bet</td><td class="num">37.6</td><td class="num">0.5798</td><td class="num">0.1597</td><td class="num">1.764</td><td class="num">120</td><td class="num">0.04926</td><td><span class="pass">approved</span></td><td><span class="badge b-gold">Gold</span></td></tr><tr><td class="num"><b>5</b></td><td><b>S5</b></td><td>Weekly top-2 spread parlay (cross-game legs)</td><td>parlay (2-leg, cross-game)</td><td class="num">165.8</td><td class="num">0.625</td><td class="num">1.2779</td><td class="num">2.048</td><td class="num">8</td><td class="num">0.04027</td><td><span class="fail">not approved</span></td><td><span class="badge b-warn">Not approved (gates failed)</span></td></tr><tr><td class="num"><b>6</b></td><td><b>S6-total</b></td><td>Negative control: own-line -110 spread and total bets [total]</td><td>single bet at -110 (calibration diagnostic)</td><td class="num">-26.32</td><td class="num">0.4667</td><td class="num">-0.1091</td><td class="num">-1.255</td><td class="num">120</td><td class="num">0.91058</td><td><span class="fail">not approved</span></td><td><span class="badge b-warn">Not approved (gates failed)</span></td></tr><tr><td class="num"><b>7</b></td><td><b>S6-spread</b></td><td>Negative control: own-line -110 spread and total bets [spread]</td><td>single bet at -110 (calibration diagnostic)</td><td class="num">-69.52</td><td class="num">0.375</td><td class="num">-0.2841</td><td class="num">-3.367</td><td class="num">120</td><td class="num">0.99962</td><td><span class="fail">not approved</span></td><td><span class="badge b-warn">Not approved (gates failed)</span></td></tr><tr><td class="num"><b>unrated</b></td><td><b>S7</b></td><td>QB passing-yards prop lines - 2026 Week 9</td><td>player prop combos</td><td class="blank"><span class="unv" title="Unrated: no verified backtest sample (gates G1/G3 unmet). Originated lines only - flagged.">unverified</span></td><td class="blank"><span class="unv" title="Could not be confirmed from an official source — left blank per project rules">unverified</span></td><td class="blank"><span class="unv" title="Could not be confirmed from an official source — left blank per project rules">unverified</span></td><td class="blank"><span class="unv" title="Could not be confirmed from an official source — left blank per project rules">unverified</span></td><td class="blank"><span class="unv" title="Could not be confirmed from an official source — left blank per project rules">unverified</span></td><td class="blank"><span class="unv" title="Could not be confirmed from an official source — left blank per project rules">unverified</span></td><td><span class="fail">not approved</span></td><td><span class="badge b-warn">Unrated - flagged for review</span></td></tr></tbody></table>
+<p class="small">Backtest detail: <a href="backtest-2026.html">Backtest 2026 W1–W8</a> · gate definitions: <a href="strategies.html">Strategies &amp; Gates</a>.</p>
+
+</main>
+<footer>
+  Generated by <code>scripts/build_site.py</code> from verified official data (<code>data/</code>, <code>analysis/</code>) ·
+  Every table row links to an official NFL source; unverifiable values are blank and marked <span class="unv">unverified</span> — see
+  <a href="../pages/flagged.html">Flagged for Review</a> · Session <code>arena-09d847e1-own5</code> · Branch <code>arena/09d847e1-own5</code>
+</footer>
+</body>
+</html>

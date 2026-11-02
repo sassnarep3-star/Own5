@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methodology — Own5 NFL Lines & Strategies</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cellipse cx='16' cy='16' rx='9' ry='14' transform='rotate(35 16 16)' fill='%23013369'/%3E%3C/svg%3E">
+<style>
+:root{--navy:#013369;--navy2:#0b4f9e;--ink:#17202a;--mut:#5d6d7e;--line:#d5dbe3;--bg:#f4f6f9;--card:#ffffff;--ok:#1e8449;--bad:#c0392b;--warn:#b9770e;--gold:#b9770e;}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);font-size:15px;line-height:1.5}
+a{color:var(--navy2)}
+header.top{background:var(--navy);color:#fff;padding:14px 22px}
+header.top .brand{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:700;letter-spacing:.5px}
+header.top .brand svg{display:block}
+header.top .sub{color:#c9d6e8;font-size:12.5px;margin-top:2px}
+nav.bar{background:#fff;border-bottom:1px solid var(--line);padding:8px 22px;display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px}
+nav.bar a{color:var(--navy);text-decoration:none;font-weight:600}
+nav.bar a:hover{text-decoration:underline}
+nav.bar a.cur{color:var(--bad)}
+main{max-width:1240px;margin:0 auto;padding:20px 22px 40px}
+h1{font-size:24px;margin:6px 0 12px;color:var(--navy)}
+h2{font-size:19px;margin:26px 0 10px;color:var(--navy);border-bottom:2px solid var(--line);padding-bottom:4px}
+h3{font-size:16px;margin:18px 0 8px;color:var(--navy)}
+p{margin:8px 0}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px;margin:14px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.card .k{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.6px}
+.card .v{font-size:24px;font-weight:700;color:var(--navy);margin-top:2px}
+.card .s{font-size:12px;color:var(--mut);margin-top:2px}
+.card a.cardlink{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;text-decoration:none;color:var(--ink)}
+.card a.cardlink:hover{border-color:var(--navy2);box-shadow:0 1px 4px rgba(1,51,105,.15)}
+.card a.cardlink .t{font-weight:700;color:var(--navy)}
+.card a.cardlink .d{font-size:12.5px;color:var(--mut);margin-top:3px}
+table.data{border-collapse:collapse;width:100%;background:var(--card);font-size:13px;margin:10px 0 18px}
+table.data th{background:var(--navy);color:#fff;text-align:left;padding:7px 9px;position:sticky;top:0;white-space:nowrap}
+table.data td{border-bottom:1px solid var(--line);padding:6px 9px;vertical-align:top}
+table.data tr:nth-child(even) td{background:#f8fafc}
+table.data tr:hover td{background:#eef4fb}
+td.blank{background:#fdf6ec}
+.unv{color:var(--warn);font-size:11px;font-style:italic;white-space:nowrap}
+.badge{display:inline-block;padding:1px 8px;border-radius:10px;font-size:11.5px;font-weight:700;white-space:nowrap}
+.b-ok{background:#e9f7ef;color:var(--ok)} .b-bad{background:#fdedec;color:var(--bad)}
+.b-warn{background:#fef5e7;color:var(--warn)} .b-info{background:#eaf2f8;color:var(--navy2)}
+.b-gold{background:#fef5e7;color:var(--gold)}
+.pass{color:var(--ok);font-weight:700}.fail{color:var(--bad);font-weight:700}
+.note{background:#eaf2f8;border-left:4px solid var(--navy2);padding:10px 14px;border-radius:0 8px 8px 0;margin:12px 0;font-size:13.5px}
+.warnbox{background:#fef5e7;border-left:4px solid var(--warn);padding:10px 14px;border-radius:0 8px 8px 0;margin:12px 0;font-size:13.5px}
+footer{border-top:1px solid var(--line);background:#fff;padding:14px 22px;color:var(--mut);font-size:12.5px}
+code{background:#eef1f5;padding:1px 5px;border-radius:4px;font-size:12.5px}
+pre{background:#0f2036;color:#dbe7f5;padding:12px;border-radius:8px;overflow-x:auto;font-size:12.5px}
+.num{text-align:right;font-variant-numeric:tabular-nums}
+.small{font-size:12.5px;color:var(--mut)}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="brand"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><ellipse cx="16" cy="16" rx="9" ry="14" transform="rotate(35 16 16)" fill="#fff" stroke="#013369" stroke-width="1.6"/><path d="M11 12 l3 4 3-4 M11 20 l3 4 3-4" stroke="#013369" stroke-width="1.6" fill="none"/></svg><span>Own5 — NFL Lines &amp; Strategies</span></div>
+  <div class="sub">Self-originated NFL lines from verified official sources only · as of 2026-11-02 (UTC) · analytics, not wagering advice</div>
+</header>
+<nav class="bar"><a href="../index.html">Dashboard</a>
+<a href="../pages/standings-2025.html">Standings 2025</a>
+<a href="../pages/standings-2026-w8.html">Standings 2026 W8</a>
+<a href="../pages/games-2026-w1-w8.html">Games 2026 W1–W8</a>
+<a href="../pages/week9-lines.html">Week 9 Lines &amp; Props</a>
+<a href="../pages/backtest-2026.html">Backtest 2026</a>
+<a href="../pages/strategies.html">Strategies &amp; Gates</a>
+<a href="../pages/leaderboard.html">Leaderboard</a>
+<a href="../pages/correlations.html">Correlations</a>
+<a href="../pages/players-2026.html">Players 2026</a>
+<a href="../pages/players-2025.html">Players 2025</a>
+<a href="../pages/season-facts.html">Season Facts</a>
+<a href="../pages/sources.html">Sources</a>
+<a href="../pages/repo-review.html">Repo Review</a>
+<a href="../pages/methodology.html" class="cur">Methodology</a>
+<a href="../pages/executive-summary.html">Executive Summary</a>
+<a href="../pages/flagged.html">⚠ Flagged for Review</a></nav>
+<main>
+<h1>Methodology — line origination &amp; validation (Own5)</h1>
+<p>All inputs are verified official NFL data (<code>data/</code>, source registry <code>data/sources.json</code>). Engine: <code>scripts/analyze.py</code> (pure stdlib, deterministic, no network). As-of 2026-11-02; 2026 data through Week 8 (120 final games; CHI@SEA W8 MNF pending, excluded — F05).</p>
+<h2>1. Team power rating (pooled, no lookahead)</h2>
+<p>For team *t*: <code>rating(t) = (PF − PA) / GP</code>, where PF/PA/GP pool the <b>2025 full verified season (GP=17)</b> with <b>all final 2026 games of the team played before the game being predicted</b>. When originating Week 9 lines, the 2026 pool is Weeks 1–8 only.</p>
+<h2>2. Originated spread (home perspective)</h2>
+<p><code>model_margin = rating(home) − rating(away) + HFA</code>, where <b>HFA = empirical mean home margin over the prior completed 2026 games</b> (0 in Week 1; for Week 9 lines: mean over the 120 final 2026 games = <b>+0.72 pts</b>, home win rate 62/120 = 51.7% — assumption F09). The originated spread is the model margin rounded to the nearest 0.5-style display; the bet side is the team favored by the model.</p>
+<h2>3. Originated total</h2>
+<p><code>expected(team) = (team PF/GP + opponent PA/GP) / 2</code>; <code>model_total = expected(home) + expected(away)</code>. Total direction pick (S3) compares model_total to a walk-forward league reference (2025 verified league mean total ≈ 46.0 for Week 1; thereafter the mean actual total of prior 2026 games).</p>
+<h2>4. Backtest protocol (walk-forward, 2026 Weeks 1–8, 120 games)</h2>
+<p>Each game is predicted using only 2025 aggregates + final 2026 games from <b>earlier weeks</b> — no lookahead. Recorded per game (<code>analysis/backtest_2026.json</code>): model margin/total, HFA used, own-line spread bet at −110 (F02), spread SU direction, own-line total bet at −110, total SU direction vs reference.</p>
+<h2>5. Strategies &amp; validation gates</h2>
+<p>Strategies (<code>analysis/strategies.json</code>): S1 spread direction all games (SU); S2 spread direction selective |line| ≥ 6 (threshold documented a priori); S3 total direction vs league reference (SU); S4 same-game 2-leg parlay (S1 leg + S3 leg) priced as a 2-leg −110 parlay; S5 weekly top-2 |line| cross-game parlay; S6 negative control (own line at −110); S7 W9 QB prop lines (originated only — not backtested, unrated).</p>
+<p><b>Gates (all must pass for approval):</b> G1 ≥ 30 graded bets · G2 win rate ≥ breakeven (50% SU; 52.38% at −110; 27.44% for a 2-leg −110 parlay) · G3 one-sided binomial p &lt; 0.05 vs breakeven (luck removed: SU legs are graded against a 50% null at even money) · G4 Weeks 7–8 holdout win rate ≥ breakeven · G5 max drawdown ≤ 15 units · G6 parlay correlation guard |same-game leg r| &lt; 0.35 (computed values C4/C5 in <code>analysis/correlations.json</code>).</p>
+<h2>6. Correlations (all computed from verified data; <code>analysis/correlations.json</code>)</h2>
+<p>C1 2025 NET vs win% r=0.919 (n=32) · C2 2026 NET vs win% r=0.831 (n=32) · C3 model vs actual margin r=0.289 (n=120) · C4 same-game margin vs total r=−0.164 (n=120) · C5 same-game spread-leg vs total-leg result r=+0.087 (n=120) · C6 2025 differential vs 2026 win% r=0.397 (n=32) · C7 empirical HFA = +0.72 pts, home win rate 51.7% (n=120).</p>
+<h2>7. Leaderboard</h2>
+<p>Score = 100×ROI + 10×Sharpe + 50×(win rate − breakeven) — a <b>project-defined competition metric</b>, labeled as such (not an official NFL value). Rewards only for gate-approved strategies; approved strategies rank above non-approved. Result: S2, S4, S3, S1 approved (Gold); S5 not approved (G1, n=8); S6 negative control fails; S7 unrated/flagged.</p>
+<h2>8. Week 9 QB prop lines</h2>
+<p><code>line = 0.65 × (2026 YDS / team GP) + 0.35 × (2025 YDS / 17)</code> (team GP as QB GP — assumption F03; weights documented a priori). Not backtested (no verified per-game logs fetched) → fails G1/G3 by construction → published as originated lines only, with blank cells where the starter or 2026 total is unverified (F06/F07).</p>
+</main>
+<footer>
+  Generated by <code>scripts/build_site.py</code> from verified official data (<code>data/</code>, <code>analysis/</code>) ·
+  Every table row links to an official NFL source; unverifiable values are blank and marked <span class="unv">unverified</span> — see
+  <a href="../pages/flagged.html">Flagged for Review</a> · Session <code>arena-09d847e1-own5</code> · Branch <code>arena/09d847e1-own5</code>
+</footer>
+</body>
+</html>
