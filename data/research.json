@@ -2,6 +2,16 @@
   "as_of": "2026-11-02",
   "sources": [
     {
+      "id": "REPO-AUDIT",
+      "publisher": "Official project repository · GitHub API",
+      "title": "Initial repository tree",
+      "url": "https://api.github.com/repos/sassnarep3-star/Own5/git/trees/426b19d4981627243aa21b324903eab97cfb9d13",
+      "checked": "2026-11-02",
+      "status": "Checked",
+      "finding": "The official repository Git tree contains only README.md, a blob of size 6 bytes. Local inspection confirms its content is # Own5.",
+      "limitation": "Repository audit only; this is not an NFL statistical source or evidence of a strategy edge."
+    },
+    {
       "id": "NFL-RULES",
       "publisher": "NFL Football Operations",
       "title": "2026 NFL rulebook",
@@ -768,7 +778,7 @@
       "scope": "Repository audit",
       "status": "Needs review",
       "sources": [
-        "NFL-STATS"
+        "REPO-AUDIT"
       ]
     }
   ],

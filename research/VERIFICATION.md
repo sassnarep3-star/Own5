@@ -7,7 +7,7 @@ Review date: **2026-11-02 UTC**. Reviewer/integration owner: `arena-cd43258e`.
 - Initial repository audit: the only tracked file was `README.md`, six bytes, containing `# Own5`. There was no existing dataset or strategy to validate.
 - Every data record and generated table row was checked for an official publisher reference. These references support only the specific published facts or methodological concepts recorded. Proposed strategy descriptions, gate thresholds, ranking policy and reward badges are **project designs**, not externally verified NFL facts.
 - No numerical player statistics, prices, fitted probabilities, empirical correlations, return statistics or prize amounts were imported. All unavailable empirical fields are `null` and display as blank cells. There are zero prediction records, not a populated model ledger.
-- No claim is made that every line of every external site was verified. The checked **finding** and **limitation** in each of the 13 primary-source records define the external review scope. The relevant source text was read, rather than treating URL availability as proof.
+- No claim is made that every line of every external site was verified. The checked **finding** and **limitation** in each of the 14 primary-source records define the external review scope. The relevant source text was read, rather than treating URL availability as proof.
 
 ## Primary-source excerpt ledger
 
@@ -15,6 +15,7 @@ Short excerpts from retrieved official pages are preserved below to make the sou
 
 | Source ID | Primary publisher link | Excerpt read | What it supports |
 |---|---|---|---|
+| REPO-AUDIT | [Official GitHub repository tree API](https://api.github.com/repos/sassnarep3-star/Own5/git/trees/426b19d4981627243aa21b324903eab97cfb9d13) | The tree lists only `README.md`, blob size 6 bytes. | Direct primary evidence for the empty starting repository; not an NFL-data claim. |
 | NFL-RULES | [NFL Football Operations](https://operations.nfl.com/rules-officiating/2026-nfl-rulebook) | “2026 NFL RULEBOOK”; “Explore the official 2026 NFL rulebook.” | Current rulebook identity and linked PDF, not operator settlement. |
 | NFL-NGS | [NFL Next Gen Stats](https://nextgenstats.nfl.com/glossary) | “Time to Throw measures the average amount of time elapsed from the time of snap to throw on every pass attempt for a passer (sacks excluded).” | F01 definition; other F02–F09 definitions were checked in their respective glossary paragraphs. |
 | NFL-INJ | [NFL.com injuries](https://www.nfl.com/injuries/) | “2026 NFL Injury Report”; “Injuries - WEEK 8”; table columns “Practice Status” and “Game Status”. | Presence and scope of the current report, not historical status at decision time. |
@@ -40,7 +41,7 @@ Short excerpts from retrieved official pages are preserved below to make the sou
 
 ## Integration verification
 
-- `python scripts/seed.py`: deterministic reviewed register with 13 sources, 11 definitions, 8 strategies, 7 gates, 6 correlation questions, 5 market methods, 10 flags and 5 competition policies.
+- `python scripts/seed.py`: deterministic reviewed register with 14 sources, 11 definitions, 8 strategies, 7 gates, 6 correlation questions, 5 market methods, 10 flags and 5 competition policies.
 - `python scripts/build.py`: deterministic static build of landing page and seven subpages; no runtime dependency on a feed, secret or third-party script.
 - `python -m unittest discover -s tests -v`: 27 tests covering pricing identities, invalid inputs, undefined correlations, complete settlement probabilities, scoring, Holm correction, fail-closed gate declarations, source coverage, null handling, unique IDs, all local links and fragment targets.
 - `node --check assets/app.js`: JavaScript syntax checked.
