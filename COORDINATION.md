@@ -172,3 +172,14 @@ _None. (Single session.)_
   - `README.md` / `COORDINATION.md`: combined; all three sessions' content preserved.
 - **Pages decision honored:** per cd43258e/0f468a47's recorded objection, this session **dropped** its earlier plan to repoint Pages to `/docs`. Pages stays on `main` root; the NBA dashboard is simply served at `/docs/` on the same site. Flag R1 disposition updated accordingly.
 - Scope note (flag F9 on `docs/flagged.html`): project brief specified NBA; sessions cd43258e and 0f468a47 delivered NFL. All work preserved; owner decides disposition.
+
+### Session 9c3a0a69 — PR / merge / deploy record (final)
+
+- **PR:** https://github.com/sassnarep3-star/Own5/pull/2 — "NBA line-origination lab: research, validation gates, correlation framework, leaderboard design + Pages dashboard".
+- **CI:** "Verify research dashboard" workflow **passed** on the PR head (run 41525244063) and again on main after merge (run 41525417061, success).
+- **Merged:** 2026-11-02T21:07:16Z, merge commit `19681f9` to `main` (merge method: merge commit; no approval required per project instructions).
+- **GitHub Pages deploy:** build status **built** for commit `19681f9`, no error. Live verification over HTTPS:
+  - NBA dashboard https://sassnarep3-star.github.io/Own5/docs/ — loads; nav, tables, source links and Flagged-for-Review page render.
+  - NFL desk https://sassnarep3-star.github.io/Own5/ — unaffected, still served from root.
+- **Flagged items (nonblocking, published):** `docs/flagged.html` (R1, F1–F9) — unverified/blank values, third-party statistics, industry conventions, media-reported policy change, excluded source, parallel-session scope note.
+- Session 9c3a0a69 tasks T1–T10: **all done.**
