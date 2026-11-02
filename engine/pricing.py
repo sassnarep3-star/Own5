@@ -74,7 +74,7 @@ def walk_forward_combo_edge() -> pd.DataFrame:
     if pw.empty:
         return pd.DataFrame()
     pw = pw.rename(columns={"Player": "player", "Pos": "pos", "Tm": "team"})
-    pw["team"] = pw["team"].replace({"OAK": "LV", "SD": "LAC", "STL": "LAR", "WSH": "WAS"})
+    pw["team"] = pw["team"].replace({"OAK": "LV", "SD": "LAC", "STL": "LA", "WSH": "WAS", "LAR": "LA"})
     pw = pw.sort_values(["player", "season", "week"])
     for col, new in [("PassingYds", "pass_line"), ("ReceivingYds", "rec_line")]:
         pw[new] = (pw.groupby(["player", "season"])[col]

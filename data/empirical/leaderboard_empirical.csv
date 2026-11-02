@@ -1,0 +1,8 @@
+strategy,decided_bets,roi,win_rate,breakeven_win_rate,roi_ci_low,roi_ci_high,binom_p,deflated_sharpe,luck_share,real_price_share,official_verified_share,G1,G2,G3,G4,G5,G6,G7,G8,G9,G10,gates_passed,gates_total,failed_gates,status,risk_adjusted_score,reward_tier,rank
+S4_division_dog,1427,0.00665,0.51997,0.51705,-0.04364,0.05768,0.422965,0.12981,1.0,0.9734,0.0123,True,True,False,False,False,False,True,True,False,True,5,10,G3; G4; G5; G6; G9,REJECTED,0.06563,None,
+S2_total_value,3603,-0.00637,0.50985,0.51337,-0.03921,0.02593,0.669695,0.03759,1.0,0.9832,0.0146,True,False,False,False,False,False,False,True,False,True,3,10,G2; G3; G4; G5; G6; G7; G9,REJECTED,-0.09779,None,
+S1_spread_value,3730,-0.0153,0.50402,0.51226,-0.04783,0.01696,0.846718,0.00959,0.99395,0.9817,0.017,True,False,False,False,False,False,False,True,False,True,3,10,G2; G3; G4; G5; G6; G7; G9,REJECTED,-0.23615,None,
+S5_fade_big_favorite,1476,-0.02006,0.51084,0.52109,-0.06612,0.02666,0.792342,0.01426,1.0,0.9815,0.0073,True,False,False,False,False,False,False,True,False,True,3,10,G2; G3; G4; G5; G6; G7; G9,REJECTED,-0.21621,None,
+P2_same_game_fav_over,3450,-0.17878,0.22812,0.27778,-0.22879,-0.12802,1.0,0.0,0.15355,0.0,0.0162,True,False,False,False,False,False,False,False,False,True,2,10,G2; G3; G4; G5; G6; G7; G8; G9,REJECTED,-1.77414,None,
+S3_rest_edge,49,-0.20993,0.40816,0.5163,-0.46801,0.05862,0.951523,0.00266,0.6602,1.0,0.0,False,False,False,False,False,False,False,True,False,True,2,10,G1; G2; G3; G4; G5; G6; G7; G9,REJECTED,-0.39863,None,
+P1_cross_game_2leg,317,-0.32744,0.25868,0.38462,-0.45047,-0.19937,0.999999,0.0,0.21697,0.9819,0.0151,True,False,False,False,False,False,False,True,False,True,3,10,G2; G3; G4; G5; G6; G7; G9,REJECTED,-1.30402,None,

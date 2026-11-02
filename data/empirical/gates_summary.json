@@ -1,0 +1,8 @@
+{
+  "strategies_evaluated": 7,
+  "validated": 0,
+  "rejected": 7,
+  "hard_gates": 10,
+  "reward_tiers_paid": 0,
+  "headline": "No strategy cleared all hard gates. No reward tier is awarded and no profitable edge is claimed."
+}

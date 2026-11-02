@@ -1,0 +1,17 @@
+{
+  "official_games_compared": 80,
+  "exact_score_matches": 80,
+  "mismatches": 0,
+  "match_rate": 1.0,
+  "seasons_covered": [
+    2021,
+    2023,
+    2024,
+    2025
+  ],
+  "backtest_universe_games": 5199,
+  "verified_share_of_universe": 0.015388,
+  "official_source": "https://www.nfl.com/scores/",
+  "status": "all compared games match official scores",
+  "limitation": "Official verification is a stratified sample of weeks, not a census. Games outside the sample remain third-party-sourced and are labelled unverified in every output table."
+}

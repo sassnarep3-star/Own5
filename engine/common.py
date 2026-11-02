@@ -63,9 +63,16 @@ def devig_two_way(p_a: np.ndarray, p_b: np.ndarray) -> tuple[np.ndarray, np.ndar
     return p_a / s, p_b / s
 
 
+# Upstream uses legacy/odd franchise codes. Normalise to current official codes
+# so that joins to official NFL.com records and to player tables are consistent.
+TEAM_ALIAS = {"OAK": "LV", "SD": "LAC", "STL": "LA", "WSH": "WAS", "LAR": "LA"}
+
+
 def load_games() -> pd.DataFrame:
     """Load, clean and derive the regular-season game table."""
     g = pd.read_csv(RAW / "games.csv")
+    g["home_team"] = g["home_team"].replace(TEAM_ALIAS)
+    g["away_team"] = g["away_team"].replace(TEAM_ALIAS)
     g = g[g["game_type"] == "REG"].copy()
     g = g[(g["season"] >= MIN_SEASON) & (g["season"] <= MAX_SEASON)].copy()
     g = g[g["home_score"].notna() & g["away_score"].notna()].copy()

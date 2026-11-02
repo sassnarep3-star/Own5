@@ -1,0 +1,11 @@
+gate_id,name,requirement,type
+G1,Sample size,>=500 decided bets (>=300 for combination markets),hard
+G2,Positive ROI,ROI point estimate > 0,hard
+G3,Bootstrap CI,95% cluster-bootstrap lower bound on ROI > 0,hard
+G4,Statistical significance,exact binomial p < 0.05 vs realised break-even rate,hard
+G5,Multiple-testing control,survives Benjamini-Hochberg FDR at 10%,hard
+G6,Deflated Sharpe,DSR > 0.95 (clears best-of-N noise hurdle),hard
+G7,Era stability,positive ROI in both chronological halves,hard
+G8,Price integrity,">=90% of bets graded at real, non-assumed prices",hard
+G9,Official verification,>=50% of bets traceable to official NFL.com scores,hard
+G10,No lookahead,"walk-forward pricing, structurally enforced",hard

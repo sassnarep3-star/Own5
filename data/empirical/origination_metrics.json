@@ -4,16 +4,16 @@
     2006,
     2025
   ],
-  "spread_rmse_ours": 13.6268,
+  "spread_rmse_ours": 13.6276,
   "spread_rmse_market": 13.1988,
-  "spread_mae_ours": 10.632,
+  "spread_mae_ours": 10.634,
   "spread_mae_market": 10.2435,
-  "total_rmse_ours": 13.6217,
+  "total_rmse_ours": 13.6244,
   "total_rmse_market": 13.3006,
-  "mean_sigma_margin": 12.9736,
-  "mean_sigma_total": 12.9997,
-  "corr_our_vs_market_spread": 0.8152,
-  "brier_ours": 0.22223,
+  "mean_sigma_margin": 12.9794,
+  "mean_sigma_total": 13.0077,
+  "corr_our_vs_market_spread": 0.814,
+  "brier_ours": 0.22232,
   "brier_market": 0.21009,
   "brier_n": 4889
 }
