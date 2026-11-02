@@ -1,0 +1,101 @@
+[
+ {
+  "combo_id": "BC01",
+  "combo_type": "Single bet",
+  "legs": "1 leg (spread / ML / total / prop)",
+  "correlation_note": "No correlation issue; base unit sizing applies.",
+  "allowed": "allowed",
+  "source_id": "S19; S23",
+  "source_url": "https://sportsbook.draftkings.com/leagues/football/nfl",
+  "verified_on": "2026-11-02",
+  "status": "verified (rules); strategy use pending validation"
+ },
+ {
+  "combo_id": "BC02",
+  "combo_type": "2-leg cross-game parlay",
+  "legs": "2 legs, different games",
+  "correlation_note": "Permitted; legs must be uncorrelated (no shared players/teams). Correlated selections not permitted unless offered as SGP (FanDuel house rules).",
+  "allowed": "allowed with correlation cap",
+  "source_id": "S21; S23",
+  "source_url": "https://www.fanduel.com/fanduel-sportsbook-house-rules-on",
+  "verified_on": "2026-11-02",
+  "status": "verified (rules); strategy use pending validation"
+ },
+ {
+  "combo_id": "BC03",
+  "combo_type": "3+ leg cross-game parlay",
+  "legs": "3 or more legs, different games",
+  "correlation_note": "Permitted but each added leg multiplies risk; leaderboard requires stricter validation gates for 3+ legs.",
+  "allowed": "allowed with stricter gates",
+  "source_id": "S21",
+  "source_url": "https://www.fanduel.com/sports-betting-guide/what-is-a-parlay-bet",
+  "verified_on": "2026-11-02",
+  "status": "verified (rules); strategy use pending validation"
+ },
+ {
+  "combo_id": "BC04",
+  "combo_type": "Same Game Parlay (SGP)",
+  "legs": "2+ legs, same game",
+  "correlation_note": "Explicitly offered by sportsbooks; correlation is priced into the odds. Strategy must use reduced stake and treat as high-correlation.",
+  "allowed": "allowed (book-priced correlation)",
+  "source_id": "S20; S21; S23",
+  "source_url": "https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nfl",
+  "verified_on": "2026-11-02",
+  "status": "verified (rules); strategy use pending validation"
+ },
+ {
+  "combo_id": "BC05",
+  "combo_type": "SGP+ (multi-game SGP)",
+  "legs": "Multiple SGPs across games",
+  "correlation_note": "Same rules as SGP; check combined price before committing (FanDuel guide).",
+  "allowed": "allowed (book-priced correlation)",
+  "source_id": "S21",
+  "source_url": "https://www.fanduel.com/sports-betting-guide/what-is-a-parlay-bet",
+  "verified_on": "2026-11-02",
+  "status": "verified (rules); strategy use pending validation"
+ },
+ {
+  "combo_id": "BC06",
+  "combo_type": "Player prop combo — same player, same game",
+  "legs": "e.g., player passing yards + passing TDs",
+  "correlation_note": "Directly correlated outcomes; NOT permitted unless explicitly offered by the sportsbook (house rules); flagged.",
+  "allowed": "restricted / flagged",
+  "source_id": "S23",
+  "source_url": "https://www.fanduel.com/fanduel-sportsbook-house-rules-on",
+  "verified_on": "2026-11-02",
+  "status": "verified (rules); strategy use pending validation"
+ },
+ {
+  "combo_id": "BC07",
+  "combo_type": "Player prop combo — different players, same game",
+  "legs": "e.g., QB passing yards (Team A) + WR receiving yards (Team B)",
+  "correlation_note": "Same-game legs: treat as SGP-type correlation; only combine within an offered SGP or cap stake.",
+  "allowed": "restricted (SGP only)",
+  "source_id": "S20; S21",
+  "source_url": "https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nfl",
+  "verified_on": "2026-11-02",
+  "status": "verified (rules); strategy use pending validation"
+ },
+ {
+  "combo_id": "BC08",
+  "combo_type": "2-team teaser (6-pt)",
+  "legs": "2 legs, spread adjusted 6 points",
+  "correlation_note": "Crosses key numbers 3 and 7 (most common NFL margins); all legs must win.",
+  "allowed": "allowed",
+  "source_id": "S20",
+  "source_url": "https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nfl",
+  "verified_on": "2026-11-02",
+  "status": "verified (rules); strategy use pending validation"
+ },
+ {
+  "combo_id": "BC09",
+  "combo_type": "Round robin",
+  "legs": "Multiple parlays from a selection pool",
+  "correlation_note": "Reduces all-or-nothing risk vs a single parlay; cost is higher total stake.",
+  "allowed": "allowed",
+  "source_id": "S20",
+  "source_url": "https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nfl",
+  "verified_on": "2026-11-02",
+  "status": "verified (rules); strategy use pending validation"
+ }
+]

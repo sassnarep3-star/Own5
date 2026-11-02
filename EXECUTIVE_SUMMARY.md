@@ -1,6 +1,6 @@
 # Executive Summary — NBA Line-Origination Project
 
-**Repo:** sassnarep3-star/Own5 · **Site:** https://sassnarep3-star.github.io/Own5/ · **Date:** 2026-11-02
+**Repo:** sassnarep3-star/Own5 · **Site:** https://sassnarep3-star.github.io/Own5/docs/ · **Date:** 2026-11-02
 
 ## Objective
 
@@ -8,11 +8,11 @@ Build the research foundation, validation machinery, and competition structure f
 
 ## What was produced
 
-1. **Strategy catalog (8 candidate signal families)** — rest/schedule spots, official-injury-report latency, home/travel/altitude context, streak persistence, pace-interaction props, usage-vacuum props, CLV-based line origination, and correlated-SGP construction. Each is documented with its hypothesis, build plan, and sources (`research/strategies.md`). **None is claimed to be profitable; all are candidates pending validation.**
-2. **Nine validation gates (G0–G8)** that every strategy must pass before leaderboard entry: pre-registration, parameter budget, walk-forward out-of-sample, de-vigged CLV with bootstrap CI, deflated-Sharpe/PBO multiplicity control, Monte Carlo permutation nulls, economic realism, parlay correlation audit, and fractional-Kelly staking (`research/validation-gates.md`).
-3. **Correlation framework** for parlays/prop combos: a 10-pair direction taxonomy (sourced), a prohibition on negatively correlated legs, and tooling to compute actual coefficients from official box scores. **Numeric r values are intentionally blank** — no official/primary source publishes them, and this project never infers values (`research/correlations.md`, `analysis/prop_correlations.py`).
-4. **Luck-removal methodology**: grade on de-vigged closing-line value (skill signal in ~200–500 bets) instead of W/L (needs thousands); empirical-Bayes shrinkage of scores; permutation nulls; falsification criteria required per strategy (`research/skill-vs-luck.md`).
-5. **Leaderboard competition**: divisions per bet class; score = 70% shrunken CLV + 20% flat-stake yield + 10% process compliance; Gold/Silver/Bronze reward tiers; anti-gaming rules including mandatory registration of all tried variants. **Current board is empty by design** (`research/leaderboard.md`).
+1. **Strategy catalog (8 candidate signal families)** — rest/schedule spots, official-injury-report latency, home/travel/altitude context, streak persistence, pace-interaction props, usage-vacuum props, CLV-based line origination, and correlated-SGP construction. Each is documented with its hypothesis, build plan, and sources (`research/nba/strategies.md`). **None is claimed to be profitable; all are candidates pending validation.**
+2. **Nine validation gates (G0–G8)** that every strategy must pass before leaderboard entry: pre-registration, parameter budget, walk-forward out-of-sample, de-vigged CLV with bootstrap CI, deflated-Sharpe/PBO multiplicity control, Monte Carlo permutation nulls, economic realism, parlay correlation audit, and fractional-Kelly staking (`research/nba/validation-gates.md`).
+3. **Correlation framework** for parlays/prop combos: a 10-pair direction taxonomy (sourced), a prohibition on negatively correlated legs, and tooling to compute actual coefficients from official box scores. **Numeric r values are intentionally blank** — no official/primary source publishes them, and this project never infers values (`research/nba/correlations.md`, `analysis/prop_correlations.py`).
+4. **Luck-removal methodology**: grade on de-vigged closing-line value (skill signal in ~200–500 bets) instead of W/L (needs thousands); empirical-Bayes shrinkage of scores; permutation nulls; falsification criteria required per strategy (`research/nba/skill-vs-luck.md`).
+5. **Leaderboard competition**: divisions per bet class; score = 70% shrunken CLV + 20% flat-stake yield + 10% process compliance; Gold/Silver/Bronze reward tiers; anti-gaming rules including mandatory registration of all tried variants. **Current board is empty by design** (`research/nba/leaderboard.md`).
 6. **Dashboard site** (GitHub Pages, `docs/`): landing page plus subpages per category, all findings in table form, every row carrying a source link and tier (OFFICIAL / PRIMARY / INDUSTRY), and a dedicated **Flagged for Review** page.
 
 ## Key verified findings (sources on every row — see site Sources page)

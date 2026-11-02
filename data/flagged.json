@@ -1,0 +1,110 @@
+[
+ {
+  "flag_id": "F01",
+  "item": "Historical closing lines, line movement, CLV",
+  "where": "signals SIG12; gate G04; leaderboard clv column",
+  "reason": "No official NFL or operator source publishes historical closing lines or line-movement history.",
+  "source_url": "",
+  "action_taken": "left blank everywhere; gate G04 cannot be passed from official sources; CLV columns blank",
+  "logged_on": "2026-11-02"
+ },
+ {
+  "flag_id": "F02",
+  "item": "Live sportsbook line values (spreads/odds/totals at a point in time)",
+  "where": "signals SIG11; data tables",
+  "reason": "Lines are dynamic and operator-specific; no official static snapshot exists. Official pages to check: FanDuel/DraftKings NFL sportsbook pages.",
+  "source_url": "https://sportsbook.fanduel.com/navigation/nfl ; https://sportsbook.draftkings.com/leagues/football/nfl",
+  "action_taken": "line value cells left blank; cite operator page instead of a value",
+  "logged_on": "2026-11-02"
+ },
+ {
+  "flag_id": "F03",
+  "item": "Same-game leg correlation coefficients (numeric)",
+  "where": "correlations page, SGP strategies",
+  "reason": "No official source publishes same-game outcome correlation coefficients.",
+  "source_url": "",
+  "action_taken": "framework only; numeric cells blank",
+  "logged_on": "2026-11-02"
+ },
+ {
+  "flag_id": "F04",
+  "item": "Sportsbook hold/vig percentage",
+  "where": "bet-types analysis",
+  "reason": "Operators do not officially disclose hold percentages.",
+  "source_url": "",
+  "action_taken": "blank",
+  "logged_on": "2026-11-02"
+ },
+ {
+  "flag_id": "F05",
+  "item": "Per-game weather values",
+  "where": "signals SIG13",
+  "reason": "nfl.com shows a weather note on some game cards (e.g., MNF Nov 2 2026 'Clear, night') but no structured official weather data field per game.",
+  "source_url": "https://www.nfl.com/schedules",
+  "action_taken": "per-game weather cells blank; only the observed game-card note cited",
+  "logged_on": "2026-11-02"
+ },
+ {
+  "flag_id": "F06",
+  "item": "Public betting percentages / sharp-money indicators",
+  "where": "signals SIG14",
+  "reason": "Not published by any official source.",
+  "source_url": "",
+  "action_taken": "signal excluded from all strategies",
+  "logged_on": "2026-11-02"
+ },
+ {
+  "flag_id": "F07",
+  "item": "Strategy backtest / leaderboard performance metrics",
+  "where": "leaderboard.csv; strategies.csv",
+  "reason": "No graded-bet history exists yet in this repo; fabricating results would violate the no-hallucination rule.",
+  "source_url": "",
+  "action_taken": "all metric cells blank, status 'pending validation'",
+  "logged_on": "2026-11-02"
+ },
+ {
+  "flag_id": "F08",
+  "item": "BetMGM house-rules URL is state-specific",
+  "where": "bet-types BT12",
+  "reason": "The regulator-approved PDF cited is the Massachusetts version; other states have their own filings.",
+  "source_url": "https://massgaming.com/wp-content/uploads/BetMGM-House-Rules-8.14.25.pdf",
+  "action_taken": "check the gaming commission of the relevant state for the applicable rules",
+  "logged_on": "2026-11-02"
+ },
+ {
+  "flag_id": "F09",
+  "item": "nfl.com standings deep links with explicit week returned 'No Standings Available'",
+  "where": "standings-2026-wk8.csv",
+  "reason": "https://www.nfl.com/standings/league/2026/reg8 and /REG9 rendered 'No Standings Available' to the fetcher on 2026-11-02; the default https://www.nfl.com/standings/ page rendered full data. Irregularity noted, not blocking.",
+  "source_url": "https://www.nfl.com/standings/",
+  "action_taken": "snapshot taken from the default standings URL",
+  "logged_on": "2026-11-02"
+ },
+ {
+  "flag_id": "F10",
+  "item": "Injury-report URL week labels vs. displayed week",
+  "where": "signals SIG01/SIG02",
+  "reason": "nfl.com injury URLs use patterns like /injuries/league/2026/reg7-1 while the page displays 'Week 8'; labeling irregularity noted.",
+  "source_url": "https://www.nfl.com/injuries/",
+  "action_taken": "used the displayed page title ('Week 8 of the 2026 Season')",
+  "logged_on": "2026-11-02"
+ },
+ {
+  "flag_id": "F11",
+  "item": "Standings snapshot is time-stamped",
+  "where": "standings-2026-wk8.csv",
+  "reason": "Values are the 2026-11-02 (Week 8) snapshot and change after every game.",
+  "source_url": "https://www.nfl.com/standings/",
+  "action_taken": "re-snapshot weekly via the official URL",
+  "logged_on": "2026-11-02"
+ },
+ {
+  "flag_id": "F12",
+  "item": "Network (TV) not captured for 4 of 13 played Week 8 games in the fetched page text",
+  "where": "week8-2026-results.csv",
+  "reason": "Network text was not present in the fetched markup for ARI-DAL, MIN-DET, LV-NYJ, ATL-TB rows.",
+  "source_url": "https://www.nfl.com/schedules/2026/by-week/week-8",
+  "action_taken": "network cells left blank for those rows",
+  "logged_on": "2026-11-02"
+ }
+]

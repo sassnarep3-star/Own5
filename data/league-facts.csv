@@ -1,0 +1,27 @@
+fact_id,category,fact,value,unit,source_id,source_url,verified_on,status
+LF01,Structure,Teams in the NFL,32,teams,S09,https://www.nfl.com/teams/,2026-11-02,verified
+LF02,Structure,Conferences,"2 (AFC, NFC)",,S04,https://www.nfl.com/standings/,2026-11-02,verified
+LF03,Structure,Divisions per conference,"4 (East, North, South, West)",,S04,https://www.nfl.com/standings/,2026-11-02,verified
+LF04,Structure,Teams per division,4,,S04,https://www.nfl.com/standings/,2026-11-02,verified
+LF05,Season,Regular-season games per team,17,games,S11,https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced,2026-11-02,verified
+LF06,Season,Regular-season weeks,18,weeks,S11,https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced,2026-11-02,verified
+LF07,Season,Total regular-season games (2026),272,games,S11,https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced,2026-11-02,verified
+LF08,Season,Bye weeks per team,1,,S11,https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced,2026-11-02,verified
+LF09,Season,Bye-week window (2026),Weeks 5-14 (no byes in Week 12),,S12,https://amp.nfl.com/news/2026-nfl-schedule-release-every-team-bye-week,2026-11-02,verified
+LF10,Season,Preseason games per team (2026),3,games,S11,https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced,2026-11-02,verified
+LF11,Season,2026 regular-season kickoff,"Wednesday, September 9, 2026, Seattle",,S11,https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced,2026-11-02,verified
+LF12,Season,2026 Week 18 dates,"Saturday Jan 9 - Sunday Jan 10, 2027; all 16 games are division games",,S11,https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced,2026-11-02,verified
+LF13,Season,International regular-season games (2026),9 (most ever in a season),games,S11,https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced,2026-11-02,verified
+LF14,Schedule formula,Each team plays every division in the other conference once every four years,,,S18,https://operations.nfl.com/calendar-events/nfl-schedule/making-the-schedule,2026-11-02,verified
+LF15,Playoffs,Playoff teams,"14 (7 per conference), format since 2020 season",teams,S13,https://www.nfl.com/news/owners-approve-expanding-postseason-to-14-teams-0ap3000001107961,2026-11-02,verified
+LF16,Playoffs,First-round bye,Only the No. 1 seed in each conference,,S13,https://www.nfl.com/news/owners-approve-expanding-postseason-to-14-teams-0ap3000001107961,2026-11-02,verified
+LF17,Playoffs,Wild Card matchups,No.2 hosts No.7; No.3 hosts No.6; No.4 hosts No.5 (per conference),,S13,https://www.nfl.com/news/owners-approve-expanding-postseason-to-14-teams-0ap3000001107961,2026-11-02,verified
+LF18,Standings,Tie game value,Counts as one-half win and one-half loss for both clubs,,S10,https://www.nfl.com/standings/tie-breaking-procedures,2026-11-02,verified
+LF19,Finance,2026 salary cap,$301.2 million per club (first time above $300M),USD,S14,https://www.nfl.com/news/nfl-announces-2026-salary-cap-set-at-301-2-million-per-team,2026-11-02,verified
+LF20,Finance,2025 salary cap (comparison),$279.2 million per club (+$22M to 2026),USD,S14,https://www.nfl.com/news/nfl-announces-2026-salary-cap-set-at-301-2-million-per-team,2026-11-02,verified
+LF21,Rules,Length of an NFL game,"60 minutes, four periods of 15 minutes each (Rule 4)",minutes,S15,https://operations.nfl.com/rules-officiating/2026-nfl-rulebook,2026-11-02,verified
+LF22,Rules,Overtime,"Governed by Rule 16 (Overtime Procedures), 2026 Official Playing Rules",,S15,https://operations.nfl.com/rules-officiating/2026-nfl-rulebook,2026-11-02,verified
+LF23,Data,Next Gen Stats tracking rate,Player location/speed/acceleration captured 10 times per second; 200+ data points per play,,S16,https://operations.nfl.com/gameday/technology/nfl-next-gen-stats,2026-11-02,verified
+LF24,Data,Official statistician of the NFL,Elias Sports Bureau; official stat corrections released by NFL League Office,,S17,https://fantasy.nfl.com/research/statcorrections,2026-11-02,verified
+LF25,Betting data,NFL Official Sports Betting Partners,"Caesars, DraftKings, FanDuel; all use the NFL's official league data feed",,S26,https://www.nfl.com/news/nfl-announces-tri-exclusive-sports-betting-partners,2026-11-02,verified
+LF26,Responsible gambling,National Problem Gambling Helpline,1-800-GAMBLER (1-800-426-2537); text 800GAM; chat via NCPG; 24/7 confidential,,S25,https://www.ncpgambling.org/help-treatment/national-helpline-1-800-522-4700/,2026-11-02,verified

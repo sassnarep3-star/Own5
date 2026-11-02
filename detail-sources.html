@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sources · Own5</title>
+<meta name="description" content="Own5 — NFL line origination & skill-based strategy lab. Fully sourced from official NFL and operator sources.">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏈</text></svg>">
+</head><body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html">Own5 <span>· NFL Line Originator</span></a>
+  <nav class="main"><a href="index.html">Overview</a><a href="executive-summary.html">Executive Summary</a><a href="detail-strategies.html">Strategies &amp; Leaderboard</a><a href="signals.html">Signals</a><a href="detail-validation.html">Validation Gates</a><a href="detail-correlations.html">Correlations</a><a href="bet-types.html">Bet Types &amp; Combos</a><a href="data.html">Data &amp; League Facts</a><a href="detail-sources.html" class="active">Sources</a><a href="flagged.html">Flagged for Review</a></nav>
+</div></header>
+<main><section class="page"><div class="wrap"><h2 class="sec">Source Registry</h2><p class="sub">27 official sources. Every data-table row references one of these via source_id + its own source_url.</p></div><div class="wrap"><div class="panel"><div class="table-tools"><input type="search" placeholder="Filter rows…" data-filter="tbl-sources-csv"><span class="count"></span></div>
+<div class="tbl-scroll"><table class="data" id="tbl-sources-csv"><thead><tr>
+<th>source_id</th>
+<th>name</th>
+<th>type</th>
+<th>url</th>
+<th>what_it_verifies</th>
+<th>accessed_on</th>
+</tr></thead><tbody>
+<tr>
+<td>S01</td>
+<td>NFL.com — official league site</td>
+<td>official NFL</td>
+<td><span class="src"><a href="https://www.nfl.com/" target="_blank" rel="noopener">https://www.nfl.com/ &#8599;</a></span></td>
+<td>League news, standings, schedules, stats, injuries, teams</td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>S02</td>
+<td>NFL Media — football information (media.nfl.com)</td>
+<td>official NFL</td>
+<td><span class="src"><a href="https://media.nfl.com/" target="_blank" rel="noopener">https://media.nfl.com/ &#8599;</a></span></td>
+<td>Official schedule announcements; official statistics reports courtesy of Elias Sports Bureau</td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>S03</td>
+<td>NFL Football Operations (operations.nfl.com)</td>
+<td>official NFL</td>
+<td><span class="src"><a href="https://operations.nfl.com/" target="_blank" rel="noopener">https://operations.nfl.com/ &#8599;</a></span></td>
+<td>Official Playing Rules, schedule-making, Next Gen Stats technology</td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>S04</td>
+<td>NFL Standings (2026, through Week 8)</td>
+<td>official NFL</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener">https://www.nfl.com/standings/ &#8599;</a></span></td>
+<td>W-L-T, PCT, PF, PA, NET PTS, streak for all 32 teams; snapshot accessed 2026-11-02</td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>S05</td>
+<td>NFL Schedules 2026</td>
+<td>official NFL</td>
+<td><span class="src"><a href="https://www.nfl.com/schedules" target="_blank" rel="noopener">https://www.nfl.com/schedules &#8599;</a></span></td>
+<td>Week-by-week matchups, times, networks, results; bye teams; weather note on game cards</td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>S06</td>
+<td>NFL official injury report (Week 8, 2026)</td>
+<td>official NFL</td>
+<td><span class="src"><a href="https://www.nfl.com/injuries/" target="_blank" rel="noopener">https://www.nfl.com/injuries/ &#8599;</a></span></td>
+<td>Official weekly injury report: player, position, injury, practice status, game status</td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>S07</td>
+<td>NFL player stats 2026</td>
+<td>official NFL</td>
+<td><span class="src"><a href="https://www.nfl.com/stats/player-stats/" target="_blank" rel="noopener">https://www.nfl.com/stats/player-stats/ &#8599;</a></span></td>
+<td>Official 2026 player stat leaders (passing, rushing, receiving, ...), Elias Sports Bureau data</td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>S08</td>
+<td>NFL team stats 2026</td>
+<td>official NFL</td>
+<td><span class="src"><a href="https://www.nfl.com/stats/team-stats/" target="_blank" rel="noopener">https://www.nfl.com/stats/team-stats/ &#8599;</a></span></td>
+<td>Official 2026 team offense/defense/special-teams stats</td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>S09</td>
+<td>NFL teams directory</td>
+<td>official NFL</td>
+<td><span class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener">https://www.nfl.com/teams/ &#8599;</a></span></td>
+<td>All 32 clubs with links to official club websites</td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>S10</td>
+<td>NFL tiebreaking procedures</td>
+<td>official NFL</td>
+<td><span class="src"><a href="https://www.nfl.com/standings/tie-breaking-procedures" target="_blank" rel="noopener">https://www.nfl.com/standings/tie-breaking-procedures &#8599;</a></span></td>
+<td>Official tiebreaking steps; tie game = half win / half loss</td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>S11</td>
+<td>2026 NFL schedule announced (May 14, 2026)</td>
+<td>official NFL</td>
+<td><span class="src"><a href="https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced" target="_blank" rel="noopener">https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced &#8599;</a></span></td>
+<td>18-week, 272-game 2026 schedule; 17 games + 3 preseason per team; byes Weeks 5-14; kickoff Sept 9, 2026 Seattle; Week 18 Jan 9-10; 9 international games</td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>S12</td>
+<td>2026 schedule release: every team&#x27;s bye week</td>
+<td>official NFL</td>
+<td><span class="src"><a href="https://amp.nfl.com/news/2026-nfl-schedule-release-every-team-bye-week" target="_blank" rel="noopener">https://amp.nfl.com/news/2026-nfl-schedule-release-every-team-bye-week &#8599;</a></span></td>
+<td>Per-team bye weeks for 2026 (Weeks 5-14, none in Week 12)</td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>S13</td>
+<td>Owners approve expanding postseason to 14 teams</td>
+<td>official NFL</td>
+<td><span class="src"><a href="https://www.nfl.com/news/owners-approve-expanding-postseason-to-14-teams-0ap3000001107961" target="_blank" rel="noopener">https://www.nfl.com/news/owners-approve-expanding-postseason-to-14-teams-0ap3000001107961 &#8599;</a></span></td>
+<td>14-team playoff format since 2020; only No.1 seeds get a bye; 2v7, 3v6, 4v5 wild card matchups</td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>S14</td>
+<td>NFL announces 2026 salary cap set at $301.2 million per team</td>
+<td>official NFL</td>
+<td><span class="src"><a href="https://www.nfl.com/news/nfl-announces-2026-salary-cap-set-at-301-2-million-per-team" target="_blank" rel="noopener">https://www.nfl.com/news/nfl-announces-2026-salary-cap-set-at-301-2-million-per-team &#8599;</a></span></td>
+<td>2026 cap $301.2M (first time over $300M); 2025 cap $279.2M; 2024 cap $255.4M; 2022 cap $208.2M</td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>S15</td>
+<td>2026 Official Playing Rules of the NFL (rulebook)</td>
+<td>official NFL</td>
+<td><span class="src"><a href="https://operations.nfl.com/rules-officiating/2026-nfl-rulebook" target="_blank" rel="noopener">https://operations.nfl.com/rules-officiating/2026-nfl-rulebook &#8599;</a></span></td>
+<td>Rules in effect for 2026 season; Rule 4 game timing (60 min, four 15-min periods); Rule 16 overtime. PDF: https://media.nfl.com/content/dam/communications/Official%20Playing%20Rules/2026%20Official%20Playing%20Rules.pdf</td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>S16</td>
+<td>NFL Next Gen Stats technology</td>
+<td>official NFL</td>
+<td><span class="src"><a href="https://operations.nfl.com/gameday/technology/nfl-next-gen-stats" target="_blank" rel="noopener">https://operations.nfl.com/gameday/technology/nfl-next-gen-stats &#8599;</a></span></td>
+<td>Player/ball tracking in every venue (Zebra Technologies, Wilson, AWS); location/speed/acceleration captured 10x per second; 200+ data points per play</td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>S17</td>
+<td>NFL stat corrections (Elias Sports Bureau)</td>
+<td>official NFL</td>
+<td><span class="src"><a href="https://fantasy.nfl.com/research/statcorrections" target="_blank" rel="noopener">https://fantasy.nfl.com/research/statcorrections &#8599;</a></span></td>
+<td>Official stat corrections released by the NFL League Office and the official statistician of the NFL, Elias Sports Bureau</td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>S18</td>
+<td>Making the schedule (operations.nfl.com)</td>
+<td>official NFL</td>
+<td><span class="src"><a href="https://operations.nfl.com/calendar-events/nfl-schedule/making-the-schedule" target="_blank" rel="noopener">https://operations.nfl.com/calendar-events/nfl-schedule/making-the-schedule &#8599;</a></span></td>
+<td>Scheduling formula: 17 games per team, 272 matchups, one bye; every team plays every division in the other conference once every four years</td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>S19</td>
+<td>DraftKings Sportsbook — NFL lines &amp; bet types</td>
+<td>official sportsbook operator</td>
+<td><span class="src"><a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener">https://sportsbook.draftkings.com/leagues/football/nfl &#8599;</a></span></td>
+<td>Operator definitions of NFL spread, moneyline, totals (over/under), live betting, parlays, props</td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>S20</td>
+<td>FanDuel — NFL betting guide</td>
+<td>official sportsbook operator</td>
+<td><span class="src"><a href="https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nfl" target="_blank" rel="noopener">https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nfl &#8599;</a></span></td>
+<td>Operator definitions of spread, push, parlay, same game parlay, teaser; key margins 3 and 7 in NFL</td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>S21</td>
+<td>FanDuel — what is a parlay bet</td>
+<td>official sportsbook operator</td>
+<td><span class="src"><a href="https://www.fanduel.com/sports-betting-guide/what-is-a-parlay-bet" target="_blank" rel="noopener">https://www.fanduel.com/sports-betting-guide/what-is-a-parlay-bet &#8599;</a></span></td>
+<td>Parlay = 2+ legs, all must win; SGP = legs from one game; SGP+ = multiple SGPs across games; correlated/duplicate legs not allowed unless offered</td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>S22</td>
+<td>FanDuel Sportsbook — NFL odds &amp; grading FAQ</td>
+<td>official sportsbook operator</td>
+<td><span class="src"><a href="https://sportsbook.fanduel.com/navigation/nfl" target="_blank" rel="noopener">https://sportsbook.fanduel.com/navigation/nfl &#8599;</a></span></td>
+<td>Live NFL lines page; grading FAQ: OT counts for spread/ML/totals; tie after OT -&gt; moneyline void, spread/total settled (push if on number); postponed before kickoff -&gt; void; relocated but played on date -&gt; action</td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>S23</td>
+<td>FanDuel Sportsbook house rules (Ontario)</td>
+<td>official sportsbook operator (regulator-filed)</td>
+<td><span class="src"><a href="https://www.fanduel.com/fanduel-sportsbook-house-rules-on" target="_blank" rel="noopener">https://www.fanduel.com/fanduel-sportsbook-house-rules-on &#8599;</a></span></td>
+<td>Parlay: all selections must win; void leg -&gt; re-priced; whole-number spread/total landing on number -&gt; refunded; correlated selections not permitted unless offered (e.g., SGP); OT counts for handicap/ML/totals</td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>S24</td>
+<td>BetMGM house rules approved by Massachusetts Gaming Commission</td>
+<td>official regulator-approved operator rules</td>
+<td><span class="src"><a href="https://massgaming.com/wp-content/uploads/BetMGM-House-Rules-8.14.25.pdf" target="_blank" rel="noopener">https://massgaming.com/wp-content/uploads/BetMGM-House-Rules-8.14.25.pdf &#8599;</a></span></td>
+<td>Football results official after 55 minutes of play; postponed/cancelled game handling; same-game-parlay variants (24h/48h rules)</td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>S25</td>
+<td>NCPG — National Problem Gambling Helpline</td>
+<td>official responsible-gambling resource</td>
+<td><span class="src"><a href="https://www.ncpgambling.org/help-treatment/national-helpline-1-800-522-4700/" target="_blank" rel="noopener">https://www.ncpgambling.org/help-treatment/national-helpline-1-800-522-4700/ &#8599;</a></span></td>
+<td>1-800-GAMBLER (1-800-426-2537), text 800GAM, chat; 24/7, confidential, all 50 states</td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>S26</td>
+<td>NFL announces tri-exclusive sports betting partners</td>
+<td>official NFL</td>
+<td><span class="src"><a href="https://www.nfl.com/news/nfl-announces-tri-exclusive-sports-betting-partners" target="_blank" rel="noopener">https://www.nfl.com/news/nfl-announces-tri-exclusive-sports-betting-partners &#8599;</a></span></td>
+<td>Caesars, DraftKings, FanDuel are Official Sports Betting Partners of the NFL; all three use the NFL&#x27;s official league data feed</td>
+<td>2026-11-02</td>
+</tr>
+<tr>
+<td>S27</td>
+<td>NFL legal — flexible scheduling procedures</td>
+<td>official NFL</td>
+<td><span class="src"><a href="https://www.nfl.com/legal/flexible-scheduling-procedures" target="_blank" rel="noopener">https://www.nfl.com/legal/flexible-scheduling-procedures &#8599;</a></span></td>
+<td>Flexible scheduling rules referenced on the 2026 schedule page (Weeks 16-18 Saturday designations)</td>
+<td>2026-11-02</td>
+</tr>
+</tbody></table></div></div></div></main>
+<footer><div class="wrap">
+  <div><h4>Own5 — NFL Line Origination Lab</h4>
+    Verified line-by-line against official sources on 2026-11-02. Unverifiable values are blank and listed on the <a href="flagged.html">Flagged for Review</a> page. Live site: <a href="https://sassnarep3-star.github.io/Own5/">https://sassnarep3-star.github.io/Own5/</a></div>
+  <div><h4>Responsible gambling</h4>
+    Analytics research only. Legal age only; never wager more than you can afford to lose. 24/7 confidential help: <a href="https://www.ncpgambling.org/help-treatment/national-helpline-1-800-522-4700/">1-800-GAMBLER (1-800-426-2537)</a>, text 800GAM — NCPG.</div>
+  <div><h4>Data</h4>
+    Machine-readable tables: <a href="data/">data/</a> (CSV + JSON). Every row carries its official <code>source_url</code>.</div>
+</div></footer>
+<script src="assets/js/site.js"></script>
+</body></html>

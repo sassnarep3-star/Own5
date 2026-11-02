@@ -1,0 +1,74 @@
+[
+ {
+  "pair_id": "CORR01",
+  "metric_x": "points scored per game (PF/G)",
+  "metric_y": "winning percentage (PCT)",
+  "n_teams": "32",
+  "pearson_r": "0.6136",
+  "input_data": "data/standings-2026-wk8.csv (32 teams, 2026 season through Week 8)",
+  "computed_by": "tools/compute_correlations.py (Pearson r)",
+  "input_source_url": "https://www.nfl.com/standings/",
+  "computed_on": "2026-11-02",
+  "status": "verified inputs (nfl.com); value computed in-repo"
+ },
+ {
+  "pair_id": "CORR02",
+  "metric_x": "points allowed per game (PA/G)",
+  "metric_y": "winning percentage (PCT)",
+  "n_teams": "32",
+  "pearson_r": "-0.5796",
+  "input_data": "data/standings-2026-wk8.csv (32 teams, 2026 season through Week 8)",
+  "computed_by": "tools/compute_correlations.py (Pearson r)",
+  "input_source_url": "https://www.nfl.com/standings/",
+  "computed_on": "2026-11-02",
+  "status": "verified inputs (nfl.com); value computed in-repo"
+ },
+ {
+  "pair_id": "CORR03",
+  "metric_x": "net points per game (NET/G)",
+  "metric_y": "winning percentage (PCT)",
+  "n_teams": "32",
+  "pearson_r": "0.8391",
+  "input_data": "data/standings-2026-wk8.csv (32 teams, 2026 season through Week 8)",
+  "computed_by": "tools/compute_correlations.py (Pearson r)",
+  "input_source_url": "https://www.nfl.com/standings/",
+  "computed_on": "2026-11-02",
+  "status": "verified inputs (nfl.com); value computed in-repo"
+ },
+ {
+  "pair_id": "CORR04",
+  "metric_x": "total points for (PF)",
+  "metric_y": "total points against (PA)",
+  "n_teams": "32",
+  "pearson_r": "0.0705",
+  "input_data": "data/standings-2026-wk8.csv (32 teams, 2026 season through Week 8)",
+  "computed_by": "tools/compute_correlations.py (Pearson r)",
+  "input_source_url": "https://www.nfl.com/standings/",
+  "computed_on": "2026-11-02",
+  "status": "verified inputs (nfl.com); value computed in-repo"
+ },
+ {
+  "pair_id": "CORR05",
+  "metric_x": "total net points (NET)",
+  "metric_y": "winning percentage (PCT)",
+  "n_teams": "32",
+  "pearson_r": "0.8313",
+  "input_data": "data/standings-2026-wk8.csv (32 teams, 2026 season through Week 8)",
+  "computed_by": "tools/compute_correlations.py (Pearson r)",
+  "input_source_url": "https://www.nfl.com/standings/",
+  "computed_on": "2026-11-02",
+  "status": "verified inputs (nfl.com); value computed in-repo"
+ },
+ {
+  "pair_id": "CORR06",
+  "metric_x": "points scored per game (PF/G)",
+  "metric_y": "points allowed per game (PA/G)",
+  "n_teams": "32",
+  "pearson_r": "-0.0117",
+  "input_data": "data/standings-2026-wk8.csv (32 teams, 2026 season through Week 8)",
+  "computed_by": "tools/compute_correlations.py (Pearson r)",
+  "input_source_url": "https://www.nfl.com/standings/",
+  "computed_on": "2026-11-02",
+  "status": "verified inputs (nfl.com); value computed in-repo"
+ }
+]

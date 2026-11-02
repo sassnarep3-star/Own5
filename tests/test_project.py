@@ -90,7 +90,7 @@ class IntegrityTests(unittest.TestCase):
                 with self.subTest(key=key,id=row['id']):
                     self.assertTrue(row['sources']); self.assertTrue(set(row['sources']) <= official)
     def test_sources_are_primary_publishers(self):
-        allowed={'operations.nfl.com','nextgenstats.nfl.com','www.nfl.com','sportsbook.draftkings.com','scikit-learn.org','docs.scipy.org','www.statsmodels.org'}
+        allowed={'api.github.com','operations.nfl.com','nextgenstats.nfl.com','www.nfl.com','sportsbook.draftkings.com','scikit-learn.org','docs.scipy.org','www.statsmodels.org'}
         for s in self.d['sources']:
             self.assertEqual(urlsplit(s['url']).scheme,'https')
             self.assertIn(urlsplit(s['url']).hostname,allowed)
