@@ -282,3 +282,42 @@ Session ID = suffix of fixed branch `arena/e0e66278-own5`. Platform requires thi
 - **GitHub Pages:** API status **built**, source `main` @ `/`, build type `legacy`. Live rendered verification succeeded for https://sassnarep3-star.github.io/Own5/own5-desk/ , https://sassnarep3-star.github.io/Own5/own5-desk/lines.html and https://sassnarep3-star.github.io/Own5/own5-desk/review.html . Existing root site remains live at https://sassnarep3-star.github.io/Own5/ .
 - **Conflict/push note:** after the merge commit, `git pull --rebase` attempted to linearize already-merged main history and hit an add/add COORDINATION conflict. It was aborted immediately to preserve the merge; the remote session branch was confirmed an ancestor and the merge was pushed fast-forward. No other session's commit was discarded.
 - **Final status:** E1–E5 done. 56 combined tests pass; root seed/build guard clean; Line Lab reconcile PASS; desk 13 pages / 215 official-linked rows / internal links pass; deterministic desk publish matches. 0/6 strategies qualify; 0 rewards; 13 nonblocking review flags published.
+---
+
+# Session `55e682dd-own5` — Empirical Engine (claim 2026-11-02)
+
+**Gap identified by repo review:** sessions `cd43258e`, `0f468a47` and `9c3a0a69` published a
+*specification* (definitions, gates, source registers). Every empirical cell is intentionally
+blank: 0 validated strategies, 0 measured backtests, 0 originated lines. That is honest but it
+does not yet satisfy the core brief (originate own lines, measure correlation, remove luck,
+rank strategies on a leaderboard). This session builds that missing empirical layer.
+
+**Scope is strictly additive.** Owned by this session (no other session may edit):
+`engine/**`, `data/empirical/**`, `lab/**`, `tests/test_engine.py`,
+`.github/workflows/engine.yml`, `research/empirical/**`, `data/raw/**`.
+NOT touched: `index.html`, `pages/**`, `assets/**`, `scripts/**`, `tools/**`, `docs/**`,
+`data/*.csv` at root, `data/research.json`, other sessions' `research/*.md`.
+
+**Shared-file requests** (logged, not edited by this session except COORDINATION/README append):
+- Request to integration: add one navigation link from the root dashboard to `lab/index.html`.
+  Until granted, `lab/` is self-navigating and links back to the root desk.
+
+| ID | Task | Status | Owner (session) | Files touched | Notes |
+|----|------|--------|-----------------|---------------|-------|
+| E1 | Claim scope, review prior work line-by-line | in progress | 55e682dd-own5 | COORDINATION.md | Prior work audited; empirical gap documented above. |
+| E2 | Acquire + officially cross-verify historical dataset | unclaimed | 55e682dd-own5 | data/raw/**, engine/verify_official.py, research/empirical/verification.md | nflverse/nfldata via codeload; every backtest game re-checked vs official NFL.com box scores. |
+| E3 | Line origination model (own spread/total/ML) | unclaimed | 55e682dd-own5 | engine/originate.py | Ridge/Elo power ratings, walk-forward, no lookahead. |
+| E4 | Correlation measurement (singles, parlay, prop combos) | unclaimed | 55e682dd-own5 | engine/correlations.py, data/empirical/** | Empirical joint probabilities vs independence. |
+| E5 | Skill-vs-luck decomposition + validation gates | unclaimed | 55e682dd-own5 | engine/skill_luck.py, engine/gates.py | Bootstrap CI, CLV, variance decomposition, deflated Sharpe, multiple-testing control. |
+| E6 | Strategy backtests + leaderboard ranking | unclaimed | 55e682dd-own5 | engine/strategies.py, engine/leaderboard.py | Singles, cross-game parlays, prop combos. |
+| E7 | Lab dashboard pages + executive summary | unclaimed | 55e682dd-own5 | lab/**, research/empirical/** | Additive; no shared-file edits. |
+| E8 | Integration, PR to main, merge, Pages verify | unclaimed | 55e682dd-own5 | COORDINATION.md, README.md (append only) | Do not merge a broken site. |
+
+### Conflict resolution — session 55e682dd-own5 (2026-11-02)
+
+Rebasing onto `main` produced an add/add conflict in `COORDINATION.md` only, against
+session `arena-44bc1e2f`'s L-board (PR #11/#12, merged while this session worked).
+**Resolution: both boards kept in full, nothing discarded** — main's L-board first,
+this session's E-board appended. No other file conflicted; this session's scope
+(`engine/`, `data/empirical/`, `data/raw/`, `lab/`, `research/empirical/`) does not
+overlap `line-lab/`, `docs/`, `pages/`, `analysis/` or `tools/`.
