@@ -24,7 +24,7 @@
 <main>
 
 <h1>Our Lines — 2026 Week 9</h1>
-<p class="lead">Originated by <code>scripts/originate_lines.py</code> from official inputs only: 2026 standings (W-L-T, PF-PA through Week 8, nfl.com) + official Week 9 schedule + measured home-field advantage (2.22 pts, 2002–2024, derived). Model spec: <a href="https://github.com/sassnarep3-star/Own5/blob/main/research/line-origination.md">research/line-origination.md</a>.</p>
+<p class="lead">Originated by <code>scripts/originate_lines.py</code> from official inputs only: 2026 standings (W-L-T, PF-PA through Week 8, nfl.com) + official Week 9 schedule + measured home-field advantage (2.22 pts, 2002–2024, derived). Model spec: <a href="https://github.com/sassnarep3-star/Own5/blob/main/research/arena-f1d30421/line-origination.md">research/arena-f1d30421/line-origination.md</a>.</p>
 <div class="note"><b>Model:</b> <code>margin = shrunk(home) − shrunk(away) + HFA</code>, <code>shrunk = net_pts_per_game × G/(G+4)</code>, <code>total = mean(PPG scored/allowed, both teams)</code>. HFA = 0 for neutral-site games (Madrid). Lines rounded to nearest 0.5.</div>
 <div class="warnbox"><b>Market columns are intentionally blank</b> — no official public source publishes market lines (flag F7). They are never inferred; when a licensed feed is connected, edge = our line − market line becomes the live signal.</div>
 <div class="filter"><input type="search" placeholder="Filter table…" oninput="tableFilter(this,'lines')"></div>
