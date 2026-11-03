@@ -1,17 +1,17 @@
 game_id,date,tip_et_24h,away,home,venue,source_url
-0022600173,2026-11-04,19:00,PHI,DET,"Little Caesars Arena, Detroit, MI",https://www.nba.com/schedule?month=11&year=2026
-0022600174,2026-11-04,19:00,ATL,WAS,"Capital One Arena, Washington, DC",https://www.nba.com/schedule?month=11&year=2026
-0022600175,2026-11-04,19:30,MIL,BOS,"TD Garden, Boston, MA",https://www.nba.com/schedule?month=11&year=2026
-0022600176,2026-11-04,19:30,CHA,BKN,"Barclays Center, Brooklyn, NY",https://www.nba.com/schedule?month=11&year=2026
-0022600177,2026-11-04,19:30,CHI,NYK,"Madison Square Garden, New York, NY",https://www.nba.com/schedule?month=11&year=2026
-0022600178,2026-11-04,20:00,IND,MEM,"FedExForum, Memphis, TN",https://www.nba.com/schedule?month=11&year=2026
-0022600179,2026-11-04,20:00,UTA,NOP,"Smoothie King Center, New Orleans, LA",https://www.nba.com/schedule?month=11&year=2026
-0022600180,2026-11-04,20:00,CLE,OKC,"Paycom Center, Oklahoma City, OK",https://www.nba.com/schedule?month=11&year=2026
-0022600181,2026-11-04,20:30,MIN,HOU,"Toyota Center, Houston, TX",https://www.nba.com/schedule?month=11&year=2026
-0022600182,2026-11-04,21:00,TOR,DEN,"Ball Arena, Denver, CO",https://www.nba.com/schedule?month=11&year=2026
-0022600183,2026-11-04,21:00,POR,PHX,"Mortgage Matchup Center, Phoenix, AZ",https://www.nba.com/schedule?month=11&year=2026
-0022600184,2026-11-04,21:30,DAL,SAS,"Frost Bank Center, San Antonio, TX",https://www.nba.com/schedule?month=11&year=2026
-0022600185,2026-11-04,22:00,LAL,SAC,"Golden 1 Center, Sacramento, CA",https://www.nba.com/schedule?month=11&year=2026
-0022600186,2026-11-04,22:30,MIA,LAC,"Intuit Dome, Inglewood, CA",https://www.nba.com/schedule?month=11&year=2026
-0022600187,2026-11-05,21:00,ORL,PHX,"Mortgage Matchup Center, Phoenix, AZ",https://www.nba.com/schedule?month=11&year=2026
-0022600188,2026-11-05,22:00,MIA,GSW,"Chase Center, San Francisco, CA",https://www.nba.com/schedule?month=11&year=2026
+0022600173,2026-11-04,19:00,PHI,DET,,https://www.nba.com/schedule?month=11&year=2026
+0022600174,2026-11-04,19:00,ATL,WAS,,https://www.nba.com/schedule?month=11&year=2026
+0022600175,2026-11-04,19:30,MIL,BOS,,https://www.nba.com/schedule?month=11&year=2026
+0022600176,2026-11-04,19:30,CHA,BKN,,https://www.nba.com/schedule?month=11&year=2026
+0022600177,2026-11-04,19:30,CHI,NYK,,https://www.nba.com/schedule?month=11&year=2026
+0022600178,2026-11-04,20:00,IND,MEM,,https://www.nba.com/schedule?month=11&year=2026
+0022600179,2026-11-04,20:00,UTA,NOP,,https://www.nba.com/schedule?month=11&year=2026
+0022600180,2026-11-04,20:00,CLE,OKC,,https://www.nba.com/schedule?month=11&year=2026
+0022600181,2026-11-04,20:30,MIN,HOU,,https://www.nba.com/schedule?month=11&year=2026
+0022600182,2026-11-04,21:00,TOR,DEN,,https://www.nba.com/schedule?month=11&year=2026
+0022600183,2026-11-04,21:00,POR,PHX,,https://www.nba.com/schedule?month=11&year=2026
+0022600184,2026-11-04,21:30,DAL,SAS,,https://www.nba.com/schedule?month=11&year=2026
+0022600185,2026-11-04,22:00,LAL,SAC,,https://www.nba.com/schedule?month=11&year=2026
+0022600186,2026-11-04,22:30,MIA,LAC,,https://www.nba.com/schedule?month=11&year=2026
+0022600187,2026-11-05,,ORL,PHX,,https://www.nba.com/schedule?month=11&year=2026
+0022600188,2026-11-05,,MIA,GSW,,https://www.nba.com/schedule?month=11&year=2026

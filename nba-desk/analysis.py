@@ -475,6 +475,19 @@ def main():
             w = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
             w.writeheader()
             w.writerows(rows)
+    # Prospective ledger: written ONCE, then frozen (results are filled in later from official game pages).
+    ledger = os.path.join(DATA, "ledger_2026_11_04_05.csv")
+    if not os.path.exists(ledger):
+        cols = ["game_id", "date", "away", "home", "own_home_margin", "own_home_win_prob", "own_total",
+                "final_home_pts", "final_away_pts", "result_source_url"]
+        with open(ledger, "w", newline="") as f:
+            w = csv.DictWriter(f, fieldnames=cols)
+            w.writeheader()
+            for r in L:
+                w.writerow({"game_id": r["game_id"], "date": r["date"], "away": r["away"], "home": r["home"],
+                            "own_home_margin": r["own_home_margin"], "own_home_win_prob": r["own_home_win_prob"],
+                            "own_total": r["own_total"], "final_home_pts": "", "final_away_pts": "",
+                            "result_source_url": f"https://www.nba.com/game/{r['game_id']}"})
     bad = [c for c in integ if not c["passed"]]
     print(f"integrity: {len(integ) - len(bad)}/{len(integ)} passed")
     for c in bad:
