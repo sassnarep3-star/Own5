@@ -301,9 +301,12 @@ Claim timestamp: 2026-11-03 UTC. Scope limited to `research/nba-2026/independent
 - Cross-checked all 10 transcribed player rows (date, opponent, W/L, minutes, points, 3PM, rebounds, assists, game ID) against the official NBA.com player-log table; no discrepancies found. This is not a verification of all 61 source rows.
 - `python3 -m unittest discover -s tests -q`: 56 passed. `python3 nba-2026-lab/compute.py`: reproduced all five coefficients exactly to displayed precision. `python3 nba-2026-lab/build.py`: 8 pages built reproducibly. `python3 nba-2026-lab/check.py`: 8/8 pages pass; 51 table rows each contain an official NBA/NBA Official link.
 - Audit at `research/nba-2026/independent-audit.md`. No new numeric line or performance claim is justified; zero strategies pass. Existing NBA dashboard was not edited because its generated pages are another completed task's scope. Existing limitations/flags remain published.
-- Branch-sync note: a concurrent update had already pushed the identical A1 claim to this fixed session branch; initial push was non-fast-forward and was not forced. The claim and audit changes are being reconciled while preserving that remote commit and the latest `origin/main` history.
+- Branch-sync note: a concurrent update had already pushed the identical A1 claim to this fixed session branch; initial push was non-fast-forward and was not forced. Both the remote claim and latest `origin/main` history were preserved.
 - Merge conflict: `COORDINATION.md` contained the same A1 claim on the remote branch as `in progress` and this completed record. Kept the remote claim's task identity/owner/scope and retained the completed verification record; no work was discarded.
-- PR and deployment record: pending.
+- [PR #21](https://github.com/sassnarep3-star/Own5/pull/21) merged on 2026-11-03T23:35:51Z; merge commit `bc7267e96a5934e1641d2061cfbcb13db4e8625b`. Required PR checks passed: research dashboard workflow 41740266274; evidence desk workflow 41740266272.
+- Post-merge checks passed at commit `bc7267e`: research dashboard workflow 41740410909, evidence desk workflow 41740410824, and GitHub Pages build/deploy run 41740409737. GitHub Pages API reports `built`, source `main:/`.
+- Live rendered checks passed for [NBA overview](https://sassnarep3-star.github.io/Own5/nba-2026-lab/index.html), [executive summary](https://sassnarep3-star.github.io/Own5/nba-2026-lab/summary.html), and [Flagged for Review](https://sassnarep3-star.github.io/Own5/nba-2026-lab/review.html).
+- **A1 complete.**
 ---
 
 # Session 5ea3d798 — NBA evidence refresh (2026-11-03 UTC)
