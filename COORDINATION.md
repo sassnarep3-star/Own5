@@ -318,4 +318,6 @@ Platform fixes this session to `arena/9557a8aa-own5`; requested session-prefixed
 
 | ID | Task | Status | Owner | Files touched | Notes |
 |---|---|---|---|---|---|
-| S1 | Independent sensitivity analysis of existing official NBA sample; self-contained Pages report and tests | in progress | 9557a8aa | nba-sensitivity/**, COORDINATION.md | Do not edit prior sessions' NBA lab or root pages. |
+| S1 | Independent sensitivity analysis of existing official NBA sample; self-contained Pages report and tests | done | 9557a8aa | nba-sensitivity/**, COORDINATION.md | Do not edit prior sessions' NBA lab or root pages. |
+
+S1 completed 2026-11-03 UTC. Official [NBA Anthony Edwards 2025–26 game log](https://www.nba.com/stats/player/1630162/boxscores?Season=2025-26) fetched and first six rows checked against the existing CSV (dates, opponent, W/L, MIN, PTS, 3PM, REB, AST); remaining four were previously checked in session 5ea3d798 and are linked individually on the page. Fifty leave-one-out rows each link to their underlying official game. Calculated coefficients are explicitly labeled as independently derived, not NBA-published. 2 new tests and 56 existing tests passed; original NBA lab check passed; 62 page links scanned, zero broken local links. Irregularities: selected ten-game sample and missing odds/holdout persist; no strategy is certified. This audit adds no current lines or betting recommendation.
