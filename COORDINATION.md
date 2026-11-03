@@ -301,9 +301,12 @@ Claim timestamp: 2026-11-03 UTC. Scope limited to `research/nba-2026/independent
 - Cross-checked all 10 transcribed player rows (date, opponent, W/L, minutes, points, 3PM, rebounds, assists, game ID) against the official NBA.com player-log table; no discrepancies found. This is not a verification of all 61 source rows.
 - `python3 -m unittest discover -s tests -q`: 56 passed. `python3 nba-2026-lab/compute.py`: reproduced all five coefficients exactly to displayed precision. `python3 nba-2026-lab/build.py`: 8 pages built reproducibly. `python3 nba-2026-lab/check.py`: 8/8 pages pass; 51 table rows each contain an official NBA/NBA Official link.
 - Audit at `research/nba-2026/independent-audit.md`. No new numeric line or performance claim is justified; zero strategies pass. Existing NBA dashboard was not edited because its generated pages are another completed task's scope. Existing limitations/flags remain published.
-- Branch-sync note: a concurrent update had already pushed the identical A1 claim to this fixed session branch; initial push was non-fast-forward and was not forced. The claim and audit changes are being reconciled while preserving that remote commit and the latest `origin/main` history.
+- Branch-sync note: a concurrent update had already pushed the identical A1 claim to this fixed session branch; initial push was non-fast-forward and was not forced. Both the remote claim and latest `origin/main` history were preserved.
 - Merge conflict: `COORDINATION.md` contained the same A1 claim on the remote branch as `in progress` and this completed record. Kept the remote claim's task identity/owner/scope and retained the completed verification record; no work was discarded.
-- PR and deployment record: pending.
+- [PR #21](https://github.com/sassnarep3-star/Own5/pull/21) merged on 2026-11-03T23:35:51Z; merge commit `bc7267e96a5934e1641d2061cfbcb13db4e8625b`. Required PR checks passed: research dashboard workflow 41740266274; evidence desk workflow 41740266272.
+- Post-merge checks passed at commit `bc7267e`: research dashboard workflow 41740410909, evidence desk workflow 41740410824, and GitHub Pages build/deploy run 41740409737. GitHub Pages API reports `built`, source `main:/`.
+- Live rendered checks passed for [NBA overview](https://sassnarep3-star.github.io/Own5/nba-2026-lab/index.html), [executive summary](https://sassnarep3-star.github.io/Own5/nba-2026-lab/summary.html), and [Flagged for Review](https://sassnarep3-star.github.io/Own5/nba-2026-lab/review.html).
+- **A1 complete.**
 ---
 
 # Session 5ea3d798 — NBA evidence refresh (2026-11-03 UTC)
@@ -399,7 +402,7 @@ Arena fixes this session's branch to `arena/9ded47ab-own5`; the requested `sessi
 | O1 | Source/requirement audit and official evidence register | done | 9ded47ab | COORDINATION.md, nba-origin-lab/** | Claimed 2026-11-03 UTC; additive namespace only. |
 | O2 | Reproducible line-origin, validation, correlations and leaderboard framework | done | 9ded47ab | nba-origin-lab/** | Await O1; no invented odds or rewards. |
 | O3 | Category dashboard, summary, flagged review and automated checks | done | 9ded47ab | nba-origin-lab/** | Await O2; no shared root navigation changes. |
-| O4 | Integration, PR, merge and Pages verification | in progress | 9ded47ab | COORDINATION.md, nba-origin-lab/** | Await O3; fixed Arena branch is integration branch. |
+| O4 | Integration, PR, merge and Pages verification | done | 9ded47ab | COORDINATION.md, nba-origin-lab/** | Await O3; fixed Arena branch is integration branch. |
 
 Cross-session requests: none at claim time. Other sessions should not edit `nba-origin-lab/**` while this claim is active.
 
@@ -415,3 +418,11 @@ Cross-session requests: none at claim time. Other sessions should not edit `nba-
 - e9a43ca6 browser remediation: extracted bundled Chromium support libraries (temporary OS directory) and reused one browser context for both viewports. All 16 local desktop/mobile no-JavaScript checks now pass. Initial CI browser run hung; cancellation was denied by GitHub permissions. Corrected test will rerun before merge.
 
 - e9a43ca6 pull-before-push: plain `git pull --rebase` attempted to replay already merged main history and conflicted. Aborted without discarding work; preserving the integration merge and verifying the remote session tip is an ancestor before fast-forward push.
+
+### Session 9ded47ab PR, merge and live Pages result
+
+- [PR #20](https://github.com/sassnarep3-star/Own5/pull/20) merged into `main` on 2026-11-03T23:35:34Z, merge commit `4ac3fbd1586a7e3879c9705f1cc0270cef3d5d7c`. Before merge: dashboard browser/evidence check and evidence-desk check passed; 4 additive and 56 existing local tests passed.
+- Initial Pages run 41740374686 was cancelled due to a higher-priority concurrent main deployment, not a site-build failure. Subsequent [Pages deployment run 41740409737](https://github.com/sassnarep3-star/Own5/actions/runs/41740409737) completed **success** (build, deploy, report), with GitHub Pages `main` @ `/` status `built`. The [NBA landing page](https://sassnarep3-star.github.io/Own5/nba-origin-lab/index.html) and [Flagged for Review](https://sassnarep3-star.github.io/Own5/nba-origin-lab/review.html) were read successfully from the live site with a cache-busting query. A concurrent session's PR #21 was merged after #20 and its successful deployment includes both changes.
+- Main branch and existing NFL/NBA sites remain intact. No certified bets, no verified live lines, no funded rewards. R01–R08 remain on the live review page. This record is delivered in a follow-up PR because the original feature PR was already merged.
+
+- e9a43ca6 second integration: preserved both append-only records after PRs #23/#25 landed. Corrected NBA browser CI step passed on run 41741139038; existing root browser suite also passes locally.
