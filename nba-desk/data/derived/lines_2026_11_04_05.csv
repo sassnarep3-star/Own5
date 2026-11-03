@@ -1,0 +1,17 @@
+game_id,date,tip_et_24h,away,home,home_gp,away_gp,home_rating,away_rating,own_home_margin,own_spread_home,own_home_win_prob,own_total,own_total_rounded,sens_spread_min,sens_spread_max,market_spread,market_total,market_source,source_url
+0022600173,2026-11-04,19:00,PHI,DET,7,8,7.91,2.95,6.9,DET -7.0,0.687,220.7,220.5,6.5,9.3,,,BLANK - no verifiable official market quote (flag F03),https://www.nba.com/schedule?month=11&year=2026
+0022600174,2026-11-04,19:00,ATL,WAS,7,8,-2.39,1.3,-1.8,WAS +2.0,0.45,228.7,228.5,-7.6,-0.1,,,BLANK - no verifiable official market quote (flag F03),https://www.nba.com/schedule?month=11&year=2026
+0022600175,2026-11-04,19:30,MIL,BOS,7,7,5.01,-8.03,15.0,BOS -15.0,0.856,223.5,223.5,12.7,19.1,,,BLANK - no verifiable official market quote (flag F03),https://www.nba.com/schedule?month=11&year=2026
+0022600176,2026-11-04,19:30,CHA,BKN,7,8,-6.96,-4.59,-0.4,BKN +0.5,0.487,216.6,216.5,-6.8,1.5,,,BLANK - no verifiable official market quote (flag F03),https://www.nba.com/schedule?month=11&year=2026
+0022600177,2026-11-04,19:30,CHI,NYK,7,7,2.39,-9.35,13.7,NYK -13.5,0.834,227.4,227.5,11.5,17.4,,,BLANK - no verifiable official market quote (flag F03),https://www.nba.com/schedule?month=11&year=2026
+0022600178,2026-11-04,20:00,IND,MEM,7,8,4.57,-4.11,10.6,MEM -10.5,0.774,230.0,230.0,8.0,13.5,,,BLANK - no verifiable official market quote (flag F03),https://www.nba.com/schedule?month=11&year=2026
+0022600179,2026-11-04,20:00,UTA,NOP,7,7,-0.44,-8.11,9.6,NOP -9.5,0.752,235.1,235.0,7.6,12.2,,,BLANK - no verifiable official market quote (flag F03),https://www.nba.com/schedule?month=11&year=2026
+0022600180,2026-11-04,20:00,CLE,OKC,7,7,3.25,2.89,2.3,OKC -2.5,0.564,226.2,226.0,1.0,5.6,,,BLANK - no verifiable official market quote (flag F03),https://www.nba.com/schedule?month=11&year=2026
+0022600181,2026-11-04,20:30,MIN,HOU,8,8,8.04,6.79,3.2,HOU -3.0,0.589,225.0,225.0,3.0,3.6,,,BLANK - no verifiable official market quote (flag F03),https://www.nba.com/schedule?month=11&year=2026
+0022600182,2026-11-04,21:00,TOR,DEN,6,7,0.51,4.51,-2.1,DEN +2.0,0.441,228.9,229.0,-4.0,0.5,,,BLANK - no verifiable official market quote (flag F03),https://www.nba.com/schedule?month=11&year=2026
+0022600183,2026-11-04,21:00,POR,PHX,5,6,-3.77,4.73,-6.6,PHX +6.5,0.321,225.8,226.0,-10.4,-2.5,,,BLANK - no verifiable official market quote (flag F03),https://www.nba.com/schedule?month=11&year=2026
+0022600184,2026-11-04,21:30,DAL,SAS,7,7,6.83,-1.54,10.3,SAS -10.5,0.767,226.9,227.0,9.6,14.3,,,BLANK - no verifiable official market quote (flag F03),https://www.nba.com/schedule?month=11&year=2026
+0022600185,2026-11-04,22:00,LAL,SAC,7,8,-9.62,4.25,-12.0,SAC +12.0,0.198,230.6,230.5,-16.3,-9.1,,,BLANK - no verifiable official market quote (flag F03),https://www.nba.com/schedule?month=11&year=2026
+0022600186,2026-11-04,22:30,MIA,LAC,7,7,-3.23,-2.12,0.8,LAC -1.0,0.523,230.2,230.0,0.5,1.0,,,BLANK - no verifiable official market quote (flag F03),https://www.nba.com/schedule?month=11&year=2026
+0022600187,2026-11-05,21:00,ORL,PHX,5,7,-3.77,-4.19,2.3,PHX -2.5,0.566,223.9,224.0,1.9,2.9,,,BLANK - no verifiable official market quote (flag F03),https://www.nba.com/schedule?month=11&year=2026
+0022600188,2026-11-05,22:00,MIA,GSW,8,7,1.34,-2.12,5.4,GSW -5.5,0.649,233.1,233.0,2.8,7.1,,,BLANK - no verifiable official market quote (flag F03),https://www.nba.com/schedule?month=11&year=2026

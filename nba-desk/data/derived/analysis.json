@@ -1,0 +1,1219 @@
+{
+  "as_of": "2026-11-03",
+  "correlations": {
+    "game_level": [
+      {
+        "ci_hi": 0.6481132447996992,
+        "ci_lo": -0.12658841330262222,
+        "n": 22,
+        "r": 0.31166065661861314,
+        "x": "spread-leg residual (actual home margin - model)",
+        "y": "total-leg residual (actual total - model)"
+      },
+      {
+        "ci_hi": 0.5980548830027715,
+        "ci_lo": -0.20619702067415815,
+        "n": 22,
+        "r": 0.23592888816174573,
+        "x": "actual home margin",
+        "y": "actual game total"
+      },
+      {
+        "ci_hi": 0.6658129586545206,
+        "ci_lo": -0.09583084066780369,
+        "n": 22,
+        "r": 0.33950153265706756,
+        "x": "home team PTS",
+        "y": "away team PTS (same game)"
+      }
+    ],
+    "parlay": [
+      {
+        "independent": 0.25,
+        "joint": 0.2,
+        "p_leg1": 0.5,
+        "p_leg2": 0.5,
+        "phi": -0.2,
+        "ratio": 0.8
+      },
+      {
+        "independent": 0.25,
+        "joint": 0.225,
+        "p_leg1": 0.5,
+        "p_leg2": 0.5,
+        "phi": -0.1,
+        "ratio": 0.9
+      },
+      {
+        "independent": 0.25,
+        "joint": 0.25,
+        "p_leg1": 0.5,
+        "p_leg2": 0.5,
+        "phi": 0.0,
+        "ratio": 1.0
+      },
+      {
+        "independent": 0.25,
+        "joint": 0.275,
+        "p_leg1": 0.5,
+        "p_leg2": 0.5,
+        "phi": 0.1,
+        "ratio": 1.1
+      },
+      {
+        "independent": 0.25,
+        "joint": 0.3,
+        "p_leg1": 0.5,
+        "p_leg2": 0.5,
+        "phi": 0.2,
+        "ratio": 1.2
+      },
+      {
+        "independent": 0.25,
+        "joint": 0.325,
+        "p_leg1": 0.5,
+        "p_leg2": 0.5,
+        "phi": 0.3,
+        "ratio": 1.3
+      },
+      {
+        "independent": 0.30250000000000005,
+        "joint": 0.25300000000000006,
+        "p_leg1": 0.55,
+        "p_leg2": 0.55,
+        "phi": -0.2,
+        "ratio": 0.8363636363636364
+      },
+      {
+        "independent": 0.30250000000000005,
+        "joint": 0.27775000000000005,
+        "p_leg1": 0.55,
+        "p_leg2": 0.55,
+        "phi": -0.1,
+        "ratio": 0.9181818181818182
+      },
+      {
+        "independent": 0.30250000000000005,
+        "joint": 0.30250000000000005,
+        "p_leg1": 0.55,
+        "p_leg2": 0.55,
+        "phi": 0.0,
+        "ratio": 1.0
+      },
+      {
+        "independent": 0.30250000000000005,
+        "joint": 0.32725000000000004,
+        "p_leg1": 0.55,
+        "p_leg2": 0.55,
+        "phi": 0.1,
+        "ratio": 1.0818181818181818
+      },
+      {
+        "independent": 0.30250000000000005,
+        "joint": 0.35200000000000004,
+        "p_leg1": 0.55,
+        "p_leg2": 0.55,
+        "phi": 0.2,
+        "ratio": 1.1636363636363636
+      },
+      {
+        "independent": 0.30250000000000005,
+        "joint": 0.37675000000000003,
+        "p_leg1": 0.55,
+        "p_leg2": 0.55,
+        "phi": 0.3,
+        "ratio": 1.2454545454545454
+      }
+    ],
+    "team_game": [
+      {
+        "ci_hi": 0.6086461817494628,
+        "ci_lo": 0.09428604036715779,
+        "n": 44,
+        "r": 0.3805199647644548,
+        "x": "team PTS",
+        "y": "FGA"
+      },
+      {
+        "ci_hi": 0.5876360505581055,
+        "ci_lo": 0.06176766835777343,
+        "n": 44,
+        "r": 0.3521946487230029,
+        "x": "team PTS",
+        "y": "3PM"
+      },
+      {
+        "ci_hi": 0.5010422869260941,
+        "ci_lo": -0.06142688384866544,
+        "n": 44,
+        "r": 0.23983237899404952,
+        "x": "team PTS",
+        "y": "FTA"
+      },
+      {
+        "ci_hi": 0.7940140619236322,
+        "ci_lo": 0.43819959075609943,
+        "n": 44,
+        "r": 0.6504630339209319,
+        "x": "team PTS",
+        "y": "AST"
+      },
+      {
+        "ci_hi": 0.08865822619041701,
+        "ci_lo": -0.4802502719656117,
+        "n": 44,
+        "r": -0.2138562568784069,
+        "x": "team PTS",
+        "y": "TOV"
+      },
+      {
+        "ci_hi": 0.3392486530977088,
+        "ci_lo": -0.2533205895206677,
+        "n": 44,
+        "r": 0.04710775254915473,
+        "x": "team PTS",
+        "y": "OREB"
+      },
+      {
+        "ci_hi": 0.5622492559181081,
+        "ci_lo": 0.023910406031041255,
+        "n": 44,
+        "r": 0.31853473795348575,
+        "x": "team PTS",
+        "y": "REB"
+      }
+    ],
+    "team_season": [
+      {
+        "ci_hi": 0.9913464328048113,
+        "ci_lo": 0.9614614455893924,
+        "n": 30,
+        "r": 0.9816887730241174,
+        "season": "2024-25",
+        "x": "margin/G",
+        "y": "win%"
+      },
+      {
+        "ci_hi": 0.8614521396998758,
+        "ci_lo": 0.49641976290873585,
+        "n": 30,
+        "r": 0.7267223545269494,
+        "season": "2024-25",
+        "x": "PTS/G",
+        "y": "margin/G"
+      },
+      {
+        "ci_hi": -0.3688778971884896,
+        "ci_lo": -0.8149279739613613,
+        "n": 30,
+        "r": -0.6436178921935556,
+        "season": "2024-25",
+        "x": "opp PTS/G",
+        "y": "margin/G"
+      },
+      {
+        "ci_hi": 0.4097216477125788,
+        "ci_lo": -0.30871795267995855,
+        "n": 30,
+        "r": 0.05800929469606385,
+        "season": "2024-25",
+        "x": "PTS/G",
+        "y": "opp PTS/G"
+      },
+      {
+        "ci_hi": 0.9871608250121542,
+        "ci_lo": 0.9432329582261039,
+        "n": 30,
+        "r": 0.9728954735140635,
+        "season": "2025-26",
+        "x": "margin/G",
+        "y": "win%"
+      },
+      {
+        "ci_hi": 0.8177159495672518,
+        "ci_lo": 0.3760753325292185,
+        "n": 30,
+        "r": 0.6484867099010303,
+        "season": "2025-26",
+        "x": "PTS/G",
+        "y": "margin/G"
+      },
+      {
+        "ci_hi": -0.7082994100534993,
+        "ci_lo": -0.9272159199855364,
+        "n": 30,
+        "r": -0.851329947150447,
+        "season": "2025-26",
+        "x": "opp PTS/G",
+        "y": "margin/G"
+      },
+      {
+        "ci_hi": 0.21964628801004835,
+        "ci_lo": -0.4862366937927704,
+        "n": 30,
+        "r": -0.15271367612341827,
+        "season": "2025-26",
+        "x": "PTS/G",
+        "y": "opp PTS/G"
+      },
+      {
+        "ci_hi": 0.9611325548294116,
+        "ci_lo": 0.835522654335987,
+        "n": 30,
+        "r": 0.9191247030356721,
+        "season": "2026-27",
+        "x": "margin/G",
+        "y": "win%"
+      },
+      {
+        "ci_hi": 0.8170950137118836,
+        "ci_lo": 0.3744676987391616,
+        "n": 30,
+        "r": 0.6474011306325645,
+        "season": "2026-27",
+        "x": "PTS/G",
+        "y": "margin/G"
+      },
+      {
+        "ci_hi": -0.5049271671744139,
+        "ci_lo": -0.8643517563822691,
+        "n": 30,
+        "r": -0.732035771207218,
+        "season": "2026-27",
+        "x": "opp PTS/G",
+        "y": "margin/G"
+      },
+      {
+        "ci_hi": 0.3990673118741932,
+        "ci_lo": -0.32019580977620093,
+        "n": 30,
+        "r": 0.045305866952976066,
+        "season": "2026-27",
+        "x": "PTS/G",
+        "y": "opp PTS/G"
+      },
+      {
+        "ci_hi": 0.7431117962407671,
+        "ci_lo": 0.20024593294892232,
+        "n": 30,
+        "r": 0.52280418280885,
+        "season": "pair",
+        "x": "margin 2024-25 -> 2025-26",
+        "y": ""
+      },
+      {
+        "ci_hi": 0.7224506479486988,
+        "ci_lo": 0.157037607254209,
+        "n": 30,
+        "r": 0.48961218823086916,
+        "season": "pair",
+        "x": "game total dev 2024-25 -> 2025-26",
+        "y": ""
+      }
+    ]
+  },
+  "gates": [
+    {
+      "id": "G1",
+      "name": "Source integrity",
+      "rule": "Every input row links to an official page and reconciles to league identities (this session's integrity suite).",
+      "status": "Automatable now"
+    },
+    {
+      "id": "G2",
+      "name": "Pre-registration",
+      "rule": "Rule, parameters and data cut-off frozen and timestamped BEFORE games start; edits create a new strategy ID.",
+      "status": "Automatable now"
+    },
+    {
+      "id": "G3",
+      "name": "Minimum sample",
+      "rule": "At least N settled, pre-registered bets where N gives 80% power at one-sided 5% vs the break-even hit rate for the claimed edge (see Luck vs Skill).",
+      "status": "Needs settled ledger"
+    },
+    {
+      "id": "G4",
+      "name": "Closing-line value",
+      "rule": "Mean CLV > 0 with a lower 95% bound above 0 over the sample. Needs timestamped market quotes and a closing line from an auditable source.",
+      "status": "Blocked: no official market feed in scope"
+    },
+    {
+      "id": "G5",
+      "name": "Multiple-testing deflation",
+      "rule": "p-value must clear Bonferroni threshold alpha / (number of strategies and parameter variants ever tried).",
+      "status": "Needs settled ledger"
+    },
+    {
+      "id": "G6",
+      "name": "Out-of-sample holdout",
+      "rule": "Positive edge on data never used to choose parameters (this desk: all parameters fitted on 2024-25 -> 2025-26, tested on 2026-27).",
+      "status": "Partially met (n=22 games, underpowered)"
+    },
+    {
+      "id": "G7",
+      "name": "Calibration",
+      "rule": "Model probabilities beat the naive baseline on log-loss / Brier on the holdout.",
+      "status": "Needs settled ledger"
+    },
+    {
+      "id": "G8",
+      "name": "Correlation discipline (parlays/props)",
+      "rule": "Any multi-leg ticket must use a measured joint probability, not a product of independent legs; legs with unmeasured correlation are rejected.",
+      "status": "Partially met (see Correlations)"
+    },
+    {
+      "id": "G9",
+      "name": "Risk of ruin",
+      "rule": "Stake sizing rule fixed in advance; simulated max drawdown under the claimed edge within limit.",
+      "status": "Needs settled ledger"
+    }
+  ],
+  "integrity": [
+    {
+      "check": "2024-25: 30 distinct teams",
+      "detail": "30 rows",
+      "passed": true
+    },
+    {
+      "check": "2024-25: league wins == league losses",
+      "detail": "W=1230 L=1230",
+      "passed": true
+    },
+    {
+      "check": "2024-25: GP == W+L for every team",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "2024-25: 1,230 games played (2,460 team-games)",
+      "detail": "GP total 2460",
+      "passed": true
+    },
+    {
+      "check": "2024-25: GP-weighted league margin sums to ~0 (rounding tolerance)",
+      "detail": "sum=16.4 tol=123.5",
+      "passed": true
+    },
+    {
+      "check": "2025-26: 30 distinct teams",
+      "detail": "30 rows",
+      "passed": true
+    },
+    {
+      "check": "2025-26: league wins == league losses",
+      "detail": "W=1230 L=1230",
+      "passed": true
+    },
+    {
+      "check": "2025-26: GP == W+L for every team",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "2025-26: 1,230 games played (2,460 team-games)",
+      "detail": "GP total 2460",
+      "passed": true
+    },
+    {
+      "check": "2025-26: GP-weighted league margin sums to ~0 (rounding tolerance)",
+      "detail": "sum=-16.4 tol=123.5",
+      "passed": true
+    },
+    {
+      "check": "2026-27: 30 distinct teams",
+      "detail": "30 rows",
+      "passed": true
+    },
+    {
+      "check": "2026-27: league wins == league losses",
+      "detail": "W=107 L=107",
+      "passed": true
+    },
+    {
+      "check": "2026-27: GP == W+L for every team",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "2026-27: 214 team-games = 107 games (matches '214 Rows' on nba.com box-score table at capture)",
+      "detail": "GP total 214",
+      "passed": true
+    },
+    {
+      "check": "2026-27: GP-weighted league margin sums to ~0 (rounding tolerance)",
+      "detail": "sum=2.0 tol=11.2",
+      "passed": true
+    },
+    {
+      "check": "2025-26 home/road: every team's splits sum to 82 games",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "2025-26 home/road: league home wins == league road losses",
+      "detail": "home W 679, road L 679",
+      "passed": true
+    },
+    {
+      "check": "2025-26 home/road: league home losses == league road wins",
+      "detail": "home L 546, road W 546",
+      "passed": true
+    },
+    {
+      "check": "2025-26 home/road: neutral wins == neutral losses",
+      "detail": "5 vs 5",
+      "passed": true
+    },
+    {
+      "check": "2025-26 home/road wins agree with team-season wins for all teams",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "game sample: 44 team-rows = 22 games",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "game sample: exactly two rows per game",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "game sample: PTS == 2*FGM + 3PM + FTM on every row",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "game sample: +/- equals point difference in both rows",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "game sample: W/L consistent with score",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "game sample: exactly one home team per game",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "game sample: minutes equal in both rows (240 reg., 265 = one OT)",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "game sample: every opp field mirrors the other row",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "schedule: 14 games on 2026-11-04 and 2 on 2026-11-05 (matches nba.com day counts)",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "schedule: all team codes valid",
+      "detail": "",
+      "passed": true
+    },
+    {
+      "check": "every data row carries an nba.com source URL",
+      "detail": "",
+      "passed": true
+    }
+  ],
+  "luck_skill": {
+    "breakeven_110": 0.5238095238095238,
+    "leaderboard_luck": [
+      {
+        "bets_each": 50,
+        "entrants": 10,
+        "expected_best_hit_rate": 0.6083585402535677,
+        "p_any_ge_60pct": 0.6563995023764744
+      },
+      {
+        "bets_each": 100,
+        "entrants": 10,
+        "expected_best_hit_rate": 0.5767798066816802,
+        "p_any_ge_60pct": 0.2506606659138144
+      },
+      {
+        "bets_each": 250,
+        "entrants": 10,
+        "expected_best_hit_rate": 0.5486197746156646,
+        "p_any_ge_60pct": 0.009376702954164595
+      },
+      {
+        "bets_each": 1000,
+        "entrants": 10,
+        "expected_best_hit_rate": 0.5243248387992451,
+        "p_any_ge_60pct": 1.368457569483894e-09
+      },
+      {
+        "bets_each": 50,
+        "entrants": 50,
+        "expected_best_hit_rate": 0.6577614782359609,
+        "p_any_ge_60pct": 0.9952107344206697
+      },
+      {
+        "bets_each": 100,
+        "entrants": 50,
+        "expected_best_hit_rate": 0.6120071329155645,
+        "p_any_ge_60pct": 0.7637386668451365
+      },
+      {
+        "bets_each": 250,
+        "entrants": 50,
+        "expected_best_hit_rate": 0.5710094572259244,
+        "p_any_ge_60pct": 0.046012494845641516
+      },
+      {
+        "bets_each": 1000,
+        "entrants": 50,
+        "expected_best_hit_rate": 0.5355469437054013,
+        "p_any_ge_60pct": 6.84228784741947e-09
+      },
+      {
+        "bets_each": 50,
+        "entrants": 100,
+        "expected_best_hit_rate": 0.6755511402786325,
+        "p_any_ge_60pct": 0.9999770629352106
+      },
+      {
+        "bets_each": 100,
+        "entrants": 100,
+        "expected_best_hit_rate": 0.6247619672905702,
+        "p_any_ge_60pct": 0.9441805824558867
+      },
+      {
+        "bets_each": 250,
+        "entrants": 100,
+        "expected_best_hit_rate": 0.5791416036274758,
+        "p_any_ge_60pct": 0.08990784000936292
+      },
+      {
+        "bets_each": 1000,
+        "entrants": 100,
+        "expected_best_hit_rate": 0.5396291522505111,
+        "p_any_ge_60pct": 1.3684575583816638e-08
+      },
+      {
+        "bets_each": 50,
+        "entrants": 500,
+        "expected_best_hit_rate": 0.711556037803377,
+        "p_any_ge_60pct": 1.0
+      },
+      {
+        "bets_each": 100,
+        "entrants": 500,
+        "expected_best_hit_rate": 0.6507277783048031,
+        "p_any_ge_60pct": 0.9999994580908271
+      },
+      {
+        "bets_each": 250,
+        "entrants": 500,
+        "expected_best_hit_rate": 0.595750796791505,
+        "p_any_ge_60pct": 0.37565179750105204
+      },
+      {
+        "bets_each": 1000,
+        "entrants": 500,
+        "expected_best_hit_rate": 0.5479797979376532,
+        "p_any_ge_60pct": 6.842287614272635e-08
+      }
+    ],
+    "required_n": [
+      {
+        "k_critical": 3162,
+        "n_bets": 5915,
+        "true_hit_rate": 0.54
+      },
+      {
+        "k_critical": 1229,
+        "n_bets": 2270,
+        "true_hit_rate": 0.55
+      },
+      {
+        "k_critical": 655,
+        "n_bets": 1195,
+        "true_hit_rate": 0.56
+      },
+      {
+        "k_critical": 281,
+        "n_bets": 500,
+        "true_hit_rate": 0.58
+      }
+    ],
+    "single_bettor": [
+      {
+        "n": 50,
+        "p_fair_coin_ge_55pct": 0.2399438308491694,
+        "p_fair_coin_ge_breakeven": 0.3359055168826888,
+        "p_true55_ge_breakeven": 0.6134078877635399
+      },
+      {
+        "n": 100,
+        "p_fair_coin_ge_55pct": 0.135626512036914,
+        "p_fair_coin_ge_breakeven": 0.3086497067946223,
+        "p_true55_ge_breakeven": 0.6931215377957382
+      },
+      {
+        "n": 250,
+        "p_fair_coin_ge_55pct": 0.05683278972987069,
+        "p_fair_coin_ge_breakeven": 0.24334592374206157,
+        "p_true55_ge_breakeven": 0.8133429402958546
+      },
+      {
+        "n": 500,
+        "p_fair_coin_ge_55pct": 0.014163080383096084,
+        "p_fair_coin_ge_breakeven": 0.15183365649703598,
+        "p_true55_ge_breakeven": 0.8874261352059453
+      },
+      {
+        "n": 1000,
+        "p_fair_coin_ge_55pct": 0.000865268042487973,
+        "p_fair_coin_ge_breakeven": 0.06858400263530678,
+        "p_true55_ge_breakeven": 0.9537902295501843
+      },
+      {
+        "n": 2500,
+        "p_fair_coin_ge_55pct": 3.1147161087096034e-07,
+        "p_fair_coin_ge_breakeven": 0.008647623668019523,
+        "p_true55_ge_breakeven": 0.9957277146589785
+      }
+    ]
+  },
+  "n_lines": 16,
+  "params": {
+    "K": 7.456884777358751,
+    "K_t": 30.09831905860029,
+    "beta": 0.5424032072840621,
+    "beta_t": 0.41529428154468356,
+    "fit_margin": {
+      "intercept": -0.010282688048560473,
+      "n": 30,
+      "r": 0.52280418280885,
+      "resid_sd": 5.390804040613599,
+      "slope": 0.5424032072840621,
+      "slope_se": 0.16713773955759464
+    },
+    "fit_total": {
+      "intercept": 3.0621885355569575e-14,
+      "n": 30,
+      "r": 0.48961218823086916,
+      "resid_sd": 4.77600707161628,
+      "slope": 0.41529428154468356,
+      "slope_se": 0.1397691972605591
+    },
+    "hfa": 1.9237768874582142,
+    "hfa0": 1.637961337031336,
+    "home_l": 546,
+    "home_pct": 0.5542857142857143,
+    "home_w": 679,
+    "lt24": 227.64666666666668,
+    "lt25": 231.21999999999997,
+    "lt26": 226.77663551401872,
+    "sigma": 14.093936241095125,
+    "sigma_t": 22.41008263868348,
+    "tau_p2": 26.63834090224646,
+    "tau_tp2": 16.685709354560146
+  },
+  "ratings": [
+    {
+      "gp": "8",
+      "l": "1",
+      "pm_2024_25": "4.5",
+      "pm_2025_26": "5.2",
+      "pm_2026_27_to_date": "12.9",
+      "prior": 2.82,
+      "rating": 8.04,
+      "team": "HOU",
+      "w": "7",
+      "weight_on_current": 0.518
+    },
+    {
+      "gp": "7",
+      "l": "1",
+      "pm_2024_25": "1.9",
+      "pm_2025_26": "8.2",
+      "pm_2026_27_to_date": "11.6",
+      "prior": 4.45,
+      "rating": 7.91,
+      "team": "DET",
+      "w": "6",
+      "weight_on_current": 0.484
+    },
+    {
+      "gp": "7",
+      "l": "2",
+      "pm_2024_25": "-2.8",
+      "pm_2025_26": "8.3",
+      "pm_2026_27_to_date": "9.3",
+      "prior": 4.5,
+      "rating": 6.83,
+      "team": "SAS",
+      "w": "5",
+      "weight_on_current": 0.484
+    },
+    {
+      "gp": "8",
+      "l": "3",
+      "pm_2024_25": "5.0",
+      "pm_2025_26": "3.4",
+      "pm_2026_27_to_date": "11.4",
+      "prior": 1.84,
+      "rating": 6.79,
+      "team": "MIN",
+      "w": "5",
+      "weight_on_current": 0.518
+    },
+    {
+      "gp": "7",
+      "l": "2",
+      "pm_2024_25": "9.1",
+      "pm_2025_26": "7.7",
+      "pm_2026_27_to_date": "5.9",
+      "prior": 4.18,
+      "rating": 5.01,
+      "team": "BOS",
+      "w": "5",
+      "weight_on_current": 0.484
+    },
+    {
+      "gp": "6",
+      "l": "1",
+      "pm_2024_25": "-3.0",
+      "pm_2025_26": "-0.3",
+      "pm_2026_27_to_date": "10.8",
+      "prior": -0.16,
+      "rating": 4.73,
+      "team": "POR",
+      "w": "5",
+      "weight_on_current": 0.446
+    },
+    {
+      "gp": "7",
+      "l": "1",
+      "pm_2024_25": "4.9",
+      "pm_2025_26": "-6.0",
+      "pm_2026_27_to_date": "12.9",
+      "prior": -3.25,
+      "rating": 4.57,
+      "team": "MEM",
+      "w": "6",
+      "weight_on_current": 0.484
+    },
+    {
+      "gp": "7",
+      "l": "3",
+      "pm_2024_25": "-4.3",
+      "pm_2025_26": "2.8",
+      "pm_2026_27_to_date": "7.7",
+      "prior": 1.52,
+      "rating": 4.51,
+      "team": "TOR",
+      "w": "4",
+      "weight_on_current": 0.484
+    },
+    {
+      "gp": "8",
+      "l": "2",
+      "pm_2024_25": "1.2",
+      "pm_2025_26": "1.8",
+      "pm_2026_27_to_date": "7.3",
+      "prior": 0.98,
+      "rating": 4.25,
+      "team": "LAL",
+      "w": "6",
+      "weight_on_current": 0.518
+    },
+    {
+      "gp": "7",
+      "l": "2",
+      "pm_2024_25": "12.9",
+      "pm_2025_26": "11.1",
+      "pm_2026_27_to_date": "0.3",
+      "prior": 6.02,
+      "rating": 3.25,
+      "team": "OKC",
+      "w": "5",
+      "weight_on_current": 0.484
+    },
+    {
+      "gp": "8",
+      "l": "1",
+      "pm_2024_25": "-6.2",
+      "pm_2025_26": "-0.2",
+      "pm_2026_27_to_date": "5.8",
+      "prior": -0.11,
+      "rating": 2.95,
+      "team": "PHI",
+      "w": "7",
+      "weight_on_current": 0.518
+    },
+    {
+      "gp": "7",
+      "l": "3",
+      "pm_2024_25": "9.5",
+      "pm_2025_26": "4.1",
+      "pm_2026_27_to_date": "3.6",
+      "prior": 2.22,
+      "rating": 2.89,
+      "team": "CLE",
+      "w": "4",
+      "weight_on_current": 0.484
+    },
+    {
+      "gp": "7",
+      "l": "4",
+      "pm_2024_25": "4.1",
+      "pm_2025_26": "6.3",
+      "pm_2026_27_to_date": "1.3",
+      "prior": 3.42,
+      "rating": 2.39,
+      "team": "NYK",
+      "w": "3",
+      "weight_on_current": 0.484
+    },
+    {
+      "gp": "8",
+      "l": "3",
+      "pm_2024_25": "3.3",
+      "pm_2025_26": "-0.6",
+      "pm_2026_27_to_date": "2.9",
+      "prior": -0.33,
+      "rating": 1.34,
+      "team": "GSW",
+      "w": "5",
+      "weight_on_current": 0.518
+    },
+    {
+      "gp": "8",
+      "l": "4",
+      "pm_2024_25": "-1.1",
+      "pm_2025_26": "2.4",
+      "pm_2026_27_to_date": "1.3",
+      "prior": 1.3,
+      "rating": 1.3,
+      "team": "ATL",
+      "w": "4",
+      "weight_on_current": 0.518
+    },
+    {
+      "gp": "6",
+      "l": "3",
+      "pm_2024_25": "3.9",
+      "pm_2025_26": "5.1",
+      "pm_2026_27_to_date": "-2.3",
+      "prior": 2.77,
+      "rating": 0.51,
+      "team": "DEN",
+      "w": "3",
+      "weight_on_current": 0.446
+    },
+    {
+      "gp": "7",
+      "l": "4",
+      "pm_2024_25": "-9.4",
+      "pm_2025_26": "-4.5",
+      "pm_2026_27_to_date": "1.7",
+      "prior": -2.44,
+      "rating": -0.44,
+      "team": "NOP",
+      "w": "3",
+      "weight_on_current": 0.484
+    },
+    {
+      "gp": "7",
+      "l": "3",
+      "pm_2024_25": "-1.2",
+      "pm_2025_26": "-5.5",
+      "pm_2026_27_to_date": "0.0",
+      "prior": -2.98,
+      "rating": -1.54,
+      "team": "DAL",
+      "w": "4",
+      "weight_on_current": 0.484
+    },
+    {
+      "gp": "7",
+      "l": "5",
+      "pm_2024_25": "0.6",
+      "pm_2025_26": "2.3",
+      "pm_2026_27_to_date": "-5.7",
+      "prior": 1.25,
+      "rating": -2.12,
+      "team": "MIA",
+      "w": "2",
+      "weight_on_current": 0.484
+    },
+    {
+      "gp": "7",
+      "l": "3",
+      "pm_2024_25": "-12.4",
+      "pm_2025_26": "-12.0",
+      "pm_2026_27_to_date": "2.0",
+      "prior": -6.51,
+      "rating": -2.39,
+      "team": "WAS",
+      "w": "4",
+      "weight_on_current": 0.484
+    },
+    {
+      "gp": "7",
+      "l": "6",
+      "pm_2024_25": "4.7",
+      "pm_2025_26": "1.1",
+      "pm_2026_27_to_date": "-7.3",
+      "prior": 0.6,
+      "rating": -3.23,
+      "team": "LAC",
+      "w": "1",
+      "weight_on_current": 0.484
+    },
+    {
+      "gp": "5",
+      "l": "4",
+      "pm_2024_25": "-3.0",
+      "pm_2025_26": "1.5",
+      "pm_2026_27_to_date": "-10.6",
+      "prior": 0.81,
+      "rating": -3.77,
+      "team": "PHX",
+      "w": "1",
+      "weight_on_current": 0.401
+    },
+    {
+      "gp": "8",
+      "l": "6",
+      "pm_2024_25": "2.2",
+      "pm_2025_26": "-8.0",
+      "pm_2026_27_to_date": "-3.9",
+      "prior": -4.34,
+      "rating": -4.11,
+      "team": "IND",
+      "w": "2",
+      "weight_on_current": 0.518
+    },
+    {
+      "gp": "7",
+      "l": "5",
+      "pm_2024_25": "-0.1",
+      "pm_2025_26": "0.6",
+      "pm_2026_27_to_date": "-9.0",
+      "prior": 0.33,
+      "rating": -4.19,
+      "team": "ORL",
+      "w": "2",
+      "weight_on_current": 0.484
+    },
+    {
+      "gp": "8",
+      "l": "5",
+      "pm_2024_25": "-9.1",
+      "pm_2025_26": "4.8",
+      "pm_2026_27_to_date": "-11.3",
+      "prior": 2.6,
+      "rating": -4.59,
+      "team": "CHA",
+      "w": "3",
+      "weight_on_current": 0.518
+    },
+    {
+      "gp": "7",
+      "l": "6",
+      "pm_2024_25": "-7.1",
+      "pm_2025_26": "-10.0",
+      "pm_2026_27_to_date": "-8.6",
+      "prior": -5.42,
+      "rating": -6.96,
+      "team": "BKN",
+      "w": "1",
+      "weight_on_current": 0.484
+    },
+    {
+      "gp": "7",
+      "l": "6",
+      "pm_2024_25": "2.5",
+      "pm_2025_26": "-6.2",
+      "pm_2026_27_to_date": "-13.0",
+      "prior": -3.36,
+      "rating": -8.03,
+      "team": "MIL",
+      "w": "1",
+      "weight_on_current": 0.484
+    },
+    {
+      "gp": "7",
+      "l": "6",
+      "pm_2024_25": "-9.3",
+      "pm_2025_26": "-8.4",
+      "pm_2026_27_to_date": "-11.9",
+      "prior": -4.56,
+      "rating": -8.11,
+      "team": "UTA",
+      "w": "1",
+      "weight_on_current": 0.484
+    },
+    {
+      "gp": "7",
+      "l": "6",
+      "pm_2024_25": "-1.6",
+      "pm_2025_26": "-5.2",
+      "pm_2026_27_to_date": "-16.3",
+      "prior": -2.82,
+      "rating": -9.35,
+      "team": "CHI",
+      "w": "1",
+      "weight_on_current": 0.484
+    },
+    {
+      "gp": "7",
+      "l": "6",
+      "pm_2024_25": "0.5",
+      "pm_2025_26": "-10.0",
+      "pm_2026_27_to_date": "-14.1",
+      "prior": -5.42,
+      "rating": -9.62,
+      "team": "SAC",
+      "w": "1",
+      "weight_on_current": 0.484
+    }
+  ],
+  "strategies": [
+    {
+      "bets_settled": 0,
+      "gates_passed": "G1,G2 only (rule frozen; sources verified)",
+      "id": "S1",
+      "missing_input": "Official market spread + timestamp",
+      "name": "Single - spread edge",
+      "reason": "Blocked - Official market spread + timestamp",
+      "reward": "none awarded",
+      "rule": "Back the side whose own spread differs from the market by at least a pre-set threshold.",
+      "signal": "Own spread (model)",
+      "status": "NOT QUALIFIED (fails closed)",
+      "type": "Single"
+    },
+    {
+      "bets_settled": 0,
+      "gates_passed": "G1,G2 only (rule frozen; sources verified)",
+      "id": "S2",
+      "missing_input": "Official market total + timestamp",
+      "name": "Single - total edge",
+      "reason": "Blocked - Official market total + timestamp",
+      "reward": "none awarded",
+      "rule": "Over/under when own total differs from market total by at least a pre-set threshold.",
+      "signal": "Own total (model)",
+      "status": "NOT QUALIFIED (fails closed)",
+      "type": "Single"
+    },
+    {
+      "bets_settled": 0,
+      "gates_passed": "G1,G2 only (rule frozen; sources verified)",
+      "id": "S3",
+      "missing_input": "Official moneyline + timestamp",
+      "name": "Single - moneyline value",
+      "reason": "Blocked - Official moneyline + timestamp",
+      "reward": "none awarded",
+      "rule": "Back a side when own win probability exceeds the de-vigged market probability by a threshold.",
+      "signal": "Own win probability (Phi(spread/sigma))",
+      "status": "NOT QUALIFIED (fails closed)",
+      "type": "Single"
+    },
+    {
+      "bets_settled": 0,
+      "gates_passed": "G1,G2 only (rule frozen; sources verified)",
+      "id": "S4",
+      "missing_input": "Market prices for both legs; cross-game correlation estimate",
+      "name": "Parlay - two independent game edges",
+      "reason": "Blocked - Market prices for both legs; cross-game correlation estimate",
+      "reward": "none awarded",
+      "rule": "Combine two single edges from different games; ticket price must use measured joint probability.",
+      "signal": "S1/S2/S3 signals",
+      "status": "NOT QUALIFIED (fails closed)",
+      "type": "Parlay"
+    },
+    {
+      "bets_settled": 0,
+      "gates_passed": "G1,G2 only (rule frozen; sources verified)",
+      "id": "S5",
+      "missing_input": "SGP pricing (not published by an official source)",
+      "name": "Parlay - same-game spread + total",
+      "reason": "Blocked - SGP pricing (not published by an official source)",
+      "reward": "none awarded",
+      "rule": "Only if own spread and total edges agree AND measured leg correlation is not adverse.",
+      "signal": "S1 + S2",
+      "status": "NOT QUALIFIED (fails closed)",
+      "type": "Parlay (SGP)"
+    },
+    {
+      "bets_settled": 0,
+      "gates_passed": "G1,G2 only (rule frozen; sources verified)",
+      "id": "S6",
+      "missing_input": "Player prop lines + player game logs at scale",
+      "name": "Player-prop combo",
+      "reason": "Blocked - Player prop lines + player game logs at scale",
+      "reward": "none awarded",
+      "rule": "Combine props whose measured same-game correlation is positive and whose price does not already embed it.",
+      "signal": "Player-level projections (not built)",
+      "status": "NOT QUALIFIED (fails closed)",
+      "type": "Prop combo"
+    }
+  ],
+  "walk_forward": {
+    "actual_home_margin_mean": 0.8181818181818182,
+    "actual_home_margin_sd": 15.051139376698249,
+    "actual_total_mean": 221.27272727272728,
+    "margin_abs_err_gain": {
+      "mean": 1.0495454545454546,
+      "se": 0.8628018581565585,
+      "z": 1.2164385653826568
+    },
+    "margin_corr": 0.30171437413183205,
+    "margin_model": {
+      "bias": 1.6768181818181818,
+      "mae": 11.579545454545455,
+      "rmse": 14.125019871265186
+    },
+    "margin_naive": {
+      "bias": 1.1018181818181823,
+      "mae": 12.629090909090909,
+      "rmse": 14.746310478464528
+    },
+    "margin_su_model": 13,
+    "margin_su_naive": 10,
+    "n": 22,
+    "team_test": {
+      "n": 30,
+      "pred_rmse_beta": 7.901797029853851,
+      "pred_rmse_one": 8.234460111830849,
+      "pred_rmse_zero": 8.736189100517455,
+      "r": 0.42949439487694135,
+      "r_ci": [
+        0.08189057774398706,
+        0.6839394551440046
+      ],
+      "slope": 0.614029332510934,
+      "slope_se": 0.24399098946619757
+    },
+    "total_abs_err_gain": {
+      "mean": 0.07727272727272418,
+      "se": 0.7365272385197054,
+      "z": 0.10491496204271987
+    },
+    "total_corr": 0.23917431032426317,
+    "total_model": {
+      "bias": 9.721818181818179,
+      "mae": 19.38636363636364,
+      "rmse": 22.40959697012948
+    },
+    "total_naive": {
+      "bias": 9.947272727272725,
+      "mae": 19.463636363636365,
+      "rmse": 23.003186340552514
+    }
+  }
+}
