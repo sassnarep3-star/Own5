@@ -57,7 +57,7 @@ URL_PLAYER_LOG = "https://www.nba.com/stats/player/1630162/boxscores?Season=2025
 
 
 def a(url, text=None, ext=True):
-    t = E(text if text is not None else "official page")
+    t = E(text if text is not None else ("official page" if url.startswith(OFFICIAL_HOSTS) else "external / repo page"))
     return f'<a href="{E(url)}"' + (' target="_blank" rel="noopener noreferrer"' if ext else "") + f">{t}</a>"
 
 

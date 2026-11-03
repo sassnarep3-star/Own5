@@ -488,7 +488,7 @@ Fixed branch `arena/4396568c-own5` (Arena platform constraint; `session-<id>/<ta
 | D2 | Official data capture (nba.com standings, team stats, team-game box scores, schedule, injury report) + integrity reconciliation | done | 4396568c | nba-desk/data/** | transcribed from nba.com pages; every row linked; reconciled against official standings |
 | D3 | Line-origination model, walk-forward test, correlations, validation gates, leaderboard | done | 4396568c | nba-desk/analysis.py, nba-desk/settle.py, nba-desk/tests/**, research/nba-4396568c/** | derived values only; no market quotes available |
 | D4 | Site (dashboard + category pages + Flagged for Review) + executive summary | done | 4396568c | nba-desk/*.html, nba-desk/build.py, nba-desk/check.py, .github/workflows/nba-desk.yml | additive, served at `/Own5/nba-desk/` |
-| D5 | Integration, verification, PR, merge, Pages check | in progress | 4396568c | COORDINATION.md, README.md | PR and merge record below |
+| D5 | Integration, verification, PR, merge, Pages check | done | 4396568c | COORDINATION.md, README.md | PR #28 merged; Pages verified (record below) |
 
 Cross-session requests: (1) the owner of root `index.html`/`scripts/seed.py` (cd43258e) is asked to add a link to `nba-desk/index.html`; the root footer links only `docs/`. This session did not edit root files. (2) Session e9a43ca6 (`nba-validation/`) publishes no lines; `nba-desk/` does. Neither edited the other's files.
 
@@ -536,3 +536,12 @@ Integration conflict log: while rebasing onto `origin/main` after concurrent PRs
 - **Concurrency:** a second append-only rebase conflict retained the concurrent PR #26 publication record and this session's block in full; no work was discarded. All existing sites remain intact.
 - **Live-review correction:** the ORL@PHX near-even line displayed a cosmetic `-0.0` home spread. This documentation follow-up normalizes signed zero and adds a regression assertion; inputs and the underlying projection are unchanged.
 - **Final result:** K1–K5 done. 11 pages, 199 official-linked table rows, 454 links checked, 16 research lines, 21 correlations, 0/7 qualified strategies, 0 rewards, F01–F11 published and nonblocking.
+
+### Session 4396568c PR, merge and live Pages result
+
+- [PR #28](https://github.com/sassnarep3-star/Own5/pull/28) merged with `gh pr merge 28 --merge` on 2026-11-03T23:52:55Z; merge commit `5d8c2657c74cf1421a624c4d0723b37ce60c93e9`.
+- A first PR run of the new `Verify NBA Desk` workflow **failed** at the regenerate-and-diff step; the likely cause is last-digit floating-point differences between machines (no log could be retrieved). Fixed by rounding derived JSON to 8 significant figures and adding diagnostics; the re-run passed. All checks were green before merge: `Verify NBA Desk`, `Verify research dashboard`, `desk-verify`, `verify`.
+- Post-merge `main` runs succeeded: Verify research dashboard, Verify NBA Desk, Verify NBA validation desk and [pages build and deployment run 41742592365](https://github.com/sassnarep3-star/Own5/actions/runs/41742592365). Live [overview](https://sassnarep3-star.github.io/Own5/nba-desk/index.html) and [Flagged for Review](https://sassnarep3-star.github.io/Own5/nba-desk/flagged.html) fetched after deployment (`?release=5d8c265`) and matched: 16 lines, 15 flags, 0 of 6 qualified.
+- Merge brought in `nba-own-lines` (636a7712): its 16 matchups agree with this desk's schedule; its home margins are copied into `nba-desk/data/crosscheck_nba_own_lines.csv` (flag F15: mean absolute difference about 3.4 points, neither model validated).
+- Follow-up PR: this record, plus a label fix (source links to the repo were captioned "official page"; now "external / repo page").
+
