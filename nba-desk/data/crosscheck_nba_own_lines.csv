@@ -1,0 +1,17 @@
+game_id,date,away,home,other_home_margin,other_total,other_tip_et,other_source,source_url
+0022600173,2026-11-04,PHI,DET,2.29,217.0,7:00 PM,session 636a7712 nba-own-lines/data/derived.json @ 3936aef,https://www.nba.com/game/0022600173
+0022600174,2026-11-04,ATL,WAS,0.33,223.0,7:00 PM,session 636a7712 nba-own-lines/data/derived.json @ 3936aef,https://www.nba.com/game/0022600174
+0022600175,2026-11-04,MIL,BOS,8.02,227.0,7:30 PM,session 636a7712 nba-own-lines/data/derived.json @ 3936aef,https://www.nba.com/game/0022600175
+0022600176,2026-11-04,CHA,BKN,1.44,215.0,7:30 PM,session 636a7712 nba-own-lines/data/derived.json @ 3936aef,https://www.nba.com/game/0022600176
+0022600177,2026-11-04,CHI,NYK,7.14,226.0,7:30 PM,session 636a7712 nba-own-lines/data/derived.json @ 3936aef,https://www.nba.com/game/0022600177
+0022600178,2026-11-04,IND,MEM,6.73,227.5,8:00 PM,session 636a7712 nba-own-lines/data/derived.json @ 3936aef,https://www.nba.com/game/0022600178
+0022600179,2026-11-04,UTA,NOP,5.47,226.5,8:00 PM,session 636a7712 nba-own-lines/data/derived.json @ 3936aef,https://www.nba.com/game/0022600179
+0022600180,2026-11-04,CLE,OKC,-1.28,225.5,8:00 PM,session 636a7712 nba-own-lines/data/derived.json @ 3936aef,https://www.nba.com/game/0022600180
+0022600181,2026-11-04,MIN,HOU,0.76,225.5,8:30 PM,session 636a7712 nba-own-lines/data/derived.json @ 3936aef,https://www.nba.com/game/0022600181
+0022600182,2026-11-04,TOR,DEN,-4.33,227.5,9:00 PM,session 636a7712 nba-own-lines/data/derived.json @ 3936aef,https://www.nba.com/game/0022600182
+0022600183,2026-11-04,POR,PHX,-7.01,231.0,9:00 PM,session 636a7712 nba-own-lines/data/derived.json @ 3936aef,https://www.nba.com/game/0022600183
+0022600184,2026-11-04,DAL,SAS,3.55,224.5,9:30 PM,session 636a7712 nba-own-lines/data/derived.json @ 3936aef,https://www.nba.com/game/0022600184
+0022600185,2026-11-04,LAL,SAC,-9.06,233.5,10:00 PM,session 636a7712 nba-own-lines/data/derived.json @ 3936aef,https://www.nba.com/game/0022600185
+0022600186,2026-11-04,MIA,LAC,-0.38,230.0,10:30 PM,session 636a7712 nba-own-lines/data/derived.json @ 3936aef,https://www.nba.com/game/0022600186
+0022600187,2026-11-05,ORL,PHX,0.14,228.5,9:00 PM,session 636a7712 nba-own-lines/data/derived.json @ 3936aef,https://www.nba.com/game/0022600187
+0022600188,2026-11-05,MIA,GSW,3.58,234.0,10:00 PM,session 636a7712 nba-own-lines/data/derived.json @ 3936aef,https://www.nba.com/game/0022600188

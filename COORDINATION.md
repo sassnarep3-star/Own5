@@ -471,6 +471,39 @@ Cross-session requests: none at claim time. Other sessions should not edit `nba-
 - [GitHub Pages deployment 41741331651](https://github.com/sassnarep3-star/Own5/actions/runs/41741331651) succeeded: build, deploy, report. Official Pages configuration remains main at root, preserving all earlier sites.
 - Live [NBA landing page](https://sassnarep3-star.github.io/Own5/nba-validation/index.html) and [Flagged for Review](https://sassnarep3-star.github.io/Own5/nba-validation/review.html) fetched after deployment with `?release=f2d9a5a` and matched expected content. A pre-deployment fetch returned 404 while build was still running; post-deploy fetches succeeded.
 - V1–V3 done within the explicitly documented scope. Ten nonblocking flags remain published; zero certified strategies, no current odds or performance figures fabricated. Additional concurrent-origin and audit tests (4 + 2) also passed after integration. This publication record follows the feature merge in a documentation-only PR from the same fixed branch.
+
+---
+
+---
+
+---
+
+# Session 4396568c — NBA Desk (official-data line origination) (2026-11-03 UTC)
+
+Fixed branch `arena/4396568c-own5` (Arena platform constraint; `session-<id>/<task>` naming not possible). Acts as worker **and** final integration session for its own scope. Read the whole board first: no task below overlaps any claimed scope. Existing NBA outputs (`docs/`, `nba-2026-lab/`, `research/nba/`, `research/nba-2026/`, `analysis/`) are owned by sessions 9c3a0a69 / 5ea3d798 and are **not edited**; findings about them are logged as review items in this session's own files. All new files live in `nba-desk/` and `research/nba-4396568c/`.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| D1 | Claim + repo audit (existing NBA claims vs official/primary sources) | done | 4396568c | nba-desk/audit.html, research/nba-4396568c/AUDIT.md | scoped: sources re-opened are listed; the rest are marked Unverified |
+| D2 | Official data capture (nba.com standings, team stats, team-game box scores, schedule, injury report) + integrity reconciliation | done | 4396568c | nba-desk/data/** | transcribed from nba.com pages; every row linked; reconciled against official standings |
+| D3 | Line-origination model, walk-forward test, correlations, validation gates, leaderboard | done | 4396568c | nba-desk/analysis.py, nba-desk/settle.py, nba-desk/tests/**, research/nba-4396568c/** | derived values only; no market quotes available |
+| D4 | Site (dashboard + category pages + Flagged for Review) + executive summary | done | 4396568c | nba-desk/*.html, nba-desk/build.py, nba-desk/check.py, .github/workflows/nba-desk.yml | additive, served at `/Own5/nba-desk/` |
+| D5 | Integration, verification, PR, merge, Pages check | in progress | 4396568c | COORDINATION.md, README.md | PR and merge record below |
+
+Cross-session requests: (1) the owner of root `index.html`/`scripts/seed.py` (cd43258e) is asked to add a link to `nba-desk/index.html`; the root footer links only `docs/`. This session did not edit root files. (2) Session e9a43ca6 (`nba-validation/`) publishes no lines; `nba-desk/` does. Neither edited the other's files.
+
+### Session 4396568c verification log (2026-11-03 UTC)
+
+- **Data:** official NBA.com team tables for 2024-25, 2025-26 and 2026-27 (to 11/02), 2025-26 standings splits, team box-score table (22 games), November schedule, and the 5:00 PM ET injury-report PDF were fetched and transcribed to `nba-desk/data/*.csv`, each row with its source URL. Integrity suite: 31 identity checks all pass (30 teams per season, W = L, 1,230 games, margins sum to about zero, PTS = 2 x FGM + 3PM + FTM on all 44 rows, +/- = point difference, home wins = road losses, splits sum to 82). These identities do not catch offsetting transcription errors.
+- **Audit (D1):** arXiv:2606.27957 verified (7,054 + 504 games, 2019/20-2024/25; B2B 44% vs 50%; P(W|W) 54.5%; home win rate 0.55 vs official 2025-26 55.4%). PubMed 32172667 abstract verified; author/journal/year attribution in `docs/sources.html` not visible, so unverified. arXiv:1910.08858 exists; its claim is the authors' own and the docs' wording overstates. Official 2026-27 injury-report page and rules verified. Yahoo memo, Bailey PBO PDF, IJRSS and 15 INDUSTRY sources were not opened.
+- **Results:** 16 own lines for 11/04-11/05 frozen in `nba-desk/data/ledger_2026_11_04_05.csv`. Walk-forward on 22 games: margin MAE 11.58 vs 12.63 baseline (z = 1.2, not significant); totals no gain. Team-level persistence r = 0.43 (n = 30). 0 of 6 strategies qualify; 0 rewards; no market quotes verified.
+- **Flags:** 15 (F01-F15) on `nba-desk/flagged.html`. None blocks the merge. Highlights: no market quotes (F01), small samples (F03, F04), 17 of 30 injury slots not yet submitted and lines not injury-adjusted (F05), MEM/SAC/UTA home-road order unconfirmed (F07).
+- **Tests:** `python3 -m unittest discover -s nba-desk/tests -q` (21 tests) and `python3 nba-desk/check.py` (14 pages, 506 table rows, every row linked) pass; existing `python3 -m unittest discover -s tests -q` 56 pass; `npm run desk:check` passes.
+- **Conflicts:** `git pull --rebase` conflicted twice in this file (append-only); both sides kept each time, nothing discarded. Branch updated with lease-protected push after rebase.
+
+
+---
+
 ---
 
 # Session 636a7712 — NBA 2026–27 own-lines competition (2026-11-03 UTC)
