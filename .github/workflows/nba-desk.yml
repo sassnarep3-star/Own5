@@ -1,0 +1,32 @@
+name: Verify NBA Desk
+
+on:
+  pull_request:
+    branches: [main]
+    paths: ['nba-desk/**', 'research/nba-4396568c/**']
+  push:
+    branches: [main]
+    paths: ['nba-desk/**', 'research/nba-4396568c/**']
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Integrity suite, deterministic build and site audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Regenerate and require no diff
+        run: |
+          python nba-desk/analysis.py
+          python nba-desk/build.py
+          git diff --exit-code -- nba-desk research/nba-4396568c
+      - name: Tests and site audit
+        run: |
+          python -m unittest discover -s nba-desk/tests -v
+          python nba-desk/check.py

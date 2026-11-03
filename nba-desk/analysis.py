@@ -164,6 +164,9 @@ def build_model(ts, hr, gs):
     hw = sum(int(r["home_w"]) for r in hr)
     hl = sum(int(r["home_l"]) for r in hr)
     home_pct = hw / (hw + hl)
+    # sensitivity: if the three unconfirmed rows had home/road swapped (league identities cannot detect a swap)
+    sw = sum(int(r["road_w"]) if r["home_road_order"].startswith("UNCONFIRMED") else int(r["home_w"]) for r in hr)
+    home_pct_if_swapped = sw / (hw + hl)
     # ---- game-level noise: sigma = RMSE of the prior-only margin model on the 22-game sample,
     # computed after HFA is added (so it includes rating error: conservative/upper bound)
     games = {}
@@ -195,7 +198,7 @@ def build_model(ts, hr, gs):
     return {
         "teams": teams, "s24": s24, "s25": s25, "s26": s26, "games": games,
         "fit_margin": fit_m, "fit_total": fit_t, "lt24": lt24, "lt25": lt25, "lt26": lt26,
-        "home_w": hw, "home_l": hl, "home_pct": home_pct, "hfa0": hfa0, "hfa": hfa,
+        "home_w": hw, "home_l": hl, "home_pct": home_pct, "home_pct_if_swapped": home_pct_if_swapped, "hfa0": hfa0, "hfa": hfa,
         "sigma": sigma, "tau_p2": tau_p2, "K": K, "sigma_t": sigma_t, "tau_tp2": tau_tp2, "K_t": K_t,
         "beta": beta, "beta_t": fit_t["slope"],
     }
@@ -460,7 +463,7 @@ def main():
                         "weight_on_current": round(int(M["s26"][t]["gp"]) / (int(M["s26"][t]["gp"]) + M["K"]), 3),
                         "rating": round(rating(M, t), 2)})
     ratings.sort(key=lambda r: -r["rating"])
-    params = {k: M[k] for k in ("beta", "beta_t", "hfa", "hfa0", "home_w", "home_l", "home_pct", "sigma", "tau_p2", "K", "sigma_t", "tau_tp2", "K_t", "lt24", "lt25", "lt26")}
+    params = {k: M[k] for k in ("beta", "beta_t", "hfa", "hfa0", "home_w", "home_l", "home_pct", "home_pct_if_swapped", "sigma", "tau_p2", "K", "sigma_t", "tau_tp2", "K_t", "lt24", "lt25", "lt26")}
     params["fit_margin"] = M["fit_margin"]
     params["fit_total"] = M["fit_total"]
     result = {"as_of": AS_OF, "integrity": integ, "params": params, "ratings": ratings, "walk_forward": wf,
