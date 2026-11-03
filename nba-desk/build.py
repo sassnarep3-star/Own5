@@ -113,7 +113,7 @@ def page(fname, title, sub, body):
         f'<footer>Every table row links to the page it was taken from. <span class="blank">Blank red cells</span> = value not confirmable, flagged on '
         f'<a href="flagged.html">Flagged for Review</a>. Sibling NBA sites from other sessions: '
         f'<a href="../docs/index.html">docs/</a> · <a href="../nba-2026-lab/index.html">nba-2026-lab</a> · '
-        f'<a href="../nba-origin-lab/index.html">nba-origin-lab</a> · <a href="../nba-audit-e9f83ff4/index.html">nba-audit</a> · '
+        f'<a href="../nba-origin-lab/index.html">nba-origin-lab</a> · <a href="../nba-validation/index.html">nba-validation</a> · <a href="../nba-audit-e9f83ff4/index.html">nba-audit</a> · '
         f'<a href="../nba-sensitivity/index.html">nba-sensitivity</a>.</footer></body></html>'
     )
 
@@ -156,7 +156,7 @@ FLAGS = [
     ("F10", "Medium", "Correlations", "Player-prop and same-game-parlay correlations are blank: no player prop lines and only a 10-game single-player sample exist in the repo. Team-level correlations here are computed from official team data; the 22-game and 44-team-game samples are small and the two rows of one game are not independent.", "Collect a large official player-game sample before computing prop correlations.", URL_PLAYER_LOG),
     ("F11", "Low", "Totals", f"Prior-only totals showed a +{f1(WF['total_model']['bias'])} point bias on the 22 games: league scoring per team-game fell from {f1(P['lt25'] / 2, 1)} (2025-26) to {f1(P['lt26'] / 2, 1)} (2026-27 to date). Published totals re-centre on the 2026-27 league level, but the early-season sample is 5-8 games per team.", "Re-check league level weekly.", URL_TRAD26),
     ("F12", "Medium", "Existing repo", "Audit of earlier NBA material: 17 of 21 sources in docs/sources.html were not re-opened this session; 15 are third-party INDUSTRY pages that are not official sources; the Yahoo memo and PubMed author/journal attribution are unverified; the arXiv:1910.08858 claim is the authors' own, not independent evidence. See Repo audit.", "Replace industry sources with official or peer-reviewed ones.", "https://github.com/sassnarep3-star/Own5/blob/main/docs/sources.html"),
-    ("F13", "Low", "Repo structure", "Six parallel NBA sites now exist (docs/, nba-2026-lab, nba-origin-lab, nba-audit-e9f83ff4, nba-sensitivity, nba-desk) and the root landing page links only docs/. Root pages are owned by another session and were not edited; a request is logged in COORDINATION.md.", "Integrator of root index.html adds a hub link.", "https://github.com/sassnarep3-star/Own5/blob/main/COORDINATION.md"),
+    ("F13", "Low", "Repo structure", "Seven parallel NBA sites now exist (docs/, nba-2026-lab, nba-origin-lab, nba-validation, nba-audit-e9f83ff4, nba-sensitivity, nba-desk) and the root landing page links only docs/. Root pages are owned by another session and were not edited; a request is logged in COORDINATION.md.", "Integrator of root index.html adds a hub link.", "https://github.com/sassnarep3-star/Own5/blob/main/COORDINATION.md"),
     ("F14", "Low", "Process", "Requested branch naming session-<id>/<task> is impossible: the platform fixes this session's branch to arena/4396568c-own5. Logged in COORDINATION.md.", "No action needed.", "https://github.com/sassnarep3-star/Own5/blob/main/COORDINATION.md"),
 ]
 
@@ -502,6 +502,7 @@ def build_pages():
         ("nba-2026-lab/", "5ea3d798", "10-game player sample, 5 correlations, review flags", "No team lines", "../nba-2026-lab/index.html"),
         ("nba-audit-e9f83ff4/", "e9f83ff4", "Independent audit of the sample", "No lines", "../nba-audit-e9f83ff4/index.html"),
         ("nba-sensitivity/", "9557a8aa", "Leave-one-out sensitivity of the sample", "No lines", "../nba-sensitivity/index.html"),
+        ("nba-validation/", "e9a43ca6", "Validation engine, 6 candidate strategies, review flags; declines to publish lines", "No own lines (by design); 0 certified", "../nba-validation/index.html"),
         ("nba-origin-lab/", "9ded47ab", "Evidence register, line-origin framework, review flags", "See its page for its own lines", "../nba-origin-lab/index.html"),
     ]
     rows = [[E(s), E(o), E(c), E(n), a("https://github.com/sassnarep3-star/Own5/tree/main/" + s.rstrip("/"), "repo folder") + " " + a(u, "live page", ext=False)] for s, o, c, n, u in sites]
