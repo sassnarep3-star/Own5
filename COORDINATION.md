@@ -354,7 +354,7 @@ Fixed platform branch: `arena/e9a43ca6-own5`; requested session naming cannot be
 |---|---|---|---|---|---|
 | V1 | Audit and official-source availability checks | done | e9a43ca6 | research/nba-validation/** | No historical claims silently inherited as verified. |
 | V2 | Fail-closed NBA model, gates, tests, category dashboard | done | e9a43ca6 | nba-validation/** | Additive isolated scope; proposed methods separated from sourced observations. |
-| V3 | Integration, PR, merge, Pages verification | in progress | e9a43ca6 | COORDINATION.md, .github/workflows/nba-validation.yml | Only this session integrates these new outputs. |
+| V3 | Integration, PR, merge, Pages verification | done | e9a43ca6 | COORDINATION.md, .github/workflows/nba-validation.yml | Only this session integrates these new outputs. |
 
 Claim committed and pushed before implementation. Root navigation is preserved to avoid historical shared ownership; standalone NBA landing page will be published under `/Own5/nba-validation/`.
 
@@ -426,3 +426,12 @@ Cross-session requests: none at claim time. Other sessions should not edit `nba-
 - Main branch and existing NFL/NBA sites remain intact. No certified bets, no verified live lines, no funded rewards. R01–R08 remain on the live review page. This record is delivered in a follow-up PR because the original feature PR was already merged.
 
 - e9a43ca6 second integration: preserved both append-only records after PRs #23/#25 landed. Corrected NBA browser CI step passed on run 41741139038; existing root browser suite also passes locally.
+
+
+### e9a43ca6 PR / merge / live deployment result
+
+- [PR #24](https://github.com/sassnarep3-star/Own5/pull/24) merged with `gh pr merge 24 --merge` on 2026-11-03T23:43:01Z. Merge commit: `f2d9a5a16e946c30eb47e1ad101c001ee9a33c4c`.
+- All current PR checks passed before merge: root dashboard build/evidence/browser, desk verification and new NBA build/unit/desktop/mobile checks. Initial browser CI hang was fixed; no failing current check was merged.
+- [GitHub Pages deployment 41741331651](https://github.com/sassnarep3-star/Own5/actions/runs/41741331651) succeeded: build, deploy, report. Official Pages configuration remains main at root, preserving all earlier sites.
+- Live [NBA landing page](https://sassnarep3-star.github.io/Own5/nba-validation/index.html) and [Flagged for Review](https://sassnarep3-star.github.io/Own5/nba-validation/review.html) fetched after deployment with `?release=f2d9a5a` and matched expected content. A pre-deployment fetch returned 404 while build was still running; post-deploy fetches succeeded.
+- V1–V3 done within the explicitly documented scope. Ten nonblocking flags remain published; zero certified strategies, no current odds or performance figures fabricated. Additional concurrent-origin and audit tests (4 + 2) also passed after integration. This publication record follows the feature merge in a documentation-only PR from the same fixed branch.
