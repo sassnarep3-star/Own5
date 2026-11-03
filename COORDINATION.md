@@ -333,3 +333,12 @@ Fixed platform branch: `arena/e9a43ca6-own5`; requested session naming cannot be
 | V3 | Integration, PR, merge, Pages verification | in progress | e9a43ca6 | COORDINATION.md, .github/workflows/nba-validation.yml | Only this session integrates these new outputs. |
 
 Claim committed and pushed before implementation. Root navigation is preserved to avoid historical shared ownership; standalone NBA landing page will be published under `/Own5/nba-validation/`.
+
+### e9a43ca6 verification and implementation record
+
+- V1 done (scoped review). [Official NBA player log](https://www.nba.com/stats/player/1630162/boxscores?Season=2025-26) chunks 0–1 independently compared against all ten existing sample rows, including every stored field; match. [Injury reporting index](https://official.nba.com/nba-injury-report-2026-27-season/) and selected [glossary](https://www.nba.com/stats/help/glossary) definitions checked. Full record: `research/nba-validation/verification.md`. No blanket certification of legacy statements.
+- V2 done. Eight additive NBA pages, 66 official-linked table rows; all local targets pass. Reproducible build hashes match. Six new unit tests pass, plus 56 root, two NBA sample and two sensitivity tests (66 total). Sixteen desktop/mobile no-JavaScript browser page checks pass. Existing root seed/build guard and NBA structural check pass.
+- New engine implements pricing/EV, empirical median, feasible binary dependence conversion, Holm correction and missing-evidence gate rejection. It is not a trained NBA prediction model or automated ingestion service. Six candidates remain blocked; current prices, phi, ROI and reward amounts blank.
+- Ten nonblocking limitations published at `nba-validation/review.html`, including limited sample, missing executable odds/settlement ledger, no prospective holdout, absent bet-level dependencies and unfunded awards. Existing pages and coordination scopes preserved. Executive summary: `research/nba-validation/EXECUTIVE_SUMMARY.md` and new NBA landing page.
+- Claim push note: new remote branch did not yet exist for first pull; pulled/rebased origin/main before initial branch push, then set upstream. No merge conflict occurred.
+- V3 in progress: build and local verification complete; PR/merge/Pages checks follow.
