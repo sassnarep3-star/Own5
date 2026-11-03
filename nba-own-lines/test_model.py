@@ -60,6 +60,8 @@ class ModelTests(unittest.TestCase):
         for row in self.derived["lines"]:
             self.assertAlmostEqual(row["home_probability"] + row["away_probability"], 1.0)
             self.assertEqual(row["home_spread"], -row["away_spread"])
+            self.assertNotEqual(str(row["home_spread"]), "-0.0")
+            self.assertNotEqual(str(row["away_spread"]), "-0.0")
             self.assertIsNone(row["market_spread"])
             self.assertIsNone(row["market_total"])
             self.assertIsNone(row["edge"])
