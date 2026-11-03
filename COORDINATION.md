@@ -321,3 +321,15 @@ Platform fixes this session to `arena/9557a8aa-own5`; requested session-prefixed
 | S1 | Independent sensitivity analysis of existing official NBA sample; self-contained Pages report and tests | done | 9557a8aa | nba-sensitivity/**, COORDINATION.md | Do not edit prior sessions' NBA lab or root pages. |
 
 S1 completed 2026-11-03 UTC. Official [NBA Anthony Edwards 2025–26 game log](https://www.nba.com/stats/player/1630162/boxscores?Season=2025-26) fetched and first six rows checked against the existing CSV (dates, opponent, W/L, MIN, PTS, 3PM, REB, AST); remaining four were previously checked in session 5ea3d798 and are linked individually on the page. Fifty leave-one-out rows each link to their underlying official game. Calculated coefficients are explicitly labeled as independently derived, not NBA-published. 2 new tests and 56 existing tests passed; original NBA lab check passed; 62 page links scanned, zero broken local links. Irregularities: selected ten-game sample and missing odds/holdout persist; no strategy is certified. This audit adds no current lines or betting recommendation.
+
+## Session e9a43ca6 — NBA validation desk (2026-11-03 UTC)
+
+Fixed platform branch: `arena/e9a43ca6-own5`; requested session naming cannot be used. Earlier scopes preserved. Historical NBA integration T10 still says in progress although later records report publication; no takeover of its files.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| V1 | Audit and official-source availability checks | in progress | e9a43ca6 | research/nba-validation/** | No historical claims silently inherited as verified. |
+| V2 | Fail-closed NBA model, gates, tests, category dashboard | in progress | e9a43ca6 | nba-validation/** | Additive isolated scope; proposed methods separated from sourced observations. |
+| V3 | Integration, PR, merge, Pages verification | in progress | e9a43ca6 | COORDINATION.md, .github/workflows/nba-validation.yml | Only this session integrates these new outputs. |
+
+Claim committed and pushed before implementation. Root navigation is preserved to avoid historical shared ownership; standalone NBA landing page will be published under `/Own5/nba-validation/`.
