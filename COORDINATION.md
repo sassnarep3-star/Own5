@@ -323,3 +323,21 @@ Platform fixes this session to `arena/9557a8aa-own5`; requested session-prefixed
 S1 completed 2026-11-03 UTC. Official [NBA Anthony Edwards 2025–26 game log](https://www.nba.com/stats/player/1630162/boxscores?Season=2025-26) fetched and first six rows checked against the existing CSV (dates, opponent, W/L, MIN, PTS, 3PM, REB, AST); remaining four were previously checked in session 5ea3d798 and are linked individually on the page. Fifty leave-one-out rows each link to their underlying official game. Calculated coefficients are explicitly labeled as independently derived, not NBA-published. 2 new tests and 56 existing tests passed; original NBA lab check passed; 62 page links scanned, zero broken local links. Irregularities: selected ten-game sample and missing odds/holdout persist; no strategy is certified. This audit adds no current lines or betting recommendation.
 
 S1 publication: [PR #17](https://github.com/sassnarep3-star/Own5/pull/17) merged 2026-11-03T23:32:03Z (merge commit cd31fbf36ce0fcdab66939c3a7bb5d95cdda702b). [Pages deployment run 41739900355](https://github.com/sassnarep3-star/Own5/actions/runs/41739900355) succeeded (build, deploy, report). Additive page: https://sassnarep3-star.github.io/Own5/nba-sensitivity/index.html . This record is a follow-up to the merged feature PR.
+
+---
+
+# Session e9f83ff4 — NBA independent audit (2026-11-03 UTC)
+
+Arena fixes this session's branch name to `arena/e9f83ff4-own5`. The previous NBA sites remain owned by their authors; this session will not edit their files.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| A1 | Independently audit NBA evidence and publication; document concrete findings and limitations | done | e9f83ff4 | COORDINATION.md, nba-audit-e9f83ff4/** | Claimed 2026-11-03 UTC; additive scope only. |
+
+### Session e9f83ff4 verification and flags
+
+- Independently checked all fields in the ten rows of `nba-2026-lab/data/edwards_2025_26_recent10.csv` against the first ten displayed rows of the [official NBA player log](https://www.nba.com/stats/player/1630162/boxscores?Season=2025-26); all matched. Recomputed all five correlations with existing code. Only this small sample was audited; no claim of repository-wide line-by-line verification.
+- NBA [injury-report index](https://official.nba.com/nba-injury-report-2026-27-season/) reviewed; reports change throughout the day and point-in-time injury joins are missing. Market prices, settled bets, prospective validation, and funded awards remain unverified. The new [Flagged for Review](nba-audit-e9f83ff4/review.html) documents these issues and distinguishes calculated correlations from official statistics.
+- `python3 -m unittest discover -s tests -q` passed 56 tests; NBA lab tests passed 2; NBA lab page checker passed 8 pages; audit tests passed 2 and check local navigation and linked official domains. Link presence is not source entailment.
+- Claim push: branch did not exist remotely, so the first `git pull --rebase` against that branch failed; rebased against `origin/main` and pushed the claim as the first branch commit. No conflict or data loss.
+- Integration rebase onto updated `origin/main` conflicted in the appended task board. Both the newly merged `9557a8aa` record and this session's claim were retained; no work was discarded. Rebasing rewrote this session's two commits, so the session branch was updated with a lease-protected push.
