@@ -1,0 +1,21 @@
+check,passed,detail
+30 teams in 2026-27 standings,true,n=30
+30 teams in 2026-27 team stats,true,n=30
+30 teams in 2025-26 standings,true,n=30
+Team ID sets identical across the three tables,true,
+Standings W-L equal team-stats W-L for all 30 teams,true,
+GP = W + L (team stats),true,
+Team-stats WIN% = W/GP to 3 dp,true,
+Standings PCT = W/(W+L) to 3 dp,true,
+"FG%, 3P%, FT% recomputed from makes/attempts (tol 0.5 pp)",true,
+"REB = OREB + DREB (per game, tol 0.1)",true,
+League margin identity: sum(GP x +/-) ~ 0,true,"sum=2.00, tol=10.70"
+League wins equal league losses (2026-27 standings),true,"W=107, L=107"
+2025-26 W + L = 82 for every team,true,
+2025-26 PCT = W/82 to 3 dp,true,
+Player PTS = 2(FGM-3PM)+3(3PM)+FTM for all rows,true,
+Player REB = OREB + DREB for all rows,true,
+Player makes <= attempts for all rows,true,
+Player game IDs unique,true,n=14
+Edwards 2026-27 rows reproduce official page header PPG/RPG/APG,true,"computed 33.3/4.8/3.5 vs header {'PPG': '33.3', 'RPG': '4.8', 'APG': '3.5'}"
+Edwards 2026-27 rows vs Minnesota GP (informational),true,"rows=4, team GP=8 -> see flag F05"

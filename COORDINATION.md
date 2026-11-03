@@ -336,6 +336,42 @@ Claim timestamp: 2026-11-03 UTC. No other session has claimed these namespaced p
 - GitHub Pages `main` at root `/`, legacy build status `built`; [deployment run 41706980242](https://github.com/sassnarep3-star/Own5/actions/runs/41706980242) succeeded (build, deploy, report). Live rendered [NBA dashboard](https://sassnarep3-star.github.io/Own5/nba-2026-lab/index.html) and [Flagged for Review](https://sassnarep3-star.github.io/Own5/nba-2026-lab/review.html) checked with a cache-busting query; index/review served correct content. First cached trailing-slash fetch returned an outdated 404 while index.html with query served the new build.
 - Publication remains additive: original NBA `docs/` and NFL root remain intact. No current market odds were available; **0 validated strategies, 0 awards**, 8 explicitly visible flags. This post-merge record is published via a small follow-up PR, not retroactively attributed to PR #15.
 
+---
+
+# Session 9cf7de11 — NBA Line Desk 2026-27 (claim)
+
+Session ID = suffix of fixed branch `arena/9cf7de11-own5` (Arena platform constraint; the `session-<id>/<task>` naming in the brief cannot be used on this platform, so each task is an ID on this branch). Claimed 2026-11-03 UTC, before any implementation.
+
+Scope rule for this session: **new namespaced paths only.** Not touched: root `index.html`, `pages/`, `data/research.json`, `docs/` (NBA lab 9c3a0a69), `nba-2026-lab/` (5ea3d798), `nfl-strategy-lab/`, `line-lab/`, `own5-desk/`, existing CSV/JSON tables, existing workflows.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| S1 | Claim + repo irregularity review (NBA-relevant files) | done (commit 08ada24) | 9cf7de11 | COORDINATION.md, research/nba-2026-27/review.md | Line-by-line review of existing NBA artifacts; flags only, no edits to them. |
+| S2 | Official NBA 2026-27 data capture (standings, team traditional stats, injury-report index) | done (cdbc164) | 9cf7de11 | data/nba-2026-27/** | nba.com pages fetched; every row carries its source URL. |
+| S3 | Validation gates, correlations, skill-vs-luck computed from verified rows only | done (cdbc164, 08ada24) | 9cf7de11 | research/nba-2026-27/**, tools/nba_line_desk/** | Market odds / CLV not available from official sources → blank + flagged. |
+| S4 | Site: landing + category subpages + Flagged for Review | built locally; 14 pages, desk:check and unit tests pass | 9cf7de11 | nba-line-desk/** | Served at `/Own5/nba-line-desk/`. Root navigation untouched (CI-locked); linked from README only. |
+| S5 | Executive summary + verification log + integration PR/merge/Pages | in progress | 9cf7de11 | nba-line-desk/executive-summary.html, research/nba-2026-27/EXECUTIVE_SUMMARY.md, COORDINATION.md, README.md | Final integration by this session. |
+
+## Session 9cf7de11 — work log, sources and verification
+
+**Verification method (all values).** Each value was transcribed from an official nba.com page (S01–S04, S08) and checked in code, not by eye alone. 20 reconciliation checks (`tools/nba_line_desk/checks.py`) cover: standings W-L = team-stats W-L for all 30 teams; GP = W+L; WIN% = W/GP; FG%/3P%/FT% recomputed from makes/attempts; REB = OREB+DREB; league margin identity; league W = L = 107; box-score PTS arithmetic for every player row; Edwards 2026-27 averages reproduce the official header (33.3/4.8/3.5). Edwards 2025-26 rows (10) match `nba-2026-lab/data/edwards_2025_26_recent10.csv` cell by cell (F10). All 91 tests pass under `python -m unittest discover -s tests` (35 are this session's).
+
+**Sources.** Register: `data/nba-2026-27/sources.csv` (S01–S14). OFFICIAL = nba.com / official.nba.com / pr.nba.com. REPORTED (S09–S11) = press reports of 2026-27 prop restrictions, not used as facts (F06). REPOSITORY (S12–S14) = this repo's files, for review findings only.
+
+**Blanks and flags.** No official source publishes NBA prices, so odds, CLV, ROI, priced bets, the reward pool and the leaderboard market column are blank and flagged (F07). 13 open flags are published on `nba-line-desk/flagged.html`. 19 flags in total.
+
+**Analysis decisions (recorded in `research/nba-2026-27/methodology.md`).**
+- Same-season box-score correlations are descriptive only (same games as the target). PTS and TOV pass the corrected test but are not predictive (F17).
+- SIG03 (opponent PTS = PTS − (+/−)) is outcome-derived. It was first listed as a candidate, then reclassified after the first run. Disclosed (F16).
+- Pre-registered out-of-sample test: 2025-26 win% → 2026-27 win% r = 0.501 (95% CI 0.171–0.729, perm p = 0.0049, passes α/2 = 0.025). Statistically supported; not validated (sample gate 20 games; minimum team GP is 5; no priced data) (F18).
+- Power: 783 priced bets to detect a 55% true rate.
+- Result: **0 validated strategies, 0 validated signals, 0 leaderboard entries, 0 rewards.**
+
+**Repo review (S1) irregularities** (`research/nba-2026-27/review.md`): README does not link `nba-2026-lab/` (F02); `research/nba/correlations.md` says there is no route to stats.nba.com, partly outdated (F03); non-official betting-guide sources in `research/nba/` and `docs/` (F04); 2025-26 data is stale for 2026-27 (F01); Edwards 4 of 8 Minnesota games in official rows (F05); branch naming vs brief (F11).
+
+**Conflicts and handoffs.** One harmless warning during the first `git pull --rebase` (remote branch did not exist yet). No merge conflicts. No other session's files were edited. Root navigation untouched; this desk is linked from README only.
+
+**Integration.** PR, merge result and Pages confirmation are recorded below once they happen.
 ## Session 9557a8aa — NBA sensitivity audit (2026-11-03 UTC)
 
 Platform fixes this session to `arena/9557a8aa-own5`; requested session-prefixed branch is unavailable. Prior NBA lab and shared navigation are left untouched. Claim timestamp 2026-11-03 UTC.
