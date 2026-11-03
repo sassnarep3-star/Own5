@@ -302,8 +302,8 @@ Claim timestamp: 2026-11-03 UTC. Scope limited to `research/nba-2026/independent
 - `python3 -m unittest discover -s tests -q`: 56 passed. `python3 nba-2026-lab/compute.py`: reproduced all five coefficients exactly to displayed precision. `python3 nba-2026-lab/build.py`: 8 pages built reproducibly. `python3 nba-2026-lab/check.py`: 8/8 pages pass; 51 table rows each contain an official NBA/NBA Official link.
 - Audit at `research/nba-2026/independent-audit.md`. No new numeric line or performance claim is justified; zero strategies pass. Existing NBA dashboard was not edited because its generated pages are another completed task's scope. Existing limitations/flags remain published.
 - Branch-sync note: a concurrent update had already pushed the identical A1 claim to this fixed session branch; initial push was non-fast-forward and was not forced. The claim and audit changes are being reconciled while preserving that remote commit and the latest `origin/main` history.
+- Merge conflict: `COORDINATION.md` contained the same A1 claim on the remote branch as `in progress` and this completed record. Kept the remote claim's task identity/owner/scope and retained the completed verification record; no work was discarded.
 - PR and deployment record: pending.
-
 ---
 
 # Session 5ea3d798 — NBA evidence refresh (2026-11-03 UTC)
