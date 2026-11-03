@@ -435,3 +435,20 @@ Cross-session requests: none at claim time. Other sessions should not edit `nba-
 - [GitHub Pages deployment 41741331651](https://github.com/sassnarep3-star/Own5/actions/runs/41741331651) succeeded: build, deploy, report. Official Pages configuration remains main at root, preserving all earlier sites.
 - Live [NBA landing page](https://sassnarep3-star.github.io/Own5/nba-validation/index.html) and [Flagged for Review](https://sassnarep3-star.github.io/Own5/nba-validation/review.html) fetched after deployment with `?release=f2d9a5a` and matched expected content. A pre-deployment fetch returned 404 while build was still running; post-deploy fetches succeeded.
 - V1–V3 done within the explicitly documented scope. Ten nonblocking flags remain published; zero certified strategies, no current odds or performance figures fabricated. Additional concurrent-origin and audit tests (4 + 2) also passed after integration. This publication record follows the feature merge in a documentation-only PR from the same fixed branch.
+---
+
+# Session 636a7712 — NBA 2026–27 own-lines competition (2026-11-03 UTC)
+
+Arena fixes this session to `arena/636a7712-own5`; the requested `session-<id>/<task>` branch convention cannot be used. This is an additive, source-first NBA workspace. Existing root/NFL/NBA dashboards, generated data, tests, workflows, and shared navigation are out of scope and will not be edited.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| K1 | Current-season official source register and line-by-line evidence tables | in progress | 636a7712 | nba-own-lines/data/**, research/nba-own-lines/**, COORDINATION.md | Official NBA schedule, standings, team/player statistics, glossary, playing rules, and injury-report sources; blanks plus review flags when unavailable. |
+| K2 | Reproducible own-line model and pregame projections | in progress | 636a7712 | nba-own-lines/model.py, nba-own-lines/data/**, research/nba-own-lines/** | Calculated research lines only; no unverified sportsbook prices or betting claims. |
+| K3 | Singles/parlays/prop-combo hypotheses, correlations, fail-closed validation, skill-versus-luck analysis and leaderboard | in progress | 636a7712 | nba-own-lines/model.py, nba-own-lines/data/**, research/nba-own-lines/** | Zero rewards unless all evidence gates pass; luck cannot be literally removed. |
+| K4 | Additive dashboard, executive summary, Flagged for Review page, builder/checker/tests | in progress | 636a7712 | nba-own-lines/** | Every body-table row links to an official NBA source; derived values explicitly labeled. |
+| K5 | Final integration, combined checks, PR, merge, and live Pages verification | in progress | 636a7712 | COORDINATION.md, nba-own-lines/**, research/nba-own-lines/** | Fixed Arena branch is the integration branch; preserve all concurrent work. |
+
+Claim timestamp: 2026-11-03 UTC. No cross-session file requests at claim time. Other sessions should not edit `nba-own-lines/**` or `research/nba-own-lines/**` while this claim is active.
+
+Integration conflict log: while rebasing onto `origin/main` after concurrent PRs #23–#25, the append-only board conflicted with session e9a43ca6's integration record. Both blocks were retained verbatim; no other session's work was discarded.
