@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard — OWN5 Empirical Lab</title>
+<meta name="description" content="Walk-forward NFL line origination, measured correlations, and skill-vs-luck validation. Every row source-linked.">
+<style>
+:root{--bg:#0b0f14;--panel:#141a21;--panel2:#1b232c;--line:#2a3441;--txt:#e8eef4;
+--mut:#93a1b1;--acc:#4da3ff;--ok:#3fb950;--warn:#d9a521;--bad:#f2555a;--gold:#e3b341}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);line-height:1.55;
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--panel);border-bottom:1px solid var(--line);padding:14px 22px;
+position:sticky;top:0;z-index:20}
+.brand{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.brand h1{margin:0;font-size:18px;letter-spacing:.2px}
+.brand .tag{font-size:11px;color:var(--mut);border:1px solid var(--line);
+border-radius:20px;padding:2px 9px}
+nav{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px}
+nav a{font-size:13px;color:var(--mut);padding:4px 10px;border-radius:6px}
+nav a:hover{background:var(--panel2);color:var(--txt);text-decoration:none}
+nav a.active{background:var(--acc);color:#04121f;font-weight:600}
+main{max-width:1280px;margin:0 auto;padding:22px}
+h2{font-size:21px;margin:26px 0 8px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+h2:first-of-type{margin-top:6px}
+h3{font-size:15px;color:var(--acc);margin:20px 0 6px}
+p{margin:8px 0}
+.lede{color:var(--mut);font-size:14px;max-width:95ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:16px 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:15px}
+.card .k{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--mut)}
+.card .v{font-size:25px;font-weight:700;margin:5px 0;font-variant-numeric:tabular-nums}
+.card .n{font-size:12px;color:var(--mut)}
+.card.ok .v{color:var(--ok)}.card.warn .v{color:var(--warn)}.card.bad .v{color:var(--bad)}
+.note{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);
+border-radius:0 8px 8px 0;padding:11px 15px;margin:14px 0;font-size:13.5px}
+.note.warn{border-left-color:var(--warn)}.note.bad{border-left-color:var(--bad)}
+.note.ok{border-left-color:var(--ok)}
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:8px;margin:12px 0}
+table{border-collapse:collapse;width:100%;font-size:13px;background:var(--panel)}
+th,td{border-bottom:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--panel2);color:var(--mut);font-weight:600;font-size:11.5px;
+text-transform:uppercase;letter-spacing:.4px;white-space:nowrap;position:sticky;top:0}
+tbody tr:hover td{background:#1a222b}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.badge{display:inline-block;font-size:10.5px;padding:1px 7px;border-radius:20px;
+border:1px solid var(--line);white-space:nowrap}
+.b-ok{color:var(--ok);border-color:var(--ok)}.b-bad{color:var(--bad);border-color:var(--bad)}
+.b-warn{color:var(--warn);border-color:var(--warn)}.b-mut{color:var(--mut)}
+.blank{color:var(--warn);font-style:italic}
+.pos{color:var(--ok)}.neg{color:var(--bad)}
+.src{font-size:11.5px;white-space:nowrap}
+.small{font-size:12px;color:var(--mut)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:16px}
+.bar{height:7px;background:var(--panel2);border-radius:4px;overflow:hidden;min-width:60px}
+.bar span{display:block;height:100%;background:var(--acc)}
+footer{border-top:1px solid var(--line);margin-top:34px;padding:18px 22px;
+color:var(--mut);font-size:12px;text-align:center}
+code{background:var(--panel2);padding:1px 5px;border-radius:4px;font-size:12px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.filters input,.filters select{background:var(--panel);color:var(--txt);
+border:1px solid var(--line);border-radius:6px;padding:6px 10px;font-size:13px}
+.filters input{min-width:220px}
+@media(max-width:700px){main{padding:14px}table{font-size:12px}th,td{padding:5px 7px}
+.card .v{font-size:21px}}
+</style></head><body>
+<header><div class="brand"><h1>OWN5 · Empirical Lab</h1>
+<span class="tag">NFL line origination</span>
+<span class="tag">2006–2025 backtest · 2026 board</span>
+<span class="tag">built 2026-11-02</span></div>
+<nav><a href="index.html" class="active">Dashboard</a><a href="board.html">Our Lines</a><a href="leaderboard.html">Leaderboard</a><a href="strategies.html">Strategies</a><a href="correlations.html">Correlations</a><a href="combos.html">Combo Pricing</a><a href="skill-luck.html">Skill vs Luck</a><a href="gates.html">Validation Gates</a><a href="verification.html">Verification</a><a href="executive-summary.html">Executive Summary</a><a href="flagged.html">Flagged for Review</a><a href="sources.html">Sources &amp; Method</a></nav></header>
+<main>
+<h2>What this is</h2>
+<p class="lede">An evidence-first attempt to <strong>originate our own NFL lines</strong> and test whether
+any signal survives contact with the closing market. 4,991 regular-season games
+(2006–2025) are priced strictly walk-forward, then
+seven strategies spanning singles, parlays and same-game combinations are graded at real prices and
+pushed through ten hard validation gates.</p>
+
+<div class="note bad"><strong>Headline result: 0 of 7 strategies passed.</strong>
+No strategy cleared all hard gates. No reward tier is awarded and no profitable edge is claimed. The closing line beat our model on both spread accuracy and win probability.
+That is the finding, and it is reported rather than buried.</div>
+
+<div class="cards">
+<div class="card "><div class="k">Games priced</div><div class="v">4,991</div><div class="n">walk-forward, no lookahead</div></div>
+<div class="card bad"><div class="k">Strategies validated</div><div class="v">0 / 7</div><div class="n">all 10 hard gates required</div></div>
+<div class="card ok"><div class="k">Official score checks</div><div class="v">80/80</div><div class="n">exact match vs NFL.com</div></div>
+<div class="card "><div class="k">Correlations measured</div><div class="v">12</div><div class="n">bootstrap CI, clustered by week</div></div>
+<div class="card warn"><div class="k">Reward tiers awarded</div><div class="v">0</div><div class="n">no gate-passing strategy</div></div>
+</div>
+
+<h2>The one robust positive finding</h2>
+<div class="note ok"><strong>Same-game player props are genuinely correlated.</strong>
+A quarterback's passing-yards over and his top receiver's receiving-yards over hit together
+far more often than independence implies: φ = <strong>0.249</strong>, and the joint rate exceeds the
+naive product by roughly six percentage points. The lift persists out-of-sample in every season tested.
+Multiplying the two legs' probabilities — the standard parlay shortcut — materially misprices this combo.
+See <a href="correlations.html">Correlations</a> and <a href="combos.html">Combo Pricing</a>.</div>
+
+<h2>Our model vs the closing market</h2>
+<div class="scroll"><table><thead><tr><th>Metric</th><th class="num">Our model</th><th class="num">Closing market</th><th>Winner</th></tr></thead><tbody>
+<tr><td>Spread RMSE (points)</td><td class="num">13.6276</td><td class="num">13.1988</td><td><span class="badge b-bad">Market</span></td></tr>
+<tr><td>Spread MAE (points)</td><td class="num">10.634</td><td class="num">10.2435</td><td><span class="badge b-bad">Market</span></td></tr>
+<tr><td>Total RMSE (points)</td><td class="num">13.6244</td><td class="num">13.3006</td><td><span class="badge b-bad">Market</span></td></tr>
+<tr><td>Win-probability Brier score</td><td class="num">0.22232</td><td class="num">0.21009</td><td><span class="badge b-bad">Market</span></td></tr>
+</tbody></table></div>
+<p class="small">Lower is better on every row. Correlation between our spread and the market spread is
+0.814 — the model has learned real team strength, but not enough to beat the price.
+Source: computed in-repo from official NFL.com final scores; see <a href="verification.html">Verification</a>.</p>
+
+<h2>Start here</h2>
+<div class="grid2">
+<div class="card"><h3 style="margin-top:0"><a href="board.html">Our originated lines →</a></h3>
+<p class="small">16 upcoming games priced with our own spread, total and moneyline,
+side by side with the posted market number. Divergence is shown, not sold as an edge.</p></div>
+<div class="card"><h3 style="margin-top:0"><a href="leaderboard.html">Leaderboard →</a></h3>
+<p class="small">Every strategy ranked with its ROI, confidence interval and the exact gates it failed.
+No reward tier is paid without clearing all ten.</p></div>
+<div class="card"><h3 style="margin-top:0"><a href="skill-luck.html">Skill vs luck →</a></h3>
+<p class="small">Cluster bootstrap, exact binomial tests, deflated Sharpe and false-discovery control —
+how we stop a lucky backtest from looking like skill.</p></div>
+<div class="card"><h3 style="margin-top:0"><a href="flagged.html">Flagged for review →</a></h3>
+<p class="small">Every limitation, third-party dependency and unverified value, listed with its source.</p></div>
+</div>
+
+<h2>Market structure we measured</h2>
+<div class="cards">
+<div class="card "><div class="k">Key numbers 3 &amp; 7</div><div class="v">21.3%</div><div class="n">share of posted spreads</div></div>
+<div class="card "><div class="k">Spread push rate</div><div class="v">2.53%</div><div class="n">stake refunded</div></div>
+<div class="card "><div class="k">Total push rate</div><div class="v">1.24%</div><div class="n">stake refunded</div></div>
+<div class="card warn"><div class="k">Standard two-way hold</div><div class="v">4.76%</div><div class="n">at −110 / −110</div></div>
+</div>
+<p class="small">The hold is the hurdle every strategy must clear before it can be called skill.</p>
+</main>
+<footer>OWN5 Empirical Lab · research output, not betting advice ·
+every table row carries a source link · unverifiable values are left blank and flagged ·
+<a href="../index.html">NFL Research Desk</a> ·
+<a href="https://github.com/sassnarep3-star/Own5">repository</a></footer>
+<script>
+document.querySelectorAll('[data-filter]').forEach(function(box){
+  var table=document.getElementById(box.getAttribute('data-filter'));
+  if(!table)return;
+  function apply(){
+    var q=box.value.toLowerCase();
+    table.querySelectorAll('tbody tr').forEach(function(tr){
+      tr.style.display = tr.textContent.toLowerCase().indexOf(q)>-1 ? '' : 'none';
+    });
+  }
+  box.addEventListener('input',apply);
+});
+</script></body></html>

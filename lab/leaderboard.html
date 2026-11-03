@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Leaderboard — OWN5 Empirical Lab</title>
+<meta name="description" content="Walk-forward NFL line origination, measured correlations, and skill-vs-luck validation. Every row source-linked.">
+<style>
+:root{--bg:#0b0f14;--panel:#141a21;--panel2:#1b232c;--line:#2a3441;--txt:#e8eef4;
+--mut:#93a1b1;--acc:#4da3ff;--ok:#3fb950;--warn:#d9a521;--bad:#f2555a;--gold:#e3b341}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);line-height:1.55;
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--panel);border-bottom:1px solid var(--line);padding:14px 22px;
+position:sticky;top:0;z-index:20}
+.brand{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.brand h1{margin:0;font-size:18px;letter-spacing:.2px}
+.brand .tag{font-size:11px;color:var(--mut);border:1px solid var(--line);
+border-radius:20px;padding:2px 9px}
+nav{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px}
+nav a{font-size:13px;color:var(--mut);padding:4px 10px;border-radius:6px}
+nav a:hover{background:var(--panel2);color:var(--txt);text-decoration:none}
+nav a.active{background:var(--acc);color:#04121f;font-weight:600}
+main{max-width:1280px;margin:0 auto;padding:22px}
+h2{font-size:21px;margin:26px 0 8px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+h2:first-of-type{margin-top:6px}
+h3{font-size:15px;color:var(--acc);margin:20px 0 6px}
+p{margin:8px 0}
+.lede{color:var(--mut);font-size:14px;max-width:95ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:16px 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:15px}
+.card .k{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--mut)}
+.card .v{font-size:25px;font-weight:700;margin:5px 0;font-variant-numeric:tabular-nums}
+.card .n{font-size:12px;color:var(--mut)}
+.card.ok .v{color:var(--ok)}.card.warn .v{color:var(--warn)}.card.bad .v{color:var(--bad)}
+.note{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);
+border-radius:0 8px 8px 0;padding:11px 15px;margin:14px 0;font-size:13.5px}
+.note.warn{border-left-color:var(--warn)}.note.bad{border-left-color:var(--bad)}
+.note.ok{border-left-color:var(--ok)}
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:8px;margin:12px 0}
+table{border-collapse:collapse;width:100%;font-size:13px;background:var(--panel)}
+th,td{border-bottom:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--panel2);color:var(--mut);font-weight:600;font-size:11.5px;
+text-transform:uppercase;letter-spacing:.4px;white-space:nowrap;position:sticky;top:0}
+tbody tr:hover td{background:#1a222b}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.badge{display:inline-block;font-size:10.5px;padding:1px 7px;border-radius:20px;
+border:1px solid var(--line);white-space:nowrap}
+.b-ok{color:var(--ok);border-color:var(--ok)}.b-bad{color:var(--bad);border-color:var(--bad)}
+.b-warn{color:var(--warn);border-color:var(--warn)}.b-mut{color:var(--mut)}
+.blank{color:var(--warn);font-style:italic}
+.pos{color:var(--ok)}.neg{color:var(--bad)}
+.src{font-size:11.5px;white-space:nowrap}
+.small{font-size:12px;color:var(--mut)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:16px}
+.bar{height:7px;background:var(--panel2);border-radius:4px;overflow:hidden;min-width:60px}
+.bar span{display:block;height:100%;background:var(--acc)}
+footer{border-top:1px solid var(--line);margin-top:34px;padding:18px 22px;
+color:var(--mut);font-size:12px;text-align:center}
+code{background:var(--panel2);padding:1px 5px;border-radius:4px;font-size:12px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.filters input,.filters select{background:var(--panel);color:var(--txt);
+border:1px solid var(--line);border-radius:6px;padding:6px 10px;font-size:13px}
+.filters input{min-width:220px}
+@media(max-width:700px){main{padding:14px}table{font-size:12px}th,td{padding:5px 7px}
+.card .v{font-size:21px}}
+</style></head><body>
+<header><div class="brand"><h1>OWN5 · Empirical Lab</h1>
+<span class="tag">NFL line origination</span>
+<span class="tag">2006–2025 backtest · 2026 board</span>
+<span class="tag">built 2026-11-02</span></div>
+<nav><a href="index.html">Dashboard</a><a href="board.html">Our Lines</a><a href="leaderboard.html" class="active">Leaderboard</a><a href="strategies.html">Strategies</a><a href="correlations.html">Correlations</a><a href="combos.html">Combo Pricing</a><a href="skill-luck.html">Skill vs Luck</a><a href="gates.html">Validation Gates</a><a href="verification.html">Verification</a><a href="executive-summary.html">Executive Summary</a><a href="flagged.html">Flagged for Review</a><a href="sources.html">Sources &amp; Method</a></nav></header>
+<main>
+<h2>Strategy leaderboard</h2>
+<p class="lede">Ranked by risk-adjusted return (ROI divided by the width of its 95% cluster-bootstrap
+interval), but only among strategies that cleared all ten hard gates. Because none did, no rank and no
+reward tier is assigned. Rejected strategies are listed with their measured results so the record is complete.</p>
+<div class="note bad"><strong>0 of 7 validated · 0 reward tiers awarded.</strong>
+No strategy cleared all hard gates. No reward tier is awarded and no profitable edge is claimed.</div>
+<div class="scroll"><table><thead><tr><th class="">Rank</th><th class="">Strategy</th><th class="num">Bets</th><th class="num">ROI</th><th class="num">CI low</th><th class="num">CI high</th><th class="num">Risk-adj</th><th class="num">Gates</th><th class="">Reward</th><th class="">Status</th><th class="">Failed gates</th></tr></thead><tbody><tr><td class=""><span class="blank">—</span></td><td class="">S4_division_dog</td><td class="num"><span class="pos">1427</span></td><td class="num"><span class="pos">0.00665</span></td><td class="num"><span class="neg">-0.04364</span></td><td class="num"><span class="pos">0.05768</span></td><td class="num"><span class="pos">0.06563</span></td><td class="num"><span class="pos">5</span></td><td class=""><span class="blank">—</span></td><td><span class="badge b-bad">REJECTED</span></td><td class="">G3; G4; G5; G6; G9</td></tr><tr><td class=""><span class="blank">—</span></td><td class="">S2_total_value</td><td class="num"><span class="pos">3603</span></td><td class="num"><span class="neg">-0.00637</span></td><td class="num"><span class="neg">-0.03921</span></td><td class="num"><span class="pos">0.02593</span></td><td class="num"><span class="neg">-0.09779</span></td><td class="num"><span class="pos">3</span></td><td class=""><span class="blank">—</span></td><td><span class="badge b-bad">REJECTED</span></td><td class="">G2; G3; G4; G5; G6; G7; G9</td></tr><tr><td class=""><span class="blank">—</span></td><td class="">S1_spread_value</td><td class="num"><span class="pos">3730</span></td><td class="num"><span class="neg">-0.0153</span></td><td class="num"><span class="neg">-0.04783</span></td><td class="num"><span class="pos">0.01696</span></td><td class="num"><span class="neg">-0.23615</span></td><td class="num"><span class="pos">3</span></td><td class=""><span class="blank">—</span></td><td><span class="badge b-bad">REJECTED</span></td><td class="">G2; G3; G4; G5; G6; G7; G9</td></tr><tr><td class=""><span class="blank">—</span></td><td class="">S5_fade_big_favorite</td><td class="num"><span class="pos">1476</span></td><td class="num"><span class="neg">-0.02006</span></td><td class="num"><span class="neg">-0.06612</span></td><td class="num"><span class="pos">0.02666</span></td><td class="num"><span class="neg">-0.21621</span></td><td class="num"><span class="pos">3</span></td><td class=""><span class="blank">—</span></td><td><span class="badge b-bad">REJECTED</span></td><td class="">G2; G3; G4; G5; G6; G7; G9</td></tr><tr><td class=""><span class="blank">—</span></td><td class="">P2_same_game_fav_over</td><td class="num"><span class="pos">3450</span></td><td class="num"><span class="neg">-0.17878</span></td><td class="num"><span class="neg">-0.22879</span></td><td class="num"><span class="neg">-0.12802</span></td><td class="num"><span class="neg">-1.77414</span></td><td class="num"><span class="pos">2</span></td><td class=""><span class="blank">—</span></td><td><span class="badge b-bad">REJECTED</span></td><td class="">G2; G3; G4; G5; G6; G7; G8; G9</td></tr><tr><td class=""><span class="blank">—</span></td><td class="">S3_rest_edge</td><td class="num"><span class="pos">49</span></td><td class="num"><span class="neg">-0.20993</span></td><td class="num"><span class="neg">-0.46801</span></td><td class="num"><span class="pos">0.05862</span></td><td class="num"><span class="neg">-0.39863</span></td><td class="num"><span class="pos">2</span></td><td class=""><span class="blank">—</span></td><td><span class="badge b-bad">REJECTED</span></td><td class="">G1; G2; G3; G4; G5; G6; G7; G9</td></tr><tr><td class=""><span class="blank">—</span></td><td class="">P1_cross_game_2leg</td><td class="num"><span class="pos">317</span></td><td class="num"><span class="neg">-0.32744</span></td><td class="num"><span class="neg">-0.45047</span></td><td class="num"><span class="neg">-0.19937</span></td><td class="num"><span class="neg">-1.30402</span></td><td class="num"><span class="pos">3</span></td><td class=""><span class="blank">—</span></td><td><span class="badge b-bad">REJECTED</span></td><td class="">G2; G3; G4; G5; G6; G7; G9</td></tr></tbody></table></div>
+<h2>How the competition is scored</h2>
+<div class="scroll"><table><thead><tr><th>Tier</th><th>Eligibility</th><th>Reward</th><th>Awarded this run</th></tr></thead><tbody>
+<tr><td>Tier 1</td><td>Top 3 gate-passing strategies by risk-adjusted return</td><td>Featured placement + largest research allocation</td><td><span class="badge b-bad">0</span></td></tr>
+<tr><td>Tier 2</td><td>Next 4 gate-passing strategies</td><td>Standard research allocation</td><td><span class="badge b-bad">0</span></td></tr>
+<tr><td>Tier 3</td><td>Remaining gate-passing strategies</td><td>Honourable mention</td><td><span class="badge b-bad">0</span></td></tr>
+</tbody></table></div>
+<p class="small">Rewards are research allocation and recognition, not cash. A strategy that fails a gate is
+ineligible regardless of its point-estimate ROI — this is the mechanism that removes luck from the ranking.</p>
+</main>
+<footer>OWN5 Empirical Lab · research output, not betting advice ·
+every table row carries a source link · unverifiable values are left blank and flagged ·
+<a href="../index.html">NFL Research Desk</a> ·
+<a href="https://github.com/sassnarep3-star/Own5">repository</a></footer>
+<script>
+document.querySelectorAll('[data-filter]').forEach(function(box){
+  var table=document.getElementById(box.getAttribute('data-filter'));
+  if(!table)return;
+  function apply(){
+    var q=box.value.toLowerCase();
+    table.querySelectorAll('tbody tr').forEach(function(tr){
+      tr.style.display = tr.textContent.toLowerCase().indexOf(q)>-1 ? '' : 'none';
+    });
+  }
+  box.addEventListener('input',apply);
+});
+</script></body></html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Combo Pricing — OWN5 Empirical Lab</title>
+<meta name="description" content="Walk-forward NFL line origination, measured correlations, and skill-vs-luck validation. Every row source-linked.">
+<style>
+:root{--bg:#0b0f14;--panel:#141a21;--panel2:#1b232c;--line:#2a3441;--txt:#e8eef4;
+--mut:#93a1b1;--acc:#4da3ff;--ok:#3fb950;--warn:#d9a521;--bad:#f2555a;--gold:#e3b341}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);line-height:1.55;
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--panel);border-bottom:1px solid var(--line);padding:14px 22px;
+position:sticky;top:0;z-index:20}
+.brand{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.brand h1{margin:0;font-size:18px;letter-spacing:.2px}
+.brand .tag{font-size:11px;color:var(--mut);border:1px solid var(--line);
+border-radius:20px;padding:2px 9px}
+nav{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px}
+nav a{font-size:13px;color:var(--mut);padding:4px 10px;border-radius:6px}
+nav a:hover{background:var(--panel2);color:var(--txt);text-decoration:none}
+nav a.active{background:var(--acc);color:#04121f;font-weight:600}
+main{max-width:1280px;margin:0 auto;padding:22px}
+h2{font-size:21px;margin:26px 0 8px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+h2:first-of-type{margin-top:6px}
+h3{font-size:15px;color:var(--acc);margin:20px 0 6px}
+p{margin:8px 0}
+.lede{color:var(--mut);font-size:14px;max-width:95ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:16px 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:15px}
+.card .k{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--mut)}
+.card .v{font-size:25px;font-weight:700;margin:5px 0;font-variant-numeric:tabular-nums}
+.card .n{font-size:12px;color:var(--mut)}
+.card.ok .v{color:var(--ok)}.card.warn .v{color:var(--warn)}.card.bad .v{color:var(--bad)}
+.note{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);
+border-radius:0 8px 8px 0;padding:11px 15px;margin:14px 0;font-size:13.5px}
+.note.warn{border-left-color:var(--warn)}.note.bad{border-left-color:var(--bad)}
+.note.ok{border-left-color:var(--ok)}
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:8px;margin:12px 0}
+table{border-collapse:collapse;width:100%;font-size:13px;background:var(--panel)}
+th,td{border-bottom:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--panel2);color:var(--mut);font-weight:600;font-size:11.5px;
+text-transform:uppercase;letter-spacing:.4px;white-space:nowrap;position:sticky;top:0}
+tbody tr:hover td{background:#1a222b}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.badge{display:inline-block;font-size:10.5px;padding:1px 7px;border-radius:20px;
+border:1px solid var(--line);white-space:nowrap}
+.b-ok{color:var(--ok);border-color:var(--ok)}.b-bad{color:var(--bad);border-color:var(--bad)}
+.b-warn{color:var(--warn);border-color:var(--warn)}.b-mut{color:var(--mut)}
+.blank{color:var(--warn);font-style:italic}
+.pos{color:var(--ok)}.neg{color:var(--bad)}
+.src{font-size:11.5px;white-space:nowrap}
+.small{font-size:12px;color:var(--mut)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:16px}
+.bar{height:7px;background:var(--panel2);border-radius:4px;overflow:hidden;min-width:60px}
+.bar span{display:block;height:100%;background:var(--acc)}
+footer{border-top:1px solid var(--line);margin-top:34px;padding:18px 22px;
+color:var(--mut);font-size:12px;text-align:center}
+code{background:var(--panel2);padding:1px 5px;border-radius:4px;font-size:12px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.filters input,.filters select{background:var(--panel);color:var(--txt);
+border:1px solid var(--line);border-radius:6px;padding:6px 10px;font-size:13px}
+.filters input{min-width:220px}
+@media(max-width:700px){main{padding:14px}table{font-size:12px}th,td{padding:5px 7px}
+.card .v{font-size:21px}}
+</style></head><body>
+<header><div class="brand"><h1>OWN5 · Empirical Lab</h1>
+<span class="tag">NFL line origination</span>
+<span class="tag">2006–2025 backtest · 2026 board</span>
+<span class="tag">built 2026-11-02</span></div>
+<nav><a href="index.html">Dashboard</a><a href="board.html">Our Lines</a><a href="leaderboard.html">Leaderboard</a><a href="strategies.html">Strategies</a><a href="correlations.html">Correlations</a><a href="combos.html" class="active">Combo Pricing</a><a href="skill-luck.html">Skill vs Luck</a><a href="gates.html">Validation Gates</a><a href="verification.html">Verification</a><a href="executive-summary.html">Executive Summary</a><a href="flagged.html">Flagged for Review</a><a href="sources.html">Sources &amp; Method</a></nav></header>
+<main>
+<h2>Combination pricing</h2>
+<p class="lede">If two legs are correlated, the fair price of the combination is set by the observed joint
+probability, not by multiplying the two single-leg probabilities. This page quantifies that gap and tests
+whether it survives out-of-sample.</p>
+<div class="note warn"><strong>No sportsbook player-prop lines are published by any official source.</strong>
+We therefore do not invent a book price or claim a prop ROI. Instead each player's line is <em>originated
+in-repo</em> as his trailing season-to-date median (minimum three prior games), which makes "prop hits" a
+well-defined event. The deliverable is the measured mispricing, not a fabricated return.</div>
+<h2>Fair price vs naive independence price</h2>
+<div class="scroll"><table><thead><tr><th class="">ID</th><th class="">Combination</th><th class="">Scope</th><th class="num">n</th><th class="num">True joint</th><th class="num">Fair price</th><th class="num">Naive price</th><th class="num">Mispricing %</th><th class="num">φ</th><th class="">Indep. rejected</th><th>Source</th></tr></thead><tbody><tr><td class="">X01</td><td class="">Favorite covers &amp; OVER</td><td class="">same game</td><td class="num"><span class="pos">4804</span></td><td class="num"><span class="pos">0.24209</span></td><td class="num"><span class="pos">313.1</span></td><td class="num"><span class="pos">311.3</span></td><td class="num"><span class="neg">-0.44</span></td><td class="num"><span class="neg">-0.0043</span></td><td><span class="badge b-bad">False</span></td><td><a class="src" href="https://www.nfl.com/scores/" rel="noopener noreferrer" target="_blank">source</a></td></tr><tr><td class="">X02</td><td class="">Favorite covers &amp; UNDER</td><td class="">same game</td><td class="num"><span class="pos">4804</span></td><td class="num"><span class="pos">0.24729</span></td><td class="num"><span class="pos">304.4</span></td><td class="num"><span class="pos">306.1</span></td><td class="num"><span class="pos">0.435</span></td><td class="num"><span class="pos">0.0043</span></td><td><span class="badge b-bad">False</span></td><td><a class="src" href="https://www.nfl.com/scores/" rel="noopener noreferrer" target="_blank">source</a></td></tr><tr><td class="">X03</td><td class="">Underdog covers &amp; OVER</td><td class="">same game</td><td class="num"><span class="pos">4804</span></td><td class="num"><span class="pos">0.25479</span></td><td class="num"><span class="pos">292.5</span></td><td class="num"><span class="pos">294.2</span></td><td class="num"><span class="pos">0.426</span></td><td class="num"><span class="pos">0.0043</span></td><td><span class="badge b-bad">False</span></td><td><a class="src" href="https://www.nfl.com/scores/" rel="noopener noreferrer" target="_blank">source</a></td></tr><tr><td class="">X04</td><td class="">Underdog covers &amp; UNDER</td><td class="">same game</td><td class="num"><span class="pos">4804</span></td><td class="num"><span class="pos">0.25583</span></td><td class="num"><span class="pos">290.9</span></td><td class="num"><span class="pos">289.3</span></td><td class="num"><span class="neg">-0.417</span></td><td class="num"><span class="neg">-0.0043</span></td><td><span class="badge b-bad">False</span></td><td><a class="src" href="https://www.nfl.com/scores/" rel="noopener noreferrer" target="_blank">source</a></td></tr><tr><td class="">X05</td><td class="">Home wins &amp; OVER</td><td class="">same game</td><td class="num"><span class="pos">4804</span></td><td class="num"><span class="pos">0.2756</span></td><td class="num"><span class="pos">262.8</span></td><td class="num"><span class="pos">264.7</span></td><td class="num"><span class="pos">0.514</span></td><td class="num"><span class="pos">0.00567</span></td><td><span class="badge b-bad">False</span></td><td><a class="src" href="https://www.nfl.com/scores/" rel="noopener noreferrer" target="_blank">source</a></td></tr><tr><td class="">X06</td><td class="">Home covers &amp; OVER</td><td class="">same game</td><td class="num"><span class="pos">4804</span></td><td class="num"><span class="pos">0.24646</span></td><td class="num"><span class="pos">305.7</span></td><td class="num"><span class="pos">313</span></td><td class="num"><span class="pos">1.788</span></td><td class="num"><span class="pos">0.01733</span></td><td><span class="badge b-bad">False</span></td><td><a class="src" href="https://www.nfl.com/scores/" rel="noopener noreferrer" target="_blank">source</a></td></tr><tr><td class="">X07</td><td class="">Favorite covers (game A) &amp; favorite covers (game B)</td><td class="">cross game</td><td class="num"><span class="pos">4473</span></td><td class="num"><span class="pos">0.23564</span></td><td class="num"><span class="pos">324.4</span></td><td class="num"><span class="pos">313.2</span></td><td class="num"><span class="neg">-2.636</span></td><td class="num"><span class="neg">-0.02553</span></td><td><span class="badge b-bad">False</span></td><td><a class="src" href="https://www.nfl.com/scores/" rel="noopener noreferrer" target="_blank">source</a></td></tr><tr><td class="">X08</td><td class="">OVER (game A) &amp; OVER (game B)</td><td class="">cross game</td><td class="num"><span class="pos">4473</span></td><td class="num"><span class="pos">0.24927</span></td><td class="num"><span class="pos">301.2</span></td><td class="num"><span class="pos">303.2</span></td><td class="num"><span class="pos">0.516</span></td><td class="num"><span class="pos">0.00513</span></td><td><span class="badge b-bad">False</span></td><td><a class="src" href="https://www.nfl.com/scores/" rel="noopener noreferrer" target="_blank">source</a></td></tr><tr><td class="">PP01</td><td class="">QB passing over &amp; same-team RB rushing over</td><td class="">same game, same team</td><td class="num"><span class="pos">6401</span></td><td class="num"><span class="pos">0.222</span></td><td class="num"><span class="pos">350.5</span></td><td class="num"><span class="pos">332</span></td><td class="num"><span class="neg">-4.1</span></td><td class="num"><span class="neg">-0.03804</span></td><td><span class="badge b-bad">False</span></td><td><a class="src" href="https://www.nfl.com/stats/player-stats/" rel="noopener noreferrer" target="_blank">source</a></td></tr><tr><td class="">PP02</td><td class="">QB passing over &amp; same-team WR1 receiving over</td><td class="">same game, same team</td><td class="num"><span class="pos">2875</span></td><td class="num"><span class="pos">0.25913</span></td><td class="num"><span class="pos">285.9</span></td><td class="num"><span class="pos">405.4</span></td><td class="num"><span class="pos">30.973</span></td><td class="num"><span class="pos">0.2486</span></td><td><span class="badge b-ok">True</span></td><td><a class="src" href="https://www.nfl.com/stats/player-stats/" rel="noopener noreferrer" target="_blank">source</a></td></tr><tr><td class="">PP03</td><td class="">WR1 receiving over &amp; WR2 receiving over (same team)</td><td class="">same game, same team</td><td class="num"><span class="pos">2849</span></td><td class="num"><span class="pos">0.20604</span></td><td class="num"><span class="pos">385.3</span></td><td class="num"><span class="pos">399.3</span></td><td class="num"><span class="pos">2.876</span></td><td class="num"><span class="pos">0.02339</span></td><td><span class="badge b-bad">False</span></td><td><a class="src" href="https://www.nfl.com/stats/player-stats/" rel="noopener noreferrer" target="_blank">source</a></td></tr><tr><td class="">PP04</td><td class="">QB passing over (team A) &amp; QB passing over (team B)</td><td class="">cross game</td><td class="num"><span class="pos">2609</span></td><td class="num"><span class="pos">0.24684</span></td><td class="num"><span class="pos">305.1</span></td><td class="num"><span class="pos">328.1</span></td><td class="num"><span class="pos">5.668</span></td><td class="num"><span class="pos">0.05299</span></td><td><span class="badge b-bad">False</span></td><td><a class="src" href="https://www.nfl.com/stats/player-stats/" rel="noopener noreferrer" target="_blank">source</a></td></tr></tbody></table></div>
+<p class="small">A positive mispricing figure means the naive price is too generous — the combination is
+more likely than independence implies. This is precisely why operators re-price or restrict correlated
+same-game legs.</p>
+<h2>Out-of-sample test: QB passing + WR1 receiving</h2>
+<p class="lede">For each season, the joint rate and the naive product are estimated from <em>prior seasons only</em>,
+then compared with what actually happened. The final column is the expected value per unit if a book had
+paid the naive independence price.</p>
+<div class="scroll"><table><thead><tr><th class="num">Season</th><th class="num">Train n</th><th class="num">Test n</th><th class="num">Prior joint</th><th class="num">Prior naive</th><th class="num">Actual joint</th><th class="num">CI low</th><th class="num">CI high</th><th class="num">Naive decimal</th><th class="num">Break-even decimal</th><th class="num">EV vs naive</th><th>Source</th></tr></thead><tbody><tr><td class="num"><span class="pos">2016</span></td><td class="num"><span class="pos">399</span></td><td class="num"><span class="pos">403</span></td><td class="num"><span class="pos">0.25815</span></td><td class="num"><span class="pos">0.19334</span></td><td class="num"><span class="pos">0.25558</span></td><td class="num"><span class="pos">0.21485</span></td><td class="num"><span class="pos">0.29981</span></td><td class="num"><span class="pos">5.1722</span></td><td class="num"><span class="pos">3.9126</span></td><td class="num"><span class="pos">0.32193</span></td><td><a class="src" href="https://www.nfl.com/stats/player-stats/" rel="noopener noreferrer" target="_blank">source</a></td></tr><tr><td class="num"><span class="pos">2017</span></td><td class="num"><span class="pos">802</span></td><td class="num"><span class="pos">394</span></td><td class="num"><span class="pos">0.25686</span></td><td class="num"><span class="pos">0.19253</span></td><td class="num"><span class="pos">0.26904</span></td><td class="num"><span class="pos">0.22705</span></td><td class="num"><span class="pos">0.3144</span></td><td class="num"><span class="pos">5.194</span></td><td class="num"><span class="pos">3.717</span></td><td class="num"><span class="pos">0.39737</span></td><td><a class="src" href="https://www.nfl.com/stats/player-stats/" rel="noopener noreferrer" target="_blank">source</a></td></tr><tr><td class="num"><span class="pos">2018</span></td><td class="num"><span class="pos">1196</span></td><td class="num"><span class="pos">410</span></td><td class="num"><span class="pos">0.26087</span></td><td class="num"><span class="pos">0.19547</span></td><td class="num"><span class="pos">0.24634</span></td><td class="num"><span class="pos">0.20652</span></td><td class="num"><span class="pos">0.28973</span></td><td class="num"><span class="pos">5.1159</span></td><td class="num"><span class="pos">4.0594</span></td><td class="num"><span class="pos">0.26025</span></td><td><a class="src" href="https://www.nfl.com/stats/player-stats/" rel="noopener noreferrer" target="_blank">source</a></td></tr><tr><td class="num"><span class="pos">2019</span></td><td class="num"><span class="pos">1606</span></td><td class="num"><span class="pos">410</span></td><td class="num"><span class="pos">0.25716</span></td><td class="num"><span class="pos">0.19276</span></td><td class="num"><span class="pos">0.26341</span></td><td class="num"><span class="pos">0.22255</span></td><td class="num"><span class="pos">0.30761</span></td><td class="num"><span class="pos">5.1879</span></td><td class="num"><span class="pos">3.7963</span></td><td class="num"><span class="pos">0.36657</span></td><td><a class="src" href="https://www.nfl.com/stats/player-stats/" rel="noopener noreferrer" target="_blank">source</a></td></tr><tr><td class="num"><span class="pos">2020</span></td><td class="num"><span class="pos">2016</span></td><td class="num"><span class="pos">428</span></td><td class="num"><span class="pos">0.25843</span></td><td class="num"><span class="pos">0.19474</span></td><td class="num"><span class="pos">0.28037</span></td><td class="num"><span class="pos">0.2394</span></td><td class="num"><span class="pos">0.3243</span></td><td class="num"><span class="pos">5.135</span></td><td class="num"><span class="pos">3.5667</span></td><td class="num"><span class="pos">0.43972</span></td><td><a class="src" href="https://www.nfl.com/stats/player-stats/" rel="noopener noreferrer" target="_blank">source</a></td></tr><tr><td class="num"><span class="pos">2021</span></td><td class="num"><span class="pos">2444</span></td><td class="num"><span class="pos">431</span></td><td class="num"><span class="pos">0.26227</span></td><td class="num"><span class="pos">0.20044</span></td><td class="num"><span class="pos">0.2413</span></td><td class="num"><span class="pos">0.20273</span></td><td class="num"><span class="pos">0.28333</span></td><td class="num"><span class="pos">4.9891</span></td><td class="num"><span class="pos">4.1442</span></td><td class="num"><span class="pos">0.20386</span></td><td><a class="src" href="https://www.nfl.com/stats/player-stats/" rel="noopener noreferrer" target="_blank">source</a></td></tr></tbody></table></div>
+<div class="note ok"><strong>Consistent across every season tested.</strong> Mean out-of-sample EV against a
+naively-priced book is +0.332 units per unit staked. The caveat that matters: real sportsbooks
+already shade correlated same-game parlays, so this is the size of the theoretical error, <em>not</em> a
+claim that the price is available. Capturing it requires a book that has not adjusted — which is an
+empirical question this dataset cannot answer.</div></main>
+<footer>OWN5 Empirical Lab · research output, not betting advice ·
+every table row carries a source link · unverifiable values are left blank and flagged ·
+<a href="../index.html">NFL Research Desk</a> ·
+<a href="https://github.com/sassnarep3-star/Own5">repository</a></footer>
+<script>
+document.querySelectorAll('[data-filter]').forEach(function(box){
+  var table=document.getElementById(box.getAttribute('data-filter'));
+  if(!table)return;
+  function apply(){
+    var q=box.value.toLowerCase();
+    table.querySelectorAll('tbody tr').forEach(function(tr){
+      tr.style.display = tr.textContent.toLowerCase().indexOf(q)>-1 ? '' : 'none';
+    });
+  }
+  box.addEventListener('input',apply);
+});
+</script></body></html>

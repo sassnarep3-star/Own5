@@ -1,0 +1,15 @@
+{
+  "season": 2026,
+  "weeks": [
+    8,
+    9
+  ],
+  "games": 16,
+  "games_with_market_price": 16,
+  "games_without_market_price": 0,
+  "mean_abs_spread_diff": 3.966,
+  "max_abs_spread_diff": 12.23,
+  "mean_abs_total_diff": 2.728,
+  "train_games": 5199,
+  "disclaimer": "Model prices are research output. No strategy cleared the validation gates; divergence from the market is NOT evidence of a profitable edge."
+}

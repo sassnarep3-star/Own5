@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sources &amp; Method — OWN5 Empirical Lab</title>
+<meta name="description" content="Walk-forward NFL line origination, measured correlations, and skill-vs-luck validation. Every row source-linked.">
+<style>
+:root{--bg:#0b0f14;--panel:#141a21;--panel2:#1b232c;--line:#2a3441;--txt:#e8eef4;
+--mut:#93a1b1;--acc:#4da3ff;--ok:#3fb950;--warn:#d9a521;--bad:#f2555a;--gold:#e3b341}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);line-height:1.55;
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--panel);border-bottom:1px solid var(--line);padding:14px 22px;
+position:sticky;top:0;z-index:20}
+.brand{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.brand h1{margin:0;font-size:18px;letter-spacing:.2px}
+.brand .tag{font-size:11px;color:var(--mut);border:1px solid var(--line);
+border-radius:20px;padding:2px 9px}
+nav{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px}
+nav a{font-size:13px;color:var(--mut);padding:4px 10px;border-radius:6px}
+nav a:hover{background:var(--panel2);color:var(--txt);text-decoration:none}
+nav a.active{background:var(--acc);color:#04121f;font-weight:600}
+main{max-width:1280px;margin:0 auto;padding:22px}
+h2{font-size:21px;margin:26px 0 8px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+h2:first-of-type{margin-top:6px}
+h3{font-size:15px;color:var(--acc);margin:20px 0 6px}
+p{margin:8px 0}
+.lede{color:var(--mut);font-size:14px;max-width:95ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:16px 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:15px}
+.card .k{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--mut)}
+.card .v{font-size:25px;font-weight:700;margin:5px 0;font-variant-numeric:tabular-nums}
+.card .n{font-size:12px;color:var(--mut)}
+.card.ok .v{color:var(--ok)}.card.warn .v{color:var(--warn)}.card.bad .v{color:var(--bad)}
+.note{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);
+border-radius:0 8px 8px 0;padding:11px 15px;margin:14px 0;font-size:13.5px}
+.note.warn{border-left-color:var(--warn)}.note.bad{border-left-color:var(--bad)}
+.note.ok{border-left-color:var(--ok)}
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:8px;margin:12px 0}
+table{border-collapse:collapse;width:100%;font-size:13px;background:var(--panel)}
+th,td{border-bottom:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--panel2);color:var(--mut);font-weight:600;font-size:11.5px;
+text-transform:uppercase;letter-spacing:.4px;white-space:nowrap;position:sticky;top:0}
+tbody tr:hover td{background:#1a222b}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.badge{display:inline-block;font-size:10.5px;padding:1px 7px;border-radius:20px;
+border:1px solid var(--line);white-space:nowrap}
+.b-ok{color:var(--ok);border-color:var(--ok)}.b-bad{color:var(--bad);border-color:var(--bad)}
+.b-warn{color:var(--warn);border-color:var(--warn)}.b-mut{color:var(--mut)}
+.blank{color:var(--warn);font-style:italic}
+.pos{color:var(--ok)}.neg{color:var(--bad)}
+.src{font-size:11.5px;white-space:nowrap}
+.small{font-size:12px;color:var(--mut)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:16px}
+.bar{height:7px;background:var(--panel2);border-radius:4px;overflow:hidden;min-width:60px}
+.bar span{display:block;height:100%;background:var(--acc)}
+footer{border-top:1px solid var(--line);margin-top:34px;padding:18px 22px;
+color:var(--mut);font-size:12px;text-align:center}
+code{background:var(--panel2);padding:1px 5px;border-radius:4px;font-size:12px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.filters input,.filters select{background:var(--panel);color:var(--txt);
+border:1px solid var(--line);border-radius:6px;padding:6px 10px;font-size:13px}
+.filters input{min-width:220px}
+@media(max-width:700px){main{padding:14px}table{font-size:12px}th,td{padding:5px 7px}
+.card .v{font-size:21px}}
+</style></head><body>
+<header><div class="brand"><h1>OWN5 · Empirical Lab</h1>
+<span class="tag">NFL line origination</span>
+<span class="tag">2006–2025 backtest · 2026 board</span>
+<span class="tag">built 2026-11-02</span></div>
+<nav><a href="index.html">Dashboard</a><a href="board.html">Our Lines</a><a href="leaderboard.html">Leaderboard</a><a href="strategies.html">Strategies</a><a href="correlations.html">Correlations</a><a href="combos.html">Combo Pricing</a><a href="skill-luck.html">Skill vs Luck</a><a href="gates.html">Validation Gates</a><a href="verification.html">Verification</a><a href="executive-summary.html">Executive Summary</a><a href="flagged.html">Flagged for Review</a><a href="sources.html" class="active">Sources &amp; Method</a></nav></header>
+<main>
+<h2>Sources and method</h2>
+<h3>Primary official source</h3>
+<p>Final scores are verified against <a href="https://www.nfl.com/scores/" target="_blank" rel="noopener">NFL.com official scoreboards</a>.
+Each verified game row links to the exact weekly page it was read from. Player statistics are referenced to
+<a href="https://www.nfl.com/stats/player-stats/" target="_blank" rel="noopener">NFL.com official player stats</a>.</p>
+<h3>Third-party inputs (declared, not official)</h3>
+<div class="scroll"><table><thead><tr><th>File</th><th>Status</th><th>Upstream</th><th>Pinned revision</th></tr></thead><tbody><tr><td><code>games.csv</code></td><td>THIRD-PARTY. Not an official NFL publication.</td><td><a class="src" href="https://github.com/nflverse/nfldata" rel="noopener noreferrer" target="_blank">upstream</a></td><td class='small'>3cd32debd8c1bb0eb71ac4092584524e8d2c9cde</td></tr><tr><td><code>player_weekly/**</code></td><td>THIRD-PARTY (Pro-Football-Reference derived). Not official.</td><td><a class="src" href="https://github.com/bendominguez0111/fantasy-csv-data" rel="noopener noreferrer" target="_blank">upstream</a></td><td class='small'>master</td></tr></tbody></table></div>
+<div class="note bad"><strong>No official league source publishes betting lines.</strong> Spreads, totals and
+moneylines in this project come from a third-party consensus dataset. Every price-dependent result inherits
+that limitation, which is why gate G8 exists and why no prop ROI is claimed at all.</div>
+<h3>Method</h3>
+<div class="scroll"><table><thead><tr><th>Stage</th><th>Implementation</th></tr></thead><tbody>
+<tr><td>Line origination</td><td>Weighted ridge on team indicators; exponential recency decay (300-day half-life); refit every week on strictly prior games. Separate margin and total models. Market prices are never used as model features.</td></tr>
+<tr><td>Probability conversion</td><td>Normal margin distribution with continuity correction for ties; residual sigma estimated from training data only.</td></tr>
+<tr><td>De-vigging</td><td>Proportional (multiplicative) removal of overround from both sides of each two-way market.</td></tr>
+<tr><td>Correlation</td><td>φ coefficient for binary legs; observed joint vs product of marginals; week-clustered bootstrap intervals.</td></tr>
+<tr><td>Skill vs luck</td><td>Exact binomial test vs realised break-even; cluster bootstrap ROI; Benjamini–Hochberg FDR at 10%; deflated Sharpe; chronological era split.</td></tr>
+<tr><td>Prop lines</td><td>Originated in-repo as trailing season-to-date median (min 3 prior games). No sportsbook prop price is invented.</td></tr>
+</tbody></table></div>
+<h3>Reproduce</h3>
+<p><code>pip install -r engine/requirements.txt</code> then <code>python engine/run_all.py</code>.
+All randomness is seeded (20261102). Tests: <code>python -m unittest tests.test_engine</code>.</p>
+<p class="small">spread_line/total_line/moneyline fields in games.csv are third-party consensus closing prices. No official league source publishes betting lines. All price-dependent results are flagged accordingly.</p>
+</main>
+<footer>OWN5 Empirical Lab · research output, not betting advice ·
+every table row carries a source link · unverifiable values are left blank and flagged ·
+<a href="../index.html">NFL Research Desk</a> ·
+<a href="https://github.com/sassnarep3-star/Own5">repository</a></footer>
+<script>
+document.querySelectorAll('[data-filter]').forEach(function(box){
+  var table=document.getElementById(box.getAttribute('data-filter'));
+  if(!table)return;
+  function apply(){
+    var q=box.value.toLowerCase();
+    table.querySelectorAll('tbody tr').forEach(function(tr){
+      tr.style.display = tr.textContent.toLowerCase().indexOf(q)>-1 ? '' : 'none';
+    });
+  }
+  box.addEventListener('input',apply);
+});
+</script></body></html>

@@ -1,0 +1,63 @@
+name: Verify empirical engine
+
+on:
+  push:
+    branches: [main, arena/55e682dd-own5]
+    paths:
+      - 'engine/**'
+      - 'data/raw/**'
+      - 'data/empirical/**'
+      - 'lab/**'
+      - 'tests/test_engine.py'
+      - 'tests/browser_lab.cjs'
+      - '.github/workflows/engine.yml'
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  engine:
+    name: Reproduce, test and check lab
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install engine dependencies
+        run: pip install -r engine/requirements.txt
+
+      - name: Reproduce every empirical output from raw data
+        run: python engine/run_all.py
+
+      - name: Rebuild lab pages
+        run: python engine/build_lab.py
+
+      - name: Assert committed outputs are reproducible
+        run: |
+          git diff --stat -- data/empirical lab research/empirical
+          git diff --exit-code -- data/empirical lab research/empirical
+
+      - name: Integrity tests (no lookahead, odds math, gates, provenance)
+        run: python -m unittest tests.test_engine -v
+
+      - name: Lab link and evidence checks
+        run: python engine/check_lab.py
+
+      - name: Install browser dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Real Chromium checks (desktop, mobile, filters, source links)
+        run: |
+          python -m http.server 8080 --bind 0.0.0.0 &
+          trap 'kill $!' EXIT
+          node -e "const net=require('node:net');let n=0;function w(){const s=net.connect(8080,'127.0.0.1',()=>{s.end();process.exit(0)});s.on('error',()=>{if(++n>60)process.exit(1);setTimeout(w,200)})};w()"
+          TEST_BASE_URL=http://127.0.0.1:8080 node tests/browser_lab.cjs

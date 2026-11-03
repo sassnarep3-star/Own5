@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Skill vs Luck — OWN5 Empirical Lab</title>
+<meta name="description" content="Walk-forward NFL line origination, measured correlations, and skill-vs-luck validation. Every row source-linked.">
+<style>
+:root{--bg:#0b0f14;--panel:#141a21;--panel2:#1b232c;--line:#2a3441;--txt:#e8eef4;
+--mut:#93a1b1;--acc:#4da3ff;--ok:#3fb950;--warn:#d9a521;--bad:#f2555a;--gold:#e3b341}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);line-height:1.55;
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--panel);border-bottom:1px solid var(--line);padding:14px 22px;
+position:sticky;top:0;z-index:20}
+.brand{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.brand h1{margin:0;font-size:18px;letter-spacing:.2px}
+.brand .tag{font-size:11px;color:var(--mut);border:1px solid var(--line);
+border-radius:20px;padding:2px 9px}
+nav{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px}
+nav a{font-size:13px;color:var(--mut);padding:4px 10px;border-radius:6px}
+nav a:hover{background:var(--panel2);color:var(--txt);text-decoration:none}
+nav a.active{background:var(--acc);color:#04121f;font-weight:600}
+main{max-width:1280px;margin:0 auto;padding:22px}
+h2{font-size:21px;margin:26px 0 8px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+h2:first-of-type{margin-top:6px}
+h3{font-size:15px;color:var(--acc);margin:20px 0 6px}
+p{margin:8px 0}
+.lede{color:var(--mut);font-size:14px;max-width:95ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:16px 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:15px}
+.card .k{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--mut)}
+.card .v{font-size:25px;font-weight:700;margin:5px 0;font-variant-numeric:tabular-nums}
+.card .n{font-size:12px;color:var(--mut)}
+.card.ok .v{color:var(--ok)}.card.warn .v{color:var(--warn)}.card.bad .v{color:var(--bad)}
+.note{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);
+border-radius:0 8px 8px 0;padding:11px 15px;margin:14px 0;font-size:13.5px}
+.note.warn{border-left-color:var(--warn)}.note.bad{border-left-color:var(--bad)}
+.note.ok{border-left-color:var(--ok)}
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:8px;margin:12px 0}
+table{border-collapse:collapse;width:100%;font-size:13px;background:var(--panel)}
+th,td{border-bottom:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--panel2);color:var(--mut);font-weight:600;font-size:11.5px;
+text-transform:uppercase;letter-spacing:.4px;white-space:nowrap;position:sticky;top:0}
+tbody tr:hover td{background:#1a222b}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.badge{display:inline-block;font-size:10.5px;padding:1px 7px;border-radius:20px;
+border:1px solid var(--line);white-space:nowrap}
+.b-ok{color:var(--ok);border-color:var(--ok)}.b-bad{color:var(--bad);border-color:var(--bad)}
+.b-warn{color:var(--warn);border-color:var(--warn)}.b-mut{color:var(--mut)}
+.blank{color:var(--warn);font-style:italic}
+.pos{color:var(--ok)}.neg{color:var(--bad)}
+.src{font-size:11.5px;white-space:nowrap}
+.small{font-size:12px;color:var(--mut)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:16px}
+.bar{height:7px;background:var(--panel2);border-radius:4px;overflow:hidden;min-width:60px}
+.bar span{display:block;height:100%;background:var(--acc)}
+footer{border-top:1px solid var(--line);margin-top:34px;padding:18px 22px;
+color:var(--mut);font-size:12px;text-align:center}
+code{background:var(--panel2);padding:1px 5px;border-radius:4px;font-size:12px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.filters input,.filters select{background:var(--panel);color:var(--txt);
+border:1px solid var(--line);border-radius:6px;padding:6px 10px;font-size:13px}
+.filters input{min-width:220px}
+@media(max-width:700px){main{padding:14px}table{font-size:12px}th,td{padding:5px 7px}
+.card .v{font-size:21px}}
+</style></head><body>
+<header><div class="brand"><h1>OWN5 · Empirical Lab</h1>
+<span class="tag">NFL line origination</span>
+<span class="tag">2006–2025 backtest · 2026 board</span>
+<span class="tag">built 2026-11-02</span></div>
+<nav><a href="index.html">Dashboard</a><a href="board.html">Our Lines</a><a href="leaderboard.html">Leaderboard</a><a href="strategies.html">Strategies</a><a href="correlations.html">Correlations</a><a href="combos.html">Combo Pricing</a><a href="skill-luck.html" class="active">Skill vs Luck</a><a href="gates.html">Validation Gates</a><a href="verification.html">Verification</a><a href="executive-summary.html">Executive Summary</a><a href="flagged.html">Flagged for Review</a><a href="sources.html">Sources &amp; Method</a></nav></header>
+<main>
+<h2>Removing luck from the equation</h2>
+<p class="lede">Luck cannot be eliminated from a football outcome. What can be done is to refuse to call a
+result skill until it survives tests designed to kill lucky backtests. Six independent checks are applied to
+every strategy.</p>
+<div class="scroll"><table><thead><tr><th>Check</th><th>What it stops</th></tr></thead><tbody>
+<tr><td>Break-even from actual prices</td><td>Comparing a −120 bet to a generic 52.4% threshold</td></tr>
+<tr><td>Exact binomial test</td><td>Reading a small win-rate edge as meaningful</td></tr>
+<tr><td>Cluster bootstrap by week</td><td>Treating same-week bets as independent samples</td></tr>
+<tr><td>Benjamini–Hochberg FDR</td><td>Testing many strategies until one looks good</td></tr>
+<tr><td>Deflated Sharpe Ratio</td><td>Ignoring the Sharpe expected from the best of N noise trials</td></tr>
+<tr><td>Era split</td><td>A result driven by one favourable stretch of seasons</td></tr>
+</tbody></table></div>
+<div class="cards">
+<div class="card "><div class="k">Strategies tested</div><div class="v">7</div><div class="n"></div></div>
+<div class="card warn"><div class="k">Positive ROI</div><div class="v">1</div><div class="n">point estimate only</div></div>
+<div class="card bad"><div class="k">Survive FDR control</div><div class="v">0</div><div class="n">multiple-testing corrected</div></div>
+<div class="card "><div class="k">Bootstrap replicates</div><div class="v">10,000</div><div class="n">resampling whole weeks</div></div>
+</div>
+<div class="filters"><input type="search" data-filter="sltbl" placeholder="Filter rows…" aria-label="Filter table"></div>
+<div class="scroll"><table id="sltbl"><thead><tr><th class="">Strategy</th><th class="num">Bets</th><th class="num">Win rate</th><th class="num">Break-even</th><th class="num">Edge</th><th class="num">ROI</th><th class="num">CI low</th><th class="num">CI high</th><th class="num">P(ROI&gt;0)</th><th class="num">Binomial p</th><th class="">FDR pass</th><th class="num">Deflated Sharpe</th><th class="num">Luck share</th></tr></thead><tbody><tr><td class="">P1_cross_game_2leg</td><td class="num"><span class="pos">317</span></td><td class="num"><span class="pos">0.25868</span></td><td class="num"><span class="pos">0.38462</span></td><td class="num"><span class="neg">-0.12594</span></td><td class="num"><span class="neg">-0.32744</span></td><td class="num"><span class="neg">-0.45047</span></td><td class="num"><span class="neg">-0.19937</span></td><td class="num"><span class="">0</span></td><td class="num"><span class="pos">0.999999</span></td><td><span class="badge b-bad">False</span></td><td class="num"><span class="">0</span></td><td class="num"><span class="pos">0.21697</span></td></tr><tr><td class="">P2_same_game_fav_over</td><td class="num"><span class="pos">3450</span></td><td class="num"><span class="pos">0.22812</span></td><td class="num"><span class="pos">0.27778</span></td><td class="num"><span class="neg">-0.04966</span></td><td class="num"><span class="neg">-0.17878</span></td><td class="num"><span class="neg">-0.22879</span></td><td class="num"><span class="neg">-0.12802</span></td><td class="num"><span class="">0</span></td><td class="num"><span class="pos">1</span></td><td><span class="badge b-bad">False</span></td><td class="num"><span class="">0</span></td><td class="num"><span class="pos">0.15355</span></td></tr><tr><td class="">S1_spread_value</td><td class="num"><span class="pos">3730</span></td><td class="num"><span class="pos">0.50402</span></td><td class="num"><span class="pos">0.51226</span></td><td class="num"><span class="neg">-0.00823</span></td><td class="num"><span class="neg">-0.0153</span></td><td class="num"><span class="neg">-0.04783</span></td><td class="num"><span class="pos">0.01696</span></td><td class="num"><span class="pos">0.1737</span></td><td class="num"><span class="pos">0.846718</span></td><td><span class="badge b-bad">False</span></td><td class="num"><span class="pos">0.00959</span></td><td class="num"><span class="pos">0.99395</span></td></tr><tr><td class="">S2_total_value</td><td class="num"><span class="pos">3603</span></td><td class="num"><span class="pos">0.50985</span></td><td class="num"><span class="pos">0.51337</span></td><td class="num"><span class="neg">-0.00352</span></td><td class="num"><span class="neg">-0.00637</span></td><td class="num"><span class="neg">-0.03921</span></td><td class="num"><span class="pos">0.02593</span></td><td class="num"><span class="pos">0.3483</span></td><td class="num"><span class="pos">0.669695</span></td><td><span class="badge b-bad">False</span></td><td class="num"><span class="pos">0.03759</span></td><td class="num"><span class="pos">1</span></td></tr><tr><td class="">S3_rest_edge</td><td class="num"><span class="pos">49</span></td><td class="num"><span class="pos">0.40816</span></td><td class="num"><span class="pos">0.5163</span></td><td class="num"><span class="neg">-0.10813</span></td><td class="num"><span class="neg">-0.20993</span></td><td class="num"><span class="neg">-0.46801</span></td><td class="num"><span class="pos">0.05862</span></td><td class="num"><span class="pos">0.0644</span></td><td class="num"><span class="pos">0.951523</span></td><td><span class="badge b-bad">False</span></td><td class="num"><span class="pos">0.00266</span></td><td class="num"><span class="pos">0.6602</span></td></tr><tr><td class="">S4_division_dog</td><td class="num"><span class="pos">1427</span></td><td class="num"><span class="pos">0.51997</span></td><td class="num"><span class="pos">0.51705</span></td><td class="num"><span class="pos">0.00292</span></td><td class="num"><span class="pos">0.00665</span></td><td class="num"><span class="neg">-0.04364</span></td><td class="num"><span class="pos">0.05768</span></td><td class="num"><span class="pos">0.6144</span></td><td class="num"><span class="pos">0.422965</span></td><td><span class="badge b-bad">False</span></td><td class="num"><span class="pos">0.12981</span></td><td class="num"><span class="pos">1</span></td></tr><tr><td class="">S5_fade_big_favorite</td><td class="num"><span class="pos">1476</span></td><td class="num"><span class="pos">0.51084</span></td><td class="num"><span class="pos">0.52109</span></td><td class="num"><span class="neg">-0.01025</span></td><td class="num"><span class="neg">-0.02006</span></td><td class="num"><span class="neg">-0.06612</span></td><td class="num"><span class="pos">0.02666</span></td><td class="num"><span class="pos">0.2087</span></td><td class="num"><span class="pos">0.792342</span></td><td><span class="badge b-bad">False</span></td><td class="num"><span class="pos">0.01426</span></td><td class="num"><span class="pos">1</span></td></tr></tbody></table></div>
+<p class="small"><strong>Luck share</strong> is the fraction of the observed deviation from break-even that
+one standard deviation of pure binomial noise could explain. A value of 1.0 means the result is entirely
+consistent with luck.</p>
+<div class="note">Luck cannot be removed from outcomes; it can only be bounded. No strategy is promoted on point estimate alone.</div>
+</main>
+<footer>OWN5 Empirical Lab · research output, not betting advice ·
+every table row carries a source link · unverifiable values are left blank and flagged ·
+<a href="../index.html">NFL Research Desk</a> ·
+<a href="https://github.com/sassnarep3-star/Own5">repository</a></footer>
+<script>
+document.querySelectorAll('[data-filter]').forEach(function(box){
+  var table=document.getElementById(box.getAttribute('data-filter'));
+  if(!table)return;
+  function apply(){
+    var q=box.value.toLowerCase();
+    table.querySelectorAll('tbody tr').forEach(function(tr){
+      tr.style.display = tr.textContent.toLowerCase().indexOf(q)>-1 ? '' : 'none';
+    });
+  }
+  box.addEventListener('input',apply);
+});
+</script></body></html>

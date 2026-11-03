@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flagged for Review — OWN5 Empirical Lab</title>
+<meta name="description" content="Walk-forward NFL line origination, measured correlations, and skill-vs-luck validation. Every row source-linked.">
+<style>
+:root{--bg:#0b0f14;--panel:#141a21;--panel2:#1b232c;--line:#2a3441;--txt:#e8eef4;
+--mut:#93a1b1;--acc:#4da3ff;--ok:#3fb950;--warn:#d9a521;--bad:#f2555a;--gold:#e3b341}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);line-height:1.55;
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--panel);border-bottom:1px solid var(--line);padding:14px 22px;
+position:sticky;top:0;z-index:20}
+.brand{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.brand h1{margin:0;font-size:18px;letter-spacing:.2px}
+.brand .tag{font-size:11px;color:var(--mut);border:1px solid var(--line);
+border-radius:20px;padding:2px 9px}
+nav{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px}
+nav a{font-size:13px;color:var(--mut);padding:4px 10px;border-radius:6px}
+nav a:hover{background:var(--panel2);color:var(--txt);text-decoration:none}
+nav a.active{background:var(--acc);color:#04121f;font-weight:600}
+main{max-width:1280px;margin:0 auto;padding:22px}
+h2{font-size:21px;margin:26px 0 8px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+h2:first-of-type{margin-top:6px}
+h3{font-size:15px;color:var(--acc);margin:20px 0 6px}
+p{margin:8px 0}
+.lede{color:var(--mut);font-size:14px;max-width:95ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:16px 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:15px}
+.card .k{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--mut)}
+.card .v{font-size:25px;font-weight:700;margin:5px 0;font-variant-numeric:tabular-nums}
+.card .n{font-size:12px;color:var(--mut)}
+.card.ok .v{color:var(--ok)}.card.warn .v{color:var(--warn)}.card.bad .v{color:var(--bad)}
+.note{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);
+border-radius:0 8px 8px 0;padding:11px 15px;margin:14px 0;font-size:13.5px}
+.note.warn{border-left-color:var(--warn)}.note.bad{border-left-color:var(--bad)}
+.note.ok{border-left-color:var(--ok)}
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:8px;margin:12px 0}
+table{border-collapse:collapse;width:100%;font-size:13px;background:var(--panel)}
+th,td{border-bottom:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--panel2);color:var(--mut);font-weight:600;font-size:11.5px;
+text-transform:uppercase;letter-spacing:.4px;white-space:nowrap;position:sticky;top:0}
+tbody tr:hover td{background:#1a222b}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.badge{display:inline-block;font-size:10.5px;padding:1px 7px;border-radius:20px;
+border:1px solid var(--line);white-space:nowrap}
+.b-ok{color:var(--ok);border-color:var(--ok)}.b-bad{color:var(--bad);border-color:var(--bad)}
+.b-warn{color:var(--warn);border-color:var(--warn)}.b-mut{color:var(--mut)}
+.blank{color:var(--warn);font-style:italic}
+.pos{color:var(--ok)}.neg{color:var(--bad)}
+.src{font-size:11.5px;white-space:nowrap}
+.small{font-size:12px;color:var(--mut)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:16px}
+.bar{height:7px;background:var(--panel2);border-radius:4px;overflow:hidden;min-width:60px}
+.bar span{display:block;height:100%;background:var(--acc)}
+footer{border-top:1px solid var(--line);margin-top:34px;padding:18px 22px;
+color:var(--mut);font-size:12px;text-align:center}
+code{background:var(--panel2);padding:1px 5px;border-radius:4px;font-size:12px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.filters input,.filters select{background:var(--panel);color:var(--txt);
+border:1px solid var(--line);border-radius:6px;padding:6px 10px;font-size:13px}
+.filters input{min-width:220px}
+@media(max-width:700px){main{padding:14px}table{font-size:12px}th,td{padding:5px 7px}
+.card .v{font-size:21px}}
+</style></head><body>
+<header><div class="brand"><h1>OWN5 · Empirical Lab</h1>
+<span class="tag">NFL line origination</span>
+<span class="tag">2006–2025 backtest · 2026 board</span>
+<span class="tag">built 2026-11-02</span></div>
+<nav><a href="index.html">Dashboard</a><a href="board.html">Our Lines</a><a href="leaderboard.html">Leaderboard</a><a href="strategies.html">Strategies</a><a href="correlations.html">Correlations</a><a href="combos.html">Combo Pricing</a><a href="skill-luck.html">Skill vs Luck</a><a href="gates.html">Validation Gates</a><a href="verification.html">Verification</a><a href="executive-summary.html">Executive Summary</a><a href="flagged.html" class="active">Flagged for Review</a><a href="sources.html">Sources &amp; Method</a></nav></header>
+<main>
+<h2>Flagged for review</h2>
+<p class="lede">Every limitation, third-party dependency and unverified value in this project. These items are
+published rather than hidden, and none of them were resolved by guessing a value. Severity reflects how much
+the item constrains the conclusions.</p>
+<div class="note warn">Flagged items do not block publication. They block <em>promotion</em>: no strategy is
+called validated while an integrity gate is open.</div>
+<div class="scroll"><table><thead><tr><th class="">ID</th><th class="">Item</th><th class="">Severity</th><th class="">Detail</th><th class="">Disposition</th><th>Source</th></tr></thead><tbody><tr><td class="">E-F01</td><td class="">Backtest inputs are third-party</td><td class="">High</td><td class="">The historical game table is nflverse/nfldata, not an official NFL publication. Only a stratified sample (80 games) has been re-verified against NFL.com.</td><td class="">Gate G9 blocks promotion until coverage improves.</td><td><a class="src" href="https://github.com/nflverse/nfldata" rel="noopener noreferrer" target="_blank">source</a></td></tr><tr><td class="">E-F02</td><td class="">No official betting lines exist</td><td class="">High</td><td class="">No league or official body publishes spreads, totals or moneylines. All prices are third-party consensus. Every ROI figure inherits this dependency.</td><td class="">Declared on every price-dependent table; gate G8 measures assumed-price share.</td><td><a class="src" href="https://github.com/nflverse/nfldata/blob/master/data/games.csv" rel="noopener noreferrer" target="_blank">source</a></td></tr><tr><td class="">E-F03</td><td class="">No verified player-prop prices</td><td class="">High</td><td class="">Player prop lines are not published by any official source. Prop analysis therefore uses in-repo originated lines (trailing medians) and reports correlation/mispricing only.</td><td class="">No prop ROI is claimed anywhere in this project.</td><td><a class="src" href="https://www.nfl.com/stats/player-stats/" rel="noopener noreferrer" target="_blank">source</a></td></tr><tr><td class="">E-F04</td><td class="">Player data ends at 2021</td><td class="">Medium</td><td class="">The vendored weekly player table covers 2015–2021. Prop correlations are not measured on the most recent seasons, so they may have drifted with offensive scheme changes.</td><td class="">Extend the player dataset and re-run.</td><td><a class="src" href="https://github.com/bendominguez0111/fantasy-csv-data" rel="noopener noreferrer" target="_blank">source</a></td></tr><tr><td class="">E-F05</td><td class="">Model is less accurate than the market</td><td class="">High</td><td class="">Our originated lines lose to the closing line on spread RMSE, total RMSE and Brier score. Divergence on the board page is therefore not evidence of edge.</td><td class="">Reported prominently; no strategy promoted.</td><td><a class="src" href="https://www.nfl.com/scores/" rel="noopener noreferrer" target="_blank">source</a></td></tr><tr><td class="">E-F06</td><td class="">Zero strategies passed validation</td><td class="">High</td><td class="">All seven strategies failed at least one hard gate. No reward tier is awarded and no profitable edge is claimed.</td><td class="">This is the honest result, not a failure to run.</td><td><a class="src" href="https://www.nfl.com/scores/" rel="noopener noreferrer" target="_blank">source</a></td></tr><tr><td class="">E-F07</td><td class="">Team-code irregularity (corrected)</td><td class="">Low</td><td class="">Upstream uses LA for the Rams while official pages use LAR; OAK/SD/STL are legacy codes. Four official rows initially failed to join. Aliases are now normalised engine-wide.</td><td class="">Fixed; verification now matches 80/80.</td><td><a class="src" href="https://www.nfl.com/scores/" rel="noopener noreferrer" target="_blank">source</a></td></tr><tr><td class="">E-F08</td><td class="">Proportional de-vig bias</td><td class="">Medium</td><td class="">Multiplicative de-vigging is known to be mildly biased toward longshots relative to Shin or power methods. This affects the market probability used as the edge benchmark.</td><td class="">Documented; alternative de-vig methods are future work.</td><td><a class="src" href="https://www.nfl.com/odds/" rel="noopener noreferrer" target="_blank">source</a></td></tr><tr><td class="">E-F09</td><td class="">Correlated-combo EV is theoretical</td><td class="">High</td><td class="">The positive EV on QB+WR1 combos assumes a book paying the naive independence price. Real operators shade correlated same-game legs, so the price may not be obtainable.</td><td class="">Stated explicitly wherever the EV appears.</td><td><a class="src" href="https://www.nfl.com/stats/player-stats/" rel="noopener noreferrer" target="_blank">source</a></td></tr><tr><td class="">E-F10</td><td class="">Rest/roster features are limited</td><td class="">Medium</td><td class="">The model uses team strength and rest only. Injuries, quarterback changes, weather and travel are not modelled, which caps achievable accuracy.</td><td class="">Listed as the main direction for model improvement.</td><td><a class="src" href="https://www.nfl.com/injuries/" rel="noopener noreferrer" target="_blank">source</a></td></tr><tr><td class="">E-F11</td><td class="">Official pages sometimes hide scores</td><td class="">Low</td><td class="">Some NFL.com weekly scoreboards render &#x27;Hidden Score&#x27; instead of a value. Those games were not transcribed and were never guessed.</td><td class="">Verification sample excludes them by design.</td><td><a class="src" href="https://www.nfl.com/scores/" rel="noopener noreferrer" target="_blank">source</a></td></tr><tr><td class="">E-F12</td><td class="">Playoffs excluded</td><td class="">Low</td><td class="">Only regular-season games are modelled and graded. Postseason markets differ structurally and were not analysed.</td><td class="">Scope boundary, declared.</td><td><a class="src" href="https://www.nfl.com/schedules/" rel="noopener noreferrer" target="_blank">source</a></td></tr></tbody></table></div></main>
+<footer>OWN5 Empirical Lab · research output, not betting advice ·
+every table row carries a source link · unverifiable values are left blank and flagged ·
+<a href="../index.html">NFL Research Desk</a> ·
+<a href="https://github.com/sassnarep3-star/Own5">repository</a></footer>
+<script>
+document.querySelectorAll('[data-filter]').forEach(function(box){
+  var table=document.getElementById(box.getAttribute('data-filter'));
+  if(!table)return;
+  function apply(){
+    var q=box.value.toLowerCase();
+    table.querySelectorAll('tbody tr').forEach(function(tr){
+      tr.style.display = tr.textContent.toLowerCase().indexOf(q)>-1 ? '' : 'none';
+    });
+  }
+  box.addEventListener('input',apply);
+});
+</script></body></html>

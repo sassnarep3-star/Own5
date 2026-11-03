@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Strategies — OWN5 Empirical Lab</title>
+<meta name="description" content="Walk-forward NFL line origination, measured correlations, and skill-vs-luck validation. Every row source-linked.">
+<style>
+:root{--bg:#0b0f14;--panel:#141a21;--panel2:#1b232c;--line:#2a3441;--txt:#e8eef4;
+--mut:#93a1b1;--acc:#4da3ff;--ok:#3fb950;--warn:#d9a521;--bad:#f2555a;--gold:#e3b341}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);line-height:1.55;
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--panel);border-bottom:1px solid var(--line);padding:14px 22px;
+position:sticky;top:0;z-index:20}
+.brand{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.brand h1{margin:0;font-size:18px;letter-spacing:.2px}
+.brand .tag{font-size:11px;color:var(--mut);border:1px solid var(--line);
+border-radius:20px;padding:2px 9px}
+nav{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px}
+nav a{font-size:13px;color:var(--mut);padding:4px 10px;border-radius:6px}
+nav a:hover{background:var(--panel2);color:var(--txt);text-decoration:none}
+nav a.active{background:var(--acc);color:#04121f;font-weight:600}
+main{max-width:1280px;margin:0 auto;padding:22px}
+h2{font-size:21px;margin:26px 0 8px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+h2:first-of-type{margin-top:6px}
+h3{font-size:15px;color:var(--acc);margin:20px 0 6px}
+p{margin:8px 0}
+.lede{color:var(--mut);font-size:14px;max-width:95ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:16px 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:15px}
+.card .k{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--mut)}
+.card .v{font-size:25px;font-weight:700;margin:5px 0;font-variant-numeric:tabular-nums}
+.card .n{font-size:12px;color:var(--mut)}
+.card.ok .v{color:var(--ok)}.card.warn .v{color:var(--warn)}.card.bad .v{color:var(--bad)}
+.note{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);
+border-radius:0 8px 8px 0;padding:11px 15px;margin:14px 0;font-size:13.5px}
+.note.warn{border-left-color:var(--warn)}.note.bad{border-left-color:var(--bad)}
+.note.ok{border-left-color:var(--ok)}
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:8px;margin:12px 0}
+table{border-collapse:collapse;width:100%;font-size:13px;background:var(--panel)}
+th,td{border-bottom:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--panel2);color:var(--mut);font-weight:600;font-size:11.5px;
+text-transform:uppercase;letter-spacing:.4px;white-space:nowrap;position:sticky;top:0}
+tbody tr:hover td{background:#1a222b}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.badge{display:inline-block;font-size:10.5px;padding:1px 7px;border-radius:20px;
+border:1px solid var(--line);white-space:nowrap}
+.b-ok{color:var(--ok);border-color:var(--ok)}.b-bad{color:var(--bad);border-color:var(--bad)}
+.b-warn{color:var(--warn);border-color:var(--warn)}.b-mut{color:var(--mut)}
+.blank{color:var(--warn);font-style:italic}
+.pos{color:var(--ok)}.neg{color:var(--bad)}
+.src{font-size:11.5px;white-space:nowrap}
+.small{font-size:12px;color:var(--mut)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:16px}
+.bar{height:7px;background:var(--panel2);border-radius:4px;overflow:hidden;min-width:60px}
+.bar span{display:block;height:100%;background:var(--acc)}
+footer{border-top:1px solid var(--line);margin-top:34px;padding:18px 22px;
+color:var(--mut);font-size:12px;text-align:center}
+code{background:var(--panel2);padding:1px 5px;border-radius:4px;font-size:12px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.filters input,.filters select{background:var(--panel);color:var(--txt);
+border:1px solid var(--line);border-radius:6px;padding:6px 10px;font-size:13px}
+.filters input{min-width:220px}
+@media(max-width:700px){main{padding:14px}table{font-size:12px}th,td{padding:5px 7px}
+.card .v{font-size:21px}}
+</style></head><body>
+<header><div class="brand"><h1>OWN5 · Empirical Lab</h1>
+<span class="tag">NFL line origination</span>
+<span class="tag">2006–2025 backtest · 2026 board</span>
+<span class="tag">built 2026-11-02</span></div>
+<nav><a href="index.html">Dashboard</a><a href="board.html">Our Lines</a><a href="leaderboard.html">Leaderboard</a><a href="strategies.html" class="active">Strategies</a><a href="correlations.html">Correlations</a><a href="combos.html">Combo Pricing</a><a href="skill-luck.html">Skill vs Luck</a><a href="gates.html">Validation Gates</a><a href="verification.html">Verification</a><a href="executive-summary.html">Executive Summary</a><a href="flagged.html">Flagged for Review</a><a href="sources.html">Sources &amp; Method</a></nav></header>
+<main>
+<h2>Strategies tested</h2>
+<p class="lede">Seven deterministic rules covering single bets, cross-game parlays and same-game
+combinations. Thresholds were fixed before grading; nothing was tuned on the test window. Pushes refund
+the stake. Player-prop combinations are analysed on the <a href="combos.html">combo pricing page</a> instead
+of being graded, because no verified sportsbook prop price exists to grade against.</p>
+<div class="scroll"><table><thead><tr><th class="">Strategy</th><th class="">Rule</th><th class="num">Bets</th><th class="num">W</th><th class="num">L</th><th class="num">Push</th><th class="num">Win rate</th><th class="num">Profit (u)</th><th class="num">ROI</th></tr></thead><tbody><tr><td class="">P1_cross_game_2leg</td><td class="">Two-leg parlay of the strongest spread edges from different games in the same week.</td><td class="num"><span class="pos">331</span></td><td class="num"><span class="pos">82</span></td><td class="num"><span class="pos">235</span></td><td class="num"><span class="pos">14</span></td><td class="num"><span class="pos">0.25868</span></td><td class="num"><span class="neg">-103.8</span></td><td class="num"><span class="neg">-0.32744</span></td></tr><tr><td class="">P2_same_game_fav_over</td><td class="">Favourite covers + game over, priced with the empirical joint rate from prior seasons only.</td><td class="num"><span class="pos">3450</span></td><td class="num"><span class="pos">787</span></td><td class="num"><span class="pos">2663</span></td><td class="num"><span class="">0</span></td><td class="num"><span class="pos">0.22812</span></td><td class="num"><span class="neg">-616.8</span></td><td class="num"><span class="neg">-0.17878</span></td></tr><tr><td class="">S1_spread_value</td><td class="">Bet the spread when our calibrated cover probability exceeds the de-vigged market probability by ≥3pp.</td><td class="num"><span class="pos">3828</span></td><td class="num"><span class="pos">1880</span></td><td class="num"><span class="pos">1850</span></td><td class="num"><span class="pos">98</span></td><td class="num"><span class="pos">0.50402</span></td><td class="num"><span class="neg">-57.0628</span></td><td class="num"><span class="neg">-0.0153</span></td></tr><tr><td class="">S2_total_value</td><td class="">Bet over/under when our total projection implies ≥3pp more probability than the de-vigged market.</td><td class="num"><span class="pos">3641</span></td><td class="num"><span class="pos">1837</span></td><td class="num"><span class="pos">1766</span></td><td class="num"><span class="pos">38</span></td><td class="num"><span class="pos">0.50985</span></td><td class="num"><span class="neg">-22.9618</span></td><td class="num"><span class="neg">-0.00637</span></td></tr><tr><td class="">S3_rest_edge</td><td class="">Back a team coming off a bye against an opponent on a short week.</td><td class="num"><span class="pos">50</span></td><td class="num"><span class="pos">20</span></td><td class="num"><span class="pos">29</span></td><td class="num"><span class="pos">1</span></td><td class="num"><span class="pos">0.40816</span></td><td class="num"><span class="neg">-10.2867</span></td><td class="num"><span class="neg">-0.20993</span></td></tr><tr><td class="">S4_division_dog</td><td class="">Back divisional underdogs of 3+ points.</td><td class="num"><span class="pos">1466</span></td><td class="num"><span class="pos">742</span></td><td class="num"><span class="pos">685</span></td><td class="num"><span class="pos">39</span></td><td class="num"><span class="pos">0.51997</span></td><td class="num"><span class="pos">9.4869</span></td><td class="num"><span class="pos">0.00665</span></td></tr><tr><td class="">S5_fade_big_favorite</td><td class="">Back the underdog when the market lays 7+ points.</td><td class="num"><span class="pos">1512</span></td><td class="num"><span class="pos">754</span></td><td class="num"><span class="pos">722</span></td><td class="num"><span class="pos">36</span></td><td class="num"><span class="pos">0.51084</span></td><td class="num"><span class="neg">-29.6106</span></td><td class="num"><span class="neg">-0.02006</span></td></tr></tbody></table></div>
+<div class="note">Every strategy above is measured against the price actually recorded for that game.
+Where the upstream table lacked a specific price, a −110 assumption was applied and flagged per bet;
+the share of assumed prices is a validation gate (G8).</div>
+<h2>Per-season stability</h2>
+<div class="scroll"><table><thead><tr><th class="">Strategy</th><th class="num">ROI first half</th><th class="num">ROI second half</th><th class="">Stable &amp; positive</th><th class="num">Bets needed for 80% power</th></tr></thead><tbody><tr><td class="">P1_cross_game_2leg</td><td class="num"><span class="neg">-0.23902</span></td><td class="num"><span class="neg">-0.42222</span></td><td><span class="badge b-bad">False</span></td><td class="num"><span class="blank">—</span></td></tr><tr><td class="">P2_same_game_fav_over</td><td class="num"><span class="neg">-0.16432</span></td><td class="num"><span class="neg">-0.19465</span></td><td><span class="badge b-bad">False</span></td><td class="num"><span class="blank">—</span></td></tr><tr><td class="">S1_spread_value</td><td class="num"><span class="neg">-0.00315</span></td><td class="num"><span class="neg">-0.02817</span></td><td><span class="badge b-bad">False</span></td><td class="num"><span class="blank">—</span></td></tr><tr><td class="">S2_total_value</td><td class="num"><span class="pos">0.0264</span></td><td class="num"><span class="neg">-0.04081</span></td><td><span class="badge b-bad">False</span></td><td class="num"><span class="blank">—</span></td></tr><tr><td class="">S3_rest_edge</td><td class="num"><span class="neg">-0.27468</span></td><td class="num"><span class="neg">-0.13047</span></td><td><span class="badge b-bad">False</span></td><td class="num"><span class="blank">—</span></td></tr><tr><td class="">S4_division_dog</td><td class="num"><span class="pos">0.01194</span></td><td class="num"><span class="pos">0.00064</span></td><td><span class="badge b-ok">True</span></td><td class="num"><span class="pos">458130</span></td></tr><tr><td class="">S5_fade_big_favorite</td><td class="num"><span class="neg">-0.00681</span></td><td class="num"><span class="neg">-0.03342</span></td><td><span class="badge b-bad">False</span></td><td class="num"><span class="blank">—</span></td></tr></tbody></table></div>
+<p class="small">"Bets needed" is the sample size required to distinguish the observed edge from zero at 80%
+power and 5% significance. Large numbers are the honest reason most edges cannot be confirmed.</p>
+</main>
+<footer>OWN5 Empirical Lab · research output, not betting advice ·
+every table row carries a source link · unverifiable values are left blank and flagged ·
+<a href="../index.html">NFL Research Desk</a> ·
+<a href="https://github.com/sassnarep3-star/Own5">repository</a></footer>
+<script>
+document.querySelectorAll('[data-filter]').forEach(function(box){
+  var table=document.getElementById(box.getAttribute('data-filter'));
+  if(!table)return;
+  function apply(){
+    var q=box.value.toLowerCase();
+    table.querySelectorAll('tbody tr').forEach(function(tr){
+      tr.style.display = tr.textContent.toLowerCase().indexOf(q)>-1 ? '' : 'none';
+    });
+  }
+  box.addEventListener('input',apply);
+});
+</script></body></html>
