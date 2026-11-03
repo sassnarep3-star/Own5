@@ -21,7 +21,7 @@ All inputs are CSVs in `nba-desk/data/`, transcribed from official NBA pages; ea
 - Luck: exact binomial tables (site page *Luck vs skill*), parlay joint-probability formula pq + phi sqrt(p(1-p)q(1-q)).
 
 ## Limits
-Small samples, no injury or rest adjustment, no market data, hand transcription. See the *Flagged for Review* page (14 flags).
+Small samples, no injury or rest adjustment, no market data, hand transcription. See the *Flagged for Review* page (15 flags).
 
 ## Reproduce
 ```

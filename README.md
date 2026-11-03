@@ -182,6 +182,6 @@ The existing root dashboard and its CI guard are unchanged. This desk is publish
 
 Live: https://sassnarep3-star.github.io/Own5/nba-desk/index.html · Code and data: `nba-desk/` · Write-ups: `research/nba-4396568c/`.
 
-Originates 16 NBA lines (2026-11-04 and 11-05) from official NBA.com team data, tests the method out of sample, measures team-level correlations, pre-registers six strategies (singles, parlays, prop combos) behind nine fail-closed gates, and tabulates luck-vs-skill sample sizes. **0 strategies qualify, 0 rewards are issued and no market quotes were verified**; 14 flags are listed on the *Flagged for Review* page. Every table row links to the official page it came from; unconfirmed values are blank.
+Originates 16 NBA lines (2026-11-04 and 11-05) from official NBA.com team data, tests the method out of sample, measures team-level correlations, pre-registers six strategies (singles, parlays, prop combos) behind nine fail-closed gates, and tabulates luck-vs-skill sample sizes. **0 strategies qualify, 0 rewards are issued and no market quotes were verified**; 15 flags are listed on the *Flagged for Review* page. Every table row links to the official page it came from; unconfirmed values are blank.
 
 Reproduce: `python3 nba-desk/analysis.py && python3 nba-desk/build.py && python3 -m unittest discover -s nba-desk/tests -q && python3 nba-desk/check.py`.

@@ -40,6 +40,7 @@ HR = rd("home_road_2025_26.csv")
 GS = rd("games_sample_2026_27.csv")
 SCHED = rd("schedule_2026_11_04_05.csv")
 INJ = rd("injury_report_2026-11-03_1700ET.csv")
+XC = rd("crosscheck_nba_own_lines.csv")
 TEAMS = {r["team"]: r for r in rd("teams.csv")}
 
 URL_STAND25 = "https://www.nba.com/standings?Season=2025-26"
@@ -113,7 +114,7 @@ def page(fname, title, sub, body):
         f'<footer>Every table row links to the page it was taken from. <span class="blank">Blank red cells</span> = value not confirmable, flagged on '
         f'<a href="flagged.html">Flagged for Review</a>. Sibling NBA sites from other sessions: '
         f'<a href="../docs/index.html">docs/</a> · <a href="../nba-2026-lab/index.html">nba-2026-lab</a> · '
-        f'<a href="../nba-origin-lab/index.html">nba-origin-lab</a> · <a href="../nba-validation/index.html">nba-validation</a> · <a href="../nba-audit-e9f83ff4/index.html">nba-audit</a> · '
+        f'<a href="../nba-origin-lab/index.html">nba-origin-lab</a> · <a href="../nba-validation/index.html">nba-validation</a> · <a href="../nba-own-lines/index.html">nba-own-lines</a> · <a href="../nba-audit-e9f83ff4/index.html">nba-audit</a> · '
         f'<a href="../nba-sensitivity/index.html">nba-sensitivity</a>.</footer></body></html>'
     )
 
@@ -156,9 +157,12 @@ FLAGS = [
     ("F10", "Medium", "Correlations", "Player-prop and same-game-parlay correlations are blank: no player prop lines and only a 10-game single-player sample exist in the repo. Team-level correlations here are computed from official team data; the 22-game and 44-team-game samples are small and the two rows of one game are not independent.", "Collect a large official player-game sample before computing prop correlations.", URL_PLAYER_LOG),
     ("F11", "Low", "Totals", f"Prior-only totals showed a +{f1(WF['total_model']['bias'])} point bias on the 22 games: league scoring per team-game fell from {f1(P['lt25'] / 2, 1)} (2025-26) to {f1(P['lt26'] / 2, 1)} (2026-27 to date). Published totals re-centre on the 2026-27 league level, but the early-season sample is 5-8 games per team.", "Re-check league level weekly.", URL_TRAD26),
     ("F12", "Medium", "Existing repo", "Audit of earlier NBA material: 17 of 21 sources in docs/sources.html were not re-opened this session; 15 are third-party INDUSTRY pages that are not official sources; the Yahoo memo and PubMed author/journal attribution are unverified; the arXiv:1910.08858 claim is the authors' own, not independent evidence. See Repo audit.", "Replace industry sources with official or peer-reviewed ones.", "https://github.com/sassnarep3-star/Own5/blob/main/docs/sources.html"),
-    ("F13", "Low", "Repo structure", "Seven parallel NBA sites now exist (docs/, nba-2026-lab, nba-origin-lab, nba-validation, nba-audit-e9f83ff4, nba-sensitivity, nba-desk) and the root landing page links only docs/. Root pages are owned by another session and were not edited; a request is logged in COORDINATION.md.", "Integrator of root index.html adds a hub link.", "https://github.com/sassnarep3-star/Own5/blob/main/COORDINATION.md"),
+    ("F13", "Low", "Repo structure", "Eight parallel NBA sites now exist (docs/, nba-2026-lab, nba-origin-lab, nba-validation, nba-own-lines, nba-audit-e9f83ff4, nba-sensitivity, nba-desk) and the root landing page links only docs/. Root pages are owned by another session and were not edited; a request is logged in COORDINATION.md.", "Integrator of root index.html adds a hub link.", "https://github.com/sassnarep3-star/Own5/blob/main/COORDINATION.md"),
+    ("F15", "Medium", "Model risk", "A second, independent in-repo model (nba-own-lines, session 636a7712) prices the same 16 games with different inputs and no home-court advantage. The two sets of home margins differ materially (see Model page for the mean absolute difference). Neither is validated, so no line should be treated as accurate before settlement.", "Settle the ledger and compare both models on identical games.", URL_SCHED),
     ("F14", "Low", "Process", "Requested branch naming session-<id>/<task> is impossible: the platform fixes this session's branch to arena/4396568c-own5. Logged in COORDINATION.md.", "No action needed.", "https://github.com/sassnarep3-star/Own5/blob/main/COORDINATION.md"),
 ]
+
+FLAGS.sort(key=lambda f: f[0])
 
 
 # ------------------------------------------------------------------ helpers for injuries
@@ -286,6 +290,20 @@ def build_pages():
     for r in WFR:
         rows.append([E(r["date"]), f"{E(r['away'])} @ {E(r['home'])}", r["actual_margin"], r["pred_margin"], r["naive_margin"], r["actual_total"], r["pred_total"], a(r["source_url"], "game page")])
     t_g = table(["Date", "Game", "Actual home margin", "Pred margin (prior only)", "Baseline margin", "Actual total", "Pred total (prior only)", "Source"], rows, "official", num=(2, 3, 4, 5, 6))
+    xc_rows, diffs, mine_l, oth_l = [], [], [], []
+    for L, X, S in zip(LINES, XC, SCHED):
+        assert L["game_id"] == X["game_id"] == S["game_id"] and L["home"] == X["home"] and L["away"] == X["away"]
+        m, o = float(L["own_home_margin"]), float(X["other_home_margin"])
+        diffs.append(abs(m - o))
+        mine_l.append(m)
+        oth_l.append(o)
+        h, mm = X["other_tip_et"].split(" ")[0].split(":"), X["other_tip_et"].split(" ")[1]
+        tip24 = f"{(int(h[0]) % 12) + (12 if mm == 'PM' else 0):02d}:{h[1]}"
+        tipcell = ("matches" if tip24 == S["tip_et_24h"] else "differs") if S["tip_et_24h"] else "this desk blank"
+        xc_rows.append([E(L["date"]), f"{E(L['away'])} @ {E(L['home'])}", sgn(m), sgn(o), sgn(m - o), L["own_total"], X["other_total"], tipcell,
+                        a(f"https://www.nba.com/game/{L['game_id']}", "game page") + " " + a("https://github.com/sassnarep3-star/Own5/blob/main/nba-own-lines/data/derived.json", "other model output")])
+    r_xc = sum((x - sum(mine_l) / 16) * (y - sum(oth_l) / 16) for x, y in zip(mine_l, oth_l)) / math.sqrt(sum((x - sum(mine_l) / 16) ** 2 for x in mine_l) * sum((y - sum(oth_l) / 16) ** 2 for y in oth_l))
+    t_xc = table(["Date", "Game", "Desk home margin", "Other model home margin", "Difference", "Desk total", "Other model total", "11/04 tip (ET) vs other session", "Source"], xc_rows, "official", num=(2, 3, 4, 5, 6))
     body = f"""
 <div class="notice"><b>Honest reading.</b> The model's edge over a naive baseline on 22 games is within noise (margin z = {f1(WF['margin_abs_err_gain']['z'], 2)}; total z = {f1(WF['total_abs_err_gain']['z'], 2)}). The 30-team test is the stronger evidence: last season's margin carries real but partial information (r = {f1(tt['r'], 2)}), and shrinking it by beta beat both no-shrinkage and no-information predictors, by a small margin.</div>
 <h2>Method in five lines</h2>
@@ -298,7 +316,9 @@ def build_pages():
 <h2>Walk-forward test on played 2026-27 games</h2>
 <p class="mut">Predictions use 2025-26 information only (no 2026-27 results), then are compared with actual results.</p>{t_wf}
 <h2>Out-of-sample team test</h2>{t_tt}
-<h2>The 22 games</h2>{t_g}"""
+<h2>The 22 games</h2>{t_g}
+<h2>Cross-check against an independent model in this repository</h2>
+<p class="mut">Session 636a7712 (<a href="../nba-own-lines/index.html">nba-own-lines</a>) built a different model (efficiency ratings, zero home-court advantage). Its 16 matchups and game IDs agree with this desk's schedule. Its home margins are copied into <code>data/crosscheck_nba_own_lines.csv</code>. Mean absolute difference in home margin: <b>{f1(sum(diffs) / 16, 2)} points</b>; correlation of the two sets of margins: <b>{f1(r_xc, 2)}</b>. Neither model is validated, so agreement is not evidence of accuracy, and the gap shows how model-dependent a line is (flag F15).</p>{t_xc}"""
     page("model.html", "Model & test", "Line-origination method and its out-of-sample test", body)
 
     # ---------------- correlations
@@ -502,6 +522,7 @@ def build_pages():
         ("nba-2026-lab/", "5ea3d798", "10-game player sample, 5 correlations, review flags", "No team lines", "../nba-2026-lab/index.html"),
         ("nba-audit-e9f83ff4/", "e9f83ff4", "Independent audit of the sample", "No lines", "../nba-audit-e9f83ff4/index.html"),
         ("nba-sensitivity/", "9557a8aa", "Leave-one-out sensitivity of the sample", "No lines", "../nba-sensitivity/index.html"),
+        ("nba-own-lines/", "636a7712", "Efficiency-rating own lines for the same 16 games, 4-player prop sample, 21 correlations, 0/7 qualified", "Different model and zero home-court advantage; margins differ (see Model page)", "../nba-own-lines/index.html"),
         ("nba-validation/", "e9a43ca6", "Validation engine, 6 candidate strategies, review flags; declines to publish lines", "No own lines (by design); 0 certified", "../nba-validation/index.html"),
         ("nba-origin-lab/", "9ded47ab", "Evidence register, line-origin framework, review flags", "See its page for its own lines", "../nba-origin-lab/index.html"),
     ]

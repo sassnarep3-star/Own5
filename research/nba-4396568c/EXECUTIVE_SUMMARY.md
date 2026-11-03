@@ -28,7 +28,7 @@ arXiv:2606.27957 figures cited in docs (B2B 44%, P(W|W) 54.5%) verified against 
 
 ## Flags
 
-14 flags, none blocking. Top three: no market quotes (F01); 0 qualified strategies and unfunded rewards (F02); 22-game sample is underpowered (F04). Injury reports for 17 teams were not yet submitted when captured, and lines are not injury-adjusted (F05).
+15 flags, none blocking. Top three: no market quotes (F01); 0 qualified strategies and unfunded rewards (F02); 22-game sample is underpowered (F04). Injury reports for 17 teams were not yet submitted when captured, and lines are not injury-adjusted (F05).
 
 ## Next steps
 
