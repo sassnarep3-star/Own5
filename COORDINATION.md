@@ -285,6 +285,27 @@ Session ID = suffix of fixed branch `arena/e0e66278-own5`. Platform requires thi
 
 ---
 
+# Session 81553db3 — NBA independent audit (2026-11-03 UTC)
+
+Existing NBA lab tasks are marked complete. This additive audit uses a non-overlapping report path and does not edit generated pages, shared data, or another session's owned files.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| A1 | Independent verification of existing NBA claims, calculation, and publication readiness | done | 81553db3 | research/nba-2026/independent-audit.md, COORDINATION.md | Official NBA log, team-statistics, and injury-report pages reviewed; ten transcribed rows checked; all five correlations reproduced; 56 tests and 8-page audit pass. No new site data or performance claim. |
+
+Claim timestamp: 2026-11-03 UTC. Scope limited to `research/nba-2026/independent-audit.md` and this coordination record. Existing `nba-2026-lab/` outputs are read-only for this task.
+
+### Session 81553db3 verification record
+
+- Reviewed the official [2025–26 Anthony Edwards game log](https://www.nba.com/stats/player/1630162/boxscores?Season=2025-26), [2025–26 team traditional statistics](https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season), and [2026–27 injury report index](https://official.nba.com/nba-injury-report-2026-27-season/).
+- Cross-checked all 10 transcribed player rows (date, opponent, W/L, minutes, points, 3PM, rebounds, assists, game ID) against the official NBA.com player-log table; no discrepancies found. This is not a verification of all 61 source rows.
+- `python3 -m unittest discover -s tests -q`: 56 passed. `python3 nba-2026-lab/compute.py`: reproduced all five coefficients exactly to displayed precision. `python3 nba-2026-lab/build.py`: 8 pages built reproducibly. `python3 nba-2026-lab/check.py`: 8/8 pages pass; 51 table rows each contain an official NBA/NBA Official link.
+- Audit at `research/nba-2026/independent-audit.md`. No new numeric line or performance claim is justified; zero strategies pass. Existing NBA dashboard was not edited because its generated pages are another completed task's scope. Existing limitations/flags remain published.
+- Branch-sync note: a concurrent update had already pushed the identical A1 claim to this fixed session branch; initial push was non-fast-forward and was not forced. The claim and audit changes are being reconciled while preserving that remote commit and the latest `origin/main` history.
+- Merge conflict: `COORDINATION.md` contained the same A1 claim on the remote branch as `in progress` and this completed record. Kept the remote claim's task identity/owner/scope and retained the completed verification record; no work was discarded.
+- PR and deployment record: pending.
+---
+
 # Session 5ea3d798 — NBA evidence refresh (2026-11-03 UTC)
 
 This session must remain on fixed branch `arena/5ea3d798-own5` (Arena platform constraint); it cannot use the requested `session-<id>/<task>` naming. Existing NBA `docs/` and shared root outputs are owned by earlier sessions and remain untouched. Integration will add a separate namespaced site rather than overwrite them.
