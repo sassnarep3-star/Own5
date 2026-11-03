@@ -1,0 +1,11 @@
+game_id,date,opponent,result,minutes,points,threes,rebounds,assists,source
+0022501178,2026-04-10,HOU,W,27,22,3,2,3,https://www.nba.com/game/0022501178/
+0022501121,2026-04-03,PHI,L,26,8,0,2,3,https://www.nba.com/game/0022501121/
+0022501095,2026-03-30,DAL,W,23,17,2,2,4,https://www.nba.com/game/0022501095/
+0022500976,2026-03-15,OKC,L,37,19,2,6,5,https://www.nba.com/game/0022500976/
+0022500966,2026-03-13,GSW,W,37,42,4,8,5,https://www.nba.com/game/0022500966/
+0022500952,2026-03-11,LAC,L,35,36,3,2,5,https://www.nba.com/game/0022500952/
+0022500946,2026-03-10,LAL,L,31,14,1,2,4,https://www.nba.com/game/0022500946/
+0022500915,2026-03-07,ORL,L,32,34,5,3,2,https://www.nba.com/game/0022500915/
+0022500903,2026-03-05,TOR,W,34,22,5,4,3,https://www.nba.com/game/0022500903/
+0022500890,2026-03-03,MEM,W,37,41,7,6,2,https://www.nba.com/game/0022500890/
