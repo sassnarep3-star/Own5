@@ -1,7 +1,7 @@
 # NBA Own Lines — executive summary
 
 **Snapshot:** 2026-11-03T23:39:30Z · **Season:** 2026–27 · **Session:** 636a7712  
-**Dashboard:** `nba-own-lines/index.html` (Pages URL after integration: https://sassnarep3-star.github.io/Own5/nba-own-lines/)
+**Live dashboard:** https://sassnarep3-star.github.io/Own5/nba-own-lines/ · **Integration:** [PR #27](https://github.com/sassnarep3-star/Own5/pull/27), merged 2026-11-03T23:47:32Z
 
 ## Decision
 

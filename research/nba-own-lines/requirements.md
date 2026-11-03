@@ -15,8 +15,8 @@
 | R11 | Every table row has an official source link | Automated audit of 199 body rows and 454 links | Pass | [NBA Games](https://www.nba.com/games) |
 | R12 | Blank unconfirmed values; Flagged for Review | Null derived fields, blank HTML cells, blank register and F01–F11 | Pass | [Official injury report](https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_06_15PM.pdf) |
 | R13 | Parallel-session coordination | Claim pushed first; additive scopes; concurrent board conflict preserved both records | Done | [Project coordination board](https://github.com/sassnarep3-star/Own5/blob/main/COORDINATION.md) |
-| R14 | Combined build and broken-link check | 16 new + 56 existing tests; deterministic 11-page checker | Pass locally; PR checks pending | [Project repository](https://github.com/sassnarep3-star/Own5) |
-| R15 | PR, merge and Pages deploy | Fixed session branch is integration branch | Pending at this document's initial commit | [Project pull requests](https://github.com/sassnarep3-star/Own5/pulls) |
-| R16 | No manual user input | Data collection, calculations, site, tests, integration and publication performed autonomously | In progress through R15 | [Project repository](https://github.com/sassnarep3-star/Own5) |
+| R14 | Combined build and broken-link check | 16 new + 56 existing tests; deterministic 11-page checker | Pass locally and in PR/main CI | [Project repository](https://github.com/sassnarep3-star/Own5) |
+| R15 | PR, merge and Pages deploy | PR #27 merged; deployment 41741910687 succeeded; live pages fetched | Done | [Project pull requests](https://github.com/sassnarep3-star/Own5/pulls) |
+| R16 | No manual user input | Data collection, calculations, site, tests, integration and publication performed autonomously | Done | [Project repository](https://github.com/sassnarep3-star/Own5) |
 
 **Acceptance rule:** research-line origination can be complete while strategy qualification remains zero. Missing odds, availability, outcomes or dependence evidence must never be filled with guesses. Flagged items do not block static publication, but they do block signals and rewards.

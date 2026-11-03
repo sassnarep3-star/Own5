@@ -230,14 +230,15 @@ def project_game(game: dict, team_map: dict, league: dict) -> dict:
     margin = home_points - away_points
     home_probability = logistic_probability(margin)
     away_probability = 1 - home_probability
+    rounded_margin = round_to_half(margin)
     return {
         **{key: game[key] for key in ("date", "time_et", "game_id", "away", "home", "slug")},
         "expected_possessions": possessions,
         "away_points": away_points,
         "home_points": home_points,
         "home_margin": margin,
-        "away_spread": round_to_half(margin),
-        "home_spread": -round_to_half(margin),
+        "away_spread": rounded_margin,
+        "home_spread": -rounded_margin if rounded_margin != 0 else 0.0,
         "total": round_to_half(away_points + home_points),
         "away_probability": away_probability,
         "home_probability": home_probability,

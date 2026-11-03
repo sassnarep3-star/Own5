@@ -1553,7 +1553,7 @@
       "home_margin": 0.14321399286302494,
       "home_points": 114.34975087724119,
       "home_probability": 0.5059669664091138,
-      "home_spread": -0.0,
+      "home_spread": 0.0,
       "market_spread": null,
       "market_total": null,
       "ratings_source_id": "S02",
