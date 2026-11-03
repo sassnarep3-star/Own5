@@ -67,7 +67,7 @@ class Model(unittest.TestCase):
         M = analysis.build_model(ts, hr, gs)
         committed = json.load(open(os.path.join(DESK, "data", "derived", "analysis.json")))
         for k in ("beta", "beta_t", "hfa", "sigma", "K", "K_t", "lt26"):
-            self.assertAlmostEqual(M[k], committed["params"][k], places=9)
+            self.assertAlmostEqual(M[k], committed["params"][k], places=5)
         lines = analysis.lines(M, sched)
         csv_lines = rd_derived("lines_2026_11_04_05.csv")
         self.assertEqual([l["own_spread_home"] for l in lines], [l["own_spread_home"] for l in csv_lines])

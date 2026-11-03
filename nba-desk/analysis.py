@@ -446,6 +446,17 @@ def strategy_status(wf):
 
 
 # --------------------------------------------------------------------- driver
+def stable(o, sig=8):
+    """Round floats to `sig` significant figures so output is identical across libm builds."""
+    if isinstance(o, float):
+        return float(f"{o:.{sig}g}")
+    if isinstance(o, dict):
+        return {k: stable(v, sig) for k, v in o.items()}
+    if isinstance(o, list):
+        return [stable(v, sig) for v in o]
+    return o
+
+
 def main():
     ts, hr, gs, sched = (read(f) for f in ("team_seasons.csv", "home_road_2025_26.csv", "games_sample_2026_27.csv", "schedule_2026_11_04_05.csv"))
     integ = integrity(ts, hr, gs, sched)
@@ -471,7 +482,7 @@ def main():
               "strategies": strategy_status(wf), "n_lines": len(L)}
     os.makedirs(OUT, exist_ok=True)
     with open(os.path.join(OUT, "analysis.json"), "w") as f:
-        json.dump(result, f, indent=2, sort_keys=True)
+        json.dump(stable(result), f, indent=2, sort_keys=True)
         f.write("\n")
     for name, rows in (("lines_2026_11_04_05.csv", L), ("walk_forward_22_games.csv", wf_rows), ("ratings_2026_11_03.csv", ratings)):
         with open(os.path.join(OUT, name), "w", newline="") as f:

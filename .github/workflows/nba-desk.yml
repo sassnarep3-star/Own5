@@ -25,6 +25,8 @@ jobs:
         run: |
           python nba-desk/analysis.py
           python nba-desk/build.py
+          git status --short
+          git diff --stat -- nba-desk research/nba-4396568c
           git diff --exit-code -- nba-desk research/nba-4396568c
       - name: Tests and site audit
         run: |
