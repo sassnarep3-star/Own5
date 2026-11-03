@@ -341,3 +341,27 @@ Arena fixes this session's branch name to `arena/e9f83ff4-own5`. The previous NB
 - `python3 -m unittest discover -s tests -q` passed 56 tests; NBA lab tests passed 2; NBA lab page checker passed 8 pages; audit tests passed 2 and check local navigation and linked official domains. Link presence is not source entailment.
 - Claim push: branch did not exist remotely, so the first `git pull --rebase` against that branch failed; rebased against `origin/main` and pushed the claim as the first branch commit. No conflict or data loss.
 - Integration rebase onto updated `origin/main` conflicted in the appended task board. Both the newly merged `9557a8aa` record and this session's claim were retained; no work was discarded. Rebasing rewrote this session's two commits, so the session branch was updated with a lease-protected push.
+
+---
+
+---
+
+# Session 9ded47ab — NBA line-origination evidence/validation extension (2026-11-03 UTC)
+
+Arena fixes this session's branch to `arena/9ded47ab-own5`; the requested `session-<id>/<task>` branch convention cannot be followed. Existing NBA labs, root dashboard, and other owned files are out of scope. Shared `COORDINATION.md` is the only shared file edited for claim and final record.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| O1 | Source/requirement audit and official evidence register | done | 9ded47ab | COORDINATION.md, nba-origin-lab/** | Claimed 2026-11-03 UTC; additive namespace only. |
+| O2 | Reproducible line-origin, validation, correlations and leaderboard framework | done | 9ded47ab | nba-origin-lab/** | Await O1; no invented odds or rewards. |
+| O3 | Category dashboard, summary, flagged review and automated checks | done | 9ded47ab | nba-origin-lab/** | Await O2; no shared root navigation changes. |
+| O4 | Integration, PR, merge and Pages verification | in progress | 9ded47ab | COORDINATION.md, nba-origin-lab/** | Await O3; fixed Arena branch is integration branch. |
+
+Cross-session requests: none at claim time. Other sessions should not edit `nba-origin-lab/**` while this claim is active.
+
+### Session 9ded47ab verification log
+
+- 2026-11-03 UTC: Opened official [NBA player box-score log](https://www.nba.com/stats/player/1630162/boxscores?Season=2025-26), checked ten rows (dates/matchups/results/minutes/PTS/3PM/REB/AST/game IDs) against `nba-2026-lab/data/edwards_2025_26_recent10.csv`; also reviewed [glossary](https://www.nba.com/stats/help/glossary), [NBA schedule](https://www.nba.com/games) and [official injury report](https://official.nba.com/nba-injury-report-2026-27-season/). No current bookmaker quotes, no current model lines, no rewarded entrants.
+- `python3 -m unittest discover -s nba-origin-lab -p 'test_*.py' -v`: 4/4 passed; deterministic 8-page generation, 40+ official-linked table rows, local links, deliberate blanks. Existing `python3 -m unittest discover -s tests -q`: 56/56 passed. In-sample median 22, MAE 9.5; four sample correlations recomputed. Source row links on proposed hypotheses/policies are contextual, not verification of an edge.
+- R01–R08 published on `nba-origin-lab/review.html`: dynamic source archiving, selected sample, missing as-of injury joins, quote/settlement, holdout, hit dependence, funding, root-nav integration. Nonblocking.
+- Concurrent change handling: origin/main advanced via session 9557a8aa while PR #20 was open. Rebased onto main; resolved the append-only `COORDINATION.md` conflict by preserving both session records in full; no other-session file overwritten. Re-ran tests below before updating PR.
