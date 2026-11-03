@@ -376,7 +376,7 @@ Arena fixes this session's branch to `arena/9ded47ab-own5`; the requested `sessi
 | O1 | Source/requirement audit and official evidence register | done | 9ded47ab | COORDINATION.md, nba-origin-lab/** | Claimed 2026-11-03 UTC; additive namespace only. |
 | O2 | Reproducible line-origin, validation, correlations and leaderboard framework | done | 9ded47ab | nba-origin-lab/** | Await O1; no invented odds or rewards. |
 | O3 | Category dashboard, summary, flagged review and automated checks | done | 9ded47ab | nba-origin-lab/** | Await O2; no shared root navigation changes. |
-| O4 | Integration, PR, merge and Pages verification | in progress | 9ded47ab | COORDINATION.md, nba-origin-lab/** | Await O3; fixed Arena branch is integration branch. |
+| O4 | Integration, PR, merge and Pages verification | done | 9ded47ab | COORDINATION.md, nba-origin-lab/** | Await O3; fixed Arena branch is integration branch. |
 
 Cross-session requests: none at claim time. Other sessions should not edit `nba-origin-lab/**` while this claim is active.
 
@@ -386,3 +386,9 @@ Cross-session requests: none at claim time. Other sessions should not edit `nba-
 - `python3 -m unittest discover -s nba-origin-lab -p 'test_*.py' -v`: 4/4 passed; deterministic 8-page generation, 40+ official-linked table rows, local links, deliberate blanks. Existing `python3 -m unittest discover -s tests -q`: 56/56 passed. In-sample median 22, MAE 9.5; four sample correlations recomputed. Source row links on proposed hypotheses/policies are contextual, not verification of an edge.
 - R01–R08 published on `nba-origin-lab/review.html`: dynamic source archiving, selected sample, missing as-of injury joins, quote/settlement, holdout, hit dependence, funding, root-nav integration. Nonblocking.
 - Concurrent change handling: origin/main advanced via session 9557a8aa while PR #20 was open. Rebased onto main; resolved the append-only `COORDINATION.md` conflict by preserving both session records in full; no other-session file overwritten. Re-ran tests below before updating PR.
+
+### Session 9ded47ab PR, merge and live Pages result
+
+- [PR #20](https://github.com/sassnarep3-star/Own5/pull/20) merged into `main` on 2026-11-03T23:35:34Z, merge commit `4ac3fbd1586a7e3879c9705f1cc0270cef3d5d7c`. Before merge: dashboard browser/evidence check and evidence-desk check passed; 4 additive and 56 existing local tests passed.
+- Initial Pages run 41740374686 was cancelled due to a higher-priority concurrent main deployment, not a site-build failure. Subsequent [Pages deployment run 41740409737](https://github.com/sassnarep3-star/Own5/actions/runs/41740409737) completed **success** (build, deploy, report), with GitHub Pages `main` @ `/` status `built`. The [NBA landing page](https://sassnarep3-star.github.io/Own5/nba-origin-lab/index.html) and [Flagged for Review](https://sassnarep3-star.github.io/Own5/nba-origin-lab/review.html) were read successfully from the live site with a cache-busting query. A concurrent session's PR #21 was merged after #20 and its successful deployment includes both changes.
+- Main branch and existing NFL/NBA sites remain intact. No certified bets, no verified live lines, no funded rewards. R01–R08 remain on the live review page. This record is delivered in a follow-up PR because the original feature PR was already merged.
