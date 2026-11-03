@@ -282,3 +282,18 @@ Session ID = suffix of fixed branch `arena/e0e66278-own5`. Platform requires thi
 - **GitHub Pages:** API status **built**, source `main` @ `/`, build type `legacy`. Live rendered verification succeeded for https://sassnarep3-star.github.io/Own5/own5-desk/ , https://sassnarep3-star.github.io/Own5/own5-desk/lines.html and https://sassnarep3-star.github.io/Own5/own5-desk/review.html . Existing root site remains live at https://sassnarep3-star.github.io/Own5/ .
 - **Conflict/push note:** after the merge commit, `git pull --rebase` attempted to linearize already-merged main history and hit an add/add COORDINATION conflict. It was aborted immediately to preserve the merge; the remote session branch was confirmed an ancestor and the merge was pushed fast-forward. No other session's commit was discarded.
 - **Final status:** E1–E5 done. 56 combined tests pass; root seed/build guard clean; Line Lab reconcile PASS; desk 13 pages / 215 official-linked rows / internal links pass; deterministic desk publish matches. 0/6 strategies qualify; 0 rewards; 13 nonblocking review flags published.
+
+---
+
+# Session 5ea3d798 — NBA evidence refresh (2026-11-03 UTC)
+
+This session must remain on fixed branch `arena/5ea3d798-own5` (Arena platform constraint); it cannot use the requested `session-<id>/<task>` naming. Existing NBA `docs/` and shared root outputs are owned by earlier sessions and remain untouched. Integration will add a separate namespaced site rather than overwrite them.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| B1 | Claim and baseline audit | in progress | 5ea3d798 | COORDINATION.md, research/nba-2026/audit.md | Review existing NBA scope and identify evidence gaps. |
+| B2 | Official NBA game-log sample, correlation calculations, validations | in progress | 5ea3d798 | research/nba-2026/**, nba-2026-lab/data/**, nba-2026-lab/compute.py, nba-2026-lab/test_compute.py | Independent sample of official player game logs; exploratory only; all rows linked. |
+| B3 | NBA source-first Pages dashboard, executive summary, review page | in progress | 5ea3d798 | nba-2026-lab/*.html, nba-2026-lab/style.css, nba-2026-lab/build.py | Additive category pages; no changes to another session's shared site. |
+| B4 | Combined verification, PR, merge, Pages check | in progress | 5ea3d798 | COORDINATION.md | Final integration after B1–B3. |
+
+Claim timestamp: 2026-11-03 UTC. No other session has claimed these namespaced paths. No requests for overlapping files at claim time.
