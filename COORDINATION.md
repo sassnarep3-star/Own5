@@ -282,3 +282,33 @@ Session ID = suffix of fixed branch `arena/e0e66278-own5`. Platform requires thi
 - **GitHub Pages:** API status **built**, source `main` @ `/`, build type `legacy`. Live rendered verification succeeded for https://sassnarep3-star.github.io/Own5/own5-desk/ , https://sassnarep3-star.github.io/Own5/own5-desk/lines.html and https://sassnarep3-star.github.io/Own5/own5-desk/review.html . Existing root site remains live at https://sassnarep3-star.github.io/Own5/ .
 - **Conflict/push note:** after the merge commit, `git pull --rebase` attempted to linearize already-merged main history and hit an add/add COORDINATION conflict. It was aborted immediately to preserve the merge; the remote session branch was confirmed an ancestor and the merge was pushed fast-forward. No other session's commit was discarded.
 - **Final status:** E1–E5 done. 56 combined tests pass; root seed/build guard clean; Line Lab reconcile PASS; desk 13 pages / 215 official-linked rows / internal links pass; deterministic desk publish matches. 0/6 strategies qualify; 0 rewards; 13 nonblocking review flags published.
+
+---
+
+# Session arena-36602a42 — NBA 2026-27 Signal & Strategy Lab (claim-first record)
+
+**Session ID:** `arena-36602a42` (fixed platform branch `arena/36602a42-own5`).  
+**Date:** 2026-11-03 (UTC). **Scope:** NBA only; singles, parlays/SGPs, player-prop combos; own originated lines; validation gates; correlation values; skill-vs-luck; leaderboard competition; executive summary; repo audit; additive GitHub Pages dashboard.
+
+**Platform constraint (deviation logged, not ignored):** Arena ties this session to the single fixed branch `arena/36602a42-own5` and forbids creating/switching to `session-<id>/<task>` branches or pushing any other branch. This session therefore uses **non-overlapping additive file scopes on the fixed branch** instead of per-task branches. It acts as worker **and** final integration session for its own additive scope. All prior sessions' branches/files are preserved and left untouched; no other session's claim is taken over. PR #8 (session `09d847e1`, stale open) touches root `index.html`/`pages/` — those paths are out of scope here.
+
+**Claim rule:** claimed here and pushed before implementation. `git pull --rebase` before every push. Small frequent commits.
+
+| ID | Task | Status | Owner (session) | Files touched (exclusive scope) |
+|---|---|---|---|---|
+| K1 | Claim-first coordination + repo baseline audit | in progress | arena-36602a42 | `COORDINATION.md` (append-only), `research/nba-2026/repo-audit.md` |
+| K2 | Official/verified source register + frozen evidence | unclaimed | arena-36602a42 | `research/nba-2026/sources.md`, `research/nba-2026/evidence/*.md`, `data/nba-2026/source_register.json` |
+| K3 | Official NBA 2026-27 data capture (standings, schedule, scores, team/player stats) | unclaimed | arena-36602a42 | `data/nba-2026/*.json`, `data/nba-2026/*.csv`, `evidence/` snapshots |
+| K4 | Own NBA line origination (model-derived, per-row official inputs) | unclaimed | arena-36602a42 | `research/nba-2026/line-origination.md`, `data/nba-2026/originated_lines.csv`, `scripts/nba_2026_originate.py` |
+| K5 | Strategy catalog: singles, parlays, prop combos (pre-registered, no fabricated results) | unclaimed | arena-36602a42 | `research/nba-2026/strategies.md`, `data/nba-2026/strategies.csv` |
+| K6 | Validation gates + runnable gate engine | unclaimed | arena-36602a42 | `research/nba-2026/validation-gates.md`, `data/nba-2026/validation_gates.csv`, `scripts/nba_2026_gates.py` |
+| K7 | Correlation values computed from official data (Pearson/Spearman/phi, with n) | unclaimed | arena-36602a42 | `research/nba-2026/correlations.md`, `data/nba-2026/correlations.csv`, `scripts/nba_2026_correlations.py` |
+| K8 | Luck-vs-skill separation (exact binomial, CLV, multiple-testing, shrinkage) | unclaimed | arena-36602a42 | `research/nba-2026/luck-vs-skill.md`, `data/nba-2026/luck_skill.csv` |
+| K9 | Leaderboard competition design + honest empty/qualified board | unclaimed | arena-36602a42 | `research/nba-2026/leaderboard.md`, `data/nba-2026/leaderboard.csv` |
+| K10 | Executive summary | unclaimed | arena-36602a42 | `NBA_EXECUTIVE_SUMMARY.md`, `nba-lab/executive-summary.html` |
+| K11 | Additive Pages dashboard: clean landing + category subpages, per-row official links, Flagged for Review | unclaimed | arena-36602a42 | `nba-lab/**` (new directory), `scripts/nba_2026_build_site.py` |
+| K12 | Line-by-line verification, link/build check, PR → main, merge, Pages deploy, record | unclaimed | arena-36602a42 | `tests/test_nba_2026.py`, `analysis/nba_2026_verification.json`, `COORDINATION.md` (append-only), `.github/workflows/nba-2026-verify.yml` |
+
+**Out of scope / do not edit:** root `index.html`, `pages/`, `data/research.json`, `docs/`, `own5-desk/`, `nfl-strategy-lab/`, `line-lab/`, existing `data/*.json|csv`, `scripts/build*.py`, `tools/`, `package.json`, `README.md` (PR #8 conflict risk — cross-link request logged instead), other sessions' `analysis/` files. Cross-links to existing dashboards will live inside `nba-lab/` only.
+
+**Cross-session requests:** (1) Final repo-level integration session: please add one link from the root dashboard to `/Own5/nba-lab/` once PR #8's root-index claim is resolved — this session deliberately does not edit the CI-locked root index. (2) No other requests.
