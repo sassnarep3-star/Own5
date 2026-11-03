@@ -282,3 +282,43 @@ Session ID = suffix of fixed branch `arena/e0e66278-own5`. Platform requires thi
 - **GitHub Pages:** API status **built**, source `main` @ `/`, build type `legacy`. Live rendered verification succeeded for https://sassnarep3-star.github.io/Own5/own5-desk/ , https://sassnarep3-star.github.io/Own5/own5-desk/lines.html and https://sassnarep3-star.github.io/Own5/own5-desk/review.html . Existing root site remains live at https://sassnarep3-star.github.io/Own5/ .
 - **Conflict/push note:** after the merge commit, `git pull --rebase` attempted to linearize already-merged main history and hit an add/add COORDINATION conflict. It was aborted immediately to preserve the merge; the remote session branch was confirmed an ancestor and the merge was pushed fast-forward. No other session's commit was discarded.
 - **Final status:** E1–E5 done. 56 combined tests pass; root seed/build guard clean; Line Lab reconcile PASS; desk 13 pages / 215 official-linked rows / internal links pass; deterministic desk publish matches. 0/6 strategies qualify; 0 rewards; 13 nonblocking review flags published.
+
+---
+
+# Session a75c43ff — NBA Line Origination, Signals, Correlations & Leaderboard (final integration)
+
+Session ID = suffix of fixed branch `arena/a75c43ff-own5`. This session is the **final integration session for the NBA work**. It began from `main` @ `b0efc6c` (PR #14 merged). All prior sessions' work is preserved.
+
+## Scope and conflict rules
+
+- **Owned by this session:** `nba/**` (new NBA dashboard, data, research, tools, tests), `README.md` (append-only NBA section), `COORDINATION.md` (this board + final record).
+- **Not edited by this session:** root `index.html`, `pages/**`, `data/research.json` (CI-locked by `scripts/seed.py` + `scripts/build.py` + `git diff --exit-code`); `docs/**` (owned by session `9c3a0a69`, already merged); `nfl-strategy-lab/**`, `line-lab/**`, `own5-desk/**`, `nfl_model/**`, `research/arena-f1d30421/**`, `research/evidence/**`, `analysis/**`, `tools/**`, `scripts/**`, `tests/**` (other sessions' scopes).
+- **Publication:** GitHub Pages source is `main` @ `/` (legacy). The new NBA site will be committed under `nba/` and served at **https://sassnarep3-star.github.io/Own5/nba/**. No Pages settings change is required. The existing NBA lab at `/Own5/docs/` remains live and is linked as prior research.
+- **Verification rule (hard):** every factual table row must carry a link to an official NBA source (nba.com / official.nba.com / stats.nba.com) or a primary peer-reviewed source. Values that cannot be confirmed are left blank and published on `nba/flagged.html`. Model-derived values are labeled `MODEL` and link to the official input data plus the formula in `nba/methodology.html`; they are never presented as official NBA values. Market/betting prices are not official NBA data and are left blank + flagged.
+- **No manual input required.** All data used in this session was fetched from official NBA pages on 2026-11-03 (UTC) and frozen into `nba/data/*.json`. The builder is deterministic.
+
+## Task board
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| A1 | Claim-first coordination + scope declaration | in progress | a75c43ff | COORDINATION.md | This claim is pushed before implementation. |
+| A2 | Official-source capture (2026-27 standings, team traditional + advanced stats, schedule, injury report, rules) | unclaimed | a75c43ff | nba/data/official_*.json, nba/research/sources.md | Fetch from nba.com / official.nba.com; freeze raw values + source URL + retrieval date. |
+| A3 | Line-origination engine (team ratings, shrinkage, HFA, projected spread/total) | unclaimed | a75c43ff | nba/tools/originate_lines.py, nba/data/model_lines_2026-11-04.csv, nba/lines.html | Model output labeled MODEL; market columns blank + flagged. |
+| A4 | Correlation analysis (team-level + player-level cross-sectional; game-level gap flagged) | unclaimed | a75c43ff | nba/tools/compute_correlations.py, nba/data/correlations_*.csv, nba/correlations.html | Pearson + Spearman, n, p; no game-level joint probabilities claimed. |
+| A5 | Strategy catalog (singles, player props, parlays/SGP) with gates | unclaimed | a75c43ff | nba/research/strategies.md, nba/data/strategies.csv, nba/strategies.html | 10 candidate strategies; all status = candidate/pending. |
+| A6 | Validation gates G0–G9 + luck-removal math | unclaimed | a75c43ff | nba/research/validation-gates.md, nba/data/validation-gates.csv, nba/validation.html, nba/luck-vs-skill.html | CLV, DSR/PBO, permutation nulls, fractional Kelly; thresholds sourced. |
+| A7 | Leaderboard design + empty standings + reward tiers | unclaimed | a75c43ff | nba/research/leaderboard.md, nba/data/leaderboard.csv, nba/leaderboard.html | 0 entries by design; no fabricated performance. |
+| A8 | Player-prop projections + SGP correlation/pricing lab | unclaimed | a75c43ff | nba/tools/project_props.py, nba/data/player_props_*.csv, nba/props.html, nba/parlays.html | Official player averages; model pace adjustment; market lines blank + flagged. |
+| A9 | Clean dashboard site (landing + category subpages + executive summary + sources + flagged) | unclaimed | a75c43ff | nba/index.html, nba/*.html, nba/assets/** | Generated by `nba/tools/build_site.py`; every row sourced or flagged. |
+| A10 | Line-by-line repo review + irregularity register | unclaimed | a75c43ff | nba/repo-review.html, nba/data/repo_review.csv, nba/research/repo-review.md | Focus on NBA-relevant claims; stale 2025-26 references, blank correlations, empty leaderboard, industry sources. |
+| A11 | Verification: row provenance, internal links, external official links, unit tests | unclaimed | a75c43ff | nba/tools/verify_site.py, nba/tests/** | Must pass with 0 failures before PR. |
+| A12 | Final integration, PR to main, merge, Pages deploy verification, record | unclaimed | a75c43ff | README.md, COORDINATION.md | PR link + merge result + live URL recorded here. |
+
+## Cross-session requests
+
+- (none outstanding. `docs/` is owned by session `9c3a0a69`; this session does not edit it. Root `index.html`/`pages/`/`data/research.json` are CI-locked; this session does not edit them.)
+
+## Activity log
+
+- 2026-11-03: Session `a75c43ff` claimed A1–A12 and pushed this claim before implementation. Scope: new `nba/**` tree; no edits to other sessions' files.
+
