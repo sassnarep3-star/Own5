@@ -294,7 +294,7 @@ This session must remain on fixed branch `arena/5ea3d798-own5` (Arena platform c
 | B1 | Claim and baseline audit | done | 5ea3d798 | COORDINATION.md, research/nba-2026/audit.md | Review existing NBA scope and identify evidence gaps. |
 | B2 | Official NBA game-log sample, correlation calculations, validations | done | 5ea3d798 | research/nba-2026/**, nba-2026-lab/data/**, nba-2026-lab/compute.py, nba-2026-lab/test_compute.py | Independent sample of official player game logs; exploratory only; all rows linked. |
 | B3 | NBA source-first Pages dashboard, executive summary, review page | done | 5ea3d798 | nba-2026-lab/*.html, nba-2026-lab/style.css, nba-2026-lab/build.py | Additive category pages; no changes to another session's shared site. |
-| B4 | Combined verification, PR, merge, Pages check | in progress | 5ea3d798 | COORDINATION.md | Final integration after B1–B3. |
+| B4 | Combined verification, PR, merge, Pages check | done | 5ea3d798 | COORDINATION.md | Final integration after B1–B3. |
 
 Claim timestamp: 2026-11-03 UTC. No other session has claimed these namespaced paths. No requests for overlapping files at claim time.
 
@@ -305,3 +305,9 @@ Claim timestamp: 2026-11-03 UTC. No other session has claimed these namespaced p
 - B3 done. 8 additive Pages HTML pages built in `nba-2026-lab/`: 51 table rows, each checked to contain an official NBA source URL; internal links pass. Older site outputs remain unchanged. No price/CLV/profit/reward invented.
 - B4 integration verification so far: `python3 -m unittest discover -s tests -q` passed 56 tests; `python3 nba-2026-lab/check.py` passed all eight pages; `python3 nba-2026-lab/build.py` reproducible. Remaining: PR checks, merge and Pages live verification.
 - Flagged, nonblocking: F01–F08 on `nba-2026-lab/review.html`: tiny selected sample, missing timestamped book quotes, no prospective holdout, no SGP payouts or leg thresholds, older third-party correlation claims unverified here, missing injury/odds joins, unfunded rewards, older site date. No current own lines may be responsibly emitted from available inputs. Dataset is deliberately narrow and not an exhaustive NBA registry.
+
+### Session 5ea3d798 PR / merge / deployment result
+
+- [PR #15](https://github.com/sassnarep3-star/Own5/pull/15) merged with `gh pr merge 15 --merge` on 2026-11-03T19:50:16Z; merge commit `4811cd175b3c604c410b93ce74e6a3861031b077`. Pre-merge checks: dashboard browser/evidence check and evidence-desk check both passed.
+- GitHub Pages `main` at root `/`, legacy build status `built`; [deployment run 41706980242](https://github.com/sassnarep3-star/Own5/actions/runs/41706980242) succeeded (build, deploy, report). Live rendered [NBA dashboard](https://sassnarep3-star.github.io/Own5/nba-2026-lab/index.html) and [Flagged for Review](https://sassnarep3-star.github.io/Own5/nba-2026-lab/review.html) checked with a cache-busting query; index/review served correct content. First cached trailing-slash fetch returned an outdated 404 while index.html with query served the new build.
+- Publication remains additive: original NBA `docs/` and NFL root remain intact. No current market odds were available; **0 validated strategies, 0 awards**, 8 explicitly visible flags. This post-merge record is published via a small follow-up PR, not retroactively attributed to PR #15.
