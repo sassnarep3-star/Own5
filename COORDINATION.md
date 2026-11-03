@@ -362,6 +362,8 @@ Arena fixes this session's branch name to `arena/e9f83ff4-own5`. The previous NB
 - `python3 -m unittest discover -s tests -q` passed 56 tests; NBA lab tests passed 2; NBA lab page checker passed 8 pages; audit tests passed 2 and check local navigation and linked official domains. Link presence is not source entailment.
 - Claim push: branch did not exist remotely, so the first `git pull --rebase` against that branch failed; rebased against `origin/main` and pushed the claim as the first branch commit. No conflict or data loss.
 - Integration rebase onto updated `origin/main` conflicted in the appended task board. Both the newly merged `9557a8aa` record and this session's claim were retained; no work was discarded. Rebasing rewrote this session's two commits, so the session branch was updated with a lease-protected push.
+- [PR #18](https://github.com/sassnarep3-star/Own5/pull/18) merged on 2026-11-03 at 23:34:08 UTC (merge commit `00af978115731a1fd5162c2e368d627282b5d475`). Pre-merge desk and dashboard CI checks passed. [Pages deployment run 41740185238](https://github.com/sassnarep3-star/Own5/actions/runs/41740185238) succeeded; [live NBA audit](https://sassnarep3-star.github.io/Own5/nba-audit-e9f83ff4/index.html?audit=18) returned the expected content. This record is a follow-up to the merged feature PR.
+- Follow-up PR #22 conflicted with another appended session record. Resolved by preserving both records; no work was discarded.
 
 ---
 
