@@ -311,3 +311,19 @@ Claim timestamp: 2026-11-03 UTC. No other session has claimed these namespaced p
 - [PR #15](https://github.com/sassnarep3-star/Own5/pull/15) merged with `gh pr merge 15 --merge` on 2026-11-03T19:50:16Z; merge commit `4811cd175b3c604c410b93ce74e6a3861031b077`. Pre-merge checks: dashboard browser/evidence check and evidence-desk check both passed.
 - GitHub Pages `main` at root `/`, legacy build status `built`; [deployment run 41706980242](https://github.com/sassnarep3-star/Own5/actions/runs/41706980242) succeeded (build, deploy, report). Live rendered [NBA dashboard](https://sassnarep3-star.github.io/Own5/nba-2026-lab/index.html) and [Flagged for Review](https://sassnarep3-star.github.io/Own5/nba-2026-lab/review.html) checked with a cache-busting query; index/review served correct content. First cached trailing-slash fetch returned an outdated 404 while index.html with query served the new build.
 - Publication remains additive: original NBA `docs/` and NFL root remain intact. No current market odds were available; **0 validated strategies, 0 awards**, 8 explicitly visible flags. This post-merge record is published via a small follow-up PR, not retroactively attributed to PR #15.
+
+---
+
+# Session 9cf7de11 — NBA Line Desk 2026-27 (claim)
+
+Session ID = suffix of fixed branch `arena/9cf7de11-own5` (Arena platform constraint; the `session-<id>/<task>` naming in the brief cannot be used on this platform, so each task is an ID on this branch). Claimed 2026-11-03 UTC, before any implementation.
+
+Scope rule for this session: **new namespaced paths only.** Not touched: root `index.html`, `pages/`, `data/research.json`, `docs/` (NBA lab 9c3a0a69), `nba-2026-lab/` (5ea3d798), `nfl-strategy-lab/`, `line-lab/`, `own5-desk/`, existing CSV/JSON tables, existing workflows.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| S1 | Claim + repo irregularity review (NBA-relevant files) | in progress | 9cf7de11 | COORDINATION.md, research/nba-2026-27/review.md | Line-by-line review of existing NBA artifacts; flags only, no edits to them. |
+| S2 | Official NBA 2026-27 data capture (standings, team traditional stats, injury-report index) | unclaimed→claimed | 9cf7de11 | data/nba-2026-27/** | nba.com pages fetched; every row carries its source URL. |
+| S3 | Validation gates, correlations, skill-vs-luck computed from verified rows only | unclaimed→claimed | 9cf7de11 | research/nba-2026-27/**, tools/nba_line_desk/** | Market odds / CLV not available from official sources → blank + flagged. |
+| S4 | Site: landing + category subpages + Flagged for Review | unclaimed→claimed | 9cf7de11 | nba-line-desk/** | Served at `/Own5/nba-line-desk/`. Root navigation untouched (CI-locked); linked from README only. |
+| S5 | Executive summary + verification log + integration PR/merge/Pages | unclaimed→claimed | 9cf7de11 | nba-line-desk/executive-summary.html, research/nba-2026-27/EXECUTIVE_SUMMARY.md, COORDINATION.md, README.md | Final integration by this session. |
