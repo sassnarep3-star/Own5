@@ -465,3 +465,33 @@ Cross-session requests: (1) the owner of root `index.html`/`scripts/seed.py` (cd
 - **Tests:** `python3 -m unittest discover -s nba-desk/tests -q` (21 tests) and `python3 nba-desk/check.py` (14 pages, 488 table rows, every row linked) pass; existing `python3 -m unittest discover -s tests -q` 56 pass; `npm run desk:check` passes.
 - **Conflicts:** `git pull --rebase` conflicted twice in this file (append-only); both sides kept each time, nothing discarded. Branch updated with lease-protected push after rebase.
 
+
+---
+
+---
+
+# Session 636a7712 — NBA 2026–27 own-lines competition (2026-11-03 UTC)
+
+Arena fixes this session to `arena/636a7712-own5`; the requested `session-<id>/<task>` branch convention cannot be used. This is an additive, source-first NBA workspace. Existing root/NFL/NBA dashboards, generated data, tests, workflows, and shared navigation are out of scope and will not be edited.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| K1 | Current-season official source register and line-by-line evidence tables | done | 636a7712 | nba-own-lines/data/**, research/nba-own-lines/**, COORDINATION.md | Official NBA schedule, standings, team/player statistics, glossary, playing rules, and injury-report sources; blanks plus review flags when unavailable. |
+| K2 | Reproducible own-line model and pregame projections | done | 636a7712 | nba-own-lines/model.py, nba-own-lines/data/**, research/nba-own-lines/** | Calculated research lines only; no unverified sportsbook prices or betting claims. |
+| K3 | Singles/parlays/prop-combo hypotheses, correlations, fail-closed validation, skill-versus-luck analysis and leaderboard | done | 636a7712 | nba-own-lines/model.py, nba-own-lines/data/**, research/nba-own-lines/** | Zero rewards unless all evidence gates pass; luck cannot be literally removed. |
+| K4 | Additive dashboard, executive summary, Flagged for Review page, builder/checker/tests | done | 636a7712 | nba-own-lines/** | Every body-table row links to an official NBA source; derived values explicitly labeled. |
+| K5 | Final integration, combined checks, PR, merge, and live Pages verification | in progress | 636a7712 | COORDINATION.md, nba-own-lines/**, research/nba-own-lines/** | Fixed Arena branch is the integration branch; preserve all concurrent work. |
+
+Claim timestamp: 2026-11-03 UTC. No cross-session file requests at claim time. Other sessions should not edit `nba-own-lines/**` or `research/nba-own-lines/**` while this claim is active.
+
+Integration conflict log: while rebasing onto `origin/main` after concurrent PRs #23–#25, the append-only board conflicted with session e9a43ca6's integration record. Both blocks were retained verbatim; no other session's work was discarded. Rebasing rewrote this session's two commits; a lease-protected push updated only this session branch.
+
+### Session 636a7712 evidence and verification record
+
+- **K1 done:** reviewed 12 official NBA/NBA Official sources. Frozen evidence contains 30 advanced-team rows, 16 November 4–5 schedule rows, four selected players and 26 complete selected player-game rows. Official source register and row-level audit: `research/nba-own-lines/source-audit.md` and `nba-own-lines/sources.html`.
+- **K2 done:** `model.py` calculates 16 research spreads/totals/scores and no-vig model prices from shrunk OffRtg/DefRtg/PACE. Disclosed analyst parameters: 10-game prior, zero HFA, 6-point logistic scale, no overtime or injury adjustment. Market/edge fields are null.
+- **K3 done:** seven singles/parlay/prop-combo hypotheses; G00–G09; 21 Pearson correlations; exact player permutation p-values with Holm correction across 16 tests; tested binomial luck function; unranked leaderboard. **0/7 strategies qualify and current rewards are zero.** No luck-removal or profitability claim.
+- **K4 done:** 11 responsive static pages, executive summary, methodology, requirements trace and Flagged for Review page. Checker passes **199 body-table rows / 454 links / 16 lines / 0 qualified**; every body-table row has an official NBA source/context link and internal links resolve.
+- **Verification:** 16 new unit/site tests pass; existing 56 root tests pass; `python3 nba-own-lines/check.py` passes; generated HTML and `derived.json` are byte-for-byte reproducible. Player means reconcile to official rounded averages in all 16 checks; schedule records match all 32 team-game entries.
+- **Material irregularities:** F01–F11 published on `nba-own-lines/review.html`. Anthony Edwards is officially Out and suppressed; other unknown availability is held; several team reports were not submitted in the 6:15 PM ET snapshot. No sportsbook prices, payouts, prospective ledger, joint-hit rates or funded rewards are inferred. Other sessions' historical rows were not independently re-transcribed (F10).
+- **K5 integration:** local combined verification complete; PR checks, merge and live Pages verification pending.

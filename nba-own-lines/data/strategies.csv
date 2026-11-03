@@ -1,0 +1,8 @@
+strategy_id,strategy,category,hypothesis,required_gates,evidence_pass,source_id
+S01,Ratings moneyline single,Single,"Shrunk efficiency margin may rank game winners better than a naive baseline after availability is resolved.",G00;G01;G02;G03;G04;G05;G06;G07;G09,G00;G01;G09,S02
+S02,Ratings spread single,Single,"Shrunk efficiency margin may identify spreads with positive closing-line-aware value after prices exist.",G00;G01;G02;G03;G04;G05;G06;G07;G09,G00;G01;G09,S02
+S03,Pace-efficiency total single,Single,"Average adjusted PACE combined with matchup efficiency may improve totals forecasts out of sample.",G00;G01;G02;G03;G04;G05;G06;G07;G09,G00;G01;G09,S02
+P01,Cross-game moneyline parlay,Parlay,"Two independently priced cross-game legs may be combined only after marginal calibration and execution gates pass.",G00;G01;G02;G03;G04;G05;G06;G07;G08;G09,G00;G01;G09,S01
+P02,Same-game side and total combo,Parlay,"A same-game side/total combination requires an explicit joint distribution rather than multiplied marginal probabilities.",G00;G01;G02;G03;G04;G05;G06;G07;G08;G09,G00;G01;G09,S01
+C01,Same-player points and assists combo,Player prop combo,"Within-player PTS/AST dependence may matter for joint pricing; current samples are exploratory and not a validated edge.",G00;G01;G02;G03;G04;G05;G06;G07;G08;G09,G00;G01;G09,S04
+C02,Cross-game player points combo,Player prop combo,"Cross-game player legs require availability, threshold, price and joint-hit validation before any combination is released.",G00;G01;G02;G03;G04;G05;G06;G07;G08;G09,G00;G01;G09,S04
