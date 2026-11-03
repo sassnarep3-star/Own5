@@ -311,3 +311,11 @@ Claim timestamp: 2026-11-03 UTC. No other session has claimed these namespaced p
 - [PR #15](https://github.com/sassnarep3-star/Own5/pull/15) merged with `gh pr merge 15 --merge` on 2026-11-03T19:50:16Z; merge commit `4811cd175b3c604c410b93ce74e6a3861031b077`. Pre-merge checks: dashboard browser/evidence check and evidence-desk check both passed.
 - GitHub Pages `main` at root `/`, legacy build status `built`; [deployment run 41706980242](https://github.com/sassnarep3-star/Own5/actions/runs/41706980242) succeeded (build, deploy, report). Live rendered [NBA dashboard](https://sassnarep3-star.github.io/Own5/nba-2026-lab/index.html) and [Flagged for Review](https://sassnarep3-star.github.io/Own5/nba-2026-lab/review.html) checked with a cache-busting query; index/review served correct content. First cached trailing-slash fetch returned an outdated 404 while index.html with query served the new build.
 - Publication remains additive: original NBA `docs/` and NFL root remain intact. No current market odds were available; **0 validated strategies, 0 awards**, 8 explicitly visible flags. This post-merge record is published via a small follow-up PR, not retroactively attributed to PR #15.
+
+## Session 9557a8aa — NBA sensitivity audit (2026-11-03 UTC)
+
+Platform fixes this session to `arena/9557a8aa-own5`; requested session-prefixed branch is unavailable. Prior NBA lab and shared navigation are left untouched. Claim timestamp 2026-11-03 UTC.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| S1 | Independent sensitivity analysis of existing official NBA sample; self-contained Pages report and tests | in progress | 9557a8aa | nba-sensitivity/**, COORDINATION.md | Do not edit prior sessions' NBA lab or root pages. |
