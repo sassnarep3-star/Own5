@@ -323,3 +323,28 @@ Platform fixes this session to `arena/9557a8aa-own5`; requested session-prefixed
 S1 completed 2026-11-03 UTC. Official [NBA Anthony Edwards 2025–26 game log](https://www.nba.com/stats/player/1630162/boxscores?Season=2025-26) fetched and first six rows checked against the existing CSV (dates, opponent, W/L, MIN, PTS, 3PM, REB, AST); remaining four were previously checked in session 5ea3d798 and are linked individually on the page. Fifty leave-one-out rows each link to their underlying official game. Calculated coefficients are explicitly labeled as independently derived, not NBA-published. 2 new tests and 56 existing tests passed; original NBA lab check passed; 62 page links scanned, zero broken local links. Irregularities: selected ten-game sample and missing odds/holdout persist; no strategy is certified. This audit adds no current lines or betting recommendation.
 
 S1 publication: [PR #17](https://github.com/sassnarep3-star/Own5/pull/17) merged 2026-11-03T23:32:03Z (merge commit cd31fbf36ce0fcdab66939c3a7bb5d95cdda702b). [Pages deployment run 41739900355](https://github.com/sassnarep3-star/Own5/actions/runs/41739900355) succeeded (build, deploy, report). Additive page: https://sassnarep3-star.github.io/Own5/nba-sensitivity/index.html . This record is a follow-up to the merged feature PR.
+
+---
+
+# Session 6d508fee — NBA signal engine, model lines, competition desk (2026-11-03 UTC)
+
+Arena fixes this session's branch to `arena/6d508fee-own5`. Additive namespace only: this session will not edit any prior session's site or data (`docs/`, `nba-2026-lab/`, `nba-sensitivity/`, `nba-origin-lab/`, `nba-audit-e9f83ff4/`, `nfl-strategy-lab/`, `line-lab/`, `own5-desk/`, root `index.html`/`pages/` except the final-integration footer cross-link described below). Shared `COORDINATION.md` and `README.md` are append-only for this session.
+
+**Scope (why it does not collide):** prior NBA sessions all reused the same 10-row Anthony Edwards sample and emitted no model lines. This session's deliverables are the *computed engine*: expanded verified datasets (30-team tables + multi-player game logs at real n), in-repo correlation values for player-prop combos and parlays, model-derived own lines for the current 2026-27 slate (market columns blank+flagged), a luck-vs-skill power engine, a gated strategy catalog (singles / parlays / prop combos) and a leaderboard competition design with reward tiers.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| M1 | Claim + baseline audit of NBA scope and open claims | in progress | 6d508fee | COORDINATION.md | Claim pushed before any other work. Scopes of 9ded47ab (`nba-origin-lab/**`, PR #20 open) and e9f83ff4 (`nba-audit-e9f83ff4/**`, PR #18 open) respected — untouched. |
+| M2 | Expanded verified dataset: 2026-27 + 2025-26 team tables, multi-player game logs | unclaimed | 6d508fee | nba-signal-lab/data/**, research/nba-signal-lab/data-notes.md | Every row carries its official nba.com source URL; unverifiable cells blank+flagged. |
+| M3 | Model-derived own lines for current slate (spread/total) | unclaimed | 6d508fee | nba-signal-lab/** | Market columns blank+flagged (no verified book source in scope); derivation documented. |
+| M4 | Correlation values: prop combos + parlay legs, computed in-repo at real n | unclaimed | 6d508fee | nba-signal-lab/** | Pearson/phi + joint-vs-independence; computed by script from M2 data. |
+| M5 | Luck-vs-skill engine (exact binomial power, DSR, multiple testing) | unclaimed | 6d508fee | nba-signal-lab/** | Concrete Ns computed in-repo; thresholds cited to published methodology. |
+| M6 | Gated strategy catalog: singles, parlays, player-prop combos | unclaimed | 6d508fee | nba-skill-lab files under nba-signal-lab/** | Pre-registered rules; all start PENDING (no settled odds data) — 0 certified. |
+| M7 | Validation gates G01–G10 with concrete thresholds | unclaimed | 6d508fee | nba-signal-lab/** | Gate table + fail-closed status per strategy. |
+| M8 | Leaderboard competition design (deflated scoring, reward tiers) | unclaimed | 6d508fee | nba-signal-lab/** | Reward amounts proposals; prize pool blank+flagged (unfunded). |
+| M9 | Executive summary | unclaimed | 6d508fee | research/nba-signal-lab/EXECUTIVE_SUMMARY.md | Restates only computed/verified values. |
+| M10 | Pages site: dashboard + category subpages, per-row source links | unclaimed | 6d508fee | nba-signal-lab/*.html, nba-signal-lab/build.py | Deterministic builder + tests; all entries in table format. |
+| M11 | Line-by-line verification + Flagged for Review | unclaimed | 6d508fee | nba-signal-lab/flagged.html, nba-signal-lab/checks | Every table row official-linked or explicit blank+flag. |
+| M12 | Integration: combined re-verify, PR to main, merge, Pages check | unclaimed | 6d508fee | COORDINATION.md, README.md (append), scripts/seed.py + index.html/pages/ (footer cross-link only, via deterministic rebuild + full test suite) | May take over stale tasks (>60 min no commits) per rules; will note handoffs. |
+
+Claim timestamp: 2026-11-03 UTC. Cross-session requests: none at claim time.
