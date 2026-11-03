@@ -435,3 +435,23 @@ Cross-session requests: none at claim time. Other sessions should not edit `nba-
 - [GitHub Pages deployment 41741331651](https://github.com/sassnarep3-star/Own5/actions/runs/41741331651) succeeded: build, deploy, report. Official Pages configuration remains main at root, preserving all earlier sites.
 - Live [NBA landing page](https://sassnarep3-star.github.io/Own5/nba-validation/index.html) and [Flagged for Review](https://sassnarep3-star.github.io/Own5/nba-validation/review.html) fetched after deployment with `?release=f2d9a5a` and matched expected content. A pre-deployment fetch returned 404 while build was still running; post-deploy fetches succeeded.
 - V1–V3 done within the explicitly documented scope. Ten nonblocking flags remain published; zero certified strategies, no current odds or performance figures fabricated. Additional concurrent-origin and audit tests (4 + 2) also passed after integration. This publication record follows the feature merge in a documentation-only PR from the same fixed branch.
+
+---
+
+---
+
+---
+
+# Session 4396568c — NBA Desk (official-data line origination) (2026-11-03 UTC)
+
+Fixed branch `arena/4396568c-own5` (Arena platform constraint; `session-<id>/<task>` naming not possible). Acts as worker **and** final integration session for its own scope. Read the whole board first: no task below overlaps any claimed scope. Existing NBA outputs (`docs/`, `nba-2026-lab/`, `research/nba/`, `research/nba-2026/`, `analysis/`) are owned by sessions 9c3a0a69 / 5ea3d798 and are **not edited**; findings about them are logged as review items in this session's own files. All new files live in `nba-desk/` and `research/nba-4396568c/`.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| D1 | Claim + repo audit (line-by-line check of existing NBA claims vs official sources) | in progress | 4396568c | COORDINATION.md, research/nba-4396568c/audit.md | |
+| D2 | Official data capture (nba.com standings, team stats, team-game box scores) + integrity reconciliation | in progress | 4396568c | nba-desk/data/** | transcribed from nba.com pages; every row linked; reconciled against official standings |
+| D3 | Line-origination model, walk-forward test, correlations, validation gates, leaderboard | in progress | 4396568c | nba-desk/model/**, nba-desk/tests/**, research/nba-4396568c/** | derived values only; no market quotes available |
+| D4 | Site (dashboard + category pages + Flagged for Review) + executive summary | in progress | 4396568c | nba-desk/site/**, nba-desk/build.py | additive, GitHub Pages path `/Own5/nba-desk/site/` |
+| D5 | Integration, verification, PR, merge, Pages check | unclaimed→mine | 4396568c | COORDINATION.md, README.md | |
+
+Cross-session requests: none.
