@@ -1,0 +1,52 @@
+{
+  "review_date": "2026-11-03",
+  "verified_game_rows": 10,
+  "candidate_strategies": 6,
+  "certified_strategies": 0,
+  "current_lines": null,
+  "bet_phi": null,
+  "roi": null,
+  "reward_amount": null,
+  "correlations": [
+    {
+      "x": "points",
+      "y": "assists",
+      "r": -0.023882595147362243,
+      "n": 10,
+      "source": "https://www.nba.com/stats/player/1630162/boxscores?Season=2025-26",
+      "status": "descriptive_only"
+    },
+    {
+      "x": "points",
+      "y": "rebounds",
+      "r": 0.576214869331317,
+      "n": 10,
+      "source": "https://www.nba.com/stats/player/1630162/boxscores?Season=2025-26",
+      "status": "descriptive_only"
+    },
+    {
+      "x": "threes",
+      "y": "points",
+      "r": 0.7974005713636835,
+      "n": 10,
+      "source": "https://www.nba.com/stats/player/1630162/boxscores?Season=2025-26",
+      "status": "descriptive_only"
+    },
+    {
+      "x": "points",
+      "y": "win",
+      "r": 0.29253985673743793,
+      "n": 10,
+      "source": "https://www.nba.com/stats/player/1630162/boxscores?Season=2025-26",
+      "status": "descriptive_only"
+    },
+    {
+      "x": "assists",
+      "y": "rebounds",
+      "r": 0.20526320231631415,
+      "n": 10,
+      "source": "https://www.nba.com/stats/player/1630162/boxscores?Season=2025-26",
+      "status": "descriptive_only"
+    }
+  ]
+}

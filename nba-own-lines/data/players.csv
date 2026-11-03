@@ -1,0 +1,5 @@
+player_id,player,team_abbr,gp,ppg,rpg,apg,threepm,upcoming_game_id,availability,availability_note,source_id
+1629029,Luka Dončić,LAL,7,38.3,8.0,8.1,5.9,0022600185,,Team report not yet submitted in the 6:15 PM ET snapshot,S06
+1630162,Anthony Edwards,MIN,4,33.3,4.8,3.5,4.5,0022600181,Out,Injury/Illness - Right Knee Arthroscopy,S05
+1630178,Tyrese Maxey,PHI,8,29.1,4.1,5.3,2.5,0022600173,,Player not listed in this snapshot; availability not inferred,S07
+1628983,Shai Gilgeous-Alexander,OKC,7,28.4,4.3,4.0,2.3,0022600180,,Player not listed in this snapshot; availability not inferred,S08
