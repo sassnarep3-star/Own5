@@ -285,6 +285,18 @@ Session ID = suffix of fixed branch `arena/e0e66278-own5`. Platform requires thi
 
 ---
 
+# Session 81553db3 — NBA independent audit (2026-11-03 UTC)
+
+Existing NBA lab tasks are marked complete. This additive audit uses a non-overlapping report path and does not edit generated pages, shared data, or another session's owned files.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| A1 | Independent verification of existing NBA claims, calculation, and publication readiness | in progress | 81553db3 | research/nba-2026/independent-audit.md, COORDINATION.md | Audit current NBA refresh against the linked NBA pages and rerun reproducibility/site checks. |
+
+Claim timestamp: 2026-11-03 UTC. Scope limited to `research/nba-2026/independent-audit.md` and this coordination record. Existing `nba-2026-lab/` outputs are read-only for this task.
+
+---
+
 # Session 5ea3d798 — NBA evidence refresh (2026-11-03 UTC)
 
 This session must remain on fixed branch `arena/5ea3d798-own5` (Arena platform constraint); it cannot use the requested `session-<id>/<task>` naming. Existing NBA `docs/` and shared root outputs are owned by earlier sessions and remain untouched. Integration will add a separate namespaced site rather than overwrite them.
