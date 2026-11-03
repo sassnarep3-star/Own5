@@ -282,3 +282,18 @@ Session ID = suffix of fixed branch `arena/e0e66278-own5`. Platform requires thi
 - **GitHub Pages:** API status **built**, source `main` @ `/`, build type `legacy`. Live rendered verification succeeded for https://sassnarep3-star.github.io/Own5/own5-desk/ , https://sassnarep3-star.github.io/Own5/own5-desk/lines.html and https://sassnarep3-star.github.io/Own5/own5-desk/review.html . Existing root site remains live at https://sassnarep3-star.github.io/Own5/ .
 - **Conflict/push note:** after the merge commit, `git pull --rebase` attempted to linearize already-merged main history and hit an add/add COORDINATION conflict. It was aborted immediately to preserve the merge; the remote session branch was confirmed an ancestor and the merge was pushed fast-forward. No other session's commit was discarded.
 - **Final status:** E1–E5 done. 56 combined tests pass; root seed/build guard clean; Line Lab reconcile PASS; desk 13 pages / 215 official-linked rows / internal links pass; deterministic desk publish matches. 0/6 strategies qualify; 0 rewards; 13 nonblocking review flags published.
+
+---
+
+## Session 1fe98d21 — NBA evidence-first refresh (2026-11-03 UTC)
+
+The platform-fixed branch `arena/1fe98d21-own5` is the only permitted session/integration branch; no alternate branch will be created. Historical dates and completion assertions above are retained as historical records, not reverified claims. Existing published scopes are preserved. This session is the final integrator for its additive NBA refresh only.
+
+| ID | Task | Status | Owner | File scope | Notes |
+|---|---|---|---|---|---|
+| B1 | Official research, repository audit, evidence register | in progress | 1fe98d21 | `nba_lab/`, `nba-lab/`, `research/nba-refresh/` | New namespace; audit legacy content without overwriting other sessions. |
+| B2 | Fail-closed origination, correlation, validation and leaderboard engine with tests | in progress | 1fe98d21 | `nba_lab/`, `nba_tests/` | No invented data, odds or performance; distinguish proposals from facts. |
+| B3 | Dashboard, summary, review flags and integration verification | in progress | 1fe98d21 | `nba-lab/`, `research/nba-refresh/`, `.github/workflows/nba.yml`, `README.md` (append only), `COORDINATION.md` (append only) | Existing root/generated navigation remains untouched to avoid conflicts. |
+| B4 | PR, immediate merge, Pages verification and publication record | in progress | 1fe98d21 | same integration scope | Keep Pages main/root; publish new NBA dashboard under `/nba-lab/`. |
+
+No overlapping active task found for these new namespaces. Legacy NBA board's T10 says in progress but its later final record says all done; no takeover or edit to `docs/` / `analysis/` / existing research is needed. PR #8 belongs to another session and will not be altered.
