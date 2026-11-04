@@ -349,8 +349,8 @@ Scope rule for this session: **new namespaced paths only.** Not touched: root `i
 | S1 | Claim + repo irregularity review (NBA-relevant files) | done (commit 08ada24) | 9cf7de11 | COORDINATION.md, research/nba-2026-27/review.md | Line-by-line review of existing NBA artifacts; flags only, no edits to them. |
 | S2 | Official NBA 2026-27 data capture (standings, team traditional stats, injury-report index) | done (cdbc164) | 9cf7de11 | data/nba-2026-27/** | nba.com pages fetched; every row carries its source URL. |
 | S3 | Validation gates, correlations, skill-vs-luck computed from verified rows only | done (cdbc164, 08ada24) | 9cf7de11 | research/nba-2026-27/**, tools/nba_line_desk/** | Market odds / CLV not available from official sources → blank + flagged. |
-| S4 | Site: landing + category subpages + Flagged for Review | built locally; 14 pages, desk:check and unit tests pass | 9cf7de11 | nba-line-desk/** | Served at `/Own5/nba-line-desk/`. Root navigation untouched (CI-locked); linked from README only. |
-| S5 | Executive summary + verification log + integration PR/merge/Pages | in progress | 9cf7de11 | nba-line-desk/executive-summary.html, research/nba-2026-27/EXECUTIVE_SUMMARY.md, COORDINATION.md, README.md | Final integration by this session. |
+| S4 | Site: landing + category subpages + Flagged for Review | done: merged in PR #30 (6ce89a9); Pages build status `built` | 9cf7de11 | nba-line-desk/** | Served at `/Own5/nba-line-desk/`. Root navigation untouched (CI-locked); linked from README only. |
+| S5 | Executive summary + verification log + integration PR/merge/Pages | done: PR #30 merged 2026-11-03 23:52:43Z; this record in PR #32 | 9cf7de11 | nba-line-desk/executive-summary.html, research/nba-2026-27/EXECUTIVE_SUMMARY.md, COORDINATION.md, README.md | Final integration by this session. |
 
 ## Session 9cf7de11 — work log, sources and verification
 
@@ -371,7 +371,15 @@ Scope rule for this session: **new namespaced paths only.** Not touched: root `i
 
 **Conflicts and handoffs.** One harmless warning during the first `git pull --rebase` (remote branch did not exist yet). No merge conflicts. No other session's files were edited. Root navigation untouched; this desk is linked from README only.
 
-**Integration.** PR, merge result and Pages confirmation are recorded below once they happen.
+**Integration record (9cf7de11).**
+- PR: https://github.com/sassnarep3-star/Own5/pull/30 (`arena/9cf7de11-own5` → `main`), opened 2026-11-03.
+- Conflict: on the first attempt, `main` had moved (other sessions appended to `COORDINATION.md`). Both sides were kept in order (commit 87272c6); no other file conflicted.
+- Checks on the PR, all green: "Verify research dashboard" (unit tests, 91 incl. 35 new, plus the browser smoke test), "Verify Own5 evidence desk" (`desk:check` and the publish diff), and "Verify NBA validation desk".
+- Merge: `gh pr merge 30 --merge`, merge commit **6ce89a9**, 2026-11-03 23:52:43Z, with no approval wait and no `--auto`.
+- Post-merge `main` checks on 6ce89a9: research dashboard, Own5 evidence desk, and NBA validation desk all succeeded.
+- Pages: the legacy build (from `main` root, no build step) shows `built` for the current head 1c41521, which contains 6ce89a9. The build for 6ce89a9 itself was superseded by a newer push (`cancelled`, not failed).
+- Limit: this sandbox cannot reach `*.github.io` (outbound access is restricted to GitHub and package hosts). The deployment is confirmed through the GitHub Pages API, not by fetching the live page. The live URL is https://sassnarep3-star.github.io/Own5/nba-line-desk/.
+- Result recorded: 0 validated strategies, 0 validated signals, 0 leaderboard entries, 0 rewards. 13 open flags on the Flagged for Review page.
 ## Session 9557a8aa — NBA sensitivity audit (2026-11-03 UTC)
 
 Platform fixes this session to `arena/9557a8aa-own5`; requested session-prefixed branch is unavailable. Prior NBA lab and shared navigation are left untouched. Claim timestamp 2026-11-03 UTC.
