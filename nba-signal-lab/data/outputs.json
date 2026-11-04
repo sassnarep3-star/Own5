@@ -1,0 +1,919 @@
+{
+ "checksum_rows": [
+  {
+   "expected": {
+    "ast_pg": 8.3,
+    "gp": 64,
+    "pts_pg": 33.5,
+    "reb_pg": 7.7,
+    "tpm_pg": 4.0
+   },
+   "ok": true,
+   "player": "Luka Doncic",
+   "player_id": "1629029",
+   "recomputed": {
+    "ast_pg": 8.2812,
+    "gp": 64,
+    "pts_pg": 33.4844,
+    "reb_pg": 7.7344,
+    "tpm_pg": 3.9688
+   },
+   "source_url": "https://www.nba.com/stats/leaders?Season=2025-26"
+  },
+  {
+   "expected": {
+    "ast_pg": 3.7,
+    "gp": 61,
+    "pts_pg": 28.8,
+    "reb_pg": 5.0,
+    "tpm_pg": 3.4
+   },
+   "ok": true,
+   "player": "Anthony Edwards",
+   "player_id": "1630162",
+   "recomputed": {
+    "ast_pg": 3.7049,
+    "gp": 61,
+    "pts_pg": 28.8033,
+    "reb_pg": 4.9508,
+    "tpm_pg": 3.3607
+   },
+   "source_url": "https://www.nba.com/stats/leaders?Season=2025-26"
+  }
+ ],
+ "correlations": {
+  "lag1_pts": [
+   {
+    "ci95": [
+     -0.285,
+     0.209
+    ],
+    "lag1_r_pts": -0.041,
+    "n_pairs": 63,
+    "player": "Luka Doncic"
+   },
+   {
+    "ci95": [
+     -0.2,
+     0.306
+    ],
+    "lag1_r_pts": 0.056,
+    "n_pairs": 60,
+    "player": "Anthony Edwards"
+   }
+  ],
+  "method": "Pearson r with Fisher-z 95% CI; phi for 0/1 threshold legs; point-biserial for W/L. Pooled rows treat player-games as units; per-player rows are reported so pooling is auditable. All computed in-repo from official game-log transcription.",
+  "prop_thresholds": [
+   {
+    "combo": "PTS>=25 & AST>=5",
+    "hit_rate_a": 0.768,
+    "hit_rate_b": 0.608,
+    "independence_product": 0.467,
+    "joint_hit_rate": 0.512,
+    "lift_vs_independence": 1.096,
+    "n": 125,
+    "phi": 0.219,
+    "source": "computed in-repo from data/game_logs_2025_26.csv"
+   },
+   {
+    "combo": "PTS>=25 & REB>=5",
+    "hit_rate_a": 0.768,
+    "hit_rate_b": 0.728,
+    "independence_product": 0.559,
+    "joint_hit_rate": 0.632,
+    "lift_vs_independence": 1.13,
+    "n": 125,
+    "phi": 0.388,
+    "source": "computed in-repo from data/game_logs_2025_26.csv"
+   },
+   {
+    "combo": "PTS>=25 & 3PM>=3",
+    "hit_rate_a": 0.768,
+    "hit_rate_b": 0.728,
+    "independence_product": 0.559,
+    "joint_hit_rate": 0.648,
+    "lift_vs_independence": 1.159,
+    "n": 125,
+    "phi": 0.473,
+    "source": "computed in-repo from data/game_logs_2025_26.csv"
+   },
+   {
+    "combo": "AST>=5 & REB>=5",
+    "hit_rate_a": 0.608,
+    "hit_rate_b": 0.728,
+    "independence_product": 0.443,
+    "joint_hit_rate": 0.496,
+    "lift_vs_independence": 1.121,
+    "n": 125,
+    "phi": 0.246,
+    "source": "computed in-repo from data/game_logs_2025_26.csv"
+   },
+   {
+    "combo": "PTS>=25 & AST>=5 & REB>=5 (3-leg)",
+    "hit_rate_a": null,
+    "hit_rate_b": null,
+    "independence_product": 0.34,
+    "joint_hit_rate": 0.432,
+    "lift_vs_independence": 1.271,
+    "n": 125,
+    "phi": null,
+    "source": "computed in-repo from data/game_logs_2025_26.csv"
+   }
+  ],
+  "stat_pairs": [
+   {
+    "pair": "PTS x REB",
+    "per_player": {
+     "Anthony Edwards": {
+      "ci95": [
+       0.055,
+       0.515
+      ],
+      "n": 61,
+      "r": 0.302
+     },
+     "Luka Doncic": {
+      "ci95": [
+       0.062,
+       0.511
+      ],
+      "n": 64,
+      "r": 0.304
+     }
+    },
+    "pooled_ci95": [
+     0.203,
+     0.509
+    ],
+    "pooled_n": 125,
+    "pooled_r": 0.366
+   },
+   {
+    "pair": "PTS x AST",
+    "per_player": {
+     "Anthony Edwards": {
+      "ci95": [
+       -0.297,
+       0.205
+      ],
+      "n": 61,
+      "r": -0.049
+     },
+     "Luka Doncic": {
+      "ci95": [
+       -0.149,
+       0.338
+      ],
+      "n": 64,
+      "r": 0.101
+     }
+    },
+    "pooled_ci95": [
+     0.018,
+     0.357
+    ],
+    "pooled_n": 125,
+    "pooled_r": 0.193
+   },
+   {
+    "pair": "PTS x TPM",
+    "per_player": {
+     "Anthony Edwards": {
+      "ci95": [
+       0.538,
+       0.806
+      ],
+      "n": 61,
+      "r": 0.696
+     },
+     "Luka Doncic": {
+      "ci95": [
+       0.502,
+       0.783
+      ],
+      "n": 64,
+      "r": 0.666
+     }
+    },
+    "pooled_ci95": [
+     0.584,
+     0.772
+    ],
+    "pooled_n": 125,
+    "pooled_r": 0.689
+   },
+   {
+    "pair": "REB x AST",
+    "per_player": {
+     "Anthony Edwards": {
+      "ci95": [
+       -0.239,
+       0.264
+      ],
+      "n": 61,
+      "r": 0.013
+     },
+     "Luka Doncic": {
+      "ci95": [
+       0.004,
+       0.467
+      ],
+      "n": 64,
+      "r": 0.249
+     }
+    },
+    "pooled_ci95": [
+     0.271,
+     0.56
+    ],
+    "pooled_n": 125,
+    "pooled_r": 0.426
+   },
+   {
+    "pair": "AST x TPM",
+    "per_player": {
+     "Anthony Edwards": {
+      "ci95": [
+       -0.332,
+       0.168
+      ],
+      "n": 61,
+      "r": -0.088
+     },
+     "Luka Doncic": {
+      "ci95": [
+       -0.173,
+       0.316
+      ],
+      "n": 64,
+      "r": 0.076
+     }
+    },
+    "pooled_ci95": [
+     -0.055,
+     0.291
+    ],
+    "pooled_n": 125,
+    "pooled_r": 0.121
+   },
+   {
+    "pair": "PTS x MIN",
+    "per_player": {
+     "Anthony Edwards": {
+      "ci95": [
+       0.405,
+       0.737
+      ],
+      "n": 61,
+      "r": 0.596
+     },
+     "Luka Doncic": {
+      "ci95": [
+       0.354,
+       0.703
+      ],
+      "n": 64,
+      "r": 0.552
+     }
+    },
+    "pooled_ci95": [
+     0.446,
+     0.683
+    ],
+    "pooled_n": 125,
+    "pooled_r": 0.577
+   },
+   {
+    "pair": "PTS x WIN (point-biserial)",
+    "per_player": {},
+    "pooled_ci95": [
+     -0.089,
+     0.259
+    ],
+    "pooled_n": 125,
+    "pooled_r": 0.088
+   }
+  ]
+ },
+ "flags": [
+  {
+   "id": "F-HFA",
+   "text": "HFA_PTS = 2.5 is a model constant (no official NBA source publishes home advantage in points); empirical home win% is reported alongside; sensitivity at 2.0/2.5/3.0 included in model_lines.",
+   "type": "model-parameter"
+  },
+  {
+   "id": "F-MARKET",
+   "text": "Market odds columns (market_spread, market_total) are blank on the model lines page: no odds source could be verified from an official NBA property in this sandbox. Nothing was inferred or filled in.",
+   "type": "unverified"
+  },
+  {
+   "id": "F-SLATE",
+   "text": "Official game calendar lists 14 NBA games on 2026-11-04; this slate sources 6 from official team-schedule pages under the pre-registered top-4-per-conference selection. Boston's official schedule page is not machine-readable (JS-only) and games among teams outside the selection were not retrieved. Coverage is partial by design; nothing was inferred for unretrieved games.",
+   "type": "irregularity"
+  },
+  {
+   "id": "F-SMALL",
+   "text": "2026-27 team samples are early-season (5-8 games per team as of 2026-11-03); model strength blends toward the 2025-26 prior (weight n/(n+20)) for this reason.",
+   "type": "irregularity"
+  },
+  {
+   "id": "F-PLAYERS",
+   "text": "Full game logs are included for the top-2 2025-26 scorers on the official leaders page (Doncic 33.5 PPG, Edwards 28.8 PPG) = 125 player-games. Gilgeous-Alexander/Brown/Maxey rows are registered with official checksums but their game logs were not transcribed (fetch budget); correlations are labeled exploratory for this sample.",
+   "type": "scope"
+  },
+  {
+   "id": "F-ODDS",
+   "text": "Leaderboard prize pool and any reward amounts are blank: no verified source for funding exists. Competition runs on audit units until a real reward is announced.",
+   "type": "unverified"
+  }
+ ],
+ "gates": [
+  {
+   "definition": "Every input row carries an official NBA source URL; unverified values blank+flagged.",
+   "gate": "G01",
+   "name": "Source gate",
+   "status": "PASS (data layer)"
+  },
+  {
+   "definition": "Strategy needs n >= 50 graded bets before skill claims (exact-binomial calibrated).",
+   "gate": "G02",
+   "name": "Sample-size gate",
+   "status": "PENDING"
+  },
+  {
+   "definition": "Deflated win rate must exceed 110/210 at one-sided alpha after multiple-testing correction.",
+   "gate": "G03",
+   "name": "Break-even gate",
+   "status": "PENDING"
+  },
+  {
+   "definition": "All candidate strategies counted in m; \u0160id\u00e1k/Bonferroni alpha applied.",
+   "gate": "G04",
+   "name": "Multiple-testing gate",
+   "status": "PASS (design)"
+  },
+  {
+   "definition": "Parlay legs assumed independent only where lag-1/cross-game checks support it.",
+   "gate": "G05",
+   "name": "Independence gate",
+   "status": "PASS (design, see correlations)"
+  },
+  {
+   "definition": "Same-game prop combos priced with measured phi, not independence product.",
+   "gate": "G06",
+   "name": "Correlation gate",
+   "status": "PASS (design, see correlations)"
+  },
+  {
+   "definition": "Parameters fixed pre-fit (K_BLEND, HFA_PTS, thresholds); no retuning on graded results.",
+   "gate": "G07",
+   "name": "Holdout gate",
+   "status": "PASS (design)"
+  },
+  {
+   "definition": "Sides/totals graded only against verified closing lines; none available yet.",
+   "gate": "G08",
+   "name": "Market gate",
+   "status": "BLOCKED (no market source)"
+  },
+  {
+   "definition": "Reproducible pipeline: compute.py + tests; every figure recomputable in-repo.",
+   "gate": "G09",
+   "name": "Audit gate",
+   "status": "PASS"
+  },
+  {
+   "definition": "Return series must survive deflation (DSR-style) to count as skill.",
+   "gate": "G10",
+   "name": "Luck-stripping gate",
+   "status": "PENDING"
+  }
+ ],
+ "hfa": {
+  "home_losses_2025_26": 546,
+  "home_losses_2026_27": 52,
+  "home_win_pct_2025_26": 0.5543,
+  "home_win_pct_2026_27": 0.514,
+  "home_wins_2025_26": 679,
+  "home_wins_2026_27": 55,
+  "model_hfa_points": 2.5,
+  "note": "Empirical home win%% computed from official HOME/ROAD split columns. Model HFA in points is a pre-registered constant (2.5), not an official NBA statistic; sensitivity shown at 2.0/2.5/3.0.",
+  "source_urls": [
+   "https://www.nba.com/standings",
+   "https://www.nba.com/standings?Season=2025-26"
+  ]
+ },
+ "leaderboard": {
+  "certified_count": 0,
+  "entries": [
+   {
+    "certified": false,
+    "class": "single",
+    "deflated_score": null,
+    "entry_id": "S-01",
+    "graded_bets": 0,
+    "losses": 0,
+    "name": "Model-spread side (|model spread| >= 4)",
+    "pushes": 0,
+    "rank": 1,
+    "source_url": "https://www.nba.com/standings",
+    "units": null,
+    "wins": 0
+   },
+   {
+    "certified": false,
+    "class": "player-prop-combo",
+    "deflated_score": null,
+    "entry_id": "S-02",
+    "graded_bets": 0,
+    "losses": 0,
+    "name": "Same-game 2-leg prop combo PTS>=25 & AST>=5",
+    "pushes": 0,
+    "rank": 2,
+    "source_url": "https://www.nba.com/stats/leaders?Season=2025-26",
+    "units": null,
+    "wins": 0
+   },
+   {
+    "certified": false,
+    "class": "player-prop-combo",
+    "deflated_score": null,
+    "entry_id": "S-03",
+    "graded_bets": 0,
+    "losses": 0,
+    "name": "Same-game 3-leg prop combo PTS>=25 & AST>=5 & REB>=5",
+    "pushes": 0,
+    "rank": 3,
+    "source_url": "https://www.nba.com/stats/leaders?Season=2025-26",
+    "units": null,
+    "wins": 0
+   },
+   {
+    "certified": false,
+    "class": "parlay",
+    "deflated_score": null,
+    "entry_id": "S-04",
+    "graded_bets": 0,
+    "losses": 0,
+    "name": "Cross-game 2-leg team parlay (model sides)",
+    "pushes": 0,
+    "rank": 4,
+    "source_url": "https://www.nba.com/standings",
+    "units": null,
+    "wins": 0
+   },
+   {
+    "certified": false,
+    "class": "single",
+    "deflated_score": null,
+    "entry_id": "S-05",
+    "graded_bets": 0,
+    "losses": 0,
+    "name": "Model-total single (over/under own line)",
+    "pushes": 0,
+    "rank": 5,
+    "source_url": "https://www.nba.com/standings",
+    "units": null,
+    "wins": 0
+   }
+  ],
+  "prize_pool": null,
+  "prize_pool_note": "Prize pool BLANK \u2014 no verified funding/reward source; flagged, not inferred.",
+  "scoring": "Unit profit at -110 baseline; deflated score = (units + 0*prior)/(n + 25) shrunk toward break-even; ties broken by larger n then by lower multiple-testing alpha consumed. Reward tiers: Champion 50%, Runner-up 30%, Third 20% of prize pool."
+ },
+ "luck_vs_skill": {
+  "break_even_note": "Break-even win rate at a -110 price is 110/210 = 0.5238 by arithmetic (not an NBA statistic). Deflated scoring shrinks toward break-even with prior weight 25 bets \u2014 leaderboard design parameter, documented and flagged.",
+  "break_even_win_rate": 0.5238,
+  "deflation_examples": [
+   {
+    "deflated_win_pct": 0.581,
+    "n": 32,
+    "raw_win_pct": 0.625,
+    "wins": 20,
+    "z_vs_break_even": 1.146
+   },
+   {
+    "deflated_win_pct": 0.575,
+    "n": 50,
+    "raw_win_pct": 0.6,
+    "wins": 30,
+    "z_vs_break_even": 1.079
+   },
+   {
+    "deflated_win_pct": 0.545,
+    "n": 100,
+    "raw_win_pct": 0.55,
+    "wins": 55,
+    "z_vs_break_even": 0.524
+   },
+   {
+    "deflated_win_pct": 0.535,
+    "n": 20,
+    "raw_win_pct": 0.55,
+    "wins": 11,
+    "z_vs_break_even": 0.235
+   },
+   {
+    "deflated_win_pct": 0.579,
+    "n": 8,
+    "raw_win_pct": 0.75,
+    "wins": 6,
+    "z_vs_break_even": 1.281
+   }
+  ],
+  "exact_small_n_examples": [
+   {
+    "exact_one_sided_p_vs_break_even": 0.17448,
+    "method": "exact binomial tail (log-domain), computed in-repo",
+    "n": 50,
+    "raw_win_pct": 0.6,
+    "wins": 30
+   },
+   {
+    "exact_one_sided_p_vs_break_even": 0.35633,
+    "method": "exact binomial tail (log-domain), computed in-repo",
+    "n": 50,
+    "raw_win_pct": 0.56,
+    "wins": 28
+   },
+   {
+    "exact_one_sided_p_vs_break_even": 0.31306,
+    "method": "exact binomial tail (log-domain), computed in-repo",
+    "n": 40,
+    "raw_win_pct": 0.575,
+    "wins": 23
+   },
+   {
+    "exact_one_sided_p_vs_break_even": 0.0766,
+    "method": "exact binomial tail (log-domain), computed in-repo",
+    "n": 100,
+    "raw_win_pct": 0.6,
+    "wins": 60
+   },
+   {
+    "exact_one_sided_p_vs_break_even": 0.26657,
+    "method": "exact binomial tail (log-domain), computed in-repo",
+    "n": 100,
+    "raw_win_pct": 0.56,
+    "wins": 56
+   }
+  ],
+  "multiple_testing": [
+   {
+    "candidate_strategies_m": 5,
+    "per_test_alpha_bonferroni": 0.01,
+    "per_test_alpha_sidak": 0.01021
+   },
+   {
+    "candidate_strategies_m": 10,
+    "per_test_alpha_bonferroni": 0.005,
+    "per_test_alpha_sidak": 0.00512
+   },
+   {
+    "candidate_strategies_m": 25,
+    "per_test_alpha_bonferroni": 0.002,
+    "per_test_alpha_sidak": 0.00205
+   },
+   {
+    "candidate_strategies_m": 50,
+    "per_test_alpha_bonferroni": 0.001,
+    "per_test_alpha_sidak": 0.00103
+   }
+  ],
+  "no_luck_claim": "0 strategies are certified. With zero graded bets no return can be attributed to skill; the table above is the gate engine that will decide, not a result.",
+  "power_table": [
+   {
+    "alpha_one_sided": 0.05,
+    "critical_wins": 1214,
+    "method": "normal approximation to the binomial (documented); exact tails used below",
+    "null_win_rate": 0.5238,
+    "power": 0.8,
+    "required_n_bets": 2243,
+    "true_win_rate": 0.55
+   },
+   {
+    "alpha_one_sided": 0.05,
+    "critical_wins": 399,
+    "method": "normal approximation to the binomial (documented); exact tails used below",
+    "null_win_rate": 0.5238,
+    "power": 0.8,
+    "required_n_bets": 719,
+    "true_win_rate": 0.57
+   },
+   {
+    "alpha_one_sided": 0.05,
+    "critical_wins": 152,
+    "method": "normal approximation to the binomial (documented); exact tails used below",
+    "null_win_rate": 0.5238,
+    "power": 0.8,
+    "required_n_bets": 263,
+    "true_win_rate": 0.6
+   }
+  ]
+ },
+ "model_lines": [
+  {
+   "arena": "Toyota Center",
+   "away_strength": 5.69,
+   "away_team": "Minnesota Timberwolves",
+   "away_weight_cur": 0.29,
+   "cross_check_url": null,
+   "game_date": "2026-11-04",
+   "home_strength": 7.4,
+   "home_team": "Houston Rockets",
+   "home_weight_cur": 0.29,
+   "market_note": "no verified market/odds source retrieved \u2014 left blank per rules",
+   "market_spread": null,
+   "market_total": null,
+   "model_home_spread": 4.2,
+   "model_home_spread_hfa20": 3.7,
+   "model_home_spread_hfa25": 4.2,
+   "model_home_spread_hfa30": 4.7,
+   "model_total": 228.1,
+   "source_url": "https://www.nba.com/rockets/schedule",
+   "tip_time_as_listed": "7:30 PM"
+  },
+  {
+   "arena": "Little Caesars Arena",
+   "away_strength": 1.51,
+   "away_team": "Philadelphia 76ers",
+   "away_weight_cur": 0.29,
+   "cross_check_url": "https://www.nba.com/sixers/schedule",
+   "game_date": "2026-11-04",
+   "home_strength": 9.08,
+   "home_team": "Detroit Pistons",
+   "home_weight_cur": 0.26,
+   "market_note": "no verified market/odds source retrieved \u2014 left blank per rules",
+   "market_spread": null,
+   "market_total": null,
+   "model_home_spread": 10.1,
+   "model_home_spread_hfa20": 9.6,
+   "model_home_spread_hfa25": 10.1,
+   "model_home_spread_hfa30": 10.6,
+   "model_total": 225.4,
+   "source_url": "https://www.nba.com/pistons/schedule",
+   "tip_time_as_listed": "7:00 PM"
+  },
+  {
+   "arena": "FedExForum",
+   "away_strength": -6.83,
+   "away_team": "Indiana Pacers",
+   "away_weight_cur": 0.29,
+   "cross_check_url": null,
+   "game_date": "2026-11-04",
+   "home_strength": -1.1,
+   "home_team": "Memphis Grizzlies",
+   "home_weight_cur": 0.26,
+   "market_note": "no verified market/odds source retrieved \u2014 left blank per rules",
+   "market_spread": null,
+   "market_total": null,
+   "model_home_spread": 8.2,
+   "model_home_spread_hfa20": 7.7,
+   "model_home_spread_hfa25": 8.2,
+   "model_home_spread_hfa30": 8.7,
+   "model_total": 233.0,
+   "source_url": "https://www.nba.com/grizzlies/schedule",
+   "tip_time_as_listed": "7:00 PM"
+  },
+  {
+   "arena": "Capital One Arena",
+   "away_strength": 2.09,
+   "away_team": "Atlanta Hawks",
+   "away_weight_cur": 0.29,
+   "cross_check_url": null,
+   "game_date": "2026-11-04",
+   "home_strength": -8.37,
+   "home_team": "Washington Wizards",
+   "home_weight_cur": 0.26,
+   "market_note": "no verified market/odds source retrieved \u2014 left blank per rules",
+   "market_spread": null,
+   "market_total": null,
+   "model_home_spread": -8.0,
+   "model_home_spread_hfa20": -8.5,
+   "model_home_spread_hfa25": -8.0,
+   "model_home_spread_hfa30": -7.5,
+   "model_total": 232.7,
+   "source_url": "https://www.nba.com/wizards/schedule",
+   "tip_time_as_listed": "7:00 PM"
+  },
+  {
+   "arena": "Golden 1 Center",
+   "away_strength": 3.37,
+   "away_team": "Los Angeles Lakers",
+   "away_weight_cur": 0.29,
+   "cross_check_url": null,
+   "game_date": "2026-11-04",
+   "home_strength": -11.06,
+   "home_team": "Sacramento Kings",
+   "home_weight_cur": 0.26,
+   "market_note": "no verified market/odds source retrieved \u2014 left blank per rules",
+   "market_spread": null,
+   "market_total": null,
+   "model_home_spread": -11.9,
+   "model_home_spread_hfa20": -12.4,
+   "model_home_spread_hfa25": -11.9,
+   "model_home_spread_hfa30": -11.4,
+   "model_total": 232.7,
+   "source_url": "https://www.nba.com/lakers/schedule",
+   "tip_time_as_listed": "7:00 PM"
+  },
+  {
+   "arena": "Mortgage Matchup Center",
+   "away_strength": 2.26,
+   "away_team": "Portland Trail Blazers",
+   "away_weight_cur": 0.23,
+   "cross_check_url": null,
+   "game_date": "2026-11-04",
+   "home_strength": -0.92,
+   "home_team": "Phoenix Suns",
+   "home_weight_cur": 0.2,
+   "market_note": "no verified market/odds source retrieved \u2014 left blank per rules",
+   "market_spread": null,
+   "market_total": null,
+   "model_home_spread": -0.7,
+   "model_home_spread_hfa20": -1.2,
+   "model_home_spread_hfa25": -0.7,
+   "model_home_spread_hfa30": -0.2,
+   "model_total": 228.4,
+   "source_url": "https://www.nba.com/blazers/schedule",
+   "tip_time_as_listed": "6:00 PM"
+  }
+ ],
+ "parameters": {
+  "BREAK_EVEN": 0.5238,
+  "DSR_PRIOR_N": 25,
+  "HFA_PTS": 2.5,
+  "K_BLEND": 20.0,
+  "MARGIN_SIGMA": 11.2,
+  "note": "Parameters fixed pre-fit and flagged; see flags list."
+ },
+ "strategies": [
+  {
+   "certified": false,
+   "class": "single",
+   "description": "Take the model side on slate games where |blended-strength spread| >= 4.0 points.",
+   "evidence": "model_lines table (in-repo); correlations: PTS x WIN point-biserial context",
+   "gates_blocking": "G02,G03,G08,G10",
+   "graded_n": 0,
+   "id": "S-01",
+   "name": "Model-spread side (|model spread| >= 4)",
+   "source_url": "https://www.nba.com/standings",
+   "status": "PENDING"
+  },
+  {
+   "certified": false,
+   "class": "player-prop-combo",
+   "description": "Two-leg player prop combo priced with measured phi (not independence).",
+   "evidence": "phi table: joint vs independence product (computed in-repo)",
+   "gates_blocking": "G02,G03,G08,G10",
+   "graded_n": 0,
+   "id": "S-02",
+   "name": "Same-game 2-leg prop combo PTS>=25 & AST>=5",
+   "source_url": "https://www.nba.com/stats/leaders?Season=2025-26",
+   "status": "PENDING"
+  },
+  {
+   "certified": false,
+   "class": "player-prop-combo",
+   "description": "Three-leg combo; lift vs independence measured on 125 player-games.",
+   "evidence": "phi table 3-leg row",
+   "gates_blocking": "G02,G03,G08,G10",
+   "graded_n": 0,
+   "id": "S-03",
+   "name": "Same-game 3-leg prop combo PTS>=25 & AST>=5 & REB>=5",
+   "source_url": "https://www.nba.com/stats/leaders?Season=2025-26",
+   "status": "PENDING"
+  },
+  {
+   "certified": false,
+   "class": "parlay",
+   "description": "Two independent-game legs from S-01 signals; independence supported by lag-1 checks.",
+   "evidence": "lag1 autocorrelation table",
+   "gates_blocking": "G02,G03,G08,G10",
+   "graded_n": 0,
+   "id": "S-04",
+   "name": "Cross-game 2-leg team parlay (model sides)",
+   "source_url": "https://www.nba.com/standings",
+   "status": "PENDING"
+  },
+  {
+   "certified": false,
+   "class": "single",
+   "description": "Play model total vs own originated line when both teams' pace blend deviates >= 3 pts from league mean total.",
+   "evidence": "model_lines total column",
+   "gates_blocking": "G02,G03,G08,G10",
+   "graded_n": 0,
+   "id": "S-05",
+   "name": "Model-total single (over/under own line)",
+   "source_url": "https://www.nba.com/standings",
+   "status": "PENDING"
+  }
+ ],
+ "summary": {
+  "as_of": "2026-11-03",
+  "correlation_pairs": 7,
+  "east_leader": {
+   "record": "7-1",
+   "source_url": "https://www.nba.com/standings",
+   "team": "Philadelphia 76ers"
+  },
+  "flags_open": 5,
+  "game_log_rows": 125,
+  "players_tracked": 2,
+  "season": "2026-27",
+  "slate_games": 6,
+  "strategies_certified": 0,
+  "strategies_total": 5,
+  "teams_tracked": 30,
+  "west_leader": {
+   "record": "7-1",
+   "source_url": "https://www.nba.com/standings",
+   "team": "Houston Rockets"
+  }
+ },
+ "verification": {
+  "checks": [
+   {
+    "check": "teams_2026_27 row count == 30",
+    "detail": "got 30",
+    "ok": true
+   },
+   {
+    "check": "teams_2025_26 row count == 30",
+    "detail": "got 30",
+    "ok": true
+   },
+   {
+    "check": "standings_2026_27 row count == 30",
+    "detail": "got 30",
+    "ok": true
+   },
+   {
+    "check": "standings_2025_26 row count == 30",
+    "detail": "got 30",
+    "ok": true
+   },
+   {
+    "check": "2026-27 W-L agreement standings vs team-stats (30 teams)",
+    "detail": "mismatched: []",
+    "ok": true
+   },
+   {
+    "check": "2025-26 W-L agreement standings vs team-stats (30 teams)",
+    "detail": "mismatched: []",
+    "ok": true
+   },
+   {
+    "check": "2026-27 home+road+neutral splits sum to record",
+    "detail": "",
+    "ok": true
+   },
+   {
+    "check": "2025-26 home+road+neutral splits sum to record",
+    "detail": "",
+    "ok": true
+   },
+   {
+    "check": "game-log scoring identity PTS=2*(FGM-3PM)+3*3PM+FTM (125 rows)",
+    "detail": "",
+    "ok": true
+   },
+   {
+    "check": "game-log rebound identity REB=OREB+DREB (125 rows)",
+    "detail": "",
+    "ok": true
+   },
+   {
+    "check": "game-log unique (player, game) keys",
+    "detail": "",
+    "ok": true
+   },
+   {
+    "check": "game-log checksum vs official leaders (Luka Doncic)",
+    "detail": "expected {'gp': 64, 'pts_pg': 33.5, 'reb_pg': 7.7, 'ast_pg': 8.3, 'tpm_pg': 4.0} recomputed {'gp': 64, 'pts_pg': 33.484375, 'reb_pg': 7.734375, 'ast_pg': 8.28125, 'tpm_pg': 3.96875}",
+    "ok": true
+   },
+   {
+    "check": "game-log checksum vs official leaders (Anthony Edwards)",
+    "detail": "expected {'gp': 61, 'pts_pg': 28.8, 'reb_pg': 5.0, 'ast_pg': 3.7, 'tpm_pg': 3.4} recomputed {'gp': 61, 'pts_pg': 28.80327868852459, 'reb_pg': 4.950819672131147, 'ast_pg': 3.7049180327868854, 'tpm_pg': 3.360655737704918}",
+    "ok": true
+   },
+   {
+    "check": "2026-27 league total wins == total losses",
+    "detail": "107 vs 107",
+    "ok": true
+   },
+   {
+    "check": "2026-27 league weighted +/- == 0 (\u00b10.5 rounding)",
+    "detail": "sum=2.00",
+    "ok": true
+   },
+   {
+    "check": "slate teams present in teams_2026_27",
+    "detail": "missing []",
+    "ok": true
+   }
+  ],
+  "failures": 0
+ }
+}
