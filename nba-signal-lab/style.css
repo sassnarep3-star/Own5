@@ -1,0 +1,25 @@
+
+body{margin:0;font:15px/1.5 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#1a2230;background:#f4f6fa}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+header{background:#101a2e;color:#fff;padding:18px 0 0}
+header h1{margin:0 0 2px;font-size:24px;letter-spacing:.3px}
+header .sub{margin:0 0 12px;color:#9fb2d0;font-size:13px}
+nav{display:flex;flex-wrap:wrap;gap:2px;padding-bottom:10px}
+nav a{color:#c9d6ee;text-decoration:none;padding:6px 10px;border-radius:6px 6px 0 0;font-size:13px}
+nav a:hover{background:#1d2b47;color:#fff}
+nav a.active{background:#2a5bd7;color:#fff}
+main{background:#fff;padding:22px 26px 34px;box-shadow:0 1px 4px rgba(16,26,46,.12);min-height:60vh}
+h2{margin-top:6px;color:#12203a}
+h3{color:#22314f;border-bottom:2px solid #e4e9f2;padding-bottom:4px}
+table{border-collapse:collapse;width:100%;margin:10px 0 18px;font-size:13px}
+th{background:#eef2f9;text-align:left;padding:7px 8px;border:1px solid #dbe3ef;color:#2c3d5e;white-space:nowrap}
+td{padding:6px 8px;border:1px solid #e4e9f2;vertical-align:top}
+tr:nth-child(even){background:#fafbfe}
+table.kv td:first-child{font-weight:600;width:38%}
+a{color:#1a4fd6}
+.note{background:#f2f6ff;border-left:4px solid #2a5bd7;padding:10px 14px;font-size:13.5px}
+.badge{display:inline-block;background:#b3261e;color:#fff;padding:3px 10px;border-radius:12px;text-decoration:none;font-size:12px}
+.blank{color:#b3261e;font-size:11.5px;font-weight:600;letter-spacing:.2px}
+footer{padding:18px 0 30px;color:#5a6a85;font-size:12.5px}
+code{background:#eef2f9;padding:1px 5px;border-radius:4px;font-size:12.5px}
+li{margin:6px 0}
