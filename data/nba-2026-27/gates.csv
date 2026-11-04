@@ -1,0 +1,9 @@
+gate_id,name,rule,threshold,evidence_needed
+G1,Official inputs,Every input field traces to an OFFICIAL source row,100% of input fields,Official standings / team stats / player logs with source_id
+G2,Priced market data,"Each leg has at least one timestamped, verified price",">= 1 priced quote per leg",Official or verified sportsbook price snapshots with timestamps
+G3,Sample size,Priced bets must reach the power requirement,"783 priced bets for a 55% true rate at 80% power (alpha 0.05 two-sided; computed by analytics.required_n_two_proportions_vs_half)",Priced bet ledger
+G4,Closing-line value,Mean CLV versus de-vigged closing price has a 95% CI above zero,CI lower bound > 0,Closing price snapshots
+G5,Out-of-sample holdout,Selection rule frozen before the holdout; holdout results reported in full,Holdout n >= G3 threshold,Priced holdout period
+G6,Multiple testing,Association p-value below the Bonferroni-adjusted alpha across all candidates tested,"permutation p < 0.05 / k (k = number of candidates)",Permutation test on official data
+G7,Parlay dependence,Leg correlation measured from official data and applied in pricing,"Measured correlation with CI and n reported",Official game-level data for each leg pair
+G8,Rule compliance,Market type permitted under the NBA 2026-27 rules and the sportsbook terms,Must be confirmed on an official source,Official NBA memo or official sportsbook terms

@@ -1,0 +1,17 @@
+game_id,date,away,home,own_home_margin,own_home_win_prob,own_total,final_home_pts,final_away_pts,result_source_url
+0022600173,2026-11-04,PHI,DET,6.9,0.687,220.7,,,https://www.nba.com/game/0022600173
+0022600174,2026-11-04,ATL,WAS,-1.8,0.45,228.7,,,https://www.nba.com/game/0022600174
+0022600175,2026-11-04,MIL,BOS,15.0,0.856,223.5,,,https://www.nba.com/game/0022600175
+0022600176,2026-11-04,CHA,BKN,-0.4,0.487,216.6,,,https://www.nba.com/game/0022600176
+0022600177,2026-11-04,CHI,NYK,13.7,0.834,227.4,,,https://www.nba.com/game/0022600177
+0022600178,2026-11-04,IND,MEM,10.6,0.774,230.0,,,https://www.nba.com/game/0022600178
+0022600179,2026-11-04,UTA,NOP,9.6,0.752,235.1,,,https://www.nba.com/game/0022600179
+0022600180,2026-11-04,CLE,OKC,2.3,0.564,226.2,,,https://www.nba.com/game/0022600180
+0022600181,2026-11-04,MIN,HOU,3.2,0.589,225.0,,,https://www.nba.com/game/0022600181
+0022600182,2026-11-04,TOR,DEN,-2.1,0.441,228.9,,,https://www.nba.com/game/0022600182
+0022600183,2026-11-04,POR,PHX,-6.6,0.321,225.8,,,https://www.nba.com/game/0022600183
+0022600184,2026-11-04,DAL,SAS,10.3,0.767,226.9,,,https://www.nba.com/game/0022600184
+0022600185,2026-11-04,LAL,SAC,-12.0,0.198,230.6,,,https://www.nba.com/game/0022600185
+0022600186,2026-11-04,MIA,LAC,0.8,0.523,230.2,,,https://www.nba.com/game/0022600186
+0022600187,2026-11-05,ORL,PHX,2.3,0.566,223.9,,,https://www.nba.com/game/0022600187
+0022600188,2026-11-05,MIA,GSW,5.4,0.649,233.1,,,https://www.nba.com/game/0022600188

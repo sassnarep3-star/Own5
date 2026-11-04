@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard · NBA Line Desk 2026-27</title>
+<meta name="description" content="NBA Line Desk 2026-27: official data, skill-only validation, and a clear flag on everything unverified.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><a href="index.html">NBA Line Desk 2026-27</a><span>Official data · skill-only validation</span></div>
+  <nav aria-label="Pages"><a href="index.html" class="on">Dashboard</a><a href="standings.html">Standings</a><a href="team-stats.html">Team stats</a><a href="player-logs.html">Player logs</a><a href="signals.html">Signals</a><a href="correlations.html">Correlations</a><a href="luck-vs-skill.html">Luck vs skill</a><a href="own-lines.html">Own lines</a><a href="strategies.html">Strategies</a><a href="validation.html">Validation</a><a href="leaderboard.html">Leaderboard</a><a href="executive-summary.html">Executive summary</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for review</a></nav>
+</header>
+<main>
+<h1>Dashboard</h1>
+<p class="lead">NBA Line Desk 2026-27: official data, skill-only validation, and a clear flag on everything unverified.</p>
+
+<div class="kpis"><a class="kpi" href="standings.html"><span class="kv">30</span><span class="kl">NBA teams</span><span class="kd">2026-27 official standings and stats</span></a><a class="kpi" href="standings.html"><span class="kv">5–8</span><span class="kl">Games per team</span><span class="kd">Season to date: below the 20-game sample gate</span></a><a class="kpi" href="strategies.html"><span class="kv">11</span><span class="kl">Strategies registered</span><span class="kd">All blocked until priced data exists</span></a><a class="kpi" href="validation.html"><span class="kv">0</span><span class="kl">Validated strategies</span><span class="kd">Pass G1–G8; none can pass G2 today</span></a><a class="kpi" href="correlations.html"><span class="kv">0</span><span class="kl">Validated signals</span><span class="kd">Predictive and past the sample gate</span></a><a class="kpi" href="flagged.html"><span class="kv">13</span><span class="kl">Open flags</span><span class="kd">Irregularities and unverified items</span></a></div>
+<div class="callout"><strong>Headline.</strong> No strategy is validated. The prior-season win% association is statistically supported,
+but it's team-level and can't be priced without market data, which no official source provides. The season is young (5–8 games per team),
+so the leaderboard has no entries and no rewards. Blank cells are unverified and listed on
+<a href="flagged.html">Flagged for review</a>.</div>
+<h2>Key findings</h2>
+<ul class="findings">
+  <li>Official 2026-27 records reconcile: standings W-L match team stats for all 30 teams, and the league is 107-107. (20 checks run; 0 failed.)</li>
+  <li>Same-season signals (8 tested, Bonferroni alpha 0.00625): 3 pass the statistical test, but all come from the same games as the target, so none is predictive. Validated: 0.</li>
+  <li>Out-of-sample (pre-registered): 2025-26 final win% vs 2026-27 win%: r = 0.501, 95% CI 0.171 to 0.729, n = 30, permutation p = 0.0049. Passes alpha 0.0250, but it fails the sample gate (20 games per team required; the minimum is 5).</li>
+  <li>Luck: 0 of 30 teams have records beyond chance at p &lt; 0.05 (about 1.5 expected by chance). Skill is not separable from luck until about 97 games per team.</li>
+  <li>Reported 2026-27 prop-market restrictions are not confirmed on an official page. 3 strategies are marked UNVERIFIED.</li>
+</ul>
+<h2>Categories</h2>
+<div class="cats"><section class="cat"><h2>Data</h2><ul><li><a href="standings.html"><strong>Standings</strong><span>30 teams, 2026-27 records</span></a></li><li><a href="team-stats.html"><strong>Team stats</strong><span>Per-game traditional stats, derived ratios</span></a></li><li><a href="player-logs.html"><strong>Player logs</strong><span>Anthony Edwards game logs (official)</span></a></li><li><a href="sources.html"><strong>Sources</strong><span>Every source ID with its tier and URL</span></a></li></ul></section><section class="cat"><h2>Analysis</h2><ul><li><a href="signals.html"><strong>Signals</strong><span>13 defined signals and their role</span></a></li><li><a href="correlations.html"><strong>Correlations</strong><span>Association tests with correction</span></a></li><li><a href="luck-vs-skill.html"><strong>Luck vs skill</strong><span>Binomial luck test and sample-size needs</span></a></li><li><a href="own-lines.html"><strong>Own lines</strong><span>Power ratings from official margin</span></a></li></ul></section><section class="cat"><h2>Betting</h2><ul><li><a href="strategies.html"><strong>Strategies</strong><span>Singles, parlays, prop combos</span></a></li><li><a href="validation.html"><strong>Validation</strong><span>Gates G1–G8 and status matrix</span></a></li><li><a href="leaderboard.html"><strong>Leaderboard</strong><span>Competition rules and current entries</span></a></li></ul></section><section class="cat"><h2>Review</h2><ul><li><a href="executive-summary.html"><strong>Executive summary</strong><span>Findings, decisions and limits</span></a></li><li><a href="flagged.html"><strong>Flagged for review</strong><span>13 open items with sources</span></a></li></ul></section></div>
+
+</main>
+<footer>
+  <p>Data: official NBA pages (sources listed on <a href="sources.html">Sources</a>). Every table row links to its source.
+  Blank cells are values that could not be verified from an official source and are listed on
+  <a href="flagged.html">Flagged for review</a>. Derived values are labelled and the method is stated.</p>
+  <p>Analysis only, not betting advice. Nothing here claims an edge. Gambling problem? NCPG helpline 1-800-MY-RESET (see S07).</p>
+  <p class="small">Build date 2026-11-03 (UTC). Season 2026-27 to date.</p>
+</footer>
+<script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+signal_id,name,definition,official_fields,source_ids,role,used_in_gates
+SIG01,Season margin per game,Official team +/- per game,plus_minus,S02,Outcome measure (same games as the target; not predictive),no
+SIG02,Points per game,Official team points per game,pts,S02,Candidate (same-season association),yes
+SIG03,Implied opponent points per game,PTS minus +/- (arithmetic from official per-game values),pts;plus_minus,S02,Candidate (derived),yes
+SIG04,Three-point attempt rate,FG3A / FGA (per-game totals),fg3a;fga,S02,Candidate (derived),yes
+SIG05,Three-point percentage,Official 3P%,fg3_pct,S02,Candidate (same-season association),yes
+SIG06,Free-throw attempt rate,FTA / FGA,fta;fga,S02,Candidate (derived),yes
+SIG07,Turnovers per game,Official TOV per game,tov,S02,Candidate (same-season association),yes
+SIG08,Rebounds per game,Official REB per game,reb,S02,Candidate (same-season association),yes
+SIG09,Assists per game,Official AST per game,ast,S02,Candidate (same-season association),yes
+SIG10,Home win percentage,Home W / (home W + home L) from standings text,home_record,S01,Component of the target (overlaps same games; excluded),no
+SIG11,Road win percentage,Road W / (road W + road L) from standings text,road_record,S01,Component of the target (overlaps same games; excluded),no
+SIG12,Last-10 win percentage,Last 10 games W/L from standings text,last10,S01,Overlaps same games; excluded,no
+SIG13,Prior-season win percentage (2025-26),Final 2025-26 W/(W+L) (out-of-sample predictor),pct,S08,Pre-registered out-of-sample predictor,yes

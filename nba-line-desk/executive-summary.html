@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Executive summary · NBA Line Desk 2026-27</title>
+<meta name="description" content="Findings, decisions and limits for the NBA 2026-27 line-origination desk. Nothing is validated and nothing is recommended.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><a href="index.html">NBA Line Desk 2026-27</a><span>Official data · skill-only validation</span></div>
+  <nav aria-label="Pages"><a href="index.html">Dashboard</a><a href="standings.html">Standings</a><a href="team-stats.html">Team stats</a><a href="player-logs.html">Player logs</a><a href="signals.html">Signals</a><a href="correlations.html">Correlations</a><a href="luck-vs-skill.html">Luck vs skill</a><a href="own-lines.html">Own lines</a><a href="strategies.html">Strategies</a><a href="validation.html">Validation</a><a href="leaderboard.html">Leaderboard</a><a href="executive-summary.html" class="on">Executive summary</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for review</a></nav>
+</header>
+<main>
+<h1>Executive summary</h1>
+<p class="lead">Findings, decisions and limits for the NBA 2026-27 line-origination desk. Nothing is validated and nothing is recommended.</p>
+
+<h2>Bottom line</h2>
+<p>No NBA strategy in this repository is validated for the 2026-27 season, and none should be used to place a bet.
+One team-level association does hold up: 2025-26 final win% predicts 2026-27 win% (r = 0.501, 95% CI 0.171 to 0.729, n = 30, permutation p = 0.0049).
+It passes the corrected threshold, but it is not a betting signal yet. Three gaps block it: (1) no official source publishes priced NBA markets, so the price and closing-line gates (G2–G5) cannot be tested;
+(2) the target itself is measured on 5–8 games per team; and (3) the 2026-27 prop-market restrictions are reported by press but not confirmed on an official page.</p>
+<h2>What was done</h2>
+<ul>
+<li>Pulled official 2026-27 standings, team stats and Anthony Edwards game logs from nba.com, plus the 2025-26 final standings (S01–S04, S08).
+Every value was transcribed and checked. The 2025-26 Edwards rows match the existing repo CSV exactly (F10).</li>
+<li>Defined 13 signals and 11 strategies. Each strategy names the official fields it uses.</li>
+<li>Ran 20 reconciliation checks. 0 failed. Standings and team stats agree for all 30 teams, and box-score arithmetic holds for every game row.</li>
+<li>Tested the candidate associations with a permutation test and a Bonferroni correction (alpha 0.00625 across 8 candidates), and the pre-registered out-of-sample test with alpha 0.0250.</li>
+</ul>
+<h2>Correlations and skill</h2>
+<ul>
+<li><strong>Same-season (descriptive).</strong> 3 of 8 candidates pass the corrected statistical test (points per game, turnovers, opponent points). These come from the same games as the target. They describe how games were won and cannot predict a result, so none is a signal.</li>
+<li><strong>Out-of-sample (predictive).</strong> Prior-season win% vs 2026-27 win%: r = 0.501, 95% CI 0.171 to 0.729, passes alpha 0.0250. The margin version is r = 0.436 (95% CI 0.090 to 0.688, passes alpha 0.0250). Both are team-level, one season, n = 30. The early record is noisy, so this r is probably understated.</li>
+<li><strong>Luck.</strong> 0 of 30 teams sit beyond chance at p &lt; 0.05, against about 1.5 expected by chance. Records this early mostly reflect luck. Team-level skill can be estimated to ±10 points only after about 97 games per team.</li>
+<li><strong>Market.</strong> The association with prior-season strength may already be in the market price. This cannot be checked without priced data.</li>
+</ul>
+<h2>Decisions made</h2>
+<ul>
+<li>No market odds are invented. Price, CLV and ROI cells are blank and flagged (F07).</li>
+<li>The reported prop-market restrictions are marked UNVERIFIED. They are not treated as prohibited (F06).</li>
+<li>Same-season box-score signals are reported but never used as predictors, because they describe the same games.</li>
+<li>SIG03 (opponent points) is outcome-derived and excluded from validation. It stays in the test count (F16).</li>
+<li>Derived values (opponent points, shooting rates, luck tests) are labelled as derived and the method is stated on each page.</li>
+<li>Work is confined to new paths (nba-line-desk/, data/nba-2026-27/, research/nba-2026-27/, tools/nba_line_desk/, tests/). README gets one link. Other sessions' pages, data and CI paths are untouched.</li>
+</ul>
+<h2>Repository review</h2>
+<ul>
+<li>README does not link the older nba-2026-lab dashboard (F02).</li>
+<li>research/nba/correlations.md says there is no route to stats.nba.com. The nba.com stats HTML pages load in this session, though the JSON API does not (F03).</li>
+<li>Older NBA notes cite betting-guide websites for correlation directions. None is an official source, and none is re-used here (F04).</li>
+<li>The older NBA evidence is built on 2025-26 data, which is stale for the 2026-27 season (F01).</li>
+</ul>
+<h2>What would change the conclusion</h2>
+<ul>
+<li>A verified, timestamped priced-market dataset (G2). Without it nothing can be validated.</li>
+<li>Priced bets: 783 needed to detect a 55% true win rate (80% power, two-sided alpha 0.05).</li>
+<li>An official NBA memo, or sportsbook terms, that confirms or rules out the reported prop restrictions (F06).</li>
+</ul>
+<p class="note">Full list of open items: <a href="flagged.html">Flagged for review</a>. Every number on this page is computed from the verified tables on the other pages.</p>
+
+</main>
+<footer>
+  <p>Data: official NBA pages (sources listed on <a href="sources.html">Sources</a>). Every table row links to its source.
+  Blank cells are values that could not be verified from an official source and are listed on
+  <a href="flagged.html">Flagged for review</a>. Derived values are labelled and the method is stated.</p>
+  <p>Analysis only, not betting advice. Nothing here claims an edge. Gambling problem? NCPG helpline 1-800-MY-RESET (see S07).</p>
+  <p class="small">Build date 2026-11-03 (UTC). Season 2026-27 to date.</p>
+</footer>
+<script src="app.js" defer></script>
+</body>
+</html>

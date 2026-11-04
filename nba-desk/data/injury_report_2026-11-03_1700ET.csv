@@ -1,0 +1,62 @@
+matchup,team,player,status,reason,attribution,source_url
+ATL@WAS,ATL,"Dennis, RayJ",Questionable,G League - Two-Way,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+ATL@WAS,ATL,"Gilbert, Keshon",Doubtful,G League - Two-Way,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+ATL@WAS,ATL,"Gueye, Mouhamed",Out,Injury/Illness - Left Foot Fracture,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+ATL@WAS,ATL,"Johnson, Jalen",Questionable,Injury/Illness - Left Ankle Sprain,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+ATL@WAS,ATL,"Landale, Jock",Out,Injury/Illness - Left Hip Strain,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+ATL@WAS,ATL,"Veesaar, Henri",Out,Injury/Illness - Right ACL Tear,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+ATL@WAS,ATL,"Wilson, Jalen",Doubtful,G League - Two-Way,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+ATL@WAS,WAS,"Beekman, Reece",Out,Injury/Illness - Right AC Joint Injury,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+ATL@WAS,WAS,"Champagnie, Justin",Out,Injury/Illness - Right Foot Surgery,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+ATL@WAS,WAS,"Gill, Anthony",Questionable,Injury/Illness - Low Back Spasms,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+ATL@WAS,WAS,"Sarr, Alex",Questionable,Injury/Illness - Left Knee Soreness,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+ATL@WAS,WAS,"Vukcevic, Tristan",Out,Injury/Illness - Left Hip Impingement,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+ATL@WAS,WAS,"Watkins, Jamir",Out,Injury/Illness - Left ACL Repair / Surgery,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+PHI@DET,PHI,"Barlow, Dominick",Out,Injury/Illness - Low Back Stress Reaction,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+PHI@DET,PHI,"Hukporti, Ariel",Out,Injury/Illness - Right Achilles Tendon Rupture / Tear,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+PHI@DET,DET,"Duren, Jalen",Out,Injury/Illness - Right Hamstring Strain,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+,,"Harkless, Elijah",Questionable,G League - Two-Way,unlabeled: row follows a PDF page break; team not stated in parsed text,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+,,"Joe, Isaiah",Out,Injury/Illness - Right Hip Contusion,unlabeled: row follows a PDF page break; team not stated in parsed text,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+,,"Jones, Isaac",Questionable,G League - Two-Way,unlabeled: row follows a PDF page break; team not stated in parsed text,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+,,"Onyenso, Ugonna",Out,G League - Two-Way,unlabeled: row follows a PDF page break; team not stated in parsed text,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+CHA@BKN,CHA,"Ajayi, Michael",Out,G League - Two-Way,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+CHA@BKN,CHA,"Boswell, Kylan",Out,G League - Two-Way,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+CHA@BKN,CHA,"Hall, PJ",Out,G League - Two-Way,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+CHA@BKN,CHA,"Knueppel, Kon",Probable,Injury/Illness - Left Hamstring Strain,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+CHA@BKN,CHA,"White, Coby",Probable,Injury/Illness - Left Calf Injury Management,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+CHA@BKN,CHA,"Williams, Grant",Out,Injury/Illness - Right Hamstring Strain,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+CHA@BKN,BKN,,,NOT YET SUBMITTED,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+CHI@NYK,CHI,"Claxton, Nic",Questionable,Injury/Illness - Left Hamstring Strain,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+CHI@NYK,CHI,"Smith, Jalen",Probable,Injury/Illness - Left Finger Sprain,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+CHI@NYK,NYK,"Hart, Josh",Questionable,Injury/Illness - Right Ankle Soreness,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+MIL@BOS,BOS,"Carter, Devin",Out,Injury/Illness - Illness,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+MIL@BOS,BOS,"Cenac Jr., Christopher",Questionable,G League - On Assignment,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+MIL@BOS,BOS,"Mitchell, Dillon",Questionable,G League - Two-Way,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+MIL@BOS,BOS,"Pritchard, Payton",Questionable,Injury/Illness - Right Shoulder Contusion,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+,,"Tatum, Jayson",Questionable,Rest,unlabeled: row follows a PDF page break; team not stated in parsed text,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+,,"Williams, Amari",Questionable,G League - Two-Way,unlabeled: row follows a PDF page break; team not stated in parsed text,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+CLE@OKC,CLE,"Diop, Khalifa",Out,G League - On Assignment,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+CLE@OKC,CLE,"Tomlin, Nae'Qwan",Out,Injury/Illness - Low Back Stress Reaction,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+CLE@OKC,CLE,"Tyson, Jaylon",Out,Injury/Illness - Right Ankle Sprain,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+CLE@OKC,CLE,"Udeh, Jr., Ernest",Out,G League - Two-Way,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+CLE@OKC,CLE,"Watson, Peyton",Out,Injury/Illness - Right Hamstring Tightness / Soreness,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+CLE@OKC,OKC,,,NOT YET SUBMITTED,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+IND@MEM,IND,,,NOT YET SUBMITTED,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+IND@MEM,MEM,,,NOT YET SUBMITTED,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+UTA@NOP,UTA,,,NOT YET SUBMITTED,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+UTA@NOP,NOP,,,NOT YET SUBMITTED,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+MIN@HOU,MIN,,,NOT YET SUBMITTED,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+MIN@HOU,HOU,"Adams, Steven",Out,Injury/Illness - Right Soleus Strain,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+MIN@HOU,HOU,"Capela, Clint",Questionable,Injury/Illness - Right Ankle Sprain,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+MIN@HOU,HOU,"Copeland, Quadir",Out,G League - Two-Way,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+MIN@HOU,HOU,"Phillips, Julian",Out,G League - Two-Way,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+POR@PHX,POR,,,NOT YET SUBMITTED,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+POR@PHX,PHX,,,NOT YET SUBMITTED,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+TOR@DEN,TOR,,,NOT YET SUBMITTED,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+TOR@DEN,DEN,,,NOT YET SUBMITTED,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+DAL@SAS,DAL,,,NOT YET SUBMITTED,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+DAL@SAS,SAS,,,NOT YET SUBMITTED,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+LAL@SAC,LAL,,,NOT YET SUBMITTED,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+LAL@SAC,SAC,,,NOT YET SUBMITTED,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+MIA@LAC,MIA,,,NOT YET SUBMITTED,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf
+MIA@LAC,LAC,,,NOT YET SUBMITTED,stated,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_05_00PM.pdf

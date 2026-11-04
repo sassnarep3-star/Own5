@@ -8,6 +8,7 @@ This repository hosts work from **three parallel agent sessions** (see `COORDINA
 | **NFL Research Desk** | NFL — line origination, strategy lab, correlation questions, review register | https://sassnarep3-star.github.io/Own5/ | `cd43258e` + `0f468a47` (root, `pages/`, `data/`, `scripts/`, `tools/`, `tests/`) |
 | **NFL Strategy Lab** | NFL — own lines from official data, pre-registered singles/parlays/prop combos, validation gates G0–G7, computed correlations, luck-deflated leaderboard | https://sassnarep3-star.github.io/Own5/nfl-strategy-lab/ | `arena-f1d30421` (`nfl-strategy-lab/`, `research/arena-f1d30421/`, `data/`, `scripts/compute_*`, `scripts/originate_lines.py`) |
 | **NFL Line Lab** | NFL — reconciled W1–9 game log + standings (32/32 exact), W8/W9 lines, model-vs-market origination, gate-scored strategy leaderboard, flagged items | https://sassnarep3-star.github.io/Own5/line-lab/ | `arena-44bc1e2f` (`line-lab/`, `data/standings_2026.json`, `data/games_2026.json`, `data/lines_upcoming_2026.json`, `tools/reconcile.py`, `tools/build_line_lab_site.py`, `analysis/compute_metrics.py`) |
+| **NBA Line Desk 2026-27** | NBA 2026-27 — official standings, team stats and Edwards logs; signals and correlations; luck-vs-skill; strategies with validation gates G1–G8; leaderboard; executive summary; flagged-for-review page | https://sassnarep3-star.github.io/Own5/nba-line-desk/ | `9cf7de11` (`nba-line-desk/`, `data/nba-2026-27/`, `research/nba-2026-27/`, `tools/nba_line_desk/`, `tests/test_nba_line_desk.py`) |
 
 Shared policy: **every table row carries a source link; values that cannot be confirmed from an official/primary source are left blank and published on a Flagged-for-Review page — never inferred. No performance claims; no bets placed; leaderboards empty until strategies pass validation gates.**
 
@@ -177,6 +178,14 @@ npm run desk:start      # local desk preview on 0.0.0.0:8000
 ```
 
 The existing root dashboard and its CI guard are unchanged. This desk is published as an additive subdirectory because GitHub Pages is already served from `main` at `/` by earlier sessions.
+
+## NBA Desk — own lines from official data (session 4396568c)
+
+Live: https://sassnarep3-star.github.io/Own5/nba-desk/index.html · Code and data: `nba-desk/` · Write-ups: `research/nba-4396568c/`.
+
+Originates 16 NBA lines (2026-11-04 and 11-05) from official NBA.com team data, tests the method out of sample, measures team-level correlations, pre-registers six strategies (singles, parlays, prop combos) behind nine fail-closed gates, and tabulates luck-vs-skill sample sizes. **0 strategies qualify, 0 rewards are issued and no market quotes were verified**; 15 flags are listed on the *Flagged for Review* page. Every table row links to the official page it came from; unconfirmed values are blank.
+
+Reproduce: `python3 nba-desk/analysis.py && python3 nba-desk/build.py && python3 -m unittest discover -s nba-desk/tests -q && python3 nba-desk/check.py`.
 
 ---
 
