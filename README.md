@@ -186,3 +186,22 @@ Live: https://sassnarep3-star.github.io/Own5/nba-desk/index.html · Code and dat
 Originates 16 NBA lines (2026-11-04 and 11-05) from official NBA.com team data, tests the method out of sample, measures team-level correlations, pre-registers six strategies (singles, parlays, prop combos) behind nine fail-closed gates, and tabulates luck-vs-skill sample sizes. **0 strategies qualify, 0 rewards are issued and no market quotes were verified**; 15 flags are listed on the *Flagged for Review* page. Every table row links to the official page it came from; unconfirmed values are blank.
 
 Reproduce: `python3 nba-desk/analysis.py && python3 nba-desk/build.py && python3 -m unittest discover -s nba-desk/tests -q && python3 nba-desk/check.py`.
+
+---
+
+## NBA Signal Lab (session 6d508fee)
+
+**Live site:** https://sassnarep3-star.github.io/Own5/nba-signal-lab/index.html · **Executive summary:** [`research/nba-signal-lab/EXECUTIVE_SUMMARY.md`](research/nba-signal-lab/EXECUTIVE_SUMMARY.md) · **Flagged for Review:** https://sassnarep3-star.github.io/Own5/nba-signal-lab/flagged.html
+
+| Path | Contents |
+|---|---|
+| `nba-signal-lab/` | Pages site (11 pages): dashboard, executive summary, own model lines, correlations, strategies & gates G01–G10, luck-vs-skill, leaderboard, verified data (125 player-game rows + 60 team rows, every row source-linked), analysis, verification, flagged-for-review |
+| `nba-signal-lab/data/` | Hand-transcribed official datasets (2026-27 + 2025-26 standings & team stats, 2025-26 Dončić/Edwards game logs with per-row nba.com game URLs, 2026-11-04 slate) + computed `outputs.json` |
+| `nba-signal-lab/compute.py` | Deterministic engine: 16/16 verification checks (cross-page agreement, scoring identities, official-leader checksums), model lines, correlations (Fisher-z CIs, phi/lift for prop combos, lag-1 independence), luck engine (exact binomial tails, power analysis, deflated scoring, multiple-testing bounds) |
+| `research/nba-signal-lab/` | `EXECUTIVE_SUMMARY.md`, `data-notes.md` (source register + transcription protocol + source irregularities), `methodology.md` |
+
+Verified highlights: same-game prop legs hit 10–27% above the independence product (phi table);
+lag-1 PTS autocorrelation ≈ 0 (cross-game parlay independence holds); a true 55% bettor needs
+≈2,243 graded bets to prove skill vs −110 break-even; **0 strategies certified**, market/odds
+columns blank + flagged. Shared policy holds: every row source-linked, unverifiable values blank
+and published on the Flagged page, never inferred.

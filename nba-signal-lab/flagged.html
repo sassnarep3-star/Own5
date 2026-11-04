@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flagged for Review — NBA Signal Lab</title><link rel="stylesheet" href="style.css"></head>
+<body><header><div class="wrap"><h1>NBA Signal Lab</h1>
+<p class="sub">Own lines · signal strategies · validation gates · luck stripped · session 6d508fee</p>
+<nav><a href="index.html">Dashboard</a><a href="executive-summary.html">Executive Summary</a><a href="model-lines.html">Own Model Lines</a><a href="correlations.html">Correlations</a><a href="strategies.html">Strategies &amp; Gates</a><a href="luck-vs-skill.html">Luck vs Skill</a><a href="leaderboard.html">Leaderboard</a><a href="data-verified.html">Verified Data</a><a href="analysis.html">Analysis</a><a href="verification.html">Verification</a><a href="flagged.html" class=active>Flagged for Review</a></nav></div></header>
+<main class="wrap">
+<h2>Flagged for Review</h2>
+<p>Irregularities, unverified values and model parameters — published, not hidden. None of these
+block the merge; all of them are open for manual review against the linked sources.</p>
+<table class=""><thead><tr><th>ID</th><th>Type</th><th>Item</th></tr></thead><tbody><tr><td>F-HFA</td><td>model-parameter</td><td>HFA_PTS = 2.5 is a model constant (no official NBA source publishes home advantage in points); empirical home win% is reported alongside; sensitivity at 2.0/2.5/3.0 included in model_lines.</td></tr><tr><td>F-MARKET</td><td>unverified</td><td>Market odds columns (market_spread, market_total) are blank on the model lines page: no odds source could be verified from an official NBA property in this sandbox. Nothing was inferred or filled in.</td></tr><tr><td>F-SLATE</td><td>irregularity</td><td>Official game calendar lists 14 NBA games on 2026-11-04; this slate sources 6 from official team-schedule pages under the pre-registered top-4-per-conference selection. Boston&#x27;s official schedule page is not machine-readable (JS-only) and games among teams outside the selection were not retrieved. Coverage is partial by design; nothing was inferred for unretrieved games.</td></tr><tr><td>F-SMALL</td><td>irregularity</td><td>2026-27 team samples are early-season (5-8 games per team as of 2026-11-03); model strength blends toward the 2025-26 prior (weight n/(n+20)) for this reason.</td></tr><tr><td>F-PLAYERS</td><td>scope</td><td>Full game logs are included for the top-2 2025-26 scorers on the official leaders page (Doncic 33.5 PPG, Edwards 28.8 PPG) = 125 player-games. Gilgeous-Alexander/Brown/Maxey rows are registered with official checksums but their game logs were not transcribed (fetch budget); correlations are labeled exploratory for this sample.</td></tr><tr><td>F-ODDS</td><td>unverified</td><td>Leaderboard prize pool and any reward amounts are blank: no verified source for funding exists. Competition runs on audit units until a real reward is announced.</td></tr></tbody></table>
+<h3>Unverified values deliberately left blank</h3>
+<table class=""><thead><tr><th>Value</th><th>Where</th><th>Why</th></tr></thead><tbody><tr><td>Market spread / market total</td><td><a href="model-lines.html" target="_blank" rel="noopener">model lines</a></td><td>No verified odds source retrievable; nothing inferred</td></tr><tr><td>Leaderboard prize pool + units</td><td><a href="leaderboard.html" target="_blank" rel="noopener">leaderboard</a></td><td>No verified funding source; 0 graded bets</td></tr><tr><td>Gilgeous-Alexander / Brown / Maxey / Mitchell per-game log rows</td><td><a href="data-verified.html" target="_blank" rel="noopener">registry</a></td><td>Registered with official checksums; full logs not transcribed (fetch budget) — flagged scope note F-PLAYERS</td></tr><tr><td>Remaining 8 games of the 2026-11-04 slate</td><td><a href="model-lines.html" target="_blank" rel="noopener">model lines</a></td><td>Not retrievable under the pre-registered selection rule; not guessed (F-SLATE)</td></tr></tbody></table>
+<h3>Irregularities observed at the source</h3>
+<ul>
+<li><code>https://www.nba.com/games?date=2026-11-04</code> renders only the calendar + game count
+without JavaScript; individual matchups are not in the static HTML.</li>
+<li><code>cdn.nba.com/static/json/staticData/scheduleLeagueV2_1.json</code> returns HTTP 500.</li>
+<li><code>standings?Section=margins</code> renders situational splits (3pts or less, score 100+, …),
+not PF/PA margins; PA/g is derived from PTS/g − +/−/g with 1dp rounding (±0.1 documented).</li>
+<li>Player box-score pages render at most ~50 rows; remaining rows retrieved via the official
+DateFrom/DateTo filters (row counts then matched the official "Rows" totals exactly).</li>
+<li>Team schedule pages label tip times "PDT" on nba.com; times are transcribed exactly as
+listed ("as listed" column) — no timezone conversion was inferred.</li>
+</ul>
+</main>
+<footer><div class="wrap">Built deterministically from <code>nba-signal-lab/data/</code> ·
+Every row links an official NBA source · Unverified values are blank and flagged, never inferred ·
+<a class="badge" href="flagged.html">6 flags — see Flagged for Review</a></div></footer></body></html>

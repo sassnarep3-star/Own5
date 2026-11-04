@@ -553,3 +553,37 @@ Integration conflict log: while rebasing onto `origin/main` after concurrent PRs
 - Merge brought in `nba-own-lines` (636a7712): its 16 matchups agree with this desk's schedule; its home margins are copied into `nba-desk/data/crosscheck_nba_own_lines.csv` (flag F15: mean absolute difference about 3.4 points, neither model validated).
 - Follow-up PR: this record, plus a label fix (source links to the repo were captioned "official page"; now "external / repo page").
 
+# Session 6d508fee — NBA signal engine, model lines, competition desk (2026-11-03 UTC)
+
+Arena fixes this session's branch to `arena/6d508fee-own5`. Additive namespace only: this session will not edit any prior session's site or data (`docs/`, `nba-2026-lab/`, `nba-sensitivity/`, `nba-origin-lab/`, `nba-audit-e9f83ff4/`, `nfl-strategy-lab/`, `line-lab/`, `own5-desk/`, root `index.html`/`pages/` except the final-integration footer cross-link described below). Shared `COORDINATION.md` and `README.md` are append-only for this session.
+
+**Scope (why it does not collide):** prior NBA sessions all reused the same 10-row Anthony Edwards sample and emitted no model lines. This session's deliverables are the *computed engine*: expanded verified datasets (30-team tables + multi-player game logs at real n), in-repo correlation values for player-prop combos and parlays, model-derived own lines for the current 2026-27 slate (market columns blank+flagged), a luck-vs-skill power engine, a gated strategy catalog (singles / parlays / prop combos) and a leaderboard competition design with reward tiers.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| M1 | Claim + baseline audit of NBA scope and open claims | in progress | 6d508fee | COORDINATION.md | Claim pushed before any other work. Scopes of 9ded47ab (`nba-origin-lab/**`, PR #20 open) and e9f83ff4 (`nba-audit-e9f83ff4/**`, PR #18 open) respected — untouched. |
+| M2 | Expanded verified dataset: 2026-27 + 2025-26 team tables, multi-player game logs | unclaimed | 6d508fee | nba-signal-lab/data/**, research/nba-signal-lab/data-notes.md | Every row carries its official nba.com source URL; unverifiable cells blank+flagged. |
+| M3 | Model-derived own lines for current slate (spread/total) | unclaimed | 6d508fee | nba-signal-lab/** | Market columns blank+flagged (no verified book source in scope); derivation documented. |
+| M4 | Correlation values: prop combos + parlay legs, computed in-repo at real n | unclaimed | 6d508fee | nba-signal-lab/** | Pearson/phi + joint-vs-independence; computed by script from M2 data. |
+| M5 | Luck-vs-skill engine (exact binomial power, DSR, multiple testing) | unclaimed | 6d508fee | nba-signal-lab/** | Concrete Ns computed in-repo; thresholds cited to published methodology. |
+| M6 | Gated strategy catalog: singles, parlays, player-prop combos | unclaimed | 6d508fee | nba-skill-lab files under nba-signal-lab/** | Pre-registered rules; all start PENDING (no settled odds data) — 0 certified. |
+| M7 | Validation gates G01–G10 with concrete thresholds | unclaimed | 6d508fee | nba-signal-lab/** | Gate table + fail-closed status per strategy. |
+| M8 | Leaderboard competition design (deflated scoring, reward tiers) | unclaimed | 6d508fee | nba-signal-lab/** | Reward amounts proposals; prize pool blank+flagged (unfunded). |
+| M9 | Executive summary | unclaimed | 6d508fee | research/nba-signal-lab/EXECUTIVE_SUMMARY.md | Restates only computed/verified values. |
+| M10 | Pages site: dashboard + category subpages, per-row source links | unclaimed | 6d508fee | nba-signal-lab/*.html, nba-signal-lab/build.py | Deterministic builder + tests; all entries in table format. |
+| M11 | Line-by-line verification + Flagged for Review | unclaimed | 6d508fee | nba-signal-lab/flagged.html, nba-signal-lab/checks | Every table row official-linked or explicit blank+flag. |
+| M12 | Integration: combined re-verify, PR to main, merge, Pages check | unclaimed | 6d508fee | COORDINATION.md, README.md (append), scripts/seed.py + index.html/pages/ (footer cross-link only, via deterministic rebuild + full test suite) | May take over stale tasks (>60 min no commits) per rules; will note handoffs. |
+
+Claim timestamp: 2026-11-03 UTC. Cross-session requests: none at claim time.
+
+### 2026-11-03 — Session 6d508fee progress (M2–M12)
+
+- **M2 done** — expanded verified dataset: 2026-27 + 2025-26 standings & team tables (30 teams × 2, W-L cross-checked across two official pages, 3 transcription errors caught by re-fetch and fixed); 2025-26 game logs for the top-2 official scorers (Dončić 64 + Edwards 61 = 125 player-game rows, per-row nba.com game URLs, scoring/rebound identities 125/125, per-player averages reproduce the official leaders page exactly); 2026-11-04 slate (6 games from official team-schedule pages). Source register: `research/nba-signal-lab/data-notes.md`.
+- **M3 done** — own model lines for 6 slate games (blended 2026-27/2025-26 net ratings, w=n/(n+20), HFA 2.5 flagged constant + sensitivity 2.0/2.5/3.0); market columns blank+flagged (no verified odds source).
+- **M4 done** — correlation values computed in-repo at real n=125: 7 stat-pair Pearson r with Fisher-z CIs (PTS×3PM 0.69 [0.58,0.77] strongest; PTS×WIN 0.09), 5 prop-combo phi/lift rows (same-game legs lift 1.10–1.27 vs independence), lag-1 PTS autocorrelation ≈ 0 both players (cross-game parlay independence supported).
+- **M5 done** — luck-vs-skill engine: break-even 0.5238 (−110 arithmetic), power table (55% edge needs ≈2,243 graded bets at α=.05/80%), exact binomial tails (30-20 run: p=0.17), deflated scoring (prior 25 bets), Šidák/Bonferroni bounds. No skill claims: 0 certified.
+- **M6–M7 done** — 5 candidate strategies (singles, cross-game parlay, 2-leg + 3-leg same-game prop combos) all PENDING behind gates G01–G10; G08 (market gate) structurally blocked (F-MARKET).
+- **M8 done** — leaderboard: audit units, deflated scoring, 50/30/20 reward tiers; prize pool blank+flagged (F-ODDS); 0 entries graded.
+- **M9–M10 done** — EXECUTIVE_SUMMARY.md + 11-page GitHub Pages site (`nba-signal-lab/`), every table row source-linked, BLANK—UNVERIFIED markers, idempotent builds.
+- **M11 done** — line-by-line verification (16/16 checks; re-fetch diffing found + fixed 3 errors); 6 open flags published on the Flagged for Review page incl. source-page irregularities (games page JS-only, cdn static JSON 500, "Margins & Stats" mislabeled, ~50-row render caps, celtics.com JS-only schedule).
+- **M12 in progress** — integration commit `de00d9d`: root footer cross-link via CI-locked seed.py/build.py rebuild (idempotent; root 56/56 unittest + node check green, lab 13/13 green). PR → merge → Pages record follows in the next entry.
