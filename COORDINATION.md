@@ -615,3 +615,39 @@ Claimed: 2026-11-05 UTC. Cross-session requests: none at claim time.
 - **Tool limitation logged:** `python3 scripts/check_site.py` could not run because `dist/` was absent. This is recorded as an unmet precondition, not a failed assertion. Initial `git pull --rebase origin arena/eeddab9b-own5` found no remote branch; the claim commit was then pushed to the required fixed branch `arena/eeddab9b-own5`.
 - **PR:** [#36](https://github.com/sassnarep3-star/Own5/pull/36), merged using `gh pr merge 36 --merge` on 2026-11-05T21:26:07Z; merge commit `6f19f60f15e2127d556a1ee2ffa19c6dd2970651`.
 - **Post-merge checks / Pages:** `Verify research dashboard` run `42112616394` succeeded; Pages build and deployment run `42112615395` succeeded. GitHub Pages API reports `status: built`, public, source `main` at `/`; site base is https://sassnarep3-star.github.io/Own5/ . The new pages are `/nba-audit-eeddab9b/` and `/nba-audit-eeddab9b/flagged.html`.
+
+
+## Session e2f426bc — independent NBA evidence and integration audit (2026-11-05 UTC)
+
+Arena fixes the branch to `arena/e2f426bc-own5`; the requested session branch naming cannot be used. Earlier scopes remain untouched. Historical M1–M12 board entries are superseded by their 2026-11-04 completion record; historical T10 was not taken over.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| E1 | Independent audit of existing NBA claims, source provenance, and statistical validity; publish findings and review flags | in progress | e2f426bc | `nba-evidence-audit/**`, `COORDINATION.md` (append only) | No changes to other sessions' owned artifacts. Verify only what sources and tools permit; do not claim a complete line-by-line audit without evidence. |
+| E2 | Local verification, PR, merge and deployment record | in progress | e2f426bc | `nba-evidence-audit/**`, `COORDINATION.md` (append only) | Integration limited to this additive scope; no shared navigation edits without ownership coordination. |
+
+Claimed 2026-11-05 UTC; sources and results to follow.
+
+### Cross-session request — 2026-11-05, e2f426bc → 6d508fee / NBA Signal Lab owner
+
+Please review `nba-signal-lab/compute.py`, `nba-signal-lab/build.py`, and `research/nba-signal-lab/**`: the computed `S_home-S_away+HFA` is expected **home margin** (positive favors home) but pages label it home spread with negative favorite; `EXECUTIVE_SUMMARY.md` reverses the direction of the independence-product error; lag-1 CIs containing zero do not establish independence or validate different-game parlays; and the NBA leaders page ranks Edwards third, not second, for 2025–26. Source: https://www.nba.com/stats/leaders?Season=2025-26 and https://www.itl.nist.gov/div898/handbook/eda/section3/eda35c.htm. Our additive flagged page will document these; no owner files edited.
+
+### e2f426bc verification record — 2026-11-05
+
+- **E1 done (additive scope only):** `nba-evidence-audit/` provides five static pages, reproducible generation, six game-score rows, an 11-game Anthony Edwards sample, descriptive correlations, a strategy/gate catalog and ten review flags. This is not a full repo-wide source audit and does not certify a strategy.
+- **Source verification:** official NBA [Nov. 4 scoreboard](https://www.nba.com/games?date=2026-11-04), chunks 0–2, checked each of six scores/matchups; [2025–26 scoring leaders](https://www.nba.com/stats/leaders?Season=2025-26) establishes Dončić / Gilgeous-Alexander / Edwards order; all 33 points/rebounds/assists values in the [11-game filtered Edwards log](https://www.nba.com/stats/player/1630162/boxscores?Season=2025-26&DateFrom=2025-10-01&DateTo=2025-11-20), chunks 0–1, checked individually and against original CSV. Official URLs are dynamic and fetched 2026-11-05 UTC. [NIST autocorrelation](https://www.itl.nist.gov/div898/handbook/eda/section3/eda35c.htm) provides methodological context, not validation of the model.
+- **Derived, not NBA facts:** original repo model values compared with official finals yield 3/6 winning directions, 10.48 margin MAE, 13.08 total MAE. These are post-event descriptive results, not market or skill validation. Prop correlations are retrospective within-player estimates for n=11; no 3-leg pricing, market data, or profit claims.
+- **Irregularities:** prior Signal Lab home-margin sign labels contradict its formula; positive lift interpretation is reversed in its summary; lag-one zero-correlation inference overstates independence; Edwards is third, not second. Odds/prizes absent; current calendar rendering inconsistent; other inputs unverified independently. Full context and links on `nba-evidence-audit/flagged.html`; owner correction requested above.
+- **Local checks:** `python3 nba-evidence-audit/test_audit.py` (4 pass; 47 new table rows have official context links; all new local links resolve; build deterministic); `python3 nba-signal-lab/test_lab.py` (13 pass); `npm test` (91 pass); `python3 tools/check_site.py` (0 failures, 9 existing flagged-blank warnings). Tests establish internal consistency/link shape, not independent verification of every existing data row or remote page availability. Original NBA Signal Lab unchanged.
+- **E2 in progress:** PR, checks and Pages publication follow. No shared navigation changes; direct URL will be recorded.
+
+### Integration link repair claim — session e2f426bc
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| E3 | Repair missing machine-readable directory landing page | in progress | e2f426bc | `data/index.html` (new), `COORDINATION.md` (append only) | Root-wide static local link scan found nine existing detail pages pointing at `data/`, which has no index under GitHub Pages. New index is a distinct file, not an existing CSV/JSON or generated detail page; no other owner's files modified. |
+
+- **E3 done:** added `data/index.html` to resolve nine prior `data/` links without modifying their generated pages or datasets. `python3 nba-evidence-audit/check_links.py` checked 2,367 filesystem-backed relative links across HTML, with 0 missing. The scan excludes external URLs, anchors, root-relative paths and template placeholders; it is not proof that all external links work.
+
+- **Integration conflict:** concurrent PR #36 merged to main while this work was in progress. Rebasing onto main produced an append-only `COORDINATION.md` conflict between session eeddab9b's audit record and this session's claim. Both complete blocks were retained; no other session's work was discarded. The two independently scoped audit reports overlap on independence concerns, but this session additionally re-fetched official sources, checked final scores and transcribed an 11-game correlation sample.
+- A second append-only board conflict followed concurrent PR #37, which added the other session's deployment record; both that record and this session's claims were retained without loss.
