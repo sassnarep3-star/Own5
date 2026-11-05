@@ -1,0 +1,23 @@
+analysis,group,kind,n,estimate,ci95_low,ci95_high,joint_hit_rate,independence_product,lift,interpretation,source_url
+Points × rebounds,Pooled two players,Pearson,125,0.3659,0.2034,0.5088,,,,Descriptive; not proof of profitable combo pricing,https://www.nba.com/game/0022501178/
+Points × assists,Pooled two players,Pearson,125,0.1931,0.0181,0.3566,,,,Descriptive; not proof of profitable combo pricing,https://www.nba.com/game/0022501178/
+Points × made threes,Pooled two players,Pearson,125,0.6893,0.5844,0.7715,,,,Descriptive; not proof of profitable combo pricing,https://www.nba.com/game/0022501178/
+Points × team win,Pooled two players,point-biserial,125,0.0876,-0.0894,0.2592,,,,Descriptive; not proof of profitable combo pricing,https://www.nba.com/game/0022501178/
+25+ PTS & 5+ REB,Pooled two players,phi / joint rate,125,0.3881,0.228,0.5277,0.632,0.5591,1.1304,Empirical joint rate; pool does not establish causal or future dependence,https://www.nba.com/game/0022501178/
+25+ PTS & 3+ 3PM,Pooled two players,phi / joint rate,125,0.4733,0.3246,0.5991,0.648,0.5591,1.159,Empirical joint rate; pool does not establish causal or future dependence,https://www.nba.com/game/0022501178/
+25+ PTS & 5+ AST,Pooled two players,phi / joint rate,125,0.2186,0.0447,0.3797,0.512,0.4669,1.0965,Empirical joint rate; pool does not establish causal or future dependence,https://www.nba.com/game/0022501178/
+Points × rebounds,Anthony Edwards,Pearson,61,0.3023,0.0547,0.5149,,,,Descriptive; not proof of profitable combo pricing,https://www.nba.com/game/0022501178/
+Points × assists,Anthony Edwards,Pearson,61,-0.0489,-0.2971,0.2054,,,,Descriptive; not proof of profitable combo pricing,https://www.nba.com/game/0022501178/
+Points × made threes,Anthony Edwards,Pearson,61,0.6956,0.538,0.8062,,,,Descriptive; not proof of profitable combo pricing,https://www.nba.com/game/0022501178/
+Points × team win,Anthony Edwards,point-biserial,61,-0.1455,-0.3833,0.1104,,,,Descriptive; not proof of profitable combo pricing,https://www.nba.com/game/0022501178/
+25+ PTS & 5+ REB,Anthony Edwards,phi / joint rate,61,0.4078,0.1739,0.5982,0.459,0.3636,1.2624,Empirical joint rate; pool does not establish causal or future dependence,https://www.nba.com/game/0022501178/
+25+ PTS & 3+ 3PM,Anthony Edwards,phi / joint rate,61,0.5229,0.3122,0.6846,0.5574,0.4407,1.2646,Empirical joint rate; pool does not establish causal or future dependence,https://www.nba.com/game/0022501178/
+25+ PTS & 5+ AST,Anthony Edwards,phi / joint rate,61,0.1159,-0.1401,0.3573,0.2459,0.2204,1.1159,Empirical joint rate; pool does not establish causal or future dependence,https://www.nba.com/game/0022501178/
+Points × rebounds,Luka Doncic,Pearson,64,0.3036,0.0625,0.5113,,,,Descriptive; not proof of profitable combo pricing,https://www.nba.com/game/0022501116/
+Points × assists,Luka Doncic,Pearson,64,0.1007,-0.1488,0.3381,,,,Descriptive; not proof of profitable combo pricing,https://www.nba.com/game/0022501116/
+Points × made threes,Luka Doncic,Pearson,64,0.6658,0.5022,0.7834,,,,Descriptive; not proof of profitable combo pricing,https://www.nba.com/game/0022501116/
+Points × team win,Luka Doncic,point-biserial,64,0.3139,0.0738,0.5196,,,,Descriptive; not proof of profitable combo pricing,https://www.nba.com/game/0022501116/
+25+ PTS & 5+ REB,Luka Doncic,phi / joint rate,64,0.1783,-0.0706,0.4063,0.7969,0.7788,1.0232,Empirical joint rate; pool does not establish causal or future dependence,https://www.nba.com/game/0022501116/
+25+ PTS & 3+ 3PM,Luka Doncic,phi / joint rate,64,0.3544,0.1189,0.5521,0.7344,0.6848,1.0724,Empirical joint rate; pool does not establish causal or future dependence,https://www.nba.com/game/0022501116/
+25+ PTS & 5+ AST,Luka Doncic,phi / joint rate,64,0.1189,-0.1307,0.3544,0.7656,0.752,1.0182,Empirical joint rate; pool does not establish causal or future dependence,https://www.nba.com/game/0022501116/
+Daily top-two favorite parlay,22 games / 3 dates,joint vs independence,3,,,,0.3333,0.4444,0.75,Only three parlays; phi blank and no inference,https://www.nba.com/game/0022600147

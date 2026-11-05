@@ -1,0 +1,10 @@
+rank,strategy_id,strategy,track,eligible,deflated_score,roi,reward,reason,source_url
+,S01,Single · prior winner,single,NO,,,,5 gate(s) open; ranking disabled,https://www.nba.com/game/0022600147
+,S02,Single · 3-point conviction,single,NO,,,,5 gate(s) open; ranking disabled,https://www.nba.com/game/0022600147
+,S03,Single · totals direction,single,NO,,,,5 gate(s) open; ranking disabled,https://www.nba.com/game/0022600147
+,S04,Parlay · daily top two favorites,parlay,NO,,,,6 gate(s) open; ranking disabled,https://www.nba.com/game/0022600147
+,S05,Prop single · Dončić 25+ points,prop_single,NO,,,,5 gate(s) open; ranking disabled,https://www.nba.com/game/0022500688/
+,S06,Prop single · Edwards 25+ points,prop_single,NO,,,,5 gate(s) open; ranking disabled,https://www.nba.com/game/0022500644/
+,S07,Prop combo · 25+ points & 5+ rebounds,prop_combo,NO,,,,6 gate(s) open; ranking disabled,https://www.nba.com/game/0022500644/
+,S08,Prop combo · 25+ points & 3+ threes,prop_combo,NO,,,,6 gate(s) open; ranking disabled,https://www.nba.com/game/0022500644/
+,S09,Prop combo · 25+ points & 5+ assists,prop_combo,NO,,,,6 gate(s) open; ranking disabled,https://www.nba.com/game/0022500644/

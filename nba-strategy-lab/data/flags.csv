@@ -1,0 +1,10 @@
+flag_id,severity,item,disposition,source_url
+F01,HIGH,No verified sportsbook quotes or settlement ledger,"Market prices, ROI, edges, ranks and rewards blank; all strategies fail closed.",https://www.nba.com/schedule?month=11&year=2026
+F02,HIGH,"Small, non-prospective samples","22 team games, 3 parlays and at most 51 pooled prop holdouts; no skill claim.",https://www.nba.com/stats/teams/boxscores?Season=2026-27&SeasonType=Regular%20Season
+F03,HIGH,Current player availability not refreshed,Archived lines are not actionable; no injury adjustment inferred.,https://official.nba.com/nba-injury-report-2026-27-season/
+F04,MEDIUM,Zero home-court advantage is an analyst convention,Model margin omits HFA; residual scale comes from the same 22-game diagnostic and is not validated.,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season
+F05,MEDIUM,Two-player convenience sample,Correlations and prop thresholds do not generalize to the league.,https://www.nba.com/stats/player/1629029/boxscores?Season=2025-26
+F06,MEDIUM,External source pages were not freshly fetched in this session,Frozen official-source transcriptions inherited from reviewed repo snapshots; identities recomputed. Manual source review links supplied.,https://www.nba.com/stats/help/glossary
+F07,LOW,Archived schedule,"2026-11-04/05 lines are reproducible historical research, not a current slate.",https://www.nba.com/schedule?month=11&year=2026
+F08,LOW,Rewards are unfunded,Reward cells blank; proposed 50/30/20 allocation activates only for eligible entries and a separately funded pool.,https://www.nba.com/schedule?month=11&year=2026
+F09,LOW,Blank source fields retained,Archived schedule venues are blank; two 2026-11-05 tip times are blank. No values inferred.,https://www.nba.com/schedule?month=11&year=2026
