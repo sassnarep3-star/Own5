@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Source register · NBA Line Commission · OWN5</title>
+<meta name="description" content="Source-verified NBA line origination, correlation values, validation gates and a luck-deflated leaderboard. Snapshot 2026-11-05.">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<header class="top">
+  <div class="brand">OWN5 · NBA LINE COMMISSION<small>SESSION arena-a46d621e · SNAPSHOT 2026-11-05 · PAPER RESEARCH ONLY</small></div>
+  <div class="meta">Every value is source-linked · Unverifiable values are blank and flagged</div>
+</header>
+<nav class="cats" aria-label="Sections"><a href="index.html">Dashboard</a><a href="lines.html">Own lines</a><a href="props.html">Player props</a><a href="correlations.html">Correlations</a><a href="strategies.html">Strategies</a><a href="gates.html">Validation gates</a><a href="skill-vs-luck.html">Skill vs luck</a><a href="leaderboard.html">Leaderboard</a><a href="data.html">Verified data</a><a href="audit.html">Repo audit</a><a href="verification.html">Verification</a><a href="sources.html" class="active">Sources</a><a href="flagged.html">Flagged for review</a><a href="executive-summary.html">Executive summary</a></nav>
+<main>
+<h1>Source register</h1>
+<p class="lede">Every source cited anywhere on this site, with what it was used for and when it was checked.</p>
+<div class="tablewrap"><table><caption>Official data sources first, then methodology references. ‘Fetched’ means the page was retrieved in this session; ‘search metadata only’ means the citation was confirmed but the document was not downloaded.</caption><thead><tr><th>ID</th><th>Publisher</th><th>Document</th><th>Link</th><th>Used for</th><th>Checked</th></tr></thead><tbody><tr><td>E1</td><td>NBA.com</td><td>2026-27 regular-season standings</td><td><a href="https://www.nba.com/standings" target="_blank" rel="noopener noreferrer">open ↗</a></td><td>30 team rows: W-L, GB, CONF/DIV/HOME/ROAD/NEUTRAL/OT/L10/STREAK</td><td>2026-11-05</td></tr><tr><td>E2</td><td>NBA.com</td><td>Team traditional stats, 2026-27 regular season (per game)</td><td><a href="https://www.nba.com/stats/teams/traditional?Season=2026-27&amp;SeasonType=Regular%20Season" target="_blank" rel="noopener noreferrer">open ↗</a></td><td>30 team rows: GP, W-L, shooting, rebounds, turnovers, net points</td><td>2026-11-05</td></tr><tr><td>E3</td><td>NBA.com</td><td>Schedule, 2026-11-05 / 2026-11-06</td><td><a href="https://www.nba.com/schedule?date=2026-11-05" target="_blank" rel="noopener noreferrer">open ↗</a></td><td>11 slate games: date, tip time (ET), venue, city, competition</td><td>2026-11-05</td></tr><tr><td>E4</td><td>NBA.com</td><td>Anthony Edwards 2026-27 game log</td><td><a href="https://www.nba.com/stats/player/1630162/boxscores?Season=2026-27" target="_blank" rel="noopener noreferrer">open ↗</a></td><td>4 player-game rows; headline averages used as a checksum</td><td>2026-11-05</td></tr><tr><td>E5</td><td>NBA.com</td><td>Luka Doncic 2026-27 game log</td><td><a href="https://www.nba.com/stats/player/1629029/boxscores?Season=2026-27" target="_blank" rel="noopener noreferrer">open ↗</a></td><td>8 player-game rows; headline averages used as a checksum</td><td>2026-11-05</td></tr><tr><td>E6</td><td>NBA.com</td><td>Anthony Edwards 2025-26 game log (early-window re-fetch)</td><td><a href="https://www.nba.com/stats/player/1630162/boxscores?Season=2025-26&amp;DateFrom=2025-10-01&amp;DateTo=2025-11-20" target="_blank" rel="noopener noreferrer">open ↗</a></td><td>independent re-fetch of 6 rows already present in the inherited 2025-26 log</td><td>2026-11-05</td></tr><tr><td>E7</td><td>NBA.com</td><td>Team traditional stats, 2025-26 regular season</td><td><a href="https://www.nba.com/stats/teams/traditional?Season=2025-26&amp;SeasonType=Regular%20Season" target="_blank" rel="noopener noreferrer">open ↗</a></td><td>prior-season team means used only as the shrinkage prior (transcribed by session 6d508fee; not re-fetched)</td><td>2026-11-03 (inherited)</td></tr><tr><td>M1</td><td>Notices of the AMS</td><td>Pseudo-Mathematics and Financial Charlatanism (Bailey, Borwein, Lopez de Prado, Zhu 2014)</td><td><a href="https://www.ams.org/notices/201405/rnoti-p458.pdf" target="_blank" rel="noopener noreferrer">open ↗</a></td><td>backtest-overfitting / multiple-testing framing</td><td>2026-11-05</td></tr><tr><td>M2</td><td>David H. Bailey (author copy)</td><td>The Deflated Sharpe Ratio (Bailey &amp; Lopez de Prado 2014)</td><td><a href="https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf" target="_blank" rel="noopener noreferrer">open ↗</a></td><td>deflation concept (implemented only as a shrunken rate)</td><td>search metadata only</td></tr><tr><td>M3</td><td>arXiv</td><td>Beating the bookies with their own numbers (Kaunitz, Zhong, Kreiner 2017)</td><td><a href="https://arxiv.org/abs/1710.02824" target="_blank" rel="noopener noreferrer">open ↗</a></td><td>context for market efficiency and account limiting; no result imported</td><td>search metadata only</td></tr><tr><td>M4</td><td>statsmodels</td><td>multipletests — Holm / Sidak / Bonferroni corrections</td><td><a href="https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html" target="_blank" rel="noopener noreferrer">open ↗</a></td><td>family-wise error corrections</td><td>2026-11-05</td></tr></tbody></table></div>
+<h2>Official-source policy</h2>
+<ul class="tight">
+<li>Data values come only from nba.com properties (standings, team traditional stats, schedule, player box scores).</li>
+<li>A value that could not be read from an official page is left blank and listed on <a href="flagged.html">Flagged for review</a>.</li>
+<li>Methodology citations (AMS, arXiv, statsmodels, author copies) never supply an NBA number; they only justify a statistical procedure.</li>
+<li>No sportsbook, aggregator, or secondary stats site is used as a data source anywhere in this session.</li>
+</ul>
+</main>
+<footer>
+  <strong>OWN5 NBA Line Commission</strong> · session <span class="mono">arena-a46d621e</span> ·
+  snapshot 2026-11-05 · 11 own game lines · 8 own player prop lines ·
+  0 of 8 strategies certified · 0 graded bets.
+  <br>Official data: nba.com. Methodology citations are linked per row. No odds, no ROI, no betting advice.
+  Blank cells mean <em>unverified</em>, not zero. Gambling help: 1-800-GAMBLER ·
+  <a href="https://www.ncpgambling.org/help-treatment/national-helpline-1-800-522-4700/" target="_blank" rel="noopener noreferrer">NCPG ↗</a>.
+  <br>Other OWN5 boards: <a href="../index.html">NFL Research Desk</a> ·
+  <a href="../nba-signal-lab/index.html">NBA Signal Lab</a> · <a href="../nba-desk/index.html">NBA Desk</a> ·
+  <a href="../docs/index.html">NBA Line-Origination Lab</a> · <a href="../line-lab/index.html">NFL Line Lab</a>.
+</footer>
+</body></html>

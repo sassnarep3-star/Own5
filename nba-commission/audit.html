@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repo audit — re-verification of the earlier NBA boards · NBA Line Commission · OWN5</title>
+<meta name="description" content="Source-verified NBA line origination, correlation values, validation gates and a luck-deflated leaderboard. Snapshot 2026-11-05.">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<header class="top">
+  <div class="brand">OWN5 · NBA LINE COMMISSION<small>SESSION arena-a46d621e · SNAPSHOT 2026-11-05 · PAPER RESEARCH ONLY</small></div>
+  <div class="meta">Every value is source-linked · Unverifiable values are blank and flagged</div>
+</header>
+<nav class="cats" aria-label="Sections"><a href="index.html">Dashboard</a><a href="lines.html">Own lines</a><a href="props.html">Player props</a><a href="correlations.html">Correlations</a><a href="strategies.html">Strategies</a><a href="gates.html">Validation gates</a><a href="skill-vs-luck.html">Skill vs luck</a><a href="leaderboard.html">Leaderboard</a><a href="data.html">Verified data</a><a href="audit.html" class="active">Repo audit</a><a href="verification.html">Verification</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for review</a><a href="executive-summary.html">Executive summary</a></nav>
+<main>
+<h1>Repo audit — re-verification of the earlier NBA boards</h1>
+<p class="lede">Six NBA boards already existed in this repository. This session re-fetched official pages, recomputed their numbers where possible, and recorded what matched, what is stale and what is irregular.</p>
+<h1>Repo audit — re-verification of the six earlier NBA boards</h1>
+<p>This session did not trust the repository; it re-checked it. Six NBA dashboards already existed</p>
+<p>(<span class="mono">docs/</span>, <span class="mono">nba-2026-lab/</span>, <span class="mono">nba-line-desk/</span>, <span class="mono">nba-desk/</span>, <span class="mono">nba-signal-lab/</span>, <span class="mono">nba-origin-lab/</span>, plus</p>
+<p><span class="mono">nba-audit-e9f83ff4/</span> and <span class="mono">nba-sensitivity/</span>). None of them had ever been re-verified against the</p>
+<p>official pages *on a later date*. That is what this audit adds.</p>
+<h2>What was re-fetched or recomputed</h2>
+<ul class="tight">
+<li><strong>Official standings re-fetch (2026-11-05).</strong> The whole 30-team table was transcribed fresh and</li>
+</ul>
+<p>  compared with session <span class="mono">6d508fee</span>&#x27;s 2026-11-03 snapshot. Result: 28 of 30 teams show exactly one</p>
+<p>  additional game, 2 teams none, and the total is <strong>28 team-games = 14 games</strong>, which is precisely the</p>
+<p>  number of games the official nba.com calendar shows for 2026-11-04. The deltas reconcile team by</p>
+<p>  team, so the earlier transcript is corroborated by an independent later fetch rather than merely</p>
+<p>  being internally consistent.</p>
+<ul class="tight">
+<li><strong>Player game-log arithmetic (125 inherited rows).</strong> All 125 rows satisfy</li>
+</ul>
+<p>  <span class="mono">PTS = 2·(FGM−3PM) + 3·3PM + FTM</span> and <span class="mono">REB = OREB + DREB</span>. Per-player averages recompute to</p>
+<p>  28.8 / 5.0 / 3.7 (Edwards) and 33.5 / 7.7 / 8.3 (Dončić), matching the official nba.com headline</p>
+<p>  averages recorded in the earlier session&#x27;s data notes.</p>
+<ul class="tight">
+<li><strong>Six game-log rows re-fetched independently.</strong> The Nov 19, 17, 15, 14, 10 and 09 (2025) Edwards</li>
+</ul>
+<p>  rows were pulled from the official box-score page again on 2026-11-05 and compared field by field</p>
+<p>  (MIN, PTS, FGM/FGA, 3PM/3PA, FTM/FTA, OREB, DREB, REB, AST, STL, BLK, TOV, PF, +/−). **6 of 6 matched</p>
+<p>  exactly**, including the two least obvious cells (REB and +/−).</p>
+<ul class="tight">
+<li><strong>Correlation reproducibility.</strong> Recomputing PTS × 3PM from the inherited 125-row log gives</li>
+</ul>
+<p>  r = 0.6893 with a Fisher-z 95% interval of 0.5844–0.7715. The earlier NBA Signal Lab published</p>
+<p>  exactly 0.6893 (0.5844, 0.7715). Two independently written engines agreeing to four decimals is</p>
+<p>  evidence the transcript and the math are sound — it is not evidence of predictive edge.</p>
+<ul class="tight">
+<li><strong>Internal consistency of the earlier team tables.</strong> <span class="mono">nba-signal-lab</span> 2026-27 team rows: 30/30 have</li>
+</ul>
+<p>  <span class="mono">GP = W + L</span>, 30/30 agree with their own standings page, all home/road/neutral splits sum to the</p>
+<p>  record, and Σ(net × GP) = 2.0 (rounding-consistent).</p>
+<ul class="tight">
+<li><strong>Repository-wide internal link scan.</strong> Every committed HTML file (root, <span class="mono">docs/</span>, <span class="mono">line-lab/</span>,</li>
+</ul>
+<p>  <span class="mono">nfl-strategy-lab/</span>, <span class="mono">nba-*</span>, <span class="mono">own5-desk/</span>) was scanned: <strong>0 broken internal links</strong>.</p>
+<ul class="tight">
+<li><strong>Existing test suites.</strong> <span class="mono">python3 -m unittest discover -s tests</span> → 91 tests, OK.</li>
+</ul>
+<p>  <span class="mono">python3 tools/check_site.py</span> → 20 checks, 0 failures.</p>
+<h2>Irregularities found</h2>
+<ul class="tight">
+<li><strong>Cyrillic character in a CSV header (cosmetic, real).</strong> <span class="mono">nba-signal-lab/data/teams_2025_26.csv</span> and</li>
+</ul>
+<p>  <span class="mono">teams_2026_27.csv</span> name a column <span class="mono">blkа_pg</span> where the fourth character is U+0430 CYRILLIC SMALL</p>
+<p>  LETTER A, not ASCII <span class="mono">a</span>. Any consumer doing <span class="mono">row[&quot;blka_pg&quot;]</span> gets a KeyError. This session&#x27;s copy</p>
+<p>  normalises the key; the source files belong to another session and were <strong>not</strong> edited, so the</p>
+<p>  defect is still live in the repository. Published as flag F13.</p>
+<ul class="tight">
+<li><strong>Every earlier snapshot is stale by construction.</strong> All six boards froze official data on</li>
+</ul>
+<p>  2026-11-02 … 2026-11-04. Their numbers were correct when captured and are reproduced here, but a</p>
+<p>  reader must not use them as today&#x27;s standings. This board publishes the 2026-11-05 snapshot for</p>
+<p>  that reason; the earlier boards have deliberately not been edited.</p>
+<ul class="tight">
+<li><strong>Shared limitation, not an error.</strong> None of the earlier boards obtained a verifiable market price,</li>
+</ul>
+<p>  and each says so. This session confirms the limitation independently: no sportsbook page is</p>
+<p>  reachable from the sandbox (outbound access is limited to GitHub hosts; nba.com is reachable only</p>
+<p>  through the platform page fetcher). The consequence is unchanged — no edge, CLV or ROI anywhere in</p>
+<p>  the repository is measurable, and none is claimed.</p>
+<ul class="tight">
+<li><strong>Duplicated scope across sessions.</strong> Six boards compute overlapping correlations from overlapping</li>
+</ul>
+<p>  samples (mostly the same two players). This is not a data error, but it does mean the repository</p>
+<p>  currently has six partial answers to one question. This board is additive: it does not delete or</p>
+<p>  edit theirs, and it states plainly which values are recomputations.</p>
+<h2>Cross-session findings adopted</h2>
+<p>Two other sessions audited the same material on the same day and their findings are corroborated here:</p>
+<ul class="tight">
+<li><strong>Session <span class="mono">eeddab9b</span> (independent provenance audit, 2026-11-05) — A02/A03.</strong> Inferring cross-game</li>
+</ul>
+<p>  independence from two players with wide intervals is too strong, and pooled two-player prop rates need</p>
+<p>  clustered and out-of-sample validation. This board agrees and states the same caveat on its own lag-1</p>
+<p>  table; no certification in this board relies on independence, and S04/S05/S08 stay blocked. Recorded as</p>
+<p>  flag F15.</p>
+<ul class="tight">
+<li><strong>Session <span class="mono">eeddab9b</span> — A04/A05.</strong> Its source-identifier mapping conflict inside the NBA Signal Lab and</li>
+</ul>
+<p>  the derived-line rows that do not expose every input could not be reproduced here because those files</p>
+<p>  belong to another session&#x27;s scope; the request to reconcile them is logged in <span class="mono">COORDINATION.md</span>.</p>
+<ul class="tight">
+<li><strong>Session <span class="mono">ad72b171</span> (NBA Strategy Lab, 2026-11-05)</strong> publishes its own lines and a 548-row audit</li>
+</ul>
+<p>  ledger. It is a parallel implementation, not a superset of this board: different slate coverage,</p>
+<p>  different gates, and the same conclusion — 0 strategies certified, no verified market price.</p>
+<h2>Verdict</h2>
+<p>The earlier NBA work is <strong>arithmetically sound and honestly labelled</strong>: no fabricated odds, no</p>
+<p>fabricated ROI, blanks where data was missing. The defects found are cosmetic (one header character),</p>
+<p>structural (stale snapshots by design) and shared (no market data). Nothing found required editing</p>
+<p>another session&#x27;s files, and nothing found changes the headline conclusion that the repository has</p>
+<p>built a pipeline, not an edge.</p>
+</main>
+<footer>
+  <strong>OWN5 NBA Line Commission</strong> · session <span class="mono">arena-a46d621e</span> ·
+  snapshot 2026-11-05 · 11 own game lines · 8 own player prop lines ·
+  0 of 8 strategies certified · 0 graded bets.
+  <br>Official data: nba.com. Methodology citations are linked per row. No odds, no ROI, no betting advice.
+  Blank cells mean <em>unverified</em>, not zero. Gambling help: 1-800-GAMBLER ·
+  <a href="https://www.ncpgambling.org/help-treatment/national-helpline-1-800-522-4700/" target="_blank" rel="noopener noreferrer">NCPG ↗</a>.
+  <br>Other OWN5 boards: <a href="../index.html">NFL Research Desk</a> ·
+  <a href="../nba-signal-lab/index.html">NBA Signal Lab</a> · <a href="../nba-desk/index.html">NBA Desk</a> ·
+  <a href="../docs/index.html">NBA Line-Origination Lab</a> · <a href="../line-lab/index.html">NFL Line Lab</a>.
+</footer>
+</body></html>

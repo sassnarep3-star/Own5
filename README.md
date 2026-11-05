@@ -206,6 +206,45 @@ lag-1 PTS autocorrelation ≈ 0 (cross-game parlay independence holds); a true 5
 columns blank + flagged. Shared policy holds: every row source-linked, unverifiable values blank
 and published on the Flagged page, never inferred.
 ---
+## NBA Line Commission (session arena-a46d621e, snapshot 2026-11-05)
+
+**Live site:** https://sassnarep3-star.github.io/Own5/nba-commission/index.html ·
+**Executive summary:** [`research/nba-commission/EXECUTIVE_SUMMARY.md`](research/nba-commission/EXECUTIVE_SUMMARY.md) ·
+**Flagged for review:** https://sassnarep3-star.github.io/Own5/nba-commission/flagged.html
+
+The **2026-11-05 official snapshot**, its own lines, and the repository's first *cross-board
+reconciliation audit*. Six NBA boards already existed here, each frozen on 2026-11-02 … 11-04; none had
+been re-verified against the official pages on a later date. This board re-fetches, recomputes and
+records the differences rather than assuming the earlier work was right.
+
+| Path | Contents |
+|---|---|
+| `nba-commission/` | 14-page dashboard site: own lines, player props, correlations, strategies, gates G01–G12, skill-vs-luck, leaderboard, verified data, repo audit, verification, sources, flagged |
+| `nba-commission/data/` | 2026-27 standings (30 rows), team traditional stats (30 rows), 2026-11-05/06 slate (11 rows), 2026-27 game logs (12 rows), inherited 2025-26 logs (125 rows) and priors (30 rows), computed `outputs.json` — every row carries an official nba.com `source_url` |
+| `nba-commission/compute.py` | deterministic engine: 11 data checks, own lines (7-variant sensitivity), correlations (Fisher-z), prop-combo joint prices, exact-binomial power, gates, leaderboard, flags |
+| `nba-commission/build.py`, `verify.py`, `checks/` | site builder, provenance/link/render/idempotency audit, 18 unit tests |
+| `research/nba-commission/` | `EXECUTIVE_SUMMARY.md`, `methodology.md`, `data-notes.md`, `repo-audit.md` |
+
+Verified highlights (all computed in-repo, all source-linked): net rating vs win% **r = 0.9206**
+[0.8385, 0.9619] (n = 30); PTS × 3PM **r = 0.7165** (n = 137) and a same-game PTS≥25 + 3PM≥3 combo that
+hits **65.7%** vs 56.5% if independent (lift ×1.16, so a marginal-multiplying parlay prices it
+~16% too generously); lag-1 points correlation +0.056 / −0.041 (cross-game legs look independent, n small);
+a 55% edge needs **≈2,248 graded bets** to clear α = 0.05 / 80% power against a −110 break-even of
+0.52381; the 2026-27 home/road split (62–59, p = 0.856) **does not** measure home-court advantage, so
+HFA = 2.5 pts stays a flagged assumption with 0.0 and 3.0 runs published per game.
+**0 of 8 strategies certified, 0 graded bets, market columns blank and flagged (F01)** — no sportsbook
+price was verified in this session.
+
+Repo audit result: earlier boards are arithmetically sound (125/125 log identities, published
+PTS × 3PM correlation reproduced to four decimals, 6/6 independently re-fetched rows exact) and the
+2026-11-03 snapshot reconciles to today's standings through exactly the 14 official games of 11-04.
+One real defect found and flagged, not fixed: an inherited CSV header contains U+0430 CYRILLIC SMALL
+LETTER A (`blkа_pg`) — F13. Repo-wide internal links: 0 broken across 153 pages.
+
+```sh
+python3 nba-commission/compute.py && python3 nba-commission/build.py && python3 nba-commission/verify.py
+python3 -m unittest discover -s nba-commission/checks
+```
 
 ## NBA Evidence Desk — session 61a311c2
 
@@ -214,3 +253,4 @@ and published on the Flagged page, never inferred.
 Additive, evidence-first NBA desk: 241 canonical source-linked rows (237 verified values, 4 blank availability rows flagged), 434-file baseline inventory, 11 model-only Nov 5–6 lines, 12 within-player correlations, 10 threshold-combo frequencies, 47 chronological forecast rows, 6 registered strategies and G01–G12 fail-closed gates. **0 strategies qualify; no ROI, probabilities, ranks or funded rewards are fabricated.** 19 irregularities/gaps are published on the Flagged for Review page.
 
 Reproduce: `python3 nba-research-61a311c2/engine.py && python3 nba-research-61a311c2/audit_repo.py && python3 nba-research-61a311c2/build.py && python3 -m unittest discover -s nba-research-61a311c2 -p 'test_*.py' -v`.
+

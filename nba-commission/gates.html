@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Validation gates G01–G12 · NBA Line Commission · OWN5</title>
+<meta name="description" content="Source-verified NBA line origination, correlation values, validation gates and a luck-deflated leaderboard. Snapshot 2026-11-05.">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<header class="top">
+  <div class="brand">OWN5 · NBA LINE COMMISSION<small>SESSION arena-a46d621e · SNAPSHOT 2026-11-05 · PAPER RESEARCH ONLY</small></div>
+  <div class="meta">Every value is source-linked · Unverifiable values are blank and flagged</div>
+</header>
+<nav class="cats" aria-label="Sections"><a href="index.html">Dashboard</a><a href="lines.html">Own lines</a><a href="props.html">Player props</a><a href="correlations.html">Correlations</a><a href="strategies.html">Strategies</a><a href="gates.html" class="active">Validation gates</a><a href="skill-vs-luck.html">Skill vs luck</a><a href="leaderboard.html">Leaderboard</a><a href="data.html">Verified data</a><a href="audit.html">Repo audit</a><a href="verification.html">Verification</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for review</a><a href="executive-summary.html">Executive summary</a></nav>
+<main>
+<h1>Validation gates G01–G12</h1>
+<p class="lede">5 of 12 gates pass at this snapshot. The failures are the point: they are what stops a plausible model from being published as a profitable strategy.</p>
+<div class="tablewrap"><table><caption>Twelve gates. A strategy is certified only if every applicable gate passes; BLOCKED and PENDING both count as not passed.</caption><thead><tr><th>Gate</th><th>Name</th><th>Rule (frozen)</th><th>Applies to</th><th>Status at this snapshot</th><th>Reference</th></tr></thead><tbody><tr><td>G01</td><td>Provenance</td><td>Every value has an official nba.com URL and a snapshot date; no value is inferred.</td><td>all rows</td><td><span class="badge b-pass">PASS this session</span></td><td><a href="https://www.nba.com/standings" target="_blank" rel="noopener noreferrer">ref ↗</a></td></tr><tr><td>G02</td><td>As-of integrity</td><td>Snapshot taken before tip-off of the listed games; no post-game information in features.</td><td>all</td><td><span class="badge b-pass">PASS (snapshot 2026-11-05; games tip 2026-11-05 21:00 ET / 2026-11-06)</span></td><td><a href="https://www.nba.com/schedule?date=2026-11-05" target="_blank" rel="noopener noreferrer">ref ↗</a></td></tr><tr><td>G03</td><td>Pre-registration</td><td>Strategy rules frozen before any price is observed; the rule text is published verbatim.</td><td>all</td><td><span class="badge b-pass">PASS (rules frozen in strategies.csv before any pricing)</span></td><td><a href="https://www.nba.com/schedule?date=2026-11-05" target="_blank" rel="noopener noreferrer">ref ↗</a></td></tr><tr><td>G04</td><td>Sample adequacy</td><td>n must exceed the exact-binomial requirement for the claimed edge at alpha=0.05 / power 0.80.</td><td>all</td><td><span class="badge b-fail">FAIL (n=0 graded bets)</span></td><td><a href="https://www.nba.com/standings" target="_blank" rel="noopener noreferrer">ref ↗</a></td></tr><tr><td>G05</td><td>Out-of-sample</td><td>Second, non-overlapping evaluation window after the rule is frozen.</td><td>all</td><td><span class="badge b-fail">FAIL (no evaluation window)</span></td><td><a href="https://www.nba.com/standings" target="_blank" rel="noopener noreferrer">ref ↗</a></td></tr><tr><td>G06</td><td>Calibration</td><td>Held-out Brier score must beat the no-vig market baseline; reliability inspected.</td><td>moneyline/spread</td><td><span class="badge b-blocked">BLOCKED (no market baseline)</span></td><td><a href="https://www.nba.com/standings" target="_blank" rel="noopener noreferrer">ref ↗</a></td></tr><tr><td>G07</td><td>Market price</td><td>A timestamped, de-viggable price from a named book is required for any edge, CLV or ROI.</td><td>all</td><td><span class="badge b-blocked">BLOCKED (no verified odds source)</span></td><td><a href="https://www.nba.com/schedule?date=2026-11-05" target="_blank" rel="noopener noreferrer">ref ↗</a></td></tr><tr><td>G08</td><td>Joint pricing</td><td>Combo legs priced from empirical joint outcomes, not the product of marginals.</td><td>parlays/combos</td><td><span class="badge b-partial">PARTIAL (joint rates computed; no price)</span></td><td><a href="https://www.nba.com/stats/player/1629029/boxscores?Season=2026-27" target="_blank" rel="noopener noreferrer">ref ↗</a></td></tr><tr><td>G09</td><td>Multiple testing</td><td>Holm/Bonferroni-adjusted alpha across every candidate tried.</td><td>all</td><td><span class="badge b-pending">PENDING (no p-values yet)</span></td><td><a href="https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html" target="_blank" rel="noopener noreferrer">ref ↗</a></td></tr><tr><td>G10</td><td>Luck deflation</td><td>Deflated (shrunken) rate and deflated Sharpe framework applied before ranking.</td><td>leaderboard</td><td><span class="badge b-pass">PASS (rule implemented)</span></td><td><a href="https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf" target="_blank" rel="noopener noreferrer">ref ↗</a></td></tr><tr><td>G11</td><td>Robustness</td><td>Sensitivity across model parameters (K, HFA) published for every line.</td><td>own lines</td><td><span class="badge b-pass">PASS (3x3 grid per game)</span></td><td><a href="https://www.nba.com/stats/teams/traditional?Season=2026-27&amp;SeasonType=Regular%20Season" target="_blank" rel="noopener noreferrer">ref ↗</a></td></tr><tr><td>G12</td><td>Prospective replication</td><td>Frozen paper-trading window with a pre-committed stopping rule.</td><td>all</td><td><span class="badge b-pending">PENDING (not started)</span></td><td><a href="https://arxiv.org/abs/1710.02824" target="_blank" rel="noopener noreferrer">ref ↗</a></td></tr></tbody></table></div>
+<h2>What would have to change</h2>
+<ul class="tight">
+<li><strong>G04 / G05</strong> need a settled sample in a second, non-overlapping window — 2,248 graded bets for a 55% edge at 80% power.</li>
+<li><strong>G06 / G07</strong> need a timestamped, de-viggable price from a named operator, captured before tip-off, plus that operator’s published settlement rules for props (F10).</li>
+<li><strong>G09</strong> needs the whole candidate family declared up front and Holm/Bonferroni-adjusted (α = 0.00625 for 8 tests).</li>
+<li><strong>G12</strong> needs a frozen prospective window with a stopping rule agreed <em>before</em> it starts.</li>
+</ul>
+<div class="note">Gate definitions are this project’s policy, built on published method: multiple-testing corrections
+(<a href="https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html" target="_blank" rel="noopener noreferrer">statsmodels ↗</a>),
+deflation for selection bias (<a href="https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf" target="_blank" rel="noopener noreferrer">Bailey &amp; López de Prado 2014 ↗</a>),
+and market-efficiency context (<a href="https://arxiv.org/abs/1710.02824" target="_blank" rel="noopener noreferrer">Kaunitz et al. 2017 ↗</a>).</div>
+</main>
+<footer>
+  <strong>OWN5 NBA Line Commission</strong> · session <span class="mono">arena-a46d621e</span> ·
+  snapshot 2026-11-05 · 11 own game lines · 8 own player prop lines ·
+  0 of 8 strategies certified · 0 graded bets.
+  <br>Official data: nba.com. Methodology citations are linked per row. No odds, no ROI, no betting advice.
+  Blank cells mean <em>unverified</em>, not zero. Gambling help: 1-800-GAMBLER ·
+  <a href="https://www.ncpgambling.org/help-treatment/national-helpline-1-800-522-4700/" target="_blank" rel="noopener noreferrer">NCPG ↗</a>.
+  <br>Other OWN5 boards: <a href="../index.html">NFL Research Desk</a> ·
+  <a href="../nba-signal-lab/index.html">NBA Signal Lab</a> · <a href="../nba-desk/index.html">NBA Desk</a> ·
+  <a href="../docs/index.html">NBA Line-Origination Lab</a> · <a href="../line-lab/index.html">NFL Line Lab</a>.
+</footer>
+</body></html>
