@@ -228,8 +228,8 @@ records the differences rather than assuming the earlier work was right.
 
 Verified highlights (all computed in-repo, all source-linked): net rating vs win% **r = 0.9206**
 [0.8385, 0.9619] (n = 30); PTS × 3PM **r = 0.7165** (n = 137) and a same-game PTS≥25 + 3PM≥3 combo that
-hits **65.7%** vs 56.5% if independent (lift ×1.16, so a marginal-multiplying parlay understates it by
-~14%); lag-1 points correlation +0.056 / −0.041 (cross-game legs look independent, n small);
+hits **65.7%** vs 56.5% if independent (lift ×1.16, so a marginal-multiplying parlay prices it
+~16% too generously); lag-1 points correlation +0.056 / −0.041 (cross-game legs look independent, n small);
 a 55% edge needs **≈2,248 graded bets** to clear α = 0.05 / 80% power against a −110 break-even of
 0.52381; the 2026-27 home/road split (62–59, p = 0.856) **does not** measure home-court advantage, so
 HFA = 2.5 pts stays a flagged assumption with 0.0 and 3.0 runs published per game.

@@ -420,7 +420,7 @@ def p_correlations() -> str:
                      pair_rows, "Player-pair Pearson correlations on game-log rows (2 players × 2 seasons = 137 rows). "
                                 "The 2026-27 column is a true out-of-sample re-test of the 2025-26 value.", numeric={1, 2, 3})
     combo_tbl = table(["ID", "Combo", "n", "P(both)", "P(leg A)·P(leg B)", "Lift", "φ", "Fair odds if independent",
-                       "Fair odds, empirical", "Underpriced by", "Source"],
+                       "Fair odds, empirical", "Independence price too generous by", "Source"],
                       [[e(c["id"]), e(c["combo"]), str(c["n"]), f'{c["p_both"]*100:.1f}%',
                         f'{c["p_independent"]*100:.1f}%', f'×{c["lift"]:.3f}' if c["lift"] else "—",
                         f'{c["phi"]:+.4f}' if c["phi"] is not None else "—",

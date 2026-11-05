@@ -33,7 +33,7 @@ review page.
 - **Same-game prop legs are strongly dependent.** PTS × 3PM r = 0.7165 (n = 137); PTS × REB 0.3809;
   PTS × AST 0.2070. In joint terms, PTS ≥ 25 with 3PM ≥ 3 occurs in 65.7% of games versus 56.5% if the
   legs were independent — a lift of ×1.163. Pricing that combo off the product of marginals
-  understates its fair odds by about 14% before any vig. The pattern repeats for the other combos
+  makes the independence-priced odds about 16.4% too generous (1.77 vs 1.52) before any vig. The pattern repeats for the other combos
   (PC5 PTS ≥ 30 & MIN ≥ 35: lift ×1.236).
 - **Cross-game legs look close to independent, and that is all we can say.** Lag-1 correlation of a
   player's own points is +0.056 (Edwards, 61 games) and −0.041 (Dončić, 64 games). Near zero is
