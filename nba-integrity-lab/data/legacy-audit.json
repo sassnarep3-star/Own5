@@ -1,0 +1,2939 @@
+{
+  "base_commit": "54e8dee596d49731c3da535a1f77b01cd0c295d5",
+  "scope": "tracked static HTML in session-start commit",
+  "allowlisted_domains": [
+    "nba.com",
+    "nfl.com",
+    "nist.gov",
+    "nih.gov",
+    "mass.gov",
+    "massgaming.com",
+    "betmgm.com",
+    "draftkings.com",
+    "fanduel.com",
+    "ncpgambling.org",
+    "ncaa.org",
+    "github.com",
+    "cdc.gov",
+    "gov.uk"
+  ],
+  "groups": [
+    {
+      "group": "(root)",
+      "pages": 10,
+      "rows": 283,
+      "missing_context_links": 12
+    },
+    {
+      "group": "docs",
+      "pages": 10,
+      "rows": 86,
+      "missing_context_links": 79
+    },
+    {
+      "group": "line-lab",
+      "pages": 11,
+      "rows": 370,
+      "missing_context_links": 128
+    },
+    {
+      "group": "nba-2026-lab",
+      "pages": 8,
+      "rows": 51,
+      "missing_context_links": 0
+    },
+    {
+      "group": "nba-audit-e9f83ff4",
+      "pages": 3,
+      "rows": 22,
+      "missing_context_links": 0
+    },
+    {
+      "group": "nba-desk",
+      "pages": 14,
+      "rows": 506,
+      "missing_context_links": 7
+    },
+    {
+      "group": "nba-line-desk",
+      "pages": 14,
+      "rows": 268,
+      "missing_context_links": 4
+    },
+    {
+      "group": "nba-origin-lab",
+      "pages": 8,
+      "rows": 60,
+      "missing_context_links": 0
+    },
+    {
+      "group": "nba-own-lines",
+      "pages": 11,
+      "rows": 199,
+      "missing_context_links": 0
+    },
+    {
+      "group": "nba-sensitivity",
+      "pages": 1,
+      "rows": 50,
+      "missing_context_links": 0
+    },
+    {
+      "group": "nba-signal-lab",
+      "pages": 11,
+      "rows": 406,
+      "missing_context_links": 76
+    },
+    {
+      "group": "nba-validation",
+      "pages": 8,
+      "rows": 66,
+      "missing_context_links": 0
+    },
+    {
+      "group": "nfl-strategy-lab",
+      "pages": 10,
+      "rows": 196,
+      "missing_context_links": 19
+    },
+    {
+      "group": "own5-desk",
+      "pages": 13,
+      "rows": 215,
+      "missing_context_links": 19
+    },
+    {
+      "group": "pages",
+      "pages": 7,
+      "rows": 74,
+      "missing_context_links": 25
+    }
+  ],
+  "files": [
+    {
+      "path": "bet-types.html",
+      "group": "(root)",
+      "rows": 21,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/bet-types.html"
+    },
+    {
+      "path": "data.html",
+      "group": "(root)",
+      "rows": 114,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/data.html"
+    },
+    {
+      "path": "detail-correlations.html",
+      "group": "(root)",
+      "rows": 38,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/detail-correlations.html"
+    },
+    {
+      "path": "detail-sources.html",
+      "group": "(root)",
+      "rows": 27,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/detail-sources.html"
+    },
+    {
+      "path": "detail-strategies.html",
+      "group": "(root)",
+      "rows": 27,
+      "missing_context_links": 4,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/detail-strategies.html"
+    },
+    {
+      "path": "detail-validation.html",
+      "group": "(root)",
+      "rows": 12,
+      "missing_context_links": 1,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/detail-validation.html"
+    },
+    {
+      "path": "docs/bet-types.html",
+      "group": "docs",
+      "rows": 8,
+      "missing_context_links": 8,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/bet-types.html"
+    },
+    {
+      "path": "docs/correlations.html",
+      "group": "docs",
+      "rows": 10,
+      "missing_context_links": 10,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/correlations.html"
+    },
+    {
+      "path": "docs/executive-summary.html",
+      "group": "docs",
+      "rows": 0,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/executive-summary.html"
+    },
+    {
+      "path": "docs/flagged.html",
+      "group": "docs",
+      "rows": 10,
+      "missing_context_links": 10,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/flagged.html"
+    },
+    {
+      "path": "docs/index.html",
+      "group": "docs",
+      "rows": 7,
+      "missing_context_links": 4,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/index.html"
+    },
+    {
+      "path": "docs/leaderboard.html",
+      "group": "docs",
+      "rows": 7,
+      "missing_context_links": 7,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/leaderboard.html"
+    },
+    {
+      "path": "docs/skill-vs-luck.html",
+      "group": "docs",
+      "rows": 7,
+      "missing_context_links": 7,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/skill-vs-luck.html"
+    },
+    {
+      "path": "docs/sources.html",
+      "group": "docs",
+      "rows": 20,
+      "missing_context_links": 18,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/sources.html"
+    },
+    {
+      "path": "docs/strategies.html",
+      "group": "docs",
+      "rows": 8,
+      "missing_context_links": 6,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/strategies.html"
+    },
+    {
+      "path": "docs/validation.html",
+      "group": "docs",
+      "rows": 9,
+      "missing_context_links": 9,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/validation.html"
+    },
+    {
+      "path": "executive-summary.html",
+      "group": "(root)",
+      "rows": 0,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/executive-summary.html"
+    },
+    {
+      "path": "flagged.html",
+      "group": "(root)",
+      "rows": 12,
+      "missing_context_links": 5,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/flagged.html"
+    },
+    {
+      "path": "index.html",
+      "group": "(root)",
+      "rows": 8,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/index.html"
+    },
+    {
+      "path": "line-lab/analysis.html",
+      "group": "line-lab",
+      "rows": 56,
+      "missing_context_links": 24,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/analysis.html"
+    },
+    {
+      "path": "line-lab/executive-summary.html",
+      "group": "line-lab",
+      "rows": 0,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/executive-summary.html"
+    },
+    {
+      "path": "line-lab/flagged.html",
+      "group": "line-lab",
+      "rows": 16,
+      "missing_context_links": 13,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/flagged.html"
+    },
+    {
+      "path": "line-lab/index.html",
+      "group": "line-lab",
+      "rows": 0,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/index.html"
+    },
+    {
+      "path": "line-lab/leaderboard.html",
+      "group": "line-lab",
+      "rows": 12,
+      "missing_context_links": 12,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/leaderboard.html"
+    },
+    {
+      "path": "line-lab/lines.html",
+      "group": "line-lab",
+      "rows": 32,
+      "missing_context_links": 32,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/lines.html"
+    },
+    {
+      "path": "line-lab/scores.html",
+      "group": "line-lab",
+      "rows": 145,
+      "missing_context_links": 9,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/scores.html"
+    },
+    {
+      "path": "line-lab/sources.html",
+      "group": "line-lab",
+      "rows": 25,
+      "missing_context_links": 18,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/sources.html"
+    },
+    {
+      "path": "line-lab/standings.html",
+      "group": "line-lab",
+      "rows": 32,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/standings.html"
+    },
+    {
+      "path": "line-lab/strategies.html",
+      "group": "line-lab",
+      "rows": 20,
+      "missing_context_links": 20,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/strategies.html"
+    },
+    {
+      "path": "line-lab/verification.html",
+      "group": "line-lab",
+      "rows": 32,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/verification.html"
+    },
+    {
+      "path": "nba-2026-lab/correlations.html",
+      "group": "nba-2026-lab",
+      "rows": 5,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-2026-lab/correlations.html"
+    },
+    {
+      "path": "nba-2026-lab/gates.html",
+      "group": "nba-2026-lab",
+      "rows": 9,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-2026-lab/gates.html"
+    },
+    {
+      "path": "nba-2026-lab/index.html",
+      "group": "nba-2026-lab",
+      "rows": 4,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-2026-lab/index.html"
+    },
+    {
+      "path": "nba-2026-lab/leaderboard.html",
+      "group": "nba-2026-lab",
+      "rows": 3,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-2026-lab/leaderboard.html"
+    },
+    {
+      "path": "nba-2026-lab/review.html",
+      "group": "nba-2026-lab",
+      "rows": 8,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-2026-lab/review.html"
+    },
+    {
+      "path": "nba-2026-lab/sample.html",
+      "group": "nba-2026-lab",
+      "rows": 10,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-2026-lab/sample.html"
+    },
+    {
+      "path": "nba-2026-lab/strategies.html",
+      "group": "nba-2026-lab",
+      "rows": 7,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-2026-lab/strategies.html"
+    },
+    {
+      "path": "nba-2026-lab/summary.html",
+      "group": "nba-2026-lab",
+      "rows": 5,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-2026-lab/summary.html"
+    },
+    {
+      "path": "nba-audit-e9f83ff4/index.html",
+      "group": "nba-audit-e9f83ff4",
+      "rows": 5,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-audit-e9f83ff4/index.html"
+    },
+    {
+      "path": "nba-audit-e9f83ff4/review.html",
+      "group": "nba-audit-e9f83ff4",
+      "rows": 7,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-audit-e9f83ff4/review.html"
+    },
+    {
+      "path": "nba-audit-e9f83ff4/sample.html",
+      "group": "nba-audit-e9f83ff4",
+      "rows": 10,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-audit-e9f83ff4/sample.html"
+    },
+    {
+      "path": "nba-desk/audit.html",
+      "group": "nba-desk",
+      "rows": 19,
+      "missing_context_links": 5,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-desk/audit.html"
+    },
+    {
+      "path": "nba-desk/correlations.html",
+      "group": "nba-desk",
+      "rows": 42,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-desk/correlations.html"
+    },
+    {
+      "path": "nba-desk/data.html",
+      "group": "nba-desk",
+      "rows": 180,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-desk/data.html"
+    },
+    {
+      "path": "nba-desk/flagged.html",
+      "group": "nba-desk",
+      "rows": 15,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-desk/flagged.html"
+    },
+    {
+      "path": "nba-desk/gates.html",
+      "group": "nba-desk",
+      "rows": 15,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-desk/gates.html"
+    },
+    {
+      "path": "nba-desk/index.html",
+      "group": "nba-desk",
+      "rows": 16,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-desk/index.html"
+    },
+    {
+      "path": "nba-desk/injuries.html",
+      "group": "nba-desk",
+      "rows": 61,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-desk/injuries.html"
+    },
+    {
+      "path": "nba-desk/leaderboard.html",
+      "group": "nba-desk",
+      "rows": 8,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-desk/leaderboard.html"
+    },
+    {
+      "path": "nba-desk/lines.html",
+      "group": "nba-desk",
+      "rows": 46,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-desk/lines.html"
+    },
+    {
+      "path": "nba-desk/luck-vs-skill.html",
+      "group": "nba-desk",
+      "rows": 26,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-desk/luck-vs-skill.html"
+    },
+    {
+      "path": "nba-desk/model.html",
+      "group": "nba-desk",
+      "rows": 59,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-desk/model.html"
+    },
+    {
+      "path": "nba-desk/sources.html",
+      "group": "nba-desk",
+      "rows": 13,
+      "missing_context_links": 2,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-desk/sources.html"
+    },
+    {
+      "path": "nba-desk/strategies.html",
+      "group": "nba-desk",
+      "rows": 6,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-desk/strategies.html"
+    },
+    {
+      "path": "nba-desk/summary.html",
+      "group": "nba-desk",
+      "rows": 0,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-desk/summary.html"
+    },
+    {
+      "path": "nba-line-desk/correlations.html",
+      "group": "nba-line-desk",
+      "rows": 24,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-line-desk/correlations.html"
+    },
+    {
+      "path": "nba-line-desk/executive-summary.html",
+      "group": "nba-line-desk",
+      "rows": 0,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-line-desk/executive-summary.html"
+    },
+    {
+      "path": "nba-line-desk/flagged.html",
+      "group": "nba-line-desk",
+      "rows": 45,
+      "missing_context_links": 1,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-line-desk/flagged.html"
+    },
+    {
+      "path": "nba-line-desk/index.html",
+      "group": "nba-line-desk",
+      "rows": 0,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-line-desk/index.html"
+    },
+    {
+      "path": "nba-line-desk/leaderboard.html",
+      "group": "nba-line-desk",
+      "rows": 0,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-line-desk/leaderboard.html"
+    },
+    {
+      "path": "nba-line-desk/luck-vs-skill.html",
+      "group": "nba-line-desk",
+      "rows": 36,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-line-desk/luck-vs-skill.html"
+    },
+    {
+      "path": "nba-line-desk/own-lines.html",
+      "group": "nba-line-desk",
+      "rows": 30,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-line-desk/own-lines.html"
+    },
+    {
+      "path": "nba-line-desk/player-logs.html",
+      "group": "nba-line-desk",
+      "rows": 16,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-line-desk/player-logs.html"
+    },
+    {
+      "path": "nba-line-desk/signals.html",
+      "group": "nba-line-desk",
+      "rows": 13,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-line-desk/signals.html"
+    },
+    {
+      "path": "nba-line-desk/sources.html",
+      "group": "nba-line-desk",
+      "rows": 14,
+      "missing_context_links": 3,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-line-desk/sources.html"
+    },
+    {
+      "path": "nba-line-desk/standings.html",
+      "group": "nba-line-desk",
+      "rows": 30,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-line-desk/standings.html"
+    },
+    {
+      "path": "nba-line-desk/strategies.html",
+      "group": "nba-line-desk",
+      "rows": 11,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-line-desk/strategies.html"
+    },
+    {
+      "path": "nba-line-desk/team-stats.html",
+      "group": "nba-line-desk",
+      "rows": 30,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-line-desk/team-stats.html"
+    },
+    {
+      "path": "nba-line-desk/validation.html",
+      "group": "nba-line-desk",
+      "rows": 19,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-line-desk/validation.html"
+    },
+    {
+      "path": "nba-origin-lab/correlations.html",
+      "group": "nba-origin-lab",
+      "rows": 7,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-origin-lab/correlations.html"
+    },
+    {
+      "path": "nba-origin-lab/gates.html",
+      "group": "nba-origin-lab",
+      "rows": 8,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-origin-lab/gates.html"
+    },
+    {
+      "path": "nba-origin-lab/index.html",
+      "group": "nba-origin-lab",
+      "rows": 4,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-origin-lab/index.html"
+    },
+    {
+      "path": "nba-origin-lab/leaderboard.html",
+      "group": "nba-origin-lab",
+      "rows": 5,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-origin-lab/leaderboard.html"
+    },
+    {
+      "path": "nba-origin-lab/lines.html",
+      "group": "nba-origin-lab",
+      "rows": 10,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-origin-lab/lines.html"
+    },
+    {
+      "path": "nba-origin-lab/review.html",
+      "group": "nba-origin-lab",
+      "rows": 8,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-origin-lab/review.html"
+    },
+    {
+      "path": "nba-origin-lab/sources.html",
+      "group": "nba-origin-lab",
+      "rows": 14,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-origin-lab/sources.html"
+    },
+    {
+      "path": "nba-origin-lab/strategies.html",
+      "group": "nba-origin-lab",
+      "rows": 4,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-origin-lab/strategies.html"
+    },
+    {
+      "path": "nba-own-lines/correlations.html",
+      "group": "nba-own-lines",
+      "rows": 21,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-own-lines/correlations.html"
+    },
+    {
+      "path": "nba-own-lines/gates.html",
+      "group": "nba-own-lines",
+      "rows": 17,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-own-lines/gates.html"
+    },
+    {
+      "path": "nba-own-lines/index.html",
+      "group": "nba-own-lines",
+      "rows": 6,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-own-lines/index.html"
+    },
+    {
+      "path": "nba-own-lines/leaderboard.html",
+      "group": "nba-own-lines",
+      "rows": 10,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-own-lines/leaderboard.html"
+    },
+    {
+      "path": "nba-own-lines/lines.html",
+      "group": "nba-own-lines",
+      "rows": 22,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-own-lines/lines.html"
+    },
+    {
+      "path": "nba-own-lines/methodology.html",
+      "group": "nba-own-lines",
+      "rows": 12,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-own-lines/methodology.html"
+    },
+    {
+      "path": "nba-own-lines/players.html",
+      "group": "nba-own-lines",
+      "rows": 34,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-own-lines/players.html"
+    },
+    {
+      "path": "nba-own-lines/review.html",
+      "group": "nba-own-lines",
+      "rows": 16,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-own-lines/review.html"
+    },
+    {
+      "path": "nba-own-lines/sources.html",
+      "group": "nba-own-lines",
+      "rows": 20,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-own-lines/sources.html"
+    },
+    {
+      "path": "nba-own-lines/strategies.html",
+      "group": "nba-own-lines",
+      "rows": 11,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-own-lines/strategies.html"
+    },
+    {
+      "path": "nba-own-lines/teams.html",
+      "group": "nba-own-lines",
+      "rows": 30,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-own-lines/teams.html"
+    },
+    {
+      "path": "nba-sensitivity/index.html",
+      "group": "nba-sensitivity",
+      "rows": 50,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-sensitivity/index.html"
+    },
+    {
+      "path": "nba-signal-lab/analysis.html",
+      "group": "nba-signal-lab",
+      "rows": 68,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/analysis.html"
+    },
+    {
+      "path": "nba-signal-lab/correlations.html",
+      "group": "nba-signal-lab",
+      "rows": 14,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/correlations.html"
+    },
+    {
+      "path": "nba-signal-lab/data-verified.html",
+      "group": "nba-signal-lab",
+      "rows": 198,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/data-verified.html"
+    },
+    {
+      "path": "nba-signal-lab/executive-summary.html",
+      "group": "nba-signal-lab",
+      "rows": 13,
+      "missing_context_links": 13,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/executive-summary.html"
+    },
+    {
+      "path": "nba-signal-lab/flagged.html",
+      "group": "nba-signal-lab",
+      "rows": 10,
+      "missing_context_links": 10,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/flagged.html"
+    },
+    {
+      "path": "nba-signal-lab/index.html",
+      "group": "nba-signal-lab",
+      "rows": 17,
+      "missing_context_links": 7,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/index.html"
+    },
+    {
+      "path": "nba-signal-lab/leaderboard.html",
+      "group": "nba-signal-lab",
+      "rows": 8,
+      "missing_context_links": 3,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/leaderboard.html"
+    },
+    {
+      "path": "nba-signal-lab/luck-vs-skill.html",
+      "group": "nba-signal-lab",
+      "rows": 17,
+      "missing_context_links": 17,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/luck-vs-skill.html"
+    },
+    {
+      "path": "nba-signal-lab/model-lines.html",
+      "group": "nba-signal-lab",
+      "rows": 18,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/model-lines.html"
+    },
+    {
+      "path": "nba-signal-lab/strategies.html",
+      "group": "nba-signal-lab",
+      "rows": 15,
+      "missing_context_links": 10,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/strategies.html"
+    },
+    {
+      "path": "nba-signal-lab/verification.html",
+      "group": "nba-signal-lab",
+      "rows": 28,
+      "missing_context_links": 16,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/verification.html"
+    },
+    {
+      "path": "nba-validation/correlations.html",
+      "group": "nba-validation",
+      "rows": 8,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-validation/correlations.html"
+    },
+    {
+      "path": "nba-validation/data.html",
+      "group": "nba-validation",
+      "rows": 14,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-validation/data.html"
+    },
+    {
+      "path": "nba-validation/gates.html",
+      "group": "nba-validation",
+      "rows": 10,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-validation/gates.html"
+    },
+    {
+      "path": "nba-validation/index.html",
+      "group": "nba-validation",
+      "rows": 4,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-validation/index.html"
+    },
+    {
+      "path": "nba-validation/leaderboard.html",
+      "group": "nba-validation",
+      "rows": 6,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-validation/leaderboard.html"
+    },
+    {
+      "path": "nba-validation/lines.html",
+      "group": "nba-validation",
+      "rows": 8,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-validation/lines.html"
+    },
+    {
+      "path": "nba-validation/review.html",
+      "group": "nba-validation",
+      "rows": 10,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-validation/review.html"
+    },
+    {
+      "path": "nba-validation/strategies.html",
+      "group": "nba-validation",
+      "rows": 6,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-validation/strategies.html"
+    },
+    {
+      "path": "nfl-strategy-lab/correlation.html",
+      "group": "nfl-strategy-lab",
+      "rows": 86,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nfl-strategy-lab/correlation.html"
+    },
+    {
+      "path": "nfl-strategy-lab/executive-summary.html",
+      "group": "nfl-strategy-lab",
+      "rows": 0,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nfl-strategy-lab/executive-summary.html"
+    },
+    {
+      "path": "nfl-strategy-lab/flagged.html",
+      "group": "nfl-strategy-lab",
+      "rows": 11,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nfl-strategy-lab/flagged.html"
+    },
+    {
+      "path": "nfl-strategy-lab/index.html",
+      "group": "nfl-strategy-lab",
+      "rows": 0,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nfl-strategy-lab/index.html"
+    },
+    {
+      "path": "nfl-strategy-lab/leaderboard.html",
+      "group": "nfl-strategy-lab",
+      "rows": 16,
+      "missing_context_links": 4,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nfl-strategy-lab/leaderboard.html"
+    },
+    {
+      "path": "nfl-strategy-lab/lines-2026-wk9.html",
+      "group": "nfl-strategy-lab",
+      "rows": 15,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nfl-strategy-lab/lines-2026-wk9.html"
+    },
+    {
+      "path": "nfl-strategy-lab/luck-vs-skill.html",
+      "group": "nfl-strategy-lab",
+      "rows": 18,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nfl-strategy-lab/luck-vs-skill.html"
+    },
+    {
+      "path": "nfl-strategy-lab/sources.html",
+      "group": "nfl-strategy-lab",
+      "rows": 21,
+      "missing_context_links": 8,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nfl-strategy-lab/sources.html"
+    },
+    {
+      "path": "nfl-strategy-lab/strategies.html",
+      "group": "nfl-strategy-lab",
+      "rows": 13,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nfl-strategy-lab/strategies.html"
+    },
+    {
+      "path": "nfl-strategy-lab/validation-gates.html",
+      "group": "nfl-strategy-lab",
+      "rows": 16,
+      "missing_context_links": 7,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nfl-strategy-lab/validation-gates.html"
+    },
+    {
+      "path": "own5-desk/404.html",
+      "group": "own5-desk",
+      "rows": 0,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/own5-desk/404.html"
+    },
+    {
+      "path": "own5-desk/correlations.html",
+      "group": "own5-desk",
+      "rows": 7,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/own5-desk/correlations.html"
+    },
+    {
+      "path": "own5-desk/data.html",
+      "group": "own5-desk",
+      "rows": 78,
+      "missing_context_links": 1,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/own5-desk/data.html"
+    },
+    {
+      "path": "own5-desk/index.html",
+      "group": "own5-desk",
+      "rows": 5,
+      "missing_context_links": 1,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/own5-desk/index.html"
+    },
+    {
+      "path": "own5-desk/leaderboard.html",
+      "group": "own5-desk",
+      "rows": 6,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/own5-desk/leaderboard.html"
+    },
+    {
+      "path": "own5-desk/lines.html",
+      "group": "own5-desk",
+      "rows": 30,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/own5-desk/lines.html"
+    },
+    {
+      "path": "own5-desk/methodology.html",
+      "group": "own5-desk",
+      "rows": 10,
+      "missing_context_links": 1,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/own5-desk/methodology.html"
+    },
+    {
+      "path": "own5-desk/parlays.html",
+      "group": "own5-desk",
+      "rows": 8,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/own5-desk/parlays.html"
+    },
+    {
+      "path": "own5-desk/props.html",
+      "group": "own5-desk",
+      "rows": 18,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/own5-desk/props.html"
+    },
+    {
+      "path": "own5-desk/review.html",
+      "group": "own5-desk",
+      "rows": 13,
+      "missing_context_links": 2,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/own5-desk/review.html"
+    },
+    {
+      "path": "own5-desk/sources.html",
+      "group": "own5-desk",
+      "rows": 17,
+      "missing_context_links": 3,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/own5-desk/sources.html"
+    },
+    {
+      "path": "own5-desk/strategies.html",
+      "group": "own5-desk",
+      "rows": 6,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/own5-desk/strategies.html"
+    },
+    {
+      "path": "own5-desk/validation.html",
+      "group": "own5-desk",
+      "rows": 17,
+      "missing_context_links": 11,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/own5-desk/validation.html"
+    },
+    {
+      "path": "pages/correlations.html",
+      "group": "pages",
+      "rows": 6,
+      "missing_context_links": 6,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/pages/correlations.html"
+    },
+    {
+      "path": "pages/leaderboard.html",
+      "group": "pages",
+      "rows": 13,
+      "missing_context_links": 4,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/pages/leaderboard.html"
+    },
+    {
+      "path": "pages/markets.html",
+      "group": "pages",
+      "rows": 5,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/pages/markets.html"
+    },
+    {
+      "path": "pages/review.html",
+      "group": "pages",
+      "rows": 10,
+      "missing_context_links": 3,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/pages/review.html"
+    },
+    {
+      "path": "pages/sources.html",
+      "group": "pages",
+      "rows": 25,
+      "missing_context_links": 6,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/pages/sources.html"
+    },
+    {
+      "path": "pages/strategies.html",
+      "group": "pages",
+      "rows": 8,
+      "missing_context_links": 0,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/pages/strategies.html"
+    },
+    {
+      "path": "pages/validation.html",
+      "group": "pages",
+      "rows": 7,
+      "missing_context_links": 6,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/pages/validation.html"
+    },
+    {
+      "path": "signals.html",
+      "group": "(root)",
+      "rows": 24,
+      "missing_context_links": 2,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/signals.html"
+    }
+  ],
+  "findings": [
+    {
+      "path": "detail-strategies.html",
+      "row_ordinal": 24,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/detail-strategies.html"
+    },
+    {
+      "path": "detail-strategies.html",
+      "row_ordinal": 25,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/detail-strategies.html"
+    },
+    {
+      "path": "detail-strategies.html",
+      "row_ordinal": 26,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/detail-strategies.html"
+    },
+    {
+      "path": "detail-strategies.html",
+      "row_ordinal": 27,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/detail-strategies.html"
+    },
+    {
+      "path": "detail-validation.html",
+      "row_ordinal": 4,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/detail-validation.html"
+    },
+    {
+      "path": "docs/bet-types.html",
+      "row_ordinal": 1,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/bet-types.html"
+    },
+    {
+      "path": "docs/bet-types.html",
+      "row_ordinal": 2,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/bet-types.html"
+    },
+    {
+      "path": "docs/bet-types.html",
+      "row_ordinal": 3,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/bet-types.html"
+    },
+    {
+      "path": "docs/bet-types.html",
+      "row_ordinal": 4,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/bet-types.html"
+    },
+    {
+      "path": "docs/bet-types.html",
+      "row_ordinal": 5,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/bet-types.html"
+    },
+    {
+      "path": "docs/bet-types.html",
+      "row_ordinal": 6,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/bet-types.html"
+    },
+    {
+      "path": "docs/bet-types.html",
+      "row_ordinal": 7,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/bet-types.html"
+    },
+    {
+      "path": "docs/bet-types.html",
+      "row_ordinal": 8,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/bet-types.html"
+    },
+    {
+      "path": "docs/correlations.html",
+      "row_ordinal": 1,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/correlations.html"
+    },
+    {
+      "path": "docs/correlations.html",
+      "row_ordinal": 2,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/correlations.html"
+    },
+    {
+      "path": "docs/correlations.html",
+      "row_ordinal": 3,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/correlations.html"
+    },
+    {
+      "path": "docs/correlations.html",
+      "row_ordinal": 4,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/correlations.html"
+    },
+    {
+      "path": "docs/correlations.html",
+      "row_ordinal": 5,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/correlations.html"
+    },
+    {
+      "path": "docs/correlations.html",
+      "row_ordinal": 6,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/correlations.html"
+    },
+    {
+      "path": "docs/correlations.html",
+      "row_ordinal": 7,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/correlations.html"
+    },
+    {
+      "path": "docs/correlations.html",
+      "row_ordinal": 8,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/correlations.html"
+    },
+    {
+      "path": "docs/correlations.html",
+      "row_ordinal": 9,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/correlations.html"
+    },
+    {
+      "path": "docs/correlations.html",
+      "row_ordinal": 10,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/correlations.html"
+    },
+    {
+      "path": "docs/flagged.html",
+      "row_ordinal": 1,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/flagged.html"
+    },
+    {
+      "path": "docs/flagged.html",
+      "row_ordinal": 2,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/flagged.html"
+    },
+    {
+      "path": "docs/flagged.html",
+      "row_ordinal": 3,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/flagged.html"
+    },
+    {
+      "path": "docs/flagged.html",
+      "row_ordinal": 4,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/flagged.html"
+    },
+    {
+      "path": "docs/flagged.html",
+      "row_ordinal": 5,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/flagged.html"
+    },
+    {
+      "path": "docs/flagged.html",
+      "row_ordinal": 6,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/flagged.html"
+    },
+    {
+      "path": "docs/flagged.html",
+      "row_ordinal": 7,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/flagged.html"
+    },
+    {
+      "path": "docs/flagged.html",
+      "row_ordinal": 8,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/flagged.html"
+    },
+    {
+      "path": "docs/flagged.html",
+      "row_ordinal": 9,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/flagged.html"
+    },
+    {
+      "path": "docs/flagged.html",
+      "row_ordinal": 10,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/flagged.html"
+    },
+    {
+      "path": "docs/index.html",
+      "row_ordinal": 1,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/index.html"
+    },
+    {
+      "path": "docs/index.html",
+      "row_ordinal": 3,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/index.html"
+    },
+    {
+      "path": "docs/index.html",
+      "row_ordinal": 6,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/index.html"
+    },
+    {
+      "path": "docs/index.html",
+      "row_ordinal": 7,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/index.html"
+    },
+    {
+      "path": "docs/leaderboard.html",
+      "row_ordinal": 1,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/leaderboard.html"
+    },
+    {
+      "path": "docs/leaderboard.html",
+      "row_ordinal": 2,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/leaderboard.html"
+    },
+    {
+      "path": "docs/leaderboard.html",
+      "row_ordinal": 3,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/leaderboard.html"
+    },
+    {
+      "path": "docs/leaderboard.html",
+      "row_ordinal": 4,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/leaderboard.html"
+    },
+    {
+      "path": "docs/leaderboard.html",
+      "row_ordinal": 5,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/leaderboard.html"
+    },
+    {
+      "path": "docs/leaderboard.html",
+      "row_ordinal": 6,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/leaderboard.html"
+    },
+    {
+      "path": "docs/leaderboard.html",
+      "row_ordinal": 7,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/leaderboard.html"
+    },
+    {
+      "path": "docs/skill-vs-luck.html",
+      "row_ordinal": 1,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/skill-vs-luck.html"
+    },
+    {
+      "path": "docs/skill-vs-luck.html",
+      "row_ordinal": 2,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/skill-vs-luck.html"
+    },
+    {
+      "path": "docs/skill-vs-luck.html",
+      "row_ordinal": 3,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/skill-vs-luck.html"
+    },
+    {
+      "path": "docs/skill-vs-luck.html",
+      "row_ordinal": 4,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/skill-vs-luck.html"
+    },
+    {
+      "path": "docs/skill-vs-luck.html",
+      "row_ordinal": 5,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/skill-vs-luck.html"
+    },
+    {
+      "path": "docs/skill-vs-luck.html",
+      "row_ordinal": 6,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/skill-vs-luck.html"
+    },
+    {
+      "path": "docs/skill-vs-luck.html",
+      "row_ordinal": 7,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/skill-vs-luck.html"
+    },
+    {
+      "path": "docs/sources.html",
+      "row_ordinal": 3,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/sources.html"
+    },
+    {
+      "path": "docs/sources.html",
+      "row_ordinal": 4,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/sources.html"
+    },
+    {
+      "path": "docs/sources.html",
+      "row_ordinal": 5,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/sources.html"
+    },
+    {
+      "path": "docs/sources.html",
+      "row_ordinal": 6,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/sources.html"
+    },
+    {
+      "path": "docs/sources.html",
+      "row_ordinal": 7,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/sources.html"
+    },
+    {
+      "path": "docs/sources.html",
+      "row_ordinal": 8,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/sources.html"
+    },
+    {
+      "path": "docs/sources.html",
+      "row_ordinal": 9,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/sources.html"
+    },
+    {
+      "path": "docs/sources.html",
+      "row_ordinal": 10,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/sources.html"
+    },
+    {
+      "path": "docs/sources.html",
+      "row_ordinal": 11,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/sources.html"
+    },
+    {
+      "path": "docs/sources.html",
+      "row_ordinal": 12,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/sources.html"
+    },
+    {
+      "path": "docs/sources.html",
+      "row_ordinal": 13,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/sources.html"
+    },
+    {
+      "path": "docs/sources.html",
+      "row_ordinal": 14,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/sources.html"
+    },
+    {
+      "path": "docs/sources.html",
+      "row_ordinal": 15,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/sources.html"
+    },
+    {
+      "path": "docs/sources.html",
+      "row_ordinal": 16,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/sources.html"
+    },
+    {
+      "path": "docs/sources.html",
+      "row_ordinal": 17,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/sources.html"
+    },
+    {
+      "path": "docs/sources.html",
+      "row_ordinal": 18,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/sources.html"
+    },
+    {
+      "path": "docs/sources.html",
+      "row_ordinal": 19,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/sources.html"
+    },
+    {
+      "path": "docs/sources.html",
+      "row_ordinal": 20,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/sources.html"
+    },
+    {
+      "path": "docs/strategies.html",
+      "row_ordinal": 3,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/strategies.html"
+    },
+    {
+      "path": "docs/strategies.html",
+      "row_ordinal": 4,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/strategies.html"
+    },
+    {
+      "path": "docs/strategies.html",
+      "row_ordinal": 5,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/strategies.html"
+    },
+    {
+      "path": "docs/strategies.html",
+      "row_ordinal": 6,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/strategies.html"
+    },
+    {
+      "path": "docs/strategies.html",
+      "row_ordinal": 7,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/strategies.html"
+    },
+    {
+      "path": "docs/strategies.html",
+      "row_ordinal": 8,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/strategies.html"
+    },
+    {
+      "path": "docs/validation.html",
+      "row_ordinal": 1,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/validation.html"
+    },
+    {
+      "path": "docs/validation.html",
+      "row_ordinal": 2,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/validation.html"
+    },
+    {
+      "path": "docs/validation.html",
+      "row_ordinal": 3,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/validation.html"
+    },
+    {
+      "path": "docs/validation.html",
+      "row_ordinal": 4,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/validation.html"
+    },
+    {
+      "path": "docs/validation.html",
+      "row_ordinal": 5,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/validation.html"
+    },
+    {
+      "path": "docs/validation.html",
+      "row_ordinal": 6,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/validation.html"
+    },
+    {
+      "path": "docs/validation.html",
+      "row_ordinal": 7,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/validation.html"
+    },
+    {
+      "path": "docs/validation.html",
+      "row_ordinal": 8,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/validation.html"
+    },
+    {
+      "path": "docs/validation.html",
+      "row_ordinal": 9,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/docs/validation.html"
+    },
+    {
+      "path": "flagged.html",
+      "row_ordinal": 1,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/flagged.html"
+    },
+    {
+      "path": "flagged.html",
+      "row_ordinal": 3,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/flagged.html"
+    },
+    {
+      "path": "flagged.html",
+      "row_ordinal": 4,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/flagged.html"
+    },
+    {
+      "path": "flagged.html",
+      "row_ordinal": 6,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/flagged.html"
+    },
+    {
+      "path": "flagged.html",
+      "row_ordinal": 7,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/flagged.html"
+    },
+    {
+      "path": "line-lab/analysis.html",
+      "row_ordinal": 33,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/analysis.html"
+    },
+    {
+      "path": "line-lab/analysis.html",
+      "row_ordinal": 34,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/analysis.html"
+    },
+    {
+      "path": "line-lab/analysis.html",
+      "row_ordinal": 35,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/analysis.html"
+    },
+    {
+      "path": "line-lab/analysis.html",
+      "row_ordinal": 36,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/analysis.html"
+    },
+    {
+      "path": "line-lab/analysis.html",
+      "row_ordinal": 37,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/analysis.html"
+    },
+    {
+      "path": "line-lab/analysis.html",
+      "row_ordinal": 38,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/analysis.html"
+    },
+    {
+      "path": "line-lab/analysis.html",
+      "row_ordinal": 39,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/analysis.html"
+    },
+    {
+      "path": "line-lab/analysis.html",
+      "row_ordinal": 40,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/analysis.html"
+    },
+    {
+      "path": "line-lab/analysis.html",
+      "row_ordinal": 41,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/analysis.html"
+    },
+    {
+      "path": "line-lab/analysis.html",
+      "row_ordinal": 42,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/analysis.html"
+    },
+    {
+      "path": "line-lab/analysis.html",
+      "row_ordinal": 43,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/analysis.html"
+    },
+    {
+      "path": "line-lab/analysis.html",
+      "row_ordinal": 44,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/analysis.html"
+    },
+    {
+      "path": "line-lab/analysis.html",
+      "row_ordinal": 45,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/analysis.html"
+    },
+    {
+      "path": "line-lab/analysis.html",
+      "row_ordinal": 46,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/analysis.html"
+    },
+    {
+      "path": "line-lab/analysis.html",
+      "row_ordinal": 47,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/analysis.html"
+    },
+    {
+      "path": "line-lab/analysis.html",
+      "row_ordinal": 48,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/analysis.html"
+    },
+    {
+      "path": "line-lab/analysis.html",
+      "row_ordinal": 49,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/analysis.html"
+    },
+    {
+      "path": "line-lab/analysis.html",
+      "row_ordinal": 50,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/analysis.html"
+    },
+    {
+      "path": "line-lab/analysis.html",
+      "row_ordinal": 51,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/analysis.html"
+    },
+    {
+      "path": "line-lab/analysis.html",
+      "row_ordinal": 52,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/analysis.html"
+    },
+    {
+      "path": "line-lab/analysis.html",
+      "row_ordinal": 53,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/analysis.html"
+    },
+    {
+      "path": "line-lab/analysis.html",
+      "row_ordinal": 54,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/analysis.html"
+    },
+    {
+      "path": "line-lab/analysis.html",
+      "row_ordinal": 55,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/analysis.html"
+    },
+    {
+      "path": "line-lab/analysis.html",
+      "row_ordinal": 56,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/analysis.html"
+    },
+    {
+      "path": "line-lab/flagged.html",
+      "row_ordinal": 1,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/flagged.html"
+    },
+    {
+      "path": "line-lab/flagged.html",
+      "row_ordinal": 2,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/flagged.html"
+    },
+    {
+      "path": "line-lab/flagged.html",
+      "row_ordinal": 3,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/flagged.html"
+    },
+    {
+      "path": "line-lab/flagged.html",
+      "row_ordinal": 4,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/flagged.html"
+    },
+    {
+      "path": "line-lab/flagged.html",
+      "row_ordinal": 5,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/flagged.html"
+    },
+    {
+      "path": "line-lab/flagged.html",
+      "row_ordinal": 6,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/flagged.html"
+    },
+    {
+      "path": "line-lab/flagged.html",
+      "row_ordinal": 7,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/flagged.html"
+    },
+    {
+      "path": "line-lab/flagged.html",
+      "row_ordinal": 8,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/flagged.html"
+    },
+    {
+      "path": "line-lab/flagged.html",
+      "row_ordinal": 9,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/flagged.html"
+    },
+    {
+      "path": "line-lab/flagged.html",
+      "row_ordinal": 13,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/flagged.html"
+    },
+    {
+      "path": "line-lab/flagged.html",
+      "row_ordinal": 14,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/flagged.html"
+    },
+    {
+      "path": "line-lab/flagged.html",
+      "row_ordinal": 15,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/flagged.html"
+    },
+    {
+      "path": "line-lab/flagged.html",
+      "row_ordinal": 16,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/flagged.html"
+    },
+    {
+      "path": "line-lab/leaderboard.html",
+      "row_ordinal": 1,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/leaderboard.html"
+    },
+    {
+      "path": "line-lab/leaderboard.html",
+      "row_ordinal": 2,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/leaderboard.html"
+    },
+    {
+      "path": "line-lab/leaderboard.html",
+      "row_ordinal": 3,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/leaderboard.html"
+    },
+    {
+      "path": "line-lab/leaderboard.html",
+      "row_ordinal": 4,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/leaderboard.html"
+    },
+    {
+      "path": "line-lab/leaderboard.html",
+      "row_ordinal": 5,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/leaderboard.html"
+    },
+    {
+      "path": "line-lab/leaderboard.html",
+      "row_ordinal": 6,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/leaderboard.html"
+    },
+    {
+      "path": "line-lab/leaderboard.html",
+      "row_ordinal": 7,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/leaderboard.html"
+    },
+    {
+      "path": "line-lab/leaderboard.html",
+      "row_ordinal": 8,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/leaderboard.html"
+    },
+    {
+      "path": "line-lab/leaderboard.html",
+      "row_ordinal": 9,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/leaderboard.html"
+    },
+    {
+      "path": "line-lab/leaderboard.html",
+      "row_ordinal": 10,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/leaderboard.html"
+    },
+    {
+      "path": "line-lab/leaderboard.html",
+      "row_ordinal": 11,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/leaderboard.html"
+    },
+    {
+      "path": "line-lab/leaderboard.html",
+      "row_ordinal": 12,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/leaderboard.html"
+    },
+    {
+      "path": "line-lab/lines.html",
+      "row_ordinal": 1,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/lines.html"
+    },
+    {
+      "path": "line-lab/lines.html",
+      "row_ordinal": 2,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/lines.html"
+    },
+    {
+      "path": "line-lab/lines.html",
+      "row_ordinal": 3,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/lines.html"
+    },
+    {
+      "path": "line-lab/lines.html",
+      "row_ordinal": 4,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/lines.html"
+    },
+    {
+      "path": "line-lab/lines.html",
+      "row_ordinal": 5,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/lines.html"
+    },
+    {
+      "path": "line-lab/lines.html",
+      "row_ordinal": 6,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/lines.html"
+    },
+    {
+      "path": "line-lab/lines.html",
+      "row_ordinal": 7,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/lines.html"
+    },
+    {
+      "path": "line-lab/lines.html",
+      "row_ordinal": 8,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/lines.html"
+    },
+    {
+      "path": "line-lab/lines.html",
+      "row_ordinal": 9,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/lines.html"
+    },
+    {
+      "path": "line-lab/lines.html",
+      "row_ordinal": 10,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/lines.html"
+    },
+    {
+      "path": "line-lab/lines.html",
+      "row_ordinal": 11,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/lines.html"
+    },
+    {
+      "path": "line-lab/lines.html",
+      "row_ordinal": 12,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/lines.html"
+    },
+    {
+      "path": "line-lab/lines.html",
+      "row_ordinal": 13,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/lines.html"
+    },
+    {
+      "path": "line-lab/lines.html",
+      "row_ordinal": 14,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/lines.html"
+    },
+    {
+      "path": "line-lab/lines.html",
+      "row_ordinal": 15,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/lines.html"
+    },
+    {
+      "path": "line-lab/lines.html",
+      "row_ordinal": 16,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/lines.html"
+    },
+    {
+      "path": "line-lab/lines.html",
+      "row_ordinal": 17,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/lines.html"
+    },
+    {
+      "path": "line-lab/lines.html",
+      "row_ordinal": 18,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/lines.html"
+    },
+    {
+      "path": "line-lab/lines.html",
+      "row_ordinal": 19,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/lines.html"
+    },
+    {
+      "path": "line-lab/lines.html",
+      "row_ordinal": 20,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/lines.html"
+    },
+    {
+      "path": "line-lab/lines.html",
+      "row_ordinal": 21,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/lines.html"
+    },
+    {
+      "path": "line-lab/lines.html",
+      "row_ordinal": 22,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/lines.html"
+    },
+    {
+      "path": "line-lab/lines.html",
+      "row_ordinal": 23,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/lines.html"
+    },
+    {
+      "path": "line-lab/lines.html",
+      "row_ordinal": 24,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/lines.html"
+    },
+    {
+      "path": "line-lab/lines.html",
+      "row_ordinal": 25,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/lines.html"
+    },
+    {
+      "path": "line-lab/lines.html",
+      "row_ordinal": 26,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/lines.html"
+    },
+    {
+      "path": "line-lab/lines.html",
+      "row_ordinal": 27,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/lines.html"
+    },
+    {
+      "path": "line-lab/lines.html",
+      "row_ordinal": 28,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/lines.html"
+    },
+    {
+      "path": "line-lab/lines.html",
+      "row_ordinal": 29,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/lines.html"
+    },
+    {
+      "path": "line-lab/lines.html",
+      "row_ordinal": 30,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/lines.html"
+    },
+    {
+      "path": "line-lab/lines.html",
+      "row_ordinal": 31,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/lines.html"
+    },
+    {
+      "path": "line-lab/lines.html",
+      "row_ordinal": 32,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/lines.html"
+    },
+    {
+      "path": "line-lab/scores.html",
+      "row_ordinal": 1,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/scores.html"
+    },
+    {
+      "path": "line-lab/scores.html",
+      "row_ordinal": 18,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/scores.html"
+    },
+    {
+      "path": "line-lab/scores.html",
+      "row_ordinal": 35,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/scores.html"
+    },
+    {
+      "path": "line-lab/scores.html",
+      "row_ordinal": 52,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/scores.html"
+    },
+    {
+      "path": "line-lab/scores.html",
+      "row_ordinal": 69,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/scores.html"
+    },
+    {
+      "path": "line-lab/scores.html",
+      "row_ordinal": 85,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/scores.html"
+    },
+    {
+      "path": "line-lab/scores.html",
+      "row_ordinal": 100,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/scores.html"
+    },
+    {
+      "path": "line-lab/scores.html",
+      "row_ordinal": 115,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/scores.html"
+    },
+    {
+      "path": "line-lab/scores.html",
+      "row_ordinal": 130,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/scores.html"
+    },
+    {
+      "path": "line-lab/sources.html",
+      "row_ordinal": 7,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/sources.html"
+    },
+    {
+      "path": "line-lab/sources.html",
+      "row_ordinal": 8,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/sources.html"
+    },
+    {
+      "path": "line-lab/sources.html",
+      "row_ordinal": 9,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/sources.html"
+    },
+    {
+      "path": "line-lab/sources.html",
+      "row_ordinal": 10,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/sources.html"
+    },
+    {
+      "path": "line-lab/sources.html",
+      "row_ordinal": 11,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/sources.html"
+    },
+    {
+      "path": "line-lab/sources.html",
+      "row_ordinal": 12,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/sources.html"
+    },
+    {
+      "path": "line-lab/sources.html",
+      "row_ordinal": 13,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/sources.html"
+    },
+    {
+      "path": "line-lab/sources.html",
+      "row_ordinal": 14,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/sources.html"
+    },
+    {
+      "path": "line-lab/sources.html",
+      "row_ordinal": 16,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/sources.html"
+    },
+    {
+      "path": "line-lab/sources.html",
+      "row_ordinal": 17,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/sources.html"
+    },
+    {
+      "path": "line-lab/sources.html",
+      "row_ordinal": 18,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/sources.html"
+    },
+    {
+      "path": "line-lab/sources.html",
+      "row_ordinal": 19,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/sources.html"
+    },
+    {
+      "path": "line-lab/sources.html",
+      "row_ordinal": 20,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/sources.html"
+    },
+    {
+      "path": "line-lab/sources.html",
+      "row_ordinal": 21,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/sources.html"
+    },
+    {
+      "path": "line-lab/sources.html",
+      "row_ordinal": 22,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/sources.html"
+    },
+    {
+      "path": "line-lab/sources.html",
+      "row_ordinal": 23,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/sources.html"
+    },
+    {
+      "path": "line-lab/sources.html",
+      "row_ordinal": 24,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/sources.html"
+    },
+    {
+      "path": "line-lab/sources.html",
+      "row_ordinal": 25,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/sources.html"
+    },
+    {
+      "path": "line-lab/strategies.html",
+      "row_ordinal": 1,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/strategies.html"
+    },
+    {
+      "path": "line-lab/strategies.html",
+      "row_ordinal": 2,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/strategies.html"
+    },
+    {
+      "path": "line-lab/strategies.html",
+      "row_ordinal": 3,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/strategies.html"
+    },
+    {
+      "path": "line-lab/strategies.html",
+      "row_ordinal": 4,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/strategies.html"
+    },
+    {
+      "path": "line-lab/strategies.html",
+      "row_ordinal": 5,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/strategies.html"
+    },
+    {
+      "path": "line-lab/strategies.html",
+      "row_ordinal": 6,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/strategies.html"
+    },
+    {
+      "path": "line-lab/strategies.html",
+      "row_ordinal": 7,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/strategies.html"
+    },
+    {
+      "path": "line-lab/strategies.html",
+      "row_ordinal": 8,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/strategies.html"
+    },
+    {
+      "path": "line-lab/strategies.html",
+      "row_ordinal": 9,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/strategies.html"
+    },
+    {
+      "path": "line-lab/strategies.html",
+      "row_ordinal": 10,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/strategies.html"
+    },
+    {
+      "path": "line-lab/strategies.html",
+      "row_ordinal": 11,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/strategies.html"
+    },
+    {
+      "path": "line-lab/strategies.html",
+      "row_ordinal": 12,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/strategies.html"
+    },
+    {
+      "path": "line-lab/strategies.html",
+      "row_ordinal": 13,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/strategies.html"
+    },
+    {
+      "path": "line-lab/strategies.html",
+      "row_ordinal": 14,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/strategies.html"
+    },
+    {
+      "path": "line-lab/strategies.html",
+      "row_ordinal": 15,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/strategies.html"
+    },
+    {
+      "path": "line-lab/strategies.html",
+      "row_ordinal": 16,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/strategies.html"
+    },
+    {
+      "path": "line-lab/strategies.html",
+      "row_ordinal": 17,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/strategies.html"
+    },
+    {
+      "path": "line-lab/strategies.html",
+      "row_ordinal": 18,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/strategies.html"
+    },
+    {
+      "path": "line-lab/strategies.html",
+      "row_ordinal": 19,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/strategies.html"
+    },
+    {
+      "path": "line-lab/strategies.html",
+      "row_ordinal": 20,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/line-lab/strategies.html"
+    },
+    {
+      "path": "nba-desk/audit.html",
+      "row_ordinal": 1,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-desk/audit.html"
+    },
+    {
+      "path": "nba-desk/audit.html",
+      "row_ordinal": 2,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-desk/audit.html"
+    },
+    {
+      "path": "nba-desk/audit.html",
+      "row_ordinal": 3,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-desk/audit.html"
+    },
+    {
+      "path": "nba-desk/audit.html",
+      "row_ordinal": 6,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-desk/audit.html"
+    },
+    {
+      "path": "nba-desk/audit.html",
+      "row_ordinal": 9,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-desk/audit.html"
+    },
+    {
+      "path": "nba-desk/sources.html",
+      "row_ordinal": 11,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-desk/sources.html"
+    },
+    {
+      "path": "nba-desk/sources.html",
+      "row_ordinal": 12,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-desk/sources.html"
+    },
+    {
+      "path": "nba-line-desk/flagged.html",
+      "row_ordinal": 6,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-line-desk/flagged.html"
+    },
+    {
+      "path": "nba-line-desk/sources.html",
+      "row_ordinal": 9,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-line-desk/sources.html"
+    },
+    {
+      "path": "nba-line-desk/sources.html",
+      "row_ordinal": 10,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-line-desk/sources.html"
+    },
+    {
+      "path": "nba-line-desk/sources.html",
+      "row_ordinal": 11,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-line-desk/sources.html"
+    },
+    {
+      "path": "nba-signal-lab/executive-summary.html",
+      "row_ordinal": 1,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/executive-summary.html"
+    },
+    {
+      "path": "nba-signal-lab/executive-summary.html",
+      "row_ordinal": 2,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/executive-summary.html"
+    },
+    {
+      "path": "nba-signal-lab/executive-summary.html",
+      "row_ordinal": 3,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/executive-summary.html"
+    },
+    {
+      "path": "nba-signal-lab/executive-summary.html",
+      "row_ordinal": 4,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/executive-summary.html"
+    },
+    {
+      "path": "nba-signal-lab/executive-summary.html",
+      "row_ordinal": 5,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/executive-summary.html"
+    },
+    {
+      "path": "nba-signal-lab/executive-summary.html",
+      "row_ordinal": 6,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/executive-summary.html"
+    },
+    {
+      "path": "nba-signal-lab/executive-summary.html",
+      "row_ordinal": 7,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/executive-summary.html"
+    },
+    {
+      "path": "nba-signal-lab/executive-summary.html",
+      "row_ordinal": 8,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/executive-summary.html"
+    },
+    {
+      "path": "nba-signal-lab/executive-summary.html",
+      "row_ordinal": 9,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/executive-summary.html"
+    },
+    {
+      "path": "nba-signal-lab/executive-summary.html",
+      "row_ordinal": 10,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/executive-summary.html"
+    },
+    {
+      "path": "nba-signal-lab/executive-summary.html",
+      "row_ordinal": 11,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/executive-summary.html"
+    },
+    {
+      "path": "nba-signal-lab/executive-summary.html",
+      "row_ordinal": 12,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/executive-summary.html"
+    },
+    {
+      "path": "nba-signal-lab/executive-summary.html",
+      "row_ordinal": 13,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/executive-summary.html"
+    },
+    {
+      "path": "nba-signal-lab/flagged.html",
+      "row_ordinal": 1,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/flagged.html"
+    },
+    {
+      "path": "nba-signal-lab/flagged.html",
+      "row_ordinal": 2,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/flagged.html"
+    },
+    {
+      "path": "nba-signal-lab/flagged.html",
+      "row_ordinal": 3,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/flagged.html"
+    },
+    {
+      "path": "nba-signal-lab/flagged.html",
+      "row_ordinal": 4,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/flagged.html"
+    },
+    {
+      "path": "nba-signal-lab/flagged.html",
+      "row_ordinal": 5,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/flagged.html"
+    },
+    {
+      "path": "nba-signal-lab/flagged.html",
+      "row_ordinal": 6,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/flagged.html"
+    },
+    {
+      "path": "nba-signal-lab/flagged.html",
+      "row_ordinal": 7,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/flagged.html"
+    },
+    {
+      "path": "nba-signal-lab/flagged.html",
+      "row_ordinal": 8,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/flagged.html"
+    },
+    {
+      "path": "nba-signal-lab/flagged.html",
+      "row_ordinal": 9,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/flagged.html"
+    },
+    {
+      "path": "nba-signal-lab/flagged.html",
+      "row_ordinal": 10,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/flagged.html"
+    },
+    {
+      "path": "nba-signal-lab/index.html",
+      "row_ordinal": 1,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/index.html"
+    },
+    {
+      "path": "nba-signal-lab/index.html",
+      "row_ordinal": 4,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/index.html"
+    },
+    {
+      "path": "nba-signal-lab/index.html",
+      "row_ordinal": 5,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/index.html"
+    },
+    {
+      "path": "nba-signal-lab/index.html",
+      "row_ordinal": 6,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/index.html"
+    },
+    {
+      "path": "nba-signal-lab/index.html",
+      "row_ordinal": 7,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/index.html"
+    },
+    {
+      "path": "nba-signal-lab/index.html",
+      "row_ordinal": 8,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/index.html"
+    },
+    {
+      "path": "nba-signal-lab/index.html",
+      "row_ordinal": 9,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/index.html"
+    },
+    {
+      "path": "nba-signal-lab/leaderboard.html",
+      "row_ordinal": 6,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/leaderboard.html"
+    },
+    {
+      "path": "nba-signal-lab/leaderboard.html",
+      "row_ordinal": 7,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/leaderboard.html"
+    },
+    {
+      "path": "nba-signal-lab/leaderboard.html",
+      "row_ordinal": 8,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/leaderboard.html"
+    },
+    {
+      "path": "nba-signal-lab/luck-vs-skill.html",
+      "row_ordinal": 1,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/luck-vs-skill.html"
+    },
+    {
+      "path": "nba-signal-lab/luck-vs-skill.html",
+      "row_ordinal": 2,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/luck-vs-skill.html"
+    },
+    {
+      "path": "nba-signal-lab/luck-vs-skill.html",
+      "row_ordinal": 3,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/luck-vs-skill.html"
+    },
+    {
+      "path": "nba-signal-lab/luck-vs-skill.html",
+      "row_ordinal": 4,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/luck-vs-skill.html"
+    },
+    {
+      "path": "nba-signal-lab/luck-vs-skill.html",
+      "row_ordinal": 5,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/luck-vs-skill.html"
+    },
+    {
+      "path": "nba-signal-lab/luck-vs-skill.html",
+      "row_ordinal": 6,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/luck-vs-skill.html"
+    },
+    {
+      "path": "nba-signal-lab/luck-vs-skill.html",
+      "row_ordinal": 7,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/luck-vs-skill.html"
+    },
+    {
+      "path": "nba-signal-lab/luck-vs-skill.html",
+      "row_ordinal": 8,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/luck-vs-skill.html"
+    },
+    {
+      "path": "nba-signal-lab/luck-vs-skill.html",
+      "row_ordinal": 9,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/luck-vs-skill.html"
+    },
+    {
+      "path": "nba-signal-lab/luck-vs-skill.html",
+      "row_ordinal": 10,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/luck-vs-skill.html"
+    },
+    {
+      "path": "nba-signal-lab/luck-vs-skill.html",
+      "row_ordinal": 11,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/luck-vs-skill.html"
+    },
+    {
+      "path": "nba-signal-lab/luck-vs-skill.html",
+      "row_ordinal": 12,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/luck-vs-skill.html"
+    },
+    {
+      "path": "nba-signal-lab/luck-vs-skill.html",
+      "row_ordinal": 13,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/luck-vs-skill.html"
+    },
+    {
+      "path": "nba-signal-lab/luck-vs-skill.html",
+      "row_ordinal": 14,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/luck-vs-skill.html"
+    },
+    {
+      "path": "nba-signal-lab/luck-vs-skill.html",
+      "row_ordinal": 15,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/luck-vs-skill.html"
+    },
+    {
+      "path": "nba-signal-lab/luck-vs-skill.html",
+      "row_ordinal": 16,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/luck-vs-skill.html"
+    },
+    {
+      "path": "nba-signal-lab/luck-vs-skill.html",
+      "row_ordinal": 17,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/luck-vs-skill.html"
+    },
+    {
+      "path": "nba-signal-lab/strategies.html",
+      "row_ordinal": 6,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/strategies.html"
+    },
+    {
+      "path": "nba-signal-lab/strategies.html",
+      "row_ordinal": 7,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/strategies.html"
+    },
+    {
+      "path": "nba-signal-lab/strategies.html",
+      "row_ordinal": 8,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/strategies.html"
+    },
+    {
+      "path": "nba-signal-lab/strategies.html",
+      "row_ordinal": 9,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/strategies.html"
+    },
+    {
+      "path": "nba-signal-lab/strategies.html",
+      "row_ordinal": 10,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/strategies.html"
+    },
+    {
+      "path": "nba-signal-lab/strategies.html",
+      "row_ordinal": 11,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/strategies.html"
+    },
+    {
+      "path": "nba-signal-lab/strategies.html",
+      "row_ordinal": 12,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/strategies.html"
+    },
+    {
+      "path": "nba-signal-lab/strategies.html",
+      "row_ordinal": 13,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/strategies.html"
+    },
+    {
+      "path": "nba-signal-lab/strategies.html",
+      "row_ordinal": 14,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/strategies.html"
+    },
+    {
+      "path": "nba-signal-lab/strategies.html",
+      "row_ordinal": 15,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/strategies.html"
+    },
+    {
+      "path": "nba-signal-lab/verification.html",
+      "row_ordinal": 1,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/verification.html"
+    },
+    {
+      "path": "nba-signal-lab/verification.html",
+      "row_ordinal": 2,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/verification.html"
+    },
+    {
+      "path": "nba-signal-lab/verification.html",
+      "row_ordinal": 3,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/verification.html"
+    },
+    {
+      "path": "nba-signal-lab/verification.html",
+      "row_ordinal": 4,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/verification.html"
+    },
+    {
+      "path": "nba-signal-lab/verification.html",
+      "row_ordinal": 5,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/verification.html"
+    },
+    {
+      "path": "nba-signal-lab/verification.html",
+      "row_ordinal": 6,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/verification.html"
+    },
+    {
+      "path": "nba-signal-lab/verification.html",
+      "row_ordinal": 7,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/verification.html"
+    },
+    {
+      "path": "nba-signal-lab/verification.html",
+      "row_ordinal": 8,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/verification.html"
+    },
+    {
+      "path": "nba-signal-lab/verification.html",
+      "row_ordinal": 9,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/verification.html"
+    },
+    {
+      "path": "nba-signal-lab/verification.html",
+      "row_ordinal": 10,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/verification.html"
+    },
+    {
+      "path": "nba-signal-lab/verification.html",
+      "row_ordinal": 11,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/verification.html"
+    },
+    {
+      "path": "nba-signal-lab/verification.html",
+      "row_ordinal": 12,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/verification.html"
+    },
+    {
+      "path": "nba-signal-lab/verification.html",
+      "row_ordinal": 13,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/verification.html"
+    },
+    {
+      "path": "nba-signal-lab/verification.html",
+      "row_ordinal": 14,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/verification.html"
+    },
+    {
+      "path": "nba-signal-lab/verification.html",
+      "row_ordinal": 15,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/verification.html"
+    },
+    {
+      "path": "nba-signal-lab/verification.html",
+      "row_ordinal": 16,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nba-signal-lab/verification.html"
+    },
+    {
+      "path": "nfl-strategy-lab/leaderboard.html",
+      "row_ordinal": 1,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nfl-strategy-lab/leaderboard.html"
+    },
+    {
+      "path": "nfl-strategy-lab/leaderboard.html",
+      "row_ordinal": 2,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nfl-strategy-lab/leaderboard.html"
+    },
+    {
+      "path": "nfl-strategy-lab/leaderboard.html",
+      "row_ordinal": 3,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nfl-strategy-lab/leaderboard.html"
+    },
+    {
+      "path": "nfl-strategy-lab/leaderboard.html",
+      "row_ordinal": 16,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nfl-strategy-lab/leaderboard.html"
+    },
+    {
+      "path": "nfl-strategy-lab/sources.html",
+      "row_ordinal": 8,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nfl-strategy-lab/sources.html"
+    },
+    {
+      "path": "nfl-strategy-lab/sources.html",
+      "row_ordinal": 9,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nfl-strategy-lab/sources.html"
+    },
+    {
+      "path": "nfl-strategy-lab/sources.html",
+      "row_ordinal": 10,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nfl-strategy-lab/sources.html"
+    },
+    {
+      "path": "nfl-strategy-lab/sources.html",
+      "row_ordinal": 11,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nfl-strategy-lab/sources.html"
+    },
+    {
+      "path": "nfl-strategy-lab/sources.html",
+      "row_ordinal": 12,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nfl-strategy-lab/sources.html"
+    },
+    {
+      "path": "nfl-strategy-lab/sources.html",
+      "row_ordinal": 13,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nfl-strategy-lab/sources.html"
+    },
+    {
+      "path": "nfl-strategy-lab/sources.html",
+      "row_ordinal": 14,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nfl-strategy-lab/sources.html"
+    },
+    {
+      "path": "nfl-strategy-lab/sources.html",
+      "row_ordinal": 15,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nfl-strategy-lab/sources.html"
+    },
+    {
+      "path": "nfl-strategy-lab/validation-gates.html",
+      "row_ordinal": 2,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nfl-strategy-lab/validation-gates.html"
+    },
+    {
+      "path": "nfl-strategy-lab/validation-gates.html",
+      "row_ordinal": 3,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nfl-strategy-lab/validation-gates.html"
+    },
+    {
+      "path": "nfl-strategy-lab/validation-gates.html",
+      "row_ordinal": 4,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nfl-strategy-lab/validation-gates.html"
+    },
+    {
+      "path": "nfl-strategy-lab/validation-gates.html",
+      "row_ordinal": 5,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nfl-strategy-lab/validation-gates.html"
+    },
+    {
+      "path": "nfl-strategy-lab/validation-gates.html",
+      "row_ordinal": 6,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nfl-strategy-lab/validation-gates.html"
+    },
+    {
+      "path": "nfl-strategy-lab/validation-gates.html",
+      "row_ordinal": 7,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nfl-strategy-lab/validation-gates.html"
+    },
+    {
+      "path": "nfl-strategy-lab/validation-gates.html",
+      "row_ordinal": 8,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/nfl-strategy-lab/validation-gates.html"
+    },
+    {
+      "path": "own5-desk/data.html",
+      "row_ordinal": 71,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/own5-desk/data.html"
+    },
+    {
+      "path": "own5-desk/index.html",
+      "row_ordinal": 4,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/own5-desk/index.html"
+    },
+    {
+      "path": "own5-desk/methodology.html",
+      "row_ordinal": 6,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/own5-desk/methodology.html"
+    },
+    {
+      "path": "own5-desk/review.html",
+      "row_ordinal": 3,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/own5-desk/review.html"
+    },
+    {
+      "path": "own5-desk/review.html",
+      "row_ordinal": 8,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/own5-desk/review.html"
+    },
+    {
+      "path": "own5-desk/sources.html",
+      "row_ordinal": 4,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/own5-desk/sources.html"
+    },
+    {
+      "path": "own5-desk/sources.html",
+      "row_ordinal": 16,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/own5-desk/sources.html"
+    },
+    {
+      "path": "own5-desk/sources.html",
+      "row_ordinal": 17,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/own5-desk/sources.html"
+    },
+    {
+      "path": "own5-desk/validation.html",
+      "row_ordinal": 1,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/own5-desk/validation.html"
+    },
+    {
+      "path": "own5-desk/validation.html",
+      "row_ordinal": 2,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/own5-desk/validation.html"
+    },
+    {
+      "path": "own5-desk/validation.html",
+      "row_ordinal": 3,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/own5-desk/validation.html"
+    },
+    {
+      "path": "own5-desk/validation.html",
+      "row_ordinal": 4,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/own5-desk/validation.html"
+    },
+    {
+      "path": "own5-desk/validation.html",
+      "row_ordinal": 5,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/own5-desk/validation.html"
+    },
+    {
+      "path": "own5-desk/validation.html",
+      "row_ordinal": 6,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/own5-desk/validation.html"
+    },
+    {
+      "path": "own5-desk/validation.html",
+      "row_ordinal": 7,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/own5-desk/validation.html"
+    },
+    {
+      "path": "own5-desk/validation.html",
+      "row_ordinal": 8,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/own5-desk/validation.html"
+    },
+    {
+      "path": "own5-desk/validation.html",
+      "row_ordinal": 9,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/own5-desk/validation.html"
+    },
+    {
+      "path": "own5-desk/validation.html",
+      "row_ordinal": 10,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/own5-desk/validation.html"
+    },
+    {
+      "path": "own5-desk/validation.html",
+      "row_ordinal": 11,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/own5-desk/validation.html"
+    },
+    {
+      "path": "pages/correlations.html",
+      "row_ordinal": 1,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/pages/correlations.html"
+    },
+    {
+      "path": "pages/correlations.html",
+      "row_ordinal": 2,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/pages/correlations.html"
+    },
+    {
+      "path": "pages/correlations.html",
+      "row_ordinal": 3,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/pages/correlations.html"
+    },
+    {
+      "path": "pages/correlations.html",
+      "row_ordinal": 4,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/pages/correlations.html"
+    },
+    {
+      "path": "pages/correlations.html",
+      "row_ordinal": 5,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/pages/correlations.html"
+    },
+    {
+      "path": "pages/correlations.html",
+      "row_ordinal": 6,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/pages/correlations.html"
+    },
+    {
+      "path": "pages/leaderboard.html",
+      "row_ordinal": 9,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/pages/leaderboard.html"
+    },
+    {
+      "path": "pages/leaderboard.html",
+      "row_ordinal": 10,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/pages/leaderboard.html"
+    },
+    {
+      "path": "pages/leaderboard.html",
+      "row_ordinal": 11,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/pages/leaderboard.html"
+    },
+    {
+      "path": "pages/leaderboard.html",
+      "row_ordinal": 12,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/pages/leaderboard.html"
+    },
+    {
+      "path": "pages/review.html",
+      "row_ordinal": 3,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/pages/review.html"
+    },
+    {
+      "path": "pages/review.html",
+      "row_ordinal": 6,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/pages/review.html"
+    },
+    {
+      "path": "pages/review.html",
+      "row_ordinal": 7,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/pages/review.html"
+    },
+    {
+      "path": "pages/sources.html",
+      "row_ordinal": 20,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/pages/sources.html"
+    },
+    {
+      "path": "pages/sources.html",
+      "row_ordinal": 21,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/pages/sources.html"
+    },
+    {
+      "path": "pages/sources.html",
+      "row_ordinal": 22,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/pages/sources.html"
+    },
+    {
+      "path": "pages/sources.html",
+      "row_ordinal": 23,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/pages/sources.html"
+    },
+    {
+      "path": "pages/sources.html",
+      "row_ordinal": 24,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/pages/sources.html"
+    },
+    {
+      "path": "pages/sources.html",
+      "row_ordinal": 25,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/pages/sources.html"
+    },
+    {
+      "path": "pages/validation.html",
+      "row_ordinal": 2,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/pages/validation.html"
+    },
+    {
+      "path": "pages/validation.html",
+      "row_ordinal": 3,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/pages/validation.html"
+    },
+    {
+      "path": "pages/validation.html",
+      "row_ordinal": 4,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/pages/validation.html"
+    },
+    {
+      "path": "pages/validation.html",
+      "row_ordinal": 5,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/pages/validation.html"
+    },
+    {
+      "path": "pages/validation.html",
+      "row_ordinal": 6,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/pages/validation.html"
+    },
+    {
+      "path": "pages/validation.html",
+      "row_ordinal": 7,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/pages/validation.html"
+    },
+    {
+      "path": "signals.html",
+      "row_ordinal": 12,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/signals.html"
+    },
+    {
+      "path": "signals.html",
+      "row_ordinal": 14,
+      "repo_url": "https://github.com/sassnarep3-star/Own5/blob/54e8dee596d49731c3da535a1f77b01cd0c295d5/signals.html"
+    }
+  ],
+  "totals": {
+    "pages": 139,
+    "rows": 2852,
+    "missing_context_links": 369
+  }
+}
