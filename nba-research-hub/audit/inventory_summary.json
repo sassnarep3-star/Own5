@@ -1,0 +1,13 @@
+{
+  "baseline_commit": "b9929ec8180b3ee6dc84b8807b863e502ba6da29",
+  "binary_files": 0,
+  "file_inventory_sha256": "6c67d4242d704225b90d5e30df98e9e9cfe14c405e656f6fac63a3478d0fc28c",
+  "files": 449,
+  "line_inventory_sha256": "7d895226f10167a106dac40ac2247c827df529b8e8c5f3d30a38256381d7c222",
+  "lines_with_source_link": 1222,
+  "physical_lines": 65099,
+  "status_legend": {
+    "INV": "inventory only / manual review",
+    "LINK": "source link present, not independently verified"
+  }
+}

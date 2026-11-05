@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sources · Own5 NBA Research Hub</title>
+<link rel="stylesheet" href="assets/style.css">
+<script defer src="assets/app.js"></script>
+</head>
+<body>
+<header class="site"><div class="brand">Own5 <span>NBA Research Hub</span></div><nav class="main" aria-label="Primary"><a href="index.html" class="">Overview</a>
+<a href="executive-summary.html" class="">Executive Summary</a>
+<a href="lines.html" class="">Research Lines</a>
+<a href="players.html" class="">Player Signals</a>
+<a href="correlations.html" class="">Correlations &amp; Combos</a>
+<a href="strategies.html" class="">Strategies</a>
+<a href="gates.html" class="">Validation Gates</a>
+<a href="leaderboard.html" class="">Leaderboard</a>
+<a href="luck.html" class="">Luck &amp; Power</a>
+<a href="sources.html" class="active">Sources</a>
+<a href="requirements.html" class="">Requirements</a>
+<a href="audit.html" class="">Repository Audit</a>
+<a href="review.html" class="">Flagged for Review</a></nav></header>
+<main>
+<h1>Sources</h1>
+
+<p class="lead">Official observations, cross-checks, operator context, and trusted methodology sources. Context citations are not proof of a betting edge.</p>
+<div class="filter"><label class="small" for="sources-filter">Filter table</label><br><input id="sources-filter" type="search" placeholder="Filter rows…" oninput="filterTable(this,'sources')"></div>
+<div class="tbl-wrap"><table id="sources"><thead><tr>
+<th>ID</th>
+<th>Publisher</th>
+<th>Title</th>
+<th>Link</th>
+<th>Scope</th>
+<th>Verification</th>
+<th>Role</th>
+</tr></thead><tbody>
+<tr><td>S01</td><td>NBA.com</td><td>2026-27 team traditional statistics</td><td><span class="src"><a href="https://www.nba.com/stats/teams/traditional?Season=2026-27&amp;SeasonType=Regular%20Season" target="_blank" rel="noopener">Open source</a></span></td><td>All 30 teams; GP/W/L/PTS/PLUS-MINUS selected fields</td><td>Direct table read; W/L cross-checked with S03</td><td><span class="chip info">Official observation</span></td></tr>
+<tr><td>S02</td><td>NBA.com</td><td>2025-26 team traditional statistics</td><td><span class="src"><a href="https://www.nba.com/stats/teams/traditional?Season=2025-26&amp;SeasonType=Regular%20Season" target="_blank" rel="noopener">Open source</a></span></td><td>All 30 teams; completed 82-game season selected fields</td><td>Direct table read; W/L cross-checked with S04</td><td><span class="chip info">Official observation</span></td></tr>
+<tr><td>S03</td><td>NBA.com</td><td>Current NBA standings</td><td><span class="src"><a href="https://www.nba.com/standings" target="_blank" rel="noopener">Open source</a></span></td><td>2026-27 W/L cross-check</td><td>Direct table read</td><td><span class="chip info">Official cross-check</span></td></tr>
+<tr><td>S04</td><td>NBA.com</td><td>2025-26 NBA standings</td><td><span class="src"><a href="https://www.nba.com/standings?Season=2025-26" target="_blank" rel="noopener">Open source</a></span></td><td>2025-26 W/L cross-check</td><td>Direct table read</td><td><span class="chip info">Official cross-check</span></td></tr>
+<tr><td>S05</td><td>NBA.com</td><td>Luka Dončić 2025-26 regular-season box scores</td><td><span class="src"><a href="https://www.nba.com/stats/player/1629029/boxscores?Season=2025-26&amp;SeasonType=Regular%20Season" target="_blank" rel="noopener">Open source</a></span></td><td>64 player-game rows; all stored fields</td><td>Direct table read; explicit SeasonType required after transient JS-only response</td><td><span class="chip info">Official observation</span></td></tr>
+<tr><td>S06</td><td>NBA.com</td><td>Anthony Edwards 2025-26 box scores</td><td><span class="src"><a href="https://www.nba.com/stats/player/1630162/boxscores?Season=2025-26" target="_blank" rel="noopener">Open source</a></span></td><td>61 player-game rows; all stored fields</td><td>Direct table read; early rows cross-checked with date-filtered view</td><td><span class="chip info">Official observation</span></td></tr>
+<tr><td>S07</td><td>NBA.com</td><td>2025-26 season leaders</td><td><span class="src"><a href="https://www.nba.com/stats/leaders?Season=2025-26" target="_blank" rel="noopener">Open source</a></span></td><td>GP and per-game means for selected players</td><td>Direct table read; means reconcile to rounded official averages</td><td><span class="chip info">Official cross-check</span></td></tr>
+<tr><td>S08</td><td>NBA.com</td><td>November 2026 schedule</td><td><span class="src"><a href="https://www.nba.com/schedule?month=11&amp;year=2026" target="_blank" rel="noopener">Open source</a></span></td><td>November 6 slate; nine games</td><td>Direct schedule read</td><td><span class="chip info">Official observation</span></td></tr>
+<tr><td>S09</td><td>NBA</td><td>Injury report 2026-11-05 4:00 PM</td><td><span class="src"><a href="https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-05_04_00PM.pdf" target="_blank" rel="noopener">Open source</a></span></td><td>Point-in-time November 5/6 availability</td><td>Direct PDF read; not final November 6 availability</td><td><span class="chip info">Official observation</span></td></tr>
+<tr><td>S10</td><td>NBA Official</td><td>Rule 5 — Scoring and Timing</td><td><span class="src"><a href="https://official.nba.com/rule-no-5-scoring-and-timing/" target="_blank" rel="noopener">Open source</a></span></td><td>Regulation/OT duration and scoring values</td><td>Direct rule read</td><td><span class="chip info">Official context</span></td></tr>
+<tr><td>S11</td><td>FanDuel</td><td>How to bet on NBA</td><td><span class="src"><a href="https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nba" target="_blank" rel="noopener">Open source</a></span></td><td>Operator definitions; props include OT; DNP void; neutral-site settlement listing</td><td>Direct guide read; not jurisdiction-specific house rules and not proof of edge</td><td><span class="chip info">Operator context</span></td></tr>
+<tr><td>S12</td><td>PubMed</td><td>Rest days and NBA performance PMID 32172667</td><td><span class="src"><a href="https://pubmed.ncbi.nlm.nih.gov/32172667/" target="_blank" rel="noopener">Open source</a></span></td><td>Rest-day hypothesis context</td><td>Abstract read; association context only</td><td><span class="chip info">Primary research context</span></td></tr>
+<tr><td>S13</td><td>David H. Bailey / Marcos López de Prado</td><td>The Deflated Sharpe Ratio</td><td><span class="src"><a href="https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf" target="_blank" rel="noopener">Open source</a></span></td><td>Selection bias and backtest overfitting context</td><td>PDF opening read; no DSR performance claim without real returns</td><td><span class="chip info">Primary research context</span></td></tr>
+<tr><td>S14</td><td>NBA.com</td><td>Stats glossary</td><td><span class="src"><a href="https://www.nba.com/stats/help/glossary" target="_blank" rel="noopener">Open source</a></span></td><td>Field definitions</td><td>Direct page read</td><td><span class="chip info">Official context</span></td></tr>
+<tr><td>S15</td><td>GitHub</td><td>Own5 coordination board</td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/COORDINATION.md" target="_blank" rel="noopener">Open source</a></span></td><td>Repository process and ownership record</td><td>Repository source; not sports-fact verification</td><td><span class="chip info">Process source</span></td></tr>
+<tr><td>S16</td><td>NIST/SEMATECH</td><td>e-Handbook binomial distribution</td><td><span class="src"><a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda366i.htm" target="_blank" rel="noopener">Open source</a></span></td><td>Binomial PMF/CDF definition for exact tail checks</td><td>Direct page read</td><td><span class="chip info">Trusted methodology context</span></td></tr>
+<tr><td>S17</td><td>NIST/SEMATECH</td><td>e-Handbook autocorrelation</td><td><span class="src"><a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda35c.htm" target="_blank" rel="noopener">Open source</a></span></td><td>Lag-k autocorrelation definition and randomness caveat</td><td>Direct page read</td><td><span class="chip info">Trusted methodology context</span></td></tr>
+<tr><td>S18</td><td>NBA.com</td><td>Houston Rockets 2025-26 team box scores</td><td><span class="src"><a href="https://www.nba.com/stats/team/1610612745/boxscores?Season=2025-26&amp;SeasonType=Regular%20Season" target="_blank" rel="noopener">Open source</a></span></td><td>Column-order cross-check for HOU vs MEM 2026-04-12</td><td>Direct table read; STL/BLK/TOV order differs from league view</td><td><span class="chip info">Official cross-check</span></td></tr>
+<tr><td>S19</td><td>NBA.com</td><td>League team traditional box scores</td><td><span class="src"><a href="https://www.nba.com/stats/teams/boxscores-traditional?Season=2025-26&amp;SeasonType=Regular%20Season" target="_blank" rel="noopener">Open source</a></span></td><td>League view column-order cross-check; not a complete persisted ledger</td><td>Direct chunk read; 2460 rows advertised but only opening chunk used for layout check</td><td><span class="chip info">Official cross-check</span></td></tr>
+</tbody></table></div>
+<p class="small">CSV: <a href="data/sources.csv">sources.csv</a>.</p>
+
+</main>
+<footer>Session 4c43d5e6 · frozen exploratory protocol 2026-11-05 · official observations, derived calculations, and context are labeled separately. No strategy is eligible; no bets or rewards are claimed. <a href="review.html">Flagged for Review</a>.</footer>
+</body>
+</html>

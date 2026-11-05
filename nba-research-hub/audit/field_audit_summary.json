@@ -1,0 +1,18 @@
+{
+  "field_audit_sha256": "be9d0bf1be321bf8455d445a6a1a1a5712f41c1fbb0d68051e22f1b14e38f147",
+  "field_comparisons": 4182,
+  "files_compared": [
+    "data/nba-2026-27/player_logs_edwards.csv",
+    "nba-desk/data/team_seasons.csv",
+    "nba-own-lines/data/player_games.csv",
+    "nba-signal-lab/data/game_logs_2025_26.csv",
+    "nba-signal-lab/data/teams_2025_26.csv",
+    "nba-signal-lab/data/teams_2026_27.csv"
+  ],
+  "note": "MATCH/STALE/MISMATCH use the hub snapshot manually checked against official NBA pages on 2026-11-05. UNVERIFIED official values are blank. This is not a network re-fetch.",
+  "status_counts": {
+    "MATCH": 3490,
+    "STALE": 250,
+    "UNVERIFIED": 442
+  }
+}

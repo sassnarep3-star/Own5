@@ -1,0 +1,75 @@
+name: Verify NBA Research Hub
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'nba-research-hub/**'
+      - '.github/workflows/nba-research-hub.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'nba-research-hub/**'
+      - '.github/workflows/nba-research-hub.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Deterministic build, tests, site and browser audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Rebuild analysis, inventory, field audit and pages
+        run: python nba-research-hub/build.py
+      - name: Require committed artifacts to match deterministic rebuild
+        run: git diff --exit-code -- nba-research-hub
+      - name: Unit and site integrity tests
+        run: |
+          python -m unittest discover -s nba-research-hub/tests -v
+          python nba-research-hub/check.py
+      - run: npm ci --ignore-scripts
+      - name: Desktop and mobile no-JavaScript browser checks
+        run: |
+          python -m http.server 3000 --bind 0.0.0.0 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID"' EXIT
+          node -e "const net=require('node:net');let n=0;function wait(){const s=net.connect(3000,'127.0.0.1',()=>{s.end();process.exit(0)});s.on('error',()=>{if(++n>50)process.exit(1);setTimeout(wait,100)})};wait()"
+          node nba-research-hub/browser.cjs
+
+  public-smoke:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: verify
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check live hub URLs after legacy Pages deployment
+        run: |
+          base="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/nba-research-hub"
+          for path in "/index.html" "/lines.html" "/review.html"; do
+            url="$base$path"
+            success=0
+            for attempt in $(seq 1 30); do
+              if curl --fail --silent --show-error --location "$url" | grep -q 'NBA Research Hub'; then
+                echo "OK $url"
+                success=1
+                break
+              fi
+              sleep 10
+            done
+            if [ "$success" -ne 1 ]; then
+              echo "Published page did not become ready: $url" >&2
+              exit 1
+            fi
+          done

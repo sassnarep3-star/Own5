@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leaderboard · Own5 NBA Research Hub</title>
+<link rel="stylesheet" href="assets/style.css">
+<script defer src="assets/app.js"></script>
+</head>
+<body>
+<header class="site"><div class="brand">Own5 <span>NBA Research Hub</span></div><nav class="main" aria-label="Primary"><a href="index.html" class="">Overview</a>
+<a href="executive-summary.html" class="">Executive Summary</a>
+<a href="lines.html" class="">Research Lines</a>
+<a href="players.html" class="">Player Signals</a>
+<a href="correlations.html" class="">Correlations &amp; Combos</a>
+<a href="strategies.html" class="">Strategies</a>
+<a href="gates.html" class="">Validation Gates</a>
+<a href="leaderboard.html" class="active">Leaderboard</a>
+<a href="luck.html" class="">Luck &amp; Power</a>
+<a href="sources.html" class="">Sources</a>
+<a href="requirements.html" class="">Requirements</a>
+<a href="audit.html" class="">Repository Audit</a>
+<a href="review.html" class="">Flagged for Review</a></nav></header>
+<main>
+<h1>Leaderboard</h1>
+
+<p class="lead">Competition rules are frozen, but there are no eligible entries. Rewards are badges only; the funded monetary pool is blank/unverified.</p>
+<div class="panel"><h3>Ranking rule (eligible strategies only)</h3><ol>
+<li>Pass every validation gate (PASS or explicit N/A).</li>
+<li>Rank by the lower 95% date-cluster bootstrap bound of mean net profit per unit stake.</li>
+<li>Tie-break: more genuine graded bets, then lower max drawdown.</li>
+<li>Reward tiers: Gold / Silver / Bronze badges. Monetary prize pool: <span class="blank" data-blank="true">Unfunded / unverified</span>.</li>
+</ol></div>
+<div class="warnbox">Current result: 0 eligible strategies, 0 graded bets, 0 rewards. Ineligible candidates are shown unranked with blank performance fields.</div>
+<div class="filter"><label class="small" for="leaderboard-filter">Filter table</label><br><input id="leaderboard-filter" type="search" placeholder="Filter rows…" oninput="filterTable(this,'leaderboard')"></div>
+<div class="tbl-wrap"><table id="leaderboard"><thead><tr>
+<th>ID</th>
+<th>Candidate</th>
+<th>Category</th>
+<th>Rank</th>
+<th>Status</th>
+<th>Graded bets</th>
+<th>ROI</th>
+<th>CLV</th>
+<th>Score lower bound</th>
+<th>Reward</th>
+<th>Blockers</th>
+<th>Source</th>
+</tr></thead><tbody>
+<tr><td>ST1</td><td>Team-strength side single</td><td>Single</td><td><span class="blank" data-blank="true">Unranked</span></td><td><span class="chip bad">Unranked — ineligible</span></td><td>0</td><td><span class="blank" data-blank="true">ROI blank</span></td><td><span class="blank" data-blank="true">CLV blank</span></td><td><span class="blank" data-blank="true">Score blank</span></td><td><span class="blank" data-blank="true">Reward blank</span></td><td>G02,G04,G05,G06,G08,G09,G10,G11</td><td><span class="src"><a href="https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nba" target="_blank" rel="noopener">Operator context</a></span></td></tr>
+<tr><td>ST2</td><td>Efficiency total single</td><td>Single</td><td><span class="blank" data-blank="true">Unranked</span></td><td><span class="chip bad">Unranked — ineligible</span></td><td>0</td><td><span class="blank" data-blank="true">ROI blank</span></td><td><span class="blank" data-blank="true">CLV blank</span></td><td><span class="blank" data-blank="true">Score blank</span></td><td><span class="blank" data-blank="true">Reward blank</span></td><td>G02,G04,G05,G06,G08,G09,G10,G11</td><td><span class="src"><a href="https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nba" target="_blank" rel="noopener">Operator context</a></span></td></tr>
+<tr><td>ST3</td><td>Rolling player-prop single</td><td>Prop</td><td><span class="blank" data-blank="true">Unranked</span></td><td><span class="chip bad">Unranked — ineligible</span></td><td>0</td><td><span class="blank" data-blank="true">ROI blank</span></td><td><span class="blank" data-blank="true">CLV blank</span></td><td><span class="blank" data-blank="true">Score blank</span></td><td><span class="blank" data-blank="true">Reward blank</span></td><td>G02,G04,G05,G06,G08,G09,G10,G11</td><td><span class="src"><a href="https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nba" target="_blank" rel="noopener">Operator context</a></span></td></tr>
+<tr><td>ST4</td><td>Cross-game two-leg parlay</td><td>Parlay</td><td><span class="blank" data-blank="true">Unranked</span></td><td><span class="chip bad">Unranked — ineligible</span></td><td>0</td><td><span class="blank" data-blank="true">ROI blank</span></td><td><span class="blank" data-blank="true">CLV blank</span></td><td><span class="blank" data-blank="true">Score blank</span></td><td><span class="blank" data-blank="true">Reward blank</span></td><td>G02,G04,G05,G06,G07,G08,G09,G10,G11</td><td><span class="src"><a href="https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nba" target="_blank" rel="noopener">Operator context</a></span></td></tr>
+<tr><td>ST5</td><td>Same-game two-prop combo</td><td>Prop combo</td><td><span class="blank" data-blank="true">Unranked</span></td><td><span class="chip bad">Unranked — ineligible</span></td><td>0</td><td><span class="blank" data-blank="true">ROI blank</span></td><td><span class="blank" data-blank="true">CLV blank</span></td><td><span class="blank" data-blank="true">Score blank</span></td><td><span class="blank" data-blank="true">Reward blank</span></td><td>G02,G04,G05,G06,G07,G08,G09,G10,G11</td><td><span class="src"><a href="https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nba" target="_blank" rel="noopener">Operator context</a></span></td></tr>
+<tr><td>ST6</td><td>Same-game three-prop combo</td><td>Prop combo</td><td><span class="blank" data-blank="true">Unranked</span></td><td><span class="chip bad">Unranked — ineligible</span></td><td>0</td><td><span class="blank" data-blank="true">ROI blank</span></td><td><span class="blank" data-blank="true">CLV blank</span></td><td><span class="blank" data-blank="true">Score blank</span></td><td><span class="blank" data-blank="true">Reward blank</span></td><td>G02,G04,G05,G06,G07,G08,G09,G10,G11</td><td><span class="src"><a href="https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nba" target="_blank" rel="noopener">Operator context</a></span></td></tr>
+</tbody></table></div>
+<p class="small">CSV: <a href="data/derived/leaderboard.csv">leaderboard.csv</a>.</p>
+
+</main>
+<footer>Session 4c43d5e6 · frozen exploratory protocol 2026-11-05 · official observations, derived calculations, and context are labeled separately. No strategy is eligible; no bets or rewards are claimed. <a href="review.html">Flagged for Review</a>.</footer>
+</body>
+</html>

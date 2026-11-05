@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flagged for Review · Own5 NBA Research Hub</title>
+<link rel="stylesheet" href="assets/style.css">
+<script defer src="assets/app.js"></script>
+</head>
+<body>
+<header class="site"><div class="brand">Own5 <span>NBA Research Hub</span></div><nav class="main" aria-label="Primary"><a href="index.html" class="">Overview</a>
+<a href="executive-summary.html" class="">Executive Summary</a>
+<a href="lines.html" class="">Research Lines</a>
+<a href="players.html" class="">Player Signals</a>
+<a href="correlations.html" class="">Correlations &amp; Combos</a>
+<a href="strategies.html" class="">Strategies</a>
+<a href="gates.html" class="">Validation Gates</a>
+<a href="leaderboard.html" class="">Leaderboard</a>
+<a href="luck.html" class="">Luck &amp; Power</a>
+<a href="sources.html" class="">Sources</a>
+<a href="requirements.html" class="">Requirements</a>
+<a href="audit.html" class="">Repository Audit</a>
+<a href="review.html" class="active">Flagged for Review</a></nav></header>
+<main>
+<h1>Flagged for Review</h1>
+
+<p class="lead">Unresolved irregularities, missing evidence, and inherited claims requiring manual review. These items are published transparently and are nonblocking for the static research site; they block betting eligibility where relevant.</p>
+<div class="note">No owner files were edited to resolve another session's flags. Corrections are additive. High-severity market/availability/settlement/reward flags prevent any strategy from becoming eligible.</div>
+<div class="filter"><label class="small" for="flags-filter">Filter table</label><br><input id="flags-filter" type="search" placeholder="Filter rows…" oninput="filterTable(this,'flags')"></div>
+<div class="tbl-wrap"><table id="flags"><thead><tr>
+<th>Flag</th>
+<th>Severity</th>
+<th>Area</th>
+<th>Finding</th>
+<th>Consequence</th>
+<th>Action</th>
+<th>Source</th>
+<th>Status</th>
+</tr></thead><tbody>
+<tr><td>F01</td><td><span class="chip bad">High</span></td><td>Market</td><td>No verified sportsbook price/closing line/limit was obtained</td><td>Market spread/total/odds/edge/CLV/ROI remain blank</td><td>Collect timestamped operator quotes before any economic gate</td><td><span class="src"><a href="https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nba" target="_blank" rel="noopener">Source</a></span></td><td><span class="chip warn">Open nonblocking</span></td></tr>
+<tr><td>F02</td><td><span class="chip bad">High</span></td><td>Availability</td><td>Nov 5 4 PM report is not final Nov 6 availability; most teams not submitted</td><td>Player props suppressed; team lines are research-only baselines</td><td>Re-fetch final report and lineups before action</td><td><span class="src"><a href="https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-05_04_00PM.pdf" target="_blank" rel="noopener">Source</a></span></td><td><span class="chip warn">Open nonblocking</span></td></tr>
+<tr><td>F03</td><td><span class="chip bad">High</span></td><td>Protocol</td><td>Protocol frozen after historical outcomes were inspected</td><td>G02 fails; retrospective analysis is not prospective preregistration</td><td>Register future rules before unseen outcomes</td><td><span class="src"><a href="https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf" target="_blank" rel="noopener">Source</a></span></td><td><span class="chip warn">Open nonblocking</span></td></tr>
+<tr><td>F04</td><td><span class="chip warn">Medium</span></td><td>Sample</td><td>Only two selected players and 125 player-games</td><td>Limited generalization; series below 100-observation gate</td><td>Expand verified league-wide logs</td><td><span class="src"><a href="https://www.nba.com/stats/leaders?Season=2025-26" target="_blank" rel="noopener">Source</a></span></td><td><span class="chip warn">Open nonblocking</span></td></tr>
+<tr><td>F05</td><td><span class="chip warn">Medium</span></td><td>Freshness</td><td>Current team snapshot has only 6-9 games per team</td><td>Early-season ratings unstable; sensitivity grid disclosed</td><td>Refresh after more games; do not treat as stable talent</td><td><span class="src"><a href="https://www.nba.com/stats/teams/traditional?Season=2026-27&amp;SeasonType=Regular%20Season" target="_blank" rel="noopener">Source</a></span></td><td><span class="chip warn">Open nonblocking</span></td></tr>
+<tr><td>F06</td><td><span class="chip warn">Medium</span></td><td>Inherited data</td><td>Older current-season files are Nov 3 snapshots and differ from Nov 5 refresh</td><td>Stale values are not transcription errors but must not be reused as current</td><td>Hub uses Nov 5 snapshot; prior files preserved</td><td><span class="src"><a href="https://www.nba.com/stats/teams/traditional?Season=2026-27&amp;SeasonType=Regular%20Season" target="_blank" rel="noopener">Source</a></span></td><td><span class="chip warn">Open nonblocking</span></td></tr>
+<tr><td>F07</td><td><span class="chip warn">Medium</span></td><td>Inherited explanation</td><td>nba-signal-lab text says positive same-game dependence makes multiplied marginals overstate joint probability</td><td>Direction is reversed: positive dependence makes the product understate joint probability</td><td>Additive correction published; other session file not edited</td><td><span class="src"><a href="https://www.nba.com/stats/player/1629029/boxscores?Season=2025-26&amp;SeasonType=Regular%20Season" target="_blank" rel="noopener">Source</a></span></td><td><span class="chip warn">Open nonblocking</span></td></tr>
+<tr><td>F08</td><td><span class="chip warn">Medium</span></td><td>Source layout</td><td>Official team and league box-score views order STL/BLK/TOV differently; an apparent HOU 2026-04-12 mismatch did not reproduce when mapped by header</td><td>Position-based reads can create false discrepancies; STL/TOV are excluded from the new team model</td><td>Map by column header and use selected PTS/GP/W/L/PLUS-MINUS fields; manual review link retained</td><td><span class="src"><a href="https://www.nba.com/stats/team/1610612745/boxscores?Season=2025-26&amp;SeasonType=Regular%20Season" target="_blank" rel="noopener">Source</a></span></td><td><span class="chip warn">Open nonblocking</span></td></tr>
+<tr><td>F09</td><td><span class="chip warn">Medium</span></td><td>Inherited summary</td><td>Old EXECUTIVE_SUMMARY.md contains broad CLV/luck/verification language not independently established</td><td>Not relied upon as evidence</td><td>Hub publishes narrower claims and direct checks</td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/EXECUTIVE_SUMMARY.md" target="_blank" rel="noopener">Source</a></span></td><td><span class="chip warn">Open nonblocking</span></td></tr>
+<tr><td>F10</td><td><span class="chip warn">Medium</span></td><td>Provenance</td><td>No raw HTTP/PDF response archive was retained; normalized CSVs and hashes are retained</td><td>Replay requires re-opening official sources; dynamic pages may change</td><td>Keep source URLs/scope/date and normalized hashes; re-fetch for audit</td><td><span class="src"><a href="https://www.nba.com/stats/help/glossary" target="_blank" rel="noopener">Source</a></span></td><td><span class="chip warn">Open nonblocking</span></td></tr>
+<tr><td>F11</td><td><span class="chip warn">Low</span></td><td>Source access</td><td>NBA advanced team table returned filters without data; capitalized Page parameter did not paginate as expected</td><td>Advanced fields and paginated league ledger not used</td><td>Use complete selected traditional tables and explicit filters</td><td><span class="src"><a href="https://www.nba.com/stats/teams/advanced?Season=2025-26&amp;SeasonType=Regular%20Season" target="_blank" rel="noopener">Source</a></span></td><td><span class="chip warn">Open nonblocking</span></td></tr>
+<tr><td>F12</td><td><span class="chip warn">Low</span></td><td>Source access</td><td>Luka unfiltered box-score URL transiently returned JS-only shell; explicit SeasonType returned full table</td><td>Access fragility documented</td><td>Use explicit SeasonType URL and date-filter cross-check</td><td><span class="src"><a href="https://www.nba.com/stats/player/1629029/boxscores?Season=2025-26&amp;SeasonType=Regular%20Season" target="_blank" rel="noopener">Source</a></span></td><td><span class="chip warn">Resolved by retry</span></td></tr>
+<tr><td>F13</td><td><span class="chip bad">High</span></td><td>Rewards</td><td>No funded prize pool or paid reward exists</td><td>Monetary reward and prize pool blank; badges only</td><td>Do not imply funded competition</td><td><span class="src"><a href="https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf" target="_blank" rel="noopener">Source</a></span></td><td><span class="chip warn">Open nonblocking</span></td></tr>
+<tr><td>F14</td><td><span class="chip bad">High</span></td><td>Dependence</td><td>Cross-game joint-hit dependence and actual parlay payouts are unmeasured</td><td>Cross-game joint probability/price/edge blank</td><td>Collect complete slate ledger and operator payout rules</td><td><span class="src"><a href="https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nba" target="_blank" rel="noopener">Source</a></span></td><td><span class="chip warn">Open nonblocking</span></td></tr>
+<tr><td>F15</td><td><span class="chip warn">Medium</span></td><td>Audit scope</td><td>Line inventory is content hashing/linking; most inherited code/factual lines are not independently source-verified</td><td>No blanket repository verification claim</td><td>Directly verify selected NBA fields; leave others manual-review</td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/COORDINATION.md" target="_blank" rel="noopener">Source</a></span></td><td><span class="chip warn">Open nonblocking</span></td></tr>
+<tr><td>F16</td><td><span class="chip bad">High</span></td><td>Settlement</td><td>FanDuel guide is operator context but not verified jurisdiction-specific house rules</td><td>G06 fails for actionable strategies</td><td>Verify applicable terms/void/OT/neutral-site rules before betting</td><td><span class="src"><a href="https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nba" target="_blank" rel="noopener">Source</a></span></td><td><span class="chip warn">Open nonblocking</span></td></tr>
+<tr><td>F17</td><td><span class="chip warn">Low</span></td><td>Navigation</td><td>Root navigation is owned by another session; cross-link request logged</td><td>No root index edit by this session</td><td>Link hub from README append and coordination request</td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/COORDINATION.md" target="_blank" rel="noopener">Source</a></span></td><td><span class="chip warn">Open nonblocking</span></td></tr>
+<tr><td>F18</td><td><span class="chip warn">Medium</span></td><td>Verification semantics</td><td>Historical link-presence checks and stale board claims do not establish source entailment</td><td>Only direct comparisons are labeled checked</td><td>Field-level audit separates checked/unverified/inventory-only</td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/COORDINATION.md" target="_blank" rel="noopener">Source</a></span></td><td><span class="chip warn">Open nonblocking</span></td></tr>
+<tr><td>F19</td><td><span class="chip warn">Medium</span></td><td>Inherited arithmetic</td><td>Coordination M5 cites a 30-bet/20-win exact tail p=0.17 at the -110 break-even null; direct binomial summation gives 0.082242</td><td>Historical example is not relied upon; hub recomputes exact tails</td><td>Use NIST binomial definition and disclosed code; request owner correction</td><td><span class="src"><a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda366i.htm" target="_blank" rel="noopener">Source</a></span></td><td><span class="chip warn">Open nonblocking</span></td></tr>
+<tr><td>F20</td><td><span class="chip warn">Low</span></td><td>Protocol correction</td><td>Initial half-point formula floor(x*2)/2+0.5 could emit integer lines; corrected to floor(x)+0.5 before publication</td><td>Research line rounding changed; no strategy eligibility or market claim affected</td><td>Disclose v1.1 correction and regenerate deterministic artifacts</td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/nba-research-hub/data/protocol.json" target="_blank" rel="noopener">Source</a></span></td><td><span class="chip warn">Resolved before publication</span></td></tr>
+</tbody></table></div>
+<p class="small">CSV: <a href="data/flags.csv">flags.csv</a>.</p>
+
+</main>
+<footer>Session 4c43d5e6 · frozen exploratory protocol 2026-11-05 · official observations, derived calculations, and context are labeled separately. No strategy is eligible; no bets or rewards are claimed. <a href="review.html">Flagged for Review</a>.</footer>
+</body>
+</html>

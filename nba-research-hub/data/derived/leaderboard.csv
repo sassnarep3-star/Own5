@@ -1,0 +1,7 @@
+strategy_id,name,category,rank,eligible,graded_bets,roi,clv,score_lower_bound,max_drawdown,reward,status,blockers,kind,source_url
+ST1,Team-strength side single,Single,,False,0,,,,,,Unranked — ineligible,"G02,G04,G05,G06,G08,G09,G10,G11",Competition rule; no graded entry,https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nba
+ST2,Efficiency total single,Single,,False,0,,,,,,Unranked — ineligible,"G02,G04,G05,G06,G08,G09,G10,G11",Competition rule; no graded entry,https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nba
+ST3,Rolling player-prop single,Prop,,False,0,,,,,,Unranked — ineligible,"G02,G04,G05,G06,G08,G09,G10,G11",Competition rule; no graded entry,https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nba
+ST4,Cross-game two-leg parlay,Parlay,,False,0,,,,,,Unranked — ineligible,"G02,G04,G05,G06,G07,G08,G09,G10,G11",Competition rule; no graded entry,https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nba
+ST5,Same-game two-prop combo,Prop combo,,False,0,,,,,,Unranked — ineligible,"G02,G04,G05,G06,G07,G08,G09,G10,G11",Competition rule; no graded entry,https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nba
+ST6,Same-game three-prop combo,Prop combo,,False,0,,,,,,Unranked — ineligible,"G02,G04,G05,G06,G07,G08,G09,G10,G11",Competition rule; no graded entry,https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nba

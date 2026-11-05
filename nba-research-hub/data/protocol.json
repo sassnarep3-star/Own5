@@ -1,6 +1,7 @@
 {
-  "protocol_id": "nba-research-hub-2026-11-05-v1",
+  "protocol_id": "nba-research-hub-2026-11-05-v1.1",
   "frozen_on": "2026-11-05",
+  "revision_note": "v1.1 corrects the half-point rounding specification to floor(x)+0.5 so every research line ends in .5. This is a disclosed specification correction before publication, not outcome-based tuning; eligibility remains fail-closed.",
   "status": "Exploratory retrospective protocol. Historical outcomes were already visible when this protocol was written; this is NOT prospective preregistration.",
   "team_model": {
     "current_season": "2026-27",
@@ -8,7 +9,7 @@
     "prior_strength_games": 20,
     "primary_home_points_adjustment": 0.0,
     "logistic_scale_points": 6.0,
-    "line_rule": "floor(x*2)/2 + 0.5; half-point research lines only",
+    "line_rule": "floor(x) + 0.5; half-point research lines only",
     "sensitivity_prior_strengths": [10, 20, 40],
     "sensitivity_home_points_adjustments": [-1.0, 0.0, 1.0],
     "notes": "No fitted coefficients. Current weight = current GP/(current GP+prior_strength). Opponent points derived as official PTS minus official PLUS/MINUS; both inputs are rounded. Win probability is an uncalibrated logistic heuristic, not a validated betting probability."

@@ -1,0 +1,21 @@
+{
+  "alternative_win_probability": 0.55,
+  "american_odds_example": -110,
+  "bonferroni_alpha": 0.000926,
+  "break_even_win_probability": 0.52381,
+  "clv": null,
+  "critical_wins_bonferroni": 3092,
+  "critical_wins_single": 1215,
+  "exact_power_at_bonferroni_n": 0.798913,
+  "exact_power_at_normal_n": 0.79189,
+  "example_30_bets_20_wins_p_vs_breakeven": 0.082242,
+  "kind": "Derived planning arithmetic; odds example is not a market quote",
+  "max_drawdown": null,
+  "normal_approx_n_bonferroni": 5678,
+  "normal_approx_n_single": 2243,
+  "note": "Luck cannot be literally removed. Normal approximation is planning only; exact binomial power is reported at that n. No real-return performance exists.",
+  "planning_family_size": 54,
+  "real_graded_bets": 0,
+  "roi": null,
+  "source_url": "https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf"
+}

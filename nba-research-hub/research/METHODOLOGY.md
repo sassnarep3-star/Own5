@@ -32,7 +32,7 @@ Expected points:
 - `away_pts = (away_off + home_def)/2 − HFA/2`
 - `margin = home_pts − away_pts`; `total = home_pts + away_pts`.
 
-Primary `HFA=0` because no current home-court effect was estimated from a verified game ledger. Research lines are half-points: `floor(x*2)/2 + 0.5`. Home spread is `−margin`. Win probability is `1/(1+exp(−margin/6))`, an **uncalibrated heuristic**. Sensitivity grid: K∈{10,20,40}, HFA∈{−1,0,+1}; all nine variants are disclosed, not cherry-picked. No injury or minutes adjustment is applied because final availability is unknown. These are team-strength research lines, not actionable picks.
+Primary `HFA=0` because no current home-court effect was estimated from a verified game ledger. Research lines are half-points: `floor(x) + 0.5` (v1.1 specification correction; always ends in `.5`). Home spread is `−margin`. Win probability is `1/(1+exp(−margin/6))`, an **uncalibrated heuristic**. Sensitivity grid: K∈{10,20,40}, HFA∈{−1,0,+1}; all nine variants are disclosed, not cherry-picked. No injury or minutes adjustment is applied because final availability is unknown. These are team-strength research lines, not actionable picks.
 
 ## Player forecasts and skill diagnostics
 

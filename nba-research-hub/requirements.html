@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Requirements Trace · Own5 NBA Research Hub</title>
+<link rel="stylesheet" href="assets/style.css">
+<script defer src="assets/app.js"></script>
+</head>
+<body>
+<header class="site"><div class="brand">Own5 <span>NBA Research Hub</span></div><nav class="main" aria-label="Primary"><a href="index.html" class="">Overview</a>
+<a href="executive-summary.html" class="">Executive Summary</a>
+<a href="lines.html" class="">Research Lines</a>
+<a href="players.html" class="">Player Signals</a>
+<a href="correlations.html" class="">Correlations &amp; Combos</a>
+<a href="strategies.html" class="">Strategies</a>
+<a href="gates.html" class="">Validation Gates</a>
+<a href="leaderboard.html" class="">Leaderboard</a>
+<a href="luck.html" class="">Luck &amp; Power</a>
+<a href="sources.html" class="">Sources</a>
+<a href="requirements.html" class="active">Requirements</a>
+<a href="audit.html" class="">Repository Audit</a>
+<a href="review.html" class="">Flagged for Review</a></nav></header>
+<main>
+<h1>Requirements Trace</h1>
+
+<p class="lead">Full active requirements trace. Process rows link to the pinned repository record; sports/method rows link to official or trusted sources.</p>
+<div class="filter"><label class="small" for="requirements-filter">Filter table</label><br><input id="requirements-filter" type="search" placeholder="Filter rows…" oninput="filterTable(this,'requirements')"></div>
+<div class="tbl-wrap"><table id="requirements"><thead><tr>
+<th>ID</th>
+<th>Requirement</th>
+<th>Acceptance criterion</th>
+<th>Implementation</th>
+<th>Verification</th>
+<th>Status</th>
+<th>Source</th>
+</tr></thead><tbody>
+<tr><td>R01</td><td>Work autonomously without user review</td><td>No blocking clarification; complete build/PR/merge/deploy in session</td><td>COORDINATION.md Q1-Q5; final integration record</td><td>Session log and PR/merge/deploy checks</td><td><span class="chip warn">In progress</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/COORDINATION.md" target="_blank" rel="noopener">Repo</a></span></td></tr>
+<tr><td>R02</td><td>Read/create coordination and claim before work</td><td>Append-only claim with session ID and file scope pushed before implementation</td><td>COORDINATION.md session 4c43d5e6</td><td>Claim commit 78ca31d6ec06964091cd63cc608819db0f07fc09</td><td><span class="chip good">Done</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/COORDINATION.md" target="_blank" rel="noopener">Repo</a></span></td></tr>
+<tr><td>R03</td><td>Use fixed session branch and pull/rebase before pushes</td><td>Only arena/4c43d5e6-own5; preserve concurrent work</td><td>Git workflow</td><td>git branch/status and rebase log</td><td><span class="chip warn">In progress</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/COORDINATION.md" target="_blank" rel="noopener">Repo</a></span></td></tr>
+<tr><td>R04</td><td>Do not overlap active scopes or edit others&#x27; files</td><td>Additive nba-research-hub namespace; shared files append-only at integration</td><td>Scope claim and git diff</td><td>Diff restricted to claimed paths plus additive workflow/README append</td><td><span class="chip warn">In progress</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/COORDINATION.md" target="_blank" rel="noopener">Repo</a></span></td></tr>
+<tr><td>R05</td><td>Full requirements trace</td><td>Every active user requirement mapped to acceptance/implementation/check</td><td>data/requirements.csv and requirements.html</td><td>Checker validates unique IDs and source links</td><td><span class="chip good">Done</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/COORDINATION.md" target="_blank" rel="noopener">Repo</a></span></td></tr>
+<tr><td>R06</td><td>Repository line-by-line inventory/audit</td><td>Hash every baseline tracked physical line; distinguish inventory from factual verification</td><td>audit/inventory.py; audit/line_inventory.csv; audit/file_inventory.csv</td><td>Deterministic rebuild and count reconciliation</td><td><span class="chip warn">In progress</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/COORDINATION.md" target="_blank" rel="noopener">Repo</a></span></td></tr>
+<tr><td>R07</td><td>Verify against official trusted sources</td><td>Selected NBA fields directly compared; inherited claims not blanket-verified</td><td>data/*; audit/field_audit.csv; sources.html</td><td>Official source links and direct comparison records</td><td><span class="chip warn">In progress</span></td><td><span class="src"><a href="https://www.nba.com/stats/teams/traditional?Season=2026-27&amp;SeasonType=Regular%20Season" target="_blank" rel="noopener">Source</a></span></td></tr>
+<tr><td>R08</td><td>Every table row has an official source link</td><td>All rendered body rows include official NBA/operator/primary or pinned repository process link</td><td>site builder and check.py</td><td>HTML parser row-link audit</td><td><span class="chip warn">In progress</span></td><td><span class="src"><a href="https://www.nba.com/stats/help/glossary" target="_blank" rel="noopener">Source</a></span></td></tr>
+<tr><td>R09</td><td>Unconfirmed values blank and flagged</td><td>No inferred odds/availability/payouts; empty cells carry review flag</td><td>Data contracts and renderer</td><td>Unit tests and site checker</td><td><span class="chip warn">In progress</span></td><td><span class="src"><a href="https://www.nba.com/stats/teams/traditional?Season=2026-27&amp;SeasonType=Regular%20Season" target="_blank" rel="noopener">Source</a></span></td></tr>
+<tr><td>R10</td><td>Separate observations/calculations/context</td><td>Explicit row kind and methodology labels</td><td>Data schemas; methodology; dashboard legends</td><td>Site checker and review</td><td><span class="chip warn">In progress</span></td><td><span class="src"><a href="https://www.nba.com/stats/help/glossary" target="_blank" rel="noopener">Source</a></span></td></tr>
+<tr><td>R11</td><td>Originate NBA lines</td><td>Reproducible research spreads/totals/scores for verified slate; market columns blank</td><td>engine/model.py; lines.html</td><td>Deterministic build and formula tests</td><td><span class="chip warn">In progress</span></td><td><span class="src"><a href="https://www.nba.com/schedule?month=11&amp;year=2026" target="_blank" rel="noopener">Source</a></span></td></tr>
+<tr><td>R12</td><td>Develop singles signals</td><td>Catalog single side/total/prop hypotheses with evidence and blockers</td><td>data/strategies.csv; strategies.html</td><td>Gate evaluation</td><td><span class="chip warn">In progress</span></td><td><span class="src"><a href="https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nba" target="_blank" rel="noopener">Source</a></span></td></tr>
+<tr><td>R13</td><td>Develop parlay signals</td><td>Cross-game parlay candidate; dependence and price blockers explicit</td><td>data/strategies.csv; correlations.html</td><td>Gate evaluation</td><td><span class="chip warn">In progress</span></td><td><span class="src"><a href="https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nba" target="_blank" rel="noopener">Source</a></span></td></tr>
+<tr><td>R14</td><td>Develop player-prop combinations</td><td>Same-game two/three-prop research combos from verified logs; no fake sportsbook props</td><td>engine/analysis.py; correlations.html</td><td>Joint-hit calculations and tests</td><td><span class="chip warn">In progress</span></td><td><span class="src"><a href="https://www.nba.com/stats/player/1629029/boxscores?Season=2025-26&amp;SeasonType=Regular%20Season" target="_blank" rel="noopener">Source</a></span></td></tr>
+<tr><td>R15</td><td>Compute correlations</td><td>Pearson/phi with sample sizes and uncertainty; no independence proof from non-significance</td><td>engine/analysis.py; correlations.html</td><td>Unit tests and multiplicity family</td><td><span class="chip warn">In progress</span></td><td><span class="src"><a href="https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf" target="_blank" rel="noopener">Source</a></span></td></tr>
+<tr><td>R16</td><td>Compute joint-hit dependence</td><td>Empirical joint vs product of marginals; lift and exact two-prop test</td><td>engine/analysis.py; correlations.html</td><td>Identity tests and Fisher exact tests</td><td><span class="chip warn">In progress</span></td><td><span class="src"><a href="https://www.nba.com/stats/player/1630162/boxscores?Season=2025-26" target="_blank" rel="noopener">Source</a></span></td></tr>
+<tr><td>R17</td><td>Separate skill from luck rigorously</td><td>No literal luck removal; bootstrap/permutation/power/multiplicity; real-return metrics blank</td><td>engine/analysis.py; luck.html</td><td>Methodology and tests</td><td><span class="chip warn">In progress</span></td><td><span class="src"><a href="https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf" target="_blank" rel="noopener">Source</a></span></td></tr>
+<tr><td>R18</td><td>Leaderboard competition with rewards</td><td>Eligible-only ranking rule; badges; funded pool blank; zero eligible entries</td><td>engine/analysis.py; leaderboard.html</td><td>Gate fail-closed tests</td><td><span class="chip warn">In progress</span></td><td><span class="src"><a href="https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf" target="_blank" rel="noopener">Source</a></span></td></tr>
+<tr><td>R19</td><td>Every strategy passes validation gates</td><td>No strategy eligible unless all gates PASS/N/A; blockers published</td><td>data/strategies.csv; gates.html</td><td>Fail-closed gate engine</td><td><span class="chip warn">In progress</span></td><td><span class="src"><a href="https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nba" target="_blank" rel="noopener">Source</a></span></td></tr>
+<tr><td>R20</td><td>Executive summary</td><td>Concise findings/limits/blockers and links</td><td>research/EXECUTIVE_SUMMARY.md; executive-summary.html</td><td>Content review against derived outputs</td><td><span class="chip warn">In progress</span></td><td><span class="src"><a href="https://www.nba.com/stats/leaders?Season=2025-26" target="_blank" rel="noopener">Source</a></span></td></tr>
+<tr><td>R21</td><td>Clean GitHub Pages dashboard</td><td>Responsive static hub with category subpages and readable tables</td><td>nba-research-hub/*.html; assets</td><td>Desktop/mobile/no-JS browser checks</td><td><span class="chip warn">In progress</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/COORDINATION.md" target="_blank" rel="noopener">Repo</a></span></td></tr>
+<tr><td>R22</td><td>Flagged for Review page</td><td>All unresolved irregularities published with links and nonblocking status</td><td>review.html; data/flags.csv</td><td>Checker validates flag links</td><td><span class="chip warn">In progress</span></td><td><span class="src"><a href="https://www.nba.com/stats/help/glossary" target="_blank" rel="noopener">Source</a></span></td></tr>
+<tr><td>R23</td><td>Do not infer or invent values</td><td>Blank unknowns; no synthetic performance; no inherited verification</td><td>Data contracts; tests</td><td>Unit and site audits</td><td><span class="chip warn">In progress</span></td><td><span class="src"><a href="https://www.nba.com/stats/help/glossary" target="_blank" rel="noopener">Source</a></span></td></tr>
+<tr><td>R24</td><td>Context citations are not edge proof</td><td>Operator/research links labeled context; no profitability claim</td><td>Source registry and methodology</td><td>Review</td><td><span class="chip warn">In progress</span></td><td><span class="src"><a href="https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nba" target="_blank" rel="noopener">Source</a></span></td></tr>
+<tr><td>R25</td><td>Final combined reverify and no broken links</td><td>Run existing suites/builds/checks plus new hub checks; generate dist before root checker</td><td>Integration command log</td><td>All checks pass before merge</td><td><span class="chip warn">In progress</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/.github/workflows/verify.yml" target="_blank" rel="noopener">Repo</a></span></td></tr>
+<tr><td>R26</td><td>Create summary PR to main</td><td>PR body summarizes changes/sources/flags</td><td>gh pr create</td><td>PR URL recorded</td><td><span class="chip warn">In progress</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/COORDINATION.md" target="_blank" rel="noopener">Repo</a></span></td></tr>
+<tr><td>R27</td><td>Merge autonomously without approval</td><td>gh pr merge explicit number after green checks</td><td>Integration record</td><td>Merge commit recorded</td><td><span class="chip warn">In progress</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/COORDINATION.md" target="_blank" rel="noopener">Repo</a></span></td></tr>
+<tr><td>R28</td><td>Verify successful Pages deployment</td><td>Main deploy success and live hub/review URLs respond</td><td>Pages API and live fetch</td><td>Deployment run and content match</td><td><span class="chip warn">In progress</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/COORDINATION.md" target="_blank" rel="noopener">Repo</a></span></td></tr>
+<tr><td>R29</td><td>Fix failed checks/deploy and retry</td><td>No broken site merged; retry until live</td><td>CI logs and fixes</td><td>Final green status</td><td><span class="chip warn">In progress</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/COORDINATION.md" target="_blank" rel="noopener">Repo</a></span></td></tr>
+<tr><td>R30</td><td>Record sources/checks/conflicts/completion</td><td>Append coordination completion with PR/merge/Pages/results</td><td>COORDINATION.md</td><td>Final board entry</td><td><span class="chip warn">In progress</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/COORDINATION.md" target="_blank" rel="noopener">Repo</a></span></td></tr>
+</tbody></table></div>
+<p class="small">CSV: <a href="data/requirements.csv">requirements.csv</a>.</p>
+
+</main>
+<footer>Session 4c43d5e6 · frozen exploratory protocol 2026-11-05 · official observations, derived calculations, and context are labeled separately. No strategy is eligible; no bets or rewards are claimed. <a href="review.html">Flagged for Review</a>.</footer>
+</body>
+</html>
