@@ -2097,16 +2097,16 @@
     {
       "id": "R13",
       "requirement": "Coordination claims and frequent commits",
-      "status": "in_progress",
-      "evidence": "Q61 claim fdf6c15; scoped namespace",
+      "status": "done",
+      "evidence": "Q61 claim fdf6c15; scoped commits; append-only conflict preserved concurrent records",
       "source_url": "https://github.com/sassnarep3-star/Own5/blob/arena/61a311c2-own5/COORDINATION.md"
     },
     {
       "id": "R14",
       "requirement": "Final integration, PR, merge, Pages verification",
-      "status": "pending",
-      "evidence": "Recorded after merge/deploy",
-      "source_url": "https://github.com/sassnarep3-star/Own5"
+      "status": "delivered",
+      "evidence": "PR #42 merged f3d164a; post-merge CI success; Pages built; live dashboard/review/lines verified",
+      "source_url": "https://github.com/sassnarep3-star/Own5/pull/42"
     },
     {
       "id": "R15",
