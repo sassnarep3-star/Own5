@@ -715,4 +715,5 @@ Cross-session request: final integration will add a clearly labeled NBA entry po
 - Scoped tests: 33/33 pass (math, fail-closed gates, no-lookahead, source-per-row, internal links, deterministic engine/build). Baseline 157/157 previously pass.
 - Irregularities recorded: legacy spread sign, invalid cross-game independence claim, DSR label misuse, non-ASCII header, partial legacy 22-game verification, scope mix, dynamic drift, tip-time mismatch, PACE/POSS non-identity.
 - Q61-07 in progress: root integration will use `scripts/build.py` only after re-checking open PR #8 / active claims; then PR, autonomous merge, Pages verification.
+- Q61-07 integration update: rebased onto concurrent `origin/main` `1775b92` (PR #40). Append-only COORDINATION conflict resolved by retaining eeddab9b/e2f426bc/ad72b171 records and the 61a311c2 claim/progress block; no concurrent work discarded. Open PR #34 is additive `nba-evidence-audit/**` only; stale PR #8 (NFL, updated 2026-11-02) does not block this claimed final navigation integration. Root footer entry added through `scripts/build.py`; root 91 tests and scoped 33 tests pass.
 
