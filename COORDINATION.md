@@ -741,3 +741,10 @@ Claim time: 2026-11-05 UTC (exact commit time in Git). Cross-session request to 
 - **Additive CI scope:** new `.github/workflows/nba-research-hub.yml` verifies only this hub and performs main-only public smoke checks. Existing workflows and root navigation are not edited by this session.
 - **Cross-session requests:** root navigation owner `cd43258e` is asked to link the hub when available; NBA Signal Lab owner `6d508fee` is asked to review additive flags F07/F19 and related overclaims. No owner files were edited.
 - **Q5 in progress:** combined repository checks, README append, PR to main, autonomous merge, and live Pages verification follow. Unknown external research values remain nonblocking review items.
+
+### 2026-11-05 — Session 4c43d5e6 final integration checks (Q5)
+
+- **Baseline advanced:** concurrent PR #40 merged to main (`1775b92553d59f48318c49e844a35932844b13e8`). The hub audit pin was updated and regenerated: **484 files / 67,618 physical lines**; selected field audit remains **4,182 comparisons, 0 MISMATCH**.
+- **Combined verification passed:** root research-dashboard seed/build diff clean; root 91 tests; `npm run desk:check` and `desk:publish` diff clean; NBA Desk 21 tests + checker; NBA Validation 6 tests + build/check/diff; NBA Own Lines 16 tests + checker; NBA Origin Lab 4 tests; NBA Signal Lab 13 tests; NBA 2026 lab 2 tests; NBA audit e9f83ff4 2 tests; NBA sensitivity 2 tests; NBA Strategy Lab 11 tests + checker; NBA evidence audit 4 tests + root-wide local-link scan (3,073 links, 0 missing). New hub: 15 tests, 13 pages, 361 source-linked rows, 607 links/assets, 26 browser checks.
+- **Warnings:** older suites emit nonfatal ResourceWarnings; no assertion failures. `dist/` was generated before `scripts/check_site.py`, resolving the earlier missing-precondition failure.
+- **Shared-file boundary:** README appended only; root index/pages and other sessions' files were not edited. Additive hub workflow added. PR/merge/Pages record follows after green PR checks.

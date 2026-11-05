@@ -214,3 +214,18 @@ and published on the Flagged page, never inferred.
 Additive, evidence-first NBA desk: 241 canonical source-linked rows (237 verified values, 4 blank availability rows flagged), 434-file baseline inventory, 11 model-only Nov 5–6 lines, 12 within-player correlations, 10 threshold-combo frequencies, 47 chronological forecast rows, 6 registered strategies and G01–G12 fail-closed gates. **0 strategies qualify; no ROI, probabilities, ranks or funded rewards are fabricated.** 19 irregularities/gaps are published on the Flagged for Review page.
 
 Reproduce: `python3 nba-research-61a311c2/engine.py && python3 nba-research-61a311c2/audit_repo.py && python3 nba-research-61a311c2/build.py && python3 -m unittest discover -s nba-research-61a311c2 -p 'test_*.py' -v`.
+## NBA Research Hub — verified integration audit (session 4c43d5e6)
+
+**Live site:** https://sassnarep3-star.github.io/Own5/nba-research-hub/index.html · **Executive summary:** [`nba-research-hub/research/EXECUTIVE_SUMMARY.md`](nba-research-hub/research/EXECUTIVE_SUMMARY.md) · **Flagged for Review:** https://sassnarep3-star.github.io/Own5/nba-research-hub/review.html
+
+An additive NBA line-origination and audit hub that preserves all earlier desks. It directly checks official NBA team snapshots, 125 selected player-game rows, the November 6 schedule, and the November 5 injury report; originates nine research-only spreads/totals; computes walk-forward player signals, correlations, and joint-hit dependence; and runs a fail-closed singles/parlays/prop-combo competition. **0/6 strategies are eligible, 0 graded bets exist, and 0 rewards are issued.** Market prices, final availability, ROI, CLV, and funded prizes remain blank/flagged. The repository inventory hashes 484 baseline files / 67,618 physical lines, but inventory/link presence is explicitly not blanket factual verification.
+
+| Path | Contents |
+|---|---|
+| `nba-research-hub/` | 13-page static dashboard: overview, executive summary, lines, player signals, correlations/combos, strategies, gates, leaderboard, luck/power, sources, requirements, audit, review |
+| `nba-research-hub/data/` | Official-reviewed registers, frozen protocol, requirements, flags, and deterministic derived artifacts |
+| `nba-research-hub/engine/` | Offline standard-library model, statistical helpers, gates and competition logic |
+| `nba-research-hub/audit/` | Pinned line/file inventory and selected inherited-field comparison |
+| `nba-research-hub/research/` | Methodology and executive summary |
+
+Reproduce: `python3 nba-research-hub/build.py && python3 nba-research-hub/check.py && python3 -m unittest discover -s nba-research-hub/tests -q`. The additive workflow `.github/workflows/nba-research-hub.yml` verifies the hub and smoke-checks the live URLs after merge. Root navigation remains owned by earlier sessions; a cross-link request is recorded in `COORDINATION.md`.

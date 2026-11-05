@@ -1,6 +1,6 @@
 {
-  "commit": "b9929ec8180b3ee6dc84b8807b863e502ba6da29",
-  "label": "origin/main after concurrent PR #36 and #35, before session 4c43d5e6 implementation",
+  "commit": "1775b92553d59f48318c49e844a35932844b13e8",
+  "label": "origin/main after concurrent PR #40, before session 4c43d5e6 final integration",
   "pinned_on": "2026-11-05",
   "note": "Inventory is deterministic against this exact commit. Final integration must check for newer main changes and update this pin if the audited baseline advances."
 }
