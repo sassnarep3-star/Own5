@@ -774,7 +774,7 @@ Claim timestamp: **2026-11-05T21:22:43Z**. Arena fixes the working/integration b
 | Q61-04 | Gated leaderboard, reward policy and executive summary | done | 61a311c2 | nba-research-61a311c2/**; research/nba-research-61a311c2/** | No fabricated rankings, returns or funded prizes; skill evidence separated from hypotheses. |
 | Q61-05 | Clean source-linked NBA dashboard and category pages | done | 61a311c2 | nba-research-61a311c2/** | Deterministic static build, client-side table search and row provenance; preserve existing sites. |
 | Q61-06 | Automated row, arithmetic, source, build and browser checks | done | 61a311c2 | nba-research-61a311c2/**; .github/workflows/nba-research-61a311c2.yml | Tests include missing-data rejection, no-lookahead, correlation, parlay dependence and qualification. |
-| Q61-07 | Final integration, PR, merge and live Pages verification | in progress | 61a311c2 | COORDINATION.md; README.md (append); root navigation via existing builder only after all Q61 work passes | Re-fetch latest main, preserve parallel work, no broken site merged; record PR and deployment result. |
+| Q61-07 | Final integration, PR, merge and live Pages verification | done | 61a311c2 | COORDINATION.md; README.md (append); root navigation via existing builder only after all Q61 work passes | Re-fetch latest main, preserve parallel work, no broken site merged; record PR and deployment result. |
 
 Cross-session request: final integration will add a clearly labeled NBA entry point to the existing root dashboard through its deterministic builder, without removing NFL or earlier NBA archives. Shared index/navigation edits are deferred until all Q61 research tasks pass. No other session's files are edited before that integration step.
 
@@ -788,4 +788,12 @@ Cross-session request: final integration will add a clearly labeled NBA entry po
 - Irregularities recorded: legacy spread sign, invalid cross-game independence claim, DSR label misuse, non-ASCII header, partial legacy 22-game verification, scope mix, dynamic drift, tip-time mismatch, PACE/POSS non-identity.
 - Q61-07 in progress: root integration will use `scripts/build.py` only after re-checking open PR #8 / active claims; then PR, autonomous merge, Pages verification.
 - Q61-07 integration update: rebased onto concurrent `origin/main` `1775b92` (PR #40). Append-only COORDINATION conflict resolved by retaining eeddab9b/e2f426bc/ad72b171 records and the 61a311c2 claim/progress block; no concurrent work discarded. Open PR #34 is additive `nba-evidence-audit/**` only; stale PR #8 (NFL, updated 2026-11-02) does not block this claimed final navigation integration. Root footer entry added through `scripts/build.py`; root 91 tests and scoped 33 tests pass.
+
+### Q61 final completion / PR / merge / Pages record — session 61a311c2
+
+- **PR:** https://github.com/sassnarep3-star/Own5/pull/42 — merged autonomously with `gh pr merge 42 --merge` at 2026-11-05T21:51:10Z; merge commit `f3d164a6a6d193a6a2f164d177d4fb7453ddfe48`.
+- **PR checks:** all reported checks passed before merge (`verify`, `desk-verify`, `Build, evidence integrity and browser smoke tests`; legacy smoke skipped by workflow condition).
+- **Post-merge CI on `f3d164a`:** NBA Research 61a311c2 run `42116357505` success; Verify research dashboard `42116357455` success; Verify Own5 evidence desk `42116357672` success; Verify NBA validation desk `42116357534` success; pages build and deployment `42116356950` success.
+- **GitHub Pages:** API status `built`, source `main` @ `/`, base https://sassnarep3-star.github.io/Own5/ . Live fetches with `?release=f3d164a` verified: [overview](https://sassnarep3-star.github.io/Own5/nba-research-61a311c2/index.html), [own lines](https://sassnarep3-star.github.io/Own5/nba-research-61a311c2/lines.html), [Flagged for Review](https://sassnarep3-star.github.io/Own5/nba-research-61a311c2/review.html), and root NFL overview (preserved). Rendered counts matched: 241 canonical rows, 11 lines, 0/6 qualified, 19 flags.
+- **Q61-01…Q61-07 done.** Follow-up documentation commit updates the dashboard requirements trace and verification record to reflect the completed merge/deployment. Flags remain nonblocking; no strategy, ROI, probability, rank or funded reward is certified.
 

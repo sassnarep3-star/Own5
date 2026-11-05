@@ -532,8 +532,8 @@ def build() -> dict:
         {"id": "R10", "requirement": "Unconfirmed values blank and flagged", "status": "delivered", "evidence": "Availability, probabilities, ROI, rank, rewards and cross-game dependence blank", "source_url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-05_04_00PM.pdf"},
         {"id": "R11", "requirement": "Clean simple Pages dashboard with subpages", "status": "delivered", "evidence": "10 static pages under nba-research-61a311c2/", "source_url": "https://github.com/sassnarep3-star/Own5"},
         {"id": "R12", "requirement": "Flagged for Review page nonblocking", "status": "delivered", "evidence": "19 flags published; publication not blocked", "source_url": "https://github.com/sassnarep3-star/Own5"},
-        {"id": "R13", "requirement": "Coordination claims and frequent commits", "status": "in_progress", "evidence": "Q61 claim fdf6c15; scoped namespace", "source_url": "https://github.com/sassnarep3-star/Own5/blob/arena/61a311c2-own5/COORDINATION.md"},
-        {"id": "R14", "requirement": "Final integration, PR, merge, Pages verification", "status": "pending", "evidence": "Recorded after merge/deploy", "source_url": "https://github.com/sassnarep3-star/Own5"},
+        {"id": "R13", "requirement": "Coordination claims and frequent commits", "status": "done", "evidence": "Q61 claim fdf6c15; scoped commits; append-only conflict preserved concurrent records", "source_url": "https://github.com/sassnarep3-star/Own5/blob/arena/61a311c2-own5/COORDINATION.md"},
+        {"id": "R14", "requirement": "Final integration, PR, merge, Pages verification", "status": "delivered", "evidence": "PR #42 merged f3d164a; post-merge CI success; Pages built; live dashboard/review/lines verified", "source_url": "https://github.com/sassnarep3-star/Own5/pull/42"},
         {"id": "R15", "requirement": "No fabricated ROI/rewards", "status": "delivered", "evidence": "All ROI/monetary fields null; zero graded bets", "source_url": "https://sportsbook.fanduel.com/navigation/nba"},
     ]
 
