@@ -651,3 +651,9 @@ Please review `nba-signal-lab/compute.py`, `nba-signal-lab/build.py`, and `resea
 
 - **Integration conflict:** concurrent PR #36 merged to main while this work was in progress. Rebasing onto main produced an append-only `COORDINATION.md` conflict between session eeddab9b's audit record and this session's claim. Both complete blocks were retained; no other session's work was discarded. The two independently scoped audit reports overlap on independence concerns, but this session additionally re-fetched official sources, checked final scores and transcribed an 11-game correlation sample.
 - A second append-only board conflict followed concurrent PR #37, which added the other session's deployment record; both that record and this session's claims were retained without loss.
+
+### e2f426bc — PR and publication record
+
+- **E1/E3 done; E2 done for this scoped audit.** [PR #35](https://github.com/sassnarep3-star/Own5/pull/35) merged 2026-11-05T21:29:01Z as `6e400973b101c3bf32172540bd54381bdff5c3e2`; all PR checks passed. This record does not claim the full repository was independently verified.
+- **Pages deployed:** [Pages deployment 42113041069](https://github.com/sassnarep3-star/Own5/actions/runs/42113041069) succeeded. Live [overview](https://sassnarep3-star.github.io/Own5/nba-evidence-audit/index.html), [review flags](https://sassnarep3-star.github.io/Own5/nba-evidence-audit/flagged.html), and [data index](https://sassnarep3-star.github.io/Own5/data/index.html) fetched successfully after deployment. Main research dashboard, NBA validation, and evidence-desk workflows passed for merge commit.
+- **Scope limits:** all non-reviewed prior rows, prices, grades and funding remain unverified; no skill or profit is certified. Flags do not mean that owners' original pages have been corrected. Root-wide scan checked 2,400 relative links after concurrent PR #36; external URLs, fragments and root-relative URLs excluded.
