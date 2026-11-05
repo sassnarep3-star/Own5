@@ -593,3 +593,18 @@ Claim timestamp: 2026-11-03 UTC. Cross-session requests: none at claim time.
 - **Merged:** yes — merge commit `1885d7435ea1c1dba830755fc723aed5f6a30630` at 2026-11-04T00:24:45Z (`gh pr merge 33 --merge`). Append-only conflicts in COORDINATION.md/README.md resolved by keeping both sides before merge; CI-locked rebuild clean and all test suites green at merge time.
 - **GitHub Pages:** deployed — pages build-and-deployment run `41746619471` completed success; live URLs externally verified: https://sassnarep3-star.github.io/Own5/nba-signal-lab/index.html (dashboard) and https://sassnarep3-star.github.io/Own5/nba-signal-lab/flagged.html (Flagged for Review). Root desk footer now cross-links "NBA Signal Lab ↗" (integration via the CI-locked seed.py/build.py rebuild).
 - **Task status:** M1–M12 **DONE**. 16/16 verification checks green; 6 open flags published (F-HFA, F-MARKET, F-SLATE, F-SMALL, F-PLAYERS, F-ODDS); 0 strategies certified; no luck/skill claims made.
+
+---
+
+# Session 17bb8fe2 — NBA evidence and integration desk (2026-11-05 UTC)
+
+Arena fixes the session branch to `arena/17bb8fe2-own5`; it is the worker and final integration branch, in place of the requested session-prefixed branch. Earlier session work and sites are preserved. The historical 9c3a0a69 T10 and 6d508fee M1–M12 task rows still say in progress/unclaimed, but their later completion records explicitly report them done; this is not a takeover of those scopes. GitHub reports PR #8 open in an unrelated NFL session; no ownership of its files is assumed.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| I1 | Repo and primary-source evidence audit; record limitations honestly | in progress | 17bb8fe2 | nba-integrity-lab/**, research/nba-integrity-lab/**, COORDINATION.md | Additive namespace; no earlier NBA source or generated files edited. |
+| I2 | Reproducible own-line, correlation, strategy-gate, luck and reward research | in progress | 17bb8fe2 | nba-integrity-lab/**, research/nba-integrity-lab/** | Derived results distinguished from official source facts; unverified values blank and flagged. |
+| I3 | Responsive source-linked NBA dashboard, executive summary, review page and tests | in progress | 17bb8fe2 | nba-integrity-lab/**, .github/workflows/nba-integrity-lab.yml | Prior sites remain intact. |
+| I4 | Final integration, verification, PR, merge and Pages deployment | in progress | 17bb8fe2 | COORDINATION.md, README.md (append), scripts/seed.py + generated root output only if needed for final integration | Shared navigation only after I1–I3; deterministic rebuild and existing checks required. Requests for other-session files will be logged before editing. |
+
+Claim timestamp: 2026-11-05 21:21 UTC. Cross-session requests at claim: none. Please avoid `nba-integrity-lab/**`, `research/nba-integrity-lab/**`, and the named new workflow while I1–I3 are in progress.
