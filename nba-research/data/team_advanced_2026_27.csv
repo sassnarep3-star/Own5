@@ -1,0 +1,31 @@
+team_id,team,conference,gp,w,l,minutes,off_rating,def_rating,net_rating,pace,possessions,efg_pct,ts_pct,source_url,source_id,verified_at
+1610612755,Philadelphia 76ers,E,9,8,1,432.0,110.5,105.1,5.4,100.28,904,51.7,55.7,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame,NBA-CUR-ADV,2026-11-05
+1610612745,Houston Rockets,W,9,7,2,432.0,120.0,109.6,10.4,98.17,884,56.6,60.9,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame,NBA-CUR-ADV,2026-11-05
+1610612747,Los Angeles Lakers,W,9,7,2,432.0,121.1,112.9,8.2,100.72,905,60.2,64.5,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame,NBA-CUR-ADV,2026-11-05
+1610612738,Boston Celtics,E,8,6,2,389.0,115.8,109.2,6.6,97.60,789,53.2,57.4,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame,NBA-CUR-ADV,2026-11-05
+1610612765,Detroit Pistons,E,8,6,2,384.0,112.4,103.0,9.4,98.81,791,54.9,58.3,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame,NBA-CUR-ADV,2026-11-05
+1610612763,Memphis Grizzlies,W,8,6,2,389.0,117.1,106.8,10.3,101.49,823,56.0,59.6,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame,NBA-CUR-ADV,2026-11-05
+1610612750,Minnesota Timberwolves,W,9,6,3,437.0,116.1,105.2,10.9,101.11,921,55.7,57.4,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame,NBA-CUR-ADV,2026-11-05
+1610612760,Oklahoma City Thunder,W,8,6,2,384.0,111.7,110.8,0.8,98.31,788,50.0,54.6,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame,NBA-CUR-ADV,2026-11-05
+1610612757,Portland Trail Blazers,W,7,6,1,336.0,120.0,109.6,10.4,101.29,711,56.4,60.2,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame,NBA-CUR-ADV,2026-11-05
+1610612759,San Antonio Spurs,W,8,6,2,389.0,115.4,107.4,8.0,99.89,810,51.7,55.9,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame,NBA-CUR-ADV,2026-11-05
+1610612737,Atlanta Hawks,E,9,5,4,432.0,112.5,109.9,2.6,102.83,926,52.5,55.3,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame,NBA-CUR-ADV,2026-11-05
+1610612744,Golden State Warriors,W,8,5,3,384.0,117.2,114.8,2.4,100.06,802,54.7,59.3,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame,NBA-CUR-ADV,2026-11-05
+1610612739,Cleveland Cavaliers,E,8,4,4,389.0,115.6,113.7,1.9,101.74,825,54.9,58.4,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame,NBA-CUR-ADV,2026-11-05
+1610612742,Dallas Mavericks,W,8,4,4,384.0,112.5,112.7,-0.1,99.63,797,54.0,57.2,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame,NBA-CUR-ADV,2026-11-05
+1610612743,Denver Nuggets,W,7,4,3,341.0,115.1,115.0,0.1,98.53,702,56.1,60.7,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame,NBA-CUR-ADV,2026-11-05
+1610612740,New Orleans Pelicans,W,8,4,4,399.0,113.4,111.1,2.3,103.28,858,53.8,59.3,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame,NBA-CUR-ADV,2026-11-05
+1610612752,New York Knicks,E,8,4,4,384.0,113.3,108.5,4.7,97.00,777,51.2,55.3,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame,NBA-CUR-ADV,2026-11-05
+1610612761,Toronto Raptors,E,8,4,4,384.0,115.8,111.1,4.7,101.94,814,52.2,55.9,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame,NBA-CUR-ADV,2026-11-05
+1610612764,Washington Wizards,E,8,4,4,384.0,110.0,109.8,0.2,99.13,792,52.9,57.7,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame,NBA-CUR-ADV,2026-11-05
+1610612766,Charlotte Hornets,E,9,3,6,432.0,101.5,112.7,-11.2,96.78,870,48.0,52.0,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame,NBA-CUR-ADV,2026-11-05
+1610612754,Indiana Pacers,E,9,3,6,432.0,109.5,112.0,-2.5,101.78,914,53.5,57.2,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame,NBA-CUR-ADV,2026-11-05
+1610612748,Miami Heat,E,8,3,5,389.0,112.6,117.7,-5.1,103.22,838,54.3,57.7,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame,NBA-CUR-ADV,2026-11-05
+1610612751,Brooklyn Nets,E,8,2,6,389.0,106.2,112.6,-6.4,99.02,803,51.3,55.8,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame,NBA-CUR-ADV,2026-11-05
+1610612753,Orlando Magic,E,7,2,5,336.0,108.0,116.2,-8.2,98.29,685,53.3,57.4,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame,NBA-CUR-ADV,2026-11-05
+1610612741,Chicago Bulls,E,8,1,7,384.0,105.9,123.5,-17.5,105.19,843,47.6,52.8,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame,NBA-CUR-ADV,2026-11-05
+1610612746,LA Clippers,W,8,1,7,389.0,106.7,112.8,-6.1,101.06,818,53.5,57.5,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame,NBA-CUR-ADV,2026-11-05
+1610612749,Milwaukee Bucks,E,8,1,7,384.0,106.3,118.1,-11.8,103.50,828,51.2,53.8,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame,NBA-CUR-ADV,2026-11-05
+1610612756,Phoenix Suns,W,6,1,5,288.0,114.3,124.5,-10.3,99.50,595,53.5,57.2,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame,NBA-CUR-ADV,2026-11-05
+1610612758,Sacramento Kings,W,8,1,7,384.0,106.5,119.4,-12.9,102.94,821,51.8,55.2,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame,NBA-CUR-ADV,2026-11-05
+1610612762,Utah Jazz,W,8,1,7,394.0,103.9,115.1,-11.3,100.93,830,49.5,53.8,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame,NBA-CUR-ADV,2026-11-05

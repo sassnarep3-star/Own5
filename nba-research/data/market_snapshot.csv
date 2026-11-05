@@ -1,0 +1,13 @@
+game_id,market,selection,line,american_price,retrieved_at,retrieved_date,observed_before_utc,jurisdiction,ticket_terms_url,source_url,source_id,flag_id
+0022600187,spread,ORL,1.5,-118,,2026-11-05,2026-11-05T21:23:14Z,,,https://sportsbook.fanduel.com/navigation/nba?tab=parlay-builder,FD-BOARD,R05
+0022600187,spread,PHX,-1.5,-104,,2026-11-05,2026-11-05T21:23:14Z,,,https://sportsbook.fanduel.com/navigation/nba?tab=parlay-builder,FD-BOARD,R05
+0022600187,moneyline,ORL,,-108,,2026-11-05,2026-11-05T21:23:14Z,,,https://sportsbook.fanduel.com/navigation/nba?tab=parlay-builder,FD-BOARD,R05
+0022600187,moneyline,PHX,,-108,,2026-11-05,2026-11-05T21:23:14Z,,,https://sportsbook.fanduel.com/navigation/nba?tab=parlay-builder,FD-BOARD,R05
+0022600187,total,Over,222.5,-114,,2026-11-05,2026-11-05T21:23:14Z,,,https://sportsbook.fanduel.com/navigation/nba?tab=parlay-builder,FD-BOARD,R05
+0022600187,total,Under,222.5,-106,,2026-11-05,2026-11-05T21:23:14Z,,,https://sportsbook.fanduel.com/navigation/nba?tab=parlay-builder,FD-BOARD,R05
+0022600188,spread,MIA,4.5,-115,,2026-11-05,2026-11-05T21:23:14Z,,,https://sportsbook.fanduel.com/navigation/nba?tab=parlay-builder,FD-BOARD,R05
+0022600188,spread,GSW,-4.5,-105,,2026-11-05,2026-11-05T21:23:14Z,,,https://sportsbook.fanduel.com/navigation/nba?tab=parlay-builder,FD-BOARD,R05
+0022600188,moneyline,MIA,,138,,2026-11-05,2026-11-05T21:23:14Z,,,https://sportsbook.fanduel.com/navigation/nba?tab=parlay-builder,FD-BOARD,R05
+0022600188,moneyline,GSW,,-164,,2026-11-05,2026-11-05T21:23:14Z,,,https://sportsbook.fanduel.com/navigation/nba?tab=parlay-builder,FD-BOARD,R05
+0022600188,total,Over,236.5,-105,,2026-11-05,2026-11-05T21:23:14Z,,,https://sportsbook.fanduel.com/navigation/nba?tab=parlay-builder,FD-BOARD,R05
+0022600188,total,Under,236.5,-115,,2026-11-05,2026-11-05T21:23:14Z,,,https://sportsbook.fanduel.com/navigation/nba?tab=parlay-builder,FD-BOARD,R05

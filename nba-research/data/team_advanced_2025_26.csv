@@ -1,0 +1,31 @@
+team_id,team,conference,gp,w,l,minutes,off_rating,def_rating,net_rating,pace,possessions,efg_pct,ts_pct,source_url,source_id,verified_at
+1610612760,Oklahoma City Thunder,W,82,64,18,3971.0,117.6,106.5,11.1,100.37,8301,56.1,59.9,https://www.nba.com/stats/teams/advanced?Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame,NBA-PRIOR-ADV,2026-11-05
+1610612759,San Antonio Spurs,W,82,62,20,3946.0,118.7,110.4,8.4,100.72,8275,55.9,59.5,https://www.nba.com/stats/teams/advanced?Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame,NBA-PRIOR-ADV,2026-11-05
+1610612765,Detroit Pistons,E,82,60,22,3961.0,117.3,108.9,8.4,99.88,8231,54.6,58.3,https://www.nba.com/stats/teams/advanced?Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame,NBA-PRIOR-ADV,2026-11-05
+1610612738,Boston Celtics,E,82,56,26,3946.0,120.0,111.7,8.3,95.58,7850,55.3,58.3,https://www.nba.com/stats/teams/advanced?Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame,NBA-PRIOR-ADV,2026-11-05
+1610612743,Denver Nuggets,W,82,54,28,3986.0,121.2,116.0,5.2,99.49,8259,57.7,61.6,https://www.nba.com/stats/teams/advanced?Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame,NBA-PRIOR-ADV,2026-11-05
+1610612747,Los Angeles Lakers,W,82,53,29,3941.0,117.0,115.5,1.5,99.22,8156,57.3,60.9,https://www.nba.com/stats/teams/advanced?Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame,NBA-PRIOR-ADV,2026-11-05
+1610612752,New York Knicks,E,82,53,29,3951.0,118.7,112.3,6.4,97.71,8046,55.7,59.0,https://www.nba.com/stats/teams/advanced?Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame,NBA-PRIOR-ADV,2026-11-05
+1610612739,Cleveland Cavaliers,E,82,52,30,3951.0,118.3,114.1,4.1,100.70,8286,56.1,59.5,https://www.nba.com/stats/teams/advanced?Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame,NBA-PRIOR-ADV,2026-11-05
+1610612745,Houston Rockets,W,82,52,30,3981.0,117.5,112.1,5.4,96.98,8042,54.2,57.6,https://www.nba.com/stats/teams/advanced?Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame,NBA-PRIOR-ADV,2026-11-05
+1610612750,Minnesota Timberwolves,W,82,49,33,3956.0,115.6,112.5,3.1,101.50,8372,55.9,59.2,https://www.nba.com/stats/teams/advanced?Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame,NBA-PRIOR-ADV,2026-11-05
+1610612737,Atlanta Hawks,E,82,46,36,3951.0,115.0,112.9,2.2,102.50,8444,55.4,58.4,https://www.nba.com/stats/teams/advanced?Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame,NBA-PRIOR-ADV,2026-11-05
+1610612761,Toronto Raptors,E,82,46,36,3956.0,115.0,112.1,2.9,99.22,8177,54.6,58.1,https://www.nba.com/stats/teams/advanced?Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame,NBA-PRIOR-ADV,2026-11-05
+1610612753,Orlando Magic,E,82,45,37,3966.0,114.2,113.6,0.6,100.56,8310,53.1,57.6,https://www.nba.com/stats/teams/advanced?Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame,NBA-PRIOR-ADV,2026-11-05
+1610612755,Philadelphia 76ers,E,82,45,37,3976.0,114.3,114.4,-0.1,100.39,8314,53.0,57.2,https://www.nba.com/stats/teams/advanced?Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame,NBA-PRIOR-ADV,2026-11-05
+1610612756,Phoenix Suns,W,82,45,37,3951.0,114.2,112.9,1.4,98.14,8083,53.7,56.8,https://www.nba.com/stats/teams/advanced?Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame,NBA-PRIOR-ADV,2026-11-05
+1610612766,Charlotte Hornets,E,82,44,38,3951.0,118.4,113.5,4.9,97.59,8033,55.2,58.9,https://www.nba.com/stats/teams/advanced?Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame,NBA-PRIOR-ADV,2026-11-05
+1610612748,Miami Heat,E,82,43,39,3941.0,115.8,113.6,2.1,104.22,8561,54.2,58.0,https://www.nba.com/stats/teams/advanced?Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame,NBA-PRIOR-ADV,2026-11-05
+1610612746,LA Clippers,W,82,42,40,3956.0,116.3,115.2,1.1,97.29,8019,55.9,60.2,https://www.nba.com/stats/teams/advanced?Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame,NBA-PRIOR-ADV,2026-11-05
+1610612757,Portland Trail Blazers,W,82,42,40,3951.0,113.1,113.5,-0.4,101.63,8370,53.4,57.0,https://www.nba.com/stats/teams/advanced?Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame,NBA-PRIOR-ADV,2026-11-05
+1610612744,Golden State Warriors,W,82,37,45,3961.0,113.8,114.4,-0.5,100.05,8255,54.9,58.4,https://www.nba.com/stats/teams/advanced?Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame,NBA-PRIOR-ADV,2026-11-05
+1610612749,Milwaukee Bucks,E,82,32,50,3951.0,112.2,118.3,-6.1,98.33,8087,56.5,58.9,https://www.nba.com/stats/teams/advanced?Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame,NBA-PRIOR-ADV,2026-11-05
+1610612741,Chicago Bulls,E,82,31,51,3951.0,112.1,117.4,-5.3,103.22,8506,54.7,58.0,https://www.nba.com/stats/teams/advanced?Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame,NBA-PRIOR-ADV,2026-11-05
+1610612742,Dallas Mavericks,W,82,26,56,3971.0,110.3,115.5,-5.2,102.62,8484,52.7,56.4,https://www.nba.com/stats/teams/advanced?Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame,NBA-PRIOR-ADV,2026-11-05
+1610612740,New Orleans Pelicans,W,82,26,56,3961.0,113.3,117.6,-4.4,101.37,8363,52.7,56.8,https://www.nba.com/stats/teams/advanced?Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame,NBA-PRIOR-ADV,2026-11-05
+1610612763,Memphis Grizzlies,W,82,25,57,3946.0,112.4,118.4,-6.0,101.69,8365,53.3,57.0,https://www.nba.com/stats/teams/advanced?Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame,NBA-PRIOR-ADV,2026-11-05
+1610612758,Sacramento Kings,W,82,22,60,3951.0,110.6,120.3,-9.7,100.12,8233,52.5,56.0,https://www.nba.com/stats/teams/advanced?Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame,NBA-PRIOR-ADV,2026-11-05
+1610612762,Utah Jazz,W,82,22,60,3966.0,112.7,120.8,-8.2,103.54,8558,53.6,57.5,https://www.nba.com/stats/teams/advanced?Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame,NBA-PRIOR-ADV,2026-11-05
+1610612751,Brooklyn Nets,E,82,20,62,3951.0,108.2,118.2,-10.0,97.60,8028,52.0,55.9,https://www.nba.com/stats/teams/advanced?Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame,NBA-PRIOR-ADV,2026-11-05
+1610612754,Indiana Pacers,E,82,19,63,3951.0,110.1,117.9,-7.8,101.78,8377,53.3,56.8,https://www.nba.com/stats/teams/advanced?Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame,NBA-PRIOR-ADV,2026-11-05
+1610612764,Washington Wizards,E,82,17,65,3951.0,109.7,121.5,-11.8,102.49,8442,53.5,56.6,https://www.nba.com/stats/teams/advanced?Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame,NBA-PRIOR-ADV,2026-11-05
