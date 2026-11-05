@@ -1,0 +1,548 @@
+group,check,status,detail,source_url
+provenance,team_seasons.csv,PASS,90 rows; HTTPS official NBA host on every row,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season
+provenance,games_sample_2026_27.csv,PASS,44 rows; HTTPS official NBA host on every row,https://www.nba.com/game/0022600162
+provenance,player_games.csv,PASS,125 rows; HTTPS official NBA host on every row,https://www.nba.com/game/0022501178/
+provenance,schedule.csv,PASS,16 rows; HTTPS official NBA host on every row,https://www.nba.com/schedule?month=11&year=2026
+team identity,2024-25 ATL GP=W+L,PASS,82=40+42,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season
+team identity,2024-25 BKN GP=W+L,PASS,82=26+56,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season
+team identity,2024-25 BOS GP=W+L,PASS,82=61+21,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season
+team identity,2024-25 CHA GP=W+L,PASS,82=19+63,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season
+team identity,2024-25 CHI GP=W+L,PASS,82=39+43,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season
+team identity,2024-25 CLE GP=W+L,PASS,82=64+18,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season
+team identity,2024-25 DAL GP=W+L,PASS,82=39+43,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season
+team identity,2024-25 DEN GP=W+L,PASS,82=50+32,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season
+team identity,2024-25 DET GP=W+L,PASS,82=44+38,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season
+team identity,2024-25 GSW GP=W+L,PASS,82=48+34,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season
+team identity,2024-25 HOU GP=W+L,PASS,82=52+30,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season
+team identity,2024-25 IND GP=W+L,PASS,82=50+32,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season
+team identity,2024-25 LAC GP=W+L,PASS,82=50+32,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season
+team identity,2024-25 LAL GP=W+L,PASS,82=50+32,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season
+team identity,2024-25 MEM GP=W+L,PASS,82=48+34,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season
+team identity,2024-25 MIA GP=W+L,PASS,82=37+45,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season
+team identity,2024-25 MIL GP=W+L,PASS,82=48+34,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season
+team identity,2024-25 MIN GP=W+L,PASS,82=49+33,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season
+team identity,2024-25 NOP GP=W+L,PASS,82=21+61,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season
+team identity,2024-25 NYK GP=W+L,PASS,82=51+31,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season
+team identity,2024-25 OKC GP=W+L,PASS,82=68+14,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season
+team identity,2024-25 ORL GP=W+L,PASS,82=41+41,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season
+team identity,2024-25 PHI GP=W+L,PASS,82=24+58,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season
+team identity,2024-25 PHX GP=W+L,PASS,82=36+46,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season
+team identity,2024-25 POR GP=W+L,PASS,82=36+46,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season
+team identity,2024-25 SAC GP=W+L,PASS,82=40+42,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season
+team identity,2024-25 SAS GP=W+L,PASS,82=34+48,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season
+team identity,2024-25 TOR GP=W+L,PASS,82=30+52,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season
+team identity,2024-25 UTA GP=W+L,PASS,82=17+65,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season
+team identity,2024-25 WAS GP=W+L,PASS,82=18+64,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season
+team identity,2025-26 ATL GP=W+L,PASS,82=46+36,https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season
+team identity,2025-26 BKN GP=W+L,PASS,82=20+62,https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season
+team identity,2025-26 BOS GP=W+L,PASS,82=56+26,https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season
+team identity,2025-26 CHA GP=W+L,PASS,82=44+38,https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season
+team identity,2025-26 CHI GP=W+L,PASS,82=31+51,https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season
+team identity,2025-26 CLE GP=W+L,PASS,82=52+30,https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season
+team identity,2025-26 DAL GP=W+L,PASS,82=26+56,https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season
+team identity,2025-26 DEN GP=W+L,PASS,82=54+28,https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season
+team identity,2025-26 DET GP=W+L,PASS,82=60+22,https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season
+team identity,2025-26 GSW GP=W+L,PASS,82=37+45,https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season
+team identity,2025-26 HOU GP=W+L,PASS,82=52+30,https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season
+team identity,2025-26 IND GP=W+L,PASS,82=19+63,https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season
+team identity,2025-26 LAC GP=W+L,PASS,82=42+40,https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season
+team identity,2025-26 LAL GP=W+L,PASS,82=53+29,https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season
+team identity,2025-26 MEM GP=W+L,PASS,82=25+57,https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season
+team identity,2025-26 MIA GP=W+L,PASS,82=43+39,https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season
+team identity,2025-26 MIL GP=W+L,PASS,82=32+50,https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season
+team identity,2025-26 MIN GP=W+L,PASS,82=49+33,https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season
+team identity,2025-26 NOP GP=W+L,PASS,82=26+56,https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season
+team identity,2025-26 NYK GP=W+L,PASS,82=53+29,https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season
+team identity,2025-26 OKC GP=W+L,PASS,82=64+18,https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season
+team identity,2025-26 ORL GP=W+L,PASS,82=45+37,https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season
+team identity,2025-26 PHI GP=W+L,PASS,82=45+37,https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season
+team identity,2025-26 PHX GP=W+L,PASS,82=45+37,https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season
+team identity,2025-26 POR GP=W+L,PASS,82=42+40,https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season
+team identity,2025-26 SAC GP=W+L,PASS,82=22+60,https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season
+team identity,2025-26 SAS GP=W+L,PASS,82=62+20,https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season
+team identity,2025-26 TOR GP=W+L,PASS,82=46+36,https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season
+team identity,2025-26 UTA GP=W+L,PASS,82=22+60,https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season
+team identity,2025-26 WAS GP=W+L,PASS,82=17+65,https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season
+team identity,2026-27 ATL GP=W+L,PASS,8=4+4,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season
+team identity,2026-27 BKN GP=W+L,PASS,7=1+6,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season
+team identity,2026-27 BOS GP=W+L,PASS,7=5+2,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season
+team identity,2026-27 CHA GP=W+L,PASS,8=3+5,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season
+team identity,2026-27 CHI GP=W+L,PASS,7=1+6,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season
+team identity,2026-27 CLE GP=W+L,PASS,7=4+3,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season
+team identity,2026-27 DAL GP=W+L,PASS,7=4+3,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season
+team identity,2026-27 DEN GP=W+L,PASS,6=3+3,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season
+team identity,2026-27 DET GP=W+L,PASS,7=6+1,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season
+team identity,2026-27 GSW GP=W+L,PASS,8=5+3,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season
+team identity,2026-27 HOU GP=W+L,PASS,8=7+1,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season
+team identity,2026-27 IND GP=W+L,PASS,8=2+6,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season
+team identity,2026-27 LAC GP=W+L,PASS,7=1+6,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season
+team identity,2026-27 LAL GP=W+L,PASS,8=6+2,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season
+team identity,2026-27 MEM GP=W+L,PASS,7=6+1,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season
+team identity,2026-27 MIA GP=W+L,PASS,7=2+5,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season
+team identity,2026-27 MIL GP=W+L,PASS,7=1+6,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season
+team identity,2026-27 MIN GP=W+L,PASS,8=5+3,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season
+team identity,2026-27 NOP GP=W+L,PASS,7=3+4,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season
+team identity,2026-27 NYK GP=W+L,PASS,7=3+4,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season
+team identity,2026-27 OKC GP=W+L,PASS,7=5+2,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season
+team identity,2026-27 ORL GP=W+L,PASS,7=2+5,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season
+team identity,2026-27 PHI GP=W+L,PASS,8=7+1,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season
+team identity,2026-27 PHX GP=W+L,PASS,5=1+4,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season
+team identity,2026-27 POR GP=W+L,PASS,6=5+1,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season
+team identity,2026-27 SAC GP=W+L,PASS,7=1+6,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season
+team identity,2026-27 SAS GP=W+L,PASS,7=5+2,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season
+team identity,2026-27 TOR GP=W+L,PASS,7=4+3,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season
+team identity,2026-27 UTA GP=W+L,PASS,7=1+6,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season
+team identity,2026-27 WAS GP=W+L,PASS,7=4+3,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season
+team aggregate,2024-25 30 unique teams,PASS,30 rows,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season
+team aggregate,2024-25 wins=losses,PASS,W=1230 L=1230,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season
+team aggregate,2024-25 full season,PASS,30 teams × 82 games,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season
+team aggregate,2025-26 30 unique teams,PASS,30 rows,https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season
+team aggregate,2025-26 wins=losses,PASS,W=1230 L=1230,https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season
+team aggregate,2025-26 full season,PASS,30 teams × 82 games,https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season
+team aggregate,2026-27 30 unique teams,PASS,30 rows,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season
+team aggregate,2026-27 wins=losses,PASS,W=107 L=107,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season
+game identity,0022600162 ORL points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600162
+game identity,0022600162 WAS points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600162
+game identity,0022600163 PHI points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600163
+game identity,0022600163 CHI points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600163
+game identity,0022600164 DAL points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600164
+game identity,0022600164 SAC points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600164
+game identity,0022600165 MEM points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600165
+game identity,0022600165 NOP points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600165
+game identity,0022600167 BOS points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600167
+game identity,0022600167 HOU points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600167
+game identity,0022600168 SAS points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600168
+game identity,0022600168 UTA points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600168
+game identity,0022600158 CLE points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600158
+game identity,0022600158 OKC points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600158
+game identity,0022600160 ATL points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600160
+game identity,0022600160 IND points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600160
+game identity,0022600166 MIL points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600166
+game identity,0022600166 MIN points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600166
+game identity,0022600161 BKN points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600161
+game identity,0022600161 NYK points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600161
+game identity,0022600171 LAC points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600171
+game identity,0022600171 TOR points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600171
+game identity,0022600169 DEN points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600169
+game identity,0022600169 POR points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600169
+game identity,0022600170 PHX points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600170
+game identity,0022600170 GSW points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600170
+game identity,0022600172 LAL points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600172
+game identity,0022600172 MIA points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600172
+game identity,0022600159 DET points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600159
+game identity,0022600159 CHA points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600159
+game identity,0022600154 ORL points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600154
+game identity,0022600154 BOS points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600154
+game identity,0022600155 BKN points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600155
+game identity,0022600155 IND points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600155
+game identity,0022600156 GSW points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600156
+game identity,0022600156 LAC points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600156
+game identity,0022600157 LAL points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600157
+game identity,0022600157 TOR points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600157
+game identity,0022600147 UTA points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600147
+game identity,0022600147 POR points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600147
+game identity,0022600148 CHA points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600148
+game identity,0022600148 PHI points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600148
+game identity,0022600149 ATL points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600149
+game identity,0022600149 NOP points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022600149
+game aggregate,22 games / 44 rows,PASS,22 games,https://www.nba.com/stats/teams/boxscores?Season=2026-27&SeasonType=Regular%20Season
+game identity,0022600162 paired box score,PASS,two opponents; one home; +/- mirrors score,https://www.nba.com/game/0022600162
+game identity,0022600163 paired box score,PASS,two opponents; one home; +/- mirrors score,https://www.nba.com/game/0022600163
+game identity,0022600164 paired box score,PASS,two opponents; one home; +/- mirrors score,https://www.nba.com/game/0022600164
+game identity,0022600165 paired box score,PASS,two opponents; one home; +/- mirrors score,https://www.nba.com/game/0022600165
+game identity,0022600167 paired box score,PASS,two opponents; one home; +/- mirrors score,https://www.nba.com/game/0022600167
+game identity,0022600168 paired box score,PASS,two opponents; one home; +/- mirrors score,https://www.nba.com/game/0022600168
+game identity,0022600158 paired box score,PASS,two opponents; one home; +/- mirrors score,https://www.nba.com/game/0022600158
+game identity,0022600160 paired box score,PASS,two opponents; one home; +/- mirrors score,https://www.nba.com/game/0022600160
+game identity,0022600166 paired box score,PASS,two opponents; one home; +/- mirrors score,https://www.nba.com/game/0022600166
+game identity,0022600161 paired box score,PASS,two opponents; one home; +/- mirrors score,https://www.nba.com/game/0022600161
+game identity,0022600171 paired box score,PASS,two opponents; one home; +/- mirrors score,https://www.nba.com/game/0022600171
+game identity,0022600169 paired box score,PASS,two opponents; one home; +/- mirrors score,https://www.nba.com/game/0022600169
+game identity,0022600170 paired box score,PASS,two opponents; one home; +/- mirrors score,https://www.nba.com/game/0022600170
+game identity,0022600172 paired box score,PASS,two opponents; one home; +/- mirrors score,https://www.nba.com/game/0022600172
+game identity,0022600159 paired box score,PASS,two opponents; one home; +/- mirrors score,https://www.nba.com/game/0022600159
+game identity,0022600154 paired box score,PASS,two opponents; one home; +/- mirrors score,https://www.nba.com/game/0022600154
+game identity,0022600155 paired box score,PASS,two opponents; one home; +/- mirrors score,https://www.nba.com/game/0022600155
+game identity,0022600156 paired box score,PASS,two opponents; one home; +/- mirrors score,https://www.nba.com/game/0022600156
+game identity,0022600157 paired box score,PASS,two opponents; one home; +/- mirrors score,https://www.nba.com/game/0022600157
+game identity,0022600147 paired box score,PASS,two opponents; one home; +/- mirrors score,https://www.nba.com/game/0022600147
+game identity,0022600148 paired box score,PASS,two opponents; one home; +/- mirrors score,https://www.nba.com/game/0022600148
+game identity,0022600149 paired box score,PASS,two opponents; one home; +/- mirrors score,https://www.nba.com/game/0022600149
+player identity,Anthony Edwards 0022501178 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022501178/
+player identity,Anthony Edwards 0022501178 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022501178/
+player identity,Anthony Edwards 0022501178 unique,PASS,unique player-game,https://www.nba.com/game/0022501178/
+player identity,Anthony Edwards 0022501121 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022501121/
+player identity,Anthony Edwards 0022501121 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022501121/
+player identity,Anthony Edwards 0022501121 unique,PASS,unique player-game,https://www.nba.com/game/0022501121/
+player identity,Anthony Edwards 0022501095 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022501095/
+player identity,Anthony Edwards 0022501095 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022501095/
+player identity,Anthony Edwards 0022501095 unique,PASS,unique player-game,https://www.nba.com/game/0022501095/
+player identity,Anthony Edwards 0022500976 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500976/
+player identity,Anthony Edwards 0022500976 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500976/
+player identity,Anthony Edwards 0022500976 unique,PASS,unique player-game,https://www.nba.com/game/0022500976/
+player identity,Anthony Edwards 0022500966 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500966/
+player identity,Anthony Edwards 0022500966 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500966/
+player identity,Anthony Edwards 0022500966 unique,PASS,unique player-game,https://www.nba.com/game/0022500966/
+player identity,Anthony Edwards 0022500952 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500952/
+player identity,Anthony Edwards 0022500952 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500952/
+player identity,Anthony Edwards 0022500952 unique,PASS,unique player-game,https://www.nba.com/game/0022500952/
+player identity,Anthony Edwards 0022500946 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500946/
+player identity,Anthony Edwards 0022500946 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500946/
+player identity,Anthony Edwards 0022500946 unique,PASS,unique player-game,https://www.nba.com/game/0022500946/
+player identity,Anthony Edwards 0022500915 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500915/
+player identity,Anthony Edwards 0022500915 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500915/
+player identity,Anthony Edwards 0022500915 unique,PASS,unique player-game,https://www.nba.com/game/0022500915/
+player identity,Anthony Edwards 0022500903 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500903/
+player identity,Anthony Edwards 0022500903 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500903/
+player identity,Anthony Edwards 0022500903 unique,PASS,unique player-game,https://www.nba.com/game/0022500903/
+player identity,Anthony Edwards 0022500890 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500890/
+player identity,Anthony Edwards 0022500890 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500890/
+player identity,Anthony Edwards 0022500890 unique,PASS,unique player-game,https://www.nba.com/game/0022500890/
+player identity,Anthony Edwards 0022500871 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500871/
+player identity,Anthony Edwards 0022500871 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500871/
+player identity,Anthony Edwards 0022500871 unique,PASS,unique player-game,https://www.nba.com/game/0022500871/
+player identity,Anthony Edwards 0022500857 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500857/
+player identity,Anthony Edwards 0022500857 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500857/
+player identity,Anthony Edwards 0022500857 unique,PASS,unique player-game,https://www.nba.com/game/0022500857/
+player identity,Anthony Edwards 0022500841 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500841/
+player identity,Anthony Edwards 0022500841 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500841/
+player identity,Anthony Edwards 0022500841 unique,PASS,unique player-game,https://www.nba.com/game/0022500841/
+player identity,Anthony Edwards 0022500824 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500824/
+player identity,Anthony Edwards 0022500824 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500824/
+player identity,Anthony Edwards 0022500824 unique,PASS,unique player-game,https://www.nba.com/game/0022500824/
+player identity,Anthony Edwards 0022500806 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500806/
+player identity,Anthony Edwards 0022500806 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500806/
+player identity,Anthony Edwards 0022500806 unique,PASS,unique player-game,https://www.nba.com/game/0022500806/
+player identity,Anthony Edwards 0022500783 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500783/
+player identity,Anthony Edwards 0022500783 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500783/
+player identity,Anthony Edwards 0022500783 unique,PASS,unique player-game,https://www.nba.com/game/0022500783/
+player identity,Anthony Edwards 0022500765 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500765/
+player identity,Anthony Edwards 0022500765 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500765/
+player identity,Anthony Edwards 0022500765 unique,PASS,unique player-game,https://www.nba.com/game/0022500765/
+player identity,Anthony Edwards 0022500760 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500760/
+player identity,Anthony Edwards 0022500760 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500760/
+player identity,Anthony Edwards 0022500760 unique,PASS,unique player-game,https://www.nba.com/game/0022500760/
+player identity,Anthony Edwards 0022500744 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500744/
+player identity,Anthony Edwards 0022500744 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500744/
+player identity,Anthony Edwards 0022500744 unique,PASS,unique player-game,https://www.nba.com/game/0022500744/
+player identity,Anthony Edwards 0022500727 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500727/
+player identity,Anthony Edwards 0022500727 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500727/
+player identity,Anthony Edwards 0022500727 unique,PASS,unique player-game,https://www.nba.com/game/0022500727/
+player identity,Anthony Edwards 0022500714 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500714/
+player identity,Anthony Edwards 0022500714 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500714/
+player identity,Anthony Edwards 0022500714 unique,PASS,unique player-game,https://www.nba.com/game/0022500714/
+player identity,Anthony Edwards 0022500700 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500700/
+player identity,Anthony Edwards 0022500700 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500700/
+player identity,Anthony Edwards 0022500700 unique,PASS,unique player-game,https://www.nba.com/game/0022500700/
+player identity,Anthony Edwards 0022500686 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500686/
+player identity,Anthony Edwards 0022500686 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500686/
+player identity,Anthony Edwards 0022500686 unique,PASS,unique player-game,https://www.nba.com/game/0022500686/
+player identity,Anthony Edwards 0022500677 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500677/
+player identity,Anthony Edwards 0022500677 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500677/
+player identity,Anthony Edwards 0022500677 unique,PASS,unique player-game,https://www.nba.com/game/0022500677/
+player identity,Anthony Edwards 0022500644 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500644/
+player identity,Anthony Edwards 0022500644 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500644/
+player identity,Anthony Edwards 0022500644 unique,PASS,unique player-game,https://www.nba.com/game/0022500644/
+player identity,Anthony Edwards 0022500631 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500631/
+player identity,Anthony Edwards 0022500631 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500631/
+player identity,Anthony Edwards 0022500631 unique,PASS,unique player-game,https://www.nba.com/game/0022500631/
+player identity,Anthony Edwards 0022500616 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500616/
+player identity,Anthony Edwards 0022500616 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500616/
+player identity,Anthony Edwards 0022500616 unique,PASS,unique player-game,https://www.nba.com/game/0022500616/
+player identity,Anthony Edwards 0022500598 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500598/
+player identity,Anthony Edwards 0022500598 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500598/
+player identity,Anthony Edwards 0022500598 unique,PASS,unique player-game,https://www.nba.com/game/0022500598/
+player identity,Anthony Edwards 0022500552 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500552/
+player identity,Anthony Edwards 0022500552 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500552/
+player identity,Anthony Edwards 0022500552 unique,PASS,unique player-game,https://www.nba.com/game/0022500552/
+player identity,Anthony Edwards 0022500542 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500542/
+player identity,Anthony Edwards 0022500542 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500542/
+player identity,Anthony Edwards 0022500542 unique,PASS,unique player-game,https://www.nba.com/game/0022500542/
+player identity,Anthony Edwards 0022500530 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500530/
+player identity,Anthony Edwards 0022500530 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500530/
+player identity,Anthony Edwards 0022500530 unique,PASS,unique player-game,https://www.nba.com/game/0022500530/
+player identity,Anthony Edwards 0022500513 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500513/
+player identity,Anthony Edwards 0022500513 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500513/
+player identity,Anthony Edwards 0022500513 unique,PASS,unique player-game,https://www.nba.com/game/0022500513/
+player identity,Anthony Edwards 0022500498 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500498/
+player identity,Anthony Edwards 0022500498 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500498/
+player identity,Anthony Edwards 0022500498 unique,PASS,unique player-game,https://www.nba.com/game/0022500498/
+player identity,Anthony Edwards 0022500486 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500486/
+player identity,Anthony Edwards 0022500486 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500486/
+player identity,Anthony Edwards 0022500486 unique,PASS,unique player-game,https://www.nba.com/game/0022500486/
+player identity,Anthony Edwards 0022500463 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500463/
+player identity,Anthony Edwards 0022500463 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500463/
+player identity,Anthony Edwards 0022500463 unique,PASS,unique player-game,https://www.nba.com/game/0022500463/
+player identity,Anthony Edwards 0022500452 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500452/
+player identity,Anthony Edwards 0022500452 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500452/
+player identity,Anthony Edwards 0022500452 unique,PASS,unique player-game,https://www.nba.com/game/0022500452/
+player identity,Anthony Edwards 0022500439 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500439/
+player identity,Anthony Edwards 0022500439 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500439/
+player identity,Anthony Edwards 0022500439 unique,PASS,unique player-game,https://www.nba.com/game/0022500439/
+player identity,Anthony Edwards 0022500013 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500013/
+player identity,Anthony Edwards 0022500013 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500013/
+player identity,Anthony Edwards 0022500013 unique,PASS,unique player-game,https://www.nba.com/game/0022500013/
+player identity,Anthony Edwards 0022500416 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500416/
+player identity,Anthony Edwards 0022500416 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500416/
+player identity,Anthony Edwards 0022500416 unique,PASS,unique player-game,https://www.nba.com/game/0022500416/
+player identity,Anthony Edwards 0022500400 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500400/
+player identity,Anthony Edwards 0022500400 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500400/
+player identity,Anthony Edwards 0022500400 unique,PASS,unique player-game,https://www.nba.com/game/0022500400/
+player identity,Anthony Edwards 0022500385 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500385/
+player identity,Anthony Edwards 0022500385 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500385/
+player identity,Anthony Edwards 0022500385 unique,PASS,unique player-game,https://www.nba.com/game/0022500385/
+player identity,Anthony Edwards 0022500365 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500365/
+player identity,Anthony Edwards 0022500365 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500365/
+player identity,Anthony Edwards 0022500365 unique,PASS,unique player-game,https://www.nba.com/game/0022500365/
+player identity,Anthony Edwards 0022500355 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500355/
+player identity,Anthony Edwards 0022500355 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500355/
+player identity,Anthony Edwards 0022500355 unique,PASS,unique player-game,https://www.nba.com/game/0022500355/
+player identity,Anthony Edwards 0022500337 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500337/
+player identity,Anthony Edwards 0022500337 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500337/
+player identity,Anthony Edwards 0022500337 unique,PASS,unique player-game,https://www.nba.com/game/0022500337/
+player identity,Anthony Edwards 0022500321 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500321/
+player identity,Anthony Edwards 0022500321 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500321/
+player identity,Anthony Edwards 0022500321 unique,PASS,unique player-game,https://www.nba.com/game/0022500321/
+player identity,Anthony Edwards 0022500306 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500306/
+player identity,Anthony Edwards 0022500306 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500306/
+player identity,Anthony Edwards 0022500306 unique,PASS,unique player-game,https://www.nba.com/game/0022500306/
+player identity,Anthony Edwards 0022500293 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500293/
+player identity,Anthony Edwards 0022500293 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500293/
+player identity,Anthony Edwards 0022500293 unique,PASS,unique player-game,https://www.nba.com/game/0022500293/
+player identity,Anthony Edwards 0022500064 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500064/
+player identity,Anthony Edwards 0022500064 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500064/
+player identity,Anthony Edwards 0022500064 unique,PASS,unique player-game,https://www.nba.com/game/0022500064/
+player identity,Anthony Edwards 0022500292 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500292/
+player identity,Anthony Edwards 0022500292 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500292/
+player identity,Anthony Edwards 0022500292 unique,PASS,unique player-game,https://www.nba.com/game/0022500292/
+player identity,Anthony Edwards 0022500053 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500053/
+player identity,Anthony Edwards 0022500053 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500053/
+player identity,Anthony Edwards 0022500053 unique,PASS,unique player-game,https://www.nba.com/game/0022500053/
+player identity,Anthony Edwards 0022500259 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500259/
+player identity,Anthony Edwards 0022500259 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500259/
+player identity,Anthony Edwards 0022500259 unique,PASS,unique player-game,https://www.nba.com/game/0022500259/
+player identity,Anthony Edwards 0022500246 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500246/
+player identity,Anthony Edwards 0022500246 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500246/
+player identity,Anthony Edwards 0022500246 unique,PASS,unique player-game,https://www.nba.com/game/0022500246/
+player identity,Anthony Edwards 0022500232 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500232/
+player identity,Anthony Edwards 0022500232 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500232/
+player identity,Anthony Edwards 0022500232 unique,PASS,unique player-game,https://www.nba.com/game/0022500232/
+player identity,Anthony Edwards 0022500044 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500044/
+player identity,Anthony Edwards 0022500044 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500044/
+player identity,Anthony Edwards 0022500044 unique,PASS,unique player-game,https://www.nba.com/game/0022500044/
+player identity,Anthony Edwards 0022500205 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500205/
+player identity,Anthony Edwards 0022500205 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500205/
+player identity,Anthony Edwards 0022500205 unique,PASS,unique player-game,https://www.nba.com/game/0022500205/
+player identity,Anthony Edwards 0022500197 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500197/
+player identity,Anthony Edwards 0022500197 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500197/
+player identity,Anthony Edwards 0022500197 unique,PASS,unique player-game,https://www.nba.com/game/0022500197/
+player identity,Anthony Edwards 0022500036 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500036/
+player identity,Anthony Edwards 0022500036 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500036/
+player identity,Anthony Edwards 0022500036 unique,PASS,unique player-game,https://www.nba.com/game/0022500036/
+player identity,Anthony Edwards 0022500175 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500175/
+player identity,Anthony Edwards 0022500175 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500175/
+player identity,Anthony Edwards 0022500175 unique,PASS,unique player-game,https://www.nba.com/game/0022500175/
+player identity,Anthony Edwards 0022500110 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500110/
+player identity,Anthony Edwards 0022500110 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500110/
+player identity,Anthony Edwards 0022500110 unique,PASS,unique player-game,https://www.nba.com/game/0022500110/
+player identity,Anthony Edwards 0022500019 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500019/
+player identity,Anthony Edwards 0022500019 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500019/
+player identity,Anthony Edwards 0022500019 unique,PASS,unique player-game,https://www.nba.com/game/0022500019/
+player identity,Anthony Edwards 0022500089 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500089/
+player identity,Anthony Edwards 0022500089 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500089/
+player identity,Anthony Edwards 0022500089 unique,PASS,unique player-game,https://www.nba.com/game/0022500089/
+player identity,Luka Doncic 0022501116 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022501116/
+player identity,Luka Doncic 0022501116 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022501116/
+player identity,Luka Doncic 0022501116 unique,PASS,unique player-game,https://www.nba.com/game/0022501116/
+player identity,Luka Doncic 0022501103 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022501103/
+player identity,Luka Doncic 0022501103 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022501103/
+player identity,Luka Doncic 0022501103 unique,PASS,unique player-game,https://www.nba.com/game/0022501103/
+player identity,Luka Doncic 0022501075 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022501075/
+player identity,Luka Doncic 0022501075 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022501075/
+player identity,Luka Doncic 0022501075 unique,PASS,unique player-game,https://www.nba.com/game/0022501075/
+player identity,Luka Doncic 0022501052 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022501052/
+player identity,Luka Doncic 0022501052 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022501052/
+player identity,Luka Doncic 0022501052 unique,PASS,unique player-game,https://www.nba.com/game/0022501052/
+player identity,Luka Doncic 0022501038 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022501038/
+player identity,Luka Doncic 0022501038 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022501038/
+player identity,Luka Doncic 0022501038 unique,PASS,unique player-game,https://www.nba.com/game/0022501038/
+player identity,Luka Doncic 0022501024 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022501024/
+player identity,Luka Doncic 0022501024 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022501024/
+player identity,Luka Doncic 0022501024 unique,PASS,unique player-game,https://www.nba.com/game/0022501024/
+player identity,Luka Doncic 0022501010 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022501010/
+player identity,Luka Doncic 0022501010 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022501010/
+player identity,Luka Doncic 0022501010 unique,PASS,unique player-game,https://www.nba.com/game/0022501010/
+player identity,Luka Doncic 0022501007 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022501007/
+player identity,Luka Doncic 0022501007 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022501007/
+player identity,Luka Doncic 0022501007 unique,PASS,unique player-game,https://www.nba.com/game/0022501007/
+player identity,Luka Doncic 0022500989 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500989/
+player identity,Luka Doncic 0022500989 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500989/
+player identity,Luka Doncic 0022500989 unique,PASS,unique player-game,https://www.nba.com/game/0022500989/
+player identity,Luka Doncic 0022500974 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500974/
+player identity,Luka Doncic 0022500974 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500974/
+player identity,Luka Doncic 0022500974 unique,PASS,unique player-game,https://www.nba.com/game/0022500974/
+player identity,Luka Doncic 0022500960 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500960/
+player identity,Luka Doncic 0022500960 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500960/
+player identity,Luka Doncic 0022500960 unique,PASS,unique player-game,https://www.nba.com/game/0022500960/
+player identity,Luka Doncic 0022500946 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500946/
+player identity,Luka Doncic 0022500946 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500946/
+player identity,Luka Doncic 0022500946 unique,PASS,unique player-game,https://www.nba.com/game/0022500946/
+player identity,Luka Doncic 0022500922 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500922/
+player identity,Luka Doncic 0022500922 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500922/
+player identity,Luka Doncic 0022500922 unique,PASS,unique player-game,https://www.nba.com/game/0022500922/
+player identity,Luka Doncic 0022500914 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500914/
+player identity,Luka Doncic 0022500914 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500914/
+player identity,Luka Doncic 0022500914 unique,PASS,unique player-game,https://www.nba.com/game/0022500914/
+player identity,Luka Doncic 0022500906 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500906/
+player identity,Luka Doncic 0022500906 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500906/
+player identity,Luka Doncic 0022500906 unique,PASS,unique player-game,https://www.nba.com/game/0022500906/
+player identity,Luka Doncic 0022500891 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500891/
+player identity,Luka Doncic 0022500891 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500891/
+player identity,Luka Doncic 0022500891 unique,PASS,unique player-game,https://www.nba.com/game/0022500891/
+player identity,Luka Doncic 0022500878 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500878/
+player identity,Luka Doncic 0022500878 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500878/
+player identity,Luka Doncic 0022500878 unique,PASS,unique player-game,https://www.nba.com/game/0022500878/
+player identity,Luka Doncic 0022500866 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500866/
+player identity,Luka Doncic 0022500866 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500866/
+player identity,Luka Doncic 0022500866 unique,PASS,unique player-game,https://www.nba.com/game/0022500866/
+player identity,Luka Doncic 0022500855 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500855/
+player identity,Luka Doncic 0022500855 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500855/
+player identity,Luka Doncic 0022500855 unique,PASS,unique player-game,https://www.nba.com/game/0022500855/
+player identity,Luka Doncic 0022500840 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500840/
+player identity,Luka Doncic 0022500840 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500840/
+player identity,Luka Doncic 0022500840 unique,PASS,unique player-game,https://www.nba.com/game/0022500840/
+player identity,Luka Doncic 0022500823 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500823/
+player identity,Luka Doncic 0022500823 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500823/
+player identity,Luka Doncic 0022500823 unique,PASS,unique player-game,https://www.nba.com/game/0022500823/
+player identity,Luka Doncic 0022500809 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500809/
+player identity,Luka Doncic 0022500809 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500809/
+player identity,Luka Doncic 0022500809 unique,PASS,unique player-game,https://www.nba.com/game/0022500809/
+player identity,Luka Doncic 0022500740 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500740/
+player identity,Luka Doncic 0022500740 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500740/
+player identity,Luka Doncic 0022500740 unique,PASS,unique player-game,https://www.nba.com/game/0022500740/
+player identity,Luka Doncic 0022500719 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500719/
+player identity,Luka Doncic 0022500719 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500719/
+player identity,Luka Doncic 0022500719 unique,PASS,unique player-game,https://www.nba.com/game/0022500719/
+player identity,Luka Doncic 0022500708 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500708/
+player identity,Luka Doncic 0022500708 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500708/
+player identity,Luka Doncic 0022500708 unique,PASS,unique player-game,https://www.nba.com/game/0022500708/
+player identity,Luka Doncic 0022500688 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500688/
+player identity,Luka Doncic 0022500688 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500688/
+player identity,Luka Doncic 0022500688 unique,PASS,unique player-game,https://www.nba.com/game/0022500688/
+player identity,Luka Doncic 0022500671 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500671/
+player identity,Luka Doncic 0022500671 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500671/
+player identity,Luka Doncic 0022500671 unique,PASS,unique player-game,https://www.nba.com/game/0022500671/
+player identity,Luka Doncic 0022500661 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500661/
+player identity,Luka Doncic 0022500661 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500661/
+player identity,Luka Doncic 0022500661 unique,PASS,unique player-game,https://www.nba.com/game/0022500661/
+player identity,Luka Doncic 0022500648 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500648/
+player identity,Luka Doncic 0022500648 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500648/
+player identity,Luka Doncic 0022500648 unique,PASS,unique player-game,https://www.nba.com/game/0022500648/
+player identity,Luka Doncic 0022500633 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500633/
+player identity,Luka Doncic 0022500633 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500633/
+player identity,Luka Doncic 0022500633 unique,PASS,unique player-game,https://www.nba.com/game/0022500633/
+player identity,Luka Doncic 0022500617 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500617/
+player identity,Luka Doncic 0022500617 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500617/
+player identity,Luka Doncic 0022500617 unique,PASS,unique player-game,https://www.nba.com/game/0022500617/
+player identity,Luka Doncic 0022500607 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500607/
+player identity,Luka Doncic 0022500607 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500607/
+player identity,Luka Doncic 0022500607 unique,PASS,unique player-game,https://www.nba.com/game/0022500607/
+player identity,Luka Doncic 0022500586 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500586/
+player identity,Luka Doncic 0022500586 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500586/
+player identity,Luka Doncic 0022500586 unique,PASS,unique player-game,https://www.nba.com/game/0022500586/
+player identity,Luka Doncic 0022500569 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500569/
+player identity,Luka Doncic 0022500569 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500569/
+player identity,Luka Doncic 0022500569 unique,PASS,unique player-game,https://www.nba.com/game/0022500569/
+player identity,Luka Doncic 0022500562 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500562/
+player identity,Luka Doncic 0022500562 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500562/
+player identity,Luka Doncic 0022500562 unique,PASS,unique player-game,https://www.nba.com/game/0022500562/
+player identity,Luka Doncic 0022500541 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500541/
+player identity,Luka Doncic 0022500541 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500541/
+player identity,Luka Doncic 0022500541 unique,PASS,unique player-game,https://www.nba.com/game/0022500541/
+player identity,Luka Doncic 0022500523 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500523/
+player identity,Luka Doncic 0022500523 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500523/
+player identity,Luka Doncic 0022500523 unique,PASS,unique player-game,https://www.nba.com/game/0022500523/
+player identity,Luka Doncic 0022500514 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500514/
+player identity,Luka Doncic 0022500514 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500514/
+player identity,Luka Doncic 0022500514 unique,PASS,unique player-game,https://www.nba.com/game/0022500514/
+player identity,Luka Doncic 0022500501 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500501/
+player identity,Luka Doncic 0022500501 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500501/
+player identity,Luka Doncic 0022500501 unique,PASS,unique player-game,https://www.nba.com/game/0022500501/
+player identity,Luka Doncic 0022500485 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500485/
+player identity,Luka Doncic 0022500485 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500485/
+player identity,Luka Doncic 0022500485 unique,PASS,unique player-game,https://www.nba.com/game/0022500485/
+player identity,Luka Doncic 0022500460 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500460/
+player identity,Luka Doncic 0022500460 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500460/
+player identity,Luka Doncic 0022500460 unique,PASS,unique player-game,https://www.nba.com/game/0022500460/
+player identity,Luka Doncic 0022500446 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500446/
+player identity,Luka Doncic 0022500446 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500446/
+player identity,Luka Doncic 0022500446 unique,PASS,unique player-game,https://www.nba.com/game/0022500446/
+player identity,Luka Doncic 0022500012 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500012/
+player identity,Luka Doncic 0022500012 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500012/
+player identity,Luka Doncic 0022500012 unique,PASS,unique player-game,https://www.nba.com/game/0022500012/
+player identity,Luka Doncic 0022500395 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500395/
+player identity,Luka Doncic 0022500395 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500395/
+player identity,Luka Doncic 0022500395 unique,PASS,unique player-game,https://www.nba.com/game/0022500395/
+player identity,Luka Doncic 0022500379 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500379/
+player identity,Luka Doncic 0022500379 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500379/
+player identity,Luka Doncic 0022500379 unique,PASS,unique player-game,https://www.nba.com/game/0022500379/
+player identity,Luka Doncic 0022501228 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022501228/
+player identity,Luka Doncic 0022501228 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022501228/
+player identity,Luka Doncic 0022501228 unique,PASS,unique player-game,https://www.nba.com/game/0022501228/
+player identity,Luka Doncic 0022501204 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022501204/
+player identity,Luka Doncic 0022501204 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022501204/
+player identity,Luka Doncic 0022501204 unique,PASS,unique player-game,https://www.nba.com/game/0022501204/
+player identity,Luka Doncic 0022500362 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500362/
+player identity,Luka Doncic 0022500362 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500362/
+player identity,Luka Doncic 0022500362 unique,PASS,unique player-game,https://www.nba.com/game/0022500362/
+player identity,Luka Doncic 0022500317 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500317/
+player identity,Luka Doncic 0022500317 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500317/
+player identity,Luka Doncic 0022500317 unique,PASS,unique player-game,https://www.nba.com/game/0022500317/
+player identity,Luka Doncic 0022500308 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500308/
+player identity,Luka Doncic 0022500308 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500308/
+player identity,Luka Doncic 0022500308 unique,PASS,unique player-game,https://www.nba.com/game/0022500308/
+player identity,Luka Doncic 0022500078 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500078/
+player identity,Luka Doncic 0022500078 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500078/
+player identity,Luka Doncic 0022500078 unique,PASS,unique player-game,https://www.nba.com/game/0022500078/
+player identity,Luka Doncic 0022500059 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500059/
+player identity,Luka Doncic 0022500059 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500059/
+player identity,Luka Doncic 0022500059 unique,PASS,unique player-game,https://www.nba.com/game/0022500059/
+player identity,Luka Doncic 0022500282 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500282/
+player identity,Luka Doncic 0022500282 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500282/
+player identity,Luka Doncic 0022500282 unique,PASS,unique player-game,https://www.nba.com/game/0022500282/
+player identity,Luka Doncic 0022500253 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500253/
+player identity,Luka Doncic 0022500253 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500253/
+player identity,Luka Doncic 0022500253 unique,PASS,unique player-game,https://www.nba.com/game/0022500253/
+player identity,Luka Doncic 0022500231 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500231/
+player identity,Luka Doncic 0022500231 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500231/
+player identity,Luka Doncic 0022500231 unique,PASS,unique player-game,https://www.nba.com/game/0022500231/
+player identity,Luka Doncic 0022500045 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500045/
+player identity,Luka Doncic 0022500045 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500045/
+player identity,Luka Doncic 0022500045 unique,PASS,unique player-game,https://www.nba.com/game/0022500045/
+player identity,Luka Doncic 0022500222 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500222/
+player identity,Luka Doncic 0022500222 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500222/
+player identity,Luka Doncic 0022500222 unique,PASS,unique player-game,https://www.nba.com/game/0022500222/
+player identity,Luka Doncic 0022500198 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500198/
+player identity,Luka Doncic 0022500198 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500198/
+player identity,Luka Doncic 0022500198 unique,PASS,unique player-game,https://www.nba.com/game/0022500198/
+player identity,Luka Doncic 0022500185 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500185/
+player identity,Luka Doncic 0022500185 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500185/
+player identity,Luka Doncic 0022500185 unique,PASS,unique player-game,https://www.nba.com/game/0022500185/
+player identity,Luka Doncic 0022500179 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500179/
+player identity,Luka Doncic 0022500179 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500179/
+player identity,Luka Doncic 0022500179 unique,PASS,unique player-game,https://www.nba.com/game/0022500179/
+player identity,Luka Doncic 0022500155 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500155/
+player identity,Luka Doncic 0022500155 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500155/
+player identity,Luka Doncic 0022500155 unique,PASS,unique player-game,https://www.nba.com/game/0022500155/
+player identity,Luka Doncic 0022500024 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500024/
+player identity,Luka Doncic 0022500024 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500024/
+player identity,Luka Doncic 0022500024 unique,PASS,unique player-game,https://www.nba.com/game/0022500024/
+player identity,Luka Doncic 0022500019 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500019/
+player identity,Luka Doncic 0022500019 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500019/
+player identity,Luka Doncic 0022500019 unique,PASS,unique player-game,https://www.nba.com/game/0022500019/
+player identity,Luka Doncic 0022500002 points,PASS,PTS=2×FGM+3PM+FTM,https://www.nba.com/game/0022500002/
+player identity,Luka Doncic 0022500002 rebounds,PASS,REB=OREB+DREB,https://www.nba.com/game/0022500002/
+player identity,Luka Doncic 0022500002 unique,PASS,unique player-game,https://www.nba.com/game/0022500002/
+player aggregate,expected frozen coverage,PASS,"{'Anthony Edwards': 61, 'Luka Doncic': 64}",https://www.nba.com/stats/player/1629029/boxscores?Season=2025-26
+schedule,16 unique games,PASS,14 on 2026-11-04; 2 on 2026-11-05,https://www.nba.com/schedule?month=11&year=2026
+schedule,known team codes,PASS,all 30 teams appear,https://www.nba.com/schedule?month=11&year=2026

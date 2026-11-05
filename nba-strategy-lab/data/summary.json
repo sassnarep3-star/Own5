@@ -1,0 +1,17 @@
+{
+  "as_of": "2026-11-05",
+  "audit_checks": 547,
+  "audit_failures": 0,
+  "candidates": 9,
+  "correlation_rows": 22,
+  "flags": 9,
+  "holdout_games": 22,
+  "lines": 16,
+  "margin_diagnostic_rmse": 14.3454,
+  "min_holdout_required": 200,
+  "official_source_rows": 275,
+  "player_games": 125,
+  "prior_games": 20.0,
+  "qualified": 0,
+  "rewards": 0
+}

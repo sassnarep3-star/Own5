@@ -1,0 +1,73 @@
+strategy_id,gate,status,evidence,source_url
+S01,G01 official input provenance,PASS,Policy satisfied,https://www.nba.com/game/0022600147
+S01,G02 frozen rule and chronological holdout,PASS,Policy satisfied,https://www.nba.com/game/0022600147
+S01,G03 at least 200 holdout events,FAIL,Computed from frozen holdout,https://www.nba.com/game/0022600147
+S01,G04 Holm-adjusted p < 0.05,FAIL,Computed from frozen holdout,https://www.nba.com/game/0022600147
+S01,G05 CI lower bound beats null,FAIL,Computed from frozen holdout,https://www.nba.com/game/0022600147
+S01,G06 timestamped market and settlement,FAIL,Required evidence absent; fail closed,https://www.nba.com/game/0022600147
+S01,G07 independent prospective replication,FAIL,Required evidence absent; fail closed,https://www.nba.com/game/0022600147
+S01,G08 combo dependence robustness,PASS,Policy satisfied,https://www.nba.com/game/0022600147
+S02,G01 official input provenance,PASS,Policy satisfied,https://www.nba.com/game/0022600147
+S02,G02 frozen rule and chronological holdout,PASS,Policy satisfied,https://www.nba.com/game/0022600147
+S02,G03 at least 200 holdout events,FAIL,Computed from frozen holdout,https://www.nba.com/game/0022600147
+S02,G04 Holm-adjusted p < 0.05,FAIL,Computed from frozen holdout,https://www.nba.com/game/0022600147
+S02,G05 CI lower bound beats null,FAIL,Computed from frozen holdout,https://www.nba.com/game/0022600147
+S02,G06 timestamped market and settlement,FAIL,Required evidence absent; fail closed,https://www.nba.com/game/0022600147
+S02,G07 independent prospective replication,FAIL,Required evidence absent; fail closed,https://www.nba.com/game/0022600147
+S02,G08 combo dependence robustness,PASS,Policy satisfied,https://www.nba.com/game/0022600147
+S03,G01 official input provenance,PASS,Policy satisfied,https://www.nba.com/game/0022600147
+S03,G02 frozen rule and chronological holdout,PASS,Policy satisfied,https://www.nba.com/game/0022600147
+S03,G03 at least 200 holdout events,FAIL,Computed from frozen holdout,https://www.nba.com/game/0022600147
+S03,G04 Holm-adjusted p < 0.05,FAIL,Computed from frozen holdout,https://www.nba.com/game/0022600147
+S03,G05 CI lower bound beats null,FAIL,Computed from frozen holdout,https://www.nba.com/game/0022600147
+S03,G06 timestamped market and settlement,FAIL,Required evidence absent; fail closed,https://www.nba.com/game/0022600147
+S03,G07 independent prospective replication,FAIL,Required evidence absent; fail closed,https://www.nba.com/game/0022600147
+S03,G08 combo dependence robustness,PASS,Policy satisfied,https://www.nba.com/game/0022600147
+S04,G01 official input provenance,PASS,Policy satisfied,https://www.nba.com/game/0022600147
+S04,G02 frozen rule and chronological holdout,PASS,Policy satisfied,https://www.nba.com/game/0022600147
+S04,G03 at least 200 holdout events,FAIL,Computed from frozen holdout,https://www.nba.com/game/0022600147
+S04,G04 Holm-adjusted p < 0.05,FAIL,Computed from frozen holdout,https://www.nba.com/game/0022600147
+S04,G05 CI lower bound beats null,FAIL,Computed from frozen holdout,https://www.nba.com/game/0022600147
+S04,G06 timestamped market and settlement,FAIL,Required evidence absent; fail closed,https://www.nba.com/game/0022600147
+S04,G07 independent prospective replication,FAIL,Required evidence absent; fail closed,https://www.nba.com/game/0022600147
+S04,G08 combo dependence robustness,FAIL,Required evidence absent; fail closed,https://www.nba.com/game/0022600147
+S05,G01 official input provenance,PASS,Policy satisfied,https://www.nba.com/game/0022500688/
+S05,G02 frozen rule and chronological holdout,PASS,Policy satisfied,https://www.nba.com/game/0022500688/
+S05,G03 at least 200 holdout events,FAIL,Computed from frozen holdout,https://www.nba.com/game/0022500688/
+S05,G04 Holm-adjusted p < 0.05,FAIL,Computed from frozen holdout,https://www.nba.com/game/0022500688/
+S05,G05 CI lower bound beats null,FAIL,Computed from frozen holdout,https://www.nba.com/game/0022500688/
+S05,G06 timestamped market and settlement,FAIL,Required evidence absent; fail closed,https://www.nba.com/game/0022500688/
+S05,G07 independent prospective replication,FAIL,Required evidence absent; fail closed,https://www.nba.com/game/0022500688/
+S05,G08 combo dependence robustness,PASS,Policy satisfied,https://www.nba.com/game/0022500688/
+S06,G01 official input provenance,PASS,Policy satisfied,https://www.nba.com/game/0022500644/
+S06,G02 frozen rule and chronological holdout,PASS,Policy satisfied,https://www.nba.com/game/0022500644/
+S06,G03 at least 200 holdout events,FAIL,Computed from frozen holdout,https://www.nba.com/game/0022500644/
+S06,G04 Holm-adjusted p < 0.05,FAIL,Computed from frozen holdout,https://www.nba.com/game/0022500644/
+S06,G05 CI lower bound beats null,FAIL,Computed from frozen holdout,https://www.nba.com/game/0022500644/
+S06,G06 timestamped market and settlement,FAIL,Required evidence absent; fail closed,https://www.nba.com/game/0022500644/
+S06,G07 independent prospective replication,FAIL,Required evidence absent; fail closed,https://www.nba.com/game/0022500644/
+S06,G08 combo dependence robustness,PASS,Policy satisfied,https://www.nba.com/game/0022500644/
+S07,G01 official input provenance,PASS,Policy satisfied,https://www.nba.com/game/0022500644/
+S07,G02 frozen rule and chronological holdout,PASS,Policy satisfied,https://www.nba.com/game/0022500644/
+S07,G03 at least 200 holdout events,FAIL,Computed from frozen holdout,https://www.nba.com/game/0022500644/
+S07,G04 Holm-adjusted p < 0.05,FAIL,Computed from frozen holdout,https://www.nba.com/game/0022500644/
+S07,G05 CI lower bound beats null,FAIL,Computed from frozen holdout,https://www.nba.com/game/0022500644/
+S07,G06 timestamped market and settlement,FAIL,Required evidence absent; fail closed,https://www.nba.com/game/0022500644/
+S07,G07 independent prospective replication,FAIL,Required evidence absent; fail closed,https://www.nba.com/game/0022500644/
+S07,G08 combo dependence robustness,FAIL,Required evidence absent; fail closed,https://www.nba.com/game/0022500644/
+S08,G01 official input provenance,PASS,Policy satisfied,https://www.nba.com/game/0022500644/
+S08,G02 frozen rule and chronological holdout,PASS,Policy satisfied,https://www.nba.com/game/0022500644/
+S08,G03 at least 200 holdout events,FAIL,Computed from frozen holdout,https://www.nba.com/game/0022500644/
+S08,G04 Holm-adjusted p < 0.05,FAIL,Computed from frozen holdout,https://www.nba.com/game/0022500644/
+S08,G05 CI lower bound beats null,FAIL,Computed from frozen holdout,https://www.nba.com/game/0022500644/
+S08,G06 timestamped market and settlement,FAIL,Required evidence absent; fail closed,https://www.nba.com/game/0022500644/
+S08,G07 independent prospective replication,FAIL,Required evidence absent; fail closed,https://www.nba.com/game/0022500644/
+S08,G08 combo dependence robustness,FAIL,Required evidence absent; fail closed,https://www.nba.com/game/0022500644/
+S09,G01 official input provenance,PASS,Policy satisfied,https://www.nba.com/game/0022500644/
+S09,G02 frozen rule and chronological holdout,PASS,Policy satisfied,https://www.nba.com/game/0022500644/
+S09,G03 at least 200 holdout events,FAIL,Computed from frozen holdout,https://www.nba.com/game/0022500644/
+S09,G04 Holm-adjusted p < 0.05,FAIL,Computed from frozen holdout,https://www.nba.com/game/0022500644/
+S09,G05 CI lower bound beats null,FAIL,Computed from frozen holdout,https://www.nba.com/game/0022500644/
+S09,G06 timestamped market and settlement,FAIL,Required evidence absent; fail closed,https://www.nba.com/game/0022500644/
+S09,G07 independent prospective replication,FAIL,Required evidence absent; fail closed,https://www.nba.com/game/0022500644/
+S09,G08 combo dependence robustness,FAIL,Required evidence absent; fail closed,https://www.nba.com/game/0022500644/
