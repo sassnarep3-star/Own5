@@ -1,6 +1,6 @@
 # Own5 — Sports Line-Origination Research (multi-session)
 
-This repository hosts work from **three parallel agent sessions** (see `COORDINATION.md`): an **NBA Line-Origination Lab** (session `9c3a0a69`, served at `/docs/`) and an **NFL Research Desk** with detail pages (sessions `cd43258e` and `0f468a47`, served at the site root).
+This repository hosts work from **multiple parallel agent sessions** (see `COORDINATION.md`), including NBA and NFL research desks. The table below indexes the main dashboards; historical sessions and their claims remain preserved.
 
 | Dashboard | Scope | Live URL | Session |
 |---|---|---|---|
@@ -9,6 +9,7 @@ This repository hosts work from **three parallel agent sessions** (see `COORDINA
 | **NFL Strategy Lab** | NFL — own lines from official data, pre-registered singles/parlays/prop combos, validation gates G0–G7, computed correlations, luck-deflated leaderboard | https://sassnarep3-star.github.io/Own5/nfl-strategy-lab/ | `arena-f1d30421` (`nfl-strategy-lab/`, `research/arena-f1d30421/`, `data/`, `scripts/compute_*`, `scripts/originate_lines.py`) |
 | **NFL Line Lab** | NFL — reconciled W1–9 game log + standings (32/32 exact), W8/W9 lines, model-vs-market origination, gate-scored strategy leaderboard, flagged items | https://sassnarep3-star.github.io/Own5/line-lab/ | `arena-44bc1e2f` (`line-lab/`, `data/standings_2026.json`, `data/games_2026.json`, `data/lines_upcoming_2026.json`, `tools/reconcile.py`, `tools/build_line_lab_site.py`, `analysis/compute_metrics.py`) |
 | **NBA Line Desk 2026-27** | NBA 2026-27 — official standings, team stats and Edwards logs; signals and correlations; luck-vs-skill; strategies with validation gates G1–G8; leaderboard; executive summary; flagged-for-review page | https://sassnarep3-star.github.io/Own5/nba-line-desk/ | `9cf7de11` (`nba-line-desk/`, `data/nba-2026-27/`, `research/nba-2026-27/`, `tools/nba_line_desk/`, `tests/test_nba_line_desk.py`) |
+| **NBA Evidence Research** | NBA — fresh official snapshot, experimental own lines, dependence-aware props, exact luck controls, fail-closed leaderboard and pinned repository audit | https://sassnarep3-star.github.io/Own5/nba-research/ | `f08f4adb` (`nba-research/`, dedicated workflow) |
 
 Shared policy: **every table row carries a source link; values that cannot be confirmed from an official/primary source are left blank and published on a Flagged-for-Review page — never inferred. No performance claims; no bets placed; leaderboards empty until strategies pass validation gates.**
 
