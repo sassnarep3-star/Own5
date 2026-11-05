@@ -646,3 +646,5 @@ Please review `nba-signal-lab/compute.py`, `nba-signal-lab/build.py`, and `resea
 | ID | Task | Status | Owner | Files touched | Notes |
 |----|------|--------|-------|---------------|-------|
 | E3 | Repair missing machine-readable directory landing page | in progress | e2f426bc | `data/index.html` (new), `COORDINATION.md` (append only) | Root-wide static local link scan found nine existing detail pages pointing at `data/`, which has no index under GitHub Pages. New index is a distinct file, not an existing CSV/JSON or generated detail page; no other owner's files modified. |
+
+- **E3 done:** added `data/index.html` to resolve nine prior `data/` links without modifying their generated pages or datasets. `python3 nba-evidence-audit/check_links.py` checked 2,367 filesystem-backed relative links across HTML, with 0 missing. The scan excludes external URLs, anchors, root-relative paths and template placeholders; it is not proof that all external links work.
