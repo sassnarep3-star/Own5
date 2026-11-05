@@ -42,9 +42,11 @@ review page.
 - **The 2026-27 official home/road split does not measure home-court advantage**: 62–59 at home,
   two-sided binomial p = 0.856 over 121 team-games. HFA = 2.5 points is therefore published as an
   assumption (F02), not as a measurement, with 0.0 and 3.0 runs shown for every game.
-- **Own lines are fragile to the model prior.** Across the seven variants a single game's spread spans
-  up to 7.9 points (BOS @ CHA: −8.6 to −0.3). That range is published per game rather than hidden
-  behind one number.
+- **Own lines are fragile to the model prior, and in four of eleven games the favourite flips.** OKC @ MEM
+  spans 12.0 points of spread across the seven variants (−4.8 to +7.2) because the 2025-26 prior rates
+  Oklahoma City far above its 2026-27 form; ORL @ PHX, PHI @ CLE and POR @ LAL flip too. The whole range
+  is published per game rather than hidden behind one number — a 12-point model swing is a warning, not
+  an opinion.
 - **A 55% edge needs ≈2,248 graded bets** to be certified at α = 0.05 with 80% power against a −110
   break-even of 0.52381; a 60% edge needs ≈269. A bettor with exactly the break-even rate goes 55–45
   over 100 bets with probability 0.618, and reaches 55% over 200 bets 25.1% of the time. A true 55%

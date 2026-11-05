@@ -231,6 +231,8 @@ def page(slug: str, title: str, lede: str, body: str) -> str:
 def p_index() -> str:
     m = OUT["meta"]
     lines = OUT["lines"]
+    flips = [l for l in lines if l["spread_min"] < 0 < l["spread_max"]]
+    widest = max(lines, key=lambda l: l["spread_max"] - l["spread_min"])
     checks_ok = sum(1 for c in OUT["checks"] if c["passed"])
     stats = [
         ("Own game lines", m["games_originated"], "2 games 11-05 · 9 games 11-06"),
@@ -265,12 +267,9 @@ def p_index() -> str:
         f'<strong>The 2026-11-05 home/road split does not measure home advantage</strong> '
         f'({OUT["hfa_test"]["home_wins"]}–{OUT["hfa_test"]["home_losses"]} home, two-sided p = {OUT["hfa_test"]["p_vs_0_5_two_sided"]:.3f}), '
         f'so HFA = 2.5 pts stays a flagged model assumption (F02) with 0.0 and 3.0 runs shown per game.',
-        f'<strong>Own lines are fragile to the model prior.</strong> The widest single-game split is '
-        f'{max(abs(l["spread_max"] - l["spread_min"]) for l in lines):.1f} points of spread '
-        f'({max(lines, key=lambda l: abs(l["spread_max"] - l["spread_min"]))["away_abbr"]} @ '
-        f'{max(lines, key=lambda l: abs(l["spread_max"] - l["spread_min"]))["home_abbr"]}: '
-        f'{max(lines, key=lambda l: abs(l["spread_max"] - l["spread_min"]))["spread_min"]:+.1f} to '
-        f'{max(lines, key=lambda l: abs(l["spread_max"] - l["spread_min"]))["spread_max"]:+.1f}) — published per game, not hidden.',
+        f'<strong>Own lines are fragile to the model prior.</strong> {len(flips)} of {len(lines)} games change favourite across the seven '
+        f'variants, and the widest single-game split is {widest["spread_max"]-widest["spread_min"]:.1f} points of spread '
+        f'({widest["away_abbr"]} @ {widest["home_abbr"]}: {widest["spread_min"]:+.1f} to {widest["spread_max"]:+.1f}) — published per game, not hidden.',
     ]
     navcards = "".join(
         f'<a class="card" href="{k}.html"><div class="t">{e(t)}</div><div class="d">{e(d)}</div></a>'
@@ -358,6 +357,10 @@ def p_lines() -> str:
 {''.join(details)}
 <h2>Model inputs (official data → estimates)</h2>
 {ratings}
+<div class="warn"><strong>Fragility.</strong> {len([l for l in lines if l["spread_min"] < 0 < l["spread_max"]])} of {len(lines)} games
+change favourite when the prior weight, the shrinkage constant or the home-court constant is changed. The largest swing is
+{max(l["spread_max"]-l["spread_min"] for l in lines):.1f} points ({max(lines, key=lambda l: l["spread_max"]-l["spread_min"])["away_abbr"]} @ {max(lines, key=lambda l: l["spread_max"]-l["spread_min"])["home_abbr"]}).
+A line whose sign depends on the prior is not a tradable opinion; it is a modelling warning, and it is shown rather than smoothed away.</div>
 <div class="warn"><strong>F02 · home-court advantage.</strong> HFA = {p['HFA']} points is an assumption, not a measurement from game-level data.
 The 2026-27 official home/road split is {OUT['hfa_test']['home_wins']}–{OUT['hfa_test']['home_losses']} for home teams
 (two-sided binomial p = {OUT['hfa_test']['p_vs_0_5_two_sided']:.3f}), which does not pin its size. The “current-only, HFA 0.0”
