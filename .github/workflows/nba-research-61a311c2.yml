@@ -1,0 +1,34 @@
+name: NBA Research 61a311c2
+
+on:
+  push:
+    paths:
+      - 'nba-research-61a311c2/**'
+      - 'research/nba-research-61a311c2/**'
+      - '.github/workflows/nba-research-61a311c2.yml'
+  pull_request:
+    paths:
+      - 'nba-research-61a311c2/**'
+      - 'research/nba-research-61a311c2/**'
+      - '.github/workflows/nba-research-61a311c2.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Build canonical evidence and dashboard
+        run: |
+          python3 nba-research-61a311c2/engine.py
+          python3 nba-research-61a311c2/audit_repo.py
+          python3 nba-research-61a311c2/build.py
+      - name: Run scoped tests
+        run: python3 -m unittest discover -s nba-research-61a311c2 -p 'test_*.py' -v
+      - name: Ensure generated outputs are committed
+        run: |
+          git diff --exit-code -- nba-research-61a311c2

@@ -1,0 +1,9 @@
+{
+  "baseline_commit": "54e8dee596d49731c3da535a1f77b01cd0c295d5",
+  "baseline_files": 434,
+  "canonical_rows_audited": 241,
+  "canonical_verified_rows": 237,
+  "canonical_flagged_rows": 4,
+  "inventory_sha256": "88ea95bbb6439fcd670aae29e166740c8865f0a49437d53e1edb66b5d5e4059e",
+  "row_audit_sha256": "15784705d927c959262b4e66f28b8ca2446d61e702804931f750894033a85246"
+}
