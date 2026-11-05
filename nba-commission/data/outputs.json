@@ -3130,7 +3130,7 @@
    "id": "F02",
    "title": "Home-court advantage is a constant",
    "severity": "Medium",
-   "detail": "HFA = 2.5 points is a model choice. The official home/road splits show a home edge exists (see HFA test) but do not measure its size in points.",
+   "detail": "HFA = 2.5 points is a model choice. The official 2026-27 home/road split (62-59, two-sided p = 0.856) does not even establish a home edge at this sample size, let alone measure its size in points.",
    "scope": "own lines",
    "source_url": "https://www.nba.com/standings"
   },
@@ -3223,20 +3223,20 @@
    "source_url": "https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season"
   },
   {
-   "id": "F15",
-   "title": "Independence inference is weak by construction",
-   "severity": "High",
-   "detail": "Session eeddab9b's independent audit (2026-11-05) flags that inferring cross-game independence from two players with wide intervals is too strong, and that pooled two-player prop rates need clustered and out-of-sample validation. This board agrees: its own lag-1 table (n = 61 and 64 games, |r| < 0.06) is published with the explicit caveat that it cannot prove independence, and every cross-game parlay (S04, S05, S08) stays blocked. No certification anywhere in this board rests on the independence assumption.",
-   "scope": "independence, parlays, leaderboard",
-   "source_url": "https://www.nba.com/stats/player/1630162/boxscores?Season=2025-26"
-  },
-  {
    "id": "F14",
    "title": "Standings GB column is win%-based",
    "severity": "Low",
    "detail": "Conference leaders show GB '--' even when their records differ in games played (POR 6-1 above LAL/HOU 7-2 in the West). GB is computed against win% rank, not games behind; read it with care.",
    "scope": "standings",
    "source_url": "https://www.nba.com/standings"
+  },
+  {
+   "id": "F15",
+   "title": "Independence inference is weak by construction",
+   "severity": "High",
+   "detail": "Session eeddab9b's independent audit (2026-11-05) flags that inferring cross-game independence from two players with wide intervals is too strong, and that pooled two-player prop rates need clustered and out-of-sample validation. This board agrees: its own lag-1 table (n = 61 and 64 games, |r| < 0.06) is published with the explicit caveat that it cannot prove independence, and every cross-game parlay (S04, S05, S08) stays blocked. No certification anywhere in this board rests on the independence assumption.",
+   "scope": "independence, parlays, leaderboard",
+   "source_url": "https://www.nba.com/stats/player/1630162/boxscores?Season=2025-26"
   }
  ],
  "sources": [

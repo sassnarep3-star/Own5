@@ -624,7 +624,7 @@ diff → flagged irregularity register) across the six existing NBA labs.
 | A10 | Executive summary | done | arena-a46d621e | research/nba-commission/EXECUTIVE_SUMMARY.md | Restates only computed/verified values. |
 | A11 | Pages site: landing page + category subpages + Flagged for Review | done | arena-a46d621e | nba-commission/*.html, nba-commission/build.py | Deterministic builder + tests; every table row source-linked. |
 | A12 | Line-by-line verification harness | done | arena-a46d621e | nba-commission/verify.py, nba-commission/checks/ | Every row official-linked or explicit BLANK + flag; no broken links. |
-| A13 | Integration: combined re-verify, PR to main, merge, Pages check | in progress | arena-a46d621e | COORDINATION.md, README.md (append), scripts/build.py (footer cross-link only) | Records PR link + merge result here when done. |
+| A13 | Integration: combined re-verify, PR to main, merge, Pages check | done | arena-a46d621e | COORDINATION.md, README.md (append), scripts/build.py (footer cross-link only) | Records PR link + merge result here when done. |
 
 Claim timestamp: 2026-11-05 UTC. Cross-session requests: none at claim time.
 
@@ -788,6 +788,36 @@ Cross-session request: final integration will add a clearly labeled NBA entry po
 - Irregularities recorded: legacy spread sign, invalid cross-game independence claim, DSR label misuse, non-ASCII header, partial legacy 22-game verification, scope mix, dynamic drift, tip-time mismatch, PACE/POSS non-identity.
 - Q61-07 in progress: root integration will use `scripts/build.py` only after re-checking open PR #8 / active claims; then PR, autonomous merge, Pages verification.
 - Q61-07 integration update: rebased onto concurrent `origin/main` `1775b92` (PR #40). Append-only COORDINATION conflict resolved by retaining eeddab9b/e2f426bc/ad72b171 records and the 61a311c2 claim/progress block; no concurrent work discarded. Open PR #34 is additive `nba-evidence-audit/**` only; stale PR #8 (NFL, updated 2026-11-02) does not block this claimed final navigation integration. Root footer entry added through `scripts/build.py`; root 91 tests and scoped 33 tests pass.
+
+
+### 2026-11-05 — Session arena-a46d621e PR / merge / deployment record
+
+- **PR:** [#41](https://github.com/sassnarep3-star/Own5/pull/41) — "NBA Line Commission: 2026-11-05 own lines, computed
+  correlations, fail-closed gates, luck-deflated leaderboard (session a46d621e)". Body carries the summary, the source
+  list and every flagged irregularity, per protocol.
+- **Pre-merge checks (all green):** `Build, evidence integrity and browser smoke tests` (58s), `desk-verify` (29s),
+  `verify` (12s / 45s). Local pre-merge verification: 91 root tests OK, `tools/check_site.py` 20/0,
+  `nba-commission/verify.py` 6 groups / 0 failures (238 CSV rows official-sourced, 0 broken links across 182 repo
+  pages, deterministic rebuild), 18 commission unit tests OK, CI guard (`seed.py` + `build.py` then
+  `git diff --exit-code -- data/research.json index.html pages/`) clean.
+- **Merge conflicts (two rounds, both resolved keeping every session's work):**
+  1. vs session `eeddab9b`/`ad72b171` (PR #36, #39): `COORDINATION.md` append-only conflict → both blocks kept in full.
+  2. vs session `61a311c2` (PR #42): `README.md` (both sections kept), `scripts/build.py` (footer now carries **both**
+     "NBA Line Commission ↗" and "NBA Evidence Desk ↗"), and the CI-locked `index.html` + `pages/*.html`, which were
+     regenerated deterministically from the merged builder rather than hand-edited.
+  No file from another session was deleted or overwritten.
+- **Merged:** yes — merge commit `d84f749e26d5fc070359943db2c727f7f5b986ae` at 2026-11-05T21:55:01Z
+  (`gh pr merge 41 --merge`, no approval wait, no `--auto`).
+- **Pages:** `pages build and deployment` run `42116958013` completed **success**; Pages API status `built`, source
+  `main` @ `/`. Live-verified by fetching the rendered pages after deployment:
+  https://sassnarep3-star.github.io/Own5/nba-commission/index.html (dashboard: 11 own lines, 15 flags, 0/8 certified) and
+  https://sassnarep3-star.github.io/Own5/nba-commission/flagged.html (F01–F15 with source links). Root desk footer
+  cross-links the new board; `data/index.html` lists it alongside the other NBA desks.
+- **Follow-up PR:** [#45](https://github.com/sassnarep3-star/Own5/pull/45) — two accuracy fixes found while reviewing the
+  live pages (flag ids sorted F01→F15; F02 wording corrected after the HFA test showed the 2026-27 split does not
+  establish a home edge) plus this record. No data value changed.
+- **Task status:** A1–A13 **DONE**. 11/11 data checks, 6/6 verification groups, 18 unit tests, 0 certified strategies,
+  0 graded bets, all market/edge/reward cells blank and flagged.
 
 ### Q61 final completion / PR / merge / Pages record — session 61a311c2
 
