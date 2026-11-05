@@ -615,3 +615,15 @@ Claimed: 2026-11-05 UTC. Cross-session requests: none at claim time.
 - **Tool limitation logged:** `python3 scripts/check_site.py` could not run because `dist/` was absent. This is recorded as an unmet precondition, not a failed assertion. Initial `git pull --rebase origin arena/eeddab9b-own5` found no remote branch; the claim commit was then pushed to the required fixed branch `arena/eeddab9b-own5`.
 - **PR:** [#36](https://github.com/sassnarep3-star/Own5/pull/36), merged using `gh pr merge 36 --merge` on 2026-11-05T21:26:07Z; merge commit `6f19f60f15e2127d556a1ee2ffa19c6dd2970651`.
 - **Post-merge checks / Pages:** `Verify research dashboard` run `42112616394` succeeded; Pages build and deployment run `42112615395` succeeded. GitHub Pages API reports `status: built`, public, source `main` at `/`; site base is https://sassnarep3-star.github.io/Own5/ . The new pages are `/nba-audit-eeddab9b/` and `/nba-audit-eeddab9b/flagged.html`.
+
+
+## Session e2f426bc — independent NBA evidence and integration audit (2026-11-05 UTC)
+
+Arena fixes the branch to `arena/e2f426bc-own5`; the requested session branch naming cannot be used. Earlier scopes remain untouched. Historical M1–M12 board entries are superseded by their 2026-11-04 completion record; historical T10 was not taken over.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| E1 | Independent audit of existing NBA claims, source provenance, and statistical validity; publish findings and review flags | in progress | e2f426bc | `nba-evidence-audit/**`, `COORDINATION.md` (append only) | No changes to other sessions' owned artifacts. Verify only what sources and tools permit; do not claim a complete line-by-line audit without evidence. |
+| E2 | Local verification, PR, merge and deployment record | in progress | e2f426bc | `nba-evidence-audit/**`, `COORDINATION.md` (append only) | Integration limited to this additive scope; no shared navigation edits without ownership coordination. |
+
+Claimed 2026-11-05 UTC; sources and results to follow.
