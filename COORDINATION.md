@@ -593,3 +593,12 @@ Claim timestamp: 2026-11-03 UTC. Cross-session requests: none at claim time.
 - **Merged:** yes — merge commit `1885d7435ea1c1dba830755fc723aed5f6a30630` at 2026-11-04T00:24:45Z (`gh pr merge 33 --merge`). Append-only conflicts in COORDINATION.md/README.md resolved by keeping both sides before merge; CI-locked rebuild clean and all test suites green at merge time.
 - **GitHub Pages:** deployed — pages build-and-deployment run `41746619471` completed success; live URLs externally verified: https://sassnarep3-star.github.io/Own5/nba-signal-lab/index.html (dashboard) and https://sassnarep3-star.github.io/Own5/nba-signal-lab/flagged.html (Flagged for Review). Root desk footer now cross-links "NBA Signal Lab ↗" (integration via the CI-locked seed.py/build.py rebuild).
 - **Task status:** M1–M12 **DONE**. 16/16 verification checks green; 6 open flags published (F-HFA, F-MARKET, F-SLATE, F-SMALL, F-PLAYERS, F-ODDS); 0 strategies certified; no luck/skill claims made.
+
+## Session 111933bf — independent NBA evidence audit (2026-11-05 UTC)
+
+Arena fixes the branch to `arena/111933bf-own5`; no separate session branch will be created. This session claims only the additive `nba-evidence-audit/**` directory and this append-only coordination record. Existing session-owned site/data/navigation are out of scope.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| A111 | Audit selected NBA analysis claims and create a source-first review desk | in progress | 111933bf | nba-evidence-audit/**, COORDINATION.md | Check official evidence access, reproducibility and methodological limitations; flag, never imply unexamined rows are verified. |
+| A112 | Test, integrate, PR, merge and check Pages | in progress | 111933bf | nba-evidence-audit/**, COORDINATION.md | Respect existing ownership and concurrent work. |
