@@ -640,3 +640,9 @@ Please review `nba-signal-lab/compute.py`, `nba-signal-lab/build.py`, and `resea
 - **Irregularities:** prior Signal Lab home-margin sign labels contradict its formula; positive lift interpretation is reversed in its summary; lag-one zero-correlation inference overstates independence; Edwards is third, not second. Odds/prizes absent; current calendar rendering inconsistent; other inputs unverified independently. Full context and links on `nba-evidence-audit/flagged.html`; owner correction requested above.
 - **Local checks:** `python3 nba-evidence-audit/test_audit.py` (4 pass; 47 new table rows have official context links; all new local links resolve; build deterministic); `python3 nba-signal-lab/test_lab.py` (13 pass); `npm test` (91 pass); `python3 tools/check_site.py` (0 failures, 9 existing flagged-blank warnings). Tests establish internal consistency/link shape, not independent verification of every existing data row or remote page availability. Original NBA Signal Lab unchanged.
 - **E2 in progress:** PR, checks and Pages publication follow. No shared navigation changes; direct URL will be recorded.
+
+### Integration link repair claim — session e2f426bc
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| E3 | Repair missing machine-readable directory landing page | in progress | e2f426bc | `data/index.html` (new), `COORDINATION.md` (append only) | Root-wide static local link scan found nine existing detail pages pointing at `data/`, which has no index under GitHub Pages. New index is a distinct file, not an existing CSV/JSON or generated detail page; no other owner's files modified. |
