@@ -593,3 +593,23 @@ Claim timestamp: 2026-11-03 UTC. Cross-session requests: none at claim time.
 - **Merged:** yes — merge commit `1885d7435ea1c1dba830755fc723aed5f6a30630` at 2026-11-04T00:24:45Z (`gh pr merge 33 --merge`). Append-only conflicts in COORDINATION.md/README.md resolved by keeping both sides before merge; CI-locked rebuild clean and all test suites green at merge time.
 - **GitHub Pages:** deployed — pages build-and-deployment run `41746619471` completed success; live URLs externally verified: https://sassnarep3-star.github.io/Own5/nba-signal-lab/index.html (dashboard) and https://sassnarep3-star.github.io/Own5/nba-signal-lab/flagged.html (Flagged for Review). Root desk footer now cross-links "NBA Signal Lab ↗" (integration via the CI-locked seed.py/build.py rebuild).
 - **Task status:** M1–M12 **DONE**. 16/16 verification checks green; 6 open flags published (F-HFA, F-MARKET, F-SLATE, F-SMALL, F-PLAYERS, F-ODDS); 0 strategies certified; no luck/skill claims made.
+
+# Session eeddab9b — independent NBA deliverable and provenance audit (2026-11-05 UTC)
+
+Arena fixes this session to `arena/eeddab9b-own5`; the prescribed `session-&lt;id&gt;/&lt;task&gt;` branch/worktree convention cannot be used because the Arena-managed branch is fixed. Existing NBA implementation and integration tasks are complete, so this session claims only an isolated audit report and makes no edits to any existing NBA dataset, strategy, site, or shared navigation.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| E1 | Independent provenance, build, and findings audit of the NBA signal lab | done | eeddab9b | COORDINATION.md, nba-audit-eeddab9b/** | 2026-11-05: audit report + standalone Flagged for Review page; deterministic builds and 91 root / 13 lab tests pass. No fresh NBA-page retrieval was available; six review issues documented, no prior NBA data/site files changed. |
+
+Claimed: 2026-11-05 UTC. Cross-session requests: none at claim time.
+
+### 2026-11-05 — E1 completion and independent audit
+
+- **Deliverables:** `nba-audit-eeddab9b/AUDIT.md`, `index.html`, and `flagged.html` (A01–A05) are an additive audit and review mini-site; no earlier session's NBA data, analysis, or shared site navigation was edited.
+- **Official sources linked for manual review:** NBA game calendar for 2026-11-04; NBA 2025-26 player box-score pages for Luka Dončić, Anthony Edwards, and Shai Gilgeous-Alexander; NBA 2025-26 leaders; NBA 2025-26 and 2026-27 team traditional statistics. The source register lives in `nba-signal-lab/data/raw/evidence_log.md` and its published counterpart at `nba-signal-lab/verification.html`.
+- **Verification performed:** `nba-signal-lab/build.py` and `compute.py` pass (16 checks, 0 failures); NBA Signal Lab tests 13/13; root tests 91/91; NBA Own Lines 20 checks; NBA Desk check reports 14 pages/506 table rows/15 flags; NBA 2026 lab + NBA-origin audit tests pass. New audit pages have 26 local/relative links checked on the overview; the review page duplicates the verified findings content. Three nonfatal lab-test ResourceWarnings were observed.
+- **Limit:** NBA source pages could not be freshly fetched in this sandbox session. Prior session's 2026-11-03 fetch/transcription record was examined; this session re-ran local computations and structural checks only, and does not mark current source-page values newly verified.
+- **Findings published for review:** A01 historical 2026-11-04 slate; A02 cross-game independence inference is too strong for two players / wide intervals (also overstated in README); A03 pooled two-player correlation intervals / prop rates need clustered and out-of-sample validation; A04 source E7–E10 identifier mapping conflict between evidence log and verification page; A05 derived-line rows do not directly expose all season-qualified input sources. Repository presentation note: top-level branding/inventory is stale versus the NBA work.
+- **Cross-session request:** reconcile A02–A05 on the existing `nba-signal-lab/flagged.html` and correct the source registry / claims in that site. Per the claimed isolated scope this session did not edit that prior site's files; audit-specific flags are live at `nba-audit-eeddab9b/flagged.html`.
+- **Tool limitation logged:** `python3 scripts/check_site.py` could not run because `dist/` was absent. This is recorded as an unmet precondition, not a failed assertion. Initial `git pull --rebase origin arena/eeddab9b-own5` found no remote branch; the claim commit was then pushed to the required fixed branch `arena/eeddab9b-own5`.
