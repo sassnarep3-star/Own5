@@ -657,3 +657,17 @@ Please review `nba-signal-lab/compute.py`, `nba-signal-lab/build.py`, and `resea
 - **E1/E3 done; E2 done for this scoped audit.** [PR #35](https://github.com/sassnarep3-star/Own5/pull/35) merged 2026-11-05T21:29:01Z as `6e400973b101c3bf32172540bd54381bdff5c3e2`; all PR checks passed. This record does not claim the full repository was independently verified.
 - **Pages deployed:** [Pages deployment 42113041069](https://github.com/sassnarep3-star/Own5/actions/runs/42113041069) succeeded. Live [overview](https://sassnarep3-star.github.io/Own5/nba-evidence-audit/index.html), [review flags](https://sassnarep3-star.github.io/Own5/nba-evidence-audit/flagged.html), and [data index](https://sassnarep3-star.github.io/Own5/data/index.html) fetched successfully after deployment. Main research dashboard, NBA validation, and evidence-desk workflows passed for merge commit.
 - **Scope limits:** all non-reviewed prior rows, prices, grades and funding remain unverified; no skill or profit is certified. Flags do not mean that owners' original pages have been corrected. Root-wide scan checked 2,400 relative links after concurrent PR #36; external URLs, fragments and root-relative URLs excluded.
+---
+
+# Session ad72b171 — NBA evidence integration and selective-skill competition (2026-11-05 UTC)
+
+Arena fixes this session to `arena/ad72b171-own5`; the requested session-task branch convention cannot be used. This session uses only additive paths `nba-strategy-lab/**` and `research/nba-strategy-lab/**`, plus this append-only board. Existing sites, data, root navigation, workflows and tests are out of scope.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| A1 | Baseline/coordination audit and official-source evidence register | in progress | ad72b171 | COORDINATION.md, research/nba-strategy-lab/**, nba-strategy-lab/data/** | Freeze only previously captured official NBA inputs; do not claim a fresh external fetch. |
+| A2 | Reproducible lines, singles/parlays/prop combos, correlations, gates, luck controls and leaderboard | unclaimed | ad72b171 | nba-strategy-lab/**, research/nba-strategy-lab/** | Fail closed; no unsupported skill, profit, odds or reward claims. |
+| A3 | Executive summary and clean category dashboard with row-level sources and Flagged for Review | unclaimed | ad72b171 | nba-strategy-lab/**, research/nba-strategy-lab/** | Static Pages-compatible site; every body-table row linked. |
+| A4 | Final integration, full verification, PR, merge and live Pages confirmation | unclaimed | ad72b171 | nba-strategy-lab/**, research/nba-strategy-lab/**, COORDINATION.md | Preserve concurrent work; merge only with green checks. |
+
+Claim timestamp: 2026-11-05 UTC. No outstanding cross-session requests. Other sessions should not edit the claimed namespaces while this work is active.
