@@ -324,7 +324,7 @@ def main() -> None:
     gates, board = gates_and_board(strategies)
     flags = [
         {"flag_id": "F01", "severity": "HIGH", "item": "No verified sportsbook quotes or settlement ledger", "disposition": "Market prices, ROI, edges, ranks and rewards blank; all strategies fail closed.", "source_url": SCHEDULE_URL},
-        {"flag_id": "F02", "severity": "HIGH", "item": "Small, non-prospective samples", "disposition": "22 team games, 3 parlays and at most 50 pooled prop holdouts; no skill claim.", "source_url": GAME_URL},
+        {"flag_id": "F02", "severity": "HIGH", "item": "Small, non-prospective samples", "disposition": "22 team games, 3 parlays and at most 51 pooled prop holdouts; no skill claim.", "source_url": GAME_URL},
         {"flag_id": "F03", "severity": "HIGH", "item": "Current player availability not refreshed", "disposition": "Archived lines are not actionable; no injury adjustment inferred.", "source_url": INJURY_URL},
         {"flag_id": "F04", "severity": "MEDIUM", "item": "Zero home-court advantage is an analyst convention", "disposition": "Model margin omits HFA; residual scale comes from the same 22-game diagnostic and is not validated.", "source_url": TEAM_URL},
         {"flag_id": "F05", "severity": "MEDIUM", "item": "Two-player convenience sample", "disposition": "Correlations and prop thresholds do not generalize to the league.", "source_url": PLAYER_URLS["Luka Doncic"]},

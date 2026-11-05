@@ -1,6 +1,6 @@
 flag_id,severity,item,disposition,source_url
 F01,HIGH,No verified sportsbook quotes or settlement ledger,"Market prices, ROI, edges, ranks and rewards blank; all strategies fail closed.",https://www.nba.com/schedule?month=11&year=2026
-F02,HIGH,"Small, non-prospective samples","22 team games, 3 parlays and at most 50 pooled prop holdouts; no skill claim.",https://www.nba.com/stats/teams/boxscores?Season=2026-27&SeasonType=Regular%20Season
+F02,HIGH,"Small, non-prospective samples","22 team games, 3 parlays and at most 51 pooled prop holdouts; no skill claim.",https://www.nba.com/stats/teams/boxscores?Season=2026-27&SeasonType=Regular%20Season
 F03,HIGH,Current player availability not refreshed,Archived lines are not actionable; no injury adjustment inferred.,https://official.nba.com/nba-injury-report-2026-27-season/
 F04,MEDIUM,Zero home-court advantage is an analyst convention,Model margin omits HFA; residual scale comes from the same 22-game diagnostic and is not validated.,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season
 F05,MEDIUM,Two-player convenience sample,Correlations and prop thresholds do not generalize to the league.,https://www.nba.com/stats/player/1629029/boxscores?Season=2025-26
