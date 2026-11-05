@@ -1,0 +1,52 @@
+name: Verify NBA research workspace
+
+on:
+  push:
+    branches: [main, arena/f08f4adb-own5]
+    paths:
+      - 'nba-research/**'
+      - '.github/workflows/nba-research.yml'
+      - 'package.json'
+      - 'package-lock.json'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'nba-research/**'
+      - '.github/workflows/nba-research.yml'
+      - 'package.json'
+      - 'package-lock.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Rebuild frozen research and dashboard
+        run: |
+          python nba-research/audit_repo.py
+          python nba-research/build.py
+          python nba-research/check.py
+          git diff --exit-code -- nba-research/
+      - name: Unit and integrity tests
+        run: python -m unittest discover -s nba-research/tests -v
+      - name: Install browser dependencies
+        run: npm ci --ignore-scripts
+      - name: Desktop/mobile no-JavaScript checks
+        run: |
+          python -m http.server 3000 --bind 0.0.0.0 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID"' EXIT
+          node -e "const net=require('node:net');let n=0;function wait(){const s=net.connect(3000,'127.0.0.1',()=>{s.end();process.exit(0)});s.on('error',()=>{if(++n>50)process.exit(1);setTimeout(wait,100)})};wait()"
+          node nba-research/browser.cjs

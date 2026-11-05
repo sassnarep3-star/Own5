@@ -19,7 +19,8 @@ class AuditTests(unittest.TestCase):
 
     def test_inventory_covers_every_baseline_line(self):
         with (ROOT/'audit'/'scan_summary.json').open() as f: summary=json.load(f)
-        rows=list(csv.DictReader((ROOT/'audit'/'file_inventory.csv').open()))
+        with (ROOT/'audit'/'file_inventory.csv').open() as f:
+            rows=list(csv.DictReader(f))
         manifest=[json.loads(l) for l in (ROOT/'audit'/'line_manifest.jsonl').read_text().splitlines()]
         self.assertEqual(len(rows),summary['files'])
         self.assertEqual(len(manifest),summary['files'])
@@ -32,7 +33,8 @@ class AuditTests(unittest.TestCase):
         self.assertTrue(all(r['review_url'].startswith(a.REPO+'/blob/'+a.BASELINE+'/') for r in rows))
 
     def test_findings_have_review_and_context_links(self):
-        rows=list(csv.DictReader((ROOT/'audit'/'findings.csv').open()))
+        with (ROOT/'audit'/'findings.csv').open() as f:
+            rows=list(csv.DictReader(f))
         self.assertGreaterEqual(len(rows),15)
         for r in rows:
             self.assertTrue(r['review_url'].startswith('https://github.com/'))
