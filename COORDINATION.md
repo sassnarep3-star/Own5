@@ -774,7 +774,7 @@ Claim timestamp: **2026-11-05T21:22:43Z**. Arena fixes the working/integration b
 | Q61-04 | Gated leaderboard, reward policy and executive summary | done | 61a311c2 | nba-research-61a311c2/**; research/nba-research-61a311c2/** | No fabricated rankings, returns or funded prizes; skill evidence separated from hypotheses. |
 | Q61-05 | Clean source-linked NBA dashboard and category pages | done | 61a311c2 | nba-research-61a311c2/** | Deterministic static build, client-side table search and row provenance; preserve existing sites. |
 | Q61-06 | Automated row, arithmetic, source, build and browser checks | done | 61a311c2 | nba-research-61a311c2/**; .github/workflows/nba-research-61a311c2.yml | Tests include missing-data rejection, no-lookahead, correlation, parlay dependence and qualification. |
-| Q61-07 | Final integration, PR, merge and live Pages verification | in progress | 61a311c2 | COORDINATION.md; README.md (append); root navigation via existing builder only after all Q61 work passes | Re-fetch latest main, preserve parallel work, no broken site merged; record PR and deployment result. |
+| Q61-07 | Final integration, PR, merge and live Pages verification | done | 61a311c2 | COORDINATION.md; README.md (append); root navigation via existing builder only after all Q61 work passes | Re-fetch latest main, preserve parallel work, no broken site merged; record PR and deployment result. |
 
 Cross-session request: final integration will add a clearly labeled NBA entry point to the existing root dashboard through its deterministic builder, without removing NFL or earlier NBA archives. Shared index/navigation edits are deferred until all Q61 research tasks pass. No other session's files are edited before that integration step.
 
@@ -818,3 +818,12 @@ Cross-session request: final integration will add a clearly labeled NBA entry po
   establish a home edge) plus this record. No data value changed.
 - **Task status:** A1–A13 **DONE**. 11/11 data checks, 6/6 verification groups, 18 unit tests, 0 certified strategies,
   0 graded bets, all market/edge/reward cells blank and flagged.
+
+### Q61 final completion / PR / merge / Pages record — session 61a311c2
+
+- **PR:** https://github.com/sassnarep3-star/Own5/pull/42 — merged autonomously with `gh pr merge 42 --merge` at 2026-11-05T21:51:10Z; merge commit `f3d164a6a6d193a6a2f164d177d4fb7453ddfe48`.
+- **PR checks:** all reported checks passed before merge (`verify`, `desk-verify`, `Build, evidence integrity and browser smoke tests`; legacy smoke skipped by workflow condition).
+- **Post-merge CI on `f3d164a`:** NBA Research 61a311c2 run `42116357505` success; Verify research dashboard `42116357455` success; Verify Own5 evidence desk `42116357672` success; Verify NBA validation desk `42116357534` success; pages build and deployment `42116356950` success.
+- **GitHub Pages:** API status `built`, source `main` @ `/`, base https://sassnarep3-star.github.io/Own5/ . Live fetches with `?release=f3d164a` verified: [overview](https://sassnarep3-star.github.io/Own5/nba-research-61a311c2/index.html), [own lines](https://sassnarep3-star.github.io/Own5/nba-research-61a311c2/lines.html), [Flagged for Review](https://sassnarep3-star.github.io/Own5/nba-research-61a311c2/review.html), and root NFL overview (preserved). Rendered counts matched: 241 canonical rows, 11 lines, 0/6 qualified, 19 flags.
+- **Q61-01…Q61-07 done.** Follow-up documentation commit updates the dashboard requirements trace and verification record to reflect the completed merge/deployment. Flags remain nonblocking; no strategy, ROI, probability, rank or funded reward is certified.
+
