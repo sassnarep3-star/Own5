@@ -593,3 +593,37 @@ Claim timestamp: 2026-11-03 UTC. Cross-session requests: none at claim time.
 - **Merged:** yes — merge commit `1885d7435ea1c1dba830755fc723aed5f6a30630` at 2026-11-04T00:24:45Z (`gh pr merge 33 --merge`). Append-only conflicts in COORDINATION.md/README.md resolved by keeping both sides before merge; CI-locked rebuild clean and all test suites green at merge time.
 - **GitHub Pages:** deployed — pages build-and-deployment run `41746619471` completed success; live URLs externally verified: https://sassnarep3-star.github.io/Own5/nba-signal-lab/index.html (dashboard) and https://sassnarep3-star.github.io/Own5/nba-signal-lab/flagged.html (Flagged for Review). Root desk footer now cross-links "NBA Signal Lab ↗" (integration via the CI-locked seed.py/build.py rebuild).
 - **Task status:** M1–M12 **DONE**. 16/16 verification checks green; 6 open flags published (F-HFA, F-MARKET, F-SLATE, F-SMALL, F-PLAYERS, F-ODDS); 0 strategies certified; no luck/skill claims made.
+
+# Session arena-a46d621e — NBA Line Commission, 2026-11-05 snapshot (2026-11-05 UTC)
+
+Arena fixes this session's branch to `arena/a46d621e-own5`. Additive namespace only: this session
+does not edit any prior session's site or data (`docs/`, `nba-line-desk/`, `nba-signal-lab/`,
+`nba-2026-lab/`, `nba-origin-lab/`, `nba-audit-e9f83ff4/`, `nba-sensitivity/`, `nba-validation/`,
+`nba-own-lines/`, `nba-desk/`, `line-lab/`, `nfl-strategy-lab/`, `own5-desk/`). Shared
+`COORDINATION.md` and `README.md` are append-only for this session, except the single root-footer
+cross-link added through the CI-locked `scripts/build.py` + `scripts/seed.py` deterministic rebuild
+(same additive integration pattern used by sessions 6d508fee and cd43258e).
+
+**Why this does not duplicate prior work.** Every prior NBA session published a *frozen* snapshot
+(2026-11-02 … 2026-11-04) and none of them re-verified a *previous* session's rows against the
+official pages on a later date. This session publishes the **2026-11-05 official snapshot**, a
+**new slate's own lines**, and the **first cross-lab reconciliation audit** (re-fetch → row-by-row
+diff → flagged irregularity register) across the six existing NBA labs.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| A1 | Claim + baseline audit of repo and open claims | done | arena-a46d621e | COORDINATION.md | Claim pushed before any other work. No task on the board is in progress; last session 6d508fee completed M1–M12 (PR #33). |
+| A2 | 2026-11-05 official snapshot: standings, team stats, slate, player logs | in progress | arena-a46d621e | nba-commission/data/**, research/nba-commission/data-notes.md | Every row carries its official nba.com source URL; unverifiable cells blank + flagged. |
+| A3 | Own model lines for the 2026-11-05/06 slate (spread + total) | unclaimed | arena-a46d621e | nba-commission/** | Market columns blank + flagged (no verified odds source); derivation + sensitivity documented. |
+| A4 | Correlation values (prop combos, parlay legs) computed in-repo at real n | unclaimed | arena-a46d621e | nba-commission/** | Pearson r with Fisher-z CIs, phi/lift vs independence, lag-1 independence check. |
+| A5 | Luck-vs-skill engine (exact binomial, power, DSR, multiple testing) | unclaimed | arena-a46d621e | nba-commission/** | Concrete Ns computed in-repo; thresholds cited to published methodology. |
+| A6 | Gated strategy catalog: singles, parlays, player-prop combos | unclaimed | arena-a46d621e | nba-commission/** | Pre-registered rules; all start PENDING — no settled odds data, so 0 certified. |
+| A7 | Validation gates G01–G12 with concrete, cited thresholds | unclaimed | arena-a46d621e | nba-commission/** | Fail-closed status per strategy. |
+| A8 | Leaderboard / competition design (deflated scoring, reward tiers) | unclaimed | arena-a46d621e | nba-commission/** | Reward amounts are proposals; prize pool blank + flagged (unfunded). |
+| A9 | Cross-lab reconciliation audit of prior NBA sessions' rows | unclaimed | arena-a46d621e | nba-commission/**, research/nba-commission/repo-audit.md | Re-fetch official pages, diff prior snapshots, publish irregularities. |
+| A10 | Executive summary | unclaimed | arena-a46d621e | research/nba-commission/EXECUTIVE_SUMMARY.md | Restates only computed/verified values. |
+| A11 | Pages site: landing page + category subpages + Flagged for Review | unclaimed | arena-a46d621e | nba-commission/*.html, nba-commission/build.py | Deterministic builder + tests; every table row source-linked. |
+| A12 | Line-by-line verification harness | unclaimed | arena-a46d621e | nba-commission/verify.py, nba-commission/checks/ | Every row official-linked or explicit BLANK + flag; no broken links. |
+| A13 | Integration: combined re-verify, PR to main, merge, Pages check | unclaimed | arena-a46d621e | COORDINATION.md, README.md (append), scripts/build.py (footer cross-link only) | Records PR link + merge result here when done. |
+
+Claim timestamp: 2026-11-05 UTC. Cross-session requests: none at claim time.
