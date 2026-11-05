@@ -593,3 +593,16 @@ Claim timestamp: 2026-11-03 UTC. Cross-session requests: none at claim time.
 - **Merged:** yes — merge commit `1885d7435ea1c1dba830755fc723aed5f6a30630` at 2026-11-04T00:24:45Z (`gh pr merge 33 --merge`). Append-only conflicts in COORDINATION.md/README.md resolved by keeping both sides before merge; CI-locked rebuild clean and all test suites green at merge time.
 - **GitHub Pages:** deployed — pages build-and-deployment run `41746619471` completed success; live URLs externally verified: https://sassnarep3-star.github.io/Own5/nba-signal-lab/index.html (dashboard) and https://sassnarep3-star.github.io/Own5/nba-signal-lab/flagged.html (Flagged for Review). Root desk footer now cross-links "NBA Signal Lab ↗" (integration via the CI-locked seed.py/build.py rebuild).
 - **Task status:** M1–M12 **DONE**. 16/16 verification checks green; 6 open flags published (F-HFA, F-MARKET, F-SLATE, F-SMALL, F-PLAYERS, F-ODDS); 0 strategies certified; no luck/skill claims made.
+
+# Session 9bd01948 — NBA repository audit and index (2026-11-05 UTC)
+
+Arena fixes this work to branch `arena/9bd01948-own5`. This session will not edit other sessions' deliverables (`docs/`, `nba-*/`, `nba-origin-lab/`, `nba-signal-lab/`, `nba-desk/`, root navigation, CI-locked generated files). New audit/index artifacts are scoped to `nba-audit-9bd01948/**`; this file is append-only for this session. The repository already contains multiple NBA research sites, so this task independently inventories and verifies their published evidence and builds a cross-site directory rather than duplicating or rewriting other sessions' data.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| A1 | Claim, repository inventory, identify existing NBA site/data scopes | in progress | 9bd01948 | COORDINATION.md, nba-audit-9bd01948/** | Additive scope; no edits to other sessions' files. |
+| A2 | Independent official-source and row-level verification audit | unclaimed | 9bd01948 | nba-audit-9bd01948/** | Audit scope and checks will be stated precisely; every published fact will carry a source or be blank/flagged. |
+| A3 | NBA cross-site landing page and category index | unclaimed | 9bd01948 | nba-audit-9bd01948/** | Link to existing live pages; do not copy or silently rewrite their data. |
+| A4 | Re-run checks, publish audit and record PR/Pages result | unclaimed | 9bd01948 | COORDINATION.md, nba-audit-9bd01948/** | Current fixed Arena branch is the integration branch. |
+
+Claim timestamp: 2026-11-05 UTC. Cross-session requests: none. Existing pages may only be changed via a logged request to their owning sessions; this session's site is fully additive.
