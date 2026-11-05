@@ -717,3 +717,16 @@ Cross-session request: final integration will add a clearly labeled NBA entry po
 - Q61-07 in progress: root integration will use `scripts/build.py` only after re-checking open PR #8 / active claims; then PR, autonomous merge, Pages verification.
 - Q61-07 integration update: rebased onto concurrent `origin/main` `1775b92` (PR #40). Append-only COORDINATION conflict resolved by retaining eeddab9b/e2f426bc/ad72b171 records and the 61a311c2 claim/progress block; no concurrent work discarded. Open PR #34 is additive `nba-evidence-audit/**` only; stale PR #8 (NFL, updated 2026-11-02) does not block this claimed final navigation integration. Root footer entry added through `scripts/build.py`; root 91 tests and scoped 33 tests pass.
 
+# Session 4c43d5e6 — NBA verified research integration (2026-11-05 UTC)
+
+Read the existing board before claiming. Fixed Arena branch: `arena/4c43d5e6-own5`; platform prohibits creating/switching to the user's requested `session-<id>/<task>` branches. This fixed branch is the worker and final-integration branch. All existing sites/data are read-only. Prior stale status rows are historical, not silently reassigned. Open NFL PR #8 is another session's scope and is untouched.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| Q1 | Claim and repository-wide inventory/audit | in progress | 4c43d5e6 | COORDINATION.md, nba-research-hub/audit/** | Hash every baseline tracked file; verify NBA data against re-opened official sources; distinguish source entailment from link presence. No inherited blanket verification. |
+| Q2 | Official NBA evidence and requirement trace | in progress | 4c43d5e6 | nba-research-hub/data/**, nba-research-hub/research/** | Every observation directly checked or blank + flagged. Raw response provenance, date, scope and calculations separated. |
+| Q3 | Line origination, strategies, correlations, gates, competition | in progress | 4c43d5e6 | nba-research-hub/engine/**, nba-research-hub/tests/** | Reproducible computations only; no inferred official values, synthetic performance or guaranteed luck removal. No active other-session overlap. |
+| Q4 | Clean dashboard, category tables, executive summary, review page | in progress | 4c43d5e6 | nba-research-hub/site/**, nba-research-hub/build.py, nba-research-hub/check.py | Static additive Pages site; all rows carry source links and verification status; unverified values empty. |
+| Q5 | Final integration, tests, PR/merge and Pages verification | in progress | 4c43d5e6 | COORDINATION.md, README.md (append-only), nba-research-hub/** | After Q1–Q4 only; preserve existing outputs. Shared root index/Pages settings not changed; new desk linked from README and root footer cross-link request logged below. |
+
+Claim time: 2026-11-05 UTC (exact commit time in Git). Cross-session request to root navigation owner cd43258e: add a link to the new NBA research hub when available. No edits to their files by this session. No active claims found for the new namespace. Claims will be updated to done only after their stated checks. Unknown external values are nonblocking review items, not reasons to fabricate.
