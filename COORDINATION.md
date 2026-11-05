@@ -708,3 +708,17 @@ Cross-session request at claim time: final integration should expose the new NBA
 ### 2026-11-05 — merge resolution before final integration
 
 - `origin/main` advanced through PR #40 while this session worked. The append-only `COORDINATION.md` conflict was resolved by retaining all concurrent main content and this session block; no foreign work was discarded. Shared navigation changes remain reserved for the final integration step.
+
+### 2026-11-05 — Session f08f4adb scoped completion and integration handoff
+
+| ID | Task | Status | Evidence |
+|----|------|--------|----------|
+| F08-01 | Baseline repository / source audit | done | `nba-research/audit/`: 434 files, 64,598 lines, 26 findings; pinned review links. |
+| F08-02 | Fresh official evidence register | done | Commit `96491b3`; 30-team current/prior tables, standings, two-game schedule, noon injuries, 12 archived FanDuel prices, 125 re-reviewed player-games. |
+| F08-03 | Deterministic engine | done | Commit `01ded4f`; 15/15 integrity checks, exact binomial/Holm/DSR/CSCV machinery, disclosed assumptions. |
+| F08-04 | Gated strategies and leaderboard | done | Eight predeclared candidates; ten gates; zero certified; empty leaderboard and blank performance/rewards. |
+| F08-05 | Executive summary and dashboard | done | Commit `2630853`; 11 static pages, 992 source-linked table rows, research docs. |
+| F08-06 | Checks and browser tests | done | 32 scoped tests pass with ResourceWarnings treated as errors; 22 desktop/mobile no-JS checks; 223 scoped internal links; dedicated workflow added. |
+| F08-07 | Final integration, PR, merge, Pages | in progress | Concurrent `origin/main` through PR #40 merged in `76da6f5`; append-only conflict preserved both sides. |
+
+**Shared-navigation handoff:** the earlier root-generator/hub claims are completed and stale. For final integration only, this session takes over the minimal shared files `scripts/build.py`, generated `index.html`/`pages/`, and `README.md` to add one cross-link to `nba-research/` and correct the stale session-count wording. No foreign analysis, dataset or historical coordination entry is altered. `tools/build_site.py` is not edited: concurrent main added `data/index.html`, and the combined working-tree scan now resolves 2,796 internal links with 0 broken. Open PRs #8, #34, #41 and #42 are preserved; this session does not merge or close them.
