@@ -1,0 +1,13 @@
+game_id,book,market,selection,line,american,source_url,quote_timestamp,note
+0022600187,FanDuel,spread,ORL,1.5,-118,https://sportsbook.fanduel.com/basketball/nba/orlando-magic-@-phoenix-suns-36268668,,dynamic page; retrieved 2026-11-05; not closing line
+0022600187,FanDuel,spread,PHX,-1.5,-104,https://sportsbook.fanduel.com/basketball/nba/orlando-magic-@-phoenix-suns-36268668,,dynamic page; retrieved 2026-11-05; not closing line
+0022600187,FanDuel,moneyline,ORL,,-108,https://sportsbook.fanduel.com/basketball/nba/orlando-magic-@-phoenix-suns-36268668,,dynamic page; retrieved 2026-11-05; not closing line
+0022600187,FanDuel,moneyline,PHX,,-108,https://sportsbook.fanduel.com/basketball/nba/orlando-magic-@-phoenix-suns-36268668,,dynamic page; retrieved 2026-11-05; not closing line
+0022600187,FanDuel,total,OVER,222.5,-114,https://sportsbook.fanduel.com/basketball/nba/orlando-magic-@-phoenix-suns-36268668,,dynamic page; retrieved 2026-11-05; not closing line
+0022600187,FanDuel,total,UNDER,222.5,-106,https://sportsbook.fanduel.com/basketball/nba/orlando-magic-@-phoenix-suns-36268668,,dynamic page; retrieved 2026-11-05; not closing line
+0022600188,FanDuel,spread,MIA,4.5,-115,https://sportsbook.fanduel.com/basketball/nba/miami-heat-@-golden-state-warriors-36268667,,dynamic page; retrieved 2026-11-05; not closing line
+0022600188,FanDuel,spread,GSW,-4.5,-105,https://sportsbook.fanduel.com/basketball/nba/miami-heat-@-golden-state-warriors-36268667,,dynamic page; retrieved 2026-11-05; not closing line
+0022600188,FanDuel,moneyline,MIA,,138,https://sportsbook.fanduel.com/basketball/nba/miami-heat-@-golden-state-warriors-36268667,,dynamic page; retrieved 2026-11-05; not closing line
+0022600188,FanDuel,moneyline,GSW,,-164,https://sportsbook.fanduel.com/basketball/nba/miami-heat-@-golden-state-warriors-36268667,,dynamic page; retrieved 2026-11-05; not closing line
+0022600188,FanDuel,total,OVER,236.5,-105,https://sportsbook.fanduel.com/basketball/nba/miami-heat-@-golden-state-warriors-36268667,,dynamic page; retrieved 2026-11-05; not closing line
+0022600188,FanDuel,total,UNDER,236.5,-115,https://sportsbook.fanduel.com/basketball/nba/miami-heat-@-golden-state-warriors-36268667,,dynamic page; retrieved 2026-11-05; not closing line

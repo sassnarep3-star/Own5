@@ -696,12 +696,23 @@ Claim timestamp: **2026-11-05T21:22:43Z**. Arena fixes the working/integration b
 
 | ID | Task | Status | Owner | Files touched | Notes |
 |----|------|--------|-------|---------------|-------|
-| Q61-01 | Claim, baseline inventory and full requirements audit | in progress | 61a311c2 | COORDINATION.md; research/nba-research-61a311c2/** | Fixed Arena branch; inventory all tracked files and classify unrelated NFL scope; no prior outputs overwritten. |
-| Q61-02 | Independent official NBA/source verification and evidence register | unclaimed | 61a311c2 | research/nba-research-61a311c2/**; nba-research-61a311c2/data/** | Check values, not merely URL presence; missing fields remain blank. Derived values explicitly identified. |
-| Q61-03 | Origination, signal research, measured correlations and validation engine | unclaimed | 61a311c2 | nba-research-61a311c2/**; research/nba-research-61a311c2/** | Singles, cross-game parlays, player-prop combinations; fail-closed qualification, uncertainty and prospective replication. |
-| Q61-04 | Gated leaderboard, reward policy and executive summary | unclaimed | 61a311c2 | nba-research-61a311c2/**; research/nba-research-61a311c2/** | No fabricated rankings, returns or funded prizes; skill evidence separated from hypotheses. |
-| Q61-05 | Clean source-linked NBA dashboard and category pages | unclaimed | 61a311c2 | nba-research-61a311c2/** | Deterministic static build, search, filters and row provenance; preserve existing sites. |
-| Q61-06 | Automated row, arithmetic, source, build and browser checks | unclaimed | 61a311c2 | nba-research-61a311c2/**; .github/workflows/nba-research-61a311c2.yml | Tests include missing-data rejection, no-lookahead, correlation, parlay dependence and qualification. |
-| Q61-07 | Final integration, PR, merge and live Pages verification | unclaimed | 61a311c2 | COORDINATION.md; README.md (append); root navigation via existing builder only after all Q61 work passes | Re-fetch latest main, preserve parallel work, no broken site merged; record PR and deployment result. |
+| Q61-01 | Claim, baseline inventory and full requirements audit | done | 61a311c2 | COORDINATION.md; research/nba-research-61a311c2/** | Fixed Arena branch; inventory all tracked files and classify unrelated NFL scope; no prior outputs overwritten. |
+| Q61-02 | Independent official NBA/source verification and evidence register | done | 61a311c2 | research/nba-research-61a311c2/**; nba-research-61a311c2/data/** | Check values, not merely URL presence; missing fields remain blank. Derived values explicitly identified. |
+| Q61-03 | Origination, signal research, measured correlations and validation engine | done | 61a311c2 | nba-research-61a311c2/**; research/nba-research-61a311c2/** | Singles, cross-game parlays, player-prop combinations; fail-closed qualification, uncertainty and prospective replication. |
+| Q61-04 | Gated leaderboard, reward policy and executive summary | done | 61a311c2 | nba-research-61a311c2/**; research/nba-research-61a311c2/** | No fabricated rankings, returns or funded prizes; skill evidence separated from hypotheses. |
+| Q61-05 | Clean source-linked NBA dashboard and category pages | done | 61a311c2 | nba-research-61a311c2/** | Deterministic static build, client-side table search and row provenance; preserve existing sites. |
+| Q61-06 | Automated row, arithmetic, source, build and browser checks | done | 61a311c2 | nba-research-61a311c2/**; .github/workflows/nba-research-61a311c2.yml | Tests include missing-data rejection, no-lookahead, correlation, parlay dependence and qualification. |
+| Q61-07 | Final integration, PR, merge and live Pages verification | in progress | 61a311c2 | COORDINATION.md; README.md (append); root navigation via existing builder only after all Q61 work passes | Re-fetch latest main, preserve parallel work, no broken site merged; record PR and deployment result. |
 
 Cross-session request: final integration will add a clearly labeled NBA entry point to the existing root dashboard through its deterministic builder, without removing NFL or earlier NBA archives. Shared index/navigation edits are deferred until all Q61 research tasks pass. No other session's files are edited before that integration step.
+
+### Q61 progress / verification log — 2026-11-05T21:40Z (session 61a311c2)
+
+- Q61-01…Q61-06 complete in isolated scopes `nba-research-61a311c2/**`, `research/nba-research-61a311c2/**`, `.github/workflows/nba-research-61a311c2.yml`. No legacy namespace edited.
+- Canonical evidence: 241 rows registered; 237 verified-value rows, 4 availability rows intentionally blank/flagged. Baseline inventory: 434 files hashed at `54e8dee`.
+- Official comparisons: Edwards 61 + Dončić 64 historical player-game rows match field-by-field; 29 current player rows, 30 prior team rows, 30 current advanced team rows, 11 schedule rows and 12 FanDuel quote rows transcribed/checked. Most Nov 6 injury reports were NOT YET SUBMITTED in the 4pm ET Nov 5 PDF; selected player availability remains blank.
+- Engine/dashboard: 11 model-only lines; 12 within-player correlations; 10 threshold-combo frequencies; 47 chronological forecast rows (23–24, exact p=0.614567, Bonferroni family-6 p=1.0); 6 strategies, 0 qualified; 19 flags. No ROI/probabilities/ranks/monetary rewards fabricated.
+- Scoped tests: 33/33 pass (math, fail-closed gates, no-lookahead, source-per-row, internal links, deterministic engine/build). Baseline 157/157 previously pass.
+- Irregularities recorded: legacy spread sign, invalid cross-game independence claim, DSR label misuse, non-ASCII header, partial legacy 22-game verification, scope mix, dynamic drift, tip-time mismatch, PACE/POSS non-identity.
+- Q61-07 in progress: root integration will use `scripts/build.py` only after re-checking open PR #8 / active claims; then PR, autonomous merge, Pages verification.
+

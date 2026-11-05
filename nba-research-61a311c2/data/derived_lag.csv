@@ -1,0 +1,3 @@
+player_id,player,metric,n_pairs,r,ci_low,ci_high,status,source_url
+1629029,Luka Doncic,PTS lag-1,63,-0.0406,-0.3188,0.0877,within_player_serial_dependence_only,https://www.nba.com/game/0022500002/
+1630162,Anthony Edwards,PTS lag-1,60,0.0564,-0.2477,0.1878,within_player_serial_dependence_only,https://www.nba.com/game/0022500089/
