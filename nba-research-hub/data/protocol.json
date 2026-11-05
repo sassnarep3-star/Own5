@@ -1,0 +1,66 @@
+{
+  "protocol_id": "nba-research-hub-2026-11-05-v1",
+  "frozen_on": "2026-11-05",
+  "status": "Exploratory retrospective protocol. Historical outcomes were already visible when this protocol was written; this is NOT prospective preregistration.",
+  "team_model": {
+    "current_season": "2026-27",
+    "prior_season": "2025-26",
+    "prior_strength_games": 20,
+    "primary_home_points_adjustment": 0.0,
+    "logistic_scale_points": 6.0,
+    "line_rule": "floor(x*2)/2 + 0.5; half-point research lines only",
+    "sensitivity_prior_strengths": [10, 20, 40],
+    "sensitivity_home_points_adjustments": [-1.0, 0.0, 1.0],
+    "notes": "No fitted coefficients. Current weight = current GP/(current GP+prior_strength). Opponent points derived as official PTS minus official PLUS/MINUS; both inputs are rounded. Win probability is an uncalibrated logistic heuristic, not a validated betting probability."
+  },
+  "player_model": {
+    "minimum_prior_games": 5,
+    "rolling_window_games": 10,
+    "binary_candidate": "Normal CDF using trailing mean and sample SD (ddof=1) of up to 10 prior games; threshold is a half-point research threshold.",
+    "binary_baseline": "Expanding empirical hit rate with Beta(1,1) smoothing: (hits+1)/(n+2).",
+    "continuous_baselines": ["last observed value", "expanding mean"],
+    "research_thresholds": {
+      "1629029": {"pts": 30.5, "reb": 7.5, "ast": 7.5, "tpm": 3.5},
+      "1630162": {"pts": 25.5, "reb": 4.5, "ast": 3.5, "tpm": 2.5}
+    },
+    "notes": "Thresholds are analyst-chosen constants, not observed sportsbook lines. No threshold tuning after evaluation. All forecasts use strictly earlier games."
+  },
+  "inference": {
+    "bootstrap_replicates": 2000,
+    "permutation_replicates": 5000,
+    "random_seed": 20261105,
+    "alpha": 0.05,
+    "binary_skill_family_size": 8,
+    "dependence_family_size": 32,
+    "multiplicity": "Holm step-down within each declared family; no cross-family claim of overall error control.",
+    "binary_skill_test": "Paired date-cluster bootstrap of candidate-minus-baseline Brier loss; two-sided bootstrap-null p; 95% percentile CI. Negative difference favors candidate.",
+    "same_game_correlation_test": "Within-player permutation of one stat vector; two-sided absolute Pearson r null.",
+    "lag1_test": "Within-player permutation of the next-game vector; two-sided absolute Pearson r null. Failure to reject is NOT proof of independence.",
+    "joint_hit_test": "Two-sided Fisher exact test on the 2x2 hit table for two-prop combos. Three-prop combos are descriptive only.",
+    "notes": "Date clusters preserve same-date cross-player dependence in binary skill resampling. Within-player game resampling/permutation assumes exchangeable games and is exploratory. No luck-removal claim."
+  },
+  "power_planning": {
+    "american_odds_example": -110,
+    "null_win_probability": 0.5238095238095238,
+    "alternative_win_probability": 0.55,
+    "one_sided_alpha": 0.05,
+    "target_power": 0.8,
+    "model_variant_count": 9,
+    "strategy_count": 6,
+    "multiplicity_family_for_planning": 54,
+    "notes": "Normal-approximation planning only; exact binomial power is also reported at the approximate n. Example odds are arithmetic, not an observed market quote."
+  },
+  "validation_gates": {
+    "minimum_graded_priced_bets": 200,
+    "minimum_predictive_observations_per_series": 100,
+    "required": "Every gate must PASS or be explicitly N/A. UNKNOWN/FAIL blocks eligibility. No synthetic ledger can satisfy a gate.",
+    "reward": "Badges only; funded monetary pool is blank/unverified. Rank eligible strategies by lower 95% date-cluster bootstrap bound of mean net profit per unit stake; ties by more graded bets, then lower max drawdown."
+  },
+  "prohibited": [
+    "Do not invent sportsbook prices, availability, payouts, or graded bets.",
+    "Do not call contextual citations proof of an edge.",
+    "Do not rank or reward an ineligible strategy.",
+    "Do not edit other sessions' files; publish corrections additively.",
+    "Do not merge before build, tests, and site checks pass."
+  ]
+}
