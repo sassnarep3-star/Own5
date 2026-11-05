@@ -1,0 +1,10 @@
+scenario,null_hit_probability,alternative_hit_probability,alpha,target_power,minimum_independent_bets,exact_power_at_n,exact_p_value,exact_ci_low,exact_ci_high,price_assumption,source_url,flag_id
+Unadjusted one-sided 5%,0.523810,0.55,0.050000,0.800,2248,0.8006,,,,Hypothetical -110 decimal payout; not an observed ledger,https://www.itl.nist.gov/div898/handbook/prc/section2/old.prc271.htm,R08
+Bonferroni 5%/8 screening scenario,0.523810,0.55,0.006250,0.800,4055,0.8008,,,,Hypothetical -110 decimal payout; not an observed ledger,https://www.itl.nist.gov/div898/handbook/prc/section2/old.prc271.htm,R08
+Unadjusted one-sided 5%,0.523810,0.57,0.050000,0.800,726,0.8021,,,,Hypothetical -110 decimal payout; not an observed ledger,https://www.itl.nist.gov/div898/handbook/prc/section2/old.prc271.htm,R08
+Bonferroni 5%/8 screening scenario,0.523810,0.57,0.006250,0.800,1301,0.8007,,,,Hypothetical -110 decimal payout; not an observed ledger,https://www.itl.nist.gov/div898/handbook/prc/section2/old.prc271.htm,R08
+Unadjusted one-sided 5%,0.523810,0.60,0.050000,0.800,269,0.8050,,,,Hypothetical -110 decimal payout; not an observed ledger,https://www.itl.nist.gov/div898/handbook/prc/section2/old.prc271.htm,R08
+Bonferroni 5%/8 screening scenario,0.523810,0.60,0.006250,0.800,476,0.8030,,,,Hypothetical -110 decimal payout; not an observed ledger,https://www.itl.nist.gov/div898/handbook/prc/section2/old.prc271.htm,R08
+Illustrative 30/50 wins,0.523810,,,,,,0.17448,0.4518,0.7359,Illustration only; not an observed strategy result,https://www.itl.nist.gov/div898/handbook/prc/section2/old.prc271.htm,R08
+Illustrative 60/100 wins,0.523810,,,,,,0.07660,0.4972,0.6967,Illustration only; not an observed strategy result,https://www.itl.nist.gov/div898/handbook/prc/section2/old.prc271.htm,R08
+Illustrative 600/1000 wins,0.523810,,,,,,0.00000,0.5689,0.6305,Illustration only; not an observed strategy result,https://www.itl.nist.gov/div898/handbook/prc/section2/old.prc271.htm,R08

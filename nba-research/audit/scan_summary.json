@@ -1,0 +1,23 @@
+{
+  "files": 434,
+  "bytes": 5526446,
+  "lines": 64598,
+  "csv_files": 66,
+  "csv_rows": 15812,
+  "csv_official_link_rows": 1014,
+  "csv_other_link_rows": 255,
+  "csv_no_link_rows": 14543,
+  "html_files": 139,
+  "internal_links": 2291,
+  "broken_internal_links": 9,
+  "python_files": 70,
+  "python_syntax_errors": 0,
+  "json_files": 50,
+  "json_errors": 0,
+  "js_files": 8,
+  "js_syntax_errors": 0,
+  "structural_review_files": 11,
+  "findings": 26,
+  "baseline": "54e8dee596d49731c3da535a1f77b01cd0c295d5",
+  "scope": "Every baseline file decoded and every line counted/scanned; syntax/schema/link/provenance checks where applicable. Independent official re-fetch is separately scoped in research/DATA_NOTES.md."
+}

@@ -1,0 +1,25 @@
+scope,x,y,n,pearson_r,ci_low,ci_high,interval_method,source_url,flag_id
+Pooled (descriptive),pts,tpm,125,0.689,0.562,0.780,Conditional player-stratified moving-block bootstrap; not population-generalizable,https://www.nba.com/stats/leaders?Season=2025-26,R06;R07
+Pooled (descriptive),pts,reb,125,0.366,0.187,0.435,Conditional player-stratified moving-block bootstrap; not population-generalizable,https://www.nba.com/stats/leaders?Season=2025-26,R06;R07
+Pooled (descriptive),pts,ast,125,0.193,0.014,0.325,Conditional player-stratified moving-block bootstrap; not population-generalizable,https://www.nba.com/stats/leaders?Season=2025-26,R06;R07
+Pooled (descriptive),reb,ast,125,0.426,0.286,0.542,Conditional player-stratified moving-block bootstrap; not population-generalizable,https://www.nba.com/stats/leaders?Season=2025-26,R06;R07
+Pooled (descriptive),pts,min,125,0.577,0.391,0.646,Conditional player-stratified moving-block bootstrap; not population-generalizable,https://www.nba.com/stats/leaders?Season=2025-26,R06;R07
+Pooled (descriptive),pts,plus_minus,125,0.187,0.002,0.277,Conditional player-stratified moving-block bootstrap; not population-generalizable,https://www.nba.com/stats/leaders?Season=2025-26,R06;R07
+Player-centered pooled,pts,tpm,125,0.680,,,No interval: centered pooled statistic or insufficient blocks,https://www.nba.com/stats/leaders?Season=2025-26,R06;R07
+Player-centered pooled,pts,reb,125,0.299,,,No interval: centered pooled statistic or insufficient blocks,https://www.nba.com/stats/leaders?Season=2025-26,R06;R07
+Player-centered pooled,pts,ast,125,0.044,,,No interval: centered pooled statistic or insufficient blocks,https://www.nba.com/stats/leaders?Season=2025-26,R06;R07
+Player-centered pooled,reb,ast,125,0.179,,,No interval: centered pooled statistic or insufficient blocks,https://www.nba.com/stats/leaders?Season=2025-26,R06;R07
+Player-centered pooled,pts,min,125,0.576,,,No interval: centered pooled statistic or insufficient blocks,https://www.nba.com/stats/leaders?Season=2025-26,R06;R07
+Player-centered pooled,pts,plus_minus,125,0.190,,,No interval: centered pooled statistic or insufficient blocks,https://www.nba.com/stats/leaders?Season=2025-26,R06;R07
+Luka Dončić,pts,tpm,64,0.666,0.438,0.817,Conditional player-stratified moving-block bootstrap; not population-generalizable,https://www.nba.com/stats/leaders?Season=2025-26,R06;R07
+Luka Dončić,pts,reb,64,0.304,0.100,0.412,Conditional player-stratified moving-block bootstrap; not population-generalizable,https://www.nba.com/stats/leaders?Season=2025-26,R06;R07
+Luka Dončić,pts,ast,64,0.101,-0.278,0.456,Conditional player-stratified moving-block bootstrap; not population-generalizable,https://www.nba.com/stats/leaders?Season=2025-26,R06;R07
+Luka Dončić,reb,ast,64,0.249,0.029,0.465,Conditional player-stratified moving-block bootstrap; not population-generalizable,https://www.nba.com/stats/leaders?Season=2025-26,R06;R07
+Luka Dončić,pts,min,64,0.552,0.191,0.714,Conditional player-stratified moving-block bootstrap; not population-generalizable,https://www.nba.com/stats/leaders?Season=2025-26,R06;R07
+Luka Dončić,pts,plus_minus,64,0.347,0.091,0.475,Conditional player-stratified moving-block bootstrap; not population-generalizable,https://www.nba.com/stats/leaders?Season=2025-26,R06;R07
+Anthony Edwards,pts,tpm,61,0.696,0.516,0.808,Conditional player-stratified moving-block bootstrap; not population-generalizable,https://www.nba.com/stats/leaders?Season=2025-26,R06;R07
+Anthony Edwards,pts,reb,61,0.302,0.029,0.478,Conditional player-stratified moving-block bootstrap; not population-generalizable,https://www.nba.com/stats/leaders?Season=2025-26,R06;R07
+Anthony Edwards,pts,ast,61,-0.049,-0.286,0.137,Conditional player-stratified moving-block bootstrap; not population-generalizable,https://www.nba.com/stats/leaders?Season=2025-26,R06;R07
+Anthony Edwards,reb,ast,61,0.013,-0.242,0.265,Conditional player-stratified moving-block bootstrap; not population-generalizable,https://www.nba.com/stats/leaders?Season=2025-26,R06;R07
+Anthony Edwards,pts,min,61,0.596,0.392,0.679,Conditional player-stratified moving-block bootstrap; not population-generalizable,https://www.nba.com/stats/leaders?Season=2025-26,R06;R07
+Anthony Edwards,pts,plus_minus,61,0.037,-0.203,0.214,Conditional player-stratified moving-block bootstrap; not population-generalizable,https://www.nba.com/stats/leaders?Season=2025-26,R06;R07

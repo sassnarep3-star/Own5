@@ -1,0 +1,19 @@
+{
+  "as_of": "2026-11-05",
+  "model_version": "nba-research-1.0.0",
+  "integrity_checks": 15,
+  "integrity_passed": 15,
+  "teams": 30,
+  "player_games": 125,
+  "games": 2,
+  "market_prices": 12,
+  "strategies": 8,
+  "certified_strategies": 0,
+  "leaderboard_entries": 0,
+  "settled_bets": 0,
+  "flags": 15,
+  "preregistration_sha256": "2ca1afd873a0aa8ab8c0bd5346f65dc812d8f02fa2c19b63281fa1d695f5e079",
+  "bootstrap_reps": 1000,
+  "bootstrap_block": 5,
+  "seed": 20261105
+}

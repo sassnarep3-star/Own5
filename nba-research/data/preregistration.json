@@ -1,0 +1,80 @@
+{
+  "version": "1.0.0",
+  "registered_date": "2026-11-05",
+  "family_size": 8,
+  "strategies": [
+    {
+      "id": "S01",
+      "name": "Efficiency spread",
+      "division": "Singles",
+      "signal": "Shrunk offense/defense matchup",
+      "rule": "Archive a spread candidate only when the point-in-time model differs from the timestamped market by at least 3 points after all availability checks.",
+      "hypothesis": "Small-sample team ratings regress toward a prior-season baseline; residual market disagreement may contain information.",
+      "source_url": "https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame"
+    },
+    {
+      "id": "S02",
+      "name": "Pace-adjusted total",
+      "division": "Singles",
+      "signal": "Matchup pace plus opponent-adjusted defense",
+      "rule": "Archive a total candidate only when the point-in-time total differs from the timestamped market by at least 4 points after all availability checks.",
+      "hypothesis": "Possession volume and opponent defensive efficiency jointly explain scoring level better than raw points alone.",
+      "source_url": "https://www.nba.com/stats/help/glossary"
+    },
+    {
+      "id": "S03",
+      "name": "Calibrated moneyline",
+      "division": "Singles",
+      "signal": "Calibrated win probability versus no-vig market",
+      "rule": "Archive a moneyline candidate only when a leakage-tested probability exceeds the applicable no-vig market probability by at least 3 percentage points.",
+      "hypothesis": "A calibrated scoring distribution may identify win-probability disagreement; this distribution is not yet verified.",
+      "source_url": "https://sportsbook.fanduel.com/navigation/nba?tab=parlay-builder"
+    },
+    {
+      "id": "S04",
+      "name": "Two-game parlay",
+      "division": "Cross-game parlays",
+      "signal": "Two spread/total edges in distinct games",
+      "rule": "Require two distinct games, each with a 3-point point-in-time edge, verified prices and an empirically validated joint outcome model.",
+      "hypothesis": "Separate games reduce shared in-game mechanisms, but independence of the actual legs still requires evidence.",
+      "source_url": "https://www.nba.com/schedule?date=2026-11-05"
+    },
+    {
+      "id": "S05",
+      "name": "Three-game parlay",
+      "division": "Cross-game parlays",
+      "signal": "Three spread/total edges in distinct games",
+      "rule": "Require three distinct games, each with a 3-point point-in-time edge, verified prices and a validated three-leg joint model; otherwise register no pick.",
+      "hypothesis": "Compounded pricing errors may exist, but tail dependence and error multiplication can dominate apparent edge.",
+      "source_url": "https://www.nba.com/schedule?date=2026-11-05"
+    },
+    {
+      "id": "S06",
+      "name": "Points plus assists combo",
+      "division": "Player-prop combinations",
+      "signal": "Usage/minutes and same-game stat dependence",
+      "rule": "Research threshold PTS>=25 and AST>=5; require a timestamped offered combo, positive net model edge of at least 3 percentage points and validated joint pricing. Thresholds are exploratory, not current market lines.",
+      "hypothesis": "Scoring and assist opportunities share possession/usage drivers; marginal multiplication is not a valid price.",
+      "source_url": "https://sportsbook.draftkings.com/page/nba-player-props"
+    },
+    {
+      "id": "S07",
+      "name": "Points assists rebounds combo",
+      "division": "Player-prop combinations",
+      "signal": "Three-way same-game stat dependence",
+      "rule": "Research threshold PTS>=25, AST>=5 and REB>=5; require a timestamped offered combo, at least 3 percentage points of net model edge and a validated three-way joint model.",
+      "hypothesis": "Pairwise correlation is insufficient to determine a three-leg joint probability; the exact joint event must be modeled or observed.",
+      "source_url": "https://sportsbook.draftkings.com/page/nba-player-props"
+    },
+    {
+      "id": "S08",
+      "name": "Distinct-game star points parlay",
+      "division": "Player-prop combinations",
+      "signal": "Two player scoring props in distinct games",
+      "rule": "Research Dončić PTS>=25 and Edwards PTS>=25 only on distinct scheduled games; require verified offered prices and a dependence-aware joint evaluation. Never pair the same shared game as independent legs.",
+      "hypothesis": "Player scoring persistence is not evidence that separate betting outcomes are independent; calendar and slate effects remain possible.",
+      "source_url": "https://www.nba.com/stats/leaders?Season=2025-26"
+    }
+  ],
+  "sha256": "2ca1afd873a0aa8ab8c0bd5346f65dc812d8f02fa2c19b63281fa1d695f5e079"
+}

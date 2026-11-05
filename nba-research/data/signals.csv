@@ -1,0 +1,2 @@
+signal,n_teams,pearson_r,current_net_mae_points_per_100,prior_league_mean_baseline_mae,scope,source_url,flag_id
+Prior-season net rating persistence,30,0.451,6.250,6.746,"Descriptive 30-team ecological check, not a game-level or betting backtest",https://www.nba.com/stats/teams/advanced?Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame,R02;R15

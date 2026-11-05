@@ -1,0 +1,16 @@
+check,status,detail,source_url
+Thirty-team coverage,PASS,Four official tables contain the same 30 unique team IDs.,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame
+Current record reconciliation,PASS,"W-L agrees across advanced, traditional and standings for all 30 teams.",https://www.nba.com/standings?Season=2026-27
+Games equal wins plus losses,PASS,All 120 team-table rows reconcile GP to W+L.,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame
+Standings split reconciliation,PASS,Home+road+neutral equals total W-L; OT is a subset and is not added again.,https://www.nba.com/standings?Season=2026-27
+League win-loss balance,PASS,League wins equal losses in both seasons.,https://www.nba.com/stats/teams/advanced?Season=2025-26&SeasonType=Regular+Season&PerMode=PerGame
+Official rating identity,PASS,NetRtg equals OffRtg-DefRtg within one-decimal rounding tolerance.,https://www.nba.com/stats/help/glossary
+Traditional scoring identity,PASS,PTS equals 2*FGM+3PM+FTM within the 0.20 bound from four one-decimal inputs plus display rounding.,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame
+Rebound identity,PASS,OREB+DREB equals REB within rounding tolerance.,https://www.nba.com/stats/help/glossary
+Shooting percentage identities,PASS,All 90 displayed FG/3P/FT percentages lie within ratio intervals propagated from rounded per-game makes/attempts.,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame
+Player log coverage and uniqueness,PASS,61 Edwards + 64 Dončić rows; no duplicate player-game keys; counts match official leaders.,https://www.nba.com/stats/leaders?Season=2025-26
+Player season-mean reconciliation,PASS,Luka Dončić: 64 games; Anthony Edwards: 61 games. Rounded PTS/REB/AST/3PM match official leaders; minutes match within rounding.,https://www.nba.com/stats/leaders?Season=2025-26
+Schedule coverage,PASS,Exactly the two officially listed November 5 games; both participants exist in team tables.,https://www.nba.com/schedule?date=2026-11-05
+Injury report scope,PASS,Nine named Out rows plus two unsubmitted team rows; no availability inference.,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-05_12_00PM.pdf
+Market pair completeness,PASS,"Six two-sided markets; spread/total thresholds match within each pair. Prices are archived, not executable.",https://sportsbook.fanduel.com/navigation/nba?tab=parlay-builder
+No fabricated ledger,PASS,The settled/prospective bet ledger is intentionally empty; performance and rewards remain blank.,https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf

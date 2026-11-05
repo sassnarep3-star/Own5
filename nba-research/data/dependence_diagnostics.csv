@@ -1,0 +1,3 @@
+player,diagnostic,n_pairs,pearson_r,interpretation,source_url,flag_id
+Luka Dončić,Adjacent logged-game points lag-1,63,-0.041,Diagnostic only; not evidence of parlay-leg independence; missed games remain adjacent in the log,https://www.nba.com/stats/leaders?Season=2025-26,R07
+Anthony Edwards,Adjacent logged-game points lag-1,60,0.056,Diagnostic only; not evidence of parlay-leg independence; missed games remain adjacent in the log,https://www.nba.com/stats/leaders?Season=2025-26,R07
