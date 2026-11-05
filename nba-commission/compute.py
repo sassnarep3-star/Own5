@@ -682,7 +682,7 @@ def main() -> None:
     # ---- 15. flags ------------------------------------------------------
     flags = [
         ("F01", "No verified market odds", "High", "No timestamped price from a named sportsbook was obtained in this session (sandbox outbound access is limited to GitHub hosts; nba.com is reachable only through the page fetcher, which does not serve book prices). Every edge, CLV, ROI and reward cell is therefore blank.", "lines, props, strategies, leaderboard", URL_SCHEDULE),
-        ("F02", "Home-court advantage is a constant", "Medium", "HFA = 2.5 points is a model choice. The official home/road splits show a home edge exists (see HFA test) but do not measure its size in points.", "own lines", URL_STANDINGS),
+        ("F02", "Home-court advantage is a constant", "Medium", "HFA = 2.5 points is a model choice. The official 2026-27 home/road split (62-59, two-sided p = 0.856) does not even establish a home edge at this sample size, let alone measure its size in points.", "own lines", URL_STANDINGS),
         ("F03", "Small samples", "High", "2026-27 teams have played 6-9 games; prop logs contain 4 (Edwards) and 8 (Doncic) 2026-27 games. Shrinkage is applied and flagged.", "own lines, props, correlations", URL_TEAM_STATS),
         ("F04", "Edwards participation", "High", "Anthony Edwards appears in 4 of Minnesota's 9 games on the official box-score page; the reason is not on the page and no official injury report was accessed. Availability is unverified.", "props, S06, S08", URL_EDWARDS_2627),
         ("F05", "Games page static render is empty", "Low", "https://www.nba.com/games?date=2026-11-05 renders 'No Games Scheduled' while the official month calendar on the same page shows 2 games for 2026-11-05. The slate was transcribed from /schedule instead; the discrepancy is recorded, not resolved.", "slate", "https://www.nba.com/games?date=2026-11-05"),
@@ -697,6 +697,7 @@ def main() -> None:
         ("F15", "Independence inference is weak by construction", "High", "Session eeddab9b's independent audit (2026-11-05) flags that inferring cross-game independence from two players with wide intervals is too strong, and that pooled two-player prop rates need clustered and out-of-sample validation. This board agrees: its own lag-1 table (n = 61 and 64 games, |r| < 0.06) is published with the explicit caveat that it cannot prove independence, and every cross-game parlay (S04, S05, S08) stays blocked. No certification anywhere in this board rests on the independence assumption.", "independence, parlays, leaderboard", "https://www.nba.com/stats/player/1630162/boxscores?Season=2025-26"),
         ("F14", "Standings GB column is win%-based", "Low", "Conference leaders show GB '--' even when their records differ in games played (POR 6-1 above LAL/HOU 7-2 in the West). GB is computed against win% rank, not games behind; read it with care.", "standings", URL_STANDINGS),
     ]
+    flags.sort(key=lambda f: int(f[0][1:]))
     flags_out = [{"id": f[0], "title": f[1], "severity": f[2], "detail": f[3], "scope": f[4], "source_url": f[5]}
                  for f in flags]
 
