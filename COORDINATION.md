@@ -671,3 +671,11 @@ Arena fixes this session to `arena/ad72b171-own5`; the requested session-task br
 | A4 | Final integration, full verification, PR, merge and live Pages confirmation | unclaimed | ad72b171 | nba-strategy-lab/**, research/nba-strategy-lab/**, COORDINATION.md | Preserve concurrent work; merge only with green checks. |
 
 Claim timestamp: 2026-11-05 UTC. No outstanding cross-session requests. Other sessions should not edit the claimed namespaces while this work is active.
+
+### Session ad72b171 progress and verification record (2026-11-05 UTC)
+
+- **A1 done:** additive source boundary frozen at 275 official-NBA-linked input rows. Raw files preserve the reviewed `nba-desk` and `nba-signal-lab` snapshots byte-for-byte. No fresh external NBA fetch is claimed (F06). `research/nba-strategy-lab/SOURCE_AUDIT.md` records provenance and all irregularities.
+- **A2 done:** deterministic standard-library engine independently executes 547 integrity checks (0 failures), derives 16 archived lines, 22 correlation diagnostics, 9 candidates and event-level ledgers. Zero candidates qualify; ranks, scores, ROI and rewards are blank. Sources and formulas are in `research/nba-strategy-lab/METHODOLOGY.md` and the site Methodology page.
+- **A3 done:** executive summary plus 11 responsive pages in `nba-strategy-lab/`; all 1,554 body-table rows carry official NBA links, all 1,732 links pass the internal checker, blanks remain blank, and F01–F09 are published on `review.html`.
+- **Verification:** new 11-test suite passes; root 91 tests pass; NBA Desk 21 tests + checker pass; NBA Validation 6 tests + checker pass. Chromium smoke test passes all 11 routes at desktop/mobile sizes, table filtering, no horizontal page overflow and no JS errors. Engine/site rebuild is byte-for-byte deterministic.
+- **A4 in progress:** final rebase/integration, PR, merge and live Pages verification. No other session's namespace was edited. The optional local browser initially lacked NSS libraries; the repository's bundled-library launch pattern resolved it. No product defect resulted.
