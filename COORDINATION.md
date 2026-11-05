@@ -593,3 +593,21 @@ Claim timestamp: 2026-11-03 UTC. Cross-session requests: none at claim time.
 - **Merged:** yes — merge commit `1885d7435ea1c1dba830755fc723aed5f6a30630` at 2026-11-04T00:24:45Z (`gh pr merge 33 --merge`). Append-only conflicts in COORDINATION.md/README.md resolved by keeping both sides before merge; CI-locked rebuild clean and all test suites green at merge time.
 - **GitHub Pages:** deployed — pages build-and-deployment run `41746619471` completed success; live URLs externally verified: https://sassnarep3-star.github.io/Own5/nba-signal-lab/index.html (dashboard) and https://sassnarep3-star.github.io/Own5/nba-signal-lab/flagged.html (Flagged for Review). Root desk footer now cross-links "NBA Signal Lab ↗" (integration via the CI-locked seed.py/build.py rebuild).
 - **Task status:** M1–M12 **DONE**. 16/16 verification checks green; 6 open flags published (F-HFA, F-MARKET, F-SLATE, F-SMALL, F-PLAYERS, F-ODDS); 0 strategies certified; no luck/skill claims made.
+
+---
+
+# Session f08f4adb — NBA evidence-first research and integration (2026-11-05 UTC)
+
+Fixed Arena branch: `arena/f08f4adb-own5`. Platform policy prohibits creating/switching to the requested `session-<id>/<task>` branches; all work stays on this fixed branch. Claim made before substantive implementation. Existing labs and data are read-only during research; the new, non-overlapping scope is `nba-research/**` and its dedicated workflow. Shared root navigation is reserved for the final integration step, after scoped tasks pass and active ownership is checked. Historical claims will not be silently overwritten.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| F08-01 | Claim and baseline repository / source audit | in progress | f08f4adb | COORDINATION.md, nba-research/audit/** | Preserve all prior sessions; report irregularities, not unsupported verification claims. |
+| F08-02 | Fresh official-source evidence register and requirement trace | in progress | f08f4adb | nba-research/data/**, nba-research/research/** | Re-fetch official sources; no inferred odds, injuries, performance or market values. |
+| F08-03 | Reproducible line, dependence, validation and luck-control engine | in progress | f08f4adb | nba-research/engine.py, nba-research/tests/** | Separate raw facts, disclosed model assumptions, calculations and unverified cells. |
+| F08-04 | Singles, parlays, player-prop combinations and gated leaderboard | in progress | f08f4adb | nba-research/strategies.py, nba-research/data/** | Fail closed; no reward without independently eligible, validated evidence. |
+| F08-05 | Executive summary and clean dashboard category pages | in progress | f08f4adb | nba-research/*.html, nba-research/build.py, nba-research/style.css, nba-research/research/** | Deterministic static GitHub Pages site, searchable tables, explicit source links. |
+| F08-06 | Line-by-line checks, browser tests and Flagged for Review | in progress | f08f4adb | nba-research/check.py, nba-research/tests/**, .github/workflows/nba-research.yml | Build reproducibility, evidence schema, calculations, internal links, mobile/no-JS checks. |
+| F08-07 | Final integration, PR, merge and Pages verification | unclaimed | f08f4adb | COORDINATION.md, README.md; root shared navigation only after scoped completion | Must not merge a broken build; preserve concurrent work; publish nonblocking flags. |
+
+Cross-session request at claim time: final integration should expose the new NBA workspace from the existing root navigation through its deterministic generator. No other session's source files are requested for editing. Sources, verification results, conflicts and final PR/deploy outcomes will be appended below as work completes.
