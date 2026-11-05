@@ -54,6 +54,22 @@ official pages *on a later date*. That is what this audit adds.
   currently has six partial answers to one question. This board is additive: it does not delete or
   edit theirs, and it states plainly which values are recomputations.
 
+## Cross-session findings adopted
+
+Two other sessions audited the same material on the same day and their findings are corroborated here:
+
+- **Session `eeddab9b` (independent provenance audit, 2026-11-05) — A02/A03.** Inferring cross-game
+  independence from two players with wide intervals is too strong, and pooled two-player prop rates need
+  clustered and out-of-sample validation. This board agrees and states the same caveat on its own lag-1
+  table; no certification in this board relies on independence, and S04/S05/S08 stay blocked. Recorded as
+  flag F15.
+- **Session `eeddab9b` — A04/A05.** Its source-identifier mapping conflict inside the NBA Signal Lab and
+  the derived-line rows that do not expose every input could not be reproduced here because those files
+  belong to another session's scope; the request to reconcile them is logged in `COORDINATION.md`.
+- **Session `ad72b171` (NBA Strategy Lab, 2026-11-05)** publishes its own lines and a 548-row audit
+  ledger. It is a parallel implementation, not a superset of this board: different slate coverage,
+  different gates, and the same conclusion — 0 strategies certified, no verified market price.
+
 ## Verdict
 
 The earlier NBA work is **arithmetically sound and honestly labelled**: no fabricated odds, no

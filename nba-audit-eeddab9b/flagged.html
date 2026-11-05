@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Independent audit notes on the NBA Signal Lab evidence, freshness, and statistical claims.">
+  <title>Flagged for Review — Independent NBA Audit</title>
+  <style>
+    :root{color-scheme:light;--ink:#14263d;--muted:#58677b;--line:#dbe3ed;--blue:#1457a6;--amber:#fff4d8;--red:#9a4019;--bg:#f5f8fc;--white:#fff}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.58 system-ui,-apple-system,"Segoe UI",sans-serif}
+    header{background:#10243c;color:#fff;padding:2.2rem max(1rem,calc((100vw - 1040px)/2)) 1.8rem}header p{margin:.35rem 0;color:#d1dceb}main{max-width:1040px;margin:1.5rem auto;padding:0 1rem 2.5rem}
+    h1{font-size:clamp(1.65rem,4vw,2.5rem);line-height:1.15;margin:.2rem 0}h2{margin-top:2rem;font-size:1.35rem}h3{font-size:1.05rem;margin:0 0 .4rem}a{color:var(--blue);overflow-wrap:anywhere}header a{color:#fff}
+    .lede,.card,.callout{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:1rem 1.2rem}.lede{margin:1rem 0}.callout{border-left:5px solid #c2750a;background:var(--amber);margin:1rem 0}.card{margin:.8rem 0}.tag{display:inline-block;background:#fce7dc;color:#7c3214;border-radius:99px;padding:.1rem .55rem;font-size:.78rem;font-weight:700;letter-spacing:.02em}
+    table{border-collapse:collapse;width:100%;background:#fff;margin:.7rem 0 1.2rem;font-size:.93rem}th,td{padding:.7rem .75rem;text-align:left;vertical-align:top;border:1px solid var(--line)}th{background:#eaf0f7}code{background:#eef2f7;padding:.08rem .3rem;border-radius:4px}.small{color:var(--muted);font-size:.9rem}footer{border-top:1px solid var(--line);padding:1rem;color:var(--muted);text-align:center}
+    @media(max-width:700px){table,tbody,tr,td{display:block}thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}tr{border:1px solid var(--line);margin:.7rem 0}td{border:0;border-bottom:1px solid var(--line)}td:last-child{border-bottom:0}td:before{content:attr(data-label);display:block;font-size:.76rem;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.04em}}
+  </style>
+</head>
+<body>
+<header>
+  <h1>Flagged for Review — Independent NBA Audit</h1>
+  <p>Own5 · session eeddab9b · review date 2026-11-05 UTC · audit findings A01–A05</p>
+  <p><a href="../nba-signal-lab/index.html">NBA Signal Lab dashboard</a> · <a href="../nba-signal-lab/verification.html">verification register</a> · <a href="../nba-signal-lab/flagged.html">existing Flagged for Review</a></p>
+</header>
+<main>
+  <section class="lede">
+    <strong>Bottom line.</strong> The repository already contains an NBA dashboard, executive summary, model-line and correlation analyses, strategy gates, leaderboard design, verification report, and flagged-items page. Local deterministic checks pass. This audit found issues that limit freshness, reproducibility, and the interpretation of correlation evidence. No strategy is certified and there is no verified betting edge or funded reward.
+  </section>
+  <section class="callout"><strong>Scope and evidence limitation.</strong> This session could not freshly retrieve nba.com pages in its shell environment. Official URLs are linked for manual review; prior-session fetches and transcriptions are documented in the source register, but this audit does not claim a fresh, line-by-line primary-source re-fetch. Automated integrity checks verify row structure, arithmetic identities, source URL domains/links, and deterministic outputs—not the truth of each value against today's live NBA page.</section>
+
+  <h2>Findings for review</h2>
+  <table>
+    <thead><tr><th>ID / severity</th><th>Finding and evidence</th><th>Recommended disposition</th><th>Primary source / review link</th></tr></thead>
+    <tbody>
+      <tr>
+        <td data-label="ID / severity"><span class="tag">A01 · freshness</span></td>
+        <td data-label="Finding and evidence">The published model-line slate is dated 2026-11-04 and the source snapshot is labeled 2026-11-03. The audit date is 2026-11-05, so those listed games are historical, not current actionable lines.</td>
+        <td data-label="Recommended disposition">Keep the snapshot clearly labeled historical; do not present it as a live slate. Refresh inputs and lines only after a dated official schedule and statistics snapshot is independently checked.</td>
+        <td data-label="Primary source / review link"><a href="https://www.nba.com/games?date=2026-11-04" target="_blank" rel="noopener">NBA game calendar, Nov 4</a> · <a href="../nba-signal-lab/model-lines.html">published lines</a></td>
+      </tr>
+      <tr>
+        <td data-label="ID / severity"><span class="tag">A02 · statistical</span></td>
+        <td data-label="Finding and evidence">The cross-game independence probe uses lag-1 points correlations for two players only: Luka Dončić, 63 pairs, r = −0.041, 95% CI [−0.285, 0.209]; Anthony Edwards, 60 pairs, r = 0.056, 95% CI [−0.200, 0.306]. These broad intervals include nontrivial positive and negative autocorrelation. A lag-1 statistic for two individual players does not establish independence of team-game legs or parlay returns. The correlations page and README also phrase the result as supporting / holding the independence assumption, which is stronger than these data warrant.</td>
+        <td data-label="Recommended disposition">Treat gate G05 as unverified, not passed, until game-leg joint outcomes are measured across a materially larger, pre-registered sample (with schedule, team, and temporal structure addressed). Avoid claiming cross-game independence from this probe.</td>
+        <td data-label="Primary source / review link"><a href="https://www.nba.com/stats/player/1629029/boxscores?Season=2025-26" target="_blank" rel="noopener">Luka official box scores</a> · <a href="https://www.nba.com/stats/player/1630162/boxscores?Season=2025-26" target="_blank" rel="noopener">Edwards official box scores</a> · <a href="../nba-signal-lab/correlations.html">computed correlations</a></td>
+      </tr>
+      <tr>
+        <td data-label="ID / severity"><span class="tag">A03 · statistical</span></td>
+        <td data-label="Finding and evidence">Pooled Pearson correlations and Fisher-z intervals use 125 game rows from only two players. The page reports per-player point estimates, but the pooled confidence intervals treat rows as independent and do not account for repeated observations within players or player-specific distributions. The 3-leg thresholds are also measured on the same small two-player sample.</td>
+        <td data-label="Recommended disposition">Keep results explicitly exploratory; do not carry the pooled interval or combo hit rates into pricing. Re-estimate with broader player coverage and uncertainty methods that respect clustering/serial dependence, then validate out of sample.</td>
+        <td data-label="Primary source / review link"><a href="https://www.nba.com/stats/leaders?Season=2025-26" target="_blank" rel="noopener">NBA official 2025-26 leaders</a> · <a href="../nba-signal-lab/correlations.html">correlation tables</a> · <a href="../nba-signal-lab/flagged.html">existing F-PLAYERS flag</a></td>
+      </tr>
+      <tr>
+        <td data-label="ID / severity"><span class="tag">A04 · provenance</span></td>
+        <td data-label="Finding and evidence">The source identifiers E7–E10 are inconsistent between <code>data/raw/evidence_log.md</code> and <code>verification.html</code>. For example, evidence-log E7 identifies Shai Gilgeous-Alexander box scores, while verification-page E7 identifies 2025-26 team traditional statistics; E8–E10 also map to different source descriptions. URLs are linked, but the IDs are ambiguous for manual cross-reference.</td>
+        <td data-label="Recommended disposition">Reconcile the source register to one stable identifier mapping and rebuild the verification page from that canonical register. Until then, cite the actual URL rather than relying on E-numbers.</td>
+        <td data-label="Primary source / review link"><a href="https://www.nba.com/stats/player/1628983/boxscores?Season=2025-26" target="_blank" rel="noopener">NBA official Shai box scores</a> · <a href="https://www.nba.com/stats/teams/traditional?Season=2025-26&amp;SeasonType=Regular%20Season" target="_blank" rel="noopener">NBA 2025-26 team stats</a> · <a href="../nba-signal-lab/verification.html">verification register</a></td>
+      </tr>
+      <tr>
+        <td data-label="ID / severity"><span class="tag">A05 · provenance</span></td>
+        <td data-label="Finding and evidence">Model-line rows link to each home team's generic schedule page, while the lines are computed from current- and prior-season team statistics. In the CSV, team-stat source URLs are also generic team pages without a season parameter. A reviewer may not land on the specific dated matchup or the season-specific statistics used in the calculation.</td>
+        <td data-label="Recommended disposition">Use season-qualified NBA stats URLs for the input fields and date/game-qualified schedule URLs where supported. Keep the model derivation links adjacent to each derived line; retain the official inputs or a dated retrieval record so results can be reproduced.</td>
+        <td data-label="Primary source / review link"><a href="https://www.nba.com/stats/teams/traditional?Season=2026-27&amp;SeasonType=Regular%20Season" target="_blank" rel="noopener">NBA 2026-27 team stats</a> · <a href="https://www.nba.com/stats/teams/traditional?Season=2025-26&amp;SeasonType=Regular%20Season" target="_blank" rel="noopener">NBA 2025-26 team stats</a> · <a href="../nba-signal-lab/model-lines.html">model-line rows</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Verification performed in this session</h2>
+  <ul>
+    <li><strong>NBA Signal Lab build/computation:</strong> PASS; 16 computed checks, 0 failures, deterministic output. Reproduce with <code>python3 nba-signal-lab/build.py</code> and <code>python3 nba-signal-lab/compute.py</code>. Arithmetic, counts, and local reconciliation passed; source content was not freshly re-fetched.</li>
+    <li><strong>NBA Signal Lab tests:</strong> PASS, 13/13. Build determinism, row/link integrity, selected checksums, and fail-closed state were tested. Three non-fatal Python <code>ResourceWarning</code>s noted unclosed files.</li>
+    <li><strong>Repository tests:</strong> PASS, 91/91 using <code>python3 -m unittest discover -s tests -v</code>. The separate <code>scripts/check_site.py</code> invocation did not run to completion because <code>dist/</code> was absent; that is a command precondition, not a failed assertion.</li>
+    <li><strong>Adjacent NBA checkers:</strong> NBA Own Lines, NBA Desk (14 pages / 506 rows / 15 flags), NBA 2026 Lab, and NBA audit checks passed. They do not replace fresh primary-source retrieval.</li>
+  </ul>
+  <h3>Repository presentation note (not a league-statistic finding)</h3>
+  <p>The NBA Signal Lab exists at <code>/nba-signal-lab/</code>, while the <a href="https://github.com/sassnarep3-star/Own5/blob/main/_config.yml">top-level Jekyll metadata</a> still calls Own5 an NFL line originator, and the <a href="https://github.com/sassnarep3-star/Own5/blob/main/README.md">README opening inventory</a> is stale. The README later documents the NBA Signal Lab and the root dashboard footer links to it. If the NBA work should lead, update the top-level description and navigation without removing NFL pages.</p>
+
+  <h2>Key project outputs</h2>
+  <ul>
+    <li><a href="../nba-signal-lab/executive-summary.html">NBA Signal Lab executive summary</a> and the companion <a href="../research/nba-signal-lab/EXECUTIVE_SUMMARY.md">Markdown executive summary</a>.</li>
+    <li><a href="../nba-signal-lab/model-lines.html">Own model lines</a>, with market prices blank rather than guessed.</li>
+    <li><a href="../nba-signal-lab/strategies.html">Strategies and validation gates</a>; the existing project reports zero certified strategies.</li>
+    <li><a href="../nba-signal-lab/leaderboard.html">Leaderboard design</a>; no entries have graded bets and prize funding remains blank.</li>
+    <li><a href="../nba-signal-lab/flagged.html">Existing Flagged for Review</a> and <a href="../nba-signal-lab/verification.html">lineage / verification details</a>.</li>
+  </ul>
+  <p class="small">This independent audit is additive. No prior NBA datasets, analysis pages, or shared root navigation were edited. It does not offer betting advice or certify a betting strategy.</p>
+</main>
+<footer>Own5 independent audit · 2026-11-05 UTC · Official-source links are provided for manual review; source content was not freshly fetched by this audit.</footer>
+</body>
+</html>
