@@ -1,0 +1,40 @@
+name: Verify NBA Integrity Desk
+on:
+  push:
+    branches: [main, 'arena/17bb8fe2-own5']
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  verify-nba-integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Rebuild from reviewed inputs
+        run: |
+          python3 nba-integrity-lab/legacy_audit.py
+          python3 nba-integrity-lab/build.py
+          git diff --exit-code -- nba-integrity-lab
+      - name: Check model, gates, audit and generated site
+        run: |
+          python3 -m unittest discover -s nba-integrity-lab -p 'test_*.py' -v
+          python3 nba-integrity-lab/check.py
+          node --check nba-integrity-lab/app.js
+      - name: Install browser test dependencies
+        run: npm ci --ignore-scripts
+      - name: Exercise desktop, mobile and no-JS pages
+        run: |
+          python3 -m http.server 8787 --bind 0.0.0.0 > /tmp/own5-integrity-http.log 2>&1 &
+          server=$!
+          trap 'kill "$server"' EXIT
+          TEST_BASE_URL=http://127.0.0.1:8787 node nba-integrity-lab/browser.cjs
