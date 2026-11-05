@@ -613,17 +613,55 @@ diff → flagged irregularity register) across the six existing NBA labs.
 | ID | Task | Status | Owner | Files touched | Notes |
 |----|------|--------|-------|---------------|-------|
 | A1 | Claim + baseline audit of repo and open claims | done | arena-a46d621e | COORDINATION.md | Claim pushed before any other work. No task on the board is in progress; last session 6d508fee completed M1–M12 (PR #33). |
-| A2 | 2026-11-05 official snapshot: standings, team stats, slate, player logs | in progress | arena-a46d621e | nba-commission/data/**, research/nba-commission/data-notes.md | Every row carries its official nba.com source URL; unverifiable cells blank + flagged. |
-| A3 | Own model lines for the 2026-11-05/06 slate (spread + total) | unclaimed | arena-a46d621e | nba-commission/** | Market columns blank + flagged (no verified odds source); derivation + sensitivity documented. |
-| A4 | Correlation values (prop combos, parlay legs) computed in-repo at real n | unclaimed | arena-a46d621e | nba-commission/** | Pearson r with Fisher-z CIs, phi/lift vs independence, lag-1 independence check. |
-| A5 | Luck-vs-skill engine (exact binomial, power, DSR, multiple testing) | unclaimed | arena-a46d621e | nba-commission/** | Concrete Ns computed in-repo; thresholds cited to published methodology. |
-| A6 | Gated strategy catalog: singles, parlays, player-prop combos | unclaimed | arena-a46d621e | nba-commission/** | Pre-registered rules; all start PENDING — no settled odds data, so 0 certified. |
-| A7 | Validation gates G01–G12 with concrete, cited thresholds | unclaimed | arena-a46d621e | nba-commission/** | Fail-closed status per strategy. |
-| A8 | Leaderboard / competition design (deflated scoring, reward tiers) | unclaimed | arena-a46d621e | nba-commission/** | Reward amounts are proposals; prize pool blank + flagged (unfunded). |
-| A9 | Cross-lab reconciliation audit of prior NBA sessions' rows | unclaimed | arena-a46d621e | nba-commission/**, research/nba-commission/repo-audit.md | Re-fetch official pages, diff prior snapshots, publish irregularities. |
-| A10 | Executive summary | unclaimed | arena-a46d621e | research/nba-commission/EXECUTIVE_SUMMARY.md | Restates only computed/verified values. |
-| A11 | Pages site: landing page + category subpages + Flagged for Review | unclaimed | arena-a46d621e | nba-commission/*.html, nba-commission/build.py | Deterministic builder + tests; every table row source-linked. |
-| A12 | Line-by-line verification harness | unclaimed | arena-a46d621e | nba-commission/verify.py, nba-commission/checks/ | Every row official-linked or explicit BLANK + flag; no broken links. |
-| A13 | Integration: combined re-verify, PR to main, merge, Pages check | unclaimed | arena-a46d621e | COORDINATION.md, README.md (append), scripts/build.py (footer cross-link only) | Records PR link + merge result here when done. |
+| A2 | 2026-11-05 official snapshot: standings, team stats, slate, player logs | done | arena-a46d621e | nba-commission/data/**, research/nba-commission/data-notes.md | Every row carries its official nba.com source URL; unverifiable cells blank + flagged. |
+| A3 | Own model lines for the 2026-11-05/06 slate (spread + total) | done | arena-a46d621e | nba-commission/** | Market columns blank + flagged (no verified odds source); derivation + sensitivity documented. |
+| A4 | Correlation values (prop combos, parlay legs) computed in-repo at real n | done | arena-a46d621e | nba-commission/** | Pearson r with Fisher-z CIs, phi/lift vs independence, lag-1 independence check. |
+| A5 | Luck-vs-skill engine (exact binomial, power, DSR, multiple testing) | done | arena-a46d621e | nba-commission/** | Concrete Ns computed in-repo; thresholds cited to published methodology. |
+| A6 | Gated strategy catalog: singles, parlays, player-prop combos | done | arena-a46d621e | nba-commission/** | Pre-registered rules; all start PENDING — no settled odds data, so 0 certified. |
+| A7 | Validation gates G01–G12 with concrete, cited thresholds | done | arena-a46d621e | nba-commission/** | Fail-closed status per strategy. |
+| A8 | Leaderboard / competition design (deflated scoring, reward tiers) | done | arena-a46d621e | nba-commission/** | Reward amounts are proposals; prize pool blank + flagged (unfunded). |
+| A9 | Cross-lab reconciliation audit of prior NBA sessions' rows | done | arena-a46d621e | nba-commission/**, research/nba-commission/repo-audit.md | Re-fetch official pages, diff prior snapshots, publish irregularities. |
+| A10 | Executive summary | done | arena-a46d621e | research/nba-commission/EXECUTIVE_SUMMARY.md | Restates only computed/verified values. |
+| A11 | Pages site: landing page + category subpages + Flagged for Review | done | arena-a46d621e | nba-commission/*.html, nba-commission/build.py | Deterministic builder + tests; every table row source-linked. |
+| A12 | Line-by-line verification harness | done | arena-a46d621e | nba-commission/verify.py, nba-commission/checks/ | Every row official-linked or explicit BLANK + flag; no broken links. |
+| A13 | Integration: combined re-verify, PR to main, merge, Pages check | in progress | arena-a46d621e | COORDINATION.md, README.md (append), scripts/build.py (footer cross-link only) | Records PR link + merge result here when done. |
 
 Claim timestamp: 2026-11-05 UTC. Cross-session requests: none at claim time.
+
+### Session arena-a46d621e — work log, sources and verification (2026-11-05 UTC)
+
+- **A2 done.** Official snapshot fetched 2026-11-05 through the platform page fetcher (sandbox curl to
+  nba.com is blocked; GitHub hosts only). Transcribed: 2026-27 standings 30 rows (E1), team traditional
+  stats 30 rows (E2), the 2026-11-05/06 slate 11 games (E3), 2026-27 game logs for Edwards 4 rows and
+  Dončić 8 rows (E4/E5), plus an independent re-fetch of 6 rows already inside the inherited 2025-26 log
+  (E6). Validation: W-L agree on both official pages 30/30; GP = W + L 30/30; split sums 30/30;
+  Σ(net×GP) = 0.7; log identities 137/137; per-player averages reproduce the official headline averages
+  (round-half-up); 0 duplicate (player_id, game_id).
+- **A3 done.** 11 own spread/total lines (formula in `research/nba-commission/methodology.md`), each with
+  a 7-variant sensitivity grid (K ∈ {10,20,40}, HFA ∈ {0.0,2.5,3.0}, current-only). Market columns blank.
+- **A4 done.** 7 team-level r (n=30), 7 player-pair r with Fisher-z CIs (n=137) plus per-season
+  out-of-sample re-tests, 5 prop-combo joint prices with φ/lift, lag-1 independence. Cross-check: the
+  inherited PTS × 3PM value recomputes to 0.6893 (0.5844, 0.7715) — identical to session 6d508fee's
+  published number.
+- **A5 done.** −110 break-even 0.52381; exact-binomial power (55% ⇒ 2,248 bets at 80% power, 3,113 at
+  90%; 60% ⇒ 269; 65% ⇒ 98); Bonferroni 0.00625 / Šidák 0.00639 for 8 tests; deflation rule and worked
+  examples; no Sharpe statistic is invented because no return series exists.
+- **A6/A7/A8 done.** 8 pre-registered strategies × 12 gates; every strategy fails closed; 0 certified;
+  leaderboard empty with a hard sample floor (2,248 bets) and reward amounts blank (pool unfunded).
+- **A9 done.** Repo audit: 91 existing tests pass, `tools/check_site.py` 20/0, repo-wide internal links
+  0 broken across 153 pages; earlier NBA boards re-verified (125/125 identities, 6/6 rows exact on
+  re-fetch, published correlation reproduced); the 2026-11-03 snapshot reconciles to the 2026-11-05
+  standings through exactly the 14 official 2026-11-04 games. Irregularity found: inherited CSV header
+  `blkа_pg` uses U+0430 (Cyrillic) instead of ASCII — logged as F13 and normalised in this session's
+  copy; the other session's files were **not** edited.
+- **A10–A12 done.** `research/nba-commission/EXECUTIVE_SUMMARY.md`, `methodology.md`, `data-notes.md`,
+  `repo-audit.md`; 14-page site in `nba-commission/`; `verify.py` green (6 groups, 0 failures: 238 CSV
+  rows all official-sourced, 75 keyed JSON rows linked, no broken links anywhere in the repo, no
+  unlinked table row, deterministic rebuild) and 18 unit tests pass.
+- **Flags published (14):** F01 no verified market price · F02 HFA is an assumption · F03 small samples ·
+  F04 Edwards 4 of 9 games · F05 games page renders "No Games Scheduled" · F06 NBA Cup treatment
+  unverified · F07 prior table secondhand · F08 moneyline model blocked · F09 prize pool unfunded ·
+  F10 prop settlement rules unverified · F11 no injury feed · F12 prior net sum −16.4 · F13 Cyrillic
+  header · F14 GB column is win%-based.
+- **A13** — integration: root footer cross-link added through the CI-locked `scripts/build.py` rebuild
+  (deterministic, `data/research.json` unchanged), full 91-test suite green, `tools/check_site.py` green.

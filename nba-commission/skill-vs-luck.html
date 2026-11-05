@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skill vs luck · NBA Line Commission · OWN5</title>
+<meta name="description" content="Source-verified NBA line origination, correlation values, validation gates and a luck-deflated leaderboard. Snapshot 2026-11-05.">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<header class="top">
+  <div class="brand">OWN5 · NBA LINE COMMISSION<small>SESSION arena-a46d621e · SNAPSHOT 2026-11-05 · PAPER RESEARCH ONLY</small></div>
+  <div class="meta">Every value is source-linked · Unverifiable values are blank and flagged</div>
+</header>
+<nav class="cats" aria-label="Sections"><a href="index.html">Dashboard</a><a href="lines.html">Own lines</a><a href="props.html">Player props</a><a href="correlations.html">Correlations</a><a href="strategies.html">Strategies</a><a href="gates.html">Validation gates</a><a href="skill-vs-luck.html" class="active">Skill vs luck</a><a href="leaderboard.html">Leaderboard</a><a href="data.html">Verified data</a><a href="audit.html">Repo audit</a><a href="verification.html">Verification</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for review</a><a href="executive-summary.html">Executive summary</a></nav>
+<main>
+<h1>Skill vs luck</h1>
+<p class="lede">The arithmetic that separates a hot streak from an edge: break-even, exact-binomial power, family-wise error and deflation of small samples.</p>
+<div class="grid">
+<div class="card"><div class="k">Break-even at −110</div><div class="v">0.5238</div><div class="s">110 / (110 + 100)</div></div>
+<div class="card"><div class="k">Bets to certify a 55% edge</div><div class="v">2,248</div><div class="s">α=0.05 one-sided, 80% power</div></div>
+<div class="card"><div class="k">Bonferroni α, 8 tests</div><div class="v">0.00625</div><div class="s">Šidák 0.00639</div></div>
+<div class="card"><div class="k">Graded bets this session</div><div class="v">0</div><div class="s">nothing to certify</div></div>
+</div>
+<h2>Power table</h2><div class="tablewrap"><table><caption>One-sided exact binomial test against the −110 break-even rate 0.523810. ‘Bets needed’ is how many graded bets a bettor with that true edge needs before the test reliably rejects break-even.</caption><thead><tr><th>True win rate</th><th class="num">Bets needed (80% power, exact)</th><th class="num">Bets needed (90% power, exact)</th><th class="num">Normal approximation (80%)</th><th>Note</th><th>Method source</th></tr></thead><tbody><tr><td>53%</td><td class="num">&gt;25,000</td><td class="num">&gt;25,000</td><td class="num">40,223</td><td>beyond the 25,000-bet cap: a 53% true edge is not certifiable in any realistic window; approximation only</td><td><a href="https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html" target="_blank" rel="noopener noreferrer">method ↗</a></td></tr><tr><td>55%</td><td class="num">2,248</td><td class="num">3,113</td><td class="num">2,242</td><td>exact one-sided binomial power search</td><td><a href="https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html" target="_blank" rel="noopener noreferrer">method ↗</a></td></tr><tr><td>58%</td><td class="num">491</td><td class="num">676</td><td class="num">485</td><td>exact one-sided binomial power search</td><td><a href="https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html" target="_blank" rel="noopener noreferrer">method ↗</a></td></tr><tr><td>60%</td><td class="num">269</td><td class="num">366</td><td class="num">262</td><td>exact one-sided binomial power search</td><td><a href="https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html" target="_blank" rel="noopener noreferrer">method ↗</a></td></tr><tr><td>65%</td><td class="num">98</td><td class="num">130</td><td class="num">94</td><td>exact one-sided binomial power search</td><td><a href="https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html" target="_blank" rel="noopener noreferrer">method ↗</a></td></tr></tbody></table></div>
+<h2>Worked examples</h2><div class="tablewrap"><table><caption>Exact binomial arithmetic (no simulation, no approximation).</caption><thead><tr><th>Scenario</th><th class="num">Computed probability</th><th>Reading</th><th>Method source</th></tr></thead><tbody><tr><td>Break-even bettor (p = break-even) goes 55-45 over 100 bets</td><td class="num">0.6180</td><td>Not evidence of skill at alpha=0.05.</td><td><a href="https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html" target="_blank" rel="noopener noreferrer">method ↗</a></td></tr><tr><td>Break-even bettor reaches at least 55% over 200 bets</td><td class="num">0.2514</td><td>Runs this hot purely by chance a large fraction of the time.</td><td><a href="https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html" target="_blank" rel="noopener noreferrer">method ↗</a></td></tr><tr><td>True 55% bettor, 200 bets, one-sided alpha=0.05</td><td class="num">0.1779</td><td>Power is far below 80% — 200 bets cannot certify a 55% edge.</td><td><a href="https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html" target="_blank" rel="noopener noreferrer">method ↗</a></td></tr></tbody></table></div>
+<div class="warn"><strong>A 55–45 run is not skill.</strong> A bettor with <em>exactly</em> the break-even rate goes 55–45 over
+100 bets with probability 0.618 — i.e. routinely. Reaching 55% over 200 bets happens
+25.1% of the time for such a bettor. Conversely, a genuine 55% edge is detected only
+17.8% of the time over those same 200 bets.</div>
+<h2>Deflation before ranking</h2>
+<p class="small">The leaderboard never displays a raw win rate. It displays
+<span class="mono">(wins + K*p0) / (n + K) with K = 25, p0 = break-even rate</span> — a 55–45 record deflates to
+<strong>0.5448</strong>, barely above break-even, which is the honest reading of a
+100-bet sample. Ranking also requires the minimum sample in the power table.</p>
+<h2>Method sources</h2>
+<div class="tablewrap"><table><caption>Citations are used for method only; no value from these papers is imported as an NBA statistic.</caption><thead><tr><th>ID</th><th>Reference</th><th>Link</th><th>How it is used here</th></tr></thead><tbody><tr><td>M1</td><td>Bailey, Borwein, Lopez de Prado, Zhu (2014) — Pseudo-Mathematics and Financial Charlatanism</td><td><a href="https://www.ams.org/notices/201405/rnoti-p458.pdf" target="_blank" rel="noopener noreferrer">open ↗</a></td><td>fetched 2026-11-05</td></tr><tr><td>M2</td><td>Bailey &amp; Lopez de Prado (2014) — The Deflated Sharpe Ratio</td><td><a href="https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf" target="_blank" rel="noopener noreferrer">open ↗</a></td><td>search metadata 2026-11-05</td></tr><tr><td>M3</td><td>Kaunitz, Zhong, Kreiner (2017) — Beating the bookies with their own numbers</td><td><a href="https://arxiv.org/abs/1710.02824" target="_blank" rel="noopener noreferrer">open ↗</a></td><td>search metadata 2026-11-05</td></tr><tr><td>M4</td><td>statsmodels — multiple-testing corrections (Holm, Sidak, Bonferroni)</td><td><a href="https://www.statsmodels.org/stable/generated/statsmodels.stats.multitest.multipletests.html" target="_blank" rel="noopener noreferrer">open ↗</a></td><td>fetched 2026-11-05</td></tr></tbody></table></div>
+</main>
+<footer>
+  <strong>OWN5 NBA Line Commission</strong> · session <span class="mono">arena-a46d621e</span> ·
+  snapshot 2026-11-05 · 11 own game lines · 8 own player prop lines ·
+  0 of 8 strategies certified · 0 graded bets.
+  <br>Official data: nba.com. Methodology citations are linked per row. No odds, no ROI, no betting advice.
+  Blank cells mean <em>unverified</em>, not zero. Gambling help: 1-800-GAMBLER ·
+  <a href="https://www.ncpgambling.org/help-treatment/national-helpline-1-800-522-4700/" target="_blank" rel="noopener noreferrer">NCPG ↗</a>.
+  <br>Other OWN5 boards: <a href="../index.html">NFL Research Desk</a> ·
+  <a href="../nba-signal-lab/index.html">NBA Signal Lab</a> · <a href="../nba-desk/index.html">NBA Desk</a> ·
+  <a href="../docs/index.html">NBA Line-Origination Lab</a> · <a href="../line-lab/index.html">NFL Line Lab</a>.
+</footer>
+</body></html>

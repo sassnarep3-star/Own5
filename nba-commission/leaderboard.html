@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leaderboard &amp; rewards · NBA Line Commission · OWN5</title>
+<meta name="description" content="Source-verified NBA line origination, correlation values, validation gates and a luck-deflated leaderboard. Snapshot 2026-11-05.">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<header class="top">
+  <div class="brand">OWN5 · NBA LINE COMMISSION<small>SESSION arena-a46d621e · SNAPSHOT 2026-11-05 · PAPER RESEARCH ONLY</small></div>
+  <div class="meta">Every value is source-linked · Unverifiable values are blank and flagged</div>
+</header>
+<nav class="cats" aria-label="Sections"><a href="index.html">Dashboard</a><a href="lines.html">Own lines</a><a href="props.html">Player props</a><a href="correlations.html">Correlations</a><a href="strategies.html">Strategies</a><a href="gates.html">Validation gates</a><a href="skill-vs-luck.html">Skill vs luck</a><a href="leaderboard.html" class="active">Leaderboard</a><a href="data.html">Verified data</a><a href="audit.html">Repo audit</a><a href="verification.html">Verification</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for review</a><a href="executive-summary.html">Executive summary</a></nav>
+<main>
+<h1>Leaderboard &amp; rewards</h1>
+<p class="lede">A competition design that pays for skill, not variance: deflated scoring, a minimum sample, family-wise error control and an entry bar that a hot week cannot clear.</p>
+<div class="panel"><h3>Scoring</h3>
+<p class="small"><span class="mono">score = deflated_rate * sqrt(n) * mean_de_vigged_CLV_sign, with deflated_rate = (wins + 25*p0)/(n + 25)</span></p>
+<p class="small muted">Units: audit unit (1 unit = 1 flat stake at the observed price). Minimum bets to rank: <strong>2,248</strong>.</p></div>
+<h2>Reward tiers</h2><div class="tablewrap"><table><caption>Reward structure is a proposal. No sponsor, no pool, no payout mechanism exists (F09).</caption><thead><tr><th class="num">Place</th><th>Share</th><th>Amount</th><th>Status</th></tr></thead><tbody><tr><td class="num">1</td><td>50% of pool</td><td><span class="blank">BLANK</span></td><td>blank — pool unfunded (F09)</td></tr><tr><td class="num">2</td><td>30% of pool</td><td><span class="blank">BLANK</span></td><td>blank — pool unfunded (F09)</td></tr><tr><td class="num">3</td><td>20% of pool</td><td><span class="blank">BLANK</span></td><td>blank — pool unfunded (F09)</td></tr></tbody></table></div>
+<h2>Standings</h2><div class="tablewrap"><table><caption>The competition table is empty because no strategy has a settled bet. An empty table is the correct output, not a gap.</caption><thead><tr><th>Rank</th><th>Entry</th><th>Strategy</th><th>Graded bets</th><th>Deflated rate</th><th>CLV</th><th>Score</th><th>Status</th></tr></thead><tbody><tr><td>—</td><td>—</td><td>—</td><td>0</td><td><span class="blank">BLANK</span></td><td><span class="blank">BLANK</span></td><td><span class="blank">BLANK</span></td><td><span class="badge b-pending">NO ENTRIES — NOTHING GRADED</span></td></tr></tbody></table></div>
+<p class="small muted">No entry is graded: no strategy has a settled bet (G04/G07 fail closed).</p>
+<h2>Anti-gaming rules</h2>
+<ul class="tight"><li>Only pre-registered rules may be scored; a rule changed mid-window restarts its sample at zero.</li><li>Legs must be priced from the same snapshot; any leg without a verified price voids the entry.</li></ul>
+<div class="note"><strong>Design intent.</strong> A 50/30/20 split of an unfunded pool with a hard sample floor means the only way to
+reach the top of this board is to survive hundreds of graded bets with a positive de-vigged closing-line value — which is what
+skill looks like when luck is subtracted, and what almost nothing survives.</div>
+</main>
+<footer>
+  <strong>OWN5 NBA Line Commission</strong> · session <span class="mono">arena-a46d621e</span> ·
+  snapshot 2026-11-05 · 11 own game lines · 8 own player prop lines ·
+  0 of 8 strategies certified · 0 graded bets.
+  <br>Official data: nba.com. Methodology citations are linked per row. No odds, no ROI, no betting advice.
+  Blank cells mean <em>unverified</em>, not zero. Gambling help: 1-800-GAMBLER ·
+  <a href="https://www.ncpgambling.org/help-treatment/national-helpline-1-800-522-4700/" target="_blank" rel="noopener noreferrer">NCPG ↗</a>.
+  <br>Other OWN5 boards: <a href="../index.html">NFL Research Desk</a> ·
+  <a href="../nba-signal-lab/index.html">NBA Signal Lab</a> · <a href="../nba-desk/index.html">NBA Desk</a> ·
+  <a href="../docs/index.html">NBA Line-Origination Lab</a> · <a href="../line-lab/index.html">NFL Line Lab</a>.
+</footer>
+</body></html>

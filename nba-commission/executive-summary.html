@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Executive summary · NBA Line Commission · OWN5</title>
+<meta name="description" content="Source-verified NBA line origination, correlation values, validation gates and a luck-deflated leaderboard. Snapshot 2026-11-05.">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<header class="top">
+  <div class="brand">OWN5 · NBA LINE COMMISSION<small>SESSION arena-a46d621e · SNAPSHOT 2026-11-05 · PAPER RESEARCH ONLY</small></div>
+  <div class="meta">Every value is source-linked · Unverifiable values are blank and flagged</div>
+</header>
+<nav class="cats" aria-label="Sections"><a href="index.html">Dashboard</a><a href="lines.html">Own lines</a><a href="props.html">Player props</a><a href="correlations.html">Correlations</a><a href="strategies.html">Strategies</a><a href="gates.html">Validation gates</a><a href="skill-vs-luck.html">Skill vs luck</a><a href="leaderboard.html">Leaderboard</a><a href="data.html">Verified data</a><a href="audit.html">Repo audit</a><a href="verification.html">Verification</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for review</a><a href="executive-summary.html" class="active">Executive summary</a></nav>
+<main>
+<h1>Executive summary</h1>
+<p class="lede">One page: what was built, what was verified against official sources, what the numbers show, and what remains unknown.</p>
+<p>Snapshot <strong>2026-11-05 (UTC)</strong>. Every value below is either transcribed from an official nba.com page</p>
+<p>(with a per-row link on the site) or computed in-repo by <span class="mono">nba-commission/compute.py</span> from those rows.</p>
+<p>Nothing is inferred. Where a value could not be verified it is blank and listed on the Flagged for</p>
+<p>review page.</p>
+<h2>What was built</h2>
+<ul class="tight">
+<li><strong>11 own game lines</strong> for the 2026-11-05 (2 games) and 2026-11-06 (9 games) slate: spread and total</li>
+</ul>
+<p>  for every game, each with a seven-variant sensitivity grid (prior weight K ∈ {10, 20, 40}, home-court</p>
+<p>  constant HFA ∈ {0.0, 2.5, 3.0}, and a no-prior/current-only variant).</p>
+<ul class="tight">
+<li><strong>8 own player-prop lines</strong> (PTS, REB, AST, 3PM) for the two players with usable official game logs,</li>
+</ul>
+<p>  each with the model mean, spread, empirical over-rate and push-rate at the published line.</p>
+<ul class="tight">
+<li><strong>Correlation values computed in-repo</strong>: 7 team-level Pearson correlations (n = 30 teams), 7</li>
+</ul>
+<p>  player-pair correlations with Fisher-z intervals (n = 137 player-games) and a genuine out-of-sample</p>
+<p>  re-test of each (2025-26 vs 2026-27), 5 same-game prop-combo joint prices with φ and lift, and a</p>
+<p>  lag-1 serial-independence check.</p>
+<ul class="tight">
+<li><strong>8 pre-registered strategies</strong> across three families — singles, cross-game parlays (2- and 3-leg),</li>
+</ul>
+<p>  same-game player-prop combos and a cross-game prop parlay — each behind <strong>12 validation gates</strong>.</p>
+<ul class="tight">
+<li><strong>A luck-vs-skill engine</strong>: exact-binomial power curves, family-wise error bounds, worked</li>
+</ul>
+<p>  coin-flip-style examples, and a deflation rule that shrinks a short hot streak toward break-even</p>
+<p>  before it can be ranked.</p>
+<ul class="tight">
+<li><strong>A competition design</strong> (deflated scoring, 50/30/20 tiers, a hard sample floor, anti-gaming rules)</li>
+</ul>
+<p>  with an intentionally empty standings table.</p>
+<ul class="tight">
+<li><strong>A repo audit</strong> re-verifying the six earlier NBA boards in this repository against official pages.</li>
+</ul>
+<h2>What the numbers actually show</h2>
+<ul class="tight">
+<li><strong>Net rating is the dominant team signal this season</strong>: net points/game vs win% r = 0.9206</li>
+</ul>
+<p>  (95% CI 0.8385–0.9619, n = 30). Points allowed is the stronger half of that (r = −0.7369 vs win%,</p>
+<p>  points scored r = 0.5397).</p>
+<ul class="tight">
+<li><strong>Same-game prop legs are strongly dependent.</strong> PTS × 3PM r = 0.7165 (n = 137); PTS × REB 0.3809;</li>
+</ul>
+<p>  PTS × AST 0.2070. In joint terms, PTS ≥ 25 with 3PM ≥ 3 occurs in 65.7% of games versus 56.5% if the</p>
+<p>  legs were independent — a lift of ×1.163. Pricing that combo off the product of marginals</p>
+<p>  understates its fair odds by about 14% before any vig. The pattern repeats for the other combos</p>
+<p>  (PC5 PTS ≥ 30 &amp; MIN ≥ 35: lift ×1.236).</p>
+<ul class="tight">
+<li><strong>Cross-game legs look close to independent, and that is all we can say.</strong> Lag-1 correlation of a</li>
+</ul>
+<p>  player&#x27;s own points is +0.056 (Edwards, 61 games) and −0.041 (Dončić, 64 games). Near zero is</p>
+<p>  consistent with independence across games; it cannot prove it, and the 2026-27 windows (4 and 8</p>
+<p>  games) are too small to add anything.</p>
+<ul class="tight">
+<li><strong>The 2026-27 official home/road split does not measure home-court advantage</strong>: 62–59 at home,</li>
+</ul>
+<p>  two-sided binomial p = 0.856 over 121 team-games. HFA = 2.5 points is therefore published as an</p>
+<p>  assumption (F02), not as a measurement, with 0.0 and 3.0 runs shown for every game.</p>
+<ul class="tight">
+<li><strong>Own lines are fragile to the model prior.</strong> Across the seven variants a single game&#x27;s spread spans</li>
+</ul>
+<p>  up to 7.9 points (BOS @ CHA: −8.6 to −0.3). That range is published per game rather than hidden</p>
+<p>  behind one number.</p>
+<ul class="tight">
+<li><strong>A 55% edge needs ≈2,248 graded bets</strong> to be certified at α = 0.05 with 80% power against a −110</li>
+</ul>
+<p>  break-even of 0.52381; a 60% edge needs ≈269. A bettor with exactly the break-even rate goes 55–45</p>
+<p>  over 100 bets with probability 0.618, and reaches 55% over 200 bets 25.1% of the time. A true 55%</p>
+<p>  bettor is detected only 17.8% of the time over those same 200 bets.</p>
+<h2>What is not claimed</h2>
+<ul class="tight">
+<li><strong>No edge, no ROI, no closing-line value, no reward.</strong> No sportsbook price was verified in this</li>
+</ul>
+<p>  session (F01). Every market column is blank by design.</p>
+<ul class="tight">
+<li><strong>No moneyline model</strong> (F08): a win-probability model needs a margin-variance constant that is not</li>
+</ul>
+<p>  verified from an official source.</p>
+<ul class="tight">
+<li><strong>No certification.</strong> 0 of 8 strategies are certified; 0 graded bets exist; the leaderboard is empty.</li>
+<li><strong>No availability claim</strong> (F04, F11): Anthony Edwards appears in 4 of Minnesota&#x27;s 9 games and no</li>
+</ul>
+<p>  official injury report was accessed; prop lines are unconditional on playing.</p>
+<ul class="tight">
+<li><strong>No legal or betting advice.</strong> This is research on data provenance and statistical method.</li>
+</ul>
+<h2>Deliverables</h2>
+<ul class="tight">
+<li>Site: <span class="mono">nba-commission/</span> (14 pages, dashboard plus category subpages, every table row source-linked).</li>
+<li>Engine: <span class="mono">nba-commission/compute.py</span> (rebuild + 11 data checks), <span class="mono">nba-commission/build.py</span>,</li>
+</ul>
+<p>  <span class="mono">nba-commission/verify.py</span> (provenance, link, render and idempotency checks).</p>
+<ul class="tight">
+<li>Data: <span class="mono">nba-commission/data/</span> — 2026-27 standings (30 rows), team stats (30 rows), slate (11 rows),</li>
+</ul>
+<p>  2026-27 game logs (12 rows), inherited 2025-26 logs (125 rows), 2025-26 priors (30 rows), <span class="mono">outputs.json</span>.</p>
+<ul class="tight">
+<li>Method and record: <span class="mono">research/nba-commission/methodology.md</span>, <span class="mono">data-notes.md</span>, <span class="mono">repo-audit.md</span>, this file.</li>
+</ul>
+<h2>Bottom line</h2>
+<p>The pipeline is real: official data in, own lines out, correlations measured, gates that fail closed,</p>
+<p>and a leaderboard that cannot be gamed by a hot week. The edge is not demonstrated, and this summary</p>
+<p>does not pretend otherwise — the honest reading of the numbers above is that a same-game combo is</p>
+<p>mispriced by anyone who multiplies marginals, and that everything else needs a verified market price</p>
+<p>and hundreds of graded bets before it means anything.</p>
+</main>
+<footer>
+  <strong>OWN5 NBA Line Commission</strong> · session <span class="mono">arena-a46d621e</span> ·
+  snapshot 2026-11-05 · 11 own game lines · 8 own player prop lines ·
+  0 of 8 strategies certified · 0 graded bets.
+  <br>Official data: nba.com. Methodology citations are linked per row. No odds, no ROI, no betting advice.
+  Blank cells mean <em>unverified</em>, not zero. Gambling help: 1-800-GAMBLER ·
+  <a href="https://www.ncpgambling.org/help-treatment/national-helpline-1-800-522-4700/" target="_blank" rel="noopener noreferrer">NCPG ↗</a>.
+  <br>Other OWN5 boards: <a href="../index.html">NFL Research Desk</a> ·
+  <a href="../nba-signal-lab/index.html">NBA Signal Lab</a> · <a href="../nba-desk/index.html">NBA Desk</a> ·
+  <a href="../docs/index.html">NBA Line-Origination Lab</a> · <a href="../line-lab/index.html">NFL Line Lab</a>.
+</footer>
+</body></html>
