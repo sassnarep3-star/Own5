@@ -1,0 +1,10 @@
+source_id,publisher,dataset,url,scope
+S01,NBA,2026-11 schedule,https://www.nba.com/schedule?month=11&year=2026,16 archived schedule rows
+S02,NBA,2026-27 traditional team stats,https://www.nba.com/stats/teams/traditional?Season=2026-27&SeasonType=Regular%20Season,30 team rows
+S03,NBA,2025-26 traditional team stats,https://www.nba.com/stats/teams/traditional?Season=2025-26&SeasonType=Regular%20Season,30 team rows / priors
+S04,NBA,2024-25 traditional team stats,https://www.nba.com/stats/teams/traditional?Season=2024-25&SeasonType=Regular%20Season,30 team rows / evidence audit
+S05,NBA,2026-27 team box scores,https://www.nba.com/stats/teams/boxscores?Season=2026-27&SeasonType=Regular%20Season,22 paired games / 44 rows
+S06,NBA,Luka Dončić 2025-26 box scores,https://www.nba.com/stats/player/1629029/boxscores?Season=2025-26,64 player-game rows
+S07,NBA,Anthony Edwards 2025-26 box scores,https://www.nba.com/stats/player/1630162/boxscores?Season=2025-26,61 player-game rows
+S08,NBA,Statistics glossary,https://www.nba.com/stats/help/glossary,Definitions/context
+S09,NBA Official,2026-27 injury reporting,https://official.nba.com/nba-injury-report-2026-27-season/,Availability limitation context
