@@ -26,7 +26,7 @@ The hub produces reproducible NBA research lines, descriptive player signals, co
 
 ## Repository audit
 
-- Pinned baseline inventory: 484 files and 67,618 physical lines hashed line by line (updated at final integration to include concurrent PR #40).
+- Pinned baseline inventory: 529 files and 72,543 physical lines hashed line by line (updated at final integration to include concurrent PR #42).
 - Selected inherited field comparisons: 4,182; 3,490 match, 250 are stale current-season snapshots, 442 remain unverified with blank official values, and 0 unexpected mismatches.
 - Inventory/link presence is **not** independent factual verification. Code is tested by behavior; most inherited factual claims remain manual-review.
 
