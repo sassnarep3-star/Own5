@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repository Audit · Own5 NBA Research Hub</title>
+<link rel="stylesheet" href="assets/style.css">
+<script defer src="assets/app.js"></script>
+</head>
+<body>
+<header class="site"><div class="brand">Own5 <span>NBA Research Hub</span></div><nav class="main" aria-label="Primary"><a href="index.html" class="">Overview</a>
+<a href="executive-summary.html" class="">Executive Summary</a>
+<a href="lines.html" class="">Research Lines</a>
+<a href="players.html" class="">Player Signals</a>
+<a href="correlations.html" class="">Correlations &amp; Combos</a>
+<a href="strategies.html" class="">Strategies</a>
+<a href="gates.html" class="">Validation Gates</a>
+<a href="leaderboard.html" class="">Leaderboard</a>
+<a href="luck.html" class="">Luck &amp; Power</a>
+<a href="sources.html" class="">Sources</a>
+<a href="requirements.html" class="">Requirements</a>
+<a href="audit.html" class="active">Repository Audit</a>
+<a href="review.html" class="">Flagged for Review</a></nav></header>
+<main>
+<h1>Repository Audit</h1>
+
+<p class="lead">Line-by-line content inventory of the pinned baseline plus selected field comparisons. Inventory/link presence is <b>not</b> independent factual verification.</p>
+<div class="cards"><div class="card"><div class="k">Baseline files</div><div class="v">529</div><div class="s">pinned commit</div></div><div class="card"><div class="k">Physical lines</div><div class="v">72,543</div><div class="s">hashed line by line</div></div><div class="card"><div class="k">Field comparisons</div><div class="v">4182</div><div class="s">selected inherited NBA fields</div></div><div class="card"><div class="k">Mismatches</div><div class="v">0</div><div class="s">unexpected differences</div></div></div>
+<div class="warnbox">Code lines are assessed by tests/behavior, not NBA sources. Most inherited factual lines remain manual-review. Selected NBA fields were directly checked; stale snapshots are labeled separately. See <a href="review.html">F15/F18</a>.</div>
+<h2>Field comparison status</h2><div class="tbl-wrap"><table id="field-status"><thead><tr>
+<th>Status</th>
+<th>Count</th>
+<th>Meaning</th>
+<th>Source</th>
+</tr></thead><tbody>
+<tr><td>MATCH</td><td>3490</td><td>Selected field agrees with official-reviewed hub snapshot.</td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/f3d164a6a6d193a6a2f164d177d4fb7453ddfe48/nba-research-hub/audit/field_audit.csv" target="_blank" rel="noopener">Audit CSV</a></span></td></tr>
+<tr><td>STALE</td><td>250</td><td>Older snapshot differs from Nov 5 refresh; not current.</td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/f3d164a6a6d193a6a2f164d177d4fb7453ddfe48/nba-research-hub/audit/field_audit.csv" target="_blank" rel="noopener">Audit CSV</a></span></td></tr>
+<tr><td>UNVERIFIED</td><td>442</td><td>Official value blank; manual review.</td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/f3d164a6a6d193a6a2f164d177d4fb7453ddfe48/nba-research-hub/audit/field_audit.csv" target="_blank" rel="noopener">Audit CSV</a></span></td></tr>
+</tbody></table></div>
+<h2>Inventory coverage by scope</h2><div class="filter"><label class="small" for="scopes-filter">Filter table</label><br><input id="scopes-filter" type="search" placeholder="Filter rows…" oninput="filterTable(this,'scopes')"></div>
+<div class="tbl-wrap"><table id="scopes"><thead><tr>
+<th>Scope</th>
+<th>Files</th>
+<th>Lines</th>
+<th>Lines with source link</th>
+<th>Verification boundary</th>
+<th>Source</th>
+</tr></thead><tbody>
+<tr><td>(root files)</td><td>19</td><td>5452</td><td>66</td><td><span class="chip warn">Inventory only</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/tree/f3d164a6a6d193a6a2f164d177d4fb7453ddfe48" target="_blank" rel="noopener">Pinned repo</a></span></td></tr>
+<tr><td>.github</td><td>5</td><td>207</td><td>0</td><td><span class="chip warn">Inventory only</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/tree/f3d164a6a6d193a6a2f164d177d4fb7453ddfe48/.github" target="_blank" rel="noopener">Pinned repo</a></span></td></tr>
+<tr><td>analysis</td><td>5</td><td>3027</td><td>0</td><td><span class="chip warn">Inventory only</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/tree/f3d164a6a6d193a6a2f164d177d4fb7453ddfe48/analysis" target="_blank" rel="noopener">Pinned repo</a></span></td></tr>
+<tr><td>artifacts</td><td>1</td><td>81</td><td>0</td><td><span class="chip warn">Inventory only</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/tree/f3d164a6a6d193a6a2f164d177d4fb7453ddfe48/artifacts" target="_blank" rel="noopener">Pinned repo</a></span></td></tr>
+<tr><td>assets</td><td>5</td><td>146</td><td>0</td><td><span class="chip warn">Inventory only</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/tree/f3d164a6a6d193a6a2f164d177d4fb7453ddfe48/assets" target="_blank" rel="noopener">Pinned repo</a></span></td></tr>
+<tr><td>data</td><td>72</td><td>25967</td><td>145</td><td><span class="chip warn">Inventory only</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/tree/f3d164a6a6d193a6a2f164d177d4fb7453ddfe48/data" target="_blank" rel="noopener">Pinned repo</a></span></td></tr>
+<tr><td>docs</td><td>17</td><td>908</td><td>16</td><td><span class="chip warn">Inventory only</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/tree/f3d164a6a6d193a6a2f164d177d4fb7453ddfe48/docs" target="_blank" rel="noopener">Pinned repo</a></span></td></tr>
+<tr><td>line-lab</td><td>11</td><td>797</td><td>0</td><td><span class="chip warn">Inventory only</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/tree/f3d164a6a6d193a6a2f164d177d4fb7453ddfe48/line-lab" target="_blank" rel="noopener">Pinned repo</a></span></td></tr>
+<tr><td>nba-2026-lab</td><td>14</td><td>145</td><td>70</td><td><span class="chip warn">Inventory only</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/tree/f3d164a6a6d193a6a2f164d177d4fb7453ddfe48/nba-2026-lab" target="_blank" rel="noopener">Pinned repo</a></span></td></tr>
+<tr><td>nba-audit-e9f83ff4</td><td>7</td><td>84</td><td>36</td><td><span class="chip warn">Inventory only</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/tree/f3d164a6a6d193a6a2f164d177d4fb7453ddfe48/nba-audit-e9f83ff4" target="_blank" rel="noopener">Pinned repo</a></span></td></tr>
+<tr><td>nba-audit-eeddab9b</td><td>3</td><td>220</td><td>24</td><td><span class="chip warn">Inventory only</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/tree/f3d164a6a6d193a6a2f164d177d4fb7453ddfe48/nba-audit-eeddab9b" target="_blank" rel="noopener">Pinned repo</a></span></td></tr>
+<tr><td>nba-desk</td><td>31</td><td>3486</td><td>899</td><td><span class="chip warn">Inventory only</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/tree/f3d164a6a6d193a6a2f164d177d4fb7453ddfe48/nba-desk" target="_blank" rel="noopener">Pinned repo</a></span></td></tr>
+<tr><td>nba-evidence-audit</td><td>11</td><td>215</td><td>80</td><td><span class="chip warn">Inventory only</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/tree/f3d164a6a6d193a6a2f164d177d4fb7453ddfe48/nba-evidence-audit" target="_blank" rel="noopener">Pinned repo</a></span></td></tr>
+<tr><td>nba-line-desk</td><td>16</td><td>534</td><td>441</td><td><span class="chip warn">Inventory only</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/tree/f3d164a6a6d193a6a2f164d177d4fb7453ddfe48/nba-line-desk" target="_blank" rel="noopener">Pinned repo</a></span></td></tr>
+<tr><td>nba-origin-lab</td><td>12</td><td>223</td><td>74</td><td><span class="chip warn">Inventory only</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/tree/f3d164a6a6d193a6a2f164d177d4fb7453ddfe48/nba-origin-lab" target="_blank" rel="noopener">Pinned repo</a></span></td></tr>
+<tr><td>nba-own-lines</td><td>26</td><td>3048</td><td>329</td><td><span class="chip warn">Inventory only</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/tree/f3d164a6a6d193a6a2f164d177d4fb7453ddfe48/nba-own-lines" target="_blank" rel="noopener">Pinned repo</a></span></td></tr>
+<tr><td>nba-research-61a311c2</td><td>36</td><td>4654</td><td>1133</td><td><span class="chip warn">Inventory only</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/tree/f3d164a6a6d193a6a2f164d177d4fb7453ddfe48/nba-research-61a311c2" target="_blank" rel="noopener">Pinned repo</a></span></td></tr>
+<tr><td>nba-sensitivity</td><td>3</td><td>80</td><td>60</td><td><span class="chip warn">Inventory only</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/tree/f3d164a6a6d193a6a2f164d177d4fb7453ddfe48/nba-sensitivity" target="_blank" rel="noopener">Pinned repo</a></span></td></tr>
+<tr><td>nba-signal-lab</td><td>24</td><td>2678</td><td>652</td><td><span class="chip warn">Inventory only</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/tree/f3d164a6a6d193a6a2f164d177d4fb7453ddfe48/nba-signal-lab" target="_blank" rel="noopener">Pinned repo</a></span></td></tr>
+<tr><td>nba-strategy-lab</td><td>32</td><td>2370</td><td>3138</td><td><span class="chip warn">Inventory only</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/tree/f3d164a6a6d193a6a2f164d177d4fb7453ddfe48/nba-strategy-lab" target="_blank" rel="noopener">Pinned repo</a></span></td></tr>
+<tr><td>nba-validation</td><td>15</td><td>275</td><td>74</td><td><span class="chip warn">Inventory only</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/tree/f3d164a6a6d193a6a2f164d177d4fb7453ddfe48/nba-validation" target="_blank" rel="noopener">Pinned repo</a></span></td></tr>
+<tr><td>nfl-strategy-lab</td><td>13</td><td>2052</td><td>6</td><td><span class="chip warn">Inventory only</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/tree/f3d164a6a6d193a6a2f164d177d4fb7453ddfe48/nfl-strategy-lab" target="_blank" rel="noopener">Pinned repo</a></span></td></tr>
+<tr><td>nfl_model</td><td>8</td><td>757</td><td>0</td><td><span class="chip warn">Inventory only</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/tree/f3d164a6a6d193a6a2f164d177d4fb7453ddfe48/nfl_model" target="_blank" rel="noopener">Pinned repo</a></span></td></tr>
+<tr><td>own5-desk</td><td>38</td><td>4752</td><td>0</td><td><span class="chip warn">Inventory only</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/tree/f3d164a6a6d193a6a2f164d177d4fb7453ddfe48/own5-desk" target="_blank" rel="noopener">Pinned repo</a></span></td></tr>
+<tr><td>pages</td><td>7</td><td>7</td><td>0</td><td><span class="chip warn">Inventory only</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/tree/f3d164a6a6d193a6a2f164d177d4fb7453ddfe48/pages" target="_blank" rel="noopener">Pinned repo</a></span></td></tr>
+<tr><td>research</td><td>63</td><td>4490</td><td>179</td><td><span class="chip warn">Inventory only</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/tree/f3d164a6a6d193a6a2f164d177d4fb7453ddfe48/research" target="_blank" rel="noopener">Pinned repo</a></span></td></tr>
+<tr><td>scripts</td><td>13</td><td>1595</td><td>6</td><td><span class="chip warn">Inventory only</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/tree/f3d164a6a6d193a6a2f164d177d4fb7453ddfe48/scripts" target="_blank" rel="noopener">Pinned repo</a></span></td></tr>
+<tr><td>site</td><td>3</td><td>365</td><td>0</td><td><span class="chip warn">Inventory only</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/tree/f3d164a6a6d193a6a2f164d177d4fb7453ddfe48/site" target="_blank" rel="noopener">Pinned repo</a></span></td></tr>
+<tr><td>tests</td><td>6</td><td>813</td><td>0</td><td><span class="chip warn">Inventory only</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/tree/f3d164a6a6d193a6a2f164d177d4fb7453ddfe48/tests" target="_blank" rel="noopener">Pinned repo</a></span></td></tr>
+<tr><td>tools</td><td>13</td><td>3115</td><td>17</td><td><span class="chip warn">Inventory only</span></td><td><span class="src"><a href="https://github.com/sassnarep3-star/Own5/tree/f3d164a6a6d193a6a2f164d177d4fb7453ddfe48/tools" target="_blank" rel="noopener">Pinned repo</a></span></td></tr>
+</tbody></table></div>
+<p class="small">Full downloads: <a href="audit/file_inventory.csv">file_inventory.csv</a> · <a href="audit/line_inventory.csv">line_inventory.csv</a> · <a href="audit/field_audit.csv">field_audit.csv</a>. Summaries: <a href="audit/inventory_summary.json">inventory_summary.json</a> · <a href="audit/field_audit_summary.json">field_audit_summary.json</a>.</p>
+
+</main>
+<footer>Session 4c43d5e6 · frozen exploratory protocol 2026-11-05 · official observations, derived calculations, and context are labeled separately. No strategy is eligible; no bets or rewards are claimed. <a href="review.html">Flagged for Review</a>.</footer>
+</body>
+</html>

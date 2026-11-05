@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luck &amp; Power · Own5 NBA Research Hub</title>
+<link rel="stylesheet" href="assets/style.css">
+<script defer src="assets/app.js"></script>
+</head>
+<body>
+<header class="site"><div class="brand">Own5 <span>NBA Research Hub</span></div><nav class="main" aria-label="Primary"><a href="index.html" class="">Overview</a>
+<a href="executive-summary.html" class="">Executive Summary</a>
+<a href="lines.html" class="">Research Lines</a>
+<a href="players.html" class="">Player Signals</a>
+<a href="correlations.html" class="">Correlations &amp; Combos</a>
+<a href="strategies.html" class="">Strategies</a>
+<a href="gates.html" class="">Validation Gates</a>
+<a href="leaderboard.html" class="">Leaderboard</a>
+<a href="luck.html" class="active">Luck &amp; Power</a>
+<a href="sources.html" class="">Sources</a>
+<a href="requirements.html" class="">Requirements</a>
+<a href="audit.html" class="">Repository Audit</a>
+<a href="review.html" class="">Flagged for Review</a></nav></header>
+<main>
+<h1>Luck &amp; Power</h1>
+
+<p class="lead">Luck cannot be literally removed. The hub quantifies uncertainty, null probabilities, multiplicity, and sample-size planning instead.</p>
+<div class="note">No real returns exist, so economic performance and deflated ranking are blank. Bootstrap/permutation diagnostics are implemented for future genuine ledgers, not synthetic performance.</div>
+<div class="tbl-wrap"><table id="luck"><thead><tr>
+<th>Metric</th>
+<th>Value</th>
+<th>Interpretation</th>
+<th>Source</th>
+</tr></thead><tbody>
+<tr><td>Break-even win probability at −110 example</td><td>0.523810</td><td>Arithmetic 110/210; not an observed quote.</td><td><span class="src"><a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda366i.htm" target="_blank" rel="noopener">NIST</a></span></td></tr>
+<tr><td>Alternative win probability</td><td>0.550</td><td>Planning assumption only.</td><td><span class="src"><a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda366i.htm" target="_blank" rel="noopener">NIST</a></span></td></tr>
+<tr><td>Normal-approx n (single α=0.05, 80% power)</td><td>2243</td><td>Planning estimate; exact power at this n is below target.</td><td><span class="src"><a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda366i.htm" target="_blank" rel="noopener">NIST</a></span></td></tr>
+<tr><td>Exact power at normal-approx n</td><td>0.791890</td><td>Discrete binomial power; not a guarantee.</td><td><span class="src"><a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda366i.htm" target="_blank" rel="noopener">NIST</a></span></td></tr>
+<tr><td>Bonferroni planning family</td><td>54</td><td>9 model variants × 6 strategies; α=0.05/54.</td><td><span class="src"><a href="https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf" target="_blank" rel="noopener">Method</a></span></td></tr>
+<tr><td>Normal-approx n (Bonferroni)</td><td>5678</td><td>Illustrates multiplicity cost.</td><td><span class="src"><a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda366i.htm" target="_blank" rel="noopener">NIST</a></span></td></tr>
+<tr><td>Exact power at Bonferroni n</td><td>0.798913</td><td>Discrete power at approximate n.</td><td><span class="src"><a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda366i.htm" target="_blank" rel="noopener">NIST</a></span></td></tr>
+<tr><td>30 bets / 20 wins exact tail vs break-even</td><td>0.082242</td><td>Recomputed; inherited p=0.17 example flagged F19.</td><td><span class="src"><a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda366i.htm" target="_blank" rel="noopener">NIST</a></span></td></tr>
+<tr><td>Real graded bets</td><td>0</td><td>No real ledger exists.</td><td><span class="src"><a href="https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nba" target="_blank" rel="noopener">Operator context</a></span></td></tr>
+<tr><td>ROI / CLV / max drawdown</td><td><span class="blank" data-blank="true">Blank — no returns</span></td><td>Cannot separate skill from luck on real returns without data.</td><td><span class="src"><a href="https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf" target="_blank" rel="noopener">Method</a></span></td></tr>
+</tbody></table></div>
+<p class="small">JSON: <a href="data/derived/luck.json">luck.json</a>. Methodology: <a href="research/METHODOLOGY.md">METHODOLOGY.md</a>.</p>
+
+</main>
+<footer>Session 4c43d5e6 · frozen exploratory protocol 2026-11-05 · official observations, derived calculations, and context are labeled separately. No strategy is eligible; no bets or rewards are claimed. <a href="review.html">Flagged for Review</a>.</footer>
+</body>
+</html>

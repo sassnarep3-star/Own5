@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Strategies · Own5 NBA Research Hub</title>
+<link rel="stylesheet" href="assets/style.css">
+<script defer src="assets/app.js"></script>
+</head>
+<body>
+<header class="site"><div class="brand">Own5 <span>NBA Research Hub</span></div><nav class="main" aria-label="Primary"><a href="index.html" class="">Overview</a>
+<a href="executive-summary.html" class="">Executive Summary</a>
+<a href="lines.html" class="">Research Lines</a>
+<a href="players.html" class="">Player Signals</a>
+<a href="correlations.html" class="">Correlations &amp; Combos</a>
+<a href="strategies.html" class="active">Strategies</a>
+<a href="gates.html" class="">Validation Gates</a>
+<a href="leaderboard.html" class="">Leaderboard</a>
+<a href="luck.html" class="">Luck &amp; Power</a>
+<a href="sources.html" class="">Sources</a>
+<a href="requirements.html" class="">Requirements</a>
+<a href="audit.html" class="">Repository Audit</a>
+<a href="review.html" class="">Flagged for Review</a></nav></header>
+<main>
+<h1>Strategies</h1>
+
+<p class="lead">Candidate strategies for singles, parlays, and player-prop combinations. These are hypotheses, not graded entries. Every strategy must pass all gates before eligibility.</p>
+<div class="warnbox">All six candidates are blocked. Common blockers: retrospective protocol (G02), final availability (G04), market quotes (G05), settlement rules (G06), sample (G08), predictive/economic evidence (G09–G11). Operator definitions are context, not proof of edge.</div>
+<div class="filter"><label class="small" for="strategies-filter">Filter table</label><br><input id="strategies-filter" type="search" placeholder="Filter rows…" oninput="filterTable(this,'strategies')"></div>
+<div class="tbl-wrap"><table id="strategies"><thead><tr>
+<th>ID</th>
+<th>Category</th>
+<th>Name</th>
+<th>Legs</th>
+<th>Hypothesis</th>
+<th>Gates passed</th>
+<th>Blockers</th>
+<th>Status</th>
+<th>Source</th>
+</tr></thead><tbody>
+<tr><td>ST1</td><td>Single</td><td>Team-strength side single</td><td>1</td><td>Blend current/prior efficiency and compare a research margin with a verified market side once quotes exist.</td><td>4/12</td><td>G02,G04,G05,G06,G08,G09,G10,G11</td><td><span class="chip bad">Blocked</span></td><td><span class="src"><a href="https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nba" target="_blank" rel="noopener">Operator context</a></span></td></tr>
+<tr><td>ST2</td><td>Single</td><td>Efficiency total single</td><td>1</td><td>Blend offense/allowed points to originate a total and compare with a verified market total once quotes exist.</td><td>4/12</td><td>G02,G04,G05,G06,G08,G09,G10,G11</td><td><span class="chip bad">Blocked</span></td><td><span class="src"><a href="https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nba" target="_blank" rel="noopener">Operator context</a></span></td></tr>
+<tr><td>ST3</td><td>Prop</td><td>Rolling player-prop single</td><td>1</td><td>Use strictly prior rolling role/production to forecast a frozen research threshold; suppress until availability and a real prop quote exist.</td><td>4/12</td><td>G02,G04,G05,G06,G08,G09,G10,G11</td><td><span class="chip bad">Blocked</span></td><td><span class="src"><a href="https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nba" target="_blank" rel="noopener">Operator context</a></span></td></tr>
+<tr><td>ST4</td><td>Parlay</td><td>Cross-game two-leg parlay</td><td>2</td><td>Combine only independent, validated single edges; cross-game dependence and operator payout are currently unmeasured.</td><td>3/12</td><td>G02,G04,G05,G06,G07,G08,G09,G10,G11</td><td><span class="chip bad">Blocked</span></td><td><span class="src"><a href="https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nba" target="_blank" rel="noopener">Operator context</a></span></td></tr>
+<tr><td>ST5</td><td>Prop combo</td><td>Same-game two-prop combo</td><td>2</td><td>Test whether positive joint dependence is mispriced by a operator; historical lift is descriptive, not a payout edge.</td><td>3/12</td><td>G02,G04,G05,G06,G07,G08,G09,G10,G11</td><td><span class="chip bad">Blocked</span></td><td><span class="src"><a href="https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nba" target="_blank" rel="noopener">Operator context</a></span></td></tr>
+<tr><td>ST6</td><td>Prop combo</td><td>Same-game three-prop combo</td><td>3</td><td>Extend joint-dependence research to three legs; no exact three-way validation or real payout exists.</td><td>3/12</td><td>G02,G04,G05,G06,G07,G08,G09,G10,G11</td><td><span class="chip bad">Blocked</span></td><td><span class="src"><a href="https://www.fanduel.com/sports-betting-guide/how-to-bet-on-nba" target="_blank" rel="noopener">Operator context</a></span></td></tr>
+</tbody></table></div>
+<p class="small">CSV: <a href="data/derived/strategies.csv">strategies.csv</a>. Gate detail: <a href="gates.html">Validation Gates</a>.</p>
+
+</main>
+<footer>Session 4c43d5e6 · frozen exploratory protocol 2026-11-05 · official observations, derived calculations, and context are labeled separately. No strategy is eligible; no bets or rewards are claimed. <a href="review.html">Flagged for Review</a>.</footer>
+</body>
+</html>

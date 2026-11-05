@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research Lines · Own5 NBA Research Hub</title>
+<link rel="stylesheet" href="assets/style.css">
+<script defer src="assets/app.js"></script>
+</head>
+<body>
+<header class="site"><div class="brand">Own5 <span>NBA Research Hub</span></div><nav class="main" aria-label="Primary"><a href="index.html" class="">Overview</a>
+<a href="executive-summary.html" class="">Executive Summary</a>
+<a href="lines.html" class="active">Research Lines</a>
+<a href="players.html" class="">Player Signals</a>
+<a href="correlations.html" class="">Correlations &amp; Combos</a>
+<a href="strategies.html" class="">Strategies</a>
+<a href="gates.html" class="">Validation Gates</a>
+<a href="leaderboard.html" class="">Leaderboard</a>
+<a href="luck.html" class="">Luck &amp; Power</a>
+<a href="sources.html" class="">Sources</a>
+<a href="requirements.html" class="">Requirements</a>
+<a href="audit.html" class="">Repository Audit</a>
+<a href="review.html" class="">Flagged for Review</a></nav></header>
+<main>
+<h1>Research Lines</h1>
+
+<p class="lead">Research-only team-strength lines for the official November 6 slate. Primary K=20, HFA=0; half-point lines; uncalibrated logistic win heuristic. Not actionable picks.</p>
+<div class="warnbox">Market spread/total/odds/edge are blank because no verified quote exists. Final availability is held; see <a href="review.html">F01/F02</a>. Input sources: <a href="https://www.nba.com/stats/teams/traditional?Season=2026-27&amp;SeasonType=Regular%20Season">2026-27</a> and <a href="https://www.nba.com/stats/teams/traditional?Season=2025-26&amp;SeasonType=Regular%20Season">2025-26</a>.</div>
+<div class="filter"><label class="small" for="lines-filter">Filter table</label><br><input id="lines-filter" type="search" placeholder="Filter rows…" oninput="filterTable(this,'lines')"></div>
+<div class="tbl-wrap"><table id="lines"><thead><tr>
+<th>Game</th>
+<th>Tip ET</th>
+<th>Research home spread</th>
+<th>Research total</th>
+<th>Expected margin</th>
+<th>Expected total</th>
+<th>Home win heuristic</th>
+<th>Market spread</th>
+<th>Market total</th>
+<th>Market odds</th>
+<th>Availability</th>
+<th>Kind</th>
+<th>Source</th>
+</tr></thead><tbody>
+<tr><td>WAS @ ATL</td><td>19:00</td><td>-5.5</td><td>232.5</td><td>5.562</td><td>232.457</td><td>0.716</td><td><span class="blank" data-blank="true">Market blank</span></td><td><span class="blank" data-blank="true">Market blank</span></td><td><span class="blank" data-blank="true">Odds blank</span></td><td><span class="chip warn">Held — final availability unverified</span></td><td><span class="chip info">Derived</span></td><td><span class="src"><a href="https://www.nba.com/game/was-vs-atl-0022600025" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>BOS @ CHA</td><td>19:00</td><td>3.5</td><td>221.5</td><td>-3.674</td><td>221.633</td><td>0.352</td><td><span class="blank" data-blank="true">Market blank</span></td><td><span class="blank" data-blank="true">Market blank</span></td><td><span class="blank" data-blank="true">Odds blank</span></td><td><span class="chip warn">Held — final availability unverified</span></td><td><span class="chip info">Derived</span></td><td><span class="src"><a href="https://www.nba.com/game/bos-vs-cha-0022600026" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>PHI @ CLE</td><td>19:30</td><td>-0.5</td><td>231.5</td><td>0.933</td><td>231.227</td><td>0.539</td><td><span class="blank" data-blank="true">Market blank</span></td><td><span class="blank" data-blank="true">Market blank</span></td><td><span class="blank" data-blank="true">Odds blank</span></td><td><span class="chip warn">Held — final availability unverified</span></td><td><span class="chip info">Derived</span></td><td><span class="src"><a href="https://www.nba.com/game/phi-vs-cle-0022600027" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>UTA @ DAL</td><td>20:00</td><td>-2.5</td><td>234.5</td><td>2.636</td><td>234.864</td><td>0.608</td><td><span class="blank" data-blank="true">Market blank</span></td><td><span class="blank" data-blank="true">Market blank</span></td><td><span class="blank" data-blank="true">Odds blank</span></td><td><span class="chip warn">Held — final availability unverified</span></td><td><span class="chip info">Derived</span></td><td><span class="src"><a href="https://www.nba.com/game/uta-vs-dal-0022600028" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>OKC @ MEM</td><td>20:00</td><td>4.5</td><td>229.5</td><td>-4.750</td><td>229.236</td><td>0.312</td><td><span class="blank" data-blank="true">Market blank</span></td><td><span class="blank" data-blank="true">Market blank</span></td><td><span class="blank" data-blank="true">Odds blank</span></td><td><span class="chip warn">Held — final availability unverified</span></td><td><span class="chip info">Derived</span></td><td><span class="src"><a href="https://www.nba.com/game/okc-vs-mem-0022600029" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>TOR @ MIL</td><td>20:00</td><td>5.5</td><td>228.5</td><td>-5.600</td><td>228.314</td><td>0.282</td><td><span class="blank" data-blank="true">Market blank</span></td><td><span class="blank" data-blank="true">Market blank</span></td><td><span class="blank" data-blank="true">Odds blank</span></td><td><span class="chip warn">Held — final availability unverified</span></td><td><span class="chip info">Derived</span></td><td><span class="src"><a href="https://www.nba.com/game/tor-vs-mil-0022600030" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>MIN @ NOP</td><td>20:00</td><td>4.5</td><td>233.5</td><td>-4.175</td><td>233.845</td><td>0.333</td><td><span class="blank" data-blank="true">Market blank</span></td><td><span class="blank" data-blank="true">Market blank</span></td><td><span class="blank" data-blank="true">Odds blank</span></td><td><span class="chip warn">Held — final availability unverified</span></td><td><span class="chip info">Derived</span></td><td><span class="src"><a href="https://www.nba.com/game/min-vs-nop-0022600031" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>POR @ LAL</td><td>22:00</td><td>-0.5</td><td>231.5</td><td>0.519</td><td>231.992</td><td>0.522</td><td><span class="blank" data-blank="true">Market blank</span></td><td><span class="blank" data-blank="true">Market blank</span></td><td><span class="blank" data-blank="true">Odds blank</span></td><td><span class="chip warn">Held — final availability unverified</span></td><td><span class="chip info">Derived</span></td><td><span class="src"><a href="https://www.nba.com/game/por-vs-lal-0022600032" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>SAS @ SAC</td><td>22:00</td><td>9.5</td><td>230.5</td><td>-9.721</td><td>230.907</td><td>0.165</td><td><span class="blank" data-blank="true">Market blank</span></td><td><span class="blank" data-blank="true">Market blank</span></td><td><span class="blank" data-blank="true">Odds blank</span></td><td><span class="chip warn">Held — final availability unverified</span></td><td><span class="chip info">Derived</span></td><td><span class="src"><a href="https://www.nba.com/game/sas-vs-sac-0022600033" target="_blank" rel="noopener">NBA</a></span></td></tr>
+</tbody></table></div>
+<p class="small">CSV: <a href="data/derived/lines.csv">lines.csv</a> · <a href="data/derived/sensitivity.csv">sensitivity.csv</a></p>
+<h2>Sensitivity grid (all nine variants disclosed)</h2>
+<div class="filter"><label class="small" for="sensitivity-filter">Filter table</label><br><input id="sensitivity-filter" type="search" placeholder="Filter rows…" oninput="filterTable(this,'sensitivity')"></div>
+<div class="tbl-wrap"><table id="sensitivity"><thead><tr>
+<th>Game</th>
+<th>Prior strength K</th>
+<th>Home points adj</th>
+<th>Expected margin</th>
+<th>Expected total</th>
+<th>Research home spread</th>
+<th>Research total</th>
+<th>Source</th>
+</tr></thead><tbody>
+<tr><td>WAS @ ATL</td><td>10</td><td>-1.0</td><td>3.650</td><td>230.404</td><td>-3.5</td><td>230.5</td><td><span class="src"><a href="https://www.nba.com/game/was-vs-atl-0022600025" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>WAS @ ATL</td><td>10</td><td>0.0</td><td>4.650</td><td>230.404</td><td>-4.5</td><td>230.5</td><td><span class="src"><a href="https://www.nba.com/game/was-vs-atl-0022600025" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>WAS @ ATL</td><td>10</td><td>1.0</td><td>5.650</td><td>230.404</td><td>-5.5</td><td>230.5</td><td><span class="src"><a href="https://www.nba.com/game/was-vs-atl-0022600025" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>WAS @ ATL</td><td>20</td><td>-1.0</td><td>4.562</td><td>232.457</td><td>-4.5</td><td>232.5</td><td><span class="src"><a href="https://www.nba.com/game/was-vs-atl-0022600025" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>WAS @ ATL</td><td>20</td><td>0.0</td><td>5.562</td><td>232.457</td><td>-5.5</td><td>232.5</td><td><span class="src"><a href="https://www.nba.com/game/was-vs-atl-0022600025" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>WAS @ ATL</td><td>20</td><td>1.0</td><td>6.562</td><td>232.457</td><td>-6.5</td><td>232.5</td><td><span class="src"><a href="https://www.nba.com/game/was-vs-atl-0022600025" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>WAS @ ATL</td><td>40</td><td>-1.0</td><td>5.245</td><td>234.009</td><td>-5.5</td><td>234.5</td><td><span class="src"><a href="https://www.nba.com/game/was-vs-atl-0022600025" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>WAS @ ATL</td><td>40</td><td>0.0</td><td>6.245</td><td>234.009</td><td>-6.5</td><td>234.5</td><td><span class="src"><a href="https://www.nba.com/game/was-vs-atl-0022600025" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>WAS @ ATL</td><td>40</td><td>1.0</td><td>7.245</td><td>234.009</td><td>-7.5</td><td>234.5</td><td><span class="src"><a href="https://www.nba.com/game/was-vs-atl-0022600025" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>BOS @ CHA</td><td>10</td><td>-1.0</td><td>-5.838</td><td>220.048</td><td>5.5</td><td>220.5</td><td><span class="src"><a href="https://www.nba.com/game/bos-vs-cha-0022600026" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>BOS @ CHA</td><td>10</td><td>0.0</td><td>-4.838</td><td>220.048</td><td>4.5</td><td>220.5</td><td><span class="src"><a href="https://www.nba.com/game/bos-vs-cha-0022600026" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>BOS @ CHA</td><td>10</td><td>1.0</td><td>-3.838</td><td>220.048</td><td>3.5</td><td>220.5</td><td><span class="src"><a href="https://www.nba.com/game/bos-vs-cha-0022600026" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>BOS @ CHA</td><td>20</td><td>-1.0</td><td>-4.674</td><td>221.633</td><td>4.5</td><td>221.5</td><td><span class="src"><a href="https://www.nba.com/game/bos-vs-cha-0022600026" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>BOS @ CHA</td><td>20</td><td>0.0</td><td>-3.674</td><td>221.633</td><td>3.5</td><td>221.5</td><td><span class="src"><a href="https://www.nba.com/game/bos-vs-cha-0022600026" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>BOS @ CHA</td><td>20</td><td>1.0</td><td>-2.674</td><td>221.633</td><td>2.5</td><td>221.5</td><td><span class="src"><a href="https://www.nba.com/game/bos-vs-cha-0022600026" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>BOS @ CHA</td><td>40</td><td>-1.0</td><td>-3.769</td><td>222.864</td><td>3.5</td><td>222.5</td><td><span class="src"><a href="https://www.nba.com/game/bos-vs-cha-0022600026" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>BOS @ CHA</td><td>40</td><td>0.0</td><td>-2.769</td><td>222.864</td><td>2.5</td><td>222.5</td><td><span class="src"><a href="https://www.nba.com/game/bos-vs-cha-0022600026" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>BOS @ CHA</td><td>40</td><td>1.0</td><td>-1.769</td><td>222.864</td><td>1.5</td><td>222.5</td><td><span class="src"><a href="https://www.nba.com/game/bos-vs-cha-0022600026" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>PHI @ CLE</td><td>10</td><td>-1.0</td><td>-0.715</td><td>230.063</td><td>0.5</td><td>230.5</td><td><span class="src"><a href="https://www.nba.com/game/phi-vs-cle-0022600027" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>PHI @ CLE</td><td>10</td><td>0.0</td><td>0.285</td><td>230.063</td><td>-0.5</td><td>230.5</td><td><span class="src"><a href="https://www.nba.com/game/phi-vs-cle-0022600027" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>PHI @ CLE</td><td>10</td><td>1.0</td><td>1.285</td><td>230.063</td><td>-1.5</td><td>230.5</td><td><span class="src"><a href="https://www.nba.com/game/phi-vs-cle-0022600027" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>PHI @ CLE</td><td>20</td><td>-1.0</td><td>-0.067</td><td>231.227</td><td>0.5</td><td>231.5</td><td><span class="src"><a href="https://www.nba.com/game/phi-vs-cle-0022600027" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>PHI @ CLE</td><td>20</td><td>0.0</td><td>0.933</td><td>231.227</td><td>-0.5</td><td>231.5</td><td><span class="src"><a href="https://www.nba.com/game/phi-vs-cle-0022600027" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>PHI @ CLE</td><td>20</td><td>1.0</td><td>1.933</td><td>231.227</td><td>-1.5</td><td>231.5</td><td><span class="src"><a href="https://www.nba.com/game/phi-vs-cle-0022600027" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>PHI @ CLE</td><td>40</td><td>-1.0</td><td>0.432</td><td>232.132</td><td>-0.5</td><td>232.5</td><td><span class="src"><a href="https://www.nba.com/game/phi-vs-cle-0022600027" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>PHI @ CLE</td><td>40</td><td>0.0</td><td>1.432</td><td>232.132</td><td>-1.5</td><td>232.5</td><td><span class="src"><a href="https://www.nba.com/game/phi-vs-cle-0022600027" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>PHI @ CLE</td><td>40</td><td>1.0</td><td>2.432</td><td>232.132</td><td>-2.5</td><td>232.5</td><td><span class="src"><a href="https://www.nba.com/game/phi-vs-cle-0022600027" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>UTA @ DAL</td><td>10</td><td>-1.0</td><td>2.294</td><td>232.761</td><td>-2.5</td><td>232.5</td><td><span class="src"><a href="https://www.nba.com/game/uta-vs-dal-0022600028" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>UTA @ DAL</td><td>10</td><td>0.0</td><td>3.294</td><td>232.761</td><td>-3.5</td><td>232.5</td><td><span class="src"><a href="https://www.nba.com/game/uta-vs-dal-0022600028" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>UTA @ DAL</td><td>10</td><td>1.0</td><td>4.294</td><td>232.761</td><td>-4.5</td><td>232.5</td><td><span class="src"><a href="https://www.nba.com/game/uta-vs-dal-0022600028" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>UTA @ DAL</td><td>20</td><td>-1.0</td><td>1.636</td><td>234.864</td><td>-1.5</td><td>234.5</td><td><span class="src"><a href="https://www.nba.com/game/uta-vs-dal-0022600028" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>UTA @ DAL</td><td>20</td><td>0.0</td><td>2.636</td><td>234.864</td><td>-2.5</td><td>234.5</td><td><span class="src"><a href="https://www.nba.com/game/uta-vs-dal-0022600028" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>UTA @ DAL</td><td>20</td><td>1.0</td><td>3.636</td><td>234.864</td><td>-3.5</td><td>234.5</td><td><span class="src"><a href="https://www.nba.com/game/uta-vs-dal-0022600028" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>UTA @ DAL</td><td>40</td><td>-1.0</td><td>1.142</td><td>236.442</td><td>-1.5</td><td>236.5</td><td><span class="src"><a href="https://www.nba.com/game/uta-vs-dal-0022600028" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>UTA @ DAL</td><td>40</td><td>0.0</td><td>2.142</td><td>236.442</td><td>-2.5</td><td>236.5</td><td><span class="src"><a href="https://www.nba.com/game/uta-vs-dal-0022600028" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>UTA @ DAL</td><td>40</td><td>1.0</td><td>3.142</td><td>236.442</td><td>-3.5</td><td>236.5</td><td><span class="src"><a href="https://www.nba.com/game/uta-vs-dal-0022600028" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>OKC @ MEM</td><td>10</td><td>-1.0</td><td>-3.639</td><td>228.172</td><td>3.5</td><td>228.5</td><td><span class="src"><a href="https://www.nba.com/game/okc-vs-mem-0022600029" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>OKC @ MEM</td><td>10</td><td>0.0</td><td>-2.639</td><td>228.172</td><td>2.5</td><td>228.5</td><td><span class="src"><a href="https://www.nba.com/game/okc-vs-mem-0022600029" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>OKC @ MEM</td><td>10</td><td>1.0</td><td>-1.639</td><td>228.172</td><td>1.5</td><td>228.5</td><td><span class="src"><a href="https://www.nba.com/game/okc-vs-mem-0022600029" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>OKC @ MEM</td><td>20</td><td>-1.0</td><td>-5.750</td><td>229.236</td><td>5.5</td><td>229.5</td><td><span class="src"><a href="https://www.nba.com/game/okc-vs-mem-0022600029" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>OKC @ MEM</td><td>20</td><td>0.0</td><td>-4.750</td><td>229.236</td><td>4.5</td><td>229.5</td><td><span class="src"><a href="https://www.nba.com/game/okc-vs-mem-0022600029" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>OKC @ MEM</td><td>20</td><td>1.0</td><td>-3.750</td><td>229.236</td><td>3.5</td><td>229.5</td><td><span class="src"><a href="https://www.nba.com/game/okc-vs-mem-0022600029" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>OKC @ MEM</td><td>40</td><td>-1.0</td><td>-7.333</td><td>230.033</td><td>7.5</td><td>230.5</td><td><span class="src"><a href="https://www.nba.com/game/okc-vs-mem-0022600029" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>OKC @ MEM</td><td>40</td><td>0.0</td><td>-6.333</td><td>230.033</td><td>6.5</td><td>230.5</td><td><span class="src"><a href="https://www.nba.com/game/okc-vs-mem-0022600029" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>OKC @ MEM</td><td>40</td><td>1.0</td><td>-5.333</td><td>230.033</td><td>5.5</td><td>230.5</td><td><span class="src"><a href="https://www.nba.com/game/okc-vs-mem-0022600029" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>TOR @ MIL</td><td>10</td><td>-1.0</td><td>-7.211</td><td>229.100</td><td>7.5</td><td>229.5</td><td><span class="src"><a href="https://www.nba.com/game/tor-vs-mil-0022600030" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>TOR @ MIL</td><td>10</td><td>0.0</td><td>-6.211</td><td>229.100</td><td>6.5</td><td>229.5</td><td><span class="src"><a href="https://www.nba.com/game/tor-vs-mil-0022600030" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>TOR @ MIL</td><td>10</td><td>1.0</td><td>-5.211</td><td>229.100</td><td>5.5</td><td>229.5</td><td><span class="src"><a href="https://www.nba.com/game/tor-vs-mil-0022600030" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>TOR @ MIL</td><td>20</td><td>-1.0</td><td>-6.600</td><td>228.314</td><td>6.5</td><td>228.5</td><td><span class="src"><a href="https://www.nba.com/game/tor-vs-mil-0022600030" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>TOR @ MIL</td><td>20</td><td>0.0</td><td>-5.600</td><td>228.314</td><td>5.5</td><td>228.5</td><td><span class="src"><a href="https://www.nba.com/game/tor-vs-mil-0022600030" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>TOR @ MIL</td><td>20</td><td>1.0</td><td>-4.600</td><td>228.314</td><td>4.5</td><td>228.5</td><td><span class="src"><a href="https://www.nba.com/game/tor-vs-mil-0022600030" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>TOR @ MIL</td><td>40</td><td>-1.0</td><td>-6.142</td><td>227.725</td><td>6.5</td><td>227.5</td><td><span class="src"><a href="https://www.nba.com/game/tor-vs-mil-0022600030" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>TOR @ MIL</td><td>40</td><td>0.0</td><td>-5.142</td><td>227.725</td><td>5.5</td><td>227.5</td><td><span class="src"><a href="https://www.nba.com/game/tor-vs-mil-0022600030" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>TOR @ MIL</td><td>40</td><td>1.0</td><td>-4.142</td><td>227.725</td><td>4.5</td><td>227.5</td><td><span class="src"><a href="https://www.nba.com/game/tor-vs-mil-0022600030" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>MIN @ NOP</td><td>10</td><td>-1.0</td><td>-5.264</td><td>233.759</td><td>5.5</td><td>233.5</td><td><span class="src"><a href="https://www.nba.com/game/min-vs-nop-0022600031" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>MIN @ NOP</td><td>10</td><td>0.0</td><td>-4.264</td><td>233.759</td><td>4.5</td><td>233.5</td><td><span class="src"><a href="https://www.nba.com/game/min-vs-nop-0022600031" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>MIN @ NOP</td><td>10</td><td>1.0</td><td>-3.264</td><td>233.759</td><td>3.5</td><td>233.5</td><td><span class="src"><a href="https://www.nba.com/game/min-vs-nop-0022600031" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>MIN @ NOP</td><td>20</td><td>-1.0</td><td>-5.175</td><td>233.845</td><td>5.5</td><td>233.5</td><td><span class="src"><a href="https://www.nba.com/game/min-vs-nop-0022600031" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>MIN @ NOP</td><td>20</td><td>0.0</td><td>-4.175</td><td>233.845</td><td>4.5</td><td>233.5</td><td><span class="src"><a href="https://www.nba.com/game/min-vs-nop-0022600031" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>MIN @ NOP</td><td>20</td><td>1.0</td><td>-3.175</td><td>233.845</td><td>3.5</td><td>233.5</td><td><span class="src"><a href="https://www.nba.com/game/min-vs-nop-0022600031" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>MIN @ NOP</td><td>40</td><td>-1.0</td><td>-5.091</td><td>233.922</td><td>5.5</td><td>233.5</td><td><span class="src"><a href="https://www.nba.com/game/min-vs-nop-0022600031" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>MIN @ NOP</td><td>40</td><td>0.0</td><td>-4.091</td><td>233.922</td><td>4.5</td><td>233.5</td><td><span class="src"><a href="https://www.nba.com/game/min-vs-nop-0022600031" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>MIN @ NOP</td><td>40</td><td>1.0</td><td>-3.091</td><td>233.922</td><td>3.5</td><td>233.5</td><td><span class="src"><a href="https://www.nba.com/game/min-vs-nop-0022600031" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>POR @ LAL</td><td>10</td><td>-1.0</td><td>-0.852</td><td>232.499</td><td>0.5</td><td>232.5</td><td><span class="src"><a href="https://www.nba.com/game/por-vs-lal-0022600032" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>POR @ LAL</td><td>10</td><td>0.0</td><td>0.148</td><td>232.499</td><td>-0.5</td><td>232.5</td><td><span class="src"><a href="https://www.nba.com/game/por-vs-lal-0022600032" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>POR @ LAL</td><td>10</td><td>1.0</td><td>1.148</td><td>232.499</td><td>-1.5</td><td>232.5</td><td><span class="src"><a href="https://www.nba.com/game/por-vs-lal-0022600032" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>POR @ LAL</td><td>20</td><td>-1.0</td><td>-0.481</td><td>231.992</td><td>0.5</td><td>231.5</td><td><span class="src"><a href="https://www.nba.com/game/por-vs-lal-0022600032" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>POR @ LAL</td><td>20</td><td>0.0</td><td>0.519</td><td>231.992</td><td>-0.5</td><td>231.5</td><td><span class="src"><a href="https://www.nba.com/game/por-vs-lal-0022600032" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>POR @ LAL</td><td>20</td><td>1.0</td><td>1.519</td><td>231.992</td><td>-1.5</td><td>231.5</td><td><span class="src"><a href="https://www.nba.com/game/por-vs-lal-0022600032" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>POR @ LAL</td><td>40</td><td>-1.0</td><td>-0.239</td><td>231.604</td><td>0.5</td><td>231.5</td><td><span class="src"><a href="https://www.nba.com/game/por-vs-lal-0022600032" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>POR @ LAL</td><td>40</td><td>0.0</td><td>0.761</td><td>231.604</td><td>-0.5</td><td>231.5</td><td><span class="src"><a href="https://www.nba.com/game/por-vs-lal-0022600032" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>POR @ LAL</td><td>40</td><td>1.0</td><td>1.761</td><td>231.604</td><td>-1.5</td><td>231.5</td><td><span class="src"><a href="https://www.nba.com/game/por-vs-lal-0022600032" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>SAS @ SAC</td><td>10</td><td>-1.0</td><td>-11.039</td><td>230.494</td><td>11.5</td><td>230.5</td><td><span class="src"><a href="https://www.nba.com/game/sas-vs-sac-0022600033" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>SAS @ SAC</td><td>10</td><td>0.0</td><td>-10.039</td><td>230.494</td><td>10.5</td><td>230.5</td><td><span class="src"><a href="https://www.nba.com/game/sas-vs-sac-0022600033" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>SAS @ SAC</td><td>10</td><td>1.0</td><td>-9.039</td><td>230.494</td><td>9.5</td><td>230.5</td><td><span class="src"><a href="https://www.nba.com/game/sas-vs-sac-0022600033" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>SAS @ SAC</td><td>20</td><td>-1.0</td><td>-10.721</td><td>230.907</td><td>10.5</td><td>230.5</td><td><span class="src"><a href="https://www.nba.com/game/sas-vs-sac-0022600033" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>SAS @ SAC</td><td>20</td><td>0.0</td><td>-9.721</td><td>230.907</td><td>9.5</td><td>230.5</td><td><span class="src"><a href="https://www.nba.com/game/sas-vs-sac-0022600033" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>SAS @ SAC</td><td>20</td><td>1.0</td><td>-8.721</td><td>230.907</td><td>8.5</td><td>230.5</td><td><span class="src"><a href="https://www.nba.com/game/sas-vs-sac-0022600033" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>SAS @ SAC</td><td>40</td><td>-1.0</td><td>-10.483</td><td>231.217</td><td>10.5</td><td>231.5</td><td><span class="src"><a href="https://www.nba.com/game/sas-vs-sac-0022600033" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>SAS @ SAC</td><td>40</td><td>0.0</td><td>-9.483</td><td>231.217</td><td>9.5</td><td>231.5</td><td><span class="src"><a href="https://www.nba.com/game/sas-vs-sac-0022600033" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>SAS @ SAC</td><td>40</td><td>1.0</td><td>-8.483</td><td>231.217</td><td>8.5</td><td>231.5</td><td><span class="src"><a href="https://www.nba.com/game/sas-vs-sac-0022600033" target="_blank" rel="noopener">NBA</a></span></td></tr>
+</tbody></table></div>
+
+</main>
+<footer>Session 4c43d5e6 · frozen exploratory protocol 2026-11-05 · official observations, derived calculations, and context are labeled separately. No strategy is eligible; no bets or rewards are claimed. <a href="review.html">Flagged for Review</a>.</footer>
+</body>
+</html>

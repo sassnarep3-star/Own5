@@ -717,3 +717,41 @@ Cross-session request: final integration will add a clearly labeled NBA entry po
 - Q61-07 in progress: root integration will use `scripts/build.py` only after re-checking open PR #8 / active claims; then PR, autonomous merge, Pages verification.
 - Q61-07 integration update: rebased onto concurrent `origin/main` `1775b92` (PR #40). Append-only COORDINATION conflict resolved by retaining eeddab9b/e2f426bc/ad72b171 records and the 61a311c2 claim/progress block; no concurrent work discarded. Open PR #34 is additive `nba-evidence-audit/**` only; stale PR #8 (NFL, updated 2026-11-02) does not block this claimed final navigation integration. Root footer entry added through `scripts/build.py`; root 91 tests and scoped 33 tests pass.
 
+# Session 4c43d5e6 — NBA verified research integration (2026-11-05 UTC)
+
+Read the existing board before claiming. Fixed Arena branch: `arena/4c43d5e6-own5`; platform prohibits creating/switching to the user's requested `session-<id>/<task>` branches. This fixed branch is the worker and final-integration branch. All existing sites/data are read-only. Prior stale status rows are historical, not silently reassigned. Open NFL PR #8 is another session's scope and is untouched.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| Q1 | Claim and repository-wide inventory/audit | in progress | 4c43d5e6 | COORDINATION.md, nba-research-hub/audit/** | Hash every baseline tracked file; verify NBA data against re-opened official sources; distinguish source entailment from link presence. No inherited blanket verification. |
+| Q2 | Official NBA evidence and requirement trace | in progress | 4c43d5e6 | nba-research-hub/data/**, nba-research-hub/research/** | Every observation directly checked or blank + flagged. Raw response provenance, date, scope and calculations separated. |
+| Q3 | Line origination, strategies, correlations, gates, competition | in progress | 4c43d5e6 | nba-research-hub/engine/**, nba-research-hub/tests/** | Reproducible computations only; no inferred official values, synthetic performance or guaranteed luck removal. No active other-session overlap. |
+| Q4 | Clean dashboard, category tables, executive summary, review page | in progress | 4c43d5e6 | nba-research-hub/site/**, nba-research-hub/build.py, nba-research-hub/check.py | Static additive Pages site; all rows carry source links and verification status; unverified values empty. |
+| Q5 | Final integration, tests, PR/merge and Pages verification | in progress | 4c43d5e6 | COORDINATION.md, README.md (append-only), nba-research-hub/** | After Q1–Q4 only; preserve existing outputs. Shared root index/Pages settings not changed; new desk linked from README and root footer cross-link request logged below. |
+
+Claim time: 2026-11-05 UTC (exact commit time in Git). Cross-session request to root navigation owner cd43258e: add a link to the new NBA research hub when available. No edits to their files by this session. No active claims found for the new namespace. Claims will be updated to done only after their stated checks. Unknown external values are nonblocking review items, not reasons to fabricate.
+
+### 2026-11-05 — Session 4c43d5e6 progress (Q1–Q4 locally verified; Q5 in progress)
+
+- **Concurrency / conflict resolution:** rebasing the claim onto `origin/main` conflicted with concurrent session `eeddab9b` and `e2f426bc` audit records in `COORDINATION.md`. Both complete blocks were retained; no other session's work was discarded. The fixed session branch was updated with `--force-with-lease` only after rebasing, because the remote still held the pre-rebase claim.
+- **Q1 done (scoped audit):** pinned baseline `b9929ec8180b3ee6dc84b8807b863e502ba6da29` inventory hashes **449 files / 65,099 physical lines**. Selected inherited field audit: **4,182 comparisons = 3,490 MATCH + 250 STALE + 442 UNVERIFIED + 0 MISMATCH**. Inventory/link presence is explicitly not blanket source verification; unverified official values are blank.
+- **Q2 done:** official/trusted source register expanded to 19 entries; 30 requirements traced; 20 review flags published. Directly checked NBA team snapshots, 125 selected player-game rows, Nov 6 schedule, and Nov 5 4 PM injury report. Context sources are labeled as context, not edge proof.
+- **Q3 done:** deterministic engine produces 9 research lines, 81 sensitivity rows, 460 walk-forward player forecasts, 8 skill series, 20 correlations, 20 prop-combo rows, 6 strategies, 72 gate rows, and an unranked leaderboard. **0/6 strategies eligible; 0 graded bets; 0 rewards.** Protocol v1.1 discloses the half-point rounding correction (F20); no outcome-based tuning or eligibility change.
+- **Q4 done:** 13 static hub pages, 360 source-linked table rows, 606 links/assets checked, 15 new unit/site tests pass, and 26 desktop/mobile no-JavaScript browser checks pass. `python3 nba-research-hub/check.py` passes.
+- **Additive CI scope:** new `.github/workflows/nba-research-hub.yml` verifies only this hub and performs main-only public smoke checks. Existing workflows and root navigation are not edited by this session.
+- **Cross-session requests:** root navigation owner `cd43258e` is asked to link the hub when available; NBA Signal Lab owner `6d508fee` is asked to review additive flags F07/F19 and related overclaims. No owner files were edited.
+- **Q5 in progress:** combined repository checks, README append, PR to main, autonomous merge, and live Pages verification follow. Unknown external research values remain nonblocking review items.
+
+### 2026-11-05 — Session 4c43d5e6 final integration checks (Q5)
+
+- **Baseline advanced:** concurrent PR #40 merged to main (`1775b92553d59f48318c49e844a35932844b13e8`). The hub audit pin was updated and regenerated: **484 files / 67,618 physical lines**; selected field audit remains **4,182 comparisons, 0 MISMATCH**.
+- **Combined verification passed:** root research-dashboard seed/build diff clean; root 91 tests; `npm run desk:check` and `desk:publish` diff clean; NBA Desk 21 tests + checker; NBA Validation 6 tests + build/check/diff; NBA Own Lines 16 tests + checker; NBA Origin Lab 4 tests; NBA Signal Lab 13 tests; NBA 2026 lab 2 tests; NBA audit e9f83ff4 2 tests; NBA sensitivity 2 tests; NBA Strategy Lab 11 tests + checker; NBA evidence audit 4 tests + root-wide local-link scan (3,073 links, 0 missing). New hub: 15 tests, 13 pages, 361 source-linked rows, 607 links/assets, 26 browser checks.
+- **Warnings:** older suites emit nonfatal ResourceWarnings; no assertion failures. `dist/` was generated before `scripts/check_site.py`, resolving the earlier missing-precondition failure.
+- **Shared-file boundary:** README appended only; root index/pages and other sessions' files were not edited. Additive hub workflow added. PR/merge/Pages record follows after green PR checks.
+
+### 2026-11-05 — Session 4c43d5e6 pre-merge rebase and final combined verification
+
+- **Concurrency:** main advanced through PR #42 (`f3d164a6a6d193a6a2f164d177d4fb7453ddfe48`, session 61a311c2). Rebasing produced append-only conflicts in `COORDINATION.md` and `README.md`; both the 61a311c2 and 4c43d5e6 blocks were retained. No other session's work was discarded.
+- **Audit baseline updated:** pinned to `f3d164a6a6d193a6a2f164d177d4fb7453ddfe48`; regenerated inventory now covers **529 files / 72,543 physical lines**. Selected field audit remains **4,182 comparisons / 0 MISMATCH**.
+- **Final combined checks passed:** root dashboard rebuild diff clean; root 91 tests; evidence desk build/publish diff clean; NBA Desk 21; NBA Validation 6; NBA Own Lines 16; NBA Origin Lab 4; NBA Signal Lab 13; NBA 2026 lab 2; NBA audit e9f83ff4 2; NBA sensitivity 2; NBA Strategy Lab 11; NBA evidence audit 4; NBA research 61a311c2 33; new hub 15 tests + checker + 26 browser checks. Root-wide local-link scan: **3,247 links, 0 missing**. Hub checker: **13 pages / 362 source-linked rows / 608 links/assets / 0 eligible / 0 graded bets**.
+- **PR:** #43 opened to main. Merge and live Pages verification follow after green PR checks.

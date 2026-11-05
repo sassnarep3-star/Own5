@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Executive Summary · Own5 NBA Research Hub</title>
+<link rel="stylesheet" href="assets/style.css">
+<script defer src="assets/app.js"></script>
+</head>
+<body>
+<header class="site"><div class="brand">Own5 <span>NBA Research Hub</span></div><nav class="main" aria-label="Primary"><a href="index.html" class="">Overview</a>
+<a href="executive-summary.html" class="active">Executive Summary</a>
+<a href="lines.html" class="">Research Lines</a>
+<a href="players.html" class="">Player Signals</a>
+<a href="correlations.html" class="">Correlations &amp; Combos</a>
+<a href="strategies.html" class="">Strategies</a>
+<a href="gates.html" class="">Validation Gates</a>
+<a href="leaderboard.html" class="">Leaderboard</a>
+<a href="luck.html" class="">Luck &amp; Power</a>
+<a href="sources.html" class="">Sources</a>
+<a href="requirements.html" class="">Requirements</a>
+<a href="audit.html" class="">Repository Audit</a>
+<a href="review.html" class="">Flagged for Review</a></nav></header>
+<main>
+<h1>Executive Summary</h1>
+
+<p class="lead">Concise summary of what was verified, calculated, and blocked. This is an exploratory retrospective audit, not prospective preregistration or betting advice.</p>
+<div class="panel"><h3>What is solid</h3><ul>
+<li>Official NBA team snapshots for all 30 teams (2025-26 and 2026-27 through Nov 5) and 125 selected player-game rows were directly checked and linked.</li>
+<li>Nine November 6 research spreads/totals/scores are reproducible from disclosed formulas; market and availability fields remain blank/held.</li>
+<li>Same-game points–threes association is positive and Holm-significant for both selected players; one Edwards two-prop historical joint-hit lift survives Holm correction.</li>
+</ul></div>
+<div class="panel"><h3>What is not established</h3><ul>
+<li>No predictive series passes the frozen skill gate; all are under 100 observations and lack adjusted significance.</li>
+<li>No sportsbook quotes, final lineups, jurisdiction-specific settlement rules, graded bets, ROI, CLV, or funded prizes exist.</li>
+<li>Cross-game parlay dependence is unmeasured; non-significant lag-1 correlations do not prove independence.</li>
+<li>Repository line inventory is content hashing/linking, not independent verification of every inherited factual claim.</li>
+</ul></div>
+<div class="warnbox"><b>Competition result:</b> 0/6 strategies eligible; 0 graded bets; 0 rewards. Every strategy must pass all validation gates before ranking or reward. See <a href="gates.html">gates</a> and <a href="review.html">review flags</a>.</div>
+<h2>Findings table</h2><div class="filter"><label class="small" for="findings-filter">Filter table</label><br><input id="findings-filter" type="search" placeholder="Filter rows…" oninput="filterTable(this,'findings')"></div>
+<div class="tbl-wrap"><table id="findings"><thead><tr>
+<th>Entry</th>
+<th>Finding</th>
+<th>Analysis / limit</th>
+<th>Official / trusted source</th>
+</tr></thead><tbody>
+<tr><td>Official team refresh</td><td>30 current teams; 60 season rows; W/L cross-checked against standings.</td><td>Current snapshot is early-season (6–9 GP); ratings are unstable.</td><td><span class="src"><a href="https://www.nba.com/stats/teams/traditional?Season=2026-27&amp;SeasonType=Regular%20Season" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>Player logs checked</td><td>125 stored player-game rows for two selected players; means reconcile to official rounded averages.</td><td>Selected sample, not league-wide; no blanket repository verification.</td><td><span class="src"><a href="https://www.nba.com/stats/leaders?Season=2025-26" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>Research lines originated</td><td>9 November 6 spreads/totals/scores from blended official team inputs.</td><td>Market spread/total/odds and edge are blank; final availability is held.</td><td><span class="src"><a href="https://www.nba.com/schedule?month=11&amp;year=2026" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>Same-game points × threes</td><td>Luka r=0.666 and Edwards r=0.696; Holm-adjusted permutation p=0.004 for both.</td><td>Descriptive positive association; not a sportsbook edge or independence proof.</td><td><span class="src"><a href="https://www.nba.com/stats/player/1629029/boxscores?Season=2025-26&amp;SeasonType=Regular%20Season" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>Two-prop joint dependence</td><td>Edwards points>25.5 + threes>2.5: joint 0.525 vs independent 0.419, lift 1.251, Holm p=0.007.</td><td>Historical research thresholds; positive lift means multiplying marginals understates joint hits.</td><td><span class="src"><a href="https://www.nba.com/stats/player/1630162/boxscores?Season=2025-26" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>Predictive skill gate</td><td>0 of 8 player×stat series pass the frozen gate.</td><td>All series n<100 and no Holm-significant negative Brier difference; rolling MAE is descriptive only.</td><td><span class="src"><a href="https://www.nba.com/stats/leaders?Season=2025-26" target="_blank" rel="noopener">NBA</a></span></td></tr>
+<tr><td>Luck / power planning</td><td>≈2243 bets for 55% vs 52.38% at 80% power; exact power at that n=0.792.</td><td>Arithmetic planning only; luck cannot be literally removed; no real returns exist.</td><td><span class="src"><a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda366i.htm" target="_blank" rel="noopener">NIST</a></span></td></tr>
+<tr><td>Competition status</td><td>0 eligible strategies; 0 graded bets; 0 rewards.</td><td>Fail-closed gates block ranking and rewards; funded pool is blank.</td><td><span class="src"><a href="https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf" target="_blank" rel="noopener">Method</a></span></td></tr>
+</tbody></table></div>
+<p class="small">Markdown copy: <a href="research/EXECUTIVE_SUMMARY.md">research/EXECUTIVE_SUMMARY.md</a>. Methodology: <a href="research/METHODOLOGY.md">research/METHODOLOGY.md</a>.</p>
+
+</main>
+<footer>Session 4c43d5e6 · frozen exploratory protocol 2026-11-05 · official observations, derived calculations, and context are labeled separately. No strategy is eligible; no bets or rewards are claimed. <a href="review.html">Flagged for Review</a>.</footer>
+</body>
+</html>

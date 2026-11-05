@@ -1,0 +1,21 @@
+metric,value
+protocol_id,nba-research-hub-2026-11-05-v1.1
+team_rows,60
+current_teams,30
+player_games,125
+players,2
+schedule_games,9
+research_lines,9
+sensitivity_rows,81
+forecast_rows,460
+skill_series,8
+predictive_gate_passes,0
+correlation_rows,20
+combo_rows,20
+two_prop_rows,12
+three_prop_rows,8
+strategies,6
+eligible_strategies,0
+graded_bets,0
+rewards_paid,0
+input_sha256,"{""availability.csv"": ""fb25225a335c026943b4c5d55aa09b3d11d1cff7dbe9608129d647e7e33d5bae"", ""flags.csv"": ""02c375c4930081179a49f6e0dd4f24dec5f9a69245b6a4938633066d60e02fd0"", ""injury_players.csv"": ""7d70b17ec6efd8c953f2e5ee097eb81644febaf8fd6e40feaabb312238a7b42b"", ""player_games.csv"": ""1603ca4a4fc061a0484d8378c7f654484634e7735c41fc5de7980e738f57b12d"", ""protocol.json"": ""0a5c20be6282ce6731bd244f75d02e695bab48e3cdf9a811d51579711965299d"", ""requirements.csv"": ""20a58a6f7587ccfcccb6ebe948031e77a0262064eead54e176b4e05fdf4b0e79"", ""schedule.csv"": ""339447fc1e3c1391dd106cf98efbed19b3c2426828dffe48b5e5045e3383121f"", ""sources.csv"": ""c74ae7ef81fde7422cbfa429865524d1e80fac096149a97ca49d99b2e679f74b"", ""team_snapshot.csv"": ""63c66cdf68dba186f9ac82d6f844b29e6192ae44557981dc6d2f99045d5d8a6d""}"
