@@ -1,0 +1,11 @@
+player_id,player,combo,n,hit_a,hit_b,joint_hit,joint_ci_low,joint_ci_high,independence_product,lift,phi,status,source_url
+1629029,Luka Doncic,PTS>=25 & AST>=5,64,0.8594,0.875,0.7656,0.6719,0.875,0.752,1.0182,0.1189,historical_threshold_frequency_not_market_prop,https://www.nba.com/game/0022500002/
+1629029,Luka Doncic,PTS>=25 & REB>=5,64,0.8594,0.9062,0.7969,0.6875,0.9062,0.7788,1.0232,0.1783,historical_threshold_frequency_not_market_prop,https://www.nba.com/game/0022500002/
+1629029,Luka Doncic,PTS>=25 & 3PM>=3,64,0.8594,0.7969,0.7344,0.625,0.8594,0.6848,1.0724,0.3544,historical_threshold_frequency_not_market_prop,https://www.nba.com/game/0022500002/
+1629029,Luka Doncic,AST>=5 & REB>=5,64,0.875,0.9062,0.8125,0.7344,0.9062,0.793,1.0246,0.2026,historical_threshold_frequency_not_market_prop,https://www.nba.com/game/0022500002/
+1629029,Luka Doncic,PTS>=25 & AST>=5 & REB>=5,64,0.8594,0.875,0.7188,0.6094,0.8281,0.6815,1.0547,,historical_threshold_frequency_not_market_prop,https://www.nba.com/game/0022500002/
+1630162,Anthony Edwards,PTS>=25 & AST>=5,61,0.6721,0.3279,0.2459,0.1639,0.3607,0.2204,1.1159,0.1159,historical_threshold_frequency_not_market_prop,https://www.nba.com/game/0022500089/
+1630162,Anthony Edwards,PTS>=25 & REB>=5,61,0.6721,0.541,0.459,0.377,0.5738,0.3636,1.2624,0.4078,historical_threshold_frequency_not_market_prop,https://www.nba.com/game/0022500089/
+1630162,Anthony Edwards,PTS>=25 & 3PM>=3,61,0.6721,0.6557,0.5574,0.4754,0.6721,0.4407,1.2646,0.5229,historical_threshold_frequency_not_market_prop,https://www.nba.com/game/0022500089/
+1630162,Anthony Edwards,AST>=5 & REB>=5,61,0.3279,0.541,0.1639,0.082,0.2623,0.1774,0.9242,-0.0574,historical_threshold_frequency_not_market_prop,https://www.nba.com/game/0022500089/
+1630162,Anthony Edwards,PTS>=25 & AST>=5 & REB>=5,61,0.6721,0.3279,0.1311,0.0656,0.2131,0.1192,1.1001,,historical_threshold_frequency_not_market_prop,https://www.nba.com/game/0022500089/

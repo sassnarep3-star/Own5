@@ -1,0 +1,31 @@
+team_id,team,gp,w,l,min,off_rtg,def_rtg,net_rtg,pace,poss,source_url
+1610612755,Philadelphia 76ers,9,8,1,432,110.5,105.1,5.4,100.28,904,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular%20Season
+1610612745,Houston Rockets,9,7,2,432,120.0,109.6,10.4,98.17,884,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular%20Season
+1610612747,Los Angeles Lakers,9,7,2,432,121.1,112.9,8.2,100.72,905,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular%20Season
+1610612738,Boston Celtics,8,6,2,389,115.8,109.2,6.6,97.60,789,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular%20Season
+1610612765,Detroit Pistons,8,6,2,384,112.4,103.0,9.4,98.81,791,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular%20Season
+1610612763,Memphis Grizzlies,8,6,2,389,117.1,106.8,10.3,101.49,823,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular%20Season
+1610612750,Minnesota Timberwolves,9,6,3,437,116.1,105.2,10.9,101.11,921,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular%20Season
+1610612760,Oklahoma City Thunder,8,6,2,384,111.7,110.8,0.8,98.31,788,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular%20Season
+1610612757,Portland Trail Blazers,7,6,1,336,120.0,109.6,10.4,101.29,711,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular%20Season
+1610612759,San Antonio Spurs,8,6,2,389,115.4,107.4,8.0,99.89,810,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular%20Season
+1610612737,Atlanta Hawks,9,5,4,432,112.5,109.9,2.6,102.83,926,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular%20Season
+1610612744,Golden State Warriors,8,5,3,384,117.2,114.8,2.4,100.06,802,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular%20Season
+1610612739,Cleveland Cavaliers,8,4,4,389,115.6,113.7,1.9,101.74,825,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular%20Season
+1610612742,Dallas Mavericks,8,4,4,384,112.5,112.7,-0.1,99.63,797,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular%20Season
+1610612743,Denver Nuggets,7,4,3,341,115.1,115.0,0.1,98.53,702,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular%20Season
+1610612740,New Orleans Pelicans,8,4,4,399,113.4,111.1,2.3,103.28,858,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular%20Season
+1610612752,New York Knicks,8,4,4,384,113.3,108.5,4.7,97.00,777,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular%20Season
+1610612761,Toronto Raptors,8,4,4,384,115.8,111.1,4.7,101.94,814,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular%20Season
+1610612764,Washington Wizards,8,4,4,384,110.0,109.8,0.2,99.13,792,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular%20Season
+1610612766,Charlotte Hornets,9,3,6,432,101.5,112.7,-11.2,96.78,870,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular%20Season
+1610612754,Indiana Pacers,9,3,6,432,109.5,112.0,-2.5,101.78,914,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular%20Season
+1610612748,Miami Heat,8,3,5,389,112.6,117.7,-5.1,103.22,838,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular%20Season
+1610612751,Brooklyn Nets,8,2,6,389,106.2,112.6,-6.4,99.02,803,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular%20Season
+1610612753,Orlando Magic,7,2,5,336,108.0,116.2,-8.2,98.29,685,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular%20Season
+1610612741,Chicago Bulls,8,1,7,384,105.9,123.5,-17.5,105.19,843,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular%20Season
+1610612746,LA Clippers,8,1,7,389,106.7,112.8,-6.1,101.06,818,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular%20Season
+1610612749,Milwaukee Bucks,8,1,7,384,106.3,118.1,-11.8,103.50,828,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular%20Season
+1610612756,Phoenix Suns,6,1,5,288,114.3,124.5,-10.3,99.50,595,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular%20Season
+1610612758,Sacramento Kings,8,1,7,384,106.5,119.4,-12.9,102.94,821,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular%20Season
+1610612762,Utah Jazz,8,1,7,394,103.9,115.1,-11.3,100.93,830,https://www.nba.com/stats/teams/advanced?Season=2026-27&SeasonType=Regular%20Season

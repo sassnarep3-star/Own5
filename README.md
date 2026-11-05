@@ -206,7 +206,6 @@ lag-1 PTS autocorrelation ≈ 0 (cross-game parlay independence holds); a true 5
 columns blank + flagged. Shared policy holds: every row source-linked, unverifiable values blank
 and published on the Flagged page, never inferred.
 ---
-
 ## NBA Line Commission (session arena-a46d621e, snapshot 2026-11-05)
 
 **Live site:** https://sassnarep3-star.github.io/Own5/nba-commission/index.html ·
@@ -246,3 +245,12 @@ LETTER A (`blkа_pg`) — F13. Repo-wide internal links: 0 broken across 153 pag
 python3 nba-commission/compute.py && python3 nba-commission/build.py && python3 nba-commission/verify.py
 python3 -m unittest discover -s nba-commission/checks
 ```
+
+## NBA Evidence Desk — session 61a311c2
+
+**Live site:** https://sassnarep3-star.github.io/Own5/nba-research-61a311c2/index.html · **Executive summary:** [`research/nba-research-61a311c2/EXECUTIVE_SUMMARY.md`](research/nba-research-61a311c2/EXECUTIVE_SUMMARY.md) · **Flagged for Review:** https://sassnarep3-star.github.io/Own5/nba-research-61a311c2/review.html
+
+Additive, evidence-first NBA desk: 241 canonical source-linked rows (237 verified values, 4 blank availability rows flagged), 434-file baseline inventory, 11 model-only Nov 5–6 lines, 12 within-player correlations, 10 threshold-combo frequencies, 47 chronological forecast rows, 6 registered strategies and G01–G12 fail-closed gates. **0 strategies qualify; no ROI, probabilities, ranks or funded rewards are fabricated.** 19 irregularities/gaps are published on the Flagged for Review page.
+
+Reproduce: `python3 nba-research-61a311c2/engine.py && python3 nba-research-61a311c2/audit_repo.py && python3 nba-research-61a311c2/build.py && python3 -m unittest discover -s nba-research-61a311c2 -p 'test_*.py' -v`.
+
