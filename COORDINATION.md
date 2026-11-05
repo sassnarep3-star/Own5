@@ -593,3 +593,13 @@ Claim timestamp: 2026-11-03 UTC. Cross-session requests: none at claim time.
 - **Merged:** yes — merge commit `1885d7435ea1c1dba830755fc723aed5f6a30630` at 2026-11-04T00:24:45Z (`gh pr merge 33 --merge`). Append-only conflicts in COORDINATION.md/README.md resolved by keeping both sides before merge; CI-locked rebuild clean and all test suites green at merge time.
 - **GitHub Pages:** deployed — pages build-and-deployment run `41746619471` completed success; live URLs externally verified: https://sassnarep3-star.github.io/Own5/nba-signal-lab/index.html (dashboard) and https://sassnarep3-star.github.io/Own5/nba-signal-lab/flagged.html (Flagged for Review). Root desk footer now cross-links "NBA Signal Lab ↗" (integration via the CI-locked seed.py/build.py rebuild).
 - **Task status:** M1–M12 **DONE**. 16/16 verification checks green; 6 open flags published (F-HFA, F-MARKET, F-SLATE, F-SMALL, F-PLAYERS, F-ODDS); 0 strategies certified; no luck/skill claims made.
+
+# Session eeddab9b — independent NBA deliverable and provenance audit (2026-11-05 UTC)
+
+Arena fixes this session to `arena/eeddab9b-own5`; the prescribed `session-&lt;id&gt;/&lt;task&gt;` branch/worktree convention cannot be used because the Arena-managed branch is fixed. Existing NBA implementation and integration tasks are complete, so this session claims only an isolated audit report and makes no edits to any existing NBA dataset, strategy, site, or shared navigation.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| E1 | Independent provenance, build, and findings audit of the NBA signal lab | in progress | eeddab9b | COORDINATION.md, nba-audit-eeddab9b/** | Re-open existing source links where feasible in this environment; run deterministic builds, tests, and link/data audits; record limitations and any unverified claims without modifying prior scopes. |
+
+Claimed: 2026-11-05 UTC. Cross-session requests: none.
