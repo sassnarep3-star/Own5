@@ -990,3 +990,26 @@ Claim timestamp: **2026-11-06T14:05Z**. Arena fixes the working branch to `arena
 | E4 | GitHub Pages subsite: landing dashboard + category subpages (units, law, process, questions, sources, flagged) | done | e028ae77 | sf-rent-94122/*.html, sf-rent-94122/style.css, sf-rent-94122/data/*.csv | Self-contained; no edits to root nav or other sessions' files. |
 | E5 | Line-by-line verification: every table row has an official source link or explicit BLANK flag; internal links resolve | done | e028ae77 | sf-rent-94122/verify.py, research/sf-rent-94122/VERIFICATION.md | Script run locally; results logged. |
 | E6 | Integration: PR to main, autonomous merge, Pages deploy verification, record results | in progress | e028ae77 | COORDINATION.md, README.md (append only) | Per protocol: no waiting for approval; fix and retry if build/deploy fails. |
+
+### SF final PR / merge / public verification — session c334a668
+
+- **PR:** [#52](https://github.com/sassnarep3-star/Own5/pull/52), merged
+  autonomously with `gh pr merge 52 --merge` at 2026-11-06 13:53 UTC; merge
+  commit `e9faa822be0781db6f56c9138c0bb03902ac7b7a`.
+- **Checks:** all pre-merge PR checks passed (SF scoped verification, existing
+  research dashboard/browser checks, existing evidence desk, and NBA
+  validation). Post-merge SF workflow
+  [42229137250](https://github.com/sassnarep3-star/Own5/actions/runs/42229137250)
+  passed both verification and the public Pages smoke test.
+- **Pages:** legacy `main` / root deployment run
+  [42229137058](https://github.com/sassnarep3-star/Own5/actions/runs/42229137058)
+  completed successfully for the merge commit. Independently fetched the live
+  [dashboard](https://sassnarep3-star.github.io/Own5/sf-rent-review/),
+  [flagged page](https://sassnarep3-star.github.io/Own5/sf-rent-review/review.html),
+  and pre-existing [root](https://sassnarep3-star.github.io/Own5/) at 13:56 UTC;
+  the dashboard displayed the expected 1.6% dated allowance, blank
+  unit-specific values, and source links. A later concurrent merge triggered
+  another deployment; that does not change what was verified at 13:56.
+- **SF1, SF2 and SF3: done.** Open legal/property/source-review flags are
+  nonblocking for publication, not a finding that an increase or notice is
+  lawful. Separate cross-session concerns remain assigned to the owning scope.
