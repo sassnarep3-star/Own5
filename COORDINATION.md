@@ -827,3 +827,15 @@ Cross-session request: final integration will add a clearly labeled NBA entry po
 - **GitHub Pages:** API status `built`, source `main` @ `/`, base https://sassnarep3-star.github.io/Own5/ . Live fetches with `?release=f3d164a` verified: [overview](https://sassnarep3-star.github.io/Own5/nba-research-61a311c2/index.html), [own lines](https://sassnarep3-star.github.io/Own5/nba-research-61a311c2/lines.html), [Flagged for Review](https://sassnarep3-star.github.io/Own5/nba-research-61a311c2/review.html), and root NFL overview (preserved). Rendered counts matched: 241 canonical rows, 11 lines, 0/6 qualified, 19 flags.
 - **Q61-01…Q61-07 done.** Follow-up documentation commit updates the dashboard requirements trace and verification record to reflect the completed merge/deployment. Flags remain nonblocking; no strategy, ROI, probability, rank or funded reward is certified.
 
+
+# Session aa2eccd9 — San Francisco rent-increase research and dashboard (2026-11-06 UTC)
+
+Arena fixes this session to `arena/aa2eccd9-own5`; the requested alternate `session-&lt;id&gt;/&lt;task&gt;` branch cannot be used. Work is isolated to `sf-rent-increase-2026/**` and this append-only coordination record. Existing unrelated NFL/NBA work is read-only. No active task in this subject namespace was found in the task-board review.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| SF1 | Official-source rent-law research, source register, and privacy-safe case framing | in progress | aa2eccd9 | sf-rent-increase-2026/**; COORDINATION.md | Verify all legal and numeric statements against official sources; personal names/initials excluded. |
+| SF2 | Clean category dashboard, executive summary, verified row sources, and Flagged for Review page | unclaimed | aa2eccd9 | sf-rent-increase-2026/** | Standalone GitHub Pages subsite; each factual table row links directly to official source; blank unconfirmed facts. |
+| SF3 | Tests, line-by-line audit, integration request / PR / deployment record | unclaimed | aa2eccd9 | sf-rent-increase-2026/**; COORDINATION.md | No root shared navigation edits until research/site verify; branch is fixed by Arena. |
+
+Claim timestamp: 2026-11-06 UTC. No conflicts identified. The user-provided unit/tenant particulars are sensitive; the public site will only use unit labels and non-identifying tenancy facts necessary for the analysis, and will omit tenant initials and names.
