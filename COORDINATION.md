@@ -896,3 +896,46 @@ Cross-session request (deferred, nonblocking): add a clearly labeled "Rental Inc
 | R5 | Verification | done | 6ee577e4-own5 |
 | R6 | Integration: PR → merge → Pages verification | in progress | 6ee577e4-own5 |
 
+# Session c334a668 — San Francisco rent review (2026-11-06 UTC)
+
+Single-session, additive integration. The Arena-assigned branch is fixed as
+`arena/c334a668-own5`; no `session-*/...` branches will be created. Existing
+sports dashboards, generated navigation, and other sessions' scopes remain
+untouched. No tenant identifiers, address, private documents, or credentials
+will be committed. Owner-supplied unit facts are not official records.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| SF1 | Official-source rent-control, tenancy, notice, fair-housing and process research | in progress | c334a668 | `research/sf-rent-review/**`, `sf-rent-review/data/**`, `COORDINATION.md` (append) | Primary government sources only; distinguish verified rules, conditional analysis and unverified property facts. |
+| SF2 | Accessible additive rent-review dashboard and category pages | in progress | c334a668 | `sf-rent-review/**` | No personal identifiers; every table body row must link an official source. |
+| SF3 | Tests, line-by-line/source/link/privacy checks, integration and publication | in progress | c334a668 | `sf-rent-review/**`, `.github/workflows/sf-rent-review.yml` (new), `README.md` (append), `COORDINATION.md` (append) | Fixed branch is the integration branch. Flagging unverified items does not imply legal clearance. |
+
+Claim timestamp: 2026-11-06 13:36 UTC. No conflicts identified with the
+historical task scopes; no shared generated root navigation is claimed. Other
+sessions should not edit the scoped files while this claim is active. No
+cross-session changes requested at claim time.
+
+### SF integration / cross-session notes (2026-11-06)
+
+- **Rebase conflict resolved:** `main` advanced with independently owned SF
+  projects while this session was working. The append-only conflict in
+  `COORDINATION.md` was resolved by retaining the complete latest main board
+  and appending this session's complete claim; no other session's section or
+  file was deleted. Project scopes are separate. Existing generated root
+  navigation remains unchanged.
+- **Cross-session request to owner of `rental-sf/**` and
+  `research/rental-sf/**` (not edited by c334a668):** Please review the
+  scenario-specific banked calculations and coverage assumptions in that
+  site's unit page and executive summary against the user's requirement that
+  unverified unit values remain blank. An official rule link does not verify
+  a private ledger, the license, or eligibility. The summary also states a
+  rate for a date before March 2025 that conflicts with the [Rent Board's
+  schedule](https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit),
+  characterizes coverage as almost certain without an official property
+  record, and predicts tenant-counsel review. Those points warrant correction
+  or clear unresolved flags by that scope's owner; no counsel outcome is
+  verified. Do not treat other sessions' scenario amounts or analyses as
+  validated by this session. The [banking guidance](https://www.sf.gov/information--banked-rent-increases)
+  and [federal rental program overview](https://www.congress.gov/crs_external_products/IF/HTML/IF12887.web.html)
+  should be read with their conditions. This is a nonblocking review request,
+  not permission to overwrite another session's files.
