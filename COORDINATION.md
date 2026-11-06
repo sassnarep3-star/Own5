@@ -833,3 +833,18 @@ Cross-session request: final integration will add a clearly labeled NBA entry po
 - **GitHub Pages:** API status `built`, source `main` @ `/`, base https://sassnarep3-star.github.io/Own5/ . Live fetches with `?release=f3d164a` verified: [overview](https://sassnarep3-star.github.io/Own5/nba-research-61a311c2/index.html), [own lines](https://sassnarep3-star.github.io/Own5/nba-research-61a311c2/lines.html), [Flagged for Review](https://sassnarep3-star.github.io/Own5/nba-research-61a311c2/review.html), and root NFL overview (preserved). Rendered counts matched: 241 canonical rows, 11 lines, 0/6 qualified, 19 flags.
 - **Q61-01…Q61-07 done.** Follow-up documentation commit updates the dashboard requirements trace and verification record to reflect the completed merge/deployment. Flags remain nonblocking; no strategy, ROI, probability, rank or funded reward is certified.
 
+
+## Session 414a434b — SF rent research (2026-11-06 UTC)
+
+Arena fixes the branch to `arena/414a434b-own5`; the requested alternate branch naming cannot be used. Existing sports dashboards and other claims remain untouched. Public content excludes personal identifiers. User-supplied private facts are not official verification.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| SF1 | Official-source research, anonymized dashboard, review flags and verification | in progress | 414a434b | `sf-rent/**`, `COORDINATION.md` (append) | Isolated additive scope; direct Pages entry. |
+| SF2 | Integration, PR, merge and deployment verification | in progress | 414a434b | `sf-rent/**`, `COORDINATION.md` (append) | Preserve existing shared navigation and concurrent work. |
+
+### SF1 research and verification log — 2026-11-06
+
+- SF1 completed in isolated `sf-rent/**`. Checked each substantive row against SF Rent Board [rate](https://www.sf.gov/news--annual-rent-increase-3126-22827-announced), [annual rules](https://www.sf.gov/learn-about-rent-increases-san-francisco), [banking](https://www.sf.gov/information--banked-rent-increases), [notices](https://sf.gov/information/allowable-rent-increases), [license](https://www.sf.gov/notice-of-rent-board-fee-and-housing-inventory-requirement), [AB 1482](https://www.sf.gov/reports--california-tenant-protection-act-2019-ab-1482), [petition](https://media.api.sf.gov/documents/516C_Tenant_Petition_Form_C_EN_5.25_Fillable_Updated.pdf); federal [HUD](https://www.hud.gov/reporthousingdiscrimination), state [fair housing regulations](https://calcivilrights.ca.gov/wp-content/uploads/sites/32/2019/09/FinalText-FairHousingRegulations.pdf), and city [right to counsel report](https://media.api.sf.gov/documents/120882_-_Housing_Trust_Fund_Five-Year_Report_-_2018-2023.pdf). Every row contains an official source; sources for blank rows establish review criteria, not verification of private facts.
+- Flags: property coverage, rent history, legal base rent, anniversary, banked balances, license, lease terms, roommate continuity, subsidies, discrimination/retaliation facts, actual lawyer review, and typical owner-type increases are not independently verified; values intentionally blank. Banking page contains an inconsistent year in an example. No personal identifiers or private assertion presented as verified on the public site.
+- Local `python3 sf-rent/test.py` checks generated pages, all relative links, and an official URL on every data row. This does not verify remote link uptime or substitute for legal review. Six standalone pages; existing root navigation remains under prior owner scope.
