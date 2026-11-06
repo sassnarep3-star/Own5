@@ -853,3 +853,46 @@ Arena fixes the branch to `arena/414a434b-own5`; the requested alternate branch 
 
 - [PR #47](https://github.com/sassnarep3-star/Own5/pull/47) merged with merge commit `fc9622dbd4f03ca48ce3acc9f4791fc8dc873927`. Pre-merge GitHub checks: research dashboard, NBA validation, and evidence desk all passed; legacy smoke skipped by workflow. Local scoped checks passed and existing `tools/check_site.py` reported 0 failures and 9 pre-existing flagged warnings.
 - Pages run [42227206719](https://github.com/sassnarep3-star/Own5/actions/runs/42227206719): build passed; deployment was still in progress after three minutes. Live page returned 404 while deployment remained pending; do not claim successful publication until the run succeeds and the page is fetched. Node 20 deprecation warning is from GitHub's Pages workflow.
+---
+
+# Session 6ee577e4-own5 — Rental Increase SF (San Francisco Outer Sunset, 94122)
+
+Claim timestamp: **2026-11-06T13:45Z**. Arena fixes this session to `arena/6ee577e4-own5`; no alternative branch will be created or pushed. Scope is **additive only**: `rental-sf/**` (site + its own tooling), `research/rental-sf/**` (research docs), and this append-only board. Existing sites, data, root navigation, `scripts/**`, `tools/**`, `.github/workflows/**` and all other sessions' namespaces are **read-only**. Root `index.html` is CI-locked; no root-navigation change will be made by this session (logged as a cross-session request below instead). No overlap with open PRs #8, #34, #43 (NFL/NBA scopes). Personal tenant/landlord names from the brief are **never committed** — the repo publishes anonymized placeholders only (dates and amounts preserved).
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| R1 | Claim + bounded repo review; record irregularities | in progress | 6ee577e4-own5 | COORDINATION.md | Additive-only review; external availability of every legacy link is not re-verified wholesale (see log). |
+| R2 | Official-source research: SF local law (Rent Board/Rent Ordinance), CA state law, federal law, industry practice, notice procedure, fair-housing/discrimination review | unclaimed→claimed | 6ee577e4-own5 | research/rental-sf/** | Every factual row needs an official source link or is blank + flagged. |
+| R3 | Executive summary (anonymized) | unclaimed→claimed | 6ee577e4-own5 | research/rental-sf/EXECUTIVE_SUMMARY.md, rental-sf/summary.html | Names replaced by placeholders; dates/amounts preserved. |
+| R4 | Site: clean dashboard landing page + subpages, category tables, Flagged for Review page | unclaimed→claimed | 6ee577e4-own5 | rental-sf/** | Static, Pages-compatible, own CSS/JS (no shared assets edited). |
+| R5 | Line-by-line verification; per-row source links; flag unverified values | unclaimed→claimed | 6ee577e4-own5 | rental-sf/**, research/rental-sf/** | Nothing merged unverified; unverifiable values left blank + flagged. |
+| R6 | Integration: rebase, PR to main, merge, GitHub Pages deploy verification, record result | unclaimed | 6ee577e4-own5 | COORDINATION.md (this log) | Preserve all concurrent work; merge only with green checks; record PR + deploy URL. |
+
+Cross-session request (deferred, nonblocking): add a clearly labeled "Rental Increase SF" footer/entry-point link to the root dashboard and `data/index.html` **via the owning builder** (`scripts/build.py` is CI-locked from hand edits). This session does not edit root navigation.
+
+### R1 progress note (2026-11-06)
+
+- Branch `arena/6ee577e4-own5` == `origin/main` @ `6a73b0a` at claim; working tree clean; open PRs #8/#34/#43 are NFL/NBA scopes — no file overlap with this task.
+- Repo is the Own5 NFL/NBA research Pages site plus many session sub-sites; no rental content existed anywhere (`grep -i rental` on tracked files → none). Pre-existing irregularities (if any) belong to their owning sessions; this session flags what it observes on the Flagged for Review page rather than rewriting others' work.
+- Legal-content safety rule for this session: the site is general educational information, not legal advice; no specific dollar recommendation is issued to any tenant or the owner; every legal parameter links to an official source; interpretation risks are published as flags, not hidden.
+
+
+### Session 6ee577e4-own5 — work log (2026-11-06)
+
+- **R1 done — bounded repo review (this session):** repo at `6a73b0a` == `origin/main` at start; 182 HTML pages scanned with a custom tolerant parser: 3,052 local refs, **0 broken**; `tools/check_site.py`: **0 failures**, 9 pre-existing intentional blank-source warnings (unchanged); 9 root-level detail pages carry an unclosed `<section>` before `</main>` (session 0f468a47 scope; flag **F-16**, not edited); PII/secrets scan: none found; root `index.html`/`data/` untouched (CI-locked). Full review claims are bounded — see flag F-18.
+- **R2 done — official-source research:** 22 official sources fetched and read in full this session (sf.gov Rent Board pages incl. the 2026-01-14 annual-increase announcement, Current Rates, "Learn about rent increases", "Banked rent increases", coverage, Costa-Hawkins guidance, capital-improvement petitions + imputed-interest table, 571 historical PDF; Cal. leginfo §§827, 1947.12, 1942.5, 1954.53; DOJ archived release 25-21; HUD FHA overview; CA CRD Fair Housing fact sheet; BLS CPI-SF June 2026 release — Apr-2026 12-month = 3.8%). Registry + retrieval log: `research/rental-sf/SOURCES.md`. No value taken from any third-party site.
+- **R3 done — anonymized executive summary:** `research/rental-sf/EXECUTIVE_SUMMARY.md` + `rental-sf/summary.html`. Placeholders (Household 1/Household 2); dates/amounts preserved; no tenant/owner PII anywhere.
+- **R4 done — site:** `rental-sf/` (12 pages + own CSS/JS, no shared assets touched): dashboard `index.html`, summary, Q&A, local-law, state-law, federal-law, practice, process (with notice template — template only, flag F-13), fair-housing (one vs both), units (all scenario math), flagged (F-01…F-18), sources; `rental-sf/verify.py` deterministic checker (parse, local refs, per-row source/flag link coverage, https-only, PII patterns).
+- **R5 done — verification:** `python3 rental-sf/verify.py` → **12 pages, 164 table rows, FAIL=0, WARN=0**; root suite `python3 -m unittest discover -s tests` → **91/91 OK**; all pages/assets serve 200 locally. Every table row carries an official source link or a flag link; unverified values are BLANK (2027-28 rate, F-04) or derived-and-labeled (AB 1482 8.8%, F-05). Official-source contradiction on banking eligibility confirmed and published, not resolved (F-02). 2024-08-23 DOJ URL 404 → archived URL used (S-18).
+- **Key analytic outcomes (details in site):** continuing covered tenancies ⇒ current-year 1.6% + properly banked only; Unit 1 +$63.92 → $4,058.92 (U1-E trap documented); Unit 2 +$50.40 annual-only; banked scenarios $3,465.00–$3,562.65 pending F-02; both-units uniform-formula is the review-passing pattern; selective single-unit raise is lawful-in-principle but review-risky; no notice should be served until F-01/F-02/F-03 close.
+- **Cross-session request (unchanged, deferred):** add "Rental Increase SF" entry point to root navigation via owning builder (`scripts/build.py`) — not done by this session (CI-locked shared output).
+
+| ID | Task | Status | Owner |
+|----|------|--------|-------|
+| R1 | Repo review | done | 6ee577e4-own5 |
+| R2 | Sources research | done | 6ee577e4-own5 |
+| R3 | Executive summary | done | 6ee577e4-own5 |
+| R4 | Site | done | 6ee577e4-own5 |
+| R5 | Verification | done | 6ee577e4-own5 |
+| R6 | Integration: PR → merge → Pages verification | in progress | 6ee577e4-own5 |
+
