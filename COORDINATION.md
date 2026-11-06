@@ -827,3 +827,12 @@ Cross-session request: final integration will add a clearly labeled NBA entry po
 - **GitHub Pages:** API status `built`, source `main` @ `/`, base https://sassnarep3-star.github.io/Own5/ . Live fetches with `?release=f3d164a` verified: [overview](https://sassnarep3-star.github.io/Own5/nba-research-61a311c2/index.html), [own lines](https://sassnarep3-star.github.io/Own5/nba-research-61a311c2/lines.html), [Flagged for Review](https://sassnarep3-star.github.io/Own5/nba-research-61a311c2/review.html), and root NFL overview (preserved). Rendered counts matched: 241 canonical rows, 11 lines, 0/6 qualified, 19 flags.
 - **Q61-01…Q61-07 done.** Follow-up documentation commit updates the dashboard requirements trace and verification record to reflect the completed merge/deployment. Flags remain nonblocking; no strategy, ROI, probability, rank or funded reward is certified.
 
+
+## Session 414a434b — SF rent research (2026-11-06 UTC)
+
+Arena fixes the branch to `arena/414a434b-own5`; the requested alternate branch naming cannot be used. Existing sports dashboards and other claims remain untouched. Public content excludes personal identifiers. User-supplied private facts are not official verification.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| SF1 | Official-source research, anonymized dashboard, review flags and verification | in progress | 414a434b | `sf-rent/**`, `COORDINATION.md` (append) | Isolated additive scope; direct Pages entry. |
+| SF2 | Integration, PR, merge and deployment verification | in progress | 414a434b | `sf-rent/**`, `COORDINATION.md` (append) | Preserve existing shared navigation and concurrent work. |
