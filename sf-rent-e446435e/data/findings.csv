@@ -1,0 +1,120 @@
+id,page,topic,value,finding,sources,flags
+X-01,index,Current annual ceiling,"1.6% (effective Mar 1, 2026 - Feb 28, 2027)",Ceiling for the annual component of covered tenancies; per-unit eligibility still gated by flags.,S-01;S-02,
+X-02,index,Unit 1 reported base,"$3,995.00/mo (reported)","Initial lease Feb 1, 2025; continuing tenancy Apr 1, 2026. User-supplied; lawful base unverified.",S-04,R44-F02;R44-F03
+X-03,index,Unit 2 reported base,"$3,150.00/mo (reported)","Last lease Jun 1, 2019. User-supplied; history unverified.",S-04,R44-F02;R44-F04
+X-04,index,License gate,,Active S37.15 Housing Inventory license required before any annual/banked increase; status unverified.,S-07;S-08,R44-F05
+X-05,index,Notice floor,30/35 days (≤10%); 90/95 days (>10%),Written notice; personal delivery or first-class mail +5 days in CA; e-mail alone invalid.,S-14,R44-F13
+Y-01,summary,Property,"1940 two-unit, Outer Sunset 94122",Coverage indicated (Prop I / S37.12) pending unit-by-unit confirmation.,S-11;S-12,R44-F01
+Y-02,summary,Unit 1 reported,"Feb 1, 2025 @ $3,995.00; continuing Apr 1, 2026 @ $3,995.00 (reported)",Tenant Alpha remains; Tenant Delta joined.,S-04,R44-F02;R44-F03
+Y-03,summary,Unit 2 reported,"Jun 1, 2019 @ $3,150.00 (reported)",Tenant Epsilon + Tenant Zeta.,S-04,R44-F02;R44-F04
+Y-04,summary,Annual ceiling,1.6% (Mar 2026 - Feb 2027 window),"Ceiling for annual component, not eligibility proof.",S-01;S-02,
+Y-05,summary,Unit 1 paths,"$0.00 fixed-term path · early $4,058.92 · Feb-2027 $4,114.85 (derived)","All conditional on agreement type, base, license, bank.",S-01;S-04;S-05,R44-F02;R44-F03;R44-F04;R44-F05
+Y-06,summary,Unit 2 paths,"Annual-only $3,200.40 · max-banked $3,562.65 (derived)",Conditional on history + license; max needs 90/95-day notice.,S-01;S-05;S-14,R44-F02;R44-F04;R44-F05;R44-F13
+Y-07,summary,AB 1482,Moot (local stricter),"Formula 5% + CPI, max 10%; computed SF figure blank.",S-15;S-32,R44-F10
+Y-08,summary,Federal,No cap; no discrimination,FHA bars discriminatory rates/terms.,S-22;S-20,R44-F12
+Y-09,summary,Notice + license gates,30/35 vs 90/95; license first,Personal/mail+5; e-mail invalid; itemize $ and %.,S-03;S-14;S-07,R44-F05;R44-F13
+Y-10,summary,Standing,Do not serve yet,Blocking flags + counsel review first; general info only.,S-28;S-29,R44-F01;R44-F02;R44-F03;R44-F04;R44-F05;R44-F12;R44-F15
+L-01,local-law,Coverage of 1940 ≤4-unit buildings,Covered (subject to unit confirmation),Prop I (1994) / S37.12: pre-1979 ≤4-unit buildings covered regardless of owner occupancy.,S-10;S-11,R44-F01
+L-02,local-law,Annual CPI cap,1.6% for 2026-27 window,S37.3(a)(1): increases capped at published CPI-based annual rate.,S-03,
+L-03,local-law,Banking allowed,Banked years add (no compounding),S37.3(a)(2) + banking rules; full payment history required to compute any bank.,S-03;S-05,R44-F04
+L-04,local-law,Increase frequency,Once per 12 months,Annual increase generally no more often than every 12 months.,S-04,
+L-05,local-law,Anniversary changes,Forfeiture risk,Non-anniversary effective dates change the anniversary and can forfeit banked years; confirm before serving.,S-06,R44-F04;R44-F17
+L-06,local-law,Written itemization,$ and % for annual vs banked,S37.3(b)(1): notice must state dollar and percent for each component; defective notices are null and void (b)(5).,S-03,R44-F13
+L-07,local-law,License condition,Active S37.15 license required,Increases without a current Housing Inventory license are void; report each Mar 1 via portal.sfrb.org.,S-07;S-08,R44-F05
+L-08,local-law,Roommate surcharge,$0 — prohibited,S37.3(a)(11)(A) bans surcharges for added occupants/roommates.,S-03,
+L-09,local-law,Partial turnover,No reset,S37.3(d)(2)(B): remaining original occupant defeats Costa-Hawkins reset; S6.14 governs vacancy increases.,S-03;S-09,R44-F17
+L-10,local-law,Full vacancy reset,Costa-Hawkins / S6.14,Reset to market only on qualifying full vacancy; partial changes do not qualify.,S-09;S-31,R44-F17
+L-11,local-law,Voucher tenancies,PHA-rent interplay,S37.3(a)(10) special rules where Housing Authority pays part of rent.,S-03,R44-F14
+L-12,local-law,Petition adjustments,,Capital-improvement / rehab / operating-cost passthroughs need individual Board decisions; no amounts verified.,S-04;S-10,R44-F19
+L-13,local-law,Algorithmic pricing,Banned (S37.10C),"SF bans landlord use of algorithmic rent-setting devices; tenant-org standing since Oct 6, 2025.",S-13,
+L-14,local-law,Harassment / coercion,Prohibited,Coercive increase practices risk petitions and penalties; confirm section text with counsel.,S-12,R44-F12
+L-15,local-law,Rate-schedule typos advisory,Follow Form 571,Two sf.gov explainer lines misstate rate/year pairs; Form 571 schedule governs.,S-01;S-04;S-06,R44-F09
+L-16,local-law,2027-28 rate,,Unannounced; scenarios past Feb 2028 leave it blank.,S-01,R44-F06
+L-17,local-law,Counseling & counsel,Free help exists,Rent Board counseling 415-252-4600; Right to Counsel/EDC 415-659-9184; BASF mediation 415-782-8940.,S-28;S-29,R44-F15
+L-18,local-law,Deposit interest / fee,4.2%; $29.50,Current Rates: deposit interest 4.2%; Rent Board fee $29.50 per unit per fee notice.,S-02;S-08,
+T-01,state-law,Written notice + service,Personal delivery or 1st-class mail,S827(b)(1)-(3): no valid increase without statutory service.,S-14,R44-F13
+T-02,state-law,≤10% timing,30 days (35 mailed),Cumulative ≤10% in 12 months.,S-14,R44-F13
+T-03,state-law,>10% timing,90 days (95 mailed),Cumulative >10% in 12 months.,S-14,R44-F13
+T-04,state-law,Mail adder,+5 days in CA,CCP S1013 via S827: mailed notice adds five calendar days.,S-14,
+T-05,state-law,E-mail/text/portal alone,Invalid,Courtesy copies only after/alongside statutory service.,S-14,R44-F13
+T-06,state-law,AB 1482 formula,"5% + CPI, max 10%",State cap formula.,S-15,R44-F10
+T-07,state-law,AB 1482 vs local control,Local governs,Properties under stricter local rent control follow the local ordinance.,S-15;S-32,
+T-08,state-law,Corporate/REIT rule,Excluded from exemption,S1947.12(d)(5): corporate/REIT-owned 1-4 unit properties do not get the single-family exemption.,S-15,
+T-09,state-law,Just cause (AB 1482),Applies where AB 1482 applies,S1946.2 framework; SF just-cause eviction rules apply separately.,S-16;S-29,
+T-10,state-law,Retaliation bar,180 days,S1942.5: no retaliatory increases after protected tenant activity.,S-17,R44-F12
+T-11,state-law,FEHA housing,Protected characteristics + SOI,"S12955 + 2 CCR 12140.1-12141: rent terms must not discriminate, incl. source of income.",S-18;S-19,R44-F12
+T-12,state-law,Costa-Hawkins (state),Full-vacancy decontrol,S1954.53: state vacancy framework; interplay with local S6.14 needs counsel at edges.,S-31;S-09,R44-F17
+D-01,federal-law,FHA rate discrimination,Prohibited,42 U.S.C. S3604(b): discriminatory rental rates/terms/conditions barred.,S-20;S-21,R44-F12
+D-02,federal-law,Federal rent cap,None (general private market),CRS: no general federal private rent cap.,S-22,
+D-03,federal-law,CARES S4024(c),30-day notice (covered dwellings),Applies to federally backed/assisted covered dwellings; status here unknown.,S-22,R44-F14
+D-04,federal-law,FMR purpose,Benchmarks only,HUD FMRs/SAFMRs measure market rents; never a lawful-increase basis.,S-23,
+D-05,federal-law,94122 0BR SAFMR FY2027,,Worksheet cell unconfirmed (header-only/404 variants).,S-23;S-24,R44-F07;R44-F08
+D-06,federal-law,94122 1BR SAFMR FY2027,"$2,770","Step-4 ZCTA value, br_size=1 worksheet.",S-23;S-24,R44-F08
+D-07,federal-law,94122 2BR SAFMR FY2027,"$3,410",Shown on successful worksheets' Step 4/5/6.,S-23;S-24,R44-F08
+D-08,federal-law,94122 3BR SAFMR FY2027,"$4,460",br_size=3 worksheet.,S-23;S-24,R44-F08
+D-09,federal-law,94122 4BR SAFMR FY2027,"$5,020",br_size=4 worksheet.,S-23;S-24,R44-F08
+D-10,federal-law,SF HMFA metro FMRs FY2027,"0BR $2,574; 1BR $3,003; 2BR $3,697; 3BR $4,832; 4BR $5,439","Metro-level schedule for context; Step 6 prints these, not ZCTA values.",S-23,R44-F08
+D-11,federal-law,Unit bedroom counts,,Unknown for both units; benchmark applicability blank.,S-23,R44-F07
+P-01,practice,Essex Property Trust 10-K,Venue verified; norms blank,Institutional multifamily disclosures exist on EDGAR; no portfolio % adopted as a norm here.,S-26,R44-F11
+P-02,practice,AvalonBay 10-K,Venue verified; norms blank,Same class of institutional disclosure.,S-27,R44-F11
+P-03,practice,Corporate AB 1482 status,No single-family exemption,Corporate/REIT owners excluded from S1947.12(d)(5) exemption.,S-15,
+P-04,practice,DOJ algorithmic pricing,Sherman Act S1 suit,RealPage complaint + follow-on landlord actions; Sept 2026 Pinnacle decree on justice.gov.,S-25,
+P-05,practice,SF algorithmic ban,S37.10C,"Local ban + tenant-org standing (Oct 6, 2025).",S-13,
+P-06,practice,Corporate renewal schedules,,Private schedule details unverified; standardized annual programs described only as context.,S-25,R44-F11
+P-07,practice,Individual banking habits,,Commonly described defer-and-catch-up behavior has no official source.,S-05,R44-F11
+P-08,practice,>10% catch-up risk,90/95-day + itemization,Large banked catch-ups without perfect service/itemization invite petitions and voidness.,S-03;S-14,R44-F04;R44-F13
+P-09,practice,Typical % by owner type,,No official source for private-market 'normal' percentages.,S-30,R44-F11
+P-10,practice,Uniform-policy pattern,Recommended practice,"Written building-wide formula + contemporaneous records = review-passing pattern (guidance, not statute).",S-18;S-20,R44-F12;R44-F15
+N-01,process,Written notice,Required,Statutory service only.,S-14;S-03,R44-F13
+N-02,process,Itemization,$ and % per component,Annual vs banked stated separately.,S-03,R44-F13
+N-03,process,Service method,Personal or mailed,First-class mail under CCP S1013.,S-14,R44-F13
+N-04,process,Mail timing,+5 days (CA),Mailed notice timing.,S-14,
+N-05,process,Thresholds,30/35 vs 90/95,By ≤10% / >10% cumulative in 12 months.,S-14,R44-F13
+N-06,process,E-mail alone,Invalid,Courtesy only.,S-14,R44-F13
+N-07,process,License,Active first,Unlicensed increases void.,S-07;S-08,R44-F05
+N-08,process,Spacing,12 months,Annual spacing rule.,S-04,
+N-09,process,Lease clause,Honor fixed terms,No mid-lease increase without a clause.,S-04,R44-F03
+N-10,process,Lawful reasons,CPI / banked / petition,Only lawful bases for covered units.,S-03;S-04,
+N-11,process,Unlawful reasons,Retaliation / bias / coercion,Any of these voids or penalizes an increase.,S-17;S-18;S-20,R44-F12
+N-12,process,'Market rent' alone,Not a basis (covered units),"Benchmarks are context, not authority above the ceiling.",S-03;S-04,
+N-13,process,Records,Proof of service + ledger,"Keep service proof, computations, license records.",S-03;S-14,R44-F13
+N-14,process,Site checklists,Illustrative only,Not a served notice; execution facts need counsel.,S-14,R44-F13;R44-F15
+U1-01,units,Unit 1 — reported initial lease,"Feb 1, 2025 @ $3,995.00/mo (reported)",User-supplied input; lawful base/history unverified.,S-04,R44-F02
+U1-02,units,Unit 1 — continuing tenancy,"Apr 1, 2026 @ $3,995.00/mo (reported)",Tenant Alpha remains; Tenant Delta joined; Tenant Beta/Gamma departed. Agreement type blank.,S-03,R44-F02;R44-F03
+U1-03,units,Unit 1 — agreement-type gate,,Fixed-term vs month-to-month + increase clause decides $0 vs annual/banked path.,S-04,R44-F03
+U1-04,units,Unit 1 — fixed-term path,"$0.00 until Apr 1, 2027 (derived)",If unexpired fixed-term without increase clause.,S-04,R44-F03
+U1-05,units,Unit 1 — Costa-Hawkins reset,$0 — none,Original co-tenant remains: no vacancy reset.,S-03;S-09,R44-F17
+U1-06,units,Unit 1 — roommate surcharge,$0 — prohibited,No surcharge for Tenant Delta joining.,S-03,
+U1-07,units,Unit 1 — early-raise illustration,"1.6%: +$63.92 → $4,058.92","If month-to-month + licensed and effective before Feb 1, 2027: 1.6% only; forfeits 1.4% bank.",S-01;S-04,R44-F04
+U1-08,units,Unit 1 — anniversary illustration,"3.0% (1.4% + 1.6%): +$119.85 → $4,114.85","If effective Feb 1, 2027: banked 1.4% + annual 1.6% = 3.0%.",S-01;S-05,R44-F04
+U1-09,units,Unit 1 — forfeiture warning,1.4% bank at risk,Raising on a changed anniversary forfeits the skipped bank year.,S-06,R44-F04;R44-F17
+U1-10,units,Unit 1 — notice for paths,30/35-day (≤10%),Both U1 illustrations stay ≤10% cumulative.,S-14,R44-F13
+U2-01,units,Unit 2 — reported last lease,"Jun 1, 2019 @ $3,150.00/mo (reported)",User-supplied; history unverified.,S-04,R44-F02
+U2-02,units,Unit 2 — history gate,,Bank assumes zero increases since Jun 2019 + month-to-month + licensed.,S-05,R44-F02;R44-F04
+UB-20,units,Unit 2 — banked Jun 2020,1.8% (+$56.70),2020-21 window rate applied at Jun 1 anniversary.,S-01,R44-F04
+UB-21,units,Unit 2 — banked Jun 2021,0.7% (+$22.05),2021-22 window rate applied at Jun 1 anniversary.,S-01,R44-F04
+UB-22,units,Unit 2 — banked Jun 2022,2.3% (+$72.45),2022-23 window rate applied at Jun 1 anniversary.,S-01,R44-F04
+UB-23,units,Unit 2 — banked Jun 2023,3.6% (+$113.40),2023-24 window rate applied at Jun 1 anniversary.,S-01,R44-F04
+UB-24,units,Unit 2 — banked Jun 2024,1.7% (+$53.55),2024-25 window rate applied at Jun 1 anniversary.,S-01,R44-F04
+UB-25,units,Unit 2 — banked Jun 2025,1.4% (+$44.10),2025-26 window rate applied at Jun 1 anniversary.,S-01,R44-F04
+U2-04,units,Unit 2 — bank subtotal,"11.5% (+$362.25 → $3,512.25)","Six banked years summed, no compounding.",S-01;S-05,R44-F04
+U2-05,units,Unit 2 — annual-only illustration,"1.6%: +$50.40 → $3,200.40",1.6% current window; 30/35-day notice.,S-01;S-04,R44-F04
+U2-06,units,Unit 2 — maximum illustration,"13.1% (11.5% + 1.6%): +$412.65 → $3,562.65","11.5% + 1.6% = 13.1% effective on/before Feb 28, 2027; 90/95-day notice.",S-01;S-05,R44-F04;R44-F13
+U2-07,units,Unit 2 — >10% service illustration,"Mailed Nov 6, 2026 → Feb 9, 2027 earliest (derived)",+95 days; inside 1.6% window but off-anniversary.,S-14,R44-F04;R44-F13;R44-F17
+U2-08,units,Unit 2 — Mar-May 2027 trap,1.6% year forfeited,Effective dates in Mar-May 2027 lose the Jun 2026 bank year.,S-06,R44-F04;R44-F17
+U2-09,units,Unit 2 — Jun 2027 wait,13.1% + blank 2027-28 rate,Anniversary wait preserves bank; new-year rate unannounced.,S-05;S-01,R44-F04;R44-F06
+U2-10,units,Unit 2 — partial-bank option,≤10.0% on 30/35-day notice,Partial imposition preserves the remainder of the bank.,S-05;S-14,R44-F04;R44-F13
+U2-11,units,Unit 2 — anniversary-change caution,Confirm before serving,Off-anniversary effectiveness changes the anniversary; confirm bank survival with counseling.,S-06,R44-F04;R44-F17
+UM-01,units,Unit 1 bedrooms,,Needed to apply any SAFMR benchmark.,S-23,R44-F07
+UM-02,units,Unit 2 bedrooms,,Needed to apply any SAFMR benchmark.,S-23,R44-F07
+UM-03,units,Benchmark use,Context only,SAFMR values (federal-law page) never authorize above-ceiling rents.,S-23,R44-F07
+H-01,fair-housing,One-unit-only action,Lawful-in-principle with locks,Objective timing differences can justify sequencing; paper trail required.,S-03;S-14,R44-F12
+H-02,fair-housing,Uniform policy,Adopt in writing first,Same formula for each unit as its lawful window opens (review-passing pattern).,S-18;S-20,R44-F12
+H-03,fair-housing,Protected characteristics,FEHA + FHA,Rent actions must not turn on protected characteristics.,S-18;S-20,R44-F12
+H-04,fair-housing,Source of income,Protected (CA),Voucher/SOI status must not drive rent decisions.,S-18;S-19,R44-F12;R44-F14
+H-05,fair-housing,Retaliation,180-day bar,Clear protected-activity history before acting.,S-17,R44-F12
+H-06,fair-housing,Coercion / harassment,Prohibited,Coercive sequencing or threats risk petitions/penalties.,S-12,R44-F12
+H-07,fair-housing,This case's locks,Unit 1 timing vs Unit 2 bank,Locks exist in principle but rest on unverified agreement/history facts.,S-04,R44-F02;R44-F03;R44-F04
+H-08,fair-housing,Contemporaneous records,Document business reasons,Date-stamped policy + per-unit window memos before any notice.,S-17,R44-F12
+H-09,fair-housing,Free-counsel landscape,EDC 415-659-9184; RB 415-252-4600; BASF 415-782-8940,Assume review; counsel pre-clearance for the owner too.,S-28;S-29,R44-F15
+H-10,fair-housing,Counsel review,None obtained (blank),No proposed increase reviewed by any lawyer.,S-28,R44-F15
