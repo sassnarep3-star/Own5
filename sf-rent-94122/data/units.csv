@@ -1,0 +1,12 @@
+unit,field,value,status_derivation,sources
+Unit 1,Location,"Outer Sunset, San Francisco, CA 94122 (user-provided)","User-provided, unverified. The SF annual allowance is citywide; no official ZIP-specific rate exists.",S01
+Unit 1,Building year built,1940 (user-provided),"User-provided, unverified; inside the on/before 6/13/1979 rent-control window — see F03 for unit-level confirmation.","S06,S18"
+Unit 1,Initial lease start,"February 1, 2025 @ $3,995/month (user-provided)","User-provided, unverified input; dates and amounts retained per instructions.",S01
+Unit 1,Initial lease tenants,"Tenant A, Tenant B, Tenant C (placeholder names — real identities withheld)",Anonymized per privacy requirement; internal only.,
+Unit 1,Continuing tenancy,"April 1, 2026 @ $3,995/month — Tenant A and Tenant D (placeholders)","User-provided, unverified. Household change from 3 to 2 occupants: charging more for the change is an unlawful increase (L13); succession effect unverified — see F04.",S01
+Unit 1,Illustrative annual increase at current 1.6% (derived arithmetic on unverified base),"$3,995 × 0.016 = $63.92 → $4,058.92/month","DERIVED from user-provided base; NOT a verified lawful amount. If April 1, 2026 was the last rent event, the next increase cannot take effect before April 1, 2027 and the 3/1/2027–2/28/2028 rate is unpublished — see F07.","S01,S02"
+Unit 2,Location,"Outer Sunset, San Francisco, CA 94122 (user-provided)","User-provided, unverified.",S01
+Unit 2,Building year built,1940 (user-provided),"User-provided, unverified; inside rent-control window — see F03.","S06,S18"
+Unit 2,Last lease start,"June 1, 2019 @ $3,150/month (user-provided)","User-provided, unverified input.",S01
+Unit 2,Tenants,Tenant E and Tenant F (placeholder names — real identities withheld),Anonymized per privacy requirement; internal only.,
+Unit 2,"Illustrative annual increase on June 1, 2026 anniversary at current 1.6% (derived arithmetic on unverified base)","$3,150 × 0.016 = $50.40 → $3,200.40/month","DERIVED from user-provided base; NOT a verified lawful amount. June 1, 2026 falls in the 3/1/2026–2/28/2027 window (1.6%). Any banked increases from skipped years are NOT computed — rent ledger unknown — see F05.","S01,S02,S16"
