@@ -254,3 +254,17 @@ Additive, evidence-first NBA desk: 241 canonical source-linked rows (237 verifie
 
 Reproduce: `python3 nba-research-61a311c2/engine.py && python3 nba-research-61a311c2/audit_repo.py && python3 nba-research-61a311c2/build.py && python3 -m unittest discover -s nba-research-61a311c2 -p 'test_*.py' -v`.
 
+
+---
+
+## SF Rent Review · evidence-first dashboard (session c334a668)
+
+**Pages path:** https://sassnarep3-star.github.io/Own5/sf-rent-review/ · **Executive summary:** [`research/sf-rent-review/EXECUTIVE_SUMMARY.md`](research/sf-rent-review/EXECUTIVE_SUMMARY.md) · **Flagged for review:** [`sf-rent-review/review.html`](sf-rent-review/review.html)
+
+An additive, privacy-first research site on San Francisco rent increases. It
+links each table row to an official source, leaves unverified property-specific
+values blank, distinguishes policy suggestions from rules, and does not issue a
+notice or legal clearance. The source snapshot is 2026-11-06; check the
+[Rent Board's current rates](https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit)
+and obtain legal advice before action. See [`sf-rent-review/README.md`](sf-rent-review/README.md)
+for reproducible generation and tests.

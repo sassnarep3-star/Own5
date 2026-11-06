@@ -1,0 +1,170 @@
+{
+  "S01": {
+    "title": "SF Rent Board · 2026 annual announcement",
+    "url": "https://www.sf.gov/news--annual-rent-increase-3126-22827-announced",
+    "checked": "2026-11-06",
+    "verified_scope": "1.6% from 2026-03-01 through 2027-02-28; annual formula is base rent × 0.016."
+  },
+  "S02": {
+    "title": "SF Rent Board · rate schedule",
+    "url": "https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit",
+    "checked": "2026-11-06",
+    "verified_scope": "Rate table: 2026–27 1.6%, 2025–26 1.4%, 2024–25 1.7%."
+  },
+  "S03": {
+    "title": "SF Rent Board · rent increases",
+    "url": "https://www.sf.gov/learn-about-rent-increases-san-francisco",
+    "checked": "2026-11-06",
+    "verified_scope": "Base rent, 12-month timing, license, written notice, mail, additional occupants and no rounding up. Two examples have conflicting years; see review."
+  },
+  "S04": {
+    "title": "SF Rent Board · banking",
+    "url": "https://www.sf.gov/information--banked-rent-increases",
+    "checked": "2026-11-06",
+    "verified_scope": "Skipped increase requires 24 full months without an increase; partial unused increase may be banked; sum eligible rates without compounding or proration. Example has inconsistent year."
+  },
+  "S05": {
+    "title": "SF Rent Ordinance § 37.3",
+    "url": "https://www.sf.gov/information--sec-373-rent-limitations",
+    "checked": "2026-11-06",
+    "verified_scope": "Annual, banking, additional occupants, notice disclosure, partial changes, petitions, and cost-related increases."
+  },
+  "S06": {
+    "title": "SF Rent Board · coverage",
+    "url": "https://www.sf.gov/learn-about-san-francisco-rental-laws",
+    "checked": "2026-11-06",
+    "verified_scope": "Many pre-June 14, 1979 units are covered; special cases and exemptions; the building must be verified individually."
+  },
+  "S07": {
+    "title": "SF Rent Board · housing inventory",
+    "url": "https://www.sf.gov/rent-board-housing-inventory",
+    "checked": "2026-11-06",
+    "verified_scope": "Annual and banked increases need a current license in effect by the notice effective date; a license is not itself legal clearance."
+  },
+  "S08": {
+    "title": "SF Rent Board · AB 1482",
+    "url": "https://www.sf.gov/reports--california-tenant-protection-act-2019-ab-1482",
+    "checked": "2026-11-06",
+    "verified_scope": "8.8% for covered AB 1482 units, Aug 1 2026–Jul 31 2027; not a replacement for more protective local limits."
+  },
+  "S09": {
+    "title": "California Civil Code § 827",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=827&lawCode=CIV",
+    "checked": "2026-11-06",
+    "verified_scope": "For covered periodic tenancies: personal or mail service, 30 days for ≤10% and 90 for >10%, measured with prior 12-month increases; exceptions and longer rules may apply."
+  },
+  "S10": {
+    "title": "California Code of Civil Procedure § 1013",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CCP&sectionNum=1013",
+    "checked": "2026-11-06",
+    "verified_scope": "Mail extension is 5 calendar days where both mailing and address are in California; other scenarios differ."
+  },
+  "S11": {
+    "title": "California DRE · fixed-term leases",
+    "url": "https://www.dre.ca.gov/publications/ResourceGuidebook/gb06_before.html",
+    "checked": "2026-11-06",
+    "verified_scope": "A landlord generally cannot raise rent during a fixed term unless the agreement expressly allows it."
+  },
+  "S12": {
+    "title": "SF Rent Board · § 6.14 and Costa-Hawkins",
+    "url": "https://www.sf.gov/information--rent-increases-under-section-614-and-costa-hawkins",
+    "checked": "2026-11-06",
+    "verified_scope": "Original occupant remaining, later occupants, timing of 6.14 notices, and co-tenant versus subtenant distinctions require legal review."
+  },
+  "S13": {
+    "title": "California Civil Rights Department · housing",
+    "url": "https://calcivilrights.ca.gov/housing/",
+    "checked": "2026-11-06",
+    "verified_scope": "State fair-housing protected characteristics, reasonable disability accommodation and retaliation protections."
+  },
+  "S14": {
+    "title": "SF Rent Ordinance § 37.9",
+    "url": "https://www.sf.gov/information--sec-379-evictions",
+    "checked": "2026-11-06",
+    "verified_scope": "Subsection (d) prohibits rent increases where the dominant motive is retaliation for exercising legal rights."
+  },
+  "S15": {
+    "title": "California Civil Code § 1942.5",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1942.5",
+    "checked": "2026-11-06",
+    "verified_scope": "Retaliation and tenant-association protections, subject to stated statutory conditions."
+  },
+  "S16": {
+    "title": "SF Mayor’s Office · tenant and landlord resources",
+    "url": "https://www.sf.gov/tenant-and-landlord-resources",
+    "checked": "2026-11-06",
+    "verified_scope": "Counseling for a rent increase notice; free legal assistance for tenants with eviction court papers; landlord resources."
+  },
+  "S17": {
+    "title": "SF Rent Board · free counseling",
+    "url": "https://www.sf.gov/speak-rent-board-counselor",
+    "checked": "2026-11-06",
+    "verified_scope": "Counseling is free and multilingual; counselors cannot give legal advice."
+  },
+  "S18": {
+    "title": "SF Rent Board · unlawful rent petition",
+    "url": "https://www.sf.gov/report-unlawful-rent-increase-or-request-review-your-rent-history",
+    "checked": "2026-11-06",
+    "verified_scope": "Eligible tenants can petition over an alleged unlawful increase or request review of lawful rent; no filing charge."
+  },
+  "S19": {
+    "title": "SF Rent Ordinance § 37.10C",
+    "url": "https://www.sf.gov/information--sec-3710c-use-and-sale-algorithmic-devices-prohibited",
+    "checked": "2026-11-06",
+    "verified_scope": "Narrowly defined rental-pricing devices using non-public competitor data are prohibited; not a ban on every algorithm."
+  },
+  "S20": {
+    "title": "US GAO · institutional investment",
+    "url": "https://www.gao.gov/products/gao-24-106643",
+    "checked": "2026-11-06",
+    "verified_scope": "Single-family investor studies reviewed; rent effects may exist, but effects on tenants are unclear and not a local owner-by-owner comparison."
+  },
+  "S21": {
+    "title": "US DOJ · proposed RealPage settlement",
+    "url": "https://www.justice.gov/opa/pr/justice-department-requires-realpage-end-sharing-competitively-sensitive-information-and",
+    "checked": "2026-11-06",
+    "verified_scope": "2025 proposed settlement and complaint allegations concerning rental-pricing software; proposal, not a finding about all landlords."
+  },
+  "S22": {
+    "title": "SF Rent Board · landlord petitions",
+    "url": "https://www.sf.gov/landlord-petitions-and-passthroughs",
+    "checked": "2026-11-06",
+    "verified_scope": "Some increases require filing before notice and approval; some passthroughs use other procedures and worksheets."
+  },
+  "S23": {
+    "title": "HUD · Fair Housing Act",
+    "url": "https://www.hud.gov/helping-americans/fair-housing-act-overview",
+    "checked": "2026-11-06",
+    "verified_scope": "Federal protected categories and nondiscrimination in rental housing."
+  },
+  "S24": {
+    "title": "California Civil Code § 1942.4",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1942.4",
+    "checked": "2026-11-06",
+    "verified_scope": "A rent-increase notice is barred when all stated serious-habitability conditions are met; not every repair issue triggers the statute."
+  },
+  "S25": {
+    "title": "SF Rent Board · comparables petition",
+    "url": "https://www.sf.gov/sites/default/files/2024-03/531%20Comps%20Petition%203.24.pdf",
+    "checked": "2026-11-06",
+    "verified_scope": "Extraordinary circumstances and comparable rents must be proved; a mere market-rent gap is not an extraordinary circumstance."
+  },
+  "S26": {
+    "title": "Congressional Research Service · federal rental programs",
+    "url": "https://www.congress.gov/crs_external_products/IF/HTML/IF12887.web.html",
+    "checked": "2026-11-06",
+    "verified_scope": "Federal rental programs can subsidize rents or impose affordability requirements; unit participation is unknown."
+  },
+  "S27": {
+    "title": "SF Rent Board · § 6.14 petition",
+    "url": "https://www.sf.gov/information--petition-determination-pursuant-section-614-andor-costa-hawkins",
+    "checked": "2026-11-06",
+    "verified_scope": "The Rent Board describes optional landlord determination and tenant challenge; the exceptions and occupancy distinctions are fact-specific."
+  },
+  "S28": {
+    "title": "SF Rent Board · Part VI rules",
+    "url": "https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-vi-rent-increase-justifications",
+    "checked": "2026-11-06",
+    "verified_scope": "Section 6.14 defines an original occupant and the conditions on subsequent occupants; operating and maintenance petitions have specific requirements."
+  }
+}

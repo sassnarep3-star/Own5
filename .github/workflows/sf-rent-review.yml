@@ -1,0 +1,66 @@
+name: Verify SF Rent Review
+
+on:
+  push:
+    branches: [main, arena/c334a668-own5]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Verify source links, blanks, internal links and deterministic outputs
+        run: |
+          python3 -m unittest discover -s sf-rent-review/tests -v
+          python3 sf-rent-review/build.py --check
+          python3 research/sf-rent-review/build_audit.py --check
+      - name: Install existing browser-test dependencies
+        run: npm ci --ignore-scripts
+      - name: Test desktop, mobile and no-JavaScript browsing
+        run: |
+          python3 -m http.server 3000 --bind 127.0.0.1 >/tmp/sf-review-server.log 2>&1 &
+          server=$!
+          trap 'kill "$server" || true' EXIT
+          timeout 30 bash -c 'until curl --fail --silent http://127.0.0.1:3000/sf-rent-review/ >/dev/null; do sleep 1; done'
+          node sf-rent-review/tests/browser.cjs
+
+  live-pages-smoke:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Verify the public root and SF dashboard after the Pages update
+        run: |
+          base="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
+          for spec in '/|Own5' '/sf-rent-review/|SF RENT' '/sf-rent-review/review.html|What remains unverified'; do
+            path="${spec%%|*}"
+            text="${spec#*|}"
+            ready=0
+            for attempt in $(seq 1 30); do
+              if body="$(curl --fail --silent --show-error --location "$base$path")" && grep -q "$text" <<< "$body"; then
+                echo "OK $base$path"
+                ready=1
+                break
+              fi
+              sleep 8
+            done
+            if [ "$ready" -ne 1 ]; then
+              echo "Public page did not become ready: $base$path" >&2
+              exit 1
+            fi
+          done
