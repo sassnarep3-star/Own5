@@ -853,3 +853,26 @@ Arena fixes the branch to `arena/414a434b-own5`; the requested alternate branch 
 
 - [PR #47](https://github.com/sassnarep3-star/Own5/pull/47) merged with merge commit `fc9622dbd4f03ca48ce3acc9f4791fc8dc873927`. Pre-merge GitHub checks: research dashboard, NBA validation, and evidence desk all passed; legacy smoke skipped by workflow. Local scoped checks passed and existing `tools/check_site.py` reported 0 failures and 9 pre-existing flagged warnings.
 - Pages run [42227206719](https://github.com/sassnarep3-star/Own5/actions/runs/42227206719): build passed; deployment was still in progress after three minutes. Live page returned 404 while deployment remained pending; do not claim successful publication until the run succeeds and the page is fetched. Node 20 deprecation warning is from GitHub's Pages workflow.
+---
+
+# Session 6ee577e4-own5 — Rental Increase SF (San Francisco Outer Sunset, 94122)
+
+Claim timestamp: **2026-11-06T13:45Z**. Arena fixes this session to `arena/6ee577e4-own5`; no alternative branch will be created or pushed. Scope is **additive only**: `rental-sf/**` (site + its own tooling), `research/rental-sf/**` (research docs), and this append-only board. Existing sites, data, root navigation, `scripts/**`, `tools/**`, `.github/workflows/**` and all other sessions' namespaces are **read-only**. Root `index.html` is CI-locked; no root-navigation change will be made by this session (logged as a cross-session request below instead). No overlap with open PRs #8, #34, #43 (NFL/NBA scopes). Personal tenant/landlord names from the brief are **never committed** — the repo publishes anonymized placeholders only (dates and amounts preserved).
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| R1 | Claim + bounded repo review; record irregularities | in progress | 6ee577e4-own5 | COORDINATION.md | Additive-only review; external availability of every legacy link is not re-verified wholesale (see log). |
+| R2 | Official-source research: SF local law (Rent Board/Rent Ordinance), CA state law, federal law, industry practice, notice procedure, fair-housing/discrimination review | unclaimed→claimed | 6ee577e4-own5 | research/rental-sf/** | Every factual row needs an official source link or is blank + flagged. |
+| R3 | Executive summary (anonymized) | unclaimed→claimed | 6ee577e4-own5 | research/rental-sf/EXECUTIVE_SUMMARY.md, rental-sf/summary.html | Names replaced by placeholders; dates/amounts preserved. |
+| R4 | Site: clean dashboard landing page + subpages, category tables, Flagged for Review page | unclaimed→claimed | 6ee577e4-own5 | rental-sf/** | Static, Pages-compatible, own CSS/JS (no shared assets edited). |
+| R5 | Line-by-line verification; per-row source links; flag unverified values | unclaimed→claimed | 6ee577e4-own5 | rental-sf/**, research/rental-sf/** | Nothing merged unverified; unverifiable values left blank + flagged. |
+| R6 | Integration: rebase, PR to main, merge, GitHub Pages deploy verification, record result | unclaimed | 6ee577e4-own5 | COORDINATION.md (this log) | Preserve all concurrent work; merge only with green checks; record PR + deploy URL. |
+
+Cross-session request (deferred, nonblocking): add a clearly labeled "Rental Increase SF" footer/entry-point link to the root dashboard and `data/index.html` **via the owning builder** (`scripts/build.py` is CI-locked from hand edits). This session does not edit root navigation.
+
+### R1 progress note (2026-11-06)
+
+- Branch `arena/6ee577e4-own5` == `origin/main` @ `6a73b0a` at claim; working tree clean; open PRs #8/#34/#43 are NFL/NBA scopes — no file overlap with this task.
+- Repo is the Own5 NFL/NBA research Pages site plus many session sub-sites; no rental content existed anywhere (`grep -i rental` on tracked files → none). Pre-existing irregularities (if any) belong to their owning sessions; this session flags what it observes on the Flagged for Review page rather than rewriting others' work.
+- Legal-content safety rule for this session: the site is general educational information, not legal advice; no specific dollar recommendation is issued to any tenant or the owner; every legal parameter links to an official source; interpretation risks are published as flags, not hidden.
+
