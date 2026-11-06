@@ -898,7 +898,6 @@ Cross-session request (deferred, nonblocking): add a clearly labeled "Rental Inc
 | R5 | Verification | done | 6ee577e4-own5 |
 | R6 | Integration: PR → merge → Pages verification | in progress | 6ee577e4-own5 |
 
-
 # Session c334a668 — San Francisco rent review (2026-11-06 UTC)
 
 Single-session, additive integration. The Arena-assigned branch is fixed as
@@ -1013,3 +1012,21 @@ Claim timestamp: **2026-11-06T14:05Z**. Arena fixes the working branch to `arena
 - **SF1, SF2 and SF3: done.** Open legal/property/source-review flags are
   nonblocking for publication, not a finding that an increase or notice is
   lawful. Separate cross-session concerns remain assigned to the owning scope.
+
+---
+
+## Session e446435e — San Francisco Rental Increase Compliance & Evidence Dashboard (2026-11-06 UTC)
+
+Arena fixes this session's branch to `arena/e446435e-own5`; the `session-<id>/<task>` branch naming convention cannot be used. To guarantee zero file collisions with existing sports dashboards and concurrent SF rent sessions (`rental-increase-sf/**`, `sf-rent/**`, `rental-sf/**`, `sf-rent-94122/**`, `sf-rent-review/**`, etc.), this session claims only isolated additive namespaces `sf-rent-e446435e/**` and `research/sf-rent-e446435e/**`, plus append-only updates to `COORDINATION.md`. All personal tenant identifiers are kept strictly internal and excluded from every tracked file, commit, PR, and public page; anonymized placeholders are used throughout while preserving reported dates and rent amounts (flagged as user-supplied/unverified where lacking official public records).
+
+- **Conflict log (2026-11-06):** (a) Rebased `b8a669d` onto `origin/main` (`ded5748`, after PRs #48/#49). (b) Rebased onto `origin/main` (`e391db7`, after PRs #50/#53 added `sf-rent-94122/**` and `sf-rent-review/**`). Both append-only `COORDINATION.md` conflicts resolved by preserving every other session's blocks verbatim; zero file overlap with any sibling scope.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| R44-01 | Repo baseline audit, privacy guardrails, and task claim | done | e446435e | `COORDINATION.md`, `research/sf-rent-e446435e/REPO_AUDIT.md` | Bounded audit: locks, 596 files, sibling row/link/PII scans, zero PII. |
+| R44-02 | Official legal & regulatory verification (SF, CA, Federal) | done | e446435e | `research/sf-rent-e446435e/**`, `sf-rent-e446435e/data/**` | 32 official sources read 2026-11-06 (S-01…S-32); Form 571, §37.3, §827 verified verbatim. |
+| R44-03 | Corporate REIT vs. individual SF owner practices | done | e446435e | `research/sf-rent-e446435e/**`, `sf-rent-e446435e/data/**` | SEC 10-K venues + DOJ/SF algorithmic bans verified; private norms blank + flagged (R44-F11). |
+| R44-04 | Anonymized Unit 1 & 2 scenarios, notice rules, scrutiny & one-vs-both analysis | done | e446435e | `research/sf-rent-e446435e/ANALYSIS.md`, `sf-rent-e446435e/data/**` | Exact banking math both units; uniform-policy pattern; 180-day/§37.10B scrutiny gates. |
+| R44-05 | Executive summary & Flagged-for-Review register | done | e446435e | `research/sf-rent-e446435e/EXECUTIVE_SUMMARY.md`, `research/sf-rent-e446435e/FLAGGED.md` | Summary + 19 flags (R44-F01…F19), every item source-linked. |
+| R44-06 | Static dashboard & category subpages + build & verification suite | done | e446435e | `sf-rent-e446435e/**` | 11 pages + 4 CSVs from canonical JSON; `verify.py` FAIL=0 (179 rows, 15 money tokens, 27 files PII-scanned); serves 200 locally. |
+| R44-07 | Final integration, CI verification, PR to main, merge & live Pages check | in progress | e446435e | `COORDINATION.md` | `unittest` 91/91 OK; `check_site.py` 0 failures; PR → merge → live-URL verification pending. |
