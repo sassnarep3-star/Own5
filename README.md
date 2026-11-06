@@ -255,6 +255,7 @@ Additive, evidence-first NBA desk: 241 canonical source-linked rows (237 verifie
 Reproduce: `python3 nba-research-61a311c2/engine.py && python3 nba-research-61a311c2/audit_repo.py && python3 nba-research-61a311c2/build.py && python3 -m unittest discover -s nba-research-61a311c2 -p 'test_*.py' -v`.
 
 
+
 ---
 
 ## SF Rent Review · evidence-first dashboard (session c334a668)
@@ -268,3 +269,11 @@ notice or legal clearance. The source snapshot is 2026-11-06; check the
 [Rent Board's current rates](https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit)
 and obtain legal advice before action. See [`sf-rent-review/README.md`](sf-rent-review/README.md)
 for reproducible generation and tests.
+
+## SF Rental Increase Review — Outer Sunset 94122 (session e028ae77)
+
+**Live site:** https://sassnarep3-star.github.io/Own5/sf-rent-94122/index.html · **Executive summary:** [`research/sf-rent-94122/EXECUTIVE_SUMMARY.md`](research/sf-rent-94122/EXECUTIVE_SUMMARY.md) · **Flagged for Review:** https://sassnarep3-star.github.io/Own5/sf-rent-94122/flagged.html · Companion brief: [`rental-increase-sf/`](rental-increase-sf/index.html) (session 7659538a)
+
+Anonymized, source-linked review of reasonable rental increases for two rent-controlled units in a 1940 building in SF 94122. Key verified values: SF annual allowable increase **1.6%** (3/1/2026–2/28/2027; 60% of Bay Area CPI-U), once per 12 months, 30/90-day written notice, rent increase license required, banking rules, AB 1482 (8.8% SF region 8/1/2026–7/31/2027, not operative where the local ordinance is stricter), Costa-Hawkins vacancy decontrol, and the federal Fair Housing Act (no federal rent cap; anti-discrimination). 20 official sources; every table row source-linked; unverifiable values left blank and published on the Flagged for Review page (F01–F12). Tenant identities anonymized (placeholder names); dates/amounts retained as user-provided and marked unverified. Not legal advice.
+
+Reproduce/verify: `python3 sf-rent-94122/build.py && python3 sf-rent-94122/verify.py`.

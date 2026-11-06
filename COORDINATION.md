@@ -975,9 +975,18 @@ Claim timestamp: **2026-11-06T14:05Z**. Arena fixes the working branch to `arena
 
 | ID | Task | Status | Owner | Files touched | Notes |
 |----|------|--------|-------|---------------|-------|
+
 | E1 | Claim + baseline review (read board, reconcile with 7659538a RNT1) | in progress | e028ae77 | COORDINATION.md | Claim pushed before any other work. |
 | E2 | Official-source research: local (SF Rent Ordinance/Rent Board), state (Civ. Code 827, 1946.2, 1947.12, 1954.50), federal (42 U.S.C. 3604 / HUD) | unclaimed→in progress | e028ae77 | research/sf-rent-94122/**, sf-rent-94122/data/sources.csv | sf.gov, leginfo.legislature.ca.gov, uscode.house.gov, hud.gov, courts.ca.gov only; values fetched/read 2026-11-06. |
 | E3 | Executive summary + answers to the six user questions (anonymized) | unclaimed | e028ae77 | research/sf-rent-94122/EXECUTIVE_SUMMARY.md, research/sf-rent-94122/qna.md, sf-rent-94122/executive-summary.html, sf-rent-94122/questions.html | Placeholder tenant names; dates/amounts kept; unverified items blank+flagged. |
 | E4 | GitHub Pages subsite: landing dashboard + category subpages (units, law, process, questions, sources, flagged) | unclaimed | e028ae77 | sf-rent-94122/*.html, sf-rent-94122/style.css, sf-rent-94122/data/*.csv | Self-contained; no edits to root nav or other sessions' files. |
 | E5 | Line-by-line verification: every table row has an official source link or explicit BLANK flag; internal links resolve | unclaimed | e028ae77 | sf-rent-94122/verify.py, research/sf-rent-94122/VERIFICATION.md | Script run locally; results logged. |
 | E6 | Integration: PR to main, autonomous merge, Pages deploy verification, record results | unclaimed | e028ae77 | COORDINATION.md, README.md (append only) | Per protocol: no waiting for approval; fix and retry if build/deploy fails. |
+
+
+| E1 | Claim + baseline review (read board, reconcile with 7659538a RNT1) | done | e028ae77 | COORDINATION.md | Claim pushed before any other work. |
+| E2 | Official-source research: local (SF Rent Ordinance/Rent Board), state (Civ. Code 827, 1946.2, 1947.12, 1954.50), federal (42 U.S.C. 3604 / HUD) | done | e028ae77 | research/sf-rent-94122/**, sf-rent-94122/data/sources.csv | sf.gov, leginfo.legislature.ca.gov, uscode.house.gov, hud.gov, courts.ca.gov only; values fetched/read 2026-11-06. |
+| E3 | Executive summary + answers to the six user questions (anonymized) | done | e028ae77 | research/sf-rent-94122/EXECUTIVE_SUMMARY.md, research/sf-rent-94122/qna.md, sf-rent-94122/executive-summary.html, sf-rent-94122/questions.html | Placeholder tenant names; dates/amounts kept; unverified items blank+flagged. |
+| E4 | GitHub Pages subsite: landing dashboard + category subpages (units, law, process, questions, sources, flagged) | done | e028ae77 | sf-rent-94122/*.html, sf-rent-94122/style.css, sf-rent-94122/data/*.csv | Self-contained; no edits to root nav or other sessions' files. |
+| E5 | Line-by-line verification: every table row has an official source link or explicit BLANK flag; internal links resolve | done | e028ae77 | sf-rent-94122/verify.py, research/sf-rent-94122/VERIFICATION.md | Script run locally; results logged. |
+| E6 | Integration: PR to main, autonomous merge, Pages deploy verification, record results | in progress | e028ae77 | COORDINATION.md, README.md (append only) | Per protocol: no waiting for approval; fix and retry if build/deploy fails. |
