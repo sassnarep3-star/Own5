@@ -51,6 +51,12 @@ requires changing a file owned by another session, log the request in
 | N10 | Line-by-line verification + sources registry | done | arena-f1d30421 | scripts/verify_site.py, nfl-strategy-lab/sources.html, nfl-strategy-lab/flagged.html, research/arena-f1d30421/flagged.md | verify_site.py PASS: 10 pages / 50 external links; every table row has source link or explicit BLANK-flag; F1–F11 published. |
 | N11 | Integration, PR, merge, Pages | done | arena-f1d30421 | COORDINATION.md (this log), README.md | PR #9 → main (record below); conflicts resolved preserving all sessions (merge log below). |
 
+## Rental increase SF — session 7659538a (2026-11-06)
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| RNT1 | Anonymized SF rent increase evidence brief + static subsite | done | 7659538a | rental-increase-sf/**, COORDINATION.md | Official primary references linked on each fact row; internal links checked (5 pages, 0 missing). Rent values provided by user remain unverified; proposed amounts intentionally blank. Key live rate verified on SF.gov as 1.6% effective 2026-03-01–2027-02-28. Flags: tenant succession, rent ledger/banking, unit coverage, license, practice norms, legal-service availability. |
+
 ## Cross-session requests
 
 - (none outstanding)
