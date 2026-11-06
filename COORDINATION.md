@@ -834,6 +834,7 @@ Cross-session request: final integration will add a clearly labeled NBA entry po
 - **Q61-01…Q61-07 done.** Follow-up documentation commit updates the dashboard requirements trace and verification record to reflect the completed merge/deployment. Flags remain nonblocking; no strategy, ROI, probability, rank or funded reward is certified.
 
 
+
 ## Session 414a434b — SF rent research (2026-11-06 UTC)
 
 Arena fixes the branch to `arena/414a434b-own5`; the requested alternate branch naming cannot be used. Existing sports dashboards and other claims remain untouched. Public content excludes personal identifiers. User-supplied private facts are not official verification.
@@ -853,6 +854,7 @@ Arena fixes the branch to `arena/414a434b-own5`; the requested alternate branch 
 
 - [PR #47](https://github.com/sassnarep3-star/Own5/pull/47) merged with merge commit `fc9622dbd4f03ca48ce3acc9f4791fc8dc873927`. Pre-merge GitHub checks: research dashboard, NBA validation, and evidence desk all passed; legacy smoke skipped by workflow. Local scoped checks passed and existing `tools/check_site.py` reported 0 failures and 9 pre-existing flagged warnings.
 - Pages run [42227206719](https://github.com/sassnarep3-star/Own5/actions/runs/42227206719): build passed; deployment was still in progress after three minutes. Live page returned 404 while deployment remained pending; do not claim successful publication until the run succeeds and the page is fetched. Node 20 deprecation warning is from GitHub's Pages workflow.
+
 ---
 
 # Session 6ee577e4-own5 — Rental Increase SF (San Francisco Outer Sunset, 94122)
@@ -895,6 +897,7 @@ Cross-session request (deferred, nonblocking): add a clearly labeled "Rental Inc
 | R4 | Site | done | 6ee577e4-own5 |
 | R5 | Verification | done | 6ee577e4-own5 |
 | R6 | Integration: PR → merge → Pages verification | in progress | 6ee577e4-own5 |
+
 
 # Session c334a668 — San Francisco rent review (2026-11-06 UTC)
 
@@ -963,3 +966,18 @@ cross-session changes requested at claim time.
   verification remain pending. Concurrent legacy Pages deployments have been
   cancelled/superseded by other `main` merges; do not record a live result until
   the public page is independently fetched.
+
+---
+
+# Session e028ae77 — SF Outer Sunset (94122) rental-increase review, full build (2026-11-06 UTC)
+
+Claim timestamp: **2026-11-06T14:05Z**. Arena fixes the working branch to `arena/e028ae77-own5`; no alternative branch will be created or pushed. Reconciliation at claim time: session `7659538a` completed **RNT1** owning `rental-increase-sf/**` (merged via PR #46, commit a603c0e) — that scope is read-only for this session. This session claims a **separate, non-overlapping scope** `sf-rent-94122/**` + `research/sf-rent-94122/**`, cross-linking the existing brief. CI-locked files (`index.html`, `pages/`, `data/research.json`, `scripts/`, `own5-desk/`, other sessions' directories) are not touched. Tenant personal information is anonymized on all published pages (placeholder names only); dates and amounts retained as provided and marked user-provided/unverified.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| E1 | Claim + baseline review (read board, reconcile with 7659538a RNT1) | in progress | e028ae77 | COORDINATION.md | Claim pushed before any other work. |
+| E2 | Official-source research: local (SF Rent Ordinance/Rent Board), state (Civ. Code 827, 1946.2, 1947.12, 1954.50), federal (42 U.S.C. 3604 / HUD) | unclaimed→in progress | e028ae77 | research/sf-rent-94122/**, sf-rent-94122/data/sources.csv | sf.gov, leginfo.legislature.ca.gov, uscode.house.gov, hud.gov, courts.ca.gov only; values fetched/read 2026-11-06. |
+| E3 | Executive summary + answers to the six user questions (anonymized) | unclaimed | e028ae77 | research/sf-rent-94122/EXECUTIVE_SUMMARY.md, research/sf-rent-94122/qna.md, sf-rent-94122/executive-summary.html, sf-rent-94122/questions.html | Placeholder tenant names; dates/amounts kept; unverified items blank+flagged. |
+| E4 | GitHub Pages subsite: landing dashboard + category subpages (units, law, process, questions, sources, flagged) | unclaimed | e028ae77 | sf-rent-94122/*.html, sf-rent-94122/style.css, sf-rent-94122/data/*.csv | Self-contained; no edits to root nav or other sessions' files. |
+| E5 | Line-by-line verification: every table row has an official source link or explicit BLANK flag; internal links resolve | unclaimed | e028ae77 | sf-rent-94122/verify.py, research/sf-rent-94122/VERIFICATION.md | Script run locally; results logged. |
+| E6 | Integration: PR to main, autonomous merge, Pages deploy verification, record results | unclaimed | e028ae77 | COORDINATION.md, README.md (append only) | Per protocol: no waiting for approval; fix and retry if build/deploy fails. |
