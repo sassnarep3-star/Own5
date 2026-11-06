@@ -1,0 +1,1160 @@
+{
+  "index": {
+    "nav": "Overview",
+    "kicker": "THE EXECUTIVE BRIEF",
+    "title": "A clearer path to a fair rent increase.",
+    "description": "An evidence-first guide for two reported San Francisco tenancies. Understand the rules, protect privacy, and make a considered decision before giving notice.",
+    "sections": [
+      {
+        "id": "executive-summary",
+        "title": "Executive summary",
+        "intro": "The annual rate is a starting point, not proof that a particular increase is lawful or typical.",
+        "columns": [
+          "Question",
+          "Finding or assessment",
+          "Status"
+        ],
+        "rows": [
+          {
+            "id": "EX01",
+            "cells": [
+              "What is the current annual allowance?",
+              "1.6% of lawful base rent for ordinary annual increases effective March 1, 2026 through February 28, 2027, subject to all other conditions.",
+              "Official rule"
+            ],
+            "sources": [
+              "S01",
+              "S03"
+            ]
+          },
+          {
+            "id": "EX02",
+            "cells": [
+              "What is a considerate approach?",
+              "Consider no increase, or an ordinary-only adjustment at or below the applicable annual allowance after verifying each tenancy. Do not assume a catch-up amount. This is a recommendation, not a measured market norm.",
+              "Assessment"
+            ],
+            "sources": [
+              "S03",
+              "S04"
+            ]
+          },
+          {
+            "id": "EX03",
+            "cells": [
+              "Does state law replace the local limit?",
+              "No. The separate AB 1482 figure applies to covered state-law units; it does not displace San Francisco’s more protective local rent regulations.",
+              "Official rule"
+            ],
+            "sources": [
+              "S08"
+            ]
+          },
+          {
+            "id": "EX04",
+            "cells": [
+              "What about a change in roommates?",
+              "Do not add rent solely because a roommate was added or assume a later agreement creates a vacancy. The tenancy and original-occupant status remain unverified.",
+              "Needs review"
+            ],
+            "sources": [
+              "S03",
+              "S05",
+              "S12"
+            ]
+          },
+          {
+            "id": "EX05",
+            "cells": [
+              "Raise one unit or both?",
+              "Use the same neutral decision criteria for each unit. Different eligibility dates or lease terms can matter; equal increases do not by themselves eliminate discrimination risk.",
+              "Assessment"
+            ],
+            "sources": [
+              "S09",
+              "S11",
+              "S13",
+              "S15"
+            ]
+          },
+          {
+            "id": "EX06",
+            "cells": [
+              "Can a notice be served now?",
+              "No individualized amount or date is cleared here. Verify coverage, lawful base rent, notice history, license, lease terms, and any applicable restrictions; obtain legal review.",
+              "Not determined"
+            ],
+            "sources": [
+              "S06",
+              "S07",
+              "S09",
+              "S18"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "units": {
+    "nav": "Unit review",
+    "kicker": "PRIVATE BY DESIGN",
+    "title": "Two units. One careful standard.",
+    "description": "Placeholder labels distinguish the tenancies without identifying anyone. Individual values are intentionally blank because the owner’s private information was not independently confirmed in official records.",
+    "sections": [
+      {
+        "id": "unit-records",
+        "title": "What can be verified?",
+        "intro": "A dash is an intentionally empty value, not zero. The linked rule or lookup does not confirm the private fact.",
+        "columns": [
+          "Record to verify",
+          "Unit 01",
+          "Unit 02",
+          "Why it matters"
+        ],
+        "rows": [
+          {
+            "id": "U01",
+            "cells": [
+              "Local rent-control coverage",
+              "",
+              "",
+              "A building’s reported age alone does not establish coverage or resolve all exemptions."
+            ],
+            "sources": [
+              "S06"
+            ]
+          },
+          {
+            "id": "U02",
+            "cells": [
+              "Lawful monthly base rent",
+              "",
+              "",
+              "The annual allowance applies to base rent, excluding temporary passthroughs and fluctuating charges."
+            ],
+            "sources": [
+              "S03"
+            ]
+          },
+          {
+            "id": "U03",
+            "cells": [
+              "Original tenancy start / continuity",
+              "",
+              "",
+              "A later lease or occupancy change does not by itself prove a new vacant tenancy or anniversary."
+            ],
+            "sources": [
+              "S05",
+              "S12"
+            ]
+          },
+          {
+            "id": "U04",
+            "cells": [
+              "Last lawful annual increase date",
+              "",
+              "",
+              "Ordinary annual and banked increases generally require at least 12 months after the last applicable increase."
+            ],
+            "sources": [
+              "S03",
+              "S04"
+            ]
+          },
+          {
+            "id": "U05",
+            "cells": [
+              "Current lease term and increase clause",
+              "",
+              "",
+              "A fixed term may restrict a midterm increase even when the ordinance would otherwise allow one."
+            ],
+            "sources": [
+              "S11"
+            ]
+          },
+          {
+            "id": "U06",
+            "cells": [
+              "Available banked percentage",
+              "",
+              "",
+              "A complete rent and notice history is needed; do not assume any amount accrued."
+            ],
+            "sources": [
+              "S04"
+            ]
+          },
+          {
+            "id": "U07",
+            "cells": [
+              "Current increase license",
+              "",
+              "",
+              "The required Housing Inventory license must be effective before an annual or banked increase takes effect."
+            ],
+            "sources": [
+              "S07"
+            ]
+          },
+          {
+            "id": "U08",
+            "cells": [
+              "Lawful increase / effective date",
+              "",
+              "",
+              "Cannot be determined without the preceding facts, service requirements, and any additional restrictions."
+            ],
+            "sources": [
+              "S03",
+              "S07",
+              "S09"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "unit-analysis",
+        "title": "How to handle the differences",
+        "intro": "The owner’s tenancy descriptions have not been checked against leases, official records, or a legal determination.",
+        "columns": [
+          "Unit",
+          "Reported context",
+          "Conservative next step"
+        ],
+        "rows": [
+          {
+            "id": "U09",
+            "cells": [
+              "Unit 01",
+              "An occupancy change and a later tenancy date were reported; the legal roles and terms of any later agreement are unverified.",
+              "Do not treat a roommate change as an automatic reset. Verify who qualifies as an original occupant, ongoing residence, and the contract before deciding."
+            ],
+            "sources": [
+              "S05",
+              "S12",
+              "S28"
+            ]
+          },
+          {
+            "id": "U10",
+            "cells": [
+              "Unit 02",
+              "A longer-running tenancy was reported; complete increase and notice history is unverified.",
+              "A longer tenancy alone does not establish banked amounts. Consider the same ordinary-only policy if independently eligible."
+            ],
+            "sources": [
+              "S03",
+              "S04"
+            ]
+          },
+          {
+            "id": "U11",
+            "cells": [
+              "Both units",
+              "Neither unit’s lawful amount, anniversary, license, condition, or lease restrictions has been verified.",
+              "No property-specific number or effective date is presented as approved; a counselor can explain the rules and an attorney can review the documents."
+            ],
+            "sources": [
+              "S07",
+              "S17"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "rules": {
+    "nav": "Rules & rates",
+    "kicker": "LOCAL · STATE · FEDERAL",
+    "title": "Know the limits before the numbers.",
+    "description": "San Francisco’s ordinary annual allowance is not the same as a market average or a license to increase rent. Other lawful components have separate rules.",
+    "sections": [
+      {
+        "id": "rates",
+        "title": "The official rate schedule",
+        "intro": "These are published annual allowable percentages, not evidence that a particular unit can be increased on a particular day.",
+        "columns": [
+          "Effective period",
+          "Annual allowance",
+          "Interpretation"
+        ],
+        "rows": [
+          {
+            "id": "R01",
+            "cells": [
+              "Mar 1, 2026 – Feb 28, 2027",
+              "1.6%",
+              "Current snapshot period. Apply to verified base rent, not the total bill with temporary charges."
+            ],
+            "sources": [
+              "S01",
+              "S03"
+            ]
+          },
+          {
+            "id": "R02",
+            "cells": [
+              "Mar 1, 2025 – Feb 28, 2026",
+              "1.4%",
+              "Historical allowance; do not add it without establishing an eligible bank."
+            ],
+            "sources": [
+              "S02",
+              "S04"
+            ]
+          },
+          {
+            "id": "R03",
+            "cells": [
+              "Mar 1, 2024 – Feb 28, 2025",
+              "1.7%",
+              "Historical allowance; the effective date and rent history determine relevance."
+            ],
+            "sources": [
+              "S02",
+              "S04"
+            ]
+          },
+          {
+            "id": "R04",
+            "cells": [
+              "Mar 1, 2027 onward",
+              "",
+              "Unverified in the sources reviewed for this snapshot. Recheck the current Rent Board schedule before choosing a later effective date."
+            ],
+            "sources": [
+              "S02"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "how-it-works",
+        "title": "Ordinary increases and banking",
+        "intro": "Rules for an annual increase are distinct from separately permitted passthroughs and petitions.",
+        "columns": [
+          "Topic",
+          "Official rule",
+          "Practical implication"
+        ],
+        "rows": [
+          {
+            "id": "R05",
+            "cells": [
+              "Eligibility",
+              "Many units built before June 14, 1979 may be covered, but exemptions and unit-specific facts matter.",
+              "Confirm official property records and classification; do not infer coverage from age alone."
+            ],
+            "sources": [
+              "S06"
+            ]
+          },
+          {
+            "id": "R06",
+            "cells": [
+              "Timing",
+              "The first ordinary increase may take effect at least 12 months after the tenancy begins; a subsequent annual increase generally follows the last applicable increase by at least 12 months.",
+              "A later effective date can establish a new anniversary; distinguish separately governed passthroughs."
+            ],
+            "sources": [
+              "S03",
+              "S04"
+            ]
+          },
+          {
+            "id": "R07",
+            "cells": [
+              "Base rent",
+              "Calculate the annual increase on base rent, including applicable housing services but excluding temporary passthroughs and fluctuating charges. Do not round up to a whole dollar.",
+              "The owner-reported total must not be assumed to equal lawful base rent."
+            ],
+            "sources": [
+              "S03"
+            ]
+          },
+          {
+            "id": "R08",
+            "cells": [
+              "License",
+              "A current Housing Inventory rent increase license is needed for annual or banked increases by the effective date.",
+              "The license is necessary, not proof every other legal requirement is met."
+            ],
+            "sources": [
+              "S07"
+            ]
+          },
+          {
+            "id": "R09",
+            "cells": [
+              "A fully skipped increase",
+              "The Rent Board says a skipped increase is banked only if at least 24 full months pass without a rent increase; a later change of anniversary may lose an amount.",
+              "Do not infer a bank merely from a long lease."
+            ],
+            "sources": [
+              "S04",
+              "S03"
+            ]
+          },
+          {
+            "id": "R10",
+            "cells": [
+              "Partially used increase",
+              "The unused portion of an allowable annual increase may be banked and imposed later under the Rent Board’s timing rules.",
+              "A smaller increase is permissible; check the remaining amount with the actual history."
+            ],
+            "sources": [
+              "S04"
+            ]
+          },
+          {
+            "id": "R11",
+            "cells": [
+              "Calculation",
+              "Eligible banked percentages are added, then applied to current base rent; the Rent Board says not to compound or prorate them.",
+              "Neither unit’s eligible bank or calculation is established here."
+            ],
+            "sources": [
+              "S04"
+            ]
+          },
+          {
+            "id": "R12",
+            "cells": [
+              "Other increases",
+              "Certain capital, operating-and-maintenance, and other increases have separate petition, worksheet, certification or notice requirements.",
+              "An expense or market-rent gap is not automatic permission to add a charge."
+            ],
+            "sources": [
+              "S05",
+              "S22",
+              "S25"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "layers",
+        "title": "Which laws apply?",
+        "intro": "Subsidies, a lease, or other laws may add protections. Coverage for these particular units is unverified.",
+        "columns": [
+          "Layer",
+          "Verified rule",
+          "Limit"
+        ],
+        "rows": [
+          {
+            "id": "R13",
+            "cells": [
+              "San Francisco",
+              "The ordinary annual allowance is 1.6% in the stated period for units subject to local rent-increase limits.",
+              "Not a universal ceiling on properly authorized banked or petition-based amounts."
+            ],
+            "sources": [
+              "S01",
+              "S05"
+            ]
+          },
+          {
+            "id": "R14",
+            "cells": [
+              "California",
+              "For units subject to AB 1482, San Francisco’s state-law figure is 8.8% from Aug 1, 2026 through Jul 31, 2027.",
+              "This does not replace the local limit for units subject to it; applicable exemptions and dates matter."
+            ],
+            "sources": [
+              "S08"
+            ]
+          },
+          {
+            "id": "R15",
+            "cells": [
+              "Federal",
+              "The Fair Housing Act prohibits discrimination on protected grounds; federal housing assistance may have additional restrictions.",
+              "No federal program status or unit-specific federal numerical cap has been established here."
+            ],
+            "sources": [
+              "S23",
+              "S26"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "notice": {
+    "nav": "Notice & process",
+    "kicker": "BEFORE ANY NOTICE",
+    "title": "Communicate clearly. Serve correctly.",
+    "description": "A friendly explanation is useful, but a letter, calculation and service must satisfy the applicable law and lease. This page is not an issued notice.",
+    "sections": [
+      {
+        "id": "timing",
+        "title": "Written notice and timing",
+        "intro": "These minimums generally apply to covered periodic tenancies; exceptions or a longer lease, program, or statutory requirement can change the result.",
+        "columns": [
+          "Situation",
+          "Minimum lead time",
+          "Important qualification"
+        ],
+        "rows": [
+          {
+            "id": "N01",
+            "cells": [
+              "Personal delivery; increase at or below 10%",
+              "At least 30 days",
+              "Measure the proposed increase together with increases in the prior 12 months under Civil Code § 827."
+            ],
+            "sources": [
+              "S09"
+            ]
+          },
+          {
+            "id": "N02",
+            "cells": [
+              "Personal delivery; increase above 10%",
+              "At least 90 days",
+              "The statute includes an income/family recertification exception and other laws may require more notice."
+            ],
+            "sources": [
+              "S09"
+            ]
+          },
+          {
+            "id": "N03",
+            "cells": [
+              "Mail within California; at or below 10%",
+              "At least 35 days",
+              "The ordinary California-mail extension adds five calendar days; confirm service requirements and any longer notice."
+            ],
+            "sources": [
+              "S09",
+              "S10"
+            ]
+          },
+          {
+            "id": "N04",
+            "cells": [
+              "Mail within California; above 10%",
+              "At least 95 days",
+              "Mailing or delivery outside California, address-confidentiality programs, and special rules may require a different extension."
+            ],
+            "sources": [
+              "S09",
+              "S10"
+            ]
+          },
+          {
+            "id": "N05",
+            "cells": [
+              "Fixed-term agreement",
+              "",
+              "A midterm increase generally requires the agreement to expressly permit it. The current contracts have not been reviewed."
+            ],
+            "sources": [
+              "S11"
+            ]
+          },
+          {
+            "id": "N06",
+            "cells": [
+              "Notice components",
+              "Annual and banked portions, if any, must be identified in writing; the Board says to include the dollar increase, percentage and effective date.",
+              "Separate cost-based charges may need additional explanations and Board forms."
+            ],
+            "sources": [
+              "S03",
+              "S05"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "workflow",
+        "title": "A careful process",
+        "intro": "These are recommended steps, not a claim that they were completed.",
+        "columns": [
+          "Step",
+          "What to do",
+          "Why it matters"
+        ],
+        "rows": [
+          {
+            "id": "N07",
+            "cells": [
+              "01 · Verify",
+              "Privately confirm coverage, lease terms, lawful base rent, prior effective dates, Housing Inventory license, and any subsidy requirements.",
+              "The public website has no official property or lease records."
+            ],
+            "sources": [
+              "S06",
+              "S07",
+              "S11",
+              "S26"
+            ]
+          },
+          {
+            "id": "N08",
+            "cells": [
+              "02 · Calculate",
+              "Choose a documented, neutral policy. For an ordinary 1.6% increase during the current period, multiply verified base rent by 0.016.",
+              "Do not round up or silently add a banked amount; apply the rate in effect on the increase date."
+            ],
+            "sources": [
+              "S01",
+              "S03",
+              "S04"
+            ]
+          },
+          {
+            "id": "N09",
+            "cells": [
+              "03 · Review",
+              "Check fair housing, retaliation, serious outstanding habitability conditions, and the wording and method of service with qualified counsel.",
+              "An owner’s explanation is not a substitute for statutory compliance or independent legal review."
+            ],
+            "sources": [
+              "S13",
+              "S15",
+              "S24"
+            ]
+          },
+          {
+            "id": "N10",
+            "cells": [
+              "04 · Inform",
+              "Give each affected tenant a properly served written notice that identifies the components, amount, percentage, and effective date; retain a copy and proof of service.",
+              "Keep ordinary annual increases separate from any special petition or passthrough."
+            ],
+            "sources": [
+              "S05",
+              "S09",
+              "S22"
+            ]
+          },
+          {
+            "id": "N11",
+            "cells": [
+              "05 · Invite questions",
+              "Provide a contact and direct tenants to Rent Board counseling and the tenant-petition process.",
+              "The Rent Board offers free information; counseling is not a lawyer’s individualized advice."
+            ],
+            "sources": [
+              "S16",
+              "S17",
+              "S18"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "reasons",
+        "title": "Reasons: useful, but not shortcuts",
+        "intro": "A reason should be truthful and should identify the legal category; it does not create authority to charge an otherwise impermissible amount.",
+        "columns": [
+          "Explanation",
+          "Assessment",
+          "Guardrail"
+        ],
+        "rows": [
+          {
+            "id": "N12",
+            "cells": [
+              "Ordinary annual adjustment",
+              "A modest annual adjustment to support ongoing operation can be a transparent business explanation if true.",
+              "Identify the annual component and satisfy timing, license, lease and notice rules."
+            ],
+            "sources": [
+              "S03",
+              "S05",
+              "S07"
+            ]
+          },
+          {
+            "id": "N13",
+            "cells": [
+              "Maintenance or capital costs",
+              "Some costs may be eligible for a separately governed petition or passthrough.",
+              "Do not simply add a repair, tax, insurance, or improvement bill to base rent."
+            ],
+            "sources": [
+              "S22",
+              "S28"
+            ]
+          },
+          {
+            "id": "N14",
+            "cells": [
+              "Nearby market rents are higher",
+              "A market difference by itself does not justify a special-circumstances comparables increase.",
+              "The Rent Board requires proof of qualifying extraordinary circumstances and comparable rents."
+            ],
+            "sources": [
+              "S25"
+            ]
+          },
+          {
+            "id": "N15",
+            "cells": [
+              "Additional occupant",
+              "An increase solely because an occupant was added to an existing tenancy is generally prohibited.",
+              "Narrow statutory exceptions and any petition must be analyzed independently."
+            ],
+            "sources": [
+              "S03",
+              "S05"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "fairness": {
+    "nav": "Fairness & rights",
+    "kicker": "CONSISTENT ≠ AUTOMATICALLY LAWFUL",
+    "title": "Fairness is more than matching numbers.",
+    "description": "An increase to one unit is not automatically discriminatory, and increasing both does not guarantee protection from a complaint. Apply and document neutral criteria, and seek professional review.",
+    "sections": [
+      {
+        "id": "fair-test",
+        "title": "The fair-housing review",
+        "intro": "These are safeguards and questions for an attorney, not a finding about either tenancy.",
+        "columns": [
+          "Question",
+          "What the evidence supports",
+          "Action"
+        ],
+        "rows": [
+          {
+            "id": "F01",
+            "cells": [
+              "One unit or both?",
+              "The laws focus on prohibited discrimination and retaliation; the sources do not establish a rule that every unit must receive the same increase.",
+              "Evaluate each unit’s lawful eligibility and document any neutral difference. Do not select a unit based on protected characteristics."
+            ],
+            "sources": [
+              "S13",
+              "S15",
+              "S23"
+            ]
+          },
+          {
+            "id": "F02",
+            "cells": [
+              "Same percentage?",
+              "A consistent policy can be easier to explain, but the same percentage does not cure an unlawful timing, lease, license, or discrimination problem.",
+              "Check each tenancy independently; avoid treating consistency as a legal safe harbor."
+            ],
+            "sources": [
+              "S07",
+              "S11",
+              "S13"
+            ]
+          },
+          {
+            "id": "F03",
+            "cells": [
+              "Protected characteristics",
+              "California protects characteristics including race, disability, familial status and source of income; federal law has its own protected categories.",
+              "Do not base pricing or treatment on protected characteristics or assumptions about them."
+            ],
+            "sources": [
+              "S13",
+              "S23"
+            ]
+          },
+          {
+            "id": "F04",
+            "cells": [
+              "Retaliation",
+              "SF and California prohibit rent increases motivated by retaliation for protected exercise of rights, under their applicable standards.",
+              "Do not target a tenant for requesting repairs, organizing or asserting legal rights."
+            ],
+            "sources": [
+              "S14",
+              "S15"
+            ]
+          },
+          {
+            "id": "F05",
+            "cells": [
+              "Repairs and habitability",
+              "California Civil Code § 1942.4 can bar a rent-increase notice when all specified serious-habitability conditions exist.",
+              "Review inspection and repair history; do not assume that every defect triggers the statute or that none exist."
+            ],
+            "sources": [
+              "S24"
+            ]
+          },
+          {
+            "id": "F06",
+            "cells": [
+              "Accommodations",
+              "California fair-housing law requires reasonable disability accommodations where applicable.",
+              "Consider a timely, individualized request and obtain legal advice where needed."
+            ],
+            "sources": [
+              "S13"
+            ]
+          },
+          {
+            "id": "F07",
+            "cells": [
+              "Legal clearance",
+              "",
+              "No lawyer, advocate, Rent Board judge, or tenant has reviewed or approved the proposed action in this project."
+            ],
+            "sources": [
+              "S17",
+              "S18"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "support",
+        "title": "Independent help",
+        "intro": "These resources are provided by the City. Availability and eligibility can vary.",
+        "columns": [
+          "Resource",
+          "Who it helps",
+          "What it offers"
+        ],
+        "rows": [
+          {
+            "id": "F08",
+            "cells": [
+              "SF Rent Board · 415-252-4600",
+              "Tenants and landlords",
+              "Free counseling on the Rent Ordinance, including language support; counselors cannot give legal advice."
+            ],
+            "sources": [
+              "S17"
+            ]
+          },
+          {
+            "id": "F09",
+            "cells": [
+              "Tenant counseling referrals",
+              "Tenants with rent-increase or eviction notices",
+              "The City lists community organizations that can help with landlord–tenant matters."
+            ],
+            "sources": [
+              "S16"
+            ]
+          },
+          {
+            "id": "F10",
+            "cells": [
+              "Eviction Defense Collaborative · 415-659-9184",
+              "Tenants with eviction court papers",
+              "The City directs tenants to seek immediate free legal help. This is not a promise of a free lawyer for every rent notice."
+            ],
+            "sources": [
+              "S16"
+            ]
+          },
+          {
+            "id": "F11",
+            "cells": [
+              "Rent Board tenant petition",
+              "Eligible tenants in locally rent-controlled units",
+              "A tenant can challenge an alleged unlawful increase or request review of lawful rent; the Board says filing is free."
+            ],
+            "sources": [
+              "S18"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "practice": {
+    "nav": "Owner practices",
+    "kicker": "WHAT THE EVIDENCE CAN — AND CANNOT — SAY",
+    "title": "Big owners, small owners, same safeguards.",
+    "description": "The public evidence does not establish a typical San Francisco percentage by landlord size. An observed practice or a legal maximum is not a recommended target.",
+    "sections": [
+      {
+        "id": "comparison",
+        "title": "What is actually documented?",
+        "intro": "National evidence is context, not a representative survey of the Outer Sunset or of these units.",
+        "columns": [
+          "Question",
+          "Evidence",
+          "Interpretation"
+        ],
+        "rows": [
+          {
+            "id": "P01",
+            "cells": [
+              "Institutional owners",
+              "GAO reviewed research on institutional investment in single-family housing and reported limited evidence about effects on tenants.",
+              "Do not treat national investment research as a local rent-increase average or a finding about every corporation."
+            ],
+            "sources": [
+              "S20"
+            ]
+          },
+          {
+            "id": "P02",
+            "cells": [
+              "Commercial pricing systems",
+              "In 2025 DOJ described allegations involving competitor data and a proposed settlement concerning a commercial rent-pricing provider.",
+              "These were allegations and a proposed settlement in that source, not proof of the conduct of all corporate landlords."
+            ],
+            "sources": [
+              "S21"
+            ]
+          },
+          {
+            "id": "P03",
+            "cells": [
+              "San Francisco pricing software",
+              "City law prohibits use or sale of the specifically defined algorithmic device that uses non-public competitor data to advise rents or occupancy.",
+              "The prohibition is not a ban on all algorithms or ordinary arithmetic."
+            ],
+            "sources": [
+              "S19"
+            ]
+          },
+          {
+            "id": "P04",
+            "cells": [
+              "Typical corporate increase in SF",
+              "",
+              "No official, comparable citywide statistic was verified for this snapshot; do not substitute the annual allowance."
+            ],
+            "sources": [
+              "S20",
+              "S02"
+            ]
+          },
+          {
+            "id": "P05",
+            "cells": [
+              "Typical individual-owner increase in SF",
+              "",
+              "No official, comparable citywide statistic was verified for this snapshot; individual owners have no separate numerical allowance merely because they are small."
+            ],
+            "sources": [
+              "S02",
+              "S05"
+            ]
+          },
+          {
+            "id": "P06",
+            "cells": [
+              "A policy for both units",
+              "Consider a predictable ordinary-only adjustment, or no increase, using the same neutral criteria and each unit’s legal timing.",
+              "This is a proposed practice, not an official market norm or a guarantee against claims."
+            ],
+            "sources": [
+              "S03",
+              "S04",
+              "S13"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "review": {
+    "nav": "Flagged for review",
+    "kicker": "OPEN ITEMS · NONBLOCKING FOR PUBLICATION",
+    "title": "What remains unverified.",
+    "description": "A flag is not an accusation or a determination. It shows what cannot be checked from official public sources or what should be reviewed before an increase is considered.",
+    "sections": [
+      {
+        "id": "review-register",
+        "title": "Review register",
+        "intro": "Blank values are intentional. A source link explains the governing rule or lookup; it does not verify the private property fact.",
+        "columns": [
+          "Item",
+          "Verified value",
+          "Why it is flagged / next step"
+        ],
+        "rows": [
+          {
+            "id": "G01",
+            "cells": [
+              "Property classification and construction",
+              "",
+              "No address or official property record was provided. Building age and coverage are unverified; do not publish the address."
+            ],
+            "sources": [
+              "S06"
+            ]
+          },
+          {
+            "id": "G02",
+            "cells": [
+              "Unit 01: rent and tenancy records",
+              "",
+              "The supplied dates and amounts are private owner reports, not verified official facts. Verify the lawful base, original occupancy and continuity privately."
+            ],
+            "sources": [
+              "S03",
+              "S12"
+            ]
+          },
+          {
+            "id": "G03",
+            "cells": [
+              "Unit 02: rent and tenancy records",
+              "",
+              "The supplied dates and amount are private owner reports, not verified official facts. Verify the lawful base and full rent history privately."
+            ],
+            "sources": [
+              "S03",
+              "S18"
+            ]
+          },
+          {
+            "id": "G04",
+            "cells": [
+              "Last lawful increases and anniversaries",
+              "",
+              "Prior notices and effective dates are missing for both units. Do not derive eligibility dates from the last lease alone."
+            ],
+            "sources": [
+              "S03",
+              "S04"
+            ]
+          },
+          {
+            "id": "G05",
+            "cells": [
+              "Banked increases",
+              "",
+              "No complete history is available; the bank for either unit is unknown. An omitted increase is not automatically banked."
+            ],
+            "sources": [
+              "S04"
+            ]
+          },
+          {
+            "id": "G06",
+            "cells": [
+              "Fixed-term restrictions",
+              "",
+              "The lease end dates and rent-increase clauses have not been independently reviewed."
+            ],
+            "sources": [
+              "S11"
+            ]
+          },
+          {
+            "id": "G07",
+            "cells": [
+              "Housing Inventory license",
+              "",
+              "License status for either unit was not checked in the Rent Board Portal; it is required for an annual or banked increase to take effect."
+            ],
+            "sources": [
+              "S07"
+            ]
+          },
+          {
+            "id": "G08",
+            "cells": [
+              "Subsidy or regulatory agreement",
+              "",
+              "Federal, state or local program restrictions may matter; neither unit’s participation status is established."
+            ],
+            "sources": [
+              "S08",
+              "S26"
+            ]
+          },
+          {
+            "id": "G09",
+            "cells": [
+              "Complaints, repairs, and motive",
+              "",
+              "No private inspection, dispute, protected-activity or decision record was reviewed. No discrimination or habitability finding is made."
+            ],
+            "sources": [
+              "S13",
+              "S15",
+              "S24"
+            ]
+          },
+          {
+            "id": "G10",
+            "cells": [
+              "Actual owner-size comparison",
+              "",
+              "No official SF data on typical annual increases by corporate versus individual owners was verified."
+            ],
+            "sources": [
+              "S20",
+              "S02"
+            ]
+          },
+          {
+            "id": "G11",
+            "cells": [
+              "Rate from March 2027 onward",
+              "",
+              "No later annual allowance was confirmed from the sources reviewed. The 1.6% rate expires for effective dates after Feb 28, 2027."
+            ],
+            "sources": [
+              "S01",
+              "S02"
+            ]
+          },
+          {
+            "id": "G12",
+            "cells": [
+              "Attorney or advocate sign-off",
+              "",
+              "No tenant attorney, advocate, judge, or counselor reviewed this specific proposal or its private records."
+            ],
+            "sources": [
+              "S17",
+              "S18"
+            ]
+          },
+          {
+            "id": "G13",
+            "cells": [
+              "SF general-guidance examples",
+              "See source inconsistency",
+              "The first example labels 1.6% as effective June 2025; the separate schedule places 1.4% in 2025–26 and 1.6% in 2026–27. Use the rate schedule, not the inconsistent example date."
+            ],
+            "sources": [
+              "S03",
+              "S02"
+            ]
+          },
+          {
+            "id": "G14",
+            "cells": [
+              "SF banking example",
+              "See source inconsistency",
+              "An August 2025 example later refers to August 2024 as the date of the 1.4% rate. The rate schedule assigns 1.7% to 2024–25 and 1.4% to 2025–26."
+            ],
+            "sources": [
+              "S04",
+              "S02"
+            ]
+          },
+          {
+            "id": "G15",
+            "cells": [
+              "Notice or service",
+              "",
+              "No tenant notice was created or sent, and no proof of service exists in this project."
+            ],
+            "sources": [
+              "S09",
+              "S05"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
