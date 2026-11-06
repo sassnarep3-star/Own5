@@ -963,3 +963,15 @@ cross-session changes requested at claim time.
   verification remain pending. Concurrent legacy Pages deployments have been
   cancelled/superseded by other `main` merges; do not record a live result until
   the public page is independently fetched.
+## Session arena-08024f1d — San Francisco rental increase desk (2026-11-06 UTC)
+
+Arena fixes this session to `arena/08024f1d-own5`; the requested alternative session branch naming is not used. Additive namespace only: the research and published dashboard live under `research/sf-rent-increase/**` and `sf-rent-increase/**`. No other session's files or data are in scope. Any root-site integration is deferred to the final integration task and will use the existing deterministic builder rather than hand-edit generated files.
+
+Privacy boundary: do not publish tenant names, initials, street address, or other direct identifiers. The requested lease dates and dollar amounts may appear only as anonymized, owner-supplied case inputs, explicitly marked unverified; they must not be represented as facts confirmed by public sources. Public legal and market statements require official source links. Any fact not confirmable from official sources will be left blank in verification tables and published as a review flag.
+
+| ID | Task | Status | Owner (session) | Files touched | Notes |
+|----|------|--------|-----------------|---------------|-------|
+| SR1 | Official-source research, anonymized case analysis, executive summary, dashboard, and row-by-row validation | in progress | arena-08024f1d | `research/sf-rent-increase/**`, `sf-rent-increase/**` | Isolated San Francisco rental-increase namespace; no edits to existing dashboards. |
+| SR2 | Final integration, combined verification, PR, merge, and Pages deployment check | unclaimed | arena-08024f1d | `COORDINATION.md` (append-only), `README.md` (append-only), `scripts/build.py` (additive link only), generated root site outputs via deterministic rebuild | Only after SR1 passes; do not hand-edit CI-locked generated outputs. |
+
+Claim timestamp: 2026-11-06 UTC. Cross-session requests: none. No overlapping San Francisco rental task was listed in the board at claim time. No tenant names or initials are recorded here.
