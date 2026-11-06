@@ -876,3 +876,23 @@ Cross-session request (deferred, nonblocking): add a clearly labeled "Rental Inc
 - Repo is the Own5 NFL/NBA research Pages site plus many session sub-sites; no rental content existed anywhere (`grep -i rental` on tracked files → none). Pre-existing irregularities (if any) belong to their owning sessions; this session flags what it observes on the Flagged for Review page rather than rewriting others' work.
 - Legal-content safety rule for this session: the site is general educational information, not legal advice; no specific dollar recommendation is issued to any tenant or the owner; every legal parameter links to an official source; interpretation risks are published as flags, not hidden.
 
+
+### Session 6ee577e4-own5 — work log (2026-11-06)
+
+- **R1 done — bounded repo review (this session):** repo at `6a73b0a` == `origin/main` at start; 182 HTML pages scanned with a custom tolerant parser: 3,052 local refs, **0 broken**; `tools/check_site.py`: **0 failures**, 9 pre-existing intentional blank-source warnings (unchanged); 9 root-level detail pages carry an unclosed `<section>` before `</main>` (session 0f468a47 scope; flag **F-16**, not edited); PII/secrets scan: none found; root `index.html`/`data/` untouched (CI-locked). Full review claims are bounded — see flag F-18.
+- **R2 done — official-source research:** 22 official sources fetched and read in full this session (sf.gov Rent Board pages incl. the 2026-01-14 annual-increase announcement, Current Rates, "Learn about rent increases", "Banked rent increases", coverage, Costa-Hawkins guidance, capital-improvement petitions + imputed-interest table, 571 historical PDF; Cal. leginfo §§827, 1947.12, 1942.5, 1954.53; DOJ archived release 25-21; HUD FHA overview; CA CRD Fair Housing fact sheet; BLS CPI-SF June 2026 release — Apr-2026 12-month = 3.8%). Registry + retrieval log: `research/rental-sf/SOURCES.md`. No value taken from any third-party site.
+- **R3 done — anonymized executive summary:** `research/rental-sf/EXECUTIVE_SUMMARY.md` + `rental-sf/summary.html`. Placeholders (Household 1/Household 2); dates/amounts preserved; no tenant/owner PII anywhere.
+- **R4 done — site:** `rental-sf/` (12 pages + own CSS/JS, no shared assets touched): dashboard `index.html`, summary, Q&A, local-law, state-law, federal-law, practice, process (with notice template — template only, flag F-13), fair-housing (one vs both), units (all scenario math), flagged (F-01…F-18), sources; `rental-sf/verify.py` deterministic checker (parse, local refs, per-row source/flag link coverage, https-only, PII patterns).
+- **R5 done — verification:** `python3 rental-sf/verify.py` → **12 pages, 164 table rows, FAIL=0, WARN=0**; root suite `python3 -m unittest discover -s tests` → **91/91 OK**; all pages/assets serve 200 locally. Every table row carries an official source link or a flag link; unverified values are BLANK (2027-28 rate, F-04) or derived-and-labeled (AB 1482 8.8%, F-05). Official-source contradiction on banking eligibility confirmed and published, not resolved (F-02). 2024-08-23 DOJ URL 404 → archived URL used (S-18).
+- **Key analytic outcomes (details in site):** continuing covered tenancies ⇒ current-year 1.6% + properly banked only; Unit 1 +$63.92 → $4,058.92 (U1-E trap documented); Unit 2 +$50.40 annual-only; banked scenarios $3,465.00–$3,562.65 pending F-02; both-units uniform-formula is the review-passing pattern; selective single-unit raise is lawful-in-principle but review-risky; no notice should be served until F-01/F-02/F-03 close.
+- **Cross-session request (unchanged, deferred):** add "Rental Increase SF" entry point to root navigation via owning builder (`scripts/build.py`) — not done by this session (CI-locked shared output).
+
+| ID | Task | Status | Owner |
+|----|------|--------|-------|
+| R1 | Repo review | done | 6ee577e4-own5 |
+| R2 | Sources research | done | 6ee577e4-own5 |
+| R3 | Executive summary | done | 6ee577e4-own5 |
+| R4 | Site | done | 6ee577e4-own5 |
+| R5 | Verification | done | 6ee577e4-own5 |
+| R6 | Integration: PR → merge → Pages verification | in progress | 6ee577e4-own5 |
+

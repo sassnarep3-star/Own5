@@ -1,0 +1,22 @@
+# Flagged for Review — Rental Increase SF
+
+Items below must be reviewed by the owner/counselor/attorney before any notice is served.
+Nothing here blocks the site from publishing; flagged = needs human review, never silent.
+
+| ID | Item | Status | What must happen |
+|----|------|--------|------------------|
+| F-01 | Rent-control coverage assumed (1940 building, 2 units, pre-1979 certificate of occupancy) | Unverified assumption — high confidence | Confirm building construction/certificate of occupancy date via SF Property Information Map + Rent Board counselor (415-252-4600); confirm no substantial-rehab determination; confirm no government regulation |
+| F-02 | **Banking eligibility ambiguity** — official sf.gov pages disagree (banked page: "skipped increase only banked if ≥24 full months pass without any rent increase"; worked examples: two consecutive skipped increases both banked at the second anniversary). This moves Unit 2's lawful maximum between 10.0% and 13.1%, and decides whether Unit 1's skipped 1.4% survives | Unresolved (official sources inconsistent) | Rent Board counselor must rule on which skipped years are validly bankable for each tenancy **before** computing any notice above current-year 1.6% |
+| F-03 | Brief states "Unit 1 … April 1, 2026 @ $3,995" — ambiguous whether a notice was served/effective, or just the current paid rent; if a notice WAS served, its content/date controls | Unverified | Locate lease and any 30/90-day notice served for April 2026; if none, treat April 1, 2026 as status quo |
+| F-04 | 2027-28 allowable increase not yet published (SF announces each cycle; current window ends 2027-02-28) | Unverifiable today | Check sf.gov current-rates page before any 2027 increase; do not pre-commit a percentage |
+| F-05 | AB 1482 2026-08-01→2027-07-31 cap derived at **8.8%** (5% + BLS Apr-2026 SF CPI-U 12-month 3.8%), not restated by an official cap table | Derived, not directly published | Moot for covered units (local 1.6% controls); if coverage fails, verify the cap via leginfo §1947.12(g) + BLS directly |
+| F-06 | "Built in 1940" taken from the brief; official construction/permit records not pulled | Unverified (external record check) | Verify on SF Property Information Map / Assessor-Recorder; update this flag |
+| F-07 | This analysis is educational; it is **not legal advice** and cannot substitute for attorney review of the lease, notices, and service records | Standing limitation | Retain/consult qualified attorney; get written review of the final notices |
+| F-08 | DOJ v. RealPage (and 6 landlords) is live litigation; allegations unproven; RealPage contests; Cortland proposed consent decree pending court approval; California is a co-plaintiff | Litigation in progress as of retrieval | Re-check docket/status before relying on the case for any decision; nothing here asserts wrongdoing by any person or company |
+| F-09 | Root site navigation (`index.html`, `data/index.html`) does not link this new section; root is CI-locked and shared | Deferred cross-session request | Integration/owner session adds entry points through the owning builder |
+| F-10 | Unit 1 household changed 3 → 2 occupants (2026-04-01). Reduction of occupants is not a lawful increase/decrease trigger; additional-occupant surcharges are unlawful | Informational | No action beyond ensuring no surcharge or retaliatory signal |
+| F-11 | Security-deposit interest (4.2% for 2026-03-01→2027-02-28) and Rent Board fee bankability ($29.50) are published but not analyzed here (out of scope of the increase question) | Out of scope | If deposits exist, compute separately with counselor |
+| F-12 | “Reasonable/normal” characterization of corporate vs. individual practice is an analytical framework, not an official statistic; no official dataset of SF increase amounts by owner type exists | Analysis, not measurement | Do not cite as measured fact; treat as practice-pattern description |
+| F-13 | Sample notice template on the site is generic; using it without unit-specific computation/service proof would be invalid | Template only | Attorney or counselor must adapt and review before service |
+| F-14 | Relocation payments, Ellis Act, owner move-in — not implicated by a lawful increase; listed to bound scope | Out of scope | n/a |
+| F-15 | Unit 1 first-anniversary rate (2026-02-01, 1.4%): if a new effective date is chosen before 2027-02-01, official guidance shows the skipped amount is lost | Per official worked examples | Decide on the date doctrine first (Feb 1 vs. other date), then compute |
