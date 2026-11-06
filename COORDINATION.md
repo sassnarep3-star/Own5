@@ -939,3 +939,27 @@ cross-session changes requested at claim time.
   and [federal rental program overview](https://www.congress.gov/crs_external_products/IF/HTML/IF12887.web.html)
   should be read with their conditions. This is a nonblocking review request,
   not permission to overwrite another session's files.
+
+### SF1–SF3 build and verification progress (2026-11-06)
+
+- **SF1 done:** 28 official sources registered with checked scope, a separate
+  research/verification note and an automatically reproducible 79-row
+  evidence register. Rate guidance and known inconsistent SF.gov example
+  dates are explicitly flagged. Unverified private lease facts are blank in
+  this session's public tables; legal source links are not treated as private
+  fact verification.
+- **SF2 done:** eight static pages, responsive source-linked tables, clear
+  source library, separate flagged register and a non-serviceable communication
+  outline. No third-party fonts, trackers, scripts, user data entry or backend.
+- **SF3 local checks passed:** 7 scoped standard-library unit/integrity tests,
+  deterministic HTML and row-register checks, browser checks over all eight
+  pages at desktop and two mobile widths with JavaScript disabled, and 91
+  existing repository unit tests; the existing `npm run desk:check` and
+  `npm run test:browser` also passed. All 107 rendered table rows (79 research +
+  28 source register) have official source links; all local links/fragments
+  resolve, and unknown unit fields stay blank. Screenshots are temporary and
+  not committed. Existing sports outputs were not changed.
+- **Integration:** README addition is append-only; PR, merge and public Pages
+  verification remain pending. Concurrent legacy Pages deployments have been
+  cancelled/superseded by other `main` merges; do not record a live result until
+  the public page is independently fetched.
