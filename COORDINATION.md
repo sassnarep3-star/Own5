@@ -1037,3 +1037,29 @@ Arena fixes this session's branch to `arena/e446435e-own5`; the `session-<id>/<t
 - Pages deployment run [42230865904](https://github.com/sassnarep3-star/Own5/actions/runs/42230865904) succeeded; Pages build API reports `built` for `6836bf3` at 14:12:00Z with no error. (Two earlier same-day builds for sibling commits show `errored`/`Page build failed` — concurrent-merge supersedes; unrelated to this scope.)
 - Live verification (fetched post-deploy): [dashboard](https://sassnarep3-star.github.io/Own5/sf-rent-e446435e/), [summary](https://sassnarep3-star.github.io/Own5/sf-rent-e446435e/summary.html), [local law + Form 571 schedule](https://sassnarep3-star.github.io/Own5/sf-rent-e446435e/local-law.html), [unit scenarios](https://sassnarep3-star.github.io/Own5/sf-rent-e446435e/units.html), [Flagged for Review](https://sassnarep3-star.github.io/Own5/sf-rent-e446435e/flagged.html) — all serve expected content (1.6% ceiling, derived math, blank unverified cells, per-row source/flag links). Initial index fetches 404'd during CDN propagation; confirmed live minutes later.
 - Session `e446435e` complete: R44-01…R44-07 all done. Open legal/property/source-review items (R44-F01…F19) are nonblocking for publication and published on the Flagged for Review page — not a finding that any increase or notice is lawful.
+
+---
+
+# Session e413f933 — NFL Decision Desk (suggestions, questions register, own lines, injury/depth signals) (2026-11-12 UTC)
+
+Arena fixes this session to `arena/e413f933-own5`; no alternative branch will be created or pushed.
+Claim timestamp: **2026-11-12 UTC**, before any implementation. Additive namespace only:
+`nfl-decision-desk/**` and `research/nfl-decision-desk/**`, plus this append-only board entry.
+Read-only for this session: root `index.html`/`pages/`/`data/research.json` (CI-locked), `docs/`,
+`nba-*/`, `nfl-strategy-lab/`, `line-lab/`, `own5-desk/`, `sf-*/rental-*`, `scripts/`, `tools/`,
+`.github/workflows/`, existing CSVs/JSON, README.md (append only at integration, if needed).
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| D1 | Claim + bounded repo review; record irregularities | in progress | e413f933 | COORDINATION.md | Claim pushed before any other work. |
+| D2 | Decision prerequisites register: questions / information / answers (known vs missing) | unclaimed | e413f933 | research/nfl-decision-desk/**, nfl-decision-desk/data/questions.csv | Suggestions section discovers missing information; every row source-linked or BLANK+flag. |
+| D3 | Suggestions register (improvement paths, ranked for review before implementation) | unclaimed | e413f933 | nfl-decision-desk/data/suggestions.csv, nfl-decision-desk/suggestions.html | No changes implemented; suggestions only, with decision criteria. |
+| D4 | Own NFL lines from official inputs + signal research | unclaimed | e413f933 | nfl-decision-desk/** , research/nfl-decision-desk/** | Market columns blank+flagged; derivation documented. |
+| D5 | Injury + depth-chart deficiency tracking (2nd/3rd/4th string signals) | unclaimed | e413f933 | nfl-decision-desk/data/injuries*.csv, nfl-decision-desk/injuries.html | Official nfl.com injury report + official team depth charts; unverifiable cells BLANK+flag. |
+| D6 | Validation gates, correlation values, luck-vs-skill, leaderboard w/ rewards (singles/parlays/prop combos) | unclaimed | e413f933 | nfl-decision-desk/** | Fail-closed; 0 certified unless gates pass; reward pool blank if unfunded. |
+| D7 | Executive summary | unclaimed | e413f933 | research/nfl-decision-desk/EXECUTIVE_SUMMARY.md, nfl-decision-desk/executive-summary.html | Restates only computed/verified values. |
+| D8 | Site: landing dashboard + category subpages + Flagged for Review | unclaimed | e413f933 | nfl-decision-desk/*.html, nfl-decision-desk/build.py | Every body-table row source-linked or explicit BLANK flag. |
+| D9 | Line-by-line verification harness | unclaimed | e413f933 | nfl-decision-desk/verify.py | Row/link/deterministic checks; logged results. |
+| D10 | Integration: re-verify, PR to main, merge, Pages deploy verification, record | unclaimed | e413f933 | COORDINATION.md | Preserve concurrent work; merge only with green checks. |
+
+Cross-session requests at claim time: none.
