@@ -1055,15 +1055,24 @@ Rationale: the user's 2026-11-12 request adds (a) a suggestions register with an
 
 | ID | Task | Status | Owner | Files touched | Notes |
 |----|------|--------|-------|---------------|-------|
-| D1 | Claim + baseline repo review | in progress | 38a1fc27 | COORDINATION.md | Claim pushed before any other work. |
-| D2 | Official-source ingestion (nfl.com injury report/schedule/standings + nflverse official-data mirrors), pinned + timestamped | unclaimed | 38a1fc27 | tools/decision_desk/fetch_sources.py, data/decision-desk/raw/**, .github/workflows/decision-desk.yml | Runner-side fetch; sandbox egress is GitHub-only. |
-| D3 | Requirements coverage matrix + suggestions register + open-questions register | unclaimed | 38a1fc27 | research/38a1fc27/**, data/decision-desk/*.csv | Every suggestion has impact/effort/confidence/decision state. |
-| D4 | Injury & lineup-deficiency engine (snap-share roles, next-man-up drop, team deficit) | unclaimed | 38a1fc27 | tools/decision_desk/compute_injuries.py, data/decision-desk/injuries*.csv | Role inferred from official snap counts, not a third-party depth chart. |
-| D5 | Line origination + strategy leaderboard + gates + correlations (recomputed) | unclaimed | 38a1fc27 | tools/decision_desk/**, data/decision-desk/** | Independent recomputation; disagreements with prior sessions flagged. |
-| D6 | Line-by-line verification pass over existing NFL claims | unclaimed | 38a1fc27 | research/38a1fc27/AUDIT.md, data/decision-desk/audit.csv | Recompute or source-check every claim; flag irregularities. |
-| D7 | Site build + link/row verification | unclaimed | 38a1fc27 | nfl-decision-desk/**, tools/decision_desk/verify.py | Every row sourced or explicitly flagged blank. |
-| D8 | Executive summary | unclaimed | 38a1fc27 | research/38a1fc27/EXECUTIVE_SUMMARY.md | Restates only verified/computed values. |
-| D9 | PR to main, autonomous merge, Pages deploy verification | unclaimed | 38a1fc27 | COORDINATION.md | Record PR link + deploy run. |
+| D1 | Claim + baseline repo review | done | 38a1fc27 | COORDINATION.md | Claim pushed before any other work. |
+| D2 | Official-source ingestion (nfl.com injury report/schedule/standings + nflverse mirrors), pinned + timestamped | done | 38a1fc27 | tools/decision_desk/fetch_sources.py, data/decision-desk/raw/**, .github/workflows/decision-desk.yml | Runner-side fetch: 12/12 pinned datasets and 3/3 official pages HTTP 200 at 2026-11-12T16:29Z; SHA-256 + UTC recorded per file. Sandbox egress is GitHub-only, so ingestion runs on Actions; official text extracts are committed, raw HTML is an artifact. |
+| D3 | Requirements matrix, suggestions register, open-questions register | done | 38a1fc27 | research/38a1fc27/**, data/decision-desk/{requirements,suggestions,questions}.csv | 19 requirements, 16 suggestions (each with decision state + review test), 18 questions (7 blocking, 4 not closable from public data). |
+| D4 | Injury & lineup-deficiency engine | done | 38a1fc27 | tools/decision_desk/compute_injuries.py, data/decision-desk/injuries_wk10_players.csv, team_deficiency_wk10.csv | 276 official rows parsed; 276/276 agree with the mirror; depth strings 1-4 from snap share; replacement drop by unit; calibration on 950 games (2023-2026). |
+| D5 | Own lines, strategy ledger, gates, correlations | done | 38a1fc27 | tools/decision_desk/compute_{lines,strategies,correlations}.py, data/decision-desk/model_lines_wk10.csv, strategy_ledger.csv, prop_correlations.csv | 14 games priced (HFA 1.22); 7 families vs G0-G12, zero certified; model walk-forward 50.2-50.9% ATS; QB/WR r=0.50, empirical joint 32.5% vs 24.8%; ATS/total phi=0.006. |
+| D6 | Line-by-line verification of existing NFL claims | done | 38a1fc27 | research/38a1fc27/AUDIT.md, VERIFICATION.md, data/decision-desk/claim_checks.csv, standings_crosscheck.csv | 11 claims re-derived (6 reproduce, 4 do not, 1 is this session's corrected sign error); official standings 32/32 vs independent game log; 4,182 links across 246 pages, 0 broken. |
+| D7 | Site build + row/link verification | done | 38a1fc27 | nfl-decision-desk/**, tools/decision_desk/{build_site,verify}.py | 14 pages, 26 tables, 494 rows, every row carries a link; verify.py PASS; clean rebuild produces no diff. |
+| D8 | Executive summary | done | 38a1fc27 | research/38a1fc27/EXECUTIVE_SUMMARY.md, nfl-decision-desk/summary.html | Restates only computed/verified values. |
+| D9 | PR to main, autonomous merge, Pages deploy verification | in progress | 38a1fc27 | COORDINATION.md | Record appended below when done. |
+
+### D2-D8 verification and irregularities (2026-11-12)
+
+- **Sources:** https://www.nfl.com/injuries/ , /schedules/2026/by-week/week-10 , /standings/league/2026/REG (OFFICIAL); nflverse releases `injuries`, `snap_counts`, `stats_player`, `schedules` and the pinned spreadspoke file (AGGREGATOR, tier-labelled everywhere).
+- **Checks:** official standings reproduce 32/32 from an independent game log; official injury report matches the mirror 276/276; every published CSV row carries a source link; every site table row carries a link; all internal links resolve; a clean rebuild is byte-identical.
+- **Irregularities logged (F01-F18, published on the site's Flagged page):** aggregator market lines with unknown timestamps (F01) and no official closing-line history (F02) block gates G4/G8, so no strategy is certified; no official prop lines (F03); game statuses publish later in the week (F04); depth is snap-share inference, not an official depth chart (F05/F16).
+- **Reproducibility finding:** this session's first injury backtest used the spread with the wrong sign and reported a false 57.4% ATS edge (p=0.0046); after correcting to the source's documented convention the same rule is 51.4% (p=1.0). The erroneous run is retained in `claim_checks.csv`, and S02 proposes a regression test.
+- **Inherited discrepancies (not resolved here, flagged for human review):** prior home-underdog cover rates (52.6% vs 49.7%), home dogs +7 (56.37%/793 vs 53.97%/730), QB/WR correlation (0.76 vs 0.50) and the 20.8% luck figure (exact binomial 25.1%).
+- **Scope discipline:** this session wrote only to `nfl-decision-desk/**`, `research/38a1fc27/**`, `data/decision-desk/**`, `tools/decision_desk/**`, `.github/workflows/decision-desk.yml`, plus append-only blocks in `COORDINATION.md` and `README.md`. No file owned by another session was edited.
 
 ### D1 baseline review notes (2026-11-12)
 

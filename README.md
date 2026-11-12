@@ -277,3 +277,44 @@ for reproducible generation and tests.
 Anonymized, source-linked review of reasonable rental increases for two rent-controlled units in a 1940 building in SF 94122. Key verified values: SF annual allowable increase **1.6%** (3/1/2026–2/28/2027; 60% of Bay Area CPI-U), once per 12 months, 30/90-day written notice, rent increase license required, banking rules, AB 1482 (8.8% SF region 8/1/2026–7/31/2027, not operative where the local ordinance is stricter), Costa-Hawkins vacancy decontrol, and the federal Fair Housing Act (no federal rent cap; anti-discrimination). 20 official sources; every table row source-linked; unverifiable values left blank and published on the Flagged for Review page (F01–F12). Tenant identities anonymized (placeholder names); dates/amounts retained as user-provided and marked unverified. Not legal advice.
 
 Reproduce/verify: `python3 sf-rent-94122/build.py && python3 sf-rent-94122/verify.py`.
+
+---
+
+## NFL Decision Desk (session 38a1fc27, 2026-11-12)
+
+**Live site:** https://sassnarep3-star.github.io/Own5/nfl-decision-desk/ ·
+**Executive summary:** [`research/38a1fc27/EXECUTIVE_SUMMARY.md`](research/38a1fc27/EXECUTIVE_SUMMARY.md) ·
+**Verification:** [`research/38a1fc27/VERIFICATION.md`](research/38a1fc27/VERIFICATION.md) ·
+**Flagged:** [`research/38a1fc27/FLAGGED.md`](research/38a1fc27/FLAGGED.md)
+
+A self-running desk for the current season that adds the pieces no earlier scope had: an explicit
+**suggestions register with a decision workflow**, a **questions register** gating decisions, and an
+**injury / lineup-depth engine** that measures what a missing starter is actually worth. It also
+re-derives the claims published by earlier sessions line by line.
+
+| Path | Contents |
+|---|---|
+| `nfl-decision-desk/` | 14-page static site (overview, requirements, suggestions, questions, own lines, strategies, gates, correlations, injuries & depth, repo audit, summary, sources, flagged, verification) |
+| `research/38a1fc27/` | methodology, verification log, audit, pre-registration, gate definitions, flags, questions, requirements |
+| `data/decision-desk/` | computed tables (own lines, injuries, deficiency, ledger, correlations, claim checks) + `raw/` pinned inputs with SHA-256 provenance |
+| `tools/decision_desk/` | fetch → parse → compute → export → build → verify pipeline (Python standard library only) |
+
+**Headline results (all reproducible):** own spread and total for all 14 Week 10 games; one
+percentage point of relative lineup deficiency is worth −0.039 points of margin (p = 6×10⁻⁵) of
+which the market already prices ≈49%; fading the more-injured team is 51.4% ATS over 782 bets
+(p = 1.0), i.e. **no betting edge**; QB passing yards vs his WR1's yards correlate at r = 0.50 and
+the empirical same-team joint hit rate is 32.5% versus 24.8% if independent; **zero strategies
+certified** because gate G4 (closing-line value) and G8 (verified operator price) cannot pass
+without a timestamped price history.
+
+**Irregularities flagged for review:** four previously published figures do not reproduce
+(home-underdog cover rates, home dogs +7, the 0.76 QB/WR correlation and the 20.8% luck figure), and
+this session's own first injury backtest is retained as a documented sign-convention error that
+manufactured a false 57.4% edge.
+
+```sh
+python3 tools/decision_desk/fetch_sources.py     # official pages + pinned mirrors (runner only)
+python3 tools/decision_desk/build_all.py         # parse, compute, export, audit
+python3 tools/decision_desk/build_site.py        # render nfl-decision-desk/
+python3 tools/decision_desk/verify.py            # fails on any unsourced row or broken link
+```
