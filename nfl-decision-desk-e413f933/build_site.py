@@ -385,7 +385,7 @@ def build_sources():
 {table(["name","url","used_for","fetched"], rows, ["url"])}
 <h3>Repository data files (CSV)</h3>
 <ul>
-<li><a href="https://github.com/sassnarep3-star/Own5/tree/main/nfl-decision-desk/data">nfl-decision-desk/data/</a> — all CSVs shown on this site</li>
+<li><a href="https://github.com/sassnarep3-star/Own5/tree/main/nfl-decision-desk-e413f933/data">nfl-decision-desk/data/</a> — all CSVs shown on this site</li>
 <li><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/nfl-decision-desk/repo-review.md">repo-review.md</a> — line-by-line repo verification log</li>
 <li><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/nfl-decision-desk/executive-summary.md">executive-summary.md</a> — source of the summary page</li>
 </ul>

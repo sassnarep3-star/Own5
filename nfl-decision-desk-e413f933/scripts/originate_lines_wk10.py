@@ -30,7 +30,7 @@ DATA = os.path.join(HERE, "..", "data")
 
 SRC_STANDINGS = "https://www.nfl.com/standings/"
 SRC_SCHEDULE = "https://www.nfl.com/schedules/2026/REG10"
-SRC_SCRIPT = "https://github.com/sassnarep3-star/Own5/blob/main/nfl-decision-desk/scripts/originate_lines_wk10.py"
+SRC_SCRIPT = "https://github.com/sassnarep3-star/Own5/blob/main/nfl-decision-desk-e413f933/scripts/originate_lines_wk10.py"
 HFA = 2.0
 
 

@@ -21,12 +21,12 @@ strategy leaderboard — all with per-row official source links.
 | Starter deficiencies found | 119 (2 Out, 68 DNP, 49 Limited starter rows) | injuries × depth charts |
 | Net-points vs wins correlation | **r = 0.846** (n=32) — standings differential is a genuine skill signal | computed |
 | Pythag expected vs actual wins | r = 0.864 — records largely track scoring | computed |
-| Luck index extremes | DEN +2.17 (luckiest), TB −2.17 (unluckiest) | [luck_vs_skill.csv](../nfl-decision-desk/data/luck_vs_skill.csv) |
+| Luck index extremes | DEN +2.17 (luckiest), TB −2.17 (unluckiest) | [luck_vs_skill.csv](../nfl-decision-desk-e413f933/data/luck_vs_skill.csv) |
 | Deficiency load vs team quality | r = 0.254 (n=27) — injured rosters skew slightly weaker, weakly | computed |
 
 ## Week-10 lines we originate (model, not market)
 
-Full table: [own_lines_2026_wk10.csv](../nfl-decision-desk/data/own_lines_2026_wk10.csv).
+Full table: [own_lines_2026_wk10.csv](../nfl-decision-desk-e413f933/data/own_lines_2026_wk10.csv).
 Model = shrunken net-points + HFA 2.0 (0 at Munich). **Market columns blank —
 no official source publishes betting lines (flagged F-MKT-1).**
 
@@ -43,12 +43,12 @@ NE@DET neutral DET −2.5 · advisory deficiency moves SEA@LV from SEA −3.5 to
 5. **PIT** — T.J. Watt and Cameron Heyward DNP with **no listed backups** on the official chart.
 6. **DAL** — 5 starters DNP (Ferguson, Hooker, Porter Jr., Ezeiruaku, Locke).
 
-Full chains: [deficiencies_2026_wk10.csv](../nfl-decision-desk/data/deficiencies_2026_wk10.csv),
-per-team loads: [team_deficiency_index.csv](../nfl-decision-desk/data/team_deficiency_index.csv).
+Full chains: [deficiencies_2026_wk10.csv](../nfl-decision-desk-e413f933/data/deficiencies_2026_wk10.csv),
+per-team loads: [team_deficiency_index.csv](../nfl-decision-desk-e413f933/data/team_deficiency_index.csv).
 
 ## Questions that must be answered before decisions (D2)
 
-15 registered questions with discovery methods: [questions_register.csv](../nfl-decision-desk/data/questions_register.csv).
+15 registered questions with discovery methods: [questions_register.csv](../nfl-decision-desk-e413f933/data/questions_register.csv).
 Blocking decisions:
 
 - **Q07 (market lines)** — policy decision required from you: capture market lines manually from licensed screens, or keep market columns permanently blank (CLV gate G3 stays closed either way until decided).
@@ -58,16 +58,16 @@ Blocking decisions:
 ## Suggestions for review (D3)
 
 12 suggestions, each with effort/risk/benefit and the question it clears:
-[suggestions_register.csv](../nfl-decision-desk/data/suggestions_register.csv).
+[suggestions_register.csv](../nfl-decision-desk-e413f933/data/suggestions_register.csv).
 Highest leverage, in order: **S01** Friday injury refresh → **S02** inactives
 confirmation gate → **S03** official results backfill (unlocks gates G1/G4) →
 **S04** market-capture policy decision.
 
 ## Strategy competition status (D6)
 
-- 7 strategies registered (singles, parlay, prop combo, QA): [strategies.csv](../nfl-decision-desk/data/strategies.csv).
-- 8 gates defined: [gates.csv](../nfl-decision-desk/data/gates.csv). **No strategy has passed any staking gate yet — graded bets = 0.** This is reported, not hidden.
-- Leaderboard tiers (rewards) defined; all metric cells blank pending graded data: [leaderboard.csv](../nfl-decision-desk/data/leaderboard.csv).
+- 7 strategies registered (singles, parlay, prop combo, QA): [strategies.csv](../nfl-decision-desk-e413f933/data/strategies.csv).
+- 8 gates defined: [gates.csv](../nfl-decision-desk-e413f933/data/gates.csv). **No strategy has passed any staking gate yet — graded bets = 0.** This is reported, not hidden.
+- Leaderboard tiers (rewards) defined; all metric cells blank pending graded data: [leaderboard.csv](../nfl-decision-desk-e413f933/data/leaderboard.csv).
 - Luck-removal: Pythag residual index computed for all 32 teams (feeds STR-D6 fade rule at ±1.5 wins).
 
 ## Flagged for review (9 items)
@@ -76,7 +76,7 @@ HOU image-only depth chart · BAL chart-vs-transaction (Lamar IR) · MIA QB dept
 gap · blank game-status on 272/278 injury rows · no market source · no prop
 source · unconfirmed Week-10 QB starters · week-8 results CHI@SEA stale blank ·
 (closed) week-8 re-verification passed 13/13. Full list with clearing actions:
-[flagged_items.csv](../nfl-decision-desk/data/flagged_items.csv).
+[flagged_items.csv](../nfl-decision-desk-e413f933/data/flagged_items.csv).
 
 ## Bottom line
 
