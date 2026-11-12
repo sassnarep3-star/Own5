@@ -1046,3 +1046,12 @@ Fixed Arena branch `arena/d0343637-own5` takes precedence over suggested branch 
 |---|---|---|---|---|---|
 | ND1 | Review existing NFL claims and official-source access; decision desk, questions, suggestions, validation and review pages | in progress | d0343637 | nfl-decision-desk/** | No invented current lines, injuries, performance or correlations. |
 | ND2 | Tests, integration PR, merge and Pages verification | in progress | d0343637 | COORDINATION.md (append only), nfl-decision-desk/** | Source-access failures are published, not represented as verification. |
+
+### d0343637 verification and integration handoff — 2026-11-12
+
+- ND1 done: isolated `nfl-decision-desk/` contains 9 category pages and 60 row-linked entries, executive summary, decision questions/answers, selective injury observations, research/gate proposals, blank current correlations and ranks, suggestions awaiting review and 9 published review flags. No shared root navigation edited.
+- Sources checked with page retrieval: https://www.nfl.com/injuries/ (first chunk only), https://www.nfl.com/teams/ (directory excerpt), https://www.commanders.com/team/depth-chart, https://www.patriots.com/team/depth-chart (unofficial disclaimer and offense), https://www.itl.nist.gov/div898/handbook/eda/section3/scatterp.htm. Policy URL https://operations.nfl.com/updates/football-ops/2017-nfl-injury-report-policy/ returned 404 and is flagged. No full-repo factual certification claimed.
+- Review irregularities: mixed-sport root summary; stale Week 9 outputs; unofficial chart authority; Ben Brown positional discrepancy; missing current policy/current joint coefficients; project-defined gate thresholds; no continuous all-team ingestion or immutable raw archives. Published in `nfl-decision-desk/flagged.html`.
+- Verification passed: 4 scoped tests (including every row's official references, local links and deterministic build), JS syntax, 91 existing unit tests, and 18 real Chromium desktop/mobile page checks plus search and no-JavaScript tables. Structural verification does not certify external facts.
+- Initial remote branch did not exist, so initial pull failed; pulled/rebased against main before initial branch push. No merge conflict and no other owners' files changed.
+- ND2 in progress: publishing PR and checking Pages deployment. The site explicitly discloses static-snapshot limits; future live ingestion suggestions are not represented as implemented.

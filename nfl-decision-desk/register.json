@@ -1,0 +1,641 @@
+{
+  "reviewed_on": "2026-11-12",
+  "sources": {
+    "injuries": [
+      "NFL injury report",
+      "https://www.nfl.com/injuries/",
+      "Checked displayed Week 10 report, first chunk only; not a complete league snapshot."
+    ],
+    "teams": [
+      "NFL official club directory",
+      "https://www.nfl.com/teams/",
+      "Checked directory and linked club identities."
+    ],
+    "was": [
+      "Commanders depth chart",
+      "https://www.commanders.com/team/depth-chart",
+      "Checked displayed offensive and defensive rows; not proof of game participation."
+    ],
+    "ne": [
+      "Patriots unofficial depth chart",
+      "https://www.patriots.com/team/depth-chart",
+      "Checked explicit unofficial disclaimer and offensive chart; not a confirmed lineup."
+    ],
+    "nist": [
+      "NIST scatter plots",
+      "https://www.itl.nist.gov/div898/handbook/eda/section3/scatterp.htm",
+      "Checked association/causation warning; does not endorse betting policy."
+    ],
+    "policy": [
+      "NFL policy URL \u2014 unavailable",
+      "https://operations.nfl.com/updates/football-ops/2017-nfl-injury-report-policy/",
+      "Returned 404 / Flag on the Play; no policy claims accepted."
+    ]
+  },
+  "pages": {
+    "index": [
+      "Executive summary",
+      [
+        [
+          "Decision now",
+          "Research and paper evaluation only.",
+          "Current calibrated prices and executable quotes",
+          "Do not place bets from this dashboard.",
+          [
+            "injuries",
+            "nist"
+          ]
+        ],
+        [
+          "Evidence scope",
+          "Selected official pages inspected on 2026-11-12 UTC.",
+          "All-team historical snapshots and independent reconciliation",
+          "This is a bounded review, not a line-by-line certification of the entire repository.",
+          [
+            "injuries",
+            "teams"
+          ]
+        ],
+        [
+          "Existing tools",
+          "NFL model and strategy lab already exist in this repository.",
+          "Current independent input verification",
+          "Keep historical model outputs separate from current evidence. See review page.",
+          [
+            "teams"
+          ]
+        ],
+        [
+          "Uncertainty",
+          "Association alone does not prove causality.",
+          "Evidence that a signal survives a genuinely future sample",
+          "Luck cannot be eliminated; quantify uncertainty and abstain when evidence is insufficient.",
+          [
+            "nist"
+          ]
+        ],
+        [
+          "Automation boundary",
+          "This release is a static reviewed snapshot.",
+          "Continuous authorized ingestion, scheduling, odds access and monitoring",
+          "No manual data entry required for this snapshot; it is not a live all-team tracker.",
+          [
+            "injuries"
+          ]
+        ]
+      ]
+    ],
+    "questions": [
+      "Decision questions & missing information",
+      [
+        [
+          "What game and cutoff are priced?",
+          "",
+          "Official schedule ID, timezone, forecast timestamp and feature availability times",
+          "Discover with official game pages; reject inputs published after forecast cutoff.",
+          [
+            "teams"
+          ]
+        ],
+        [
+          "Who is available?",
+          "Report includes practice and game-status columns.",
+          "Final active/inactive list and report revisions",
+          "Archive official reports and reconcile club game-day announcements; blank status is not a medical clearance.",
+          [
+            "injuries"
+          ]
+        ],
+        [
+          "Who actually replaces a starter?",
+          "Club charts provide positional ordering; some are unofficial.",
+          "Confirmed lineup, substitutions, snap allocation and third/fourth-string roles",
+          "Join roster IDs, transactions, active lists and official gamebooks; never infer replacement from injury alone.",
+          [
+            "was",
+            "ne"
+          ]
+        ],
+        [
+          "How much does a replacement change the line?",
+          "",
+          "Historical point-in-time participation, opponents, scheme and uncertainty",
+          "Estimate only in training; compare models with/without role features on held-out weeks.",
+          [
+            "injuries",
+            "nist"
+          ]
+        ],
+        [
+          "Are prices executable?",
+          "",
+          "Operator, jurisdiction, timestamp, limits, two-sided odds, fees and settlement version",
+          "Obtain authorized operator records; no current market price asserted.",
+          [
+            "teams"
+          ]
+        ],
+        [
+          "Do correlations transfer?",
+          "",
+          "Paired official game observations, thresholds, sample window and holdout results",
+          "Measure continuous stats and binary leg outcomes separately; do not reuse team-season correlations as parlay dependence.",
+          [
+            "nist"
+          ]
+        ],
+        [
+          "Can rewards be paid?",
+          "",
+          "Budget, eligibility, jurisdiction and approved competition rules",
+          "Use paper-only provisional recognition; no cash rewards or gambling execution enabled.",
+          [
+            "teams"
+          ]
+        ]
+      ]
+    ],
+    "injuries": [
+      "Injuries & replacement evidence",
+      [
+        [
+          "WAS \u00b7 Lucas Patrick \u00b7 C",
+          "Concussion; Did Not Participate In Practice; Out.",
+          "Replacement identity, depth and expected snaps",
+          "Verified displayed NFL row on review date only; replacement and impact unverified.",
+          [
+            "injuries"
+          ]
+        ],
+        [
+          "WAS \u00b7 Colson Yankoff \u00b7 TE",
+          "Knee; Did Not Participate In Practice; Out.",
+          "Confirmed replacement and impact",
+          "Chart lists John Bates then Colson Yankoff on a TE row; does not establish a promoted starter.",
+          [
+            "injuries",
+            "was"
+          ]
+        ],
+        [
+          "NE \u00b7 Ben Brown",
+          "NFL report: C; Knee; Did Not Participate In Practice; Out.",
+          "Actual game-day role and replacement",
+          "Club unofficial chart places Brown first at LG and second at C. Position/role discrepancy requires review, not silent normalization.",
+          [
+            "injuries",
+            "ne"
+          ]
+        ],
+        [
+          "NE \u00b7 Carlton Davis III \u00b7 CB",
+          "Knee; Did Not Participate In Practice; Out.",
+          "Confirmed defensive replacement, third/fourth depth and matchup impact",
+          "No quantitative defensive deficiency claimed.",
+          [
+            "injuries"
+          ]
+        ],
+        [
+          "WAS \u00b7 QB ordering",
+          "Chart displays Jayden Daniels, Marcus Mariota, Athan Kaliakmanis.",
+          "Final game-day participants and expected snaps",
+          "Chart-only ordering; do not label all as active or assert a depth-related betting edge.",
+          [
+            "was"
+          ]
+        ],
+        [
+          "League coverage",
+          "",
+          "Other players, all-team depth charts, final active lists and report revisions",
+          "UNVERIFIED / incomplete coverage. No live monitoring process deployed.",
+          [
+            "teams",
+            "injuries"
+          ]
+        ]
+      ]
+    ],
+    "strategies": [
+      "Signal research & validation",
+      [
+        [
+          "S1 \u00b7 singles \u00b7 independent team strength",
+          "PROPOSAL: opponent-adjusted scoring/efficiency model, with shrinkage.",
+          "Official historical games, time-correct training and executable quotes",
+          "Compare with a simple scoring baseline; fit margin/total distributions; publish fair prices separately from market prices.",
+          [
+            "teams",
+            "nist"
+          ]
+        ],
+        [
+          "S2 \u00b7 singles/props \u00b7 replacement exposure",
+          "PROPOSAL: position-specific availability and expected participation.",
+          "Verified starters, substitutes, snaps and pregame status archives",
+          "Test incremental held-out forecast improvement; no hard-coded points per missing starter.",
+          [
+            "injuries",
+            "was",
+            "ne"
+          ]
+        ],
+        [
+          "S3 \u00b7 player prop combos",
+          "PROPOSAL: shared pace, attempts and target-allocation model.",
+          "Official paired logs, active roles, thresholds and settlement rules",
+          "Fit joint outcomes; validate joint probabilities, not only each marginal.",
+          [
+            "nist",
+            "injuries"
+          ]
+        ],
+        [
+          "S4 \u00b7 cross-game parlays",
+          "PROPOSAL: aggregate only independently validated legs.",
+          "Shared weather/schedule/strategy exposure and operator quote",
+          "Test dependence across games and common model errors; do not automatically multiply probabilities.",
+          [
+            "nist"
+          ]
+        ],
+        [
+          "G0 \u00b7 provenance + contract",
+          "PROPOSED REQUIRED GATE",
+          "Official source, retrieval time, hash, player/game IDs, quote and settlement terms",
+          "Missing evidence blocks eligibility. Original records remain immutable.",
+          [
+            "teams",
+            "injuries"
+          ]
+        ],
+        [
+          "G1 \u00b7 preregistration + leakage",
+          "PROPOSED REQUIRED GATE",
+          "Locked hypothesis, variants, cutoff and chronological folds",
+          "Record every tried variant; training precedes test and final holdout is untouched.",
+          [
+            "nist"
+          ]
+        ],
+        [
+          "G2 \u00b7 predictive skill",
+          "PROPOSED REQUIRED GATE",
+          "Out-of-sample log loss, Brier score, calibration and interval coverage",
+          "Compare with locked baseline; thresholds and power plan must be preregistered, not chosen after results.",
+          [
+            "nist"
+          ]
+        ],
+        [
+          "G3 \u00b7 economic skill + chance",
+          "PROPOSED REQUIRED GATE",
+          "Net returns, confidence intervals, price slippage, all attempted tests",
+          "Cluster uncertainty by game/week, correct multiple testing, and test null outcomes. CLV alone is not proof of profit.",
+          [
+            "nist"
+          ]
+        ],
+        [
+          "G4 \u00b7 joint validation + robustness",
+          "PROPOSED REQUIRED GATE",
+          "Conditional dependence, role changes, season drift and drawdown",
+          "Pass joint calibration for combos; sensitivity and prospective paper test required.",
+          [
+            "nist",
+            "injuries"
+          ]
+        ],
+        [
+          "G5 \u00b7 reproducibility + deployment",
+          "PROPOSED REQUIRED GATE",
+          "Locked artifacts, reproducible rerun, stale-data alarm, rollback",
+          "All gates must pass; a missing gate is blocked, never treated as passed.",
+          [
+            "teams"
+          ]
+        ]
+      ]
+    ],
+    "correlations": [
+      "Correlation & fair pricing",
+      [
+        [
+          "QB passing yards vs receiver yards",
+          "",
+          "Official paired game logs and role-conditioned sample",
+          "Coefficient blank / UNVERIFIED. Report n, window, Pearson/Spearman and uncertainty when available.",
+          [
+            "nist"
+          ]
+        ],
+        [
+          "QB passing over + receiver over",
+          "",
+          "Exact thresholds, paired binary outcomes and push/void rules",
+          "Binary correlation and joint probability blank / UNVERIFIED; continuous r is not a combo price.",
+          [
+            "nist"
+          ]
+        ],
+        [
+          "RB rushing over + team win",
+          "",
+          "Official paired outcomes, role changes and game context",
+          "Joint probability blank / UNVERIFIED; a plausible football story is not a measured edge.",
+          [
+            "nist"
+          ]
+        ],
+        [
+          "Three-leg player prop combo",
+          "",
+          "Full joint distribution and operator settlement",
+          "Pairwise correlations alone do not determine a three-way joint probability. No fair price published.",
+          [
+            "nist"
+          ]
+        ],
+        [
+          "Origination workflow",
+          "PROPOSAL: train only on pre-cutoff official observations.",
+          "Held-out distribution calibration and current complete inputs",
+          "Score distribution \u2192 win/cover/total probabilities \u2192 fair odds; compare with quotes only after independent forecast is locked.",
+          [
+            "teams",
+            "nist"
+          ]
+        ],
+        [
+          "Derivation boundary",
+          "Model outputs are estimates, never official NFL lines.",
+          "Reproducible sourced input set",
+          "Because current complete inputs are missing, current lines, EV and recommended stakes remain blank.",
+          [
+            "teams"
+          ]
+        ]
+      ]
+    ],
+    "leaderboard": [
+      "Competition & rewards",
+      [
+        [
+          "Singles division",
+          "",
+          "Validated out-of-sample submissions",
+          "Blocked; no ranking or reward issued.",
+          [
+            "nist"
+          ]
+        ],
+        [
+          "Parlays division",
+          "",
+          "Validated joint-outcome submissions",
+          "Blocked; do not rank by raw win count or cherry-picked returns.",
+          [
+            "nist"
+          ]
+        ],
+        [
+          "Player prop combos division",
+          "",
+          "Validated role-conditioned joint forecasts",
+          "Blocked; no ranking or reward issued.",
+          [
+            "injuries",
+            "nist"
+          ]
+        ],
+        [
+          "Proposed ranking policy",
+          "PROPOSAL: economic-skill lower confidence bound, forecast skill tie-break.",
+          "Approved scoring window, trial registry, risk cap and comparable unit stakes",
+          "Rank within division only after every gate passes; publish all failures and freeze season rules.",
+          [
+            "nist"
+          ]
+        ],
+        [
+          "Proposed reward policy",
+          "PROPOSAL: noncash recognition for eligible top performers.",
+          "Approved prize rules, budget and legal review",
+          "No cash prizes configured. Never reward a strategy solely for a lucky short run.",
+          [
+            "nist"
+          ]
+        ]
+      ]
+    ],
+    "suggestions": [
+      "Suggestions \u00b7 review before implementation",
+      [
+        [
+          "P0 \u00b7 immutable evidence archive",
+          "PROPOSED / NOT IMPLEMENTED",
+          "Authorized access and retention policy",
+          "Preferred first step: timestamp + hash raw official responses; acceptance: every feature traces to pre-cutoff evidence.",
+          [
+            "injuries",
+            "teams"
+          ]
+        ],
+        [
+          "P0 \u00b7 role reconciliation",
+          "PROPOSED / NOT IMPLEMENTED",
+          "Roster IDs, depth/active lists, transaction and gamebook feeds",
+          "Compare official chart ordering with confirmed lineup; acceptance: discrepancies block affected predictions.",
+          [
+            "was",
+            "ne"
+          ]
+        ],
+        [
+          "P0 \u00b7 stale-data circuit breaker",
+          "PROPOSED / NOT IMPLEMENTED",
+          "Source-specific update expectations and alarm destination",
+          "Fail closed on missing or changed source schema; acceptance: synthetic stale/failure tests prevent publication.",
+          [
+            "injuries"
+          ]
+        ],
+        [
+          "P1 \u00b7 evidence-first navigation",
+          "PROPOSED / NOT IMPLEMENTED IN ROOT",
+          "Final integration ownership of shared landing page",
+          "Recommend one NFL entry point with current-as-of date; root NBA summary and old NFL pages should have clear sport/date labels.",
+          [
+            "teams"
+          ]
+        ],
+        [
+          "P1 \u00b7 reproducible experiment registry",
+          "PROPOSED / NOT IMPLEMENTED",
+          "Complete historical records and registered analysis plan",
+          "Prefer archived paper experiments before complex models; acceptance: deterministic results and untouched holdout.",
+          [
+            "nist"
+          ]
+        ],
+        [
+          "P2 \u00b7 joint simulator",
+          "PROPOSED / NOT IMPLEMENTED",
+          "Validated singles and role-conditioned samples",
+          "Defer until ingestion and singles pass gates; acceptance: joint calibration survives future weeks.",
+          [
+            "nist"
+          ]
+        ]
+      ]
+    ],
+    "flagged": [
+      "Flagged for Review",
+      [
+        [
+          "F01 \u00b7 scope",
+          "Repository contains NFL, NBA and unrelated rental dashboards.",
+          "Full independent row-by-row source audit",
+          "Bounded review only. Root EXECUTIVE_SUMMARY.md is NBA-specific; do not present it as this NFL summary.",
+          [
+            "teams"
+          ]
+        ],
+        [
+          "F02 \u00b7 historical lines",
+          "data/model_lines_2026_wk9.csv contains Week 9 dated outputs.",
+          "Current independent verification and refresh",
+          "Historical research only; not current actionable lines. Source links are not proof of present-day freshness.",
+          [
+            "teams"
+          ]
+        ],
+        [
+          "F03 \u00b7 chart authority",
+          "Patriots explicitly calls chart unofficial.",
+          "Confirmed lineup and participation",
+          "Official publisher does not make chart ordering an official game-day lineup.",
+          [
+            "ne"
+          ]
+        ],
+        [
+          "F04 \u00b7 position discrepancy",
+          "Ben Brown: C in NFL injury row; first LG / second C on club chart.",
+          "Game-day role reconciliation",
+          "Keep both observations; replacement and quantitative impact blank.",
+          [
+            "injuries",
+            "ne"
+          ]
+        ],
+        [
+          "F05 \u00b7 policy URL failed",
+          "Attempted injury-policy URL returned 404.",
+          "Accessible current policy document",
+          "No reporting deadlines or policy definitions asserted from this URL.",
+          [
+            "policy"
+          ]
+        ],
+        [
+          "F06 \u00b7 no current coefficients",
+          "",
+          "Sourced paired observations, exact thresholds and holdout",
+          "Current prop correlations, joint prices and market EV blank / UNVERIFIED.",
+          [
+            "nist"
+          ]
+        ],
+        [
+          "F07 \u00b7 proposed thresholds",
+          "nfl_model/validation.py contains fixed sample and economic thresholds.",
+          "Independent justification and power analysis",
+          "Project policies, not NFL-certified standards. Existing boolean comparisons also need strict schema review before qualification.",
+          [
+            "nist"
+          ]
+        ],
+        [
+          "F08 \u00b7 no continuous tracker",
+          "",
+          "Authorized ingestion, all-team coverage, persistent scheduler and monitoring",
+          "Snapshot only; no claim of automated current all-team injury/depth tracking.",
+          [
+            "injuries",
+            "teams"
+          ]
+        ],
+        [
+          "F09 \u00b7 evidence currency",
+          "Dynamic pages can change after review.",
+          "Immutable full response archives and new retrieval",
+          "Selected rows reflect displayed source at review time, not permanent verified truth.",
+          [
+            "injuries"
+          ]
+        ]
+      ]
+    ],
+    "sources": [
+      "Source register",
+      [
+        [
+          "injuries",
+          "NFL injury report",
+          "Checked displayed Week 10 report, first chunk only; not a complete league snapshot.",
+          "Reviewed 2026-11-12 UTC; source supports only its stated scope.",
+          [
+            "injuries"
+          ]
+        ],
+        [
+          "teams",
+          "NFL official club directory",
+          "Checked directory and linked club identities.",
+          "Reviewed 2026-11-12 UTC; source supports only its stated scope.",
+          [
+            "teams"
+          ]
+        ],
+        [
+          "was",
+          "Commanders depth chart",
+          "Checked displayed offensive and defensive rows; not proof of game participation.",
+          "Reviewed 2026-11-12 UTC; source supports only its stated scope.",
+          [
+            "was"
+          ]
+        ],
+        [
+          "ne",
+          "Patriots unofficial depth chart",
+          "Checked explicit unofficial disclaimer and offensive chart; not a confirmed lineup.",
+          "Reviewed 2026-11-12 UTC; source supports only its stated scope.",
+          [
+            "ne"
+          ]
+        ],
+        [
+          "nist",
+          "NIST scatter plots",
+          "Checked association/causation warning; does not endorse betting policy.",
+          "Reviewed 2026-11-12 UTC; source supports only its stated scope.",
+          [
+            "nist"
+          ]
+        ],
+        [
+          "policy",
+          "NFL policy URL \u2014 unavailable",
+          "Returned 404 / Flag on the Play; no policy claims accepted.",
+          "Reviewed 2026-11-12 UTC; source supports only its stated scope.",
+          [
+            "policy"
+          ]
+        ]
+      ]
+    ]
+  }
+}
