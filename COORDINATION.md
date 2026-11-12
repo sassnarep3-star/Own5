@@ -1067,7 +1067,7 @@ Read-only for this session: root `index.html`/`pages/`/`data/research.json` (CI-
 | D7 | Executive summary | done | e413f933 | research/nfl-decision-desk/executive-summary.md, nfl-decision-desk-e413f933/executive-summary.html | Only computed/verified values; decisions-needed section; bottom line published. |
 | D8 | Site: landing dashboard + category subpages + Flagged for Review | done | e413f933 | nfl-decision-desk-e413f933/*.html, nfl-decision-desk-e413f933/build_site.py | 12 pages + style.css, deterministic build; every tbody row source-linked; 8 open flags published on flagged.html. |
 | D9 | Line-by-line verification harness | done | e413f933 | nfl-decision-desk-e413f933/verify_nfl_desk.py | PASS: 12 pages, per-row source links, internal links, CSV source columns, market-blank policy; root CI also green (unittest OK, build diff clean, desk:check PASS). |
-| D10 | Integration: re-verify, PR to main, merge, Pages deploy verification, record | unclaimed | e413f933 | COORDINATION.md | Preserve concurrent work; merge only with green checks. |
+| D10 | Integration: re-verify, PR to main, merge, Pages deploy verification, record | done | e413f933 | COORDINATION.md | PR #64 merged `df04dd7` 2026-11-12T18:19:56Z; Pages built + 3 live URLs verified; d0343637 site untouched; drift logged. |
 
 Cross-session requests at claim time: none.
 
@@ -1089,6 +1089,28 @@ both are other sessions' repo-wide audit snapshots going stale as the repository
 This desk's own `nfl-decision-desk-e413f933/verify_nfl_desk.py` PASSes (12 pages), session
 d0343637's `nfl-decision-desk/verify.py` PASSes (4 tests, untouched), root unit tests and
 `desk:check` PASS. Neither drifting check is required for merge (PR #63 merged in the same state).
+
+### D10 integration record — 2026-11-12
+
+- **Namespace collision resolved without discarding work:** session `d0343637` owns
+  `nfl-decision-desk/**` on main (their site verified live and untouched). This session's desk
+  was moved wholesale to `nfl-decision-desk-e413f933/**` before merge (the `38a1fc27` precedent);
+  `research/nfl-decision-desk/**` remained uncontested. COORDINATION conflict resolved by
+  keeping both sessions' blocks verbatim.
+- **[PR #64](https://github.com/sassnarep3-star/Own5/pull/64)** (`arena/e413f933-own5` → `main`)
+  merged 2026-11-12T18:19:56Z, merge commit `df04dd714ed920f9fb6510f9af463c1d679e0a0d`.
+- **Checks at merge:** root research-dashboard verify PASS, desk-verify PASS, 26d4cafb desk
+  PASS, NBA/SF verifies PASS, decision-desk build/verify steps PASS locally; two cross-session
+  audit-snapshot checks failed (logged above, not actioned, non-required — same state as merged
+  PR #63).
+- **Pages:** build for `df04dd7` completed with no error (`pages-build-deployment`, status
+  `built`). Live content verified via fetch: [dashboard](https://sassnarep3-star.github.io/Own5/nfl-decision-desk-e413f933/),
+  [lines](https://sassnarep3-star.github.io/Own5/nfl-decision-desk-e413f933/lines.html) (14 games,
+  market cells blank·flagged, per-row sources), [flagged](https://sassnarep3-star.github.io/Own5/nfl-decision-desk-e413f933/flagged.html)
+  (8 open + 2 closed flags). Session `d0343637`'s [site](https://sassnarep3-star.github.io/Own5/nfl-decision-desk/)
+  re-checked live and unchanged.
+- **Session e413f933 complete: D1–D10 all done.** Open items (Q07/Q13 policy decisions,
+  S01–S12 suggestions, F-* flags) are published for review and are non-blocking per brief.
 ## Session 38a1fc27 — NFL Decision Desk: requirements audit, suggestions, questions, injury/depth tracking (2026-11-12 UTC)
 
 Branch fixed by Arena: `arena/38a1fc27-own5` (base `95c2eea`). Existing scopes are read-only for this session. This session claims only additive namespaces:
