@@ -238,8 +238,13 @@ def build():
                      "n=%s non-neutral games, p=%s"
                      % (hfa_rec.get("n_non_neutral_games"), hfa_rec.get("p_two_sided")),
                      "warn"))
-    body.append(card("Away / home records", "71 / 64",
-                     "1 tie - away teams have won more games than home teams in 2026",
+    _hw = sum(1 for g in ledger if int(g["home_pts"]) > int(g["away_pts"]))
+    _aw = sum(1 for g in ledger if int(g["away_pts"]) > int(g["home_pts"]))
+    _tt = len(ledger) - _hw - _aw
+    body.append(card("Away / home records", "%d / %d" % (_aw, _hw),
+                     "%d tie%s - %s teams have won more games than home teams in 2026"
+                     % (_tt, "" if _tt == 1 else "s",
+                        "away" if _aw > _hw else ("home" if _hw > _aw else "neither")),
                      "warn"))
     body.append(card("Week 10 lines originated", summary.get("week10_lines_originated", ""),
                      "spread, total and moneyline on all 14 matchups"))
@@ -281,9 +286,10 @@ def build():
                 "<a href='leaderboard.html'>Leaderboard</a>. The other eight are blocked or unranked "
                 "because they fail a gate, not because they were filtered silently.</li>")
     body.append("<li><b>Selective skill is NOT established.</b> Accuracy across confidence terciles is "
-                "0.414 / 0.828 / 0.724 &mdash; not monotone, so the highest-confidence bucket does not beat "
+                "%s / %s / %s &mdash; not monotone, so the highest-confidence bucket does not beat "
                 "the middle one. The engine reports this rather than claiming selectivity. "
-                "See <a href='luck-vs-skill.html'>Luck vs Skill</a>.</li>")
+                "See <a href='luck-vs-skill.html'>Luck vs Skill</a>.</li>"
+                % (sel[0]["win_rate"], sel[1]["win_rate"], sel[2]["win_rate"]))
     body.append("<li><b>No official market or player-prop lines exist.</b> NFL.com publishes none, so every "
                 "market, price, edge and CLV column on this site is deliberately left blank and flagged "
                 "(FLG-01, FLG-02) rather than sourced from a third-party scrape.</li>")
