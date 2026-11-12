@@ -100,7 +100,11 @@ def main():
        % (nmatch, nmatch, summary["standings_mismatches"]))
     kv("Empirical home-field advantage", "%+.3f pts (n=%s, p=%s)"
        % (float(hfa["mean_home_margin"]), hfa["n_non_neutral_games"], hfa["p_two_sided"]))
-    kv("Home / away records", "64 W / 71 L / 1 T")
+    _lg = rows("ledger.csv")
+    _hw = sum(1 for g in _lg if int(g["home_pts"]) > int(g["away_pts"]))
+    _aw = sum(1 for g in _lg if int(g["away_pts"]) > int(g["home_pts"]))
+    _tt = len(_lg) - _hw - _aw
+    kv("Home / away records", "%d home W / %d away W / %d T" % (_hw, _aw, _tt))
     kv("Week 10 lines originated", summary["week10_lines_originated"])
     kv("Injury / depth rows tracked", len(inj))
     kv("Player game logs", len(logs))

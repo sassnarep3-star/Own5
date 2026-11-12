@@ -12,7 +12,7 @@
 | Games re-fetched after the repo's 2026-11-02 freeze | 16 |
 | Standings reconciliation | 32/32 teams, 0 mismatches |
 | Empirical home-field advantage | -0.054 pts (n=130, p=0.963127) |
-| Home / away records | 64 W / 71 L / 1 T |
+| Home / away records | 64 home W / 71 away W / 1 T |
 | Week 10 lines originated | 14 |
 | Injury / depth rows tracked | 46 |
 | Player game logs | 50 |
