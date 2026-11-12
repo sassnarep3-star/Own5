@@ -23,6 +23,8 @@ jobs:
           python-version: '3.11'
       - name: Fetch official + aggregator inputs (provenance recorded)
         run: python3 tools/decision_desk/fetch_sources.py
+      - name: Parse official pages into row-level CSVs
+        run: python3 tools/decision_desk/parse_official.py
       - name: Upload official HTML snapshots (inspection artifact, not committed)
         uses: actions/upload-artifact@v4
         with:
@@ -33,7 +35,7 @@ jobs:
         run: |
           git config user.name "decision-desk-bot"
           git config user.email "decision-desk-bot@users.noreply.github.com"
-          git add data/decision-desk/raw
+          git add data/decision-desk/raw data/decision-desk/official
           if git diff --cached --quiet; then
             echo "no snapshot change"
           else
