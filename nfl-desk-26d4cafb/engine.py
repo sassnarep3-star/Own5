@@ -76,6 +76,11 @@ def norm_team(t):
     return ABBR_ALIAS.get(t, t)
 
 
+def _norm_triples(tr):
+    """Normalise (week, away, home) triples to the official nfl.com team tokens."""
+    return {(wk, norm_team(a), norm_team(h)) for wk, a, h in tr}
+
+
 # PLAYER_GAME_LOGS_2026 tuple index constants (see raw_inputs.py for the schema).
 (I_TEAM, I_WK, I_DATE, I_OPP, I_WL, I_TEAM_PTS, I_OPP_PTS,
  I_QB, I_QB_COMP, I_QB_ATT, I_QB_YDS, I_QB_TD, I_QB_INT, I_QB_URL,
@@ -85,17 +90,21 @@ def norm_team(t):
 
 # Confirmed international neutral-site games (official venue note present on nfl.com).
 # (week, away, home) -- verified against the official schedule page on 2026-11-12.
-NEUTRAL_TRIPLES = {
+NEUTRAL_TRIPLES_RAW = {
     (1, "SF", "LAR"),   # Melbourne, Australia
     (5, "PHI", "JAX"),  # London
     (7, "PIT", "NO"),   # Saint-Denis
     (9, "CIN", "ATL"),  # Madrid, Spain
 }
 # Unconfirmed: 9:30 AM ET international window but venue not stated on the official page.
-NEUTRAL_UNCONFIRMED_TRIPLES = {
+NEUTRAL_UNCONFIRMED_TRIPLES_RAW = {
     (4, "IND", "WSH"),
     (6, "HOU", "JAX"),
 }
+
+
+NEUTRAL_TRIPLES = _norm_triples(NEUTRAL_TRIPLES_RAW)
+NEUTRAL_UNCONFIRMED_TRIPLES = _norm_triples(NEUTRAL_UNCONFIRMED_TRIPLES_RAW)
 
 
 # ===========================================================================

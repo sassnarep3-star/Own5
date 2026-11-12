@@ -269,7 +269,7 @@ def build():
     body.append("<li><b>2026 home-field advantage is statistically indistinguishable from zero "
                 "(%+.2f pts, p=%.2f).</b> Prior boards assumed +2.0. That assumption is the single "
                 "largest systematic error in the repo: on the matched sample it produced a margin bias of "
-                "%s points." % (float(hfa_rec.get("mean_home_margin", 0)),
+                "%s points.</li>" % (float(hfa_rec.get("mean_home_margin", 0)),
                                 float(hfa_rec.get("p_two_sided", 0) or 0),
                                 (oos_matched[2]["margin_bias"] if len(oos_matched) > 2 else "n/a")))
     body.append("<li><b>Baltimore is starting its third-string quarterback on Monday night</b> while the "
@@ -326,7 +326,7 @@ def build():
     b.append("<h2>Findings that should change decisions</h2><ol class='findings'>")
     b.append("<li>Do not use a +2.0 home-field assumption for 2026. The empirical value on 131 "
              "non-neutral games is %+.2f points with a 95%% interval of [%s, %s]."
-             % (float(hfa_rec.get("mean_home_margin", 0)), hfa_rec.get("ci95_low"), hfa_rec.get("ci95_high")))
+             % (float(hfa_rec.get("mean_home_margin", 0)), hfa_rec.get("ci95_low"), hfa_rec.get("ci95_high")) + "</li>")
     b.append("<li>Do not read the official weekly injury table as a health signal for Monday night games. "
              "Baltimore's QB1 and QB2 are both on IR while the table shows &ldquo;No Injuries Reported&rdquo;.</li>")
     b.append("<li>Do not rank strategies on raw win rate. With ten candidates, one is expected to look "
@@ -336,13 +336,13 @@ def build():
              "the observed joint rate is %s against an independence-implied %s."
              % (parlay_sum[0].get("measured_leg_phi") if parlay_sum else "-",
                 parlay_sum[0].get("parlay_hit_rate") if parlay_sum else "-",
-                parlay_sum[0].get("independence_implied_hit_rate") if parlay_sum else "-"))
+                parlay_sum[0].get("independence_implied_hit_rate") if parlay_sum else "-") + "</li>")
     b.append("<li>Two-leg parlays at -110 per leg need a %.1f%% hit rate to break even. This sample hit "
              "%s on %s non-overlapping parlays, so on paper they clear it &mdash; but n &lt; 20, so gate "
              "G-03 blocks the strategy until more games accumulate."
              % (100 * float(parlay_sum[0]["break_even_hit_rate"]) if parlay_sum else 0,
                 parlay_sum[0].get("parlay_hit_rate") if parlay_sum else "-",
-                parlay_sum[0].get("n_parlays") if parlay_sum else "-"))
+                parlay_sum[0].get("n_parlays") if parlay_sum else "-") + "</li>")
     b.append("</ol>")
     b.append("<h2>What is still missing</h2>")
     b.append(render_table(flagged, [

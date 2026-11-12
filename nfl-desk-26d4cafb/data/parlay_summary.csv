@@ -1,2 +1,2 @@
 n_parlays,pairing,leg_a_win_rate,leg_b_win_rate,measured_leg_phi,correlation_cap_ok,parlay_hit_rate,independence_implied_hit_rate,null_implied_hit_rate,lift_over_independence,model_expected_hit_rate,frechet_min,frechet_max,within_frechet_bounds,roi_per_unit,units,break_even_hit_rate,max_drawdown_units,sharpe,brier,brier_reference_null,p_two_sided_exact_poisson_binomial,source_url
-16,"greedy, non-overlapping, within week",0.75,0.75,-0.3333,YES,0.5,0.5625,0.2648,0.8889,0.6473,0.5,0.75,YES,0.8223,13.157,0.2744,3.0,0.4512,0.3068,0.3141,0.044088,https://www.nfl.com/schedules
+16,"greedy, non-overlapping, within week",0.75,0.75,-0.3333,YES,0.5,0.5625,0.2648,0.8889,0.6459,0.5,0.75,YES,0.8223,13.157,0.2744,3.0,0.4512,0.3073,0.3141,0.044088,https://www.nfl.com/schedules

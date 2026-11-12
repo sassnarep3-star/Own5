@@ -53,7 +53,7 @@ cowboys-at-texans-2026-reg-4,4,2026-10-04,DAL,HOU,34,30,-4,64,False,False,data/g
 broncos-at-49ers-2026-reg-4,4,2026-10-04,DEN,SF,14,24,10,38,False,False,data/games_2026.json (nfl.com-verified),https://www.nfl.com/games/broncos-at-49ers-2026-reg-4
 lions-at-panthers-2026-reg-4,4,2026-10-04,DET,CAR,26,32,6,58,False,False,data/games_2026.json (nfl.com-verified),https://www.nfl.com/games/lions-at-panthers-2026-reg-4
 packers-at-buccaneers-2026-reg-4,4,2026-10-04,GB,TB,17,14,-3,31,False,False,data/games_2026.json (nfl.com-verified),https://www.nfl.com/games/packers-at-buccaneers-2026-reg-4
-colts-at-commanders-2026-reg-4,4,2026-10-04,IND,WAS,30,13,-17,43,False,False,data/games_2026.json (nfl.com-verified),https://www.nfl.com/games/colts-at-commanders-2026-reg-4
+colts-at-commanders-2026-reg-4,4,2026-10-04,IND,WAS,30,13,-17,43,False,True,data/games_2026.json (nfl.com-verified),https://www.nfl.com/games/colts-at-commanders-2026-reg-4
 jaguars-at-bengals-2026-reg-4,4,2026-10-04,JAX,CIN,22,17,-5,39,False,False,data/games_2026.json (nfl.com-verified),https://www.nfl.com/games/jaguars-at-bengals-2026-reg-4
 chiefs-at-raiders-2026-reg-4,4,2026-10-04,KC,LV,30,27,-3,57,False,False,data/games_2026.json (nfl.com-verified),https://www.nfl.com/games/chiefs-at-raiders-2026-reg-4
 chargers-at-seahawks-2026-reg-4,4,2026-10-04,LAC,SEA,23,30,7,53,False,False,data/games_2026.json (nfl.com-verified),https://www.nfl.com/games/chargers-at-seahawks-2026-reg-4

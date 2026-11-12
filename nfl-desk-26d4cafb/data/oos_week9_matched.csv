@@ -1,5 +1,5 @@
 model,matched_sample_n,margin_MAE,margin_bias,total_MAE,straight_up_correct,straight_up_accuracy,brier_score,source_url,note
-"26d4cafb walk-forward (this session, depth-adjusted)",13,10.983,4.758,9.538,11,0.8462,0.1628,https://www.nfl.com/schedules/2026/by-week/week-9,Matched sample: only games graded by EVERY model listed here.
-line-lab market scrape (ESPN/DraftKings) -- THIRD PARTY,13,9.308,5.154,8.808,12,0.9231,0.1391,https://www.nfl.com/schedules/2026/by-week/week-9,Matched sample: only games graded by EVERY model listed here.
-"nfl-strategy-lab (originate_lines.py, HFA=+2.0)",13,9.808,5.346,9.615,10,0.7692,0.1666,https://www.nfl.com/schedules/2026/by-week/week-9,Matched sample: only games graded by EVERY model listed here.
+"26d4cafb walk-forward (this session, depth-adjusted)",13,11.028,4.896,9.538,11,0.8462,0.1648,https://www.nfl.com/schedules/2026/by-week/week-9,Matched sample: only games graded by EVERY model listed here.
+line-lab market scrape (ESPN/DraftKings) -- THIRD PARTY,13,9.308,5.154,8.808,12,0.9231,0.1389,https://www.nfl.com/schedules/2026/by-week/week-9,Matched sample: only games graded by EVERY model listed here.
+"nfl-strategy-lab (originate_lines.py, HFA=+2.0)",13,9.808,5.346,9.615,10,0.7692,0.1664,https://www.nfl.com/schedules/2026/by-week/week-9,Matched sample: only games graded by EVERY model listed here.
 "own5-desk (points-poisson-v0.1, HFA=0.0, k=8)",13,10.193,4.148,9.615,10,0.7692,0.1252,https://www.nfl.com/schedules/2026/by-week/week-9,Matched sample: only games graded by EVERY model listed here.
