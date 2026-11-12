@@ -34,7 +34,7 @@ def tracked_files():
         p=Path(name)
         s=name.lower()
         include=(
-            s.startswith(("nfl-strategy-lab/","line-lab/","own5-desk/","nfl-decision-desk/","nfl_model/","research/arena-f1d30421/","research/evidence/"))
+            s.startswith(("nfl-strategy-lab/","line-lab/","own5-desk/","nfl-decision-desk/","nfl-decision-desk-38a1fc27/","nfl_model/","research/arena-f1d30421/","research/evidence/"))
             or s.startswith(("data/raw/","data/")) and p.suffix.lower() in {".csv",".json"} and not s.startswith(("data/nba","data/own5_desk"))
             or s.startswith(("research/",)) and p.suffix.lower() in {".md",".json"} and any(k in s for k in ("nfl","football","official_snapshot","strategies","correlations","validation-gates","bet-markets","league-structure","executive-summary","verification")) and not any(k in s for k in ("nba","sf-rent","rental"))
             or s.startswith(("pages/","assets/","scripts/","tools/","site/","tests/",".github/workflows/"))
@@ -44,7 +44,7 @@ def tracked_files():
         if include and p.is_file():
             if s.startswith(("nfl-b34253a1/","research/nfl-b34253a1/")) or s==".github/workflows/nfl-b34253a1.yml":
                 continue
-            if any(x in s for x in ("nba-","/nba/","sf-rent","rental-sf","rental-increase")):
+            if any(x in s for x in ("nba-","nba_","/nba/","sf-rent","rental-sf","rental-increase")):
                 continue
             picked.append(p)
     return sorted(set(picked),key=lambda x:str(x))

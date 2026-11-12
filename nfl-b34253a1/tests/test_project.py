@@ -8,6 +8,7 @@ from pathlib import Path
 PROJECT = Path(__file__).resolve().parents[1]
 REPO = PROJECT.parent
 sys.path.insert(0, str(PROJECT))
+import audit_repo
 import engine
 
 
@@ -75,6 +76,13 @@ class NFLWeek10SnapshotTests(unittest.TestCase):
         self.assertLess(float(result["p"]), 1)
         strong = engine.corr_stats(list(range(1, 33)), list(range(1, 33)))
         self.assertGreater(float(strong["p"]), 0)
+
+    def test_audit_scope_includes_prior_nfl_desk_and_excludes_nba(self):
+        paths = {path.as_posix() for path in audit_repo.tracked_files()}
+        self.assertIn("nfl-decision-desk-38a1fc27/index.html", paths)
+        self.assertNotIn("tools/nba_line_desk/build.py", paths)
+        self.assertNotIn("tests/test_nba_line_desk.py", paths)
+        self.assertFalse(any(path.startswith(("sf-rent", "rental-sf", "rental-increase")) for path in paths))
 
     def test_static_site_has_overview_and_twelve_pages(self):
         pages = {p.name for p in PROJECT.glob("*.html")}
