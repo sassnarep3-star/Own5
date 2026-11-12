@@ -317,4 +317,41 @@ python3 tools/decision_desk/fetch_sources.py     # official pages + pinned mirro
 python3 tools/decision_desk/build_all.py         # parse, compute, export, audit
 python3 tools/decision_desk/build_site.py        # render nfl-decision-desk-38a1fc27/
 python3 tools/decision_desk/verify.py            # fails on any unsourced row or broken link
+
+## NFL Decision Desk — line origination, signals & depth tracking (session 26d4cafb)
+
+**Live site:** https://sassnarep3-star.github.io/Own5/nfl-desk-26d4cafb/ ·
+**Executive summary:** [`research/nfl-26d4cafb/executive-summary.md`](research/nfl-26d4cafb/executive-summary.md) ·
+**Flagged for Review:** https://sassnarep3-star.github.io/Own5/nfl-desk-26d4cafb/flagged.html ·
+**Dossier index:** [`research/nfl-26d4cafb/README.md`](research/nfl-26d4cafb/README.md)
+
+An 18-page, official-source-only analytics dashboard for the **2026 NFL season, Week 10**
+(snapshot 2026-11-12 UTC). It reviews the repository line by line against official sources,
+originates its own Week 10 lines, tracks Offense/Defense 1st-through-4th-string depth
+deficiencies, runs signal strategies through ten fail-closed validation gates on a leaderboard,
+publishes correlation and prop-combo values with Frechet-Hoeffding bounds, and separates luck
+from selective skill.
+
+Key verified values: **136** completed official games reconciling **32/32 teams with 0
+mismatches** on W/L/T/PF/PA to [nfl.com/standings](https://www.nfl.com/standings/); **16** of
+those games were missing from the repository's 2026-11-02-frozen boards and were re-fetched from
+NFL.com; 2026 home-field advantage is **-0.054 pts** on 130 non-neutral games
+(95% CI [-2.34, +2.23], p = 0.96) versus the **+2.0** the existing boards assume; **2 of 10**
+strategies clear all ten gates; **16** items are open on the Flagged for Review page
+(none blocking). No official market or player-prop lines exist, so market, price, edge and CLV
+columns are deliberately left blank rather than filled from a third-party scrape.
+
+The improvement proposals on the [Suggestions](https://sassnarep3-star.github.io/Own5/nfl-desk-26d4cafb/suggestions.html)
+page are **proposals only** — no site-wide change was implemented from this session, and a
+reviewer picks a path (`PATH-A`..`PATH-D`) before anything is changed.
+
+Reproduce/verify:
+
+```
+cd nfl-desk-26d4cafb
+python3 engine.py            # rebuild all CSV/JSON from the official inputs
+python3 build.py             # render the 18-page dashboard
+python3 export_research.py   # regenerate research/nfl-26d4cafb/*.md
+python3 verify.py            # 25 line-by-line checks (0 failures)
+python3 -m unittest discover -s nfl-desk-26d4cafb/tests   # 60 tests
 ```

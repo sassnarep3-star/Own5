@@ -1171,14 +1171,63 @@ Claim timestamp: **2026-11-12T16:28Z**, committed and pushed before implementati
 | ID | Task | Status | Owner | Files touched | Notes |
 |---|---|---|---|---|---|
 | N26-01 | Read task board, inspect CI locks & sibling branches, push isolated claim | done | 26d4cafb | `COORDINATION.md` | Verified CI locks & sibling 2026-11-12 claims; claimed collision-free `nfl-desk-26d4cafb/**`. |
-| N26-02 | Line-by-line repo audit of existing NFL scopes vs official 2026-11-12 sources | in progress | 26d4cafb | `research/nfl-26d4cafb/REPO_AUDIT.md`, `nfl-desk-26d4cafb/data/**` | Audit root desk, detail CSVs, `nfl-strategy-lab/`, `line-lab/`, `own5-desk/`, `nfl-decision-desk/`; link official sources & flag irregularities. |
-| N26-03 | Full requirements matrix, site-improvement Suggestions section, and Questions / Known-vs-Missing Info / Discovery register | unclaimed | 26d4cafb | `research/nfl-26d4cafb/REQUIREMENTS.md`, `research/nfl-26d4cafb/SUGGESTIONS.md`, `research/nfl-26d4cafb/QUESTIONS_AND_GAPS.md`, `nfl-desk-26d4cafb/data/**` | Reviewable improvement paths (unimplemented on locked scopes) + decision prerequisites & discovery paths. |
-| N26-04 | Official 2026-11-12 NFL data verification (standings, W9 results, W10 slate, official injury reports & club depth charts) | unclaimed | 26d4cafb | `nfl-desk-26d4cafb/data/**`, `research/nfl-26d4cafb/SOURCES.md` | Every row linked to `nfl.com`, `operations.nfl.com`, or official NFL club depth-chart/injury URLs; unverified cells blank + flagged. |
-| N26-05 | Offense & Defense injury + 1st/2nd/3rd/4th-string backup deficiency tracker & matchup signals | unclaimed | 26d4cafb | `nfl-desk-26d4cafb/engine.py`, `research/nfl-26d4cafb/INJURY_DEPTH_MODEL.md`, `nfl-desk-26d4cafb/data/**` | Tracks starter vs 2nd/3rd/4th-string replacements across offense & defense from official club depth charts + NFL injury reports. |
-| N26-06 | Own Week 10 NFL line origination, signal strategies (singles, parlays, prop combos), correlations, luck-removal math, fail-closed gates & leaderboard | unclaimed | 26d4cafb | `nfl-desk-26d4cafb/engine.py`, `research/nfl-26d4cafb/METHODOLOGY.md`, `nfl-desk-26d4cafb/data/**` | Computed Pearson/Fisher-z/joint-combo correlations, binomial/DSR/Holm-Bonferroni luck gates, 0 unvalidated strategies certified. |
-| N26-07 | Executive summary & Flagged-for-Review register | unclaimed | 26d4cafb | `research/nfl-26d4cafb/EXECUTIVE_SUMMARY.md`, `research/nfl-26d4cafb/FLAGGED.md` | Concise verified executive summary + complete nonblocking flagged register with official links. |
-| N26-08 | Clean GitHub Pages dashboard & category subpages (`nfl-desk-26d4cafb/`) | unclaimed | 26d4cafb | `nfl-desk-26d4cafb/*.html`, `nfl-desk-26d4cafb/assets/**`, `nfl-desk-26d4cafb/build.py` | Clean, intuitive dashboard + category subpages, search/filter/CSV export, interactive suggestion/question reviewers, no-JS fallback. |
-| N26-09 | Line-by-line verification harness, unit tests, browser smoke tests & CI workflow | unclaimed | 26d4cafb | `nfl-desk-26d4cafb/verify.py`, `nfl-desk-26d4cafb/tests/**`, `.github/workflows/nfl-desk-26d4cafb.yml` | Asserts 100% of table rows carry official source links or explicit blank+flag; 0 broken links; deterministic rebuild; existing CI passes. |
-| N26-10 | Final integration, rebase on `origin/main`, PR to `main`, autonomous merge, live GitHub Pages check & coordination log | unclaimed | 26d4cafb | `COORDINATION.md`, `README.md` | Rebase preserving all concurrent sessions, green PR checks, explicit `gh pr merge <num> --merge`, confirm live Pages URLs. |
+| N26-02 | Line-by-line repo audit of existing NFL scopes vs official 2026-11-12 sources | done | 26d4cafb | `research/nfl-26d4cafb/REPO_AUDIT.md`, `nfl-desk-26d4cafb/data/**` | Audit root desk, detail CSVs, `nfl-strategy-lab/`, `line-lab/`, `own5-desk/`, `nfl-decision-desk/`; link official sources & flag irregularities. |
+| N26-03 | Full requirements matrix, site-improvement Suggestions section, and Questions / Known-vs-Missing Info / Discovery register | done | 26d4cafb | `research/nfl-26d4cafb/REQUIREMENTS.md`, `research/nfl-26d4cafb/SUGGESTIONS.md`, `research/nfl-26d4cafb/QUESTIONS_AND_GAPS.md`, `nfl-desk-26d4cafb/data/**` | Reviewable improvement paths (unimplemented on locked scopes) + decision prerequisites & discovery paths. |
+| N26-04 | Official 2026-11-12 NFL data verification (standings, W9 results, W10 slate, official injury reports & club depth charts) | done | 26d4cafb | `nfl-desk-26d4cafb/data/**`, `research/nfl-26d4cafb/SOURCES.md` | Every row linked to `nfl.com`, `operations.nfl.com`, or official NFL club depth-chart/injury URLs; unverified cells blank + flagged. |
+| N26-05 | Offense & Defense injury + 1st/2nd/3rd/4th-string backup deficiency tracker & matchup signals | done | 26d4cafb | `nfl-desk-26d4cafb/engine.py`, `research/nfl-26d4cafb/INJURY_DEPTH_MODEL.md`, `nfl-desk-26d4cafb/data/**` | Tracks starter vs 2nd/3rd/4th-string replacements across offense & defense from official club depth charts + NFL injury reports. |
+| N26-06 | Own Week 10 NFL line origination, signal strategies (singles, parlays, prop combos), correlations, luck-removal math, fail-closed gates & leaderboard | done | 26d4cafb | `nfl-desk-26d4cafb/engine.py`, `research/nfl-26d4cafb/METHODOLOGY.md`, `nfl-desk-26d4cafb/data/**` | Computed Pearson/Fisher-z/joint-combo correlations, binomial/DSR/Holm-Bonferroni luck gates, 0 unvalidated strategies certified. |
+| N26-07 | Executive summary & Flagged-for-Review register | done | 26d4cafb | `research/nfl-26d4cafb/EXECUTIVE_SUMMARY.md`, `research/nfl-26d4cafb/FLAGGED.md` | Concise verified executive summary + complete nonblocking flagged register with official links. |
+| N26-08 | Clean GitHub Pages dashboard & category subpages (`nfl-desk-26d4cafb/`) | done | 26d4cafb | `nfl-desk-26d4cafb/*.html`, `nfl-desk-26d4cafb/assets/**`, `nfl-desk-26d4cafb/build.py` | Clean, intuitive dashboard + category subpages, search/filter/CSV export, interactive suggestion/question reviewers, no-JS fallback. |
+| N26-09 | Line-by-line verification harness, unit tests, browser smoke tests & CI workflow | done | 26d4cafb | `nfl-desk-26d4cafb/verify.py`, `nfl-desk-26d4cafb/tests/**`, `.github/workflows/nfl-desk-26d4cafb.yml` | Asserts 100% of table rows carry official source links or explicit blank+flag; 0 broken links; deterministic rebuild; existing CI passes. |
+| N26-10 | Final integration, rebase on `origin/main`, PR to `main`, autonomous merge, live GitHub Pages check & coordination log | in progress | 26d4cafb | `COORDINATION.md`, `README.md` | Rebase preserving all concurrent sessions, green PR checks, explicit `gh pr merge <num> --merge`, confirm live Pages URLs. |
 
 Cross-session requests at claim time: none (all prior and sibling scopes treated as read-only).
+
+### N26-02..N26-09 completion record — 2026-11-12
+
+**Data provenance (all fetched 2026-11-12 UTC, official sources only).**
+[nfl.com/standings](https://www.nfl.com/standings/) (32-team standings),
+[nfl.com/schedules](https://www.nfl.com/schedules) (Week 10 slate + byes),
+[nfl.com/schedules/2026/by-week/week-8](https://www.nfl.com/schedules/2026/by-week/week-8) and
+[week-9](https://www.nfl.com/schedules/2026/by-week/week-9) (16 post-freeze finals),
+[nfl.com/injuries/league/2026/reg10](https://www.nfl.com/injuries/league/2026/reg10) (Week 10 practice/game statuses),
+[nfl.com/stats/player-stats](https://www.nfl.com/stats/player-stats/) (6 QB passing checksums),
+18 official 2026 player game-log pages,
+[operations.nfl.com/rules-officiating/2026-nfl-rulebook](https://operations.nfl.com/rules-officiating/2026-nfl-rulebook) (2026 rule changes),
+and **18 official NFL club `/team/depth-chart` pages** (`SRC-01..SRC-51`).
+
+**Exact arithmetic verified.**
+- `data/standings-2026-wk8.csv` (120 games) + Week 8 MNF (`CHI 34 @ SEA 17`) + 15 Week 9 finals
+  = **136 completed games**, which reconcile **32/32 teams, 0 mismatches** on W, L, T, PF and PA
+  against the 2026-11-12 `nfl.com/standings/`.
+- All 6 quarterbacks' game-by-game passing yards sum to the exact official season total
+  (Love 2618, Burrow 2386, Prescott 2381, Goff 2134, Mahomes 2037, Allen 2027): **0 mismatches**.
+
+**Key computed findings.**
+- Empirical 2026 home-field advantage on 130 non-neutral games: **-0.054 pts**
+  (SD 13.28, SE 1.165, 95% CI [-2.34, +2.23], p = 0.96). Away teams are 71-64-1 against home teams.
+  The repository's existing boards assume **+2.0**; on the matched 13-game sample that assumption
+  produced a **+5.35 point** margin bias.
+- Week 10 depth findings: BAL is on its **3rd-string QB** (Jackson and Huntley both on IR) while the
+  official Week 10 injury table still reads "No Injuries Reported" for that Monday-night game (`FLG-06`).
+- **2 of 10** strategies clear all ten fail-closed gates and are ranked; 3 are blocked by a gate and
+  5 are marked *not evaluable* because no official input exists for Weeks 1-9 (injury register is
+  current-week only; no official prop lines at all).
+- Selectivity is **NOT established**: confidence-tercile accuracy is 0.379 / 0.828 / 0.724, which is
+  not monotone. The engine reports this rather than claiming selective skill.
+
+**Verification performed.**
+- `nfl-desk-26d4cafb/verify.py`: **25 checks, 0 failures** (ledger integrity, 32/32 standings
+  reconciliation, QB checksums, score arithmetic, **every rendered table row carries an official
+  source link**, no placeholder values, no broken internal links, declared blanks genuinely blank,
+  FLG-register integrity, zero look-ahead, probability sanity, neutral-site HFA zeroing).
+- `python3 -m unittest discover -s nfl-desk-26d4cafb/tests`: **60 tests, all passing**.
+- All 19 rendered pages are well-formed HTML; all internal links and assets resolve;
+  no `localhost` / `127.0.0.1` references in any browser-facing file.
+- Site served locally on port 8000: every page returns HTTP 200 with expected content.
+
+**Scope discipline.** All artifacts live in `nfl-desk-26d4cafb/**`, `research/nfl-26d4cafb/**` and
+`.github/workflows/nfl-desk-26d4cafb.yml`. No CI-locked file and no other session's file was modified;
+`nfl-decision-desk/**` (session `d0343637`) was read-only. No site-wide change was implemented from
+this session — every improvement is a proposal on the Suggestions page awaiting a chosen path.
+
