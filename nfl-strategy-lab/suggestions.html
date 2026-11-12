@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suggestions for Review · Own5 NFL Strategy Lab</title>
+<link rel="stylesheet" href="assets/style.css">
+<script defer src="assets/app.js"></script>
+</head>
+<body>
+<header class="site">
+  <div class="brand">Own5 <span>NFL Strategy Lab</span></div>
+  <nav class="main"><a href="index.html" class="">Dashboard</a>
+<a href="executive-summary.html" class="">Executive Summary</a>
+<a href="strategies.html" class="">Strategies</a>
+<a href="validation-gates.html" class="">Validation Gates</a>
+<a href="correlation.html" class="">Correlation</a>
+<a href="luck-vs-skill.html" class="">Luck vs Skill</a>
+<a href="leaderboard.html" class="">Leaderboard</a>
+<a href="lines-2026-wk9.html" class="">Week 9 Lines</a>
+<a href="sources.html" class="">Sources</a>
+<a href="flagged.html" class="">Flagged for Review</a>
+<a href="suggestions.html" class="active">Suggestions for Review</a></nav>
+</header>
+<main>
+
+<h1>Suggestions for Review</h1>
+<p class="lead">Proposed changes, research gaps, and strategy refinements for reviewer evaluation before implementation. Every suggestion links to official sources or explicitly flags unverified items. Repo copy: <a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-strategy-lab/suggestions.md">nfl-strategy-lab/suggestions.md</a>.</p>
+
+<div class="tbl-wrap"><table><thead><tr>
+<th>ID</th><th>Suggestion</th><th>Proposed Action</th><th>Evidence / Observation</th><th>Severity</th><th>Status</th></tr></thead><tbody>
+<tr>
+<td><b>S1</b></td><td>Week 10 Injury &amp; Deficiency Integration</td><td>Create data/model_lines_2026_wk10.csv and update lines-2026-wk10.html with injury-adjusted lines and backup string deficiencies (2nd/3rd/4th).</td><td>Week 10 injuries: John Bates (Full), Treylon Burks (DNP), Jayden Daniels (Full), Matt Gulbin (Full), Chig Okonkwo (Full), Lucas Patrick (Out), Amik Robertson (Limited), Shy Tuttle (Full), Colson Yankoff (Out). Starter replacements: Sam Darnold OUT → Drew Lock START for Seahawks Week 10. Packers RB Josh Jacobs surgery (finger). Ravens Lamar Jackson (right thumb) out 6-9 weeks. <a href="https://www.nfl.com/injuries/" target="_blank" rel="noopener">Source 5</a></td><td><span class="chip warn">Medium</span></td><td>Open — Reviewer decision required</td>
+</tr>
+<tr>
+<td><b>S2</b></td><td>Correlation Value Update for Week 10</td><td>Recompute correlation values for player prop combos and parlays using Week 10 box scores and injury statuses. Update correlation.html.</td><td>Week 9 correlation values: QB↔top-WR yards r=0.76 (n=3,852). Game-line legs ≈ independent (phi 0.01; cross-game ratio 0.984, n=9,479). Week 10 data pending (Nov 12, 2026). <a href="https://www.nfl.com/injuries/" target="_blank" rel="noopener">Source 5</a></td><td><span class="chip good">Low</span></td><td>Open — Reviewer decision required</td>
+</tr>
+<tr>
+<td><b>S3</b></td><td>Leaderboard Reward Definition</td><td>Define concrete reward tiers and pool amounts for the skill-based strategy leaderboard competition. Update leaderboard.html.</td><td>Current board is empty by design; reward amounts blank/flagged (F9). Scoring: 70% shrunken CLV + 20% flat-stake yield + 10% process compliance. Divisions: Singles, Parlays, Prop Combos. <a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-strategy-lab/leaderboard.md" target="_blank" rel="noopener">Source 12</a></td><td><span class="chip good">Low</span></td><td>Open — Reviewer decision required</td>
+</tr>
+<tr>
+<td><b>S4</b></td><td>Strategy Catalog Expansion</td><td>Add Week 10-specific variants (e.g., injury-adjusted singles, parlays, prop combos) to strategies.html. Apply validation gates G0–G7.</td><td>8 pre-registered variants (1980–2024). Best strategy S2 (home underdog ≥7) fails significance gate (p=0.0134 > α=0.00625). Luck removal requires ~2,243 bets to prove 55% skill (80% power). <a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-strategy-lab/strategies.md" target="_blank" rel="noopener">Source 8</a></td><td><span class="chip warn">Medium</span></td><td>Open — Reviewer decision required</td>
+</tr>
+<tr>
+<td><b>S5</b></td><td>Site Navigation &amp; Suggestions Page</td><td>Add Suggestions page to site navigation and update dashboard. Link from index.html.</td><td>Current navigation: Dashboard, Executive Summary, Strategies, Validation Gates, Correlation, Luck vs Skill, Leaderboard, Week 9 Lines, Sources, Flagged for Review. Suggestions section missing. <a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-strategy-lab/index.html" target="_blank" rel="noopener">Source 7</a></td><td><span class="chip good">Low</span></td><td>Open — Reviewer decision required</td>
+</tr>
+</tbody></table></div>
+
+<div class="warnbox"><b>Disclaimer:</b> Suggestions are for reviewer evaluation only. Nothing here is betting advice; modeled ROI assumes standard prices because prices are absent from the source dataset (flag F8). Implementation requires reviewer approval.</div>
+
+</main>
+<footer>Own5 · NFL line origination &amp; skill-based strategy leaderboard · generated from verified data files by scripts/build_site.py · session arena/662698e9-own5 · 2026-11-12<br>
+Community datasets are flagged — see <a href="flagged.html">Flagged for Review</a>. Nothing on this site is betting advice.</footer>
+</body>
+</html>
