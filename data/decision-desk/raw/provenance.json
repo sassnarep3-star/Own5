@@ -127,17 +127,17 @@
       "http_status": 200,
       "name": "injury_report_wk10",
       "saved": "injury_report_wk10.html",
-      "sha256": "fa56acc86bcc95a0c485f55d6ef6310e996d23c6e6d8fff0b1d19d9449e8073c",
+      "sha256": "1eb11e0cbb3c810370a8a643d5df0e03ba11ad6940fd716a44617f4bbf0396ff",
       "text_bytes": 20140,
       "text_extract": "data/decision-desk/raw/official_text/injury_report_wk10.txt",
       "url": "https://www.nfl.com/injuries/"
     },
     {
-      "bytes": 2289845,
+      "bytes": 2289581,
       "http_status": 200,
       "name": "schedule_wk10",
       "saved": "schedule_wk10.html",
-      "sha256": "0780147789d7e88df3136ff1144365dcf08abbc1d2519c0ba87ed067cc6e477f",
+      "sha256": "2c8bc348b09c1080e89cbc99c4242900a463875566b32bdd3a3505dca4e8a225",
       "text_bytes": 8228,
       "text_extract": "data/decision-desk/raw/official_text/schedule_wk10.txt",
       "url": "https://www.nfl.com/schedules/2026/by-week/week-10"
@@ -153,5 +153,5 @@
       "url": "https://www.nfl.com/standings/league/2026/REG"
     }
   ],
-  "retrieved_utc": "2026-11-12T16:47:34Z"
+  "retrieved_utc": "2026-11-12T16:52:39Z"
 }

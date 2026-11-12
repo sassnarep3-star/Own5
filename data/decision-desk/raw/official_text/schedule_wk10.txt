@@ -1,5 +1,5 @@
 SOURCE: https://www.nfl.com/schedules/2026/by-week/week-10
-RETRIEVED_UTC: 2026-11-12T16:47:34Z
+RETRIEVED_UTC: 2026-11-12T16:52:39Z
 HTTP: 200
 
 NFL Week 10 Schedule 2026: Games, Times, Matchups & Tickets 

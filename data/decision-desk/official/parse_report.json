@@ -1,5 +1,5 @@
 {
-  "retrieved_utc": "2026-11-12T16:47:34Z",
+  "retrieved_utc": "2026-11-12T16:52:39Z",
   "pages": {
     "injury_report_wk10": {
       "rows": 276,
@@ -42,7 +42,7 @@
           "practice_status": "Full Participation in Practice",
           "game_status": "",
           "source_url": "https://www.nfl.com/injuries/",
-          "retrieved_utc": "2026-11-12T16:47:34Z"
+          "retrieved_utc": "2026-11-12T16:52:39Z"
         },
         {
           "team_nickname": "Commanders",
@@ -52,7 +52,7 @@
           "practice_status": "Did Not Participate In Practice",
           "game_status": "",
           "source_url": "https://www.nfl.com/injuries/",
-          "retrieved_utc": "2026-11-12T16:47:34Z"
+          "retrieved_utc": "2026-11-12T16:52:39Z"
         },
         {
           "team_nickname": "Commanders",
@@ -62,7 +62,7 @@
           "practice_status": "Full Participation in Practice",
           "game_status": "",
           "source_url": "https://www.nfl.com/injuries/",
-          "retrieved_utc": "2026-11-12T16:47:34Z"
+          "retrieved_utc": "2026-11-12T16:52:39Z"
         },
         {
           "team_nickname": "Commanders",
@@ -72,7 +72,7 @@
           "practice_status": "Full Participation in Practice",
           "game_status": "",
           "source_url": "https://www.nfl.com/injuries/",
-          "retrieved_utc": "2026-11-12T16:47:34Z"
+          "retrieved_utc": "2026-11-12T16:52:39Z"
         },
         {
           "team_nickname": "Commanders",
@@ -82,7 +82,7 @@
           "practice_status": "Full Participation in Practice",
           "game_status": "",
           "source_url": "https://www.nfl.com/injuries/",
-          "retrieved_utc": "2026-11-12T16:47:34Z"
+          "retrieved_utc": "2026-11-12T16:52:39Z"
         },
         {
           "team_nickname": "Commanders",
@@ -92,7 +92,7 @@
           "practice_status": "Did Not Participate In Practice",
           "game_status": "Out",
           "source_url": "https://www.nfl.com/injuries/",
-          "retrieved_utc": "2026-11-12T16:47:34Z"
+          "retrieved_utc": "2026-11-12T16:52:39Z"
         }
       ]
     },
@@ -110,7 +110,7 @@
           "pa": "219",
           "net_pts": "-98",
           "source_url": "https://www.nfl.com/standings/league/2026/REG",
-          "retrieved_utc": "2026-11-12T16:47:34Z"
+          "retrieved_utc": "2026-11-12T16:52:39Z"
         },
         {
           "team": "Miami Dolphins Dolphins",
@@ -122,7 +122,7 @@
           "pa": "200",
           "net_pts": "-74",
           "source_url": "https://www.nfl.com/standings/league/2026/REG",
-          "retrieved_utc": "2026-11-12T16:47:34Z"
+          "retrieved_utc": "2026-11-12T16:52:39Z"
         },
         {
           "team": "Tennessee Titans Titans",
@@ -134,7 +134,7 @@
           "pa": "199",
           "net_pts": "-55",
           "source_url": "https://www.nfl.com/standings/league/2026/REG",
-          "retrieved_utc": "2026-11-12T16:47:34Z"
+          "retrieved_utc": "2026-11-12T16:52:39Z"
         }
       ]
     }
