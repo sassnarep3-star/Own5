@@ -1,0 +1,28 @@
+{
+  "as_of": "2026-11-12",
+  "source_url": "https://www.nfl.com/standings/league/2026/REG",
+  "games": 136,
+  "teams": 32,
+  "week_counts": {
+    "1": 16,
+    "2": 16,
+    "3": 16,
+    "4": 16,
+    "5": 15,
+    "6": 14,
+    "7": 14,
+    "8": 14,
+    "9": 15
+  },
+  "teams_reconciled": 32,
+  "fields_checked_per_team": [
+    "W",
+    "L",
+    "T",
+    "PF",
+    "PA"
+  ],
+  "mismatches": [],
+  "status": "PASS",
+  "scope_note": "136 completed 2026 Weeks 1-9 results reconciled exactly to NFL.com standings before Week 10. Each game row links to the official NFL.com game page."
+}
