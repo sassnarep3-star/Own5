@@ -24,6 +24,8 @@ from __future__ import annotations
 
 import gzip
 import hashlib
+import html
+import re
 import json
 import os
 import sys
@@ -49,8 +51,10 @@ NFLVERSE_ASSETS = [
     ("snap_counts", "snap_counts_2026.csv.gz"),
     ("snap_counts", "snap_counts_2025.csv.gz"),
     ("snap_counts", "snap_counts_2024.csv.gz"),
+    ("snap_counts", "snap_counts_2023.csv.gz"),
     ("stats_player", "stats_player_week_2026.csv.gz"),
     ("stats_player", "stats_player_week_2025.csv.gz"),
+    ("stats_player", "stats_player_week_2024.csv.gz"),
     ("schedules", "games.csv.gz"),
 ]
 
@@ -117,6 +121,27 @@ def main() -> int:
                               "bytes": len(body), "sha256": sha256(body),
                               "saved": os.path.basename(path)})
         print(f"{name}: http={status} bytes={len(body)}")
+
+    # Committed text extract of each official page: lets reviewers check the
+    # parsing offline without committing multi-megabyte raw HTML.
+    text_dir = os.path.join(RAW, "official_text")
+    os.makedirs(text_dir, exist_ok=True)
+    for page in prov["pages"]:
+        src = os.path.join(WORK, f"{page['name']}.html")
+        if not os.path.exists(src):
+            continue
+        raw = open(src, encoding="utf-8", errors="replace").read()
+        body = re.sub(r"(?is)<(script|style|svg)[^>]*>.*?</\1>", " ", raw)
+        body = re.sub(r"(?i)</(p|div|tr|li|h[1-6]|table)>", "\n", body)
+        body = re.sub(r"<[^>]+>", " ", body)
+        body = html.unescape(body)
+        body = re.sub(r"[ \t\xa0]+", " ", body)
+        body = re.sub(r"\n\s*\n+", "\n", body).strip()
+        out = os.path.join(text_dir, f"{page['name']}.txt")
+        with open(out, "w", encoding="utf-8") as fh:
+            fh.write(f"SOURCE: {page['url']}\nRETRIEVED_UTC: {prov['retrieved_utc']}\nHTTP: {page['http_status']}\n\n{body}\n")
+        page["text_extract"] = f"data/decision-desk/raw/official_text/{page['name']}.txt"
+        page["text_bytes"] = len(body)
 
     with open(os.path.join(RAW, "provenance.json"), "w", encoding="utf-8") as fh:
         json.dump(prov, fh, indent=2, sort_keys=True)
