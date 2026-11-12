@@ -1037,3 +1037,21 @@ Arena fixes this session's branch to `arena/e446435e-own5`; the `session-<id>/<t
 - Pages deployment run [42230865904](https://github.com/sassnarep3-star/Own5/actions/runs/42230865904) succeeded; Pages build API reports `built` for `6836bf3` at 14:12:00Z with no error. (Two earlier same-day builds for sibling commits show `errored`/`Page build failed` — concurrent-merge supersedes; unrelated to this scope.)
 - Live verification (fetched post-deploy): [dashboard](https://sassnarep3-star.github.io/Own5/sf-rent-e446435e/), [summary](https://sassnarep3-star.github.io/Own5/sf-rent-e446435e/summary.html), [local law + Form 571 schedule](https://sassnarep3-star.github.io/Own5/sf-rent-e446435e/local-law.html), [unit scenarios](https://sassnarep3-star.github.io/Own5/sf-rent-e446435e/units.html), [Flagged for Review](https://sassnarep3-star.github.io/Own5/sf-rent-e446435e/flagged.html) — all serve expected content (1.6% ceiling, derived math, blank unverified cells, per-row source/flag links). Initial index fetches 404'd during CDN propagation; confirmed live minutes later.
 - Session `e446435e` complete: R44-01…R44-07 all done. Open legal/property/source-review items (R44-F01…F19) are nonblocking for publication and published on the Flagged for Review page — not a finding that any increase or notice is lawful.
+
+## Session d0343637 — NFL decision desk (2026-11-12 UTC)
+
+Fixed Arena branch `arena/d0343637-own5` takes precedence over suggested branch naming. Isolated additive scope avoids all other owners; existing root navigation remains untouched.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| ND1 | Review existing NFL claims and official-source access; decision desk, questions, suggestions, validation and review pages | in progress | d0343637 | nfl-decision-desk/** | No invented current lines, injuries, performance or correlations. |
+| ND2 | Tests, integration PR, merge and Pages verification | in progress | d0343637 | COORDINATION.md (append only), nfl-decision-desk/** | Source-access failures are published, not represented as verification. |
+
+### d0343637 verification and integration handoff — 2026-11-12
+
+- ND1 done: isolated `nfl-decision-desk/` contains 9 category pages and 60 row-linked entries, executive summary, decision questions/answers, selective injury observations, research/gate proposals, blank current correlations and ranks, suggestions awaiting review and 9 published review flags. No shared root navigation edited.
+- Sources checked with page retrieval: https://www.nfl.com/injuries/ (first chunk only), https://www.nfl.com/teams/ (directory excerpt), https://www.commanders.com/team/depth-chart, https://www.patriots.com/team/depth-chart (unofficial disclaimer and offense), https://www.itl.nist.gov/div898/handbook/eda/section3/scatterp.htm. Policy URL https://operations.nfl.com/updates/football-ops/2017-nfl-injury-report-policy/ returned 404 and is flagged. No full-repo factual certification claimed.
+- Review irregularities: mixed-sport root summary; stale Week 9 outputs; unofficial chart authority; Ben Brown positional discrepancy; missing current policy/current joint coefficients; project-defined gate thresholds; no continuous all-team ingestion or immutable raw archives. Published in `nfl-decision-desk/flagged.html`.
+- Verification passed: 4 scoped tests (including every row's official references, local links and deterministic build), JS syntax, 91 existing unit tests, and 18 real Chromium desktop/mobile page checks plus search and no-JavaScript tables. Structural verification does not certify external facts.
+- Initial remote branch did not exist, so initial pull failed; pulled/rebased against main before initial branch push. No merge conflict and no other owners' files changed.
+- ND2 in progress: publishing PR and checking Pages deployment. The site explicitly discloses static-snapshot limits; future live ingestion suggestions are not represented as implemented.
