@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sources · NFL Decision Desk</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>NFL Decision Desk <span style="color:var(--muted);font-weight:400">· Week 10 2026</span></h1>
+  <div class="sub">Official-source data · session arena-e413f933 · every table row carries an official source link · unconfirmable values blank + flagged</div>
+  <nav><a href="index.html" class="">Dashboard</a><a href="executive-summary.html" class="">Executive Summary</a><a href="standings.html" class="">Standings</a><a href="schedule.html" class="">Schedule</a><a href="injuries.html" class="">Injuries</a><a href="deficiencies.html" class="">Deficiencies</a><a href="lines.html" class="">Our Lines</a><a href="questions.html" class="">Questions</a><a href="suggestions.html" class="">Suggestions</a><a href="strategies.html" class="">Strategies</a><a href="flagged.html" class="">Flagged for Review</a><a href="sources.html" class="active">Sources</a></nav>
+</header>
+<main>
+
+<h2>Source registry</h2>
+<div class="note">All page content derives from these sources. Per-row links live inside each table's source columns.</div>
+<div class="scroll"><table><thead><tr><th>name</th><th>url</th><th>used_for</th><th>fetched</th></tr></thead><tbody><tr><td>NFL standings (through Week 9)</td><td><a href="https://www.nfl.com/standings/" rel="noopener">https://www.nfl.com/standings/</a></td><td>standings, lines, luck, correlations</td><td>2026-11-12</td></tr><tr><td>NFL Week-10 schedule</td><td><a href="https://www.nfl.com/schedules/2026/REG10" rel="noopener">https://www.nfl.com/schedules/2026/REG10</a></td><td>schedule, byes, neutral-site flag</td><td>2026-11-12</td></tr><tr><td>NFL Week-10 injury report</td><td><a href="https://www.nfl.com/injuries/league/2026/REG10" rel="noopener">https://www.nfl.com/injuries/league/2026/REG10</a></td><td>injuries, deficiency severities</td><td>2026-11-12</td></tr><tr><td>NFL Week-8 schedule/scores</td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-8" rel="noopener">https://www.nfl.com/schedules/2026/by-week/week-8</a></td><td>D1 repo re-verification (13/13 played games matched)</td><td>2026-11-12</td></tr><tr><td>27 official club depth-chart pages</td><td><a href="https://www.seahawks.com/team/depth-chart/" rel="noopener">https://www.seahawks.com/team/depth-chart/</a></td><td>starter/backup strings (per-row links in deficiencies)</td><td>2026-11-12</td></tr><tr><td>Houston depth chart (image only)</td><td><a href="https://www.houstontexans.com/team/depth-chart/" rel="noopener">https://www.houstontexans.com/team/depth-chart/</a></td><td>attempted — no table; flagged F-HOU-1</td><td>2026-11-12</td></tr><tr><td>Repo line-origination methodology</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/scripts/originate_lines.py" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/scripts/originate_lines.py</a></td><td>model continuity</td><td>2026-11-12</td></tr><tr><td>This desk&#x27;s methodology</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/nfl-decision-desk/methodology.md" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/research/nfl-decision-desk/methodology.md</a></td><td>gates, weights, policies</td><td>2026-11-12</td></tr></tbody></table></div>
+<h3>Repository data files (CSV)</h3>
+<ul>
+<li><a href="https://github.com/sassnarep3-star/Own5/tree/main/nfl-decision-desk-e413f933/data">nfl-decision-desk/data/</a> — all CSVs shown on this site</li>
+<li><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/nfl-decision-desk/repo-review.md">repo-review.md</a> — line-by-line repo verification log</li>
+<li><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/nfl-decision-desk/executive-summary.md">executive-summary.md</a> — source of the summary page</li>
+</ul>
+
+</main>
+<footer>NFL Decision Desk · built by build_site.py (deterministic) · sources: nfl.com and official club sites · flagged items are published, not hidden</footer>
+</body>
+</html>

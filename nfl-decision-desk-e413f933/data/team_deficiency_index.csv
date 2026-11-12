@@ -1,0 +1,29 @@
+team,week10_playing,deficiency_load,starters_out,starters_dnp,starters_limited,starters_questionable,positions_no_listed_backup,replacement_chain_breaks,positions,team_record,net_pts,source_url_injuries,source_url_depth
+ATL,yes,0.0,0,0,1,0,0,0,ILB:Limited,3-6-0,-35,https://www.nfl.com/injuries/league/2026/REG10,https://www.atlantafalcons.com/team/depth-chart/
+AZ,yes,3.0,0,6,4,0,0,0,C:DNP; CB:Limited; DT:Limited; ILB:DNP; LG:DNP; LT:Limited; NT:DNP; OLB:DNP; S:DNP; S:Limited,3-6-0,-77,https://www.nfl.com/injuries/league/2026/REG10,https://www.azcardinals.com/team/depth-chart/
+BAL,yes,0.0,0,0,0,0,0,0,,4-5-0,-47,https://www.nfl.com/injuries/league/2026/REG10,no starter deficiencies on official report (zero-severity row)
+BUF,yes,0.0,0,0,6,0,0,0,C:Limited; CB:Limited; LG:Limited; LT:Limited; RT:Limited; TE:Limited,7-1-0,69,https://www.nfl.com/injuries/league/2026/REG10,https://www.buffalobills.com/team/depth-chart/
+CAR,yes,1.0,0,2,0,0,0,0,LB:DNP; RB:DNP,3-5-0,-20,https://www.nfl.com/injuries/league/2026/REG10,https://www.panthers.com/team/depth-chart/
+CIN,yes,0.5,0,1,2,0,0,0,CB:Limited; DT:DNP; LG:Limited,6-2-0,65,https://www.nfl.com/injuries/league/2026/REG10,https://www.bengals.com/team/depth-chart/
+CLE,yes,1.5,0,3,7,0,2,0,C:DNP; CB:Limited; FS:DNP; LDT:Limited; MIKE:Limited; RG:Limited; RT:Limited; TE:Limited; WILL:Limited; WR:DNP,5-4-0,-35,https://www.nfl.com/injuries/league/2026/REG10,https://www.clevelandbrowns.com/team/depth-chart/
+DAL,yes,2.5,0,5,2,0,0,0,CB:DNP; LB:Limited; OLB:DNP; S:DNP; S:DNP; TE:DNP; WR:Limited,4-5-0,10,https://www.nfl.com/injuries/league/2026/REG10,https://www.dallascowboys.com/team/depth-chart/
+DET,yes,1.0,0,2,3,0,0,0,C:DNP; CB:DNP; QB:Limited; S:Limited; WR:Limited,6-2-0,33,https://www.nfl.com/injuries/league/2026/REG10,https://www.detroitlions.com/team/depth-chart/
+GB,yes,2.5,0,5,2,0,0,0,C:DNP; EDGE:DNP; LB:DNP; LG:Limited; NB:DNP; RB:DNP; WR:Limited,6-3-0,25,https://www.nfl.com/injuries/league/2026/REG10,https://www.packers.com/team/depth-chart/
+HOU,yes,,,,,,,,,3-5-0,17,https://www.nfl.com/injuries/league/2026/REG10,HOU chart image-only (no table) — flagged F-HOU-1; backup strings unverified
+IND,yes,2.5,0,5,1,0,0,0,CB:DNP; MLB:DNP; RB:Limited; RT:DNP; SS:DNP; WLB:DNP,2-7-0,-65,https://www.nfl.com/injuries/league/2026/REG10,https://www.colts.com/team/depth-chart/
+JAX,yes,2.5,0,5,5,0,1,0,C:Limited; DE:DNP; LB:Limited; NT:DNP; RB:DNP; RB:Limited; RG:Limited; S:DNP; S:Limited; WR:DNP,6-2-0,108,https://www.nfl.com/injuries/league/2026/REG10,https://www.jaguars.com/team/depth-chart/
+KC,yes,0.5,0,1,0,0,0,0,RT:DNP,6-2-0,59,https://www.nfl.com/injuries/league/2026/REG10,https://www.chiefs.com/team/depth-chart/
+LAC,yes,0.0,0,0,0,0,0,0,,0-8-0,-98,https://www.nfl.com/injuries/league/2026/REG10,no starter deficiencies on official report (zero-severity row)
+LAR,yes,2.0,0,4,3,0,1,0,CB:DNP; LG:DNP; OLB:Limited; S:DNP; TE:Limited; TE:Limited; WR:DNP,5-4-0,33,https://www.nfl.com/injuries/league/2026/REG10,https://www.therams.com/team/depth-chart/
+LV,yes,0.0,0,0,0,0,0,0,,4-5-0,-30,https://www.nfl.com/injuries/league/2026/REG10,no starter deficiencies on official report (zero-severity row)
+MIA,yes,0.5,0,1,1,0,0,0,C:DNP; WR:Limited,1-7-0,-74,https://www.nfl.com/injuries/league/2026/REG10,https://www.miamidolphins.com/team/depth-chart/
+MIN,yes,2.5,0,5,0,0,0,0,DL:DNP; LB:DNP; QB:DNP; TE:DNP; WR:DNP,6-2-0,30,https://www.nfl.com/injuries/league/2026/REG10,https://www.vikings.com/team/depth-chart/
+NE,yes,2.5,2,1,4,0,0,1,CB:Out; LG:Out; RB:DNP; RT:Limited; S:Limited; TE:Limited; WR:Limited,5-4-0,4,https://www.nfl.com/injuries/league/2026/REG10,https://www.patriots.com/team/depth-chart/
+NO,yes,1.0,0,2,3,0,0,0,C:DNP; CB:Limited; LG:Limited; LT:Limited; RB:DNP,3-5-0,-31,https://www.nfl.com/injuries/league/2026/REG10,https://www.neworleanssaints.com/team/depth-chart/
+NYG,yes,0.0,0,0,0,0,0,0,,5-2-1,10,https://www.nfl.com/injuries/league/2026/REG10,no starter deficiencies on official report (zero-severity row)
+NYJ,yes,0.5,0,1,1,0,0,0,DL:DNP; WR:Limited,2-7-0,-41,https://www.nfl.com/injuries/league/2026/REG10,https://www.newyorkjets.com/team/depth-chart/
+PIT,yes,1.5,0,3,0,0,2,0,DT:DNP; LOLB:DNP; TE:DNP,6-2-0,36,https://www.nfl.com/injuries/league/2026/REG10,https://www.steelers.com/team/depth-chart/
+SEA,yes,3.0,0,6,1,0,0,0,DE:DNP; DT:DNP; LG:DNP; LT:DNP; QB:DNP; SLB:Limited; WR:DNP,5-4-0,40,https://www.nfl.com/injuries/league/2026/REG10,https://www.seahawks.com/team/depth-chart/
+SF,yes,3.0,0,6,2,0,2,0,LCB:DNP; LT:DNP; NB:Limited; RB:DNP; RCB:DNP; WILL:DNP; WR:DNP; WR:Limited,7-1-0,79,https://www.nfl.com/injuries/league/2026/REG10,https://www.49ers.com/team/depth-chart/
+TEN,yes,2.0,0,4,0,0,2,0,LB:DNP; LB:DNP; LG:DNP; WR:DNP,1-7-0,-55,https://www.nfl.com/injuries/league/2026/REG10,https://www.tennesseetitans.com/team/depth-chart/
+WAS,yes,0.0,0,0,1,0,0,0,CB:Limited,2-5-1,-30,https://www.nfl.com/injuries/league/2026/REG10,https://www.commanders.com/team/depth-chart/

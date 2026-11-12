@@ -1040,6 +1040,55 @@ Arena fixes this session's branch to `arena/e446435e-own5`; the `session-<id>/<t
 
 ---
 
+# Session e413f933 — NFL Decision Desk (suggestions, questions register, own lines, injury/depth signals) (2026-11-12 UTC)
+
+Arena fixes this session to `arena/e413f933-own5`; no alternative branch will be created or pushed.
+Claim timestamp: **2026-11-12 UTC**, before any implementation. Claimed additive namespace:
+`nfl-decision-desk/**` and `research/nfl-decision-desk/**`, plus this append-only board entry.
+
+**Scope update at integration (2026-11-12):** while this session collected official data, session
+`d0343637` merged its own desk into `nfl-decision-desk/**` (PRs #56/#57) and the board records that
+directory as owned by `d0343637`. Following the collision precedent set by session `38a1fc27`, this
+session moved ALL of its outputs wholesale to **`nfl-decision-desk-e413f933/**`** (site, data, scripts,
+verification harness) — no other session's work was overwritten or discarded, and
+`research/nfl-decision-desk/**` (uncontested, only this session) stays as claimed.
+Read-only for this session: root `index.html`/`pages/`/`data/research.json` (CI-locked), `docs/`,
+`nba-*/`, `nfl-strategy-lab/`, `line-lab/`, `own5-desk/`, `sf-*/rental-*`, `scripts/`, `tools/`,
+`.github/workflows/`, existing CSVs/JSON, README.md (append only at integration, if needed).
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| D1 | Claim + bounded repo review; record irregularities | done | e413f933 | COORDINATION.md, research/nfl-decision-desk/repo-review.md | Claim pushed first; wk8 results re-verified 13/13 vs official by-week page; 9 irregularities flagged (F-HOU-1, F-BAL-1, F-MIA-1, F-INT-1, F-MKT-1, F-PROP-1, F-W10-1, F-W8-1, F-CHT-2). |
+| D2 | Decision prerequisites register: questions / information / answers (known vs missing) | done | e413f933 | nfl-decision-desk-e413f933/data/questions_register.csv, nfl-decision-desk-e413f933/questions.html | 15 questions with known/unknown/discovery method; every row official-source-linked; 2 blocked on user policy (Q07, Q13). |
+| D3 | Suggestions register (improvement paths, ranked for review before implementation) | done | e413f933 | nfl-decision-desk-e413f933/data/suggestions_register.csv, nfl-decision-desk-e413f933/suggestions.html | 12 suggestions S01-S12 with effort/risk/benefit; none implemented without decision; dedicated review page. |
+| D4 | Own NFL lines from official inputs + signal research | done | e413f933 | nfl-decision-desk-e413f933/data/own_lines_2026_wk10.csv, nfl-decision-desk-e413f933/scripts/originate_lines_wk10.py, nfl-decision-desk-e413f933/lines.html | 14 lines, repo-documented model (shrunken net pts, HFA 2.0, Munich neutral); market columns blank+flagged F-MKT-1; advisory deficiency column separate. |
+| D5 | Injury + depth-chart deficiency tracking (2nd/3rd/4th string signals) | done | e413f933 | nfl-decision-desk-e413f933/data/injuries_2026_wk10.csv, depth_charts_2026_wk10.csv, deficiencies_2026_wk10.csv, team_deficiency_index.csv | 278 injury rows + 608 depth rows (27 clubs) -> 119 starter deficiencies with next-man-up chains; HOU blank+flagged (image-only chart). |
+| D6 | Validation gates, correlation values, luck-vs-skill, leaderboard w/ rewards (singles/parlays/prop combos) | done | e413f933 | nfl-decision-desk-e413f933/data/{signals,strategies,gates,leaderboard,correlations,luck_vs_skill}.csv, strategies.html | C01 r=0.846, C04 r=0.864 computed; C05 pending, C06 blocked; 7 strategies, 8 gates, all fail-closed (0 graded bets); tiers documented, metrics blank. |
+| D7 | Executive summary | done | e413f933 | research/nfl-decision-desk/executive-summary.md, nfl-decision-desk-e413f933/executive-summary.html | Only computed/verified values; decisions-needed section; bottom line published. |
+| D8 | Site: landing dashboard + category subpages + Flagged for Review | done | e413f933 | nfl-decision-desk-e413f933/*.html, nfl-decision-desk-e413f933/build_site.py | 12 pages + style.css, deterministic build; every tbody row source-linked; 8 open flags published on flagged.html. |
+| D9 | Line-by-line verification harness | done | e413f933 | nfl-decision-desk-e413f933/verify_nfl_desk.py | PASS: 12 pages, per-row source links, internal links, CSV source columns, market-blank policy; root CI also green (unittest OK, build diff clean, desk:check PASS). |
+| D10 | Integration: re-verify, PR to main, merge, Pages deploy verification, record | unclaimed | e413f933 | COORDINATION.md | Preserve concurrent work; merge only with green checks. |
+
+Cross-session requests at claim time: none.
+
+### e413f933 cross-session CI drift note (2026-11-12, not actioned)
+
+Two checks fail on this session's PR and are **not** caused by defects in this desk's files;
+both are other sessions' repo-wide audit snapshots going stale as the repository grows:
+
+- **`NFL Decision Desk — fetch & verify`** (decision-desk.yml, owner 38a1fc27): reproduced
+  locally — `build_all.py`, `build_site.py`, `verify.py` all exit 0; only
+  `data/decision-desk/audit_summary.json` counts drift (links_checked/pages grew with this
+  session's 12 pages). The same check already failed on sibling PR #63 before this session's
+  merge; `data/decision-desk/**` is read-only here, so per sibling precedent it is logged, not actioned.
+- **`Rebuild, audit, and test isolated NFL desk`** (nfl-b34253a1.yml, owner b34253a1):
+  reproduced locally — `audit_repo.py` exits 0; its full-repo inventory
+  (`nfl-b34253a1/data/repo_audit.csv`) diff-refreshes against the grown tree. That scope is
+  read-only here; b34253a1 refreshes its audit after rebases as its own action.
+
+This desk's own `nfl-decision-desk-e413f933/verify_nfl_desk.py` PASSes (12 pages), session
+d0343637's `nfl-decision-desk/verify.py` PASSes (4 tests, untouched), root unit tests and
+`desk:check` PASS. Neither drifting check is required for merge (PR #63 merged in the same state).
 ## Session 38a1fc27 — NFL Decision Desk: requirements audit, suggestions, questions, injury/depth tracking (2026-11-12 UTC)
 
 Branch fixed by Arena: `arena/38a1fc27-own5` (base `95c2eea`). Existing scopes are read-only for this session. This session claims only additive namespaces:
