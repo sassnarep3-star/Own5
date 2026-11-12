@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methodology &middot; NFL Decision Desk 26d4cafb</title>
+<link rel="stylesheet" href="assets/style.css">
+</head><body>
+<header class="top">
+  <div class="brand"><a href="index.html">NFL Decision Desk</a>
+    <span class="tag">session 26d4cafb &middot; snapshot 2026-11-12 &middot; 2026 Week 10</span></div>
+  <nav class="nav"><a class="" href="index.html">Overview</a>
+<a class="" href="executive-summary.html">Executive Summary</a>
+<a class="" href="standings.html">Standings</a>
+<a class="" href="ledger.html">Game Ledger</a>
+<a class="" href="lines.html">Originated Lines</a>
+<a class="" href="injuries.html">Injuries &amp; Depth</a>
+<a class="" href="signals.html">Signals</a>
+<a class="" href="strategies.html">Strategies</a>
+<a class="" href="leaderboard.html">Leaderboard</a>
+<a class="" href="validation.html">Validation Gates</a>
+<a class="" href="correlations.html">Correlations</a>
+<a class="" href="luck-vs-skill.html">Luck vs Skill</a>
+<a class="active" href="methodology.html">Methodology</a>
+<a class="" href="repo-audit.html">Repo Audit</a>
+<a class="" href="suggestions.html">Suggestions</a>
+<a class="" href="questions.html">Pre-Decision</a>
+<a class="" href="flagged.html">Flagged for Review</a>
+<a class="" href="sources.html">Sources</a></nav>
+</header>
+<main class="wide">
+  <h1>Methodology</h1>
+  <p class="lede">Exactly how every number on this site was produced, and what was deliberately not done.</p>
+<h2>Declared model</h2><ul><li>Team offence = shrunk, opponent-adjusted points per game above league mean.</li><li>Team defence = shrunk, opponent-adjusted points allowed per game above league mean.</li><li>Expected points: <code>pts_A = league_mean + off_A + def_B</code>, with the empirical home-field advantage split half to each side and zeroed for confirmed neutral-site games.</li><li>Score distribution: independent Poisson on the two expected point totals, giving win, loss and tie probabilities, the fair spread and the fair total by direct enumeration.</li><li>Injury/depth toll: itemised per team per unit, weighted by the official availability tier, subtracted from the affected unit's own scoring expectation. These are bounded model priors, never official statistics.</li></ul><h2>Declared hyper-parameters</h2><div class="tablewrap"><table id="hp"><thead><tr><th>Parameter</th><th>Value</th><th>Official source</th></tr></thead><tbody><tr><td class="">assumed_price</td><td class="">-110</td><td><a class="src" href="https://www.nfl.com/schedules" target="_blank" rel="noopener">nfl.com/schedules</a></td></tr><tr><td class="">correlation_cap</td><td class="">0.6</td><td><a class="src" href="https://www.nfl.com/schedules" target="_blank" rel="noopener">nfl.com/schedules</a></td></tr><tr><td class="">graded_from_week</td><td class="">4</td><td><a class="src" href="https://www.nfl.com/schedules" target="_blank" rel="noopener">nfl.com/schedules</a></td></tr><tr><td class="">max_drawdown_units</td><td class="">10.0</td><td><a class="src" href="https://www.nfl.com/schedules" target="_blank" rel="noopener">nfl.com/schedules</a></td></tr><tr><td class="">opp_adjust_iters</td><td class="">2</td><td><a class="src" href="https://www.nfl.com/schedules" target="_blank" rel="noopener">nfl.com/schedules</a></td></tr><tr><td class="">rest_edge_days</td><td class="">3</td><td><a class="src" href="https://www.nfl.com/schedules" target="_blank" rel="noopener">nfl.com/schedules</a></td></tr><tr><td class="">selectivity_threshold</td><td class="">3.0</td><td><a class="src" href="https://www.nfl.com/schedules" target="_blank" rel="noopener">nfl.com/schedules</a></td></tr><tr><td class="">shrink_k</td><td class="">6.0</td><td><a class="src" href="https://www.nfl.com/schedules" target="_blank" rel="noopener">nfl.com/schedules</a></td></tr></tbody></table></div><h2>Home-field advantage</h2><div class="tablewrap"><table id="hf"><thead><tr><th>n (non-neutral)</th><th>Mean home margin</th><th>SD</th><th>SE</th><th>95% CI low</th><th>95% CI high</th><th>t</th><th>p (two-sided)</th><th>Home wins</th><th>Away wins</th><th>Ties</th><th>n (neutral)</th><th>Mean margin, neutral</th><th>Incl. unconfirmed venues</th><th>Official source</th></tr></thead><tbody><tr><td class="">130</td><td class="">-0.0538</td><td class="">13.2801</td><td class="">1.1647</td><td class="">-2.3367</td><td class="">2.2291</td><td class="">-0.0462</td><td class="">0.963127</td><td class="">63</td><td class="">66</td><td class="">1</td><td class="">4</td><td class="">-10.25</td><td class="">-0.2045</td><td><a class="src" href="https://www.nfl.com/schedules" target="_blank" rel="noopener">nfl.com/schedules</a></td></tr></tbody></table></div><div class="callout warn2">Two 2026 games (Week 4 IND@WSH and Week 6 HOU@JAX) show a 9:30 AM ET international kickoff window but no venue on the official schedule page, so their neutral-site status is unconfirmed and they are excluded from the main estimate. The sensitivity column shows the estimate with them included (<a href="flagged.html">FLG-12</a>).</div><h2>Zero-look-ahead protocol</h2><ul><li>Walk-forward: a bet graded in week w is produced by a model fitted only on weeks &lt; w.</li><li>The null probability for each pick also comes only from weeks &lt; w.</li><li>Shrinkage k is declared before the fact; the sensitivity table shows the choice is not load-bearing (MAE varies only from 9.42 to 9.91 across k = 3 to 24).</li><li>No official injury register exists for Weeks 1-9, so no strategy using injuries is backtested; those entries are marked not evaluable rather than graded on invented data.</li></ul>
+</main>
+<footer>
+  <p>Every table row links to the official source it was read from. Values that could not be
+  confirmed from an official source are left blank (&mdash;) and listed on the
+  <a href="flagged.html">Flagged for Review</a> page. Nothing on this site is inferred or filled in.</p>
+  <p class="meta">Session 26d4cafb &middot; data snapshot 2026-11-12 UTC &middot; built from official NFL and
+  official NFL club pages &middot; <a href="data/summary.json">summary.json</a></p>
+</footer>
+<script src="assets/app.js"></script>
+</body></html>

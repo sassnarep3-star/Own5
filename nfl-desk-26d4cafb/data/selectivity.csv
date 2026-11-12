@@ -1,0 +1,4 @@
+tercile,n_bets,mean_abs_model_margin,wins,win_rate,mean_null_win_rate,lift_over_null,source_url
+1 (lowest |model margin|),29,0.573,11,0.3793,0.5002,-0.1209,https://www.nfl.com/schedules
+2 (middle),29,2.387,24,0.8276,0.4953,0.3323,https://www.nfl.com/schedules
+3 (highest |model margin|),29,6.193,21,0.7241,0.5186,0.2055,https://www.nfl.com/schedules

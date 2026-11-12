@@ -1,0 +1,7 @@
+qb,team,n_games,official_season_pass_yds,sum_of_game_logs,checksum_match,mean_pass_yds,sd_pass_yds,r_with_primary_target,n_rb_games,r_with_lead_rb,source_url
+Dak Prescott,DAL,9,2381,2381,MATCH,264.6,59.8,0.5937,9,-0.0325,https://www.nfl.com/players/dak-prescott/stats/logs/2026/
+Jared Goff,DET,8,2134,2134,MATCH,266.8,82.2,0.3361,8,-0.5984,https://www.nfl.com/players/jared-goff/stats/logs/2026/
+Joe Burrow,CIN,8,2386,2386,MATCH,298.2,97.6,0.1371,8,-0.4606,https://www.nfl.com/players/joe-burrow/stats/logs/2026/
+Jordan Love,GB,9,2618,2618,MATCH,290.9,81.1,0.2907,3,-0.9776,https://www.nfl.com/players/jordan-love/stats/logs/2026/
+Josh Allen,BUF,8,2027,2027,MATCH,253.4,42.3,0.1655,8,-0.8068,https://www.nfl.com/players/josh-allen/stats/logs/2026/
+Patrick Mahomes,KC,8,2037,2037,MATCH,254.6,70.8,0.6019,0,,https://www.nfl.com/players/patrick-mahomes/stats/logs/2026/

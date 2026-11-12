@@ -1,0 +1,7 @@
+shrink_k,n_graded,margin_MAE,margin_RMSE,margin_bias,is_declared_value,source_url
+3,88,9.422,12.394,1.963,,https://www.nfl.com/schedules
+6,88,9.301,12.287,1.91,YES (used for all reported results),https://www.nfl.com/schedules
+9,88,9.406,12.331,1.882,,https://www.nfl.com/schedules
+12,88,9.544,12.398,1.865,,https://www.nfl.com/schedules
+16,88,9.7,12.483,1.851,,https://www.nfl.com/schedules
+24,88,9.906,12.612,1.834,,https://www.nfl.com/schedules

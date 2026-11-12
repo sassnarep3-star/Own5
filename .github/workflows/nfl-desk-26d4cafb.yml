@@ -1,0 +1,96 @@
+name: nfl-desk-26d4cafb
+
+# Session 26d4cafb subsite. Scope is deliberately narrow: this workflow only touches
+# nfl-desk-26d4cafb/** and research/nfl-26d4cafb/**, so it never collides with the
+# scopes claimed by other sessions (see COORDINATION.md).
+
+on:
+  push:
+    branches: ["**"]
+    paths:
+      - "nfl-desk-26d4cafb/**"
+      - "research/nfl-26d4cafb/**"
+      - ".github/workflows/nfl-desk-26d4cafb.yml"
+  pull_request:
+    paths:
+      - "nfl-desk-26d4cafb/**"
+      - "research/nfl-26d4cafb/**"
+      - ".github/workflows/nfl-desk-26d4cafb.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Build data, render site, verify, test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Rebuild the analytics artifacts from the official inputs
+        working-directory: nfl-desk-26d4cafb
+        run: python3 engine.py
+
+      - name: Render the dashboard site
+        working-directory: nfl-desk-26d4cafb
+        run: python3 build.py
+
+      - name: Export the research dossier
+        working-directory: nfl-desk-26d4cafb
+        run: python3 export_research.py
+
+      - name: Run the unit test suite
+        run: python3 -m unittest discover -s nfl-desk-26d4cafb/tests -v
+
+      - name: Run the line-by-line verifier
+        working-directory: nfl-desk-26d4cafb
+        run: python3 verify.py
+
+      - name: Fail if the build left the working tree dirty
+        run: |
+          git add -A nfl-desk-26d4cafb research/nfl-26d4cafb
+          git diff --cached --quiet || {
+            echo "::error::Committed artifacts are out of date. Run engine.py, build.py and export_research.py and commit the result."
+            git --no-pager diff --cached --stat
+            exit 1
+          }
+
+      - name: Check every rendered page for broken internal links and missing sources
+        working-directory: nfl-desk-26d4cafb
+        run: |
+          python3 - <<'PY'
+          import os, re, sys
+          here = "."
+          hrefs = re.compile(r"<a\s[^>]*href=[\"']([^\"']+)[\"']", re.I)
+          bad = []
+          pages = sorted(f for f in os.listdir(here) if f.endswith(".html"))
+          for pg in pages:
+              html = open(os.path.join(here, pg), encoding="utf-8").read()
+              for h in hrefs.findall(html):
+                  if h.startswith(("http", "mailto:", "#")):
+                      continue
+                  t = h.split("#")[0]
+                  if t and not os.path.exists(os.path.join(here, t)):
+                      bad.append((pg, h))
+          if bad:
+              print("BROKEN LINKS:", bad[:10]); sys.exit(1)
+          print("%d pages checked, all internal links resolve" % len(pages))
+          PY
+
+      - name: Confirm the site is self-contained (no localhost references)
+        working-directory: nfl-desk-26d4cafb
+        run: |
+          ! grep -rIl -e "localhost" -e "127.0.0.1" --include="*.html" --include="*.js" . \
+            || { echo "::error::Browser-facing code must not reference localhost."; exit 1; }
+
+      - name: Upload the built site as an artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: nfl-desk-26d4cafb-site
+          path: nfl-desk-26d4cafb/
