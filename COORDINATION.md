@@ -1231,3 +1231,24 @@ and **18 official NFL club `/team/depth-chart` pages** (`SRC-01..SRC-51`).
 `nfl-decision-desk/**` (session `d0343637`) was read-only. No site-wide change was implemented from
 this session — every improvement is a proposal on the Suggestions page awaiting a chosen path.
 
+**Cross-session request logged, NOT actioned (2026-11-12).** The `NFL Decision Desk — fetch & verify`
+workflow (`.github/workflows/decision-desk.yml`, owned by sessions `d0343637` / `38a1fc27`) fails its
+"Confirm the committed site matches a clean rebuild" step on this session's PR #61. Its failing step is
+`git diff --exit-code -- nfl-decision-desk/ data/decision-desk/`.
+
+This is **pre-existing on `main` and unrelated to this session**. Verified by extracting `origin/main`
+into a clean directory containing **none** of this session's files and running that workflow's own
+commands (`tools/decision_desk/build_all.py && tools/decision_desk/build_site.py`): the rebuild still
+drifts from the committed snapshot in `data/decision-desk/injuries_wk10_players.csv` and
+`data/decision-desk/team_deficiency_wk10.csv`.
+
+This session changes **no** file under `nfl-decision-desk/`, `data/decision-desk/` or `tools/`
+(confirmed with `git diff --name-only $(git merge-base origin/main HEAD)..HEAD`), so per the
+coordination rules this is logged for the owning session rather than patched here. Suggested fix for
+the owner: make `parse_official.py` emit rows in a deterministic order (and pin any live-fetch
+timestamp), or move the drift check behind the `fetch` job that regenerates the pinned snapshot.
+
+This session's own scoped check — `.github/workflows/nfl-desk-26d4cafb.yml`
+("Build data, render site, verify, test") — **passes**, and its build is deterministic: the workflow
+fails if a clean rebuild of `nfl-desk-26d4cafb/**` differs from what is committed.
+
