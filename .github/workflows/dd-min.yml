@@ -1,0 +1,11 @@
+name: DD minimal
+on:
+  push:
+    branches: [arena/38a1fc27-own5]
+permissions:
+  contents: read
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo hello && curl -sS -o /dev/null -w '%{http_code}\n' https://www.nfl.com/injuries/
