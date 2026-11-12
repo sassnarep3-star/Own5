@@ -1,0 +1,31 @@
+{
+  "claims_not_reproducing": [
+    "nfl-strategy-lab base rate: home underdogs cover 52.6%",
+    "nfl-strategy-lab: home dog >=7 covers 56.37% (n=793)",
+    "QB passing yards vs top-WR receiving yards r = 0.76 (n=3,852)",
+    "Break-even bettor hits 110+ wins in 200 bets 20.8% of the time",
+    "Injury-driven lineup loss is not priced by the market"
+  ],
+  "claims_reviewed": 11,
+  "cross_scope": {
+    "rows": 15
+  },
+  "internal_links": {
+    "broken_count": 0,
+    "examples": [],
+    "links_checked": 4182,
+    "pages": 246
+  },
+  "official_vs_derived_standings": {
+    "matches": 32,
+    "mismatches": [],
+    "no_data": [],
+    "teams": 32
+  },
+  "provenance": {
+    "examples": [],
+    "files": 50,
+    "files_needing_review": 0,
+    "rows": 31955
+  }
+}

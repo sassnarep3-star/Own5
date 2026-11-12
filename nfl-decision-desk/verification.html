@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verification log · NFL Decision Desk</title>
+<meta name="description" content="What was checked, how, and what it returned.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230b1f3a'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%23ffd166' font-family='sans-serif'>D</text></svg>">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <span class="mark">DD</span>
+      <div>
+        <h1><a href="index.html">NFL Decision Desk</a></h1>
+        <p>Own lines · validated strategies · injury &amp; depth intelligence</p>
+      </div>
+    </div>
+    <div class="stamp">
+      <strong>Week 10 · 2026 season</strong>
+      <span>Snapshot 2026-11-12 UTC</span>
+    </div>
+  </div>
+  <nav class="wrap"><a class="" href="index.html">Overview</a><a class="" href="requirements.html">Requirements</a><a class="" href="suggestions.html">Suggestions</a><a class="" href="questions.html">Open questions</a><a class="" href="lines.html">Own lines</a><a class="" href="strategies.html">Strategies</a><a class="" href="validation.html">Gates</a><a class="" href="correlations.html">Correlations</a><a class="" href="injuries.html">Injuries &amp; depth</a><a class="" href="audit.html">Repo audit</a><a class="" href="summary.html">Summary</a><a class="" href="sources.html">Sources</a><a class="" href="flagged.html">Flagged</a><a class="active" href="verification.html">Verification</a></nav>
+</header>
+<main class="wrap">
+  <section class="pagehead">
+    <h2>Verification log</h2>
+    <p>What was checked, how, and what it returned.</p>
+  </section>
+  
+<div class="prose">
+<h3>Rules used on every row</h3>
+<ol>
+<li><strong>Official or flagged.</strong> A row either links to an official page, or links to the
+script and pinned input that computed it, or is blank and flagged. There is no fourth option.</li>
+<li><strong>No inference.</strong> A value that is not in the source is never filled in. Missing
+game statuses show as <em>pending</em>, not as "Questionable".</li>
+<li><strong>Tier disclosure.</strong> Official and aggregator data are labelled separately in every
+table.</li>
+<li><strong>Dual-source assertion.</strong> Where the official page is parseable, the aggregator
+mirror must agree row for row. It currently does: 32/32 standings rows and 276/276 injury rows.</li>
+<li><strong>Timestamps.</strong> Every fetch records URL, HTTP status, byte count, SHA-256 and UTC
+time in <code>data/decision-desk/raw/provenance.json</code>.</li>
+</ol>
+
+<h3 id="sign">The sign-convention check that changed the answer</h3>
+<p>The first backtest of the injury metric used <code>margin + spread</code> as the against-the-spread
+residual, which treats the spread as a handicap on the home team. The pinned source actually stores
+the <em>expected home margin</em> (positive = home favoured). With the wrong sign the strategy looked
+like 57.4% ATS; with the correct sign it is 51.4% (p = 1.0). The erroneous run is preserved in the
+claim table, and suggestion S02 adds a regression test so it cannot recur silently.</p>
+
+<h3>What was checked this build</h3>
+<ul>
+<li>All 32 clubs' W-L-T and PF/PA against an independent game log — 32/32 match.</li>
+<li>4,182 internal links across 246 pages — 0 broken.</li>
+<li>11 previously published numeric claims re-derived.</li>
+<li>50 CSV tables scanned for per-row provenance.</li>
+<li>Every computed table's arithmetic reproducible by <code>python3 tools/decision_desk/build_all.py</code>.</li>
+</ul>
+
+<h3>Reproduce this site</h3>
+<pre><code>python3 tools/decision_desk/fetch_sources.py   # official pages + pinned mirrors
+python3 tools/decision_desk/build_all.py       # parse, compute, audit
+python3 tools/decision_desk/build_site.py      # render nfl-decision-desk/
+python3 tools/decision_desk/verify.py          # row/link/blank checks</code></pre>
+
+<h3>Snapshot</h3>
+<p>Retrieved 2026-11-12T16:29:19Z; 12
+of 12 pinned datasets and 3
+of 3 official pages returned HTTP 200. A failed fetch produces a status
+row, never a fabricated value.</p>
+</div>
+</main>
+<footer class="wrap">
+  <p><strong>Verification policy.</strong> Every table row links to an official page or to the
+  script and pinned input that produced it. Values that cannot be confirmed are left blank and
+  published on the <a href="flagged.html">Flagged for review</a> page — never inferred.</p>
+  <p>Research only. No bets are placed, no performance is claimed, and nothing here is betting
+  advice. If gambling is a problem: 1-800-GAMBLER.</p>
+</footer>
+</body>
+</html>

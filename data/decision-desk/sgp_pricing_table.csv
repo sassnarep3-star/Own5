@@ -1,0 +1,8 @@
+r,joint_prob,independent_joint_prob,ratio_vs_independent,fair_price_keeping_9.09pct_hold,source_url
+0.0,0.25,0.25,1,263.64,https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/compute_correlations.py
+0.1,0.265942,0.25,1.06377,241.841,https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/compute_correlations.py
+0.2,0.282047,0.25,1.12819,222.322,https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/compute_correlations.py
+0.3,0.298493,0.25,1.19397,204.563,https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/compute_correlations.py
+0.4,0.315495,0.25,1.26198,188.15,https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/compute_correlations.py
+0.5,0.333333,0.25,1.33333,172.73,https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/compute_correlations.py
+0.6,0.352416,0.25,1.40967,157.962,https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/compute_correlations.py

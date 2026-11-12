@@ -2,7 +2,14 @@ name: NFL Decision Desk — fetch & verify
 on:
   push:
     branches: [main, arena/38a1fc27-own5]
-    paths: ['data/decision-desk/TRIGGER']
+    paths:
+      - 'data/decision-desk/TRIGGER'
+      - 'tools/decision_desk/**'
+      - 'nfl-decision-desk/**'
+      - 'data/decision-desk/**'
+      - 'research/38a1fc27/**'
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -13,6 +20,24 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  verify:
+    if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Rebuild the desk from the pinned snapshot
+        run: |
+          python3 tools/decision_desk/build_all.py
+          python3 tools/decision_desk/build_site.py
+      - name: Verify rows, links and provenance
+        run: python3 tools/decision_desk/verify.py
+      - name: Confirm the committed site matches a clean rebuild
+        run: git diff --exit-code -- nfl-decision-desk/ data/decision-desk/
+
   fetch:
     runs-on: ubuntu-latest
     timeout-minutes: 25

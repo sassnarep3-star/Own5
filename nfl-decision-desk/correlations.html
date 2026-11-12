@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Correlations · NFL Decision Desk</title>
+<meta name="description" content="Measured correlation values for parlay legs and player-prop combinations, with intervals and sample sizes.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230b1f3a'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%23ffd166' font-family='sans-serif'>D</text></svg>">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <span class="mark">DD</span>
+      <div>
+        <h1><a href="index.html">NFL Decision Desk</a></h1>
+        <p>Own lines · validated strategies · injury &amp; depth intelligence</p>
+      </div>
+    </div>
+    <div class="stamp">
+      <strong>Week 10 · 2026 season</strong>
+      <span>Snapshot 2026-11-12 UTC</span>
+    </div>
+  </div>
+  <nav class="wrap"><a class="" href="index.html">Overview</a><a class="" href="requirements.html">Requirements</a><a class="" href="suggestions.html">Suggestions</a><a class="" href="questions.html">Open questions</a><a class="" href="lines.html">Own lines</a><a class="" href="strategies.html">Strategies</a><a class="" href="validation.html">Gates</a><a class="active" href="correlations.html">Correlations</a><a class="" href="injuries.html">Injuries &amp; depth</a><a class="" href="audit.html">Repo audit</a><a class="" href="summary.html">Summary</a><a class="" href="sources.html">Sources</a><a class="" href="flagged.html">Flagged</a><a class="" href="verification.html">Verification</a></nav>
+</header>
+<main class="wrap">
+  <section class="pagehead">
+    <h2>Correlations</h2>
+    <p>Measured correlation values for parlay legs and player-prop combinations, with intervals and sample sizes.</p>
+  </section>
+  <div class="grid kpis"><div class="kpi "><div class="kpi-value">1360</div><div class="kpi-label">team-games in the panel</div><div class="kpi-note">2024-2026 regular season</div></div><div class="kpi "><div class="kpi-value">0.3251</div><div class="kpi-label">QB+WR1 joint over rate</div><div class="kpi-note">independent would be 0.248012</div></div><div class="kpi warn"><div class="kpi-value">7.70877 pp</div><div class="kpi-label">excess vs independence</div><div class="kpi-note">the same-game parlay gap</div></div></div><h3 id="props">Prop correlations</h3><p>Pearson correlation between the underlying statistics, not between bet outcomes. Fisher 95% intervals are shown; a coefficient is only used for pricing when the interval excludes zero.</p><div class="tablewrap"><table class="data"><thead><tr><th>Pair</th><th>r</th><th>95% CI</th><th>n</th><th>p</th><th>Interpretation</th><th>Source</th></tr></thead><tbody><tr><td>QB passing yards vs team points</td><td>0.441242</td><td>0.397407–0.483067</td><td>1360</td><td>0</td><td>prop leg vs team-total leg</td><td><a href="https://github.com/nflverse/nflverse-data/releases/tag/stats_player" rel="noopener">data</a></td></tr><tr><td>QB passing yards vs WR1 receiving yards</td><td>0.495781</td><td>0.45287–0.5364</td><td>1255</td><td>0</td><td>same-team passing stack</td><td><a href="https://github.com/nflverse/nflverse-data/releases/tag/stats_player" rel="noopener">data</a></td></tr><tr><td>WR1 receiving yards vs team points</td><td>0.255269</td><td>0.202798–0.306278</td><td>1255</td><td>0</td><td>receiver prop vs team total</td><td><a href="https://github.com/nflverse/nflverse-data/releases/tag/stats_player" rel="noopener">data</a></td></tr><tr><td>RB1 rushing yards vs team points</td><td>0.362001</td><td>0.314905–0.407319</td><td>1360</td><td>0</td><td>rushing prop vs team total</td><td><a href="https://github.com/nflverse/nflverse-data/releases/tag/stats_player" rel="noopener">data</a></td></tr><tr><td>QB passing yards vs opponent points</td><td>0.178209</td><td>0.126249–0.229193</td><td>1360</td><td>2.48905e-11</td><td>game-script correlation (comeback/negative script)</td><td><a href="https://github.com/nflverse/nflverse-data/releases/tag/stats_player" rel="noopener">data</a></td></tr><tr><td>QB passing yards vs game total</td><td>0.447526</td><td>0.403981–0.489048</td><td>1360</td><td>0</td><td>prop leg vs game-total leg</td><td><a href="https://github.com/nflverse/nflverse-data/releases/tag/stats_player" rel="noopener">data</a></td></tr></tbody></table></div><h3 id="sgp">Same-game parlay pricing</h3><p>For two legs with equal 50% win probability and correlation r, the joint probability is 0.25 + arcsin(r)/(2π). The fair price column keeps a 9.09% hold so it can be compared directly with a two-leg -110 parlay paying +264.</p><div class="tablewrap"><table class="data"><thead><tr><th>r</th><th>Joint probability</th><th>vs independent</th><th>Fair price (9.09% hold)</th><th>Source</th></tr></thead><tbody><tr><td>0.0</td><td>0.25</td><td>1</td><td>263.64</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/sgp_pricing_table.csv" rel="noopener">source</a></td></tr><tr><td>0.1</td><td>0.265942</td><td>1.06377</td><td>241.841</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/sgp_pricing_table.csv" rel="noopener">source</a></td></tr><tr><td>0.2</td><td>0.282047</td><td>1.12819</td><td>222.322</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/sgp_pricing_table.csv" rel="noopener">source</a></td></tr><tr><td>0.3</td><td>0.298493</td><td>1.19397</td><td>204.563</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/sgp_pricing_table.csv" rel="noopener">source</a></td></tr><tr><td>0.4</td><td>0.315495</td><td>1.26198</td><td>188.15</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/sgp_pricing_table.csv" rel="noopener">source</a></td></tr><tr><td>0.5</td><td>0.333333</td><td>1.33333</td><td>172.73</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/sgp_pricing_table.csv" rel="noopener">source</a></td></tr><tr><td>0.6</td><td>0.352416</td><td>1.40967</td><td>157.962</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/sgp_pricing_table.csv" rel="noopener">source</a></td></tr></tbody></table></div><h3>Parlay leg correlations (phi)</h3><div class="tablewrap"><table class="data"><thead><tr><th>Leg pair</th><th>phi</th><th>n games</th><th>Reading</th><th>Source</th></tr></thead><tbody><tr><td>same-game: home ATS cover vs game over</td><td>0.0060347</td><td>7103</td><td>positive = legs reinforce; negative = hedge</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/parlay_correlations.csv" rel="noopener">source</a></td></tr><tr><td>same-game: home team total over vs home ATS cover</td><td>0.360794</td><td>7103</td><td>the classic correlated parlay pair</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/parlay_correlations.csv" rel="noopener">source</a></td></tr><tr><td>home scoring vs implied total (residual correlation)</td><td>0.606792</td><td>7103</td><td>how much team-scoring legs move with the spread leg</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/parlay_correlations.csv" rel="noopener">source</a></td></tr></tbody></table></div><div class="callout"><h4>What this means for combination bets</h4><p>Cross-market legs (spread and total) are effectively independent, so a two-leg parlay across them is fairly priced by the multiplier. Same-team legs are not: passing volume drives both the quarterback's yards and his receiver's, so pricing them as independent overstates the payout. Same-team combinations should only be taken at the operator's same-game price, where the book applies its own correlation model.</p></div>
+</main>
+<footer class="wrap">
+  <p><strong>Verification policy.</strong> Every table row links to an official page or to the
+  script and pinned input that produced it. Values that cannot be confirmed are left blank and
+  published on the <a href="flagged.html">Flagged for review</a> page — never inferred.</p>
+  <p>Research only. No bets are placed, no performance is claimed, and nothing here is betting
+  advice. If gambling is a problem: 1-800-GAMBLER.</p>
+</footer>
+</body>
+</html>

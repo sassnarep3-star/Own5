@@ -1,0 +1,7 @@
+model,threshold_pts,n_bets,wins,win_rate,ci_low,ci_high,break_even,p_two_sided,flat_roi_at_minus110,source_url
+ratings_only,2.0,4207,2114,0.502496,0.487392,0.517595,0.5238,0.465099,-0.0406898,https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/compute_lines.py
+ratings_only,3.0,3121,1573,0.504005,0.48647,0.521531,0.5238,1,-0.0378084,https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/compute_lines.py
+ratings_only,4.0,2230,1133,0.508072,0.487326,0.52879,0.5238,1,-0.0300448,https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/compute_lines.py
+ratings_plus_injury,2.0,4232,2133,0.504017,0.488957,0.51907,0.5238,0.827862,-0.0377857,https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/compute_lines.py
+ratings_plus_injury,3.0,3145,1591,0.505882,0.488412,0.523338,0.5238,1,-0.0342246,https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/compute_lines.py
+ratings_plus_injury,4.0,2237,1130,0.505141,0.484431,0.525833,0.5238,1,-0.0356403,https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/compute_lines.py
