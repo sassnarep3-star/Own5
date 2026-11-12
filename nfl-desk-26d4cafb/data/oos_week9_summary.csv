@@ -1,0 +1,5 @@
+model,n_games_graded,margin_MAE,margin_RMSE,margin_bias,total_MAE,straight_up_correct,straight_up_accuracy,brier_score,model_provenance_url,source_url
+"26d4cafb walk-forward (this session, depth-adjusted)",29,10.982,13.353,-1.684,10.741,24,0.8276,0.1688,https://www.nfl.com/schedules/2026/by-week/week-9,https://www.nfl.com/schedules/2026/by-week/week-9
+line-lab market scrape (ESPN/DraftKings) -- THIRD PARTY,15,9.6,11.895,5.667,9.567,13,0.8667,0.1472,https://www.espn.com/nfl/odds,https://www.nfl.com/schedules/2026/by-week/week-9
+"nfl-strategy-lab (originate_lines.py, HFA=+2.0)",15,9.0,11.453,4.733,11.033,12,0.8,0.1591,https://github.com/sassnarep3-star/Own5/blob/main/data/model_lines_2026_wk9.csv,https://www.nfl.com/schedules/2026/by-week/week-9
+"own5-desk (points-poisson-v0.1, HFA=0.0, k=8)",13,10.193,12.58,4.148,9.615,10,0.7692,0.1252,https://github.com/sassnarep3-star/Own5/blob/main/data/own5_desk/derived_lines.json,https://www.nfl.com/schedules/2026/by-week/week-9

@@ -1,0 +1,197 @@
+{
+  "assumption_practice_weights": {
+    "": 0.0,
+    "Did Not Participate In Practice": 0.5,
+    "Full Participation in Practice": 0.0,
+    "Limited Participation in Practice": 0.25
+  },
+  "assumption_weights": {
+    "Doubtful": 0.75,
+    "Out": 1.0,
+    "Questionable": 0.5
+  },
+  "by_gap_bucket": [
+    {
+      "bucket": "5-15 pp",
+      "n": 155,
+      "p_two_sided": "1",
+      "win_rate": "0.483871",
+      "wins": 75
+    },
+    {
+      "bucket": "15-30 pp",
+      "n": 189,
+      "p_two_sided": "1",
+      "win_rate": "0.52381",
+      "wins": 99
+    },
+    {
+      "bucket": "30-50 pp",
+      "n": 211,
+      "p_two_sided": "1",
+      "win_rate": "0.516588",
+      "wins": 109
+    },
+    {
+      "bucket": ">=50 pp",
+      "n": 227,
+      "p_two_sided": "1",
+      "win_rate": "0.524229",
+      "wins": 119
+    }
+  ],
+  "by_season": [
+    {
+      "bets_gap_ge50pp": 66,
+      "n": 271,
+      "p": "0.363123",
+      "r2": "0.00203596",
+      "se": "0.0142031",
+      "season": 2023,
+      "slope_pts_per_pp": "0.0129167",
+      "source_url": "https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/compute_injuries.py",
+      "t": "0.90943",
+      "win_rate": "0.378788",
+      "wins": 25
+    },
+    {
+      "bets_gap_ge50pp": 63,
+      "n": 271,
+      "p": "0.00052473",
+      "r2": "0.0442298",
+      "se": "0.0161727",
+      "season": 2024,
+      "slope_pts_per_pp": "-0.0560837",
+      "source_url": "https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/compute_injuries.py",
+      "t": "-3.4678",
+      "win_rate": "0.68254",
+      "wins": 43
+    },
+    {
+      "bets_gap_ge50pp": 73,
+      "n": 272,
+      "p": "0.421901",
+      "r2": "0.00319736",
+      "se": "0.0162724",
+      "season": 2025,
+      "slope_pts_per_pp": "-0.0130688",
+      "source_url": "https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/compute_injuries.py",
+      "t": "-0.803127",
+      "win_rate": "0.520548",
+      "wins": 38
+    },
+    {
+      "bets_gap_ge50pp": 32,
+      "n": 136,
+      "p": "0.193387",
+      "r2": "0.0119029",
+      "se": "0.0226421",
+      "season": 2026,
+      "slope_pts_per_pp": "-0.0294489",
+      "source_url": "https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/compute_injuries.py",
+      "t": "-1.30063",
+      "win_rate": "0.40625",
+      "wins": 13
+    }
+  ],
+  "deficiency_units": "percentage points of unit snap share (player season snap share minus next man up)",
+  "fade_more_injured_team": {
+    "break_even": 0.5238,
+    "ci95": [
+      "0.479053",
+      "0.548942"
+    ],
+    "n_bets": 782,
+    "p_two_sided": "1",
+    "win_rate": "0.514066",
+    "wins": 402
+  },
+  "holdout_gap50": {
+    "rule": "fade the team with >=50 pp larger lineup deficiency (ATS), rule fixed on 2023-2024",
+    "test_n": 104,
+    "test_p_two_sided": "1",
+    "test_win_rate": "0.490385",
+    "test_wins": 51,
+    "train_n": 123,
+    "train_win_rate": "0.552846",
+    "train_wins": 68
+  },
+  "market_line_source": "nflverse games.csv spread_line (AGGREGATOR; positive = home team expected to win by that margin; timing unknown)",
+  "market_residual_model": {
+    "interpretation": "points of ATS margin (actual margin minus the nflverse spread_line, which is the expected home margin) per percentage point of relative lineup deficiency",
+    "n": 950,
+    "p": 0.020404512575046496,
+    "r2": 0.006212898860441851,
+    "slope_pts_per_pp": -0.02058509313932796,
+    "slope_se": 0.008877380038085872,
+    "t": -2.3188252672537932
+  },
+  "n_games": 950,
+  "placebo": {
+    "draws": 500,
+    "null_mean": "0.000507094",
+    "null_sd": "0.00811995",
+    "observed_slope": "-0.0205851",
+    "share_null_at_least_as_extreme": "0.002"
+  },
+  "quality_controlled_model": {
+    "ats_residual_p": "0.0242031",
+    "ats_residual_r2": "0.00709019",
+    "ats_residual_slope_pts_per_pp": "-0.020122",
+    "market_spread_p": "3.3904e-12",
+    "market_spread_r2": "0.484695",
+    "market_spread_slope_pts_per_pp": "-0.0190095",
+    "n": 887,
+    "note": "all three models use the same 887 games, the same deficiency gap and the same prior-scoring-margin control; raw margin = actual margin, market = nflverse spread_line, residual = margin - line",
+    "prior_margin_control_coef": "0.383069",
+    "prior_margin_control_p": "0",
+    "raw_margin_p": "6.07152e-05",
+    "raw_margin_r2": "0.110686",
+    "raw_margin_slope_pts_per_pp": "-0.0391315",
+    "share_of_effect_priced_by_market": "0.485784"
+  },
+  "seasons": [
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "starting_QB_out_exactly_one_side": {
+    "n_games": 94,
+    "p_two_sided": "1",
+    "win_rate": "0.531915",
+    "wins": 50
+  },
+  "walk_forward": [
+    {
+      "bets": 147,
+      "predicted_slope": "0.0129167",
+      "source_url": "https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/compute_injuries.py",
+      "test_season": 2024,
+      "train_n": 271,
+      "win_rate": "0.489796",
+      "wins": 72
+    },
+    {
+      "bets": 114,
+      "predicted_slope": "-0.0230788",
+      "source_url": "https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/compute_injuries.py",
+      "test_season": 2025,
+      "train_n": 542,
+      "win_rate": "0.491228",
+      "wins": 56
+    },
+    {
+      "bets": 38,
+      "predicted_slope": "-0.0191385",
+      "source_url": "https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/compute_injuries.py",
+      "test_season": 2026,
+      "train_n": 814,
+      "win_rate": "0.394737",
+      "wins": 15
+    }
+  ],
+  "weeks_per_season": [
+    18
+  ]
+}

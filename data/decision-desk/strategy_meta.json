@@ -1,0 +1,60 @@
+{
+  "base_rates": {
+    "favorite_ats_cover_rate": "0.484889",
+    "favorite_ats_n": 10423,
+    "favorite_su_n": 10729,
+    "favorite_su_win_rate": "0.661385",
+    "games_with_spread": 10729,
+    "home_underdog_ats_cover_rate": "0.497242",
+    "home_underdog_n": 3626,
+    "over_rate": "0.490788",
+    "over_under_n": 10530
+  },
+  "bonferroni_alpha": 0.0071428571428571435,
+  "break_even_at_minus110": 0.5238,
+  "parlay_math": {
+    "note": "a 2-leg -110 parlay needs joint 27.47%; independent break-even legs deliver exactly that, so parlay price alone carries no edge - only correlation does.",
+    "price_at_minus110_two_leg": "+264 (decimal 3.64)",
+    "required_leg_win_rate_if_independent": "0.52381",
+    "two_leg_independent_breakeven": "0.274376"
+  },
+  "prior_claim_checks": [
+    {
+      "agrees": "no",
+      "claim": "nfl-strategy-lab base rate: favourites cover 48.1% (n=10,424)",
+      "prior_session_value": "0.481",
+      "recomputed_n": 10423,
+      "recomputed_value": "0.484889"
+    },
+    {
+      "agrees": "no",
+      "claim": "nfl-strategy-lab base rate: home underdogs cover 52.6%",
+      "prior_session_value": "0.526",
+      "recomputed_n": 3626,
+      "recomputed_value": "0.497242"
+    },
+    {
+      "agrees": "yes",
+      "claim": "nfl-strategy-lab base rate: overs 49.1% (n=10,729)",
+      "prior_session_value": "0.491",
+      "recomputed_n": 10530,
+      "recomputed_value": "0.490788"
+    },
+    {
+      "agrees": "no",
+      "claim": "nfl-strategy-lab: home dog >=7 covers 56.37% (n=793)",
+      "prior_session_value": "0.5637",
+      "recomputed_n": 730,
+      "recomputed_value": "0.539726"
+    },
+    {
+      "agrees": "no",
+      "claim": "nfl-strategy-lab: favourite SU win rate 65.63% (n=10,729)",
+      "prior_session_value": "0.6563",
+      "recomputed_n": 10729,
+      "recomputed_value": "0.661385"
+    }
+  ],
+  "variants_tested": 7,
+  "window": "1980-2024 regular season (spreadspoke), nflverse 2010-2026 for rest/injury variants"
+}

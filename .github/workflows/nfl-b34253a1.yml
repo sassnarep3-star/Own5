@@ -1,0 +1,61 @@
+name: Verify NFL B34 Week 10 research desk
+
+on:
+  push:
+    branches: [main, arena/b34253a1-own5]
+    paths:
+      - 'nfl-b34253a1/**'
+      - 'research/nfl-b34253a1/**'
+      - '.github/workflows/nfl-b34253a1.yml'
+      - 'COORDINATION.md'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'nfl-b34253a1/**'
+      - 'research/nfl-b34253a1/**'
+      - '.github/workflows/nfl-b34253a1.yml'
+      - 'COORDINATION.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Rebuild, audit, and test isolated NFL desk
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Rebuild inputs, analysis, audit, and static pages
+        run: |
+          python3 nfl-b34253a1/seed.py
+          python3 nfl-b34253a1/engine.py
+          python3 nfl-b34253a1/content_seed.py
+          python3 nfl-b34253a1/audit_repo.py
+          python3 nfl-b34253a1/build.py
+      - name: Test the isolated contract and existing repository unit suite
+        run: |
+          python3 -m unittest discover -s nfl-b34253a1/tests -v
+          python3 -m unittest discover -s tests -v
+          python3 nfl-b34253a1/verify.py
+          python3 -m py_compile nfl-b34253a1/*.py
+          node --check nfl-b34253a1/tests/browser.cjs
+      - name: Check deterministic generated outputs
+        run: git diff --exit-code -- nfl-b34253a1
+      - name: Install existing browser test dependencies
+        run: npm ci --ignore-scripts
+      - name: Desktop/mobile Chromium and no-JavaScript smoke checks
+        run: |
+          python3 -m http.server 3000 --bind 0.0.0.0 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID"' EXIT
+          node -e "const net=require('node:net');let n=0;function wait(){const s=net.connect(3000,'127.0.0.1',()=>{s.end();process.exit(0)});s.on('error',()=>{if(++n>50)process.exit(1);setTimeout(wait,100)})};wait()"
+          NFL_TEST_BASE_URL=http://127.0.0.1:3000/nfl-b34253a1 node nfl-b34253a1/tests/browser.cjs

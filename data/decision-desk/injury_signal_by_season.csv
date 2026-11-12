@@ -1,0 +1,5 @@
+season,n,slope_pts_per_pp,se,t,p,r2,bets_gap_ge50pp,wins,win_rate,source_url
+2023,271,0.0129167,0.0142031,0.90943,0.363123,0.00203596,66,25,0.378788,https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/compute_injuries.py
+2024,271,-0.0560837,0.0161727,-3.4678,0.00052473,0.0442298,63,43,0.68254,https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/compute_injuries.py
+2025,272,-0.0130688,0.0162724,-0.803127,0.421901,0.00319736,73,38,0.520548,https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/compute_injuries.py
+2026,136,-0.0294489,0.0226421,-1.30063,0.193387,0.0119029,32,13,0.40625,https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/compute_injuries.py

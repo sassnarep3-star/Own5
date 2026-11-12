@@ -1,0 +1,16 @@
+{
+  "as_of": "2026-11-12",
+  "n_games": 120,
+  "prediction_method": "Pre-week rolling PF/G and PA/G; no same-week data, no HFA, no injury adjustment.",
+  "mae_points": "10.4048",
+  "mean_error_actual_minus_projected": "-0.7939",
+  "pearson_projected_vs_actual": {
+    "r": "0.135006",
+    "p": "0.141514",
+    "ci_low": "-0.045336",
+    "ci_high": "0.306826",
+    "n": 120
+  },
+  "status": "EXPLORATORY_DESCRIPTIVE_ONLY",
+  "limitations": "2026 in-sample walk-forward, 120 games, one season; no bookmaker price/closing line, no bet ledger, no clustered confidence interval. It does not establish profitability or skill."
+}

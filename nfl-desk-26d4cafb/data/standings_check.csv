@@ -1,0 +1,33 @@
+abbr,team,conf,div,official_W,official_L,official_T,official_PF,official_PA,computed_GP,computed_W,computed_L,computed_T,computed_PF,computed_PA,match,detail,source_url
+ARI,Arizona Cardinals,NFC,West,3,6,0,178,255,9,3,6,0,178,255,MATCH,,https://www.nfl.com/teams/arizona-cardinals/
+ATL,Atlanta Falcons,NFC,South,3,6,0,188,223,9,3,6,0,188,223,MATCH,,https://www.nfl.com/teams/atlanta-falcons/
+BAL,Baltimore Ravens,AFC,North,4,5,0,189,236,9,4,5,0,189,236,MATCH,,https://www.nfl.com/teams/baltimore-ravens/
+BUF,Buffalo Bills,AFC,East,7,1,0,256,187,8,7,1,0,256,187,MATCH,,https://www.nfl.com/teams/buffalo-bills/
+CAR,Carolina Panthers,NFC,South,3,5,0,199,219,8,3,5,0,199,219,MATCH,,https://www.nfl.com/teams/carolina-panthers/
+CHI,Chicago Bears,NFC,North,7,2,0,241,184,9,7,2,0,241,184,MATCH,,https://www.nfl.com/teams/chicago-bears/
+CIN,Cincinnati Bengals,AFC,North,6,2,0,240,175,8,6,2,0,240,175,MATCH,,https://www.nfl.com/teams/cincinnati-bengals/
+CLE,Cleveland Browns,AFC,North,5,4,0,161,196,9,5,4,0,161,196,MATCH,,https://www.nfl.com/teams/cleveland-browns/
+DAL,Dallas Cowboys,NFC,East,4,5,0,246,236,9,4,5,0,246,236,MATCH,,https://www.nfl.com/teams/dallas-cowboys/
+DEN,Denver Broncos,AFC,West,7,2,0,198,186,9,7,2,0,198,186,MATCH,,https://www.nfl.com/teams/denver-broncos/
+DET,Detroit Lions,NFC,North,6,2,0,222,189,8,6,2,0,222,189,MATCH,,https://www.nfl.com/teams/detroit-lions/
+GB,Green Bay Packers,NFC,North,6,3,0,216,191,9,6,3,0,216,191,MATCH,,https://www.nfl.com/teams/green-bay-packers/
+HOU,Houston Texans,AFC,South,3,5,0,209,192,8,3,5,0,209,192,MATCH,,https://www.nfl.com/teams/houston-texans/
+IND,Indianapolis Colts,AFC,South,2,7,0,184,249,9,2,7,0,184,249,MATCH,,https://www.nfl.com/teams/indianapolis-colts/
+JAX,Jacksonville Jaguars,AFC,South,6,2,0,229,121,8,6,2,0,229,121,MATCH,,https://www.nfl.com/teams/jacksonville-jaguars/
+KC,Kansas City Chiefs,AFC,West,6,2,0,202,143,8,6,2,0,202,143,MATCH,,https://www.nfl.com/teams/kansas-city-chiefs/
+LAC,Los Angeles Chargers,AFC,West,0,8,0,121,219,8,0,8,0,121,219,MATCH,,https://www.nfl.com/teams/los-angeles-chargers/
+LAR,Los Angeles Rams,NFC,West,5,4,0,214,181,9,5,4,0,214,181,MATCH,,https://www.nfl.com/teams/los-angeles-rams/
+LV,Las Vegas Raiders,AFC,West,4,5,0,238,268,9,4,5,0,238,268,MATCH,,https://www.nfl.com/teams/las-vegas-raiders/
+MIA,Miami Dolphins,AFC,East,1,7,0,126,200,8,1,7,0,126,200,MATCH,,https://www.nfl.com/teams/miami-dolphins/
+MIN,Minnesota Vikings,NFC,North,6,2,0,146,116,8,6,2,0,146,116,MATCH,,https://www.nfl.com/teams/minnesota-vikings/
+NE,New England Patriots,AFC,East,5,4,0,211,207,9,5,4,0,211,207,MATCH,,https://www.nfl.com/teams/new-england-patriots/
+NO,New Orleans Saints,NFC,South,3,5,0,185,216,8,3,5,0,185,216,MATCH,,https://www.nfl.com/teams/new-orleans-saints/
+NYG,New York Giants,NFC,East,5,2,1,182,172,8,5,2,1,182,172,MATCH,,https://www.nfl.com/teams/new-york-giants/
+NYJ,New York Jets,AFC,East,2,7,0,182,223,9,2,7,0,182,223,MATCH,,https://www.nfl.com/teams/new-york-jets/
+PHI,Philadelphia Eagles,NFC,East,2,7,0,148,221,9,2,7,0,148,221,MATCH,,https://www.nfl.com/teams/philadelphia-eagles/
+PIT,Pittsburgh Steelers,AFC,North,6,2,0,180,144,8,6,2,0,180,144,MATCH,,https://www.nfl.com/teams/pittsburgh-steelers/
+SEA,Seattle Seahawks,NFC,West,5,4,0,202,162,9,5,4,0,202,162,MATCH,,https://www.nfl.com/teams/seattle-seahawks/
+SF,San Francisco 49ers,NFC,West,7,1,0,235,156,8,7,1,0,235,156,MATCH,,https://www.nfl.com/teams/san-francisco-49ers/
+TB,Tampa Bay Buccaneers,NFC,South,3,6,0,202,178,9,3,6,0,202,178,MATCH,,https://www.nfl.com/teams/tampa-bay-buccaneers/
+TEN,Tennessee Titans,AFC,South,1,7,0,144,199,8,1,7,0,144,199,MATCH,,https://www.nfl.com/teams/tennessee-titans/
+WAS,Washington Commanders,NFC,East,2,5,1,172,202,8,2,5,1,172,202,MATCH,,https://www.nfl.com/teams/washington-commanders/

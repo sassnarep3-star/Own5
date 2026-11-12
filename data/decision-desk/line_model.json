@@ -1,0 +1,95 @@
+{
+  "backtest": [
+    {
+      "break_even": 0.5238,
+      "ci_high": "0.517595",
+      "ci_low": "0.487392",
+      "flat_roi_at_minus110": "-0.0406898",
+      "model": "ratings_only",
+      "n_bets": 4207,
+      "p_two_sided": "0.465099",
+      "source_url": "https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/compute_lines.py",
+      "threshold_pts": 2.0,
+      "win_rate": "0.502496",
+      "wins": 2114
+    },
+    {
+      "break_even": 0.5238,
+      "ci_high": "0.521531",
+      "ci_low": "0.48647",
+      "flat_roi_at_minus110": "-0.0378084",
+      "model": "ratings_only",
+      "n_bets": 3121,
+      "p_two_sided": "1",
+      "source_url": "https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/compute_lines.py",
+      "threshold_pts": 3.0,
+      "win_rate": "0.504005",
+      "wins": 1573
+    },
+    {
+      "break_even": 0.5238,
+      "ci_high": "0.52879",
+      "ci_low": "0.487326",
+      "flat_roi_at_minus110": "-0.0300448",
+      "model": "ratings_only",
+      "n_bets": 2230,
+      "p_two_sided": "1",
+      "source_url": "https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/compute_lines.py",
+      "threshold_pts": 4.0,
+      "win_rate": "0.508072",
+      "wins": 1133
+    },
+    {
+      "break_even": 0.5238,
+      "ci_high": "0.51907",
+      "ci_low": "0.488957",
+      "flat_roi_at_minus110": "-0.0377857",
+      "model": "ratings_plus_injury",
+      "n_bets": 4232,
+      "p_two_sided": "0.827862",
+      "source_url": "https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/compute_lines.py",
+      "threshold_pts": 2.0,
+      "win_rate": "0.504017",
+      "wins": 2133
+    },
+    {
+      "break_even": 0.5238,
+      "ci_high": "0.523338",
+      "ci_low": "0.488412",
+      "flat_roi_at_minus110": "-0.0342246",
+      "model": "ratings_plus_injury",
+      "n_bets": 3145,
+      "p_two_sided": "1",
+      "source_url": "https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/compute_lines.py",
+      "threshold_pts": 3.0,
+      "win_rate": "0.505882",
+      "wins": 1591
+    },
+    {
+      "break_even": 0.5238,
+      "ci_high": "0.525833",
+      "ci_low": "0.484431",
+      "flat_roi_at_minus110": "-0.0356403",
+      "model": "ratings_plus_injury",
+      "n_bets": 2237,
+      "p_two_sided": "1",
+      "source_url": "https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/compute_lines.py",
+      "threshold_pts": 4.0,
+      "win_rate": "0.505141",
+      "wins": 1130
+    }
+  ],
+  "edges_ge3": 7,
+  "games_priced": 14,
+  "generated_from": {
+    "deficiency": "data/decision-desk/deficiency_by_team_week.csv",
+    "games": "data/decision-desk/raw/games.csv.gz",
+    "injuries": "data/decision-desk/official/official_injuries_wk10.csv"
+  },
+  "hfa_pts": "1.21673",
+  "injury_coefficient_n": 887,
+  "injury_coefficient_p": "6.07152e-05",
+  "injury_coefficient_pts_per_pp": "-0.0391315",
+  "injury_coefficient_se": "0.00975845",
+  "week": 10
+}

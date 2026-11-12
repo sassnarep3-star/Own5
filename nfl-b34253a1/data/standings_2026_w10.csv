@@ -1,0 +1,33 @@
+team,team_name,wins,losses,ties,points_for,points_against,as_of,source_url,source_verified_on
+BUF,Buffalo Bills,7,1,0,256,187,before_week_10,https://www.nfl.com/standings/league/2026/REG,2026-11-12
+SF,San Francisco 49ers,7,1,0,235,156,before_week_10,https://www.nfl.com/standings/league/2026/REG,2026-11-12
+CHI,Chicago Bears,7,2,0,241,184,before_week_10,https://www.nfl.com/standings/league/2026/REG,2026-11-12
+DEN,Denver Broncos,7,2,0,198,186,before_week_10,https://www.nfl.com/standings/league/2026/REG,2026-11-12
+CIN,Cincinnati Bengals,6,2,0,240,175,before_week_10,https://www.nfl.com/standings/league/2026/REG,2026-11-12
+DET,Detroit Lions,6,2,0,222,189,before_week_10,https://www.nfl.com/standings/league/2026/REG,2026-11-12
+JAX,Jacksonville Jaguars,6,2,0,229,121,before_week_10,https://www.nfl.com/standings/league/2026/REG,2026-11-12
+KC,Kansas City Chiefs,6,2,0,202,143,before_week_10,https://www.nfl.com/standings/league/2026/REG,2026-11-12
+MIN,Minnesota Vikings,6,2,0,146,116,before_week_10,https://www.nfl.com/standings/league/2026/REG,2026-11-12
+PIT,Pittsburgh Steelers,6,2,0,180,144,before_week_10,https://www.nfl.com/standings/league/2026/REG,2026-11-12
+NYG,New York Giants,5,2,1,182,172,before_week_10,https://www.nfl.com/standings/league/2026/REG,2026-11-12
+GB,Green Bay Packers,6,3,0,216,191,before_week_10,https://www.nfl.com/standings/league/2026/REG,2026-11-12
+CLE,Cleveland Browns,5,4,0,161,196,before_week_10,https://www.nfl.com/standings/league/2026/REG,2026-11-12
+LAR,Los Angeles Rams,5,4,0,214,181,before_week_10,https://www.nfl.com/standings/league/2026/REG,2026-11-12
+NE,New England Patriots,5,4,0,211,207,before_week_10,https://www.nfl.com/standings/league/2026/REG,2026-11-12
+SEA,Seattle Seahawks,5,4,0,202,162,before_week_10,https://www.nfl.com/standings/league/2026/REG,2026-11-12
+BAL,Baltimore Ravens,4,5,0,189,236,before_week_10,https://www.nfl.com/standings/league/2026/REG,2026-11-12
+DAL,Dallas Cowboys,4,5,0,246,236,before_week_10,https://www.nfl.com/standings/league/2026/REG,2026-11-12
+LV,Las Vegas Raiders,4,5,0,238,268,before_week_10,https://www.nfl.com/standings/league/2026/REG,2026-11-12
+CAR,Carolina Panthers,3,5,0,199,219,before_week_10,https://www.nfl.com/standings/league/2026/REG,2026-11-12
+HOU,Houston Texans,3,5,0,209,192,before_week_10,https://www.nfl.com/standings/league/2026/REG,2026-11-12
+NO,New Orleans Saints,3,5,0,185,216,before_week_10,https://www.nfl.com/standings/league/2026/REG,2026-11-12
+ARI,Arizona Cardinals,3,6,0,178,255,before_week_10,https://www.nfl.com/standings/league/2026/REG,2026-11-12
+ATL,Atlanta Falcons,3,6,0,188,223,before_week_10,https://www.nfl.com/standings/league/2026/REG,2026-11-12
+TB,Tampa Bay Buccaneers,3,6,0,202,178,before_week_10,https://www.nfl.com/standings/league/2026/REG,2026-11-12
+WSH,Washington Commanders,2,5,1,172,202,before_week_10,https://www.nfl.com/standings/league/2026/REG,2026-11-12
+IND,Indianapolis Colts,2,7,0,184,249,before_week_10,https://www.nfl.com/standings/league/2026/REG,2026-11-12
+NYJ,New York Jets,2,7,0,182,223,before_week_10,https://www.nfl.com/standings/league/2026/REG,2026-11-12
+PHI,Philadelphia Eagles,2,7,0,148,221,before_week_10,https://www.nfl.com/standings/league/2026/REG,2026-11-12
+MIA,Miami Dolphins,1,7,0,126,200,before_week_10,https://www.nfl.com/standings/league/2026/REG,2026-11-12
+TEN,Tennessee Titans,1,7,0,144,199,before_week_10,https://www.nfl.com/standings/league/2026/REG,2026-11-12
+LAC,Los Angeles Chargers,0,8,0,121,219,before_week_10,https://www.nfl.com/standings/league/2026/REG,2026-11-12

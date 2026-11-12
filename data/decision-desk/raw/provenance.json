@@ -1,0 +1,157 @@
+{
+  "assets": [
+    {
+      "asset": "injuries_2026.csv.gz",
+      "bytes": 65923,
+      "committed_as": "data/decision-desk/raw/injuries_2026.csv.gz",
+      "header": "season,season_type,game_type,team,week,gsis_id,position,full_name,first_name,last_name,report_primary_injury,report_secondary_injury,report_status,practice_primary_injury,practice_secondary_injury,practice_status",
+      "http_status": 200,
+      "release": "injuries",
+      "sha256": "36c933c378dd06eca5f4d43b1891412ba2d0e632ff0df85ddaddaf32e40ca0d8",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz"
+    },
+    {
+      "asset": "injuries_2025.csv.gz",
+      "bytes": 127360,
+      "committed_as": "data/decision-desk/raw/injuries_2025.csv.gz",
+      "header": "season,season_type,game_type,team,week,gsis_id,position,full_name,first_name,last_name,report_primary_injury,report_secondary_injury,report_status,practice_primary_injury,practice_secondary_injury,practice_status",
+      "http_status": 200,
+      "release": "injuries",
+      "sha256": "6f1a882aa738b685dac09f15f67bc1f891c9bc258148c98138f8589c9b08300b",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2025.csv.gz"
+    },
+    {
+      "asset": "injuries_2024.csv.gz",
+      "bytes": 157383,
+      "committed_as": "data/decision-desk/raw/injuries_2024.csv.gz",
+      "header": "season,game_type,team,week,gsis_id,position,full_name,first_name,last_name,report_primary_injury,report_secondary_injury,report_status,practice_primary_injury,practice_secondary_injury,practice_status,date_modified",
+      "http_status": 200,
+      "release": "injuries",
+      "sha256": "7fe70c7b1ec165e2fcdf57f29034f8ec104875071600e30eafdb1849591e2a45",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2024.csv.gz"
+    },
+    {
+      "asset": "injuries_2023.csv.gz",
+      "bytes": 140729,
+      "committed_as": "data/decision-desk/raw/injuries_2023.csv.gz",
+      "header": "season,game_type,team,week,gsis_id,position,full_name,first_name,last_name,report_primary_injury,report_secondary_injury,report_status,practice_primary_injury,practice_secondary_injury,practice_status,date_modified",
+      "http_status": 200,
+      "release": "injuries",
+      "sha256": "fc8468eeeaff24151ee94d5d718116cee2baceee07b3ee151c4d42a6aec763e2",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz"
+    },
+    {
+      "asset": "snap_counts_2026.csv.gz",
+      "bytes": 239772,
+      "committed_as": "data/decision-desk/raw/snap_counts_2026.csv.gz",
+      "header": "game_id,pfr_game_id,season,game_type,week,player,pfr_player_id,position,team,opponent,offense_snaps,offense_pct,defense_snaps,defense_pct,st_snaps,st_pct",
+      "http_status": 200,
+      "release": "snap_counts",
+      "sha256": "4551d3cdf6e9b2d22678f381d70f141c4d927ea0d3aff2c37dfd29b13151e1d5",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/snap_counts/snap_counts_2026.csv.gz"
+    },
+    {
+      "asset": "snap_counts_2025.csv.gz",
+      "bytes": 504063,
+      "committed_as": "data/decision-desk/raw/snap_counts_2025.csv.gz",
+      "header": "game_id,pfr_game_id,season,game_type,week,player,pfr_player_id,position,team,opponent,offense_snaps,offense_pct,defense_snaps,defense_pct,st_snaps,st_pct",
+      "http_status": 200,
+      "release": "snap_counts",
+      "sha256": "66e3e0ff4c61856101718c770a6378112ad0788b10587d25cb574a6bfa17d6a8",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/snap_counts/snap_counts_2025.csv.gz"
+    },
+    {
+      "asset": "snap_counts_2024.csv.gz",
+      "bytes": 502822,
+      "committed_as": "data/decision-desk/raw/snap_counts_2024.csv.gz",
+      "header": "game_id,pfr_game_id,season,game_type,week,player,pfr_player_id,position,team,opponent,offense_snaps,offense_pct,defense_snaps,defense_pct,st_snaps,st_pct",
+      "http_status": 200,
+      "release": "snap_counts",
+      "sha256": "fe1d819db55d6e333057a8efcec52e8506ef111c7961b0e0411310393bb912bb",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/snap_counts/snap_counts_2024.csv.gz"
+    },
+    {
+      "asset": "snap_counts_2023.csv.gz",
+      "bytes": 500319,
+      "committed_as": "data/decision-desk/raw/snap_counts_2023.csv.gz",
+      "header": "game_id,pfr_game_id,season,game_type,week,player,pfr_player_id,position,team,opponent,offense_snaps,offense_pct,defense_snaps,defense_pct,st_snaps,st_pct",
+      "http_status": 200,
+      "release": "snap_counts",
+      "sha256": "11fbfcfaaf3e0eeef4cbf159821a0e48d9824e84fccbab26b8e50c6f67ad8830",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/snap_counts/snap_counts_2023.csv.gz"
+    },
+    {
+      "asset": "stats_player_week_2026.csv.gz",
+      "bytes": 613594,
+      "committed_as": "data/decision-desk/raw/stats_player_week_2026.csv.gz",
+      "header": "player_id,player_name,player_display_name,position,position_group,headshot_url,season,week,season_type,game_id,team,opponent_team,completions,attempts,passing_yards,passing_tds,passing_interceptions,sacks_suffered,sack_yards_lost,sack_fumbles,sack_fumbles_lost,passing_air_yards,passing_yards_after_catch,passing_first_downs,passing_epa,passing_cpoe,passing_2pt_conversions,pacr,passing_10,passing_16,passing_20,passing_40,carries,rushing_yards,rushing_tds,rushing_fumbles,rushing_fumbles_lost,rushing_first_downs,rushing_epa,rushing_2pt_conversions,rushing_10,rushing_12,rushing_20,rushing_40,receptions,targets,receiving_yards,receiving_tds,receiving_fumbles,receiving_fumbles_lost,receiving_air_yards,receiving_yards_after_catch,receiving_first_downs,receiving_epa,receiving_2pt_conversions,receiving_10,receiving_16,receiving_20,receiving_40,racr,target_share,air_yards_share,wopr,special_teams_tds,def_tackles_solo,def_tackles_with_assist,def_tackle_assists,def_tackles_for_loss,def_tackles_for_loss_yards,def_fumbles_forced,def_sacks,def_sack_yards,def_qb_hits,def_interceptions,def_interception_yards,def_pass_defended,def_tds,def_fumbles,def_safeties,def_punt_blocks,def_pat_blocks,def_fg_blocks,def_2pt_atts,def_2pt_made,misc_yards,fumble_recovery_own,fumble_recovery_yards_own,fumble_recovery_opp,fumble_recovery_yards_opp,fumble_recovery_tds,penalties,penalty_yards,fumbles_forced_by_opp,fumbles_not_forced,fumbles_out_of_bounds,fumbles_total,fumbles_lost_total,punt_returns,punt_return_yards,kickoff_returns,kickoff_return_yards,fg_made,fg_att,fg_missed,fg_blocked,fg_long,fg_pct,fg_made_0_19,fg_made_20_29,fg_made_30_39,fg_made_40_49,fg_made_50_59,fg_made_60_,fg_missed_0_19,fg_missed_20_29,fg_missed_30_39,fg_missed_40_49,fg_missed_50_59,fg_missed_60_,fg_made_list,fg_missed_list,fg_blocked_list,fg_made_distance,fg_missed_distance,fg_blocked_distance,pat_made,pat_att,pat_missed,pat_blocked,pat_pct,gwfg_made,gwfg_att,gwfg_missed,gwfg_blocked,gwfg_distance,pt_att,pt_blocked,pt_long,pt_yards,pt_inside_20,pt_out_of_bounds,pt_downed,pt_touchback,pt_fair_caught,pt_returned,pt_return_yards,pt_return_tds,pt_net_yards,fantasy_points,fantasy_points_ppr",
+      "http_status": 200,
+      "release": "stats_player",
+      "sha256": "bc02fda86575e80f801aea87dcb91560dfd4b24c020bc75aee030ba8b8db11c3",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2026.csv.gz"
+    },
+    {
+      "asset": "stats_player_week_2025.csv.gz",
+      "bytes": 1262421,
+      "committed_as": "data/decision-desk/raw/stats_player_week_2025.csv.gz",
+      "header": "player_id,player_name,player_display_name,position,position_group,headshot_url,season,week,season_type,game_id,team,opponent_team,completions,attempts,passing_yards,passing_tds,passing_interceptions,sacks_suffered,sack_yards_lost,sack_fumbles,sack_fumbles_lost,passing_air_yards,passing_yards_after_catch,passing_first_downs,passing_epa,passing_cpoe,passing_2pt_conversions,pacr,passing_10,passing_16,passing_20,passing_40,carries,rushing_yards,rushing_tds,rushing_fumbles,rushing_fumbles_lost,rushing_first_downs,rushing_epa,rushing_2pt_conversions,rushing_10,rushing_12,rushing_20,rushing_40,receptions,targets,receiving_yards,receiving_tds,receiving_fumbles,receiving_fumbles_lost,receiving_air_yards,receiving_yards_after_catch,receiving_first_downs,receiving_epa,receiving_2pt_conversions,receiving_10,receiving_16,receiving_20,receiving_40,racr,target_share,air_yards_share,wopr,special_teams_tds,def_tackles_solo,def_tackles_with_assist,def_tackle_assists,def_tackles_for_loss,def_tackles_for_loss_yards,def_fumbles_forced,def_sacks,def_sack_yards,def_qb_hits,def_interceptions,def_interception_yards,def_pass_defended,def_tds,def_fumbles,def_safeties,def_punt_blocks,def_pat_blocks,def_fg_blocks,def_2pt_atts,def_2pt_made,misc_yards,fumble_recovery_own,fumble_recovery_yards_own,fumble_recovery_opp,fumble_recovery_yards_opp,fumble_recovery_tds,penalties,penalty_yards,fumbles_forced_by_opp,fumbles_not_forced,fumbles_out_of_bounds,fumbles_total,fumbles_lost_total,punt_returns,punt_return_yards,kickoff_returns,kickoff_return_yards,fg_made,fg_att,fg_missed,fg_blocked,fg_long,fg_pct,fg_made_0_19,fg_made_20_29,fg_made_30_39,fg_made_40_49,fg_made_50_59,fg_made_60_,fg_missed_0_19,fg_missed_20_29,fg_missed_30_39,fg_missed_40_49,fg_missed_50_59,fg_missed_60_,fg_made_list,fg_missed_list,fg_blocked_list,fg_made_distance,fg_missed_distance,fg_blocked_distance,pat_made,pat_att,pat_missed,pat_blocked,pat_pct,gwfg_made,gwfg_att,gwfg_missed,gwfg_blocked,gwfg_distance,pt_att,pt_blocked,pt_long,pt_yards,pt_inside_20,pt_out_of_bounds,pt_downed,pt_touchback,pt_fair_caught,pt_returned,pt_return_yards,pt_return_tds,pt_net_yards,fantasy_points,fantasy_points_ppr",
+      "http_status": 200,
+      "release": "stats_player",
+      "sha256": "c7401e321bdb369443f3280b9acd74ba6e16d82e710383bf1c01acabfebeac0b",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2025.csv.gz"
+    },
+    {
+      "asset": "stats_player_week_2024.csv.gz",
+      "bytes": 1244175,
+      "committed_as": "data/decision-desk/raw/stats_player_week_2024.csv.gz",
+      "header": "player_id,player_name,player_display_name,position,position_group,headshot_url,season,week,season_type,game_id,team,opponent_team,completions,attempts,passing_yards,passing_tds,passing_interceptions,sacks_suffered,sack_yards_lost,sack_fumbles,sack_fumbles_lost,passing_air_yards,passing_yards_after_catch,passing_first_downs,passing_epa,passing_cpoe,passing_2pt_conversions,pacr,passing_10,passing_16,passing_20,passing_40,carries,rushing_yards,rushing_tds,rushing_fumbles,rushing_fumbles_lost,rushing_first_downs,rushing_epa,rushing_2pt_conversions,rushing_10,rushing_12,rushing_20,rushing_40,receptions,targets,receiving_yards,receiving_tds,receiving_fumbles,receiving_fumbles_lost,receiving_air_yards,receiving_yards_after_catch,receiving_first_downs,receiving_epa,receiving_2pt_conversions,receiving_10,receiving_16,receiving_20,receiving_40,racr,target_share,air_yards_share,wopr,special_teams_tds,def_tackles_solo,def_tackles_with_assist,def_tackle_assists,def_tackles_for_loss,def_tackles_for_loss_yards,def_fumbles_forced,def_sacks,def_sack_yards,def_qb_hits,def_interceptions,def_interception_yards,def_pass_defended,def_tds,def_fumbles,def_safeties,def_punt_blocks,def_pat_blocks,def_fg_blocks,def_2pt_atts,def_2pt_made,misc_yards,fumble_recovery_own,fumble_recovery_yards_own,fumble_recovery_opp,fumble_recovery_yards_opp,fumble_recovery_tds,penalties,penalty_yards,fumbles_forced_by_opp,fumbles_not_forced,fumbles_out_of_bounds,fumbles_total,fumbles_lost_total,punt_returns,punt_return_yards,kickoff_returns,kickoff_return_yards,fg_made,fg_att,fg_missed,fg_blocked,fg_long,fg_pct,fg_made_0_19,fg_made_20_29,fg_made_30_39,fg_made_40_49,fg_made_50_59,fg_made_60_,fg_missed_0_19,fg_missed_20_29,fg_missed_30_39,fg_missed_40_49,fg_missed_50_59,fg_missed_60_,fg_made_list,fg_missed_list,fg_blocked_list,fg_made_distance,fg_missed_distance,fg_blocked_distance,pat_made,pat_att,pat_missed,pat_blocked,pat_pct,gwfg_made,gwfg_att,gwfg_missed,gwfg_blocked,gwfg_distance,pt_att,pt_blocked,pt_long,pt_yards,pt_inside_20,pt_out_of_bounds,pt_downed,pt_touchback,pt_fair_caught,pt_returned,pt_return_yards,pt_return_tds,pt_net_yards,fantasy_points,fantasy_points_ppr",
+      "http_status": 200,
+      "release": "stats_player",
+      "sha256": "61fc9a44706522218a4448001706e3fec65ebbb97c1d9c5746ceef364989125d",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2024.csv.gz"
+    },
+    {
+      "asset": "games.csv.gz",
+      "bytes": 516900,
+      "committed_as": "data/decision-desk/raw/games.csv.gz",
+      "header": "game_id,season,game_type,week,gameday,weekday,gametime,away_team,away_score,home_team,home_score,location,result,total,overtime,old_game_id,gsis,nfl_detail_id,pfr,pff,espn,ftn,away_rest,home_rest,away_moneyline,home_moneyline,spread_line,away_spread_odds,home_spread_odds,total_line,under_odds,over_odds,div_game,roof,surface,temp,wind,away_qb_id,home_qb_id,away_qb_name,home_qb_name,away_coach,home_coach,referee,stadium_id,stadium",
+      "http_status": 200,
+      "release": "schedules",
+      "sha256": "3d6394dd86427a158d8b22c8f8c5cdfdac13460e2a2c76935180b56dab108532",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz"
+    }
+  ],
+  "pages": [
+    {
+      "bytes": 387944,
+      "http_status": 200,
+      "name": "injury_report_wk10",
+      "saved": "injury_report_wk10.html",
+      "sha256": "1eb11e0cbb3c810370a8a643d5df0e03ba11ad6940fd716a44617f4bbf0396ff",
+      "text_bytes": 20140,
+      "text_extract": "data/decision-desk/raw/official_text/injury_report_wk10.txt",
+      "url": "https://www.nfl.com/injuries/"
+    },
+    {
+      "bytes": 2289581,
+      "http_status": 200,
+      "name": "schedule_wk10",
+      "saved": "schedule_wk10.html",
+      "sha256": "2c8bc348b09c1080e89cbc99c4242900a463875566b32bdd3a3505dca4e8a225",
+      "text_bytes": 8228,
+      "text_extract": "data/decision-desk/raw/official_text/schedule_wk10.txt",
+      "url": "https://www.nfl.com/schedules/2026/by-week/week-10"
+    },
+    {
+      "bytes": 251651,
+      "http_status": 200,
+      "name": "standings_reg_2026",
+      "saved": "standings_reg_2026.html",
+      "sha256": "c412a632371d7d1d510a4be2e3390ec05bd490185ff9141fd676498a85c668d1",
+      "text_bytes": 5638,
+      "text_extract": "data/decision-desk/raw/official_text/standings_reg_2026.txt",
+      "url": "https://www.nfl.com/standings/league/2026/REG"
+    }
+  ],
+  "retrieved_utc": "2026-11-12T16:52:39Z"
+}

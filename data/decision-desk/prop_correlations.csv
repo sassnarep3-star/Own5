@@ -1,0 +1,7 @@
+measure,pearson_r,ci95_low,ci95_high,p_value,n_team_games,note,source_url,status
+QB passing yards vs team points,0.441242,0.397407,0.483067,0,1360,prop leg vs team-total leg,https://github.com/nflverse/nflverse-data/releases/tag/stats_player,computed
+QB passing yards vs WR1 receiving yards,0.495781,0.45287,0.5364,0,1255,same-team passing stack,https://github.com/nflverse/nflverse-data/releases/tag/stats_player,computed
+WR1 receiving yards vs team points,0.255269,0.202798,0.306278,0,1255,receiver prop vs team total,https://github.com/nflverse/nflverse-data/releases/tag/stats_player,computed
+RB1 rushing yards vs team points,0.362001,0.314905,0.407319,0,1360,rushing prop vs team total,https://github.com/nflverse/nflverse-data/releases/tag/stats_player,computed
+QB passing yards vs opponent points,0.178209,0.126249,0.229193,2.48905e-11,1360,game-script correlation (comeback/negative script),https://github.com/nflverse/nflverse-data/releases/tag/stats_player,computed
+QB passing yards vs game total,0.447526,0.403981,0.489048,0,1360,prop leg vs game-total leg,https://github.com/nflverse/nflverse-data/releases/tag/stats_player,computed

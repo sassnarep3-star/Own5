@@ -1,0 +1,4 @@
+test_season,train_n,predicted_slope,bets,wins,win_rate,source_url
+2024,271,0.0129167,147,72,0.489796,https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/compute_injuries.py
+2025,542,-0.0230788,114,56,0.491228,https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/compute_injuries.py
+2026,814,-0.0191385,38,15,0.394737,https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/compute_injuries.py
