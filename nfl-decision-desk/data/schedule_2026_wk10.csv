@@ -1,15 +1,15 @@
 game_id,day,date,time_et,away_team,home_team,broadcast,network,notes,source_url
 2026-REG-10-01,Thu,2026-11-12,8:15 PM,WAS,NYG,PRIME,,TNF,https://www.nfl.com/schedules/2026/REG10
 2026-REG-10-02,Sun,2026-11-15,9:30 AM,NE,DET,FOX,,International Game (Munich),https://www.nfl.com/schedules/2026/REG10
-2026-REG-10-03,Sun,2026-11-15,1:00 PM,KC,ATL,CBS,,https://www.nfl.com/schedules/2026/REG10
-2026-REG-10-04,Sun,2026-11-15,1:00 PM,HOU,CLE,FOX,,https://www.nfl.com/schedules/2026/REG10
-2026-REG-10-05,Sun,2026-11-15,1:00 PM,MIN,GB,FOX,,https://www.nfl.com/schedules/2026/REG10
-2026-REG-10-06,Sun,2026-11-15,1:00 PM,MIA,IND,CBS,,https://www.nfl.com/schedules/2026/REG10
-2026-REG-10-07,Sun,2026-11-15,1:00 PM,CAR,NO,FOX,,https://www.nfl.com/schedules/2026/REG10
-2026-REG-10-08,Sun,2026-11-15,1:00 PM,BUF,NYJ,CBS,,https://www.nfl.com/schedules/2026/REG10
-2026-REG-10-09,Sun,2026-11-15,1:00 PM,JAX,TEN,FOX,,https://www.nfl.com/schedules/2026/REG10
-2026-REG-10-10,Sun,2026-11-15,4:05 PM,LAR,AZ,CBS,,https://www.nfl.com/schedules/2026/REG10
-2026-REG-10-11,Sun,2026-11-15,4:05 PM,SEA,LV,CBS,,https://www.nfl.com/schedules/2026/REG10
-2026-REG-10-12,Sun,2026-11-15,4:25 PM,SF,DAL,FOX,,https://www.nfl.com/schedules/2026/REG10
+2026-REG-10-03,Sun,2026-11-15,1:00 PM,KC,ATL,CBS,,,https://www.nfl.com/schedules/2026/REG10
+2026-REG-10-04,Sun,2026-11-15,1:00 PM,HOU,CLE,FOX,,,https://www.nfl.com/schedules/2026/REG10
+2026-REG-10-05,Sun,2026-11-15,1:00 PM,MIN,GB,FOX,,,https://www.nfl.com/schedules/2026/REG10
+2026-REG-10-06,Sun,2026-11-15,1:00 PM,MIA,IND,CBS,,,https://www.nfl.com/schedules/2026/REG10
+2026-REG-10-07,Sun,2026-11-15,1:00 PM,CAR,NO,FOX,,,https://www.nfl.com/schedules/2026/REG10
+2026-REG-10-08,Sun,2026-11-15,1:00 PM,BUF,NYJ,CBS,,,https://www.nfl.com/schedules/2026/REG10
+2026-REG-10-09,Sun,2026-11-15,1:00 PM,JAX,TEN,FOX,,,https://www.nfl.com/schedules/2026/REG10
+2026-REG-10-10,Sun,2026-11-15,4:05 PM,LAR,AZ,CBS,,,https://www.nfl.com/schedules/2026/REG10
+2026-REG-10-11,Sun,2026-11-15,4:05 PM,SEA,LV,CBS,,,https://www.nfl.com/schedules/2026/REG10
+2026-REG-10-12,Sun,2026-11-15,4:25 PM,SF,DAL,FOX,,,https://www.nfl.com/schedules/2026/REG10
 2026-REG-10-13,Sun,2026-11-15,8:20 PM,PIT,CIN,NBC,,SNF,https://www.nfl.com/schedules/2026/REG10
 2026-REG-10-14,Mon,2026-11-16,8:15 PM,LAC,BAL,ESPN,,MNF,https://www.nfl.com/schedules/2026/REG10

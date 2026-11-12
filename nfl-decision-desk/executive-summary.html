@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Executive Summary · NFL Decision Desk</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>NFL Decision Desk <span style="color:var(--muted);font-weight:400">· Week 10 2026</span></h1>
+  <div class="sub">Official-source data · session arena-e413f933 · every table row carries an official source link · unconfirmable values blank + flagged</div>
+  <nav><a href="index.html" class="">Dashboard</a><a href="executive-summary.html" class="active">Executive Summary</a><a href="standings.html" class="">Standings</a><a href="schedule.html" class="">Schedule</a><a href="injuries.html" class="">Injuries</a><a href="deficiencies.html" class="">Deficiencies</a><a href="lines.html" class="">Our Lines</a><a href="questions.html" class="">Questions</a><a href="suggestions.html" class="">Suggestions</a><a href="strategies.html" class="">Strategies</a><a href="flagged.html" class="">Flagged for Review</a><a href="sources.html" class="">Sources</a></nav>
+</header>
+<main>
+
+<h2>Executive Summary — Week 10, 2026</h2>
+<div class="note">Prepared 2026-11-12 from official nfl.com sources and official club depth charts.
+Full narrative: <a href="https://github.com/sassnarep3-star/Own5/blob/main/research/nfl-decision-desk/executive-summary.md">executive-summary.md</a>.</div>
+
+<div class="cards">
+<div class="card"><div class="l">Standings captured</div><div class="k">32/32</div></div>
+<div class="card"><div class="l">Week-10 games</div><div class="k">14 + 4 byes</div></div>
+<div class="card"><div class="l">Injury rows</div><div class="k">278</div></div>
+<div class="card"><div class="l">Starter deficiencies</div><div class="k">119</div></div>
+<div class="card"><div class="l">Depth charts</div><div class="k">27/28</div></div>
+<div class="card"><div class="l">Open flags</div><div class="k">8</div></div>
+</div>
+
+<h3>Headline findings</h3>
+<table class="scroll"><thead><tr><th>Finding</th><th>Value</th><th>Source</th></tr></thead><tbody>
+<tr><td>Net points vs wins (skill backbone)</td><td>r = 0.846, n=32</td><td><a href="https://www.nfl.com/standings/">nfl.com/standings</a></td></tr>
+<tr><td>Pythag expected vs actual wins</td><td>r = 0.864</td><td><a href="https://www.nfl.com/standings/">nfl.com/standings</a></td></tr>
+<tr><td>Luck extremes after Week 9</td><td>DEN +2.17 · TB −2.17</td><td><a href="strategies.html">luck_vs_skill</a></td></tr>
+<tr><td>Deficiency load vs net points</td><td>r = 0.254 (n=27, HOU excluded)</td><td><a href="deficiencies.html">deficiency index</a></td></tr>
+<tr><td>Heaviest Week-10 deficiency load</td><td>SEA (6 starters DNP incl. QB)</td><td><a href="deficiencies.html">team index</a></td></tr>
+<tr><td>Official Out players</td><td>WAS Patrick, WAS Yankoff, NE Brown, NE Davis III, NE Henderson</td><td><a href="https://www.nfl.com/injuries/league/2026/REG10">injury report</a></td></tr>
+<tr><td>Model favorites of note</td><td>BUF −7 · JAX −11.5 · SF −4 · DET −2.5 (Munich neutral)</td><td><a href="lines.html">our lines</a></td></tr>
+<tr><td>Strategy competition</td><td>7 strategies · 8 gates · 0 graded bets — pending, never faked</td><td><a href="strategies.html">strategies</a></td></tr>
+</tbody></table>
+
+<h3>Decisions needed from you</h3>
+<ul>
+<li><b>Q07/S04 — market lines:</b> approve manual capture from licensed screens, or accept permanent blanks (CLV gate stays closed).</li>
+<li><b>Q13 — player props:</b> approve a source or keep STR-D5 blocked.</li>
+<li><b>Suggestions S01–S12:</b> review <a href="suggestions.html">Suggestions</a> and pick paths.</li>
+</ul>
+
+<h3>Bottom line</h3>
+<p>Decision-ready for model lines and deficiency analysis on 27 of 28 teams with every row sourced.
+Deliberately <b>not</b> ready for staking: gates G1–G5 need results history and a market-data policy decision.
+Nothing was inferred; everything unconfirmable is <a href="flagged.html">blank and flagged</a>.</p>
+
+</main>
+<footer>NFL Decision Desk · built by build_site.py (deterministic) · sources: nfl.com and official club sites · flagged items are published, not hidden</footer>
+</body>
+</html>
