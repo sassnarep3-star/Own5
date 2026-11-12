@@ -1038,6 +1038,48 @@ Arena fixes this session's branch to `arena/e446435e-own5`; the `session-<id>/<t
 - Live verification (fetched post-deploy): [dashboard](https://sassnarep3-star.github.io/Own5/sf-rent-e446435e/), [summary](https://sassnarep3-star.github.io/Own5/sf-rent-e446435e/summary.html), [local law + Form 571 schedule](https://sassnarep3-star.github.io/Own5/sf-rent-e446435e/local-law.html), [unit scenarios](https://sassnarep3-star.github.io/Own5/sf-rent-e446435e/units.html), [Flagged for Review](https://sassnarep3-star.github.io/Own5/sf-rent-e446435e/flagged.html) — all serve expected content (1.6% ceiling, derived math, blank unverified cells, per-row source/flag links). Initial index fetches 404'd during CDN propagation; confirmed live minutes later.
 - Session `e446435e` complete: R44-01…R44-07 all done. Open legal/property/source-review items (R44-F01…F19) are nonblocking for publication and published on the Flagged for Review page — not a finding that any increase or notice is lawful.
 
+---
+
+## Session 38a1fc27 — NFL Decision Desk: requirements audit, suggestions, questions, injury/depth tracking (2026-11-12 UTC)
+
+Branch fixed by Arena: `arena/38a1fc27-own5` (base `95c2eea`). Existing scopes are read-only for this session. This session claims only additive namespaces:
+
+- `nfl-decision-desk/**` (new static site, self-contained; does not touch root `index.html`, `pages/`, `docs/`, `own5-desk/`, `nfl-strategy-lab/`, `line-lab/`, or any other session's directory)
+- `research/38a1fc27/**`
+- `data/decision-desk/**`
+- `tools/decision_desk/**`
+- `.github/workflows/decision-desk.yml`
+- append-only blocks in `COORDINATION.md`
+
+Rationale: the user's 2026-11-12 request adds (a) a suggestions register with an explicit review/decision workflow, (b) a questions-and-missing-information register gating decisions, (c) injury + lineup/depth deficiency tracking (2nd/3rd/4th string), and (d) a line-by-line re-verification of the existing NFL claims. None of those exist in any prior scope.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| D1 | Claim + baseline repo review | done | 38a1fc27 | COORDINATION.md | Claim pushed before any other work. |
+| D2 | Official-source ingestion (nfl.com injury report/schedule/standings + nflverse mirrors), pinned + timestamped | done | 38a1fc27 | tools/decision_desk/fetch_sources.py, data/decision-desk/raw/**, .github/workflows/decision-desk.yml | Runner-side fetch: 12/12 pinned datasets and 3/3 official pages HTTP 200 at 2026-11-12T16:29Z; SHA-256 + UTC recorded per file. Sandbox egress is GitHub-only, so ingestion runs on Actions; official text extracts are committed, raw HTML is an artifact. |
+| D3 | Requirements matrix, suggestions register, open-questions register | done | 38a1fc27 | research/38a1fc27/**, data/decision-desk/{requirements,suggestions,questions}.csv | 19 requirements, 16 suggestions (each with decision state + review test), 18 questions (7 blocking, 4 not closable from public data). |
+| D4 | Injury & lineup-deficiency engine | done | 38a1fc27 | tools/decision_desk/compute_injuries.py, data/decision-desk/injuries_wk10_players.csv, team_deficiency_wk10.csv | 276 official rows parsed; 276/276 agree with the mirror; depth strings 1-4 from snap share; replacement drop by unit; calibration on 950 games (2023-2026). |
+| D5 | Own lines, strategy ledger, gates, correlations | done | 38a1fc27 | tools/decision_desk/compute_{lines,strategies,correlations}.py, data/decision-desk/model_lines_wk10.csv, strategy_ledger.csv, prop_correlations.csv | 14 games priced (HFA 1.22); 7 families vs G0-G12, zero certified; model walk-forward 50.2-50.9% ATS; QB/WR r=0.50, empirical joint 32.5% vs 24.8%; ATS/total phi=0.006. |
+| D6 | Line-by-line verification of existing NFL claims | done | 38a1fc27 | research/38a1fc27/AUDIT.md, VERIFICATION.md, data/decision-desk/claim_checks.csv, standings_crosscheck.csv | 11 claims re-derived (6 reproduce, 4 do not, 1 is this session's corrected sign error); official standings 32/32 vs independent game log; 4,182 links across 246 pages, 0 broken. |
+| D7 | Site build + row/link verification | done | 38a1fc27 | nfl-decision-desk/**, tools/decision_desk/{build_site,verify}.py | 14 pages, 26 tables, 494 rows, every row carries a link; verify.py PASS; clean rebuild produces no diff. |
+| D8 | Executive summary | done | 38a1fc27 | research/38a1fc27/EXECUTIVE_SUMMARY.md, nfl-decision-desk/summary.html | Restates only computed/verified values. |
+| D9 | PR to main, autonomous merge, Pages deploy verification | in progress | 38a1fc27 | COORDINATION.md | Record appended below when done. |
+
+### D2-D8 verification and irregularities (2026-11-12)
+
+- **Sources:** https://www.nfl.com/injuries/ , /schedules/2026/by-week/week-10 , /standings/league/2026/REG (OFFICIAL); nflverse releases `injuries`, `snap_counts`, `stats_player`, `schedules` and the pinned spreadspoke file (AGGREGATOR, tier-labelled everywhere).
+- **Checks:** official standings reproduce 32/32 from an independent game log; official injury report matches the mirror 276/276; every published CSV row carries a source link; every site table row carries a link; all internal links resolve; a clean rebuild is byte-identical.
+- **Irregularities logged (F01-F18, published on the site's Flagged page):** aggregator market lines with unknown timestamps (F01) and no official closing-line history (F02) block gates G4/G8, so no strategy is certified; no official prop lines (F03); game statuses publish later in the week (F04); depth is snap-share inference, not an official depth chart (F05/F16).
+- **Reproducibility finding:** this session's first injury backtest used the spread with the wrong sign and reported a false 57.4% ATS edge (p=0.0046); after correcting to the source's documented convention the same rule is 51.4% (p=1.0). The erroneous run is retained in `claim_checks.csv`, and S02 proposes a regression test.
+- **Inherited discrepancies (not resolved here, flagged for human review):** prior home-underdog cover rates (52.6% vs 49.7%), home dogs +7 (56.37%/793 vs 53.97%/730), QB/WR correlation (0.76 vs 0.50) and the 20.8% luck figure (exact binomial 25.1%).
+- **Scope discipline:** this session wrote only to `nfl-decision-desk/**`, `research/38a1fc27/**`, `data/decision-desk/**`, `tools/decision_desk/**`, `.github/workflows/decision-desk.yml`, plus append-only blocks in `COORDINATION.md` and `README.md`. No file owned by another session was edited.
+
+### D1 baseline review notes (2026-11-12)
+
+- Repo contains 20+ prior scopes (NFL root desk, `nfl-strategy-lab/`, `line-lab/`, `own5-desk/`, many NBA and SF-rent scopes). None covers injury/lineup-deficiency tracking; `data/flagged.csv` F01–F12 treat injuries only as a research gap.
+- Sandbox egress: only `github.com`, `codeload.github.com`, `api.github.com`, `registry.npmjs.org`, `pypi.org`, `files.pythonhosted.org` resolve. `www.nfl.com` and nflverse release assets are NOT reachable from the sandbox, but the `fetch_page` tool and GitHub Actions runners can reach them. Ingestion therefore runs on a runner and commits a pinned snapshot.
+- No pandas/numpy/scipy in the sandbox runtime; the repo standard is Python standard library only. All computation is stdlib-only.
+
 ## Session d0343637 — NFL decision desk (2026-11-12 UTC)
 
 Fixed Arena branch `arena/d0343637-own5` takes precedence over suggested branch naming. Isolated additive scope avoids all other owners; existing root navigation remains untouched.
@@ -1062,3 +1104,20 @@ Fixed Arena branch `arena/d0343637-own5` takes precedence over suggested branch 
 - PR checks were initially not yet reported (not a failure); subsequently all four verification checks passed (research/browser, evidence desk, NBA and SF review); legacy PR smoke skipped by workflow design. Main research workflow [43258612109](https://github.com/sassnarep3-star/Own5/actions/runs/43258612109), evidence desk [43258611518](https://github.com/sassnarep3-star/Own5/actions/runs/43258611518), NBA [43258612167](https://github.com/sassnarep3-star/Own5/actions/runs/43258612167) and SF [43258612090](https://github.com/sassnarep3-star/Own5/actions/runs/43258612090) all succeeded.
 - Pages [43258609034](https://github.com/sassnarep3-star/Own5/actions/runs/43258609034) build + deploy succeeded; Pages API confirmed `built` for the exact merge commit with no error.
 - Independently retrieved live [dashboard](https://sassnarep3-star.github.io/Own5/nfl-decision-desk/) and [Flagged for Review](https://sassnarep3-star.github.io/Own5/nfl-decision-desk/flagged.html) after deployment; expected summary, blank cells, source links and nine flags were present. Local Chromium verified all nine pages at desktop/mobile widths. All ND tasks done; unmet data/continuous-ingestion capabilities remain explicitly published limitations, not completed operational features.
+
+### D9 merge / conflict log — session 38a1fc27
+
+- **2026-11-12:** while this session was building, session `d0343637` merged its own
+  `nfl-decision-desk/` desk to `main` (PRs #56, #57). That created a **directory-name collision** on
+  `nfl-decision-desk/` and a `COORDINATION.md` append conflict.
+- **Resolution (no work discarded):** `origin/main` was merged in; session d0343637's
+  `nfl-decision-desk/` is kept exactly as published, and this session's site was moved to its own
+  namespace **`nfl-decision-desk-38a1fc27/`** (build and verify targets updated, README links
+  updated). `COORDINATION.md` keeps both sessions' blocks verbatim, with this log added.
+- **Post-merge re-verification:** repo-wide internal links 4,317 across 255 pages, **0 broken**;
+  session d0343637's own `nfl-decision-desk/verify.py` still passes (4 tests OK); this session's
+  `verify.py` passes (14 pages / 26 tables / 494 rows, every row sourced); provenance audit
+  0 tables needing review; official standings still 32/32.
+- **Scope note for future sessions:** `nfl-decision-desk/**` is owned by `d0343637`;
+  `nfl-decision-desk-38a1fc27/**` is owned by this session. The two desks overlap in subject but
+  not in files; the integration session may choose to cross-link them later.

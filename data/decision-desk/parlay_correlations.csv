@@ -1,0 +1,4 @@
+measure,value,n,interpretation,source_url
+same-game: home ATS cover vs game over,0.0060347,7103,positive = legs reinforce; negative = hedge,https://github.com/nflverse/nflverse-data/releases/tag/schedules
+same-game: home team total over vs home ATS cover,0.360794,7103,the classic correlated parlay pair,https://github.com/nflverse/nflverse-data/releases/tag/schedules
+home scoring vs implied total (residual correlation),0.606792,7103,how much team-scoring legs move with the spread leg,https://github.com/nflverse/nflverse-data/releases/tag/schedules

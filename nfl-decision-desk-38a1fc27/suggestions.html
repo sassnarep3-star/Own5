@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suggestions for review · NFL Decision Desk</title>
+<meta name="description" content="Recommendations to improve decision quality, ranked by impact, each with a decision state you can approve, modify or reject.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230b1f3a'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%23ffd166' font-family='sans-serif'>D</text></svg>">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <span class="mark">DD</span>
+      <div>
+        <h1><a href="index.html">NFL Decision Desk</a></h1>
+        <p>Own lines · validated strategies · injury &amp; depth intelligence</p>
+      </div>
+    </div>
+    <div class="stamp">
+      <strong>Week 10 · 2026 season</strong>
+      <span>Snapshot 2026-11-12 UTC</span>
+    </div>
+  </div>
+  <nav class="wrap"><a class="" href="index.html">Overview</a><a class="" href="requirements.html">Requirements</a><a class="active" href="suggestions.html">Suggestions</a><a class="" href="questions.html">Open questions</a><a class="" href="lines.html">Own lines</a><a class="" href="strategies.html">Strategies</a><a class="" href="validation.html">Gates</a><a class="" href="correlations.html">Correlations</a><a class="" href="injuries.html">Injuries &amp; depth</a><a class="" href="audit.html">Repo audit</a><a class="" href="summary.html">Summary</a><a class="" href="sources.html">Sources</a><a class="" href="flagged.html">Flagged</a><a class="" href="verification.html">Verification</a></nav>
+</header>
+<main class="wrap">
+  <section class="pagehead">
+    <h2>Suggestions for review</h2>
+    <p>Recommendations to improve decision quality, ranked by impact, each with a decision state you can approve, modify or reject.</p>
+  </section>
+  <div class="callout"><h4>How to review this register</h4><p>Each suggestion states the problem it solves, the change, its expected impact and effort, and the test that would make us abandon it. Decision states are <strong>Recommended now</strong>, <strong>Pilot</strong>, <strong>Defer</strong> or <strong>Reject</strong>. Nothing is implemented until you choose — this page is the approval surface.</p></div><div class="grid kpis"><div class="kpi ok"><div class="kpi-value">11</div><div class="kpi-label">Recommended now</div><div class="kpi-note">suggestions</div></div><div class="kpi "><div class="kpi-value">3</div><div class="kpi-label">Pilot</div><div class="kpi-note">suggestions</div></div><div class="kpi "><div class="kpi-value">2</div><div class="kpi-label">Defer</div><div class="kpi-note">suggestions</div></div></div>
+<details class="sug" id="S01">
+  <summary><span class="sid">S01</span> Archive a timestamped operator price snapshot every week <span class="badge">Recommended now</span></summary>
+  <div class="sugbody">
+    <dl>
+      <dt>Problem</dt><dd>Every CLV and &#x27;market vs model&#x27; statement currently rests on an aggregator line whose timestamp is unknown (F01). Without a price history, gate G4 can never be evaluated and no strategy can be certified as skill.</dd>
+      <dt>Recommendation</dt><dd>Capture the operator&#x27;s own NFL page (spread, total, moneyline) at two fixed times per week (Wednesday post-injury-report and Sunday pre-kickoff) and store the raw snapshot with HTTP headers and hash.</dd>
+      <dt>Impact / effort / confidence</dt><dd>High · Medium · High</dd>
+      <dt>Evidence</dt><dd>validation.html#G4; data/decision-desk/claim_checks.csv row &#x27;closing line value&#x27;</dd>
+      <dt>Owner</dt><dd>Data engineering</dd>
+      <dt>Review test</dt><dd>If the operator page blocks automated capture or terms forbid it, fall back to manual capture of 5 games per week and mark the sample as partial.</dd>
+    </dl>
+  </div>
+</details>
+<details class="sug" id="S02">
+  <summary><span class="sid">S02</span> Ship a sign-convention regression test with every backtest <span class="badge">Recommended now</span></summary>
+  <div class="sugbody">
+    <dl>
+      <dt>Problem</dt><dd>This session&#x27;s first injury backtest reported a 57.4% ATS edge that vanished once the spread sign convention was corrected (nflverse spread_line is the expected home margin, not a handicap). A single sign error is enough to invent an edge.</dd>
+      <dt>Recommendation</dt><dd>Add a unit test that asserts the ATS sign on a synthetic fixture, plus a known-answer test on 10 historical games with published results, and fail the build if either drifts.</dd>
+      <dt>Impact / effort / confidence</dt><dd>High · Low · High</dd>
+      <dt>Evidence</dt><dd>verification.html#sign; data/decision-desk/claim_checks.csv row &#x27;Injury-driven lineup loss is not priced by the market&#x27;</dd>
+      <dt>Owner</dt><dd>Quant</dd>
+      <dt>Review test</dt><dd>If a future data feed documents a different convention, update the fixture rather than the assertion, and record the change.</dd>
+    </dl>
+  </div>
+</details>
+<details class="sug" id="S03">
+  <summary><span class="sid">S03</span> Pre-register the variant count before looking at results <span class="badge">Recommended now</span></summary>
+  <div class="sugbody">
+    <dl>
+      <dt>Problem</dt><dd>Bonferroni only means something if the number of tested variants is honest. Buckets like &#x27;gap &gt;= 50 pp&#x27; were found after inspection, which inflates the true false-discovery rate.</dd>
+      <dt>Recommendation</dt><dd>Write the strategy list and thresholds into research/38a1fc27/strategies.md, commit it, and require the commit hash in the results table. Count every variant, including abandoned ones.</dd>
+      <dt>Impact / effort / confidence</dt><dd>High · Low · High</dd>
+      <dt>Evidence</dt><dd>strategies.html#multiplicity; data/decision-desk/strategy_meta.json</dd>
+      <dt>Owner</dt><dd>Research</dd>
+      <dt>Review test</dt><dd>If a strategy must be added after the fact, it starts in a new pre-registration round with its own alpha budget.</dd>
+    </dl>
+  </div>
+</details>
+<details class="sug" id="S04">
+  <summary><span class="sid">S04</span> Publish a market-efficiency scorecard per signal <span class="badge">Recommended now</span></summary>
+  <div class="sugbody">
+    <dl>
+      <dt>Problem</dt><dd>We can measure whether a signal predicts results, but the useful question is whether the market has already priced it. Injury deficiency moves the line (-0.021 pts per pp) but its ATS residual edge is 51.4% with p=1.0.</dd>
+      <dt>Recommendation</dt><dd>For each signal, report (a) regression of the market line on the signal, (b) regression of the ATS residual on the signal, (c) the implied &#x27;priced share&#x27;. Rank ideas by residual edge, not by raw predictive power.</dd>
+      <dt>Impact / effort / confidence</dt><dd>High · Medium · High</dd>
+      <dt>Evidence</dt><dd>injuries.html#calibration; data/decision-desk/injury_calibration_games.csv</dd>
+      <dt>Owner</dt><dd>Quant</dd>
+      <dt>Review test</dt><dd>If a signal shows residual edge with a verified closing price, promote it to a full gate evaluation.</dd>
+    </dl>
+  </div>
+</details>
+<details class="sug" id="S05">
+  <summary><span class="sid">S05</span> Use lineup deficiency as a pricing input for our own lines, not as a bet trigger <span class="badge">Recommended now</span></summary>
+  <div class="sugbody">
+    <dl>
+      <dt>Problem</dt><dd>The measured relationship is real for predicting margin (about -0.039 points per percentage point of relative deficiency, p=6e-5), but the market already moves about half of it and the residual ATS record is 51.4% (p=1.0).</dd>
+      <dt>Recommendation</dt><dd>Feed deficiency into the line model (already implemented) and stop advertising it as a betting signal. Show the model line both with and without the adjustment so the size of the adjustment is auditable.</dd>
+      <dt>Impact / effort / confidence</dt><dd>Medium · Low · High</dd>
+      <dt>Evidence</dt><dd>lines.html; data/decision-desk/line_model.json</dd>
+      <dt>Owner</dt><dd>Model owner</dd>
+      <dt>Review test</dt><dd>If a future season shows a residual edge with verified prices, revisit.</dd>
+    </dl>
+  </div>
+</details>
+<details class="sug" id="S06">
+  <summary><span class="sid">S06</span> Extend depth tracking to offensive-line continuity <span class="badge warn">Pilot</span></summary>
+  <div class="sugbody">
+    <dl>
+      <dt>Problem</dt><dd>Offensive line injuries are the classic source of hidden lineup decay: five players who never practised together still count as &#x27;starters available&#x27;. Snap share alone cannot see that.</dd>
+      <dt>Recommendation</dt><dd>Build a weekly starting-five continuity metric (same five linemen starting together, consecutive weeks) from snap counts and measure its relationship to sacks allowed, pressure rate and ATS residual.</dd>
+      <dt>Impact / effort / confidence</dt><dd>Medium · Medium · Medium</dd>
+      <dt>Evidence</dt><dd>injuries.html#methodology; snap counts pinned in data/decision-desk/raw</dd>
+      <dt>Owner</dt><dd>Research</dd>
+      <dt>Review test</dt><dd>If continuity shows no relationship to pressure or margin after a season of data, drop it.</dd>
+    </dl>
+  </div>
+</details>
+<details class="sug" id="S07">
+  <summary><span class="sid">S07</span> Treat practice-status transitions as a probability, not a label <span class="badge warn">Pilot</span></summary>
+  <div class="sugbody">
+    <dl>
+      <dt>Problem</dt><dd>The official report gives three practice levels and a game status. Collapsing them to fixed weights (A1/A2) throws away the strongest information: a player moving DNP -&gt; LP -&gt; FP across the week.</dd>
+      <dt>Recommendation</dt><dd>Fit the mapping empirically: P(active) by (practice sequence, game status) from 2023-2026 reports, and publish the fitted table with sample sizes.</dd>
+      <dt>Impact / effort / confidence</dt><dd>Medium · Medium · Medium</dd>
+      <dt>Evidence</dt><dd>injuries.html#weights; data/decision-desk/injuries_wk10_players.csv</dd>
+      <dt>Owner</dt><dd>Quant</dd>
+      <dt>Review test</dt><dd>If the fitted probabilities differ from the assumed weights by less than 5 percentage points, keep the simple weights.</dd>
+    </dl>
+  </div>
+</details>
+<details class="sug" id="S08">
+  <summary><span class="sid">S08</span> Score the leaderboard on CLV and calibration, never on win rate <span class="badge">Recommended now</span></summary>
+  <div class="sugbody">
+    <dl>
+      <dt>Problem</dt><dd>A win-rate leaderboard rewards luck and variance; over 300 bets a 52% and a 56% record are statistically indistinguishable.</dd>
+      <dt>Recommendation</dt><dd>Rank by de-vigged CLV first, calibration second, flat-stake yield third; require a 300-bet minimum and publish confidence intervals next to every rank.</dd>
+      <dt>Impact / effort / confidence</dt><dd>High · Medium · High</dd>
+      <dt>Evidence</dt><dd>strategies.html#leaderboard; data/decision-desk/strategy_meta.json (required n = 2241 for 55% vs 52.38%)</dd>
+      <dt>Owner</dt><dd>Competition design</dd>
+      <dt>Review test</dt><dd>If CLV data cannot be captured (S01 fails), the board stays provisional and unranked.</dd>
+    </dl>
+  </div>
+</details>
+<details class="sug" id="S09">
+  <summary><span class="sid">S09</span> Make the data layer dual-source with automatic disagreement alerts <span class="badge">Recommended now</span></summary>
+  <div class="sugbody">
+    <dl>
+      <dt>Problem</dt><dd>The pipeline depends on one aggregator mirror. If it drifts from the official page, every downstream number drifts silently.</dd>
+      <dt>Recommendation</dt><dd>Every build already fetches the official page and the mirror; add a hard assertion that the two agree row-for-row on the injury report and standings (currently 276/276 and 32/32), and fail the build on any mismatch.</dd>
+      <dt>Impact / effort / confidence</dt><dd>High · Low · High</dd>
+      <dt>Evidence</dt><dd>verification.html#dual; data/decision-desk/standings_crosscheck.csv</dd>
+      <dt>Owner</dt><dd>Data engineering</dd>
+      <dt>Review test</dt><dd>If the official page layout changes and parsing fails, fail closed (blank + flag) rather than falling back silently.</dd>
+    </dl>
+  </div>
+</details>
+<details class="sug" id="S10">
+  <summary><span class="sid">S10</span> Model opponent-adjusted efficiency, not raw points <span class="badge warn">Defer</span></summary>
+  <div class="sugbody">
+    <dl>
+      <dt>Problem</dt><dd>The current ratings use final margins with a two-way fit; they cannot distinguish a good offence beating bad defences from a mediocre one.</dd>
+      <dt>Recommendation</dt><dd>Add EPA per play (offence and defence) from the same pinned source, blend with the margin model, and evaluate whether it reduces out-of-sample log-loss.</dd>
+      <dt>Impact / effort / confidence</dt><dd>Medium · High · Medium</dd>
+      <dt>Evidence</dt><dd>lines.html#model; data/decision-desk/model_backtest.csv (no edge at 50.5%)</dd>
+      <dt>Owner</dt><dd>Model owner</dd>
+      <dt>Review test</dt><dd>Promote when play-by-play ingestion is in place and the blend beats the margin model on holdout log-loss.</dd>
+    </dl>
+  </div>
+</details>
+<details class="sug" id="S11">
+  <summary><span class="sid">S11</span> Price correlated legs with an empirical copula, and refuse independent pricing <span class="badge">Recommended now</span></summary>
+  <div class="sugbody">
+    <dl>
+      <dt>Problem</dt><dd>Same-team QB + WR1 legs are correlated (r = 0.50 on 2024-2026); at median lines the joint hit rate is 32.5% versus 24.8% if treated as independent, a +7.7 pp gap that changes the fair price materially.</dd>
+      <dt>Recommendation</dt><dd>Require an empirical joint estimate for any same-game combination; publish the implied fair price next to the offered price and reject the bet when the offered price assumes independence.</dd>
+      <dt>Impact / effort / confidence</dt><dd>High · Medium · High</dd>
+      <dt>Evidence</dt><dd>correlations.html#sgp; data/decision-desk/sgp_pricing_table.csv</dd>
+      <dt>Owner</dt><dd>Quant</dd>
+      <dt>Review test</dt><dd>If the operator&#x27;s SGP price already reflects the correlation (compare implied joint to empirical), no action is needed beyond documentation.</dd>
+    </dl>
+  </div>
+</details>
+<details class="sug" id="S12">
+  <summary><span class="sid">S12</span> Keep a decision log (one line per accepted suggestion) <span class="badge">Recommended now</span></summary>
+  <div class="sugbody">
+    <dl>
+      <dt>Problem</dt><dd>Suggestions accepted without a recorded rationale get re-litigated, and rejected ones get re-proposed.</dd>
+      <dt>Recommendation</dt><dd>Append an ADR row when a suggestion moves to Accepted/Rejected: date, decision, evidence, owner, revisit date.</dd>
+      <dt>Impact / effort / confidence</dt><dd>Medium · Low · High</dd>
+      <dt>Evidence</dt><dd>suggestions.html; COORDINATION.md session log</dd>
+      <dt>Owner</dt><dd>Project owner</dd>
+      <dt>Review test</dt><dd>If the log has fewer than one entry per accepted suggestion, the process is not being followed.</dd>
+    </dl>
+  </div>
+</details>
+<details class="sug" id="S13">
+  <summary><span class="sid">S13</span> Separate OFFICIAL and AGGREGATOR tiers in every table, mechanically <span class="badge">Recommended now</span></summary>
+  <div class="sugbody">
+    <dl>
+      <dt>Problem</dt><dd>Mixing an official injury row and a mirror-derived snap profile in one &#x27;verified&#x27; column invites over-claiming.</dd>
+      <dt>Recommendation</dt><dd>Every table carries a tier column; a build check fails if an OFFICIAL-labelled row&#x27;s source URL is not on an official domain.</dd>
+      <dt>Impact / effort / confidence</dt><dd>High · Low · High</dd>
+      <dt>Evidence</dt><dd>sources.html#tiers; verification.html#rules</dd>
+      <dt>Owner</dt><dd>Data engineering</dd>
+      <dt>Review test</dt><dd>If a needed dataset has no official publisher, label it AGGREGATOR and keep the claim language narrow.</dd>
+    </dl>
+  </div>
+</details>
+<details class="sug" id="S14">
+  <summary><span class="sid">S14</span> Cap and retire strategies on a schedule, not on a hunch <span class="badge warn">Pilot</span></summary>
+  <div class="sugbody">
+    <dl>
+      <dt>Problem</dt><dd>Unlimited strategy proliferation guarantees a false discovery; the more families tested, the higher the alpha needed.</dd>
+      <dt>Recommendation</dt><dd>Budget one new family per week, retire any family that fails gates for two consecutive seasons, and publish the retirement list.</dd>
+      <dt>Impact / effort / confidence</dt><dd>Medium · Low · Medium</dd>
+      <dt>Evidence</dt><dd>strategies.html#multiplicity</dd>
+      <dt>Owner</dt><dd>Research</dd>
+      <dt>Review test</dt><dd>If the family budget blocks a genuinely new mechanism, allow an exception with a doubled alpha requirement.</dd>
+    </dl>
+  </div>
+</details>
+<details class="sug" id="S15">
+  <summary><span class="sid">S15</span> Add a weather and venue adjustment to the total model <span class="badge warn">Defer</span></summary>
+  <div class="sugbody">
+    <dl>
+      <dt>Problem</dt><dd>The totals model ignores wind, temperature and roof; domes and high-wind games are systematically mis-totalled.</dd>
+      <dt>Recommendation</dt><dd>Join official game-time weather and roof data, fit a wind/temperature adjustment on historical totals, and show the adjusted total beside the raw one.</dd>
+      <dt>Impact / effort / confidence</dt><dd>Low · Medium · Medium</dd>
+      <dt>Evidence</dt><dd>lines.html#model; games.csv roof/temp fields (often blank)</dd>
+      <dt>Owner</dt><dd>Model owner</dd>
+      <dt>Review test</dt><dd>Promote if more than 80% of games have non-null weather in the pinned source.</dd>
+    </dl>
+  </div>
+</details>
+<details class="sug" id="S16">
+  <summary><span class="sid">S16</span> Publish the reward structure only after the jurisdiction question is closed <span class="badge">Recommended now</span></summary>
+  <div class="sugbody">
+    <dl>
+      <dt>Problem</dt><dd>The brief asks for rewards for top-performing strategies, but cash prizes raise licensing, tax and eligibility questions that no public source answers for this project.</dd>
+      <dt>Recommendation</dt><dd>Run the competition as points-only until Q04/Q05 are answered; publish the intended cash structure as a proposal, not a commitment.</dd>
+      <dt>Impact / effort / confidence</dt><dd>Medium · Low · High</dd>
+      <dt>Evidence</dt><dd>questions.html#Q04; strategies.html#rewards</dd>
+      <dt>Owner</dt><dd>Project owner</dd>
+      <dt>Review test</dt><dd>Close Q04/Q05 first; then publish reward terms with eligibility rules.</dd>
+    </dl>
+  </div>
+</details>
+</main>
+<footer class="wrap">
+  <p><strong>Verification policy.</strong> Every table row links to an official page or to the
+  script and pinned input that produced it. Values that cannot be confirmed are left blank and
+  published on the <a href="flagged.html">Flagged for review</a> page — never inferred.</p>
+  <p>Research only. No bets are placed, no performance is claimed, and nothing here is betting
+  advice. If gambling is a problem: 1-800-GAMBLER.</p>
+</footer>
+</body>
+</html>

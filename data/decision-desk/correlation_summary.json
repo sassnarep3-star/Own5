@@ -1,0 +1,42 @@
+{
+  "empirical_qb_wr1_joint": {
+    "excess_pp": "7.70877",
+    "independent_product": "0.248012",
+    "joint_over_rate": "0.3251",
+    "n": 1255,
+    "p_qb_over": "0.498008",
+    "p_wr1_over": "0.498008",
+    "qb_median": 224.0,
+    "wr1_median": 58.0
+  },
+  "panel_team_games": 1360,
+  "phi_pairs": [
+    {
+      "interpretation": "positive = legs reinforce; negative = hedge",
+      "measure": "same-game: home ATS cover vs game over",
+      "n": 7103,
+      "source_url": "https://github.com/nflverse/nflverse-data/releases/tag/schedules",
+      "value": "0.0060347"
+    },
+    {
+      "interpretation": "the classic correlated parlay pair",
+      "measure": "same-game: home team total over vs home ATS cover",
+      "n": 7103,
+      "source_url": "https://github.com/nflverse/nflverse-data/releases/tag/schedules",
+      "value": "0.360794"
+    },
+    {
+      "interpretation": "how much team-scoring legs move with the spread leg",
+      "measure": "home scoring vs implied total (residual correlation)",
+      "n": 7103,
+      "source_url": "https://github.com/nflverse/nflverse-data/releases/tag/schedules",
+      "value": "0.606792"
+    }
+  ],
+  "seasons": [
+    2024,
+    2025,
+    2026
+  ],
+  "source": "nflverse stats_player_week + games (AGGREGATOR of official gamebooks)"
+}

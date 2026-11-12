@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Executive summary · NFL Decision Desk</title>
+<meta name="description" content="What was built, what is verified, what is missing, and the decisions that follow.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230b1f3a'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%23ffd166' font-family='sans-serif'>D</text></svg>">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <span class="mark">DD</span>
+      <div>
+        <h1><a href="index.html">NFL Decision Desk</a></h1>
+        <p>Own lines · validated strategies · injury &amp; depth intelligence</p>
+      </div>
+    </div>
+    <div class="stamp">
+      <strong>Week 10 · 2026 season</strong>
+      <span>Snapshot 2026-11-12 UTC</span>
+    </div>
+  </div>
+  <nav class="wrap"><a class="" href="index.html">Overview</a><a class="" href="requirements.html">Requirements</a><a class="" href="suggestions.html">Suggestions</a><a class="" href="questions.html">Open questions</a><a class="" href="lines.html">Own lines</a><a class="" href="strategies.html">Strategies</a><a class="" href="validation.html">Gates</a><a class="" href="correlations.html">Correlations</a><a class="" href="injuries.html">Injuries &amp; depth</a><a class="" href="audit.html">Repo audit</a><a class="active" href="summary.html">Summary</a><a class="" href="sources.html">Sources</a><a class="" href="flagged.html">Flagged</a><a class="" href="verification.html">Verification</a></nav>
+</header>
+<main class="wrap">
+  <section class="pagehead">
+    <h2>Executive summary</h2>
+    <p>What was built, what is verified, what is missing, and the decisions that follow.</p>
+  </section>
+  
+<div class="prose">
+<h3>Objective</h3>
+<p>Originate our own NFL lines, test strategies that might carry skill, price and understand
+correlation across singles, parlays and player-prop combinations, and track injuries and lineup
+depth well enough to know when a starter is replaced by a 2nd, 3rd or 4th string player — with
+every value traceable to an official source or explicitly flagged.</p>
+
+<h3>What is verified</h3>
+<ul>
+<li><strong>Official data, row by row.</strong> 276 player rows from the
+<a href="https://www.nfl.com/injuries/">official Week 10 injury report</a>, the
+<a href="https://www.nfl.com/schedules/2026/by-week/week-10">Week 10 schedule</a> and the
+<a href="https://www.nfl.com/standings/league/2026/REG">2026 standings</a>, each with a source link
+and a retrieval timestamp recorded in <code>provenance.json</code>.</li>
+<li><strong>Dual-source agreement.</strong> All 32 clubs' standings reproduce exactly from an
+independent game log; all 276 injury rows match the independent mirror.</li>
+<li><strong>Own lines.</strong> A spread and total for all 14 Week 10 games, fitted only
+on prior weeks, with the injury adjustment shown separately.</li>
+</ul>
+
+<h3>What is computed</h3>
+<ul>
+<li><strong>Injury value.</strong> A percentage point of relative lineup deficiency is worth about
+<strong>-0.0391315 points</strong>
+of margin (p = 6.07152e-05). The market moves
+<strong>-0.0190095</strong>
+points per point — roughly half the effect — leaving a residual of
+<strong>-0.020122</strong>
+(p = 0.0242031).</li>
+<li><strong>No betting edge.</strong> Fading the more-injured team is
+51.4% ATS over
+782 bets, p = 1.0. The model's own
+walk-forward ATS record is 50.2-50.9%, i.e. no edge.</li>
+<li><strong>Correlation.</strong> QB passing yards and his WR1's receiving yards correlate at
+r = 0.50; at median lines the joint hit rate is 32.5% versus 24.8% if independent. Cross-market
+legs (spread vs total) are independent (phi = 0.006).</li>
+<li><strong>Zero certified strategies.</strong> 7 families tested against
+α = 0.00714; none passes every gate.</li>
+</ul>
+
+<h3>What is missing, and why it matters</h3>
+<ul>
+<li><strong>No verified price history (F01, F02).</strong> Without a timestamped operator price,
+closing-line value cannot be computed and no strategy can be certified as skill. This is the
+single largest blocker; suggestion S01 addresses it.</li>
+<li><strong>No official prop lines (F03).</strong> Prop combinations are priced by correlation, not
+against real lines, so their economic value is unknown.</li>
+<li><strong>Depth is inferred (F05, F16).</strong> Snap share is a measurable proxy for a depth
+chart the league does not publish.</li>
+<li><strong>Prior-session figures do not all reproduce (F08-F10).</strong> The home-underdog,
+QB/WR correlation and 20.8% luck figures are flagged for human review.</li>
+</ul>
+
+<h3>The five decisions in front of you</h3>
+<ol>
+<li>Capture a real price history (S01) — without it, nothing can ever be certified.</li>
+<li>Adopt the sign-convention regression test (S02) — it already caught one invented edge.</li>
+<li>Close the jurisdiction and funding questions (Q04, Q05) before publishing any reward amount.</li>
+<li>Approve the correction of the four non-reproducing prior figures (F08-F10), or ask for a
+second opinion first.</li>
+<li>Decide whether the injury metric is a pricing input only (recommended, S05) or a bet trigger
+(not supported by the data).</li>
+</ol>
+
+<h3>Bottom line</h3>
+<p>The desk is now automated, sourced and reproducible. The honest current state is: good
+infrastructure, verified inputs, no certified edge. That is a much better position than a
+leaderboard full of unverified win rates — and it is exactly what "remove luck from the equation"
+requires.</p>
+</div>
+</main>
+<footer class="wrap">
+  <p><strong>Verification policy.</strong> Every table row links to an official page or to the
+  script and pinned input that produced it. Values that cannot be confirmed are left blank and
+  published on the <a href="flagged.html">Flagged for review</a> page — never inferred.</p>
+  <p>Research only. No bets are placed, no performance is claimed, and nothing here is betting
+  advice. If gambling is a problem: 1-800-GAMBLER.</p>
+</footer>
+</body>
+</html>
