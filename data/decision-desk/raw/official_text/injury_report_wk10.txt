@@ -1,5 +1,5 @@
 SOURCE: https://www.nfl.com/injuries/
-RETRIEVED_UTC: 2026-11-12T16:26:23Z
+RETRIEVED_UTC: 2026-11-12T16:29:19Z
 HTTP: 200
 
 Official Latest NFL Injury Report for Players - Week 10 of the 2026 Season | NFL.com Skip to main content 
