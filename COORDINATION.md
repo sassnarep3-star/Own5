@@ -1079,3 +1079,45 @@ Rationale: the user's 2026-11-12 request adds (a) a suggestions register with an
 - Repo contains 20+ prior scopes (NFL root desk, `nfl-strategy-lab/`, `line-lab/`, `own5-desk/`, many NBA and SF-rent scopes). None covers injury/lineup-deficiency tracking; `data/flagged.csv` F01–F12 treat injuries only as a research gap.
 - Sandbox egress: only `github.com`, `codeload.github.com`, `api.github.com`, `registry.npmjs.org`, `pypi.org`, `files.pythonhosted.org` resolve. `www.nfl.com` and nflverse release assets are NOT reachable from the sandbox, but the `fetch_page` tool and GitHub Actions runners can reach them. Ingestion therefore runs on a runner and commits a pinned snapshot.
 - No pandas/numpy/scipy in the sandbox runtime; the repo standard is Python standard library only. All computation is stdlib-only.
+
+## Session d0343637 — NFL decision desk (2026-11-12 UTC)
+
+Fixed Arena branch `arena/d0343637-own5` takes precedence over suggested branch naming. Isolated additive scope avoids all other owners; existing root navigation remains untouched.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| ND1 | Review existing NFL claims and official-source access; decision desk, questions, suggestions, validation and review pages | in progress | d0343637 | nfl-decision-desk/** | No invented current lines, injuries, performance or correlations. |
+| ND2 | Tests, integration PR, merge and Pages verification | in progress | d0343637 | COORDINATION.md (append only), nfl-decision-desk/** | Source-access failures are published, not represented as verification. |
+
+### d0343637 verification and integration handoff — 2026-11-12
+
+- ND1 done: isolated `nfl-decision-desk/` contains 9 category pages and 60 row-linked entries, executive summary, decision questions/answers, selective injury observations, research/gate proposals, blank current correlations and ranks, suggestions awaiting review and 9 published review flags. No shared root navigation edited.
+- Sources checked with page retrieval: https://www.nfl.com/injuries/ (first chunk only), https://www.nfl.com/teams/ (directory excerpt), https://www.commanders.com/team/depth-chart, https://www.patriots.com/team/depth-chart (unofficial disclaimer and offense), https://www.itl.nist.gov/div898/handbook/eda/section3/scatterp.htm. Policy URL https://operations.nfl.com/updates/football-ops/2017-nfl-injury-report-policy/ returned 404 and is flagged. No full-repo factual certification claimed.
+- Review irregularities: mixed-sport root summary; stale Week 9 outputs; unofficial chart authority; Ben Brown positional discrepancy; missing current policy/current joint coefficients; project-defined gate thresholds; no continuous all-team ingestion or immutable raw archives. Published in `nfl-decision-desk/flagged.html`.
+- Verification passed: 4 scoped tests (including every row's official references, local links and deterministic build), JS syntax, 91 existing unit tests, and 18 real Chromium desktop/mobile page checks plus search and no-JavaScript tables. Structural verification does not certify external facts.
+- Initial remote branch did not exist, so initial pull failed; pulled/rebased against main before initial branch push. No merge conflict and no other owners' files changed.
+- ND2 in progress: publishing PR and checking Pages deployment. The site explicitly discloses static-snapshot limits; future live ingestion suggestions are not represented as implemented.
+
+### d0343637 publication record — ND2 done
+
+- PR [#56](https://github.com/sassnarep3-star/Own5/pull/56) merged autonomously with `gh pr merge 56 --merge` at 2026-11-12T16:26:01Z; merge commit `64322ddeb68022294dbd6b675078de885b487b71`.
+- PR checks were initially not yet reported (not a failure); subsequently all four verification checks passed (research/browser, evidence desk, NBA and SF review); legacy PR smoke skipped by workflow design. Main research workflow [43258612109](https://github.com/sassnarep3-star/Own5/actions/runs/43258612109), evidence desk [43258611518](https://github.com/sassnarep3-star/Own5/actions/runs/43258611518), NBA [43258612167](https://github.com/sassnarep3-star/Own5/actions/runs/43258612167) and SF [43258612090](https://github.com/sassnarep3-star/Own5/actions/runs/43258612090) all succeeded.
+- Pages [43258609034](https://github.com/sassnarep3-star/Own5/actions/runs/43258609034) build + deploy succeeded; Pages API confirmed `built` for the exact merge commit with no error.
+- Independently retrieved live [dashboard](https://sassnarep3-star.github.io/Own5/nfl-decision-desk/) and [Flagged for Review](https://sassnarep3-star.github.io/Own5/nfl-decision-desk/flagged.html) after deployment; expected summary, blank cells, source links and nine flags were present. Local Chromium verified all nine pages at desktop/mobile widths. All ND tasks done; unmet data/continuous-ingestion capabilities remain explicitly published limitations, not completed operational features.
+
+### D9 merge / conflict log — session 38a1fc27
+
+- **2026-11-12:** while this session was building, session `d0343637` merged its own
+  `nfl-decision-desk/` desk to `main` (PRs #56, #57). That created a **directory-name collision** on
+  `nfl-decision-desk/` and a `COORDINATION.md` append conflict.
+- **Resolution (no work discarded):** `origin/main` was merged in; session d0343637's
+  `nfl-decision-desk/` is kept exactly as published, and this session's site was moved to its own
+  namespace **`nfl-decision-desk-38a1fc27/`** (build and verify targets updated, README links
+  updated). `COORDINATION.md` keeps both sessions' blocks verbatim, with this log added.
+- **Post-merge re-verification:** repo-wide internal links 4,317 across 255 pages, **0 broken**;
+  session d0343637's own `nfl-decision-desk/verify.py` still passes (4 tests OK); this session's
+  `verify.py` passes (14 pages / 26 tables / 494 rows, every row sourced); provenance audit
+  0 tables needing review; official standings still 32/32.
+- **Scope note for future sessions:** `nfl-decision-desk/**` is owned by `d0343637`;
+  `nfl-decision-desk-38a1fc27/**` is owned by this session. The two desks overlap in subject but
+  not in files; the integration session may choose to cross-link them later.

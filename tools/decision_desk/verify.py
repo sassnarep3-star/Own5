@@ -23,7 +23,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
-SITE = os.path.join(ROOT, "nfl-decision-desk")
+SITE = os.path.join(ROOT, "nfl-decision-desk-38a1fc27")
 DATA = os.path.join(ROOT, "data", "decision-desk")
 ALLOWED_PLACEHOLDERS = {"pending", "n/a", "—", ""}
 

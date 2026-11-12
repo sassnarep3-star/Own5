@@ -17,7 +17,7 @@ sys.path.insert(0, HERE)
 import content  # noqa: E402
 import lib  # noqa: E402
 
-SITE = os.path.join(ROOT, "nfl-decision-desk")
+SITE = os.path.join(ROOT, "nfl-decision-desk-38a1fc27")
 DATA = os.path.join(ROOT, "data", "decision-desk")
 REPO = "https://github.com/sassnarep3-star/Own5/blob/main/"
 
@@ -993,7 +993,7 @@ claim table, and suggestion S02 adds a regression test so it cannot recur silent
 <h3>Reproduce this site</h3>
 <pre><code>python3 tools/decision_desk/fetch_sources.py   # official pages + pinned mirrors
 python3 tools/decision_desk/build_all.py       # parse, compute, audit
-python3 tools/decision_desk/build_site.py      # render nfl-decision-desk/
+python3 tools/decision_desk/build_site.py      # render nfl-decision-desk-38a1fc27/
 python3 tools/decision_desk/verify.py          # row/link/blank checks</code></pre>
 
 <h3>Snapshot</h3>
@@ -1026,7 +1026,7 @@ def main() -> int:
     with open(os.path.join(SITE, "style.css"), "w", encoding="utf-8") as fh:
         fh.write(CSS)
     open(os.path.join(SITE, ".nojekyll"), "w").close()
-    print(f"wrote {len(NAV)} pages to nfl-decision-desk/")
+    print(f"wrote {len(NAV)} pages to nfl-decision-desk-38a1fc27/")
     return 0
 
 

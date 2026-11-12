@@ -75,7 +75,7 @@ REQUIREMENTS = [
          how="32/32 clubs' official standings reproduce exactly from an independent game log; 11 prior claims re-derived, 5 of which do not reproduce and are flagged.",
          gap="Market prices, prop lines and closing lines have no official public source (F01-F03)."),
     dict(id="R17", requirement="GitHub Pages site: clean landing page, category subpages, tables, all findings",
-         status="Met", evidence="nfl-decision-desk/index.html and 13 subpages",
+         status="Met", evidence="nfl-decision-desk-38a1fc27/index.html and 13 subpages",
          how="Static, no JavaScript required for content, consistent navigation, every table row sourced or explicitly flagged.",
          gap=""),
     dict(id="R18", requirement="Coordinate with other parallel sessions via COORDINATION.md",

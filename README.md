@@ -282,7 +282,7 @@ Reproduce/verify: `python3 sf-rent-94122/build.py && python3 sf-rent-94122/verif
 
 ## NFL Decision Desk (session 38a1fc27, 2026-11-12)
 
-**Live site:** https://sassnarep3-star.github.io/Own5/nfl-decision-desk/ ·
+**Live site:** https://sassnarep3-star.github.io/Own5/nfl-decision-desk-38a1fc27/ ·
 **Executive summary:** [`research/38a1fc27/EXECUTIVE_SUMMARY.md`](research/38a1fc27/EXECUTIVE_SUMMARY.md) ·
 **Verification:** [`research/38a1fc27/VERIFICATION.md`](research/38a1fc27/VERIFICATION.md) ·
 **Flagged:** [`research/38a1fc27/FLAGGED.md`](research/38a1fc27/FLAGGED.md)
@@ -294,7 +294,7 @@ re-derives the claims published by earlier sessions line by line.
 
 | Path | Contents |
 |---|---|
-| `nfl-decision-desk/` | 14-page static site (overview, requirements, suggestions, questions, own lines, strategies, gates, correlations, injuries & depth, repo audit, summary, sources, flagged, verification) |
+| `nfl-decision-desk-38a1fc27/` | 14-page static site (overview, requirements, suggestions, questions, own lines, strategies, gates, correlations, injuries & depth, repo audit, summary, sources, flagged, verification) |
 | `research/38a1fc27/` | methodology, verification log, audit, pre-registration, gate definitions, flags, questions, requirements |
 | `data/decision-desk/` | computed tables (own lines, injuries, deficiency, ledger, correlations, claim checks) + `raw/` pinned inputs with SHA-256 provenance |
 | `tools/decision_desk/` | fetch → parse → compute → export → build → verify pipeline (Python standard library only) |
@@ -315,6 +315,6 @@ manufactured a false 57.4% edge.
 ```sh
 python3 tools/decision_desk/fetch_sources.py     # official pages + pinned mirrors (runner only)
 python3 tools/decision_desk/build_all.py         # parse, compute, export, audit
-python3 tools/decision_desk/build_site.py        # render nfl-decision-desk/
+python3 tools/decision_desk/build_site.py        # render nfl-decision-desk-38a1fc27/
 python3 tools/decision_desk/verify.py            # fails on any unsourced row or broken link
 ```
