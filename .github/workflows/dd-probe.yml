@@ -1,5 +1,8 @@
 name: DD probe (temporary)
 on:
+  push:
+    branches: [arena/38a1fc27-own5]
+    paths: ['dd-trigger.txt']
   workflow_dispatch:
 
 permissions:
