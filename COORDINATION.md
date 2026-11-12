@@ -1037,3 +1037,36 @@ Arena fixes this session's branch to `arena/e446435e-own5`; the `session-<id>/<t
 - Pages deployment run [42230865904](https://github.com/sassnarep3-star/Own5/actions/runs/42230865904) succeeded; Pages build API reports `built` for `6836bf3` at 14:12:00Z with no error. (Two earlier same-day builds for sibling commits show `errored`/`Page build failed` — concurrent-merge supersedes; unrelated to this scope.)
 - Live verification (fetched post-deploy): [dashboard](https://sassnarep3-star.github.io/Own5/sf-rent-e446435e/), [summary](https://sassnarep3-star.github.io/Own5/sf-rent-e446435e/summary.html), [local law + Form 571 schedule](https://sassnarep3-star.github.io/Own5/sf-rent-e446435e/local-law.html), [unit scenarios](https://sassnarep3-star.github.io/Own5/sf-rent-e446435e/units.html), [Flagged for Review](https://sassnarep3-star.github.io/Own5/sf-rent-e446435e/flagged.html) — all serve expected content (1.6% ceiling, derived math, blank unverified cells, per-row source/flag links). Initial index fetches 404'd during CDN propagation; confirmed live minutes later.
 - Session `e446435e` complete: R44-01…R44-07 all done. Open legal/property/source-review items (R44-F01…F19) are nonblocking for publication and published on the Flagged for Review page — not a finding that any increase or notice is lawful.
+
+---
+
+## Session 38a1fc27 — NFL Decision Desk: requirements audit, suggestions, questions, injury/depth tracking (2026-11-12 UTC)
+
+Branch fixed by Arena: `arena/38a1fc27-own5` (base `95c2eea`). Existing scopes are read-only for this session. This session claims only additive namespaces:
+
+- `nfl-decision-desk/**` (new static site, self-contained; does not touch root `index.html`, `pages/`, `docs/`, `own5-desk/`, `nfl-strategy-lab/`, `line-lab/`, or any other session's directory)
+- `research/38a1fc27/**`
+- `data/decision-desk/**`
+- `tools/decision_desk/**`
+- `.github/workflows/decision-desk.yml`
+- append-only blocks in `COORDINATION.md`
+
+Rationale: the user's 2026-11-12 request adds (a) a suggestions register with an explicit review/decision workflow, (b) a questions-and-missing-information register gating decisions, (c) injury + lineup/depth deficiency tracking (2nd/3rd/4th string), and (d) a line-by-line re-verification of the existing NFL claims. None of those exist in any prior scope.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| D1 | Claim + baseline repo review | in progress | 38a1fc27 | COORDINATION.md | Claim pushed before any other work. |
+| D2 | Official-source ingestion (nfl.com injury report/schedule/standings + nflverse official-data mirrors), pinned + timestamped | unclaimed | 38a1fc27 | tools/decision_desk/fetch_sources.py, data/decision-desk/raw/**, .github/workflows/decision-desk.yml | Runner-side fetch; sandbox egress is GitHub-only. |
+| D3 | Requirements coverage matrix + suggestions register + open-questions register | unclaimed | 38a1fc27 | research/38a1fc27/**, data/decision-desk/*.csv | Every suggestion has impact/effort/confidence/decision state. |
+| D4 | Injury & lineup-deficiency engine (snap-share roles, next-man-up drop, team deficit) | unclaimed | 38a1fc27 | tools/decision_desk/compute_injuries.py, data/decision-desk/injuries*.csv | Role inferred from official snap counts, not a third-party depth chart. |
+| D5 | Line origination + strategy leaderboard + gates + correlations (recomputed) | unclaimed | 38a1fc27 | tools/decision_desk/**, data/decision-desk/** | Independent recomputation; disagreements with prior sessions flagged. |
+| D6 | Line-by-line verification pass over existing NFL claims | unclaimed | 38a1fc27 | research/38a1fc27/AUDIT.md, data/decision-desk/audit.csv | Recompute or source-check every claim; flag irregularities. |
+| D7 | Site build + link/row verification | unclaimed | 38a1fc27 | nfl-decision-desk/**, tools/decision_desk/verify.py | Every row sourced or explicitly flagged blank. |
+| D8 | Executive summary | unclaimed | 38a1fc27 | research/38a1fc27/EXECUTIVE_SUMMARY.md | Restates only verified/computed values. |
+| D9 | PR to main, autonomous merge, Pages deploy verification | unclaimed | 38a1fc27 | COORDINATION.md | Record PR link + deploy run. |
+
+### D1 baseline review notes (2026-11-12)
+
+- Repo contains 20+ prior scopes (NFL root desk, `nfl-strategy-lab/`, `line-lab/`, `own5-desk/`, many NBA and SF-rent scopes). None covers injury/lineup-deficiency tracking; `data/flagged.csv` F01–F12 treat injuries only as a research gap.
+- Sandbox egress: only `github.com`, `codeload.github.com`, `api.github.com`, `registry.npmjs.org`, `pypi.org`, `files.pythonhosted.org` resolve. `www.nfl.com` and nflverse release assets are NOT reachable from the sandbox, but the `fetch_page` tool and GitHub Actions runners can reach them. Ingestion therefore runs on a runner and commits a pinned snapshot.
+- No pandas/numpy/scipy in the sandbox runtime; the repo standard is Python standard library only. All computation is stdlib-only.
