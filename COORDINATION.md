@@ -1375,4 +1375,7 @@ Branch `arena/28431d9c-own5`. Claimed scope R1–R5 (above). Scope was narrowed 
 
 **Not in this session's claimed scope (not done here):** own-line origination, signal strategy research, correlation values and the leaderboard. Those outputs stay in the desks, unverified by this hub (H-16).
 
-**PR and merge:** PR link and merge result are recorded in the PR body and verified with `gh` after the merge.
+**PR:** https://github.com/sassnarep3-star/Own5/pull/67 (`arena/28431d9c-own5` → `main`, opened 2026-11-13 UTC).
+**Checks on the PR:** `NFL cross-desk hub (28431d9c)` verify: pass (rebuild and verifier). `Verify NBA validation desk`, `desk-verify`, SF rent and research dashboard checks: pass.
+**Failing checks outside this session's scope:** (a) `NFL Decision Desk — fetch & verify` (`.github/workflows/decision-desk.yml`) runs live fetches on every PR to `main` and fails when regenerated `nfl-decision-desk/` and `data/decision-desk/` differ from the committed snapshot (source drift; this PR changes neither folder). (b) `Verify NFL B34 Week 10 research desk` (`nfl-b34253a1.yml`) already fails on `main` at `0e50f9b`. Both are logged as cross-scope requests to their owners and were not edited here.
+**Merge:** `gh pr merge 67 --merge` after the checks above. The merge result and the Pages deploy are confirmed with `gh` and the live URL after the merge.
