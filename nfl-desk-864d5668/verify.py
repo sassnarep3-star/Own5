@@ -380,15 +380,15 @@ def _c27():
 @check("The build is deterministic: rebuilding produces identical files")
 def _c28():
     import subprocess
-    before = {}
-    for f in sorted(os.listdir(DATA)):
-        if f.endswith(".csv"):
-            before[f] = hashlib.sha256(
-                open(os.path.join(DATA, f), "rb").read()).hexdigest()
+    files = [os.path.join("data", f) for f in sorted(os.listdir(DATA))
+             if f.endswith(".csv")]
+    files += [f for f in sorted(os.listdir(HERE)) if f.endswith(".html")]
+    before = {f: hashlib.sha256(
+        open(os.path.join(HERE, f), "rb").read()).hexdigest() for f in files}
     subprocess.run([sys.executable, "run.py"], cwd=HERE, check=True,
                    stdout=subprocess.DEVNULL)
     for f, h in before.items():
-        now = hashlib.sha256(open(os.path.join(DATA, f), "rb").read()).hexdigest()
+        now = hashlib.sha256(open(os.path.join(HERE, f), "rb").read()).hexdigest()
         assert now == h, "non-deterministic output in " + f
 
 

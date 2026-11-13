@@ -9,7 +9,6 @@ Run:  python3 build_site.py
 """
 from __future__ import annotations
 import csv
-import datetime as dt
 import html
 import json
 import os
@@ -21,7 +20,10 @@ DATA = os.path.join(HERE, "data")
 SITE = HERE  # served at https://sassnarep3-star.github.io/Own5/nfl-desk-864d5668/
 os.makedirs(SITE, exist_ok=True)
 
-BUILD_DATE = dt.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
+# No wall-clock stamp: every page must be byte-for-byte reproducible from the
+# same inputs. The date shown is the date the official data was captured.
+import raw_inputs as _R
+BUILD_DATE = _R.FETCH_DATE
 BLANK = ('<span class="blank" title="Intentionally left blank: no official '
          'source published a value for this cell">&mdash;</span>')
 
@@ -96,8 +98,10 @@ PAGE = """<!DOCTYPE html>
   {body}
 </main>
 <footer>
-  <p>Built {build}. Every row on this site links to the official source it was
-  read from. Blank cells mean no official source published that value.</p>
+  <p>Official data captured {build}. Rebuilt deterministically: running the
+  pipeline again from the same official inputs reproduces every file on this
+  site byte for byte. Every row links to the official source it was read from.
+  Blank cells mean no official source published that value.</p>
 </footer>
 </body>
 </html>
