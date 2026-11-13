@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Correlations — Own5 NFL Own-Line Lab</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html">Own5 <span>NFL Own-Line Lab</span></a>
+  <nav class="nav"><a href="index.html" class="">Overview</a>
+<a href="executive-summary.html" class="">Executive summary</a>
+<a href="standings.html" class="">Standings</a>
+<a href="ledger.html" class="">Game ledger</a>
+<a href="ratings.html" class="">Team ratings</a>
+<a href="lines.html" class="">Own lines (Week 10)</a>
+<a href="backtest.html" class="">Backtest</a>
+<a href="strategies.html" class="">Strategies</a>
+<a href="leaderboard.html" class="">Leaderboard</a>
+<a href="validation.html" class="">Validation gates</a>
+<a href="correlations.html" class="active">Correlations</a>
+<a href="injuries.html" class="">Injuries</a>
+<a href="depth.html" class="">Depth &amp; backups</a>
+<a href="hfa.html" class="">Home-field advantage</a>
+<a href="questions.html" class="">Questions</a>
+<a href="suggestions.html" class="">Suggestions</a>
+<a href="flagged.html" class="">Flagged for review</a>
+<a href="repo-audit.html" class="">Repo audit</a>
+<a href="sources.html" class="">Sources</a>
+<a href="glossary.html" class="">Glossary</a></nav>
+</header>
+<main>
+  <h1>Correlations</h1>
+  <p class="lead">Measured correlations, including the ones you need before building a parlay.</p>
+  
+  ['<div class="note info">A missing value means fewer than four paired observations were available, or one of the variables never varied.</div>', "<p class='count'>10 rows.</p>", '<div class="tablewrap"><table class="tbl">\n<thead><tr><th>id</th><th>quantity</th><th>variable_a</th><th>variable_b</th><th>n</th><th>pearson_r</th><th>p_value</th><th>fisher_z</th><th>ci95_low_r</th><th>ci95_high_r</th><th>what_it_is_used_for</th><th>source</th></tr></thead><tbody>\n<tr><td>C-01</td><td>Game level: home margin vs total points scored</td><td>home_margin</td><td>total_points</td><td>137</td><td>-0.1607</td><td>0.06074</td><td>-0.1621</td><td>-0.3198</td><td>0.0073</td><td>Same-game parlay pricing: shows whether the side and the total of one game are independent</td><td><a class="src" href="https://www.nfl.com/standings/" target="_blank" rel="noopener">www.nfl.com/standings/</a></td></tr>\n<tr><td>C-02</td><td>Game level: size of the margin vs total points scored</td><td>abs_home_margin</td><td>total_points</td><td>137</td><td>-0.0157</td><td>0.85544</td><td>-0.0157</td><td>-0.1829</td><td>0.1524</td><td>Do lopsided games score more?</td><td><a class="src" href="https://www.nfl.com/standings/" target="_blank" rel="noopener">www.nfl.com/standings/</a></td></tr>\n<tr><td>C-03</td><td>Rest differential vs home margin</td><td>rest_diff_days</td><td>home_margin</td><td>121</td><td>-0.4257</td><td>0.0</td><td>-0.4546</td><td>-0.5615</td><td>-0.2675</td><td>Is a rest advantage a real signal?</td><td><a class="src" href="https://www.nfl.com/standings/" target="_blank" rel="noopener">www.nfl.com/standings/</a></td></tr>\n<tr><td>C-04</td><td>Divisional game vs size of the margin</td><td>divisional_flag</td><td>abs_home_margin</td><td>137</td><td>0.0795</td><td>0.35563</td><td>0.0797</td><td>-0.0894</td><td>0.244</td><td>Are divisional games tighter?</td><td><a class="src" href="https://www.nfl.com/standings/" target="_blank" rel="noopener">www.nfl.com/standings/</a></td></tr>\n<tr><td>C-05</td><td>Model predicted margin vs actual margin (out-of-sample)</td><td>pred_home_margin</td><td>actual_home_margin</td><td>89</td><td>0.3256</td><td>0.00185</td><td>0.3379</td><td>0.1258</td><td>0.4999</td><td>Forecast accuracy of the rating model</td><td><a class="src" href="https://www.nfl.com/standings/" target="_blank" rel="noopener">www.nfl.com/standings/</a></td></tr>\n<tr><td>C-06</td><td>Model predicted total vs actual total (out-of-sample)</td><td>pred_total</td><td>actual_total</td><td>89</td><td>0.0816</td><td>0.44695</td><td>0.0818</td><td>-0.1288</td><td>0.285</td><td>Forecast accuracy of the totals model</td><td><a class="src" href="https://www.nfl.com/standings/" target="_blank" rel="noopener">www.nfl.com/standings/</a></td></tr>\n<tr><td>C-07</td><td>Signal agreement: model pick vs better-point-differential pick</td><td>model_pick_is_home</td><td>pointdiff_pick_is_home</td><td>89</td><td>0.8441</td><td>0.0</td><td>1.2352</td><td>0.7714</td><td>0.895</td><td>Parlay construction: two signals that always agree give no diversification</td><td><a class="src" href="https://www.nfl.com/standings/" target="_blank" rel="noopener">www.nfl.com/standings/</a></td></tr>\n<tr><td>C-08</td><td>Signal agreement: model pick vs better-win-percentage pick</td><td>model_pick_is_home</td><td>record_pick_is_home</td><td>89</td><td>0.639</td><td>0.0</td><td>0.7566</td><td>0.4969</td><td>0.7478</td><td>How much the model duplicates a simple record rule</td><td><a class="src" href="https://www.nfl.com/standings/" target="_blank" rel="noopener">www.nfl.com/standings/</a></td></tr>\n<tr><td>C-09</td><td>Home-team result vs model-pick result (same games)</td><td>home_pick_won</td><td>model_pick_won</td><td>89</td><td>0.1792</td><td>0.09299</td><td>0.1811</td><td>-0.0302</td><td>0.3735</td><td>Incremental value of the model over always backing the home team</td><td><a class="src" href="https://www.nfl.com/standings/" target="_blank" rel="noopener">www.nfl.com/standings/</a></td></tr>\n<tr><td>C-10</td><td>Player-prop correlations (any player market)</td><td>prop_a</td><td>prop_b</td><td>0</td><td><span class="blank" title="Intentionally left blank: no official source published a value for this cell">&mdash;</span></td><td><span class="blank" title="Intentionally left blank: no official source published a value for this cell">&mdash;</span></td><td><span class="blank" title="Intentionally left blank: no official source published a value for this cell">&mdash;</span></td><td><span class="blank" title="Intentionally left blank: no official source published a value for this cell">&mdash;</span></td><td><span class="blank" title="Intentionally left blank: no official source published a value for this cell">&mdash;</span></td><td>Same-game player-prop parlays need historic official player box scores. No official player-statistic table was in scope this session, so no prop correlation is published. See flag F-06.</td><td><a class="src" href="https://www.nfl.com/standings/" target="_blank" rel="noopener">www.nfl.com/standings/</a></td></tr>\n</tbody></table></div>']
+</main>
+<footer>
+  <p>Built 2026-11-13 22:17 UTC. Every row on this site links to the official source it was
+  read from. Blank cells mean no official source published that value.</p>
+</footer>
+</body>
+</html>

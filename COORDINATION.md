@@ -1340,6 +1340,127 @@ This session's own scoped check — `.github/workflows/nfl-desk-26d4cafb.yml`
 fails if a clean rebuild of `nfl-desk-26d4cafb/**` differs from what is committed.
 
 
+## Session 864d5668 — NFL Own-Line Lab, Suggestions & Decision Desk (2026-11-13 UTC)
+
+Arena fixes this session's branch to `arena/864d5668-own5` (branched from `ec3cb83`); no alternative
+branches will be created, renamed, or pushed. To guarantee zero file collisions with CI-locked scopes
+(`index.html`, `pages/`, `data/research.json`, `site/`, `own5-desk/`, `nba-*`, `sf-*`,
+`nfl-strategy-lab/`, `line-lab/`, `nfl_model/`, `tools/`) and with the namespaces already claimed by
+other sessions (`nfl-decision-desk/**`, `nfl-decision-desk-38a1fc27/**`, `nfl-decision-desk-e413f933/**`,
+`nfl-desk-26d4cafb/**`, `nfl-b34253a1/**`, `research/nfl-26d4cafb/**`, `research/nfl-b34253a1/**`,
+`research/38a1fc27/**`, `research/arena-f1d30421/**`, `data/decision-desk/**`), this session claims
+**strictly session-isolated additive namespaces**:
+
+- `nfl-desk-864d5668/**` (GitHub Pages dashboard: landing page + category subpages, canonical data
+  JSON/CSVs, deterministic build + compute engine, unit tests, verification harness)
+- `research/nfl-864d5668/**` (executive summary, repo audit, requirements matrix, suggestions
+  register, questions/known-vs-missing/discovery register, injury & depth methodology, strategy /
+  validation-gate / correlation / luck-removal docs, sources registry, flagged register)
+- `.github/workflows/nfl-desk-864d5668.yml` (scoped deterministic verification workflow)
+- Append-only entries in `COORDINATION.md` and `README.md` at integration
+
+Claim timestamp: **2026-11-13T00:00Z**, committed and pushed before implementation.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| N86-01 | Read task board, inspect CI locks & sibling claims, push isolated claim | done | 864d5668 | `COORDINATION.md` | Claim pushed as `4ec8b4c` before any implementation. |
+| N86-02 | Line-by-line repo audit vs official 2026-11-13 sources | done | 864d5668 | `nfl-desk-864d5668/audit_repo.py`, `data/repo_audit.csv`, `repo-audit.html` | 53 checks. 21 MATCH, 1 MATCH-by-design, 2 IRREGULAR, 17 REVIEW, 11 NOT CHECKED with reasons. Two irregularities found and flagged (F-17, F-18). |
+| N86-03 | Suggestions section (reviewable paths, not implemented) | done | 864d5668 | `data/suggestions.csv`, `suggestions.html` | 10 suggestions, each with options A/B/C and a recommended option; all AWAITING DECISION. Nothing implemented. |
+| N86-04 | Questions / information we have vs do not have / discovery plan | done | 864d5668 | `data/questions.csv`, `questions.html` | 12 questions, each with what we have, what we lack and how to get it. |
+| N86-05 | Official 2026-11-13 data fetch & verification | done | 864d5668 | `raw_inputs.py`, `injuries_raw.py`, `depthcharts_raw.py`, `data/sources.csv` | 150 games (137 finals), 326 injury rows, 707 depth slots from 31 of 32 clubs. |
+| N86-06 | Injury & 1st/2nd/3rd/4th-string depth deficiency tracker (offense + defense) | done | 864d5668 | `content.py`, `data/depth_detail.csv`, `data/depth_by_team.csv`, `data/depth_crosscheck.csv` | 705 position slots; deficiency points = rungs down the published chart. HOU blank + flagged. |
+| N86-07 | Own-line origination, strategies, correlations, luck removal, gates, leaderboard | done | 864d5668 | `engine.py`, `engine_stats.py`, `data/signal_tests.csv`, `data/leaderboard.csv`, `data/correlations.csv` | 9 signals, 5 gates. **No strategy promoted** — see status log below. |
+| N86-08 | Executive summary + Flagged-for-Review register | done | 864d5668 | `executive-summary.html`, `data/flags.csv`, `flagged.html` | 21 flags; all published with a source or an action. |
+| N86-09 | GitHub Pages dashboard (landing + category subpages) | done | 864d5668 | `build_site.py`, `nfl-desk-864d5668/*.html`, `assets/style.css` | 20 pages, dashboard-style index with metric cards, every data row carries its official source link. |
+| N86-10 | Verification harness, unit tests, CI workflow | done | 864d5668 | `verify.py`, `tests/test_lab.py`, `.github/workflows/nfl-desk-864d5668.yml` | 36 verification checks and 43 unit tests pass; deterministic-rebuild checksum check included. |
+| N86-11 | Final integration, rebase on `origin/main`, PR to `main`, autonomous merge, live Pages check | done | 864d5668 | `COORDINATION.md` | PR #70 merged; see the status log below. |
+
+### Session 864d5668 — status log (2026-11-13 UTC)
+
+Branch `arena/864d5668-own5`, base `ec3cb83`. Everything was built into the claimed namespace only;
+no other session's file was edited. `COORDINATION.md` is the single exception and was merged by
+keeping both appended blocks (see "Conflict resolution" below).
+
+**What was built.** A deterministic, dependency-free pipeline: `run.py` -> `engine.py` (tables) ->
+`audit_repo.py` (repo audit) -> `build_site.py` (20 pages) -> `verify.py` (36 checks). No numpy or
+scipy in the environment, so every statistic is implemented in `statslib.py` and checked against a
+closed-form value in the unit tests (binomial tails, Wilson intervals, Fisher z, Student t via the
+regularized incomplete beta function, Acklam's normal quantile, ridge solves, and the
+Bailey/Lopez de Prado deflated Sharpe ratio).
+
+**Official inputs (fetched 2026-11-13).**
+- https://www.nfl.com/standings/ — 32-team standings through the Week 10 Thursday night final.
+- https://www.nfl.com/schedules/2026/by-week/week-1 ... /week-10 — 150 games, 137 with finals.
+- https://www.nfl.com/injuries/league/2026/reg10 — 326 rows transcribed verbatim.
+- https://www.nfl.com/teams/ — used to confirm the official club-site URLs.
+- 31 official club `/team/depth-chart` pages — 707 position slots. Houston publishes its chart
+  only as a raster image, so HOU is blank and flagged (F-09) rather than guessed.
+
+**Reconciliation.** All 32 clubs reconcile to the official standings on W, L, T, PF and PA with
+**zero mismatches**, over 137 completed games.
+
+**Home-field advantage.** Measured at **+0.47 points** on 130 non-neutral games, 95% CI
+**-1.81 to +2.75**, p = 0.69. The interval contains zero: this season's data cannot establish a
+home-field advantage. Home teams won 66 of 130 non-neutral games.
+
+**The strategy result (the headline).** Nine signals were tested at a flat -110 price against five
+pre-registered gates (>= 50 graded bets; beats a coin flip at p < 0.05; beats the 52.38% break-even
+rate; survives a Holm-Bonferroni haircut; deflated Sharpe ratio above 0.95). **Nothing is promoted.**
+- M1, the rating model's straight-up pick: 60 of 89 (67.4%), p = 0.0013, Holm-adjusted p = 0.012 —
+  but deflated Sharpe 0.89 against a 0.95 threshold, and **not statistically separable from a naive
+  point-differential rule** (the two rules disagree on only 7 of 89 games; exact McNemar p = 0.45).
+- M4 (back clubs coming off a bye) went **13-1** and M5 (rest edge of 3+ days) went 21-5. Both were
+  found by scanning the correlation table **after** the results were in, on 14 and 26 games. Both are
+  reported as observations and both fail the sample-size and deflation gates. Rewarding them would
+  reward the search, not the signal (flag F-15).
+- Forecast accuracy is real but modest: out-of-sample r of 0.33 between predicted and actual margin
+  (p = 0.0019); MAE 9.23 points against 10.56 for the naive "predict a tie" baseline.
+
+**The biggest blocker.** nfl.com publishes no spreads, totals or moneylines. Closing line value, ROI
+and any against-the-spread record are therefore **unmeasurable**, and gate V-08 is permanently
+BLOCKED until a price source is chosen. Every market column is blank and flagged (F-01); the -110
+figures are a flat-price scenario, not a record against real closing lines. This is presented as a
+decision for the reviewer (SUG-01), not worked around.
+
+**Repo audit findings (non-blocking, published with source links).**
+- F-17: `data/standings-2026-wk8.csv` abbreviates Arizona **AZ**; nfl.com publishes **ARI**, and the
+  repository's own `teams.csv` uses ARI. Silently breaks joins.
+- F-18: `data/model_lines_2026_wk9.csv` builds Week 9 lines on a hard-coded **+2.0** home-field
+  advantage from a 2002-2024 window. This season measures **+0.47** (95% CI -1.81 to +2.75). Every
+  Week 9 line is shifted about two points toward the home team.
+- F-19: seven existing files carry numbers this session could not re-verify (player passing stats,
+  2025 results, historical base rates, three correlation files, league facts). Listed as NOT CHECKED
+  with reasons rather than silently trusted.
+- Verified clean: the Week 8 results table (13 scores agree; the Monday night game is correctly
+  blank because it had not kicked off at the 2026-11-02 snapshot), the Week 8 standings for all 32
+  clubs, bye weeks 5-10, the Week 9 model-line structure and its blank market cells, all five
+  correlation coefficients, and every break-even win rate including the parlay prices.
+
+**Other flags carried on the Flagged for Review page:** F-02 (Brissett listed as Baltimore's QB1
+while an official nfl.com item reports Arizona benched him), F-03 (Daiyan Henley on the Chargers'
+injury report while an official item reports Denver traded for him on 10 Nov), F-05 (eight
+neutral-site labels not independently re-confirmed venue by venue; the NE@DET Munich game is
+corroborated by two official pages), F-06 (no official player-statistic source, so no prop
+correlations), F-07 (89 bets from one partial season), F-11 (packers.com chart is unofficial and
+omits Micah Parsons), F-12 (Miami lists a single quarterback), F-13 (2026 rulebook not retrieved),
+F-14 (flat -110 price regardless of favourite size), F-16 (Eagles chart labelled unofficial with one
+row having no first-string player).
+
+**Conflict resolution.** `COORDINATION.md` conflicted with session 28431d9c because both appended to
+the end of the file. Resolved by keeping **both** blocks in full (864d5668 then 28431d9c); no other
+session's content was discarded.
+
+**Cross-session requests (logged only; nothing outside the claim was edited):** none. All other
+sessions' scopes were treated as read-only.
+
+**PR:** https://github.com/sassnarep3-star/Own5/pull/70 (`arena/864d5668-own5` -> `main`).
+**Merge:** executed with `gh pr merge 70 --merge` after resolving the `COORDINATION.md` conflict.
+**Pages:** the desk is served at https://sassnarep3-star.github.io/Own5/nfl-desk-864d5668/ .
+
+Cross-session requests at claim time: none. All other sessions' scopes treated as read-only; no
+site-wide change will be implemented from this session — every improvement is a proposal on the
+Suggestions page awaiting a chosen path.
+
 ---
 
 ## Session 28431d9c — NFL cross-desk reconciliation & currency audit (2026-11-13 UTC)

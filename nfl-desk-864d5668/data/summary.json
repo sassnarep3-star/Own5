@@ -1,0 +1,42 @@
+{
+  "completed_games": 137,
+  "hfa": {
+    "hi": 2.7506675543222143,
+    "home_win_rate": 0.5076923076923077,
+    "lo": -1.8122060158606756,
+    "mean": 0.46923076923076923,
+    "n": 130,
+    "p": 0.687532881310617,
+    "sd": 13.27186711687689,
+    "se": 1.1640197486034138
+  },
+  "ridge_lambda": 5.0,
+  "scheduled_games": 13,
+  "standings_mismatches": 0,
+  "tables": {
+    "backtest_summary": 14,
+    "backtest_walkforward": 89,
+    "backtest_weekly": 7,
+    "correlations": 10,
+    "depth_by_team": 64,
+    "depth_crosscheck": 52,
+    "depth_detail": 705,
+    "flags": 18,
+    "glossary": 21,
+    "hfa": 13,
+    "hfa_sensitivity": 6,
+    "injuries": 326,
+    "injury_summary": 32,
+    "leaderboard": 9,
+    "ledger": 150,
+    "own_lines": 13,
+    "questions": 12,
+    "signal_tests": 10,
+    "sources": 45,
+    "standings_reconciliation": 32,
+    "suggestions": 10,
+    "team_ratings": 32,
+    "validation": 10
+  },
+  "walk_forward_predictions": 89
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leaderboard — Own5 NFL Own-Line Lab</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html">Own5 <span>NFL Own-Line Lab</span></a>
+  <nav class="nav"><a href="index.html" class="">Overview</a>
+<a href="executive-summary.html" class="">Executive summary</a>
+<a href="standings.html" class="">Standings</a>
+<a href="ledger.html" class="">Game ledger</a>
+<a href="ratings.html" class="">Team ratings</a>
+<a href="lines.html" class="">Own lines (Week 10)</a>
+<a href="backtest.html" class="">Backtest</a>
+<a href="strategies.html" class="">Strategies</a>
+<a href="leaderboard.html" class="active">Leaderboard</a>
+<a href="validation.html" class="">Validation gates</a>
+<a href="correlations.html" class="">Correlations</a>
+<a href="injuries.html" class="">Injuries</a>
+<a href="depth.html" class="">Depth &amp; backups</a>
+<a href="hfa.html" class="">Home-field advantage</a>
+<a href="questions.html" class="">Questions</a>
+<a href="suggestions.html" class="">Suggestions</a>
+<a href="flagged.html" class="">Flagged for review</a>
+<a href="repo-audit.html" class="">Repo audit</a>
+<a href="sources.html" class="">Sources</a>
+<a href="glossary.html" class="">Glossary</a></nav>
+</header>
+<main>
+  <h1>Strategy leaderboard</h1>
+  <p class="lead">Every strategy ranked by out-of-sample hit rate, with the reward tier each one has actually reached.</p>
+  
+  ['<div class="note warn">The leaderboard is empty at the top by design. A strategy reaches the top tier only by passing every gate, and no strategy has done that yet. Ranking is by out-of-sample hit rate, but the tier - not the rank - is what decides whether anything gets staked.</div>', '<div class="tablewrap"><table class="tbl plain">\n<thead><tr><th>Tier</th><th>What it takes</th><th>What the strategy gets</th></tr></thead><tbody>\n<tr><td>1. Promoted</td><td>At least 50 graded bets, beats a coin flip at p below 0.05, beats the -110 break-even rate, survives the Holm-Bonferroni haircut and clears a deflated Sharpe ratio above 0.95.</td><td>Eligible to be staked. Listed first on this page with its full record.</td></tr>\n<tr><td>2. Watchlist</td><td>Above the -110 break-even rate but short of at least one gate.</td><td>Paper-tracked every week. No money, no promotion, no reward.</td></tr>\n<tr><td>3. Below break-even</td><td>Does not beat the -110 break-even rate.</td><td>Not tracked. Kept on the page so a rejected idea stays visible.</td></tr>\n</tbody></table></div>', '<h2>Current standings</h2>', '<div class="tablewrap"><table class="tbl">\n<thead><tr><th>rank</th><th>signal</th><th>graded_bets</th><th>hit_rate</th><th>units_per_bet_at_-110</th><th>roi_pct</th><th>deflated_sharpe</th><th>verdict</th><th>reward_tier</th><th>source</th></tr></thead><tbody>\n<tr><td>1</td><td>M4 Back the team coming off a bye (rest edge &gt;= 7 days)</td><td>14</td><td>0.9286</td><td>0.7727</td><td>77.27</td><td>0.5599</td><td><span class="blank" title="Intentionally left blank: no official source published a value for this cell">&mdash;</span></td><td>watchlist - above break-even but short of the full gate set</td><td><a class="src" href="https://www.nfl.com/standings/" target="_blank" rel="noopener">www.nfl.com/standings/</a></td></tr>\n<tr><td>2</td><td>M5 Back the team with a rest edge of 3 or more days</td><td>26</td><td>0.8077</td><td>0.542</td><td>54.2</td><td>0.8305</td><td><span class="blank" title="Intentionally left blank: no official source published a value for this cell">&mdash;</span></td><td>watchlist - above break-even but short of the full gate set</td><td><a class="src" href="https://www.nfl.com/standings/" target="_blank" rel="noopener">www.nfl.com/standings/</a></td></tr>\n<tr><td>3</td><td>M3 Model pick, predicted margin &gt;= 3 points</td><td>41</td><td>0.6829</td><td>0.3038</td><td>30.38</td><td>0.6668</td><td><span class="blank" title="Intentionally left blank: no official source published a value for this cell">&mdash;</span></td><td>watchlist - above break-even but short of the full gate set</td><td><a class="src" href="https://www.nfl.com/standings/" target="_blank" rel="noopener">www.nfl.com/standings/</a></td></tr>\n<tr><td>4</td><td>M1 Model pick (walk-forward, all games)</td><td>89</td><td>0.6742</td><td>0.287</td><td>28.7</td><td>0.8925</td><td><span class="blank" title="Intentionally left blank: no official source published a value for this cell">&mdash;</span></td><td>watchlist - above break-even and through the haircut, but fails the deflated-Sharpe gate</td><td><a class="src" href="https://www.nfl.com/standings/" target="_blank" rel="noopener">www.nfl.com/standings/</a></td></tr>\n<tr><td>5</td><td>B2 Take the better season-to-date point differential</td><td>89</td><td>0.6404</td><td>0.2227</td><td>22.27</td><td>0.7384</td><td><span class="blank" title="Intentionally left blank: no official source published a value for this cell">&mdash;</span></td><td>watchlist - above break-even but short of the full gate set</td><td><a class="src" href="https://www.nfl.com/standings/" target="_blank" rel="noopener">www.nfl.com/standings/</a></td></tr>\n<tr><td>6</td><td>B4 Take the team with more rest</td><td>89</td><td>0.6404</td><td>0.2227</td><td>22.27</td><td>0.7384</td><td><span class="blank" title="Intentionally left blank: no official source published a value for this cell">&mdash;</span></td><td>watchlist - above break-even but short of the full gate set</td><td><a class="src" href="https://www.nfl.com/standings/" target="_blank" rel="noopener">www.nfl.com/standings/</a></td></tr>\n<tr><td>7</td><td>B3 Take the better season-to-date win percentage</td><td>89</td><td>0.6067</td><td>0.1583</td><td>15.83</td><td>0.5088</td><td><span class="blank" title="Intentionally left blank: no official source published a value for this cell">&mdash;</span></td><td>watchlist - above break-even but short of the full gate set</td><td><a class="src" href="https://www.nfl.com/standings/" target="_blank" rel="noopener">www.nfl.com/standings/</a></td></tr>\n<tr><td>8</td><td>B1 Always take the home team</td><td>89</td><td>0.4382</td><td>-0.1634</td><td>-16.34</td><td>0.0009</td><td><span class="blank" title="Intentionally left blank: no official source published a value for this cell">&mdash;</span></td><td>below break-even - not promoted</td><td><a class="src" href="https://www.nfl.com/standings/" target="_blank" rel="noopener">www.nfl.com/standings/</a></td></tr>\n<tr><td>9</td><td>M2 Model pick, predicted margin &gt;= 7 points</td><td>9</td><td>0.8889</td><td>0.697</td><td>69.7</td><td>0.4666</td><td><span class="blank" title="Intentionally left blank: no official source published a value for this cell">&mdash;</span></td><td>watchlist - above break-even but short of the full gate set</td><td><a class="src" href="https://www.nfl.com/standings/" target="_blank" rel="noopener">www.nfl.com/standings/</a></td></tr>\n</tbody></table></div>', '<h2>Why nothing is rewarded yet</h2><p>Two of the strategies on this page look spectacular: backing a club coming off a bye went 13-1. Both were found by scanning the correlation table after the results were already in, on 14 and 26 games. That is precisely the situation the deflated Sharpe ratio exists to punish, and both fail it. Rewarding them would be rewarding the search, not the signal.</p>']
+</main>
+<footer>
+  <p>Built 2026-11-13 22:17 UTC. Every row on this site links to the official source it was
+  read from. Blank cells mean no official source published that value.</p>
+</footer>
+</body>
+</html>

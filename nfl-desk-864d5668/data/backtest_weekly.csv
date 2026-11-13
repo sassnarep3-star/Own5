@@ -1,0 +1,8 @@
+week,games_graded,model_wins,model_hit_rate,pointdiff_baseline_wins,pointdiff_baseline_hit_rate,home_baseline_wins,home_baseline_hit_rate,mae_margin,bias_margin,mae_total,bias_total,source
+4,16,11,0.6875,11,0.6875,8,0.5,6.0558,-2.8204,11.0036,4.1776,https://www.nfl.com/schedules/2026/by-week/week-4
+5,15,10,0.6667,10,0.6667,5,0.3333,10.9427,0.0148,11.0455,4.2202,https://www.nfl.com/schedules/2026/by-week/week-5
+6,14,8,0.5714,7,0.5,6,0.4286,6.5659,-2.3704,11.9388,-1.8424,https://www.nfl.com/schedules/2026/by-week/week-6
+7,14,8,0.5714,7,0.5,5,0.3571,11.1992,-5.4464,10.9114,0.4723,https://www.nfl.com/schedules/2026/by-week/week-7
+8,14,10,0.7143,9,0.6429,10,0.7143,11.837,7.2959,11.7805,1.8163,https://www.nfl.com/schedules/2026/by-week/week-8
+9,15,13,0.8667,13,0.8667,5,0.3333,9.3732,-3.7574,11.017,-1.151,https://www.nfl.com/schedules/2026/by-week/week-9
+10,1,0,0.0,0,0.0,0,0.0,5.3894,-5.3894,0.4584,0.4584,https://www.nfl.com/schedules/2026/by-week/week-10

@@ -1,0 +1,11 @@
+id,quantity,variable_a,variable_b,n,pearson_r,p_value,fisher_z,ci95_low_r,ci95_high_r,what_it_is_used_for,source
+C-01,Game level: home margin vs total points scored,home_margin,total_points,137,-0.1607,0.06074,-0.1621,-0.3198,0.0073,Same-game parlay pricing: shows whether the side and the total of one game are independent,https://www.nfl.com/standings/
+C-02,Game level: size of the margin vs total points scored,abs_home_margin,total_points,137,-0.0157,0.85544,-0.0157,-0.1829,0.1524,Do lopsided games score more?,https://www.nfl.com/standings/
+C-03,Rest differential vs home margin,rest_diff_days,home_margin,121,-0.4257,0.0,-0.4546,-0.5615,-0.2675,Is a rest advantage a real signal?,https://www.nfl.com/standings/
+C-04,Divisional game vs size of the margin,divisional_flag,abs_home_margin,137,0.0795,0.35563,0.0797,-0.0894,0.244,Are divisional games tighter?,https://www.nfl.com/standings/
+C-05,Model predicted margin vs actual margin (out-of-sample),pred_home_margin,actual_home_margin,89,0.3256,0.00185,0.3379,0.1258,0.4999,Forecast accuracy of the rating model,https://www.nfl.com/standings/
+C-06,Model predicted total vs actual total (out-of-sample),pred_total,actual_total,89,0.0816,0.44695,0.0818,-0.1288,0.285,Forecast accuracy of the totals model,https://www.nfl.com/standings/
+C-07,Signal agreement: model pick vs better-point-differential pick,model_pick_is_home,pointdiff_pick_is_home,89,0.8441,0.0,1.2352,0.7714,0.895,Parlay construction: two signals that always agree give no diversification,https://www.nfl.com/standings/
+C-08,Signal agreement: model pick vs better-win-percentage pick,model_pick_is_home,record_pick_is_home,89,0.639,0.0,0.7566,0.4969,0.7478,How much the model duplicates a simple record rule,https://www.nfl.com/standings/
+C-09,Home-team result vs model-pick result (same games),home_pick_won,model_pick_won,89,0.1792,0.09299,0.1811,-0.0302,0.3735,Incremental value of the model over always backing the home team,https://www.nfl.com/standings/
+C-10,Player-prop correlations (any player market),prop_a,prop_b,0,,,,,,"Same-game player-prop parlays need historic official player box scores. No official player-statistic table was in scope this session, so no prop correlation is published. See flag F-06.",https://www.nfl.com/standings/

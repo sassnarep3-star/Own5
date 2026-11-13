@@ -1,0 +1,22 @@
+term,plain_english_definition,how_it_is_computed_here
+Own line,"A point spread or total we calculate ourselves from official results, instead of copying a sportsbook's number.","Ridge regression of home margin on team indicators, fitted only on weeks before the game being predicted."
+Ridge regression,A way of fitting a model that stops extreme team ratings running away when a club has played only a few games.,Solved in closed form with a penalty of 5.0 on the size of every team rating.
+Home margin,Home team's points minus the away team's points. Positive means the home team won.,Straight from the official final scores.
+Walk-forward,"Predicting each week using only the weeks before it, so the test can never see the future.",Week N is predicted from weeks 1 to N-1 only.
+Out-of-sample,A prediction made on data the model never saw while it was being fitted.,Every row of backtest_walkforward.csv.
+Neutral-site game,"A game played abroad, where neither club has a home crowd.",Marked from the official nfl.com weekly schedule pages; home-field advantage is set to zero for these games.
+Home-field advantage (HFA),How many points the home team is worth before you even look at who is playing.,"Mean home margin across non-neutral games, reported with a 95 per cent confidence interval."
+MAE,"Mean absolute error: on average, how many points a prediction missed by.","Average of the absolute margin errors, compared against the naive alternative of predicting a zero margin every game."
+Bias,Whether the misses lean one way. Positive means the model under-rated the home team on average.,Simple mean of the margin errors.
+Break-even hit rate,The share of bets you must win just to cover the book's commission.,"At -110 you risk 1.00 to win 0.909, so break-even is 1.10 / 2.10 = 52.38 per cent."
+Wilson interval,A range for a hit rate that behaves properly on small samples.,Wilson score interval at 95 per cent.
+Holm-Bonferroni,"A correction applied when several signals are tested at once, because testing many signals manufactures winners.",Step-down adjustment across the skill signals only; the bias probe is excluded.
+Deflated Sharpe Ratio,A Sharpe ratio adjusted for how many strategies were tried and for lopsided returns. It asks: would this still look good if I had only ever tried one thing?,"Bailey and Lopez de Prado (2014), using the measured skew and excess kurtosis and a trials count equal to the number of signals tested."
+Skew and excess kurtosis,How lopsided and how fat-tailed the per-bet returns are. Both make a good-looking record less trustworthy.,"Computed directly on the per-bet return series: +0.909 for a win, -1.000 for a loss."
+Deficiency points,How far down a club's published depth chart a position has to reach. Zero means the first string starts; two means the third string starts.,Walk the club's published depth order and skip any player the official injury report lists as Out.
+String used,"Which line of the depth chart is expected to start: 1 means first string, 2 means second string and so on.",Position of the expected starter in the club's published order.
+Closing line value,How much better the price you took was than the price available when the game started.,NOT COMPUTED. It needs a market price and no official source publishes one (flag F-01).
+Units,Bet size expressed as multiples of your standard stake.,"One unit risked: a win at -110 returns +0.909 units, a loss returns -1.000."
+Correlation (Pearson r),"How much two numbers move together, from -1 to +1.",Standard Pearson correlation with a Fisher z confidence interval.
+Same-game parlay,Several bets on one game combined into a single ticket. The legs are not independent.,Not priced here; the inputs you would need are the correlations in correlations.csv plus real parlay prices from a book.
+Verified and unverified,Whether a number was read off an official source or not.,Every row carries its source URL. Anything without an official source is left blank and given a flag.

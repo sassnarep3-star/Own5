@@ -1,0 +1,7 @@
+ridge_lambda,fitted_hfa_points,in_sample_mae_margin,in_sample_rmse_margin,note,source
+1.0,0.081,8.259,10.311,in-sample fit only; not a forecast test,https://www.nfl.com/standings/
+3.0,0.134,8.377,10.505,in-sample fit only; not a forecast test,https://www.nfl.com/standings/
+5.0,0.172,8.505,10.725,in-sample fit only; not a forecast test,https://www.nfl.com/standings/
+10.0,0.232,8.761,11.191,in-sample fit only; not a forecast test,https://www.nfl.com/standings/
+20.0,0.279,9.273,11.767,in-sample fit only; not a forecast test,https://www.nfl.com/standings/
+,,,,An unconstrained (lambda = 0) fit is not reported: with 32 teams and bye-week gaps the design matrix is rank-deficient and the solution is not unique.,https://www.nfl.com/standings/
