@@ -1,0 +1,257 @@
+[
+  {
+    "id": "Q01",
+    "question": "Which price is the benchmark for 'beating the market': our line at post, the operator's current price, or the closing price?",
+    "why": "Every CLV, edge and certification statement depends on which price it is measured against.",
+    "have": "A single aggregator line per game with an unknown timestamp (nflverse games.csv).",
+    "missing": "A timestamped operator price history.",
+    "resolve": "Capture the operator page twice weekly (S01) and store the raw snapshot.",
+    "blocks": "Gate G4, leaderboard certification, and any claim of skill.",
+    "status": "Blocking",
+    "related": "R08, R10",
+    "official_sources": [
+      "https://www.nfl.com/schedules/2026/by-week/week-9"
+    ]
+  },
+  {
+    "id": "Q02",
+    "question": "Are the aggregator line values closing lines, and for which operator?",
+    "why": "If they are closing lines, the market prices information efficiently and any measured ATS edge is implausible; if they are early lines, part of a measured edge is stale-line alpha.",
+    "have": "nflverse games.csv spread_line/total_line; no documentation of source or snapshot time.",
+    "missing": "Provenance and timestamp from the publisher.",
+    "resolve": "Ask the mirror maintainer for the upstream source, or replace with an archived operator snapshot.",
+    "blocks": "Interpretation of every market comparison in this repo.",
+    "status": "Blocking",
+    "related": "R04, R16",
+    "official_sources": [
+      "https://www.nfl.com/schedules/2026/by-week/week-9"
+    ]
+  },
+  {
+    "id": "Q03",
+    "question": "What bankroll, staking rule and maximum drawdown are acceptable?",
+    "why": "Kelly fractions, stop rules and the drawdown gate are undefined without a bankroll.",
+    "have": "A 100-unit reference bankroll and a quarter-Kelly cap used for illustration only.",
+    "missing": "The owner's actual risk tolerance and capital.",
+    "resolve": "Owner decision; not resolvable from any source.",
+    "blocks": "G6/G7 evaluation, reward sizing.",
+    "status": "Blocking",
+    "related": "R06, R10",
+    "official_sources": [
+      "https://support.fanduel.com/s/article/Betting-football-with-FanDuel",
+      "https://www.nfl.com/"
+    ]
+  },
+  {
+    "id": "Q04",
+    "question": "Are rewards cash, points, or nothing?",
+    "why": "Cash rewards change the legal, tax and eligibility requirements, and the operator's terms may restrict competition use.",
+    "have": "Reward tiers proposed in the prior sessions; no funding decision.",
+    "missing": "Owner decision plus a jurisdiction review.",
+    "resolve": "Owner decision; treat as points-only until answered (S16).",
+    "blocks": "Competition launch.",
+    "status": "Blocking",
+    "related": "R06",
+    "official_sources": [
+      "https://support.fanduel.com/s/article/Betting-football-with-FanDuel"
+    ]
+  },
+  {
+    "id": "Q05",
+    "question": "Which jurisdiction and operator rules govern the bets?",
+    "why": "Same-game parlay restrictions, minimum age, and void/void rules differ by state and operator.",
+    "have": "Operator house-rule pages cited by earlier sessions (FanDuel/DraftKings/BetMGM).",
+    "missing": "A confirmed jurisdiction for the owner and the applicable operator's current terms.",
+    "resolve": "Owner states the jurisdiction; then re-read that operator's house rules for that state.",
+    "blocks": "G9-G12, any live betting.",
+    "status": "Blocking",
+    "related": "R06, R08",
+    "official_sources": [
+      "https://support.fanduel.com/s/article/Betting-football-with-FanDuel"
+    ]
+  },
+  {
+    "id": "Q06",
+    "question": "Can we obtain historical player-prop lines to backtest prop strategies?",
+    "why": "Without a prop line there is no breakeven price, so a prop strategy cannot be evaluated economically.",
+    "have": "Median-split proxies and correlation coefficients from official-derived stats.",
+    "missing": "Any official public prop-line history (none exists).",
+    "resolve": "Commercial odds archive, or forward-collect prop lines from today onward and accept a start date.",
+    "blocks": "Economically meaningful prop backtests.",
+    "status": "Blocking",
+    "related": "R07, R09",
+    "official_sources": [
+      "https://support.fanduel.com/s/article/Betting-football-with-FanDuel"
+    ]
+  },
+  {
+    "id": "Q07",
+    "question": "What defines a 'starter' — the club depth chart, or snap share?",
+    "why": "Depth charts are not published by the league; snap share is measurable but lags role changes.",
+    "have": "Snap-share role inference with explicit thresholds and depth strings 1-4.",
+    "missing": "An official, machine-readable depth chart (none exists at nfl.com).",
+    "resolve": "Keep snap share as the primary definition and publish the threshold; cross-check against club-published depth charts where available.",
+    "blocks": "Precision of R12/R13, not their existence.",
+    "status": "Partially answered",
+    "related": "R12, R13",
+    "official_sources": [
+      "https://www.nfl.com/injuries/"
+    ]
+  },
+  {
+    "id": "Q08",
+    "question": "How many points is a missing player worth?",
+    "why": "The injury adjustment needs a value per player, not just a count.",
+    "have": "An estimated coefficient of -0.039 points per percentage point of relative deficiency on raw margin (p=6e-5), of which the market prices about 49% (market coefficient -0.019), leaving a residual of -0.020 (p=0.024) that does not survive as a binary ATS edge.",
+    "missing": "Position-specific values (QB vs guard vs safety) and interaction effects.",
+    "resolve": "Fit per-position-group coefficients with enough sample, and validate out of season.",
+    "blocks": "Precision of the injury adjustment in the line model.",
+    "status": "Partially answered",
+    "related": "R05, R12",
+    "official_sources": [
+      "https://www.nfl.com/injuries/",
+      "https://www.nfl.com/standings/league/2026/REG"
+    ]
+  },
+  {
+    "id": "Q09",
+    "question": "Should practice status be used as a probability weight?",
+    "why": "The game status is not published until later in the week; ignoring practice participation means discarding the only early signal.",
+    "have": "Documented weights (Out 1.0, Doubtful 0.75, Questionable 0.5; DNP 0.5, Limited 0.25, Full 0.0).",
+    "missing": "Empirically fitted activation probabilities by practice sequence.",
+    "resolve": "Fit on 2023-2026 reports (S07) and replace the judgment weights.",
+    "blocks": "Nothing blocking; improves accuracy.",
+    "status": "Partially answered",
+    "related": "R11",
+    "official_sources": [
+      "https://www.nfl.com/injuries/"
+    ]
+  },
+  {
+    "id": "Q10",
+    "question": "Do Questionable players belong in the deficiency score?",
+    "why": "A Questionable starter often plays; counting him at 0.5 could double-count with his backup.",
+    "have": "A 0.5 weight applied consistently.",
+    "missing": "Evidence on actual activation rates by position and practice level.",
+    "resolve": "Same fit as Q09; until then keep the weight and disclose it.",
+    "blocks": "Nothing blocking.",
+    "status": "Partially answered",
+    "related": "R11",
+    "official_sources": [
+      "https://www.nfl.com/injuries/"
+    ]
+  },
+  {
+    "id": "Q11",
+    "question": "What sample size is required before a strategy may appear on the leaderboard?",
+    "why": "Appearing on a board is a claim; small samples make that claim false.",
+    "have": "A 300-bet minimum, and the calculation that 2,241 bets are needed to distinguish 55% from 52.38% at 80% power.",
+    "missing": "An owner-agreed rule for provisional vs certified listing.",
+    "resolve": "Adopt the 300-bet minimum for provisional listing and full power analysis for certification.",
+    "blocks": "Reward allocation, not analysis.",
+    "status": "Answered",
+    "related": "R06, R10",
+    "official_sources": [
+      "https://academic.oup.com/rfs/issue/29/1"
+    ]
+  },
+  {
+    "id": "Q12",
+    "question": "What false-discovery rate is acceptable when certifying a strategy?",
+    "why": "Bonferroni over 7 variants at alpha=0.05 is conservative; a different error budget changes which strategies qualify.",
+    "have": "Bonferroni 0.05/k with k published, plus permutation nulls.",
+    "missing": "An explicit owner preference (strict vs exploratory).",
+    "resolve": "Keep strict for anything that would attract money; allow exploratory labels at 0.10 with disclosure.",
+    "blocks": "Nothing blocking; policy choice.",
+    "status": "Answered",
+    "related": "R10",
+    "official_sources": [
+      "https://academic.oup.com/rfs/issue/29/1"
+    ]
+  },
+  {
+    "id": "Q13",
+    "question": "How often may the model be updated in-season?",
+    "why": "Frequent refits invite overfitting and make the published line unreproducible.",
+    "have": "A fixed weekly refit in the pipeline, with parameters estimated only from prior weeks.",
+    "missing": "A rule for mid-week injury-driven recalculation.",
+    "resolve": "Freeze the model after the Wednesday report; publish the frozen line and the injury adjustment separately.",
+    "blocks": "Auditability of the line history.",
+    "status": "Answered",
+    "related": "R04, R15",
+    "official_sources": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ]
+  },
+  {
+    "id": "Q14",
+    "question": "Is home-field advantage really zero at a neutral site?",
+    "why": "The Week 10 Munich game is a designated home game for Detroit; treating it as neutral is an assumption.",
+    "have": "HFA = +1.22 points estimated from prior seasons; neutral games set to zero.",
+    "missing": "Measured margin in international/neutral games.",
+    "resolve": "Estimate the neutral-site effect from the historical neutral games in the pinned dataset.",
+    "blocks": "Precision of one line, not the framework.",
+    "status": "Partially answered",
+    "related": "R04",
+    "official_sources": [
+      "https://www.nfl.com/schedules/2026/by-week/week-9"
+    ]
+  },
+  {
+    "id": "Q15",
+    "question": "Do we include postseason games in ratings and backtests?",
+    "why": "Including playoffs mixes different rest patterns and opponent quality.",
+    "have": "Regular season only, explicitly filtered.",
+    "missing": "A decision on whether postseason props/futures are in scope.",
+    "resolve": "Keep regular season for ratings; treat postseason as a separate labelled sample.",
+    "blocks": "Nothing blocking.",
+    "status": "Answered",
+    "related": "R05",
+    "official_sources": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ]
+  },
+  {
+    "id": "Q16",
+    "question": "Which lineage wins when the official page and the mirror disagree?",
+    "why": "The pipeline consumes both; a silent drift would change every downstream number.",
+    "have": "A row-for-row cross-check: 276/276 injury rows and 32/32 standings rows currently agree.",
+    "missing": "An automated fail-closed policy in CI.",
+    "resolve": "Adopt S09: fail the build and flag the mismatch rather than choosing silently.",
+    "blocks": "Trust in the whole pipeline.",
+    "status": "Answered",
+    "related": "R16",
+    "official_sources": [
+      "https://www.nfl.com/injuries/",
+      "https://www.nfl.com/standings/league/2026/REG"
+    ]
+  },
+  {
+    "id": "Q17",
+    "question": "How are source changes versioned?",
+    "why": "An official page changes weekly; a value without a timestamp cannot be audited later.",
+    "have": "A provenance file with URL, HTTP status, SHA-256, byte count and UTC timestamp for every fetch, committed with the data.",
+    "missing": "Long-term retention beyond the repository history.",
+    "resolve": "Keep the weekly snapshot commit; tag releases per season.",
+    "blocks": "Long-run reproducibility.",
+    "status": "Answered",
+    "related": "R15, R16",
+    "official_sources": [
+      "https://www.nfl.com/standings/league/2026/REG"
+    ]
+  },
+  {
+    "id": "Q18",
+    "question": "Is there budget for a paid odds feed?",
+    "why": "A verified price feed closes Q01, Q02 and Q06 at once; the free route is slow and partial.",
+    "have": "No paid feed; aggregator lines only.",
+    "missing": "Owner budget decision.",
+    "resolve": "Owner decision; document the cost of the gap either way.",
+    "blocks": "Certification of skill (G4), prop backtests.",
+    "status": "Blocking",
+    "related": "R08, R10",
+    "official_sources": [
+      "https://support.fanduel.com/s/article/Betting-football-with-FanDuel"
+    ]
+  }
+]

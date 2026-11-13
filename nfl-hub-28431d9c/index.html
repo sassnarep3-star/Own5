@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard | NFL Cross-Desk Hub</title><link rel="stylesheet" href="style.css"></head>
+<body><header><h1>NFL Cross-Desk Hub - 2026 Week 10</h1><nav><a href="index.html" aria-current="page">Dashboard</a><a href="desks.html">Desk map</a><a href="standings.html">Standings</a><a href="slate.html">Week 10 slate</a><a href="injuries.html">Injuries &amp; QB news</a><a href="own-lines.html">Own-line comparison</a><a href="flagged.html">Flagged for Review</a><a href="sources.html">Sources</a></nav></header>
+<main>
+<h2>Start here</h2>
+<p class="lead">This hub reconciles the six NFL desks already in this repository against the current official NFL.com pages (fetched 2026-11-13). It does not add new betting recommendations. Every value on the official side links to nfl.com, and anything that could not be confirmed is shown as blank or flagged.</p>
+<div class="cards">
+<div class="card"><b>32</b><span>official teams checked (standings)</span></div>
+<div class="card"><b>14</b><span>Week 10 games checked (+4 byes)</span></div>
+<div class="card"><b>44</b><span>official injury rows checked</span></div>
+<div class="card"><b>14</b><span>games with own-line comparison</span></div>
+<div class="card"><b>16</b><span>open flags (3 high)</span></div>
+<div class="card"><b>0</b><span>slate mismatches across desks</span></div>
+</div>
+<h2>Executive summary</h2>
+<div class="note"><ul>
+<li><b>Standings: the desks are one game behind, not wrong.</b> 30 of 32 teams match the official standings exactly in all three desks. The only differences are the two Thursday teams (NYG, WAS). Adding the official Thursday result to each desk's pre-game NYG and WAS totals reproduces the official figures in every desk (computed by build.py).</li>
+<li><b>The Week 10 slate agrees.</b> All 14 official games match the three desks on teams, date and kickoff time (mismatches: 0). b34253a1 is the only desk that records a Thursday status, and it still shows the game as SCHEDULED. The four bye teams (CHI, DEN, PHI, TB) match the two desks that record byes; 26d4cafb has no machine-readable bye list.</li>
+<li><b>Injury rows are where the desks disagree with the official page.</b> Of 44 official rows, e413f933 matches 29 exactly and differs on 15; 0 are not in its file. b34253a1 lists 11 of them, differs on 3 (a wrong position and an unsupported injury reason among them) and is practice-level only on 2. Some differences are snapshot timing; the rest are not explained by timing. All are listed on the Flagged page.</li>
+<li><b>Own-line models disagree.</b> In 4 of 14 games the three desks do not agree on the favorite (a zero margin counts as a pick'em). Causes were not separately verified; the desks use different methods. No desk's model line is an official value.</li>
+<li><b>Market quotes are not usable as they stand.</b> b34253a1's DraftKings and FanDuel quotes have no time stamp and include the Thursday Commanders at Giants game, which the official schedule lists as final. They were not re-verified against the books.</li>
+<li><b>Quarterback news is covered unevenly.</b> Re-fetched official headlines show Lamar Jackson placed on injured reserve, Tyler Huntley out for the season, Sam Darnold ruled out for Seattle's Week 10 game with Drew Lock expected to start, and TreVeyon Henderson hospitalized after an emergency. Four other draft headlines could not be reproduced and are excluded (Flagged H-13).</li>
+</ul></div>
+<h2>Pages</h2>
+<ul>
+<li><a href="desks.html">Desk map</a>: the six desks, their owners, pull requests, live links and what each one covers.</li>
+<li><a href="standings.html">Standings</a>: 32 teams, official vs each desk, with a per-row official link.</li>
+<li><a href="slate.html">Week 10 slate</a>: 14 games and 4 byes, official vs each desk.</li>
+<li><a href="injuries.html">Injuries &amp; QB news</a>: official injury rows for the four sampled games, and the official QB headlines.</li>
+<li><a href="own-lines.html">Own-line comparison</a>: home margins from each model, and where they disagree.</li>
+<li><a href="flagged.html">Flagged for Review</a>: every open irregularity, with the file and the official link.</li>
+<li><a href="sources.html">Sources</a>: each official URL, its fetch date and what was used from it.</li>
+</ul>
+<p class="lead">Scope limit: this hub verifies only the standings, slate, byes, an injury sample for four games and the QB headlines. Correlations, strategy gates, leaderboards and registers in the six desks are not re-verified here.</p>
+</main>
+<footer>Official values: nfl.com, fetched 2026-11-13 UTC. Desk values: read-only copies from the repo. Blank = not verified. Stdlib build, deterministic output.</footer>
+</body></html>

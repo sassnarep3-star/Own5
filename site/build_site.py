@@ -92,6 +92,8 @@ NAV = [
     ("Research", [("lines.html", "Own NFL lines", "◈"), ("strategies.html", "Strategies", "◇"), ("correlations.html", "Correlations", "⌁")]),
     ("Markets", [("parlays.html", "Parlays & combos", "⧉"), ("props.html", "Player props", "◎"), ("leaderboard.html", "Leaderboard", "♜")]),
     ("Evidence", [("validation.html", "Validation gates", "✓"), ("data.html", "Official data", "▤"), ("sources.html", "Source register", "↗"), ("methodology.html", "Methodology", "≡")]),
+    ("Lineup intelligence", [("injuries.html", "Injuries & depth", "⚕")]),
+    ("Decisions", [("suggestions.html", "Suggestions", "📋"), ("questions.html", "Questions", "❓"), ("summary.html", "Executive summary", "📄")]),
     ("Governance", [("review.html", "Flagged for review", "⚑")]),
 ]
 
@@ -159,6 +161,10 @@ def build() -> None:
     gates = load("gate_definitions.json")
     snapshot = json.loads((ROOT / "research/official_snapshot.json").read_text())
     rc = len(reviews)
+    suggestions = load("suggestions.json")
+    questions = load("questions.json")
+    injuries = load("injuries.json")
+    deficiencies = load("deficiencies.json")
     warning = f'''<div class="banner"><span class="banner-icon">⚑</span><div><strong>No verified sportsbook prices. No strategy is approved for wagering.</strong><p>Own lines are independent research estimates. Market odds, current props, edge and CLV are intentionally blank until official, timestamped evidence exists. <a href="review.html">Review all {rc} flags →</a></p></div></div>'''
 
     # Overview / executive summary
@@ -179,10 +185,14 @@ def build() -> None:
         ("leaderboard.html", "♜", "Leaderboard", "Eligibility-first ranking and non-cash research points."),
         ("data.html", "▤", "Official data", "Every verified fact row with its official source."),
         ("review.html", "⚑", "Flagged for review", "Irregularities and unsupported values, ready for review."),
+        ("injuries.html", "⚕", "Injuries & depth", "276 official injury rows and offense/defense 1st-4th-string deficiencies."),
+        ("suggestions.html", "📋", "Suggestions register", "16 improvement paths with impact, effort, confidence and a review decision state."),
+        ("questions.html", "❓", "Pre-decision questions", "18 questions that must be answered before a decision is reasonable."),
+        ("summary.html", "📄", "Executive summary", "Verified vs computed vs missing, and the decisions waiting on you."),
     ]
     cat_html = '<div class="category-grid">' + "".join(f'<a class="category" href="{href}"><span class="cat-icon">{icon}</span><strong>{e(t)}</strong><span>{e(d)}</span></a>' for href, icon, t, d in categories) + "</div>"
     body = f'''<div class="hero"><div class="eyebrow">Independent research · 2026 Week 9</div><h1>Originate lines.<br>Prove the edge before trusting it.</h1><p>A source-audited NFL research desk for single bets, parlays and player-prop combinations. Verified facts, derived estimates and missing market inputs stay separate—by design.</p><div class="hero-actions"><a class="btn btn-primary" href="lines.html">Explore research lines →</a><a class="btn btn-secondary" href="validation.html">Inspect validation gates</a></div></div>{warning}
-<div class="kpis">{kpi("Research lines", str(summary["research_lines"]), "Week 9 · independent estimates", "accent")}{kpi("Registered strategies", str(summary["strategies"]), "Singles, parlays and props")}{kpi("Qualified strategies", str(summary["qualified_strategies"]), "No performance claims", "warn")}{kpi("Official fact rows", str(summary["verified_fact_rows"]), f'{summary["official_sources"]} primary sources')}{''}</div>
+<div class="kpis">{kpi("Research lines", str(summary["research_lines"]), "Week 9 · independent estimates", "accent")}{kpi("Registered strategies", str(summary["strategies"]), "Singles, parlays and props")}{kpi("Qualified strategies", str(summary["qualified_strategies"]), "No performance claims", "warn")}{kpi("Official fact rows", str(summary["verified_fact_rows"]), f'{summary["official_sources"]} primary sources')}{kpi("Injury rows tracked", str(len(injuries)), "Official Week 10 report")}{kpi("Teams with deficiencies", str(len(deficiencies)), "Offense and defense, 1st-4th string")}{kpi("Suggestions for review", str(len(suggestions)), "Each has a decision state")}{kpi("Open questions", str(len(questions)), "4 cannot be closed from public data")}</div>
 {section("Executive findings", "What the evidence supports—and what it does not.", table(["Finding", "Result", "Classification", "Interpretation", "Official inputs"], findings))}
 <div class="grid-2 section"><div class="card"><h2>Ready for inspection</h2><ul class="list-clean"><li><strong>Official snapshot:</strong> 32 teams, 15 matchups and 17 paired player games.</li><li><strong>Transparent baseline:</strong> shrunken points ratings and explicit score probabilities.</li><li><strong>Reproducible checks:</strong> evidence hashes, reconciliations, unit tests and internal-link audit.</li></ul></div><div class="card"><h2>Deliberately not claimed</h2><ul class="list-clean"><li><strong>No verified edge:</strong> no timestamped sportsbook archive or untouched holdout.</li><li><strong>No current prop picks:</strong> participation and operator prices are missing.</li><li><strong>No luck-free guarantee:</strong> uncertainty and regime change remain.</li></ul></div></div>
 {section("Explore the research desk", "Each category is a simple, filterable table view with source links.", cat_html)}'''
@@ -320,6 +330,62 @@ def build() -> None:
     body += section("Signal development roadmap", "Useful signals require point-in-time data and out-of-sample evidence, not narrative alone.", table(["Signal family", "Availability", "Evidence boundary", "Official source"], signal_rows))
     body += '<div class="card"><h2>Full protocol</h2><p class="muted">Read the complete predeclared protocol, correlation formulas, gate definitions and future data contract.</p><a class="btn btn-primary" style="background:var(--teal);color:#fff" href="docs/METHODOLOGY.md">Open methodology document →</a> <a href="docs/REQUIREMENTS.md" style="margin-left:12px">Requirements traceability</a></div>'
     page("methodology.html", "Methodology", "How independent lines are formed, how dependence is handled and why qualification is fail-closed.", body, rc)
+
+    # Executive summary
+    summary_rows = [
+        ["Verified inputs", "32 clubs · 15 Week 9 matchups · 17 paired player game logs", "NFL standings, schedule and injury report read row-by-row", badge("Verified", "verified"), src(["https://www.nfl.com/standings/league/2026/REG", "https://www.nfl.com/schedules/2026/by-week/week-9", "https://www.nfl.com/injuries/"])],
+        ["Derived research lines", "15 independent fair spreads, totals and win probabilities", "Shrunken points ratings + independent Poisson; home advantage disabled (0), no injury or weather adjustment", badge("Derived", "derived"), src(["https://www.nfl.com/standings/league/2026/REG", "https://www.nfl.com/schedules/2026/by-week/week-9"])],
+        ["Correlation (descriptive)", "QB passing vs WR receiving yards r = +0.752; joint hit 10/17 vs 45.7% independent", "Single QB–WR pair, one 2024 season, 17 games; not a current SGP coefficient", badge("Derived", "derived"), src(["https://www.nfl.com/players/joe-burrow/stats/logs/2024/", "https://www.nfl.com/players/ja-marr-chase/stats/logs/2024/"])],
+        ["Validation gates", "0 of 6 strategies qualify; every family fail-closed", "No verified timestamped market history or untouched out-of-sample record", badge("Blocked", "blocked"), src(["https://academic.oup.com/rfs/issue/29/1"])],
+        ["Market prices / prop lines", "None verified — intentionally blank", "No official, timestamped sportsbook archive exists for this project", badge("Blank", "review"), src(["https://www.nfl.com/schedules/2026/by-week/week-9", "https://support.fanduel.com/s/article/Betting-football-with-FanDuel"])],
+    ]
+    body = warning + section("Executive summary", "What is verified, what is computed, what is missing, and what to decide next. Nothing here is a bet, a line for wagering, or a performance claim.", table(["Area", "Status", "Basis", "Classification", "Official inputs"], summary_rows))
+    body += '<div class="callout"><strong>No certified edge.</strong> No strategy passes all validation gates, so the leaderboard is empty and no rewards are awarded. Rewards remain points-only until the jurisdiction and funding questions (Q04, Q05) are resolved.</div>'
+    page("summary.html", "Executive summary", "Verified vs computed vs missing, and the decisions waiting on you.", body, rc)
+
+    # Suggestions register
+    suggestion_rows = []
+    for s in suggestions:
+        suggestion_rows.append([
+            f'<span id="{e(s["id"])}">{e(s["id"])}</span>', e(s["title"]), e(s["problem"]),
+            e(s["recommendation"]), e(s["impact"]), e(s["effort"]), e(s["confidence"]),
+            e(s["decision"]), e(s["owner"]), e(s["review_test"]), src(s["official_sources"]),
+        ])
+    body = warning + section("Suggestions register", "Review every improvement path and choose a best path before implementing anything. A suggestion is not adopted until its decision state and its review test are resolved.", table(["ID", "Title", "Problem", "Recommendation", "Impact", "Effort", "Confidence", "Decision", "Owner", "Review test", "Official sources"], suggestion_rows))
+    page("suggestions.html", "Suggestions register", "16 improvement paths with impact, effort, confidence and a review decision state.", body, rc)
+
+    # Pre-decision questions
+    question_rows = []
+    for q in questions:
+        question_rows.append([
+            f'<span id="{e(q["id"])}">{e(q["id"])}</span>', e(q["question"]), e(q["why"]),
+            e(q["have"]), e(q["missing"]), e(q["resolve"]), e(q["blocks"]),
+            e(q["status"]), e(q["related"]), src(q["official_sources"]),
+        ])
+    body = warning + section("Pre-decision questions", "These are the questions, information and answers that must be addressed before a decision can be reasonably made. Blocking items cannot be closed from public data and await owner action or a verified source.", table(["ID", "Question", "Why it matters", "We have", "Missing", "How to resolve", "Blocks", "Status", "Related", "Official sources"], question_rows))
+    page("questions.html", "Pre-decision questions", "18 questions that must be answered before a decision is reasonable.", body, rc)
+
+    # Injuries & depth desk
+    injury_rows = []
+    for inj in injuries:
+        injury_rows.append([
+            e(inj["team"]), e(inj["team_name"]), e(inj["player"]), e(inj["position"]),
+            e(inj["injury"] or "—"), e(inj["practice_status"] or "—"), e(inj["game_status"] or "—"),
+            fmt(inj["season_snap_share"]), e(inj["depth_string"]), "Starter" if inj["is_starter"] else "Backup",
+            fmt(inj["replacement_drop"]), src([inj["source_url"]]),
+        ])
+    deficiency_rows = []
+    for d in deficiencies:
+        deficiency_rows.append([
+            e(d["team"]), e(d["team_name"]), fmt(d["players_listed"]),
+            fmt(d["players_with_snap_profile"]), fmt(d["starters_unavailable_or_limited"]),
+            fmt(d["off_replacement_drop"]), fmt(d["def_replacement_drop"]),
+            fmt(d["total_replacement_drop"]), src([d["source_url"]]),
+        ])
+    body = f'''{warning}<div class="kpis">{kpi("Official injury rows", str(len(injuries)), "Week 10 report, per-row source links")}{kpi("Teams tracked", str(len(deficiencies)), "32 clubs, offense and defense")}{kpi("Depth strings", "1st–4th string", "Starter vs backup inferred from snap share")}{kpi("Source", "nfl.com/injuries/", "Every row links to the official injury report", "accent")}</div>'''
+    body += section("Player injury register", "Every official Week 10 injury row with depth string (1st–4th string), starter flag and the measured replacement drop. Depth strings are inferred from season-to-date snap share within team and position group — the NFL does not publish machine-readable depth charts (flagged F05/F16).", table(["Team", "Club", "Player", "Position", "Injury", "Practice status", "Game status", "Snap share", "Depth string", "Role", "Replacement drop", "Official source"], injury_rows))
+    body += section("Team deficiency by unit (offense and defense)", "Replacement drop when a starter is replaced by the 2nd, 3rd or 4th-string player, split by offense and defense. Covers starters unavailable or limited due to injury.", table(["Team", "Club", "Players listed", "With snap profile", "Starters unavailable/limited", "Offense drop", "Defense drop", "Total drop", "Official source"], deficiency_rows))
+    page("injuries.html", "Injuries & depth", "276 official injury rows and offense/defense 1st-4th-string deficiencies, starters vs backups.", body, rc)
 
     # Simple 404 for GitHub Pages
     (DIST / "404.html").write_text('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Page not found · Own5</title><link rel="stylesheet" href="assets/app.css"></head><body><main class="content" style="max-width:680px;margin:80px auto"><div class="card empty-state"><h1>Page not found</h1><p>The requested research page does not exist.</p><p><a class="btn btn-primary" style="background:var(--teal);color:#fff" href="index.html">Return to overview</a></p></div></main></body></html>')
