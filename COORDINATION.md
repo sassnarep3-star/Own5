@@ -1223,9 +1223,9 @@ Claim timestamp: **2026-11-12T16:26Z** (rebased cleanly onto `0d3e323` preservin
 | B34-06 | done | `engine.py`, `data/model_lines_2026_w10.csv`, walk-forward/correlation/strategy/gate/leaderboard/luck outputs, `METHODOLOGY.md` | 14 exploratory baseline lines; 120 prior-week-only margin forecasts (MAE 10.4048); 4 computed descriptive correlations plus 3 blank paired-prop rows; six strategy hypotheses and 11 gates. Injury adjustments, ROI/CLV, ranks and reward amounts remain unavailable; only G0 passes. |
 | B34-07 | done | `EXECUTIVE_SUMMARY.md`, `FLAGGED.md`, `flagged_review.csv` | Executive limits and 20 linked review flags; no recommendation or validated-skill claim. |
 | B34-08 | done | `nfl-b34253a1/{index.html,*.html,style.css,build.py,verify.py,tests/}` and `.github/workflows/nfl-b34253a1.yml` | Isolated static overview plus 12 category pages; deterministic builder; scoped verification, unit tests, Chromium desktop/mobile and no-JavaScript checks pass locally. |
-| B34-09 | in progress | `COORDINATION.md` (append-only), isolated namespace | Local build and verification pass; branch push, PR checks/merge, and GitHub Pages deployment verification remain pending. |
+| B34-09 | done | `COORDINATION.md` (append-only), isolated namespace | PR #60 merged; post-merge checks and GitHub Pages deployment passed; see publication record in the validation entry below. |
 
-Local validation on 2026-11-12: eight session tests passed; all 91 existing repository unit tests passed; isolated source/HTML/audit verification passed, including the line hashes; Chromium smoke tests passed all 13 pages at desktop and mobile widths, CSV download, table accessibility structure, and no-JavaScript source table. After rebasing onto `0f41505`, the audit was refreshed to include the prior `nfl-decision-desk-38a1fc27/` desk and exclude NBA-only paths; the final inventory covers 286 files and 81,718 physical lines. Deterministic rebuilds pass. External source URLs remain dynamic and were not re-fetched by CI-style structural checks.
+Local validation on 2026-11-12: eight session tests passed; all 91 existing repository unit tests passed; isolated source/HTML/audit verification passed, including the line hashes; Chromium smoke tests passed all 13 pages at desktop and mobile widths, CSV download, table accessibility structure, and no-JavaScript source table. After rebasing onto `587f00b`, the audit includes the prior `nfl-decision-desk/`, `nfl-decision-desk-38a1fc27/`, and `nfl-desk-26d4cafb/` desks, excludes NBA-only paths, and is regenerated against the merged tree; the final inventory covers 360 files and 90,774 physical lines. Deterministic rebuilds pass. External source URLs remain dynamic and were not re-fetched by CI-style structural checks. Publication: PR [#60](https://github.com/sassnarep3-star/Own5/pull/60) merged at 2026-11-12T17:30:44Z as `d37ed316e5df7e04b326a0222dae823b368166bf`; post-merge B34 verification [43270216284](https://github.com/sassnarep3-star/Own5/actions/runs/43270216284), repository research [43270216202](https://github.com/sassnarep3-star/Own5/actions/runs/43270216202), evidence desk [43270216270](https://github.com/sassnarep3-star/Own5/actions/runs/43270216270), and NBA validation [43270216157](https://github.com/sassnarep3-star/Own5/actions/runs/43270216157) all passed. Pages deployment [43270215050](https://github.com/sassnarep3-star/Own5/actions/runs/43270215050) succeeded and the Pages API reported `built` for that commit; published desk: https://sassnarep3-star.github.io/Own5/nfl-b34253a1/. The only nonblocking PR-check exception was the existing `NFL Decision Desk — fetch & verify` clean-rebuild diff; its `fetch` job skipped on pull requests by design. Local reproduction showed the upstream snapshot refresh makes `data/decision-desk/audit_summary.json`, `injuries_wk10_players.csv`, and `team_deficiency_wk10.csv` differ on rebuild. Those prior-owner outputs were restored and left untouched; all B34-specific checks passed.
 
 ## Session 26d4cafb — NFL Decision, Line Origination & Depth-Deficiency Desk (2026-11-12 UTC)
 
@@ -1340,6 +1340,91 @@ This session's own scoped check — `.github/workflows/nfl-desk-26d4cafb.yml`
 fails if a clean rebuild of `nfl-desk-26d4cafb/**` differs from what is committed.
 
 
+## Session dc1b9e9f — NFL stale integration follow-up handoff (2026-11-13 UTC)
+
+Arena fixes the working branch to `arena/dc1b9e9f-own5`; all work stays on that branch. This
+session is taking over **only** the final integration follow-ups represented by the two stale,
+open NFL PRs below. Their latest commits were 2026-11-12T16:55:24Z (#59, session 38a1fc27) and
+2026-11-12T17:42:12Z (#62, session b34253a1); both exceed the board's 60-minute no-commit handoff
+window. No other session branch will be checked out or pushed, and no unlisted project namespace
+will be edited.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| DC1 | Take over the exact existing patches from stale NFL PRs #59 and #62 on the current branch; refresh deterministic artifacts, repair/verify checks, audit README entry and deployment | in progress | dc1b9e9f | `.github/workflows/decision-desk.yml`, `data/decision-desk/{injuries_wk10_players.csv,team_deficiency_wk10.csv,audit_summary.json}`, `nfl-decision-desk-38a1fc27/{audit.html,index.html,verification.html}`, `research/38a1fc27/{AUDIT.md,VERIFICATION.md}`, `nfl-b34253a1/{audit.html,audit_repo.py,content_seed.py,data/{flagged_review.csv,repo_audit.csv,repo_audit_summary.json},flagged.html,index.html,tests/test_project.py}`, `research/nfl-b34253a1/{FLAGGED.md,REPO_AUDIT.md}`, `README.md` (fence repair + additive desk entry), `COORDINATION.md` (append-only) | Handoff is limited to the published patches plus deterministic rebuild outputs and a discoverability/freshness note; do not re-run live NFL ingestion or change another desk's research claims. PR #59's checks passed; PR #62's `decision-desk` clean-rebuild check failed and must be diagnosed before merge. |
+
+Claim committed and pushed before implementation. At claim time there are no changes to the existing
+NFL datasets or pages. Completion, check/deployment outcomes, and any residual limitation will be
+recorded below.
+
+### dc1b9e9f progress and live-source verification — 2026-11-13
+
+- Cherry-picked the exact existing patches from PR #62 (`345aae4`) and PR #59 (`85f017e`) onto
+  `arena/dc1b9e9f-own5`; neither other branch was checked out or pushed. Rebuilt the stale
+  decision-desk artifacts deterministically. Its first clean rebuild found a real drift: the
+  repository-wide internal-link audit had grown from 255 pages / 4,317 links to 299 pages / 5,192
+  links after subsequent NFL desk publications. Updated the generated summary and rendered pages;
+  the second rebuild is byte-identical and the desk verifier passes (14 pages, 26 tables, 494 rows,
+  all rows sourced, 0 broken links).
+- Rebuilt the B34 Week 10 audit against the current tree after these integrations: 366 in-scope files,
+  91,320 physical lines, each indexed with SHA-256 and an official-source basis or explicit
+  comparator/legacy classification. Updated the inventory date to 2026-11-13; this date describes
+  the repository inventory only, not a fresh retrieval of every NFL URL. The source snapshot still
+  carries its original capture timestamp.
+- Re-fetched the official [2026 NFL standings](https://www.nfl.com/standings/league/2026/REG),
+  [Week 10 schedule](https://www.nfl.com/schedules/2026/by-week/week-10), and
+  [Week 10 injury report](https://www.nfl.com/injuries/league/2026/reg10) for integration review.
+  The official injury report is dynamic: compared with the pinned 2026-11-12T16:52:39Z capture,
+  the 2026-11-13 page now lists New England's A.J. Brown with ankle/knee and Questionable, whereas
+  the stored capture has no injury/game-status value for him. No historical snapshot was overwritten;
+  existing freshness flags FLG-19 and F18 already cover this limitation.
+- Confirmed a discoverability/format issue in `README.md`: a missing Markdown closing fence hid the
+  NFL 26d4 section as code, and the B34 site had no README entry. Fixed only the fence, added an
+  additive B34 dashboard entry with all category links, source links, snapshot timing, and an explicit
+  warning that separate desks' strategy gate results are not repo-wide certifications. Its market note
+  now records the 2026-11-13 DraftKings NE@DET +3/49.5 and FanDuel total 49.5 page displays versus
+  the stored Nov. 12 +2.5/51.5 and 50.5, without claiming a comparable price move because capture time
+  and jurisdiction were not retained; the original date-only snapshot was preserved.
+- **Cross-session request (not actioned):** root `index.html` is generated from the CI-locked
+  `scripts/build.py` / `data/research.json` scope and still says it was reviewed 2026-11-02. The
+  current B34 and other Week 10 desks are published below separate paths. A future root integration
+  should add a clearly dated link to the current NFL desk and disclose that it is a static snapshot.
+  This session did not hand-edit the generated landing page or its generator.
+- Diagnosed PR #62's clean-rebuild failure from its remote run (43272271642, verify job
+  131371610293): rebuild and structural verification passed; the final `git diff --exit-code`
+  step failed. Reproduced it from a clean archive of exact head `345aae4` without live ingestion.
+  The three changed paths were `data/decision-desk/audit_summary.json` (committed audit 255 pages /
+  4,317 links vs rebuilt 287 / 5,017) and `injuries_wk10_players.csv` plus
+  `team_deficiency_wk10.csv` (generated `retrieved_utc` 2026-11-12T16:47:34Z vs the pinned local
+  input's 16:52:39Z). The structural verifier passed. The failing workflow revision also checked
+  the legacy `nfl-decision-desk/` path rather than the actual generated
+  `nfl-decision-desk-38a1fc27/`; PR #59's workflow patch corrects that path and rebuilds the
+  artifacts in the fetch job. No archived sportsbook quote was changed.
+- Merged the then-current `origin/main` tip `35a088b` into this branch as `e059744`, preserving both
+  append-only coordination sections. This incorporates already-merged PRs #66 and #67 before
+  integration. `npm run desk:check` synchronized the root desk's generated injury timestamps to the
+  same existing pinned 2026-11-12T16:52:39Z snapshot; it did not fetch or ingest external data.
+  Its ignored `dist/` output was removed before the repository-wide audits.
+- The first remote run for integration PR #69 passed the Decision Desk, B34, hub, root, NBA, and
+  SF checks but failed `Verify Own5 evidence desk` at its committed-pages comparison. Its combined
+  tests/build step passed; the next step runs `npm run desk:publish` and checks `own5-desk/`. The
+  branch had rebuilt `data/own5_desk/` to the pinned 16:52:39Z snapshot but had not yet published the
+  matching copies. Running the publisher regenerated exactly `own5-desk/data/{deficiencies,injuries}.json`;
+  these are included for the next CI run. This was a static rebuild, not live ingestion.
+- Post-merge local checks: NFL hub verifier **1,022 checks PASS**; root `npm test` **91 tests PASS**;
+  `npm run desk:check` **20 checks PASS**, 17 rendered pages and 562 sourced table rows. B34 unit
+  tests **9/9 PASS** and its verifier passes with 13 pages, 18 data files, 627 rows, 99,631 source
+  URLs, 251 local links, 862 external links, and all repository-audit line hashes verified (current
+  file/line counts are in `repo_audit_summary.json`). Decision Desk verifier passes with 14 pages,
+  26 tables, 494 sourced rows, 25 CSV tables checked, and zero problems. Its repository audit covers
+  311 pages / 5,415 links with zero broken links; provenance covers 50 files / 31,955 rows with zero
+  files needing review.
+- Repeated the full B34 + Decision Desk rebuild after refreshing the cross-desk audit once; the next
+  paired rebuild's generated diff was byte-identical. B34 browser checks pass on 13 desktop/mobile
+  routes; root browser checks pass on eight routes. `npm run desk:publish` now refreshes the published
+  root desk; ignored `dist/` was removed before the repository-wide audits. No live NFL ingestion ran.
+  PRs #59 and #62 remain open and unmerged; integration PR #69's next check run, merge, and live
+  Pages deployment verification remain pending.
 ---
 
 ## Session 28431d9c — NFL cross-desk reconciliation & currency audit (2026-11-13 UTC)

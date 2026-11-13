@@ -13,6 +13,7 @@ from pathlib import Path
 
 ROOT=Path(__file__).resolve().parent
 REPO=ROOT.parent
+AUDIT_DATE="2026-11-13"  # repository tree inventory date; not a fresh external-source fetch
 OUT=ROOT/"data"/"repo_audit.csv"
 SUMMARY=ROOT/"data"/"repo_audit_summary.json"
 NFL_STAND="https://www.nfl.com/standings/league/2026/REG"
@@ -34,7 +35,7 @@ def tracked_files():
         p=Path(name)
         s=name.lower()
         include=(
-            s.startswith(("nfl-strategy-lab/","line-lab/","own5-desk/","nfl-decision-desk/","nfl-decision-desk-38a1fc27/","nfl_model/","research/arena-f1d30421/","research/evidence/"))
+            s.startswith(("nfl-strategy-lab/","line-lab/","own5-desk/","nfl-decision-desk/","nfl-decision-desk-38a1fc27/","nfl-desk-26d4cafb/","nfl_model/","research/arena-f1d30421/","research/evidence/"))
             or s.startswith(("data/raw/","data/")) and p.suffix.lower() in {".csv",".json"} and not s.startswith(("data/nba","data/own5_desk"))
             or s.startswith(("research/",)) and p.suffix.lower() in {".md",".json"} and any(k in s for k in ("nfl","football","official_snapshot","strategies","correlations","validation-gates","bet-markets","league-structure","executive-summary","verification")) and not any(k in s for k in ("nba","sf-rent","rental"))
             or s.startswith(("pages/","assets/","scripts/","tools/","site/","tests/",".github/workflows/"))
@@ -186,16 +187,16 @@ def main():
             rows.append({"audit_id":f"RA-{len(rows)+1:06d}","repository_path":rel,"physical_line":n,
                 "line_sha256":hashlib.sha256(line.encode("utf-8")).hexdigest(),"excerpt":excerpt,"classification":status,
                 "audit_note":note,"official_source_url":source,"source_basis":source_basis(rel,line,context,item),"legacy_reference_url":legacy_ref,
-                "session_or_scope":"NFL legacy scope or shared repository metadata","as_of":"2026-11-12"})
+                "session_or_scope":"NFL legacy scope or shared repository metadata","as_of":AUDIT_DATE})
     fields=list(rows[0]) if rows else []
     OUT.parent.mkdir(parents=True,exist_ok=True)
     with OUT.open("w",newline="",encoding="utf-8") as f:
         w=csv.DictWriter(f,fieldnames=fields,lineterminator="\n");w.writeheader();w.writerows(rows)
     counts=Counter(r["classification"] for r in rows)
     basis_counts=Counter(r["source_basis"] for r in rows)
-    summary={"as_of":"2026-11-12","files":len(files),"physical_lines":len(rows),"status_counts":dict(sorted(counts.items())),
+    summary={"as_of":AUDIT_DATE,"files":len(files),"physical_lines":len(rows),"status_counts":dict(sorted(counts.items())),
        "source_basis_counts":dict(sorted(basis_counts.items())),
-       "scope":"Line-indexed inventory of previous NFL sites, generators, datasets, research references and shared navigation/CI context; this is not a claim that every legacy historical statistic was re-fetched.",
+       "scope":"Line-indexed inventory of previous NFL sites, generators, datasets, research references and shared navigation/CI context. The audit date is the repository-tree inventory date, not a fresh fetch of every external URL; this is not a claim that every legacy historical statistic was re-fetched.",
        "critical_findings":[
          {"id":"RA-F01","finding":"Existing 2026 games file carried mixed NFL/PFR verification provenance; this session revalidated 136 completed Week 1-9 games against official NFL schedule/game pages and reconciled W-L-T/PF/PA 32/32. The new canonical snapshot drops PFR references."},
          {"id":"RA-F02","finding":"Legacy ESPN market/futures values and older Spreadspoke/nflverse-derived backtests are not official NFL/bookmaker evidence; not reused and explicitly flagged."},

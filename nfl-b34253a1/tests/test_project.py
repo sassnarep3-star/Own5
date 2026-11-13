@@ -80,9 +80,28 @@ class NFLWeek10SnapshotTests(unittest.TestCase):
     def test_audit_scope_includes_prior_nfl_desk_and_excludes_nba(self):
         paths = {path.as_posix() for path in audit_repo.tracked_files()}
         self.assertIn("nfl-decision-desk-38a1fc27/index.html", paths)
+        self.assertIn("nfl-desk-26d4cafb/index.html", paths)
         self.assertNotIn("tools/nba_line_desk/build.py", paths)
         self.assertNotIn("tests/test_nba_line_desk.py", paths)
         self.assertFalse(any(path.startswith(("sf-rent", "rental-sf", "rental-increase")) for path in paths))
+
+    def test_market_quote_freshness_discrepancy_is_published_with_official_links(self):
+        flags = {row["flag_id"]: row for row in rows("flagged_review.csv")}
+        flag = flags["FLG-05"]
+        self.assertIn("2026-11-13", flag["finding"])
+        self.assertIn("+2.5/51.5", flag["finding"])
+        self.assertIn("+3/49.5", flag["finding"])
+        self.assertIn("50.5", flag["finding"])
+        self.assertIn("49.5", flag["finding"])
+        self.assertTrue(flag["source_url"].startswith("https://sportsbook.draftkings.com/"))
+        self.assertTrue(flag["secondary_source_url"].startswith("https://sportsbook.fanduel.com/"))
+        archived = [r for r in rows("market_quotes_2026_w10.csv")
+                    if r["away_team"] == "NE" and r["home_team"] == "DET" and r["book"] == "DK"]
+        self.assertEqual(len(archived), 1)
+        self.assertEqual((archived[0]["away_spread"], archived[0]["total_points"]), ("2.5", "51.5"))
+        page = (PROJECT / "flagged.html").read_text(encoding="utf-8")
+        self.assertIn('id="FLG-05"', page)
+        self.assertIn("+3/49.5", page)
 
     def test_static_site_has_overview_and_twelve_pages(self):
         pages = {p.name for p in PROJECT.glob("*.html")}

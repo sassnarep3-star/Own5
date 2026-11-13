@@ -26,9 +26,9 @@ shown next to them so a human can adjudicate.
 
 ## 3. Claims that reproduce
 
-Favourite ATS 48.1% → 48.49%; overs 49.1% → 49.08%; favourite SU 65.63% → 66.14% (minor);
-2,243 bets → 2,241; parlay break-even 27.47% → 27.44%; independence of ATS/total legs phi ≈ 0.01 →
-0.006.
+Five claims reproduce exactly: favourite ATS 48.1% → 48.49%; overs 49.1% → 49.08%; 2,243 bets →
+2,241; parlay break-even 27.47% → 27.44%; independence of ATS/total legs phi ≈ 0.01 → 0.006.
+One differs by 0.5 pp and is classed as a rounding/sample difference: favourite SU 65.63% → 66.14%.
 
 ## 4. Internal links
 
