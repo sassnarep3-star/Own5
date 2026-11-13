@@ -317,6 +317,7 @@ python3 tools/decision_desk/fetch_sources.py     # official pages + pinned mirro
 python3 tools/decision_desk/build_all.py         # parse, compute, export, audit
 python3 tools/decision_desk/build_site.py        # render nfl-decision-desk-38a1fc27/
 python3 tools/decision_desk/verify.py            # fails on any unsourced row or broken link
+```
 
 ## NFL Decision Desk — line origination, signals & depth tracking (session 26d4cafb)
 
@@ -355,3 +356,74 @@ python3 export_research.py   # regenerate research/nfl-26d4cafb/*.md
 python3 verify.py            # 25 line-by-line checks (0 failures)
 python3 -m unittest discover -s nfl-desk-26d4cafb/tests   # 60 tests
 ```
+
+## NFL Week 10 Evidence Desk — session b34253a1
+
+**Live site:** https://sassnarep3-star.github.io/Own5/nfl-b34253a1/ ·
+**Executive summary:** [`research/nfl-b34253a1/EXECUTIVE_SUMMARY.md`](research/nfl-b34253a1/EXECUTIVE_SUMMARY.md) ·
+**Flagged for Review:** [site page](https://sassnarep3-star.github.io/Own5/nfl-b34253a1/flagged.html) ·
+**Methodology:** [`research/nfl-b34253a1/METHODOLOGY.md`](research/nfl-b34253a1/METHODOLOGY.md)
+
+This is a **dated, static 2026 Week 10 research snapshot (2026-11-12)**, not a live odds feed. Its
+13-page site groups verified results and schedule, exploratory own lines, injury/depth observations,
+correlations, strategies, validation gates, leaderboard, decision questions, suggestions, sources,
+and flagged items. Every published data row has an official source link or an explicit blank/flag;
+all numeric injury-to-points adjustments, strategy ranks, rewards, and market-edge claims remain
+unqualified. The 28 DraftKings/FanDuel game-price observations in this snapshot have a date but no
+retained UTC capture time or jurisdiction, so they are not a closing-line history or a verified
+current quote. See the [`market quote register`](nfl-b34253a1/data/market_quotes_2026_w10.csv).
+
+**Market-provenance wording warning:** The [38a1fc27 Executive Summary](research/38a1fc27/EXECUTIVE_SUMMARY.md)
+reports no verified price history for its aggregator-sourced market numbers and no official player-prop
+line history. This B34 snapshot separately has 28 date-only game-price observations transcribed from
+official DraftKings/FanDuel pages. B34 did not retain UTC capture time or jurisdiction, and neither
+desk has verified historical closing-line/player-prop price history. These rows do not qualify CLV
+or an economic edge; this cross-desk note is not a repo-wide market-data certification.
+A 2026-11-13 follow-up page fetch displayed NE@DET DraftKings at +3/49.5 versus the stored
++2.5/51.5, and FanDuel's total at 49.5 versus the stored 50.5. Because UTC capture time and
+jurisdiction were not retained, this is a difference between page displays, not a verified
+comparable price move. See
+[FLG-05](https://sassnarep3-star.github.io/Own5/nfl-b34253a1/flagged.html#FLG-05),
+[DraftKings](https://sportsbook.draftkings.com/leagues/football/nfl?category=games&subcategory=game-lines&nav_1=all-games),
+and [FanDuel](https://sportsbook.fanduel.com/navigation/nfl).
+
+**Freshness warning:** The [official Week 10 NFL injury report](https://www.nfl.com/injuries/league/2026/reg10)
+was re-fetched on 2026-11-13. It now shows later statuses than the stored 2026-11-12T16:52:39Z
+capture—for example, New England's A.J. Brown is now listed with ankle/knee and a Questionable
+game status, whereas that stored capture has no injury or game-status value for him. This is a
+source-page update, not a correction to the historical capture. Review
+[FLG-19](https://sassnarep3-star.github.io/Own5/nfl-b34253a1/flagged.html#FLG-19) and
+[F18](https://sassnarep3-star.github.io/Own5/nfl-decision-desk-38a1fc27/flagged.html#F18); do not
+use either static snapshot as today's lineup status. The existing fetch workflow is manually
+triggered or data-change-triggered, not scheduled, and it is fixed to Week 10.
+
+**Cross-desk qualification warning:** [`nfl-desk-26d4cafb`](https://sassnarep3-star.github.io/Own5/nfl-desk-26d4cafb/leaderboard.html)
+reports 2 of 10 candidates passing that desk's gates; this desk and the
+[`38a1fc27 desk`](https://sassnarep3-star.github.io/Own5/nfl-decision-desk-38a1fc27/leaderboard.html)
+report zero certified strategies. These are separate snapshots and gate definitions, not a
+repo-wide certification. Do not treat the 2/10 result as a validated betting strategy. The B34
+site itself reports only G0 passing and no ranked entries or rewards.
+
+Official primary-source pages used for manual review include [NFL 2026 standings](https://www.nfl.com/standings/league/2026/REG),
+[NFL Week 10 schedule](https://www.nfl.com/schedules/2026/by-week/week-10), the
+[Week 10 injury report](https://www.nfl.com/injuries/league/2026/reg10), the
+[2026 NFL Rulebook](https://operations.nfl.com/rules-officiating/2026-nfl-rulebook),
+[DraftKings NFL markets](https://sportsbook.draftkings.com/leagues/football/nfl?category=games&subcategory=game-lines&nav_1=all-games),
+and [FanDuel NFL markets](https://sportsbook.fanduel.com/navigation/nfl). The desk's
+[Sources page](https://sassnarep3-star.github.io/Own5/nfl-b34253a1/sources.html) records the
+source tier, date and limitations for each register.
+
+Category pages: [Overview](https://sassnarep3-star.github.io/Own5/nfl-b34253a1/),
+[Results & schedule](https://sassnarep3-star.github.io/Own5/nfl-b34253a1/results.html),
+[Own lines](https://sassnarep3-star.github.io/Own5/nfl-b34253a1/lines.html),
+[Injuries & depth](https://sassnarep3-star.github.io/Own5/nfl-b34253a1/injuries.html),
+[Correlations](https://sassnarep3-star.github.io/Own5/nfl-b34253a1/correlations.html),
+[Strategies](https://sassnarep3-star.github.io/Own5/nfl-b34253a1/strategies.html),
+[Validation gates](https://sassnarep3-star.github.io/Own5/nfl-b34253a1/validation.html),
+[Leaderboard](https://sassnarep3-star.github.io/Own5/nfl-b34253a1/leaderboard.html),
+[Questions](https://sassnarep3-star.github.io/Own5/nfl-b34253a1/questions.html),
+[Suggestions](https://sassnarep3-star.github.io/Own5/nfl-b34253a1/suggestions.html),
+[Flagged for Review](https://sassnarep3-star.github.io/Own5/nfl-b34253a1/flagged.html),
+and [Repository Audit](https://sassnarep3-star.github.io/Own5/nfl-b34253a1/audit.html).
+
+Rebuild and verify: `python3 nfl-b34253a1/seed.py && python3 nfl-b34253a1/engine.py && python3 nfl-b34253a1/content_seed.py && python3 nfl-b34253a1/audit_repo.py && python3 nfl-b34253a1/build.py && python3 nfl-b34253a1/verify.py`.

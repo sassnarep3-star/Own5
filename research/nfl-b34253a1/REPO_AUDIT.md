@@ -2,6 +2,8 @@
 
 The generated [`repo_audit_summary.json`](../../nfl-b34253a1/data/repo_audit_summary.json) and [`repo_audit.csv`](../../nfl-b34253a1/data/repo_audit.csv) are a dated physical-line inventory of selected prior NFL/data/research/shared-site artifacts in the repository. The selected scope includes existing NFL desks such as `nfl-decision-desk/`, `nfl-decision-desk-38a1fc27/`, and `nfl-desk-26d4cafb/`, plus NFL/research/data/shared-context paths. It excludes unrelated NBA and rental scopes, this session's own `nfl-b34253a1/`, `research/nfl-b34253a1/`, and workflow so the inventory does not certify itself.
 
+**2026-11-13 integration refresh:** `as_of` is the repository-tree inventory date, not a claim that external source URLs were re-fetched on that date. NFL facts retain their own source capture dates. As a concrete freshness boundary, the separate decision-desk capture recorded the Week 10 injury report at 2026-11-12T16:52:39Z; the [official NFL report](https://www.nfl.com/injuries/league/2026/reg10) was re-fetched on 2026-11-13 and showed later player statuses. The Week 10 data remains a static historical snapshot and its existing freshness flags remain open.
+
 ## Per-line fields
 
 Each CSV row contains an audit ID, repository-relative path, physical line number, SHA-256 of the line, excerpt (truncated to 240 characters), classification, audit note, an HTTPS official source URL or official counterpart, `source_basis`, any nonofficial legacy reference found in a CSV row, scope label, and date.

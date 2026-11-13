@@ -1340,3 +1340,44 @@ will be edited.
 Claim committed and pushed before implementation. At claim time there are no changes to the existing
 NFL datasets or pages. Completion, check/deployment outcomes, and any residual limitation will be
 recorded below.
+
+### dc1b9e9f progress and live-source verification — 2026-11-13
+
+- Cherry-picked the exact existing patches from PR #62 (`345aae4`) and PR #59 (`85f017e`) onto
+  `arena/dc1b9e9f-own5`; neither other branch was checked out or pushed. Rebuilt the stale
+  decision-desk artifacts deterministically. Its first clean rebuild found a real drift: the
+  repository-wide internal-link audit had grown from 255 pages / 4,317 links to 299 pages / 5,192
+  links after subsequent NFL desk publications. Updated the generated summary and rendered pages;
+  the second rebuild is byte-identical and the desk verifier passes (14 pages, 26 tables, 494 rows,
+  all rows sourced, 0 broken links).
+- Rebuilt the B34 Week 10 audit against the current tree after these integrations: 366 in-scope files,
+  91,320 physical lines, each indexed with SHA-256 and an official-source basis or explicit
+  comparator/legacy classification. Updated the inventory date to 2026-11-13; this date describes
+  the repository inventory only, not a fresh retrieval of every NFL URL. The source snapshot still
+  carries its original capture timestamp.
+- Re-fetched the official [2026 NFL standings](https://www.nfl.com/standings/league/2026/REG),
+  [Week 10 schedule](https://www.nfl.com/schedules/2026/by-week/week-10), and
+  [Week 10 injury report](https://www.nfl.com/injuries/league/2026/reg10) for integration review.
+  The official injury report is dynamic: compared with the pinned 2026-11-12T16:52:39Z capture,
+  the 2026-11-13 page now lists New England's A.J. Brown with ankle/knee and Questionable, whereas
+  the stored capture has no injury/game-status value for him. No historical snapshot was overwritten;
+  existing freshness flags FLG-19 and F18 already cover this limitation.
+- Confirmed a discoverability/format issue in `README.md`: a missing Markdown closing fence hid the
+  NFL 26d4 section as code, and the B34 site had no README entry. Fixed only the fence, added an
+  additive B34 dashboard entry with all category links, source links, snapshot timing, and an explicit
+  warning that separate desks' strategy gate results are not repo-wide certifications. Its market note
+  now records the 2026-11-13 DraftKings NE@DET +3/49.5 and FanDuel total 49.5 page displays versus
+  the stored Nov. 12 +2.5/51.5 and 50.5, without claiming a comparable price move because capture time
+  and jurisdiction were not retained; the original date-only snapshot was preserved.
+- **Cross-session request (not actioned):** root `index.html` is generated from the CI-locked
+  `scripts/build.py` / `data/research.json` scope and still says it was reviewed 2026-11-02. The
+  current B34 and other Week 10 desks are published below separate paths. A future root integration
+  should add a clearly dated link to the current NFL desk and disclose that it is a static snapshot.
+  This session did not hand-edit the generated landing page or its generator.
+- Local checks after the final B34 data, script, site, and documentation edits: B34 unit tests 9/9;
+  root unit tests 91/91; B34 structural verifier passes (13 pages, 627 data rows, 92,634 source
+  URLs, 0 broken local links, 91,320/91,320 audit line hashes); Decision Desk verifier passes
+  (14 pages, 26 tables, 494 rows, all rows sourced, 0 broken links), and its second full rebuild
+  produced a byte-identical generated diff. B34 browser smoke tests pass on 13 desktop/mobile routes;
+  root browser smoke tests pass on eight routes. Integration PR checks, merge, and live Pages
+  deployment verification remain.

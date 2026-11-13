@@ -1,30 +1,30 @@
 {
-  "as_of": "2026-11-12",
-  "files": 360,
-  "physical_lines": 90774,
+  "as_of": "2026-11-13",
+  "files": 366,
+  "physical_lines": 91320,
   "status_counts": {
     "DATED_OFFICIAL_FACT_ROW": 1588,
     "DATED_SNAPSHOT_RECOMPUTED_OR_STALE": 730,
     "DERIVED_OR_LEGACY_LINE_REVIEW": 35,
     "FLAGGED_LEGACY_MARKET_VALUE": 903,
     "FLAGGED_NONOFFICIAL_HISTORICAL_INPUT": 14406,
-    "IMPLEMENTATION_LINE_REVIEW": 15280,
+    "IMPLEMENTATION_LINE_REVIEW": 15295,
     "LEGACY_JSON_RECORD_REVIEW": 5970,
-    "LEGACY_RESEARCH_CLAIM_SCOPE": 3862,
+    "LEGACY_RESEARCH_CLAIM_SCOPE": 4278,
     "LEGACY_SNAPSHOT_SOURCE_REGISTERED": 4389,
     "LINE_ITEM_SOURCE_LINK_OR_FLAG": 32610,
     "OFFICIAL_LINK_PRESENT_NOT_REFETCHED": 30,
-    "PUBLISHED_RENDER_LINE_REVIEW": 9046,
+    "PUBLISHED_RENDER_LINE_REVIEW": 9161,
     "REPOSITORY_METADATA_LINE": 133,
     "REVERIFIED_CURRENT_GAME_LOG": 1792
   },
   "source_basis_counts": {
-    "HTTPS_OFFICIAL_LINK_IN_LINE": 2205,
+    "HTTPS_OFFICIAL_LINK_IN_LINE": 2232,
     "OFFICIAL_COUNTERPART_FOR_FLAGGED_INPUT_NOT_INPUT_PROVENANCE": 15309,
-    "OFFICIAL_SCOPE_REFERENCE_FALLBACK_NOT_ROW_PROVENANCE": 71842,
+    "OFFICIAL_SCOPE_REFERENCE_FALLBACK_NOT_ROW_PROVENANCE": 72361,
     "ROW_SOURCE_FIELD": 1418
   },
-  "scope": "Line-indexed inventory of previous NFL sites, generators, datasets, research references and shared navigation/CI context; this is not a claim that every legacy historical statistic was re-fetched.",
+  "scope": "Line-indexed inventory of previous NFL sites, generators, datasets, research references and shared navigation/CI context. The audit date is the repository-tree inventory date, not a fresh fetch of every external URL; this is not a claim that every legacy historical statistic was re-fetched.",
   "critical_findings": [
     {
       "id": "RA-F01",
@@ -50,8 +50,8 @@
   "files_inventory": [
     {
       "path": ".github/workflows/decision-desk.yml",
-      "physical_lines": 67,
-      "bytes": 2293
+      "physical_lines": 72,
+      "bytes": 2546
     },
     {
       "path": ".github/workflows/nfl-desk-26d4cafb.yml",
@@ -70,13 +70,13 @@
     },
     {
       "path": "COORDINATION.md",
-      "physical_lines": 1254,
-      "bytes": 178595
+      "physical_lines": 1383,
+      "bytes": 191745
     },
     {
       "path": "README.md",
-      "physical_lines": 357,
-      "bytes": 31016
+      "physical_lines": 429,
+      "bytes": 36809
     },
     {
       "path": "assets/app.js",
@@ -724,6 +724,21 @@
       "bytes": 4816
     },
     {
+      "path": "nfl-decision-desk-e413f933/executive-summary.html",
+      "physical_lines": 57,
+      "bytes": 4232
+    },
+    {
+      "path": "nfl-decision-desk-e413f933/flagged.html",
+      "physical_lines": 28,
+      "bytes": 7659
+    },
+    {
+      "path": "nfl-decision-desk-e413f933/index.html",
+      "physical_lines": 30,
+      "bytes": 5098
+    },
+    {
       "path": "nfl-decision-desk/README.md",
       "physical_lines": 34,
       "bytes": 4082
@@ -825,8 +840,8 @@
     },
     {
       "path": "nfl-desk-26d4cafb/build.py",
-      "physical_lines": 892,
-      "bytes": 52944
+      "physical_lines": 898,
+      "bytes": 53355
     },
     {
       "path": "nfl-desk-26d4cafb/correlations.html",
@@ -1000,8 +1015,8 @@
     },
     {
       "path": "nfl-desk-26d4cafb/export_research.py",
-      "physical_lines": 358,
-      "bytes": 22375
+      "physical_lines": 362,
+      "bytes": 22610
     },
     {
       "path": "nfl-desk-26d4cafb/flagged.html",
@@ -1011,7 +1026,7 @@
     {
       "path": "nfl-desk-26d4cafb/index.html",
       "physical_lines": 43,
-      "bytes": 13142
+      "bytes": 13145
     },
     {
       "path": "nfl-desk-26d4cafb/injuries.html",
@@ -1440,8 +1455,8 @@
     },
     {
       "path": "research/38a1fc27/VERIFICATION.md",
-      "physical_lines": 70,
-      "bytes": 3852
+      "physical_lines": 72,
+      "bytes": 4033
     },
     {
       "path": "research/38a1fc27/strategies.md",
@@ -1616,7 +1631,22 @@
     {
       "path": "research/nfl-26d4cafb/executive-summary.md",
       "physical_lines": 70,
-      "bytes": 8311
+      "bytes": 8321
+    },
+    {
+      "path": "research/nfl-decision-desk/executive-summary.md",
+      "physical_lines": 86,
+      "bytes": 5784
+    },
+    {
+      "path": "research/nfl-decision-desk/methodology.md",
+      "physical_lines": 83,
+      "bytes": 4015
+    },
+    {
+      "path": "research/nfl-decision-desk/repo-review.md",
+      "physical_lines": 44,
+      "bytes": 4077
     },
     {
       "path": "research/official_snapshot.json",
