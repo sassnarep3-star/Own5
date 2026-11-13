@@ -1323,3 +1323,27 @@ This session's own scoped check — `.github/workflows/nfl-desk-26d4cafb.yml`
 ("Build data, render site, verify, test") — **passes**, and its build is deterministic: the workflow
 fails if a clean rebuild of `nfl-desk-26d4cafb/**` differs from what is committed.
 
+
+---
+
+## Session 28431d9c — NFL cross-desk reconciliation & currency audit (2026-11-13 UTC)
+
+Arena fixes this session's branch to `arena/28431d9c-own5` (base `ec3cb83` = `main`); no other branch will be created or pushed. Claim timestamp: **2026-11-13 UTC**, pushed before any implementation.
+
+Rationale: six NFL desks already exist on `main` (`nfl-strategy-lab/`, `nfl-decision-desk/` (d0343637), `nfl-decision-desk-38a1fc27/`, `nfl-b34253a1/`, `nfl-desk-26d4cafb/`, `nfl-decision-desk-e413f933/`), each built from its own snapshot. No page compares them with each other or with the current official nfl.com state. This session claims that gap only.
+
+Claimed additive namespace (no overlap with any other session):
+- `nfl-hub-28431d9c/**` (static GitHub Pages hub: desk map, official-standings and Week 10 reconciliation, injury spot-check, own-line cross-model comparison, Flagged for Review, sources; build + verify scripts)
+- `research/nfl-28431d9c/**` (method, executive summary, flagged register)
+- `.github/workflows/nfl-hub-28431d9c.yml` (runs this session's verify script only)
+- Append-only blocks in `COORDINATION.md`
+
+Read-only for this session: every other NFL desk directory, root `index.html`/`pages/`/`data/research.json`, `docs/`, `own5-desk/`, `nba-*`, `sf-*`, `rental-*`, `line-lab/`, `scripts/`, `tools/`, existing workflows, existing CSV/JSON.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| R1 | Claim + baseline inventory of all NFL desks | in progress | 28431d9c | COORDINATION.md | Claim pushed first. |
+| R2 | Official nfl.com snapshot (32-team standings, Week 10 slate, Week 10 injury report sample) transcribed with URLs and fetch date | unclaimed → in progress | 28431d9c | nfl-hub-28431d9c/data/official_*.csv | Values transcribed from fetch_page results; any unreadable value left blank. |
+| R3 | Cross-desk reconciliation: standings, slate, injury statuses, own-line favorites | in progress | 28431d9c | nfl-hub-28431d9c/data/reconcile_*.csv | Each row carries an official nfl.com link or an explicit blank + flag. |
+| R4 | Hub site (overview, desk map, reconciliation pages, Flagged for Review, sources) | in progress | 28431d9c | nfl-hub-28431d9c/*.html, build.py | Static, deterministic build. |
+| R5 | Verification harness + executive summary + PR/merge/Pages check | in progress | 28431d9c | nfl-hub-28431d9c/verify.py, research/nfl-28431d9c/**, COORDINATION.md | Merge only after verify PASS and live Pages check. |
