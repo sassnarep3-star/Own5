@@ -1252,7 +1252,23 @@ Claim timestamp: **2026-11-12T16:28Z**, committed and pushed before implementati
 | N26-09 | Line-by-line verification harness, unit tests, browser smoke tests & CI workflow | done | 26d4cafb | `nfl-desk-26d4cafb/verify.py`, `nfl-desk-26d4cafb/tests/**`, `.github/workflows/nfl-desk-26d4cafb.yml` | Asserts 100% of table rows carry official source links or explicit blank+flag; 0 broken links; deterministic rebuild; existing CI passes. |
 | N26-10 | Final integration, rebase on `origin/main`, PR to `main`, autonomous merge, live GitHub Pages check & coordination log | in progress | 26d4cafb | `COORDINATION.md`, `README.md` | Rebase preserving all concurrent sessions, green PR checks, explicit `gh pr merge <num> --merge`, confirm live Pages URLs. |
 
-Cross-session requests at claim time: none (all prior and sibling scopes treated as read-only).
+## Session b2c99329 board (NFL decision-desk completion, own5-desk/ scope)
+
+Session ID: `b2c99329` (branch `arena/b2c99329-own5`, based on `main` at ec3cb83).
+Scope (additive, non-overlapping): `site/build_site.py`, `scripts/build_data.py`, generated `data/own5_desk/*.json`, regenerated `own5-desk/**`, and this `COORDINATION.md` block only.
+Read-only (not touched): `nfl-desk-26d4cafb/**`, `research/nfl-26d4cafb/**`, `.github/workflows/nfl-desk-26d4cafb.yml`, root CI-locked pages, `data/decision-desk/**`, `nfl-decision-desk/**`.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| B1 | Repo review & verification of decision-desk data vs official sources; flag irregularities | in progress | b2c99329 | `data/decision-desk/*.csv` (read-only), `COORDINATION.md` | Cross-check row counts, reconciliation, official links |
+| B2 | Dedicated Suggestions review section on the live desk (review + choose path before implementing) | unclaimed | b2c99329 | `site/build_site.py`, `scripts/build_data.py`, `data/own5_desk/suggestions.json`, `own5-desk/suggestions.html` | 16 suggestions S01-S16 from data/decision-desk/suggestions.csv |
+| B3 | Pre-decision Questions / information / answers list | unclaimed | b2c99329 | `site/build_site.py`, `scripts/build_data.py`, `data/own5_desk/questions.json`, `own5-desk/questions.html` | 18 questions Q01-Q18 from data/decision-desk/questions.csv |
+| B4 | Injuries & depth desk: defense & offense 1st-4th-string deficiencies, starters vs backups | unclaimed | b2c99329 | `site/build_site.py`, `scripts/build_data.py`, `data/own5_desk/injuries.json`, `data/own5_desk/deficiencies.json`, `own5-desk/injuries.html` | 276 official injury rows + 32 team deficiency rows |
+| B5 | Executive summary page outlining important details | unclaimed | b2c99329 | `site/build_site.py`, `data/own5_desk/summary.json`, `own5-desk/summary.html` | Verified vs computed vs missing, decisions pending |
+| B6 | Build, verify (check_site.py every row official-sourced or blank+flagged), publish live desk | unclaimed | b2c99329 | `own5-desk/**`, `dist/` | `npm run desk:build` + `scripts/publish_desk.py`; CI smoke-tests /own5-desk/ |
+| B7 | PR to main, autonomous merge, confirm GitHub Pages deploys, record result in COORDINATION.md | unclaimed | b2c99329 | `COORDINATION.md` | Explicit `gh pr merge <num> --merge`, verify live Pages URLs |
+
+Cross-session requests: none (all sibling scopes treated as read-only; this block is append-only and does not edit any other session's section).
 
 ### N26-02..N26-09 completion record — 2026-11-12
 
