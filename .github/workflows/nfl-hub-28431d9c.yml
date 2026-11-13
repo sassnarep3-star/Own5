@@ -1,0 +1,46 @@
+name: NFL cross-desk hub (28431d9c)
+
+# Session 28431d9c scope only: this workflow touches nfl-hub-28431d9c/**,
+# research/nfl-28431d9c/** and itself. See COORDINATION.md.
+
+on:
+  push:
+    branches: ["**"]
+    paths:
+      - "nfl-hub-28431d9c/**"
+      - "research/nfl-28431d9c/**"
+      - ".github/workflows/nfl-hub-28431d9c.yml"
+  pull_request:
+    paths:
+      - "nfl-hub-28431d9c/**"
+      - "research/nfl-28431d9c/**"
+      - ".github/workflows/nfl-hub-28431d9c.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Rebuild the hub and run the line-by-line verifier
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Verify official arithmetic, row links, internal links, and deterministic rebuild
+        run: python3 nfl-hub-28431d9c/verify.py
+
+      - name: Fail if committed outputs are out of date
+        run: |
+          git add -A nfl-hub-28431d9c research/nfl-28431d9c
+          git diff --cached --quiet || {
+            echo "::error::Committed hub outputs are out of date. Run nfl-hub-28431d9c/build.py and commit the result."
+            git --no-pager diff --cached --stat
+            exit 1
+          }

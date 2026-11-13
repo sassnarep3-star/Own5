@@ -1347,3 +1347,32 @@ Read-only for this session: every other NFL desk directory, root `index.html`/`p
 | R3 | Cross-desk reconciliation: standings, slate, injury statuses, own-line favorites | in progress | 28431d9c | nfl-hub-28431d9c/data/reconcile_*.csv | Each row carries an official nfl.com link or an explicit blank + flag. |
 | R4 | Hub site (overview, desk map, reconciliation pages, Flagged for Review, sources) | in progress | 28431d9c | nfl-hub-28431d9c/*.html, build.py | Static, deterministic build. |
 | R5 | Verification harness + executive summary + PR/merge/Pages check | in progress | 28431d9c | nfl-hub-28431d9c/verify.py, research/nfl-28431d9c/**, COORDINATION.md | Merge only after verify PASS and live Pages check. |
+
+### Session 28431d9c — status log (2026-11-13 UTC)
+
+Branch `arena/28431d9c-own5`. Claimed scope R1–R5 (above). Scope was narrowed from the earlier plan (B34-04..09 and N26-10 are other sessions' claims and were not touched).
+
+| ID | Status | What was done | Evidence in repo |
+|----|--------|---------------|------------------|
+| R1 | done | Inventory of the six NFL desks: e413f933, b34253a1, 26d4cafb, 38a1fc27, d0343637 (`nfl-decision-desk/`), and nfl-strategy-lab. Each desk's data basis and machine-readable files are listed. | `nfl-hub-28431d9c/data/desk_map.csv` |
+| R2 | done | Official values transcribed from fetch_page results of nfl.com: standings (32 teams, re-fetched post-Thursday), Week 10 schedule (14 games, 4 byes), injury report (44 rows for WAS, NYG, NE, DET). Each row carries its nfl.com URL. Injury chunk 7 returned no data; not used. | `nfl-hub-28431d9c/data/official_*.csv` |
+| R3 | done | Reconciliation of standings, slate, byes, injuries, own-line favorites, and QB headlines. Unconfirmed values are blank and flagged. | `nfl-hub-28431d9c/data/reconcile_*.csv`, `official_qb_news.csv`, `flagged.csv` |
+| R4 | done | Static hub built deterministically: index, desk map, standings, slate, injuries and QB news, own-line comparison, Flagged for Review, sources. | `nfl-hub-28431d9c/*.html`, `build.py` |
+| R5 | in progress | `verify.py` (1,022 checks) passes. Executive summary and generated Flagged register written. PR to `main` to follow. | `nfl-hub-28431d9c/verify.py`, `research/nfl-28431d9c/SUMMARY.md`, `research/nfl-28431d9c/FLAGGED.md`, `.github/workflows/nfl-hub-28431d9c.yml` |
+
+**Findings that changed during verification (recorded so no draft claim survives):**
+- The first draft's "reversing the TNF result reproduces each desk" was not computed. It is now computed in code and re-derived in `verify.py`: it holds for all three desks and the 38a1fc27 root snapshot.
+- The draft's "quotes include a finished game" claim was overstated. The quotes are date-only, so only "no time recorded; cannot be shown pre-kickoff" can be said.
+- Four draft QB headlines (Willis IR, Watson starting, Beck starting, Jackson 6–10 weeks / Walker questionable) were not reproduced on the re-fetched injury page's news list and are excluded (H-13). Kenneth Walker is absent from the official Seattle table.
+- The official standings page now shows NYG 5-3-1 and WAS 3-5-1 (post-Thursday). An earlier pre-game read showed 5-2-1 and 2-5-1. The post-game values are the ones used.
+
+**Cross-scope requests (logged only; not edited by 28431d9c):**
+- Integration owner: add a link from the root site index to `nfl-hub-28431d9c/index.html` (root index not changed here).
+- 38a1fc27 owner: `data/decision-desk/official/official_injuries_wk10.csv` is a pre-kickoff snapshot (2026-11-12T16:52Z) that differs from the current official page on 15 of 44 sampled rows (H-14).
+- b34253a1 owner: add retrieval times to market quotes (H-02); fix Ben Brown's position LG→C (H-03); update the Thursday status from SCHEDULED (H-01).
+- 26d4cafb owner: correct availability labels ("Confirmed Out / IR" on non-IR rows; Stevenson "DNP + Backup Out") (H-06–H-08); add a machine-readable bye list (H-12).
+- e413f933 owner: fill game status for rows the official page designates (H-09).
+
+**Not in this session's claimed scope (not done here):** own-line origination, signal strategy research, correlation values and the leaderboard. Those outputs stay in the desks, unverified by this hub (H-16).
+
+**PR and merge:** PR link and merge result are recorded in the PR body and verified with `gh` after the merge.
