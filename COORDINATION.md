@@ -1454,8 +1454,25 @@ session's content was discarded.
 sessions' scopes were treated as read-only.
 
 **PR:** https://github.com/sassnarep3-star/Own5/pull/70 (`arena/864d5668-own5` -> `main`).
-**Merge:** executed with `gh pr merge 70 --merge` after resolving the `COORDINATION.md` conflict.
-**Pages:** the desk is served at https://sassnarep3-star.github.io/Own5/nfl-desk-864d5668/ .
+**Merge:** `gh pr merge 70 --merge` after resolving the `COORDINATION.md` conflict, merge SHA `4076160`.
+
+**Follow-up PR #71 (CI fix, merged).** The first CI run on `main` failed on this session's own check:
+the page footer stamped the wall-clock build time, so a rebuild never reproduced the committed HTML
+byte for byte and `git diff --exit-code` on the built artefacts failed. Fixed in
+https://github.com/sassnarep3-star/Own5/pull/71 (merge SHA `22ccd50`): the footer now shows the
+official data capture date instead, and the determinism check in `verify.py` was extended to cover
+the rendered pages as well as the CSVs so it cannot regress silently.
+
+**Checks on `main` after PR #71.** `Verify NFL Own-Line Lab (864d5668)`: **success**, including the
+`pages-smoke` job, which fetched the live URLs from GitHub's runner and confirmed `/`,
+`/leaderboard.html`, `/repo-audit.html`, `/flagged.html` and `/suggestions.html` all return a page
+containing "Own5". GitHub Pages build for `22ccd50`: **built**. Also green: `Verify Own5 evidence
+desk`, `Verify SF Rent Review`, `Verify research dashboard`, `Verify NBA validation desk`.
+**Not caused by this session:** `NFL Decision Desk — fetch & verify` and `Verify NFL B34 Week 10
+research desk` fail on `main` independently (logged by their owners); this session changed neither
+folder.
+
+**Pages:** the desk is live at https://sassnarep3-star.github.io/Own5/nfl-desk-864d5668/ .
 
 Cross-session requests at claim time: none. All other sessions' scopes treated as read-only; no
 site-wide change will be implemented from this session — every improvement is a proposal on the
