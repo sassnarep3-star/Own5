@@ -1405,15 +1405,16 @@ recorded below.
   integration. `npm run desk:check` synchronized the root desk's generated injury timestamps to the
   same existing pinned 2026-11-12T16:52:39Z snapshot; it did not fetch or ingest external data.
   Its ignored `dist/` output was removed before the repository-wide audits.
-- The first remote run for integration PR #69 passed the Decision Desk, B34, hub, root, NBA, and
-  SF checks but failed `Verify Own5 evidence desk` at its committed-pages comparison. Its combined
-  tests/build step passed; the next step runs `npm run desk:publish` and checks `own5-desk/`. The
-  branch had rebuilt `data/own5_desk/` to the pinned 16:52:39Z snapshot but had not yet published the
-  matching copies. Running the publisher regenerated exactly `own5-desk/data/{deficiencies,injuries}.json`;
-  these are included for the next CI run. This was a static rebuild, not live ingestion.
+- On integration PR #69's first commit, the only failing remote check was `Verify Own5 evidence
+  desk` at its committed-pages comparison. Its build/tests passed; `npm run desk:publish` then
+  exposed that the branch had refreshed `data/own5_desk/` to the pinned 16:52:39Z snapshot without
+  publishing matching copies. Publishing regenerated exactly
+  `own5-desk/data/{deficiencies,injuries}.json` (static rebuild; no live ingestion). On head
+  `454b97c`, all six active remote check runs passed; PR-only fetch and live-page smoke jobs are
+  skipped as expected.
 - Post-merge local checks: NFL hub verifier **1,022 checks PASS**; root `npm test` **91 tests PASS**;
   `npm run desk:check` **20 checks PASS**, 17 rendered pages and 562 sourced table rows. B34 unit
-  tests **9/9 PASS** and its verifier passes with 13 pages, 18 data files, 627 rows, 99,631 source
+  tests **9/9 PASS** and its verifier passes with 13 pages, 18 data files, 627 rows, 99,633 source
   URLs, 251 local links, 862 external links, and all repository-audit line hashes verified (current
   file/line counts are in `repo_audit_summary.json`). Decision Desk verifier passes with 14 pages,
   26 tables, 494 sourced rows, 25 CSV tables checked, and zero problems. Its repository audit covers
@@ -1423,7 +1424,8 @@ recorded below.
   paired rebuild's generated diff was byte-identical. B34 browser checks pass on 13 desktop/mobile
   routes; root browser checks pass on eight routes. `npm run desk:publish` now refreshes the published
   root desk; ignored `dist/` was removed before the repository-wide audits. No live NFL ingestion ran.
-  PRs #59 and #62 remain open and unmerged; integration PR #69's next check run, merge, and live
+  PRs #59 and #62 remain open and unmerged. All active checks passed on head `454b97c`; this final
+  audit-refresh commit will trigger checks on the updated head. Integration PR #69's merge and live
   Pages deployment verification remain pending.
 ---
 

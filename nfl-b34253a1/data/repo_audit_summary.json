@@ -1,7 +1,7 @@
 {
   "as_of": "2026-11-13",
   "files": 379,
-  "physical_lines": 98317,
+  "physical_lines": 98319,
   "status_counts": {
     "DATED_OFFICIAL_FACT_ROW": 1588,
     "DATED_SNAPSHOT_RECOMPUTED_OR_STALE": 730,
@@ -10,7 +10,7 @@
     "FLAGGED_NONOFFICIAL_HISTORICAL_INPUT": 14406,
     "IMPLEMENTATION_LINE_REVIEW": 15529,
     "LEGACY_JSON_RECORD_REVIEW": 5970,
-    "LEGACY_RESEARCH_CLAIM_SCOPE": 4546,
+    "LEGACY_RESEARCH_CLAIM_SCOPE": 4548,
     "LEGACY_SNAPSHOT_SOURCE_REGISTERED": 10815,
     "LINE_ITEM_SOURCE_LINK_OR_FLAG": 32610,
     "OFFICIAL_LINK_PRESENT_NOT_REFETCHED": 30,
@@ -21,7 +21,7 @@
   "source_basis_counts": {
     "HTTPS_OFFICIAL_LINK_IN_LINE": 2614,
     "OFFICIAL_COUNTERPART_FOR_FLAGGED_INPUT_NOT_INPUT_PROVENANCE": 15309,
-    "OFFICIAL_SCOPE_REFERENCE_FALLBACK_NOT_ROW_PROVENANCE": 78976,
+    "OFFICIAL_SCOPE_REFERENCE_FALLBACK_NOT_ROW_PROVENANCE": 78978,
     "ROW_SOURCE_FIELD": 1418
   },
   "scope": "Line-indexed inventory of previous NFL sites, generators, datasets, research references and shared navigation/CI context. The audit date is the repository-tree inventory date, not a fresh fetch of every external URL; this is not a claim that every legacy historical statistic was re-fetched.",
@@ -75,8 +75,8 @@
     },
     {
       "path": "COORDINATION.md",
-      "physical_lines": 1484,
-      "bytes": 204396
+      "physical_lines": 1486,
+      "bytes": 204469
     },
     {
       "path": "README.md",
