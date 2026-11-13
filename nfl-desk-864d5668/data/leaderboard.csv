@@ -1,0 +1,10 @@
+rank,signal,graded_bets,hit_rate,units_per_bet_at_-110,roi_pct,deflated_sharpe,verdict,reward_tier,source
+1,M4 Back the team coming off a bye (rest edge >= 7 days),14,0.9286,0.7727,77.27,0.5599,,watchlist - above break-even but short of the full gate set,https://www.nfl.com/standings/
+2,M5 Back the team with a rest edge of 3 or more days,26,0.8077,0.542,54.2,0.8305,,watchlist - above break-even but short of the full gate set,https://www.nfl.com/standings/
+3,"M3 Model pick, predicted margin >= 3 points",41,0.6829,0.3038,30.38,0.6668,,watchlist - above break-even but short of the full gate set,https://www.nfl.com/standings/
+4,"M1 Model pick (walk-forward, all games)",89,0.6742,0.287,28.7,0.8925,,"watchlist - above break-even and through the haircut, but fails the deflated-Sharpe gate",https://www.nfl.com/standings/
+5,B2 Take the better season-to-date point differential,89,0.6404,0.2227,22.27,0.7384,,watchlist - above break-even but short of the full gate set,https://www.nfl.com/standings/
+6,B4 Take the team with more rest,89,0.6404,0.2227,22.27,0.7384,,watchlist - above break-even but short of the full gate set,https://www.nfl.com/standings/
+7,B3 Take the better season-to-date win percentage,89,0.6067,0.1583,15.83,0.5088,,watchlist - above break-even but short of the full gate set,https://www.nfl.com/standings/
+8,B1 Always take the home team,89,0.4382,-0.1634,-16.34,0.0009,,below break-even - not promoted,https://www.nfl.com/standings/
+9,"M2 Model pick, predicted margin >= 7 points",9,0.8889,0.697,69.7,0.4666,,watchlist - above break-even but short of the full gate set,https://www.nfl.com/standings/

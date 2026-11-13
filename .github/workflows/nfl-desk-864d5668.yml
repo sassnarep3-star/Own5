@@ -1,0 +1,91 @@
+name: Verify NFL Own-Line Lab (864d5668)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'nfl-desk-864d5668/**'
+      - '.github/workflows/nfl-desk-864d5668.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'nfl-desk-864d5668/**'
+      - '.github/workflows/nfl-desk-864d5668.yml'
+  workflow_dispatch:
+  schedule:
+    # Mondays at 07:15 UTC, after the official Week N injury report refreshes
+    - cron: '15 7 * * 1'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nfl-desk-864d5668-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Build every table and page from the pinned official inputs
+        working-directory: nfl-desk-864d5668
+        run: python3 run.py
+
+      - name: Deterministic rebuild check (data must not drift)
+        working-directory: nfl-desk-864d5668
+        run: |
+          python3 run.py > /dev/null
+          python3 run.py > /dev/null
+
+      - name: Line-by-line verification
+        working-directory: nfl-desk-864d5668
+        run: python3 verify.py
+
+      - name: Unit tests
+        working-directory: nfl-desk-864d5668
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Committed artefacts match the deterministic build
+        run: git diff --exit-code -- nfl-desk-864d5668/data nfl-desk-864d5668/*.html
+
+      - name: Upload the built desk
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nfl-own-line-lab-864d5668
+          path: |
+            nfl-desk-864d5668/data
+            nfl-desk-864d5668/*.html
+            nfl-desk-864d5668/assets
+
+  pages-smoke:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: verify
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check the published desk URLs
+        run: |
+          base="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/nfl-desk-864d5668"
+          for path in "/" "/leaderboard.html" "/repo-audit.html" "/flagged.html" "/suggestions.html"; do
+            url="$base$path"
+            ok=0
+            for attempt in $(seq 1 24); do
+              if curl --fail --silent --show-error --location "$url" | grep -q 'Own5'; then
+                echo "OK $url"
+                ok=1
+                break
+              fi
+              sleep 10
+            done
+            if [ "$ok" -ne 1 ]; then
+              echo "Published page did not become ready: $url" >&2
+              exit 1
+            fi
+          done

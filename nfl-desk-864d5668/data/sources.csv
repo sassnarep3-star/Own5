@@ -1,0 +1,46 @@
+source_id,publisher,title,url,fetched,used_for,verification_status
+S-01,NFL.com,2026 NFL Standings (all games through Week 10 TNF),https://www.nfl.com/standings/,2026-11-13,"Official W-L-T, PF, PA for all 32 teams; reconciliation benchmark",verified - read directly
+S-12,NFL.com,"Official NFL Week 10 Injury Report (2026, Reg 10)",https://www.nfl.com/injuries/league/2026/reg10,2026-11-13,Practice status and issued game status for every listed player,verified - 326 rows transcribed
+S-13,NFL Football Operations,2026 NFL Rulebook,https://operations.nfl.com/rules-officiating/2026-nfl-rulebook,2026-11-13,Rules that create scoring and strategy effects,NOT FETCHED - see flag F-13
+S-W01,NFL.com,2026 NFL Schedule - Week 1,https://www.nfl.com/schedules/2026/by-week/week-1,2026-11-13,"Week 1 game dates, matchups and final scores",verified - transcribed
+S-W02,NFL.com,2026 NFL Schedule - Week 2,https://www.nfl.com/schedules/2026/by-week/week-2,2026-11-13,"Week 2 game dates, matchups and final scores",verified - transcribed
+S-W03,NFL.com,2026 NFL Schedule - Week 3,https://www.nfl.com/schedules/2026/by-week/week-3,2026-11-13,"Week 3 game dates, matchups and final scores",verified - transcribed
+S-W04,NFL.com,2026 NFL Schedule - Week 4,https://www.nfl.com/schedules/2026/by-week/week-4,2026-11-13,"Week 4 game dates, matchups and final scores",verified - transcribed
+S-W05,NFL.com,2026 NFL Schedule - Week 5,https://www.nfl.com/schedules/2026/by-week/week-5,2026-11-13,"Week 5 game dates, matchups and final scores",verified - transcribed
+S-W06,NFL.com,2026 NFL Schedule - Week 6,https://www.nfl.com/schedules/2026/by-week/week-6,2026-11-13,"Week 6 game dates, matchups and final scores",verified - transcribed
+S-W07,NFL.com,2026 NFL Schedule - Week 7,https://www.nfl.com/schedules/2026/by-week/week-7,2026-11-13,"Week 7 game dates, matchups and final scores",verified - transcribed
+S-W08,NFL.com,2026 NFL Schedule - Week 8,https://www.nfl.com/schedules/2026/by-week/week-8,2026-11-13,"Week 8 game dates, matchups and final scores",verified - transcribed
+S-W09,NFL.com,2026 NFL Schedule - Week 9,https://www.nfl.com/schedules/2026/by-week/week-9,2026-11-13,"Week 9 game dates, matchups and final scores",verified - transcribed
+S-W10,NFL.com,2026 NFL Schedule - Week 10,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-13,"Week 10 game dates, matchups and final scores",verified - transcribed
+S-DC-ARI,Arizona Cardinals,Arizona Cardinals official depth chart,https://www.azcardinals.com/team/depth-chart,2026-11-13,ARI published depth order by position,verified - transcribed
+S-DC-ATL,Atlanta Falcons,Atlanta Falcons official depth chart,https://www.atlantafalcons.com/team/depth-chart,2026-11-13,ATL published depth order by position,verified - transcribed
+S-DC-BAL,Baltimore Ravens,Baltimore Ravens official depth chart,https://www.baltimoreravens.com/team/depth-chart,2026-11-13,BAL published depth order by position,verified - transcribed
+S-DC-BUF,Buffalo Bills,Buffalo Bills official depth chart,https://www.buffalobills.com/team/depth-chart,2026-11-13,BUF published depth order by position,verified - transcribed
+S-DC-CAR,Carolina Panthers,Carolina Panthers official depth chart,https://www.panthers.com/team/depth-chart,2026-11-13,CAR published depth order by position,verified - transcribed
+S-DC-CHI,Chicago Bears,Chicago Bears official depth chart (As of 10/31/2026),https://www.chicagobears.com/team/depth-chart,2026-11-13,CHI published depth order by position,verified - transcribed
+S-DC-CIN,Cincinnati Bengals,Cincinnati Bengals official depth chart,https://www.bengals.com/team/depth-chart,2026-11-13,CIN published depth order by position,verified - transcribed
+S-DC-CLE,Cleveland Browns,Cleveland Browns official depth chart,https://www.clevelandbrowns.com/team/depth-chart,2026-11-13,CLE published depth order by position,verified - transcribed
+S-DC-DAL,Dallas Cowboys,Dallas Cowboys official depth chart,https://www.dallascowboys.com/team/depth-chart,2026-11-13,DAL published depth order by position,verified - transcribed
+S-DC-DEN,Denver Broncos,Denver Broncos official depth chart,https://www.denverbroncos.com/team/depth-chart,2026-11-13,DEN published depth order by position,verified - transcribed
+S-DC-DET,Detroit Lions,Detroit Lions official depth chart,https://www.detroitlions.com/team/depth-chart,2026-11-13,DET published depth order by position,verified - transcribed
+S-DC-GB,Green Bay Packers,"Green Bay Packers official depth chart (Unofficial, Nov. 10, 2026)",https://www.packers.com/team/depth-chart,2026-11-13,GB published depth order by position,verified - transcribed
+S-DC-HOU,Houston Texans,Houston Texans official depth chart,https://www.houstontexans.com/team/depth-chart,2026-11-13,HOU published depth order by position,NOT AVAILABLE - the page publishes the chart as an image only (flag F-09)
+S-DC-IND,Indianapolis Colts,Indianapolis Colts official depth chart,https://www.colts.com/team/depth-chart,2026-11-13,IND published depth order by position,verified - transcribed
+S-DC-JAX,Jacksonville Jaguars,Jacksonville Jaguars official depth chart,https://www.jaguars.com/team/depth-chart,2026-11-13,JAX published depth order by position,verified - transcribed
+S-DC-KC,Kansas City Chiefs,Kansas City Chiefs official depth chart,https://www.chiefs.com/team/depth-chart,2026-11-13,KC published depth order by position,verified - transcribed
+S-DC-LAC,Los Angeles Chargers,Los Angeles Chargers official depth chart,https://www.chargers.com/team/depth-chart,2026-11-13,LAC published depth order by position,verified - transcribed
+S-DC-LAR,Los Angeles Rams,Los Angeles Rams official depth chart,https://www.therams.com/team/depth-chart,2026-11-13,LAR published depth order by position,verified - transcribed
+S-DC-LV,Las Vegas Raiders,"Las Vegas Raiders official depth chart (as of November 10, 2026)",https://www.raiders.com/team/depth-chart,2026-11-13,LV published depth order by position,verified - transcribed
+S-DC-MIA,Miami Dolphins,Miami Dolphins official depth chart,https://www.miamidolphins.com/team/depth-chart,2026-11-13,MIA published depth order by position,verified - transcribed
+S-DC-MIN,Minnesota Vikings,Minnesota Vikings official depth chart,https://www.vikings.com/team/depth-chart,2026-11-13,MIN published depth order by position,verified - transcribed
+S-DC-NE,New England Patriots,New England Patriots official depth chart,https://www.patriots.com/team/depth-chart,2026-11-13,NE published depth order by position,verified - transcribed
+S-DC-NO,New Orleans Saints,New Orleans Saints official depth chart,https://www.neworleanssaints.com/team/depth-chart,2026-11-13,NO published depth order by position,verified - transcribed
+S-DC-NYG,New York Giants,New York Giants official depth chart,https://www.giants.com/team/depth-chart,2026-11-13,NYG published depth order by position,verified - transcribed
+S-DC-NYJ,New York Jets,New York Jets official depth chart,https://www.newyorkjets.com/team/depth-chart,2026-11-13,NYJ published depth order by position,verified - transcribed
+S-DC-PHI,Philadelphia Eagles,"Philadelphia Eagles official depth chart (UNOFFICIAL, compiled by the Eagles Communications Department)",https://www.philadelphiaeagles.com/team/depth-chart,2026-11-13,PHI published depth order by position,verified - transcribed
+S-DC-PIT,Pittsburgh Steelers,Pittsburgh Steelers official depth chart,https://www.steelers.com/team/depth-chart/,2026-11-13,PIT published depth order by position,verified - transcribed
+S-DC-SEA,Seattle Seahawks,Seattle Seahawks official depth chart,https://www.seahawks.com/team/depth-chart,2026-11-13,SEA published depth order by position,verified - transcribed
+S-DC-SF,San Francisco 49ers,San Francisco 49ers official depth chart (Updated as of 11/10/26),https://www.49ers.com/team/depth-chart,2026-11-13,SF published depth order by position,verified - transcribed
+S-DC-TB,Tampa Bay Buccaneers,Tampa Bay Buccaneers official depth chart,https://www.buccaneers.com/team/depth-chart,2026-11-13,TB published depth order by position,verified - transcribed
+S-DC-TEN,Tennessee Titans,Tennessee Titans official depth chart (as of 11/10/26),https://www.tennesseetitans.com/team/depth-chart,2026-11-13,TEN published depth order by position,verified - transcribed
+S-DC-WAS,Washington Commanders,Washington Commanders official depth chart,https://www.commanders.com/team/depth-chart,2026-11-13,WAS published depth order by position,verified - transcribed

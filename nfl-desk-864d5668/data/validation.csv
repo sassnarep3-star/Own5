@@ -1,0 +1,11 @@
+gate_id,gate,why_it_exists,threshold,result,pass_fail,source
+V-01,Data integrity,"If the ledger is wrong, everything downstream is wrong","All 32 clubs reconcile to nfl.com standings on W, L, T, PF and PA",32 of 32 clubs reconcile; 0 mismatches,PASS,https://www.nfl.com/standings/
+V-02,No look-ahead,A backtest that can see the future is worthless,Every prediction uses only weeks strictly before the game predicted,"89 predictions, each fitted on prior weeks only",PASS,https://www.nfl.com/standings/
+V-03,Minimum sample,Small samples cannot be distinguished from luck,At least 50 graded bets,89 graded bets,PASS,https://www.nfl.com/standings/
+V-04,Skill vs coin flip,The signal must beat chance,Two-sided binomial p below 0.05 against 50 per cent,p = 0.00134,PASS,https://www.nfl.com/standings/
+V-05,Multiple-testing haircut,Trying many signals manufactures winners,Holm-Bonferroni adjusted p below 0.05,adjusted p = 0.01202,PASS,https://www.nfl.com/standings/
+V-06,Deflated Sharpe ratio,Corrects for how many strategies were tried and for lopsided returns,Deflated Sharpe above 0.95,DSR = 0.8925,FAIL,https://www.nfl.com/standings/
+V-07,Beat a naive baseline,A model that only rediscovers 'the better team wins' has no value,Hit rate above the better of the home-team and point-differential baselines,"model 0.6742 vs best baseline 0.6404; the two rules disagree on 7 games, of which the model wins 5 and the baseline wins 2; exact McNemar p = 0.4531",FAIL,https://www.nfl.com/standings/
+V-08,Profitable at a real price,-110 is the standard side price,Units per bet above 0 at -110,"NOT TESTABLE - no official market price exists (flag F-01). The -110 figures in signal_tests.csv are a flat-price scenario, not a record against real closing lines.",BLOCKED,https://www.nfl.com/standings/
+V-09,Deterministic rebuild,A table that changes between runs cannot be audited,Two consecutive builds produce identical file checksums,checked by verify.py,checked by verify.py,n/a
+V-10,Every row carries an official source,The core verification rule of this project,Zero rows with an empty source column across all published tables,checked by verify.py,checked by verify.py,n/a

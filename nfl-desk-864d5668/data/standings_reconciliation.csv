@@ -1,0 +1,33 @@
+team,club,conference,division,games_ledger,W_ledger,W_official,L_ledger,L_official,T_ledger,T_official,PF_ledger,PF_official,PA_ledger,PA_official,point_diff,reconciles,differences,source
+ARI,Arizona Cardinals,NFC,West,9,3,3,6,6,0,0,178,178,255,255,-77,YES,none,https://www.nfl.com/standings/
+ATL,Atlanta Falcons,NFC,South,9,3,3,6,6,0,0,188,188,223,223,-35,YES,none,https://www.nfl.com/standings/
+BAL,Baltimore Ravens,AFC,North,9,4,4,5,5,0,0,189,189,236,236,-47,YES,none,https://www.nfl.com/standings/
+BUF,Buffalo Bills,AFC,East,8,7,7,1,1,0,0,256,256,187,187,69,YES,none,https://www.nfl.com/standings/
+CAR,Carolina Panthers,NFC,South,8,3,3,5,5,0,0,199,199,219,219,-20,YES,none,https://www.nfl.com/standings/
+CHI,Chicago Bears,NFC,North,9,7,7,2,2,0,0,241,241,184,184,57,YES,none,https://www.nfl.com/standings/
+CIN,Cincinnati Bengals,AFC,North,8,6,6,2,2,0,0,240,240,175,175,65,YES,none,https://www.nfl.com/standings/
+CLE,Cleveland Browns,AFC,North,9,5,5,4,4,0,0,161,161,196,196,-35,YES,none,https://www.nfl.com/standings/
+DAL,Dallas Cowboys,NFC,East,9,4,4,5,5,0,0,246,246,236,236,10,YES,none,https://www.nfl.com/standings/
+DEN,Denver Broncos,AFC,West,9,7,7,2,2,0,0,198,198,186,186,12,YES,none,https://www.nfl.com/standings/
+DET,Detroit Lions,NFC,North,8,6,6,2,2,0,0,222,222,189,189,33,YES,none,https://www.nfl.com/standings/
+GB,Green Bay Packers,NFC,North,9,6,6,3,3,0,0,216,216,191,191,25,YES,none,https://www.nfl.com/standings/
+HOU,Houston Texans,AFC,South,8,3,3,5,5,0,0,209,209,192,192,17,YES,none,https://www.nfl.com/standings/
+IND,Indianapolis Colts,AFC,South,9,2,2,7,7,0,0,184,184,249,249,-65,YES,none,https://www.nfl.com/standings/
+JAX,Jacksonville Jaguars,AFC,South,8,6,6,2,2,0,0,229,229,121,121,108,YES,none,https://www.nfl.com/standings/
+KC,Kansas City Chiefs,AFC,West,8,6,6,2,2,0,0,202,202,143,143,59,YES,none,https://www.nfl.com/standings/
+LAC,Los Angeles Chargers,AFC,West,8,0,0,8,8,0,0,121,121,219,219,-98,YES,none,https://www.nfl.com/standings/
+LAR,Los Angeles Rams,NFC,West,9,5,5,4,4,0,0,214,214,181,181,33,YES,none,https://www.nfl.com/standings/
+LV,Las Vegas Raiders,AFC,West,9,4,4,5,5,0,0,238,238,268,268,-30,YES,none,https://www.nfl.com/standings/
+MIA,Miami Dolphins,AFC,East,8,1,1,7,7,0,0,126,126,200,200,-74,YES,none,https://www.nfl.com/standings/
+MIN,Minnesota Vikings,NFC,North,8,6,6,2,2,0,0,146,146,116,116,30,YES,none,https://www.nfl.com/standings/
+NE,New England Patriots,AFC,East,9,5,5,4,4,0,0,211,211,207,207,4,YES,none,https://www.nfl.com/standings/
+NO,New Orleans Saints,NFC,South,8,3,3,5,5,0,0,185,185,216,216,-31,YES,none,https://www.nfl.com/standings/
+NYG,New York Giants,NFC,East,9,5,5,3,3,1,1,203,203,196,196,7,YES,none,https://www.nfl.com/standings/
+NYJ,New York Jets,AFC,East,9,2,2,7,7,0,0,182,182,223,223,-41,YES,none,https://www.nfl.com/standings/
+PHI,Philadelphia Eagles,NFC,East,9,2,2,7,7,0,0,148,148,221,221,-73,YES,none,https://www.nfl.com/standings/
+PIT,Pittsburgh Steelers,AFC,North,8,6,6,2,2,0,0,180,180,144,144,36,YES,none,https://www.nfl.com/standings/
+SEA,Seattle Seahawks,NFC,West,9,5,5,4,4,0,0,202,202,162,162,40,YES,none,https://www.nfl.com/standings/
+SF,San Francisco 49ers,NFC,West,8,7,7,1,1,0,0,235,235,156,156,79,YES,none,https://www.nfl.com/standings/
+TB,Tampa Bay Buccaneers,NFC,South,9,3,3,6,6,0,0,202,202,178,178,24,YES,none,https://www.nfl.com/standings/
+TEN,Tennessee Titans,AFC,South,8,1,1,7,7,0,0,144,144,199,199,-55,YES,none,https://www.nfl.com/standings/
+WAS,Washington Commanders,NFC,East,9,3,3,5,5,1,1,196,196,223,223,-27,YES,none,https://www.nfl.com/standings/

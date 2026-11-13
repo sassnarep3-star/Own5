@@ -1,0 +1,15 @@
+metric,value,source
+Predictions graded (out-of-sample),89,https://www.nfl.com/standings/
+Weeks graded,7,https://www.nfl.com/standings/
+MAE of predicted home margin (points),9.2298,https://www.nfl.com/standings/
+RMSE of predicted home margin (points),12.1903,https://www.nfl.com/standings/
+Bias of predicted home margin (points),-1.2803,https://www.nfl.com/standings/
+SD of margin error (points),12.1916,https://www.nfl.com/standings/
+MAE of predicted total (points),11.1492,https://www.nfl.com/standings/
+Bias of predicted total (points),1.3437,https://www.nfl.com/standings/
+Naive baseline MAE (predict a 0 margin every game),10.562,https://www.nfl.com/standings/
+MAE improvement vs that naive baseline (points),1.3322,https://www.nfl.com/standings/
+Out-of-sample r: predicted vs actual home margin,0.3256,https://www.nfl.com/standings/
+p-value of that correlation,0.00185,https://www.nfl.com/standings/
+Out-of-sample r: predicted vs actual total,0.0816,https://www.nfl.com/standings/
+p-value of that correlation,0.44695,https://www.nfl.com/standings/

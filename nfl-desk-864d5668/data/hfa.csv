@@ -1,0 +1,14 @@
+metric,value,n,interpretation,source
+Non-neutral games in sample,130,130,"All 2026 games played through 2026-11-13, excluding neutral-site games",https://www.nfl.com/standings/
+Neutral-site games in sample,7,7,International games; excluded from the HFA estimate,https://www.nfl.com/standings/
+Mean home margin (points),0.469,130,Raw average of (home points - away points),https://www.nfl.com/standings/
+Standard deviation (points),13.272,130,Game-to-game spread of the home margin,https://www.nfl.com/standings/
+Standard error (points),1.164,130,sd / sqrt(n); the precision of the estimate,https://www.nfl.com/standings/
+95% CI lower bound,-1.812,130,The data are consistent with an HFA anywhere in this interval,https://www.nfl.com/standings/
+95% CI upper bound,2.751,130,The data are consistent with an HFA anywhere in this interval,https://www.nfl.com/standings/
+Two-sided p-value vs 0,0.6875,130,p above 0.05 means this sample cannot distinguish HFA from zero,https://www.nfl.com/standings/
+Home team win rate,0.5077,130,Home teams won 66 of 130 non-neutral games,https://www.nfl.com/standings/
+"Ridge-fit HFA (margin model, lambda=5.0)",0.172,137,HFA estimated jointly with team ratings; neutral games zeroed,https://www.nfl.com/standings/
+Ridge-fit HFA (points model),0.166,137,HFA split +0.5 / -0.5 across the two teams' point expectations,https://www.nfl.com/standings/
+Points-model league average (mu),21.251,137,Neutral-site expected points for an average team,https://www.nfl.com/standings/
+Bets needed to detect a 1.5-point HFA at 80% power,,,NOT COMPUTED - a power calculation needs a per-game variance assumption that is itself unmeasured (flag F-04),https://www.nfl.com/standings/
