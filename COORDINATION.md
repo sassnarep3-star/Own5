@@ -1260,15 +1260,33 @@ Read-only (not touched): `nfl-desk-26d4cafb/**`, `research/nfl-26d4cafb/**`, `.g
 
 | ID | Task | Status | Owner | Files touched | Notes |
 |----|------|--------|-------|---------------|-------|
-| B1 | Repo review & verification of decision-desk data vs official sources; flag irregularities | in progress | b2c99329 | `data/decision-desk/*.csv` (read-only), `COORDINATION.md` | Cross-check row counts, reconciliation, official links |
-| B2 | Dedicated Suggestions review section on the live desk (review + choose path before implementing) | unclaimed | b2c99329 | `site/build_site.py`, `scripts/build_data.py`, `data/own5_desk/suggestions.json`, `own5-desk/suggestions.html` | 16 suggestions S01-S16 from data/decision-desk/suggestions.csv |
-| B3 | Pre-decision Questions / information / answers list | unclaimed | b2c99329 | `site/build_site.py`, `scripts/build_data.py`, `data/own5_desk/questions.json`, `own5-desk/questions.html` | 18 questions Q01-Q18 from data/decision-desk/questions.csv |
-| B4 | Injuries & depth desk: defense & offense 1st-4th-string deficiencies, starters vs backups | unclaimed | b2c99329 | `site/build_site.py`, `scripts/build_data.py`, `data/own5_desk/injuries.json`, `data/own5_desk/deficiencies.json`, `own5-desk/injuries.html` | 276 official injury rows + 32 team deficiency rows |
-| B5 | Executive summary page outlining important details | unclaimed | b2c99329 | `site/build_site.py`, `data/own5_desk/summary.json`, `own5-desk/summary.html` | Verified vs computed vs missing, decisions pending |
-| B6 | Build, verify (check_site.py every row official-sourced or blank+flagged), publish live desk | unclaimed | b2c99329 | `own5-desk/**`, `dist/` | `npm run desk:build` + `scripts/publish_desk.py`; CI smoke-tests /own5-desk/ |
-| B7 | PR to main, autonomous merge, confirm GitHub Pages deploys, record result in COORDINATION.md | unclaimed | b2c99329 | `COORDINATION.md` | Explicit `gh pr merge <num> --merge`, verify live Pages URLs |
+| B1 | Repo review & verification of decision-desk data vs official sources; flag irregularities | done | b2c99329 | `data/decision-desk/*.csv` (read-only), `COORDINATION.md` | Verified: check_site.py 562/562 rows official-sourced, audit pass; nflverse injuries mirror independently corroborates exactly 276 Week-10 rows across 26 teams (flags F04/F06) |
+| B2 | Dedicated Suggestions review section on the live desk (review + choose path before implementing) | done | b2c99329 | `site/build_site.py`, `scripts/build_data.py`, `data/own5_desk/suggestions.json`, `own5-desk/suggestions.html` | 16 suggestions S01-S16; each row links to official NFL/FanDuel sources; decision state + review test per row |
+| B3 | Pre-decision Questions / information / answers list | done | b2c99329 | `site/build_site.py`, `scripts/build_data.py`, `data/own5_desk/questions.json`, `own5-desk/questions.html` | 18 questions Q01-Q18; what we have / missing / resolve / blocks / status; Q01-Q02, Q04-Q06, Q18 flagged Blocking |
+| B4 | Injuries & depth desk: defense & offense 1st-4th-string deficiencies, starters vs backups | done | b2c99329 | `site/build_site.py`, `scripts/build_data.py`, `data/own5_desk/injuries.json`, `data/own5_desk/deficiencies.json`, `own5-desk/injuries.html` | 276 official injury rows (depth string 1st-4th, starter/backup, replacement drop) + 32-team offense/defense deficiency table |
+| B5 | Executive summary page outlining important details | done | b2c99329 | `site/build_site.py`, `data/own5_desk/summary.json`, `own5-desk/summary.html` | Verified vs computed vs missing; 0 certified strategies, leaderboard empty, rewards points-only pending Q04/Q05 |
+| B6 | Build, verify (check_site.py every row official-sourced or blank+flagged), publish live desk | done | b2c99329 | `own5-desk/**`, `dist/` | `npm run desk:build` PASS (17 pages, 562 rows, 0 broken links); `scripts/publish_desk.py` -> own5-desk/ |
+| B7 | PR to main, autonomous merge, confirm GitHub Pages deploys, record result in COORDINATION.md | done | b2c99329 | `COORDINATION.md` | PR #66 https://github.com/sassnarep3-star/Own5/pull/66 — MERGED via `gh pr merge 66 --merge`, merge commit 0e50f9b; Pages status `built`; legacy-pages-smoke PASS on live /own5-desk/, /own5-desk/lines.html, /own5-desk/review.html |
 
 Cross-session requests: none (all sibling scopes treated as read-only; this block is append-only and does not edit any other session's section).
+
+### B1-B7 completion record — session b2c99329, 2026-11-13
+
+**Scope:** deterministic NFL decision desk at `own5-desk/` (published at `https://sassnarep3-star.github.io/Own5/own5-desk/`), additive to sibling sessions' desks (`nfl-desk-26d4cafb/` owned by session 26d4cafb; root CI-locked pages owned by cd43258e/0f468a47; `docs/` NBA lab owned by 9c3a0a69). No sibling file was modified.
+
+**Verification performed (all green):**
+- `npm run desk:build` → `desk:build:data` (audit_status: pass; 32/32 teams reconciled, PF=PA, 15 Week 9 games, Burrow 4918, Chase 1708/127), `desk:build:site` (17 HTML pages), `check_site.py` → PASS: every one of 562 data-table rows carries an official source link or is intentionally blank; 0 broken internal links/fragments/assets; no loopback URLs.
+- `scripts/publish_desk.py` → regenerated `own5-desk/` deterministically; `git diff --exit-code -- own5-desk/` clean (matches CI's "committed site matches a clean rebuild" step).
+- Independent cross-check vs GitHub-hosted mirror: nflverse injuries_2026 release has exactly 276 Week-10 rows across 26 teams, corroborating the official injury register and flags F04/F06.
+- GitHub Pages deployment status: `built`; `legacy-pages-smoke` verified live /own5-desk/, /own5-desk/lines.html, /own5-desk/review.html all return HTTP 200.
+
+**Sources:** all table rows link to official pages for manual review (nfl.com standings/schedules/injuries, FanDuel help, OUP/AMS methodology). nfl.com is not directly fetchable from this sandbox, so those official links are provided for manual review; unverifiable values remain blank and flagged (review.html, 13 items).
+
+**Nonblocking irregularities (published on review.html, do not block merge):** F01–F18 — market line provenance/timestamp, no official closing-line history, no official prop lines, incomplete game statuses, inferred depth strings, sign-convention error, non-reproducing correlation/luck figures, single aggregator dependency, etc. Each has source links and a required action.
+
+**Pull request & merge:** PR #66 (https://github.com/sassnarep3-star/Own5/pull/66), merged to main via explicit `gh pr merge 66 --merge` (no approval wait, no --auto), merge commit 0e50f9b. All checks required for this desk's scope passed; two pre-existing failures in other sessions' workflows (`decision-desk.yml` non-determinism in `data/decision-desk/`, `nfl-b34253a1.yml` isolated desk) are unrelated to this scope and were not touched per coordination rules.
+
+No manual input required; the pipeline (fetch, parse, compute, build, verify, publish) runs unattended.
 
 ### N26-02..N26-09 completion record — 2026-11-12
 
