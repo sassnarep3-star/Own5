@@ -1323,3 +1323,20 @@ This session's own scoped check — `.github/workflows/nfl-desk-26d4cafb.yml`
 ("Build data, render site, verify, test") — **passes**, and its build is deterministic: the workflow
 fails if a clean rebuild of `nfl-desk-26d4cafb/**` differs from what is committed.
 
+
+## Session dc1b9e9f — NFL stale integration follow-up handoff (2026-11-13 UTC)
+
+Arena fixes the working branch to `arena/dc1b9e9f-own5`; all work stays on that branch. This
+session is taking over **only** the final integration follow-ups represented by the two stale,
+open NFL PRs below. Their latest commits were 2026-11-12T16:55:24Z (#59, session 38a1fc27) and
+2026-11-12T17:42:12Z (#62, session b34253a1); both exceed the board's 60-minute no-commit handoff
+window. No other session branch will be checked out or pushed, and no unlisted project namespace
+will be edited.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| DC1 | Take over and integrate the exact existing patches from stale NFL PRs #59 and #62 on the current branch; repair/verify checks and deployment | in progress | dc1b9e9f | `.github/workflows/decision-desk.yml`, `data/decision-desk/injuries_wk10_players.csv`, `data/decision-desk/team_deficiency_wk10.csv`, `nfl-decision-desk-38a1fc27/{index.html,verification.html}`, `research/38a1fc27/{AUDIT.md,VERIFICATION.md}`, `nfl-b34253a1/{audit.html,audit_repo.py,data/repo_audit.csv,data/repo_audit_summary.json,index.html,tests/test_project.py}`, `research/nfl-b34253a1/REPO_AUDIT.md`, `COORDINATION.md` (append-only) | Handoff is limited to the published patches; do not re-run live NFL ingestion or change another desk's research claims. PR #59's checks passed; PR #62's `decision-desk` clean-rebuild check failed and must be diagnosed before merge. |
+
+Claim committed and pushed before implementation. At claim time there are no changes to the existing
+NFL datasets or pages. Completion, check/deployment outcomes, and any residual limitation will be
+recorded below.
