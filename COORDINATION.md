@@ -1390,13 +1390,33 @@ recorded below.
   current B34 and other Week 10 desks are published below separate paths. A future root integration
   should add a clearly dated link to the current NFL desk and disclose that it is a static snapshot.
   This session did not hand-edit the generated landing page or its generator.
-- Local checks after the final B34 data, script, site, and documentation edits: B34 unit tests 9/9;
-  root unit tests 91/91; B34 structural verifier passes (13 pages, 627 data rows, 92,634 source
-  URLs, 0 broken local links, 91,320/91,320 audit line hashes); Decision Desk verifier passes
-  (14 pages, 26 tables, 494 rows, all rows sourced, 0 broken links), and its second full rebuild
-  produced a byte-identical generated diff. B34 browser smoke tests pass on 13 desktop/mobile routes;
-  root browser smoke tests pass on eight routes. Integration PR checks, merge, and live Pages
-  deployment verification remain.
+- Diagnosed PR #62's clean-rebuild failure from its remote run (43272271642, verify job
+  131371610293): rebuild and structural verification passed; the final `git diff --exit-code`
+  step failed. Reproduced it from a clean archive of exact head `345aae4` without live ingestion.
+  The three changed paths were `data/decision-desk/audit_summary.json` (committed audit 255 pages /
+  4,317 links vs rebuilt 287 / 5,017) and `injuries_wk10_players.csv` plus
+  `team_deficiency_wk10.csv` (generated `retrieved_utc` 2026-11-12T16:47:34Z vs the pinned local
+  input's 16:52:39Z). The structural verifier passed. The failing workflow revision also checked
+  the legacy `nfl-decision-desk/` path rather than the actual generated
+  `nfl-decision-desk-38a1fc27/`; PR #59's workflow patch corrects that path and rebuilds the
+  artifacts in the fetch job. No archived sportsbook quote was changed.
+- Merged the then-current `origin/main` tip `35a088b` into this branch as `e059744`, preserving both
+  append-only coordination sections. This incorporates already-merged PRs #66 and #67 before
+  integration. `npm run desk:check` synchronized the root desk's generated injury timestamps to the
+  same existing pinned 2026-11-12T16:52:39Z snapshot; it did not fetch or ingest external data.
+  Its ignored `dist/` output was removed before the repository-wide audits.
+- Post-merge local checks: NFL hub verifier **1,022 checks PASS**; root `npm test` **91 tests PASS**;
+  `npm run desk:check` **20 checks PASS**, 17 rendered pages and 562 sourced table rows. B34 unit
+  tests **9/9 PASS** and its verifier passes with 13 pages, 18 data files, 627 rows, 99,623 source
+  URLs, 251 local links, 862 external links, and 379 in-scope files / 98,309 line hashes checked.
+  Decision Desk verifier passes with 14 pages, 26 tables, 494 sourced rows, 25 CSV tables checked,
+  and zero problems. Its repository audit covers 311 pages / 5,415 links with zero broken links;
+  provenance covers 50 files / 31,955 rows with zero files needing review.
+- Repeated the full B34 + Decision Desk rebuild after refreshing the cross-desk audit once; the next
+  paired rebuild's generated diff was byte-identical. B34 browser checks pass on 13 desktop/mobile
+  routes; root browser checks pass on eight routes. `dist/` is absent. No live NFL ingestion ran.
+  PRs #59 and #62 remain open and unmerged; this integration PR, its remote checks, merge, and live
+  Pages deployment verification remain pending.
 ---
 
 ## Session 28431d9c — NFL cross-desk reconciliation & currency audit (2026-11-13 UTC)
