@@ -1,6 +1,6 @@
 # Repository audit scope and interpretation
 
-The generated [`repo_audit_summary.json`](../../nfl-b34253a1/data/repo_audit_summary.json) and [`repo_audit.csv`](../../nfl-b34253a1/data/repo_audit.csv) are a dated physical-line inventory of selected prior NFL/data/research/shared-site artifacts in the repository. The selected scope includes existing NFL desks such as `nfl-decision-desk/` and `nfl-decision-desk-38a1fc27/`, plus NFL/research/data/shared-context paths. It excludes unrelated NBA and rental scopes, this session's own `nfl-b34253a1/`, `research/nfl-b34253a1/`, and workflow so the inventory does not certify itself.
+The generated [`repo_audit_summary.json`](../../nfl-b34253a1/data/repo_audit_summary.json) and [`repo_audit.csv`](../../nfl-b34253a1/data/repo_audit.csv) are a dated physical-line inventory of selected prior NFL/data/research/shared-site artifacts in the repository. The selected scope includes existing NFL desks such as `nfl-decision-desk/`, `nfl-decision-desk-38a1fc27/`, and `nfl-desk-26d4cafb/`, plus NFL/research/data/shared-context paths. It excludes unrelated NBA and rental scopes, this session's own `nfl-b34253a1/`, `research/nfl-b34253a1/`, and workflow so the inventory does not certify itself.
 
 ## Per-line fields
 

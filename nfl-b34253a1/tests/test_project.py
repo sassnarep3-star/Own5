@@ -80,6 +80,7 @@ class NFLWeek10SnapshotTests(unittest.TestCase):
     def test_audit_scope_includes_prior_nfl_desk_and_excludes_nba(self):
         paths = {path.as_posix() for path in audit_repo.tracked_files()}
         self.assertIn("nfl-decision-desk-38a1fc27/index.html", paths)
+        self.assertIn("nfl-desk-26d4cafb/index.html", paths)
         self.assertNotIn("tools/nba_line_desk/build.py", paths)
         self.assertNotIn("tests/test_nba_line_desk.py", paths)
         self.assertFalse(any(path.startswith(("sf-rent", "rental-sf", "rental-increase")) for path in paths))
