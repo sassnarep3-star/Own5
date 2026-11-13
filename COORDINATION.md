@@ -1323,3 +1323,42 @@ This session's own scoped check — `.github/workflows/nfl-desk-26d4cafb.yml`
 ("Build data, render site, verify, test") — **passes**, and its build is deterministic: the workflow
 fails if a clean rebuild of `nfl-desk-26d4cafb/**` differs from what is committed.
 
+
+## Session 864d5668 — NFL Own-Line Lab, Suggestions & Decision Desk (2026-11-13 UTC)
+
+Arena fixes this session's branch to `arena/864d5668-own5` (branched from `ec3cb83`); no alternative
+branches will be created, renamed, or pushed. To guarantee zero file collisions with CI-locked scopes
+(`index.html`, `pages/`, `data/research.json`, `site/`, `own5-desk/`, `nba-*`, `sf-*`,
+`nfl-strategy-lab/`, `line-lab/`, `nfl_model/`, `tools/`) and with the namespaces already claimed by
+other sessions (`nfl-decision-desk/**`, `nfl-decision-desk-38a1fc27/**`, `nfl-decision-desk-e413f933/**`,
+`nfl-desk-26d4cafb/**`, `nfl-b34253a1/**`, `research/nfl-26d4cafb/**`, `research/nfl-b34253a1/**`,
+`research/38a1fc27/**`, `research/arena-f1d30421/**`, `data/decision-desk/**`), this session claims
+**strictly session-isolated additive namespaces**:
+
+- `nfl-desk-864d5668/**` (GitHub Pages dashboard: landing page + category subpages, canonical data
+  JSON/CSVs, deterministic build + compute engine, unit tests, verification harness)
+- `research/nfl-864d5668/**` (executive summary, repo audit, requirements matrix, suggestions
+  register, questions/known-vs-missing/discovery register, injury & depth methodology, strategy /
+  validation-gate / correlation / luck-removal docs, sources registry, flagged register)
+- `.github/workflows/nfl-desk-864d5668.yml` (scoped deterministic verification workflow)
+- Append-only entries in `COORDINATION.md` and `README.md` at integration
+
+Claim timestamp: **2026-11-13T00:00Z**, committed and pushed before implementation.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| N86-01 | Read task board, inspect CI locks & sibling claims, push isolated claim | in progress | 864d5668 | `COORDINATION.md` | Collision-free namespace claimed above; all other scopes read-only. |
+| N86-02 | Line-by-line repo audit vs official 2026-11-13 sources | unclaimed | 864d5668 | `research/nfl-864d5668/REPO_AUDIT.md`, `nfl-desk-864d5668/data/**` | Every audited row linked to an official source; irregularities flagged. |
+| N86-03 | Requirements matrix + Suggestions section (reviewable paths, not implemented) | unclaimed | 864d5668 | `research/nfl-864d5668/REQUIREMENTS.md`, `research/nfl-864d5668/SUGGESTIONS.md` | Improvement proposals with decision-ready options. |
+| N86-04 | Questions / information we have vs do not have / answers + discovery plan | unclaimed | 864d5668 | `research/nfl-864d5668/QUESTIONS_AND_GAPS.md` | Decision prerequisites; suggestions to discover missing info. |
+| N86-05 | Official 2026-11-13 data fetch & verification (standings, schedules/results, injury reports, club depth charts) | unclaimed | 864d5668 | `nfl-desk-864d5668/data/**`, `research/nfl-864d5668/SOURCES.md` | nfl.com + operations.nfl.com + official club sites only. |
+| N86-06 | Injury & 1st/2nd/3rd/4th-string depth deficiency tracker (offense + defense) | unclaimed | 864d5668 | `nfl-desk-864d5668/engine.py`, `research/nfl-864d5668/INJURY_DEPTH_MODEL.md` | Official club depth charts + NFL injury reports. |
+| N86-07 | Own-line origination, signal strategies (singles/parlays/prop combos), correlations, luck removal, validation gates, leaderboard | unclaimed | 864d5668 | `nfl-desk-864d5668/engine.py`, `research/nfl-864d5668/METHODOLOGY.md` | Fail-closed gates; no unvalidated strategy certified. |
+| N86-08 | Executive summary + Flagged-for-Review register | unclaimed | 864d5668 | `research/nfl-864d5668/EXECUTIVE_SUMMARY.md`, `research/nfl-864d5668/FLAGGED.md` | Nonblocking; published with source links. |
+| N86-09 | GitHub Pages dashboard (landing + category subpages) | unclaimed | 864d5668 | `nfl-desk-864d5668/*.html`, `nfl-desk-864d5668/assets/**`, `nfl-desk-864d5668/build.py` | Clean, simple dashboard UI; tables with per-row source links. |
+| N86-10 | Verification harness, unit tests, CI workflow | unclaimed | 864d5668 | `nfl-desk-864d5668/verify.py`, `nfl-desk-864d5668/tests/**`, `.github/workflows/nfl-desk-864d5668.yml` | 100% of table rows carry official source link or explicit blank+flag. |
+| N86-11 | Final integration, rebase on `origin/main`, PR to `main`, autonomous merge, live Pages check | unclaimed | 864d5668 | `COORDINATION.md`, `README.md` | Rebase preserving all sessions; green checks; explicit `gh pr merge <num> --merge`. |
+
+Cross-session requests at claim time: none. All other sessions' scopes treated as read-only; no
+site-wide change will be implemented from this session — every improvement is a proposal on the
+Suggestions page awaiting a chosen path.
