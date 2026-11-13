@@ -1252,7 +1252,23 @@ Claim timestamp: **2026-11-12T16:28Z**, committed and pushed before implementati
 | N26-09 | Line-by-line verification harness, unit tests, browser smoke tests & CI workflow | done | 26d4cafb | `nfl-desk-26d4cafb/verify.py`, `nfl-desk-26d4cafb/tests/**`, `.github/workflows/nfl-desk-26d4cafb.yml` | Asserts 100% of table rows carry official source links or explicit blank+flag; 0 broken links; deterministic rebuild; existing CI passes. |
 | N26-10 | Final integration, rebase on `origin/main`, PR to `main`, autonomous merge, live GitHub Pages check & coordination log | in progress | 26d4cafb | `COORDINATION.md`, `README.md` | Rebase preserving all concurrent sessions, green PR checks, explicit `gh pr merge <num> --merge`, confirm live Pages URLs. |
 
-Cross-session requests at claim time: none (all prior and sibling scopes treated as read-only).
+## Session b2c99329 board (NFL decision-desk completion, own5-desk/ scope)
+
+Session ID: `b2c99329` (branch `arena/b2c99329-own5`, based on `main` at ec3cb83).
+Scope (additive, non-overlapping): `site/build_site.py`, `scripts/build_data.py`, generated `data/own5_desk/*.json`, regenerated `own5-desk/**`, and this `COORDINATION.md` block only.
+Read-only (not touched): `nfl-desk-26d4cafb/**`, `research/nfl-26d4cafb/**`, `.github/workflows/nfl-desk-26d4cafb.yml`, root CI-locked pages, `data/decision-desk/**`, `nfl-decision-desk/**`.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| B1 | Repo review & verification of decision-desk data vs official sources; flag irregularities | in progress | b2c99329 | `data/decision-desk/*.csv` (read-only), `COORDINATION.md` | Cross-check row counts, reconciliation, official links |
+| B2 | Dedicated Suggestions review section on the live desk (review + choose path before implementing) | unclaimed | b2c99329 | `site/build_site.py`, `scripts/build_data.py`, `data/own5_desk/suggestions.json`, `own5-desk/suggestions.html` | 16 suggestions S01-S16 from data/decision-desk/suggestions.csv |
+| B3 | Pre-decision Questions / information / answers list | unclaimed | b2c99329 | `site/build_site.py`, `scripts/build_data.py`, `data/own5_desk/questions.json`, `own5-desk/questions.html` | 18 questions Q01-Q18 from data/decision-desk/questions.csv |
+| B4 | Injuries & depth desk: defense & offense 1st-4th-string deficiencies, starters vs backups | unclaimed | b2c99329 | `site/build_site.py`, `scripts/build_data.py`, `data/own5_desk/injuries.json`, `data/own5_desk/deficiencies.json`, `own5-desk/injuries.html` | 276 official injury rows + 32 team deficiency rows |
+| B5 | Executive summary page outlining important details | unclaimed | b2c99329 | `site/build_site.py`, `data/own5_desk/summary.json`, `own5-desk/summary.html` | Verified vs computed vs missing, decisions pending |
+| B6 | Build, verify (check_site.py every row official-sourced or blank+flagged), publish live desk | unclaimed | b2c99329 | `own5-desk/**`, `dist/` | `npm run desk:build` + `scripts/publish_desk.py`; CI smoke-tests /own5-desk/ |
+| B7 | PR to main, autonomous merge, confirm GitHub Pages deploys, record result in COORDINATION.md | unclaimed | b2c99329 | `COORDINATION.md` | Explicit `gh pr merge <num> --merge`, verify live Pages URLs |
+
+Cross-session requests: none (all sibling scopes treated as read-only; this block is append-only and does not edit any other session's section).
 
 ### N26-02..N26-09 completion record — 2026-11-12
 
@@ -1381,3 +1397,60 @@ recorded below.
   produced a byte-identical generated diff. B34 browser smoke tests pass on 13 desktop/mobile routes;
   root browser smoke tests pass on eight routes. Integration PR checks, merge, and live Pages
   deployment verification remain.
+---
+
+## Session 28431d9c — NFL cross-desk reconciliation & currency audit (2026-11-13 UTC)
+
+Arena fixes this session's branch to `arena/28431d9c-own5` (base `ec3cb83` = `main`); no other branch will be created or pushed. Claim timestamp: **2026-11-13 UTC**, pushed before any implementation.
+
+Rationale: six NFL desks already exist on `main` (`nfl-strategy-lab/`, `nfl-decision-desk/` (d0343637), `nfl-decision-desk-38a1fc27/`, `nfl-b34253a1/`, `nfl-desk-26d4cafb/`, `nfl-decision-desk-e413f933/`), each built from its own snapshot. No page compares them with each other or with the current official nfl.com state. This session claims that gap only.
+
+Claimed additive namespace (no overlap with any other session):
+- `nfl-hub-28431d9c/**` (static GitHub Pages hub: desk map, official-standings and Week 10 reconciliation, injury spot-check, own-line cross-model comparison, Flagged for Review, sources; build + verify scripts)
+- `research/nfl-28431d9c/**` (method, executive summary, flagged register)
+- `.github/workflows/nfl-hub-28431d9c.yml` (runs this session's verify script only)
+- Append-only blocks in `COORDINATION.md`
+
+Read-only for this session: every other NFL desk directory, root `index.html`/`pages/`/`data/research.json`, `docs/`, `own5-desk/`, `nba-*`, `sf-*`, `rental-*`, `line-lab/`, `scripts/`, `tools/`, existing workflows, existing CSV/JSON.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| R1 | Claim + baseline inventory of all NFL desks | in progress | 28431d9c | COORDINATION.md | Claim pushed first. |
+| R2 | Official nfl.com snapshot (32-team standings, Week 10 slate, Week 10 injury report sample) transcribed with URLs and fetch date | unclaimed → in progress | 28431d9c | nfl-hub-28431d9c/data/official_*.csv | Values transcribed from fetch_page results; any unreadable value left blank. |
+| R3 | Cross-desk reconciliation: standings, slate, injury statuses, own-line favorites | in progress | 28431d9c | nfl-hub-28431d9c/data/reconcile_*.csv | Each row carries an official nfl.com link or an explicit blank + flag. |
+| R4 | Hub site (overview, desk map, reconciliation pages, Flagged for Review, sources) | in progress | 28431d9c | nfl-hub-28431d9c/*.html, build.py | Static, deterministic build. |
+| R5 | Verification harness + executive summary + PR/merge/Pages check | in progress | 28431d9c | nfl-hub-28431d9c/verify.py, research/nfl-28431d9c/**, COORDINATION.md | Merge only after verify PASS and live Pages check. |
+
+### Session 28431d9c — status log (2026-11-13 UTC)
+
+Branch `arena/28431d9c-own5`. Claimed scope R1–R5 (above). Scope was narrowed from the earlier plan (B34-04..09 and N26-10 are other sessions' claims and were not touched).
+
+| ID | Status | What was done | Evidence in repo |
+|----|--------|---------------|------------------|
+| R1 | done | Inventory of the six NFL desks: e413f933, b34253a1, 26d4cafb, 38a1fc27, d0343637 (`nfl-decision-desk/`), and nfl-strategy-lab. Each desk's data basis and machine-readable files are listed. | `nfl-hub-28431d9c/data/desk_map.csv` |
+| R2 | done | Official values transcribed from fetch_page results of nfl.com: standings (32 teams, re-fetched post-Thursday), Week 10 schedule (14 games, 4 byes), injury report (44 rows for WAS, NYG, NE, DET). Each row carries its nfl.com URL. Injury chunk 7 returned no data; not used. | `nfl-hub-28431d9c/data/official_*.csv` |
+| R3 | done | Reconciliation of standings, slate, byes, injuries, own-line favorites, and QB headlines. Unconfirmed values are blank and flagged. | `nfl-hub-28431d9c/data/reconcile_*.csv`, `official_qb_news.csv`, `flagged.csv` |
+| R4 | done | Static hub built deterministically: index, desk map, standings, slate, injuries and QB news, own-line comparison, Flagged for Review, sources. | `nfl-hub-28431d9c/*.html`, `build.py` |
+| R5 | in progress | `verify.py` (1,022 checks) passes. Executive summary and generated Flagged register written. PR to `main` to follow. | `nfl-hub-28431d9c/verify.py`, `research/nfl-28431d9c/SUMMARY.md`, `research/nfl-28431d9c/FLAGGED.md`, `.github/workflows/nfl-hub-28431d9c.yml` |
+
+**Findings that changed during verification (recorded so no draft claim survives):**
+- The first draft's "reversing the TNF result reproduces each desk" was not computed. It is now computed in code and re-derived in `verify.py`: it holds for all three desks and the 38a1fc27 root snapshot.
+- The draft's "quotes include a finished game" claim was overstated. The quotes are date-only, so only "no time recorded; cannot be shown pre-kickoff" can be said.
+- Four draft QB headlines (Willis IR, Watson starting, Beck starting, Jackson 6–10 weeks / Walker questionable) were not reproduced on the re-fetched injury page's news list and are excluded (H-13). Kenneth Walker is absent from the official Seattle table.
+- The official standings page now shows NYG 5-3-1 and WAS 3-5-1 (post-Thursday). An earlier pre-game read showed 5-2-1 and 2-5-1. The post-game values are the ones used.
+
+**Cross-scope requests (logged only; not edited by 28431d9c):**
+- Integration owner: add a link from the root site index to `nfl-hub-28431d9c/index.html` (root index not changed here).
+- 38a1fc27 owner: `data/decision-desk/official/official_injuries_wk10.csv` is a pre-kickoff snapshot (2026-11-12T16:52Z) that differs from the current official page on 15 of 44 sampled rows (H-14).
+- b34253a1 owner: add retrieval times to market quotes (H-02); fix Ben Brown's position LG→C (H-03); update the Thursday status from SCHEDULED (H-01).
+- 26d4cafb owner: correct availability labels ("Confirmed Out / IR" on non-IR rows; Stevenson "DNP + Backup Out") (H-06–H-08); add a machine-readable bye list (H-12).
+- e413f933 owner: fill game status for rows the official page designates (H-09).
+
+**Not in this session's claimed scope (not done here):** own-line origination, signal strategy research, correlation values and the leaderboard. Those outputs stay in the desks, unverified by this hub (H-16).
+
+**PR:** https://github.com/sassnarep3-star/Own5/pull/67 (`arena/28431d9c-own5` → `main`, opened 2026-11-13 UTC).
+**Checks on the PR:** `NFL cross-desk hub (28431d9c)` verify: pass (rebuild and verifier). `Verify NBA validation desk`, `desk-verify`, SF rent and research dashboard checks: pass.
+**Failing checks outside this session's scope:** (a) `NFL Decision Desk — fetch & verify` (`.github/workflows/decision-desk.yml`) runs live fetches on every PR to `main` and fails when regenerated `nfl-decision-desk/` and `data/decision-desk/` differ from the committed snapshot (source drift; this PR changes neither folder). (b) `Verify NFL B34 Week 10 research desk` (`nfl-b34253a1.yml`) already fails on `main` at `0e50f9b`. Both are logged as cross-scope requests to their owners and were not edited here.
+**Merge:** `gh pr merge 67 --merge` after the checks above. The merge result and the Pages deploy are confirmed with `gh` and the live URL after the merge.
+
+**Merge result (session 28431d9c):** PR #67 (`arena/28431d9c-own5` → `main`) was merged with a merge commit at 2026-11-13 21:41 UTC (`gh pr merge 67 --merge`), merge SHA `4fc2000`. The GitHub Pages build for `4fc2000` finished with status `built` (https://sassnarep3-star.github.io/Own5/). The live hub at `/nfl-hub-28431d9c/` serves the dashboard and the Flagged for Review page with the corrected text. R5 is now done. The two failing checks on PR #67 (`decision-desk.yml`, `nfl-b34253a1.yml`) were not caused by this PR and remain open for their owners as cross-scope requests above.
