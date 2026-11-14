@@ -1,0 +1,78 @@
+{
+  "accuracy": {
+    "brier": "0.2302",
+    "log_loss": "0.6523",
+    "margin_corr_n": 73,
+    "margin_corr_p": "0.0060",
+    "margin_corr_r": "0.3187",
+    "n_predictions": 73,
+    "naive_mae_league_total": "11.0235",
+    "naive_mae_tie": "10.8082",
+    "side_bias": "0.9863",
+    "side_mae": "10.0242",
+    "side_rmse": "12.8736",
+    "sigma_margin": "12.9246",
+    "su_decided": 72,
+    "su_hit_rate": "0.6806",
+    "su_hits": 49,
+    "total_bias": "0.5170",
+    "total_mae": "11.0038",
+    "total_rmse": "13.6683",
+    "weeks_covered": "5-10"
+  },
+  "backtests": {
+    "certified": 0,
+    "families": 9,
+    "graded_periods_official": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "mirror_universe_rows": 6967,
+    "official_universe_rows": 137
+  },
+  "correlations_official": 9,
+  "depth": {
+    "clubs_published": 31,
+    "out_players_checked": 14,
+    "out_players_irregular": 0,
+    "slots": 705,
+    "slots_using_a_backup": 7
+  },
+  "flags": 14,
+  "mirror_agreement": {
+    "agree": 136,
+    "disagree": 0,
+    "missing": 1
+  },
+  "official_games": 137,
+  "origination": {
+    "games": 26,
+    "hfa_pts": "0.213",
+    "markets": 78,
+    "sigma": "12.925"
+  },
+  "parse_problems": [],
+  "price_store": {
+    "by_snapshot_type": {
+      "MARKET_CLOSE": 78,
+      "MARKET_OPEN": 78,
+      "MARKET_REFERENCE": 78,
+      "MODEL_CLOSE": 78,
+      "MODEL_ORIGIN": 78
+    },
+    "populated": 156,
+    "rows": 390
+  },
+  "repo_audit": {
+    "checks": 150,
+    "irregular": 0,
+    "match": 150,
+    "not_checked": 0
+  },
+  "sigma_used": "11.106",
+  "standings_mismatches": 0
+}

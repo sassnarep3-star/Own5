@@ -1,0 +1,6 @@
+snapshot_type,meaning,rows_total,populated_rows,empty_rows,source_tier,blocking_flag
+MODEL_ORIGIN,the price this desk originates when it first prices the market,78,78,0,DERIVED,
+MODEL_CLOSE,the desk's last price before kickoff,78,0,78,,F-03
+MARKET_OPEN,the operator's opening price,78,0,78,,F-01
+MARKET_CLOSE,the operator's closing price,78,0,78,,F-01
+MARKET_REFERENCE,"an aggregator line of unknown timestamp, kept for context only",78,78,0,AGGREGATOR,F-01
