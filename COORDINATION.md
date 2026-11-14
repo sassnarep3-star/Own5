@@ -1777,3 +1777,59 @@ Cross-session requests: root-nav request above. No files in other claimed scopes
 - **Remaining unrelated check:** the pre-existing `Verify NFL B34 Week 10 research desk` workflow again failed on main at its deterministic generated-output step (run [43644707743](https://github.com/sassnarep3-star/Own5/actions/runs/43644707743)); this is outside the session's claimed scope and was already logged by the `d38e90c5` session. The overall GitHub Pages deployment and this session's scoped workflow both passed. No unrelated files were changed.
 
 **Follow-up coordination PR log (2026-11-14 UTC):** PR #77 adds the final PR #73 merge/Pages record above, after PR #73 was already merged. Rebase onto `origin/main` brought in session `39086ec8`'s new coordination block and conflicted in this append-only file; resolution preserved the complete `39086ec8` block and the complete 853c0074 publication record. No other session files were changed. The unrelated B34 deterministic-output check failed again on main (run 43644707743) and on PR #77 (run 43644872853); the NFL Decision Desk clean-rebuild check also failed on PR #77 (run 43644872866). These failures are outside this session's claimed scope, with their owner requests recorded above.
+## Session 3fb93d11 — NFL Price-Snapshot & Verified-Results Desk (2026-11-14 UTC)
+
+Arena fixes this session's branch to `arena/3fb93d11-own5` (base `530e94e` = `main`); no other
+branch will be created, renamed or pushed. Claim timestamp: **2026-11-14T00:00Z UTC**, committed
+and pushed before any implementation.
+
+**Rationale (gap this session fills).** The user's 2026-11-14 brief adds eight concrete engineering
+requirements. Verified against `main` at `530e94e`, none of them exists in any prior scope:
+
+| # | Requirement | State on main before this session |
+|---|---|---|
+| 1 | Price-snapshot store recording opening + closing numbers for every originated market | **absent** — no store, no schema, no opening/closing column anywhere (38a1fc27 flags F01/F02) |
+| 2 | Verified results feed so backtests/ROI can be computed | **absent** — no official-results feed table; scores live only inside per-desk snapshots |
+| 3 | Originate the side first, then the total, then the moneyline | **absent** — existing desks emit side+total (and ML where present) with no dependency order recorded |
+| 4 | Publish model fair line, market line and the difference as separate columns | **partial** — 38a1fc27 `cross_scope_lines.csv` has model vs market but no explicit per-column difference triplet for ML |
+| 5 | Separate 'signal' from 'staking' in the leaderboard | **absent** — every existing leaderboard has one composite score |
+| 6 | Track the *depth* of the replacement, not just the fact | **partial** — `depth_string`/`replacement_drop` exist (38a1fc27, 864d5668) but the depth of the *replacement player* (and compounding when the replacement is also injured) is not tracked |
+| 7 | Correlations only from officially sourced numbers, with n published | **absent** — all published correlations are computed from nflverse (AGGREGATOR) inputs |
+| 8 | Define a demotion gate sending a live strategy back to paper | **absent** — no prior desk has any demotion rule |
+
+**Claimed namespaces (strictly additive, zero overlap with any other session):**
+- `nfl-desk-3fb93d11/**` (GitHub Pages dashboard: landing page + category subpages, data CSV/JSON,
+  deterministic engine, unit tests, verification harness, browser check)
+- `research/nfl-3fb93d11/**` (executive summary, methodology, requirements matrix, suggestions
+  register, questions register, flagged register)
+- `.github/workflows/nfl-desk-3fb93d11.yml` (scoped deterministic verification only)
+- Append-only blocks in `COORDINATION.md` and one additive table row in `README.md`
+
+**Read-only for this session (never edited):** root `index.html`, `pages/**`, `data/research.json`,
+`scripts/**`, `tools/**`, `tests/**`, `assets/**`, `docs/**`, `own5-desk/**`, `site/**`,
+`nfl_model/**`, `line-lab/**`, `nfl-strategy-lab/**`, `nfl-decision-desk/**`,
+`nfl-decision-desk-38a1fc27/**`, `nfl-decision-desk-e413f933/**`, `nfl-desk-26d4cafb/**`,
+`nfl-b34253a1/**`, `nfl-desk-864d5668/**`, `nfl-hub-28431d9c/**`, `nba-*`, `sf-*`, `rental-*`,
+`data/decision-desk/**`, all existing workflows, all existing CSV/JSON outside the claimed scope.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| P1 | Coordination claim + CI-lock inspection | done | 3fb93d11 | COORDINATION.md | Claim pushed before implementation. |
+| P2 | Official-source ingestion for 2026-11-14 (standings, W1–W10 results, W11 slate, W11 injury report) | unclaimed → in progress | 3fb93d11 | `nfl-desk-3fb93d11/data/raw_official/**`, `data/sources.csv` | Every page recorded with URL + retrieval UTC + SHA-256 of the text extract. |
+| P3 | Price-snapshot store (schema + writer + ledger) | unclaimed | 3fb93d11 | `nfl-desk-3fb93d11/price_store.py`, `data/price_snapshots.csv` | Rows for every originated market; operator open/close blank+flagged where no official source exists. |
+| P4 | Verified results feed + dual-source reconciliation | unclaimed | 3fb93d11 | `data/results_feed.csv`, `data/results_reconciliation.csv` | Official nfl.com finals vs in-repo pinned mirror; disagreement → flag. |
+| P5 | Origination pipeline: side → total → moneyline, with model/market/difference columns | unclaimed | 3fb93d11 | `originate.py`, `data/originated_markets.csv` | Dependency order recorded per row. |
+| P6 | Signal-vs-staking leaderboard + demotion gate | unclaimed | 3fb93d11 | `leaderboard.py`, `data/leaderboard.csv`, `data/demotion_gate.csv` | Two independent scores; a strategy cannot be certified on staking alone. |
+| P7 | Replacement-depth tracker (offence + defence) | unclaimed | 3fb93d11 | `depth.py`, `data/replacement_depth.csv` | Depth of the *replacement*, compounding, per unit. |
+| P8 | Official-only correlations with n published | unclaimed | 3fb93d11 | `correlations.py`, `data/correlations_official.csv`, `data/correlations_withheld.csv` | Only official inputs; every prior aggregator-derived value moved to the withheld table. |
+| P9 | Suggestions register (reviewable paths, nothing implemented) | unclaimed | 3fb93d11 | `data/suggestions.csv`, `suggestions.html` | Options A/B/C + recommended path + the test that would change the call. |
+| P10 | Questions / information-have-vs-missing register | unclaimed | 3fb93d11 | `data/questions.csv`, `questions.html` | Blocking vs non-blocking; cheapest discovery route per item. |
+| P11 | Line-by-line repo review vs official sources | unclaimed | 3fb93d11 | `audit_repo.py`, `data/repo_audit.csv`, `repo-audit.html` | Irregularities flagged, never silently "corrected". |
+| P12 | GitHub Pages dashboard (landing + category subpages + Flagged for Review) | unclaimed | 3fb93d11 | `build_site.py`, `nfl-desk-3fb93d11/*.html`, `assets/style.css` | Every body row carries an official source link or an explicit BLANK flag. |
+| P13 | Verification harness, unit tests, scoped CI workflow | unclaimed | 3fb93d11 | `verify.py`, `tests/test_desk.py`, `.github/workflows/nfl-desk-3fb93d11.yml` | Deterministic rebuild + row/link/provenance audit. |
+| P14 | Executive summary | unclaimed | 3fb93d11 | `research/nfl-3fb93d11/EXECUTIVE_SUMMARY.md`, `executive-summary.html` | Restates only computed or officially sourced values. |
+| P15 | Rebase on origin/main, PR to main, autonomous merge, live Pages check | unclaimed | 3fb93d11 | COORDINATION.md, README.md | Merge only after verify PASS and a live URL check. |
+
+### Session 3fb93d11 — status log
+
+(Updated as tasks complete; see the bottom of this block for the final record.)
