@@ -1535,3 +1535,63 @@ Branch `arena/28431d9c-own5`. Claimed scope R1–R5 (above). Scope was narrowed 
 **Merge:** `gh pr merge 67 --merge` after the checks above. The merge result and the Pages deploy are confirmed with `gh` and the live URL after the merge.
 
 **Merge result (session 28431d9c):** PR #67 (`arena/28431d9c-own5` → `main`) was merged with a merge commit at 2026-11-13 21:41 UTC (`gh pr merge 67 --merge`), merge SHA `4fc2000`. The GitHub Pages build for `4fc2000` finished with status `built` (https://sassnarep3-star.github.io/Own5/). The live hub at `/nfl-hub-28431d9c/` serves the dashboard and the Flagged for Review page with the corrected text. R5 is now done. The two failing checks on PR #67 (`decision-desk.yml`, `nfl-b34253a1.yml`) were not caused by this PR and remain open for their owners as cross-scope requests above.
+
+---
+
+## Session ce1f16ff — NFL Market Data & Promotion Control (2026-11-14 UTC)
+
+Arena fixes this session's branch to `arena/ce1f16ff-own5` (base `530e94e` = `main`, the merge of PR #72).
+No other branch will be created, renamed or pushed. Claim timestamp **2026-11-14T00:00Z**, committed and
+pushed **before** any implementation work.
+
+**Gap this session fills.** Every NFL desk on `main` is blocked on the same two things, and says so:
+no price store (`nfl-desk-864d5668` flag F-01, suggestion SUG-01 option B "have the user upload archived
+lines") and no results feed with a machine-checkable provenance chain, so backtests, CLV and ROI are not
+computable. The user's brief for this session names eight requirements that map exactly onto those gaps.
+The user also requires **zero manual input**, so a solution that asks the user to upload anything is not
+acceptable here; this session builds the capture machinery and reports honestly what it can and cannot
+reach.
+
+**Claimed additive namespaces (no overlap with any other session):**
+
+- `nfl-desk-ce1f16ff/**` — price-snapshot store (opening + closing per originated market), verified results
+  feed, three-stage origination engine (side → total → moneyline), fair-vs-market-vs-edge table, depth-of-
+  replacement tracker, officially-sourced correlations with published `n`, signal/staking-split leaderboard,
+  demotion gate, GitHub Pages dashboard, deterministic build, verify harness, unit tests.
+- `research/nfl-ce1f16ff/**` — executive summary, methodology, suggestions register, questions/missing-
+  information register, sources register, flagged-for-review register.
+- `.github/workflows/nfl-desk-ce1f16ff.yml` — this session's scoped verify job plus a scheduled snapshot
+  capture job (the mechanism that accumulates opening and closing prices with no manual input).
+- Append-only blocks in `COORDINATION.md` and `README.md` at integration.
+
+**Read-only for this session (never edited, only cited):** `index.html`, `pages/`, `data/research.json`,
+`site/`, `scripts/`, `tools/`, `docs/`, `own5-desk/`, `data/**` (all other sessions' CSV/JSON),
+`nfl-desk-864d5668/**`, `nfl-decision-desk/**`, `nfl-decision-desk-38a1fc27/**`, `nfl-decision-desk-e413f933/**`,
+`nfl-desk-26d4cafb/**`, `nfl-b34253a1/**`, `nfl-strategy-lab/**`, `nfl-hub-28431d9c/**`, `line-lab/`,
+`nfl_model/`, `nba-*`, `sf-*`, `rental-*`, and every existing workflow except the one named above.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| MK1 | Claim scope, push claim, baseline audit of prior desks' price/results blockers | in progress | ce1f16ff | `COORDINATION.md` | Claim pushed first; reads other desks read-only. |
+| MK2 | Price-snapshot store: schema (opening/closing per market), capture machinery, immutability + provenance rules | unclaimed | ce1f16ff | `nfl-desk-ce1f16ff/price_store.py`, `data/price_snapshots.csv`, `store.html` | Live capture attempted from named sources; anything unreachable stays blank + flagged, never invented. |
+| MK3 | Verified results feed: official finals with per-row source, reconciliation, append-only ledger | unclaimed | ce1f16ff | `nfl-desk-ce1f16ff/results_feed.py`, `data/results_verified.csv`, `results.html` | Grades backtests; every row links an official source URL. |
+| MK4 | Origination in the mandated order: side → total → moneyline, each stage published separately | unclaimed | ce1f16ff | `nfl-desk-ce1f16ff/originate.py`, `data/lines_*.csv`, `lines.html` | Three stages, three column groups; derivation documented. |
+| MK5 | Fair line / market line / difference as separate columns | unclaimed | ce1f16ff | `data/lines_*.csv`, `data/edges.csv`, `edges.html` | Market column blank + flagged wherever no confirmed price exists. |
+| MK6 | Leaderboard: separate signal score from staking score | unclaimed | ce1f16ff | `nfl-desk-ce1f16ff/score.py`, `data/leaderboard_signal.csv`, `data/leaderboard_staking.csv`, `leaderboard.html` | Signal block gates the staking block; ranks on signal, never on blended score. |
+| MK7 | Depth of replacement (rung distance down the published chart), offense + defense | unclaimed | ce1f16ff | `nfl-desk-ce1f16ff/depth.py`, `data/depth_of_replacement.csv`, `depth.html` | Uses official club depth charts; unverifiable clubs blank + flagged. |
+| MK8 | Correlations from officially sourced numbers only, `n` published with every value | unclaimed | ce1f16ff | `nfl-desk-ce1f16ff/correlate.py`, `data/correlations.csv`, `correlations.csv` page | Refuses to emit r without n and a source URL per row. |
+| MK9 | Demotion gate: rules that send a live strategy back to paper, implemented and tested | unclaimed | ce1f16ff | `nfl-desk-ce1f16ff/promotion.py`, `data/promotion_state.csv`, `gates.html` | Fail-closed; state machine + unit tests. |
+| MK10 | Suggestions register (paths to choose, nothing pre-implemented) | unclaimed | ce1f16ff | `data/suggestions.csv`, `suggestions.html` | Each: options, tradeoffs, recommendation, AWAITING DECISION. |
+| MK11 | Questions / information we have vs do not have / discovery plan | unclaimed | ce1f16ff | `data/questions.csv`, `questions.html` | Includes the discovery steps that would unblock MK2. |
+| MK12 | Executive summary + Flagged for Review + sources register | unclaimed | ce1f16ff | `executive-summary.html`, `flagged.html`, `sources.html`, `data/flags.csv`, `data/sources.csv` | Nonblocking flags published with links. |
+| MK13 | Verify harness, unit tests, CI workflow (verify + scheduled capture) | unclaimed | ce1f16ff | `verify.py`, `tests/**`, `.github/workflows/nfl-desk-ce1f16ff.yml` | Every table row must be source-linked or explicitly blank + flagged. |
+| MK14 | Integration: rebase on `origin/main`, PR, autonomous merge, live Pages check, log | unclaimed | ce1f16ff | `COORDINATION.md`, `README.md` | Preserve concurrent sessions; never merge a broken site. |
+
+**Cross-session requests at claim time (logged here, not edited by this session):**
+- Owner of `nfl-desk-864d5668`: its F-01 ("no official market prices exist") is addressed by MK2/MK3 here;
+  if the reviewer picks a price source, that desk's `own_lines.csv` market columns can be back-filled from
+  `nfl-desk-ce1f16ff/data/price_snapshots.csv` without changing this session's files.
+- Owner of `nfl-decision-desk` (`data/decision-desk/`): the `decision-desk.yml` "Confirm the committed site
+  matches a clean rebuild" step fails on `main` per the 2026-11-12 log above; still open.
+- Integration owner (root `index.html`, owned by session `arena-cd43258e`, CI-locked): add a link to
+  `nfl-desk-ce1f16ff/index.html` when the shared index is next rebuilt.
