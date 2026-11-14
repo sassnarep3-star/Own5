@@ -1586,7 +1586,7 @@ reach.
 | MK10 | Suggestions register (paths to choose, nothing pre-implemented) | **done** | ce1f16ff | `data/suggestions.csv`, `suggestions.html` | 10 suggestions (MK-SG-01..10), each with options, cost, what-changes and a recommendation; every row `PROPOSED`. |
 | MK11 | Questions / information we have vs do not have / discovery plan | **done** | ce1f16ff | `data/questions.csv`, `questions.html` | 8 questions (MK-Q-01..08), 5 blocking, each with who publishes the answer, how to go and get it, and the fallback used meanwhile. |
 | MK12 | Executive summary + Flagged for Review + sources register | **done** | ce1f16ff | `index.html`, `flagged.html`, `sources.html`, `data/flags.csv`, `data/sources.csv` | 12 flags (2 high) and a 24-row source register (12 captured sources, 11 pinned input digests, 1 derived). |
-| MK13 | Verify harness, unit tests, CI workflow (verify + scheduled capture) | **done** | ce1f16ff | `verify.py`, `tests/test_statslib.py`, `tests/test_desk.py`, `.github/workflows/nfl-desk-ce1f16ff.yml` | `python3 run.py --check` proves 43 tables + 13 pages rebuild byte-identically; `verify.py` = 32 checks; **82 unit tests**. CI runs rebuild → tests → verify → `git diff --exit-code`. |
+| MK13 | Verify harness, unit tests, CI workflow (verify + scheduled capture) | **done** | ce1f16ff | `verify.py`, `tests/test_statslib.py`, `tests/test_desk.py`, `.github/workflows/nfl-desk-ce1f16ff.yml` | `python3 run.py --check` proves 43 tables + 13 pages rebuild byte-identically; `verify.py` = 33 checks; **86 unit tests**. CI runs rebuild → tests → verify → `git diff --exit-code`. |
 | MK14 | Integration: rebase on `origin/main`, PR, autonomous merge, live Pages check, log | in progress | ce1f16ff | `COORDINATION.md`, `README.md` | Additive: only `nfl-desk-ce1f16ff/**` and this session's workflow file. |
 
 **Deviations from the claim, stated plainly.** The claim named `price_store.py`, `results_verified.csv`,
@@ -1649,6 +1649,6 @@ ship **flat inside `nfl-desk-ce1f16ff/`** (as `nfl-desk-864d5668` and `nfl-desk-
 `data/*.csv` links resolve on Pages) and `research/nfl-ce1f16ff/` carries the markdown dossier rather
 than the site.
 
-*Checks on the PR and Pages.* See the PR thread: `nfl-desk-ce1f16ff` verify job (rebuild → 82 unit tests →
+*Checks on the PR and Pages.* See the PR thread: `nfl-desk-ce1f16ff` verify job (rebuild → 86 unit tests →
 32 verify checks → `git diff --exit-code` on the desk's own outputs). `decision-desk.yml` and
 `nfl-b34253a1.yml` still fail on `main` for their own owners and are untouched here.

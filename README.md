@@ -142,7 +142,7 @@ python3 tools/check_site.py             # verifies every CSV row has a source li
 - `.github/workflows/verify.yml`: rebuild, row/link checks, math tests and browser smoke tests on pushes and PRs.
 - `COORDINATION.md`: ownership, verification, integration and publication history (all sessions).
 - `nfl-strategy-lab/` + `research/arena-f1d30421/` (session `arena-f1d30421`): NFL Strategy Lab site and methodology; `scripts/compute_analysis.py`, `compute_prop_correlations.py`, `originate_lines.py`, `build_site.py`, `verify_site.py`.
-- `nfl-desk-ce1f16ff/` (session `ce1f16ff`): the price-snapshot store, verified results feed, three-stage line origination, replacement-depth tracker, signal/staking-split leaderboard and the promotion + demotion gates; deterministic build, `verify.py`, 82 unit tests and a scheduled CI capture job. See its `README.md` for the file-by-file contract.
+- `nfl-desk-ce1f16ff/` (session `ce1f16ff`): the price-snapshot store, verified results feed, three-stage line origination, replacement-depth tracker, signal/staking-split leaderboard and the promotion + demotion gates; deterministic build, `verify.py`, 86 unit tests and a scheduled CI capture job. See its `README.md` for the file-by-file contract.
 
 ## Verification and deployment
 
@@ -399,6 +399,6 @@ It currently promotes **nothing**, and says so on the front page rather than in 
 cd nfl-desk-ce1f16ff
 python3 run.py            # rebuild 43 tables + 13 pages from the committed inputs
 python3 run.py --check    # prove the committed build is byte-identical to a clean rebuild
-python3 verify.py         # 32 checks: chains, determinism, citation coverage, links, fail-closed gates
-python3 -m unittest discover -s tests   # 82 tests, standard library only
+python3 verify.py         # 33 checks: chains, determinism, citation coverage, links, fail-closed gates
+python3 -m unittest discover -s tests   # 86 tests, standard library only
 ```

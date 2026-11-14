@@ -18,8 +18,8 @@ what was measured, what was refused, and what would change the answer.
 cd nfl-desk-ce1f16ff
 python3 run.py            # 43 tables + 13 pages from the committed inputs
 python3 run.py --check    # prove the committed build equals a clean rebuild
-python3 verify.py         # 32 checks
-python3 -m unittest discover -s tests   # 82 tests
+python3 verify.py         # 33 checks
+python3 -m unittest discover -s tests   # 86 tests
 ```
 
 Standard library only. No network access is required or attempted at build time.

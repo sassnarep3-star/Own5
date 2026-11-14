@@ -12,8 +12,8 @@ Read the site first: [`index.html`](index.html) (published at
 ```bash
 cd nfl-desk-ce1f16ff
 python3 run.py            # rebuild every table and every page, from the committed inputs
-python3 -m unittest discover -s tests   # 82 tests: arithmetic, gates, chains, site contract
-python3 verify.py         # 32 checks: chains, determinism, citation coverage, links, fail-closed gates
+python3 -m unittest discover -s tests   # 86 tests: arithmetic, gates, chains, site contract
+python3 verify.py         # 33 checks: chains, determinism, citation coverage, links, fail-closed gates
 ```
 
 Python 3.11+, standard library only — no numpy, no pandas, no network. Every input is a
