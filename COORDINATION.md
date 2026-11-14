@@ -1889,3 +1889,14 @@ both numbers are published on the repo-audit page.
 **Merge / conflict log:** branch `arena/3fb93d11-own5`, base `530e94eb`. Claim pushed as `eb64af1`
 before any build work started.
 
+**Overlap note (read by this session, 2026-11-14):** session `d38e90c5` (namespace
+`nfl-desk-d38e90c5/**`) and session `853c0074` (namespace `nfl-price-results-853c0074/**`) claimed
+substantially the same functional gap as this session — price snapshots, a verified results feed and
+a signal/staking split — before this session's build started. There is **no file-namespace overlap**
+(this session writes only `nfl-desk-3fb93d11/**` and `research/nfl-3fb93d11/**`), so nothing here
+edits or blocks their work. Flagging it so the reviewer knows three desks now answer the same brief
+from different namespaces, and so a future session consolidates rather than adding a fourth. This
+session's distinguishing content versus theirs: the replacement-**depth** tracker (depth of the
+replacement, compounding, offence/defence split), the official-only correlation rule with a
+withheld register carrying the previous values, the 6-trigger demotion gate, and the 150-check repo
+audit.
