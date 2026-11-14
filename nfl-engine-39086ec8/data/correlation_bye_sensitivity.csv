@@ -1,0 +1,5 @@
+subset,n,r,ci95,p,note
+all games with rest data,121,-0.4257,-0.562 to -0.267,0.0,published value
+excluding |rest_diff| > 4 (bye-week games),107,-0.324,-0.484 to -0.143,0.00066,
+excluding |rest_diff| > 3 (bye-week games),105,-0.2599,-0.430 to -0.072,0.00741,
+excluding |rest_diff| > 2 (bye-week games),89,0.0387,-0.171 to 0.245,0.7189,coefficient does not survive removing bye weeks

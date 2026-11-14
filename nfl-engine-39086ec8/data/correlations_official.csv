@@ -1,0 +1,5 @@
+id,question,x,y,unit_of_observation,n,r,ci95_low,ci95_high,p_two_sided,provenance,official_url,note
+O-01,Do clubs that score more also concede more? (offence vs defence coupling),points for per game,points against per game,club (2026 season to date),32,-0.2041,-0.516,0.156,0.2626,OFFICIAL,https://www.nfl.com/standings/,"32 clubs; two-way association, not causal"
+O-02,How strongly does scoring predict winning?,points for per game,winning percentage (official tie rule),club (2026 season to date),32,0.6984,0.462,0.842,9e-06,OFFICIAL,https://www.nfl.com/standings/,"ecological association; n=32, so intervals are wide"
+O-03,Are a game's side and total outcomes independent?,home margin,total points,game (2026 finals),137,-0.1607,-0.32,0.007,0.0607,OFFICIAL,https://www.nfl.com/schedules/,used by same-game parlay pricing; |r| small but not proof of independence
+O-04,Does a rest advantage move the home margin?,rest differential (away days - home days),home margin,game with both rest values,121,-0.4257,-0.562,-0.267,0.0,OFFICIAL,https://www.nfl.com/schedules/,see the bye-week sensitivity table: the value is not robust

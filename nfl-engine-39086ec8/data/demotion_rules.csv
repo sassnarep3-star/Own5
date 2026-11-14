@@ -1,0 +1,6 @@
+rule_id,rule,threshold,basis,source_url
+D1,SPRT lower boundary crossed,"H0 p = break-even vs H1 p = break-even + declared edge; alpha 0.05, beta 0.20",Wald (1945) sequential probability ratio test,https://www.jstor.org/stable/2236233
+D2,CLV reversal,rolling mean CLV over last K graded bets < 0 and one-sided t-test p < 0.05,closing-line value as the market-side signal of skill,https://www.nfl.com/standings/
+D3,Drawdown beyond declared limit,peak-to-trough bankroll fall > declared max_drawdown,risk-of-ruin discipline,https://sportsbook.draftkings.com/leagues/football/nfl
+D4,Price evidence unavailable,no verified closing snapshot for 2 consecutive weeks,"no price, no proof",https://sportsbook.draftkings.com/leagues/football/nfl
+D5,Price-store integrity failure,a re-captured price contradicts the archived one,evidence base broken,https://sportsbook.draftkings.com/help/general-betting-rules/general-rules

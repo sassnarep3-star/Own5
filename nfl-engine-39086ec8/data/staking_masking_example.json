@@ -1,0 +1,12 @@
+{
+  "breakeven": 0.5238095238095238,
+  "flat_units": -10.454545454545453,
+  "hit_rate": 0.25,
+  "interpretation": "Signal verdict is FAIL (-27.4 points below break-even), yet the bankroll curve is positive because the five largest stakes all won. Ranking on profit would have promoted this. Ranking on the signal column cannot.",
+  "n": 20,
+  "signal_edge_pts": -0.27380952380952384,
+  "signal_verdict": "FAIL",
+  "skewed_growth_pct": 31.762802055318296,
+  "skewed_max_dd_pct": 2.668529054169312,
+  "wins": 5
+}
