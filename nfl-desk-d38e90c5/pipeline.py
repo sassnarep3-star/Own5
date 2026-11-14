@@ -1105,7 +1105,9 @@ def main():
 
     # --- summary ----------------------------------------------------------
     summary = {
-        "generated_at": datetime.now().isoformat(timespec="seconds"),
+        # deterministic: the build must reproduce byte-identical artefacts, so the
+        # stamp is the capture date of the official inputs, never the wall clock
+        "inputs_captured": RI.FETCH_DATE,
         "input_fetch_date": RI.FETCH_DATE,
         "league_points_per_team_per_game": round(league_ppg, 4),
         "sigma_margin_points": round(sigma, 4) if sigma else "",

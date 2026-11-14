@@ -24,7 +24,9 @@ ASSETS = os.path.join(HERE, "assets")
 os.makedirs(PAGES, exist_ok=True)
 os.makedirs(ASSETS, exist_ok=True)
 
-GENERATED = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+# deterministic: the build stamp is the capture date of the official inputs, not
+# the wall clock, so a rebuild reproduces byte-identical pages
+GENERATED = "official inputs captured " + json.load(open(os.path.join(DATA, "summary.json"), encoding="utf-8"))["input_fetch_date"]
 
 NAV = [
     ("index.html", "Overview"),
