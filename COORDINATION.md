@@ -1667,7 +1667,7 @@ Claimed scope is deliberately additive and isolated: `nfl-price-results-853c0074
 | PR2 | Append-only, source-provenanced price snapshot store for originated side/total/moneyline/prop markets | done | 853c0074 | `nfl-price-results-853c0074/**` | Opening/closing/intermediate snapshots require UTC times and source links; no historical quote values invented. |
 | PR3 | Official result ledger contract and fail-closed settlement/backtest/ROI evaluator | done | 853c0074 | `nfl-price-results-853c0074/**` | 136 inherited official-linked final scores; settlement requires exact market/book/jurisdiction, source/rules URLs; current ROI is null. |
 | PR4 | Standalone dashboard, suggestions/questions/flags, deterministic tests and scoped CI | done | 853c0074 | `nfl-price-results-853c0074/**`, `.github/workflows/nfl-price-results-853c0074.yml` | Nine Pages including an executive summary; 10 scoped tests; every populated data row carries a direct official URL; price cells blank where source record unavailable. |
-| PR5 | Integration PR, autonomous merge and live Pages verification | in progress | 853c0074 | `COORDINATION.md` (append only) | Local verifier/tests pass; PR and publication verification to follow. |
+| PR5 | Integration PR, autonomous merge and live Pages verification | done | 853c0074 | `COORDINATION.md` (append only) | PR #73 merged as `d6a615c`; Pages deployment built and live subpages fetched. Merge/deployment record below. |
 
 Cross-session request (logged, not edited): add or link a stable market key and open/close price-history store to the eventual NFL desk integration. This session does not modify `nfl-b34253a1/**`, `own5-desk/**`, or any root shared navigation; other sessions' pages remain unchanged.
 
@@ -1765,3 +1765,15 @@ repos/sassnarep3-star/Own5/pages`; the separate NFL workflow verifies and upload
 but does not change the repo's locked root deployment.
 
 Cross-session requests: root-nav request above. No files in other claimed scopes were edited.
+
+---
+
+### Final integration & publication result — session 853c0074
+
+- **PR #73:** https://github.com/sassnarep3-star/Own5/pull/73 — merged to `main` on 2026-11-14 21:47:57 UTC using `gh pr merge 73 --merge`; merge commit **`d6a615cb8dded12fa1baaa690130a6691e693892`**.
+- **Scoped CI on merged commit:** `NFL price snapshots and verified results feed (853c0074)` passed (run [43644707752](https://github.com/sassnarep3-star/Own5/actions/runs/43644707752)). The scoped PR check was green before merge as well.
+- **GitHub Pages:** deployment run [43644707049](https://github.com/sassnarep3-star/Own5/actions/runs/43644707049) passed all build/deploy/report jobs. Latest Pages build API reports status `built` for commit `d6a615cb8dded12fa1baaa690130a6691e693892` (build id `1370150225`).
+- **Live verification:** fetched successfully after deployment: https://sassnarep3-star.github.io/Own5/nfl-price-results-853c0074/ , `/executive-summary.html`, and `/flagged.html`. The overview shows 136 source-linked final-score rows, 28 legacy quote metadata rows with numeric values blank, and zero price snapshots, settlements or graded bets. The executive summary and flags render with their official links.
+- **Remaining unrelated check:** the pre-existing `Verify NFL B34 Week 10 research desk` workflow again failed on main at its deterministic generated-output step (run [43644707743](https://github.com/sassnarep3-star/Own5/actions/runs/43644707743)); this is outside the session's claimed scope and was already logged by the `d38e90c5` session. The overall GitHub Pages deployment and this session's scoped workflow both passed. No unrelated files were changed.
+
+**Follow-up coordination PR log (2026-11-14 UTC):** PR #77 adds the final PR #73 merge/Pages record above, after PR #73 was already merged. Rebase onto `origin/main` brought in session `39086ec8`'s new coordination block and conflicted in this append-only file; resolution preserved the complete `39086ec8` block and the complete 853c0074 publication record. No other session files were changed. The unrelated B34 deterministic-output check failed again on main (run 43644707743) and on PR #77 (run 43644872853); the NFL Decision Desk clean-rebuild check also failed on PR #77 (run 43644872866). These failures are outside this session's claimed scope, with their owner requests recorded above.
