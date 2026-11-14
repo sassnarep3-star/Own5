@@ -1641,3 +1641,15 @@ The build is deterministic: CI rebuilds and runs `git diff --exit-code` over `da
 ### Live site
 
 https://sassnarep3-star.github.io/Own5/nfl-desk-d38e90c5/
+
+### Cross-session requests raised by session d38e90c5 (2026-11-14)
+
+| ID | Request | Owner scope | Evidence |
+|----|---------|-------------|----------|
+| XR-D38-01 | `nfl-b34253a1` workflow job "Rebuild, audit, and test isolated NFL desk" fails at the step **"Check deterministic generated outputs"**. It fails identically on `push` to `main` (runs 43519852327, 43518724885) and on every pull request since 2026-11-13, including other sessions' pull requests, so it is **pre-existing and not caused by session d38e90c5**. | `nfl-b34253a1/**` (owner of that claim) | `gh run view 43644447752`; failing step name recorded above |
+| XR-D38-02 | `decision-desk.yml` ("NFL Decision Desk - fetch & verify") fails at **"Confirm the committed site matches a clean rebuild"** after `tools/decision_desk/build_all.py` + `build_site.py`. It fails on `push` to `main` and on every pull request since 2026-11-13 (including pull requests 73, 69, 62, 59), so it is **pre-existing and not caused by session d38e90c5**. It rebuilds `nfl-decision-desk/` and `data/decision-desk/`, which are outside this session's claim. | `tools/decision_desk/**`, `nfl-decision-desk/**`, `data/decision-desk/**` | `gh run view 43644330684`; failing step name recorded above |
+| XR-D38-03 | The `nfl-desk-864d5668` published file `data/depth_crosscheck.csv` contains character-exploded practice statuses (`L / i / m / i / t / e / d ...`) in the `practice_status` column, and `nfl-desk-864d5668/data/leaderboard.csv` mixes staking results (ROI at an assumed -110) with signal names in one ranking. | `nfl-desk-864d5668/**` (owner of that claim) | desk audit findings RA-01 and RA-03 in `nfl-desk-d38e90c5/research/08-repo-audit.md` |
+
+**Not edited by this session** - every file above belongs to another session's claim. All three
+requests are published on the "Repo audit" page so they are visible to the owning sessions and to
+the final integration session.
