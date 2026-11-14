@@ -94,14 +94,32 @@ The row then carries:
 61 of 347 injury rows have no entry on the club's published chart (16 of them Houston, whose chart is
 image-only). Those rows keep a blank depth tier and are flagged rather than guessed.
 
-## 7. Price snapshots and results
+## 7. Known sensitivities (read before using a published line)
+
+* **Schedule adjustment is the loudest input.** The ratings compare each club with the average
+  strength of the opponents it actually faced, so a club that played several strong offenses is
+  credited with a better defense than its raw points-against number shows (Minnesota, for example,
+  allows only 14.5 points per game yet is rated as the league's weakest defense because of the
+  opponents it faced). With only eight or nine games in the sample, that adjustment is noisy and it
+  can produce lines that look aggressive - Jacksonville is published as a 10.5-point favourite at
+  Tennessee in Week 10 for exactly this reason. Shrinkage (`SHRINKAGE_K`) was compared over
+  K = 4, 6, 8, 10 and 14 on the walk-forward sample and barely moves the result (Brier 0.2291 to
+  0.2302), so the published lines are not an artefact of the shrinkage constant; they are the
+  honest output of a transparent schedule-adjusted model on a short sample.
+* **Home-field advantage is an assumption.** 2.0 points is not an official statistic. The published
+  spread moves one full point for every half-point of HFA, and the moneyline moves with it.
+* **The sample is short.** 73 out-of-sample predictions is enough to show the model is not worse
+  than a base-rate guess on the probability metrics, and far too short to call it an edge. The
+  weekly build keeps adding to the sample (discovery step D-02).
+
+## 8. Price snapshots and results
 
 * `data/price_snapshots.jsonl` is append-only: one `opening` and one `closing` record for every
   originated market, keyed by `game_id|market|phase`. A rebuild never rewrites an existing record.
 * `data/results_verified.csv` holds the 137 official final scores with the official schedule page as
   the source of each row, and is the feed that settlement and ROI would use.
 
-## 8. Fail-closed rules
+## 9. Fail-closed rules
 
 1. No official price source -> market line, market price, difference, CLV and market ROI are blank
    and registered on the Flagged for Review page.

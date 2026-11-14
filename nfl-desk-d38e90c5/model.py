@@ -82,9 +82,9 @@ def logistic(x):
 
 
 def round_half(x):
-    """Round to the nearest half point, ties away from zero."""
+    """Round to the nearest half point, ties away from zero (no negative zero)."""
     v = math.floor(abs(x) * 2 + 0.5) / 2
-    return v if x >= 0 else -v
+    return (v if x >= 0 else -v) + 0.0
 
 
 def american_odds(p):
