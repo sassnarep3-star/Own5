@@ -1900,3 +1900,33 @@ session's distinguishing content versus theirs: the replacement-**depth** tracke
 replacement, compounding, offence/defence split), the official-only correlation rule with a
 withheld register carrying the previous values, the 6-trigger demotion gate, and the 150-check repo
 audit.
+
+### Session 3fb93d11 — merge and deployment record
+
+**PR #79** (`arena/3fb93d11-own5` → `main`) merged with a merge commit at **2026-11-14T22:16:09Z**,
+merge SHA `a03dfb719b8ada36be2cb066966e77b9b893b317` (`gh pr merge 79 --merge`).
+
+**Checks on the merged commit:**
+- `Verify NFL price-snapshot desk (3fb93d11)` — **success** (run 43647189341). All eleven steps green,
+  including *Deterministic rebuild check (data must not drift)*, *Row-level source-link proof on the
+  generated HTML*, *Unit tests* and *Committed artefacts match the deterministic build*.
+- `pages build and deployment` — **success** (run 43647188944). Pages build API reports status
+  `built` for commit `a03dfb71`.
+- `pages-smoke` job — **success**. Fetched and confirmed live over HTTP:
+  https://sassnarep3-star.github.io/Own5/nfl-desk-3fb93d11/ , `/leaderboard.html`,
+  `/price-store.html`, `/flagged.html`.
+- `Verify NFL B34 Week 10 research desk` — **failure** (run 43647189340). Pre-existing: the same
+  workflow fails on `main` at `f5fa4967`, `b3b46c82`, `d6a615cb` and `a264292b`, i.e. before this
+  merge. Outside this session's claimed scope.
+- `NFL Decision Desk — fetch & verify` — failed on PR #79 only, at the step
+  *Confirm the committed site matches a clean rebuild*. Reproduced locally: running that desk's own
+  `tools/decision_desk/build_all.py` + `build_site.py` dirties `data/decision-desk/audit_summary.json`,
+  `injuries_wk10_players.csv` and `team_deficiency_wk10.csv` on a clean checkout, so the drift is in
+  that desk's committed snapshot, not in anything this session added. The working tree was restored;
+  no file outside this session's namespace was changed. Owners: session `38a1fc27`.
+
+**Rebase note:** rebasing onto `origin/main` conflicted in the append-only `COORDINATION.md` (session
+`d38e90c5` and the `853c0074` publication record) and in `README.md` (session `d38e90c5`'s block).
+Both conflicts were resolved by preserving **both** sides in full. The branch was then force-pushed
+with `--force-with-lease` because the rebase rewrote only this session's own commits; no commit from
+any other session was present on the branch.
