@@ -1579,3 +1579,65 @@ strategy back to paper. This session claims exactly that gap in a new additive n
 | D38-09 | Validation gates incl. the **demotion gate** (live → paper) and the suggestions / questions / executive-summary registers | unclaimed | d38e90c5 | `nfl-desk-d38e90c5/data/gates.csv`, `.../suggestions.csv`, `.../questions.csv`, `research/nfl-d38e90c5/EXECUTIVE_SUMMARY.md` | Demotion gate is fail-closed and explicit about its thresholds and its source. |
 | D38-10 | Pages site: clean dashboard landing + category subpages, deterministic build, line-by-line verifier, CI | unclaimed | d38e90c5 | `nfl-desk-d38e90c5/**`, `.github/workflows/nfl-desk-d38e90c5.yml` | Every table row linked to an official source or rendered as an explicit blank + flag; 0 broken internal links. |
 | D38-11 | Final integration, PR to `main`, autonomous merge, live Pages verification, record | unclaimed | d38e90c5 | `COORDINATION.md`, `README.md` (append-only) | Rebase, green checks, `gh pr merge <num> --merge`, live URL fetch. |
+
+---
+
+## Session d38e90c5 - NFL line-origination and strategy desk - COMPLETE (2026-11-14)
+
+**Claimed scope (unchanged):** `nfl-desk-d38e90c5/**`, `research/nfl-d38e90c5/**`,
+`.github/workflows/nfl-desk-d38e90c5.yml`, append-only blocks in `COORDINATION.md` and `README.md`.
+No file owned by another session was edited.
+
+### Task status
+
+| ID | Task | Status | Notes |
+|----|------|--------|-------|
+| D38-01 | Line-by-line repo audit of the six NFL desks | done | 14 findings with file paths in `nfl-desk-d38e90c5/research/08-repo-audit.md` and on the "Repo audit" page |
+| D38-02 | Official nfl.com capture (standings, results, slate, injuries) | done | 137 completed games, 26 upcoming games, 32 club depth charts, 347 official injury rows, all source-pinned |
+| D38-03 | Price-snapshot store (opening **and** closing) | done (structure) / blank values | `data/price_snapshots.jsonl` append-only, 594 records for 297 markets; market price blank and flagged - no official price source exists |
+| D38-04 | Verified results feed | done | `data/results_verified.csv`, 137 official final scores; reconciles with the official standings (aggregate PF = PA = 6,291) |
+| D38-05 | Origination order side -> total -> moneyline, three separate columns | done | `model.MARKET_ORDER`, `publish_seq` on every row, verifier check 5 |
+| D38-06 | Leaderboard split signal vs staking | done | `data/leaderboard_signal.csv` + `data/leaderboard_staking.csv`; gate rows 7-8 make profit-alone promotion impossible |
+| D38-07 | Replacement-depth tracker (1st-4th string, offense and defense) | done | `data/depth_detail.csv`, `data/depth_team_summary.csv`; 61 rows without a chart match stay blank and flagged |
+| D38-08 | Correlations from official numbers only, `n` published with every value | done | `data/correlations.csv`, 7 rows, each with `n`, both input sources and a note |
+| D38-09 | Validation gates incl. the demotion gate, plus questions / suggestions / executive summary | done | 10 criteria per strategy, fail-closed, all six strategies `PAPER`; `research/06-questions-and-unknowns.md`, `research/07-suggestions.md` |
+| D38-10 | Pages site: landing + categorised subpages, deterministic build, line-by-line verifier, CI | done | 20 pages, 115 verification checks, 0 failures; workflow `nfl-desk-d38e90c5.yml` |
+| D38-11 | Final integration, PR to `main`, merge, live Pages verification | done | PR merged to `main`; live URLs recorded below |
+
+### Sources used (all official)
+
+NFL.com league standings, the official Week 1-11 schedule pages (137 final scores), the official
+Week 10 injury report, the official league notes, and the official depth chart of each of the 32
+clubs. Full register: `nfl-desk-d38e90c5/data/sources.csv`.
+
+### Irregularities and unverified items (published, not blocking)
+
+1. NFL.com publishes no betting prices; `nfl.com/betting/` returns 404 and no operator feed was
+   reachable, so market line, market price, difference, CLV and market ROI are blank and flagged.
+2. The Houston Texans publish their depth chart as a raster image - all 16 Texans depth values are
+   blank pending manual review.
+3. The Kansas City Week 10 injury block was truncated at a page-chunk boundary; the Tennessee block
+   arrived in two non-contiguous segments and was assembled by hand.
+4. 61 official injury rows have no entry on the club's published depth chart; their depth tier is
+   blank and flagged rather than inferred.
+5. HFA = 2.0 points is the only non-official number inside the line engine; it is flagged, and
+   discovery step D-07 proposes estimating it from the official results.
+6. The NFL.com team-stat pages cannot be paired with their labels without ambiguity, so no advanced
+   statistic was transcribed.
+7. Cross-desk drift found in the audit (corrupted `depth_crosscheck.csv` column in
+   `nfl-desk-864d5668`, mixed signal/staking leaderboard there, third-party ESPN/DraftKings prices in
+   `nfl-desk-26d4cafb`, frozen 2026-11-02 ledgers in `nfl-strategy-lab` and `line-lab`) belongs to
+   other sessions' claims and was **not** edited here; it is logged as proposal SUG-07/SUG-08 for a
+   final integration session.
+
+### Verification
+
+`python3 nfl-desk-d38e90c5/verify.py` -> 115 checks, 0 failures (inputs reconcile, official source
+on every populated source cell, every blank registered in the flagged register, `n` on every
+correlation, publication order, snapshot completeness, fail-closed gate, no broken internal link).
+The build is deterministic: CI rebuilds and runs `git diff --exit-code` over `data/`, `index.html`,
+`pages/` and `assets/`.
+
+### Live site
+
+https://sassnarep3-star.github.io/Own5/nfl-desk-d38e90c5/

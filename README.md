@@ -355,3 +355,56 @@ python3 export_research.py   # regenerate research/nfl-26d4cafb/*.md
 python3 verify.py            # 25 line-by-line checks (0 failures)
 python3 -m unittest discover -s nfl-desk-26d4cafb/tests   # 60 tests
 ```
+
+---
+
+## NFL line-origination and strategy desk (`nfl-desk-d38e90c5`, session d38e90c5)
+
+A standalone, official-source-only desk that **originates its own NFL lines** and publishes them with
+a model fair line, a market line and the difference as three separate columns, side/spread first,
+total second, moneyline third.
+
+Live site: https://sassnarep3-star.github.io/Own5/nfl-desk-d38e90c5/
+
+What it contains:
+
+| Page | Content |
+|---|---|
+| Overview | landing page with the headline numbers and the publication order |
+| Requirements | every requirement with the artefact that satisfies it and its honest status |
+| Executive summary | findings, evidence and what is deliberately blank |
+| Own lines | 297 originated markets (99 spread, 99 total, 99 moneyline) with fair line / market line / difference |
+| Price snapshots | append-only store, opening + closing record for every originated market |
+| Verified results | 137 official final scores, reconciled against the official standings |
+| Leaderboard | **signal quality** and **staking performance** as two separate scorecards |
+| Correlations | official-source correlations, `n` published with every value |
+| Demotion gate | fail-closed gate with an explicit live -> paper decision per strategy |
+| Strategies | single bets, parlays and player-prop combinations with their blocking reasons |
+| Injuries / Depth tracker | 347 official injury rows with 1st-4th string depth and named replacements |
+| Questions and unknowns | questions, information, answers, unknowns and discovery steps |
+| Suggestions | options and the recommended path before implementation |
+| Repo audit | line-by-line review of the existing NFL desks with drift and irregularities |
+| Flagged for review | every unverified value and irregularity, with manual-review links |
+| Sources | the official source register behind every published row |
+
+Key verified values (2026-11-14): **137** completed official games reconciling **32/32** clubs with
+**0** mismatches on W/L/T/PF/PA (aggregate PF = PA = 6,291); **73** walk-forward out-of-sample
+predictions with MAE **10.24** points, Brier **0.2291** vs a **0.2443** base-rate baseline, log loss
+**0.6480** vs **0.6818**, winner hit rate **60.3%** and calibration slope **0.869**; **347** official
+Week 10 injury rows matched to the official depth charts of all **32** clubs (**31** transcribed,
+Houston publishes an image only).
+
+No official market or player-prop prices exist: `nfl.com/betting/` returns 404 and no operator feed
+was reachable, so market line, market price, difference, CLV and market ROI are deliberately left
+**blank** and published on the Flagged for Review page instead of being filled from a third-party
+scrape. All six strategies are `PAPER`: the gate fails closed, so nothing is promoted while a
+required criterion cannot be evaluated.
+
+Reproduce and verify:
+
+```
+cd nfl-desk-d38e90c5
+python3 pipeline.py     # rebuild every dataset from the pinned official inputs
+python3 build_site.py   # render the 20-page site
+python3 verify.py       # 115 line-by-line checks (0 failures)
+```
