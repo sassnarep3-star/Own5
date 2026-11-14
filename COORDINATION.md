@@ -1777,3 +1777,19 @@ Cross-session requests: root-nav request above. No files in other claimed scopes
 - **Remaining unrelated check:** the pre-existing `Verify NFL B34 Week 10 research desk` workflow again failed on main at its deterministic generated-output step (run [43644707743](https://github.com/sassnarep3-star/Own5/actions/runs/43644707743)); this is outside the session's claimed scope and was already logged by the `d38e90c5` session. The overall GitHub Pages deployment and this session's scoped workflow both passed. No unrelated files were changed.
 
 **Follow-up coordination PR log (2026-11-14 UTC):** PR #77 adds the final PR #73 merge/Pages record above, after PR #73 was already merged. Rebase onto `origin/main` brought in session `39086ec8`'s new coordination block and conflicted in this append-only file; resolution preserved the complete `39086ec8` block and the complete 853c0074 publication record. No other session files were changed. The unrelated B34 deterministic-output check failed again on main (run 43644707743) and on PR #77 (run 43644872853); the NFL Decision Desk clean-rebuild check also failed on PR #77 (run 43644872866). These failures are outside this session's claimed scope, with their owner requests recorded above.
+
+### Merge and deployment record (session d38e90c5)
+
+| Item | Result |
+|------|--------|
+| Pull request | **#74** "NFL line-origination and strategy desk (session d38e90c5)" - merged 2026-11-14T21:46:24Z, merge commit `a264292` |
+| Follow-up pull request | **#75** "publish model sensitivities and fix the negative-zero spread" - merged 2026-11-14T21:49:29Z, merge commit `f23e319` |
+| Branch | `arena/d38e90c5-own5` (claim `273b652`, desk `a706938`, research `96346b6`, site `0bc6050`, coordination `65658c4`, determinism `f658acd`, sensitivities `9d4e46a`) |
+| CI for this desk | `Verify NFL Line-Origination Desk (d38e90c5)` - **success** on the pull request and on `main` |
+| Determinism | the committed artefacts match a clean rebuild (CI step "Committed artefacts match the deterministic build"); two consecutive local rebuilds are byte-identical |
+| Pages build | `pages build and deployment` - **success** on `main`; Pages build `1370147514` for `a264292` status **built**, latest build for `f23e319` status **built** (28s) |
+| Live site | https://sassnarep3-star.github.io/Own5/nfl-desk-d38e90c5/ - landing page and `pages/own-lines.html` fetched live and confirmed (publication order spread -> total -> moneyline visible, model fair line / market line / difference as separate columns, source links present) |
+| Live smoke test | the `pages-smoke` job on `main` fetched `/`, `/pages/own-lines.html`, `/pages/leaderboard.html`, `/pages/gate.html`, `/pages/flagged.html` and `/pages/sources.html` and passed |
+| Broken links | none - the verifier resolves every internal link in the 20 generated pages |
+| Pre-existing red checks | `nfl-b34253a1.yml` ("Check deterministic generated outputs") and `decision-desk.yml` ("Confirm the committed site matches a clean rebuild") fail on `main` and on every pull request since 2026-11-13, including other sessions' pull requests; both are in other sessions' scopes and are logged as cross-session requests XR-D38-01 and XR-D38-02. They are **not** caused by this session and they do not affect the published desk, whose own workflow is green. |
+| Merged without waiting | yes - both pull requests were merged autonomously with `gh pr merge <n> --merge`, no review requested, no `--auto` |
