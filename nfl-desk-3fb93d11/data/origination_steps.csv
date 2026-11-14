@@ -1,0 +1,79 @@
+game_id,origination_step,model_value,market_value,difference,derived_from,source_url
+2026_10_NE_DET,1_side,0.77,2.50,-1.73,margin model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_10_NE_DET,2_total,48.25,51.50,-3.25,totals model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_10_NE_DET,3_moneyline,0.5239,0.5830,-0.0591,step 1 (side) + step 2 (total); P(home win) = Phi(side / sigma),https://www.nfl.com/schedules/2026/by-week/
+2026_10_KC_ATL,1_side,-4.07,-3.00,-1.07,margin model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_10_KC_ATL,2_total,44.60,46.50,-1.90,totals model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_10_KC_ATL,3_moneyline,0.3765,0.3775,-0.0011,step 1 (side) + step 2 (total); P(home win) = Phi(side / sigma),https://www.nfl.com/schedules/2026/by-week/
+2026_10_HOU_CLE,1_side,-2.91,-4.50,1.59,margin model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_10_HOU_CLE,2_total,44.76,40.50,4.26,totals model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_10_HOU_CLE,3_moneyline,0.4109,0.3364,0.0745,step 1 (side) + step 2 (total); P(home win) = Phi(side / sigma),https://www.nfl.com/schedules/2026/by-week/
+2026_10_MIN_GB,1_side,-0.10,3.00,-3.10,margin model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_10_MIN_GB,2_total,39.99,42.50,-2.51,totals model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_10_MIN_GB,3_moneyline,0.4969,0.5934,-0.0965,step 1 (side) + step 2 (total); P(home win) = Phi(side / sigma),https://www.nfl.com/schedules/2026/by-week/
+2026_10_MIA_IND,1_side,0.61,3.50,-2.89,margin model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_10_MIA_IND,2_total,44.86,38.50,6.36,totals model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_10_MIA_IND,3_moneyline,0.5189,0.6447,-0.1258,step 1 (side) + step 2 (total); P(home win) = Phi(side / sigma),https://www.nfl.com/schedules/2026/by-week/
+2026_10_CAR_NO,1_side,-0.80,2.50,-3.30,margin model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_10_CAR_NO,2_total,50.64,48.50,2.14,totals model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_10_CAR_NO,3_moneyline,0.4754,0.5427,-0.0674,step 1 (side) + step 2 (total); P(home win) = Phi(side / sigma),https://www.nfl.com/schedules/2026/by-week/
+2026_10_BUF_NYJ,1_side,-6.39,-8.50,2.11,margin model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_10_BUF_NYJ,2_total,49.29,50.50,-1.21,totals model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_10_BUF_NYJ,3_moneyline,0.3106,0.2181,0.0925,step 1 (side) + step 2 (total); P(home win) = Phi(side / sigma),https://www.nfl.com/schedules/2026/by-week/
+2026_10_JAX_TEN,1_side,-10.30,-10.50,0.20,margin model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_10_JAX_TEN,2_total,43.89,46.50,-2.61,totals model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_10_JAX_TEN,3_moneyline,0.2128,0.1777,0.0351,step 1 (side) + step 2 (total); P(home win) = Phi(side / sigma),https://www.nfl.com/schedules/2026/by-week/
+2026_10_LAR_ARI,1_side,-5.33,-9.50,4.17,margin model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_10_LAR_ARI,2_total,45.90,39.50,6.40,totals model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_10_LAR_ARI,3_moneyline,0.3401,0.1957,0.1444,step 1 (side) + step 2 (total); P(home win) = Phi(side / sigma),https://www.nfl.com/schedules/2026/by-week/
+2026_10_SEA_LV,1_side,-3.70,-6.50,2.80,margin model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_10_SEA_LV,2_total,47.89,40.50,7.39,totals model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_10_SEA_LV,3_moneyline,0.3873,0.2820,0.1053,step 1 (side) + step 2 (total); P(home win) = Phi(side / sigma),https://www.nfl.com/schedules/2026/by-week/
+2026_10_SF_DAL,1_side,-4.27,-3.50,-0.77,margin model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_10_SF_DAL,2_total,50.49,55.50,-5.01,totals model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_10_SF_DAL,3_moneyline,0.3704,0.3553,0.0152,step 1 (side) + step 2 (total); P(home win) = Phi(side / sigma),https://www.nfl.com/schedules/2026/by-week/
+2026_10_PIT_CIN,1_side,2.27,3.50,-1.23,margin model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_10_PIT_CIN,2_total,46.52,49.50,-2.98,totals model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_10_PIT_CIN,3_moneyline,0.5698,0.6164,-0.0466,step 1 (side) + step 2 (total); P(home win) = Phi(side / sigma),https://www.nfl.com/schedules/2026/by-week/
+2026_10_LAC_BAL,1_side,3.21,4.50,-1.29,margin model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_10_LAC_BAL,2_total,44.49,38.50,5.99,totals model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_10_LAC_BAL,3_moneyline,0.5981,0.6636,-0.0655,step 1 (side) + step 2 (total); P(home win) = Phi(side / sigma),https://www.nfl.com/schedules/2026/by-week/
+2026_11_IND_HOU,1_side,4.79,10.00,-5.21,margin model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_11_IND_HOU,2_total,48.47,44.50,3.97,totals model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_11_IND_HOU,3_moneyline,0.6446,0.7867,-0.1421,step 1 (side) + step 2 (total); P(home win) = Phi(side / sigma),https://www.nfl.com/schedules/2026/by-week/
+2026_11_MIA_BUF,1_side,8.23,16.50,-8.27,margin model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_11_MIA_BUF,2_total,47.45,46.50,0.95,totals model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_11_MIA_BUF,3_moneyline,0.7379,0.9124,-0.1745,step 1 (side) + step 2 (total); P(home win) = Phi(side / sigma),https://www.nfl.com/schedules/2026/by-week/
+2026_11_BAL_CAR,1_side,1.79,1.50,0.29,margin model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_11_BAL_CAR,2_total,48.89,44.50,4.39,totals model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_11_BAL_CAR,3_moneyline,0.5551,0.5261,0.0290,step 1 (side) + step 2 (total); P(home win) = Phi(side / sigma),https://www.nfl.com/schedules/2026/by-week/
+2026_11_NO_CHI,1_side,5.65,9.50,-3.85,margin model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_11_NO_CHI,2_total,48.88,48.50,0.38,totals model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_11_NO_CHI,3_moneyline,0.6690,0.7914,-0.1224,step 1 (side) + step 2 (total); P(home win) = Phi(side / sigma),https://www.nfl.com/schedules/2026/by-week/
+2026_11_TEN_DAL,1_side,4.19,7.50,-3.31,margin model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_11_TEN_DAL,2_total,48.05,51.50,-3.45,totals model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_11_TEN_DAL,3_moneyline,0.6272,0.7819,-0.1547,step 1 (side) + step 2 (total); P(home win) = Phi(side / sigma),https://www.nfl.com/schedules/2026/by-week/
+2026_11_TB_DET,1_side,0.02,3.50,-3.48,margin model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_11_TB_DET,2_total,46.53,47.50,-0.97,totals model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_11_TB_DET,3_moneyline,0.5005,0.6164,-0.1159,step 1 (side) + step 2 (total); P(home win) = Phi(side / sigma),https://www.nfl.com/schedules/2026/by-week/
+2026_11_ARI_KC,1_side,7.21,14.00,-6.79,margin model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_11_ARI_KC,2_total,46.07,42.50,3.57,totals model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_11_ARI_KC,3_moneyline,0.7114,0.8721,-0.1607,step 1 (side) + step 2 (total); P(home win) = Phi(side / sigma),https://www.nfl.com/schedules/2026/by-week/
+2026_11_PIT_PHI,1_side,-5.99,-4.50,-1.49,margin model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_11_PIT_PHI,2_total,41.50,38.50,3.00,totals model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_11_PIT_PHI,3_moneyline,0.3216,0.3631,-0.0415,step 1 (side) + step 2 (total); P(home win) = Phi(side / sigma),https://www.nfl.com/schedules/2026/by-week/
+2026_11_NYJ_LAC,1_side,-3.00,1.50,-4.50,margin model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_11_NYJ_LAC,2_total,43.90,42.50,1.40,totals model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_11_NYJ_LAC,3_moneyline,0.4082,0.5325,-0.1243,step 1 (side) + step 2 (total); P(home win) = Phi(side / sigma),https://www.nfl.com/schedules/2026/by-week/
+2026_11_JAX_NYG,1_side,-6.75,-6.00,-0.75,margin model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_11_JAX_NYG,2_total,44.21,44.50,-0.29,totals model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_11_JAX_NYG,3_moneyline,0.3007,0.3042,-0.0035,step 1 (side) + step 2 (total); P(home win) = Phi(side / sigma),https://www.nfl.com/schedules/2026/by-week/
+2026_11_LV_DEN,1_side,3.25,8.50,-5.25,margin model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_11_LV_DEN,2_total,49.03,41.50,7.53,totals model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_11_LV_DEN,3_moneyline,0.5994,0.7819,-0.1825,step 1 (side) + step 2 (total); P(home win) = Phi(side / sigma),https://www.nfl.com/schedules/2026/by-week/
+2026_11_MIN_SF,1_side,2.30,3.50,-1.20,margin model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_11_MIN_SF,2_total,41.62,46.50,-4.88,totals model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_11_MIN_SF,3_moneyline,0.5707,0.6447,-0.0740,step 1 (side) + step 2 (total); P(home win) = Phi(side / sigma),https://www.nfl.com/schedules/2026/by-week/
+2026_11_CIN_WAS,1_side,-5.71,-3.50,-2.21,margin model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_11_CIN_WAS,2_total,49.11,51.50,-2.39,totals model fitted on 137 official 2026 results,https://www.nfl.com/schedules/2026/by-week/
+2026_11_CIN_WAS,3_moneyline,0.3292,0.3553,-0.0260,step 1 (side) + step 2 (total); P(home win) = Phi(side / sigma),https://www.nfl.com/schedules/2026/by-week/

@@ -1833,3 +1833,59 @@ requirements. Verified against `main` at `530e94e`, none of them exists in any p
 ### Session 3fb93d11 — status log
 
 (Updated as tasks complete; see the bottom of this block for the final record.)
+
+
+---
+
+## Session log — 3fb93d11 (NFL price-snapshot & verified-results desk) — 2026-11-14
+
+**Claimed namespaces:** `nfl-desk-3fb93d11/**`, `research/nfl-3fb93d11/**`,
+`.github/workflows/nfl-desk-3fb93d11.yml`, plus append-only additions to `COORDINATION.md` and
+`README.md`. Nothing outside those paths was modified.
+
+**Built (16-page static site, deterministic, stdlib-only Python):**
+
+| Deliverable | Where |
+|---|---|
+| Verified results feed — 137 official 2026 finals, 32/32 standings reconciliation (0 mismatches), mirror cross-check 136 agree / 0 disagree / 1 lagging | `nfl-desk-3fb93d11/results.html` |
+| Price-snapshot store — 390 rows (78 markets x 5 snapshot types); 156 populated, 234 empty and flagged | `nfl-desk-3fb93d11/price-store.html` |
+| Originated lines — side -> total -> moneyline, model / market / difference columns | `nfl-desk-3fb93d11/lines.html` |
+| 9 pre-registered families, 2 universes, Holm + Deflated Sharpe | `nfl-desk-3fb93d11/strategies.html` |
+| Gates G0-G8 and the 6-trigger demotion gate D1a-D1f | `nfl-desk-3fb93d11/gates.html` |
+| Leaderboard — signal and staking ranked separately, inside a board | `nfl-desk-3fb93d11/leaderboard.html` |
+| Correlations — 9 admissible (official inputs, each with n), 7 withheld | `nfl-desk-3fb93d11/correlations.html` |
+| Injuries & replacement depth — 705 slots / 31 clubs, offence and defence split | `nfl-desk-3fb93d11/depth.html` |
+| Repo audit — 150 checks against earlier desks' headline claims | `nfl-desk-3fb93d11/repo-audit.html` |
+| Requirements / suggestions / questions registers | `requirements.html`, `suggestions.html`, `questions.html` |
+| Flagged for review — 14 items, 4 blocking | `nfl-desk-3fb93d11/flagged.html` |
+
+**Verification:** `run.py` rebuilds everything deterministically (byte-identical across runs);
+`verify.py` walks the generated HTML and asserts that every body-table row is either source-linked
+or carries the UNVERIFIED badge (2,176 rows: 1,937 linked, 239 explicitly unverified, 0 failures);
+51 unit tests pass.
+
+**Headline results:** 0 strategies certified. The best certification-board family on the signal axis
+is *rest edge >= 3 days* (n = 24, 62.5%, ROI +19.3%). *Fade large home favourite >= 10* leads on
+realised money (n = 4, 75.0%, ROI +43.2%) but ranks 5 of 8 on signal — exactly the case the
+signal/staking split was built to expose. The moneyline family is significantly *worse* than
+break-even (21.6% on 51 bets, Holm p = 5.8e-5).
+
+**Blocking gaps for any session that follows:**
+1. **F-01** — nfl.com publishes no spreads, totals or moneylines. There is no official opening or
+   closing price, so gate G2 cannot pass for any family. Suggestion S-01 has three costed paths and
+   is AWAITING DECISION; nothing will certify until a decision is made.
+2. **F-10** — the certification universe gives each family 4-51 graded bets against a 300 minimum.
+   Suggestion S-06 (extend the official feed backwards) is the fix.
+3. **F-04** — the Week 11 injury report URL serves Week 10. Every Week 11 market here is originated
+   with no injury adjustment.
+4. **F-08** — no player-prop lines exist from any source in this repo, so prop combinations produce
+   zero graded bets and parlay legs cannot be correlated (gate G7 fails).
+
+**Repo audit result:** 150 checks re-ran earlier desks' headline claims against the official pages
+fetched for this build. **150 matched, 0 disagreed.** One item is reported rather than reconciled:
+session 864d5668's COORDINATION entry says 707 depth slots while its committed table holds 705 —
+both numbers are published on the repo-audit page.
+
+**Merge / conflict log:** branch `arena/3fb93d11-own5`, base `530e94eb`. Claim pushed as `eb64af1`
+before any build work started.
+

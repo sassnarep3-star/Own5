@@ -1,0 +1,10 @@
+corr_id,unit_of_analysis,metric_a,metric_b,r,p_value,ci95_low,ci95_high,n,n_definition,source_tier,source_url,fetched_utc
+CORR-01,team-season,net_pts_per_game,win_pct,0.8781,0.000000,0.7630,0.9392,32,"32 NFL clubs, 2026 regular season to date",OFFICIAL,https://www.nfl.com/standings/league/2026/REG,2026-11-14T21:33:19Z
+CORR-02,team-season,pf_per_game,win_pct,0.6984,0.000009,0.4622,0.8420,32,"32 NFL clubs, 2026 regular season to date",OFFICIAL,https://www.nfl.com/standings/league/2026/REG,2026-11-14T21:33:19Z
+CORR-03,team-season,pa_per_game,win_pct,-0.6636,0.000035,-0.8221,-0.4097,32,"32 NFL clubs, 2026 regular season to date",OFFICIAL,https://www.nfl.com/standings/league/2026/REG,2026-11-14T21:33:19Z
+CORR-04,team-season,pf_per_game,pa_per_game,-0.2041,0.262602,-0.5160,0.1557,32,"32 NFL clubs, 2026 regular season to date",OFFICIAL,https://www.nfl.com/standings/league/2026/REG,2026-11-14T21:33:19Z
+CORR-05,team-season,net_pts_per_game,pf_per_game,0.8019,0.000000,0.6291,0.8992,32,"32 NFL clubs, 2026 regular season to date",OFFICIAL,https://www.nfl.com/standings/league/2026/REG,2026-11-14T21:33:19Z
+CORR-06,team-season,net_pts_per_game,pa_per_game,-0.7485,0.000001,-0.8701,-0.5411,32,"32 NFL clubs, 2026 regular season to date",OFFICIAL,https://www.nfl.com/standings/league/2026/REG,2026-11-14T21:33:19Z
+CORR-07,game,home_margin,total_points,-0.1607,0.060739,-0.3198,0.0073,137,137 completed 2026 games (Weeks 1-10),OFFICIAL,https://www.nfl.com/schedules/2026/by-week/,2026-11-14T21:33:19Z
+CORR-08,game,abs_margin,total_points,-0.0157,0.855436,-0.1829,0.1524,137,137 completed 2026 games (Weeks 1-10),OFFICIAL,https://www.nfl.com/schedules/2026/by-week/,2026-11-14T21:33:19Z
+CORR-09,game,home_margin_non_neutral,total_points,-0.1764,0.044705,-0.3383,-0.0043,130,130 completed 2026 games played at a home venue,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/,2026-11-14T21:33:19Z

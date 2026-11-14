@@ -1,0 +1,138 @@
+game_id,season,week,kickoff_date,weekday_as_published,weekday_checked,away,away_club,home,home_club,away_score,home_score,home_margin,total_points,result,neutral_site,source_tier,source_url,fetched_utc
+2026_01_NE_SEA,2026,1,2026-09-09,Wednesday,Wednesday,NE,New England Patriots,SEA,Seattle Seahawks,10,13,3,23,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-1,2026-11-14T21:33:19Z
+2026_01_SF_LAR,2026,1,2026-09-10,Thursday,Thursday,SF,San Francisco 49ers,LAR,Los Angeles Rams,27,7,-20,34,away win,Melbourne,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-1,2026-11-14T21:33:19Z
+2026_01_CHI_CAR,2026,1,2026-09-13,Sunday,Sunday,CHI,Chicago Bears,CAR,Carolina Panthers,59,37,-22,96,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-1,2026-11-14T21:33:19Z
+2026_01_TB_CIN,2026,1,2026-09-13,Sunday,Sunday,TB,Tampa Bay Buccaneers,CIN,Cincinnati Bengals,27,33,6,60,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-1,2026-11-14T21:33:19Z
+2026_01_NO_DET,2026,1,2026-09-13,Sunday,Sunday,NO,New Orleans Saints,DET,Detroit Lions,30,31,1,61,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-1,2026-11-14T21:33:19Z
+2026_01_BUF_HOU,2026,1,2026-09-13,Sunday,Sunday,BUF,Buffalo Bills,HOU,Houston Texans,36,31,-5,67,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-1,2026-11-14T21:33:19Z
+2026_01_BAL_IND,2026,1,2026-09-13,Sunday,Sunday,BAL,Baltimore Ravens,IND,Indianapolis Colts,41,23,-18,64,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-1,2026-11-14T21:33:19Z
+2026_01_CLE_JAX,2026,1,2026-09-13,Sunday,Sunday,CLE,Cleveland Browns,JAX,Jacksonville Jaguars,10,34,24,44,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-1,2026-11-14T21:33:19Z
+2026_01_ATL_PIT,2026,1,2026-09-13,Sunday,Sunday,ATL,Atlanta Falcons,PIT,Pittsburgh Steelers,13,20,7,33,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-1,2026-11-14T21:33:19Z
+2026_01_NYJ_TEN,2026,1,2026-09-13,Sunday,Sunday,NYJ,New York Jets,TEN,Tennessee Titans,23,10,-13,33,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-1,2026-11-14T21:33:19Z
+2026_01_ARI_LAC,2026,1,2026-09-13,Sunday,Sunday,ARI,Arizona Cardinals,LAC,Los Angeles Chargers,26,14,-12,40,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-1,2026-11-14T21:33:19Z
+2026_01_MIA_LV,2026,1,2026-09-13,Sunday,Sunday,MIA,Miami Dolphins,LV,Las Vegas Raiders,13,27,14,40,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-1,2026-11-14T21:33:19Z
+2026_01_GB_MIN,2026,1,2026-09-13,Sunday,Sunday,GB,Green Bay Packers,MIN,Minnesota Vikings,22,39,17,61,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-1,2026-11-14T21:33:19Z
+2026_01_WAS_PHI,2026,1,2026-09-13,Sunday,Sunday,WAS,Washington Commanders,PHI,Philadelphia Eagles,22,24,2,46,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-1,2026-11-14T21:33:19Z
+2026_01_DAL_NYG,2026,1,2026-09-13,Sunday,Sunday,DAL,Dallas Cowboys,NYG,New York Giants,20,28,8,48,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-1,2026-11-14T21:33:19Z
+2026_01_DEN_KC,2026,1,2026-09-14,Monday,Monday,DEN,Denver Broncos,KC,Kansas City Chiefs,10,31,21,41,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-1,2026-11-14T21:33:19Z
+2026_02_DET_BUF,2026,2,2026-09-17,Thursday,Thursday,DET,Detroit Lions,BUF,Buffalo Bills,31,41,10,72,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-2,2026-11-14T21:33:19Z
+2026_02_CAR_ATL,2026,2,2026-09-20,Sunday,Sunday,CAR,Carolina Panthers,ATL,Atlanta Falcons,34,3,-31,37,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-2,2026-11-14T21:33:19Z
+2026_02_NO_BAL,2026,2,2026-09-20,Sunday,Sunday,NO,New Orleans Saints,BAL,Baltimore Ravens,24,17,-7,41,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-2,2026-11-14T21:33:19Z
+2026_02_MIN_CHI,2026,2,2026-09-20,Sunday,Sunday,MIN,Minnesota Vikings,CHI,Chicago Bears,9,3,-6,12,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-2,2026-11-14T21:33:19Z
+2026_02_CIN_HOU,2026,2,2026-09-20,Sunday,Sunday,CIN,Cincinnati Bengals,HOU,Houston Texans,20,6,-14,26,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-2,2026-11-14T21:33:19Z
+2026_02_PIT_NE,2026,2,2026-09-20,Sunday,Sunday,PIT,Pittsburgh Steelers,NE,New England Patriots,3,20,17,23,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-2,2026-11-14T21:33:19Z
+2026_02_GB_NYJ,2026,2,2026-09-20,Sunday,Sunday,GB,Green Bay Packers,NYJ,New York Jets,20,17,-3,37,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-2,2026-11-14T21:33:19Z
+2026_02_CLE_TB,2026,2,2026-09-20,Sunday,Sunday,CLE,Cleveland Browns,TB,Tampa Bay Buccaneers,23,19,-4,42,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-2,2026-11-14T21:33:19Z
+2026_02_PHI_TEN,2026,2,2026-09-20,Sunday,Sunday,PHI,Philadelphia Eagles,TEN,Tennessee Titans,24,20,-4,44,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-2,2026-11-14T21:33:19Z
+2026_02_JAX_DEN,2026,2,2026-09-20,Sunday,Sunday,JAX,Jacksonville Jaguars,DEN,Denver Broncos,13,20,7,33,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-2,2026-11-14T21:33:19Z
+2026_02_LV_LAC,2026,2,2026-09-20,Sunday,Sunday,LV,Las Vegas Raiders,LAC,Los Angeles Chargers,26,14,-12,40,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-2,2026-11-14T21:33:19Z
+2026_02_SEA_ARI,2026,2,2026-09-20,Sunday,Sunday,SEA,Seattle Seahawks,ARI,Arizona Cardinals,31,7,-24,38,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-2,2026-11-14T21:33:19Z
+2026_02_WAS_DAL,2026,2,2026-09-20,Sunday,Sunday,WAS,Washington Commanders,DAL,Dallas Cowboys,20,37,17,57,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-2,2026-11-14T21:33:19Z
+2026_02_MIA_SF,2026,2,2026-09-20,Sunday,Sunday,MIA,Miami Dolphins,SF,San Francisco 49ers,13,35,22,48,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-2,2026-11-14T21:33:19Z
+2026_02_IND_KC,2026,2,2026-09-20,Sunday,Sunday,IND,Indianapolis Colts,KC,Kansas City Chiefs,30,33,3,63,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-2,2026-11-14T21:33:19Z
+2026_02_NYG_LAR,2026,2,2026-09-21,Monday,Monday,NYG,New York Giants,LAR,Los Angeles Rams,6,28,22,34,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-2,2026-11-14T21:33:19Z
+2026_03_ATL_GB,2026,3,2026-09-24,Thursday,Thursday,ATL,Atlanta Falcons,GB,Green Bay Packers,35,14,-21,49,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-3,2026-11-14T21:33:19Z
+2026_03_LAC_BUF,2026,3,2026-09-27,Sunday,Sunday,LAC,Los Angeles Chargers,BUF,Buffalo Bills,16,24,8,40,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-3,2026-11-14T21:33:19Z
+2026_03_CAR_CLE,2026,3,2026-09-27,Sunday,Sunday,CAR,Carolina Panthers,CLE,Cleveland Browns,18,21,3,39,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-3,2026-11-14T21:33:19Z
+2026_03_NYJ_DET,2026,3,2026-09-27,Sunday,Sunday,NYJ,New York Jets,DET,Detroit Lions,24,31,7,55,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-3,2026-11-14T21:33:19Z
+2026_03_HOU_IND,2026,3,2026-09-27,Sunday,Sunday,HOU,Houston Texans,IND,Indianapolis Colts,17,19,2,36,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-3,2026-11-14T21:33:19Z
+2026_03_NE_JAX,2026,3,2026-09-27,Sunday,Sunday,NE,New England Patriots,JAX,Jacksonville Jaguars,6,35,29,41,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-3,2026-11-14T21:33:19Z
+2026_03_KC_MIA,2026,3,2026-09-27,Sunday,Sunday,KC,Kansas City Chiefs,MIA,Miami Dolphins,24,10,-14,34,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-3,2026-11-14T21:33:19Z
+2026_03_TEN_NYG,2026,3,2026-09-27,Sunday,Sunday,TEN,Tennessee Titans,NYG,New York Giants,7,12,5,19,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-3,2026-11-14T21:33:19Z
+2026_03_CIN_PIT,2026,3,2026-09-27,Sunday,Sunday,CIN,Cincinnati Bengals,PIT,Pittsburgh Steelers,27,30,3,57,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-3,2026-11-14T21:33:19Z
+2026_03_SEA_WAS,2026,3,2026-09-27,Sunday,Sunday,SEA,Seattle Seahawks,WAS,Washington Commanders,31,33,2,64,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-3,2026-11-14T21:33:19Z
+2026_03_ARI_SF,2026,3,2026-09-27,Sunday,Sunday,ARI,Arizona Cardinals,SF,San Francisco 49ers,30,36,6,66,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-3,2026-11-14T21:33:19Z
+2026_03_MIN_TB,2026,3,2026-09-27,Sunday,Sunday,MIN,Minnesota Vikings,TB,Tampa Bay Buccaneers,23,16,-7,39,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-3,2026-11-14T21:33:19Z
+2026_03_LV_NO,2026,3,2026-09-27,Sunday,Sunday,LV,Las Vegas Raiders,NO,New Orleans Saints,35,27,-8,62,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-3,2026-11-14T21:33:19Z
+2026_03_BAL_DAL,2026,3,2026-09-27,Sunday,Sunday,BAL,Baltimore Ravens,DAL,Dallas Cowboys,34,31,-3,65,away win,Rio de Janeiro,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-3,2026-11-14T21:33:19Z
+2026_03_LAR_DEN,2026,3,2026-09-27,Sunday,Sunday,LAR,Los Angeles Rams,DEN,Denver Broncos,26,30,4,56,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-3,2026-11-14T21:33:19Z
+2026_03_PHI_CHI,2026,3,2026-09-28,Monday,Monday,PHI,Philadelphia Eagles,CHI,Chicago Bears,7,27,20,34,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-3,2026-11-14T21:33:19Z
+2026_04_PIT_CLE,2026,4,2026-10-01,Thursday,Thursday,PIT,Pittsburgh Steelers,CLE,Cleveland Browns,24,27,3,51,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-4,2026-11-14T21:33:19Z
+2026_04_IND_WAS,2026,4,2026-10-04,Sunday,Sunday,IND,Indianapolis Colts,WAS,Washington Commanders,30,13,-17,43,away win,London,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-4,2026-11-14T21:33:19Z
+2026_04_TEN_BAL,2026,4,2026-10-04,Sunday,Sunday,TEN,Tennessee Titans,BAL,Baltimore Ravens,18,24,6,42,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-4,2026-11-14T21:33:19Z
+2026_04_NE_BUF,2026,4,2026-10-04,Sunday,Sunday,NE,New England Patriots,BUF,Buffalo Bills,29,26,-3,55,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-4,2026-11-14T21:33:19Z
+2026_04_NYJ_CHI,2026,4,2026-10-04,Sunday,Sunday,NYJ,New York Jets,CHI,Chicago Bears,12,23,11,35,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-4,2026-11-14T21:33:19Z
+2026_04_JAX_CIN,2026,4,2026-10-04,Sunday,Sunday,JAX,Jacksonville Jaguars,CIN,Cincinnati Bengals,22,17,-5,39,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-4,2026-11-14T21:33:19Z
+2026_04_DAL_HOU,2026,4,2026-10-04,Sunday,Sunday,DAL,Dallas Cowboys,HOU,Houston Texans,34,30,-4,64,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-4,2026-11-14T21:33:19Z
+2026_04_ARI_NYG,2026,4,2026-10-04,Sunday,Sunday,ARI,Arizona Cardinals,NYG,New York Giants,24,36,12,60,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-4,2026-11-14T21:33:19Z
+2026_04_LAR_PHI,2026,4,2026-10-04,Sunday,Sunday,LAR,Los Angeles Rams,PHI,Philadelphia Eagles,24,20,-4,44,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-4,2026-11-14T21:33:19Z
+2026_04_GB_TB,2026,4,2026-10-04,Sunday,Sunday,GB,Green Bay Packers,TB,Tampa Bay Buccaneers,17,14,-3,31,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-4,2026-11-14T21:33:19Z
+2026_04_MIA_MIN,2026,4,2026-10-04,Sunday,Sunday,MIA,Miami Dolphins,MIN,Minnesota Vikings,10,15,5,25,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-4,2026-11-14T21:33:19Z
+2026_04_KC_LV,2026,4,2026-10-04,Sunday,Sunday,KC,Kansas City Chiefs,LV,Las Vegas Raiders,30,27,-3,57,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-4,2026-11-14T21:33:19Z
+2026_04_LAC_SEA,2026,4,2026-10-04,Sunday,Sunday,LAC,Los Angeles Chargers,SEA,Seattle Seahawks,23,30,7,53,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-4,2026-11-14T21:33:19Z
+2026_04_DEN_SF,2026,4,2026-10-04,Sunday,Sunday,DEN,Denver Broncos,SF,San Francisco 49ers,14,24,10,38,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-4,2026-11-14T21:33:19Z
+2026_04_DET_CAR,2026,4,2026-10-04,Sunday,Sunday,DET,Detroit Lions,CAR,Carolina Panthers,26,32,6,58,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-4,2026-11-14T21:33:19Z
+2026_04_ATL_NO,2026,4,2026-10-05,Monday,Monday,ATL,Atlanta Falcons,NO,New Orleans Saints,45,24,-21,69,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-4,2026-11-14T21:33:19Z
+2026_05_TB_DAL,2026,5,2026-10-08,Thursday,Thursday,TB,Tampa Bay Buccaneers,DAL,Dallas Cowboys,24,16,-8,40,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5,2026-11-14T21:33:19Z
+2026_05_PHI_JAX,2026,5,2026-10-11,Sunday,Sunday,PHI,Philadelphia Eagles,JAX,Jacksonville Jaguars,17,19,2,36,home win,London,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5,2026-11-14T21:33:19Z
+2026_05_CIN_MIA,2026,5,2026-10-11,Sunday,Sunday,CIN,Cincinnati Bengals,MIA,Miami Dolphins,31,24,-7,55,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5,2026-11-14T21:33:19Z
+2026_05_LV_NE,2026,5,2026-10-11,Sunday,Sunday,LV,Las Vegas Raiders,NE,New England Patriots,17,45,28,62,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5,2026-11-14T21:33:19Z
+2026_05_MIN_NO,2026,5,2026-10-11,Sunday,Sunday,MIN,Minnesota Vikings,NO,New Orleans Saints,23,13,-10,36,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5,2026-11-14T21:33:19Z
+2026_05_CLE_NYJ,2026,5,2026-10-11,Sunday,Sunday,CLE,Cleveland Browns,NYJ,New York Jets,12,17,5,29,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5,2026-11-14T21:33:19Z
+2026_05_IND_PIT,2026,5,2026-10-11,Sunday,Sunday,IND,Indianapolis Colts,PIT,Pittsburgh Steelers,22,34,12,56,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5,2026-11-14T21:33:19Z
+2026_05_HOU_TEN,2026,5,2026-10-11,Sunday,Sunday,HOU,Houston Texans,TEN,Tennessee Titans,26,3,-23,29,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5,2026-11-14T21:33:19Z
+2026_05_NYG_WAS,2026,5,2026-10-11,Sunday,Sunday,NYG,New York Giants,WAS,Washington Commanders,27,27,0,54,tie,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5,2026-11-14T21:33:19Z
+2026_05_CHI_GB,2026,5,2026-10-11,Sunday,Sunday,CHI,Chicago Bears,GB,Green Bay Packers,7,31,24,38,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5,2026-11-14T21:33:19Z
+2026_05_DEN_LAC,2026,5,2026-10-11,Sunday,Sunday,DEN,Denver Broncos,LAC,Los Angeles Chargers,23,17,-6,40,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5,2026-11-14T21:33:19Z
+2026_05_DET_ARI,2026,5,2026-10-11,Sunday,Sunday,DET,Detroit Lions,ARI,Arizona Cardinals,45,21,-24,66,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5,2026-11-14T21:33:19Z
+2026_05_SF_SEA,2026,5,2026-10-11,Sunday,Sunday,SF,San Francisco 49ers,SEA,Seattle Seahawks,32,29,-3,61,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5,2026-11-14T21:33:19Z
+2026_05_BAL_ATL,2026,5,2026-10-11,Sunday,Sunday,BAL,Baltimore Ravens,ATL,Atlanta Falcons,30,23,-7,53,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5,2026-11-14T21:33:19Z
+2026_05_BUF_LAR,2026,5,2026-10-12,Monday,Monday,BUF,Buffalo Bills,LAR,Los Angeles Rams,37,34,-3,71,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5,2026-11-14T21:33:19Z
+2026_06_SEA_DEN,2026,6,2026-10-15,Thursday,Thursday,SEA,Seattle Seahawks,DEN,Denver Broncos,14,17,3,31,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6,2026-11-14T21:33:19Z
+2026_06_HOU_JAX,2026,6,2026-10-18,Sunday,Sunday,HOU,Houston Texans,JAX,Jacksonville Jaguars,34,31,-3,65,away win,London,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6,2026-11-14T21:33:19Z
+2026_06_CHI_ATL,2026,6,2026-10-18,Sunday,Sunday,CHI,Chicago Bears,ATL,Atlanta Falcons,31,23,-8,54,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6,2026-11-14T21:33:19Z
+2026_06_BAL_CLE,2026,6,2026-10-18,Sunday,Sunday,BAL,Baltimore Ravens,CLE,Cleveland Browns,10,13,3,23,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6,2026-11-14T21:33:19Z
+2026_06_TEN_IND,2026,6,2026-10-18,Sunday,Sunday,TEN,Tennessee Titans,IND,Indianapolis Colts,26,20,-6,46,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6,2026-11-14T21:33:19Z
+2026_06_NYJ_NE,2026,6,2026-10-18,Sunday,Sunday,NYJ,New York Jets,NE,New England Patriots,19,26,7,45,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6,2026-11-14T21:33:19Z
+2026_06_NO_NYG,2026,6,2026-10-18,Sunday,Sunday,NO,New Orleans Saints,NYG,New York Giants,34,27,-7,61,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6,2026-11-14T21:33:19Z
+2026_06_CAR_PHI,2026,6,2026-10-18,Sunday,Sunday,CAR,Carolina Panthers,PHI,Philadelphia Eagles,25,14,-11,39,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6,2026-11-14T21:33:19Z
+2026_06_PIT_TB,2026,6,2026-10-18,Sunday,Sunday,PIT,Pittsburgh Steelers,TB,Tampa Bay Buccaneers,26,19,-7,45,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6,2026-11-14T21:33:19Z
+2026_06_ARI_LAR,2026,6,2026-10-18,Sunday,Sunday,ARI,Arizona Cardinals,LAR,Los Angeles Rams,18,16,-2,34,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6,2026-11-14T21:33:19Z
+2026_06_LAC_KC,2026,6,2026-10-18,Sunday,Sunday,LAC,Los Angeles Chargers,KC,Kansas City Chiefs,6,22,16,28,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6,2026-11-14T21:33:19Z
+2026_06_BUF_LV,2026,6,2026-10-18,Sunday,Sunday,BUF,Buffalo Bills,LV,Las Vegas Raiders,33,30,-3,63,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6,2026-11-14T21:33:19Z
+2026_06_DAL_GB,2026,6,2026-10-18,Sunday,Sunday,DAL,Dallas Cowboys,GB,Green Bay Packers,13,23,10,36,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6,2026-11-14T21:33:19Z
+2026_06_WAS_SF,2026,6,2026-10-19,Monday,Monday,WAS,Washington Commanders,SF,San Francisco 49ers,17,23,6,40,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6,2026-11-14T21:33:19Z
+2026_07_NE_CHI,2026,7,2026-10-22,Thursday,Thursday,NE,New England Patriots,CHI,Chicago Bears,24,30,6,54,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7,2026-11-14T21:33:19Z
+2026_07_PIT_NO,2026,7,2026-10-25,Sunday,Sunday,PIT,Pittsburgh Steelers,NO,New Orleans Saints,16,10,-6,26,away win,Saint-Denis,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7,2026-11-14T21:33:19Z
+2026_07_SF_ATL,2026,7,2026-10-25,Sunday,Sunday,SF,San Francisco 49ers,ATL,Atlanta Falcons,20,29,9,49,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7,2026-11-14T21:33:19Z
+2026_07_CIN_BAL,2026,7,2026-10-25,Sunday,Sunday,CIN,Cincinnati Bengals,BAL,Baltimore Ravens,35,13,-22,48,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7,2026-11-14T21:33:19Z
+2026_07_TB_CAR,2026,7,2026-10-25,Sunday,Sunday,TB,Tampa Bay Buccaneers,CAR,Carolina Panthers,43,13,-30,56,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7,2026-11-14T21:33:19Z
+2026_07_NYG_HOU,2026,7,2026-10-25,Sunday,Sunday,NYG,New York Giants,HOU,Houston Texans,27,21,-6,48,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7,2026-11-14T21:33:19Z
+2026_07_IND_MIN,2026,7,2026-10-25,Sunday,Sunday,IND,Indianapolis Colts,MIN,Minnesota Vikings,10,16,6,26,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7,2026-11-14T21:33:19Z
+2026_07_MIA_NYJ,2026,7,2026-10-25,Sunday,Sunday,MIA,Miami Dolphins,NYJ,New York Jets,28,25,-3,53,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7,2026-11-14T21:33:19Z
+2026_07_CLE_TEN,2026,7,2026-10-25,Sunday,Sunday,CLE,Cleveland Browns,TEN,Tennessee Titans,27,24,-3,51,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7,2026-11-14T21:33:19Z
+2026_07_DEN_ARI,2026,7,2026-10-25,Sunday,Sunday,DEN,Denver Broncos,ARI,Arizona Cardinals,30,16,-14,46,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7,2026-11-14T21:33:19Z
+2026_07_GB_DET,2026,7,2026-10-25,Sunday,Sunday,GB,Green Bay Packers,DET,Detroit Lions,17,20,3,37,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7,2026-11-14T21:33:19Z
+2026_07_LAR_LV,2026,7,2026-10-25,Sunday,Sunday,LAR,Los Angeles Rams,LV,Las Vegas Raiders,35,21,-14,56,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7,2026-11-14T21:33:19Z
+2026_07_KC_SEA,2026,7,2026-10-25,Sunday,Sunday,KC,Kansas City Chiefs,SEA,Seattle Seahawks,3,20,17,23,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7,2026-11-14T21:33:19Z
+2026_07_DAL_PHI,2026,7,2026-10-26,Monday,Monday,DAL,Dallas Cowboys,PHI,Philadelphia Eagles,38,21,-17,59,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7,2026-11-14T21:33:19Z
+2026_08_CAR_GB,2026,8,2026-10-29,Thursday,Thursday,CAR,Carolina Panthers,GB,Green Bay Packers,19,27,8,46,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8,2026-11-14T21:33:19Z
+2026_08_BAL_BUF,2026,8,2026-11-01,Sunday,Sunday,BAL,Baltimore Ravens,BUF,Buffalo Bills,10,36,26,46,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8,2026-11-14T21:33:19Z
+2026_08_TEN_CIN,2026,8,2026-11-01,Sunday,Sunday,TEN,Tennessee Titans,CIN,Cincinnati Bengals,36,43,7,79,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8,2026-11-14T21:33:19Z
+2026_08_ARI_DAL,2026,8,2026-11-01,Sunday,Sunday,ARI,Arizona Cardinals,DAL,Dallas Cowboys,33,30,-3,63,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8,2026-11-14T21:33:19Z
+2026_08_MIN_DET,2026,8,2026-11-01,Sunday,Sunday,MIN,Minnesota Vikings,DET,Detroit Lions,15,19,4,34,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8,2026-11-14T21:33:19Z
+2026_08_IND_JAX,2026,8,2026-11-01,Sunday,Sunday,IND,Indianapolis Colts,JAX,Jacksonville Jaguars,7,42,35,49,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8,2026-11-14T21:33:19Z
+2026_08_LV_NYJ,2026,8,2026-11-01,Sunday,Sunday,LV,Las Vegas Raiders,NYJ,New York Jets,38,33,-5,71,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8,2026-11-14T21:33:19Z
+2026_08_CLE_PIT,2026,8,2026-11-01,Sunday,Sunday,CLE,Cleveland Browns,PIT,Pittsburgh Steelers,6,27,21,33,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8,2026-11-14T21:33:19Z
+2026_08_ATL_TB,2026,8,2026-11-01,Sunday,Sunday,ATL,Atlanta Falcons,TB,Tampa Bay Buccaneers,0,16,16,16,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8,2026-11-14T21:33:19Z
+2026_08_LAC_LAR,2026,8,2026-11-01,Sunday,Sunday,LAC,Los Angeles Chargers,LAR,Los Angeles Rams,9,24,15,33,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8,2026-11-14T21:33:19Z
+2026_08_KC_DEN,2026,8,2026-11-01,Sunday,Sunday,KC,Kansas City Chiefs,DEN,Denver Broncos,24,28,4,52,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8,2026-11-14T21:33:19Z
+2026_08_NE_MIA,2026,8,2026-11-01,Sunday,Sunday,NE,New England Patriots,MIA,Miami Dolphins,24,19,-5,43,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8,2026-11-14T21:33:19Z
+2026_08_PHI_WAS,2026,8,2026-11-01,Sunday,Sunday,PHI,Philadelphia Eagles,WAS,Washington Commanders,10,27,17,37,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8,2026-11-14T21:33:19Z
+2026_08_CHI_SEA,2026,8,2026-11-02,Monday,Monday,CHI,Chicago Bears,SEA,Seattle Seahawks,34,17,-17,51,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8,2026-11-14T21:33:19Z
+2026_09_JAX_BAL,2026,9,2026-11-05,Thursday,Thursday,JAX,Jacksonville Jaguars,BAL,Baltimore Ravens,33,10,-23,43,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9,2026-11-14T21:33:19Z
+2026_09_CIN_ATL,2026,9,2026-11-08,Sunday,Sunday,CIN,Cincinnati Bengals,ATL,Atlanta Falcons,34,17,-17,51,away win,Madrid,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9,2026-11-14T21:33:19Z
+2026_09_DEN_CAR,2026,9,2026-11-08,Sunday,Sunday,DEN,Denver Broncos,CAR,Carolina Panthers,26,21,-5,47,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9,2026-11-14T21:33:19Z
+2026_09_DAL_IND,2026,9,2026-11-08,Sunday,Sunday,DAL,Dallas Cowboys,IND,Indianapolis Colts,27,23,-4,50,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9,2026-11-14T21:33:19Z
+2026_09_NYJ_KC,2026,9,2026-11-08,Sunday,Sunday,NYJ,New York Jets,KC,Kansas City Chiefs,12,35,23,47,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9,2026-11-14T21:33:19Z
+2026_09_DET_MIA,2026,9,2026-11-08,Sunday,Sunday,DET,Detroit Lions,MIA,Miami Dolphins,19,9,-10,28,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9,2026-11-14T21:33:19Z
+2026_09_CLE_NO,2026,9,2026-11-08,Sunday,Sunday,CLE,Cleveland Browns,NO,New Orleans Saints,22,23,1,45,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9,2026-11-14T21:33:19Z
+2026_09_NYG_PHI,2026,9,2026-11-08,Sunday,Sunday,NYG,New York Giants,PHI,Philadelphia Eagles,19,11,-8,30,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9,2026-11-14T21:33:19Z
+2026_09_LAR_WAS,2026,9,2026-11-08,Sunday,Sunday,LAR,Los Angeles Rams,WAS,Washington Commanders,20,13,-7,33,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9,2026-11-14T21:33:19Z
+2026_09_HOU_LAC,2026,9,2026-11-08,Sunday,Sunday,HOU,Houston Texans,LAC,Los Angeles Chargers,44,22,-22,66,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9,2026-11-14T21:33:19Z
+2026_09_LV_SF,2026,9,2026-11-08,Sunday,Sunday,LV,Las Vegas Raiders,SF,San Francisco 49ers,17,38,21,55,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9,2026-11-14T21:33:19Z
+2026_09_GB_NE,2026,9,2026-11-08,Sunday,Sunday,GB,Green Bay Packers,NE,New England Patriots,45,27,-18,72,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9,2026-11-14T21:33:19Z
+2026_09_ARI_SEA,2026,9,2026-11-08,Sunday,Sunday,ARI,Arizona Cardinals,SEA,Seattle Seahawks,3,17,14,20,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9,2026-11-14T21:33:19Z
+2026_09_TB_CHI,2026,9,2026-11-08,Sunday,Sunday,TB,Tampa Bay Buccaneers,CHI,Chicago Bears,24,27,3,51,home win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9,2026-11-14T21:33:19Z
+2026_09_BUF_MIN,2026,9,2026-11-09,Monday,Monday,BUF,Buffalo Bills,MIN,Minnesota Vikings,23,6,-17,29,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9,2026-11-14T21:33:19Z
+2026_10_WAS_NYG,2026,10,2026-11-12,Thursday,Thursday,WAS,Washington Commanders,NYG,New York Giants,24,21,-3,45,away win,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-14T21:33:19Z

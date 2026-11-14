@@ -1,0 +1,163 @@
+strategy_id,strategy,gate_id,result,note,universe_tier,source_url
+S1,Model side edge >= 3.0 pts,G0,pass,rule and parameters fixed before results were seen,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S1,Model side edge >= 3.0 pts,G1,fail (n = 29),minimum 300 graded bets,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S1,Model side edge >= 3.0 pts,G2,fail,no verified opening/closing operator price exists - flag F-01,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S1,Model side edge >= 3.0 pts,G3,pass,walk-forward fit; parameters predate every graded bet,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S1,Model side edge >= 3.0 pts,G4,fail,holm p = 1.0000 at alpha 0.05,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S1,Model side edge >= 3.0 pts,G5,fail (0.000),deflated Sharpe >= 0.95 over 8 families,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S1,Model side edge >= 3.0 pts,G6,not evaluated,no bankroll or limit has been declared by the owner - question Q-03,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S1,Model side edge >= 3.0 pts,G7,pass,"single bet, no leg pair to audit",OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S1,Model side edge >= 3.0 pts,G8,pass,graded against OFFICIAL results,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S2,Model total edge >= 3.0 pts,G0,pass,rule and parameters fixed before results were seen,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S2,Model total edge >= 3.0 pts,G1,fail (n = 33),minimum 300 graded bets,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S2,Model total edge >= 3.0 pts,G2,fail,no verified opening/closing operator price exists - flag F-01,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S2,Model total edge >= 3.0 pts,G3,pass,walk-forward fit; parameters predate every graded bet,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S2,Model total edge >= 3.0 pts,G4,fail,holm p = 1.0000 at alpha 0.05,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S2,Model total edge >= 3.0 pts,G5,fail (0.000),deflated Sharpe >= 0.95 over 8 families,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S2,Model total edge >= 3.0 pts,G6,not evaluated,no bankroll or limit has been declared by the owner - question Q-03,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S2,Model total edge >= 3.0 pts,G7,pass,"single bet, no leg pair to audit",OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S2,Model total edge >= 3.0 pts,G8,pass,graded against OFFICIAL results,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S3,Moneyline value >= 5 pp,G0,pass,rule and parameters fixed before results were seen,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S3,Moneyline value >= 5 pp,G1,fail (n = 51),minimum 300 graded bets,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S3,Moneyline value >= 5 pp,G2,fail,no verified opening/closing operator price exists - flag F-01,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S3,Moneyline value >= 5 pp,G3,pass,walk-forward fit; parameters predate every graded bet,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S3,Moneyline value >= 5 pp,G4,fail,holm p = 0.0001 at alpha 0.05,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S3,Moneyline value >= 5 pp,G5,fail (0.000),deflated Sharpe >= 0.95 over 8 families,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S3,Moneyline value >= 5 pp,G6,not evaluated,no bankroll or limit has been declared by the owner - question Q-03,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S3,Moneyline value >= 5 pp,G7,pass,"single bet, no leg pair to audit",OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S3,Moneyline value >= 5 pp,G8,pass,graded against OFFICIAL results,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S4,Home underdog >= 2.5,G0,pass,rule and parameters fixed before results were seen,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S4,Home underdog >= 2.5,G1,fail (n = 25),minimum 300 graded bets,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S4,Home underdog >= 2.5,G2,fail,no verified opening/closing operator price exists - flag F-01,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S4,Home underdog >= 2.5,G3,pass,walk-forward fit; parameters predate every graded bet,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S4,Home underdog >= 2.5,G4,fail,holm p = 0.0331 at alpha 0.05,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S4,Home underdog >= 2.5,G5,fail (0.000),deflated Sharpe >= 0.95 over 8 families,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S4,Home underdog >= 2.5,G6,not evaluated,no bankroll or limit has been declared by the owner - question Q-03,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S4,Home underdog >= 2.5,G7,pass,"single bet, no leg pair to audit",OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S4,Home underdog >= 2.5,G8,pass,graded against OFFICIAL results,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S5,Rest edge >= 3 days,G0,pass,rule and parameters fixed before results were seen,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S5,Rest edge >= 3 days,G1,fail (n = 24),minimum 300 graded bets,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S5,Rest edge >= 3 days,G2,fail,no verified opening/closing operator price exists - flag F-01,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S5,Rest edge >= 3 days,G3,pass,walk-forward fit; parameters predate every graded bet,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S5,Rest edge >= 3 days,G4,fail,holm p = 1.0000 at alpha 0.05,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S5,Rest edge >= 3 days,G5,fail (0.000),deflated Sharpe >= 0.95 over 8 families,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S5,Rest edge >= 3 days,G6,not evaluated,no bankroll or limit has been declared by the owner - question Q-03,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S5,Rest edge >= 3 days,G7,pass,"single bet, no leg pair to audit",OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S5,Rest edge >= 3 days,G8,pass,graded against OFFICIAL results,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S6,Divisional home underdog,G0,pass,rule and parameters fixed before results were seen,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S6,Divisional home underdog,G1,fail (n = 8),minimum 300 graded bets,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S6,Divisional home underdog,G2,fail,no verified opening/closing operator price exists - flag F-01,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S6,Divisional home underdog,G3,pass,walk-forward fit; parameters predate every graded bet,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S6,Divisional home underdog,G4,fail,holm p = 1.0000 at alpha 0.05,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S6,Divisional home underdog,G5,fail (0.000),deflated Sharpe >= 0.95 over 8 families,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S6,Divisional home underdog,G6,not evaluated,no bankroll or limit has been declared by the owner - question Q-03,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S6,Divisional home underdog,G7,pass,"single bet, no leg pair to audit",OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S6,Divisional home underdog,G8,pass,graded against OFFICIAL results,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S7,Fade large home favourite >= 10,G0,pass,rule and parameters fixed before results were seen,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S7,Fade large home favourite >= 10,G1,fail (n = 4),minimum 300 graded bets,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S7,Fade large home favourite >= 10,G2,fail,no verified opening/closing operator price exists - flag F-01,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S7,Fade large home favourite >= 10,G3,pass,walk-forward fit; parameters predate every graded bet,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S7,Fade large home favourite >= 10,G4,fail,holm p = 1.0000 at alpha 0.05,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S7,Fade large home favourite >= 10,G5,fail (0.000),deflated Sharpe >= 0.95 over 8 families,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S7,Fade large home favourite >= 10,G6,not evaluated,no bankroll or limit has been declared by the owner - question Q-03,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S7,Fade large home favourite >= 10,G7,pass,"single bet, no leg pair to audit",OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S7,Fade large home favourite >= 10,G8,pass,graded against OFFICIAL results,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S8,Same-game side+total parlay,G0,pass,rule and parameters fixed before results were seen,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S8,Same-game side+total parlay,G1,fail (n = 8),minimum 300 graded bets,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S8,Same-game side+total parlay,G2,fail,no verified opening/closing operator price exists - flag F-01,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S8,Same-game side+total parlay,G3,pass,walk-forward fit; parameters predate every graded bet,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S8,Same-game side+total parlay,G4,fail,holm p = 1.0000 at alpha 0.05,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S8,Same-game side+total parlay,G5,fail (0.000),deflated Sharpe >= 0.95 over 8 families,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S8,Same-game side+total parlay,G6,not evaluated,no bankroll or limit has been declared by the owner - question Q-03,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S8,Same-game side+total parlay,G7,fail,parlay/prop legs have no officially sourced joint estimate - flag F-08,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S8,Same-game side+total parlay,G8,pass,graded against OFFICIAL results,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S9,Same-game prop combination,G0,pass,rule and parameters fixed before results were seen,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S9,Same-game prop combination,G1,fail (n = 0),minimum 300 graded bets,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S9,Same-game prop combination,G2,fail,no verified opening/closing operator price exists - flag F-01,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S9,Same-game prop combination,G3,not evaluated,walk-forward fit; parameters predate every graded bet,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S9,Same-game prop combination,G4,fail,holm p =  at alpha 0.05,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S9,Same-game prop combination,G5,fail (),deflated Sharpe >= 0.95 over 8 families,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S9,Same-game prop combination,G6,not evaluated,no bankroll or limit has been declared by the owner - question Q-03,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S9,Same-game prop combination,G7,fail,parlay/prop legs have no officially sourced joint estimate - flag F-08,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S9,Same-game prop combination,G8,pass,graded against OFFICIAL results,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/
+S1,Model side edge >= 3.0 pts,G0,pass,rule and parameters fixed before results were seen,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S1,Model side edge >= 3.0 pts,G1,pass,minimum 300 graded bets,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S1,Model side edge >= 3.0 pts,G2,fail,no verified opening/closing operator price exists - flag F-01,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S1,Model side edge >= 3.0 pts,G3,pass,walk-forward fit; parameters predate every graded bet,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S1,Model side edge >= 3.0 pts,G4,fail,holm p = 0.6677 at alpha 0.05,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S1,Model side edge >= 3.0 pts,G5,fail (0.000),deflated Sharpe >= 0.95 over 8 families,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S1,Model side edge >= 3.0 pts,G6,not evaluated,no bankroll or limit has been declared by the owner - question Q-03,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S1,Model side edge >= 3.0 pts,G7,pass,"single bet, no leg pair to audit",AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S1,Model side edge >= 3.0 pts,G8,fail,graded against AGGREGATOR results,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S2,Model total edge >= 3.0 pts,G0,pass,rule and parameters fixed before results were seen,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S2,Model total edge >= 3.0 pts,G1,pass,minimum 300 graded bets,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S2,Model total edge >= 3.0 pts,G2,fail,no verified opening/closing operator price exists - flag F-01,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S2,Model total edge >= 3.0 pts,G3,pass,walk-forward fit; parameters predate every graded bet,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S2,Model total edge >= 3.0 pts,G4,fail,holm p = 0.6730 at alpha 0.05,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S2,Model total edge >= 3.0 pts,G5,fail (0.000),deflated Sharpe >= 0.95 over 8 families,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S2,Model total edge >= 3.0 pts,G6,not evaluated,no bankroll or limit has been declared by the owner - question Q-03,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S2,Model total edge >= 3.0 pts,G7,pass,"single bet, no leg pair to audit",AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S2,Model total edge >= 3.0 pts,G8,fail,graded against AGGREGATOR results,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S3,Moneyline value >= 5 pp,G0,pass,rule and parameters fixed before results were seen,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S3,Moneyline value >= 5 pp,G1,pass,minimum 300 graded bets,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S3,Moneyline value >= 5 pp,G2,fail,no verified opening/closing operator price exists - flag F-01,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S3,Moneyline value >= 5 pp,G3,pass,walk-forward fit; parameters predate every graded bet,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S3,Moneyline value >= 5 pp,G4,fail,holm p = 0.0000 at alpha 0.05,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S3,Moneyline value >= 5 pp,G5,fail (0.000),deflated Sharpe >= 0.95 over 8 families,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S3,Moneyline value >= 5 pp,G6,not evaluated,no bankroll or limit has been declared by the owner - question Q-03,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S3,Moneyline value >= 5 pp,G7,pass,"single bet, no leg pair to audit",AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S3,Moneyline value >= 5 pp,G8,fail,graded against AGGREGATOR results,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S4,Home underdog >= 2.5,G0,pass,rule and parameters fixed before results were seen,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S4,Home underdog >= 2.5,G1,pass,minimum 300 graded bets,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S4,Home underdog >= 2.5,G2,fail,no verified opening/closing operator price exists - flag F-01,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S4,Home underdog >= 2.5,G3,pass,walk-forward fit; parameters predate every graded bet,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S4,Home underdog >= 2.5,G4,fail,holm p = 0.4073 at alpha 0.05,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S4,Home underdog >= 2.5,G5,fail (0.000),deflated Sharpe >= 0.95 over 8 families,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S4,Home underdog >= 2.5,G6,not evaluated,no bankroll or limit has been declared by the owner - question Q-03,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S4,Home underdog >= 2.5,G7,pass,"single bet, no leg pair to audit",AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S4,Home underdog >= 2.5,G8,fail,graded against AGGREGATOR results,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S5,Rest edge >= 3 days,G0,pass,rule and parameters fixed before results were seen,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S5,Rest edge >= 3 days,G1,pass,minimum 300 graded bets,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S5,Rest edge >= 3 days,G2,fail,no verified opening/closing operator price exists - flag F-01,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S5,Rest edge >= 3 days,G3,pass,walk-forward fit; parameters predate every graded bet,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S5,Rest edge >= 3 days,G4,fail,holm p = 0.9004 at alpha 0.05,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S5,Rest edge >= 3 days,G5,fail (0.000),deflated Sharpe >= 0.95 over 8 families,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S5,Rest edge >= 3 days,G6,not evaluated,no bankroll or limit has been declared by the owner - question Q-03,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S5,Rest edge >= 3 days,G7,pass,"single bet, no leg pair to audit",AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S5,Rest edge >= 3 days,G8,fail,graded against AGGREGATOR results,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S6,Divisional home underdog,G0,pass,rule and parameters fixed before results were seen,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S6,Divisional home underdog,G1,pass,minimum 300 graded bets,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S6,Divisional home underdog,G2,fail,no verified opening/closing operator price exists - flag F-01,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S6,Divisional home underdog,G3,pass,walk-forward fit; parameters predate every graded bet,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S6,Divisional home underdog,G4,fail,holm p = 0.2647 at alpha 0.05,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S6,Divisional home underdog,G5,fail (0.000),deflated Sharpe >= 0.95 over 8 families,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S6,Divisional home underdog,G6,not evaluated,no bankroll or limit has been declared by the owner - question Q-03,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S6,Divisional home underdog,G7,pass,"single bet, no leg pair to audit",AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S6,Divisional home underdog,G8,fail,graded against AGGREGATOR results,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S7,Fade large home favourite >= 10,G0,pass,rule and parameters fixed before results were seen,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S7,Fade large home favourite >= 10,G1,pass,minimum 300 graded bets,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S7,Fade large home favourite >= 10,G2,fail,no verified opening/closing operator price exists - flag F-01,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S7,Fade large home favourite >= 10,G3,pass,walk-forward fit; parameters predate every graded bet,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S7,Fade large home favourite >= 10,G4,fail,holm p = 0.9004 at alpha 0.05,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S7,Fade large home favourite >= 10,G5,fail (0.000),deflated Sharpe >= 0.95 over 8 families,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S7,Fade large home favourite >= 10,G6,not evaluated,no bankroll or limit has been declared by the owner - question Q-03,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S7,Fade large home favourite >= 10,G7,pass,"single bet, no leg pair to audit",AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S7,Fade large home favourite >= 10,G8,fail,graded against AGGREGATOR results,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S8,Same-game side+total parlay,G0,pass,rule and parameters fixed before results were seen,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S8,Same-game side+total parlay,G1,pass,minimum 300 graded bets,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S8,Same-game side+total parlay,G2,fail,no verified opening/closing operator price exists - flag F-01,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S8,Same-game side+total parlay,G3,pass,walk-forward fit; parameters predate every graded bet,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S8,Same-game side+total parlay,G4,fail,holm p = 0.8268 at alpha 0.05,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S8,Same-game side+total parlay,G5,fail (0.000),deflated Sharpe >= 0.95 over 8 families,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S8,Same-game side+total parlay,G6,not evaluated,no bankroll or limit has been declared by the owner - question Q-03,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S8,Same-game side+total parlay,G7,fail,parlay/prop legs have no officially sourced joint estimate - flag F-08,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S8,Same-game side+total parlay,G8,fail,graded against AGGREGATOR results,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S9,Same-game prop combination,G0,pass,rule and parameters fixed before results were seen,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S9,Same-game prop combination,G1,fail (n = 0),minimum 300 graded bets,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S9,Same-game prop combination,G2,fail,no verified opening/closing operator price exists - flag F-01,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S9,Same-game prop combination,G3,not evaluated,walk-forward fit; parameters predate every graded bet,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S9,Same-game prop combination,G4,fail,holm p =  at alpha 0.05,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S9,Same-game prop combination,G5,fail (),deflated Sharpe >= 0.95 over 8 families,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S9,Same-game prop combination,G6,not evaluated,no bankroll or limit has been declared by the owner - question Q-03,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S9,Same-game prop combination,G7,fail,parlay/prop legs have no officially sourced joint estimate - flag F-08,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/
+S9,Same-game prop combination,G8,fail,graded against AGGREGATOR results,AGGREGATOR,https://www.nfl.com/schedules/2026/by-week/

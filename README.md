@@ -407,4 +407,39 @@ cd nfl-desk-d38e90c5
 python3 pipeline.py     # rebuild every dataset from the pinned official inputs
 python3 build_site.py   # render the 20-page site
 python3 verify.py       # 115 line-by-line checks (0 failures)
+
+---
+
+## NFL Price-Snapshot & Verified-Results Desk (session 3fb93d11, 2026-11-14)
+
+**Live site:** https://sassnarep3-star.github.io/Own5/nfl-desk-3fb93d11/ ·
+**Executive summary:** [`research/nfl-3fb93d11/EXECUTIVE_SUMMARY.md`](research/nfl-3fb93d11/EXECUTIVE_SUMMARY.md) ·
+**Flagged for Review:** https://sassnarep3-star.github.io/Own5/nfl-desk-3fb93d11/flagged.html
+
+A 16-page desk built around eight requirements: a **price-snapshot store** recording opening and
+closing numbers for every market we originate; a **verified results feed** so backtests and ROI can
+be computed at all; origination in the order **side → total → moneyline**; **model / market /
+difference** as three separate columns; a **leaderboard that scores signal separately from staking**;
+tracking the **depth of a replacement** rather than the fact of one; **correlations from official
+numbers only, each with its n**; and a **demotion gate** that returns a live strategy to paper.
+
+Key verified values: **137** official 2026 finals, rebuilt into standings that reproduce
+[nfl.com/standings](https://www.nfl.com/standings/league/2026/REG) **32/32 with 0 mismatches**; the
+pinned mirror agrees on **136/137** and disagrees on none; **78** originated markets (26 games ×
+side, total, moneyline) with **σ = 12.925** and home-field advantage **+0.213 pts**; the side model's
+margin forecast correlates with the actual margin at **r = 0.3187** (p = 0.0060, n = 73); the totals
+model is worth **0.02 points** over a constant; **705** depth slots across **31** clubs with **7**
+currently filled by a backup; **9** admissible correlation pairs and **7** previously published
+values moved to a withheld register; **0 strategies certified** and **0 bets placed**.
+
+The price store's opening and closing rows are **empty and flagged**, because **nfl.com publishes no
+betting prices**. That single gap is why gate G2 fails for every family. It is recorded explicitly
+rather than filled in.
+
+Reproduce/verify:
+
+```sh
+python3 nfl-desk-3fb93d11/run.py      # rebuild every CSV + the 16-page site (deterministic)
+python3 nfl-desk-3fb93d11/verify.py   # row-level proof: every published row is sourced or UNVERIFIED
+python3 -W ignore -m unittest discover -s nfl-desk-3fb93d11/tests   # 51 tests
 ```

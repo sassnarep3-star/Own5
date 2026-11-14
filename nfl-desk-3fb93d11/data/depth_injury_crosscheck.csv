@@ -1,0 +1,15 @@
+team,player,position,game_status,practice_status,injured_player_is_published_starter,depth_slot_moved,check_state,injury_source_url,depth_source_url
+WAS,Lucas Patrick,C,Out,Did Not Participate In Practice,no,no,not a published first-string player - no slot to move,https://www.nfl.com/injuries/league/2026/reg10,https://www.nfl.com/injuries/league/2026/reg10
+WAS,Colson Yankoff,TE,Out,Did Not Participate In Practice,no,no,not a published first-string player - no slot to move,https://www.nfl.com/injuries/league/2026/reg10,https://www.nfl.com/injuries/league/2026/reg10
+NE,Ben Brown,C,Out,Did Not Participate In Practice,yes,yes,ok - slot moved down the published chart,https://www.nfl.com/injuries/league/2026/reg10,https://www.nfl.com/injuries/league/2026/reg10
+NE,Carlton Davis III,CB,Out,Did Not Participate In Practice,yes,yes,ok - slot moved down the published chart,https://www.nfl.com/injuries/league/2026/reg10,https://www.nfl.com/injuries/league/2026/reg10
+NE,TreVeyon Henderson,RB,Out,Did Not Participate In Practice,no,no,not a published first-string player - no slot to move,https://www.nfl.com/injuries/league/2026/reg10,https://www.nfl.com/injuries/league/2026/reg10
+DET,Kerby Joseph,S,Out,Full Participation in Practice,no,no,not a published first-string player - no slot to move,https://www.nfl.com/injuries/league/2026/reg10,https://www.nfl.com/injuries/league/2026/reg10
+DET,Cade Mays,C,Out,Did Not Participate In Practice,yes,yes,ok - slot moved down the published chart,https://www.nfl.com/injuries/league/2026/reg10,https://www.nfl.com/injuries/league/2026/reg10
+DET,D.J. Reed,CB,Out,Did Not Participate In Practice,yes,yes,ok - slot moved down the published chart,https://www.nfl.com/injuries/league/2026/reg10,https://www.nfl.com/injuries/league/2026/reg10
+IND,Mo Alie-Cox,TE,Out,Did Not Participate In Practice,no,no,not a published first-string player - no slot to move,https://www.nfl.com/injuries/league/2026/reg10,https://www.nfl.com/injuries/league/2026/reg10
+IND,Jaylon Carlies,LB,Out,Did Not Participate In Practice,yes,yes,ok - slot moved down the published chart,https://www.nfl.com/injuries/league/2026/reg10,https://www.nfl.com/injuries/league/2026/reg10
+IND,Akeem Davis-Gaither,LB,Out,Did Not Participate In Practice,yes,yes,ok - slot moved down the published chart,https://www.nfl.com/injuries/league/2026/reg10,https://www.nfl.com/injuries/league/2026/reg10
+IND,Luke Rhodes,LS,Out,Did Not Participate In Practice,no,no,not a published first-string player - no slot to move,https://www.nfl.com/injuries/league/2026/reg10,https://www.nfl.com/injuries/league/2026/reg10
+IND,Jerry Tillery,DT,Out,Did Not Participate In Practice,no,no,not a published first-string player - no slot to move,https://www.nfl.com/injuries/league/2026/reg10,https://www.nfl.com/injuries/league/2026/reg10
+IND,Jalen Travis,T,Out,Did Not Participate In Practice,yes,yes,ok - slot moved down the published chart,https://www.nfl.com/injuries/league/2026/reg10,https://www.nfl.com/injuries/league/2026/reg10

@@ -1,0 +1,391 @@
+season,week,game_id,matchup,market_id,market_type,snapshot_type,line_value,price_american,snapshot_utc,source_url,source_tier,verified,flag_id
+2026,10,2026_10_NE_DET,NE @ DET,2026_10_NE_DET:SIDE,SIDE,MODEL_ORIGIN,0.77,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_NE_DET,NE @ DET,2026_10_NE_DET:SIDE,SIDE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_NE_DET,NE @ DET,2026_10_NE_DET:SIDE,SIDE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_NE_DET,NE @ DET,2026_10_NE_DET:SIDE,SIDE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_NE_DET,NE @ DET,2026_10_NE_DET:SIDE,SIDE,MARKET_REFERENCE,2.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_NE_DET,NE @ DET,2026_10_NE_DET:TOTAL,TOTAL,MODEL_ORIGIN,48.25,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_NE_DET,NE @ DET,2026_10_NE_DET:TOTAL,TOTAL,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_NE_DET,NE @ DET,2026_10_NE_DET:TOTAL,TOTAL,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_NE_DET,NE @ DET,2026_10_NE_DET:TOTAL,TOTAL,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_NE_DET,NE @ DET,2026_10_NE_DET:TOTAL,TOTAL,MARKET_REFERENCE,51.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_NE_DET,NE @ DET,2026_10_NE_DET:ML,MONEYLINE,MODEL_ORIGIN,0.5239,-110.0,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_NE_DET,NE @ DET,2026_10_NE_DET:ML,MONEYLINE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_NE_DET,NE @ DET,2026_10_NE_DET:ML,MONEYLINE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_NE_DET,NE @ DET,2026_10_NE_DET:ML,MONEYLINE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_NE_DET,NE @ DET,2026_10_NE_DET:ML,MONEYLINE,MARKET_REFERENCE,0.5830,-155,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_KC_ATL,KC @ ATL,2026_10_KC_ATL:SIDE,SIDE,MODEL_ORIGIN,-4.07,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_KC_ATL,KC @ ATL,2026_10_KC_ATL:SIDE,SIDE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_KC_ATL,KC @ ATL,2026_10_KC_ATL:SIDE,SIDE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_KC_ATL,KC @ ATL,2026_10_KC_ATL:SIDE,SIDE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_KC_ATL,KC @ ATL,2026_10_KC_ATL:SIDE,SIDE,MARKET_REFERENCE,-3.00,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_KC_ATL,KC @ ATL,2026_10_KC_ATL:TOTAL,TOTAL,MODEL_ORIGIN,44.60,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_KC_ATL,KC @ ATL,2026_10_KC_ATL:TOTAL,TOTAL,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_KC_ATL,KC @ ATL,2026_10_KC_ATL:TOTAL,TOTAL,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_KC_ATL,KC @ ATL,2026_10_KC_ATL:TOTAL,TOTAL,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_KC_ATL,KC @ ATL,2026_10_KC_ATL:TOTAL,TOTAL,MARKET_REFERENCE,46.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_KC_ATL,KC @ ATL,2026_10_KC_ATL:ML,MONEYLINE,MODEL_ORIGIN,0.3765,165.6,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_KC_ATL,KC @ ATL,2026_10_KC_ATL:ML,MONEYLINE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_KC_ATL,KC @ ATL,2026_10_KC_ATL:ML,MONEYLINE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_KC_ATL,KC @ ATL,2026_10_KC_ATL:ML,MONEYLINE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_KC_ATL,KC @ ATL,2026_10_KC_ATL:ML,MONEYLINE,MARKET_REFERENCE,0.3775,154,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_HOU_CLE,HOU @ CLE,2026_10_HOU_CLE:SIDE,SIDE,MODEL_ORIGIN,-2.91,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_HOU_CLE,HOU @ CLE,2026_10_HOU_CLE:SIDE,SIDE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_HOU_CLE,HOU @ CLE,2026_10_HOU_CLE:SIDE,SIDE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_HOU_CLE,HOU @ CLE,2026_10_HOU_CLE:SIDE,SIDE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_HOU_CLE,HOU @ CLE,2026_10_HOU_CLE:SIDE,SIDE,MARKET_REFERENCE,-4.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_HOU_CLE,HOU @ CLE,2026_10_HOU_CLE:TOTAL,TOTAL,MODEL_ORIGIN,44.76,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_HOU_CLE,HOU @ CLE,2026_10_HOU_CLE:TOTAL,TOTAL,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_HOU_CLE,HOU @ CLE,2026_10_HOU_CLE:TOTAL,TOTAL,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_HOU_CLE,HOU @ CLE,2026_10_HOU_CLE:TOTAL,TOTAL,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_HOU_CLE,HOU @ CLE,2026_10_HOU_CLE:TOTAL,TOTAL,MARKET_REFERENCE,40.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_HOU_CLE,HOU @ CLE,2026_10_HOU_CLE:ML,MONEYLINE,MODEL_ORIGIN,0.4109,143.4,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_HOU_CLE,HOU @ CLE,2026_10_HOU_CLE:ML,MONEYLINE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_HOU_CLE,HOU @ CLE,2026_10_HOU_CLE:ML,MONEYLINE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_HOU_CLE,HOU @ CLE,2026_10_HOU_CLE:ML,MONEYLINE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_HOU_CLE,HOU @ CLE,2026_10_HOU_CLE:ML,MONEYLINE,MARKET_REFERENCE,0.3364,185,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_MIN_GB,MIN @ GB,2026_10_MIN_GB:SIDE,SIDE,MODEL_ORIGIN,-0.10,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_MIN_GB,MIN @ GB,2026_10_MIN_GB:SIDE,SIDE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_MIN_GB,MIN @ GB,2026_10_MIN_GB:SIDE,SIDE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_MIN_GB,MIN @ GB,2026_10_MIN_GB:SIDE,SIDE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_MIN_GB,MIN @ GB,2026_10_MIN_GB:SIDE,SIDE,MARKET_REFERENCE,3.00,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_MIN_GB,MIN @ GB,2026_10_MIN_GB:TOTAL,TOTAL,MODEL_ORIGIN,39.99,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_MIN_GB,MIN @ GB,2026_10_MIN_GB:TOTAL,TOTAL,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_MIN_GB,MIN @ GB,2026_10_MIN_GB:TOTAL,TOTAL,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_MIN_GB,MIN @ GB,2026_10_MIN_GB:TOTAL,TOTAL,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_MIN_GB,MIN @ GB,2026_10_MIN_GB:TOTAL,TOTAL,MARKET_REFERENCE,42.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_MIN_GB,MIN @ GB,2026_10_MIN_GB:ML,MONEYLINE,MODEL_ORIGIN,0.4969,101.2,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_MIN_GB,MIN @ GB,2026_10_MIN_GB:ML,MONEYLINE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_MIN_GB,MIN @ GB,2026_10_MIN_GB:ML,MONEYLINE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_MIN_GB,MIN @ GB,2026_10_MIN_GB:ML,MONEYLINE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_MIN_GB,MIN @ GB,2026_10_MIN_GB:ML,MONEYLINE,MARKET_REFERENCE,0.5934,-162,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_MIA_IND,MIA @ IND,2026_10_MIA_IND:SIDE,SIDE,MODEL_ORIGIN,0.61,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_MIA_IND,MIA @ IND,2026_10_MIA_IND:SIDE,SIDE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_MIA_IND,MIA @ IND,2026_10_MIA_IND:SIDE,SIDE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_MIA_IND,MIA @ IND,2026_10_MIA_IND:SIDE,SIDE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_MIA_IND,MIA @ IND,2026_10_MIA_IND:SIDE,SIDE,MARKET_REFERENCE,3.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_MIA_IND,MIA @ IND,2026_10_MIA_IND:TOTAL,TOTAL,MODEL_ORIGIN,44.86,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_MIA_IND,MIA @ IND,2026_10_MIA_IND:TOTAL,TOTAL,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_MIA_IND,MIA @ IND,2026_10_MIA_IND:TOTAL,TOTAL,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_MIA_IND,MIA @ IND,2026_10_MIA_IND:TOTAL,TOTAL,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_MIA_IND,MIA @ IND,2026_10_MIA_IND:TOTAL,TOTAL,MARKET_REFERENCE,38.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_MIA_IND,MIA @ IND,2026_10_MIA_IND:ML,MONEYLINE,MODEL_ORIGIN,0.5189,-107.9,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_MIA_IND,MIA @ IND,2026_10_MIA_IND:ML,MONEYLINE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_MIA_IND,MIA @ IND,2026_10_MIA_IND:ML,MONEYLINE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_MIA_IND,MIA @ IND,2026_10_MIA_IND:ML,MONEYLINE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_MIA_IND,MIA @ IND,2026_10_MIA_IND:ML,MONEYLINE,MARKET_REFERENCE,0.6447,-205,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_CAR_NO,CAR @ NO,2026_10_CAR_NO:SIDE,SIDE,MODEL_ORIGIN,-0.80,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_CAR_NO,CAR @ NO,2026_10_CAR_NO:SIDE,SIDE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_CAR_NO,CAR @ NO,2026_10_CAR_NO:SIDE,SIDE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_CAR_NO,CAR @ NO,2026_10_CAR_NO:SIDE,SIDE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_CAR_NO,CAR @ NO,2026_10_CAR_NO:SIDE,SIDE,MARKET_REFERENCE,2.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_CAR_NO,CAR @ NO,2026_10_CAR_NO:TOTAL,TOTAL,MODEL_ORIGIN,50.64,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_CAR_NO,CAR @ NO,2026_10_CAR_NO:TOTAL,TOTAL,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_CAR_NO,CAR @ NO,2026_10_CAR_NO:TOTAL,TOTAL,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_CAR_NO,CAR @ NO,2026_10_CAR_NO:TOTAL,TOTAL,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_CAR_NO,CAR @ NO,2026_10_CAR_NO:TOTAL,TOTAL,MARKET_REFERENCE,48.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_CAR_NO,CAR @ NO,2026_10_CAR_NO:ML,MONEYLINE,MODEL_ORIGIN,0.4754,110.4,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_CAR_NO,CAR @ NO,2026_10_CAR_NO:ML,MONEYLINE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_CAR_NO,CAR @ NO,2026_10_CAR_NO:ML,MONEYLINE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_CAR_NO,CAR @ NO,2026_10_CAR_NO:ML,MONEYLINE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_CAR_NO,CAR @ NO,2026_10_CAR_NO:ML,MONEYLINE,MARKET_REFERENCE,0.5427,-130,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_BUF_NYJ,BUF @ NYJ,2026_10_BUF_NYJ:SIDE,SIDE,MODEL_ORIGIN,-6.39,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_BUF_NYJ,BUF @ NYJ,2026_10_BUF_NYJ:SIDE,SIDE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_BUF_NYJ,BUF @ NYJ,2026_10_BUF_NYJ:SIDE,SIDE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_BUF_NYJ,BUF @ NYJ,2026_10_BUF_NYJ:SIDE,SIDE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_BUF_NYJ,BUF @ NYJ,2026_10_BUF_NYJ:SIDE,SIDE,MARKET_REFERENCE,-8.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_BUF_NYJ,BUF @ NYJ,2026_10_BUF_NYJ:TOTAL,TOTAL,MODEL_ORIGIN,49.29,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_BUF_NYJ,BUF @ NYJ,2026_10_BUF_NYJ:TOTAL,TOTAL,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_BUF_NYJ,BUF @ NYJ,2026_10_BUF_NYJ:TOTAL,TOTAL,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_BUF_NYJ,BUF @ NYJ,2026_10_BUF_NYJ:TOTAL,TOTAL,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_BUF_NYJ,BUF @ NYJ,2026_10_BUF_NYJ:TOTAL,TOTAL,MARKET_REFERENCE,50.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_BUF_NYJ,BUF @ NYJ,2026_10_BUF_NYJ:ML,MONEYLINE,MODEL_ORIGIN,0.3106,221.9,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_BUF_NYJ,BUF @ NYJ,2026_10_BUF_NYJ:ML,MONEYLINE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_BUF_NYJ,BUF @ NYJ,2026_10_BUF_NYJ:ML,MONEYLINE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_BUF_NYJ,BUF @ NYJ,2026_10_BUF_NYJ:ML,MONEYLINE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_BUF_NYJ,BUF @ NYJ,2026_10_BUF_NYJ:ML,MONEYLINE,MARKET_REFERENCE,0.2181,340,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_JAX_TEN,JAX @ TEN,2026_10_JAX_TEN:SIDE,SIDE,MODEL_ORIGIN,-10.30,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_JAX_TEN,JAX @ TEN,2026_10_JAX_TEN:SIDE,SIDE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_JAX_TEN,JAX @ TEN,2026_10_JAX_TEN:SIDE,SIDE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_JAX_TEN,JAX @ TEN,2026_10_JAX_TEN:SIDE,SIDE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_JAX_TEN,JAX @ TEN,2026_10_JAX_TEN:SIDE,SIDE,MARKET_REFERENCE,-10.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_JAX_TEN,JAX @ TEN,2026_10_JAX_TEN:TOTAL,TOTAL,MODEL_ORIGIN,43.89,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_JAX_TEN,JAX @ TEN,2026_10_JAX_TEN:TOTAL,TOTAL,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_JAX_TEN,JAX @ TEN,2026_10_JAX_TEN:TOTAL,TOTAL,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_JAX_TEN,JAX @ TEN,2026_10_JAX_TEN:TOTAL,TOTAL,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_JAX_TEN,JAX @ TEN,2026_10_JAX_TEN:TOTAL,TOTAL,MARKET_REFERENCE,46.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_JAX_TEN,JAX @ TEN,2026_10_JAX_TEN:ML,MONEYLINE,MODEL_ORIGIN,0.2128,370.0,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_JAX_TEN,JAX @ TEN,2026_10_JAX_TEN:ML,MONEYLINE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_JAX_TEN,JAX @ TEN,2026_10_JAX_TEN:ML,MONEYLINE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_JAX_TEN,JAX @ TEN,2026_10_JAX_TEN:ML,MONEYLINE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_JAX_TEN,JAX @ TEN,2026_10_JAX_TEN:ML,MONEYLINE,MARKET_REFERENCE,0.1777,440,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_LAR_ARI,LAR @ ARI,2026_10_LAR_ARI:SIDE,SIDE,MODEL_ORIGIN,-5.33,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_LAR_ARI,LAR @ ARI,2026_10_LAR_ARI:SIDE,SIDE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_LAR_ARI,LAR @ ARI,2026_10_LAR_ARI:SIDE,SIDE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_LAR_ARI,LAR @ ARI,2026_10_LAR_ARI:SIDE,SIDE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_LAR_ARI,LAR @ ARI,2026_10_LAR_ARI:SIDE,SIDE,MARKET_REFERENCE,-9.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_LAR_ARI,LAR @ ARI,2026_10_LAR_ARI:TOTAL,TOTAL,MODEL_ORIGIN,45.90,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_LAR_ARI,LAR @ ARI,2026_10_LAR_ARI:TOTAL,TOTAL,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_LAR_ARI,LAR @ ARI,2026_10_LAR_ARI:TOTAL,TOTAL,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_LAR_ARI,LAR @ ARI,2026_10_LAR_ARI:TOTAL,TOTAL,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_LAR_ARI,LAR @ ARI,2026_10_LAR_ARI:TOTAL,TOTAL,MARKET_REFERENCE,39.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_LAR_ARI,LAR @ ARI,2026_10_LAR_ARI:ML,MONEYLINE,MODEL_ORIGIN,0.3401,194.0,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_LAR_ARI,LAR @ ARI,2026_10_LAR_ARI:ML,MONEYLINE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_LAR_ARI,LAR @ ARI,2026_10_LAR_ARI:ML,MONEYLINE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_LAR_ARI,LAR @ ARI,2026_10_LAR_ARI:ML,MONEYLINE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_LAR_ARI,LAR @ ARI,2026_10_LAR_ARI:ML,MONEYLINE,MARKET_REFERENCE,0.1957,390,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_SEA_LV,SEA @ LV,2026_10_SEA_LV:SIDE,SIDE,MODEL_ORIGIN,-3.70,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_SEA_LV,SEA @ LV,2026_10_SEA_LV:SIDE,SIDE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_SEA_LV,SEA @ LV,2026_10_SEA_LV:SIDE,SIDE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_SEA_LV,SEA @ LV,2026_10_SEA_LV:SIDE,SIDE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_SEA_LV,SEA @ LV,2026_10_SEA_LV:SIDE,SIDE,MARKET_REFERENCE,-6.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_SEA_LV,SEA @ LV,2026_10_SEA_LV:TOTAL,TOTAL,MODEL_ORIGIN,47.89,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_SEA_LV,SEA @ LV,2026_10_SEA_LV:TOTAL,TOTAL,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_SEA_LV,SEA @ LV,2026_10_SEA_LV:TOTAL,TOTAL,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_SEA_LV,SEA @ LV,2026_10_SEA_LV:TOTAL,TOTAL,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_SEA_LV,SEA @ LV,2026_10_SEA_LV:TOTAL,TOTAL,MARKET_REFERENCE,40.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_SEA_LV,SEA @ LV,2026_10_SEA_LV:ML,MONEYLINE,MODEL_ORIGIN,0.3873,158.2,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_SEA_LV,SEA @ LV,2026_10_SEA_LV:ML,MONEYLINE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_SEA_LV,SEA @ LV,2026_10_SEA_LV:ML,MONEYLINE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_SEA_LV,SEA @ LV,2026_10_SEA_LV:ML,MONEYLINE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_SEA_LV,SEA @ LV,2026_10_SEA_LV:ML,MONEYLINE,MARKET_REFERENCE,0.2820,240,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_SF_DAL,SF @ DAL,2026_10_SF_DAL:SIDE,SIDE,MODEL_ORIGIN,-4.27,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_SF_DAL,SF @ DAL,2026_10_SF_DAL:SIDE,SIDE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_SF_DAL,SF @ DAL,2026_10_SF_DAL:SIDE,SIDE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_SF_DAL,SF @ DAL,2026_10_SF_DAL:SIDE,SIDE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_SF_DAL,SF @ DAL,2026_10_SF_DAL:SIDE,SIDE,MARKET_REFERENCE,-3.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_SF_DAL,SF @ DAL,2026_10_SF_DAL:TOTAL,TOTAL,MODEL_ORIGIN,50.49,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_SF_DAL,SF @ DAL,2026_10_SF_DAL:TOTAL,TOTAL,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_SF_DAL,SF @ DAL,2026_10_SF_DAL:TOTAL,TOTAL,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_SF_DAL,SF @ DAL,2026_10_SF_DAL:TOTAL,TOTAL,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_SF_DAL,SF @ DAL,2026_10_SF_DAL:TOTAL,TOTAL,MARKET_REFERENCE,55.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_SF_DAL,SF @ DAL,2026_10_SF_DAL:ML,MONEYLINE,MODEL_ORIGIN,0.3704,170.0,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_SF_DAL,SF @ DAL,2026_10_SF_DAL:ML,MONEYLINE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_SF_DAL,SF @ DAL,2026_10_SF_DAL:ML,MONEYLINE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_SF_DAL,SF @ DAL,2026_10_SF_DAL:ML,MONEYLINE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_SF_DAL,SF @ DAL,2026_10_SF_DAL:ML,MONEYLINE,MARKET_REFERENCE,0.3553,170,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_PIT_CIN,PIT @ CIN,2026_10_PIT_CIN:SIDE,SIDE,MODEL_ORIGIN,2.27,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_PIT_CIN,PIT @ CIN,2026_10_PIT_CIN:SIDE,SIDE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_PIT_CIN,PIT @ CIN,2026_10_PIT_CIN:SIDE,SIDE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_PIT_CIN,PIT @ CIN,2026_10_PIT_CIN:SIDE,SIDE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_PIT_CIN,PIT @ CIN,2026_10_PIT_CIN:SIDE,SIDE,MARKET_REFERENCE,3.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_PIT_CIN,PIT @ CIN,2026_10_PIT_CIN:TOTAL,TOTAL,MODEL_ORIGIN,46.52,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_PIT_CIN,PIT @ CIN,2026_10_PIT_CIN:TOTAL,TOTAL,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_PIT_CIN,PIT @ CIN,2026_10_PIT_CIN:TOTAL,TOTAL,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_PIT_CIN,PIT @ CIN,2026_10_PIT_CIN:TOTAL,TOTAL,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_PIT_CIN,PIT @ CIN,2026_10_PIT_CIN:TOTAL,TOTAL,MARKET_REFERENCE,49.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_PIT_CIN,PIT @ CIN,2026_10_PIT_CIN:ML,MONEYLINE,MODEL_ORIGIN,0.5698,-132.5,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_PIT_CIN,PIT @ CIN,2026_10_PIT_CIN:ML,MONEYLINE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_PIT_CIN,PIT @ CIN,2026_10_PIT_CIN:ML,MONEYLINE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_PIT_CIN,PIT @ CIN,2026_10_PIT_CIN:ML,MONEYLINE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_PIT_CIN,PIT @ CIN,2026_10_PIT_CIN:ML,MONEYLINE,MARKET_REFERENCE,0.6164,-180,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_LAC_BAL,LAC @ BAL,2026_10_LAC_BAL:SIDE,SIDE,MODEL_ORIGIN,3.21,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_LAC_BAL,LAC @ BAL,2026_10_LAC_BAL:SIDE,SIDE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_LAC_BAL,LAC @ BAL,2026_10_LAC_BAL:SIDE,SIDE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_LAC_BAL,LAC @ BAL,2026_10_LAC_BAL:SIDE,SIDE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_LAC_BAL,LAC @ BAL,2026_10_LAC_BAL:SIDE,SIDE,MARKET_REFERENCE,4.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_LAC_BAL,LAC @ BAL,2026_10_LAC_BAL:TOTAL,TOTAL,MODEL_ORIGIN,44.49,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_LAC_BAL,LAC @ BAL,2026_10_LAC_BAL:TOTAL,TOTAL,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_LAC_BAL,LAC @ BAL,2026_10_LAC_BAL:TOTAL,TOTAL,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_LAC_BAL,LAC @ BAL,2026_10_LAC_BAL:TOTAL,TOTAL,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_LAC_BAL,LAC @ BAL,2026_10_LAC_BAL:TOTAL,TOTAL,MARKET_REFERENCE,38.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,10,2026_10_LAC_BAL,LAC @ BAL,2026_10_LAC_BAL:ML,MONEYLINE,MODEL_ORIGIN,0.5981,-148.8,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,10,2026_10_LAC_BAL,LAC @ BAL,2026_10_LAC_BAL:ML,MONEYLINE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,10,2026_10_LAC_BAL,LAC @ BAL,2026_10_LAC_BAL:ML,MONEYLINE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_LAC_BAL,LAC @ BAL,2026_10_LAC_BAL:ML,MONEYLINE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,10,2026_10_LAC_BAL,LAC @ BAL,2026_10_LAC_BAL:ML,MONEYLINE,MARKET_REFERENCE,0.6636,-225,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_IND_HOU,IND @ HOU,2026_11_IND_HOU:SIDE,SIDE,MODEL_ORIGIN,4.79,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_IND_HOU,IND @ HOU,2026_11_IND_HOU:SIDE,SIDE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_IND_HOU,IND @ HOU,2026_11_IND_HOU:SIDE,SIDE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_IND_HOU,IND @ HOU,2026_11_IND_HOU:SIDE,SIDE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_IND_HOU,IND @ HOU,2026_11_IND_HOU:SIDE,SIDE,MARKET_REFERENCE,10.00,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_IND_HOU,IND @ HOU,2026_11_IND_HOU:TOTAL,TOTAL,MODEL_ORIGIN,48.47,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_IND_HOU,IND @ HOU,2026_11_IND_HOU:TOTAL,TOTAL,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_IND_HOU,IND @ HOU,2026_11_IND_HOU:TOTAL,TOTAL,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_IND_HOU,IND @ HOU,2026_11_IND_HOU:TOTAL,TOTAL,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_IND_HOU,IND @ HOU,2026_11_IND_HOU:TOTAL,TOTAL,MARKET_REFERENCE,44.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_IND_HOU,IND @ HOU,2026_11_IND_HOU:ML,MONEYLINE,MODEL_ORIGIN,0.6446,-181.4,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_IND_HOU,IND @ HOU,2026_11_IND_HOU:ML,MONEYLINE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_IND_HOU,IND @ HOU,2026_11_IND_HOU:ML,MONEYLINE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_IND_HOU,IND @ HOU,2026_11_IND_HOU:ML,MONEYLINE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_IND_HOU,IND @ HOU,2026_11_IND_HOU:ML,MONEYLINE,MARKET_REFERENCE,0.7867,-455,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_MIA_BUF,MIA @ BUF,2026_11_MIA_BUF:SIDE,SIDE,MODEL_ORIGIN,8.23,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_MIA_BUF,MIA @ BUF,2026_11_MIA_BUF:SIDE,SIDE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_MIA_BUF,MIA @ BUF,2026_11_MIA_BUF:SIDE,SIDE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_MIA_BUF,MIA @ BUF,2026_11_MIA_BUF:SIDE,SIDE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_MIA_BUF,MIA @ BUF,2026_11_MIA_BUF:SIDE,SIDE,MARKET_REFERENCE,16.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_MIA_BUF,MIA @ BUF,2026_11_MIA_BUF:TOTAL,TOTAL,MODEL_ORIGIN,47.45,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_MIA_BUF,MIA @ BUF,2026_11_MIA_BUF:TOTAL,TOTAL,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_MIA_BUF,MIA @ BUF,2026_11_MIA_BUF:TOTAL,TOTAL,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_MIA_BUF,MIA @ BUF,2026_11_MIA_BUF:TOTAL,TOTAL,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_MIA_BUF,MIA @ BUF,2026_11_MIA_BUF:TOTAL,TOTAL,MARKET_REFERENCE,46.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_MIA_BUF,MIA @ BUF,2026_11_MIA_BUF:ML,MONEYLINE,MODEL_ORIGIN,0.7379,-281.6,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_MIA_BUF,MIA @ BUF,2026_11_MIA_BUF:ML,MONEYLINE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_MIA_BUF,MIA @ BUF,2026_11_MIA_BUF:ML,MONEYLINE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_MIA_BUF,MIA @ BUF,2026_11_MIA_BUF:ML,MONEYLINE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_MIA_BUF,MIA @ BUF,2026_11_MIA_BUF:ML,MONEYLINE,MARKET_REFERENCE,0.9124,-1800,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_BAL_CAR,BAL @ CAR,2026_11_BAL_CAR:SIDE,SIDE,MODEL_ORIGIN,1.79,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_BAL_CAR,BAL @ CAR,2026_11_BAL_CAR:SIDE,SIDE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_BAL_CAR,BAL @ CAR,2026_11_BAL_CAR:SIDE,SIDE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_BAL_CAR,BAL @ CAR,2026_11_BAL_CAR:SIDE,SIDE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_BAL_CAR,BAL @ CAR,2026_11_BAL_CAR:SIDE,SIDE,MARKET_REFERENCE,1.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_BAL_CAR,BAL @ CAR,2026_11_BAL_CAR:TOTAL,TOTAL,MODEL_ORIGIN,48.89,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_BAL_CAR,BAL @ CAR,2026_11_BAL_CAR:TOTAL,TOTAL,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_BAL_CAR,BAL @ CAR,2026_11_BAL_CAR:TOTAL,TOTAL,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_BAL_CAR,BAL @ CAR,2026_11_BAL_CAR:TOTAL,TOTAL,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_BAL_CAR,BAL @ CAR,2026_11_BAL_CAR:TOTAL,TOTAL,MARKET_REFERENCE,44.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_BAL_CAR,BAL @ CAR,2026_11_BAL_CAR:ML,MONEYLINE,MODEL_ORIGIN,0.5551,-124.8,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_BAL_CAR,BAL @ CAR,2026_11_BAL_CAR:ML,MONEYLINE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_BAL_CAR,BAL @ CAR,2026_11_BAL_CAR:ML,MONEYLINE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_BAL_CAR,BAL @ CAR,2026_11_BAL_CAR:ML,MONEYLINE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_BAL_CAR,BAL @ CAR,2026_11_BAL_CAR:ML,MONEYLINE,MARKET_REFERENCE,0.5261,-122,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_NO_CHI,NO @ CHI,2026_11_NO_CHI:SIDE,SIDE,MODEL_ORIGIN,5.65,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_NO_CHI,NO @ CHI,2026_11_NO_CHI:SIDE,SIDE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_NO_CHI,NO @ CHI,2026_11_NO_CHI:SIDE,SIDE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_NO_CHI,NO @ CHI,2026_11_NO_CHI:SIDE,SIDE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_NO_CHI,NO @ CHI,2026_11_NO_CHI:SIDE,SIDE,MARKET_REFERENCE,9.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_NO_CHI,NO @ CHI,2026_11_NO_CHI:TOTAL,TOTAL,MODEL_ORIGIN,48.88,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_NO_CHI,NO @ CHI,2026_11_NO_CHI:TOTAL,TOTAL,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_NO_CHI,NO @ CHI,2026_11_NO_CHI:TOTAL,TOTAL,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_NO_CHI,NO @ CHI,2026_11_NO_CHI:TOTAL,TOTAL,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_NO_CHI,NO @ CHI,2026_11_NO_CHI:TOTAL,TOTAL,MARKET_REFERENCE,48.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_NO_CHI,NO @ CHI,2026_11_NO_CHI:ML,MONEYLINE,MODEL_ORIGIN,0.6690,-202.1,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_NO_CHI,NO @ CHI,2026_11_NO_CHI:ML,MONEYLINE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_NO_CHI,NO @ CHI,2026_11_NO_CHI:ML,MONEYLINE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_NO_CHI,NO @ CHI,2026_11_NO_CHI:ML,MONEYLINE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_NO_CHI,NO @ CHI,2026_11_NO_CHI:ML,MONEYLINE,MARKET_REFERENCE,0.7914,-470,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_TEN_DAL,TEN @ DAL,2026_11_TEN_DAL:SIDE,SIDE,MODEL_ORIGIN,4.19,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_TEN_DAL,TEN @ DAL,2026_11_TEN_DAL:SIDE,SIDE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_TEN_DAL,TEN @ DAL,2026_11_TEN_DAL:SIDE,SIDE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_TEN_DAL,TEN @ DAL,2026_11_TEN_DAL:SIDE,SIDE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_TEN_DAL,TEN @ DAL,2026_11_TEN_DAL:SIDE,SIDE,MARKET_REFERENCE,7.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_TEN_DAL,TEN @ DAL,2026_11_TEN_DAL:TOTAL,TOTAL,MODEL_ORIGIN,48.05,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_TEN_DAL,TEN @ DAL,2026_11_TEN_DAL:TOTAL,TOTAL,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_TEN_DAL,TEN @ DAL,2026_11_TEN_DAL:TOTAL,TOTAL,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_TEN_DAL,TEN @ DAL,2026_11_TEN_DAL:TOTAL,TOTAL,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_TEN_DAL,TEN @ DAL,2026_11_TEN_DAL:TOTAL,TOTAL,MARKET_REFERENCE,51.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_TEN_DAL,TEN @ DAL,2026_11_TEN_DAL:ML,MONEYLINE,MODEL_ORIGIN,0.6272,-168.2,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_TEN_DAL,TEN @ DAL,2026_11_TEN_DAL:ML,MONEYLINE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_TEN_DAL,TEN @ DAL,2026_11_TEN_DAL:ML,MONEYLINE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_TEN_DAL,TEN @ DAL,2026_11_TEN_DAL:ML,MONEYLINE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_TEN_DAL,TEN @ DAL,2026_11_TEN_DAL:ML,MONEYLINE,MARKET_REFERENCE,0.7819,-440,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_TB_DET,TB @ DET,2026_11_TB_DET:SIDE,SIDE,MODEL_ORIGIN,0.02,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_TB_DET,TB @ DET,2026_11_TB_DET:SIDE,SIDE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_TB_DET,TB @ DET,2026_11_TB_DET:SIDE,SIDE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_TB_DET,TB @ DET,2026_11_TB_DET:SIDE,SIDE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_TB_DET,TB @ DET,2026_11_TB_DET:SIDE,SIDE,MARKET_REFERENCE,3.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_TB_DET,TB @ DET,2026_11_TB_DET:TOTAL,TOTAL,MODEL_ORIGIN,46.53,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_TB_DET,TB @ DET,2026_11_TB_DET:TOTAL,TOTAL,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_TB_DET,TB @ DET,2026_11_TB_DET:TOTAL,TOTAL,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_TB_DET,TB @ DET,2026_11_TB_DET:TOTAL,TOTAL,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_TB_DET,TB @ DET,2026_11_TB_DET:TOTAL,TOTAL,MARKET_REFERENCE,47.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_TB_DET,TB @ DET,2026_11_TB_DET:ML,MONEYLINE,MODEL_ORIGIN,0.5005,-100.2,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_TB_DET,TB @ DET,2026_11_TB_DET:ML,MONEYLINE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_TB_DET,TB @ DET,2026_11_TB_DET:ML,MONEYLINE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_TB_DET,TB @ DET,2026_11_TB_DET:ML,MONEYLINE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_TB_DET,TB @ DET,2026_11_TB_DET:ML,MONEYLINE,MARKET_REFERENCE,0.6164,-180,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_ARI_KC,ARI @ KC,2026_11_ARI_KC:SIDE,SIDE,MODEL_ORIGIN,7.21,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_ARI_KC,ARI @ KC,2026_11_ARI_KC:SIDE,SIDE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_ARI_KC,ARI @ KC,2026_11_ARI_KC:SIDE,SIDE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_ARI_KC,ARI @ KC,2026_11_ARI_KC:SIDE,SIDE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_ARI_KC,ARI @ KC,2026_11_ARI_KC:SIDE,SIDE,MARKET_REFERENCE,14.00,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_ARI_KC,ARI @ KC,2026_11_ARI_KC:TOTAL,TOTAL,MODEL_ORIGIN,46.07,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_ARI_KC,ARI @ KC,2026_11_ARI_KC:TOTAL,TOTAL,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_ARI_KC,ARI @ KC,2026_11_ARI_KC:TOTAL,TOTAL,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_ARI_KC,ARI @ KC,2026_11_ARI_KC:TOTAL,TOTAL,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_ARI_KC,ARI @ KC,2026_11_ARI_KC:TOTAL,TOTAL,MARKET_REFERENCE,42.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_ARI_KC,ARI @ KC,2026_11_ARI_KC:ML,MONEYLINE,MODEL_ORIGIN,0.7114,-246.5,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_ARI_KC,ARI @ KC,2026_11_ARI_KC:ML,MONEYLINE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_ARI_KC,ARI @ KC,2026_11_ARI_KC:ML,MONEYLINE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_ARI_KC,ARI @ KC,2026_11_ARI_KC:ML,MONEYLINE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_ARI_KC,ARI @ KC,2026_11_ARI_KC:ML,MONEYLINE,MARKET_REFERENCE,0.8721,-1000,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_PIT_PHI,PIT @ PHI,2026_11_PIT_PHI:SIDE,SIDE,MODEL_ORIGIN,-5.99,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_PIT_PHI,PIT @ PHI,2026_11_PIT_PHI:SIDE,SIDE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_PIT_PHI,PIT @ PHI,2026_11_PIT_PHI:SIDE,SIDE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_PIT_PHI,PIT @ PHI,2026_11_PIT_PHI:SIDE,SIDE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_PIT_PHI,PIT @ PHI,2026_11_PIT_PHI:SIDE,SIDE,MARKET_REFERENCE,-4.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_PIT_PHI,PIT @ PHI,2026_11_PIT_PHI:TOTAL,TOTAL,MODEL_ORIGIN,41.50,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_PIT_PHI,PIT @ PHI,2026_11_PIT_PHI:TOTAL,TOTAL,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_PIT_PHI,PIT @ PHI,2026_11_PIT_PHI:TOTAL,TOTAL,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_PIT_PHI,PIT @ PHI,2026_11_PIT_PHI:TOTAL,TOTAL,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_PIT_PHI,PIT @ PHI,2026_11_PIT_PHI:TOTAL,TOTAL,MARKET_REFERENCE,38.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_PIT_PHI,PIT @ PHI,2026_11_PIT_PHI:ML,MONEYLINE,MODEL_ORIGIN,0.3216,211.0,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_PIT_PHI,PIT @ PHI,2026_11_PIT_PHI:ML,MONEYLINE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_PIT_PHI,PIT @ PHI,2026_11_PIT_PHI:ML,MONEYLINE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_PIT_PHI,PIT @ PHI,2026_11_PIT_PHI:ML,MONEYLINE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_PIT_PHI,PIT @ PHI,2026_11_PIT_PHI:ML,MONEYLINE,MARKET_REFERENCE,0.3631,164,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_NYJ_LAC,NYJ @ LAC,2026_11_NYJ_LAC:SIDE,SIDE,MODEL_ORIGIN,-3.00,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_NYJ_LAC,NYJ @ LAC,2026_11_NYJ_LAC:SIDE,SIDE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_NYJ_LAC,NYJ @ LAC,2026_11_NYJ_LAC:SIDE,SIDE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_NYJ_LAC,NYJ @ LAC,2026_11_NYJ_LAC:SIDE,SIDE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_NYJ_LAC,NYJ @ LAC,2026_11_NYJ_LAC:SIDE,SIDE,MARKET_REFERENCE,1.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_NYJ_LAC,NYJ @ LAC,2026_11_NYJ_LAC:TOTAL,TOTAL,MODEL_ORIGIN,43.90,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_NYJ_LAC,NYJ @ LAC,2026_11_NYJ_LAC:TOTAL,TOTAL,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_NYJ_LAC,NYJ @ LAC,2026_11_NYJ_LAC:TOTAL,TOTAL,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_NYJ_LAC,NYJ @ LAC,2026_11_NYJ_LAC:TOTAL,TOTAL,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_NYJ_LAC,NYJ @ LAC,2026_11_NYJ_LAC:TOTAL,TOTAL,MARKET_REFERENCE,42.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_NYJ_LAC,NYJ @ LAC,2026_11_NYJ_LAC:ML,MONEYLINE,MODEL_ORIGIN,0.4082,145.0,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_NYJ_LAC,NYJ @ LAC,2026_11_NYJ_LAC:ML,MONEYLINE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_NYJ_LAC,NYJ @ LAC,2026_11_NYJ_LAC:ML,MONEYLINE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_NYJ_LAC,NYJ @ LAC,2026_11_NYJ_LAC:ML,MONEYLINE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_NYJ_LAC,NYJ @ LAC,2026_11_NYJ_LAC:ML,MONEYLINE,MARKET_REFERENCE,0.5325,-125,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_JAX_NYG,JAX @ NYG,2026_11_JAX_NYG:SIDE,SIDE,MODEL_ORIGIN,-6.75,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_JAX_NYG,JAX @ NYG,2026_11_JAX_NYG:SIDE,SIDE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_JAX_NYG,JAX @ NYG,2026_11_JAX_NYG:SIDE,SIDE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_JAX_NYG,JAX @ NYG,2026_11_JAX_NYG:SIDE,SIDE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_JAX_NYG,JAX @ NYG,2026_11_JAX_NYG:SIDE,SIDE,MARKET_REFERENCE,-6.00,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_JAX_NYG,JAX @ NYG,2026_11_JAX_NYG:TOTAL,TOTAL,MODEL_ORIGIN,44.21,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_JAX_NYG,JAX @ NYG,2026_11_JAX_NYG:TOTAL,TOTAL,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_JAX_NYG,JAX @ NYG,2026_11_JAX_NYG:TOTAL,TOTAL,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_JAX_NYG,JAX @ NYG,2026_11_JAX_NYG:TOTAL,TOTAL,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_JAX_NYG,JAX @ NYG,2026_11_JAX_NYG:TOTAL,TOTAL,MARKET_REFERENCE,44.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_JAX_NYG,JAX @ NYG,2026_11_JAX_NYG:ML,MONEYLINE,MODEL_ORIGIN,0.3007,232.6,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_JAX_NYG,JAX @ NYG,2026_11_JAX_NYG:ML,MONEYLINE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_JAX_NYG,JAX @ NYG,2026_11_JAX_NYG:ML,MONEYLINE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_JAX_NYG,JAX @ NYG,2026_11_JAX_NYG:ML,MONEYLINE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_JAX_NYG,JAX @ NYG,2026_11_JAX_NYG:ML,MONEYLINE,MARKET_REFERENCE,0.3042,215,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_LV_DEN,LV @ DEN,2026_11_LV_DEN:SIDE,SIDE,MODEL_ORIGIN,3.25,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_LV_DEN,LV @ DEN,2026_11_LV_DEN:SIDE,SIDE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_LV_DEN,LV @ DEN,2026_11_LV_DEN:SIDE,SIDE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_LV_DEN,LV @ DEN,2026_11_LV_DEN:SIDE,SIDE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_LV_DEN,LV @ DEN,2026_11_LV_DEN:SIDE,SIDE,MARKET_REFERENCE,8.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_LV_DEN,LV @ DEN,2026_11_LV_DEN:TOTAL,TOTAL,MODEL_ORIGIN,49.03,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_LV_DEN,LV @ DEN,2026_11_LV_DEN:TOTAL,TOTAL,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_LV_DEN,LV @ DEN,2026_11_LV_DEN:TOTAL,TOTAL,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_LV_DEN,LV @ DEN,2026_11_LV_DEN:TOTAL,TOTAL,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_LV_DEN,LV @ DEN,2026_11_LV_DEN:TOTAL,TOTAL,MARKET_REFERENCE,41.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_LV_DEN,LV @ DEN,2026_11_LV_DEN:ML,MONEYLINE,MODEL_ORIGIN,0.5994,-149.6,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_LV_DEN,LV @ DEN,2026_11_LV_DEN:ML,MONEYLINE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_LV_DEN,LV @ DEN,2026_11_LV_DEN:ML,MONEYLINE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_LV_DEN,LV @ DEN,2026_11_LV_DEN:ML,MONEYLINE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_LV_DEN,LV @ DEN,2026_11_LV_DEN:ML,MONEYLINE,MARKET_REFERENCE,0.7819,-440,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_MIN_SF,MIN @ SF,2026_11_MIN_SF:SIDE,SIDE,MODEL_ORIGIN,2.30,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_MIN_SF,MIN @ SF,2026_11_MIN_SF:SIDE,SIDE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_MIN_SF,MIN @ SF,2026_11_MIN_SF:SIDE,SIDE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_MIN_SF,MIN @ SF,2026_11_MIN_SF:SIDE,SIDE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_MIN_SF,MIN @ SF,2026_11_MIN_SF:SIDE,SIDE,MARKET_REFERENCE,3.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_MIN_SF,MIN @ SF,2026_11_MIN_SF:TOTAL,TOTAL,MODEL_ORIGIN,41.62,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_MIN_SF,MIN @ SF,2026_11_MIN_SF:TOTAL,TOTAL,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_MIN_SF,MIN @ SF,2026_11_MIN_SF:TOTAL,TOTAL,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_MIN_SF,MIN @ SF,2026_11_MIN_SF:TOTAL,TOTAL,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_MIN_SF,MIN @ SF,2026_11_MIN_SF:TOTAL,TOTAL,MARKET_REFERENCE,46.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_MIN_SF,MIN @ SF,2026_11_MIN_SF:ML,MONEYLINE,MODEL_ORIGIN,0.5707,-132.9,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_MIN_SF,MIN @ SF,2026_11_MIN_SF:ML,MONEYLINE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_MIN_SF,MIN @ SF,2026_11_MIN_SF:ML,MONEYLINE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_MIN_SF,MIN @ SF,2026_11_MIN_SF:ML,MONEYLINE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_MIN_SF,MIN @ SF,2026_11_MIN_SF:ML,MONEYLINE,MARKET_REFERENCE,0.6447,-205,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_CIN_WAS,CIN @ WAS,2026_11_CIN_WAS:SIDE,SIDE,MODEL_ORIGIN,-5.71,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_CIN_WAS,CIN @ WAS,2026_11_CIN_WAS:SIDE,SIDE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_CIN_WAS,CIN @ WAS,2026_11_CIN_WAS:SIDE,SIDE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_CIN_WAS,CIN @ WAS,2026_11_CIN_WAS:SIDE,SIDE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_CIN_WAS,CIN @ WAS,2026_11_CIN_WAS:SIDE,SIDE,MARKET_REFERENCE,-3.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_CIN_WAS,CIN @ WAS,2026_11_CIN_WAS:TOTAL,TOTAL,MODEL_ORIGIN,49.11,,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_CIN_WAS,CIN @ WAS,2026_11_CIN_WAS:TOTAL,TOTAL,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_CIN_WAS,CIN @ WAS,2026_11_CIN_WAS:TOTAL,TOTAL,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_CIN_WAS,CIN @ WAS,2026_11_CIN_WAS:TOTAL,TOTAL,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_CIN_WAS,CIN @ WAS,2026_11_CIN_WAS:TOTAL,TOTAL,MARKET_REFERENCE,51.50,,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
+2026,11,2026_11_CIN_WAS,CIN @ WAS,2026_11_CIN_WAS:ML,MONEYLINE,MODEL_ORIGIN,0.3292,203.7,2026-11-14T21:33:19Z,https://www.nfl.com/schedules/2026/by-week/,DERIVED,yes - reproducible from the committed inputs,
+2026,11,2026_11_CIN_WAS,CIN @ WAS,2026_11_CIN_WAS:ML,MONEYLINE,MODEL_CLOSE,,,,,,no - not yet observed,F-03
+2026,11,2026_11_CIN_WAS,CIN @ WAS,2026_11_CIN_WAS:ML,MONEYLINE,MARKET_OPEN,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_CIN_WAS,CIN @ WAS,2026_11_CIN_WAS:ML,MONEYLINE,MARKET_CLOSE,,,,,,no - nfl.com publishes no betting prices,F-01
+2026,11,2026_11_CIN_WAS,CIN @ WAS,2026_11_CIN_WAS:ML,MONEYLINE,MARKET_REFERENCE,0.3553,170,,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,"no - third-party mirror, snapshot time unknown",F-01
