@@ -1535,3 +1535,47 @@ Branch `arena/28431d9c-own5`. Claimed scope R1–R5 (above). Scope was narrowed 
 **Merge:** `gh pr merge 67 --merge` after the checks above. The merge result and the Pages deploy are confirmed with `gh` and the live URL after the merge.
 
 **Merge result (session 28431d9c):** PR #67 (`arena/28431d9c-own5` → `main`) was merged with a merge commit at 2026-11-13 21:41 UTC (`gh pr merge 67 --merge`), merge SHA `4fc2000`. The GitHub Pages build for `4fc2000` finished with status `built` (https://sassnarep3-star.github.io/Own5/). The live hub at `/nfl-hub-28431d9c/` serves the dashboard and the Flagged for Review page with the corrected text. R5 is now done. The two failing checks on PR #67 (`decision-desk.yml`, `nfl-b34253a1.yml`) were not caused by this PR and remain open for their owners as cross-scope requests above.
+
+---
+
+## Session d38e90c5 — NFL Line-Origination Engine v2 (price snapshots, results feed, signal/staking split) (2026-11-14 UTC)
+
+Arena fixes this session's branch to `arena/d38e90c5-own5` (base `530e94e` = `main`); no other branch
+will be created or pushed. Claim timestamp: **2026-11-14 UTC**, pushed before any implementation.
+
+**Gap claimed.** Six NFL desks exist on `main`, each with its own snapshot, and every one of them
+records the *same* unresolved blockers: (a) no machine-readable **price-snapshot store** (opening
+and closing numbers per originated market), (b) no **verified results feed**, so ROI is uncomputable;
+(c) origination order is not fixed (side / total / moneyline), (d) model fair line, market line and
+their difference are not published as three separate columns, (e) the leaderboard mixes **signal**
+with **staking**, so a lucky staking run can mask a bad signal, (f) replacement **depth**
+(1st/2nd/3rd/4th string) is only partly tracked, (g) correlation values are not always tied to
+officially sourced numbers with `n`, and (h) there is no **demotion gate** that sends a live
+strategy back to paper. This session claims exactly that gap in a new additive namespace.
+
+**Claimed additive namespace (no overlap with any other session):**
+- `nfl-desk-d38e90c5/**` (static GitHub Pages desk: dashboard + category subpages, price-snapshot
+  store, verified results feed, origination engine, leaderboard, suggestions, questions,
+  executive summary, Flagged for Review, sources; build + verify scripts)
+- `research/nfl-d38e90c5/**` (methodology, executive summary, verification log, flagged register)
+- `.github/workflows/nfl-desk-d38e90c5.yml` (runs this session's verify script only)
+- Append-only blocks in `COORDINATION.md`
+- `README.md` (append-only section)
+
+**Read-only for this session:** every other NFL desk directory, root `index.html` / `pages/` /
+`data/research.json`, `docs/`, `own5-desk/`, `nba-*`, `sf-*`, `rental-*`, `line-lab/`, `scripts/`,
+`tools/`, `analysis/`, existing workflows, existing CSV/JSON.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| D38-01 | Claim + line-by-line repo audit of the six NFL desks (data basis, links, irregularities) | unclaimed | d38e90c5 | `research/nfl-d38e90c5/REPO_AUDIT.md`, `nfl-desk-d38e90c5/data/repo_audit.csv` | Every irregularity carries the file it was found in; values never copied on trust. |
+| D38-02 | Official nfl.com capture: 2026 league standings, Week 10/11 slate, completed-game results, official injury report | unclaimed | d38e90c5 | `nfl-desk-d38e90c5/data/official_*.csv` | Transcribed from `fetch_page` results with the exact URL and capture date; unreadable values left blank. |
+| D38-03 | Price-snapshot store: opening **and** closing numbers for every market originated | unclaimed | d38e90c5 | `nfl-desk-d38e90c5/data/price_snapshots.csv`, `nfl-desk-d38e90c5/store.py` | Append-only store keyed by (game, market, side, snapshot stage); open/close lifecycle enforced in code; cells without an official price source are blank + flagged. |
+| D38-04 | Verified results feed (settled games) so backtests and ROI are computable | unclaimed | d38e90c5 | `nfl-desk-d38e90c5/data/results_verified.csv` | Final scores + status from nfl.com; settlement flags derived from the feed, never assumed. |
+| D38-05 | Origination order enforced: **side → total → moneyline**; fair line, market line and difference published as three separate columns | unclaimed | d38e90c5 | `nfl-desk-d38e90c5/data/own_lines.csv`, `engine.py` | Total and moneyline are derived from the side step, not computed independently. |
+| D38-06 | Leaderboard split: **signal** vs **staking**, with luck/luck-control columns so a lucky staking run cannot mask a bad signal | unclaimed | d38e90c5 | `nfl-desk-d38e90c5/data/leaderboard*.csv` | Two tables, independent scorecards; signal score never uses stake size. |
+| D38-07 | Depth-of-replacement tracker: 1st/2nd/3rd/4th-string replacements, offense and defense, with the depth recorded per replacement | unclaimed | d38e90c5 | `nfl-desk-d38e90c5/data/depth_replacements.csv`, `nfl-desk-d38e90c5/data/deficiency_summary.csv` | Depth string only where an official source states it; otherwise blank + flagged. |
+| D38-08 | Correlations recomputed from officially sourced numbers only, each value published with `n` | unclaimed | d38e90c5 | `nfl-desk-d38e90c5/data/correlations.csv` | Every row: coefficient, n, method, source URL; no row without n. |
+| D38-09 | Validation gates incl. the **demotion gate** (live → paper) and the suggestions / questions / executive-summary registers | unclaimed | d38e90c5 | `nfl-desk-d38e90c5/data/gates.csv`, `.../suggestions.csv`, `.../questions.csv`, `research/nfl-d38e90c5/EXECUTIVE_SUMMARY.md` | Demotion gate is fail-closed and explicit about its thresholds and its source. |
+| D38-10 | Pages site: clean dashboard landing + category subpages, deterministic build, line-by-line verifier, CI | unclaimed | d38e90c5 | `nfl-desk-d38e90c5/**`, `.github/workflows/nfl-desk-d38e90c5.yml` | Every table row linked to an official source or rendered as an explicit blank + flag; 0 broken internal links. |
+| D38-11 | Final integration, PR to `main`, autonomous merge, live Pages verification, record | unclaimed | d38e90c5 | `COORDINATION.md`, `README.md` (append-only) | Rebase, green checks, `gh pr merge <num> --merge`, live URL fetch. |
