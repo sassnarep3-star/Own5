@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suggestions &middot; Own5 NFL Engine Desk</title>
+<meta name="description" content="Own line origination for the NFL, with every value sourced or explicitly blank.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="mark">OWN5</span><span class="sub">NFL Engine Desk</span></a>
+    <nav aria-label="Sections"><a href="index.html">Overview</a><a href="status.html">Status &amp; verification</a><a href="prices.html">1 &middot; Price store</a><a href="results.html">2 &middot; Results feed</a><a href="origination.html">3&ndash;4 &middot; Lines</a><a href="leaderboard.html">5 &middot; Signal vs staking</a><a href="depth.html">6 &middot; Replacement depth</a><a href="correlations.html">7 &middot; Correlations</a><a href="demotion.html">8 &middot; Demotion gate</a><a href="suggestions.html" class="on">Suggestions</a><a href="questions.html">Questions</a><a href="audit.html">Repo audit</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources</a></nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+<h1>Suggestions</h1>
+<p class="lede">Decision paths, not tasks. Nothing on this page has been implemented: each item lists three options, a recommendation, its cost, and the test that would change the recommendation.</p>
+<div class="note warn"><strong>How to use this page</strong><p>Read the problem, then the three options, then the test. If the test still cannot be answered, the recommendation stands. Every item is <strong>AWAITING DECISION</strong> and nothing moves until one is chosen.</p></div>
+<article class="sug"><header><span class="sid">S01</span><h3>Make the capture clock the product, not the model</h3><span class="st">AWAITING DECISION</span></header>
+<p class="prob">The desk can now read FanDuel game lines. What it still cannot do is prove a price was available at a time. Every CLV, gate and reward statement depends on that one missing property.</p>
+<p class="ev"><strong>Evidence:</strong> price_snapshots.csv (13 games, 1 capture); flagged F-01/F-02; audit C5</p>
+<table class="opts"><caption>Options</caption><thead><tr><th>Option</th><th>Cost</th><th>Path</th></tr></thead><tbody>
+<tr class="rec"><td><strong>A</strong> &larr; recommended</td><td>Low</td><td>Add a second capture at a fixed weekday time (Thu 18:00 ET) and a third at kickoff-minus-60m, both stored with the raw block hash. Cost: two scheduled runs a week.</td></tr>
+<tr><td><strong>B</strong></td><td>Low</td><td>Capture continuously every 15 minutes and keep only the first and last observation per market. Cost: 96x the requests, needs a backoff policy and an archive budget.</td></tr>
+<tr><td><strong>C</strong></td><td>Low</td><td>Do nothing automatic; capture by hand whenever you look. Cost: zero, but no row can ever be certified as an opening or closing price.</td></tr>
+</tbody></table>
+<p class="why"><strong>Why A:</strong> A produces a defensible opening and closing pair per week for roughly 1/50th the request volume of B, and it is the only option that makes CLV computable next week rather than next season.</p>
+<p class="test"><strong>This changes the call:</strong> If FanDuel starts serving a documented feed or the page blocks scheduled requests, switch to B or stop.</p>
+<p class="small"><strong>Blocks:</strong> Requirements 1, 5, 8; every CLV statement; reward eligibility &middot; <strong>Risk of waiting:</strong> Every week without a capture is a week of permanently unrecoverable price history. This is the only item on the list where waiting destroys data. &middot; <strong>Owner:</strong> Owner</p></article>
+<article class="sug"><header><span class="sid">S02</span><h3>Publish a market-efficiency scorecard before any picks</h3><span class="st">AWAITING DECISION</span></header>
+<p class="prob">The model disagrees with the market by 1.8 points on average and up to 3.2 on the side. Those numbers look like edges and are not. Without a scorecard, a reader has no way to tell a missing variable from a mispriced game.</p>
+<p class="ev"><strong>Evidence:</strong> origination_calibration.csv; mean_abs 1.764 (side), 4.001 (total)</p>
+<table class="opts"><caption>Options</caption><thead><tr><th>Option</th><th>Cost</th><th>Path</th></tr></thead><tbody>
+<tr class="rec"><td><strong>A</strong> &larr; recommended</td><td>Low</td><td>Publish, per market, the model&#x27;s mean bias, mean absolute disagreement and residual variance against the closing price, with n. No picks, no confidence language.</td></tr>
+<tr><td><strong>B</strong></td><td>Low</td><td>Publish picks with a written argument for each. Faster to read, but an argument is not evidence and it cannot be scored.</td></tr>
+<tr><td><strong>C</strong></td><td>Low</td><td>Publish nothing until the model beats the market in backtest. Cleanest, but the desk then says nothing for months.</td></tr>
+</tbody></table>
+<p class="why"><strong>Why A:</strong> A is the only option that converts model error into a quantity someone can improve. It also makes the next model change measurable.</p>
+<p class="test"><strong>This changes the call:</strong> If mean absolute disagreement falls below the market&#x27;s own week-to-week movement, the model is calibrated enough to justify picks.</p>
+<p class="small"><strong>Blocks:</strong> Requirement 4; any &#x27;signal&#x27; claim &middot; <strong>Risk of waiting:</strong> Readers mistake model error for edge and act on it. &middot; <strong>Owner:</strong> Owner</p></article>
+<article class="sug"><header><span class="sid">S03</span><h3>Separate the two scoreboards physically, not just by column</h3><span class="st">AWAITING DECISION</span></header>
+<p class="prob">Signal and staking are currently two halves of one table. A reader skimming a green profit number will not notice a red signal verdict three columns to its left.</p>
+<p class="ev"><strong>Evidence:</strong> staking_masking_example.json: 25% hit rate, FAIL verdict, +31.8% bankroll</p>
+<table class="opts"><caption>Options</caption><thead><tr><th>Option</th><th>Cost</th><th>Path</th></tr></thead><tbody>
+<tr class="rec"><td><strong>A</strong> &larr; recommended</td><td>Low</td><td>Two separate pages with their own navigation entries, and the staking page carries a banner showing the signal verdict for every row it lists.</td></tr>
+<tr><td><strong>B</strong></td><td>Low</td><td>One page, staking columns collapsed by default behind a toggle.</td></tr>
+<tr><td><strong>C</strong></td><td>Low</td><td>Keep one table and rely on column order.</td></tr>
+</tbody></table>
+<p class="why"><strong>Why A:</strong> The masking example exists because people read the biggest number first. A banner on the staking page is the only arrangement where the failing signal cannot be skipped.</p>
+<p class="test"><strong>This changes the call:</strong> If the owner reads the staking view only, and cannot state the signal verdict afterwards, the separation is not working.</p>
+<p class="small"><strong>Blocks:</strong> Requirement 5 &middot; <strong>Risk of waiting:</strong> A lucky staking run is presented as skill. &middot; <strong>Owner:</strong> Owner</p></article>
+<article class="sug"><header><span class="sid">S04</span><h3>Rank replacements by depth, and cap the metric before it is trusted</h3><span class="st">AWAITING DECISION</span></header>
+<p class="prob">Depth is now measured in rungs, but only four charts are read and only three slots are exposed. A ranking built on three observations is a story, not a measurement.</p>
+<p class="ev"><strong>Evidence:</strong> depth_replacement_units.csv (7 rows); F-05</p>
+<table class="opts"><caption>Options</caption><thead><tr><th>Option</th><th>Cost</th><th>Path</th></tr></thead><tbody>
+<tr class="rec"><td><strong>A</strong> &larr; recommended</td><td>Low</td><td>Display depth per slot as a fact (rung, replacement name, source) and suppress any club-level ranking until 32 charts are read.</td></tr>
+<tr><td><strong>B</strong></td><td>Low</td><td>Rank clubs now on unit_depth_index and add a sample-size warning.</td></tr>
+<tr><td><strong>C</strong></td><td>Low</td><td>Combine depth with snap counts to estimate the quality drop.</td></tr>
+</tbody></table>
+<p class="why"><strong>Why A:</strong> C is the right long-term answer but needs snap-count data that is not in the repository. B would publish a ranking that a real roster move could invert. A is honest and still useful.</p>
+<p class="test"><strong>This changes the call:</strong> If all 32 charts are read and at least 20 slots are exposed, promote B and revisit C.</p>
+<p class="small"><strong>Blocks:</strong> Requirement 6 &middot; <strong>Risk of waiting:</strong> A club is mis-ranked on three observations and the number is quoted later as if it were measured. &middot; <strong>Owner:</strong> Owner</p></article>
+<article class="sug"><header><span class="sid">S05</span><h3>Replace &#x27;deficiency&#x27; with rungs in the inherited data</h3><span class="st">AWAITING DECISION</span></header>
+<p class="prob">The inherited depth column is 0 or 1 for 705 slots. It cannot express a cascade, and it makes an injury to a fourth-string receiver look identical to an injury to a starting quarterback.</p>
+<p class="ev"><strong>Evidence:</strong> audit D2; 698 zeros and 7 ones</p>
+<table class="opts"><caption>Options</caption><thead><tr><th>Option</th><th>Cost</th><th>Path</th></tr></thead><tbody>
+<tr><td><strong>A</strong></td><td>Medium</td><td>Recompute all 32 charts with the rung metric in this desk&#x27;s engine and publish a before/after table.</td></tr>
+<tr class="rec"><td><strong>B</strong> &larr; recommended</td><td>Medium</td><td>Leave the old column and add the new one alongside.</td></tr>
+<tr><td><strong>C</strong></td><td>Medium</td><td>Drop the column entirely and publish only named replacements.</td></tr>
+</tbody></table>
+<p class="why"><strong>Why B:</strong> B keeps every prior desk&#x27;s arithmetic reproducible while making the new measure available. A would silently change numbers other pages quote.</p>
+<p class="test"><strong>This changes the call:</strong> If the old column is never referenced again, take A.</p>
+<p class="small"><strong>Blocks:</strong> Requirement 6 &middot; <strong>Risk of waiting:</strong> Old and new numbers get mixed in conversation with no way to tell which is which. &middot; <strong>Owner:</strong> Owner</p></article>
+<article class="sug"><header><span class="sid">S06</span><h3>State the closing-price definition once and enforce it</h3><span class="st">AWAITING DECISION</span></header>
+<p class="prob">&#x27;Closing line&#x27; has no single definition here. The price store treats the last capture before kickoff as the close. An operator would call the price at the moment betting closes the close. They can differ by hours.</p>
+<p class="ev"><strong>Evidence:</strong> price_snapshots.csv event=close; F-02</p>
+<table class="opts"><caption>Options</caption><thead><tr><th>Option</th><th>Cost</th><th>Path</th></tr></thead><tbody>
+<tr><td><strong>A</strong></td><td>Low</td><td>Define close as the last capture at or before kickoff-minus-15m and record the actual gap in every row so the definition is auditable.</td></tr>
+<tr><td><strong>B</strong></td><td>Low</td><td>Use the operator&#x27;s own price at suspension as the close; requires capturing the suspension event.</td></tr>
+<tr class="rec"><td><strong>C</strong> &larr; recommended</td><td>Low</td><td>Redefine the metric as &#x27;beat the last observed price&#x27; and stop calling it closing-line value.</td></tr>
+</tbody></table>
+<p class="why"><strong>Why C:</strong> C removes an unfalsifiable term. If the number is the last observed price, saying so makes it checkable and makes &#x27;CLV&#x27; an honest, weaker claim.</p>
+<p class="test"><strong>This changes the call:</strong> If the operator ever publishes a suspension feed, B becomes available and is strictly better.</p>
+<p class="small"><strong>Blocks:</strong> Requirements 1, 5, 8 &middot; <strong>Risk of waiting:</strong> Two desks compute CLV differently and the leaderboard compares them. &middot; <strong>Owner:</strong> Owner</p></article>
+<article class="sug"><header><span class="sid">S07</span><h3>Ask for prop numbers explicitly, or drop prop combos</h3><span class="st">AWAITING DECISION</span></header>
+<p class="prob">Prop markets render as names only. Every prop combo in the repository is therefore unpriced, and an unpriced combo cannot be scored, staked or rewarded.</p>
+<p class="ev"><strong>Evidence:</strong> MARKET_PROBE.prop_prices_served = False; F-03</p>
+<table class="opts"><caption>Options</caption><thead><tr><th>Option</th><th>Cost</th><th>Path</th></tr></thead><tbody>
+<tr class="rec"><td><strong>A</strong> &larr; recommended</td><td>Low</td><td>Keep prop combos in the catalogue as a design target but exclude them from every ROI and reward calculation until numbers exist.</td></tr>
+<tr><td><strong>B</strong></td><td>Low</td><td>Model prop lines yourself from player game logs and treat the model output as the line.</td></tr>
+<tr><td><strong>C</strong></td><td>Low</td><td>Drop prop combos from the project until a priced source is available.</td></tr>
+</tbody></table>
+<p class="why"><strong>Why A:</strong> B is the tempting one and it is the one that manufactures fake edges: a model line compared with a model line always agrees. A keeps the goal visible without pretending.</p>
+<p class="test"><strong>This changes the call:</strong> If any official source exposes prop lines with timestamps, B becomes viable and should be revisited.</p>
+<p class="small"><strong>Blocks:</strong> Prop combos; requirement 7 for player markets &middot; <strong>Risk of waiting:</strong> A prop strategy is promoted on an assumed line. &middot; <strong>Owner:</strong> Owner</p></article>
+<article class="sug"><header><span class="sid">S08</span><h3>Publish the demotion gate as a rule table, not a policy paragraph</h3><span class="st">AWAITING DECISION</span></header>
+<p class="prob">A demotion gate written in prose cannot be executed. The one built here is a table of five rules, each with a threshold and a source.</p>
+<p class="ev"><strong>Evidence:</strong> demotion_rules.csv; demotion_scenarios.csv</p>
+<table class="opts"><caption>Options</caption><thead><tr><th>Option</th><th>Cost</th><th>Path</th></tr></thead><tbody>
+<tr><td><strong>A</strong></td><td>Low</td><td>Adopt D1-D5 as written, with the thresholds visible and an owner signature on each.</td></tr>
+<tr class="rec"><td><strong>B</strong> &larr; recommended</td><td>Low</td><td>Adopt D1, D3 and D5 only; defer the CLV and price-availability rules until a price history exists.</td></tr>
+<tr><td><strong>C</strong></td><td>Low</td><td>Write a bespoke gate after the first live strategy exists.</td></tr>
+</tbody></table>
+<p class="why"><strong>Why B:</strong> D2 and D4 both depend on price history that does not exist yet. Adopting them now would produce constant false demotions. D1, D3 and D5 are executable today.</p>
+<p class="test"><strong>This changes the call:</strong> When two consecutive weeks of price history exist, enable D2 and D4 and re-run the scenarios.</p>
+<p class="small"><strong>Blocks:</strong> Requirement 8 &middot; <strong>Risk of waiting:</strong> A losing strategy stays live because &#x27;the rule was never formalised&#x27;. &middot; <strong>Owner:</strong> Owner</p></article>
+<article class="sug"><header><span class="sid">S09</span><h3>Put the reconciliation on the front page, not the audit page</h3><span class="st">AWAITING DECISION</span></header>
+<p class="prob">The single strongest result today is that 137 results reconcile to the official standings with zero mismatches. It is buried on an audit page. It is the reason to trust anything else here.</p>
+<p class="ev"><strong>Evidence:</strong> results_reconciliation.csv (192 checks, 0 mismatches)</p>
+<table class="opts"><caption>Options</caption><thead><tr><th>Option</th><th>Cost</th><th>Path</th></tr></thead><tbody>
+<tr class="rec"><td><strong>A</strong> &larr; recommended</td><td>Low</td><td>A one-line status strip on every page: results verified, prices partial, model uncalibrated.</td></tr>
+<tr><td><strong>B</strong></td><td>Low</td><td>Keep it on the audit page and rely on navigation.</td></tr>
+<tr><td><strong>C</strong></td><td>Low</td><td>Publish only the pass/fail, not the check count.</td></tr>
+</tbody></table>
+<p class="why"><strong>Why A:</strong> Trust is built by the weakest link, not the strongest. A strip that admits &#x27;prices partial&#x27; on every page is more credible than a green badge.</p>
+<p class="test"><strong>This changes the call:</strong> If the owner ignores the strip, simplify to C.</p>
+<p class="small"><strong>Blocks:</strong> Nothing; improves everything &middot; <strong>Risk of waiting:</strong> Readers assume the unverified parts are as solid as the verified part. &middot; <strong>Owner:</strong> Owner</p></article>
+<article class="sug"><header><span class="sid">S10</span><h3>Fund rewards in points, not cash, until the legal question closes</h3><span class="st">AWAITING DECISION</span></header>
+<p class="prob">Cash rewards change the legal, tax and self-exclusion requirements, and the operator&#x27;s terms may restrict competition use of its numbers.</p>
+<p class="ev"><strong>Evidence:</strong> Q04; F-09</p>
+<table class="opts"><caption>Options</caption><thead><tr><th>Option</th><th>Cost</th><th>Path</th></tr></thead><tbody>
+<tr class="rec"><td><strong>A</strong> &larr; recommended</td><td>Low</td><td>Points-only leaderboard with no cash value, published as a research ranking.</td></tr>
+<tr><td><strong>B</strong></td><td>Low</td><td>Cash prizes with a jurisdiction review before launch.</td></tr>
+<tr><td><strong>C</strong></td><td>Low</td><td>No rewards; publish the ranking only.</td></tr>
+</tbody></table>
+<p class="why"><strong>Why A:</strong> A keeps the competition incentive without touching the regulated surface. It is reversible the moment the legal question closes.</p>
+<p class="test"><strong>This changes the call:</strong> A written opinion that a points-only board is outside contest rules, or a funded prize budget.</p>
+<p class="small"><strong>Blocks:</strong> Leaderboard launch &middot; <strong>Risk of waiting:</strong> A cash reward is promised before the terms are checked. &middot; <strong>Owner:</strong> Owner</p></article>
+<article class="sug"><header><span class="sid">S11</span><h3>Make the in-sample block structural, not editorial</h3><span class="st">AWAITING DECISION</span></header>
+<p class="prob">A strategy fitted on the data it is scored on produced a 75% hit rate and a PASS verdict. Only a status flag stopped it being read as skill.</p>
+<p class="ev"><strong>Evidence:</strong> leaderboard_signal_staking.csv row R3: NOT_ELIGIBLE_IN_SAMPLE</p>
+<table class="opts"><caption>Options</caption><thead><tr><th>Option</th><th>Cost</th><th>Path</th></tr></thead><tbody>
+<tr class="rec"><td><strong>A</strong> &larr; recommended</td><td>Low</td><td>Make the scoring function refuse to emit a verdict when the strategy declares in-sample fitting, and have that refusal appear in the table.</td></tr>
+<tr><td><strong>B</strong></td><td>Low</td><td>Keep the flag and add a footnote.</td></tr>
+<tr><td><strong>C</strong></td><td>Low</td><td>Exclude in-sample strategies from the table entirely.</td></tr>
+</tbody></table>
+<p class="why"><strong>Why A:</strong> C hides the number, which is sometimes the point of an in-sample run. A shows the number and makes the refusal impossible to miss.</p>
+<p class="test"><strong>This changes the call:</strong> If the leaderboard ever runs with zero in-sample entries, the block is unreachable and can be simplified.</p>
+<p class="small"><strong>Blocks:</strong> Requirements 5, 8 &middot; <strong>Risk of waiting:</strong> An in-sample 75% is quoted as a result. &middot; <strong>Owner:</strong> Owner</p></article>
+<article class="sug"><header><span class="sid">S12</span><h3>Put a 60-minute stale-capture check on every priced row</h3><span class="st">AWAITING DECISION</span></header>
+<p class="prob">A price with no freshness guarantee is a price of unknown age. The inherited quotes were dated to the day and the market moved inside 48 hours.</p>
+<p class="ev"><strong>Evidence:</strong> audit C5: CAR@NO moved a full point of spread; C6/C7</p>
+<table class="opts"><caption>Options</caption><thead><tr><th>Option</th><th>Cost</th><th>Path</th></tr></thead><tbody>
+<tr class="rec"><td><strong>A</strong> &larr; recommended</td><td>Low</td><td>Every page that shows a price also shows its age, and rows older than 60 minutes before kickoff are dimmed with a reason.</td></tr>
+<tr><td><strong>B</strong></td><td>Low</td><td>Hide stale prices entirely.</td></tr>
+<tr><td><strong>C</strong></td><td>Low</td><td>Show prices without age because the timestamp is in the CSV.</td></tr>
+</tbody></table>
+<p class="why"><strong>Why A:</strong> B destroys the audit trail. C assumes the reader opens the CSV. A keeps both the number and its honesty visible.</p>
+<p class="test"><strong>This changes the call:</strong> If captures become automated at kickoff-minus-60m, staleness becomes rare and the treatment can soften.</p>
+<p class="small"><strong>Blocks:</strong> Requirements 1, 4 &middot; <strong>Risk of waiting:</strong> A stale quote is used as if it were live. &middot; <strong>Owner:</strong> Owner</p></article>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p><strong>Data captured 2026-11-14 (UTC).</strong> Official sources only.
+    Anything a source does not publish is shown as <span class="blank">blank</span> and listed on
+    <a href="flagged.html">Flagged for review</a>.</p>
+    <p>Results verified against nfl.com standings. Prices are a single capture point per game:
+    there is no opening price, so nothing here is a closing-line value.</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "break_even_at_minus_110": 0.5238095238095238,
+  "example_13_of_14": {
+    "beats_breakeven_lower_bound": true,
+    "binom_p_two_sided": 0.002112545832290867,
+    "breakeven": 0.5238095238095238,
+    "hit_rate": 0.9285714285714286,
+    "n": 14,
+    "n_needed_to_prove_3pt_edge": 1709,
+    "wilson_high": 0.9872777847521093,
+    "wilson_low": 0.6853129557584889,
+    "wins": 13
+  },
+  "n_needed_55pct": 2243
+}

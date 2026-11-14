@@ -1,0 +1,15 @@
+# Raw price snapshot — Own5 NFL engine desk
+# operator: FanDuel (public event page, unauthenticated)
+# captured_at_utc: 2026-11-14T12:00:00Z
+# captured_on (local working date): 2026-11-14
+# region: US-UNSPECIFIED (page does not state the governing state)
+# url: https://sportsbook.fanduel.com/football/nfl/miami-dolphins-@-indianapolis-colts-36275761
+#
+# Reading note: the operator renders the AWAY block first, then the
+# HOME block. The block below is transcribed exactly in that form.
+away_team: MIA
+home_team: IND
+away_spread: 3.5  away_spread_price: -105
+home_spread: -3.5  home_spread_price: -115
+total: 38.5  over_price: -105  under_price: -115
+away_moneyline: +176  home_moneyline: -210

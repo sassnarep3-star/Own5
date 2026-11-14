@@ -1,0 +1,60 @@
+name: NFL engine desk
+
+on:
+  push:
+    branches: ["**"]
+    paths:
+      - "nfl-engine-39086ec8/**"
+      - ".github/workflows/nfl-engine-39086ec8.yml"
+  pull_request:
+    paths:
+      - "nfl-engine-39086ec8/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nfl-engine-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: build, test, verify
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Rebuild the data layer
+        working-directory: nfl-engine-39086ec8
+        run: python3 build_data.py
+
+      - name: Rebuild the site
+        working-directory: nfl-engine-39086ec8
+        run: python3 build_site.py
+
+      - name: Unit tests
+        working-directory: nfl-engine-39086ec8
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Verification harness
+        working-directory: nfl-engine-39086ec8
+        run: python3 verify.py
+
+      - name: Fail if the committed build is stale
+        run: |
+          git diff --exit-code -- nfl-engine-39086ec8 \
+            || (echo "::error::Committed data or HTML does not match a clean rebuild"; exit 1)
+
+      - name: Upload the desk site
+        uses: actions/upload-artifact@v4
+        with:
+          name: nfl-engine-site
+          path: |
+            nfl-engine-39086ec8/*.html
+            nfl-engine-39086ec8/assets/style.css
+          retention-days: 30

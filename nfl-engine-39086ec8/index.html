@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Overview &middot; Own5 NFL Engine Desk</title>
+<meta name="description" content="Own line origination for the NFL, with every value sourced or explicitly blank.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="mark">OWN5</span><span class="sub">NFL Engine Desk</span></a>
+    <nav aria-label="Sections"><a href="index.html" class="on">Overview</a><a href="status.html">Status &amp; verification</a><a href="prices.html">1 &middot; Price store</a><a href="results.html">2 &middot; Results feed</a><a href="origination.html">3&ndash;4 &middot; Lines</a><a href="leaderboard.html">5 &middot; Signal vs staking</a><a href="depth.html">6 &middot; Replacement depth</a><a href="correlations.html">7 &middot; Correlations</a><a href="demotion.html">8 &middot; Demotion gate</a><a href="suggestions.html">Suggestions</a><a href="questions.html">Questions</a><a href="audit.html">Repo audit</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources</a></nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+<section class="hero"><h1>Originate the line.<br>Publish the error.</h1>
+<p class="lede">A working implementation of the eight engine requirements, built on official NFL sources and one verifiable operator price capture. The honest headline: the results feed is fully verified and the model is <em>not</em> yet calibrated against the market.</p></section>
+<div class="cards"><div class="card"><span>Games reconciled</span><strong>192<span class="of"> / 192 checks</span></strong><small>0 mismatches across 32 clubs</small></div><div class="card"><span>Prices captured</span><strong>13</strong><small>games, one capture point each</small></div><div class="card"><span>Opening prices</span><strong>0</strong><small>not recoverable for Week 10</small></div><div class="card"><span>Model vs market</span><strong>1.8<span class="of"> pts</span></strong><small>mean absolute side disagreement</small></div></div>
+<div class="note warn"><strong>Read this before any number below</strong><p>There is <strong>one</strong> capture of market prices (2026-11-14). An opening price cannot be reconstructed, so no closing-line value is computed anywhere in this desk. Where the market is unknown the market column is blank and the difference column says <code>UNPRICED</code> &mdash; never zero.</p></div>
+<h2>The eight requirements</h2><div class="grid">
+<a class="tile" href="prices.html"><span class="num">1</span><strong>Price-snapshot store</strong><p>Append-only, provenance-required, hash of the raw block. 78 rows.</p></a>
+<a class="tile" href="results.html"><span class="num">2</span><strong>Verified results feed</strong><p>137 finals, reconciled to official standings with 0 mismatches.</p></a>
+<a class="tile" href="origination.html"><span class="num">3&ndash;4</span><strong>Origination order, three columns</strong><p>Side, then total, then moneyline. Fair, market, difference kept apart.</p></a>
+<a class="tile" href="leaderboard.html"><span class="num">5</span><strong>Signal vs staking</strong><p>Two scoreboards. A staking run cannot change a signal verdict.</p></a>
+<a class="tile" href="depth.html"><span class="num">6</span><strong>Depth of replacement</strong><p>Rungs down, cascades and exhaustion, not a yes/no flag.</p></a>
+<a class="tile" href="correlations.html"><span class="num">7</span><strong>Correlations with n</strong><p>4 official values with intervals, and a provenance audit.</p></a>
+<a class="tile" href="demotion.html"><span class="num">8</span><strong>Demotion gate</strong><p>5 executable rules, each shown firing on its own evidence.</p></a>
+<a class="tile" href="suggestions.html"><span class="num">&mdash;</span><strong>Suggestions to review</strong><p>12 decision paths, none implemented.</p></a>
+</div>
+<h2>What changed in this session</h2>
+<div class="note ok"><strong>Found: game-line prices ARE officially readable</strong><p>A prior desk concluded that no official market price exists. That was too strong: the operator's public event pages served a readable Game Lines block for 13 of the 14 Week 10 games. The first price store in this repository now exists, and the store immediately shows what is still missing &mdash; the opening number and any history.</p></div>
+<div class="note bad"><strong>Found: the inherited depth metric cannot rank a game</strong><p>The depth column is 0 for 698 of 705 slots and 1 for the rest. It records that a replacement happened, never how deep it went. 3 slots in this desk's replacement metric now carry the rung, the cascade count and an exhaustion flag.</p></div>
+<div class="note warn"><strong>Found: the strongest published correlation is a bye-week artefact</strong><p>Rest differential vs home margin is published as r = &minus;0.4257. Removing the 16 games where either side came off a bye drops it to r = +0.0387 (p = 0.72). See <a href='correlations.html'>Correlations</a>.</p></div>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p><strong>Data captured 2026-11-14 (UTC).</strong> Official sources only.
+    Anything a source does not publish is shown as <span class="blank">blank</span> and listed on
+    <a href="flagged.html">Flagged for review</a>.</p>
+    <p>Results verified against nfl.com standings. Prices are a single capture point per game:
+    there is no opening price, so nothing here is a closing-line value.</p>
+  </div>
+</footer>
+</body>
+</html>

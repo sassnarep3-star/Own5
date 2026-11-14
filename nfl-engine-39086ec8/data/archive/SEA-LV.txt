@@ -1,0 +1,15 @@
+# Raw price snapshot — Own5 NFL engine desk
+# operator: FanDuel (public event page, unauthenticated)
+# captured_at_utc: 2026-11-14T12:00:00Z
+# captured_on (local working date): 2026-11-14
+# region: US-UNSPECIFIED (page does not state the governing state)
+# url: https://sportsbook.fanduel.com/football/nfl/seattle-seahawks-@-las-vegas-raiders-36275769
+#
+# Reading note: the operator renders the AWAY block first, then the
+# HOME block. The block below is transcribed exactly in that form.
+away_team: SEA
+home_team: LV
+away_spread: -6.5  away_spread_price: -110
+home_spread: 6.5  home_spread_price: -110
+total: 40.5  over_price: -110  under_price: -110
+away_moneyline: -300  home_moneyline: +245

@@ -1,0 +1,19 @@
+{
+  "blocking_flag": "P-01 / F-02",
+  "decision_rule": "Publish a signal only if the coefficient is positive, the 95% interval excludes zero, and the pre-report movement is not the majority of it",
+  "have": [
+    "Official injury report contents (4 clubs, Week 10, 2026-11-14)"
+  ],
+  "lack": [
+    "Every price, at every timestamp, for every game"
+  ],
+  "question": "Does the market move on the official injury report, or does it move first?",
+  "required_inputs": [
+    "Timestamped opening and closing prices for the same game (price store, req 1)",
+    "The exact publication timestamp of the official injury report",
+    "At least one full season of both, aligned to kickoff"
+  ],
+  "status": "BLOCKED \u2014 cannot be computed without a price archive",
+  "test_statistic": "regress the signed line movement (close - open) on the injury-status change, controlling for the result; report n, the coefficient, and the share of movement that precedes the report",
+  "why_it_matters": "If the line moves before the official report, the report is not the information source and an injury-based signal cannot beat the close. If the line moves after, the size and timing of that move is the edge."
+}

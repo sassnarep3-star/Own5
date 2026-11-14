@@ -1538,6 +1538,7 @@ Branch `arena/28431d9c-own5`. Claimed scope R1–R5 (above). Scope was narrowed 
 
 ---
 
+
 ## Session d38e90c5 — NFL Line-Origination Engine v2 (price snapshots, results feed, signal/staking split) (2026-11-14 UTC)
 
 Arena fixes this session's branch to `arena/d38e90c5-own5` (base `530e94e` = `main`); no other branch
@@ -1688,3 +1689,79 @@ Cross-session request (logged, not edited): add or link a stable market key and 
 **PR/check status update (2026-11-14 UTC):** PR #73 is open from `arena/853c0074-own5` to `main`. The scoped workflow `NFL price snapshots and verified results feed (853c0074)` passed (run 43644208677), including deterministic output, all 9 local pages, source-row checks and browser smoke tests. `Build, evidence integrity and browser smoke tests`, `Verify Own5 evidence desk`, `Verify NBA validation desk`, `Verify SF Rent Review`, and `Verify research dashboard` passed. Two unrelated NFL workflows failed only at their deterministic generated-output checks: `NFL Decision Desk — fetch & verify` (run 43644208617) and `Verify NFL B34 Week 10 research desk` (run 43644208623); neither workflow's owned files were modified here. GitHub's `gh run rerun` refused both as their workflow files may be broken; no cross-scope edits were made. These failures are logged as cross-session requests for their owners to inspect/re-run after their own snapshot synchronization. The affected public site for this PR is built/verified by its own passing workflow; the unrelated desk statuses are not represented as passes.
 
 **Concurrent integration / conflict log (2026-11-14 UTC):** after PR #73 was opened, another session merged PR #74 (`d38e90c5`) to `main` (merge commit `a264292`). The first merge attempt for PR #73 reported a `COORDINATION.md` conflict. Rebased this branch on the new `origin/main` and resolved the conflict by retaining the entire `d38e90c5` audit/integration block and this session's complete block; no files outside this session's claimed scope were edited. Both other-session blocks remain intact. Their latest PR-triggered deterministic-output checks also failed again (`NFL Decision Desk — fetch & verify` run 43644423111; `Verify NFL B34 Week 10 research desk` run 43644423087); this session did not change either workflow's files. Our own latest run 43644423199 passed.
+
+
+## Session 39086ec8 — NFL Engine Spec & Integration Desk (2026-11-14 UTC)
+
+Arena fixes this session's branch to `arena/39086ec8-own5` (base `530e94e` = `main` after PR #72).
+Claim timestamp: **2026-11-14 UTC**, committed and pushed **before** implementation. No other branch
+will be created, renamed or pushed.
+
+**Why this session exists.** `main` already carries seven NFL desks. Every one of them publishes a
+round of model output, but none implements the eight engine components the owner has now specified
+as a single block: a price-snapshot store (opening **and** closing), a verified results feed,
+origination in the order side → total → moneyline, fair/market/difference as three separate columns,
+signal separated from staking on the leaderboard, *depth of* replacement rather than *fact of*
+replacement, correlations restricted to officially sourced numbers with `n` published, and a
+demotion gate that returns a live strategy to paper. This session builds a decision-grade **spec and
+reference implementation** for exactly those eight, plus the suggestion and question registers that
+must be answered before any of them is switched on. It does not restate the existing desks' results.
+
+**Claimed namespace (additive, collision-free).**
+
+- `nfl-engine-39086ec8/**` — static GitHub Pages desk (landing page + category subpages, canonical
+  CSV/JSON under `nfl-engine-39086ec8/data/`, deterministic build `build.py`, verifier `verify.py`,
+  unit tests `tests/test_engine.py`, reference implementation `engine/`).
+- `research/nfl-39086ec8/**` — executive summary, requirements matrix, methodology, verification log,
+  flagged register.
+- `.github/workflows/nfl-engine-39086ec8.yml` — this session's scoped deterministic check only.
+- Append-only blocks in `COORDINATION.md` and (at integration) `README.md`.
+
+**Read-only for this session** (treated as other sessions' property, never edited): `index.html`,
+`pages/`, `data/research.json`, `scripts/`, `tests/` (root), `tools/`, `docs/`, `site/`, `own5-desk/`,
+every `nfl-*` desk folder other than the one above, `data/decision-desk/`, `nba-*`, `sf-*`,
+`rental-*`, `line-lab/`, and all existing workflows.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| E1 | Coordination claim (this block) | done | 39086ec8 | `COORDINATION.md` | Claim pushed first, before any implementation. |
+| E2 | Official 2026-11-14 source capture (standings, Week 10 slate, Week 10 injuries) | in progress | 39086ec8 | `nfl-engine-39086ec8/data/official_*.csv` | Transcribed from `fetch_page` results; unreadable values left blank and flagged. |
+| E3 | Price-snapshot store: schema, append-only invariants, capture-ability probe | in progress | 39086ec8 | `nfl-engine-39086ec8/data/price_snapshots.csv`, `engine/price_store.py` | Blocking question P-01: no official public closing-line feed exists. |
+| E4 | Verified results feed + reconciliation to official standings | in progress | 39086ec8 | `nfl-engine-39086ec8/data/results_feed.csv` | Reconciles to nfl.com PF/PA per club. |
+| E5 | Origination order: side → total → moneyline, with fair/market/difference columns | in progress | 39086ec8 | `engine/originate.py`, `data/origination_wk10.csv` | Market columns blank unless a verified snapshot exists. |
+| E6 | Signal vs staking split on the leaderboard | in progress | 39086ec8 | `data/leaderboard_signal.csv`, `data/leaderboard_staking.csv` | Worked example of staking masking a failing signal. |
+| E7 | Depth-of-replacement metric (offence + defence) | in progress | 39086ec8 | `engine/replacement.py`, `data/replacement_depth.csv` | Rungs + cascading-absence flag. |
+| E8 | Correlations from official sources only, with `n` | in progress | 39086ec8 | `data/correlations_official.csv` | Cross-desk provenance audit of published correlations. |
+| E9 | Demotion gate specification + reference implementation | in progress | 39086ec8 | `engine/demotion.py`, `data/demotion_rules.csv` | SPRT + drawdown + CLV-reversal triggers. |
+| E10 | Suggestion register (reviewable paths, nothing implemented) | in progress | 39086ec8 | `data/suggestions.csv` | Options A/B/C, recommendation, test that would change the call. |
+| E11 | Question register (have / lack / how to get / what blocks) | in progress | 39086ec8 | `data/questions.csv` | Blocking items named explicitly. |
+| E12 | Line-by-line repo audit vs official sources | in progress | 39086ec8 | `data/repo_audit.csv`, `repo-audit.html` | MATCH / IRREGULAR / REVIEW / NOT CHECKED with reasons. |
+| E13 | Site build, verification harness, tests, CI | in progress | 39086ec8 | `nfl-engine-39086ec8/*.html`, `build.py`, `verify.py`, `tests/`, workflow | Deterministic; every table row carries a source link or an explicit blank. |
+| E14 | PR to `main`, autonomous merge, live Pages check, record result | unclaimed | — | `COORDINATION.md` | Not started until E2–E13 pass. |
+
+Cross-session requests at claim time: none. The root `index.html`/`pages/`/`data/research.json` are
+CI-locked by `scripts/build.py` + `git diff --exit-code`, so this session will **not** add a nav link
+to them; it will instead log a request for the integration owner in its closing record.
+
+## Session 39086ec8 — completion record (2026-11-14)
+
+E1–E13 completed in the claimed `nfl-engine-39086ec8/**` / `research/nfl-39086ec8/**` scope.
+The original E2–E13 rows above describe the initial claim plan; the actual deliverables are in
+`nfl-engine-39086ec8/` (flat `engine_*.py` modules, not the earlier proposed `engine/` layout).
+Verification: `python3 -m unittest discover -s tests` = 68/68 pass; `python3 verify.py` =
+1,215 checks / 0 failures; `build_data.py` reconciles 192/192 results checks. The five unresolved
+review categories are explicitly published in `data/repo_audit.csv` and `flagged.html`; none
+blocks integration by the standing rule.
+
+**Integration request to the root-site owner (no root-nav edit by this session):** add a root
+navigation link labelled “NFL Line Origination” to
+`nfl-engine-39086ec8/index.html`, then rerun the root site's locked deterministic build and check.
+The nested 14-page site is self-contained and will already be served by legacy Pages when this
+branch is merged; the requested link only makes it discoverable from the root navigation.
+
+**E14 status:** PR, merge, Pages deployment check, and merge-result record are being completed by
+this session. The Pages source is legacy `main:/`, confirmed with `gh api
+repos/sassnarep3-star/Own5/pages`; the separate NFL workflow verifies and uploads the desk artifact
+but does not change the repo's locked root deployment.
+
+Cross-session requests: root-nav request above. No files in other claimed scopes were edited.

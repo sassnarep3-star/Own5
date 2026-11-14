@@ -1,0 +1,82 @@
+{
+  "audit_summary": {
+    "irregular": 7,
+    "match": 26,
+    "not_checked": 1,
+    "review": 3,
+    "total": 37
+  },
+  "bye": {
+    "n_bye_games": 14,
+    "n_with_rest": 121
+  },
+  "capture_date": "2026-11-14",
+  "counts": {
+    "audit_checks": 37,
+    "audit_irregular": 7,
+    "correlations_official": 4,
+    "demotion_rules": 5,
+    "demotion_scenarios": 6,
+    "depth_exhausted_slots": 0,
+    "depth_exposed_slots": 3,
+    "depth_slots": 78,
+    "games_priced": 13,
+    "games_unpriced": 1,
+    "origination_rows": 14,
+    "price_snapshots": 78,
+    "questions": 13,
+    "recon_checks": 192,
+    "recon_mismatches": 0,
+    "results": 137,
+    "suggestions": 12
+  },
+  "coupling": {
+    "n": 137,
+    "note": "declared fixed lines; not a market price",
+    "p_cover": 0.3796,
+    "p_independent": 0.1856,
+    "p_joint": 0.1679,
+    "p_over": 0.4891,
+    "phi": -0.0731,
+    "ratio": 0.9044,
+    "spread_line": -3.0,
+    "total_line": 45.5
+  },
+  "league_parameters": {
+    "hfa": 0.17932,
+    "mean_home_margin_non_neutral": 0.46923,
+    "mean_total": 45.91971,
+    "n_games": 137,
+    "n_non_neutral": 130,
+    "sd_margin": 13.22512,
+    "sd_total": 14.25558,
+    "tie_rate_observed": 0.0073
+  },
+  "market_probe": {
+    "conclusion": "Game-level prices ARE officially readable and are now stored (13 games, one capture point each, 2026-11-14). Two things are still NOT obtainable: (1) an OPENING price \u2014 the first capture only exists from today, so the opening column is published blank rather than reconstructed; (2) PLAYER PROP lines and prices \u2014 the prop markets are named on the page but their numbers are not in the readable text, so every prop leg stays UNPRICED.",
+    "games_with_price_on_page": 13,
+    "operator": "FanDuel",
+    "price_table_served": true,
+    "prop_note": "Prop market NAMES render (e.g. 'Patrick Mahomes - Passing Yds') but no line or price does. Prop combos therefore cannot be priced from this source and are excluded from any ROI calculation rather than modelled at assumed lines.",
+    "prop_prices_served": false,
+    "read_on": "2026-11-14",
+    "region_note": "The price page does not publish which state's rules apply to the served numbers; its footer carried New Jersey responsible-gaming assets. The store records source_region as US-UNSPECIFIED for every row and this is flagged (F-08) because settlement rules and void rights are state-specific.",
+    "url": "https://sportsbook.fanduel.com/football/nfl/new-england-patriots-@-detroit-lions-35605986",
+    "what_was_served": "Each game's public event page served a readable 'Game Lines' block: spread with both prices, total with both prices, and both moneylines. 13 of the 14 Week 10 games were read this way; WAS @ NYG had already kicked off."
+  },
+  "recon_summary": {
+    "checks": 192,
+    "clubs_in_feed": 32,
+    "clubs_official": 32,
+    "games": 137,
+    "mismatches": 0,
+    "total_points": 6291,
+    "total_points_official": 6291
+  },
+  "ridge": {
+    "hfa_fitted": 0.1793,
+    "in_sample_rmse": 10.7249,
+    "lambda": 5.0,
+    "n_games": 137
+  }
+}

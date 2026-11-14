@@ -1,0 +1,287 @@
+"""Line-by-line audit of claims already published elsewhere in this repository.
+
+Every row is one check with a verdict:
+
+    MATCH        recomputed from the desk's own declared inputs and agrees
+    IRREGULAR    does not reproduce, or the desk's own output contradicts its
+                 own claim, or a documented convention differs from the raw data
+    REVIEW       could not be settled from what is in the repository or from an
+                 official source readable today; the reason is stated
+    NOT CHECKED  out of scope for this desk, with the reason
+
+Nothing is "assumed fine". A check that cannot be run is REVIEW, never MATCH.
+Each row carries the file it was checked against and an official URL where one
+exists.
+"""
+
+import csv
+import io
+import os
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(HERE)
+
+HEADER = ("check_id", "desk", "claim", "where", "method", "observed",
+          "verdict", "official_url", "note")
+
+V_MATCH = "MATCH"
+V_IRREG = "IRREGULAR"
+V_REVIEW = "REVIEW"
+V_SKIP = "NOT CHECKED"
+
+
+def rows():
+    out = []
+
+    def add(cid, desk, claim, where, method, observed, verdict, url, note=""):
+        out.append({"check_id": cid, "desk": desk, "claim": claim, "where": where,
+                    "method": method, "observed": observed, "verdict": verdict,
+                    "official_url": url, "note": note})
+
+    S = "https://www.nfl.com/standings/"
+    SCH = "https://www.nfl.com/schedules/2026/by-week/week-10"
+    INJ = "https://www.nfl.com/injuries/league/2026/reg10"
+
+    # ---- A. root desk (session cd43258e / 0f468a47) -------------------------
+    add("A1", "root (data/correlations.csv)", "CORR01 PF/G vs PCT r=0.6136",
+        "data/correlations.csv", "recomputed from data/standings-2026-wk8.csv",
+        "r=0.6136 (n=32)", V_MATCH, S)
+    add("A2", "root", "CORR02 PA/G vs PCT r=-0.5796", "data/correlations.csv",
+        "recomputed from the same 32-club file", "r=-0.5796 (n=32)", V_MATCH, S)
+    add("A3", "root", "CORR03 NET/G vs PCT r=0.8391", "data/correlations.csv",
+        "recomputed from the same file", "r=0.8391 (n=32)", V_MATCH, S)
+    add("A4", "root", "CORR04 PF vs PA r=0.0705", "data/correlations.csv",
+        "recomputed from the same file", "r=0.0705 (n=32)", V_MATCH, S)
+    add("A5", "root", "CORR05 NET vs PCT r=0.8313", "data/correlations.csv",
+        "recomputed from the same file", "r=0.8313 (n=32)", V_MATCH, S)
+    add("A6", "root", "CORR06 PF/G vs PA/G r=-0.0117", "data/correlations.csv",
+        "recomputed from the same file", "r=-0.0117 (n=32)", V_MATCH, S)
+    add("A7", "root", "Table cells are HTML-escaped on the way out",
+        "scripts/build.py line 15-17", "read cell() and every caller",
+        "cell() concatenates str(v) with no escaping, BUT grep finds no cell() "
+        "call site in scripts/build.py — every builder escapes its own strings "
+        "with html.escape() first",
+        V_MATCH, "",
+        "Correct today and by one layer only. The helper exists, is written to be "
+        "called, and would inject raw markup the moment it is used on unescaped "
+        "CSV text. Recorded as a latent hazard, not a live defect.")
+    add("A8", "root", "A stat card reports how many strategies are validated",
+        "index.html", "read the stat card and its data binding",
+        "the card hard-codes 00 out of 08 rather than reading a validated count "
+        "from data/research.json",
+        V_REVIEW, "",
+        "The 0 is correct today because no strategy has passed a gate. The concern "
+        "is forward-looking only: the number is a literal, so it cannot rise when "
+        "a strategy is validated. Not a present defect.")
+    add("A9", "root", "Winning percentage uses the official NFL tie rule",
+        "data/standings-2026-wk8.csv", "(W+0.5T)/GP vs published PCT",
+        "0 mismatches over 32 clubs; NYG and WAS each carry 1 tie",
+        V_MATCH, S, "The tie rule matters: NYG 5-3-1 is 0.611, not 0.625.")
+
+    # ---- B. 864d5668 own-line lab ------------------------------------------
+    L = "nfl-desk-864d5668/data/ledger.csv"
+    add("B1", "864d5668", "Official ledger reconciles to nfl.com standings",
+        L, "sum PF/PA/W/L/T per club vs transcribed standings, 32 clubs",
+        "32/32 clubs match once LA/AZ are mapped (see B2); 0 point mismatches",
+        V_MATCH, S)
+    add("B2", "864d5668", "Club codes used for joins",
+        L, "compare club codes against nfl.com standings codes",
+        "ledger uses ARI and LAR; nfl.com publishes AZ and LA. A join on the raw "
+        "code drops both clubs and reports 30 of 32 as reconciled",
+        V_IRREG, S,
+        "This is the defect that made this session's own build fail until a "
+        "canonical map (official.CLUB_ALIASES) was added. Any desk joining the "
+        "ledger to nfl.com by raw code is silently losing two teams.")
+    add("B3", "864d5668", "C-01 home margin vs total r=-0.1607",
+        "nfl-desk-864d5668/data/correlations.csv",
+        "recomputed from its own ledger.csv", "r=-0.1607 (n=137)", V_MATCH, S)
+    add("B4", "864d5668", "C-02 |margin| vs total r=-0.0157",
+        "nfl-desk-864d5668/data/correlations.csv", "recomputed", "r=-0.0157",
+        V_MATCH, S)
+    add("B5", "864d5668", "C-03 rest differential vs home margin r=-0.4257",
+        "nfl-desk-864d5668/data/correlations.csv", "recomputed", "r=-0.4257 (n=121)",
+        V_MATCH, S, "Reproduces exactly — but see B6, the value is not robust.")
+    add("B6", "864d5668",
+        "C-03 is interpreted as 'is a rest advantage a real signal?'",
+        "nfl-desk-864d5668/data/correlations.csv, column what_it_is_used_for",
+        "drop games where either side came off a bye and recompute",
+        "excluding |rest_diff|>2 (n=89) the coefficient falls to r=+0.0387, "
+        "p=0.72. 16 of 121 games (13.2%) have a bye-sized rest gap",
+        V_IRREG, SCH,
+        "The published r is dominated by bye weeks. A 16-game sub-sample with "
+        "clear selection (byes are scheduled, not random) is being read as a "
+        "rest gradient.")
+    add("B7", "864d5668", "C-03 source is nfl.com standings",
+        "nfl-desk-864d5668/data/correlations.csv, column source",
+        "read the declared input",
+        "the quantity uses rest days and game margins; rest days are published on "
+        "the schedule pages by kickoff date, and margins come from the results. The "
+        "standings page carries neither, so the link is not the source of this "
+        "quantity",
+        V_IRREG, SCH,
+        "The link resolves, but it is the wrong page for the quantity. C-05 to "
+        "C-09 share the same blanket source.")
+    add("B8", "864d5668", "137 FINAL games in the 2026 ledger", L,
+        "count FINAL rows and compare the point total with nfl.com",
+        "137 FINAL; ledger points-for total 6,291 = official points-against total "
+        "6,291", V_MATCH, S)
+    add("B9", "864d5668", "Neutral-site games are excluded from the HFA estimate",
+        "nfl-desk-864d5668/data/hfa.csv", "recount",
+        "7 neutral, 130 non-neutral; mean home margin 0.4692 and sd 13.2719 both "
+        "reproduce", V_MATCH, SCH)
+    add("B10", "864d5668", "Own lines cover the Week 10 slate",
+        "nfl-desk-864d5668/data/own_lines.csv", "compare game keys with nfl.com",
+        "13 rows. WAS @ NYG is missing; the official slate has 14 games",
+        V_IRREG, SCH,
+        "The Thursday final was excluded, leaving one game of the slate "
+        "unoriginated without an explicit note.")
+    add("B11", "864d5668", "Market columns are blank because no official price exists",
+        "nfl-desk-864d5668/data/own_lines.csv", "attempt to read an official price",
+        "13 games DID expose readable game-line prices on an operator event page "
+        "on 2026-11-14 (see this desk's price store)", V_IRREG,
+        "https://sportsbook.fanduel.com/football/nfl/new-england-patriots-@-detroit-lions-35605986",
+        "The conclusion 'no official market price exists' is too strong. What is "
+        "missing is an OPENING price and any history; a current price is "
+        "obtainable and is now stored.")
+
+    # ---- C. 38a1fc27 / 26d4cafb / e413f933 ---------------------------------
+    add("C1", "38a1fc27",
+        "Gates G4 (CLV) and G8 cannot pass without verified price history",
+        "data/decision-desk/gate_matrix.csv (38a1fc27)", "read the gate definitions",
+        "the reasoning is sound and matches this desk's conclusion (P-01)",
+        V_MATCH, "", "No action needed; recorded so the two desks agree.")
+    add("C2", "26d4cafb", "CORR-T01 PF/G vs PCT r=0.6938 through Week 9",
+        "nfl-desk-26d4cafb/data/correlations.csv",
+        "recompute from the same upstream standings snapshot if available",
+        "the snapshot used is not in the desk's data folder, so it cannot be "
+        "recomputed here", V_REVIEW, S,
+        "The value is plausible against this desk's own Week-10 value of 0.6136, "
+        "but plausibility is not verification. Needs the input snapshot committed.")
+    add("C3", "e413f933", "C01 net points vs wins r=0.846 (n=32, thru wk9)",
+        "nfl-decision-desk-e413f933/data/correlations.csv",
+        "cross-check against this desk's Week-10 values",
+        "this desk finds NET/G vs PCT r=0.8391 at Week 8 and a different sample "
+        "at Week 10; 0.846 is not reproducible without the snapshot",
+        V_REVIEW, S, "Same missing-snapshot problem as C2.")
+    add("C4", "b34253a1", "Market quotes carry DK and FD numbers for Week 10",
+        "nfl-b34253a1/data/market_quotes_2026_w10.csv", "read the columns",
+        "28 rows, 2 books, 14 games, with DK event URLs and FD event URLs",
+        V_MATCH,
+        "https://sportsbook.fanduel.com/football/nfl/kansas-city-chiefs-@-atlanta-falcons-36275759",
+        "The FD numbers reproduce against a fresh 2026-11-14 read on 11 of 13 "
+        "checkable games (see C5).")
+    add("C5", "b34253a1", "The recorded quotes match the operator today",
+        "nfl-b34253a1/data/market_quotes_2026_w10.csv",
+        "compare each FD spread/total with the 2026-11-14 capture",
+        "the quotes are dated 2026-11-12 with no time. Fresh read: DK event URL "
+        "404s; CAR@NO moved from NO -2.5 to NO -1.5, and several totals moved",
+        V_IRREG,
+        "https://sportsbook.fanduel.com/football/nfl/carolina-panthers-@-new-orleans-saints-36275767",
+        "Not an error by that desk: the market moved. It is evidence that a "
+        "DATE-ONLY timestamp is not enough — the same numbers mean different "
+        "things 48 hours apart. This is the core argument for the price store's "
+        "required captured_at_utc.")
+    add("C6", "b34253a1", "WITHDRAWN — see C7. Spread sign convention",
+        "nfl-b34253a1/data/market_quotes_2026_w10.csv",
+        "compare home_spread with the operator's home block",
+        "the column labelled home_spread carries the AWAY value on every row "
+        "(e.g. KC@ATL home_spread=+3.5 while FanDuel renders ATL +3.5, and the "
+        "home team is Atlanta)",
+        V_SKIP,
+        "https://sportsbook.fanduel.com/football/nfl/kansas-city-chiefs-@-atlanta-falcons-36275759",
+        "Raised during this audit, then disproved by C7. Kept in the table so the "
+        "withdrawal is visible; a finding that was deleted leaves no trace that it "
+        "was ever considered.")
+    add("C7", "b34253a1", "C6 re-read",
+        "nfl-b34253a1/data/market_quotes_2026_w10.csv",
+        "check whether home_spread is consistent with home_moneyline sign",
+        "KC@ATL: home_spread +3.5 with home_moneyline +144 (home is a dog). "
+        "FanDuel renders ATL +3.5 / +144, so the numbers ARE home-perspective and "
+        "consistent with each other",
+        V_MATCH,
+        "https://sportsbook.fanduel.com/football/nfl/kansas-city-chiefs-@-atlanta-falcons-36275759",
+        "C6 was a mis-read on this desk's part and is withdrawn rather than left "
+        "standing. Recorded because a withdrawn finding is also evidence of "
+        "process.")
+
+    # ---- D. injuries / depth ------------------------------------------------
+    add("D1", "864d5668", "705 depth-chart slots across 31 clubs",
+        "nfl-desk-864d5668/data/depth_detail.csv", "count",
+        "705 rows, 31 clubs, 349 offense / 356 defense; HOU absent", V_MATCH,
+        "https://www.nfl.com/teams/",
+        "31 of 32 charts were read. HOU publishes a raster image only.")
+    add("D2", "864d5668",
+        "`deficiency_points` measures how far down the chart a replacement is",
+        "nfl-desk-864d5668/data/depth_detail.csv", "distribution of the column",
+        "698 rows = 0, 7 rows = 1, and no other value. 629 of 705 slots publish "
+        "2+ players, so the depth information exists but is not used",
+        V_IRREG, "",
+        "The column is a near-boolean. It cannot rank a game, separate a 1-rung "
+        "from a 2-rung loss, or see a cascading absence. Requirement 6 of this "
+        "brief is therefore not met by the inherited data even though the "
+        "underlying charts support it.")
+    add("D3", "864d5668", "The 7 exposed slots are correctly identified",
+        "nfl-desk-864d5668/data/depth_detail.csv",
+        "cross-check each against the official injury report",
+        "DET C (Cade Mays, Out), DET CB (D.J. Reed, Out), NE LG (Ben Brown, Out), "
+        "IND RT/WLB/MLB, NE CB (Carlton Davis III, Out) all carry Out status on "
+        "the official report", V_MATCH, INJ,
+        "The FACT of replacement is right; only the DEPTH was missing.")
+    add("D4", "this desk", "Depth-of-replacement reproduces from the raw charts",
+        "nfl-engine-39086ec8/data/depth_replacement_slots.csv",
+        "recompute each exposed slot from the transcribed chart + injury list",
+        "3 exposed slots (DET C -> Juice Scruggs, DET CB -> Rock Ya-Sin, NE LG -> "
+        "Walter Rouse); all are 1 rung; 0 exhausted", V_MATCH,
+        "https://www.detroitlions.com/team/depth-chart",
+        "Scale warning: with 4 charts read, only 3 slots are exposed. The metric "
+        "is correct but the sample is tiny — see F-05.")
+
+    # ---- E. league facts ----------------------------------------------------
+    add("E1", "league structure", "Week 10 has 14 games and 4 byes",
+        "nfl-hub-28431d9c/data/official_slate_2026_wk10.csv", "count the slate",
+        "14 games, byes CHI, DEN, PHI, TB", V_MATCH, SCH)
+    add("E2", "league structure", "Bye clubs are CHI, DEN, PHI, TB",
+        "nfl-hub-28431d9c", "read the official byes block",
+        "CHI, DEN, PHI, TB on the Week 10 schedule page", V_MATCH, SCH)
+    add("E3", "rulebook", "Spread/total settlement follows the operator's house rules",
+        "research/bet-markets.md", "read the linked rule pages",
+        "DraftKings general rules define an 'Error' including odds that are "
+        "meaningfully different at acceptance time", V_MATCH,
+        "https://sportsbook.draftkings.com/help/general-betting-rules/general-rules")
+
+    # ---- F. this desk's own gates -------------------------------------------
+    add("F1", "this desk", "Every price row carries full provenance",
+        "nfl-engine-39086ec8/data/price_snapshots.csv",
+        "run engine_price.validate on every row", "78 rows; 0 rejected", V_MATCH,
+        "https://sportsbook.fanduel.com/leagues/football/nfl")
+    add("F2", "this desk", "The results feed reconciles to official standings",
+        "nfl-engine-39086ec8/data/results_reconciliation.csv",
+        "192 checks over 32 clubs", "192 checks, 0 mismatches", V_MATCH, S)
+    add("F3", "this desk", "Snapshot hashes are recomputable",
+        "nfl-engine-39086ec8/data/archive/*.txt",
+        "sha256 of each raw file vs the stored value",
+        "13 of 13 match", V_MATCH,
+        "https://sportsbook.fanduel.com/leagues/football/nfl")
+    return out
+
+
+def to_csv(rs):
+    buf = io.StringIO()
+    w = csv.DictWriter(buf, fieldnames=HEADER, lineterminator="\n",
+                       extrasaction="ignore")
+    w.writeheader()
+    for r in rs:
+        w.writerow({k: r.get(k, "") for k in HEADER})
+    return buf.getvalue()
+
+
+def summary(rs):
+    from collections import Counter
+    c = Counter(r["verdict"] for r in rs)
+    return {
+        "total": len(rs),
+        "match": c[V_MATCH],
+        "irregular": c[V_IRREG],
+        "review": c[V_REVIEW],
+        "not_checked": c[V_SKIP],
+    }

@@ -1,0 +1,8 @@
+club,unit,slots_published,slots_exposed,rungs_down_sum,depth_points,max_possible_points,unit_depth_index,exhausted_slots,chart_url,chart_unofficial
+DET,Defense,11,1,1,2.0,27.0,0.0741,0,https://www.detroitlions.com/team/depth-chart,yes
+DET,Offense,11,1,1,2.0,16.5,0.1212,0,https://www.detroitlions.com/team/depth-chart,yes
+NE,Offense,10,1,1,1.5,18.5,0.0811,0,https://www.patriots.com/team/depth-chart,yes
+NYG,Defense,12,0,0,0.0,20.0,0.0,0,https://www.giants.com/team/depth-chart,no
+NYG,Offense,11,0,0,0.0,21.0,0.0,0,https://www.giants.com/team/depth-chart,no
+WAS,Defense,11,0,0,0.0,18.0,0.0,0,https://www.commanders.com/team/depth-chart,no
+WAS,Offense,12,0,0,0.0,22.5,0.0,0,https://www.commanders.com/team/depth-chart,no

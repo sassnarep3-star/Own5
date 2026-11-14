@@ -1,0 +1,7 @@
+scenario,n_bets,hit_rate,declared_edge,verdict,rules_triggered,sprt_llr,sprt_lower,sprt_upper,clv_mean,clv_p_one_sided,drawdown_frac,missing_price_weeks,integrity_failure,note
+"S1 55% over 400 bets, CLV positive",400,0.55,0.03,HOLD_LIVE_SAMPLING,,0.539,-1.558,2.773,0.002,,0.0113,0,no,no rule fires: SPRT has not reached either boundary; stays live
+S2 45% over 300 bets,300,0.45,0.03,DEMOTE_TO_PAPER,D1,-1.567,-1.558,2.773,0.0,,0.4319,0,no,D1 fires: the sequence is evidence for break-even-or-worse
+S3 55% wins but CLV negative for 40 bets,400,0.55,0.03,DEMOTE_TO_PAPER,D2,0.539,-1.558,2.773,-0.009,1.0,0.0113,0,no,D2 fires: winning is not the same as beating the price
+"S4 good signal, 26% drawdown",400,0.55,0.03,DEMOTE_TO_PAPER,D3,0.539,-1.558,2.773,0.001,,0.4921,0,no,"D3 fires: sizing, not signal, triggered the demotion"
+S5 no closing price for 2 weeks,400,0.55,0.03,DEMOTE_TO_PAPER,D4,0.539,-1.558,2.773,,,0.0113,2,no,D4 fires: without a price the strategy cannot be proven either way
+S6 a re-captured price contradicts the archive,400,0.55,0.03,DEMOTE_TO_PAPER,D5,0.539,-1.558,2.773,0.002,,0.0113,0,yes,"D5 fires: the evidence base itself is broken, so the live status is suspended"

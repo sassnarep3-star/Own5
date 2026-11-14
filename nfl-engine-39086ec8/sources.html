@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sources &middot; Own5 NFL Engine Desk</title>
+<meta name="description" content="Own line origination for the NFL, with every value sourced or explicitly blank.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="mark">OWN5</span><span class="sub">NFL Engine Desk</span></a>
+    <nav aria-label="Sections"><a href="index.html">Overview</a><a href="status.html">Status &amp; verification</a><a href="prices.html">1 &middot; Price store</a><a href="results.html">2 &middot; Results feed</a><a href="origination.html">3&ndash;4 &middot; Lines</a><a href="leaderboard.html">5 &middot; Signal vs staking</a><a href="depth.html">6 &middot; Replacement depth</a><a href="correlations.html">7 &middot; Correlations</a><a href="demotion.html">8 &middot; Demotion gate</a><a href="suggestions.html">Suggestions</a><a href="questions.html">Questions</a><a href="audit.html">Repo audit</a><a href="flagged.html">Flagged for review</a><a href="sources.html" class="on">Sources</a></nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+<h1>Sources</h1>
+<p class="lede">Every external fact in this desk traces to one of these pages. Read on 2026-11-14 (UTC) unless a row says otherwise.</p>
+<div class="tw"><table class=""><caption>Primary sources</caption><thead><tr><th>Source</th><th>What it supplied</th><th>Link</th></tr></thead><tbody><tr><td>nfl.com standings</td><td>Win/loss/tie, points for/against, all 32 clubs</td><td><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener noreferrer">open</a></td></tr><tr><td>nfl.com Week 10 schedule</td><td>Slate, kickoff times, byes, finals</td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-10" target="_blank" rel="noopener noreferrer">open</a></td></tr><tr><td>nfl.com injury report</td><td>Official practice and game status, 4 clubs</td><td><a href="https://www.nfl.com/injuries/league/2026/reg10" target="_blank" rel="noopener noreferrer">open</a></td></tr><tr><td>FanDuel NFL event pages</td><td>Game lines: spread, total, moneyline, 13 games</td><td><a href="https://sportsbook.fanduel.com/football/nfl/kansas-city-chiefs-@-atlanta-falcons-36275759" target="_blank" rel="noopener noreferrer">open</a></td></tr><tr><td>FanDuel NFL hub</td><td>Prop market names (no numbers)</td><td><a href="https://sportsbook.fanduel.com/leagues/football/nfl" target="_blank" rel="noopener noreferrer">open</a></td></tr><tr><td>DraftKings house rules</td><td>Definition of an &#x27;Error&#x27;; price validity</td><td><a href="https://sportsbook.draftkings.com/help/general-betting-rules/general-rules" target="_blank" rel="noopener noreferrer">open</a></td></tr><tr><td>Detroit Lions depth chart</td><td>Official chart (club-labelled unofficial)</td><td><a href="https://www.detroitlions.com/team/depth-chart" target="_blank" rel="noopener noreferrer">open</a></td></tr><tr><td>New England Patriots depth chart</td><td>Official chart (club-labelled unofficial)</td><td><a href="https://www.patriots.com/team/depth-chart" target="_blank" rel="noopener noreferrer">open</a></td></tr><tr><td>New York Giants depth chart</td><td>Official chart</td><td><a href="https://www.giants.com/team/depth-chart" target="_blank" rel="noopener noreferrer">open</a></td></tr><tr><td>Washington Commanders depth chart</td><td>Official chart</td><td><a href="https://www.commanders.com/team/depth-chart" target="_blank" rel="noopener noreferrer">open</a></td></tr><tr><td>nfl.com teams directory</td><td>Club-site canonical URLs</td><td><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener noreferrer">open</a></td></tr></tbody></table></div>
+<h2>Method references</h2>
+<div class="tw"><table class=""><caption>Statistical methods</caption><thead><tr><th>Method</th><th>Used for</th><th>Reference</th></tr></thead><tbody><tr><td>Wilson score interval</td><td>lower bound on a hit rate before calling it skill</td><td><a href="https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval" target="_blank" rel="noopener noreferrer">reference</a></td></tr><tr><td>SPRT</td><td>sequential demotion after every graded bet</td><td><a href="https://en.wikipedia.org/wiki/Sequential_probability_ratio_test" target="_blank" rel="noopener noreferrer">reference</a></td></tr><tr><td>Holm-Bonferroni</td><td>multiplicity across tested strategy variants</td><td><a href="https://en.wikipedia.org/wiki/Holm%E2%80%93Bonferroni_method" target="_blank" rel="noopener noreferrer">reference</a></td></tr><tr><td>Deflated Sharpe ratio</td><td>penalising the best of many trials</td><td><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2460551" target="_blank" rel="noopener noreferrer">reference</a></td></tr><tr><td>Fisher z interval</td><td>confidence interval on a correlation</td><td><a href="https://en.wikipedia.org/wiki/Fisher_transformation" target="_blank" rel="noopener noreferrer">reference</a></td></tr></tbody></table></div>
+<div class="note warn"><strong>Third-party data is labelled as such</strong><p>Player-prop correlations published elsewhere in this repository are computed from a play-by-play mirror, not from an official page. They are tagged THIRD_PARTY and are not treated as official numbers here.</p></div>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p><strong>Data captured 2026-11-14 (UTC).</strong> Official sources only.
+    Anything a source does not publish is shown as <span class="blank">blank</span> and listed on
+    <a href="flagged.html">Flagged for review</a>.</p>
+    <p>Results verified against nfl.com standings. Prices are a single capture point per game:
+    there is no opening price, so nothing here is a closing-line value.</p>
+  </div>
+</footer>
+</body>
+</html>
