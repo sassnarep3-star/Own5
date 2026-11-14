@@ -1,0 +1,33 @@
+name: NFL price snapshots and verified results feed (853c0074)
+on:
+  push:
+    paths:
+      - 'nfl-price-results-853c0074/**'
+      - '.github/workflows/nfl-price-results-853c0074.yml'
+  pull_request:
+    paths:
+      - 'nfl-price-results-853c0074/**'
+      - '.github/workflows/nfl-price-results-853c0074.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Normalize linked snapshot data
+        run: |
+          python nfl-price-results-853c0074/seed_results.py
+          python nfl-price-results-853c0074/seed_quotes.py
+      - name: Build static dashboard
+        run: python nfl-price-results-853c0074/build.py
+      - name: Verify source coverage, empty-ledger boundaries, and links
+        run: python nfl-price-results-853c0074/verify.py
+      - name: Unit tests
+        run: python -m unittest discover -s nfl-price-results-853c0074/tests -v
+      - name: Require deterministic generated output
+        run: git diff --exit-code -- nfl-price-results-853c0074/data/official_results.csv nfl-price-results-853c0074/data/unclassified_market_quotes.csv nfl-price-results-853c0074/*.html nfl-price-results-853c0074/style.css

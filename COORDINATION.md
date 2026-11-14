@@ -1662,10 +1662,25 @@ Claimed scope is deliberately additive and isolated: `nfl-price-results-853c0074
 
 | ID | Task | Status | Owner | Files touched | Notes |
 |---|---|---|---|---|---|
-| PR1 | Claim and baseline review of existing quote/results structures | in progress | 853c0074 | `COORDINATION.md` | Read-only review; no other task's scope edited. |
-| PR2 | Append-only, source-provenanced price snapshot store for originated side/total/moneyline/prop markets | in progress | 853c0074 | `nfl-price-results-853c0074/**` | Explicit opening/closing snapshots; no guessed prices or timestamps; missing values remain blank and flagged. |
-| PR3 | Official result ledger contract and fail-closed settlement/backtest/ROI evaluator | in progress | 853c0074 | `nfl-price-results-853c0074/**` | Game outcomes linked to NFL.com; market grading only when authoritative rules and all required fields exist. |
-| PR4 | Standalone dashboard, suggestions/questions/flags, deterministic tests and scoped CI | in progress | 853c0074 | `nfl-price-results-853c0074/**`, `.github/workflows/nfl-price-results-853c0074.yml` | Published facts have official row-level source links; unavailable historical opening/closing quotes and market-specific grading rules are clearly flagged. |
-| PR5 | Integration PR, autonomous merge and live Pages verification | unclaimed | 853c0074 | `COORDINATION.md` (append only) | Only after own verifier and scoped checks pass; preserve concurrent sessions and report external check failures accurately. |
+| PR1 | Claim and baseline review of existing quote/results structures | done | 853c0074 | `COORDINATION.md` | Existing date-only quotes and linked results reviewed; no other session scope edited. |
+| PR2 | Append-only, source-provenanced price snapshot store for originated side/total/moneyline/prop markets | done | 853c0074 | `nfl-price-results-853c0074/**` | Opening/closing/intermediate snapshots require UTC times and source links; no historical quote values invented. |
+| PR3 | Official result ledger contract and fail-closed settlement/backtest/ROI evaluator | done | 853c0074 | `nfl-price-results-853c0074/**` | 136 inherited official-linked final scores; settlement requires exact market/book/jurisdiction, source/rules URLs; current ROI is null. |
+| PR4 | Standalone dashboard, suggestions/questions/flags, deterministic tests and scoped CI | done | 853c0074 | `nfl-price-results-853c0074/**`, `.github/workflows/nfl-price-results-853c0074.yml` | Nine Pages including an executive summary; 10 scoped tests; every populated data row carries a direct official URL; price cells blank where source record unavailable. |
+| PR5 | Integration PR, autonomous merge and live Pages verification | in progress | 853c0074 | `COORDINATION.md` (append only) | Local verifier/tests pass; PR and publication verification to follow. |
 
 Cross-session request (logged, not edited): add or link a stable market key and open/close price-history store to the eventual NFL desk integration. This session does not modify `nfl-b34253a1/**`, `own5-desk/**`, or any root shared navigation; other sessions' pages remain unchanged.
+
+### Session 853c0074 — verification record (2026-11-14 UTC)
+
+**Deliverables in isolated scope:** `nfl-price-results-853c0074/` contains the append-only price/settlement/graded-bet CSV contracts, validation and ROI calculator, a 136-row normalized results feed, 28 legacy quote metadata rows with every historical numeric price blank, a standalone nine-page site (overview, executive summary, prices, results, ROI, questions, suggestions, flagged review and sources), and 10 unit tests. `.github/workflows/nfl-price-results-853c0074.yml` runs deterministic normalization/build, source-structure checks and tests.
+
+**Official source review:**
+- Freshly fetched NFL.com Patriots–Seahawks game center (2026-11-14) showed FINAL New England 10, Seattle 13; the linked inherited row matches. NFL.com Week 9 schedule was also fetched and used as an official schedule/results source check.
+- Freshly fetched FanDuel NFL board displayed current side, moneyline and total markets; it is mutable and does not provide a historical price archive in the captured page. No values were copied to the opening/closing ledger.
+- Freshly fetched FanDuel Indiana house rules displayed jurisdiction-specific rules and effective date 2026-10-15; this is only an example and is not treated as the user's applicable rules.
+- Freshly fetched the direct DraftKings WSH–NYG event quote URL from the inherited Week 10 file; it returned the operator's 404 page. With no archived quote body/image available, numeric values in **all 28** inherited quote observations were blanked (not just the failed row), and F01/F07 flags explain the missing timestamp/history and failed source URL.
+- The 136 prior final-score values were normalized from `nfl-b34253a1/data/games_2026_w1_w9.csv`, preserving each exact NFL.com game URL and its inherited `source_verified_on` date. This session did not re-fetch all 136 game pages individually; `VERIFICATION.md` discloses that boundary, and each result remains linked row by row for review. A legacy game-page day-label issue remains F06.
+
+**Checks:** scoped verifier PASS (136 official-linked results, 28 blank/unclassified quote records, 0 opening/closing snapshots, 0 settlements, 0 ROI rows, 9 pages); scoped unit tests 10/10 PASS; Python compilation PASS; `store.py roi` returns 0 bets and `roi_pct: null`; repository `npm test` 91/91 PASS. Local preview at port 3000 returned the overview HTML. No shared navigation or other session files changed.
+
+**Irregularities:** historic quote values/times unavailable; direct DraftKings event quote link returned 404; no market settlement, applicable user jurisdiction, or accepted-bet evidence is configured; no performance statistic can be computed. See `nfl-price-results-853c0074/flagged.html` and `VERIFICATION.md`. These are explicitly nonblocking for publishing the research status, not cleared facts.

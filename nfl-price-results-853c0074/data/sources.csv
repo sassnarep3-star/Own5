@@ -1,0 +1,9 @@
+id,source_name,source_type,scope,url,notes
+SRC01,NFL.com game center,official league,game scores and result pages,https://www.nfl.com/games/steelers-at-eagles-2026-reg-11,Use the exact official game URL attached to each result-feed row.
+SRC02,NFL.com schedule,official league,schedule and event identity,https://www.nfl.com/schedules/2026/by-week/week-9,Dynamic schedule; use row-level game source for result details.
+SRC03,NFL.com player statistics,official league,player statistics and prop outcome inputs,https://www.nfl.com/stats/player-stats/,No prop outcomes imported in this release.
+SRC04,FanDuel Sportsbook house rules Indiana,official operator jurisdictional rules,illustration only; not a default for another jurisdiction,https://www.fanduel.com/fanduel-sportsbook-house-rules-in,Rules are state-specific; select the applicable jurisdiction before settlement.
+SRC05,FanDuel Sportsbook house rules Ohio,official operator jurisdictional rules,illustration only; not a default for another jurisdiction,https://www.fanduel.com/fanduel-sportsbook-house-rules-oh,Rules are state-specific; select the applicable jurisdiction before settlement.
+SRC06,DraftKings NFL market board,official operator market page,live game lines where available,https://sportsbook.draftkings.com/leagues/football/nfl?category=games&subcategory=game-lines&nav_1=all-games,Dynamic board; no historical time series guaranteed by this link.
+SRC07,FanDuel NFL market navigation,official operator market page,live NFL board where available,https://sportsbook.fanduel.com/navigation/nfl,Dynamic board; no historical time series guaranteed by this link.
+SRC08,NFL Football Operations schedule construction,official league,context for schedule and season event identity,https://operations.nfl.com/gameday/nfl-schedule/creating-the-nfl-schedule,Not a market pricing or settlement source.
