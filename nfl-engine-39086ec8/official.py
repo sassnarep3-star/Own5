@@ -363,7 +363,8 @@ FANDUEL_WEEK10 = [
 #    What the public, unauthenticated operator pages actually served.
 # --------------------------------------------------------------------------
 MARKET_PROBE = {
-    "url": URL["dk_nfl"],
+    "url": FANDUEL_WEEK10[0][-1],
+    "operator": "FanDuel",
     "read_on": CAPTURE_DATE,
     "price_table_served": False,
     "games_with_price_on_page": None,

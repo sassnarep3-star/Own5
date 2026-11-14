@@ -55,12 +55,13 @@
   "market_probe": {
     "conclusion": "Game-level prices ARE officially readable and are now stored (13 games, one capture point each, 2026-11-14). Two things are still NOT obtainable: (1) an OPENING price \u2014 the first capture only exists from today, so the opening column is published blank rather than reconstructed; (2) PLAYER PROP lines and prices \u2014 the prop markets are named on the page but their numbers are not in the readable text, so every prop leg stays UNPRICED.",
     "games_with_price_on_page": 13,
+    "operator": "FanDuel",
     "price_table_served": true,
     "prop_note": "Prop market NAMES render (e.g. 'Patrick Mahomes - Passing Yds') but no line or price does. Prop combos therefore cannot be priced from this source and are excluded from any ROI calculation rather than modelled at assumed lines.",
     "prop_prices_served": false,
     "read_on": "2026-11-14",
     "region_note": "The price page does not publish which state's rules apply to the served numbers; its footer carried New Jersey responsible-gaming assets. The store records source_region as US-UNSPECIFIED for every row and this is flagged (F-08) because settlement rules and void rights are state-specific.",
-    "url": "https://sportsbook.draftkings.com/leagues/football/nfl",
+    "url": "https://sportsbook.fanduel.com/football/nfl/new-england-patriots-@-detroit-lions-35605986",
     "what_was_served": "Each game's public event page served a readable 'Game Lines' block: spread with both prices, total with both prices, and both moneylines. 13 of the 14 Week 10 games were read this way; WAS @ NYG had already kicked off."
   },
   "recon_summary": {

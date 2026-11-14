@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Signal vs staking &middot; Own5 NFL Engine Desk</title>
+<meta name="description" content="Own line origination for the NFL, with every value sourced or explicitly blank.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="mark">OWN5</span><span class="sub">NFL Engine Desk</span></a>
+    <nav aria-label="Sections"><a href="index.html">Overview</a><a href="status.html">Status &amp; verification</a><a href="prices.html">1 &middot; Price store</a><a href="results.html">2 &middot; Results feed</a><a href="origination.html">3&ndash;4 &middot; Lines</a><a href="leaderboard.html" class="on">5 &middot; Signal vs staking</a><a href="depth.html">6 &middot; Replacement depth</a><a href="correlations.html">7 &middot; Correlations</a><a href="demotion.html">8 &middot; Demotion gate</a><a href="suggestions.html">Suggestions</a><a href="questions.html">Questions</a><a href="audit.html">Repo audit</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources</a></nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+<h1>5 &middot; Signal and staking, separately</h1>
+<p class="lede">A lucky staking run cannot mask a bad signal because the signal column does not know what the stakes were.</p>
+<div class="note bad"><strong>The masking problem, in exact numbers</strong><p>A synthetic strategy winning <strong>5 of 20</strong> bets (25%, far below the 52.38% break-even) ends with a bankroll <strong>+31.8%</strong> higher because its five largest stakes all won. Flat-staked it loses -10.45 units. Ranking on profit would have promoted it.</p></div>
+<div class="tw"><table class=""><caption>Signal scoreboard &mdash; stake size is not an input</caption><thead><tr><th>ID</th><th>Strategy</th><th>n</th><th>Hit rate</th><th>Break-even</th><th>Edge (pts)</th><th>z</th><th>Wilson low</th><th>Verdict</th><th>Status</th></tr></thead><tbody><tr><td>R1</td><td>Home team moneyline, every game</td><td>136</td><td>0.4926</td><td>0.5238</td><td>-0.03116</td><td>-0.7276</td><td>0.4099</td><td><span class="b warn">INCONCLUSIVE</span></td><td><span class="b ">EXPLORATORY</span></td></tr><tr><td>R2</td><td>Away team moneyline, every game</td><td>136</td><td>0.5073</td><td>0.5238</td><td>-0.01645</td><td>-0.3842</td><td>0.4242</td><td><span class="b warn">INCONCLUSIVE</span></td><td><span class="b ">EXPLORATORY</span></td></tr><tr><td>R3</td><td>Better scoring-margin team ML (in-sample rating)</td><td>136</td><td>0.75</td><td>0.5238</td><td>0.226190</td><td>5.28161</td><td>0.6710</td><td><span class="b ">NOT_ELIGIBLE_IN_SAMPLE</span></td><td><span class="b warn">IN-SAMPLE</span></td></tr><tr><td>R4</td><td>Under 45.5, every game, fixed line</td><td>137</td><td>0.5109</td><td>0.5238</td><td>-0.01286</td><td>-0.3014</td><td>0.4280</td><td><span class="b warn">INCONCLUSIVE</span></td><td><span class="b ">EXPLORATORY</span></td></tr></tbody></table></div>
+<div class="tw"><table class=""><caption>Staking scoreboard &mdash; shown for information only</caption><thead><tr><th>ID</th><th>Strategy</th><th>Flat units</th><th>Bankroll multiple</th><th>Max drawdown</th><th>Stake per bet</th><th>Based on</th></tr></thead><tbody><tr><td>R1</td><td>Home team moneyline, every game</td><td>-8.09090</td><td>0.9165</td><td>0.1500</td><td>1% declared</td><td><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener noreferrer">official scores</a></td></tr><tr><td>R2</td><td>Away team moneyline, every game</td><td>-4.27272</td><td>0.9522</td><td>0.1233</td><td>1% declared</td><td><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener noreferrer">official scores</a></td></tr><tr><td>R3</td><td>Better scoring-margin team ML (in-sample rating)</td><td>58.72727</td><td>1.7884</td><td>0.0378</td><td>1% declared</td><td><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener noreferrer">official scores</a></td></tr><tr><td>R4</td><td>Under 45.5, every game, fixed line</td><td>-3.36363</td><td>0.9609</td><td>0.1602</td><td>1% declared</td><td><a href="https://www.nfl.com/standings/" target="_blank" rel="noopener noreferrer">official scores</a></td></tr></tbody></table></div>
+<div class="note warn"><strong>Why R3 is blocked despite a 75% hit rate</strong><p>R3 selects the team with the better scoring margin using standings that include the games it is scored on. That is leakage, not skill, so the verdict column reads <code>NOT_ELIGIBLE_IN_SAMPLE</code>. A footnote would not stop that number being quoted later.</p></div>
+<div class="note warn"><strong>No entry has a verified closing-line value</strong><p>Every verdict above is measured against a fixed &minus;110 price, not against the price actually available at the time of bet. That is enough to score a signal consistently, and not enough to certify skill (requirement 8, rule D2).</p></div>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p><strong>Data captured 2026-11-14 (UTC).</strong> Official sources only.
+    Anything a source does not publish is shown as <span class="blank">blank</span> and listed on
+    <a href="flagged.html">Flagged for review</a>.</p>
+    <p>Results verified against nfl.com standings. Prices are a single capture point per game:
+    there is no opening price, so nothing here is a closing-line value.</p>
+  </div>
+</footer>
+</body>
+</html>

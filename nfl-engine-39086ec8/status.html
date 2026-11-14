@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Status &middot; Own5 NFL Engine Desk</title>
+<meta name="description" content="Own line origination for the NFL, with every value sourced or explicitly blank.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="mark">OWN5</span><span class="sub">NFL Engine Desk</span></a>
+    <nav aria-label="Sections"><a href="index.html">Overview</a><a href="status.html" class="on">Status &amp; verification</a><a href="prices.html">1 &middot; Price store</a><a href="results.html">2 &middot; Results feed</a><a href="origination.html">3&ndash;4 &middot; Lines</a><a href="leaderboard.html">5 &middot; Signal vs staking</a><a href="depth.html">6 &middot; Replacement depth</a><a href="correlations.html">7 &middot; Correlations</a><a href="demotion.html">8 &middot; Demotion gate</a><a href="suggestions.html">Suggestions</a><a href="questions.html">Questions</a><a href="audit.html">Repo audit</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources</a></nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+<h1>Status &amp; verification</h1>
+<p class="lede">What is verified, what is built, and what is still missing. "Built" and "correct" are different claims and are kept in different columns.</p>
+<div class="tw"><table class=""><caption>Requirement status</caption><thead><tr><th>Req</th><th>Requirement</th><th>Built</th><th>Scale</th><th>What that means</th><th>Caveat</th><th>Where</th></tr></thead><tbody><tr><td>1</td><td>Price-snapshot store</td><td><span class="b ok">PASS</span></td><td>78 snapshots, 13 games</td><td>Store built and verified</td><td>No opening price exists (F-01); props unpriced (F-03)</td><td><a href="prices.html" target="_blank" rel="noopener noreferrer">detail</a></td></tr><tr><td>2</td><td>Verified results feed</td><td><span class="b ok">PASS</span></td><td>137 finals</td><td>192 checks, 0 mismatches</td><td>Settlement source is final scores only</td><td><a href="results.html" target="_blank" rel="noopener noreferrer">detail</a></td></tr><tr><td>3</td><td>Origination order</td><td><span class="b ok">PASS</span></td><td>14 games</td><td>Stage order enforced in code</td><td>Model calibrated? No (see 4)</td><td><a href="origination.html" target="_blank" rel="noopener noreferrer">detail</a></td></tr><tr><td>4</td><td>Fair / market / difference</td><td><span class="b ok">PASS</span></td><td>14 rows x 3 markets</td><td>Blank + UNPRICED when market missing</td><td>Mean |error| 1.76 pts on the side</td><td><a href="origination.html" target="_blank" rel="noopener noreferrer">detail</a></td></tr><tr><td>5</td><td>Signal vs staking split</td><td><span class="b ok">PASS</span></td><td>4 scored entries</td><td>In-sample entry blocked from PASS</td><td>No entry has a verified CLV</td><td><a href="leaderboard.html" target="_blank" rel="noopener noreferrer">detail</a></td></tr><tr><td>6</td><td>Depth of replacement</td><td><span class="b ok">PASS</span></td><td>78 slots</td><td>Rungs, cascade, exhaustion</td><td>Only 4 club charts read (F-05)</td><td><a href="depth.html" target="_blank" rel="noopener noreferrer">detail</a></td></tr><tr><td>7</td><td>Correlations, official + n</td><td><span class="b ok">PASS</span></td><td>4 values</td><td>Provenance tagged, n published</td><td>Player-market values still third-party</td><td><a href="correlations.html" target="_blank" rel="noopener noreferrer">detail</a></td></tr><tr><td>8</td><td>Demotion gate</td><td><span class="b ok">PASS</span></td><td>5 rules</td><td>Each rule shown firing</td><td>D2/D4 unusable without price history</td><td><a href="demotion.html" target="_blank" rel="noopener noreferrer">detail</a></td></tr><tr><td>A</td><td>Repo line-by-line audit</td><td><span class="b warn">REVIEW</span></td><td>37 checks</td><td>7 irregular, 3 review</td><td>Two prior correlation values not reproducible (C2/C3)</td><td><a href="audit.html" target="_blank" rel="noopener noreferrer">detail</a></td></tr><tr><td>S</td><td>Suggestions &amp; questions</td><td><span class="b warn">REVIEW</span></td><td>12 / 13</td><td>Nothing implemented by design</td><td>Owner decisions outstanding</td><td><a href="suggestions.html" target="_blank" rel="noopener noreferrer">detail</a></td></tr></tbody></table></div>
+<h2>Verification trail</h2>
+<div class="tw"><table class=""><caption>How each claim was checked</caption><thead><tr><th>Check</th><th>How</th><th>Result</th><th>Proof</th></tr></thead><tbody><tr><td>Results reconcile</td><td>sum PF/PA/W/L/T per club from the feed vs nfl.com standings</td><td>192 checks, 0 mismatches</td><td><a href="results.html" target="_blank" rel="noopener noreferrer">reconciliation</a></td></tr><tr><td>Snapshot integrity</td><td>sha256 of each archived raw block vs the stored hash</td><td>13 of 13 match</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-engine-39086ec8/verify.py" target="_blank" rel="noopener noreferrer">verify.py</a></td></tr><tr><td>Published correlations</td><td>recompute from each desk's own declared inputs</td><td>All 13 reproduce exactly</td><td><a href="correlations.html" target="_blank" rel="noopener noreferrer">reproduction</a></td></tr><tr><td>Stat library</td><td>68 unit tests against closed-form values</td><td>68 pass</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-engine-39086ec8/tests/test_engine.py" target="_blank" rel="noopener noreferrer">tests</a></td></tr><tr><td>Internal links</td><td>every href resolved on disk</td><td>verified at build</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-engine-39086ec8/verify.py" target="_blank" rel="noopener noreferrer">verify.py</a></td></tr><tr><td>Every table row sourced</td><td>source column non-empty or explicit blank</td><td>verified at build</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-engine-39086ec8/verify.py" target="_blank" rel="noopener noreferrer">verify.py</a></td></tr></tbody></table></div>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p><strong>Data captured 2026-11-14 (UTC).</strong> Official sources only.
+    Anything a source does not publish is shown as <span class="blank">blank</span> and listed on
+    <a href="flagged.html">Flagged for review</a>.</p>
+    <p>Results verified against nfl.com standings. Prices are a single capture point per game:
+    there is no opening price, so nothing here is a closing-line value.</p>
+  </div>
+</footer>
+</body>
+</html>

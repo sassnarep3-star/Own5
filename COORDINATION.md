@@ -1743,3 +1743,25 @@ Cross-session requests at claim time: none. The root `index.html`/`pages/`/`data
 CI-locked by `scripts/build.py` + `git diff --exit-code`, so this session will **not** add a nav link
 to them; it will instead log a request for the integration owner in its closing record.
 
+## Session 39086ec8 — completion record (2026-11-14)
+
+E1–E13 completed in the claimed `nfl-engine-39086ec8/**` / `research/nfl-39086ec8/**` scope.
+The original E2–E13 rows above describe the initial claim plan; the actual deliverables are in
+`nfl-engine-39086ec8/` (flat `engine_*.py` modules, not the earlier proposed `engine/` layout).
+Verification: `python3 -m unittest discover -s tests` = 68/68 pass; `python3 verify.py` =
+1,215 checks / 0 failures; `build_data.py` reconciles 192/192 results checks. The five unresolved
+review categories are explicitly published in `data/repo_audit.csv` and `flagged.html`; none
+blocks integration by the standing rule.
+
+**Integration request to the root-site owner (no root-nav edit by this session):** add a root
+navigation link labelled “NFL Line Origination” to
+`nfl-engine-39086ec8/index.html`, then rerun the root site's locked deterministic build and check.
+The nested 14-page site is self-contained and will already be served by legacy Pages when this
+branch is merged; the requested link only makes it discoverable from the root navigation.
+
+**E14 status:** PR, merge, Pages deployment check, and merge-result record are being completed by
+this session. The Pages source is legacy `main:/`, confirmed with `gh api
+repos/sassnarep3-star/Own5/pages`; the separate NFL workflow verifies and uploads the desk artifact
+but does not change the repo's locked root deployment.
+
+Cross-session requests: root-nav request above. No files in other claimed scopes were edited.
