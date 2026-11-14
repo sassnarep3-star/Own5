@@ -671,76 +671,6 @@ def _naive_ok():
     return any(max(v) < ALPHA for v in best.values())
 
 
-def promotion_and_demotion(sig_rows, store):
-    """Two tables, one file each: who may go live, who must come back off.
-
-    Promotion is gated on evidence (gates V-01..V-09 all PASS plus a live record).
-    Demotion is gated on deterioration, and deliberately needs no statistical
-    significance: waiting for significance while live money is at risk is how a
-    bad month becomes a bad year.
-    """
-    live_n = store.get("live_graded_bets", 0)
-    closing = store.get("closing_rows", 0)
-    prom = []
-    for r in sig_rows:
-        reasons = []
-        if r["settled"] < MIN_BETS:
-            reasons.append(f"settled n={r['settled']} < {MIN_BETS}")
-        if r["holm_adjusted_p"] in ("", None):
-            reasons.append("no valid p")
-        elif r["holm_adjusted_p"] != "<0.0001" and float(r["holm_adjusted_p"]) >= ALPHA:
-            reasons.append(f"Holm p={r['holm_adjusted_p']} >= {ALPHA}")
-        if r["excess_over_be"] <= 0:
-            reasons.append("hit rate below the break-even implied by its own prices")
-        if r["dsr"] == "" or float(r["dsr"]) <= DSR_MIN:
-            reasons.append(f"DSR {r['dsr'] or 'n/a'} <= {DSR_MIN}")
-        if live_n == 0:
-            reasons.append("zero live graded bets: this desk publishes paper results only")
-        if closing < CLV_MIN_BETS:
-            reasons.append(f"no closing-line coverage ({closing} closing rows) so CLV is unmeasurable")
-        prom.append(dict(strategy=r["strategy"], promotion_decision="BLOCKED" if reasons else "PROMOTE",
-                          reasons="; ".join(reasons) or "all promotion gates clear",
-                          live_bets_required=f"{required_n(float(r['break_even_mean']) or 0.5238, (float(r['hit_rate']) or 0.55)) if r['hit_rate'] else '>8000'} live bets at the observed rate"))
-    with open(os.path.join(DATA, "promotion_status.csv"), "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=list(prom[0].keys()))
-        w.writeheader()
-        w.writerows(prom)
-
-    dem = []
-    for r in sig_rows:
-        n_live = live_n
-        wins_live = 0
-        clv = None
-        dd_units = None
-        rules = []
-        if n_live:
-            p_be = float(r["break_even_mean"] or 0.5238)
-            p = st.binom_two_sided(n_live, wins_live, p_be)
-            if p is not None and p < ALPHA and wins_live / n_live < p_be:
-                rules.append("live hit rate significantly below break-even (exact binomial)")
-            if wins_live / max(1, n_live) < p_be - 0.05:
-                rules.append("live hit rate more than 5 points below break-even")
-        else:
-            rules.append("no live graded bets yet - nothing to demote, and nothing live either")
-        if (r["holm_adjusted_p"] not in ("", None)
-                and r["holm_adjusted_p"] != "<0.0001" and float(r["holm_adjusted_p"]) >= ALPHA):
-            rules.append("backtest signal not significant after multiplicity: paper-only by construction")
-        dem.append(dict(strategy=r["strategy"], state="PAPER",
-                        demotion_decision="NO CHANGE" if n_live == 0 else ("DEMOTE TO PAPER" if rules else "NO CHANGE"),
-                        triggering_rules="; ".join(rules),
-                        gate_D1="n_live >= 20 with hit rate < break-even (no significance required)",
-                        gate_D2=f"backtest Holm p >= {ALPHA} after a re-run on data that now includes the live weeks",
-                        gate_D3="CLV over the last 20 bets negative",
-                        gate_D4="drawdown > 6 units below the peak or 3x the historical maximum",
-                        gate_D5="input integrity or no-look-ahead check failed in CI (immediate)",
-                        gate_D6="three consecutive weeks of source outage (no live prices)"))
-    with open(os.path.join(DATA, "demotion_gate.csv"), "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=list(dem[0].keys()))
-        w.writeheader()
-        w.writerows(dem)
-    return prom, dem
-
-
 def write(store_summary=None):
     by_strategy, rows = grade.grade()
     trial = _trial_sharpes(by_strategy)
@@ -800,7 +730,6 @@ def write(store_summary=None):
                     "no threshold was moved after seeing a backtest; see flags.csv"])
         w.writerow(["thresholds changed after seeing results", 0,
                     "any change here would be published, not folded into the fit"])
-    prom, dem = promotion_and_demotion(sig, store_summary or {})
     return by_strategy, sig, stk, gt, passes
 
 

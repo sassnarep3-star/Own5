@@ -1572,20 +1572,28 @@ reach.
 
 | ID | Task | Status | Owner | Files touched | Notes |
 |----|------|--------|-------|---------------|-------|
-| MK1 | Claim scope, push claim, baseline audit of prior desks' price/results blockers | in progress | ce1f16ff | `COORDINATION.md` | Claim pushed first; reads other desks read-only. |
-| MK2 | Price-snapshot store: schema (opening/closing per market), capture machinery, immutability + provenance rules | unclaimed | ce1f16ff | `nfl-desk-ce1f16ff/price_store.py`, `data/price_snapshots.csv`, `store.html` | Live capture attempted from named sources; anything unreachable stays blank + flagged, never invented. |
-| MK3 | Verified results feed: official finals with per-row source, reconciliation, append-only ledger | unclaimed | ce1f16ff | `nfl-desk-ce1f16ff/results_feed.py`, `data/results_verified.csv`, `results.html` | Grades backtests; every row links an official source URL. |
-| MK4 | Origination in the mandated order: side → total → moneyline, each stage published separately | unclaimed | ce1f16ff | `nfl-desk-ce1f16ff/originate.py`, `data/lines_*.csv`, `lines.html` | Three stages, three column groups; derivation documented. |
-| MK5 | Fair line / market line / difference as separate columns | unclaimed | ce1f16ff | `data/lines_*.csv`, `data/edges.csv`, `edges.html` | Market column blank + flagged wherever no confirmed price exists. |
-| MK6 | Leaderboard: separate signal score from staking score | unclaimed | ce1f16ff | `nfl-desk-ce1f16ff/score.py`, `data/leaderboard_signal.csv`, `data/leaderboard_staking.csv`, `leaderboard.html` | Signal block gates the staking block; ranks on signal, never on blended score. |
-| MK7 | Depth of replacement (rung distance down the published chart), offense + defense | unclaimed | ce1f16ff | `nfl-desk-ce1f16ff/depth.py`, `data/depth_of_replacement.csv`, `depth.html` | Uses official club depth charts; unverifiable clubs blank + flagged. |
-| MK8 | Correlations from officially sourced numbers only, `n` published with every value | unclaimed | ce1f16ff | `nfl-desk-ce1f16ff/correlate.py`, `data/correlations.csv`, `correlations.csv` page | Refuses to emit r without n and a source URL per row. |
-| MK9 | Demotion gate: rules that send a live strategy back to paper, implemented and tested | unclaimed | ce1f16ff | `nfl-desk-ce1f16ff/promotion.py`, `data/promotion_state.csv`, `gates.html` | Fail-closed; state machine + unit tests. |
-| MK10 | Suggestions register (paths to choose, nothing pre-implemented) | unclaimed | ce1f16ff | `data/suggestions.csv`, `suggestions.html` | Each: options, tradeoffs, recommendation, AWAITING DECISION. |
-| MK11 | Questions / information we have vs do not have / discovery plan | unclaimed | ce1f16ff | `data/questions.csv`, `questions.html` | Includes the discovery steps that would unblock MK2. |
-| MK12 | Executive summary + Flagged for Review + sources register | unclaimed | ce1f16ff | `executive-summary.html`, `flagged.html`, `sources.html`, `data/flags.csv`, `data/sources.csv` | Nonblocking flags published with links. |
-| MK13 | Verify harness, unit tests, CI workflow (verify + scheduled capture) | unclaimed | ce1f16ff | `verify.py`, `tests/**`, `.github/workflows/nfl-desk-ce1f16ff.yml` | Every table row must be source-linked or explicitly blank + flagged. |
-| MK14 | Integration: rebase on `origin/main`, PR, autonomous merge, live Pages check, log | unclaimed | ce1f16ff | `COORDINATION.md`, `README.md` | Preserve concurrent sessions; never merge a broken site. |
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| MK1 | Claim scope, push claim, baseline audit of prior desks' price/results blockers | **done** | ce1f16ff | `COORDINATION.md` | Claim pushed first (`099b608`); reads other desks read-only. |
+| MK2 | Price-snapshot store: schema (opening/closing per market), capture machinery, immutability + provenance rules | **done** | ce1f16ff | `nfl-desk-ce1f16ff/store.py`, `capture_job.py`, `data/price_snapshots.csv`, `data/store_meta.csv`, `data/market_gaps.csv`, `store.html` | 148 hash-chained rows, each with provider, URL, method, timestamp. Opening + pre-game exist; **closing is 0 rows** and is published as 56 gap rows rather than back-filled. `capture_job.py` on a weekly CI schedule is the accumulation mechanism (no manual input). |
+| MK3 | Verified results feed: official finals with per-row source, reconciliation, append-only ledger | **done** | ce1f16ff | `nfl-desk-ce1f16ff/results_feed.py`, `data/results_feed.csv`, `data/results_checks.csv`, `results.html` | 151 rows, 137 FINAL + 14 scheduled-with-no-score. Hash-chained; **13/13 self-checks pass**, including row-for-row reconciliation against the pinned mirror and a standings reconciliation for all 32 clubs. |
+| MK4 | Origination in the mandated order: side → total → moneyline, each stage published separately | **done** | ce1f16ff | `nfl-desk-ce1f16ff/originate.py`, `data/fair_lines.csv`, `data/model_ratings.csv`, `data/derivation.csv`, `markets.html` | One ridge fit, then three stages in order; stage 3 consumes stage 1's margin distribution and **re-fits nothing**. The derivation register records every stage, input and rule. |
+| MK5 | Fair line / market line / difference as separate columns | **done** | ce1f16ff | `data/line_sheet.csv`, `markets.html` | Three column groups. `diff_spread_pts` = fair minus market (the decision quantity); rounding differences are shown separately, never silently smoothed. |
+| MK6 | Leaderboard: separate signal score from staking score | **done** | ce1f16ff | `nfl-desk-ce1f16ff/ledger.py`, `leaderboard.py`, `data/leaderboard_signal.csv`, `data/leaderboard_staking.csv`, `data/leaderboard.csv`, `data/rewards.csv`, `leaderboard.html` | Two rankings published side by side plus their disagreement (signal leader sits 6th on units). Break-even read from each bet's **own** price, never an assumed -110. No division awarded. |
+| MK7 | Depth of replacement (rung distance down the published chart), offense + defense | **done** | ce1f16ff | `nfl-desk-ce1f16ff/depth.py`, `data/replacement_depth.csv`, `data/depth_by_team.csv`, `data/absence_vs_depth.csv`, `depth.html` | 705 published position groups across 31 clubs, graded TESTED 90 / PARTIALLY TESTED 423 / UNTESTED 116 / NO NAME PUBLISHED 76 from the replacement's own measured snap share. 864d5668's `deficiency_points` kept as a separate labelled peer column, never blended. |
+| MK8 | Correlations from officially sourced numbers only, `n` published with every value | **done** | ce1f16ff | `nfl-desk-ce1f16ff/correlate.py`, `data/correlations.csv`, `correlations.html` | 11 rows: 6 computed with `r`, `n`, 95% CI and tier; **5 published as refusals** (blank `r` + reason), incl. QB↔top-WR, whose only available input is a third-party figure. |
+| MK9 | Demotion gate: rules that send a live strategy back to paper, implemented and tested | **done** | ce1f16ff | `nfl-desk-ce1f16ff/gate.py`, `data/demotion_gate.csv`, `data/gate_rules.csv`, `data/gate_integrity.csv`, `data/strategy_states.csv`, `gates.html` | D1..D6, fail-closed; D5 demotes **everything live** if any feed check or either hash chain fails; D6 demotes on a three-week capture outage. Current build: integrity ok, 0 live bets, D3 unevaluable (no closing data) → reported as *armed, not passed*. |
+| MK10 | Suggestions register (paths to choose, nothing pre-implemented) | **done** | ce1f16ff | `data/suggestions.csv`, `suggestions.html` | 10 suggestions (MK-SG-01..10), each with options, cost, what-changes and a recommendation; every row `PROPOSED`. |
+| MK11 | Questions / information we have vs do not have / discovery plan | **done** | ce1f16ff | `data/questions.csv`, `questions.html` | 8 questions (MK-Q-01..08), 5 blocking, each with who publishes the answer, how to go and get it, and the fallback used meanwhile. |
+| MK12 | Executive summary + Flagged for Review + sources register | **done** | ce1f16ff | `index.html`, `flagged.html`, `sources.html`, `data/flags.csv`, `data/sources.csv` | 12 flags (2 high) and a 24-row source register (12 captured sources, 11 pinned input digests, 1 derived). |
+| MK13 | Verify harness, unit tests, CI workflow (verify + scheduled capture) | **done** | ce1f16ff | `verify.py`, `tests/test_statslib.py`, `tests/test_desk.py`, `.github/workflows/nfl-desk-ce1f16ff.yml` | `python3 run.py --check` proves 43 tables + 13 pages rebuild byte-identically; `verify.py` = 32 checks; **82 unit tests**. CI runs rebuild → tests → verify → `git diff --exit-code`. |
+| MK14 | Integration: rebase on `origin/main`, PR, autonomous merge, live Pages check, log | in progress | ce1f16ff | `COORDINATION.md`, `README.md` | Additive: only `nfl-desk-ce1f16ff/**` and this session's workflow file. |
+
+**Deviations from the claim, stated plainly.** The claim named `price_store.py`, `results_verified.csv`,
+`lines.html`, `promotion.py` and a `research/nfl-ce1f16ff/**` documentation tree; the build ships
+`store.py`, `results_feed.csv`, `markets.html`, `gate.py` and a flat 13-page site at
+`nfl-desk-ce1f16ff/*.html` (matching the `864d5668` and `26d4cafb` layout so that relative `data/`
+links resolve on Pages). Same promises, different filenames; the tables above carry the real paths.
 
 **Cross-session requests at claim time (logged here, not edited by this session):**
 - Owner of `nfl-desk-864d5668`: its F-01 ("no official market prices exist") is addressed by MK2/MK3 here;
@@ -1595,3 +1603,52 @@ reach.
   matches a clean rebuild" step fails on `main` per the 2026-11-12 log above; still open.
 - Integration owner (root `index.html`, owned by session `arena-cd43258e`, CI-locked): add a link to
   `nfl-desk-ce1f16ff/index.html` when the shared index is next rebuilt.
+
+**Integration log (session ce1f16ff, 2026-11-14 UTC).**
+
+*What shipped.* 13 Python modules + 13 static pages + 46 CSV tables inside `nfl-desk-ce1f16ff/`, and one
+workflow file. Everything is standard library only (no numpy, no pandas, no network at build time), so
+the build is byte-for-byte reproducible: `python3 run.py --check` rebuilds all 43 tracked tables and 13
+pages and compares digests (result: `deterministic: true, changed: []`).
+
+*The two blockers other desks reported are now infrastructure, not assumptions:*
+`data/results_feed.csv` (151 rows, hash-chained, 13/13 checks pass, official slate reconciled against
+the pinned mirror **and** re-derived from the official standings for 32/32 clubs with 0 mismatches) and
+`data/price_snapshots.csv` (148 chained rows with provider, URL, method, timestamp per row). 2026
+home-field advantage measured from the feed is **+0.47 pts** (n=130, 95% CI −1.81…+2.75) against the
+**+2.0** several boards assume; 2026 tie rate is **1/137 = 0.00730** and is used to split the moneyline
+tie mass instead of being assumed away.
+
+*What this desk concluded about itself, unprompted.* On 1,274 walk-forward games the ratings model
+forecasts the home margin at **r = 0.2901** (MAE 10.574) while the posted line forecasts the same games
+at **r = 0.4530** (MAE 9.808). The desk therefore fails its own skill gate (V-06) and promotes nothing:
+6/11 gates pass, V-05 (survives multiplicity) fails at Holm p = 1.0000, V-08 (CLV) fails on 0 closing
+snapshots, V-10 is blocked on sample size, and no division on the leaderboard is awarded. The worst
+staking rank and the best signal rank belong to different strategies, which is the point of splitting
+them.
+
+*Honest gaps, all published rather than papered over.* Closing lines do not exist yet, so no CLV claim
+anywhere (56 gap rows in `data/market_gaps.csv`); no opening moneyline exists on the source page; the
+injury-report vintage disagrees with the mirror (326 vs 276 rows for week 10, kept visible in
+`data/availability_source_diff.csv`); prop outcomes are not gradable from any pinned source, so the
+prop-combos division is BLOCKED rather than scored; three pinned upstream mirrors were republished after
+our 2026-11-12T16:52:39Z digest pin, so we flagged the drift and kept the pin instead of silently
+chasing it; `data/live_bets.csv` ships header-only, so the demotion gate reports itself as *armed, not
+passed* — and `verify.py` fails if anything writes rows into it.
+
+*Nothing manual was required of the user.* Live capture was attempted and the sandbox has no route to
+espn.com / draftkings.com / nfl.com (recorded as a dead end so nobody retries it); the response is
+`capture_job.py` running on a twice-weekly CI schedule, appending snapshots into the same chain, so the
+closing-price and graded-live-bet gates become evaluable by time passing rather than by a human uploading
+a CSV.
+
+*Scope discipline.* Only `nfl-desk-ce1f16ff/**`, `research/nfl-ce1f16ff/**`, this session's own workflow
+file, and append-only blocks in `COORDINATION.md` / `README.md` were touched. No other session's file was
+edited; other desks were read for context only. Deviation from the claim, stated plainly: the 13 pages
+ship **flat inside `nfl-desk-ce1f16ff/`** (as `nfl-desk-864d5668` and `nfl-desk-26d4cafb` do, so relative
+`data/*.csv` links resolve on Pages) and `research/nfl-ce1f16ff/` carries the markdown dossier rather
+than the site.
+
+*Checks on the PR and Pages.* See the PR thread: `nfl-desk-ce1f16ff` verify job (rebuild → 82 unit tests →
+32 verify checks → `git diff --exit-code` on the desk's own outputs). `decision-desk.yml` and
+`nfl-b34253a1.yml` still fail on `main` for their own owners and are untouched here.

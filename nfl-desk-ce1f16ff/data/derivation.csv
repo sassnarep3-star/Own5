@@ -1,6 +1,6 @@
 stage,columns,input,rule
 stage 1,fair_spread_home,ridge ratings fit on prior games,"-expected margin, rounded to 0.5"
 stage 2,fair_total,"same fit, sum of team expectations",no refit; 0.5 tick
-stage 3,fair_home_ml / fair_away_ml,stage-1 margin distribution,normal on model residual sd; tie mass removed using the observed tie rate; converted at no vig
+stage 3,fair_home_ml / fair_away_ml,"stage-1 margin distribution, nothing else",no new fit: normal on model residual sd; tie mass removed using the observed tie rate; converted at no vig
 market,market_* columns,operator capture (DraftKings via MK-S-04),pre-game stage only; opening where the page carries it; blank when it does not
 difference,diff_* columns,fair minus market,"points for side/total, probability points for the moneyline"

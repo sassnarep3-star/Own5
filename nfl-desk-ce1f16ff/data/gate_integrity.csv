@@ -1,0 +1,4 @@
+check,state,detail
+D5 input integrity,PASS,all checks pass
+D6 capture outage weeks,0,"weeks since the last successful capture job, from capture_log.csv"
+live bets on file,0,"the ledger ships empty because no bet has been placed; the gate is armed, not passed"

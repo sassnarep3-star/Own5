@@ -169,6 +169,9 @@ def build_rows(include_mirror=False):
                          verification="verbatim; tab identity inferred from page order (MK-F-05)",
                          note="prop rows are never used for grading in this build"))
 
+    # ---- 2b. rows appended by the scheduled capture job --------------------
+    rows.extend(load_captured())
+
     # ---- 3. pinned aggregator mirror: excluded from the committed store ----
     if include_mirror:
         rows.extend(mirror_rows())
@@ -184,6 +187,45 @@ def build_rows(include_mirror=False):
         r["row_hash"] = row_hash(prev, r)
         prev = r["row_hash"]
         out.append(r)
+    return out
+
+
+CAPTURED_GLOB = "captured_*.csv"
+
+
+def load_captured():
+    """Fold in whatever the scheduled capture job wrote, if anything.
+
+    The job drops one CSV per run (``data/captured_<date>.csv``) holding the raw
+    observations from the provider's endpoint. Those files are an append-only
+    record of fetches; the store is the record of *prices*. This function is the
+    seam between them, and it is deliberately boring: a captured row with no price
+    becomes a store row whose verification says ABSENT, never a dropped row, because
+    a dropped row is indistinguishable from a game nobody looked at.
+    """
+    import glob as _glob
+    out = []
+    for path in sorted(_glob.glob(os.path.join(DATA, CAPTURED_GLOB))):
+        with open(path, newline="", encoding="utf-8") as f:
+            for r in csv.DictReader(f):
+                present = str(r.get("present", "")).lower() not in ("false", "0", "")
+                out.append(dict(
+                    captured_at_utc=r.get("captured_utc", ""),
+                    provider_key="DRAFTKINGS_VIA_ESPN", provider_display=r.get("provider") or "DraftKings (via ESPN JSON)",
+                    source_url=r.get("source_url", ""),
+                    capture_method="fetched by the scheduled capture job from the provider JSON endpoint",
+                    lineage="CI", season=r.get("season", ""), week=r.get("week", ""),
+                    game_key=r.get("game_key", ""), kickoff=r.get("kickoff", ""),
+                    venue_note="state=%s (%s)" % (r.get("state", ""), r.get("detail", "")),
+                    market=r.get("market", ""), selection=r.get("selection", ""),
+                    line_value=r.get("line_value", ""), price_american=r.get("price_american", ""),
+                    line_stage=("closing" if str(r.get("state", "")) == "post" and r.get("stage") == "closing"
+                                else r.get("stage", "pre_game")),
+                    implied_prob_vig=_prob(r.get("price_american", "")), implied_prob_novig="",
+                    pair_price="", raw_display=r.get("raw", ""),
+                    verification=("captured automatically; digest of the payload recorded in capture_log.csv"
+                                  if present else "ABSENT - the endpoint published no number for this cell"),
+                    note=("provider state at capture: %s" % r.get("state", ""))))
     return out
 
 

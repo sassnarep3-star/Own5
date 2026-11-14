@@ -1,0 +1,98 @@
+name: nfl-desk-ce1f16ff
+
+# Session ce1f16ff desk: verified results feed, price-snapshot store, line
+# origination, gates. Scope is deliberately narrow - this workflow only touches
+# nfl-desk-ce1f16ff/** and its own workflow file, so it cannot collide with the
+# scopes other sessions have claimed in COORDINATION.md.
+
+on:
+  push:
+    branches: ["**"]
+    paths:
+      - "nfl-desk-ce1f16ff/**"
+      - ".github/workflows/nfl-desk-ce1f16ff.yml"
+  pull_request:
+    paths:
+      - "nfl-desk-ce1f16ff/**"
+      - ".github/workflows/nfl-desk-ce1f16ff.yml"
+  schedule:
+    # Sunday 13:05 UTC (before the main US slate windows) and Monday 00:05 UTC,
+    # so a closing-side snapshot exists for the graded-bet gates next week.
+    - cron: "5 13 * * 0"
+    - cron: "5 0 * * 1"
+  workflow_dispatch:
+    inputs:
+      capture_date:
+        description: "YYYY-MM-DD slate to capture (blank = today, UTC)"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nfl-desk-ce1f16ff-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    name: Rebuild, test, verify determinism and provenance
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Rebuild every table and page from the committed inputs
+        working-directory: nfl-desk-ce1f16ff
+        run: python3 run.py
+
+      - name: Unit tests (statistics, gates, chains, site contract)
+        working-directory: nfl-desk-ce1f16ff
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Verify chains, determinism, citation coverage and links
+        working-directory: nfl-desk-ce1f16ff
+        run: python3 verify.py
+
+      - name: Fail if the committed build is not the build the inputs produce
+        run: |
+          git diff --exit-code -- nfl-desk-ce1f16ff/data nfl-desk-ce1f16ff/*.html \
+            || { echo "::error::committed tables/pages differ from a clean rebuild; run python3 nfl-desk-ce1f16ff/run.py and commit the result"; exit 1; }
+
+  capture:
+    name: Capture live price snapshots (scheduled)
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Capture the slate's published prices
+        working-directory: nfl-desk-ce1f16ff
+        env:
+          CAPTURE_DATE: ${{ github.event.inputs.capture_date }}
+        run: |
+          if [ -n "$CAPTURE_DATE" ]; then
+            python3 capture_job.py "$CAPTURE_DATE"
+          else
+            python3 capture_job.py
+          fi
+      - name: Show the capture log
+        working-directory: nfl-desk-ce1f16ff
+        run: cat data/capture_log.csv
+      - name: Upload capture artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ce1f16ff-capture-${{ github.run_number }}
+          path: |
+            nfl-desk-ce1f16ff/data/captured_*.csv
+            nfl-desk-ce1f16ff/data/capture_log.csv
+          if-no-files-found: warn

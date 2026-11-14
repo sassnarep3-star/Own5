@@ -264,10 +264,13 @@ def squad_impact(week=10, lookback=3):
             else:
                 d["off"].append(pct)
             d["seen"] += 1
-    avg_off = {}
+    side_snaps = {}
     for (team, wk), v in totals.items():
-        avg_off.setdefault(team, []).append(v["off"] or 1.0)
-    base = {t: (sum(v) / len(v)) for t, v in avg_off.items()}
+        side_snaps.setdefault(team, {"off": [], "defn": []})
+        side_snaps[team]["off"].append(v["off"] or 1.0)
+        side_snaps[team]["defn"].append(v["defn"] or 1.0)
+    base = {t: {side: (sum(v) / len(v) if v else 1.0) for side, v in d.items()}
+            for t, d in side_snaps.items()}
 
     absent = {}
     for r in csv.DictReader(open(OFFICIAL_INJ, newline="", encoding="utf-8")):
@@ -283,21 +286,31 @@ def squad_impact(week=10, lookback=3):
                                                  injury=r.get("injury") or ""))
     rows = []
     for team in sorted(absent):
-        lost = 0.0
+        lost = lost_off = lost_def = 0.0
+        unknown_side = 0
         details = []
         for pl in absent[team]:
             key = _name(pl["player"])
             d = role.get((team, key))
+            is_def = (pl["position"] or "").upper() in DEF_POS
+            side = "defn" if is_def else "off"
             shares = []
             if d:
-                shares = (d["off"] or d["defn"])
-                share = st.median([s for s in shares if s > 0]) if any(shares) else 0.0
-                lost_snaps = share * base.get(team, 0.0)
+                # the share is always taken against the player's own unit, so an
+                # offensive line and a secondary are never divided by the same base
+                shares = (d["defn"] if is_def else d["off"]) or (d["off"] or d["defn"])
+                share = st.median([x for x in shares if x > 0]) if any(shares) else 0.0
+                lost_snaps = share * base.get(team, {}).get(side, 0.0)
                 lost += lost_snaps
-                measured = (f"median snap share {share:.3f} of the team's {len(shares)} "
-                            f"listed weeks; about {lost_snaps:.0f} snaps")
+                if is_def:
+                    lost_def += lost_snaps
+                else:
+                    lost_off += lost_snaps
+                measured = (f"median snap share {share:.3f} of the {'defence' if is_def else 'offence'} "
+                            f"snap base over {len(shares)} listed weeks; about {lost_snaps:.0f} snaps")
             else:
                 share = None
+                unknown_side += 1
                 measured = ("not in the snap records for the last three weeks (not played, or the mirror "
                             "spells the name differently) - snaps removed left blank, never assumed")
             mate = None
@@ -320,18 +333,39 @@ def squad_impact(week=10, lookback=3):
                 mate = "NO MEASURED BACKUP at this position in the snap records"
                 depth_after = 0
             details.append(dict(pl, share=share, measured=measured, mate=mate, backups_measured=depth_after))
+        b = base.get(team, {})
+        measured_any = any(d["share"] is not None for d in details)
+        # Published-first arithmetic: round the snap counts, then derive each
+        # percentage from the *rounded* numbers, so a reader holding only this row can
+        # reproduce every figure in it. Percentages computed from unrounded internals
+        # are correct and unauditable at the same time.
+        so = round(lost_off, 1) if measured_any else None
+        sd = round(lost_def, 1) if measured_any else None
+        bo = round(b.get("off", 0.0), 1)
+        bd = round(b.get("defn", 0.0), 1)
+        po = round(100.0 * so / max(1e-9, bo), 2) if so is not None else None
+        pd_ = round(100.0 * sd / max(1e-9, bd), 2) if sd is not None else None
         rows.append(dict(team=team, week=week, players_kept_out=len(absent[team]),
-                         expected_snaps_removed=round(lost, 1) if any(
-                             d["share"] is not None for d in details) else "",
-                         pct_of_team_snap_base=round(100.0 * lost / max(1e-9, base.get(team, 1.0)), 2),
+                         players_unmatched=unknown_side,
+                         expected_snaps_removed=(round((so or 0.0) + (sd or 0.0), 1)
+                                                 if measured_any else ""),
+                         snaps_removed_offence="" if so is None else so,
+                         snaps_removed_defence="" if sd is None else sd,
+                         pct_of_offence_snap_base="" if po is None else po,
+                         pct_of_defence_snap_base="" if pd_ is None else pd_,
+                         offence_snap_base=bo,
+                         defence_snap_base=bd,
                          detail=" | ".join(f"{d['player']} ({d['position']}, {d['status'] or d['practice']}): "
                                            f"{d['measured']} -> {d['mate']}" for d in details),
                          tier="OFFICIAL report x mirrored play records",
                          source=INJ_URL,
                          note=("snaps removed, not points: the points question is answered in depth.py and "
-                               "labelled separately there; the percentage can exceed 100 when several "
-                               "full-time players at the same position are out, because a snap is not a "
-                               "slot - it measures volume removed, not a share of a budget")))
+                               "labelled separately there. Each side's percentage is against that side's "
+                               "own snap base, never a blend; it can still exceed 100 when several "
+                               "full-time players at one position are out, because a snap is not a slot - "
+                               "the column measures volume removed, not a share of a budget. "
+                               "players_unmatched are on the report but absent from the snap records, so "
+                               "they contribute zero rather than an estimate")))
     return rows
 
 
@@ -352,7 +386,9 @@ def write():
         w.writeheader()
         w.writerows(sd)
     si = squad_impact()
-    cols = ["team", "week", "players_kept_out", "expected_snaps_removed", "pct_of_team_snap_base",
+    cols = ["team", "week", "players_kept_out", "players_unmatched", "expected_snaps_removed",
+            "snaps_removed_offence", "snaps_removed_defence", "offence_snap_base", "defence_snap_base",
+            "pct_of_offence_snap_base", "pct_of_defence_snap_base",
             "detail", "tier", "source", "note"]
     with open(os.path.join(DATA, "availability_impact.csv"), "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=cols)

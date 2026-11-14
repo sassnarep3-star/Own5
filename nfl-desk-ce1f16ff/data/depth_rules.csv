@@ -1,0 +1,7 @@
+rule,definition
+TESTED,second string has median snap share >= 0.5 of the unit's snaps in >= 3 games of 2026
+PARTIALLY TESTED,second string appeared in >= 1 game but below the TESTED thresholds
+UNTESTED,"second string has no snaps in the 2026 play records (injury, healthy scratch, practice squad, or a name the two sources spell differently)"
+NO NAME PUBLISHED,the club's depth chart lists no second string at that position
+join,names are matched exactly after normalisation; no fuzzy matching is used anywhere in this file
+peer column,"deficiency_points is another session's model output, published unchanged in its own column and never combined with the measured columns"

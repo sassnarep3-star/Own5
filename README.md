@@ -142,6 +142,7 @@ python3 tools/check_site.py             # verifies every CSV row has a source li
 - `.github/workflows/verify.yml`: rebuild, row/link checks, math tests and browser smoke tests on pushes and PRs.
 - `COORDINATION.md`: ownership, verification, integration and publication history (all sessions).
 - `nfl-strategy-lab/` + `research/arena-f1d30421/` (session `arena-f1d30421`): NFL Strategy Lab site and methodology; `scripts/compute_analysis.py`, `compute_prop_correlations.py`, `originate_lines.py`, `build_site.py`, `verify_site.py`.
+- `nfl-desk-ce1f16ff/` (session `ce1f16ff`): the price-snapshot store, verified results feed, three-stage line origination, replacement-depth tracker, signal/staking-split leaderboard and the promotion + demotion gates; deterministic build, `verify.py`, 82 unit tests and a scheduled CI capture job. See its `README.md` for the file-by-file contract.
 
 ## Verification and deployment
 
@@ -354,4 +355,50 @@ python3 build.py             # render the 18-page dashboard
 python3 export_research.py   # regenerate research/nfl-26d4cafb/*.md
 python3 verify.py            # 25 line-by-line checks (0 failures)
 python3 -m unittest discover -s nfl-desk-26d4cafb/tests   # 60 tests
+```
+
+## NFL Market Data & Promotion Control (session ce1f16ff, 2026-11-14)
+
+**Live site:** https://sassnarep3-star.github.io/Own5/nfl-desk-ce1f16ff/ ·
+**Flagged for review:** https://sassnarep3-star.github.io/Own5/nfl-desk-ce1f16ff/flagged.html ·
+**Open questions:** https://sassnarep3-star.github.io/Own5/nfl-desk-ce1f16ff/questions.html
+
+The desk the other NFL sessions were blocked on: it builds the two missing
+pieces of infrastructure — a **verified results feed** and an **append-only price-snapshot
+store** — and then does the thing nobody else could do, which is grade itself against them.
+It currently promotes **nothing**, and says so on the front page rather than in an appendix.
+
+- **Results feed:** 151 rows (137 FINAL, 14 scheduled with no score, by design), hash-chained,
+  **13/13 self-checks pass**, reconciled row-for-row against the pinned mirror and re-derived
+  from the official standings for all 32 clubs (0 disagreements).
+- **Price store:** 148 chained snapshots, each with provider, URL, capture method and timestamp;
+  opening and pre-game exist, **closing is 0 rows** and is published as 56 gap rows instead of
+  being back-filled from somebody's blog. A CI capture job is the accumulation mechanism, so no
+  manual upload is required at any point.
+- **Origination:** side → total → moneyline from one ridge fit, three stages, three column groups,
+  with fair / market / difference kept as separate columns and the moneyline derived from stage 1
+  (no second fit, no assumed -110; the observed 1-in-137 tie rate splits the tie mass).
+- **The finding that matters:** out of sample over 1,274 games the model forecasts the home margin
+  at **r = 0.2901** while the posted line forecasts the same games at **r = 0.453** — so the desk
+  reports that it cannot yet forecast better than the market rather than quoting its own 1,255
+  backtest bets as though 0.2695 vs 0.2765 break-even were skill (Holm-adjusted p = 1.0000).
+- **Depth, not absence:** all 705 published position groups across 31 clubs graded from the named
+  replacement's own measured snap share (TESTED 90 / PARTIALLY TESTED 423 / UNTESTED 116 /
+  NO NAME PUBLISHED 76); a 588-row base-rate study says **Out players played 0 of 588 times**
+  and Questionable played **58.6%** — and the "questionout" reading of that is refused, because
+  96 week-10 absences join to no measured backup at all.
+- **Gates:** 11 promotion gates (6 pass, 4 fail, V-10 blocked) and 6 fail-closed demotion rules,
+  where a broken feed or a broken hash chain demotes every live strategy at once and a capture
+  outage demotes on silence alone. The live ledger ships **empty on purpose**, so the gate is
+  reported as *armed, not passed*.
+- **Registers:** 10 suggestions (all `PROPOSED`, none implemented from their own entry), 8 open
+  questions (5 blocking, each with who publishes the answer and how to get it), 12 flags, 24-row
+  source register.
+
+```sh
+cd nfl-desk-ce1f16ff
+python3 run.py            # rebuild 43 tables + 13 pages from the committed inputs
+python3 run.py --check    # prove the committed build is byte-identical to a clean rebuild
+python3 verify.py         # 32 checks: chains, determinism, citation coverage, links, fail-closed gates
+python3 -m unittest discover -s tests   # 82 tests, standard library only
 ```

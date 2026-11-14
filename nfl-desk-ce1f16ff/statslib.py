@@ -22,10 +22,19 @@ SQRT2 = math.sqrt(2.0)
 # pricing
 # --------------------------------------------------------------------------
 def american_to_prob(odds):
-    """Implied probability from American odds, vig included. None in -> None out."""
-    if odds is None:
+    """Implied probability from American odds, vig included. None in -> None out.
+
+    Blank and unparseable inputs return None rather than raising: every caller in
+    this desk reads strings out of CSVs where a missing price is a real state
+    (nothing published), and a crash on a blank would push a future edit towards
+    defaulting the blank to something.
+    """
+    if odds is None or (isinstance(odds, str) and not odds.strip()):
         return None
-    odds = float(odds)
+    try:
+        odds = float(odds)
+    except (TypeError, ValueError):
+        return None
     if odds == 0:
         return None
     if odds > 0:
@@ -195,16 +204,26 @@ def wilson_ci(k, n, z=1.959963984540054):
 
 
 def binom_power(n, p0, p1, alpha=0.05):
-    """Power of a one-sided exact binomial test rejecting 'rate <= p0' when true rate is p1."""
+    """Power of a one-sided exact binomial test rejecting 'rate <= p0' when true rate is p1.
+
+    The critical region is the smallest count ``c`` with ``P(X >= c | p0) <= alpha``;
+    the tail probability is *decreasing* in ``c``, so the search moves upward when the
+    tail is still too big. (Getting that direction backwards is a silent failure: the
+    search returns no critical value and the power reads as zero, which looks like
+    "this edge is undetectable" rather than "this function is broken". It is covered
+    by a test for exactly that reason.)
+    """
+    if n <= 0 or not (0 < p0 < 1) or not (0 < p1 < 1) or p1 <= p0:
+        return 0.0
     lo, hi = 0, n
     crit = None
     while lo <= hi:
         mid = (lo + hi) // 2
         if binom_greater(n, mid, p0) <= alpha:
             crit = mid
-            lo = mid + 1
+            hi = mid - 1            # tail already small: try a smaller (earlier) critical count
         else:
-            hi = mid - 1
+            lo = mid + 1            # tail too big: the rejection region has to start later
     if crit is None:
         return 0.0
     return sum(binom_pmf(n, x, p1) for x in range(crit, n + 1))
@@ -268,7 +287,10 @@ def phi_table(a, b, c, d):
     for obs, exp in ((a, r1 * c1 / n), (b, r1 * c2 / n), (c, r2 * c1 / n), (d, r2 * c2 / n)):
         if exp > 0:
             chi2 += (obs - exp) ** 2 / exp
-    p = 1.0 - norm_cdf(math.sqrt(max(chi2, 0.0)))  # chi2 with df=1 == z^2
+    # chi-square with df=1 is z^2, and the p-value is the *two-sided* normal tail:
+    # 2*(1 - Phi(|z|)). The missing factor of two shows up immediately on a null
+    # 2x2 table, where the correct answer is p=1.0 and the wrong one is p=0.5.
+    p = min(1.0, 2.0 * (1.0 - norm_cdf(math.sqrt(max(chi2, 0.0)))))
     return (phi, chi2, p, n)
 
 
@@ -415,6 +437,11 @@ def kelly_fraction(p_win, b):
 # --------------------------------------------------------------------------
 # formatting helpers (stable rendering)
 # --------------------------------------------------------------------------
+def mean(xs):
+    xs = list(xs)
+    return (sum(xs) / len(xs)) if xs else None
+
+
 def median(xs):
     """Median of a non-empty sequence; None when empty (so blanks stay blanks)."""
     xs = sorted(xs)

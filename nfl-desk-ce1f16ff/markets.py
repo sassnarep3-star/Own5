@@ -40,7 +40,8 @@ SHEET_COLS = [
     "fair_total", "model_expected_total", "market_total", "market_over_price", "market_under_price",
     "market_opening_total", "diff_total_pts", "move_total_open_to_pre_pts",
     # --- stage 3: moneyline
-    "model_p_home_ml", "market_home_ml", "market_away_ml", "market_p_home_novig",
+    "model_p_home_ml", "model_p_away_ml", "model_p_tie", "fair_home_ml", "fair_away_ml",
+    "market_home_ml", "market_away_ml", "market_p_home_novig",
     "diff_home_ml_prob", "model_fair_hold_pct", "market_hold_pct",
     # --- provenance
     "market_provider", "market_stage", "market_captured_at", "market_source_url",
@@ -89,7 +90,10 @@ def line_sheet():
             market_under_price=f["market_under_price"], market_opening_total=f["market_opening_total"],
             diff_total_pts=f["diff_total_pts"],
             move_total_open_to_pre_pts=_move(f),
-            model_p_home_ml=f["model_p_home_ml"], market_home_ml=f["market_home_ml"],
+            model_p_home_ml=f["model_p_home_ml"], model_p_away_ml=f["model_p_away_ml"],
+            model_p_tie=f["model_p_tie"], fair_home_ml=f["fair_home_ml"],
+            fair_away_ml=f["fair_away_ml"],
+            market_home_ml=f["market_home_ml"],
             market_away_ml=f["market_away_ml"], market_p_home_novig=f["market_p_home_novig"],
             diff_home_ml_prob=f["diff_home_ml_prob"],
             model_fair_hold_pct=0.0, market_hold_pct=f["market_hold_pct"],
@@ -167,6 +171,8 @@ def store_coverage(rows):
 
 def write():
     srows, ok, problems = build_store()
+    import results_feed
+    results_feed.game_conditions()
     sheet = line_sheet()
     gaps = gap_report(srows)
     cov = store_coverage(srows)

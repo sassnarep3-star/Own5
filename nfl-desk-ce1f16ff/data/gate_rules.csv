@@ -1,0 +1,8 @@
+rule,definition,why,evaluates,fail_closed
+D1 live performance,hit rate over the last 20 graded live bets below the break-even implied by the prices taken,no significance test: waiting for proof while live money is at risk is how a bad month becomes a bad year,when at least one live bet has settled,an empty window is not a pass: the strategy stays on paper until it has a record
+D2 re-validated signal,Holm-adjusted p >= 0.05 when the backtest is re-run on data that includes the live weeks,a signal that disappears once the sample grows was never a signal,every build,missing or unparseable adjusted p counts as broken
+D3 closing-line value,mean CLV over the window < 0 points,the market moving against you is the earliest honest warning available,once closing snapshots exist in the store,"cannot be evaluated yet: reported as unevaluable, and V-08 blocks promotion"
+D4 drawdown,"live units 6.0 below peak, or 3.0x the backtest's own worst drawdown, whichever is larger",sizes the stop to the strategy's own history instead of to a mood,when a live record exists,no backtest drawdown on file falls back to the absolute limit rather than to no limit
+D5 input integrity,"any results-feed check fails, or either hash chain does not recompute",a number nobody can vouch for cannot support a live bet,every build,unreadable file counts as a failure
+D6 data flow,3 consecutive weeks with no captured price for a market the strategy bets,"an ungradeable strategy cannot be promoted, demoted or audited; it goes to paper",every build,a failed capture job counts as an outage week
+Scope,demotion applies to all strategies simultaneously if D5 fires; otherwise per strategy,an integrity problem is not a property of one strategy,every build,-
