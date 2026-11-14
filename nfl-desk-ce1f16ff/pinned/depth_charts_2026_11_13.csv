@@ -1,0 +1,706 @@
+team,club,unit,position,players_published,first_string,second_string,third_string,expected_starter_next_game,string_used,deficiency_points,out_players_skipped,no_backup_published,as_of_stamp,source
+ARI,Arizona Cardinals,Offense,WR,2,Reggie Virgil,Harrison Wallace III,,Reggie Virgil,1,0,,no,,https://www.azcardinals.com/team/depth-chart
+ARI,Arizona Cardinals,Offense,LT,2,Jayden Williams,Jedrick Wills,,Jayden Williams,1,0,,no,,https://www.azcardinals.com/team/depth-chart
+ARI,Arizona Cardinals,Offense,LG,2,Isaac Seumalo,Hayden Conner,,Isaac Seumalo,1,0,,no,,https://www.azcardinals.com/team/depth-chart
+ARI,Arizona Cardinals,Offense,C,2,Hjalte Froholdt,Kingsley Eguakun,,Hjalte Froholdt,1,0,,no,,https://www.azcardinals.com/team/depth-chart
+ARI,Arizona Cardinals,Offense,RG,2,Isaiah Adams,Jon Gaines II,,Isaiah Adams,1,0,,no,,https://www.azcardinals.com/team/depth-chart
+ARI,Arizona Cardinals,Offense,RT,3,Elijah Wilkinson,Josh Fryar,Albert Reese,Elijah Wilkinson,1,0,,no,,https://www.azcardinals.com/team/depth-chart
+ARI,Arizona Cardinals,Offense,TE,1,Trey McBride,,,Trey McBride,1,0,,yes,,https://www.azcardinals.com/team/depth-chart
+ARI,Arizona Cardinals,Offense,TE,2,Elijah Higgins,Teagan Quitoriano,,Elijah Higgins,1,0,,no,,https://www.azcardinals.com/team/depth-chart
+ARI,Arizona Cardinals,Offense,WR,2,Simi Fehoko,Devin Duvernay,,Simi Fehoko,1,0,,no,,https://www.azcardinals.com/team/depth-chart
+ARI,Arizona Cardinals,Offense,QB,3,Carson Beck,Josh Johnson,Joey Aguilar,Carson Beck,1,0,,no,,https://www.azcardinals.com/team/depth-chart
+ARI,Arizona Cardinals,Offense,RB,3,Tyler Allgeier,Bam Knight,Evan Hull,Tyler Allgeier,1,0,,no,,https://www.azcardinals.com/team/depth-chart
+ARI,Arizona Cardinals,Defense,DT,2,Dante Stills,Darius Robinson,,Dante Stills,1,0,,no,,https://www.azcardinals.com/team/depth-chart
+ARI,Arizona Cardinals,Defense,NT,2,Roy Lopez,Andrew Billings,,Roy Lopez,1,0,,no,,https://www.azcardinals.com/team/depth-chart
+ARI,Arizona Cardinals,Defense,DT,2,Walter Nolen III,L.J. Collier,,Walter Nolen III,1,0,,no,,https://www.azcardinals.com/team/depth-chart
+ARI,Arizona Cardinals,Defense,OLB,3,Josh Sweat,Jordan Burch,Eku Leota,Josh Sweat,1,0,,no,,https://www.azcardinals.com/team/depth-chart
+ARI,Arizona Cardinals,Defense,ILB,2,Jack Gibbens,Karson Sharar,,Jack Gibbens,1,0,,no,,https://www.azcardinals.com/team/depth-chart
+ARI,Arizona Cardinals,Defense,ILB,2,Mack Wilson Sr.,Cody Simon,,Mack Wilson Sr.,1,0,,no,,https://www.azcardinals.com/team/depth-chart
+ARI,Arizona Cardinals,Defense,OLB,2,Zaven Collins,Baron Browning,,Zaven Collins,1,0,,no,,https://www.azcardinals.com/team/depth-chart
+ARI,Arizona Cardinals,Defense,CB,2,Denzel Burke,Starling Thomas V,,Denzel Burke,1,0,,no,,https://www.azcardinals.com/team/depth-chart
+ARI,Arizona Cardinals,Defense,CB,2,Max Melton,Kei'Trel Clark,,Max Melton,1,0,,no,,https://www.azcardinals.com/team/depth-chart
+ARI,Arizona Cardinals,Defense,CB,2,Kalen King,Garrett Williams,,Kalen King,1,0,,no,,https://www.azcardinals.com/team/depth-chart
+ARI,Arizona Cardinals,Defense,S,2,Andrew Wingard,Kitan Crawford,,Andrew Wingard,1,0,,no,,https://www.azcardinals.com/team/depth-chart
+ARI,Arizona Cardinals,Defense,S,2,Budda Baker,Dadrion Taylor-Demerson,,Budda Baker,1,0,,no,,https://www.azcardinals.com/team/depth-chart
+ATL,Atlanta Falcons,Offense,WR,2,Drake London,Chris Blair,,Drake London,1,0,,no,,https://www.atlantafalcons.com/team/depth-chart
+ATL,Atlanta Falcons,Offense,LT,2,Jake Matthews,Cameron Williams,,Jake Matthews,1,0,,no,,https://www.atlantafalcons.com/team/depth-chart
+ATL,Atlanta Falcons,Offense,LG,2,Matthew Bergeron,Kyle Hinton,,Matthew Bergeron,1,0,,no,,https://www.atlantafalcons.com/team/depth-chart
+ATL,Atlanta Falcons,Offense,C,1,Corey Levin,,,Corey Levin,1,0,,yes,,https://www.atlantafalcons.com/team/depth-chart
+ATL,Atlanta Falcons,Offense,RG,2,Chris Lindstrom,Andrew Vorhees,,Chris Lindstrom,1,0,,no,,https://www.atlantafalcons.com/team/depth-chart
+ATL,Atlanta Falcons,Offense,RT,2,Jawaan Taylor,Ethan Onianwa,,Jawaan Taylor,1,0,,no,,https://www.atlantafalcons.com/team/depth-chart
+ATL,Atlanta Falcons,Offense,TE,2,Kyle Pitts Sr.,Austin Hooper,,Kyle Pitts Sr.,1,0,,no,,https://www.atlantafalcons.com/team/depth-chart
+ATL,Atlanta Falcons,Offense,TE,2,Charlie Woerner,Nick Muse,,Charlie Woerner,1,0,,no,,https://www.atlantafalcons.com/team/depth-chart
+ATL,Atlanta Falcons,Offense,RB,2,Bijan Robinson,Khalil Herbert,,Bijan Robinson,1,0,,no,,https://www.atlantafalcons.com/team/depth-chart
+ATL,Atlanta Falcons,Offense,QB,4,Michael Penix Jr.,Tua Tagovailoa,Andy Dalton,Michael Penix Jr.,1,0,,no,,https://www.atlantafalcons.com/team/depth-chart
+ATL,Atlanta Falcons,Offense,WR,2,Olamide Zaccheaus,Zachariah Branch,,Olamide Zaccheaus,1,0,,no,,https://www.atlantafalcons.com/team/depth-chart
+ATL,Atlanta Falcons,Offense,WR,2,Jahan Dotson,Beaux Collins,,Jahan Dotson,1,0,,no,,https://www.atlantafalcons.com/team/depth-chart
+ATL,Atlanta Falcons,Defense,DE,3,Cameron Thomas,Za'Darius Smith,Charles Snowden,Cameron Thomas,1,0,,no,,https://www.atlantafalcons.com/team/depth-chart
+ATL,Atlanta Falcons,Defense,DL,2,Maason Smith,Gervon Dexter Sr.,,Maason Smith,1,0,,no,,https://www.atlantafalcons.com/team/depth-chart
+ATL,Atlanta Falcons,Defense,DL,2,LaCale London,Zach Harrison,,LaCale London,1,0,,no,,https://www.atlantafalcons.com/team/depth-chart
+ATL,Atlanta Falcons,Defense,DE,3,Brandon Dorlus,Yasir Abdullah,James Pearce Jr.,Brandon Dorlus,1,0,,no,,https://www.atlantafalcons.com/team/depth-chart
+ATL,Atlanta Falcons,Defense,ILB,3,Divine Deablo,Christian Harris,Josh Woods,Divine Deablo,1,0,,no,,https://www.atlantafalcons.com/team/depth-chart
+ATL,Atlanta Falcons,Defense,ILB,2,Kendal Daniels,Harold Perkins Jr.,,Kendal Daniels,1,0,,no,,https://www.atlantafalcons.com/team/depth-chart
+ATL,Atlanta Falcons,Defense,CB,2,A.J. Terrell Jr.,Robert Longerbeam,,A.J. Terrell Jr.,1,0,,no,,https://www.atlantafalcons.com/team/depth-chart
+ATL,Atlanta Falcons,Defense,S,1,DeMarcco Hellams,,,DeMarcco Hellams,1,0,,yes,,https://www.atlantafalcons.com/team/depth-chart
+ATL,Atlanta Falcons,Defense,S,2,Xavier Watts,Sydney Brown,,Xavier Watts,1,0,,no,,https://www.atlantafalcons.com/team/depth-chart
+ATL,Atlanta Falcons,Defense,CB,3,C.J. Henderson,Mike Hughes,Mike Ford Jr,C.J. Henderson,1,0,,no,,https://www.atlantafalcons.com/team/depth-chart
+ATL,Atlanta Falcons,Defense,NB,2,Avieon Terrell,Billy Bowman Jr.,,Avieon Terrell,1,0,,no,,https://www.atlantafalcons.com/team/depth-chart
+BAL,Baltimore Ravens,Offense,WR,3,Zay Flowers,Devontez Walker,Elijah Sarratt,Zay Flowers,1,0,,no,,https://www.baltimoreravens.com/team/depth-chart
+BAL,Baltimore Ravens,Offense,WR,3,Rashod Bateman,Ja'Kobi Lane,LaJohntay Wester,Rashod Bateman,1,0,,no,,https://www.baltimoreravens.com/team/depth-chart
+BAL,Baltimore Ravens,Offense,LT,2,Ronnie Stanley,Carson Vinson,,Ronnie Stanley,1,0,,no,,https://www.baltimoreravens.com/team/depth-chart
+BAL,Baltimore Ravens,Offense,LG,2,John Simpson,Ryan Neuzil,,John Simpson,1,0,,no,,https://www.baltimoreravens.com/team/depth-chart
+BAL,Baltimore Ravens,Offense,C,2,Cam Jurgens,Ryan Neuzil,,Cam Jurgens,1,0,,no,,https://www.baltimoreravens.com/team/depth-chart
+BAL,Baltimore Ravens,Offense,RG,2,Vega Ioane,Emery Jones Jr.,,Vega Ioane,1,0,,no,,https://www.baltimoreravens.com/team/depth-chart
+BAL,Baltimore Ravens,Offense,RT,2,Roger Rosengarten,Carson Vinson,,Roger Rosengarten,1,0,,no,,https://www.baltimoreravens.com/team/depth-chart
+BAL,Baltimore Ravens,Offense,TE,2,Mark Andrews,Josh Cuevas,,Mark Andrews,1,0,,no,,https://www.baltimoreravens.com/team/depth-chart
+BAL,Baltimore Ravens,Offense,TE,1,Matt Hibner,,,Matt Hibner,1,0,,yes,,https://www.baltimoreravens.com/team/depth-chart
+BAL,Baltimore Ravens,Offense,QB,3,Jacoby Brissett,Joe Fagnano,Kedon Slovis,Jacoby Brissett,1,0,,no,,https://www.baltimoreravens.com/team/depth-chart
+BAL,Baltimore Ravens,Offense,RB,3,Derrick Henry,Justice Hill,Rasheen Ali,Derrick Henry,1,0,,no,,https://www.baltimoreravens.com/team/depth-chart
+BAL,Baltimore Ravens,Defense,DT,2,Nnamdi Madubuike,Broderick Washington Jr.,,Nnamdi Madubuike,1,0,,no,,https://www.baltimoreravens.com/team/depth-chart
+BAL,Baltimore Ravens,Defense,NT,2,Travis Jones,John Jenkins,,Travis Jones,1,0,,no,,https://www.baltimoreravens.com/team/depth-chart
+BAL,Baltimore Ravens,Defense,DE,2,Calais Campbell,Aeneas Peebles,,Calais Campbell,1,0,,no,,https://www.baltimoreravens.com/team/depth-chart
+BAL,Baltimore Ravens,Defense,RUSH,2,Trey Hendrickson,Mike Green,,Trey Hendrickson,1,0,,no,,https://www.baltimoreravens.com/team/depth-chart
+BAL,Baltimore Ravens,Defense,MLB,2,Roquan Smith,Jay Higgins IV,,Roquan Smith,1,0,,no,,https://www.baltimoreravens.com/team/depth-chart
+BAL,Baltimore Ravens,Defense,WLB,2,Trenton Simpson,Teddye Buchanan,,Trenton Simpson,1,0,,no,,https://www.baltimoreravens.com/team/depth-chart
+BAL,Baltimore Ravens,Defense,SAM,3,Mike Green,Zion Young,Ethan Burke,Mike Green,1,0,,no,,https://www.baltimoreravens.com/team/depth-chart
+BAL,Baltimore Ravens,Defense,CB,2,Marlon Humphrey,Chidobe Awuzie,,Marlon Humphrey,1,0,,no,,https://www.baltimoreravens.com/team/depth-chart
+BAL,Baltimore Ravens,Defense,DB,3,Kyle Hamilton,Keyon Martin,Chandler Rivers,Kyle Hamilton,1,0,,no,,https://www.baltimoreravens.com/team/depth-chart
+BAL,Baltimore Ravens,Defense,SS,2,Jaylinn Hawkins,Keondre Jackson,,Jaylinn Hawkins,1,0,,no,,https://www.baltimoreravens.com/team/depth-chart
+BAL,Baltimore Ravens,Defense,FS,2,Malaki Starks,K'Von Wallace,,Malaki Starks,1,0,,no,,https://www.baltimoreravens.com/team/depth-chart
+BAL,Baltimore Ravens,Defense,CB,2,Nate Wiggins,T.J. Tampa Jr.,,Nate Wiggins,1,0,,no,,https://www.baltimoreravens.com/team/depth-chart
+BUF,Buffalo Bills,Offense,WR,2,DJ Moore,Skyler Bell,,DJ Moore,1,0,,no,,https://www.buffalobills.com/team/depth-chart
+BUF,Buffalo Bills,Offense,LT,2,Dion Dawkins,Jude Bowry,,Dion Dawkins,1,0,,no,,https://www.buffalobills.com/team/depth-chart
+BUF,Buffalo Bills,Offense,LG,2,Alec Anderson,Austin Corbett,,Alec Anderson,1,0,,no,,https://www.buffalobills.com/team/depth-chart
+BUF,Buffalo Bills,Offense,C,2,Connor McGovern,Lloyd Cushenberry,,Connor McGovern,1,0,,no,,https://www.buffalobills.com/team/depth-chart
+BUF,Buffalo Bills,Offense,RG,2,O'Cyrus Torrence,Ar'maj Reed-Adams,,O'Cyrus Torrence,1,0,,no,,https://www.buffalobills.com/team/depth-chart
+BUF,Buffalo Bills,Offense,RT,2,Spencer Brown,Tylan Grable,,Spencer Brown,1,0,,no,,https://www.buffalobills.com/team/depth-chart
+BUF,Buffalo Bills,Offense,TE,4,Dalton Kincaid,Dawson Knox,Jackson Hawes,Dalton Kincaid,1,0,,no,,https://www.buffalobills.com/team/depth-chart
+BUF,Buffalo Bills,Offense,QB,2,Josh Allen,Kyle Allen,,Josh Allen,1,0,,no,,https://www.buffalobills.com/team/depth-chart
+BUF,Buffalo Bills,Offense,RB,3,James Cook III,Ray Davis,Ty Johnson,James Cook III,1,0,,no,,https://www.buffalobills.com/team/depth-chart
+BUF,Buffalo Bills,Offense,WR,2,Khalil Shakir,Greg Dortch,,Khalil Shakir,1,0,,no,,https://www.buffalobills.com/team/depth-chart
+BUF,Buffalo Bills,Offense,WR,1,Keon Coleman,,,Keon Coleman,1,0,,yes,,https://www.buffalobills.com/team/depth-chart
+BUF,Buffalo Bills,Defense,DL,2,Ed Oliver,DeWayne Carter,,Ed Oliver,1,0,,no,,https://www.buffalobills.com/team/depth-chart
+BUF,Buffalo Bills,Defense,DL,2,Deone Walker,Greg Gaines,,Deone Walker,1,0,,no,,https://www.buffalobills.com/team/depth-chart
+BUF,Buffalo Bills,Defense,DL,2,T.J. Sanders,Landon Jackson,,T.J. Sanders,1,0,,no,,https://www.buffalobills.com/team/depth-chart
+BUF,Buffalo Bills,Defense,OLB,3,Greg Rousseau,Michael Hoecht,Mike Danna,Greg Rousseau,1,0,,no,,https://www.buffalobills.com/team/depth-chart
+BUF,Buffalo Bills,Defense,OLB,3,Bradley Chubb,TJ Parker,Javon Solomon,Bradley Chubb,1,0,,no,,https://www.buffalobills.com/team/depth-chart
+BUF,Buffalo Bills,Defense,ILB,2,Dorian Williams,Kaleb Elarms-Orr,,Dorian Williams,1,0,,no,,https://www.buffalobills.com/team/depth-chart
+BUF,Buffalo Bills,Defense,ILB,2,Terrel Bernard,Joe Andreessen,,Terrel Bernard,1,0,,no,,https://www.buffalobills.com/team/depth-chart
+BUF,Buffalo Bills,Defense,CB,2,Christian Benford,Dee Alford,,Christian Benford,1,0,,no,,https://www.buffalobills.com/team/depth-chart
+BUF,Buffalo Bills,Defense,CB,2,Davison Igbinosun,Maxwell Hairston,,Davison Igbinosun,1,0,,no,,https://www.buffalobills.com/team/depth-chart
+BUF,Buffalo Bills,Defense,NCB,2,Dee Alford,Te'Cory Couch,,Dee Alford,1,0,,no,,https://www.buffalobills.com/team/depth-chart
+BUF,Buffalo Bills,Defense,S,2,Damar Hamlin,Sam Franklin Jr.,,Damar Hamlin,1,0,,no,,https://www.buffalobills.com/team/depth-chart
+BUF,Buffalo Bills,Defense,S,2,Cole Bishop,Jalon Kilgore,,Cole Bishop,1,0,,no,,https://www.buffalobills.com/team/depth-chart
+CAR,Carolina Panthers,Offense,WR,2,Tetairoa McMillan,Brycen Tremayne,,Tetairoa McMillan,1,0,,no,,https://www.panthers.com/team/depth-chart
+CAR,Carolina Panthers,Offense,WR,1,Jalen Coker,,,Jalen Coker,1,0,,yes,,https://www.panthers.com/team/depth-chart
+CAR,Carolina Panthers,Offense,LT,2,Rasheed Walker,Stone Forsythe,,Rasheed Walker,1,0,,no,,https://www.panthers.com/team/depth-chart
+CAR,Carolina Panthers,Offense,LG,2,Damien Lewis,Corey Bullock,,Damien Lewis,1,0,,no,,https://www.panthers.com/team/depth-chart
+CAR,Carolina Panthers,Offense,C,2,Luke Fortner,Sam Hecht,,Luke Fortner,1,0,,no,,https://www.panthers.com/team/depth-chart
+CAR,Carolina Panthers,Offense,RG,2,Robert Hunt,Torricelli Simpkins III,,Robert Hunt,1,0,,no,,https://www.panthers.com/team/depth-chart
+CAR,Carolina Panthers,Offense,RT,2,Monroe Freeling,Stone Forsythe,,Monroe Freeling,1,0,,no,,https://www.panthers.com/team/depth-chart
+CAR,Carolina Panthers,Offense,TE,5,Tommy Tremble,Mitchell Evans,Darren Waller,Tommy Tremble,1,0,,no,,https://www.panthers.com/team/depth-chart
+CAR,Carolina Panthers,Offense,WR,1,John Metchie III,,,John Metchie III,1,0,,yes,,https://www.panthers.com/team/depth-chart
+CAR,Carolina Panthers,Offense,QB,3,Bryce Young,Kenny Pickett,Haynes King,Bryce Young,1,0,,no,,https://www.panthers.com/team/depth-chart
+CAR,Carolina Panthers,Offense,RB,4,Chuba Hubbard,Trevor Etienne,AJ Dillon,Chuba Hubbard,1,0,,no,,https://www.panthers.com/team/depth-chart
+CAR,Carolina Panthers,Defense,DL,2,Bobby Brown III,TeRah Edwards,,Bobby Brown III,1,0,,no,,https://www.panthers.com/team/depth-chart
+CAR,Carolina Panthers,Defense,DL,2,Tershawn Wharton,Lee Hunter,,Tershawn Wharton,1,0,,no,,https://www.panthers.com/team/depth-chart
+CAR,Carolina Panthers,Defense,DL,2,Derrick Brown,Aaron Hall,,Derrick Brown,1,0,,no,,https://www.panthers.com/team/depth-chart
+CAR,Carolina Panthers,Defense,OLB,3,Patrick Jones II,Trevis Gipson,Nick Hampton,Patrick Jones II,1,0,,no,,https://www.panthers.com/team/depth-chart
+CAR,Carolina Panthers,Defense,LB,3,Devin Lloyd,Jackson Kuwatch,Bam Martin-Scott,Devin Lloyd,1,0,,no,,https://www.panthers.com/team/depth-chart
+CAR,Carolina Panthers,Defense,LB,2,Bobby Okereke,Tyrel Dodson,,Bobby Okereke,1,0,,no,,https://www.panthers.com/team/depth-chart
+CAR,Carolina Panthers,Defense,OLB,2,Jaelan Phillips,Princely Umanmielen,,Jaelan Phillips,1,0,,no,,https://www.panthers.com/team/depth-chart
+CAR,Carolina Panthers,Defense,CB,2,Chau Smith-Wade,Malcolm DeWalt IV,,Chau Smith-Wade,1,0,,no,,https://www.panthers.com/team/depth-chart
+CAR,Carolina Panthers,Defense,CB,1,Will Lee III,,,Will Lee III,1,0,,yes,,https://www.panthers.com/team/depth-chart
+CAR,Carolina Panthers,Defense,S,2,Tre'von Moehrig,Zakee Wheatley,,Tre'von Moehrig,1,0,,no,,https://www.panthers.com/team/depth-chart
+CAR,Carolina Panthers,Defense,S,3,Nick Scott,Lathan Ransom,Isaiah Simmons,Nick Scott,1,0,,no,,https://www.panthers.com/team/depth-chart
+CHI,Chicago Bears,Offense,WR,2,Rome Odunze,Zavion Thomas,,Rome Odunze,1,0,,no,As of 10/31/2026,https://www.chicagobears.com/team/depth-chart
+CHI,Chicago Bears,Offense,LT,2,Theo Benedet,Ozzy Trapilo,,Theo Benedet,1,0,,no,As of 10/31/2026,https://www.chicagobears.com/team/depth-chart
+CHI,Chicago Bears,Offense,LG,2,Joe Thuney,Jordan McFadden,,Joe Thuney,1,0,,no,As of 10/31/2026,https://www.chicagobears.com/team/depth-chart
+CHI,Chicago Bears,Offense,C,2,Garrett Bradbury,Logan Jones,,Garrett Bradbury,1,0,,no,As of 10/31/2026,https://www.chicagobears.com/team/depth-chart
+CHI,Chicago Bears,Offense,RG,2,Jonah Jackson,Luke Newman,,Jonah Jackson,1,0,,no,As of 10/31/2026,https://www.chicagobears.com/team/depth-chart
+CHI,Chicago Bears,Offense,RT,2,Darnell Wright,Ozzy Trapilo,,Darnell Wright,1,0,,no,As of 10/31/2026,https://www.chicagobears.com/team/depth-chart
+CHI,Chicago Bears,Offense,TE,2,Colston Loveland,Sam Roush,,Colston Loveland,1,0,,no,As of 10/31/2026,https://www.chicagobears.com/team/depth-chart
+CHI,Chicago Bears,Offense,WR,1,Kalif Raymond,,,Kalif Raymond,1,0,,yes,As of 10/31/2026,https://www.chicagobears.com/team/depth-chart
+CHI,Chicago Bears,Offense,WR,2,Luther Burden III,Jahdae Walker,,Luther Burden III,1,0,,no,As of 10/31/2026,https://www.chicagobears.com/team/depth-chart
+CHI,Chicago Bears,Offense,QB,3,Caleb Williams,Tyson Bagent,Case Keenum,Caleb Williams,1,0,,no,As of 10/31/2026,https://www.chicagobears.com/team/depth-chart
+CHI,Chicago Bears,Offense,RB,3,D'Andre Swift,Kyle Monangai,Roschon Johnson,D'Andre Swift,1,0,,no,As of 10/31/2026,https://www.chicagobears.com/team/depth-chart
+CHI,Chicago Bears,Defense,DL,3,Austin Booker,Shemar Turner,James Lynch,Austin Booker,1,0,,no,As of 10/31/2026,https://www.chicagobears.com/team/depth-chart
+CHI,Chicago Bears,Defense,DL,3,Grady Jarrett,Neville Gallimore,Jayden Loving,Grady Jarrett,1,0,,no,As of 10/31/2026,https://www.chicagobears.com/team/depth-chart
+CHI,Chicago Bears,Defense,DL,3,Jeffery Simmons,Kentavius Street,Jordan van den Berg,Jeffery Simmons,1,0,,no,As of 10/31/2026,https://www.chicagobears.com/team/depth-chart
+CHI,Chicago Bears,Defense,DL,2,Montez Sweat,Daniel Hardy,,Montez Sweat,1,0,,no,As of 10/31/2026,https://www.chicagobears.com/team/depth-chart
+CHI,Chicago Bears,Defense,LB,3,T.J. Edwards,D'Marco Jackson,Keyshaun Elliott,T.J. Edwards,1,0,,no,As of 10/31/2026,https://www.chicagobears.com/team/depth-chart
+CHI,Chicago Bears,Defense,LB,3,Devin Bush,Noah Sewell,Jack Sanborn,Devin Bush,1,0,,no,As of 10/31/2026,https://www.chicagobears.com/team/depth-chart
+CHI,Chicago Bears,Defense,S,2,Dillon Thieneman,Elijah Hicks,,Dillon Thieneman,1,0,,no,As of 10/31/2026,https://www.chicagobears.com/team/depth-chart
+CHI,Chicago Bears,Defense,S,2,Cam Lewis,Skyler Thomas,,Cam Lewis,1,0,,no,As of 10/31/2026,https://www.chicagobears.com/team/depth-chart
+CHI,Chicago Bears,Defense,DB,2,Kyler Gordon,Malik Muhammad II,,Kyler Gordon,1,0,,no,As of 10/31/2026,https://www.chicagobears.com/team/depth-chart
+CHI,Chicago Bears,Defense,CB,2,Tyrique Stevenson Sr.,Clark Phillips III,,Tyrique Stevenson Sr.,1,0,,no,As of 10/31/2026,https://www.chicagobears.com/team/depth-chart
+CHI,Chicago Bears,Defense,CB,2,Jaylon Johnson,Josh Blackwell,,Jaylon Johnson,1,0,,no,As of 10/31/2026,https://www.chicagobears.com/team/depth-chart
+CIN,Cincinnati Bengals,Offense,WR,2,Ja'Marr Chase,Mitch Tinsley,,Ja'Marr Chase,1,0,,no,,https://www.bengals.com/team/depth-chart
+CIN,Cincinnati Bengals,Offense,LOT,2,Orlando Brown Jr.,Javon Foster,,Orlando Brown Jr.,1,0,,no,,https://www.bengals.com/team/depth-chart
+CIN,Cincinnati Bengals,Offense,LG,2,Dylan Fairchild,Jalen Rivers,,Dylan Fairchild,1,0,,no,,https://www.bengals.com/team/depth-chart
+CIN,Cincinnati Bengals,Offense,C,2,Ted Karras,Connor Lew,,Ted Karras,1,0,,no,,https://www.bengals.com/team/depth-chart
+CIN,Cincinnati Bengals,Offense,RG,2,Dalton Risner,Jacob Bayer,,Dalton Risner,1,0,,no,,https://www.bengals.com/team/depth-chart
+CIN,Cincinnati Bengals,Offense,ROT,2,Amarius Mims,Myles Hinton,,Amarius Mims,1,0,,no,,https://www.bengals.com/team/depth-chart
+CIN,Cincinnati Bengals,Offense,TE,4,Drew Sample,Mike Gesicki,Jack Endries,Drew Sample,1,0,,no,,https://www.bengals.com/team/depth-chart
+CIN,Cincinnati Bengals,Offense,WR,1,Dohnte Meyers,,,Dohnte Meyers,1,0,,yes,,https://www.bengals.com/team/depth-chart
+CIN,Cincinnati Bengals,Offense,WR,2,Tee Higgins,Colbie Young,,Tee Higgins,1,0,,no,,https://www.bengals.com/team/depth-chart
+CIN,Cincinnati Bengals,Offense,QB,2,Joe Burrow,Joe Flacco,,Joe Burrow,1,0,,no,,https://www.bengals.com/team/depth-chart
+CIN,Cincinnati Bengals,Offense,HB,3,Chase Brown,Samaje Perine,Tahj Brooks,Chase Brown,1,0,,no,,https://www.bengals.com/team/depth-chart
+CIN,Cincinnati Bengals,Defense,LDE,3,Myles Murphy,Shemar Stewart,Cedric Johnson,Myles Murphy,1,0,,no,,https://www.bengals.com/team/depth-chart
+CIN,Cincinnati Bengals,Defense,NT,2,Dexter Lawrence II,T.J. Slaton Jr.,,Dexter Lawrence II,1,0,,no,,https://www.bengals.com/team/depth-chart
+CIN,Cincinnati Bengals,Defense,DT,4,Jonathan Allen,B.J. Hill,Kris Jenkins Jr.,Jonathan Allen,1,0,,no,,https://www.bengals.com/team/depth-chart
+CIN,Cincinnati Bengals,Defense,RDE,2,Boye Mafe,Cashius Howell,,Boye Mafe,1,0,,no,,https://www.bengals.com/team/depth-chart
+CIN,Cincinnati Bengals,Defense,LB,3,Barrett Carter,Joe Giles-Harris,Jack Kiser,Barrett Carter,1,0,,no,,https://www.bengals.com/team/depth-chart
+CIN,Cincinnati Bengals,Defense,LB,2,Demetrius Knight Jr.,Oren Burks,,Demetrius Knight Jr.,1,0,,no,,https://www.bengals.com/team/depth-chart
+CIN,Cincinnati Bengals,Defense,NCB,2,Dax Hill,Josh Newton,,Dax Hill,1,0,,no,,https://www.bengals.com/team/depth-chart
+CIN,Cincinnati Bengals,Defense,CB,2,DJ Ivey,Tacario Davis,,DJ Ivey,1,0,,no,,https://www.bengals.com/team/depth-chart
+CIN,Cincinnati Bengals,Defense,CB,2,DJ Turner II,Tacario Davis,,DJ Turner II,1,0,,no,,https://www.bengals.com/team/depth-chart
+CIN,Cincinnati Bengals,Defense,S,2,Bryan Cook,PJ Jules,,Bryan Cook,1,0,,no,,https://www.bengals.com/team/depth-chart
+CIN,Cincinnati Bengals,Defense,S,3,Jordan Battle,Kyle Dugger,Russ Yeast,Jordan Battle,1,0,,no,,https://www.bengals.com/team/depth-chart
+CLE,Cleveland Browns,Offense,WR,2,Jerry Jeudy,Tylan Wallace,,Jerry Jeudy,1,0,,no,,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Cleveland Browns,Offense,LT,1,Spencer Fano,,,Spencer Fano,1,0,,yes,,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Cleveland Browns,Offense,LG,2,Zion Johnson,Zak Zinter,,Zion Johnson,1,0,,no,,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Cleveland Browns,Offense,C,3,Elgton Jenkins,Luke Wypler,Parker Brailsford,Elgton Jenkins,1,0,,no,,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Cleveland Browns,Offense,RG,1,Austin Barber,,,Austin Barber,1,0,,yes,,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Cleveland Browns,Offense,RT,2,Tytus Howard,Dawand Jones,,Tytus Howard,1,0,,no,,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Cleveland Browns,Offense,WR,2,Denzel Boston,Malachi Corley,,Denzel Boston,1,0,,no,,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Cleveland Browns,Offense,QB,4,Deshaun Watson,Shedeur Sanders,Dillon Gabriel,Deshaun Watson,1,0,,no,,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Cleveland Browns,Offense,RB,4,Quinshon Judkins,Dylan Sampson,Michael Burton,Quinshon Judkins,1,0,,no,,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Cleveland Browns,Offense,TE,2,Harold Fannin Jr.,Blake Whiteheart,,Harold Fannin Jr.,1,0,,no,,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Cleveland Browns,Offense,WR,2,KC Concepcion Jr.,Isaiah Bond,,KC Concepcion Jr.,1,0,,no,,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Cleveland Browns,Defense,LDE,2,Jared Verse,Sam Williams,,Jared Verse,1,0,,no,,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Cleveland Browns,Defense,LDT,3,Maliek Collins,Mike Hall Jr.,Sam Kamara,Maliek Collins,1,0,,no,,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Cleveland Browns,Defense,RDT,2,Mason Graham,Adin Huntington,,Mason Graham,1,0,,no,,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Cleveland Browns,Defense,RDE,2,Isaiah McGuire,Derek Barnett,,Isaiah McGuire,1,0,,no,,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Cleveland Browns,Defense,WILL,1,Carson Schwesinger,,,Carson Schwesinger,1,0,,yes,,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Cleveland Browns,Defense,MIKE,2,Quincy Williams,Justin Jefferson,,Quincy Williams,1,0,,no,,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Cleveland Browns,Defense,SAM,2,Easton Mascarenas-Arnold,Winston Reid,,Easton Mascarenas-Arnold,1,0,,no,,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Cleveland Browns,Defense,CB,3,Tyson Campbell,Myles Harden,Noah Igbinoghene,Tyson Campbell,1,0,,no,,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Cleveland Browns,Defense,CB,3,Denzel Ward,Mekhi Blackmon,Toriano Pride Jr.,Denzel Ward,1,0,,no,,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Cleveland Browns,Defense,SS,3,Grant Delpit,Emmanuel McNeil-Warren,Daniel Thomas,Grant Delpit,1,0,,no,,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Cleveland Browns,Defense,FS,2,Ronnie Hickman,Donovan McMillon,,Ronnie Hickman,1,0,,no,,https://www.clevelandbrowns.com/team/depth-chart
+DAL,Dallas Cowboys,Offense,WR,2,George Pickens,Camden Brown,,George Pickens,1,0,,no,,https://www.dallascowboys.com/team/depth-chart
+DAL,Dallas Cowboys,Offense,LT,2,Tyler Guyton,Drew Shelton,,Tyler Guyton,1,0,,no,,https://www.dallascowboys.com/team/depth-chart
+DAL,Dallas Cowboys,Offense,LG,2,Tyler Smith,T.J. Bass,,Tyler Smith,1,0,,no,,https://www.dallascowboys.com/team/depth-chart
+DAL,Dallas Cowboys,Offense,C,2,Cooper Beebe,T.J. Bass,,Cooper Beebe,1,0,,no,,https://www.dallascowboys.com/team/depth-chart
+DAL,Dallas Cowboys,Offense,RG,2,Tyler Booker,Ajani Cornelius,,Tyler Booker,1,0,,no,,https://www.dallascowboys.com/team/depth-chart
+DAL,Dallas Cowboys,Offense,RT,2,Terence Steele,Broderick Jones,,Terence Steele,1,0,,no,,https://www.dallascowboys.com/team/depth-chart
+DAL,Dallas Cowboys,Offense,TE,3,Jake Ferguson,Brevyn Spann-Ford,Luke Schoonmaker,Jake Ferguson,1,0,,no,,https://www.dallascowboys.com/team/depth-chart
+DAL,Dallas Cowboys,Offense,WR,2,Ryan Flournoy,KaVontae Turpin,,Ryan Flournoy,1,0,,no,,https://www.dallascowboys.com/team/depth-chart
+DAL,Dallas Cowboys,Offense,WR,2,CeeDee Lamb,Jonathan Mingo,,CeeDee Lamb,1,0,,no,,https://www.dallascowboys.com/team/depth-chart
+DAL,Dallas Cowboys,Offense,QB,2,Dak Prescott,Sam Howell,,Dak Prescott,1,0,,no,,https://www.dallascowboys.com/team/depth-chart
+DAL,Dallas Cowboys,Offense,RB,2,Javonte Williams,Tyler Goodson,,Javonte Williams,1,0,,no,,https://www.dallascowboys.com/team/depth-chart
+DAL,Dallas Cowboys,Offense,FB,1,Hunter Luepke,,,Hunter Luepke,1,0,,yes,,https://www.dallascowboys.com/team/depth-chart
+DAL,Dallas Cowboys,Defense,DT,2,Otito Ogbonnia,Elijah Garcia,,Otito Ogbonnia,1,0,,no,,https://www.dallascowboys.com/team/depth-chart
+DAL,Dallas Cowboys,Defense,DT,1,Kenny Clark,,,Kenny Clark,1,0,,yes,,https://www.dallascowboys.com/team/depth-chart
+DAL,Dallas Cowboys,Defense,DT,2,Quinnen Williams,LT Overton,,Quinnen Williams,1,0,,no,,https://www.dallascowboys.com/team/depth-chart
+DAL,Dallas Cowboys,Defense,OLB,3,Donovan Ezeiruaku,James Houston,Tyrus Wheat,Donovan Ezeiruaku,1,0,,no,,https://www.dallascowboys.com/team/depth-chart
+DAL,Dallas Cowboys,Defense,LB,3,DeMarvion Overshown,Dee Winters,Justin Barron,DeMarvion Overshown,1,0,,no,,https://www.dallascowboys.com/team/depth-chart
+DAL,Dallas Cowboys,Defense,LB,2,Shemar James,Jaishawn Barham,,Shemar James,1,0,,no,,https://www.dallascowboys.com/team/depth-chart
+DAL,Dallas Cowboys,Defense,OLB,3,Rashan Gary,Von Miller,Marist Liufau,Rashan Gary,1,0,,no,,https://www.dallascowboys.com/team/depth-chart
+DAL,Dallas Cowboys,Defense,CB,3,Joey Porter Jr.,Shavon Revel Jr.,Ameer Speed,Joey Porter Jr.,1,0,,no,,https://www.dallascowboys.com/team/depth-chart
+DAL,Dallas Cowboys,Defense,DB,1,Caleb Downs,,,Caleb Downs,1,0,,yes,,https://www.dallascowboys.com/team/depth-chart
+DAL,Dallas Cowboys,Defense,CB,2,DaRon Bland,Cobie Durant,,DaRon Bland,1,0,,no,,https://www.dallascowboys.com/team/depth-chart
+DAL,Dallas Cowboys,Defense,S,3,P.J. Locke,Markquese Bell,Juanyeh Thomas,P.J. Locke,1,0,,no,,https://www.dallascowboys.com/team/depth-chart
+DAL,Dallas Cowboys,Defense,S,2,Malik Hooker,Alijah Clark,,Malik Hooker,1,0,,no,,https://www.dallascowboys.com/team/depth-chart
+DEN,Denver Broncos,Offense,WR,2,Marvin Mims Jr.,Troy Franklin,,Marvin Mims Jr.,1,0,,no,,https://www.denverbroncos.com/team/depth-chart
+DEN,Denver Broncos,Offense,WR,2,Jaylen Waddle,Lil'Jordan Humphrey,,Jaylen Waddle,1,0,,no,,https://www.denverbroncos.com/team/depth-chart
+DEN,Denver Broncos,Offense,LT,2,Garett Bolles,Matt Peart,,Garett Bolles,1,0,,no,,https://www.denverbroncos.com/team/depth-chart
+DEN,Denver Broncos,Offense,LG,2,Ben Powers,Kage Casey,,Ben Powers,1,0,,no,,https://www.denverbroncos.com/team/depth-chart
+DEN,Denver Broncos,Offense,C,2,Luke Wattenberg,Alex Forsyth,,Luke Wattenberg,1,0,,no,,https://www.denverbroncos.com/team/depth-chart
+DEN,Denver Broncos,Offense,RG,2,Quinn Meinerz,Kage Casey,,Quinn Meinerz,1,0,,no,,https://www.denverbroncos.com/team/depth-chart
+DEN,Denver Broncos,Offense,RT,2,Mike McGlinchey,Alex Palczewski,,Mike McGlinchey,1,0,,no,,https://www.denverbroncos.com/team/depth-chart
+DEN,Denver Broncos,Offense,TE,4,Evan Engram,Adam Trautman,Nate Adkins,Evan Engram,1,0,,no,,https://www.denverbroncos.com/team/depth-chart
+DEN,Denver Broncos,Offense,WR,1,Courtland Sutton,,,Courtland Sutton,1,0,,yes,,https://www.denverbroncos.com/team/depth-chart
+DEN,Denver Broncos,Offense,RB,2,J.K. Dobbins,Jonah Coleman,,J.K. Dobbins,1,0,,no,,https://www.denverbroncos.com/team/depth-chart
+DEN,Denver Broncos,Offense,FB,1,Adam Prentice,,,Adam Prentice,1,0,,yes,,https://www.denverbroncos.com/team/depth-chart
+DEN,Denver Broncos,Offense,QB,3,Bo Nix,Jarrett Stidham,Sam Ehlinger,Bo Nix,1,0,,no,,https://www.denverbroncos.com/team/depth-chart
+DEN,Denver Broncos,Defense,DE,3,Zach Allen,Jordan Jackson,Tyler Onyedim,Zach Allen,1,0,,no,,https://www.denverbroncos.com/team/depth-chart
+DEN,Denver Broncos,Defense,NT,2,D.J. Jones,Sai'vion Jones,,D.J. Jones,1,0,,no,,https://www.denverbroncos.com/team/depth-chart
+DEN,Denver Broncos,Defense,DE,2,Malcolm Roach,Eyioma Uwazurike,,Malcolm Roach,1,0,,no,,https://www.denverbroncos.com/team/depth-chart
+DEN,Denver Broncos,Defense,SLB,2,Nik Bonitto,Que Robinson,,Nik Bonitto,1,0,,no,,https://www.denverbroncos.com/team/depth-chart
+DEN,Denver Broncos,Defense,WLB,2,Jonathon Cooper,Dondrea Tillman,,Jonathon Cooper,1,0,,no,,https://www.denverbroncos.com/team/depth-chart
+DEN,Denver Broncos,Defense,ILB,2,Alex Singleton,Jordan Turner,,Alex Singleton,1,0,,no,,https://www.denverbroncos.com/team/depth-chart
+DEN,Denver Broncos,Defense,ILB,2,Justin Strnad,Karene Reid,,Justin Strnad,1,0,,no,,https://www.denverbroncos.com/team/depth-chart
+DEN,Denver Broncos,Defense,LCB,2,Pat Surtain II,Jahdae Barron,,Pat Surtain II,1,0,,no,,https://www.denverbroncos.com/team/depth-chart
+DEN,Denver Broncos,Defense,RCB,2,Riley Moss,Kris Abrams-Draine,,Riley Moss,1,0,,no,,https://www.denverbroncos.com/team/depth-chart
+DEN,Denver Broncos,Defense,NCB,2,Ja'Quan McMillian,Jahdae Barron,,Ja'Quan McMillian,1,0,,no,,https://www.denverbroncos.com/team/depth-chart
+DEN,Denver Broncos,Defense,S,3,Talanoa Hufanga,JL Skinner,Tycen Anderson,Talanoa Hufanga,1,0,,no,,https://www.denverbroncos.com/team/depth-chart
+DEN,Denver Broncos,Defense,S,3,Brandon Jones,Devon Key,Taylor Rapp,Brandon Jones,1,0,,no,,https://www.denverbroncos.com/team/depth-chart
+DET,Detroit Lions,Offense,WR,1,Jameson Williams,,,Jameson Williams,1,0,,yes,,https://www.detroitlions.com/team/depth-chart
+DET,Detroit Lions,Offense,WR,2,Amon-Ra St. Brown,DeAndre Carter,,Amon-Ra St. Brown,1,0,,no,,https://www.detroitlions.com/team/depth-chart
+DET,Detroit Lions,Offense,LT,1,Penei Sewell,,,Penei Sewell,1,0,,yes,,https://www.detroitlions.com/team/depth-chart
+DET,Detroit Lions,Offense,LG,2,Christian Mahogany,Miles Frazier,,Christian Mahogany,1,0,,no,,https://www.detroitlions.com/team/depth-chart
+DET,Detroit Lions,Offense,C,2,Cade Mays,Juice Scruggs,,Juice Scruggs,2,1,Cade Mays,no,,https://www.detroitlions.com/team/depth-chart
+DET,Detroit Lions,Offense,RG,2,Tate Ratledge,Seth McLaughlin,,Tate Ratledge,1,0,,no,,https://www.detroitlions.com/team/depth-chart
+DET,Detroit Lions,Offense,RT,2,Blake Miller,Larry Borom,,Blake Miller,1,0,,no,,https://www.detroitlions.com/team/depth-chart
+DET,Detroit Lions,Offense,TE,4,Sam LaPorta,Brock Wright,Tyler Conklin,Sam LaPorta,1,0,,no,,https://www.detroitlions.com/team/depth-chart
+DET,Detroit Lions,Offense,WR,2,Isaac TeSlaa,Tay Martin,,Isaac TeSlaa,1,0,,no,,https://www.detroitlions.com/team/depth-chart
+DET,Detroit Lions,Offense,QB,2,Jared Goff,Joshua Dobbs,,Jared Goff,1,0,,no,,https://www.detroitlions.com/team/depth-chart
+DET,Detroit Lions,Offense,RB,3,Jahmyr Gibbs,Sione Vaki,Jacob Saylors,Jahmyr Gibbs,1,0,,no,,https://www.detroitlions.com/team/depth-chart
+DET,Detroit Lions,Defense,EDGE,3,Aidan Hutchinson,Derrick Moore,Eric O'Neill,Aidan Hutchinson,1,0,,no,,https://www.detroitlions.com/team/depth-chart
+DET,Detroit Lions,Defense,DL,3,Alim McNeill,Skyler Gill-Howard,Mekhi Wingo,Alim McNeill,1,0,,no,,https://www.detroitlions.com/team/depth-chart
+DET,Detroit Lions,Defense,DL,2,Tyleik Williams,Levi Onwuzurike,,Tyleik Williams,1,0,,no,,https://www.detroitlions.com/team/depth-chart
+DET,Detroit Lions,Defense,EDGE,3,DJ Wonnum,Tyler Lacy,Ahmed Hassanein,DJ Wonnum,1,0,,no,,https://www.detroitlions.com/team/depth-chart
+DET,Detroit Lions,Defense,LB,2,Derrick Barnes,Joe Bachie,,Derrick Barnes,1,0,,no,,https://www.detroitlions.com/team/depth-chart
+DET,Detroit Lions,Defense,LB,2,Malcolm Rodriguez,K.J. Britt,,Malcolm Rodriguez,1,0,,no,,https://www.detroitlions.com/team/depth-chart
+DET,Detroit Lions,Defense,LB,2,Trevor Nowaske,Amen Ogbongbemiga,,Trevor Nowaske,1,0,,no,,https://www.detroitlions.com/team/depth-chart
+DET,Detroit Lions,Defense,CB,4,D.J. Reed,Rock Ya-Sin,Khalil Dorsey,Rock Ya-Sin,2,1,D.J. Reed,no,,https://www.detroitlions.com/team/depth-chart
+DET,Detroit Lions,Defense,CB,3,Roger McCreary,Ennis Rakestraw Jr.,Keith Abney II,Roger McCreary,1,0,,no,,https://www.detroitlions.com/team/depth-chart
+DET,Detroit Lions,Defense,S,1,Chuck Clark,,,Chuck Clark,1,0,,yes,,https://www.detroitlions.com/team/depth-chart
+DET,Detroit Lions,Defense,S,2,Brian Branch,Christian Izien,,Brian Branch,1,0,,no,,https://www.detroitlions.com/team/depth-chart
+GB,Green Bay Packers,Offense,WR,2,Christian Watson,Bo Melton,,Christian Watson,1,0,,no,"Unofficial, Nov. 10, 2026",https://www.packers.com/team/depth-chart
+GB,Green Bay Packers,Offense,WR,2,Matthew Golden,J. Michael Sturdivant,,Matthew Golden,1,0,,no,"Unofficial, Nov. 10, 2026",https://www.packers.com/team/depth-chart
+GB,Green Bay Packers,Offense,LT,2,Jordan Morgan,John Williams,,Jordan Morgan,1,0,,no,"Unofficial, Nov. 10, 2026",https://www.packers.com/team/depth-chart
+GB,Green Bay Packers,Offense,LG,3,Aaron Banks,Travis Glover,Donovan Jennings,Aaron Banks,1,0,,no,"Unofficial, Nov. 10, 2026",https://www.packers.com/team/depth-chart
+GB,Green Bay Packers,Offense,C,2,Sean Rhyan,Jager Burton,,Sean Rhyan,1,0,,no,"Unofficial, Nov. 10, 2026",https://www.packers.com/team/depth-chart
+GB,Green Bay Packers,Offense,RG,2,Laken Tomlinson,Kevin Zeitler,,Laken Tomlinson,1,0,,no,"Unofficial, Nov. 10, 2026",https://www.packers.com/team/depth-chart
+GB,Green Bay Packers,Offense,RT,2,Anthony Belton,Mekhi Becton Sr.,,Anthony Belton,1,0,,no,"Unofficial, Nov. 10, 2026",https://www.packers.com/team/depth-chart
+GB,Green Bay Packers,Offense,TE,4,Tucker Kraft,Jonnu Smith,Mark Redman,Tucker Kraft,1,0,,no,"Unofficial, Nov. 10, 2026",https://www.packers.com/team/depth-chart
+GB,Green Bay Packers,Offense,WR,2,Savion Williams,Coleman Owen,,Savion Williams,1,0,,no,"Unofficial, Nov. 10, 2026",https://www.packers.com/team/depth-chart
+GB,Green Bay Packers,Offense,QB,2,Jordan Love,Tyrod Taylor,,Jordan Love,1,0,,no,"Unofficial, Nov. 10, 2026",https://www.packers.com/team/depth-chart
+GB,Green Bay Packers,Offense,RB,4,Josh Jacobs,MarShawn Lloyd,Pierre Strong Jr.,Josh Jacobs,1,0,,no,"Unofficial, Nov. 10, 2026",https://www.packers.com/team/depth-chart
+GB,Green Bay Packers,Defense,DT,3,Karl Brooks,Jordon Riley,Anthony Campbell,Karl Brooks,1,0,,no,"Unofficial, Nov. 10, 2026",https://www.packers.com/team/depth-chart
+GB,Green Bay Packers,Defense,DT,2,Devonte Wyatt,Chris McClellan,,Devonte Wyatt,1,0,,no,"Unofficial, Nov. 10, 2026",https://www.packers.com/team/depth-chart
+GB,Green Bay Packers,Defense,EDGE,2,Lukas Van Ness,Brenton Cox Jr,,Lukas Van Ness,1,0,,no,"Unofficial, Nov. 10, 2026",https://www.packers.com/team/depth-chart
+GB,Green Bay Packers,Defense,LB,3,Zaire Franklin,Ty'Ron Hopper,Kristian Welch,Zaire Franklin,1,0,,no,"Unofficial, Nov. 10, 2026",https://www.packers.com/team/depth-chart
+GB,Green Bay Packers,Defense,LB,2,Isaiah McDuffie,Nick Niemann,,Isaiah McDuffie,1,0,,no,"Unofficial, Nov. 10, 2026",https://www.packers.com/team/depth-chart
+GB,Green Bay Packers,Defense,EDGE,2,Barryn Sorrell,Dani Dennis-Sutton,,Barryn Sorrell,1,0,,no,"Unofficial, Nov. 10, 2026",https://www.packers.com/team/depth-chart
+GB,Green Bay Packers,Defense,CB,2,Keisean Nixon,Carrington Valentine,,Keisean Nixon,1,0,,no,"Unofficial, Nov. 10, 2026",https://www.packers.com/team/depth-chart
+GB,Green Bay Packers,Defense,CB,2,Brandon Cisse,Benjamin St-Juste,,Brandon Cisse,1,0,,no,"Unofficial, Nov. 10, 2026",https://www.packers.com/team/depth-chart
+GB,Green Bay Packers,Defense,S,2,Xavier McKinney,Kitan Oladapo,,Xavier McKinney,1,0,,no,"Unofficial, Nov. 10, 2026",https://www.packers.com/team/depth-chart
+GB,Green Bay Packers,Defense,S,2,Evan Williams,Kitan Oladapo,,Evan Williams,1,0,,no,"Unofficial, Nov. 10, 2026",https://www.packers.com/team/depth-chart
+GB,Green Bay Packers,Defense,NB,2,Javon Bullard,Kamal Hadden,,Javon Bullard,1,0,,no,"Unofficial, Nov. 10, 2026",https://www.packers.com/team/depth-chart
+IND,Indianapolis Colts,Offense,WR,2,Laquon Treadwell,Nick Westbrook-Ikhine,,Laquon Treadwell,1,0,,no,,https://www.colts.com/team/depth-chart
+IND,Indianapolis Colts,Offense,LT,2,Bernhard Raimann,Charlie Heck,,Bernhard Raimann,1,0,,no,,https://www.colts.com/team/depth-chart
+IND,Indianapolis Colts,Offense,LG,2,Jalen Farmer,Dalton Tucker,,Jalen Farmer,1,0,,no,,https://www.colts.com/team/depth-chart
+IND,Indianapolis Colts,Offense,C,2,Tanor Bortolini,Sedrick Van Pran-Granger,,Tanor Bortolini,1,0,,no,,https://www.colts.com/team/depth-chart
+IND,Indianapolis Colts,Offense,RG,1,Matt Goncalves,,,Matt Goncalves,1,0,,yes,,https://www.colts.com/team/depth-chart
+IND,Indianapolis Colts,Offense,RT,2,Jalen Travis,Luke Tenuta,,Luke Tenuta,2,1,Jalen Travis,no,,https://www.colts.com/team/depth-chart
+IND,Indianapolis Colts,Offense,TE,5,Tyler Warren,Mo Alie-Cox,Drew Ogletree,Tyler Warren,1,0,,no,,https://www.colts.com/team/depth-chart
+IND,Indianapolis Colts,Offense,WR,1,Anthony Gould,,,Anthony Gould,1,0,,yes,,https://www.colts.com/team/depth-chart
+IND,Indianapolis Colts,Offense,WR,2,Ashton Dulin,Deion Burks,,Ashton Dulin,1,0,,no,,https://www.colts.com/team/depth-chart
+IND,Indianapolis Colts,Offense,QB,3,Daniel Jones,Anthony Richardson Sr.,Riley Leonard,Daniel Jones,1,0,,no,,https://www.colts.com/team/depth-chart
+IND,Indianapolis Colts,Offense,RB,3,Jonathan Taylor,Seth McGowan,DJ Giddens,Jonathan Taylor,1,0,,no,,https://www.colts.com/team/depth-chart
+IND,Indianapolis Colts,Defense,DE,2,Jaylahn Tuimoloau,George Gumbs Jr.,,Jaylahn Tuimoloau,1,0,,no,,https://www.colts.com/team/depth-chart
+IND,Indianapolis Colts,Defense,DT,2,Adetomiwa Adebawore,Kevin Givens,,Adetomiwa Adebawore,1,0,,no,,https://www.colts.com/team/depth-chart
+IND,Indianapolis Colts,Defense,NT,3,Grover Stewart,Jerry Tillery,Tim Smith,Grover Stewart,1,0,,no,,https://www.colts.com/team/depth-chart
+IND,Indianapolis Colts,Defense,DE,2,Laiatu Latu,Caden Curry,,Laiatu Latu,1,0,,no,,https://www.colts.com/team/depth-chart
+IND,Indianapolis Colts,Defense,WLB,3,Jaylon Carlies,Bryce Boettcher,Tahj Chambers,Bryce Boettcher,2,1,Jaylon Carlies,no,,https://www.colts.com/team/depth-chart
+IND,Indianapolis Colts,Defense,MLB,3,Akeem Davis-Gaither,CJ Allen,Austin Ajiake,CJ Allen,2,1,Akeem Davis-Gaither,no,,https://www.colts.com/team/depth-chart
+IND,Indianapolis Colts,Defense,CB,2,Charvarius Ward,Kenneth Harris,,Charvarius Ward,1,0,,no,,https://www.colts.com/team/depth-chart
+IND,Indianapolis Colts,Defense,FS,2,Cam Bynum,Jonathan Owens,,Cam Bynum,1,0,,no,,https://www.colts.com/team/depth-chart
+IND,Indianapolis Colts,Defense,SS,2,AJ Haulcy,Hunter Wohler,,AJ Haulcy,1,0,,no,,https://www.colts.com/team/depth-chart
+IND,Indianapolis Colts,Defense,N,2,Justin Walley,Kapena Gushiken,,Justin Walley,1,0,,no,,https://www.colts.com/team/depth-chart
+IND,Indianapolis Colts,Defense,CB,1,Sauce Gardner,,,Sauce Gardner,1,0,,yes,,https://www.colts.com/team/depth-chart
+JAX,Jacksonville Jaguars,Offense,WR,2,Parker Washington,Josh Cameron,,Parker Washington,1,0,,no,,https://www.jaguars.com/team/depth-chart
+JAX,Jacksonville Jaguars,Offense,RT,1,Cole Van Lanen,,,Cole Van Lanen,1,0,,yes,,https://www.jaguars.com/team/depth-chart
+JAX,Jacksonville Jaguars,Offense,RG,2,Ezra Cleveland,Wyatt Milum,,Ezra Cleveland,1,0,,no,,https://www.jaguars.com/team/depth-chart
+JAX,Jacksonville Jaguars,Offense,C,2,Robert Hainsey,Jonah Monheim,,Robert Hainsey,1,0,,no,,https://www.jaguars.com/team/depth-chart
+JAX,Jacksonville Jaguars,Offense,LG,2,Emmanuel Pregnon,Daniel Faalele,,Emmanuel Pregnon,1,0,,no,,https://www.jaguars.com/team/depth-chart
+JAX,Jacksonville Jaguars,Offense,LT,1,Walker Little,,,Walker Little,1,0,,yes,,https://www.jaguars.com/team/depth-chart
+JAX,Jacksonville Jaguars,Offense,TE,4,Brenton Strange,Nate Boerkircher,Quintin Morris,Brenton Strange,1,0,,no,,https://www.jaguars.com/team/depth-chart
+JAX,Jacksonville Jaguars,Offense,QB,2,Trevor Lawrence,Quinn Ewers,,Trevor Lawrence,1,0,,no,,https://www.jaguars.com/team/depth-chart
+JAX,Jacksonville Jaguars,Offense,RB,4,Bhayshul Tuten,Chris Rodriguez Jr.,LeQuint Allen Jr.,Bhayshul Tuten,1,0,,no,,https://www.jaguars.com/team/depth-chart
+JAX,Jacksonville Jaguars,Offense,WR,2,Brian Thomas Jr.,Travis Hunter,,Brian Thomas Jr.,1,0,,no,,https://www.jaguars.com/team/depth-chart
+JAX,Jacksonville Jaguars,Offense,WR,2,Jakobi Meyers,CJ Williams,,Jakobi Meyers,1,0,,no,,https://www.jaguars.com/team/depth-chart
+JAX,Jacksonville Jaguars,Defense,NT,3,Jordan Davis,Davon Godchaux,Matt Dickerson,Jordan Davis,1,0,,no,,https://www.jaguars.com/team/depth-chart
+JAX,Jacksonville Jaguars,Defense,DT,3,Arik Armstead,Ruke Orhorhoro,Albert Regis,Arik Armstead,1,0,,no,,https://www.jaguars.com/team/depth-chart
+JAX,Jacksonville Jaguars,Defense,DE,2,Josh Hines-Allen,Bryan Thomas Jr.,,Josh Hines-Allen,1,0,,no,,https://www.jaguars.com/team/depth-chart
+JAX,Jacksonville Jaguars,Defense,DE,3,Travon Walker,Danny Striggow,Wesley Williams,Travon Walker,1,0,,no,,https://www.jaguars.com/team/depth-chart
+JAX,Jacksonville Jaguars,Defense,LB,2,Foyesade Oluokun,Jahlani Tavai,,Foyesade Oluokun,1,0,,no,,https://www.jaguars.com/team/depth-chart
+JAX,Jacksonville Jaguars,Defense,LB,2,Ventrell Miller,Branson Combs,,Ventrell Miller,1,0,,no,,https://www.jaguars.com/team/depth-chart
+JAX,Jacksonville Jaguars,Defense,LB,2,Dennis Gardeck,Jalen McLeod,,Dennis Gardeck,1,0,,no,,https://www.jaguars.com/team/depth-chart
+JAX,Jacksonville Jaguars,Defense,CB,2,Montaric Brown,Jaylon Jones,,Montaric Brown,1,0,,no,,https://www.jaguars.com/team/depth-chart
+JAX,Jacksonville Jaguars,Defense,CB,2,Jourdan Lewis,Jarrian Jones,,Jourdan Lewis,1,0,,no,,https://www.jaguars.com/team/depth-chart
+JAX,Jacksonville Jaguars,Defense,CB,1,Travis Hunter,,,Travis Hunter,1,0,,yes,,https://www.jaguars.com/team/depth-chart
+JAX,Jacksonville Jaguars,Defense,S,3,Jessie Bates III,Kaevon Merriweather,Rayuan Lane III,Jessie Bates III,1,0,,no,,https://www.jaguars.com/team/depth-chart
+JAX,Jacksonville Jaguars,Defense,S,2,Antonio Johnson,Jalen Huskey,,Antonio Johnson,1,0,,no,,https://www.jaguars.com/team/depth-chart
+KC,Kansas City Chiefs,Offense,WR,3,Rashee Rice,Jalen Royals,Andrew Armstrong,Rashee Rice,1,0,,no,,https://www.chiefs.com/team/depth-chart
+KC,Kansas City Chiefs,Offense,LT,2,Kahlil Benson,Diego Pounds,,Kahlil Benson,1,0,,no,,https://www.chiefs.com/team/depth-chart
+KC,Kansas City Chiefs,Offense,LG,2,Kingsley Suamataia,Joshua Ezeudu,,Kingsley Suamataia,1,0,,no,,https://www.chiefs.com/team/depth-chart
+KC,Kansas City Chiefs,Offense,C,2,Creed Humphrey,Hunter Nourzad,,Creed Humphrey,1,0,,no,,https://www.chiefs.com/team/depth-chart
+KC,Kansas City Chiefs,Offense,RG,2,Trey Smith,Mike Caliendo,,Trey Smith,1,0,,no,,https://www.chiefs.com/team/depth-chart
+KC,Kansas City Chiefs,Offense,RT,2,Jaylon Moore,Joshua Ezeudu,,Jaylon Moore,1,0,,no,,https://www.chiefs.com/team/depth-chart
+KC,Kansas City Chiefs,Offense,TE,4,Travis Kelce,Noah Gray,Jared Wiley,Travis Kelce,1,0,,no,,https://www.chiefs.com/team/depth-chart
+KC,Kansas City Chiefs,Offense,QB,3,Patrick Mahomes,Justin Fields,Garrett Nussmeier,Patrick Mahomes,1,0,,no,,https://www.chiefs.com/team/depth-chart
+KC,Kansas City Chiefs,Offense,RB,3,Kenneth Walker,Emmett Johnson,Jaydn Ott,Kenneth Walker,1,0,,no,,https://www.chiefs.com/team/depth-chart
+KC,Kansas City Chiefs,Offense,FB,1,Ben VanSumeren,,,Ben VanSumeren,1,0,,yes,,https://www.chiefs.com/team/depth-chart
+KC,Kansas City Chiefs,Offense,WR,3,Xavier Worthy,Cyrus Allen,Josh Downs,Xavier Worthy,1,0,,no,,https://www.chiefs.com/team/depth-chart
+KC,Kansas City Chiefs,Defense,DE,2,Felix Anudike-Uzomah,Ashton Gillotte,,Felix Anudike-Uzomah,1,0,,no,,https://www.chiefs.com/team/depth-chart
+KC,Kansas City Chiefs,Defense,DT,3,Chris Jones,Peter Woods,Marcus Harris,Chris Jones,1,0,,no,,https://www.chiefs.com/team/depth-chart
+KC,Kansas City Chiefs,Defense,DT,2,Khyiris Tonga,Bryson Eason,,Khyiris Tonga,1,0,,no,,https://www.chiefs.com/team/depth-chart
+KC,Kansas City Chiefs,Defense,DE,2,George Karlaftis,R Mason Thomas,,George Karlaftis,1,0,,no,,https://www.chiefs.com/team/depth-chart
+KC,Kansas City Chiefs,Defense,LB,2,Jack Cochrane,Cooper McDonald,,Jack Cochrane,1,0,,no,,https://www.chiefs.com/team/depth-chart
+KC,Kansas City Chiefs,Defense,LB,2,Nick Bolton,Jack Cochrane,,Nick Bolton,1,0,,no,,https://www.chiefs.com/team/depth-chart
+KC,Kansas City Chiefs,Defense,LB,2,Drue Tranquill,Jeffrey Bassa,,Drue Tranquill,1,0,,no,,https://www.chiefs.com/team/depth-chart
+KC,Kansas City Chiefs,Defense,CB,2,Nohl Williams,Jadon Canady,,Nohl Williams,1,0,,no,,https://www.chiefs.com/team/depth-chart
+KC,Kansas City Chiefs,Defense,CB,3,Mansoor Delane,Kristian Fulton,Melvin Smith,Mansoor Delane,1,0,,no,,https://www.chiefs.com/team/depth-chart
+KC,Kansas City Chiefs,Defense,S,2,Alohi Gilman,Chris Roland-Wallace,,Alohi Gilman,1,0,,no,,https://www.chiefs.com/team/depth-chart
+KC,Kansas City Chiefs,Defense,S,3,Chamarri Conner,Jaden Hicks,Xavier Nwankpa,Chamarri Conner,1,0,,no,,https://www.chiefs.com/team/depth-chart
+LAC,Los Angeles Chargers,Offense,WR,4,Ladd McConkey,Tre' Harris,Derius Davis,Ladd McConkey,1,0,,no,,https://www.chargers.com/team/depth-chart
+LAC,Los Angeles Chargers,Offense,LT,2,Travis Burke,Branson Taylor,,Travis Burke,1,0,,no,,https://www.chargers.com/team/depth-chart
+LAC,Los Angeles Chargers,Offense,LG,2,Kayode Awosika,Logan Taylor,,Kayode Awosika,1,0,,no,,https://www.chargers.com/team/depth-chart
+LAC,Los Angeles Chargers,Offense,C,2,Jake Slaughter,Jacob Spomer,,Jake Slaughter,1,0,,no,,https://www.chargers.com/team/depth-chart
+LAC,Los Angeles Chargers,Offense,RG,2,Cole Strange,Logan Taylor,,Cole Strange,1,0,,no,,https://www.chargers.com/team/depth-chart
+LAC,Los Angeles Chargers,Offense,RT,2,Joe Alt,Alex Harkey,,Joe Alt,1,0,,no,,https://www.chargers.com/team/depth-chart
+LAC,Los Angeles Chargers,Offense,TE,3,Charlie Kolar,Oronde Gadsden,Hayden Rucci,Charlie Kolar,1,0,,no,,https://www.chargers.com/team/depth-chart
+LAC,Los Angeles Chargers,Offense,WR,2,Quentin Johnston,Brenen Thompson,,Quentin Johnston,1,0,,no,,https://www.chargers.com/team/depth-chart
+LAC,Los Angeles Chargers,Offense,QB,2,Justin Herbert,DJ Uiagalelei,,Justin Herbert,1,0,,no,,https://www.chargers.com/team/depth-chart
+LAC,Los Angeles Chargers,Offense,FB,2,Alec Ingold,Scott Matlock,,Alec Ingold,1,0,,no,,https://www.chargers.com/team/depth-chart
+LAC,Los Angeles Chargers,Offense,RB,3,Omarion Hampton,Keaton Mitchell,Kimani Vidal,Omarion Hampton,1,0,,no,,https://www.chargers.com/team/depth-chart
+LAC,Los Angeles Chargers,Defense,EDGE,2,Khalil Mack,Akheem Mesidor,,Khalil Mack,1,0,,no,,https://www.chargers.com/team/depth-chart
+LAC,Los Angeles Chargers,Defense,DL,2,Jamaree Caldwell,Nick Barrett,,Jamaree Caldwell,1,0,,no,,https://www.chargers.com/team/depth-chart
+LAC,Los Angeles Chargers,Defense,DL,2,Dalvin Tomlinson,Justin Eboigbe,,Dalvin Tomlinson,1,0,,no,,https://www.chargers.com/team/depth-chart
+LAC,Los Angeles Chargers,Defense,DL,1,Teair Tart,,,Teair Tart,1,0,,yes,,https://www.chargers.com/team/depth-chart
+LAC,Los Angeles Chargers,Defense,EDGE,2,Tuli Tuipulotu,Bud Dupree,,Tuli Tuipulotu,1,0,,no,,https://www.chargers.com/team/depth-chart
+LAC,Los Angeles Chargers,Defense,LB,2,Daiyan Henley,Troy Dye,,Daiyan Henley,1,0,,no,,https://www.chargers.com/team/depth-chart
+LAC,Los Angeles Chargers,Defense,LB,2,Del'Shawn Phillips,Marlowe Wax,,Del'Shawn Phillips,1,0,,no,,https://www.chargers.com/team/depth-chart
+LAC,Los Angeles Chargers,Defense,CB,3,Tarheeb Still,Cam Hart,Deane Leonard,Tarheeb Still,1,0,,no,,https://www.chargers.com/team/depth-chart
+LAC,Los Angeles Chargers,Defense,S,3,Derwin James Jr.,Tony Jefferson,RJ Mickens,Derwin James Jr.,1,0,,no,,https://www.chargers.com/team/depth-chart
+LAC,Los Angeles Chargers,Defense,S,3,Elijah Molden,Genesis Smith,Kendall Williamson,Elijah Molden,1,0,,no,,https://www.chargers.com/team/depth-chart
+LAC,Los Angeles Chargers,Defense,CB,3,Donte Jackson,Cam Hart,Rodney Shelley,Donte Jackson,1,0,,no,,https://www.chargers.com/team/depth-chart
+LAR,Los Angeles Rams,Offense,WR,2,Konata Mumpfield,CJ Daniels,,Konata Mumpfield,1,0,,no,,https://www.therams.com/team/depth-chart
+LAR,Los Angeles Rams,Offense,TE,2,Davis Allen,Tyler Higbee,,Davis Allen,1,0,,no,,https://www.therams.com/team/depth-chart
+LAR,Los Angeles Rams,Offense,LT,2,Alaric Jackson,David Quessenberry,,Alaric Jackson,1,0,,no,,https://www.therams.com/team/depth-chart
+LAR,Los Angeles Rams,Offense,LG,2,Steve Avila,Bill Murray,,Steve Avila,1,0,,no,,https://www.therams.com/team/depth-chart
+LAR,Los Angeles Rams,Offense,C,2,Coleman Shelton,Dylan McMahon,,Coleman Shelton,1,0,,no,,https://www.therams.com/team/depth-chart
+LAR,Los Angeles Rams,Offense,RG,2,Kevin Dotson,Beaux Limmer,,Kevin Dotson,1,0,,no,,https://www.therams.com/team/depth-chart
+LAR,Los Angeles Rams,Offense,RT,2,Warren McClendon Jr.,Keagen Trost,,Warren McClendon Jr.,1,0,,no,,https://www.therams.com/team/depth-chart
+LAR,Los Angeles Rams,Offense,TE,2,Colby Parkinson,Max Klare,,Colby Parkinson,1,0,,no,,https://www.therams.com/team/depth-chart
+LAR,Los Angeles Rams,Offense,WR,3,Puka Nacua,Jordan Whittington,Tutu Atwell,Puka Nacua,1,0,,no,,https://www.therams.com/team/depth-chart
+LAR,Los Angeles Rams,Offense,QB,3,Matthew Stafford,Stetson Bennett IV,Ty Simpson,Matthew Stafford,1,0,,no,,https://www.therams.com/team/depth-chart
+LAR,Los Angeles Rams,Offense,RB,3,Kyren Williams,Blake Corum,Ronnie Rivers,Kyren Williams,1,0,,no,,https://www.therams.com/team/depth-chart
+LAR,Los Angeles Rams,Defense,OLB,2,Byron Young,Wesley Bailey,,Byron Young,1,0,,no,,https://www.therams.com/team/depth-chart
+LAR,Los Angeles Rams,Defense,DE,1,Braden Fiske,,,Braden Fiske,1,0,,yes,,https://www.therams.com/team/depth-chart
+LAR,Los Angeles Rams,Defense,NT,2,Tyler Davis,Ty Hamilton,,Tyler Davis,1,0,,no,,https://www.therams.com/team/depth-chart
+LAR,Los Angeles Rams,Defense,DE,2,Aaron Donald,Larrell Murchison,,Aaron Donald,1,0,,no,,https://www.therams.com/team/depth-chart
+LAR,Los Angeles Rams,Defense,OLB,3,Myles Garrett,Josaiah Stewart,Desjuan Johnson,Myles Garrett,1,0,,no,,https://www.therams.com/team/depth-chart
+LAR,Los Angeles Rams,Defense,ILB,2,Omar Speights,Grant Stuard,,Omar Speights,1,0,,no,,https://www.therams.com/team/depth-chart
+LAR,Los Angeles Rams,Defense,ILB,2,Nate Landman,Shaun Dolac,,Nate Landman,1,0,,no,,https://www.therams.com/team/depth-chart
+LAR,Los Angeles Rams,Defense,CB,2,Trent McDuffie,Cam Lampkin,,Trent McDuffie,1,0,,no,,https://www.therams.com/team/depth-chart
+LAR,Los Angeles Rams,Defense,S,3,Quentin Lake,Kamren Kinchens,Maximus Pulley,Quentin Lake,1,0,,no,,https://www.therams.com/team/depth-chart
+LAR,Los Angeles Rams,Defense,S,2,Kam Curl,Jaylen McCollough,,Kam Curl,1,0,,no,,https://www.therams.com/team/depth-chart
+LAR,Los Angeles Rams,Defense,CB,2,Emmanuel Forbes Jr.,Josh Wallace,,Emmanuel Forbes Jr.,1,0,,no,,https://www.therams.com/team/depth-chart
+LV,Las Vegas Raiders,Offense,WR,3,Jalen Nailor,Malik Benson,Dont'e Thornton Jr.,Jalen Nailor,1,0,,no,"as of November 10, 2026",https://www.raiders.com/team/depth-chart
+LV,Las Vegas Raiders,Offense,LT,2,Kolton Miller,Charles Grant,,Kolton Miller,1,0,,no,"as of November 10, 2026",https://www.raiders.com/team/depth-chart
+LV,Las Vegas Raiders,Offense,LG,2,Spencer Burford,Bryce Cabeldue,,Spencer Burford,1,0,,no,"as of November 10, 2026",https://www.raiders.com/team/depth-chart
+LV,Las Vegas Raiders,Offense,C,1,Tyler Linderbaum,,,Tyler Linderbaum,1,0,,yes,"as of November 10, 2026",https://www.raiders.com/team/depth-chart
+LV,Las Vegas Raiders,Offense,RG,2,Jackson Powers-Johnson,Caleb Rogers,,Jackson Powers-Johnson,1,0,,no,"as of November 10, 2026",https://www.raiders.com/team/depth-chart
+LV,Las Vegas Raiders,Offense,RT,2,DJ Glaze,Trey Zuhn III,,DJ Glaze,1,0,,no,"as of November 10, 2026",https://www.raiders.com/team/depth-chart
+LV,Las Vegas Raiders,Offense,TE,3,Brock Bowers,Michael Mayer,Ian Thomas,Brock Bowers,1,0,,no,"as of November 10, 2026",https://www.raiders.com/team/depth-chart
+LV,Las Vegas Raiders,Offense,WR,4,Tre Tucker,Jack Bech,Dareke Young,Tre Tucker,1,0,,no,"as of November 10, 2026",https://www.raiders.com/team/depth-chart
+LV,Las Vegas Raiders,Offense,QB,2,Fernando Mendoza,Aidan O'Connell,,Fernando Mendoza,1,0,,no,"as of November 10, 2026",https://www.raiders.com/team/depth-chart
+LV,Las Vegas Raiders,Offense,RB,3,Ashton Jeanty,Mike Washington Jr.,Dylan Laube,Ashton Jeanty,1,0,,no,"as of November 10, 2026",https://www.raiders.com/team/depth-chart
+LV,Las Vegas Raiders,Offense,FB,1,Connor Heyward,,,Connor Heyward,1,0,,yes,"as of November 10, 2026",https://www.raiders.com/team/depth-chart
+LV,Las Vegas Raiders,Defense,DE,2,Maxx Crosby,Malcolm Koonce,,Maxx Crosby,1,0,,no,"as of November 10, 2026",https://www.raiders.com/team/depth-chart
+LV,Las Vegas Raiders,Defense,DT,3,Tonka Hemingway,JJ Pegues,Tim Keenan III,Tonka Hemingway,1,0,,no,"as of November 10, 2026",https://www.raiders.com/team/depth-chart
+LV,Las Vegas Raiders,Defense,DT,3,Adam Butler,Folorunso Fatukasi,Thomas Booker IV,Adam Butler,1,0,,no,"as of November 10, 2026",https://www.raiders.com/team/depth-chart
+LV,Las Vegas Raiders,Defense,EDGE,1,Kwity Paye,,,Kwity Paye,1,0,,yes,"as of November 10, 2026",https://www.raiders.com/team/depth-chart
+LV,Las Vegas Raiders,Defense,LB,3,Nakobe Dean,Tommy Eichenberg,Segun Olubi,Nakobe Dean,1,0,,no,"as of November 10, 2026",https://www.raiders.com/team/depth-chart
+LV,Las Vegas Raiders,Defense,LB,2,Quay Walker,Cody Lindenberg,,Quay Walker,1,0,,no,"as of November 10, 2026",https://www.raiders.com/team/depth-chart
+LV,Las Vegas Raiders,Defense,CB,3,Eric Stokes,Jermod McCoy,Darrell Luter Jr.,Eric Stokes,1,0,,no,"as of November 10, 2026",https://www.raiders.com/team/depth-chart
+LV,Las Vegas Raiders,Defense,CB,2,Darien Porter,Hezekiah Masses,,Darien Porter,1,0,,no,"as of November 10, 2026",https://www.raiders.com/team/depth-chart
+LV,Las Vegas Raiders,Defense,CB,1,Taron Johnson,,,Taron Johnson,1,0,,yes,"as of November 10, 2026",https://www.raiders.com/team/depth-chart
+LV,Las Vegas Raiders,Defense,FS,3,Treydan Stukes,Isaiah Pola-Mao,Tristin McCollum,Treydan Stukes,1,0,,no,"as of November 10, 2026",https://www.raiders.com/team/depth-chart
+LV,Las Vegas Raiders,Defense,SS,2,Jeremy Chinn,Dalton Johnson,,Jeremy Chinn,1,0,,no,"as of November 10, 2026",https://www.raiders.com/team/depth-chart
+MIA,Miami Dolphins,Offense,WR,2,Caleb Douglas,Jared Wayne,,Caleb Douglas,1,0,,no,,https://www.miamidolphins.com/team/depth-chart
+MIA,Miami Dolphins,Offense,LT,2,Patrick Paul,Chukwuebuka Godrick,,Patrick Paul,1,0,,no,,https://www.miamidolphins.com/team/depth-chart
+MIA,Miami Dolphins,Offense,LG,2,Kadyn Proctor,Jarrett Kingston,,Kadyn Proctor,1,0,,no,,https://www.miamidolphins.com/team/depth-chart
+MIA,Miami Dolphins,Offense,C,2,Aaron Brewer,Andrew Meyer,,Aaron Brewer,1,0,,no,,https://www.miamidolphins.com/team/depth-chart
+MIA,Miami Dolphins,Offense,RG,3,Jonah Savaiinaea,Caedan Wallace,Christian Haynes,Jonah Savaiinaea,1,0,,no,,https://www.miamidolphins.com/team/depth-chart
+MIA,Miami Dolphins,Offense,RT,2,Austin Jackson,Caedan Wallace,,Austin Jackson,1,0,,no,,https://www.miamidolphins.com/team/depth-chart
+MIA,Miami Dolphins,Offense,TE,4,Greg Dulcich,Will Kacmarek,Seydou Traore,Greg Dulcich,1,0,,no,,https://www.miamidolphins.com/team/depth-chart
+MIA,Miami Dolphins,Offense,FB,1,DJ Herman,,,DJ Herman,1,0,,yes,,https://www.miamidolphins.com/team/depth-chart
+MIA,Miami Dolphins,Offense,RB,3,Ollie Gordon II,Jaylen Wright,Kaytron Allen,Ollie Gordon II,1,0,,no,,https://www.miamidolphins.com/team/depth-chart
+MIA,Miami Dolphins,Offense,QB,1,Kyle McCord,,,Kyle McCord,1,0,,yes,,https://www.miamidolphins.com/team/depth-chart
+MIA,Miami Dolphins,Offense,WR,2,Malik Washington,Kevin Coleman Jr.,,Malik Washington,1,0,,no,,https://www.miamidolphins.com/team/depth-chart
+MIA,Miami Dolphins,Offense,WR,2,Chris Bell,Jalen Tolbert,,Chris Bell,1,0,,no,,https://www.miamidolphins.com/team/depth-chart
+MIA,Miami Dolphins,Defense,DT,2,Jordan Phillips,Kenneth Grant,,Jordan Phillips,1,0,,no,,https://www.miamidolphins.com/team/depth-chart
+MIA,Miami Dolphins,Defense,DT,1,Zeek Biggers,,,Zeek Biggers,1,0,,yes,,https://www.miamidolphins.com/team/depth-chart
+MIA,Miami Dolphins,Defense,EDGE,3,Chop Robinson,Malik Herring,Rodney McGraw,Chop Robinson,1,0,,no,,https://www.miamidolphins.com/team/depth-chart
+MIA,Miami Dolphins,Defense,EDGE,2,Josh Uche,Jamree Kromah,,Josh Uche,1,0,,no,,https://www.miamidolphins.com/team/depth-chart
+MIA,Miami Dolphins,Defense,ILB,3,Jordyn Brooks,Jackson Woodard,Shaka Heyward,Jordyn Brooks,1,0,,no,,https://www.miamidolphins.com/team/depth-chart
+MIA,Miami Dolphins,Defense,ILB,2,Jacob Rodriguez,Willie Gay Jr.,,Jacob Rodriguez,1,0,,no,,https://www.miamidolphins.com/team/depth-chart
+MIA,Miami Dolphins,Defense,NB,1,Chris Johnson,,,Chris Johnson,1,0,,yes,,https://www.miamidolphins.com/team/depth-chart
+MIA,Miami Dolphins,Defense,CB,2,JuJu Brents,Marcellas Dial Jr.,,JuJu Brents,1,0,,no,,https://www.miamidolphins.com/team/depth-chart
+MIA,Miami Dolphins,Defense,CB,2,Jason Marshall Jr.,Jaylin Simpson,,Jason Marshall Jr.,1,0,,no,,https://www.miamidolphins.com/team/depth-chart
+MIA,Miami Dolphins,Defense,S,2,Michael Taaffe,Zayne Anderson,,Michael Taaffe,1,0,,no,,https://www.miamidolphins.com/team/depth-chart
+MIA,Miami Dolphins,Defense,S,3,Dante Trader Jr.,Kyle Louis,Julius Wood,Dante Trader Jr.,1,0,,no,,https://www.miamidolphins.com/team/depth-chart
+MIN,Minnesota Vikings,Offense,QB,3,Kyler Murray,Carson Wentz,Max Brosmer,Kyler Murray,1,0,,no,,https://www.vikings.com/team/depth-chart
+MIN,Minnesota Vikings,Offense,RB,4,Aaron Jones Sr.,Jordan Mason,Demond Claiborne,Aaron Jones Sr.,1,0,,no,,https://www.vikings.com/team/depth-chart
+MIN,Minnesota Vikings,Offense,FB,1,Max Bredeson,,,Max Bredeson,1,0,,yes,,https://www.vikings.com/team/depth-chart
+MIN,Minnesota Vikings,Offense,WR,2,Justin Jefferson,Tai Felton,,Justin Jefferson,1,0,,no,,https://www.vikings.com/team/depth-chart
+MIN,Minnesota Vikings,Offense,WR,1,Jordan Addison,,,Jordan Addison,1,0,,yes,,https://www.vikings.com/team/depth-chart
+MIN,Minnesota Vikings,Offense,WR,2,Jauan Jennings,Myles Price,,Jauan Jennings,1,0,,no,,https://www.vikings.com/team/depth-chart
+MIN,Minnesota Vikings,Offense,TE,2,T.J. Hockenson,Gavin Bartholomew,,T.J. Hockenson,1,0,,no,,https://www.vikings.com/team/depth-chart
+MIN,Minnesota Vikings,Offense,LT,2,Christian Darrisaw,Ryan Van Demark,,Christian Darrisaw,1,0,,no,,https://www.vikings.com/team/depth-chart
+MIN,Minnesota Vikings,Offense,LG,1,Joe Huber,,,Joe Huber,1,0,,yes,,https://www.vikings.com/team/depth-chart
+MIN,Minnesota Vikings,Offense,C,3,Blake Brandel,Michael Jurgens,Nick Samac,Blake Brandel,1,0,,no,,https://www.vikings.com/team/depth-chart
+MIN,Minnesota Vikings,Offense,RG,1,Will Fries,,,Will Fries,1,0,,yes,,https://www.vikings.com/team/depth-chart
+MIN,Minnesota Vikings,Offense,RT,2,Brian O'Neill,Caleb Tiernan,,Brian O'Neill,1,0,,no,,https://www.vikings.com/team/depth-chart
+MIN,Minnesota Vikings,Defense,OLB,3,Dallas Turner,Kyle Van Noy,Chaz Chambliss,Dallas Turner,1,0,,no,,https://www.vikings.com/team/depth-chart
+MIN,Minnesota Vikings,Defense,DL,2,Jalen Redmond,Caleb Banks,,Jalen Redmond,1,0,,no,,https://www.vikings.com/team/depth-chart
+MIN,Minnesota Vikings,Defense,DL,2,Levi Drake Rodriguez,Domonique Orange,,Levi Drake Rodriguez,1,0,,no,,https://www.vikings.com/team/depth-chart
+MIN,Minnesota Vikings,Defense,DL,2,Tyrion Ingram-Dawkins,Elijah Williams,,Tyrion Ingram-Dawkins,1,0,,no,,https://www.vikings.com/team/depth-chart
+MIN,Minnesota Vikings,Defense,OLB,2,Andrew Van Ginkel,Bo Richter,,Andrew Van Ginkel,1,0,,no,,https://www.vikings.com/team/depth-chart
+MIN,Minnesota Vikings,Defense,LB,2,Blake Cashman,Ivan Pace Jr.,,Blake Cashman,1,0,,no,,https://www.vikings.com/team/depth-chart
+MIN,Minnesota Vikings,Defense,LB,2,Eric Wilson,Jake Golday,,Eric Wilson,1,0,,no,,https://www.vikings.com/team/depth-chart
+MIN,Minnesota Vikings,Defense,CB,3,Isaiah Rodgers,James Pierre,Zemaiah Vaughn,Isaiah Rodgers,1,0,,no,,https://www.vikings.com/team/depth-chart
+MIN,Minnesota Vikings,Defense,CB,2,Byron Murphy Jr.,Charles Demmings,,Byron Murphy Jr.,1,0,,no,,https://www.vikings.com/team/depth-chart
+MIN,Minnesota Vikings,Defense,S,3,Harrison Smith,Theo Jackson,Jacob Thomas,Harrison Smith,1,0,,no,,https://www.vikings.com/team/depth-chart
+MIN,Minnesota Vikings,Defense,S,3,Joshua Metellus,Jay Ward,Jakobe Thomas,Joshua Metellus,1,0,,no,,https://www.vikings.com/team/depth-chart
+NE,New England Patriots,Offense,WR,2,A.J. Brown,Efton Chism III,,A.J. Brown,1,0,,no,,https://www.patriots.com/team/depth-chart
+NE,New England Patriots,Offense,LT,3,Will Campbell,Dametrious Crownover,Marcus Bryant,Will Campbell,1,0,,no,,https://www.patriots.com/team/depth-chart
+NE,New England Patriots,Offense,LG,2,Ben Brown,Walter Rouse,,Walter Rouse,2,1,Ben Brown,no,,https://www.patriots.com/team/depth-chart
+NE,New England Patriots,Offense,C,2,Jared Wilson,Ben Brown,,Jared Wilson,1,0,,no,,https://www.patriots.com/team/depth-chart
+NE,New England Patriots,Offense,RG,2,Matt Pryor,Walter Rouse,,Matt Pryor,1,0,,no,,https://www.patriots.com/team/depth-chart
+NE,New England Patriots,Offense,RT,2,Morgan Moses,Caleb Lomu,,Morgan Moses,1,0,,no,,https://www.patriots.com/team/depth-chart
+NE,New England Patriots,Offense,TE,3,Hunter Henry,Eli Raridon,Cameron Latu,Hunter Henry,1,0,,no,,https://www.patriots.com/team/depth-chart
+NE,New England Patriots,Offense,WR,2,DeMario Douglas,Kyle Williams,,DeMario Douglas,1,0,,no,,https://www.patriots.com/team/depth-chart
+NE,New England Patriots,Offense,WR,2,Efton Chism III,Kyle Williams,,Efton Chism III,1,0,,no,,https://www.patriots.com/team/depth-chart
+NE,New England Patriots,Offense,RB,4,Rhamondre Stevenson,TreVeyon Henderson,Corey Kiner,Rhamondre Stevenson,1,0,,no,,https://www.patriots.com/team/depth-chart
+NE,New England Patriots,Offense,QB,3,Drake Maye,Tommy DeVito,Behren Morton,Drake Maye,1,0,,no,,https://www.patriots.com/team/depth-chart
+NE,New England Patriots,Defense,OLB,2,Dre'Mont Jones,Gabe Jacas,,Dre'Mont Jones,1,0,,no,,https://www.patriots.com/team/depth-chart
+NE,New England Patriots,Defense,DT,2,Christian Barmore,Leonard Taylor III,,Christian Barmore,1,0,,no,,https://www.patriots.com/team/depth-chart
+NE,New England Patriots,Defense,DT,2,Cory Durden,DaQuan Jones,,Cory Durden,1,0,,no,,https://www.patriots.com/team/depth-chart
+NE,New England Patriots,Defense,DT,2,Milton Williams,Joshua Farmer,,Milton Williams,1,0,,no,,https://www.patriots.com/team/depth-chart
+NE,New England Patriots,Defense,OLB,2,Elijah Ponder,Gabe Jacas,,Elijah Ponder,1,0,,no,,https://www.patriots.com/team/depth-chart
+NE,New England Patriots,Defense,LB,3,Robert Spillane,Darius Muasau,Erick Hunter,Robert Spillane,1,0,,no,,https://www.patriots.com/team/depth-chart
+NE,New England Patriots,Defense,LB,2,Christian Elliss,Namdi Obiazor,,Christian Elliss,1,0,,no,,https://www.patriots.com/team/depth-chart
+NE,New England Patriots,Defense,CB,2,Carlton Davis III,Channing Canada,,Channing Canada,2,1,Carlton Davis III,no,,https://www.patriots.com/team/depth-chart
+NE,New England Patriots,Defense,S,2,Craig Woodson,Mike Brown,,Craig Woodson,1,0,,no,,https://www.patriots.com/team/depth-chart
+NE,New England Patriots,Defense,S,3,Kevin Byard III,Jaylen Reed,Brenden Schooler,Kevin Byard III,1,0,,no,,https://www.patriots.com/team/depth-chart
+NE,New England Patriots,Defense,CB,2,Marcus Jones,Charles Woods,,Marcus Jones,1,0,,no,,https://www.patriots.com/team/depth-chart
+NE,New England Patriots,Defense,CB,2,Christian Gonzalez,Karon Prunty,,Christian Gonzalez,1,0,,no,,https://www.patriots.com/team/depth-chart
+NO,New Orleans Saints,Offense,WR,2,Chris Olave,Barion Brown,,Chris Olave,1,0,,no,,https://www.neworleanssaints.com/team/depth-chart
+NO,New Orleans Saints,Offense,LT,2,Kelvin Banks Jr.,Asim Richards,,Kelvin Banks Jr.,1,0,,no,,https://www.neworleanssaints.com/team/depth-chart
+NO,New Orleans Saints,Offense,LG,2,David Edwards,Jeremiah Wright,,David Edwards,1,0,,no,,https://www.neworleanssaints.com/team/depth-chart
+NO,New Orleans Saints,Offense,C,2,Erik McCoy,William Sherman,,Erik McCoy,1,0,,no,,https://www.neworleanssaints.com/team/depth-chart
+NO,New Orleans Saints,Offense,RG,2,Cesar Ruiz,Jeremiah Wright,,Cesar Ruiz,1,0,,no,,https://www.neworleanssaints.com/team/depth-chart
+NO,New Orleans Saints,Offense,RT,2,Taliese Fuaga,Mason Murphy,,Taliese Fuaga,1,0,,no,,https://www.neworleanssaints.com/team/depth-chart
+NO,New Orleans Saints,Offense,TE,3,Juwan Johnson,Noah Fant,Oscar Delp,Juwan Johnson,1,0,,no,,https://www.neworleanssaints.com/team/depth-chart
+NO,New Orleans Saints,Offense,WR,2,Devaughn Vele,Bryce Lance,,Devaughn Vele,1,0,,no,,https://www.neworleanssaints.com/team/depth-chart
+NO,New Orleans Saints,Offense,WR,2,Jordyn Tyson,Barion Brown,,Jordyn Tyson,1,0,,no,,https://www.neworleanssaints.com/team/depth-chart
+NO,New Orleans Saints,Offense,QB,3,Tyler Shough,Spencer Rattler,Zach Wilson,Tyler Shough,1,0,,no,,https://www.neworleanssaints.com/team/depth-chart
+NO,New Orleans Saints,Offense,RB,3,Alvin Kamara,Audric Estime,CJ Donaldson,Alvin Kamara,1,0,,no,,https://www.neworleanssaints.com/team/depth-chart
+NO,New Orleans Saints,Defense,EDGE,3,Chase Young,Carl Granderson,Anfernee Jennings,Chase Young,1,0,,no,,https://www.neworleanssaints.com/team/depth-chart
+NO,New Orleans Saints,Defense,DL,2,Vernon Broughton,John Ridgeway III,,Vernon Broughton,1,0,,no,,https://www.neworleanssaints.com/team/depth-chart
+NO,New Orleans Saints,Defense,DL,2,Khristian Boyd,Christen Miller,,Khristian Boyd,1,0,,no,,https://www.neworleanssaints.com/team/depth-chart
+NO,New Orleans Saints,Defense,DL,2,Nathan Shepherd,Colby Wooden,,Nathan Shepherd,1,0,,no,,https://www.neworleanssaints.com/team/depth-chart
+NO,New Orleans Saints,Defense,EDGE,2,Cameron Jordan,Tyree Wilson,,Cameron Jordan,1,0,,no,,https://www.neworleanssaints.com/team/depth-chart
+NO,New Orleans Saints,Defense,LB,3,Pete Werner,Chris Rumph II,Isaiah Stalbird,Pete Werner,1,0,,no,,https://www.neworleanssaints.com/team/depth-chart
+NO,New Orleans Saints,Defense,LB,3,Kaden Elliss,Danny Stutsman,Jaylan Ford,Kaden Elliss,1,0,,no,,https://www.neworleanssaints.com/team/depth-chart
+NO,New Orleans Saints,Defense,CB,2,Martin Emerson Jr.,Quincy Riley,,Martin Emerson Jr.,1,0,,no,,https://www.neworleanssaints.com/team/depth-chart
+NO,New Orleans Saints,Defense,S,2,Julian Blackmon,Jordan Howden,,Julian Blackmon,1,0,,no,,https://www.neworleanssaints.com/team/depth-chart
+NO,New Orleans Saints,Defense,S,2,Justin Reid,Mike Reid,,Justin Reid,1,0,,no,,https://www.neworleanssaints.com/team/depth-chart
+NO,New Orleans Saints,Defense,CB,2,Kool-Aid McKinstry,Decamerion Richardson,,Kool-Aid McKinstry,1,0,,no,,https://www.neworleanssaints.com/team/depth-chart
+NO,New Orleans Saints,Defense,S,2,Jonas Sanker,Lorenzo Styles,,Jonas Sanker,1,0,,no,,https://www.neworleanssaints.com/team/depth-chart
+NYG,New York Giants,Offense,WR,3,Malik Nabers,Malachi Fields,Jalin Hyatt,Malik Nabers,1,0,,no,,https://www.giants.com/team/depth-chart
+NYG,New York Giants,Offense,WR,2,Darnell Mooney,Charlie Jones,,Darnell Mooney,1,0,,no,,https://www.giants.com/team/depth-chart
+NYG,New York Giants,Offense,LT,2,Andrew Thomas,J.C. Davis,,Andrew Thomas,1,0,,no,,https://www.giants.com/team/depth-chart
+NYG,New York Giants,Offense,LG,3,Jon Runyan Jr.,Aaron Stinnie,Josh Sills,Jon Runyan Jr.,1,0,,no,,https://www.giants.com/team/depth-chart
+NYG,New York Giants,Offense,C,2,Bryan Hudson,John Michael Schmitz Jr.,,Bryan Hudson,1,0,,no,,https://www.giants.com/team/depth-chart
+NYG,New York Giants,Offense,RG,2,"Francis ""Sisi"" Mauigoa",Aaron Stinnie,,"Francis ""Sisi"" Mauigoa",1,0,,no,,https://www.giants.com/team/depth-chart
+NYG,New York Giants,Offense,RT,2,Jermaine Eluemunor,Marcus Mbow,,Jermaine Eluemunor,1,0,,no,,https://www.giants.com/team/depth-chart
+NYG,New York Giants,Offense,TE,4,Isaiah Likely,Theo Johnson,Chris Manhertz,Isaiah Likely,1,0,,no,,https://www.giants.com/team/depth-chart
+NYG,New York Giants,Offense,QB,2,J.J. McCarthy,Jameis Winston,,J.J. McCarthy,1,0,,no,,https://www.giants.com/team/depth-chart
+NYG,New York Giants,Offense,FB,1,Patrick Ricard,,,Patrick Ricard,1,0,,yes,,https://www.giants.com/team/depth-chart
+NYG,New York Giants,Offense,RB,3,Cam Skattebo,Devin Singletary,Gregory Desrosiers,Cam Skattebo,1,0,,no,,https://www.giants.com/team/depth-chart
+NYG,New York Giants,Defense,DT,3,Shelby Harris,Darius Alexander,Bobby Jamison-Travis,Shelby Harris,1,0,,no,,https://www.giants.com/team/depth-chart
+NYG,New York Giants,Defense,NT,2,DJ Reader,C.J. Okoye,,DJ Reader,1,0,,no,,https://www.giants.com/team/depth-chart
+NYG,New York Giants,Defense,DE,1,Darius Alexander,,,Darius Alexander,1,0,,yes,,https://www.giants.com/team/depth-chart
+NYG,New York Giants,Defense,RUSH,2,Kayvon Thibodeaux,Trace Ford,,Kayvon Thibodeaux,1,0,,no,,https://www.giants.com/team/depth-chart
+NYG,New York Giants,Defense,MLB,2,Micah McFadden,Zaire Barnes,,Micah McFadden,1,0,,no,,https://www.giants.com/team/depth-chart
+NYG,New York Giants,Defense,WLB,2,Arvell Reese,Jack Kelly,,Arvell Reese,1,0,,no,,https://www.giants.com/team/depth-chart
+NYG,New York Giants,Defense,SAM,2,Abdul Carter,Kayvon Thibodeaux,,Abdul Carter,1,0,,no,,https://www.giants.com/team/depth-chart
+NYG,New York Giants,Defense,CB,3,Deonte Banks,Paulson Adebo,Nikko Reed,Deonte Banks,1,0,,no,,https://www.giants.com/team/depth-chart
+NYG,New York Giants,Defense,SS,2,Tyler Nubin,Jason Pinnock,,Tyler Nubin,1,0,,no,,https://www.giants.com/team/depth-chart
+NYG,New York Giants,Defense,FS,3,Jevon Holland,Ar'Darius Washington,Elijah Campbell,Jevon Holland,1,0,,no,,https://www.giants.com/team/depth-chart
+NYG,New York Giants,Defense,CB,2,Greg Newsome II,Colton Hood,,Greg Newsome II,1,0,,no,,https://www.giants.com/team/depth-chart
+NYG,New York Giants,Defense,NB,2,Dru Phillips,Nic Jones,,Dru Phillips,1,0,,no,,https://www.giants.com/team/depth-chart
+NYJ,New York Jets,Offense,WR,3,Garrett Wilson,Omar Cooper Jr.,Isaiah Williams,Garrett Wilson,1,0,,no,,https://www.newyorkjets.com/team/depth-chart
+NYJ,New York Jets,Offense,TE,2,Jeremy Ruckert,Jelani Woods,,Jeremy Ruckert,1,0,,no,,https://www.newyorkjets.com/team/depth-chart
+NYJ,New York Jets,Offense,LT,1,Olu Fashanu,,,Olu Fashanu,1,0,,yes,,https://www.newyorkjets.com/team/depth-chart
+NYJ,New York Jets,Offense,LG,2,Dylan Parham,Jordan Meredith,,Dylan Parham,1,0,,no,,https://www.newyorkjets.com/team/depth-chart
+NYJ,New York Jets,Offense,C,2,Josh Myers,Jordan Meredith,,Josh Myers,1,0,,no,,https://www.newyorkjets.com/team/depth-chart
+NYJ,New York Jets,Offense,RG,2,Joe Tippmann,Kohl Levao,,Joe Tippmann,1,0,,no,,https://www.newyorkjets.com/team/depth-chart
+NYJ,New York Jets,Offense,RT,2,Armand Membou,Chukwuma Okorafor,,Armand Membou,1,0,,no,,https://www.newyorkjets.com/team/depth-chart
+NYJ,New York Jets,Offense,TE,2,Mason Taylor,Kenyon Sadiq,,Mason Taylor,1,0,,no,,https://www.newyorkjets.com/team/depth-chart
+NYJ,New York Jets,Offense,WR,3,Adonai Mitchell,Tim Patrick,Malik McClain,Adonai Mitchell,1,0,,no,,https://www.newyorkjets.com/team/depth-chart
+NYJ,New York Jets,Offense,QB,2,Geno Smith,Cade Klubnik,,Geno Smith,1,0,,no,,https://www.newyorkjets.com/team/depth-chart
+NYJ,New York Jets,Offense,FB,1,Andrew Beck,,,Andrew Beck,1,0,,yes,,https://www.newyorkjets.com/team/depth-chart
+NYJ,New York Jets,Offense,RB,4,Breece Hall,Braelon Allen,Isaiah Davis,Breece Hall,1,0,,no,,https://www.newyorkjets.com/team/depth-chart
+NYJ,New York Jets,Defense,EDGE,2,Kingsley Enagbare,Will McDonald IV,,Kingsley Enagbare,1,0,,no,,https://www.newyorkjets.com/team/depth-chart
+NYJ,New York Jets,Defense,DL,2,Harrison Phillips,Jack Heflin,,Harrison Phillips,1,0,,no,,https://www.newyorkjets.com/team/depth-chart
+NYJ,New York Jets,Defense,DL,1,Jack Heflin,,,Jack Heflin,1,0,,yes,,https://www.newyorkjets.com/team/depth-chart
+NYJ,New York Jets,Defense,DL,2,Jowon Briggs,Darrell Jackson Jr.,,Jowon Briggs,1,0,,no,,https://www.newyorkjets.com/team/depth-chart
+NYJ,New York Jets,Defense,EDGE,3,David Bailey,Joseph Ossai,Nate Lynn,David Bailey,1,0,,no,,https://www.newyorkjets.com/team/depth-chart
+NYJ,New York Jets,Defense,LB,2,Jamien Sherwood,Trevin Wallace,,Jamien Sherwood,1,0,,no,,https://www.newyorkjets.com/team/depth-chart
+NYJ,New York Jets,Defense,LB,2,Demario Davis,Jaden Keller,,Demario Davis,1,0,,no,,https://www.newyorkjets.com/team/depth-chart
+NYJ,New York Jets,Defense,NB,2,Jarvis Brownlee Jr.,D'Angelo Ponds,,Jarvis Brownlee Jr.,1,0,,no,,https://www.newyorkjets.com/team/depth-chart
+NYJ,New York Jets,Defense,CB,2,Brandon Stephens,Qwan'tez Stiggers,,Brandon Stephens,1,0,,no,,https://www.newyorkjets.com/team/depth-chart
+NYJ,New York Jets,Defense,CB,2,Azareye'h Thomas,Nahshon Wright,,Azareye'h Thomas,1,0,,no,,https://www.newyorkjets.com/team/depth-chart
+NYJ,New York Jets,Defense,S,2,Minkah Fitzpatrick,Malachi Moore,,Minkah Fitzpatrick,1,0,,no,,https://www.newyorkjets.com/team/depth-chart
+NYJ,New York Jets,Defense,S,1,Dane Belton,,,Dane Belton,1,0,,yes,,https://www.newyorkjets.com/team/depth-chart
+PHI,Philadelphia Eagles,Offense,WR,2,DeVonta Smith,Hollywood Brown,,DeVonta Smith,1,0,,no,"UNOFFICIAL, compiled by the Eagles Communications Department",https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Philadelphia Eagles,Offense,LT,1,Jordan Mailata,,,Jordan Mailata,1,0,,yes,"UNOFFICIAL, compiled by the Eagles Communications Department",https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Philadelphia Eagles,Offense,LG,1,Willie Lampkin,,,Willie Lampkin,1,0,,yes,"UNOFFICIAL, compiled by the Eagles Communications Department",https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Philadelphia Eagles,Offense,C,2,Drew Kendall,Jake Majors,,Drew Kendall,1,0,,no,"UNOFFICIAL, compiled by the Eagles Communications Department",https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Philadelphia Eagles,Offense,RG,2,Tyler Steen,Micah Morris,,Tyler Steen,1,0,,no,"UNOFFICIAL, compiled by the Eagles Communications Department",https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Philadelphia Eagles,Offense,RT,2,Markel Bell,Fred Johnson,,Markel Bell,1,0,,no,"UNOFFICIAL, compiled by the Eagles Communications Department",https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Philadelphia Eagles,Offense,TE,2,Dallas Goedert,Johnny Mundt,,Dallas Goedert,1,0,,no,"UNOFFICIAL, compiled by the Eagles Communications Department",https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Philadelphia Eagles,Offense,WR,3,Makai Lemon,Elijah Moore,Britain Covey,Makai Lemon,1,0,,no,"UNOFFICIAL, compiled by the Eagles Communications Department",https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Philadelphia Eagles,Offense,WR,2,Dontayvion Wicks,Darius Cooper,,Dontayvion Wicks,1,0,,no,"UNOFFICIAL, compiled by the Eagles Communications Department",https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Philadelphia Eagles,Offense,RB,1,Saquon Barkley,,,Saquon Barkley,1,0,,yes,"UNOFFICIAL, compiled by the Eagles Communications Department",https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Philadelphia Eagles,Offense,QB,3,Tanner McKee,Cole Payton,Joe Milton,Tanner McKee,1,0,,no,"UNOFFICIAL, compiled by the Eagles Communications Department",https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Philadelphia Eagles,Defense,EDGE,3,Jalyx Hunt,Jonathan Greenard,Arnold Ebiketie,Jalyx Hunt,1,0,,no,"UNOFFICIAL, compiled by the Eagles Communications Department",https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Philadelphia Eagles,Defense,DT,2,Jalen Carter,Byron Young,,Jalen Carter,1,0,,no,"UNOFFICIAL, compiled by the Eagles Communications Department",https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Philadelphia Eagles,Defense,DT,1,Ty Robinson,,,Ty Robinson,1,0,,yes,"UNOFFICIAL, compiled by the Eagles Communications Department",https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Philadelphia Eagles,Defense,DT,1,Moro Ojomo,,,Moro Ojomo,1,0,,yes,"UNOFFICIAL, compiled by the Eagles Communications Department",https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Philadelphia Eagles,Defense,EDGE,3,Nolan Smith Jr.,Jonathan Greenard,A.J. Epenesa,Nolan Smith Jr.,1,0,,no,"UNOFFICIAL, compiled by the Eagles Communications Department",https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Philadelphia Eagles,Defense,LB,2,Zack Baun,Smael Mondon Jr.,,Zack Baun,1,0,,no,"UNOFFICIAL, compiled by the Eagles Communications Department",https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Philadelphia Eagles,Defense,LB,2,Jihaad Campbell,Jeremiah Trotter Jr.,,Jihaad Campbell,1,0,,no,"UNOFFICIAL, compiled by the Eagles Communications Department",https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Philadelphia Eagles,Defense,CB,2,Riq Woolen,Jonathan Jones,,Riq Woolen,1,0,,no,"UNOFFICIAL, compiled by the Eagles Communications Department",https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Philadelphia Eagles,Defense,CB,2,Quinyon Mitchell,Kelee Ringo,,Quinyon Mitchell,1,0,,no,"UNOFFICIAL, compiled by the Eagles Communications Department",https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Philadelphia Eagles,Defense,NCB,2,Cooper DeJean,Mac McWilliams,,Cooper DeJean,1,0,,no,"UNOFFICIAL, compiled by the Eagles Communications Department",https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Philadelphia Eagles,Defense,S,2,Marcus Epps,Michael Carter II,,Marcus Epps,1,0,,no,"UNOFFICIAL, compiled by the Eagles Communications Department",https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Philadelphia Eagles,Defense,S,2,Andrew Mukuba,Kenny Moore II,,Andrew Mukuba,1,0,,no,"UNOFFICIAL, compiled by the Eagles Communications Department",https://www.philadelphiaeagles.com/team/depth-chart
+PIT,Pittsburgh Steelers,Offense,WR,2,DK Metcalf,Kaden Wetjen,,DK Metcalf,1,0,,no,,https://www.steelers.com/team/depth-chart/
+PIT,Pittsburgh Steelers,Offense,LT,1,Troy Fautanu,,,Troy Fautanu,1,0,,yes,,https://www.steelers.com/team/depth-chart/
+PIT,Pittsburgh Steelers,Offense,LG,1,Mason McCormick,,,Mason McCormick,1,0,,yes,,https://www.steelers.com/team/depth-chart/
+PIT,Pittsburgh Steelers,Offense,C,2,Zach Frazier,Ryan McCollum,,Zach Frazier,1,0,,no,,https://www.steelers.com/team/depth-chart/
+PIT,Pittsburgh Steelers,Offense,RG,2,Brock Hoffman,Spencer Anderson,,Brock Hoffman,1,0,,no,,https://www.steelers.com/team/depth-chart/
+PIT,Pittsburgh Steelers,Offense,RT,2,Max Iheanachor,Dylan Cook,,Max Iheanachor,1,0,,no,,https://www.steelers.com/team/depth-chart/
+PIT,Pittsburgh Steelers,Offense,TE,3,Pat Freiermuth,Darnell Washington,Robert Tonyan,Pat Freiermuth,1,0,,no,,https://www.steelers.com/team/depth-chart/
+PIT,Pittsburgh Steelers,Offense,WR,2,Ben Skowronek,Brandon Smith,,Ben Skowronek,1,0,,no,,https://www.steelers.com/team/depth-chart/
+PIT,Pittsburgh Steelers,Offense,WR,1,Germie Bernard,,,Germie Bernard,1,0,,yes,,https://www.steelers.com/team/depth-chart/
+PIT,Pittsburgh Steelers,Offense,QB,4,Aaron Rodgers,Mason Rudolph,Will Howard,Aaron Rodgers,1,0,,no,,https://www.steelers.com/team/depth-chart/
+PIT,Pittsburgh Steelers,Offense,RB,5,Jaylen Warren,Rico Dowdle,Eli Heidenreich,Jaylen Warren,1,0,,no,,https://www.steelers.com/team/depth-chart/
+PIT,Pittsburgh Steelers,Offense,FB,1,Riley Nowakowski,,,Riley Nowakowski,1,0,,yes,,https://www.steelers.com/team/depth-chart/
+PIT,Pittsburgh Steelers,Defense,DE,3,Keeanu Benton,Gabriel Rubio,Kevin Jobity Jr.,Keeanu Benton,1,0,,no,,https://www.steelers.com/team/depth-chart/
+PIT,Pittsburgh Steelers,Defense,NT,1,Yahya Black,,,Yahya Black,1,0,,yes,,https://www.steelers.com/team/depth-chart/
+PIT,Pittsburgh Steelers,Defense,DT,1,Cameron Heyward,,,Cameron Heyward,1,0,,yes,,https://www.steelers.com/team/depth-chart/
+PIT,Pittsburgh Steelers,Defense,LOLB,1,T.J. Watt,,,T.J. Watt,1,0,,yes,,https://www.steelers.com/team/depth-chart/
+PIT,Pittsburgh Steelers,Defense,LILB,2,Patrick Queen,Carson Bruener,,Patrick Queen,1,0,,no,,https://www.steelers.com/team/depth-chart/
+PIT,Pittsburgh Steelers,Defense,RILB,2,Payton Wilson,Cole Holcomb,,Payton Wilson,1,0,,no,,https://www.steelers.com/team/depth-chart/
+PIT,Pittsburgh Steelers,Defense,ROLB,2,Alex Highsmith,Jack Sawyer,,Alex Highsmith,1,0,,no,,https://www.steelers.com/team/depth-chart/
+PIT,Pittsburgh Steelers,Defense,OLB,1,Nick Herbig,,,Nick Herbig,1,0,,yes,,https://www.steelers.com/team/depth-chart/
+PIT,Pittsburgh Steelers,Defense,CB,3,Asante Samuel Jr.,Sean Murphy-Bunting,Doneiko Slaughter,Asante Samuel Jr.,1,0,,no,,https://www.steelers.com/team/depth-chart/
+PIT,Pittsburgh Steelers,Defense,NCB,2,Jalen Ramsey,Brandin Echols,,Jalen Ramsey,1,0,,no,,https://www.steelers.com/team/depth-chart/
+PIT,Pittsburgh Steelers,Defense,CB,3,Jamel Dean,Daylen Everette,Terell Smith,Jamel Dean,1,0,,no,,https://www.steelers.com/team/depth-chart/
+PIT,Pittsburgh Steelers,Defense,S,3,Jaquan Brisker,DeShon Elliott,Robert Spears-Jennings,Jaquan Brisker,1,0,,no,,https://www.steelers.com/team/depth-chart/
+SEA,Seattle Seahawks,Offense,WR,3,Cooper Kupp,Rashid Shaheed,Irvin Charles,Cooper Kupp,1,0,,no,,https://www.seahawks.com/team/depth-chart
+SEA,Seattle Seahawks,Offense,LT,2,Charles Cross,Josh Jones,,Charles Cross,1,0,,no,,https://www.seahawks.com/team/depth-chart
+SEA,Seattle Seahawks,Offense,LG,2,Quenton Nelson,Anthony Bradford,,Quenton Nelson,1,0,,no,,https://www.seahawks.com/team/depth-chart
+SEA,Seattle Seahawks,Offense,C,2,Jalen Sundell,Olu Oluwatimi,,Jalen Sundell,1,0,,no,,https://www.seahawks.com/team/depth-chart
+SEA,Seattle Seahawks,Offense,RG,3,Grey Zabel,Anthony Bradford,Beau Stephens,Grey Zabel,1,0,,no,,https://www.seahawks.com/team/depth-chart
+SEA,Seattle Seahawks,Offense,RT,2,Abraham Lucas,Josh Jones,,Abraham Lucas,1,0,,no,,https://www.seahawks.com/team/depth-chart
+SEA,Seattle Seahawks,Offense,TE,3,AJ Barner,Eric Saubert,Nick Kallerup,AJ Barner,1,0,,no,,https://www.seahawks.com/team/depth-chart
+SEA,Seattle Seahawks,Offense,WR,2,Jaxon Smith-Njigba,Tory Horton,,Jaxon Smith-Njigba,1,0,,no,,https://www.seahawks.com/team/depth-chart
+SEA,Seattle Seahawks,Offense,QB,3,Sam Darnold,Drew Lock,Jalen Milroe,Sam Darnold,1,0,,no,,https://www.seahawks.com/team/depth-chart
+SEA,Seattle Seahawks,Offense,FB,1,Brady Russell,,,Brady Russell,1,0,,yes,,https://www.seahawks.com/team/depth-chart
+SEA,Seattle Seahawks,Offense,RB,4,Zach Charbonnet,Jadarian Price,Emanuel Wilson,Zach Charbonnet,1,0,,no,,https://www.seahawks.com/team/depth-chart
+SEA,Seattle Seahawks,Defense,DT,2,Leonard Williams,Rylie Mills,,Leonard Williams,1,0,,no,,https://www.seahawks.com/team/depth-chart
+SEA,Seattle Seahawks,Defense,NT,3,Byron Murphy II,Brandon Pili,Deven Eastern,Byron Murphy II,1,0,,no,,https://www.seahawks.com/team/depth-chart
+SEA,Seattle Seahawks,Defense,DE,2,Jarran Reed,Mike Morris,,Jarran Reed,1,0,,no,,https://www.seahawks.com/team/depth-chart
+SEA,Seattle Seahawks,Defense,RUSH,2,DeMarcus Lawrence,Derick Hall,,DeMarcus Lawrence,1,0,,no,,https://www.seahawks.com/team/depth-chart
+SEA,Seattle Seahawks,Defense,MLB,2,Ernest Jones IV,Patrick O'Connell,,Ernest Jones IV,1,0,,no,,https://www.seahawks.com/team/depth-chart
+SEA,Seattle Seahawks,Defense,WLB,3,Drake Thomas,Tyrice Knight,Chazz Surratt,Drake Thomas,1,0,,no,,https://www.seahawks.com/team/depth-chart
+SEA,Seattle Seahawks,Defense,SLB,3,Uchenna Nwosu,Dante Fowler Jr.,Connor O'Toole,Uchenna Nwosu,1,0,,no,,https://www.seahawks.com/team/depth-chart
+SEA,Seattle Seahawks,Defense,CB,2,Devon Witherspoon,Nehemiah Pritchett,,Devon Witherspoon,1,0,,no,,https://www.seahawks.com/team/depth-chart
+SEA,Seattle Seahawks,Defense,CB,2,Josh Jobe,Avery Smith,,Josh Jobe,1,0,,no,,https://www.seahawks.com/team/depth-chart
+SEA,Seattle Seahawks,Defense,S,2,Ty Okada,Rodney Thomas II,,Ty Okada,1,0,,no,,https://www.seahawks.com/team/depth-chart
+SEA,Seattle Seahawks,Defense,S,1,Julian Love,,,Julian Love,1,0,,yes,,https://www.seahawks.com/team/depth-chart
+SEA,Seattle Seahawks,Defense,S,1,Nick Emmanwori,,,Nick Emmanwori,1,0,,yes,,https://www.seahawks.com/team/depth-chart
+SF,San Francisco 49ers,Offense,WR,3,Mike Evans,Jordan Watkins,Brandin Cooks,Mike Evans,1,0,,no,Updated as of 11/10/26,https://www.49ers.com/team/depth-chart
+SF,San Francisco 49ers,Offense,LT,3,Trent Williams,Vederian Lowe,Enrique Cruz Jr.,Trent Williams,1,0,,no,Updated as of 11/10/26,https://www.49ers.com/team/depth-chart
+SF,San Francisco 49ers,Offense,LG,2,Connor Colby,Carver Willis,,Connor Colby,1,0,,no,Updated as of 11/10/26,https://www.49ers.com/team/depth-chart
+SF,San Francisco 49ers,Offense,C,2,Jake Brendel,Jarrett Patterson,,Jake Brendel,1,0,,no,Updated as of 11/10/26,https://www.49ers.com/team/depth-chart
+SF,San Francisco 49ers,Offense,RG,1,Dominick Puni,,,Dominick Puni,1,0,,yes,Updated as of 11/10/26,https://www.49ers.com/team/depth-chart
+SF,San Francisco 49ers,Offense,RT,1,Colton McKivitz,,,Colton McKivitz,1,0,,yes,Updated as of 11/10/26,https://www.49ers.com/team/depth-chart
+SF,San Francisco 49ers,Offense,TE,3,George Kittle,Luke Farrell,Brayden Willis,George Kittle,1,0,,no,Updated as of 11/10/26,https://www.49ers.com/team/depth-chart
+SF,San Francisco 49ers,Offense,WR,3,Deebo Samuel Sr.,Demarcus Robinson,Jacob Cowing,Deebo Samuel Sr.,1,0,,no,Updated as of 11/10/26,https://www.49ers.com/team/depth-chart
+SF,San Francisco 49ers,Offense,RB,3,Christian McCaffrey,Kaelon Black,Jordan James,Christian McCaffrey,1,0,,no,Updated as of 11/10/26,https://www.49ers.com/team/depth-chart
+SF,San Francisco 49ers,Offense,FB,1,Kyle Juszczyk,,,Kyle Juszczyk,1,0,,yes,Updated as of 11/10/26,https://www.49ers.com/team/depth-chart
+SF,San Francisco 49ers,Offense,QB,3,Brock Purdy,Mac Jones,Kurtis Rourke,Brock Purdy,1,0,,no,Updated as of 11/10/26,https://www.49ers.com/team/depth-chart
+SF,San Francisco 49ers,Defense,LDE,3,Keion White,Mykel Williams,Khalid Kareem,Keion White,1,0,,no,Updated as of 11/10/26,https://www.49ers.com/team/depth-chart
+SF,San Francisco 49ers,Defense,LDT,3,DeForest Buckner,Gracen Halton,Sebastian Valdez,DeForest Buckner,1,0,,no,Updated as of 11/10/26,https://www.49ers.com/team/depth-chart
+SF,San Francisco 49ers,Defense,RDT,2,Osa Odighizuwa,James Thompson Jr.,,Osa Odighizuwa,1,0,,no,Updated as of 11/10/26,https://www.49ers.com/team/depth-chart
+SF,San Francisco 49ers,Defense,RDE,2,Nick Bosa,Romello Height,,Nick Bosa,1,0,,no,Updated as of 11/10/26,https://www.49ers.com/team/depth-chart
+SF,San Francisco 49ers,Defense,SAM,2,Jaden Dugger,Luke Gifford,,Jaden Dugger,1,0,,no,Updated as of 11/10/26,https://www.49ers.com/team/depth-chart
+SF,San Francisco 49ers,Defense,MIKE,2,Fred Warner,Tatum Bethune,,Fred Warner,1,0,,no,Updated as of 11/10/26,https://www.49ers.com/team/depth-chart
+SF,San Francisco 49ers,Defense,WILL,2,Dre Greenlaw,Garret Wallow,,Dre Greenlaw,1,0,,no,Updated as of 11/10/26,https://www.49ers.com/team/depth-chart
+SF,San Francisco 49ers,Defense,LCB,1,Renardo Green,,,Renardo Green,1,0,,yes,Updated as of 11/10/26,https://www.49ers.com/team/depth-chart
+SF,San Francisco 49ers,Defense,RCB,2,Deommodore Lenoir,Ephesians Prysock,,Deommodore Lenoir,1,0,,no,Updated as of 11/10/26,https://www.49ers.com/team/depth-chart
+SF,San Francisco 49ers,Defense,NB,1,Upton Stout,,,Upton Stout,1,0,,yes,Updated as of 11/10/26,https://www.49ers.com/team/depth-chart
+SF,San Francisco 49ers,Defense,FS,2,Ji'Ayir Brown,Siran Neal,,Ji'Ayir Brown,1,0,,no,Updated as of 11/10/26,https://www.49ers.com/team/depth-chart
+SF,San Francisco 49ers,Defense,SS,3,Malik Mustapha,Marques Sigle,Ashtyn Davis,Malik Mustapha,1,0,,no,Updated as of 11/10/26,https://www.49ers.com/team/depth-chart
+TB,Tampa Bay Buccaneers,Offense,WR,2,Ted Hurst III,David Sills V,,Ted Hurst III,1,0,,no,,https://www.buccaneers.com/team/depth-chart
+TB,Tampa Bay Buccaneers,Offense,WR,2,Chris Godwin Jr.,Kameron Johnson,,Chris Godwin Jr.,1,0,,no,,https://www.buccaneers.com/team/depth-chart
+TB,Tampa Bay Buccaneers,Offense,LT,2,Tristan Wirfs,Benjamin Chukwuma,,Tristan Wirfs,1,0,,no,,https://www.buccaneers.com/team/depth-chart
+TB,Tampa Bay Buccaneers,Offense,LG,2,Ben Bredeson,Billy Schrauth,,Ben Bredeson,1,0,,no,,https://www.buccaneers.com/team/depth-chart
+TB,Tampa Bay Buccaneers,Offense,C,2,Graham Barton,Dan Feeney,,Graham Barton,1,0,,no,,https://www.buccaneers.com/team/depth-chart
+TB,Tampa Bay Buccaneers,Offense,RG,2,Cody Mauch,Trevor Keegan,,Cody Mauch,1,0,,no,,https://www.buccaneers.com/team/depth-chart
+TB,Tampa Bay Buccaneers,Offense,RT,2,Luke Goedeke,Justin Skule,,Luke Goedeke,1,0,,no,,https://www.buccaneers.com/team/depth-chart
+TB,Tampa Bay Buccaneers,Offense,WR,2,Emeka Egbuka,Tez Johnson,,Emeka Egbuka,1,0,,no,,https://www.buccaneers.com/team/depth-chart
+TB,Tampa Bay Buccaneers,Offense,TE,4,Cade Otton,Payne Durham,Ko Kieft,Cade Otton,1,0,,no,,https://www.buccaneers.com/team/depth-chart
+TB,Tampa Bay Buccaneers,Offense,QB,2,Baker Mayfield,Jalon Daniels,,Baker Mayfield,1,0,,no,,https://www.buccaneers.com/team/depth-chart
+TB,Tampa Bay Buccaneers,Offense,RB,3,Bucky Irving,Kenny Gainwell,Sean Tucker,Bucky Irving,1,0,,no,,https://www.buccaneers.com/team/depth-chart
+TB,Tampa Bay Buccaneers,Defense,DL,2,Calijah Kancey,Elijah Roberts,,Calijah Kancey,1,0,,no,,https://www.buccaneers.com/team/depth-chart
+TB,Tampa Bay Buccaneers,Defense,NT,3,Vita Vea,Rakeem Nunez-Roches,Elijah Simmons,Vita Vea,1,0,,no,,https://www.buccaneers.com/team/depth-chart
+TB,Tampa Bay Buccaneers,Defense,DL,2,A'Shawn Robinson,DeMonte Capehart,,A'Shawn Robinson,1,0,,no,,https://www.buccaneers.com/team/depth-chart
+TB,Tampa Bay Buccaneers,Defense,OLB,3,Yaya Diaby,Anthony Nelson,David Walker,Yaya Diaby,1,0,,no,,https://www.buccaneers.com/team/depth-chart
+TB,Tampa Bay Buccaneers,Defense,ILB,2,Josiah Trotter,SirVocea Dennis,,Josiah Trotter,1,0,,no,,https://www.buccaneers.com/team/depth-chart
+TB,Tampa Bay Buccaneers,Defense,ILB,1,Alex Anzalone,,,Alex Anzalone,1,0,,yes,,https://www.buccaneers.com/team/depth-chart
+TB,Tampa Bay Buccaneers,Defense,OLB,2,Rueben Bain Jr.,Al-Quadin Muhammad,,Rueben Bain Jr.,1,0,,no,,https://www.buccaneers.com/team/depth-chart
+TB,Tampa Bay Buccaneers,Defense,CB,3,Zyon McCollum,Benjamin Morrison,Ayden Garnes,Zyon McCollum,1,0,,no,,https://www.buccaneers.com/team/depth-chart
+TB,Tampa Bay Buccaneers,Defense,CB,3,Jacob Parrish,Keionte Scott,Kevin Knowles,Jacob Parrish,1,0,,no,,https://www.buccaneers.com/team/depth-chart
+TB,Tampa Bay Buccaneers,Defense,S,2,Antoine Winfield Jr.,Ifeatu Melifonwu,,Antoine Winfield Jr.,1,0,,no,,https://www.buccaneers.com/team/depth-chart
+TB,Tampa Bay Buccaneers,Defense,S,2,Tykee Smith,Miles Killebrew,,Tykee Smith,1,0,,no,,https://www.buccaneers.com/team/depth-chart
+TEN,Tennessee Titans,Offense,WR,2,Calvin Ridley,Chimere Dike,,Calvin Ridley,1,0,,no,as of 11/10/26,https://www.tennesseetitans.com/team/depth-chart
+TEN,Tennessee Titans,Offense,TE,4,Gunnar Helm,Daniel Bellinger,David Martin-Robinson,Gunnar Helm,1,0,,no,as of 11/10/26,https://www.tennesseetitans.com/team/depth-chart
+TEN,Tennessee Titans,Offense,LT,2,Dan Moore Jr.,James Hudson III,,Dan Moore Jr.,1,0,,no,as of 11/10/26,https://www.tennesseetitans.com/team/depth-chart
+TEN,Tennessee Titans,Offense,LG,1,Peter Skoronski,,,Peter Skoronski,1,0,,yes,as of 11/10/26,https://www.tennesseetitans.com/team/depth-chart
+TEN,Tennessee Titans,Offense,C,2,Austin Schlottmann,Pat Coogan,,Austin Schlottmann,1,0,,no,as of 11/10/26,https://www.tennesseetitans.com/team/depth-chart
+TEN,Tennessee Titans,Offense,RG,2,Atonio Mafi,Garrett Dellinger,,Atonio Mafi,1,0,,no,as of 11/10/26,https://www.tennesseetitans.com/team/depth-chart
+TEN,Tennessee Titans,Offense,RT,2,JC Latham,Brandon Crenshaw-Dickson,,JC Latham,1,0,,no,as of 11/10/26,https://www.tennesseetitans.com/team/depth-chart
+TEN,Tennessee Titans,Offense,WR,1,Wan'Dale Robinson,,,Wan'Dale Robinson,1,0,,yes,as of 11/10/26,https://www.tennesseetitans.com/team/depth-chart
+TEN,Tennessee Titans,Offense,WR,2,Carnell Tate,Elic Ayomanor,,Carnell Tate,1,0,,no,as of 11/10/26,https://www.tennesseetitans.com/team/depth-chart
+TEN,Tennessee Titans,Offense,QB,2,Cam Ward,Mitchell Trubisky,,Cam Ward,1,0,,no,as of 11/10/26,https://www.tennesseetitans.com/team/depth-chart
+TEN,Tennessee Titans,Offense,RB,5,Tony Pollard,Tyjae Spears,Nick Singleton,Tony Pollard,1,0,,no,as of 11/10/26,https://www.tennesseetitans.com/team/depth-chart
+TEN,Tennessee Titans,Defense,DE,2,Jermaine Johnson II,Oluwafemi Oladejo,,Jermaine Johnson II,1,0,,no,as of 11/10/26,https://www.tennesseetitans.com/team/depth-chart
+TEN,Tennessee Titans,Defense,DT,3,Solomon Thomas,Jonah Laulu,Jackie Marshall,Solomon Thomas,1,0,,no,as of 11/10/26,https://www.tennesseetitans.com/team/depth-chart
+TEN,Tennessee Titans,Defense,DL,3,John Franklin-Myers,Nazir Stackhouse,Timmy Horne,John Franklin-Myers,1,0,,no,as of 11/10/26,https://www.tennesseetitans.com/team/depth-chart
+TEN,Tennessee Titans,Defense,DE,3,Jacob Martin,Keldric Faulk,Truman Jones,Jacob Martin,1,0,,no,as of 11/10/26,https://www.tennesseetitans.com/team/depth-chart
+TEN,Tennessee Titans,Defense,LB,1,Cody Barton,,,Cody Barton,1,0,,yes,as of 11/10/26,https://www.tennesseetitans.com/team/depth-chart
+TEN,Tennessee Titans,Defense,LB,1,Cedric Gray,,,Cedric Gray,1,0,,yes,as of 11/10/26,https://www.tennesseetitans.com/team/depth-chart
+TEN,Tennessee Titans,Defense,LB,2,Anthony Hill Jr.,Dorian Mausi,,Anthony Hill Jr.,1,0,,no,as of 11/10/26,https://www.tennesseetitans.com/team/depth-chart
+TEN,Tennessee Titans,Defense,CB,2,Joshua Williams,Alontae Taylor,,Joshua Williams,1,0,,no,as of 11/10/26,https://www.tennesseetitans.com/team/depth-chart
+TEN,Tennessee Titans,Defense,NCB,3,Marcus Harris,Alontae Taylor,Micah Robinson,Marcus Harris,1,0,,no,as of 11/10/26,https://www.tennesseetitans.com/team/depth-chart
+TEN,Tennessee Titans,Defense,S,1,Tony Adams,,,Tony Adams,1,0,,yes,as of 11/10/26,https://www.tennesseetitans.com/team/depth-chart
+TEN,Tennessee Titans,Defense,S,2,Kevin Winston Jr.,Terrell Burgess,,Kevin Winston Jr.,1,0,,no,as of 11/10/26,https://www.tennesseetitans.com/team/depth-chart
+TEN,Tennessee Titans,Defense,CB,2,Cor'Dale Flott,Jaylon Jones,,Cor'Dale Flott,1,0,,no,as of 11/10/26,https://www.tennesseetitans.com/team/depth-chart
+WAS,Washington Commanders,Offense,WR,2,Terry McLaurin,Treylon Burks,,Terry McLaurin,1,0,,no,,https://www.commanders.com/team/depth-chart
+WAS,Washington Commanders,Offense,LT,2,Brandon Coleman,Andrew Wylie,,Brandon Coleman,1,0,,no,,https://www.commanders.com/team/depth-chart
+WAS,Washington Commanders,Offense,LG,2,Chris Paul,Tanoa Togiai,,Chris Paul,1,0,,no,,https://www.commanders.com/team/depth-chart
+WAS,Washington Commanders,Offense,C,2,Nick Allegretti,Matt Gulbin,,Nick Allegretti,1,0,,no,,https://www.commanders.com/team/depth-chart
+WAS,Washington Commanders,Offense,RG,2,Sam Cosmi,Tanoa Togiai,,Sam Cosmi,1,0,,no,,https://www.commanders.com/team/depth-chart
+WAS,Washington Commanders,Offense,RT,2,Josh Conerly Jr.,Andrew Wylie,,Josh Conerly Jr.,1,0,,no,,https://www.commanders.com/team/depth-chart
+WAS,Washington Commanders,Offense,TE,2,Chig Okonkwo,Ben Sinnott,,Chig Okonkwo,1,0,,no,,https://www.commanders.com/team/depth-chart
+WAS,Washington Commanders,Offense,TE,2,John Bates,Colson Yankoff,,John Bates,1,0,,no,,https://www.commanders.com/team/depth-chart
+WAS,Washington Commanders,Offense,WR,2,Stefon Diggs,Jaylin Lane,,Stefon Diggs,1,0,,no,,https://www.commanders.com/team/depth-chart
+WAS,Washington Commanders,Offense,WR,3,Dyami Brown,Antonio Williams,Luke McCaffrey,Dyami Brown,1,0,,no,,https://www.commanders.com/team/depth-chart
+WAS,Washington Commanders,Offense,QB,3,Jayden Daniels,Marcus Mariota,Athan Kaliakmanis,Jayden Daniels,1,0,,no,,https://www.commanders.com/team/depth-chart
+WAS,Washington Commanders,Offense,RB,3,Jacory Croskey-Merritt,Rachaad White,Austin Ekeler,Jacory Croskey-Merritt,1,0,,no,,https://www.commanders.com/team/depth-chart
+WAS,Washington Commanders,Defense,DL,1,Daron Payne,,,Daron Payne,1,0,,yes,,https://www.commanders.com/team/depth-chart
+WAS,Washington Commanders,Defense,DL,2,Tim Settle,Shy Tuttle,,Tim Settle,1,0,,no,,https://www.commanders.com/team/depth-chart
+WAS,Washington Commanders,Defense,DL,2,Javon Kinlaw,Charles Omenihu,,Javon Kinlaw,1,0,,no,,https://www.commanders.com/team/depth-chart
+WAS,Washington Commanders,Defense,OLB,2,Odafe Oweh,Joshua Josephs,,Odafe Oweh,1,0,,no,,https://www.commanders.com/team/depth-chart
+WAS,Washington Commanders,Defense,LB,2,Sonny Styles,Kain Medrano,,Sonny Styles,1,0,,no,,https://www.commanders.com/team/depth-chart
+WAS,Washington Commanders,Defense,LB,2,Frankie Luvu,Kain Medrano,,Frankie Luvu,1,0,,no,,https://www.commanders.com/team/depth-chart
+WAS,Washington Commanders,Defense,OLB,3,K'Lavon Chaisson,Dorance Armstrong,Javontae Jean-Baptiste,K'Lavon Chaisson,1,0,,no,,https://www.commanders.com/team/depth-chart
+WAS,Washington Commanders,Defense,CB,2,Amik Robertson,Rasul Douglas,,Amik Robertson,1,0,,no,,https://www.commanders.com/team/depth-chart
+WAS,Washington Commanders,Defense,CB,2,Mike Sainristil,Fabian Moreau,,Mike Sainristil,1,0,,no,,https://www.commanders.com/team/depth-chart
+WAS,Washington Commanders,Defense,SS,2,Nick Cross,Tyler Owens,,Nick Cross,1,0,,no,,https://www.commanders.com/team/depth-chart
+WAS,Washington Commanders,Defense,FS,3,Jeremy Reaves,Quan Martin,Percy Butler,Jeremy Reaves,1,0,,no,,https://www.commanders.com/team/depth-chart

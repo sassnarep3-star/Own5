@@ -1,0 +1,13 @@
+strategy,division,bets,games,weeks,max_bets_in_one_week,same_game_multileg_bets,note
+S1 Side: model likes home by >= 1.5 pts,singles,750,750,90,14,0,one leg per game
+S2 Side: model likes home by >= 3.0 pts,singles,676,676,90,13,0,one leg per game
+S3 Side: fade the market home price by >= 3.0 pts,singles,330,330,89,9,0,one leg per game
+S4 Total: over when our total is >= 3 pts above the market,singles,321,321,84,11,0,one leg per game
+S5 Total: under when our total is <= -3 pts vs the market,singles,207,207,81,15,0,one leg per game
+S6 Side: take the model's side at any size,singles,1255,1255,90,15,0,one leg per game
+S7 Moneyline: back home when model p >= 0.62,singles,373,373,83,9,0,one leg per game
+S8 Moneyline: back away when model p_home <= 0.38,singles,88,88,60,4,0,one leg per game
+P1 Parlay: model home side + over,parlays,310,310,86,10,310,"same-game parlays: legs are priced off the same two captured numbers, so their joint probability is not a coin flip product - see correlations.csv"
+P2 Parlay: model home side + under,parlays,197,197,80,8,197,"same-game parlays: legs are priced off the same two captured numbers, so their joint probability is not a coin flip product - see correlations.csv"
+P3 Parlay: model away side + over,parlays,171,171,76,6,171,"same-game parlays: legs are priced off the same two captured numbers, so their joint probability is not a coin flip product - see correlations.csv"
+P4 Parlay: model away side + under,parlays,121,121,66,7,121,"same-game parlays: legs are priced off the same two captured numbers, so their joint probability is not a coin flip product - see correlations.csv"

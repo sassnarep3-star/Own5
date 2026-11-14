@@ -1,0 +1,13 @@
+strategy,bets,mean_kelly_fraction_at_realised_outcome,quarter_kelly,note
+S1 Side: model likes home by >= 1.5 pts,732,0.422,0.1055,"retrospective: computed from realised outcomes, so it shows what the right sizing would have paid, not what could have been known"
+S2 Side: model likes home by >= 3.0 pts,658,0.4227,0.1057,"retrospective: computed from realised outcomes, so it shows what the right sizing would have paid, not what could have been known"
+S3 Side: fade the market home price by >= 3.0 pts,319,0.4213,0.1053,"retrospective: computed from realised outcomes, so it shows what the right sizing would have paid, not what could have been known"
+S4 Total: over when our total is >= 3 pts above the market,317,0.373,0.0933,"retrospective: computed from realised outcomes, so it shows what the right sizing would have paid, not what could have been known"
+S5 Total: under when our total is <= -3 pts vs the market,206,0.4462,0.1115,"retrospective: computed from realised outcomes, so it shows what the right sizing would have paid, not what could have been known"
+S6 Side: take the model's side at any size,1224,0.418,0.1045,"retrospective: computed from realised outcomes, so it shows what the right sizing would have paid, not what could have been known"
+S7 Moneyline: back home when model p >= 0.62,372,0.1626,0.0407,"retrospective: computed from realised outcomes, so it shows what the right sizing would have paid, not what could have been known"
+S8 Moneyline: back away when model p_home <= 0.38,87,0.1202,0.03,"retrospective: computed from realised outcomes, so it shows what the right sizing would have paid, not what could have been known"
+P1 Parlay: model home side + over,299,1.8159,0.454,"retrospective: computed from realised outcomes, so it shows what the right sizing would have paid, not what could have been known"
+P2 Parlay: model home side + under,191,1.7009,0.4252,"retrospective: computed from realised outcomes, so it shows what the right sizing would have paid, not what could have been known"
+P3 Parlay: model away side + over,160,1.5988,0.3997,"retrospective: computed from realised outcomes, so it shows what the right sizing would have paid, not what could have been known"
+P4 Parlay: model away side + under,119,1.7264,0.4316,"retrospective: computed from realised outcomes, so it shows what the right sizing would have paid, not what could have been known"

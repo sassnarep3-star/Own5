@@ -1,0 +1,7 @@
+item,value,note
+store rows,148,hash chain valid: yes
+rows_stage_opening,48,
+rows_stage_pre_game,100,
+games with an operator snapshot,16,13 of the 14 Week-10 games plus 3 Week-11 games carried a price on the page
+fair-vs-market rows with a market number,14,0 rows priced with no market number to compare against
+closing snapshots,0,"zero, so no CLV claim is made anywhere in this build (gate V-08 BLOCKED BY DATA)"

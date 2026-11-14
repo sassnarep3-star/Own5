@@ -1,0 +1,30 @@
+{
+ "files": {
+  "pinned/byes_2026_vendored.csv": {
+   "from": "nfl-desk-864d5668/raw_inputs.py",
+   "note": "extracted verbatim from the sibling session's pinned official transcription",
+   "sha256": "6928afa066d6cefee00e7c8de3b2e1904c4726b7a557e3a0362531db67b15ef0",
+   "sha256_of_source": "a971b80f1e117573f1a87262529189f6355d5eba47a3513ffb6202c85049b2df"
+  },
+  "pinned/depth_charts_2026_11_13.csv": {
+   "from": "nfl-desk-864d5668/data/depth_detail.csv",
+   "note": "Official club /team/depth-chart pages, transcribed by session 864d5668 on 2026-11-13 (31 of 32 clubs; Houston publishes an image only and is blank there)",
+   "sha256": "5eccb97a2bc5095d4330f84e41990f11e0a4af13e81fba6e880098914496e786",
+   "sha256_of_source": "5eccb97a2bc5095d4330f84e41990f11e0a4af13e81fba6e880098914496e786"
+  },
+  "pinned/injuries_wk10_official.csv": {
+   "from": "nfl-desk-864d5668/data/injuries.csv",
+   "note": "Official 2026 Week 10 league injury report (nfl.com/injuries/league/2026/reg10) transcribed row by row by session 864d5668 on 2026-11-13",
+   "sha256": "325a2c48ce447d720b597f8e5e6949ac2e06449edfcea41d84b8ae822e3701f0",
+   "sha256_of_source": "325a2c48ce447d720b597f8e5e6949ac2e06449edfcea41d84b8ae822e3701f0"
+  },
+  "pinned/slate_2026_vendored.csv": {
+   "from": "nfl-desk-864d5668/raw_inputs.py",
+   "note": "extracted verbatim from the sibling session's pinned official transcription",
+   "sha256": "5662446fd86d2750348989c85efc2864c82f6e528ee1fb7d2c85664c434bc521",
+   "sha256_of_source": "a971b80f1e117573f1a87262529189f6355d5eba47a3513ffb6202c85049b2df"
+  }
+ },
+ "session": "ce1f16ff",
+ "vendored_utc": "2026-11-14T21:55Z"
+}

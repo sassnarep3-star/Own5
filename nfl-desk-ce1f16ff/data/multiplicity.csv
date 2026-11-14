@@ -1,0 +1,4 @@
+item,value,why
+registered strategy variants,12,"all of them enter the Holm step-down, including the ones that looked bad"
+thresholds registered before results were seen,15,no threshold was moved after seeing a backtest; see flags.csv
+thresholds changed after seeing results,0,"any change here would be published, not folded into the fit"

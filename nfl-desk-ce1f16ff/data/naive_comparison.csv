@@ -1,0 +1,49 @@
+strategy,naive_rule,n,model_wins,naive_wins,model_hit_rate,naive_hit_rate,discordant,mcnemar_p,verdict
+S1 Side: model likes home by >= 1.5 pts,N1 always take the home side at the posted line,732,358,358,0.4891,0.4891,0,1.0000,indistinguishable from this naive rule
+S1 Side: model likes home by >= 1.5 pts,N2 always take the side the market prefers,732,358,358,0.4891,0.4891,32,1.0000,indistinguishable from this naive rule
+S1 Side: model likes home by >= 1.5 pts,N3 always take the over at the posted total,727,356,368,0.4897,0.5062,350,0.5566,indistinguishable from this naive rule
+S1 Side: model likes home by >= 1.5 pts,N4 always back the home moneyline,731,358,482,0.4897,0.6594,124,<0.0001,beats this naive rule on the same games
+S2 Side: model likes home by >= 3.0 pts,N1 always take the home side at the posted line,658,322,322,0.4894,0.4894,0,1.0000,indistinguishable from this naive rule
+S2 Side: model likes home by >= 3.0 pts,N2 always take the side the market prefers,658,322,323,0.4894,0.4909,15,1.0000,indistinguishable from this naive rule
+S2 Side: model likes home by >= 3.0 pts,N3 always take the over at the posted total,653,320,331,0.49,0.5069,315,0.5732,indistinguishable from this naive rule
+S2 Side: model likes home by >= 3.0 pts,N4 always back the home moneyline,657,322,443,0.4901,0.6743,121,<0.0001,beats this naive rule on the same games
+S3 Side: fade the market home price by >= 3.0 pts,N1 always take the home side at the posted line,319,156,163,0.489,0.511,319,0.7370,indistinguishable from this naive rule
+S3 Side: fade the market home price by >= 3.0 pts,N2 always take the side the market prefers,319,156,155,0.489,0.4859,3,1.0000,indistinguishable from this naive rule
+S3 Side: fade the market home price by >= 3.0 pts,N3 always take the over at the posted total,315,155,143,0.4921,0.454,164,0.3904,indistinguishable from this naive rule
+S3 Side: fade the market home price by >= 3.0 pts,N4 always back the home moneyline,317,156,104,0.4921,0.3281,260,0.0015,beats this naive rule on the same games
+S4 Total: over when our total is >= 3 pts above the market,N1 always take the home side at the posted line,304,134,160,0.4408,0.5263,146,0.0382,beats this naive rule on the same games
+S4 Total: over when our total is >= 3 pts above the market,N2 always take the side the market prefers,304,134,155,0.4408,0.5099,161,0.1147,indistinguishable from this naive rule
+S4 Total: over when our total is >= 3 pts above the market,N3 always take the over at the posted total,317,141,141,0.4448,0.4448,0,1.0000,indistinguishable from this naive rule
+S4 Total: over when our total is >= 3 pts above the market,N4 always back the home moneyline,317,141,172,0.4448,0.5426,157,0.0164,beats this naive rule on the same games
+S5 Total: under when our total is <= -3 pts vs the market,N1 always take the home side at the posted line,200,105,102,0.525,0.51,97,0.8392,indistinguishable from this naive rule
+S5 Total: under when our total is <= -3 pts vs the market,N2 always take the side the market prefers,200,105,92,0.525,0.46,103,0.2369,indistinguishable from this naive rule
+S5 Total: under when our total is <= -3 pts vs the market,N3 always take the over at the posted total,206,107,99,0.5194,0.4806,206,0.6259,indistinguishable from this naive rule
+S5 Total: under when our total is <= -3 pts vs the market,N4 always back the home moneyline,206,107,112,0.5194,0.5437,103,0.6937,indistinguishable from this naive rule
+S6 Side: take the model's side at any size,N1 always take the home side at the posted line,1224,593,605,0.4845,0.4943,448,0.6033,indistinguishable from this naive rule
+S6 Side: take the model's side at any size,N2 always take the side the market prefers,1224,593,600,0.4845,0.4902,67,0.4638,indistinguishable from this naive rule
+S6 Side: take the model's side at any size,N3 always take the over at the posted total,1213,589,590,0.4856,0.4864,609,1.0000,indistinguishable from this naive rule
+S6 Side: take the model's side at any size,N4 always back the home moneyline,1220,593,659,0.4861,0.5402,500,0.0036,beats this naive rule on the same games
+S7 Moneyline: back home when model p >= 0.62,N1 always take the home side at the posted line,363,247,176,0.6804,0.4848,79,<0.0001,beats this naive rule on the same games
+S7 Moneyline: back home when model p >= 0.62,N2 always take the side the market prefers,363,247,173,0.6804,0.4766,104,<0.0001,beats this naive rule on the same games
+S7 Moneyline: back home when model p >= 0.62,N3 always take the over at the posted total,370,254,193,0.6865,0.5216,181,<0.0001,beats this naive rule on the same games
+S7 Moneyline: back home when model p >= 0.62,N4 always back the home moneyline,372,256,256,0.6882,0.6882,0,1.0000,indistinguishable from this naive rule
+S8 Moneyline: back away when model p_home <= 0.38,N1 always take the home side at the posted line,86,54,45,0.6279,0.5233,71,0.3425,indistinguishable from this naive rule
+S8 Moneyline: back away when model p_home <= 0.38,N2 always take the side the market prefers,86,54,41,0.6279,0.4767,19,0.0044,beats this naive rule on the same games
+S8 Moneyline: back away when model p_home <= 0.38,N3 always take the over at the posted total,86,54,42,0.6279,0.4884,36,0.0652,indistinguishable from this naive rule
+S8 Moneyline: back away when model p_home <= 0.38,N4 always back the home moneyline,87,55,32,0.6322,0.3678,87,0.0178,beats this naive rule on the same games
+P1 Parlay: model home side + over,N1 always take the home side at the posted line,302,146,146,0.4834,0.4834,0,1.0000,indistinguishable from this naive rule
+P1 Parlay: model home side + over,N2 always take the side the market prefers,302,146,148,0.4834,0.4901,18,0.8145,indistinguishable from this naive rule
+P1 Parlay: model home side + over,N3 always take the over at the posted total,299,145,146,0.4849,0.4883,143,1.0000,indistinguishable from this naive rule
+P1 Parlay: model home side + over,N4 always back the home moneyline,301,146,193,0.485,0.6412,47,<0.0001,beats this naive rule on the same games
+P2 Parlay: model home side + under,N1 always take the home side at the posted line,192,90,90,0.4688,0.4688,0,1.0000,indistinguishable from this naive rule
+P2 Parlay: model home side + under,N2 always take the side the market prefers,192,90,91,0.4688,0.474,9,1.0000,indistinguishable from this naive rule
+P2 Parlay: model home side + under,N3 always take the over at the posted total,191,90,99,0.4712,0.5183,99,0.4215,indistinguishable from this naive rule
+P2 Parlay: model home side + under,N4 always back the home moneyline,192,90,123,0.4688,0.6406,33,<0.0001,beats this naive rule on the same games
+P3 Parlay: model away side + over,N1 always take the home side at the posted line,162,80,82,0.4938,0.5062,162,0.9374,indistinguishable from this naive rule
+P3 Parlay: model away side + over,N2 always take the side the market prefers,162,80,76,0.4938,0.4691,4,0.1250,indistinguishable from this naive rule
+P3 Parlay: model away side + over,N3 always take the over at the posted total,160,79,75,0.4938,0.4688,84,0.7436,indistinguishable from this naive rule
+P3 Parlay: model away side + over,N4 always back the home moneyline,162,80,56,0.4938,0.3457,134,0.0465,beats this naive rule on the same games
+P4 Parlay: model away side + under,N1 always take the home side at the posted line,119,58,61,0.4874,0.5126,119,0.8546,indistinguishable from this naive rule
+P4 Parlay: model away side + under,N2 always take the side the market prefers,119,58,59,0.4874,0.4958,1,1.0000,indistinguishable from this naive rule
+P4 Parlay: model away side + under,N3 always take the over at the posted total,119,58,55,0.4874,0.4622,53,0.7838,indistinguishable from this naive rule
+P4 Parlay: model away side + under,N4 always back the home moneyline,119,58,45,0.4874,0.3782,103,0.2369,indistinguishable from this naive rule
