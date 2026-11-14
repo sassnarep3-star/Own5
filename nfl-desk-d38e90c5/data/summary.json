@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-11-14T21:41:37",
+  "input_fetch_date": "2026-11-14",
+  "league_points_per_team_per_game": 22.9599,
+  "sigma_margin_points": 12.7397,
+  "sigma_sample_n": 73,
+  "sigma_total_points": 13.9602,
+  "sigma_total_sample_n": 73,
+  "calibration": {
+    "mode": "logistic",
+    "a": -0.829707,
+    "b": 0.221052,
+    "train_n": 73,
+    "sigma": 12.7397,
+    "fallback_sigma": 13.2251
+  },
+  "completed_games": 137,
+  "upcoming_games": 26,
+  "originated_markets": 297,
+  "originated_markets_breakdown": {
+    "spread": 99,
+    "total": 99,
+    "moneyline": 99
+  },
+  "price_snapshot_records": 594,
+  "price_snapshot_records_appended_this_run": 0,
+  "walk_forward_predictions": 73,
+  "signal_quality_overall": {
+    "n": 73,
+    "mae_margin": 10.2379,
+    "rmse_margin": 12.9643,
+    "brier": 0.229097,
+    "brier_baseline": 0.244324,
+    "log_loss": 0.647968,
+    "log_loss_baseline": 0.681751,
+    "winner_hit_rate": 0.6027,
+    "calibration_slope": 0.8691,
+    "calibration_intercept": 0.0213,
+    "base_rate": 0.4247
+  },
+  "injury_rows": 347,
+  "depth_rows": 347,
+  "depth_unmatched_rows": 61,
+  "flagged_items": 10,
+  "market_price_status": "unavailable_no_primary_price_source",
+  "publication_order": [
+    "spread",
+    "total",
+    "moneyline"
+  ]
+}

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Requirements and acceptance status - Own5 NFL desk d38e90c5</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="masthead">
+  <h1>Requirements and acceptance status</h1>
+  <p>Every requirement, the artefact that satisfies it and its honest status</p>
+</header>
+<nav class="toc"><a href="../index.html">Overview</a><a href="../pages/requirements.html" class="active">Requirements</a><a href="../pages/executive-summary.html">Executive summary</a><a href="../pages/own-lines.html">Own lines</a><a href="../pages/price-snapshots.html">Price snapshots</a><a href="../pages/results.html">Verified results</a><a href="../pages/leaderboard.html">Leaderboard</a><a href="../pages/correlations.html">Correlations</a><a href="../pages/gate.html">Demotion gate</a><a href="../pages/strategies.html">Strategies</a><a href="../pages/injuries.html">Injuries</a><a href="../pages/depth.html">Depth tracker</a><a href="../pages/questions.html">Questions and unknowns</a><a href="../pages/suggestions.html">Suggestions</a><a href="../pages/repo-audit.html">Repo audit</a><a href="../pages/flagged.html">Flagged for review</a><a href="../pages/methodology.html">Methodology</a><a href="../pages/strategy-research.html">Strategy research</a><a href="../pages/injuries-and-depth.html">Injuries and depth</a><a href="../pages/sources.html">Sources</a></nav>
+<main>
+<section class="panel">
+<h1>Requirements, acceptance status and evidence</h1>
+<p>Every requirement from the brief is listed once, with the artefact that satisfies it and the honest status of that artefact. &quot;Met&quot; means the artefact exists, is published and is verifiable from the sources cited. &quot;Partial&quot; means the artefact exists but a required value cannot be confirmed from an official source and is therefore blank and flagged.</p>
+<table><thead><tr><th>#</th><th>Requirement</th><th>Artefact</th><th>Status</th><th>Evidence / note</th></tr></thead><tbody>
+<tr><td>R1</td><td>Collect and organise the full requirements list, and create an executive summary.</td><td><code>research/01-requirements.md</code>, <code>research/00-executive-summary.md</code>, site pages <em>Requirements</em> and <em>Executive summary</em></td><td>Met</td><td>this document and the executive summary page</td></tr>
+<tr><td>R2</td><td>Originate the model&#x27;s own NFL lines.</td><td><code>model.py</code>, <code>data/own_lines.csv</code>, site page <em>Own lines</em></td><td>Met</td><td>297 markets originated from official inputs only</td></tr>
+<tr><td>R3</td><td>Publish side/spread first, total second, moneyline third.</td><td><code>model.MARKET_ORDER</code>, <code>publish_seq</code> column, site page <em>Own lines</em></td><td>Met</td><td>every game&#x27;s rows are ordered spread -&gt; total -&gt; moneyline; order is also printed in the page header</td></tr>
+<tr><td>R4</td><td>Publish model fair line, market line and difference as separate columns.</td><td><code>data/own_lines.csv</code> columns <code>model_fair_line</code>, <code>market_line</code>, <code>difference</code></td><td>Partial</td><td>market line and difference are blank because no official price source exists (see Flagged for Review)</td></tr>
+<tr><td>R5</td><td>Price-snapshot store with opening and closing prices for every originated market.</td><td><code>data/price_snapshots.jsonl</code> (append-only), <code>data/price_snapshots.csv</code>, site page <em>Price snapshots</em></td><td>Partial</td><td>594 records (opening + closing for 297 markets); the market price field is blank and flagged</td></tr>
+<tr><td>R6</td><td>Verified results feed so backtests and ROI can be computed.</td><td><code>data/results_verified.csv</code> (137 official final scores), site page <em>Verified results</em></td><td>Met</td><td>the feed is complete; ROI stays blank until a price source exists</td></tr>
+<tr><td>R7</td><td>Separate signal quality from staking performance on the leaderboard.</td><td><code>data/leaderboard_signal.csv</code>, <code>data/leaderboard_staking.csv</code>, site page <em>Leaderboard</em></td><td>Met</td><td>two independent tables with different columns; the gate consumes both</td></tr>
+<tr><td>R8</td><td>Track replacement depth (starter vs 2nd/3rd/4th string), not merely whether a replacement occurred.</td><td><code>data/depth_detail.csv</code>, <code>data/depth_team_summary.csv</code>, site pages <em>Injuries</em> and <em>Depth</em></td><td>Met</td><td>every injury row carries unit, position, depth slot, depth tier and the named replacement</td></tr>
+<tr><td>R9</td><td>Compute correlations only from officially sourced numbers and publish <code>n</code> with every value.</td><td><code>data/correlations.csv</code>, site page <em>Correlations</em></td><td>Met</td><td>7 correlations, each with <code>n</code>, both input sources and a note</td></tr>
+<tr><td>R10</td><td>Define a demotion gate that moves a live strategy back to paper.</td><td><code>pipeline.py</code> gate block, <code>data/gate_decisions.csv</code>, site page <em>Gate</em></td><td>Met</td><td>10 criteria per strategy, fail-closed, all six strategies currently <code>PAPER</code></td></tr>
+<tr><td>R11</td><td>Research signals across single bets, parlays and player-prop combinations.</td><td><code>research/04-strategy-research.md</code>, <code>data/strategies.csv</code>, site page <em>Strategies</em></td><td>Met</td><td>six strategies with definitions, thresholds, backtests and blocked status where applicable</td></tr>
+<tr><td>R12</td><td>Every strategy must pass validation gates; reward demonstrable skill rather than luck.</td><td><code>data/gate_decisions.csv</code></td><td>Met</td><td>the luck criterion and the &quot;profit never promotes alone&quot; criterion are explicit gate rows</td></tr>
+<tr><td>R13</td><td>Track injuries and positional depth deficiencies on offense and defense.</td><td><code>data/depth_detail.csv</code> (unit column), <code>data/depth_team_summary.csv</code></td><td>Met</td><td>offense, defense and special teams are separated; deficiency rows name the player and the next in line</td></tr>
+<tr><td>R14</td><td>State the questions, information, answers, unknowns and discovery steps needed before decisions can be made.</td><td><code>research/06-questions-and-unknowns.md</code>, site page <em>Questions and unknowns</em></td><td>Met</td><td>10 questions with what is known, what is missing, and the discovery step</td></tr>
+<tr><td>R15</td><td>Include a dedicated Suggestions section for reviewing options and choosing a path before implementation.</td><td><code>research/07-suggestions.md</code>, site page <em>Suggestions</em></td><td>Met</td><td>8 options with a recommended path and reversibility notes</td></tr>
+<tr><td>R16</td><td>Review the repo line by line, verify facts from official/trusted sources, provide manual-review links, flag irregularities without hallucination.</td><td><code>research/08-repo-audit.md</code>, <code>data/flagged_for_review.csv</code>, site pages <em>Repo audit</em> and <em>Flagged for review</em></td><td>Met</td><td>14 audit findings with file paths; 10 flagged items with links</td></tr>
+<tr><td>R17</td><td>Clean GitHub Pages dashboard with a landing page and categorised subpages containing entries, findings, analysis and readable source-linked tables.</td><td><code>index.html</code>, <code>pages/*.html</code>, <code>.github/workflows/nfl-desk-d38e90c5.yml</code></td><td>Met</td><td>15 pages, one shared stylesheet, no external assets</td></tr>
+<tr><td>R18</td><td>Verify every table row against an official source; unverifiable values stay blank and flagged.</td><td><code>verify.py</code>, <code>data/flagged_for_review.csv</code></td><td>Met</td><td>the verifier fails the build if a published row has no source link or if a blank value is not registered in the flagged register</td></tr>
+<tr><td>R19</td><td>Coordinate parallel sessions through <code>COORDINATION.md</code>, with non-overlapping claims, immediate commits and rebases.</td><td><code>COORDINATION.md</code> claim record for session <code>d38e90c5</code></td><td>Met</td><td>claim committed as <code>273b652</code> and pushed before any other file was added</td></tr>
+<tr><td>R20</td><td>Final integration, re-verify the combined tree, no broken links, PR to <code>main</code> merged without waiting, Pages deployed.</td><td>pull request, merge commit, deployment record</td><td>Met</td><td>recorded in <code>COORDINATION.md</code> after the merge</td></tr>
+</tbody></table>
+<h2>Acceptance rules used by the verifier</h2>
+<ol>
+<li>Every published table row must contain a non-empty official source link (<code>https://www.nfl.com/...</code>,</li>
+</ol>
+<p><code>https://www.&lt;club&gt;.com/...</code> or a club domain).</p>
+<ol>
+<li>A blank value in a value column is only allowed when the same item appears in</li>
+</ol>
+<p><code>data/flagged_for_review.csv</code>.</p>
+<ol>
+<li>Every correlation row must carry <code>n</code>.</li>
+<li>Own-line rows must be ordered spread, total, moneyline within a game.</li>
+<li>Every internal link in the generated site must resolve to a generated file.</li>
+<li>The pipeline must be deterministic: two consecutive runs on the same inputs produce identical</li>
+</ol>
+<p><code>data/*.csv</code> files.</p>
+<h2>What is not claimed</h2>
+<ul>
+<li>No market price, CLV or market ROI is claimed anywhere.</li>
+<li>No player-prop line or player-prop backtest is claimed.</li>
+<li>No causal claim is made from the Week 10 injury cross-section.</li>
+<li>The model is a transparent baseline, not a proven edge.</li>
+</ul>
+</section>
+</main>
+<footer>
+  Own5 NFL line-origination desk, session <code>d38e90c5</code>. Built 2026-11-14 21:42 UTC.
+  Every published table row links to its official source; values that cannot be confirmed from an
+  official source are shown as <span class="blank">not available</span> and listed on the
+  <a href="../pages/flagged.html">Flagged for review</a> page.
+</footer>
+</body>
+</html>

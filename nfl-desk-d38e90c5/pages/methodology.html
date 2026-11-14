@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methodology - Own5 NFL desk d38e90c5</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="masthead">
+  <h1>Methodology</h1>
+  <p>How the model originates its own lines, and what is an assumption</p>
+</header>
+<nav class="toc"><a href="../index.html">Overview</a><a href="../pages/requirements.html">Requirements</a><a href="../pages/executive-summary.html">Executive summary</a><a href="../pages/own-lines.html">Own lines</a><a href="../pages/price-snapshots.html">Price snapshots</a><a href="../pages/results.html">Verified results</a><a href="../pages/leaderboard.html">Leaderboard</a><a href="../pages/correlations.html">Correlations</a><a href="../pages/gate.html">Demotion gate</a><a href="../pages/strategies.html">Strategies</a><a href="../pages/injuries.html">Injuries</a><a href="../pages/depth.html">Depth tracker</a><a href="../pages/questions.html">Questions and unknowns</a><a href="../pages/suggestions.html">Suggestions</a><a href="../pages/repo-audit.html">Repo audit</a><a href="../pages/flagged.html">Flagged for review</a><a href="../pages/methodology.html" class="active">Methodology</a><a href="../pages/strategy-research.html">Strategy research</a><a href="../pages/injuries-and-depth.html">Injuries and depth</a><a href="../pages/sources.html">Sources</a></nav>
+<main>
+<section class="panel">
+<h1>Methodology: how the desk originates its own lines</h1>
+<p>Source code: <code>model.py</code> (engine), <code>pipeline.py</code> (datasets), <code>raw_inputs.py</code>, <code>injuries_raw.py</code>, <code>depth_raw.py</code> (transcribed official inputs).</p>
+<h2>1. Inputs (all official)</h2>
+<table><thead><tr><th>Input</th><th>Content</th><th>Source</th></tr></thead><tbody>
+<tr><td>Official standings</td><td>W, L, T, PCT, PF, PA, point difference for all 32 clubs</td><td><a href="https://www.nfl.com/standings/league/2026/REG">https://www.nfl.com/standings/league/2026/REG</a></td></tr>
+<tr><td>Official results</td><td>137 completed games with date, away, home, final score, week</td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-1">https://www.nfl.com/schedules/2026/by-week/week-1</a> ... week-10</td></tr>
+<tr><td>Official slate</td><td>26 upcoming Week 10 and Week 11 games with kickoff, network, venue</td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-10">https://www.nfl.com/schedules/2026/by-week/week-10</a> , week-11</td></tr>
+<tr><td>Official injury report</td><td>347 Week 10 rows: player, position, injury, practice status, game status</td><td><a href="https://www.nfl.com/injuries/">https://www.nfl.com/injuries/</a></td></tr>
+<tr><td>Official club depth charts</td><td>32 club pages, 31 transcribed</td><td>each club&#x27;s own site, listed in <code>data/sources.csv</code></td></tr>
+</tbody></table>
+<p>The transcription reconciles: all 32 clubs match the official W-L-T, PF and PA exactly, and the aggregate points scored and allowed both equal 6,291 over 137 games.</p>
+<h2>2. Ratings</h2>
+<p>Ratings are estimated by alternating least squares on the official final scores, with the home-field term held fixed:</p>
+<pre><code>
+expected_home = L + HFA/2 + off_home - def_away
+expected_away = L - HFA/2 + off_away - def_home
+</code></pre>
+<ul>
+<li><code>L</code> = league points per team per game, computed from the official results (22.9599 for the current</li>
+</ul>
+<p>sample).</p>
+<ul>
+<li><code>off_t</code> = points scored above the league mean; <code>def_t</code> = points conceded above the league mean.</li>
+</ul>
+<p>Both are re-centred after every sweep so their weighted league mean is exactly zero.</p>
+<ul>
+<li><code>HFA</code> = 2.0 points. <strong>This is a model assumption, not an official statistic</strong>, and it is the only</li>
+</ul>
+<p>non-official number inside the line engine. It is flagged, and the published lines move one point for each half-point of HFA.</p>
+<ul>
+<li>Shrinkage: <code>w(t) = G(t) / (G(t) + 6)</code>, applied to both ratings, so a club with four games is pulled</li>
+</ul>
+<p>towards the league mean and a club with nine games is trusted more.</p>
+<h2>3. Probability calibration</h2>
+<ul>
+<li>Primary estimator: <code>p(home) = logistic(a + b * margin)</code>, with <code>a</code> and <code>b</code> fitted by Newton-Raphson</li>
+</ul>
+<p>on the model&#x27;s <strong>own earlier out-of-sample predictions</strong>. Current fit: <code>a = -0.8297</code>, <code>b = 0.2211</code>, trained on 73 predictions.</p>
+<ul>
+<li>Fallback (used only until 20 out-of-sample predictions exist): <code>p(home) = Phi(margin / SD)</code> where SD</li>
+</ul>
+<p>is the standard deviation of official final margins in the training window (13.2251 points).</p>
+<ul>
+<li>Margin noise scale for the total market: the residual standard deviation of walk-forward total</li>
+</ul>
+<p>predictions, 13.9602 points over 73 predictions.</p>
+<h2>4. Lines and publication order</h2>
+<table><thead><tr><th>Market</th><th>Model line</th><th>Probability</th><th>Fair price</th></tr></thead><tbody>
+<tr><td>Side / spread</td><td>home line = <code>-round_half(margin)</code></td><td><code>p(home wins)</code></td><td>American odds from that probability</td></tr>
+<tr><td>Total</td><td><code>round_half(expected_home + expected_away)</code></td><td><code>P(total &gt; line)</code></td><td>American odds from that probability</td></tr>
+<tr><td>Moneyline</td><td>home selection</td><td><code>p(home wins)</code></td><td>American odds from that probability</td></tr>
+</tbody></table>
+<p>Publication order is fixed by <code>model.MARKET_ORDER = (&quot;spread&quot;, &quot;total&quot;, &quot;moneyline&quot;)</code> and carried in the <code>publish_seq</code> column of every published line row.</p>
+<h2>5. Backtest discipline</h2>
+<p>Every backtest number is walk-forward. For week <em>w</em> the engine rebuilds ratings from games played in weeks &lt; <em>w</em> and rebuilds the calibration from predictions made in weeks &lt; <em>w</em>. No result can inform its own prediction. The walk-forward starts in Week 5 (the first week with a usable amount of team history), which yields <strong>73 out-of-sample predictions</strong>.</p>
+<p>Measured on those 73 predictions:</p>
+<table><thead><tr><th>Metric</th><th>Model</th><th>Reference</th><th>n</th></tr></thead><tbody>
+<tr><td>Mean absolute error of the margin</td><td>10.24 points</td><td>-</td><td>73</td></tr>
+<tr><td>Root mean squared error</td><td>12.96 points</td><td>-</td><td>73</td></tr>
+<tr><td>Brier score</td><td>0.2291</td><td>0.2443 (base-rate)</td><td>73</td></tr>
+<tr><td>Log loss</td><td>0.6480</td><td>0.6818 (base-rate)</td><td>73</td></tr>
+<tr><td>Winner hit rate</td><td>60.3%</td><td>42.5% (home base rate)</td><td>73</td></tr>
+<tr><td>Calibration slope</td><td>0.869</td><td>1.0 (ideal)</td><td>73</td></tr>
+<tr><td>Correlation of model margin with actual margin</td><td>r = 0.3517</td><td>-</td><td>73</td></tr>
+</tbody></table>
+<p>The model is a <strong>transparent baseline</strong>: it beats the base-rate references on the probability metrics but explains only a modest share of margin variation. It is not claimed to be a proven edge.</p>
+<h2>6. Replacement depth</h2>
+<p>Each official injury row is matched to the club&#x27;s official depth chart by normalised player name (a small first-name alias table handles Josh/Joshua, Matt/Matthew and similar published variants). The row then carries:</p>
+<ul>
+<li>the unit (Offense, Defense, Special Teams) and the club&#x27;s own position label;</li>
+<li>the depth slot (1 = first string) and the depth tier (1st / 2nd / 3rd / 4th string);</li>
+<li>the named player who would step in, and that player&#x27;s depth tier;</li>
+<li>a <strong>depth deficiency</strong> flag when a starter is Out and the next in line is a third- or</li>
+</ul>
+<p>fourth-string reserve.</p>
+<p>61 of 347 injury rows have no entry on the club&#x27;s published chart (16 of them Houston, whose chart is image-only). Those rows keep a blank depth tier and are flagged rather than guessed.</p>
+<h2>7. Price snapshots and results</h2>
+<ul>
+<li><code>data/price_snapshots.jsonl</code> is append-only: one <code>opening</code> and one <code>closing</code> record for every</li>
+</ul>
+<p>originated market, keyed by <code>game_id|market|phase</code>. A rebuild never rewrites an existing record.</p>
+<ul>
+<li><code>data/results_verified.csv</code> holds the 137 official final scores with the official schedule page as</li>
+</ul>
+<p>the source of each row, and is the feed that settlement and ROI would use.</p>
+<h2>8. Fail-closed rules</h2>
+<ol>
+<li>No official price source -&gt; market line, market price, difference, CLV and market ROI are blank</li>
+</ol>
+<p>and registered on the Flagged for Review page.</p>
+<ol>
+<li>A gate criterion that cannot be evaluated is <code>NOT_EVALUABLE</code>; any strategy with a</li>
+</ol>
+<p><code>NOT_EVALUABLE</code> live criterion is <code>PAPER</code>, never <code>LIVE</code>.</p>
+<ol>
+<li>An injury row with a blank game-status cell is recorded as &quot;No designation published&quot; and is never</li>
+</ol>
+<p>treated as healthy.</p>
+<ol>
+<li>A depth value that cannot be read from a machine-readable official chart stays blank.</li>
+</ol>
+</section>
+</main>
+<footer>
+  Own5 NFL line-origination desk, session <code>d38e90c5</code>. Built 2026-11-14 21:42 UTC.
+  Every published table row links to its official source; values that cannot be confirmed from an
+  official source are shown as <span class="blank">not available</span> and listed on the
+  <a href="../pages/flagged.html">Flagged for review</a> page.
+</footer>
+</body>
+</html>

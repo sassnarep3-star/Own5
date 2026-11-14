@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NFL line origination and strategy desk - Own5 NFL desk d38e90c5</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="masthead">
+  <h1>NFL line origination and strategy desk</h1>
+  <p>Session d38e90c5 - official-source model lines, price snapshots, verified results, depth tracking, correlations, leaderboards and a demotion gate</p>
+</header>
+<nav class="toc"><a href="index.html" class="active">Overview</a><a href="pages/requirements.html">Requirements</a><a href="pages/executive-summary.html">Executive summary</a><a href="pages/own-lines.html">Own lines</a><a href="pages/price-snapshots.html">Price snapshots</a><a href="pages/results.html">Verified results</a><a href="pages/leaderboard.html">Leaderboard</a><a href="pages/correlations.html">Correlations</a><a href="pages/gate.html">Demotion gate</a><a href="pages/strategies.html">Strategies</a><a href="pages/injuries.html">Injuries</a><a href="pages/depth.html">Depth tracker</a><a href="pages/questions.html">Questions and unknowns</a><a href="pages/suggestions.html">Suggestions</a><a href="pages/repo-audit.html">Repo audit</a><a href="pages/flagged.html">Flagged for review</a><a href="pages/methodology.html">Methodology</a><a href="pages/strategy-research.html">Strategy research</a><a href="pages/injuries-and-depth.html">Injuries and depth</a><a href="pages/sources.html">Sources</a></nav>
+<main>
+<section class="panel">
+<h2>What this desk is</h2>
+<p class="lede">A self-contained NFL line-origination and strategy desk that publishes its own side, total and moneyline lines from officially sourced numbers only, keeps an append-only price-snapshot store, keeps a verified results feed, separates signal quality from staking performance, tracks replacement depth, and runs a fail-closed demotion gate.</p>
+<div class="grid"><div class="stat"><div class="k">Completed official games</div><div class="v">137</div><div class="s">NFL.com schedule pages</div></div><div class="stat"><div class="k">Upcoming games</div><div class="v">26</div><div class="s">Weeks 10 and 11</div></div><div class="stat"><div class="k">Originated markets</div><div class="v">297</div><div class="s">99 spread, 99 total, 99 moneyline</div></div><div class="stat"><div class="k">Price snapshot records</div><div class="v">594</div><div class="s">opening + closing, append-only</div></div><div class="stat"><div class="k">Official injury rows</div><div class="v">347</div><div class="s">Week 10 report</div></div><div class="stat"><div class="k">Walk-forward predictions</div><div class="v">73</div><div class="s">out of sample</div></div><div class="stat"><div class="k">Flagged items</div><div class="v">10</div><div class="s">published for review</div></div><div class="stat"><div class="k">Market price status</div><div class="v">blank</div><div class="s">unavailable_no_primary_price_source</div></div></div>
+</section>
+<section class="panel"><h2>Publication order</h2>
+<p>Every game is published <strong>side / spread first, total second, moneyline third</strong>. The model fair line, the market line and the difference are three separate columns. The market line and difference are blank because no official price source exists.</p>
+<table><thead><tr><th class="num">Wk</th><th>Date</th><th>Away</th><th>Home</th><th>Model fair line</th><th>Market line</th><th>Difference</th><th>Model fair price</th><th>Source</th></tr></thead><tbody><tr><td class="num">10</td><td>2026-11-15</td><td>BUF</td><td>NYJ</td><td>+5.0</td><td><span class="blank">not available</span></td><td><span class="blank">not available</span></td><td>717</td><td><a href="https://www.nfl.com/games/bills-at-jets-2026-reg-10">https://www.nfl.com/games/bills-at-jets-2026-reg-10</a></td></tr><tr><td class="num">10</td><td>2026-11-15</td><td>CAR</td><td>NO</td><td>-0.0</td><td><span class="blank">not available</span></td><td><span class="blank">not available</span></td><td>228</td><td><a href="https://www.nfl.com/games/panthers-at-saints-2026-reg-10">https://www.nfl.com/games/panthers-at-saints-2026-reg-10</a></td></tr><tr><td class="num">10</td><td>2026-11-15</td><td>HOU</td><td>CLE</td><td>+1.0</td><td><span class="blank">not available</span></td><td><span class="blank">not available</span></td><td>276</td><td><a href="https://www.nfl.com/games/texans-at-browns-2026-reg-10">https://www.nfl.com/games/texans-at-browns-2026-reg-10</a></td></tr><tr><td class="num">10</td><td>2026-11-15</td><td>JAX</td><td>TEN</td><td>+10.5</td><td><span class="blank">not available</span></td><td><span class="blank">not available</span></td><td>2292</td><td><a href="https://www.nfl.com/games/jaguars-at-titans-2026-reg-10">https://www.nfl.com/games/jaguars-at-titans-2026-reg-10</a></td></tr><tr><td class="num">10</td><td>2026-11-15</td><td>KC</td><td>ATL</td><td>+1.5</td><td><span class="blank">not available</span></td><td><span class="blank">not available</span></td><td>313</td><td><a href="https://www.nfl.com/games/chiefs-at-falcons-2026-reg-10">https://www.nfl.com/games/chiefs-at-falcons-2026-reg-10</a></td></tr><tr><td class="num">10</td><td>2026-11-15</td><td>LAR</td><td>ARI</td><td>+3.0</td><td><span class="blank">not available</span></td><td><span class="blank">not available</span></td><td>448</td><td><a href="https://www.nfl.com/games/rams-at-cardinals-2026-reg-10">https://www.nfl.com/games/rams-at-cardinals-2026-reg-10</a></td></tr><tr><td class="num">10</td><td>2026-11-15</td><td>MIA</td><td>IND</td><td>-1.5</td><td><span class="blank">not available</span></td><td><span class="blank">not available</span></td><td>157</td><td><a href="https://www.nfl.com/games/dolphins-at-colts-2026-reg-10">https://www.nfl.com/games/dolphins-at-colts-2026-reg-10</a></td></tr><tr><td class="num">10</td><td>2026-11-15</td><td>MIN</td><td>GB</td><td>-2.0</td><td><span class="blank">not available</span></td><td><span class="blank">not available</span></td><td>150</td><td><a href="https://www.nfl.com/games/vikings-at-packers-2026-reg-10">https://www.nfl.com/games/vikings-at-packers-2026-reg-10</a></td></tr><tr><td class="num">10</td><td>2026-11-15</td><td>NE</td><td>DET</td><td>-2.0</td><td><span class="blank">not available</span></td><td><span class="blank">not available</span></td><td>153</td><td><a href="https://www.nfl.com/games/patriots-at-lions-2026-reg-10">https://www.nfl.com/games/patriots-at-lions-2026-reg-10</a></td></tr><tr><td class="num">10</td><td>2026-11-15</td><td>PIT</td><td>CIN</td><td>-4.5</td><td><span class="blank">not available</span></td><td><span class="blank">not available</span></td><td>-120</td><td><a href="https://www.nfl.com/games/steelers-at-bengals-2026-reg-10">https://www.nfl.com/games/steelers-at-bengals-2026-reg-10</a></td></tr><tr><td class="num">10</td><td>2026-11-15</td><td>SEA</td><td>LV</td><td>+2.0</td><td><span class="blank">not available</span></td><td><span class="blank">not available</span></td><td>342</td><td><a href="https://www.nfl.com/games/seahawks-at-raiders-2026-reg-10">https://www.nfl.com/games/seahawks-at-raiders-2026-reg-10</a></td></tr><tr><td class="num">10</td><td>2026-11-15</td><td>SF</td><td>DAL</td><td>+3.0</td><td><span class="blank">not available</span></td><td><span class="blank">not available</span></td><td>455</td><td><a href="https://www.nfl.com/games/49ers-at-cowboys-2026-reg-10">https://www.nfl.com/games/49ers-at-cowboys-2026-reg-10</a></td></tr><tr><td class="num">10</td><td>2026-11-16</td><td>LAC</td><td>BAL</td><td>-5.5</td><td><span class="blank">not available</span></td><td><span class="blank">not available</span></td><td>-144</td><td><a href="https://www.nfl.com/games/chargers-at-ravens-2026-reg-10">https://www.nfl.com/games/chargers-at-ravens-2026-reg-10</a></td></tr><tr><td class="num">11</td><td>2026-11-19</td><td>IND</td><td>HOU</td><td>-7.0</td><td><span class="blank">not available</span></td><td><span class="blank">not available</span></td><td>-194</td><td><a href="https://www.nfl.com/games/colts-at-texans-2026-reg-11">https://www.nfl.com/games/colts-at-texans-2026-reg-11</a></td></tr></tbody></table>
+<p class="small">Full table with all 297 markets: <a href="pages/own-lines.html">Own lines</a>.</p>
+</section>
+<section class="panel"><h2>Key findings</h2><ul>
+<li>Walk-forward out-of-sample performance on n = 73 predictions: MAE 10.2379 points, Brier 0.229097 against a 0.244324 base-rate baseline, log loss 0.647968 against 0.681751, winner hit rate 0.6027. A transparent baseline, not a proven edge.</li>
+<li>NFL.com publishes no betting prices and no operator price feed was reachable from this environment, so every market line, price, difference, CLV and market ROI stays blank and is published on the <a href="pages/flagged.html">Flagged for review</a> page.</li>
+<li>Replacement depth is tracked per player (starter, second, third, fourth string) on offense and on defense, with the named replacement and a depth-deficiency flag.</li>
+<li>All six strategies are <strong>PAPER</strong>: the demotion gate fails closed, so nothing is promoted while a required criterion cannot be evaluated.</li>
+</ul></section>
+<section class="panel"><h2>Pages</h2><ul>
+<li><a href="pages/requirements.html">Requirements</a></li>
+<li><a href="pages/executive-summary.html">Executive summary</a></li>
+<li><a href="pages/own-lines.html">Own lines</a></li>
+<li><a href="pages/price-snapshots.html">Price snapshots</a></li>
+<li><a href="pages/results.html">Verified results</a></li>
+<li><a href="pages/leaderboard.html">Leaderboard</a></li>
+<li><a href="pages/correlations.html">Correlations</a></li>
+<li><a href="pages/gate.html">Demotion gate</a></li>
+<li><a href="pages/strategies.html">Strategies</a></li>
+<li><a href="pages/injuries.html">Injuries</a></li>
+<li><a href="pages/depth.html">Depth tracker</a></li>
+<li><a href="pages/questions.html">Questions and unknowns</a></li>
+<li><a href="pages/suggestions.html">Suggestions</a></li>
+<li><a href="pages/repo-audit.html">Repo audit</a></li>
+<li><a href="pages/flagged.html">Flagged for review</a></li>
+<li><a href="pages/methodology.html">Methodology</a></li>
+<li><a href="pages/strategy-research.html">Strategy research</a></li>
+<li><a href="pages/injuries-and-depth.html">Injuries and depth</a></li>
+<li><a href="pages/sources.html">Sources</a></li>
+</ul></section>
+</main>
+<footer>
+  Own5 NFL line-origination desk, session <code>d38e90c5</code>. Built 2026-11-14 21:42 UTC.
+  Every published table row links to its official source; values that cannot be confirmed from an
+  official source are shown as <span class="blank">not available</span> and listed on the
+  <a href="pages/flagged.html">Flagged for review</a> page.
+</footer>
+</body>
+</html>

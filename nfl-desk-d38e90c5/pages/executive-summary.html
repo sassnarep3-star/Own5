@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Executive summary - Own5 NFL desk d38e90c5</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="masthead">
+  <h1>Executive summary</h1>
+  <p>Findings, evidence and what is deliberately blank</p>
+</header>
+<nav class="toc"><a href="../index.html">Overview</a><a href="../pages/requirements.html">Requirements</a><a href="../pages/executive-summary.html" class="active">Executive summary</a><a href="../pages/own-lines.html">Own lines</a><a href="../pages/price-snapshots.html">Price snapshots</a><a href="../pages/results.html">Verified results</a><a href="../pages/leaderboard.html">Leaderboard</a><a href="../pages/correlations.html">Correlations</a><a href="../pages/gate.html">Demotion gate</a><a href="../pages/strategies.html">Strategies</a><a href="../pages/injuries.html">Injuries</a><a href="../pages/depth.html">Depth tracker</a><a href="../pages/questions.html">Questions and unknowns</a><a href="../pages/suggestions.html">Suggestions</a><a href="../pages/repo-audit.html">Repo audit</a><a href="../pages/flagged.html">Flagged for review</a><a href="../pages/methodology.html">Methodology</a><a href="../pages/strategy-research.html">Strategy research</a><a href="../pages/injuries-and-depth.html">Injuries and depth</a><a href="../pages/sources.html">Sources</a></nav>
+<main>
+<section class="panel">
+<h1>Executive summary - NFL line origination and strategy desk (session d38e90c5)</h1>
+<p><strong>Status:</strong> published as a standalone GitHub Pages desk. Every published table row carries an official source link. Values that cannot be confirmed from an official source are blank and listed on the <strong>Flagged for Review</strong> page.</p>
+<p><strong>Data as of 2026-11-14 (official NFL.com).</strong> 137 completed games transcribed from the official Week 1-9 schedule pages plus the completed Week 10 Thursday game; 26 upcoming games (Week 10 and Week 11) with kickoff times, networks and venues; the complete official Week 10 injury report (347 rows); and the official depth chart of all 32 clubs (31 transcribed, Houston published as an image only).</p>
+<h2>What this desk does</h2>
+<ol>
+<li><strong>Originates its own NFL lines</strong> with a transparent model built only from official numbers:</li>
+</ol>
+<p>alternating least-squares offensive and defensive ratings, small-sample shrinkage, and a walk-forward logistic calibration. 297 markets originated (99 spreads, 99 totals, 99 moneylines).</p>
+<ol>
+<li><strong>Publishes in the required order</strong> - side/spread first, total second, moneyline third - with</li>
+</ol>
+<p><strong>model fair line, market line and difference as three separate columns</strong>.</p>
+<ol>
+<li><strong>Keeps a price-snapshot store</strong> with an opening and a closing record for every originated market</li>
+</ol>
+<p>(594 records, append-only).</p>
+<ol>
+<li><strong>Keeps a verified results feed</strong> (137 official final scores) so backtests and ROI can be computed</li>
+</ol>
+<p>the moment a price source exists.</p>
+<ol>
+<li><strong>Separates signal quality from staking performance</strong> on two leaderboards, so a lucky staking run</li>
+</ol>
+<p>cannot hide a weak signal (and a strong signal is not credited for a lucky run).</p>
+<ol>
+<li><strong>Tracks replacement depth</strong>, not just &quot;did a replacement happen&quot;: every official injury row is</li>
+</ol>
+<p>matched to the club&#x27;s official depth chart and labelled 1st / 2nd / 3rd / 4th string on offense and on defense.</p>
+<ol>
+<li><strong>Computes correlations only from officially sourced numbers</strong> and publishes <code>n</code> with every value.</li>
+<li><strong>Runs a fail-closed demotion gate</strong>: every strategy is currently <code>PAPER</code>, because no required</li>
+</ol>
+<p>criterion may be silently skipped.</p>
+<ol>
+<li><strong>Researches single bets, parlays and player-prop combinations</strong>, and records what blocks each</li>
+</ol>
+<p>one.</p>
+<h2>Headline findings</h2>
+<table><thead><tr><th>#</th><th>Finding</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>1</td><td>The model is a usable but unremarkable baseline: 73 walk-forward out-of-sample predictions, MAE 10.24 points, Brier 0.2291 vs a 0.2443 base-rate baseline, log loss 0.6480 vs 0.6818, winner hit rate 60.3%, calibration slope 0.869.</td><td><code>data/backtest_predictions.csv</code>, <code>data/leaderboard_signal.csv</code></td></tr>
+<tr><td>2</td><td><strong>NFL.com publishes no betting prices.</strong> <code>nfl.com/betting/</code> returns 404 and no operator price feed was reachable from this environment. Every market line, market price, difference, CLV and market ROI is therefore blank and flagged.</td><td><code>data/flagged_for_review.csv</code>, <a href="https://www.nfl.com/betting/">https://www.nfl.com/betting/</a></td></tr>
+<tr><td>3</td><td>26 of the 28 clubs playing in Week 10 have at least one <strong>starter Out</strong> on the official injury report; the substitution depth behind each absence is published per player.</td><td><code>data/depth_detail.csv</code>, <code>data/depth_team_summary.csv</code></td></tr>
+<tr><td>4</td><td>Offensive starters out in Week 10 show essentially no relationship to the season point differential (Pearson r = 0.034, n = 28); defensive starters out show a weak negative relationship with points allowed per game (r = -0.1587, n = 28). One injury week cannot separate injury effect from team quality.</td><td><code>data/correlations.csv</code></td></tr>
+<tr><td>5</td><td>Staking results priced at the model&#x27;s own fair price are <strong>pure luck</strong> (expected profit is zero by construction). The leaderboard therefore reports them separately from signal quality and the gate never lets them promote a strategy.</td><td><code>data/leaderboard_staking.csv</code>, <code>data/gate_decisions.csv</code></td></tr>
+<tr><td>6</td><td>The Houston Texans publish their depth chart as an image only, so all 16 Texans depth values are blank pending manual review.</td><td><code>data/flagged_for_review.csv</code>, <a href="https://www.houstontexans.com/team/depth-chart">https://www.houstontexans.com/team/depth-chart</a></td></tr>
+</tbody></table>
+<h2>What is deliberately blank</h2>
+<p>Market line, market price, difference, closing-line value, market ROI, player-prop lines and the player-prop backtest. They are not estimated, not filled from a third-party scrape, and not carried over from an older desk. Each one has an entry on the Flagged for Review page with the manual-review link and the action needed to close it.</p>
+<h2>Read next</h2>
+<ul>
+<li>Requirements and acceptance status: <code>research/01-requirements.md</code></li>
+<li>Model and parameters: <code>research/02-methodology.md</code></li>
+<li>Strategy research: <code>research/04-strategy-research.md</code></li>
+<li>Questions, unknowns and discovery steps: <code>research/06-questions-and-unknowns.md</code></li>
+<li>Options and recommended path: <code>research/07-suggestions.md</code></li>
+<li>Repo-wide audit and irregularities: <code>research/08-repo-audit.md</code></li>
+</ul>
+</section>
+</main>
+<footer>
+  Own5 NFL line-origination desk, session <code>d38e90c5</code>. Built 2026-11-14 21:42 UTC.
+  Every published table row links to its official source; values that cannot be confirmed from an
+  official source are shown as <span class="blank">not available</span> and listed on the
+  <a href="../pages/flagged.html">Flagged for review</a> page.
+</footer>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Strategy research - Own5 NFL desk d38e90c5</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="masthead">
+  <h1>Strategy research</h1>
+  <p>Single bets, parlays, player props, validation gates and luck control</p>
+</header>
+<nav class="toc"><a href="../index.html">Overview</a><a href="../pages/requirements.html">Requirements</a><a href="../pages/executive-summary.html">Executive summary</a><a href="../pages/own-lines.html">Own lines</a><a href="../pages/price-snapshots.html">Price snapshots</a><a href="../pages/results.html">Verified results</a><a href="../pages/leaderboard.html">Leaderboard</a><a href="../pages/correlations.html">Correlations</a><a href="../pages/gate.html">Demotion gate</a><a href="../pages/strategies.html">Strategies</a><a href="../pages/injuries.html">Injuries</a><a href="../pages/depth.html">Depth tracker</a><a href="../pages/questions.html">Questions and unknowns</a><a href="../pages/suggestions.html">Suggestions</a><a href="../pages/repo-audit.html">Repo audit</a><a href="../pages/flagged.html">Flagged for review</a><a href="../pages/methodology.html">Methodology</a><a href="../pages/strategy-research.html" class="active">Strategy research</a><a href="../pages/injuries-and-depth.html">Injuries and depth</a><a href="../pages/sources.html">Sources</a></nav>
+<main>
+<section class="panel">
+<h1>Strategy research: single bets, parlays and player-prop combinations</h1>
+<p>Every strategy below states its selection rule, the price it is priced at, the measured result and the gate status. The full gate table is in <code>data/gate_decisions.csv</code>; the leaderboards are in <code>data/leaderboard_signal.csv</code> and <code>data/leaderboard_staking.csv</code>.</p>
+<p><strong>Pricing rule for this desk.</strong> No primary market price is available, so every strategy that can be measured is priced at <strong>the model&#x27;s own fair price</strong>. At a fair price the expected profit is exactly zero, so the realised result of any of these strategies is <em>luck</em>, not skill. That is the reason the two leaderboards are separate and the reason a staking run can never promote a strategy.</p>
+<h2>S1 - Model spread favourite (single bet)</h2>
+<ul>
+<li><strong>Rule:</strong> take the side the model prefers when <code>|model margin| &gt;= 3.5</code> points.</li>
+<li><strong>Price basis:</strong> the model&#x27;s own fair price for that side (cover probability from the model&#x27;s</li>
+</ul>
+<p>margin distribution).</p>
+<ul>
+<li><strong>Measured:</strong> 16 bets, 50.0% hit rate, -2.19 units realised, ROI -13.7% per bet at the model&#x27;s own</li>
+</ul>
+<p>fair price.</p>
+<ul>
+<li><strong>Reads:</strong> the loss is not luck - it is a <em>signal</em> defect, and the leaderboard exposes it. The</li>
+</ul>
+<p>model&#x27;s cover probability is derived from the margin noise scale that was calibrated on win/loss outcomes, and it is overconfident for cover outcomes, where the model&#x27;s margin error (MAE 10.24 points) is large relative to a 3.5-point threshold. The honest use of this strategy is as a calibration exercise, not as a recommendation.</p>
+<h2>S2 - Model moneyline favourite (single bet)</h2>
+<ul>
+<li><strong>Rule:</strong> back the model side when the calibrated win probability is at least 0.60.</li>
+<li><strong>Price basis:</strong> model fair price.</li>
+<li><strong>Measured:</strong> 37 bets, 70.3% hit rate, +0.12 units realised - a result that sits <strong>inside</strong> the</li>
+</ul>
+<p>95% luck band of +/-7.90 units, so it is indistinguishable from luck. That is exactly the case the gate is built to catch, and it is why the strategy stays in PAPER.</p>
+<h2>S3 - Two-leg parlay of model favourites (parlay)</h2>
+<ul>
+<li><strong>Rule:</strong> in each week, pair the two most confident model sides into a two-leg parlay.</li>
+<li><strong>Price basis:</strong> the combined model fair price (product of the leg probabilities).</li>
+<li><strong>Measured:</strong> 17 parlays, 41.2% hit rate, -3.32 units realised, also inside the luck band.</li>
+<li><strong>Reads:</strong> parlay construction adds variance without adding skill when the legs are priced at fair</li>
+</ul>
+<p>probabilities. The realised loss is larger than either single-bet strategy over a comparable number of bets because parlay outcomes are rare events.</p>
+<ul>
+<li><strong>Research note:</strong> parlay construction adds variance without adding skill when the legs are priced</li>
+</ul>
+<p>at fair probabilities. A parlay only becomes interesting when the legs are priced <em>below</em> their model probabilities, which requires a real price feed. The repo&#x27;s third-party price work (<code>nfl-desk-26d4cafb/data/oos_week9.csv</code>, labelled &quot;ESPN/DraftKings -- THIRD PARTY&quot;) shows what that looks like, but those numbers are not official and are therefore not used here.</p>
+<h2>S4 - Value versus the market line (single bet, blocked)</h2>
+<ul>
+<li><strong>Rule:</strong> bet where the model line differs from the market line by at least a point.</li>
+<li><strong>Status:</strong> blocked. NFL.com publishes no market line, and no operator price feed was reachable from</li>
+</ul>
+<p>this environment. The market line, market price, difference, CLV and ROI columns are blank and flagged. This is the single highest-value unlock in the whole desk: it converts the pack from a model study into a betting record.</p>
+<h2>S5 - Replacement-depth adjusted line (single bet, prospective)</h2>
+<ul>
+<li><strong>Rule:</strong> shift the model line when a starter is Out and the next in line at that position is a</li>
+</ul>
+<p>third- or fourth-string reserve.</p>
+<ul>
+<li><strong>Status:</strong> paper track from Week 10. The official NFL injury report is a <em>current week</em> page -</li>
+</ul>
+<p>there is no official archive of historical Week 1-9 injury reports on nfl.com - so a walk-forward backtest of a depth adjustment is not possible with official inputs today.</p>
+<ul>
+<li><strong>What exists already:</strong> 347 official injury rows, 32 official depth charts, and a per-player</li>
+</ul>
+<p>replacement tier for every row that the club charts cover. From Week 10 forward the desk can freeze each week&#x27;s injury report and build the missing history (see discovery step D-04).</p>
+<ul>
+<li><strong>Interim evidence:</strong> the Week 10 cross-section (C4, C5 in <code>data/correlations.csv</code>) shows no</li>
+</ul>
+<p>relationship between offensive starters out and season point differential (r = 0.034, n = 28) and a weak negative relationship for defensive starters out versus points allowed per game (r = -0.1587, n = 28). One week of injuries cannot separate injury effect from team quality.</p>
+<h2>S6 - Player-prop combinations (player prop, blocked)</h2>
+<ul>
+<li><strong>Rule:</strong> combine player-level official box scores (passing, rushing, receiving yards) with the</li>
+</ul>
+<p>replacement-depth state, then look for prop lines that sit below the model probability.</p>
+<ul>
+<li><strong>Status:</strong> blocked on two independent requirements:</li>
+</ul>
+<ol>
+<li><em>Player-level official data</em>: the NFL Game Center exposes a <strong>Game Book PDF</strong> (for example the</li>
+</ol>
+<p>official Week 10 Washington-New York book at <code>https://static.www.nfl.com/image/upload/v1794570519/gamecenter/ab5828d9-4feb-11f1-abca-2c54536568a9.pdf</code>). Parsing that into a machine-readable player table is a defined discovery step (D-03), not a guess. The NFL.com team-stat pages were rejected as a source because their multi-value tiles cannot be paired with their labels without ambiguity - the values are left blank rather than inferred.</p>
+<ol>
+<li><em>Prop prices</em>: no official prop line exists, so no prop edge can be computed.</li>
+</ol>
+<ul>
+<li><strong>Research note:</strong> prop strategies also inherit the same luck problem. A prop bet at the model&#x27;s</li>
+</ul>
+<p>own fair price has zero expected profit; only a price feed turns it into an edge.</p>
+<h2>Validation gates (fail-closed)</h2>
+<p>Ten criteria per strategy, published row by row in <code>data/gate_decisions.csv</code>:</p>
+<table><thead><tr><th>#</th><th>Criterion</th><th>Type</th></tr></thead><tbody>
+<tr><td>1</td><td>Every input traces to an official NFL or official club source</td><td>provenance</td></tr>
+<tr><td>2</td><td>No look-ahead: a prediction uses only earlier weeks</td><td>structural</td></tr>
+<tr><td>3</td><td>Minimum out-of-sample sample size (n &gt;= 30)</td><td>signal</td></tr>
+<tr><td>4</td><td>Brier score at or better than the league base-rate baseline</td><td>signal</td></tr>
+<tr><td>5</td><td>Log loss at or better than the league base-rate baseline</td><td>signal</td></tr>
+<tr><td>6</td><td>Calibration slope inside the 0.8 - 1.2 band</td><td>signal</td></tr>
+<tr><td>7</td><td>Realised staking result is separated from signal quality</td><td>luck control</td></tr>
+<tr><td>8</td><td>Staking profit is never used alone to reward a strategy</td><td>luck control</td></tr>
+<tr><td>9</td><td>Market ROI and closing-line value against a real price</td><td>market (not evaluable today)</td></tr>
+<tr><td>10</td><td>Break-even hit rate at a real offered price</td><td>market (not evaluable today)</td></tr>
+</tbody></table>
+<p><strong>Decision rule.</strong> Any <code>FAIL</code> -&gt; <code>PAPER</code>. Any <code>NOT_EVALUABLE</code> -&gt; <code>PAPER</code> (fail closed). Only a strategy whose every live criterion is <code>PASS</code> may be <code>LIVE_ELIGIBLE</code>. A strategy that is already live is moved back to <code>PAPER</code> by the same rule - that is the demotion gate, and it is exercised on every build.</p>
+<p><strong>Current outcome:</strong> all six strategies are <code>PAPER</code>, because criteria 9 and 10 cannot be evaluated without a price source, and S4/S5/S6 cannot even measure their signal yet. No strategy is promoted on the strength of a staking run.</p>
+</section>
+</main>
+<footer>
+  Own5 NFL line-origination desk, session <code>d38e90c5</code>. Built 2026-11-14 21:42 UTC.
+  Every published table row links to its official source; values that cannot be confirmed from an
+  official source are shown as <span class="blank">not available</span> and listed on the
+  <a href="../pages/flagged.html">Flagged for review</a> page.
+</footer>
+</body>
+</html>

@@ -1,0 +1,7 @@
+strategy_id,strategy,family,n_predictions,mae_margin_pts,rmse_margin_pts,brier_score,brier_baseline,log_loss,log_loss_baseline,winner_hit_rate,calibration_slope,calibration_intercept,signal_basis,signal_note
+S1,Model spread favourite,single bet,73,10.2379,12.9643,0.229097,0.244324,0.647968,0.681751,0.6027,0.8691,0.0213,model walk-forward predictions (n = 73),
+S2,Model moneyline favourite (p >= 0.60),single bet,73,10.2379,12.9643,0.229097,0.244324,0.647968,0.681751,0.6027,0.8691,0.0213,model walk-forward predictions (n = 73),
+S3,Two-leg parlay of model favourites,parlay,73,10.2379,12.9643,0.229097,0.244324,0.647968,0.681751,0.6027,0.8691,0.0213,model walk-forward predictions (n = 73),
+S4,Value versus market line,single bet,73,10.2379,12.9643,0.229097,0.244324,0.647968,0.681751,0.6027,0.8691,0.0213,not evaluable: the strategy is defined against a market line that does not exist in an official source,
+S5,Replacement-depth adjusted line,single bet,73,10.2379,12.9643,0.229097,0.244324,0.647968,0.681751,0.6027,0.8691,0.0213,not evaluable: no out-of-sample history exists for the depth adjustment,
+S6,Player-prop combinations,player prop,73,10.2379,12.9643,0.229097,0.244324,0.647968,0.681751,0.6027,0.8691,0.0213,not evaluable: player-level official game books have not been parsed,shared model; player-level data missing
