@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Strategies - Own5 NFL desk d38e90c5</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="masthead">
+  <h1>Strategies</h1>
+  <p>Single bets, parlays and player-prop combinations</p>
+</header>
+<nav class="toc"><a href="../index.html">Overview</a><a href="../pages/requirements.html">Requirements</a><a href="../pages/executive-summary.html">Executive summary</a><a href="../pages/own-lines.html">Own lines</a><a href="../pages/price-snapshots.html">Price snapshots</a><a href="../pages/results.html">Verified results</a><a href="../pages/leaderboard.html">Leaderboard</a><a href="../pages/correlations.html">Correlations</a><a href="../pages/gate.html">Demotion gate</a><a href="../pages/strategies.html" class="active">Strategies</a><a href="../pages/injuries.html">Injuries</a><a href="../pages/depth.html">Depth tracker</a><a href="../pages/questions.html">Questions and unknowns</a><a href="../pages/suggestions.html">Suggestions</a><a href="../pages/repo-audit.html">Repo audit</a><a href="../pages/flagged.html">Flagged for review</a><a href="../pages/methodology.html">Methodology</a><a href="../pages/strategy-research.html">Strategy research</a><a href="../pages/injuries-and-depth.html">Injuries and depth</a><a href="../pages/sources.html">Sources</a></nav>
+<main>
+<section class="panel"><h2>Strategy catalogue</h2>
+<p>Single bets, parlays and player-prop combinations. Full research, measurements and the blocking reasons are in <code>research/04-strategy-research.md</code>.</p>
+<table><thead><tr><th>ID</th><th>Strategy</th><th>Family</th><th>Definition</th><th>Selection rule</th><th>Price basis</th><th>Market price needed</th><th class="num">Bets</th><th>Status</th><th>Source</th></tr></thead><tbody><tr><td>S1</td><td>Model spread favourite</td><td>single bet</td><td>Take the side the model prefers when |model margin| &gt;= 3.5 points, priced at the model&#x27;s own fair price for that side.</td><td>|model margin| &gt;= 3.5</td><td>model fair price (no market price source available)</td><td>no</td><td class="num">16</td><td><span class="blank">not available</span></td><td><a href="https://www.nfl.com/schedules/2026/REG/">https://www.nfl.com/schedules/2026/REG/</a></td></tr><tr><td>S2</td><td>Model moneyline favourite (p &gt;= 0.60)</td><td>single bet</td><td>Back the model moneyline side whenever the model&#x27;s win probability is at least 0.60, priced at the model&#x27;s own fair price.</td><td>model win probability &gt;= 0.60</td><td>model fair price (no market price source available)</td><td>no</td><td class="num">37</td><td><span class="blank">not available</span></td><td><a href="https://www.nfl.com/schedules/2026/REG/">https://www.nfl.com/schedules/2026/REG/</a></td></tr><tr><td>S3</td><td>Two-leg parlay of model favourites</td><td>parlay</td><td>Pair the two most confident model sides available in each week into a two-leg parlay priced at the combined model fair price.</td><td>two legs per week, each with model probability &gt;= 0.60</td><td>model fair price (no market price source available)</td><td>no</td><td class="num">17</td><td><span class="blank">not available</span></td><td><a href="https://www.nfl.com/schedules/2026/REG/">https://www.nfl.com/schedules/2026/REG/</a></td></tr><tr><td>S4</td><td>Value versus market line</td><td>single bet</td><td>Bet where the model line differs from the market line by at least the edge threshold.</td><td>|model line - market line| &gt;= 1.0 point</td><td>market price required</td><td>yes</td><td class="num">0</td><td>blocked: no primary market price source is reachable from this environment</td><td><a href="https://www.nfl.com/schedules/2026/REG/">https://www.nfl.com/schedules/2026/REG/</a></td></tr><tr><td>S5</td><td>Replacement-depth adjusted line</td><td>single bet</td><td>Shift the model line when a starter is Out and the next in line at that position is a third- or fourth-string reserve (official depth charts).</td><td>starter Out with 3rd/4th string replacement</td><td>model fair price (no market price source available)</td><td>no</td><td class="num">0</td><td>paper track from Week 10: the official NFL injury archive needed for a historical backtest does not exist on nfl.com</td><td><a href="https://www.nfl.com/injuries/">https://www.nfl.com/injuries/</a></td></tr><tr><td>S6</td><td>Player-prop combinations</td><td>player prop</td><td>Combine player-level official box-score data (passing, rushing, receiving yards) with replacement-depth state.</td><td>depth-adjusted player prop thresholds</td><td>market price required</td><td>yes</td><td class="num">0</td><td>blocked: player-level official game books have not been parsed; primary source identified (NFL.com Game Book PDF)</td><td><a href="https://www.nfl.com/injuries/">https://www.nfl.com/injuries/</a></td></tr></tbody></table>
+</section>
+</main>
+<footer>
+  Own5 NFL line-origination desk, session <code>d38e90c5</code>. Built official inputs captured 2026-11-14.
+  Every published table row links to its official source; values that cannot be confirmed from an
+  official source are shown as <span class="blank">not available</span> and listed on the
+  <a href="../pages/flagged.html">Flagged for review</a> page.
+</footer>
+</body>
+</html>

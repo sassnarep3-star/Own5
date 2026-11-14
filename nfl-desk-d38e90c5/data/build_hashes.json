@@ -1,0 +1,17 @@
+{
+  "backtest_predictions.csv": "f84c9a82ffaf96ec3761773d3271610a4a454330d0e8c7ba09a89674af1f080c",
+  "correlations.csv": "0e5082ddf54119325320825dff614d4c48eaf542ce6d45ac6bf1e7f0ebd2cd78",
+  "depth_detail.csv": "0c18891beabfe01abcad55e9fe8449cf58d497b88639bcce699d3312a86eb102",
+  "depth_team_summary.csv": "5b35e6530114369fc40957b2756132f86345ed98958d2a8e4533eb610137d108",
+  "flagged_for_review.csv": "bc68dd5cc31cb6f7c1e900b044eeca1e0f5b7a7de5dc02fc73c1029484e0694a",
+  "gate_decisions.csv": "7facf1068059783a3cd5cd9165a89e7cd2fb716da923d3167288a51eda971993",
+  "leaderboard_signal.csv": "0621aef751ccffdb1784807f4adc766071bfde91297f8ae436e0afe4a88ae0dc",
+  "leaderboard_staking.csv": "cfc9caff376c067b15b2e801027ddf1b1df8794f5ad06e570b62686c0c025bf2",
+  "own_lines.csv": "ce53ae9d735117c2cacfc5295c22de4a776dc891b2a32ab0ad795821edd186da",
+  "price_snapshots.csv": "32909425247f7d950778b0d7c0cdc830d0ba992be26d41fb2f6f4ace456677ae",
+  "results_verified.csv": "080a6b206b2c408cfbfe81c03ca9a32ba3589c5b506857ca079751b44fb73c41",
+  "sources.csv": "050665406e39c4ea00c1a096d76fb8c61aa2dbb2dcae90c3b4f1128bbdd8c1c1",
+  "standings_official.csv": "af52d7b04ae4d6c642efe5fdff0be620055291972af5cbc564060f9a8710ddb0",
+  "strategies.csv": "fbf3be4d345cf4af580f475521dad832950a4cd196849629e0cff0dc9cb300a4",
+  "team_ratings.csv": "0fa1e59d3fdb45061f9cbb33721e29fa26d50933eef9b2221c169ec0ed647c19"
+}

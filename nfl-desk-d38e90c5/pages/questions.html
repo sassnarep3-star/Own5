@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Questions and unknowns - Own5 NFL desk d38e90c5</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="masthead">
+  <h1>Questions and unknowns</h1>
+  <p>Questions, information, answers, unknowns and discovery steps</p>
+</header>
+<nav class="toc"><a href="../index.html">Overview</a><a href="../pages/requirements.html">Requirements</a><a href="../pages/executive-summary.html">Executive summary</a><a href="../pages/own-lines.html">Own lines</a><a href="../pages/price-snapshots.html">Price snapshots</a><a href="../pages/results.html">Verified results</a><a href="../pages/leaderboard.html">Leaderboard</a><a href="../pages/correlations.html">Correlations</a><a href="../pages/gate.html">Demotion gate</a><a href="../pages/strategies.html">Strategies</a><a href="../pages/injuries.html">Injuries</a><a href="../pages/depth.html">Depth tracker</a><a href="../pages/questions.html" class="active">Questions and unknowns</a><a href="../pages/suggestions.html">Suggestions</a><a href="../pages/repo-audit.html">Repo audit</a><a href="../pages/flagged.html">Flagged for review</a><a href="../pages/methodology.html">Methodology</a><a href="../pages/strategy-research.html">Strategy research</a><a href="../pages/injuries-and-depth.html">Injuries and depth</a><a href="../pages/sources.html">Sources</a></nav>
+<main>
+<section class="panel">
+<h1>Questions, information, answers, unknowns and discovery steps</h1>
+<p>These are the questions that must be answered before the desk can make a decision it is willing to publish. Each entry states what is known, what is missing, what the answer is today, and the concrete step that would close the gap.</p>
+<table><thead><tr><th>ID</th><th>Question</th><th>Why it blocks a decision</th><th>Information we have</th><th>Information we do not have</th><th>Answer today</th><th>Unknown</th><th>Discovery step</th></tr></thead><tbody>
+<tr><td>Q-01</td><td>What are the real market spreads, totals and moneylines for these games?</td><td>Without a price there is no edge, no ROI, no CLV, no break-even test</td><td>NFL.com publishes no prices; <code>nfl.com/betting/</code> returns 404; operator pages (DraftKings, FanDuel, BetMGM) are geolocation-gated from this environment</td><td>Any primary operator or exchange price feed</td><td>No price source is reachable</td><td>Whether a licensed feed can be obtained and stored with timestamps</td><td>D-01</td></tr>
+<tr><td>Q-02</td><td>Which price would a strategy actually be bet into, and at what juice and limit?</td><td>Break-even hit rate depends on the offered price, not on the model</td><td>The repo&#x27;s older desks assume a flat -110 (<code>nfl-desk-864d5668/data/leaderboard.csv</code>) or use a third-party ESPN/DraftKings scrape (<code>nfl-desk-26d4cafb/data/oos_week9.csv</code>)</td><td>The actual offered price of a named book for these games</td><td>Flat -110 is an assumption, not a fact</td><td>Real juice and limits per market</td><td>D-01</td></tr>
+<tr><td>Q-03</td><td>Is the model&#x27;s probability calibration good enough to bet?</td><td>Calibration is the skill measure that survives without a price</td><td>Walk-forward n = 73: Brier 0.2291 vs 0.2443 base rate, log loss 0.6480 vs 0.6818, slope 0.869, winner hit rate 60.3%</td><td>A larger out-of-sample sample; a calibration that holds on later weeks</td><td>Marginally better than base rate on a small sample</td><td>Whether the edge survives with n &gt; 200</td><td>D-02</td></tr>
+<tr><td>Q-04</td><td>Does replacement depth move the line?</td><td>Determines whether S5 is worth running at all</td><td>347 official injury rows, 32 official depth charts, per-player replacement tier</td><td>Official historical injury reports for Weeks 1-9 (nfl.com publishes only the current week)</td><td>Not answerable yet</td><td>Whether a depth adjustment has any measurable value</td><td>D-04</td></tr>
+<tr><td>Q-05</td><td>How do the 61 injury rows with no depth-chart entry resolve?</td><td>Missing depth tiers weaken the depth tracker and the deficiency counts</td><td>Club depth charts for 31 clubs, 16 Houston rows blocked by the image-only chart</td><td>Official confirmation of those players&#x27; chart position</td><td>Flagged, left blank</td><td>Which of the 61 are true chart absences versus chart omissions</td><td>D-05</td></tr>
+<tr><td>Q-06</td><td>Are the Chiefs&#x27; and Titans&#x27; official injury blocks complete?</td><td>Two clubs&#x27; absence counts may be under-reported</td><td>Both blocks captured from the official page, with the truncation and the two-segment assembly recorded</td><td>A clean second capture</td><td>Flagged as irregular</td><td>Exact size of the gaps</td><td>D-06</td></tr>
+<tr><td>Q-07</td><td>Can player-level official data be extracted for props?</td><td>S6 is entirely blocked on this</td><td>NFL Game Center exposes an official Game Book PDF per game</td><td>A parsed player table for the 2026 season</td><td>Not answerable yet</td><td>Whether the PDFs parse cleanly at scale</td><td>D-03</td></tr>
+<tr><td>Q-08</td><td>What is the true home-field effect in 2026?</td><td>HFA = 2.0 is the only non-official number in the engine</td><td>137 official final scores; the repo&#x27;s older desk estimates HFA empirically (<code>nfl-desk-864d5668/data/hfa.csv</code>)</td><td>A defensible 2026 estimate with a confidence interval</td><td>2.0 points, flagged as an assumption</td><td>The value that maximises out-of-sample accuracy</td><td>D-07</td></tr>
+<tr><td>Q-09</td><td>Which advanced team statistics matter?</td><td>Advanced stats would materially improve the model</td><td>NFL.com team-stat pages expose first downs, third-down rate, yards, sacks and turnover ratio</td><td>Values that can be paired unambiguously with their labels</td><td>Not answerable from the team-stat tiles</td><td>Whether the Game Book PDF or the club stats pages give a clean per-game table</td><td>D-03, D-08</td></tr>
+<tr><td>Q-10</td><td>How should this desk be merged with the existing NFL desks?</td><td>Six overlapping NFL desks exist with duplicated and drifting inputs</td><td>The audit in <code>research/08-repo-audit.md</code></td><td>A decision on the canonical desk and the shared navigation</td><td>Not decided here</td><td>Whether the repo keeps one NFL desk or a family with one shared data layer</td><td>D-09</td></tr>
+</tbody></table>
+<h2>Discovery steps</h2>
+<table><thead><tr><th>ID</th><th>Step</th><th>Unblocks</th><th>Effort</th></tr></thead><tbody>
+<tr><td>D-01</td><td>Establish a licensed primary price feed (for example a regulated state lottery or an operator API) that stores the raw price with a capture timestamp per market, and re-run the append-only snapshot store</td><td>Q-01, Q-02, S4, criteria 9 and 10 of the gate</td><td>Commercial</td></tr>
+<tr><td>D-02</td><td>Re-run the pipeline weekly and keep the walk-forward ledger so the calibration sample grows past n = 200</td><td>Q-03</td><td>Low, automated</td></tr>
+<tr><td>D-03</td><td>Parse the official NFL Game Book PDFs into a per-game player table and publish the parser plus a verification script</td><td>Q-07, Q-09, S6</td><td>Medium</td></tr>
+<tr><td>D-04</td><td>Freeze each future week&#x27;s official injury report into a dated archive inside this desk so a depth backtest becomes possible</td><td>Q-04, S5</td><td>Low, automated</td></tr>
+<tr><td>D-05</td><td>Manually review the Houston Texans depth-chart image and transcribe it by hand into <code>depth_raw.py</code></td><td>Q-05, 16 blank Texans rows</td><td>Low</td></tr>
+<tr><td>D-06</td><td>Re-capture the official Chiefs and Titans injury blocks and diff them against the current transcription</td><td>Q-06</td><td>Low</td></tr>
+<tr><td>D-07</td><td>Estimate the 2026 home-field effect from the official results with a bootstrap interval and compare it against the 2.0 constant</td><td>Q-08</td><td>Low</td></tr>
+<tr><td>D-08</td><td>Decide whether to use club statistics pages for advanced team stats, and document the exact pairing rule if so</td><td>Q-09</td><td>Low</td></tr>
+<tr><td>D-09</td><td>Hold a final integration session that re-verifies the combined tree and publishes one canonical NFL landing page</td><td>Q-10, site navigation</td><td>Medium</td></tr>
+</tbody></table>
+</section>
+</main>
+<footer>
+  Own5 NFL line-origination desk, session <code>d38e90c5</code>. Built official inputs captured 2026-11-14.
+  Every published table row links to its official source; values that cannot be confirmed from an
+  official source are shown as <span class="blank">not available</span> and listed on the
+  <a href="../pages/flagged.html">Flagged for review</a> page.
+</footer>
+</body>
+</html>

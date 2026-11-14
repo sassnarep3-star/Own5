@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repo audit - Own5 NFL desk d38e90c5</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="masthead">
+  <h1>Repo audit</h1>
+  <p>Line-by-line review of the existing NFL desks, drift and irregularities</p>
+</header>
+<nav class="toc"><a href="../index.html">Overview</a><a href="../pages/requirements.html">Requirements</a><a href="../pages/executive-summary.html">Executive summary</a><a href="../pages/own-lines.html">Own lines</a><a href="../pages/price-snapshots.html">Price snapshots</a><a href="../pages/results.html">Verified results</a><a href="../pages/leaderboard.html">Leaderboard</a><a href="../pages/correlations.html">Correlations</a><a href="../pages/gate.html">Demotion gate</a><a href="../pages/strategies.html">Strategies</a><a href="../pages/injuries.html">Injuries</a><a href="../pages/depth.html">Depth tracker</a><a href="../pages/questions.html">Questions and unknowns</a><a href="../pages/suggestions.html">Suggestions</a><a href="../pages/repo-audit.html" class="active">Repo audit</a><a href="../pages/flagged.html">Flagged for review</a><a href="../pages/methodology.html">Methodology</a><a href="../pages/strategy-research.html">Strategy research</a><a href="../pages/injuries-and-depth.html">Injuries and depth</a><a href="../pages/sources.html">Sources</a></nav>
+<main>
+<section class="panel">
+<h1>Repo audit: line-by-line review of the existing NFL desks</h1>
+<p>Scope of this audit: every NFL desk already in the repository, reviewed for the properties this session was asked to deliver - official-source provenance, price snapshots, verified results, publication ordering, leaderboard separation, replacement depth, correlations with <code>n</code>, a demotion gate and per-row source links. Findings are recorded with file paths so they can be re-checked by hand.</p>
+<p>Desks reviewed: <code>nfl-desk-864d5668</code>, <code>nfl-desk-26d4cafb</code>, <code>nfl-hub-28431d9c</code>, <code>nfl-b34253a1</code>, <code>nfl-decision-desk</code>, <code>nfl-decision-desk-38a1fc27</code>, <code>nfl-decision-desk-e413f933</code>, <code>nfl-strategy-lab</code>, <code>line-lab</code>, <code>own5-desk</code>, plus the shared <code>data/</code> tree.</p>
+<h2>Findings</h2>
+<table><thead><tr><th>ID</th><th>Desk</th><th>Path</th><th>Finding</th><th>Impact</th><th>Recommendation</th></tr></thead><tbody>
+<tr><td>RA-01</td><td><code>nfl-desk-864d5668</code></td><td><code>data/depth_crosscheck.csv</code></td><td>The <code>practice_status</code> column contains character-exploded strings (<code>L / i / m / i / t / e / d ...</code>) instead of the published practice designation. The same rows carry the correct text in the <code>issue</code> column.</td><td>A published column is unreadable; anything computed from it is wrong</td><td>Fix the writer that split the string per character; see SUG-08</td></tr>
+<tr><td>RA-02</td><td><code>nfl-desk-864d5668</code></td><td><code>data/injury_summary.csv</code>, <code>data/injuries.csv</code></td><td>The official injury source is pinned to <code>https://www.nfl.com/injuries/league/2026/reg10</code> and the capture is dated 2026-11-13, with 326 rows. This session captured the same official page on 2026-11-14 and transcribed 347 rows.</td><td>Two desks publish different counts for the same official report; a reader cannot tell which is current</td><td>Pin one capture date per page and print it next to every count</td></tr>
+<tr><td>RA-03</td><td><code>nfl-desk-864d5668</code></td><td><code>data/leaderboard.csv</code></td><td>A single ranking mixes staking results (<code>units_per_bet_at_-110</code>, <code>roi_pct</code>, <code>deflated_sharpe</code>) with the signal name, and the ROI is computed at an assumed flat -110 rather than at a published price.</td><td>A lucky staking run can dominate the ranking, and the ROI column is not a market ROI</td><td>Split the leaderboard into signal and staking tables, as this desk does</td></tr>
+<tr><td>RA-04</td><td><code>nfl-desk-864d5668</code></td><td><code>data/flags.csv</code> F-01</td><td>Correctly records that no official market prices exist and that every market column is left blank.</td><td>None - this is the correct behaviour and it is the precedent this desk follows</td><td>Keep</td></tr>
+<tr><td>RA-05</td><td><code>nfl-desk-26d4cafb</code></td><td><code>data/oos_week9.csv</code></td><td>Market lines and prices are taken from an &quot;ESPN/DraftKings -- THIRD PARTY&quot; scrape and published beside official scores.</td><td>A third-party price is published on a site whose rule is that every row needs an official source</td><td>Label third-party prices in the row itself and keep them out of official-source tables</td></tr>
+<tr><td>RA-06</td><td><code>nfl-desk-26d4cafb</code></td><td><code>data/flagged.csv</code> FLG-01</td><td>The desk itself records that &quot;the repo&#x27;s market numbers are an ESPN/DraftKings scrape&quot; and leaves its market columns blank.</td><td>Consistent within the desk; the inconsistency is across desks</td><td>Consolidate on one rule (SUG-07)</td></tr>
+<tr><td>RA-07</td><td><code>nfl-desk-26d4cafb</code></td><td><code>registers.py</code> (VALIDATION_GATES G-01..G-10)</td><td>Ten fail-closed validation gates exist, but every failure action is &quot;reject / unranked / ineligible&quot;; there is no explicit live-to-paper state transition.</td><td>A live strategy has no defined demotion path</td><td>Adopt this desk&#x27;s gate, which computes a <code>PAPER</code> decision and a reason for every strategy on every build</td></tr>
+<tr><td>RA-08</td><td><code>nfl-decision-desk-e413f933</code></td><td><code>scripts/originate_lines_wk10.py</code></td><td>The home-field term is a module constant (<code>HFA</code>) rather than an estimate, and it is not surfaced as a flagged assumption in the published output.</td><td>A reviewer cannot tell an assumption from a sourced number</td><td>Publish model parameters next to the lines and flag them</td></tr>
+<tr><td>RA-09</td><td><code>nfl-hub-28431d9c</code></td><td><code>verify.py</code>, <code>data/</code></td><td>The hub reconciles desks against one official snapshot, but it has no price-snapshot store, no verified-results feed and no leaderboard, so it cannot detect drift in those areas</td><td>Drift in price and results handling stays invisible</td><td>Point the hub verifier at this desk&#x27;s <code>price_snapshots.jsonl</code> and <code>results_verified.csv</code></td></tr>
+<tr><td>RA-10</td><td>shared <code>data/</code></td><td><code>data/correlation_bets.csv</code>, <code>data/decision-desk/parlay_correlations.csv</code></td><td>Historical correlations use third-party archives (<code>github.com/tobycrabtree/spreadspoke</code>, <code>github.com/nflverse/nflverse-data</code>), not official NFL publications.</td><td>Valuable for long samples, but not &quot;officially sourced numbers&quot;; must not be presented as official</td><td>Label the provenance per row; this desk restricts itself to official NFL sources and publishes <code>n</code> for every value</td></tr>
+<tr><td>RA-11</td><td>shared <code>data/</code></td><td><code>data/correlations.csv</code></td><td>Carries <code>n_teams</code> and the input file, which is the right shape, but the computed column and the source URL are stored in separate columns with no per-value note</td><td>A reader has to join columns to check a number</td><td>Keep the <code>n</code>, the input and the note in one row, as <code>data/correlations.csv</code> does here</td></tr>
+<tr><td>RA-12</td><td><code>nfl-strategy-lab</code>, <code>line-lab</code></td><td><code>lines-2026-wk9.html</code>, <code>data/</code></td><td>The oldest labs are frozen at 2026-11-02 and still publish Week 9 lines and ledgers computed on a stale game list</td><td>Their rankings are computed on fewer games than the current official record</td><td>Re-run or clearly date-stamp them as historical</td></tr>
+<tr><td>RA-13</td><td><code>own5-desk</code></td><td><code>data/derived_lines.json</code></td><td>Legacy snapshot records carry <code>&quot;empirical_home_advantage&quot;: null</code> and <code>&quot;home_advantage_assumption&quot;: 0.0</code></td><td>The home-field treatment differs between snapshots and the same field is null in one and 0.0 in another</td><td>Normalise the field and record which estimate produced each snapshot</td></tr>
+<tr><td>RA-14</td><td>repo-wide</td><td><code>index.html</code>, <code>README.md</code></td><td>The root landing page and README describe several NFL desks with different dates and different counts, with no single canonical NFL entry point</td><td>A reviewer landing on the root sees conflicting numbers for the same league week</td><td>Final integration session publishes one canonical NFL landing page (SUG-07, D-09)</td></tr>
+</tbody></table>
+<h2>Cross-desk drift summary</h2>
+<table><thead><tr><th>Area</th><th>State across the repo</th><th>State in this desk</th></tr></thead><tbody>
+<tr><td>Market prices</td><td>Blank in the desks that follow the official-only rule; third-party ESPN/DraftKings values in <code>nfl-desk-26d4cafb</code></td><td>Blank everywhere, flagged, with the manual-review link</td></tr>
+<tr><td>Price snapshots</td><td>No opening/closing store found in any desk</td><td>Append-only store, opening + closing for every originated market</td></tr>
+<tr><td>Verified results</td><td>Ledgers exist but are per-desk copies with different cut-off dates</td><td>One feed, 137 official final scores, reconciled against the official standings</td></tr>
+<tr><td>Publication order</td><td>Not enforced as a rule</td><td><code>MARKET_ORDER</code> enforced in code and in the published order of every game&#x27;s rows</td></tr>
+<tr><td>Leaderboard</td><td>Single mixed ranking in <code>nfl-desk-864d5668</code></td><td>Two separate leaderboards, signal and staking</td></tr>
+<tr><td>Depth</td><td>Depth charts are tracked, but the tracker does not always reach the <em>replacement tier</em>; <code>depth_crosscheck.csv</code> is corrupted (RA-01)</td><td>Per-player replacement tier and depth-deficiency flag for every injury row</td></tr>
+<tr><td>Correlations</td><td>Most carry <code>n</code>; the root shared data mixes official and third-party inputs</td><td>Official inputs only, <code>n</code> on every row</td></tr>
+<tr><td>Gate</td><td>Ten fail-closed criteria but no live-to-paper transition</td><td>Fail-closed gate with an explicit demotion decision and reason</td></tr>
+<tr><td>Source links</td><td>Present on most rows; some legacy JSON rows carry a source field that is null</td><td>Every published row carries a source link, enforced by the verifier</td></tr>
+</tbody></table>
+<h2>Manual review links for the audit</h2>
+<ul>
+<li>Official standings used for reconciliation: <a href="https://www.nfl.com/standings/league/2026/REG">https://www.nfl.com/standings/league/2026/REG</a></li>
+<li>Official schedules used for every result: <a href="https://www.nfl.com/schedules/2026/by-week/week-10">https://www.nfl.com/schedules/2026/by-week/week-10</a></li>
+<li>Official injury report behind the injury tables: <a href="https://www.nfl.com/injuries/">https://www.nfl.com/injuries/</a></li>
+<li>Example club depth chart behind the depth tables: <a href="https://www.packers.com/team/depth-chart">https://www.packers.com/team/depth-chart</a></li>
+<li>The third-party price provenance seen in <code>nfl-desk-26d4cafb</code>: <a href="https://www.espn.com/nfl/odds">https://www.espn.com/nfl/odds</a></li>
+<li>The third-party archives seen in the shared correlation files:</li>
+</ul>
+<p><a href="https://github.com/tobycrabtree/spreadspoke">https://github.com/tobycrabtree/spreadspoke</a> , <a href="https://github.com/nflverse/nflverse-data">https://github.com/nflverse/nflverse-data</a></p>
+<h2>Conclusion</h2>
+<p>The repository already contains strong pieces - fail-closed validation gates, official-source discipline, injury and depth work, per-row <code>n</code> in correlations. The gaps are cross-desk: duplicated inputs that drift, one corrupted column, one leaderboard that mixes luck with skill, and no shared price-snapshot or verified-results layer. This desk is deliberately standalone and does not edit any file owned by another session&#x27;s claim; the consolidation work is proposed as SUG-07 for a final integration session.</p>
+</section>
+</main>
+<footer>
+  Own5 NFL line-origination desk, session <code>d38e90c5</code>. Built official inputs captured 2026-11-14.
+  Every published table row links to its official source; values that cannot be confirmed from an
+  official source are shown as <span class="blank">not available</span> and listed on the
+  <a href="../pages/flagged.html">Flagged for review</a> page.
+</footer>
+</body>
+</html>

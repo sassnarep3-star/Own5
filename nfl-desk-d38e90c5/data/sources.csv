@@ -1,0 +1,47 @@
+source_id,publisher,title,url,retrieved,used_for
+S-01,NFL.com,2026 NFL League Standings,https://www.nfl.com/standings/league/2026/REG,2026-11-14,"W-L-T, PCT, PF, PA and net points for all 32 clubs (post Thursday 12 Nov game)"
+S-02,NFL.com,2026 NFL Schedule - Week 1,https://www.nfl.com/schedules/2026/by-week/week-1,2026-11-14,"Week 1 matchups, dates and final scores"
+S-03,NFL.com,2026 NFL Schedule - Week 2,https://www.nfl.com/schedules/2026/by-week/week-2,2026-11-14,"Week 2 matchups, dates and final scores"
+S-04,NFL.com,2026 NFL Schedule - Week 3,https://www.nfl.com/schedules/2026/by-week/week-3,2026-11-14,"Week 3 matchups, dates and final scores"
+S-05,NFL.com,2026 NFL Schedule - Week 4,https://www.nfl.com/schedules/2026/by-week/week-4,2026-11-14,"Week 4 matchups, dates and final scores"
+S-06,NFL.com,2026 NFL Schedule - Week 5,https://www.nfl.com/schedules/2026/by-week/week-5,2026-11-14,"Week 5 matchups, dates and final scores"
+S-07,NFL.com,2026 NFL Schedule - Week 6,https://www.nfl.com/schedules/2026/by-week/week-6,2026-11-14,"Week 6 matchups, dates and final scores"
+S-08,NFL.com,2026 NFL Schedule - Week 7,https://www.nfl.com/schedules/2026/by-week/week-7,2026-11-14,"Week 7 matchups, dates and final scores"
+S-09,NFL.com,2026 NFL Schedule - Week 8,https://www.nfl.com/schedules/2026/by-week/week-8,2026-11-14,"Week 8 matchups, dates and final scores"
+S-10,NFL.com,2026 NFL Schedule - Week 9,https://www.nfl.com/schedules/2026/by-week/week-9,2026-11-14,"Week 9 matchups, dates and final scores"
+S-11,NFL.com,2026 NFL Schedule - Week 10,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-14,"Week 10 matchups, dates, kickoff times, networks, final score for the completed Thursday game"
+S-12,NFL.com,2026 NFL Schedule - Week 11,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-14,"Week 11 matchups, dates, kickoff times, networks and bye teams"
+S-13,NFL.com,Official Week 10 NFL Injury Report (2026 regular season),https://www.nfl.com/injuries/,2026-11-14,Practice participation and game status for every player listed for Week 10
+S-14,NFL.com,NFL news roundups and Week 10 injury reports (official news index),https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-saturday-nov-14,2026-11-14,"Official league notes published on the injury page (QB changes, IR moves)"
+D-ARI,ARI official club site,ARI official depth chart (Arizona Cardinals Official Depth Chart),https://www.azcardinals.com/team/depth-chart,2026-11-14,replacement depth tiers (starter / 2nd / 3rd / 4th string)
+D-ATL,ATL official club site,ATL official depth chart (Atlanta Falcons Depth Chart),https://www.atlantafalcons.com/team/depth-chart,2026-11-14,replacement depth tiers (starter / 2nd / 3rd / 4th string)
+D-BAL,BAL official club site,BAL official depth chart (Baltimore Ravens Depth Chart),https://www.baltimoreravens.com/team/depth-chart,2026-11-14,replacement depth tiers (starter / 2nd / 3rd / 4th string)
+D-BUF,BUF official club site,BUF official depth chart (Buffalo Bills Depth Chart),https://www.buffalobills.com/team/depth-chart,2026-11-14,replacement depth tiers (starter / 2nd / 3rd / 4th string)
+D-CAR,CAR official club site,CAR official depth chart (2026 Depth Chart),https://www.panthers.com/team/depth-chart,2026-11-14,replacement depth tiers (starter / 2nd / 3rd / 4th string)
+D-CHI,CHI official club site,CHI official depth chart (Depth Chart (As of 10/31/2026)),https://www.chicagobears.com/team/depth-chart,2026-11-14,replacement depth tiers (starter / 2nd / 3rd / 4th string)
+D-CIN,CIN official club site,CIN official depth chart (2026 Bengals Depth Chart),https://www.bengals.com/team/depth-chart,2026-11-14,replacement depth tiers (starter / 2nd / 3rd / 4th string)
+D-CLE,CLE official club site,CLE official depth chart (Browns Depth Chart),https://www.clevelandbrowns.com/team/depth-chart,2026-11-14,replacement depth tiers (starter / 2nd / 3rd / 4th string)
+D-DAL,DAL official club site,DAL official depth chart (Unofficial 2026 Dallas Cowboys Depth Chart),https://www.dallascowboys.com/team/depth-chart,2026-11-14,replacement depth tiers (starter / 2nd / 3rd / 4th string)
+D-DEN,DEN official club site,DEN official depth chart (Denver Broncos Depth Chart),https://www.denverbroncos.com/team/depth-chart/,2026-11-14,replacement depth tiers (starter / 2nd / 3rd / 4th string)
+D-DET,DET official club site,DET official depth chart (2026 Lions Depth Chart - 2026 Unofficial Depth Chart Compiled by Lions Football Communications),https://www.detroitlions.com/team/depth-chart,2026-11-14,replacement depth tiers (starter / 2nd / 3rd / 4th string)
+D-GB,GB official club site,"GB official depth chart (Unofficial, Nov. 10, 2026)",https://www.packers.com/team/depth-chart,2026-11-14,replacement depth tiers (starter / 2nd / 3rd / 4th string)
+D-HOU,HOU official club site,HOU official depth chart (Unofficial Depth Chart (published as a raster image only; no machine-readable rows)),https://www.houstontexans.com/team/depth-chart,2026-11-14,replacement depth tiers (starter / 2nd / 3rd / 4th string)
+D-IND,IND official club site,IND official depth chart (Indianapolis Colts Depth Chart),https://www.colts.com/team/depth-chart,2026-11-14,replacement depth tiers (starter / 2nd / 3rd / 4th string)
+D-JAX,JAX official club site,JAX official depth chart (Jaguars Depth Chart),https://www.jaguars.com/team/depth-chart,2026-11-14,replacement depth tiers (starter / 2nd / 3rd / 4th string)
+D-KC,KC official club site,KC official depth chart (Kansas City Chiefs Unofficial Depth Chart),https://www.chiefs.com/team/depth-chart,2026-11-14,replacement depth tiers (starter / 2nd / 3rd / 4th string)
+D-LAC,LAC official club site,LAC official depth chart (Los Angeles Chargers Depth Chart),https://www.chargers.com/team/depth-chart,2026-11-14,replacement depth tiers (starter / 2nd / 3rd / 4th string)
+D-LAR,LAR official club site,LAR official depth chart (Rams Unofficial Depth Chart),https://www.therams.com/team/depth-chart,2026-11-14,replacement depth tiers (starter / 2nd / 3rd / 4th string)
+D-LV,LV official club site,"LV official depth chart (as of November 10, 2026 | Week 10 vs. Seattle Seahawks)",https://www.raiders.com/team/depth-chart,2026-11-14,replacement depth tiers (starter / 2nd / 3rd / 4th string)
+D-MIA,MIA official club site,MIA official depth chart (Miami Dolphins Depth Chart),https://www.miamidolphins.com/team/depth-chart,2026-11-14,replacement depth tiers (starter / 2nd / 3rd / 4th string)
+D-MIN,MIN official club site,MIN official depth chart (2026 Unofficial Depth Chart),https://www.vikings.com/team/depth-chart,2026-11-14,replacement depth tiers (starter / 2nd / 3rd / 4th string)
+D-NE,NE official club site,NE official depth chart (New England Patriots Unofficial Depth Chart - the 2026 depth chart is unofficial and is published by the writers of Patriots.com),https://www.patriots.com/team/depth-chart,2026-11-14,replacement depth tiers (starter / 2nd / 3rd / 4th string)
+D-NO,NO official club site,NO official depth chart (New Orleans Saints Unofficial Depth Chart),https://www.neworleanssaints.com/team/depth-chart,2026-11-14,replacement depth tiers (starter / 2nd / 3rd / 4th string)
+D-NYG,NYG official club site,NYG official depth chart (Giants Team Depth Chart),https://www.giants.com/team/depth-chart,2026-11-14,replacement depth tiers (starter / 2nd / 3rd / 4th string)
+D-NYJ,NYJ official club site,NYJ official depth chart (Jets Depth Chart - unofficial depth chart compiled by the New York Jets Communications Department),https://www.newyorkjets.com/team/depth-chart,2026-11-14,replacement depth tiers (starter / 2nd / 3rd / 4th string)
+D-PHI,PHI official club site,PHI official depth chart (Philadelphia Eagles Depth Chart (unofficial depth chart compiled by the Eagles' Communications Department)),https://www.philadelphiaeagles.com/team/depth-chart,2026-11-14,replacement depth tiers (starter / 2nd / 3rd / 4th string)
+D-PIT,PIT official club site,PIT official depth chart (Steelers Depth Chart),https://www.steelers.com/team/depth-chart/,2026-11-14,replacement depth tiers (starter / 2nd / 3rd / 4th string)
+D-SEA,SEA official club site,SEA official depth chart (Seattle Seahawks Depth Chart),https://www.seahawks.com/team/depth-chart/,2026-11-14,replacement depth tiers (starter / 2nd / 3rd / 4th string)
+D-SF,SF official club site,SF official depth chart (Updated as of 11/10/26),https://www.49ers.com/team/depth-chart,2026-11-14,replacement depth tiers (starter / 2nd / 3rd / 4th string)
+D-TB,TB official club site,TB official depth chart (Buccaneers Depth Chart),https://www.buccaneers.com/team/depth-chart,2026-11-14,replacement depth tiers (starter / 2nd / 3rd / 4th string)
+D-TEN,TEN official club site,TEN official depth chart (UNOFFICIAL DEPTH CHART (as of 11/10/26)),https://www.tennesseetitans.com/team/depth-chart,2026-11-14,replacement depth tiers (starter / 2nd / 3rd / 4th string)
+D-WAS,WAS official club site,WAS official depth chart (Washington Commanders Team Depth Chart),https://www.commanders.com/team/depth-chart,2026-11-14,replacement depth tiers (starter / 2nd / 3rd / 4th string)

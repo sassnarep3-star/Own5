@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suggestions - Own5 NFL desk d38e90c5</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="masthead">
+  <h1>Suggestions</h1>
+  <p>Options for review and the recommended path before implementation</p>
+</header>
+<nav class="toc"><a href="../index.html">Overview</a><a href="../pages/requirements.html">Requirements</a><a href="../pages/executive-summary.html">Executive summary</a><a href="../pages/own-lines.html">Own lines</a><a href="../pages/price-snapshots.html">Price snapshots</a><a href="../pages/results.html">Verified results</a><a href="../pages/leaderboard.html">Leaderboard</a><a href="../pages/correlations.html">Correlations</a><a href="../pages/gate.html">Demotion gate</a><a href="../pages/strategies.html">Strategies</a><a href="../pages/injuries.html">Injuries</a><a href="../pages/depth.html">Depth tracker</a><a href="../pages/questions.html">Questions and unknowns</a><a href="../pages/suggestions.html" class="active">Suggestions</a><a href="../pages/repo-audit.html">Repo audit</a><a href="../pages/flagged.html">Flagged for review</a><a href="../pages/methodology.html">Methodology</a><a href="../pages/strategy-research.html">Strategy research</a><a href="../pages/injuries-and-depth.html">Injuries and depth</a><a href="../pages/sources.html">Sources</a></nav>
+<main>
+<section class="panel">
+<h1>Suggestions: options for review and the recommended path</h1>
+<p>This section exists so a decision can be taken <strong>before</strong> implementation. Each option lists what it changes, the evidence behind it, the options that compete with it, the recommendation, the effort and how easily it can be reversed.</p>
+<h2>Option set</h2>
+<table><thead><tr><th>ID</th><th>Title</th><th>Area</th><th>What changes</th><th>Evidence</th><th>Options considered</th><th>Recommendation</th><th>Effort</th><th>Reversible</th></tr></thead><tbody>
+<tr><td>SUG-01</td><td>Establish a primary market price feed</td><td>data</td><td>Market line, market price, difference, CLV and market ROI become real; gate criteria 9 and 10 become testable; S4 becomes runnable</td><td>Every market column in this desk is blank; <code>nfl.com/betting/</code> returns 404; no operator feed reachable from this environment</td><td>A: keep everything blank and fail closed. B: use the repo&#x27;s third-party ESPN/DraftKings scrape. C: license a primary feed</td><td><strong>C</strong>, with A as the interim state. B is rejected: a third-party scrape cannot satisfy &quot;every row has an official source&quot;, and it silently changes the meaning of every ROI column</td><td>Commercial</td><td>Low (append-only store)</td></tr>
+<tr><td>SUG-02</td><td>Archive each week&#x27;s official injury report inside this desk</td><td>data</td><td>Enables a walk-forward depth backtest, which is the only way to know whether S5 has value</td><td>No official historical injury archive exists on nfl.com; the official page is current-week only</td><td>A: keep one snapshot. B: archive weekly from now on</td><td><strong>B</strong>. The archive starts empty and grows; that is the honest answer to Q-04</td><td>Low, automated</td><td>Yes (additive files)</td></tr>
+<tr><td>SUG-03</td><td>Estimate the 2026 home-field effect instead of assuming 2.0</td><td>model</td><td>Replaces the only non-official number in the engine with an official-data-derived value and an interval</td><td>HFA = 2.0 is flagged in <code>data/flagged_for_review.csv</code>; the older desk estimates it empirically in <code>nfl-desk-864d5668/data/hfa.csv</code></td><td>A: keep the constant and flag it. B: estimate it from the official results</td><td><strong>B</strong>, published as an estimate with <code>n</code> and an interval, keeping the constant as the fallback</td><td>Low</td><td>Yes (one parameter)</td></tr>
+<tr><td>SUG-04</td><td>Parse the official Game Book PDFs into a player table</td><td>data</td><td>Unlocks player-prop research and per-player replacement analysis</td><td>NFL Game Center publishes an official Game Book PDF per game</td><td>A: skip props. B: parse the PDFs</td><td><strong>B</strong>, with a verification script that checks parsed totals against the official box score</td><td>Medium</td><td>Yes (additive)</td></tr>
+<tr><td>SUG-05</td><td>Publish the leaderboards as two permanently separate tables</td><td>reporting</td><td>A lucky staking run can never hide a weak signal, and a strong signal is never credited for luck</td><td><code>data/leaderboard_signal.csv</code> and <code>data/leaderboard_staking.csv</code>; gate rows 7 and 8</td><td>A: one combined ranking. B: two separate tables</td><td><strong>B</strong>. Already implemented in this desk</td><td>Done</td><td>Yes</td></tr>
+<tr><td>SUG-06</td><td>Keep the fail-closed demotion gate</td><td>reporting</td><td>A criterion that cannot be evaluated can never be silently passed; nothing is promoted on luck</td><td><code>data/gate_decisions.csv</code>: all six strategies are <code>PAPER</code></td><td>A: allow promotion with missing data. B: fail closed</td><td><strong>B</strong>. The cost is that nothing is live today, which is the correct description of the evidence</td><td>Done</td><td>Yes</td></tr>
+<tr><td>SUG-07</td><td>Consolidate the six existing NFL desks into one family with a shared data layer</td><td>repo</td><td>Removes duplicated, drifting inputs and conflicting numbers in the same repository</td><td>The audit found four desks with their own copied inputs and different injury counts for the same official page</td><td>A: keep all desks. B: shared data layer, separate studies. C: one canonical desk</td><td><strong>B</strong>: one shared official data layer (<code>raw_inputs.py</code>, <code>injuries_raw.py</code>, <code>depth_raw.py</code> promoted to a shared package), separate study pages that import it. C would delete work that other sessions still own</td><td>Medium</td><td>Partly</td></tr>
+<tr><td>SUG-08</td><td>Repair the data defects found in the existing desks</td><td>repo</td><td>Removes corrupted columns and stale ledgers from published pages</td><td><code>nfl-desk-864d5668/data/depth_crosscheck.csv</code> contains character-exploded practice statuses; several desks are frozen at 2026-11-02 while this desk is current to 2026-11-14</td><td>A: leave them. B: fix in a follow-up session</td><td><strong>B</strong>, but <strong>not in this session</strong>: those files belong to other sessions&#x27; claims. Logged as a cross-session request instead</td><td>Low per file</td><td>Yes</td></tr>
+</tbody></table>
+<h2>Recommended path</h2>
+<ol>
+<li><strong>Now (done in this session):</strong> publish a complete, self-contained, officially sourced desk that</li>
+</ol>
+<p>fails closed on prices, separates signal from luck, tracks replacement depth, publishes <code>n</code> with every correlation, and keeps a live demotion gate.</p>
+<ol>
+<li><strong>Next (highest value, low effort):</strong> SUG-03 (estimate HFA), D-04/D-02 (weekly archives and a</li>
+</ol>
+<p>growing calibration sample), D-05/D-06 (close the flagged data gaps).</p>
+<ol>
+<li><strong>Then (highest value, higher effort):</strong> SUG-01 (price feed) and SUG-04 (player tables). These two</li>
+</ol>
+<p>unlock the three strategies that are currently blocked and turn the desk from a model study into a betting record with measurable ROI and CLV.</p>
+<ol>
+<li><strong>Separately (repo-wide, other sessions):</strong> SUG-07 and SUG-08, coordinated through</li>
+</ol>
+<p><code>COORDINATION.md</code> and finished in a final integration session.</p>
+<h2>What we are deliberately not doing</h2>
+<ul>
+<li>Not importing third-party price scrapes to fill the market columns.</li>
+<li>Not promoting any strategy to live while a required criterion is not evaluable.</li>
+<li>Not editing files owned by other sessions&#x27; claims.</li>
+</ul>
+</section>
+</main>
+<footer>
+  Own5 NFL line-origination desk, session <code>d38e90c5</code>. Built official inputs captured 2026-11-14.
+  Every published table row links to its official source; values that cannot be confirmed from an
+  official source are shown as <span class="blank">not available</span> and listed on the
+  <a href="../pages/flagged.html">Flagged for review</a> page.
+</footer>
+</body>
+</html>
