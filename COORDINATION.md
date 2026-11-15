@@ -59,7 +59,16 @@ requires changing a file owned by another session, log the request in
 
 ## Cross-session requests
 
-- (none outstanding)
+- **2026-11-15 (from session 560ed315):** `.github/workflows/decision-desk.yml` (**NFL Decision Desk —
+  fetch & verify**) fails its `verify` job on **every** PR, including PRs that touch none of its paths.
+  The failure is at the step `Confirm the committed site matches a clean rebuild`
+  (`git diff --exit-code -- nfl-decision-desk/ data/decision-desk/`): the committed decision-desk outputs
+  do not reproduce from `tools/decision_desk/build_all.py` + `build_site.py`. Confirmed pre-existing and
+  not caused by session 560ed315 (run list: it failed for sessions a991e3fb, 3fb93d11, d38e90c5 and
+  853c0074 too, and session a991e3fb already logged the same drift on `main`). Owner: the decision-desk
+  session(s) that own `nfl-decision-desk/**` and `data/decision-desk/**`. Logged as a request, **not
+  edited** here, because fixing it requires changing another session's committed outputs. This is a
+  non-blocking pre-existing failure; session 560ed315's own scoped workflow (`nfl-560ed315.yml`) passes.
 
 ## Merge / conflict log
 
@@ -1995,3 +2004,181 @@ same brief from different namespaces. This session's distinguishing content vers
 **removal-of-luck panel** on the landing page, and a wider 85-requirement matrix that also covers
 the process/PR items. A future session should consolidate the two readiness desks rather than
 adding a third.
+
+## Session a991e3fb — Week 10 official injury report re-capture (2026-11-15 UTC)
+
+**Branch:** `arena/a991e3fb-own5` (base `a03dfb7` = `main`). This session works only on this branch. The session-branch naming in the protocol above was not used because Arena fixes one branch per session.
+
+**Claimed namespace (only these paths were written):** `nfl-capture-a991e3fb/**`, plus this append-only block. Nothing else was edited. Other sessions' files, including `nfl-desk-3fb93d11/**` and `data/decision-desk/**`, are untouched and read-only here.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| A1 | Re-read official Week 10 injury report, all 8 chunks | done | a991e3fb | `nfl-capture-a991e3fb/raw/reg10_official_transcription.txt` | Source: https://www.nfl.com/injuries/league/2026/reg10 (fetched 2026-11-15, before 23:24:44Z). 347 rows, 28 clubs, 14 games. |
+| A2 | Build live CSV, checks, diff against published table, page | done | a991e3fb | `nfl-capture-a991e3fb/build.py`, `data/*.csv`, `index.html`, `README.md` | `python3 nfl-capture-a991e3fb/build.py` exits 0; all 8 hard checks PASS. Page: `/Own5/nfl-capture-a991e3fb/`. |
+| A3 | Flag irregularities | done | a991e3fb | `nfl-capture-a991e3fb/index.html` (Flagged section) | See irregularities below. |
+
+**Verification performed**
+- Per-club row counts equal the counts read from the page (28/28 sections).
+- Clubs without a section (CHI, DEN, PHI, TB) equal the Week 10 bye clubs in `data/bye-weeks-2026.csv` (source cited there: amp.nfl.com 2026 bye-week article).
+- Lions: Kerby Joseph, Cade Mays and D.J. Reed are Out on the official page. The previously published table had them blank.
+- Every row has an `https://www.nfl.com/` source link. No duplicate player within a club.
+- Limit: bash cannot reach nfl.com, so the raw file is a transcription of fetch-tool output, not a stored byte copy, and it has no SHA-256. Rows are flagged for spot-check.
+
+**Irregularities (published on the page, not blocking)**
+1. The published Week 10 table (`data/decision-desk/official/official_injuries_wk10.csv`, captured 2026-11-12T16:52:39Z from `/injuries/`) has 276 rows versus 347 on the live page, and no Ravens or Chargers sections. 268 rows differ.
+2. Lions blanks confirmed as an error in the published table (see above).
+3. `/injuries/league/2026/reg11` redirected to the Week 10 page (canonical `reg10`). This is consistent with the Week 11 report not yet being published. Earlier entry F-04 described it as a Week 10 serving error; the redirect alone does not show that.
+4. Malik Willis (IR) and Lamar Jackson (IR) are absent from the report. Both are recorded from official news headlines on the same page, not inferred as healthy.
+5. The official page shows no publication timestamp, so the capture time is the read time.
+
+**Not done (blocked; see `nfl-capture-a991e3fb/README.md`):** scheduled multi-day captures and retained hashes (needs a scheduled job with nfl.com access), depth charts for 32 clubs, snap counts, inactive lists, archives of past injury reports, fixture venues, and the Texans depth image (needs an authorized source). Each is blocked on a source or access this sandbox does not have.
+
+**Cross-session notes:** none. No conflicts with other sessions' files.
+
+**a991e3fb — PR #81 checks and irregularity log (2026-11-15).** Two non-required jobs fail. Both were reproduced on `main` at `a03dfb7` before this PR, and this PR touches neither path:
+1. `Verify NFL B34 Week 10 research desk` (`.github/workflows/nfl-b34253a1.yml`) fails at the step "Check deterministic generated outputs" on `main` (run 43647189340). Owner: session that owns `nfl-b34253a1/**` (b34253a1).
+2. `NFL Decision Desk — fetch & verify` (`.github/workflows/decision-desk.yml`), job `verify`, fails at "Confirm the committed site matches a clean rebuild". A fresh export of `origin/main` rebuilt with `tools/decision_desk/build_all.py` and `build_site.py` modifies `data/decision-desk/audit_summary.json`, `injuries_wk10_players.csv`, `team_deficiency_wk10.csv` and `nfl-decision-desk-38a1fc27/{audit,index,verification}.html`. The committed outputs do not reproduce. Owner: the decision-desk session(s). Logged as a cross-session request, not edited here.
+PR #81 is merged on this basis: the failures are pre-existing, the PR changes no file on either path, and the Pages site builds.
+
+**a991e3fb — PR and deployment record (2026-11-15).** PR #81 (`arena/a991e3fb-own5` → `main`) merged with a merge commit, `264264f`, at 2026-11-15T23:30:24Z. Pages source is `main` `/`. Pages status is `built`, and the workflow run completed with success. Live check: https://sassnarep3-star.github.io/Own5/nfl-capture-a991e3fb/ returns the page with 347 live rows, 28 clubs, 276 published rows, 268 differing rows, and 0 failing checks. The non-required failures (B34 desk; decision-desk rebuild drift) are logged above. Task board: A1, A2 and A3 are done.
+
+---
+
+## Session 560ed315 — NFL Decision-Readiness & Verification Desk (2026-11-15 UTC)
+
+**Session ID:** `560ed315` (branch `arena/560ed315-own5`, base `a03dfb7`).
+**Claimed namespaces (strictly additive, zero overlap with every prior session):**
+- `nfl-560ed315/**` (GitHub Pages dashboard: landing page carrying the **decision-readiness table**,
+  plus category subpages, data CSV/JSON, deterministic engine, unit tests, verification harness)
+- `research/nfl-560ed315/**` (executive summary, methodology, flagged register, verification log)
+- `.github/workflows/nfl-560ed315.yml` (scoped deterministic verification only)
+- Append-only blocks in `COORDINATION.md` and one additive table row in `README.md`
+
+**Read-only for this session (never edited):** root `index.html`, `pages/**`, `data/research.json`,
+`scripts/**`, `tools/**`, `tests/**`, `assets/**`, `docs/**`, `own5-desk/**`, `site/**`, `nfl_model/**`,
+`line-lab/**`, `nfl-strategy-lab/**`, every prior `nfl-*` / `nba-*` / `sf-*` / `rental-*` desk,
+all existing workflows, all existing CSV/JSON outside the claimed scope.
+
+**Purpose (why this desk exists):** the brief's central decision-support ask — *"Put a decision-readiness
+table on the landing page: one row per requirement, with the gate that blocks it and the number that
+would clear it."* Earlier NFL desks (notably `3fb93d11`) built the price store, verified results feed,
+origination pipeline, gates, leaderboard and correlations and published a requirements register. This
+desk is additive: it consolidates those verified registers into a single **decision-readiness matrix**
+where every requirement row carries (a) the validation gate that blocks it, (b) the concrete number /
+threshold that would clear it, and (c) the observed number today — source-linked, or blank + flagged
+where no official source exists. It does **not** re-derive the underlying data and does **not** edit
+any other session's files.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| D56-01 | Claim + baseline audit of open NFL desks | done | 560ed315 | COORDINATION.md | Claim pushed before any build work began. |
+| D56-02 | Official-source re-verification snapshot + consolidation of verified registers | done | 560ed315 | `research/nfl-560ed315/**`, `nfl-560ed315/data/sources.csv` | Live nfl.com standings re-read 2026-11-15; consolidated verified R/Q/S/F registers with source URLs. |
+| D56-03 | Decision-readiness engine (one row per requirement: blocking gate + clearing number + observed number) | done | 560ed315 | `nfl-560ed315/data/decision_readiness.csv`, `nfl-560ed315/readiness.py` | Every row source-linked or blank+flagged; clearing number is a concrete threshold/count. |
+| D56-04 | Pages dashboard: landing page with decision-readiness table + category subpages (questions, suggestions, sources, flagged, review) | done | 560ed315 | `nfl-560ed315/**`, `nfl-560ed315/build_site.py` | Deterministic, stdlib-only; every body row carries an official source link or an explicit UNVERIFIED badge. |
+| D56-05 | Line-by-line verification harness, unit tests, scoped CI workflow | done | 560ed315 | `nfl-560ed315/verify.py`, `nfl-560ed315/tests/`, `.github/workflows/nfl-560ed315.yml` | Deterministic rebuild + row/link/provenance audit; fail closed. |
+| D56-06 | Executive summary + flagged-for-review register | done | 560ed315 | `research/nfl-560ed315/EXECUTIVE_SUMMARY.md`, `research/nfl-560ed315/FLAGGED.md`, `nfl-560ed315/data/flagged.csv` | Restates only computed or officially sourced values. |
+| D56-07 | Integration: rebase, PR to main, autonomous merge, live Pages check, record | in progress | 560ed315 | COORDINATION.md, README.md | Merge only after verify PASS and a live URL check. |
+
+**Cross-session note:** prior session `3fb93d11` already owns price snapshots, the verified results
+feed, origination order and the signal/staking leaderboard. This desk adds the decision-readiness
+matrix and the "number that would clear it" column on top of that verified work, without touching its
+files. No task on the board is claimed by another session within this desk's file scope.
+
+---
+
+## Session 83a7d6a8 — NFL Market Desk: integrated requirements matrix, decision-readiness, verified corpus (2026-11-15 UTC)
+
+Arena fixes this session's branch to `arena/83a7d6a8-own5` (base `a03dfb7` = `main`); no other branch
+will be created or pushed. Claim timestamp: **2026-11-15 UTC**, committed and pushed before any
+implementation work.
+
+**Why this session exists.** `main` now carries **eleven** NFL desks (`nfl-strategy-lab/`,
+`nfl-decision-desk/`, `nfl-decision-desk-38a1fc27/`, `nfl-decision-desk-e413f933/`, `nfl-b34253a1/`,
+`nfl-desk-26d4cafb/`, `nfl-desk-864d5668/`, `nfl-desk-d38e90c5/`, `nfl-desk-3fb93d11/`,
+`nfl-engine-39086ec8/`, `nfl-hub-28431d9c/`). Each answers a slice of the same brief from its own
+snapshot, and the three most recent (3fb93d11, d38e90c5, 853c0074) openly say they answer the same
+price-snapshot / results-feed / signal-staking gap. The reviewer's brief asks for **one** site with a
+requirements matrix, a decision-readiness table, a questions register, a suggestions register, an
+injury/depth view, an own-line origination desk, a leaderboard competition and an executed
+verification pass — reconciling the eleven desks rather than adding a twelfth unaudited slice.
+This session claims exactly that consolidation plus the executable pricing core.
+
+**Claimed additive namespace (no overlap with any other session):**
+- `nfl-market-desk/**` (GitHub Pages dashboard: landing page + category subpages + Flagged for Review;
+  deterministic stdlib-only build script; verification harness; unit tests)
+- `nfl-market-desk/data/**` (registers, corpus, price store, results feed, injury/depth, leaderboard)
+- `research/nfl-83a7d6a8/**` (executive summary, methodology, verification log, flagged register)
+- `.github/workflows/nfl-market-desk.yml` (runs this session's deterministic verify only)
+- Append-only blocks in `COORDINATION.md` and one additive section in `README.md`
+
+**Read-only (never edited by this session):** root `index.html`, `pages/**`, `data/research.json`,
+`scripts/**`, `tools/**`, `tests/**`, `assets/**`, `docs/**`, `own5-desk/**`, `site/**`,
+`nfl_model/**`, `line-lab/**`, every `nfl-*` desk directory listed above, `data/**` outside the
+claimed scope, `nba-*`, `sf-*`, `rental-*`, all existing workflows, all existing CSV/JSON.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| M1 | Claim + inventory of the eleven NFL desks (what each claims, what its data basis is, what it leaves open) | in progress | 83a7d6a8 | `nfl-market-desk/data/desk_inventory.csv`, `research/nfl-83a7d6a8/REPO_AUDIT.md` | Every row names the desk's own files; no value copied without its citation. |
+| M2 | Requirements matrix: every line of the reviewer's brief as its own row, with a machine-checkable evidence pointer and a status | in progress | 83a7d6a8 | `nfl-market-desk/data/requirements.csv` | Status is one of MET / PARTIAL / NOT MET / REJECTED / NEEDS REVIEW, with the evidence path. |
+| M3 | Decision-readiness table: one row per requirement with the blocking gate and the number that would clear it | in progress | 83a7d6a8 | `nfl-market-desk/data/decision_readiness.csv`, landing-page table | Nothing is marked clearable by an estimate. |
+| M4 | Questions register (information we have vs. do not have) + suggestions register with options and the test that would change the call | in progress | 83a7d6a8 | `nfl-market-desk/data/questions.csv`, `data/suggestions.csv` | Every suggestion carries scope, cost and a reversible decision rule. |
+| M5 | Price-data policy (decide before any backtest is published) and the price-snapshot store (opening + closing per originated market) | in progress | 83a7d6a8 | `nfl-market-desk/data/price_policy.csv`, `data/price_snapshots.csv` | Operator OH/CL price has no official source; policy states the admissible substitutes and their tier. |
+| M6 | Verified results feed, 32-team standings reconciliation, and the 136-game pre-registered backtest corpus | in progress | 83a7d6a8 | `nfl-market-desk/data/results_feed.csv`, `data/backtest_corpus.csv` | Official 2026 finals vs pinned mirror; disagreements flagged, never silently corrected. |
+| M7 | Origination engine: side → total → moneyline, model / market / difference as separate columns, probability + inputs per output | in progress | 83a7d6a8 | `nfl-market-desk/data/originated_markets.csv`, `data/model_predictions.csv` | Chronological holdout; no lookahead. |
+| M8 | Injury / availability / replacement-depth view (official depth charts, 32-club sweep, depth of the replacement, IR) | in progress | 83a7d6a8 | `nfl-market-desk/data/availability.csv`, `data/depth_register.csv`, `data/injury_snapshots.csv` | Official rows only; blank + flag where a club publishes nothing machine-readable (Texans image, Packers jersey numbers). |
+| M9 | Strategy competition: pre-registration, validation gates, correlation values with n, luck-removal panel, signal-vs-staking leaderboard, demotion gate | in progress | 83a7d6a8 | `nfl-market-desk/data/strategies.csv`, `data/gates.csv`, `data/leaderboard.csv`, `data/luck_panel.csv` | Pre-registered before results; backtest numbers are barred from the leaderboard. |
+| M10 | Site: landing page + category subpages, every body-table row source-linked or explicitly UNVERIFIED | in progress | 83a7d6a8 | `nfl-market-desk/*.html`, `build.py` | Deterministic; no hand edits. |
+| M11 | Verification harness, unit tests, scoped CI workflow, executive summary | in progress | 83a7d6a8 | `nfl-market-desk/verify.py`, `tests/test_market_desk.py`, `research/nfl-83a7d6a8/EXECUTIVE_SUMMARY.md` | Row-level provenance audit + deterministic rebuild. |
+| M12 | Rebase, PR to `main`, autonomous merge, live Pages check, record result | in progress | 83a7d6a8 | `COORDINATION.md`, `README.md` | Merge only after verify PASS and a live URL check. |
+
+### Session 83a7d6a8 — progress log (append-only)
+
+| ID | Task | Status | Files touched | Notes |
+|----|------|--------|---------------|-------|
+| M1 | Claim + inventory of the eleven NFL desks | done | `nfl-market-desk/data/desk_inventory.csv` | 11 desks catalogued; 4 re-verified against live sources. One real collision found: PR #79's flag ids (F-01…F-14) were reused by this desk for different findings. |
+| M2 | Requirements matrix | done | `nfl-market-desk/data/requirements.csv` | 78 rows: 46 MET / 21 PARTIAL / 9 NOT MET / 2 REJECTED. `verify.py` resolves every evidence path. |
+| M3 | Decision-readiness table | done | `data/decision_readiness.csv`, landing page | Every row carries its gate, the gate's status and the number that would clear it. No row is clearable by an estimate. |
+| M4 | Questions + suggestions registers | done | `data/questions.csv`, `data/suggestions.csv` | 15 questions, 19 suggestions with options, recommended path, cost and a reversible rule. |
+| M5 | Price policy + snapshot store | done | `data/price_policy.csv`, `data/price_snapshots.csv` | 10 policy decisions before any return; 195 rows, 78 populated, 117 empty by policy with a flag. |
+| M6 | Verified results feed + corpus | done | `data/results_feed.csv`, `data/standings_reconciliation.csv`, `data/backtest_corpus.csv` | 145 finals; 32/32 reconcile; mirror agrees 127, disagrees 0, absent 18. |
+| M7 | Origination engine | done | `data/originated_markets.csv` | Side → total → moneyline; 39 markets on 13 Week-11 games; fair/market/difference as three columns. |
+| M8 | Injury / availability / replacement depth | done | `data/injuries_wk10.csv`, `data/depth_rows.csv`, `data/replacement_cascade.csv`, `data/availability_by_team.csv` | 347 rows / 28 clubs; 551 depth rows / 11 clubs; 14 replacements, all 2nd string, 0 compounding. |
+| M9 | Strategy competition | done | `data/strategy_registration.csv`, `data/preregistration/`, `data/gates.csv`, `data/leaderboard.csv`, `data/luck_panel.csv` | 9 hashed families, 264 graded bets, 12 gates (6/1/5), 3 controls, luck panel. |
+| M10 | Site | done | `nfl-market-desk/*.html`, `build.py`, `report.py` | 13 pages, deterministic; 1,704 body-table rows, every one source-bearing. |
+| M11 | Verification harness, tests, CI, executive summary | done | `verify.py`, `tests/test_market_desk.py`, `.github/workflows/nfl-market-desk.yml`, `research/nfl-83a7d6a8/` | verify: 10 checks PASS. tests: 27 PASS. Summary + methodology + verification log generated from the data. |
+| M12 | PR to `main`, merge, Pages check, record | **in progress** | `COORDINATION.md`, `README.md` | Recorded below once merged. |
+
+**Defects fixed this session (kept visible, not overwritten):**
+
+- `sources_captured.csv` said the Week 11 slate had 14 games (the page lists 13) and the Week 10
+  injury capture had 254 rows (the file holds 347). Both notes corrected in place; recorded as OWN-20.
+- A draft of `build_results.py` derived a market-implied margin σ by dividing a line by a z-score from
+  a symmetric price and produced 42.9-point standard deviations. The field is now blank by
+  construction and the arithmetic is documented in the code so it is not reintroduced.
+- The control baselines were graded against the home result instead of their own outcome, which made
+  all three score exactly 0.25. Fixed; C1 now scores a coin-flip 0.25 Brier with a 0.4444 hit rate.
+- Flag ids collided with PR #79's register. All 34 flags now carry `INH-` or `OWN-`.
+
+**Not done, and deliberately so:** 21 of 32 clubs still have no parsed depth chart (SG-03); the
+price store has no opening or close (SG-01, SG-13); there are no inactive lists or snap counts
+(SG-05); the injury archive has one week (SG-18); the eleven desks are not consolidated (SG-02).
+
+**M12 — PR and deployment record (session 83a7d6a8).** PR **#85** (`arena/83a7d6a8-own5` → `main`) was
+merged with a merge commit via `gh pr merge 85 --merge`. GitHub Pages status is `built`;
+https://sassnarep3-star.github.io/Own5/nfl-market-desk/ serves all 13 pages (live-verified: the landing
+page shows 78 requirements / 6 of 12 gates met / 39 markets / 264 graded bets / 9 blocking flags /
+145 finals, and the readiness table renders with its evidence links).
+
+CI on the merged commit: `NFL market desk (session 83a7d6a8)` **success**, `Verify Own5 evidence desk`
+**success**, `Verify research dashboard` **success**, `Verify SF Rent Review` **success**,
+`Verify NBA validation desk` **success**. Two checks fail and are **pre-existing and not caused by this
+PR**: `NFL Decision Desk — fetch & verify` (rebuild drift in `nfl-decision-desk-38a1fc27/` and
+`data/decision-desk/`, logged as XR-D38-02 above and failing on `main` after PRs #82 and #83) and
+`Verify NFL B34 Week 10 research desk` (failing on `main` after PRs #82 and #83). Neither workflow is
+scoped by path, so both run on every pull request; neither reads any file this session wrote. They are
+left to their owners rather than edited from here.
+
+The branch was rebased onto the current `main` (which had advanced to `fc6240b` via PR #83) before
+pushing. That rebase produced one conflict, in this append-only log only: two sessions had appended a
+block at the same offset. Both blocks were kept, in order, with the earlier session's block first. No
+file, table or number was changed by the resolution.

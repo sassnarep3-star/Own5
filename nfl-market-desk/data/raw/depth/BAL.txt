@@ -1,0 +1,34 @@
+# club: Baltimore Ravens
+# url: https://www.baltimoreravens.com/team/depth-chart
+# page_dated: (no date published on the page)
+# shape: markdown_table
+# captured_utc: 2026-11-15T23:24:00Z
+# format: POSITION|slot1|slot2|slot3|slot4   (';' = two players in one slot)
+
+OFFENSE
+WR|Zay Flowers|Devontez Walker|Elijah Sarratt|
+WR|Rashod Bateman|Ja'Kobi Lane|LaJohntay Wester|
+LT|Ronnie Stanley|Carson Vinson|
+LG|John Simpson|Ryan Neuzil|
+C|Cam Jurgens|Ryan Neuzil|
+RG|Vega Ioane|Emery Jones Jr.|
+RT|Roger Rosengarten|Carson Vinson|
+TE|Mark Andrews|Josh Cuevas|
+TE|Matt Hibner||
+QB|Jacoby Brissett|Joe Fagnano|Kedon Slovis|
+RB|Derrick Henry|Justice Hill|Rasheen Ali|
+
+DEFENSE
+DT|Nnamdi Madubuike|Broderick Washington Jr.|
+NT|Travis Jones|John Jenkins|
+DE|Calais Campbell|Aeneas Peebles|
+RUSH|Trey Hendrickson|Mike Green|
+MLB|Roquan Smith|Jay Higgins IV|
+WLB|Trenton Simpson|Teddye Buchanan|
+SAM|Mike Green|Zion Young|Ethan Burke|
+CB|Marlon Humphrey|Chidobe Awuzie|
+DB|Kyle Hamilton|Keyon Martin|Chandler Rivers|
+SS|Jaylinn Hawkins|Keondre Jackson|
+FS|Malaki Starks|K'Von Wallace|
+CB|Nate Wiggins|T.J. Tampa Jr.|
+

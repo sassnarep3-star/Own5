@@ -1,0 +1,12 @@
+desk_path,claims,data_basis,status_in_this_desk,relation
+nfl-strategy-lab/,"signal research, strategy framework, validation gates","its own static pages, no machine-readable data",partially re-verified here (correlation method),"cited, not merged"
+nfl-decision-desk/,decision desk (session d0343637),data/*.csv,not re-verified,"cited, not merged"
+nfl-decision-desk-38a1fc27/,"requirements audit, questions, injury/depth tracking",data/decision-desk/*.csv,not re-verified; owns data/decision-desk which this session read only,"cited, not merged"
+nfl-decision-desk-e413f933/,"suggestions, questions, own lines, depth deficiencies",own data/*.csv,not re-verified,"cited, not merged"
+nfl-b34253a1/,"136-game log, 32-team reconciliation, decision questions",data/games_2026_w1_w9.csv,re-verified: 136 rows reconcile 32/32 here,"cited, not merged"
+nfl-desk-26d4cafb/,"correlations, parlays, prop combos, own lines",data/*.csv,not re-verified,"cited, not merged"
+nfl-desk-864d5668/,"depth register (705 slots / 31 clubs), HFA, correlations",data/depth_detail.csv,"re-verified: live pages disagree on 17 rows (OWN-08, OWN-09)","cited, not merged"
+nfl-desk-d38e90c5/,"price snapshots, results, signal/staking leaderboard",data/*.csv + jsonl,not re-verified; same gap as this desk (OWN-19),superseded by this desk where it overlaps
+nfl-desk-3fb93d11/,"137 official finals, price store, demotion gate, 150-check audit",data/*.csv,re-verified: results feed extended to 145 finals; depth register superseded,superseded by this desk where it overlaps
+nfl-engine-39086ec8/,"leaderboard signal/staking, demotion rules, correlations",data/*.csv,not re-verified,"cited, not merged"
+nfl-hub-28431d9c/,cross-desk reconciliation of six desks,data/reconcile_*.csv,not re-verified,"cited, not merged"

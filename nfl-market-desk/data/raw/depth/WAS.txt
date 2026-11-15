@@ -1,0 +1,34 @@
+# club: Washington Commanders
+# url: https://www.commanders.com/team/depth-chart
+# page_dated: (no date published on the page)
+# shape: markdown_table
+# captured_utc: 2026-11-15T23:24:00Z
+# format: POSITION|slot1|slot2|slot3|slot4   (';' = two players in one slot)
+
+OFFENSE
+WR|Terry McLaurin|Treylon Burks|
+LT|Brandon Coleman|Andrew Wylie|
+LG|Chris Paul|Tanoa Togiai|
+C|Nick Allegretti|Matt Gulbin|
+RG|Sam Cosmi|Tanoa Togiai|
+RT|Josh Conerly Jr.|Andrew Wylie|
+TE|Chig Okonkwo|Ben Sinnott|
+TE|John Bates|Colson Yankoff|
+WR|Stefon Diggs|Jaylin Lane|
+WR|Dyami Brown|Antonio Williams|Luke McCaffrey|
+QB|Jayden Daniels|Marcus Mariota|Athan Kaliakmanis|
+RB|Jacory Croskey-Merritt|Rachaad White|Austin Ekeler|
+
+DEFENSE
+DL|Daron Payne||
+DL|Tim Settle|Shy Tuttle|
+DL|Javon Kinlaw|Charles Omenihu|
+OLB|Odafe Oweh|Joshua Josephs|
+LB|Sonny Styles|Kain Medrano|
+LB|Frankie Luvu||Kain Medrano
+OLB|K'Lavon Chaisson|Dorance Armstrong|Javontae Jean-Baptiste|
+CB|Amik Robertson|Rasul Douglas|
+CB|Mike Sainristil|Fabian Moreau|
+SS|Nick Cross|Tyler Owens|
+FS|Jeremy Reaves|Quan Martin|Percy Butler|
+

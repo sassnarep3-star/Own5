@@ -1,0 +1,8 @@
+rule_id,trigger,definition,effect,applies_to
+D-01,Brier skill lower bound,The lower bound of the 95% game-clustered bootstrap interval of skill vs the de-vigged market falls at or below 0.00,sends to paper (strike 1),"every family, control and combo"
+D-02,Holm-adjusted p,Holm-adjusted p > 0.05 on the prospective sample at n >= 300,sends to paper,"every family, control and combo"
+D-03,Two negative blocks,Market-relative skill negative in two consecutive 50-bet blocks,sends to paper,"every family, control and combo"
+D-04,Registration drift,The rule file's sha256 no longer matches the ledger,immediate suspension,"every family, control and combo"
+D-05,Price-quality loss,The only available price source drops below AGGREGATOR tier,suspension until a priced snapshot exists,"every family, control and combo"
+D-06,Drawdown,Flat-stake drawdown exceeds 20 units while signal skill is not positive,sends to paper,"every family, control and combo"
+D-07,Retirement,"Three strikes, or a rule unevaluable for six consecutive weeks",retired; history stays visible,"every family, control and combo"

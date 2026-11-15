@@ -1,0 +1,34 @@
+# club: Buffalo Bills
+# url: https://www.buffalobills.com/team/depth-chart
+# page_dated: (no date published on the page)
+# shape: markdown_table
+# captured_utc: 2026-11-15T23:24:00Z
+# format: POSITION|slot1|slot2|slot3|slot4   (';' = two players in one slot)
+
+OFFENSE
+WR|DJ Moore|Skyler Bell|
+LT|Dion Dawkins|Jude Bowry|
+LG|Alec Anderson|Austin Corbett|
+C|Connor McGovern|Lloyd Cushenberry|
+RG|O'Cyrus Torrence|Ar'maj Reed-Adams|
+RT|Spencer Brown|Tylan Grable|
+TE|Dalton Kincaid|Dawson Knox|Jackson Hawes|Keleki Latu
+QB|Josh Allen|Kyle Allen|
+RB|James Cook III|Ray Davis|Ty Johnson|
+WR|Khalil Shakir|Greg Dortch|
+WR|Keon Coleman||
+
+DEFENSE
+DL|Ed Oliver|DeWayne Carter|
+DL|Deone Walker|Greg Gaines|
+DL|T.J. Sanders|Landon Jackson|
+OLB|Greg Rousseau|Michael Hoecht|Mike Danna|
+OLB|Bradley Chubb|TJ Parker|Javon Solomon|
+ILB|Dorian Williams|Kaleb Elarms-Orr|
+ILB|Terrel Bernard|Joe Andreessen|
+CB|Christian Benford|Dee Alford|
+CB|Davison Igbinosun|Maxwell Hairston|
+NCB|Dee Alford||
+S|Damar Hamlin|Sam Franklin Jr.|
+S|Cole Bishop|Jalon Kilgore|
+

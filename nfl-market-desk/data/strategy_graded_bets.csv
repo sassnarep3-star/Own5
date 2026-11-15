@@ -1,0 +1,265 @@
+family_id,game_id,week,side_or_total,won,proper_score_p,outcome,edge,price_american,price_implied_prob,model_prob,reference_prob,staking_units,staking_return_units,price_tier,score_tier,source_url
+S1,2026_05_BAL_ATL,5,away,yes,0.6462,1,-6.953,145,0.4082,0.3538,model,1.0,1.4500,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S4,2026_05_BAL_ATL,5,home,yes,,1,,-175,0.6364,0.3538,,1.0,0.5714,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S1,2026_05_CHI_GB,5,away,no,0.9724,0,-16.150,-125,0.5556,0.0276,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S2,2026_05_CHI_GB,5,under,yes,0.4826,1,-4.882,,,0.0276,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S3,2026_05_CHI_GB,5,away,no,0.9724,0,-0.505,-125,0.5556,0.0276,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S8,2026_05_CHI_GB,5,away + under,no,,0,,,,0.0276,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S2,2026_05_CIN_MIA,5,under,no,0.4892,0,-12.137,,,0.1772,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S3,2026_05_CIN_MIA,5,away,yes,0.8228,1,-0.571,-355,0.7802,0.1772,model,1.0,0.2817,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S1,2026_05_CLE_NYJ,5,away,no,0.6069,0,-4.997,120,0.4545,0.3931,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S4,2026_05_CLE_NYJ,5,home,no,,0,,-142,0.5868,0.3931,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S2,2026_05_CLE_NYJ,5,under,yes,0.5043,1,-3.593,,,0.3931,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S5,2026_05_CLE_NYJ,5,away,no,,0,-3.000,,,0.3931,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S8,2026_05_CLE_NYJ,5,away + under,no,,0,,,,0.3931,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S1,2026_05_DEN_LAC,5,away,yes,0.8621,1,-6.533,-192,0.6575,0.1379,model,1.0,0.5208,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S2,2026_05_DEN_LAC,5,under,yes,0.5108,1,-10.387,,,0.1379,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S3,2026_05_DEN_LAC,5,away,yes,0.8621,1,-0.493,-192,0.6575,0.1379,model,1.0,0.5208,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S8,2026_05_DEN_LAC,5,away + under,yes,,1,,,,0.1379,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S2,2026_05_DET_ARI,5,under,no,0.5043,0,-13.224,,,0.3379,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S3,2026_05_DET_ARI,5,away,yes,0.6621,1,-0.358,-265,0.7260,0.3379,model,1.0,0.3774,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S1,2026_05_HOU_TEN,5,home,no,0.3584,0,3.161,250,0.2857,0.3584,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S2,2026_05_HOU_TEN,5,under,yes,0.5043,1,-6.617,,,0.3584,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S3,2026_05_HOU_TEN,5,away,yes,0.6416,1,-0.367,-310,0.7561,0.3584,model,1.0,0.3226,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S8,2026_05_HOU_TEN,5,home + under,no,,0,,,,0.3584,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S1,2026_05_IND_PIT,5,away,no,0.5765,0,-4.775,136,0.4237,0.4235,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S4,2026_05_IND_PIT,5,home,no,,0,,-162,0.6183,0.4235,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S5,2026_05_IND_PIT,5,home,yes,,1,3.000,,,0.4235,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S1,2026_05_LV_NE,5,away,no,0.7100,0,-8.593,150,0.4000,0.2900,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S4,2026_05_LV_NE,5,home,no,,0,,-180,0.6429,0.2900,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S2,2026_05_LV_NE,5,under,no,0.5217,0,-3.637,,,0.2900,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S3,2026_05_LV_NE,5,away,no,0.7100,0,-0.094,150,0.4000,0.2900,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S8,2026_05_LV_NE,5,away + under,no,,0,,,,0.2900,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S1,2026_05_MIN_NO,5,away,yes,0.8691,1,-7.830,-142,0.5868,0.1309,model,1.0,0.7042,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S3,2026_05_MIN_NO,5,away,yes,0.8691,1,-0.433,-142,0.5868,0.1309,model,1.0,0.7042,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S1,2026_05_NYG_WAS,5,away,yes,0.7608,1,-10.026,150,0.4000,0.2392,model,1.0,1.5000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S2,2026_05_NYG_WAS,5,under,no,0.4957,0,-5.044,,,0.2392,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S8,2026_05_NYG_WAS,5,away + under,no,,0,,,,0.2392,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S1,2026_05_PHI_JAX,5,home,no,0.9427,0,7.026,-380,0.7917,0.9427,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S4,2026_05_PHI_JAX,5,home,no,,0,,-380,0.7917,0.9427,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S3,2026_05_PHI_JAX,5,home,yes,0.9427,1,0.703,-380,0.7917,0.9427,model,1.0,0.2632,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S1,2026_05_SF_SEA,5,away,yes,0.8251,1,-11.607,140,0.4167,0.1749,model,1.0,1.4000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S4,2026_05_SF_SEA,5,home,yes,,1,,-166,0.6241,0.1749,,1.0,0.6024,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S2,2026_05_SF_SEA,5,over,yes,0.4892,1,5.574,,,0.1749,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S3,2026_05_SF_SEA,5,away,yes,0.8251,1,-0.225,140,0.4167,0.1749,model,1.0,1.4000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S6,2026_05_SF_SEA,5,home,yes,,1,,-166,0.6241,0.1749,,1.0,0.6024,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S8,2026_05_SF_SEA,5,away + over,yes,,1,,,,0.1749,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S1,2026_05_TB_DAL,5,away,yes,0.3734,1,-6.529,400,0.2000,0.6266,model,1.0,4.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S4,2026_05_TB_DAL,5,home,yes,,1,,-535,0.8425,0.6266,,1.0,0.1869,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S2,2026_05_TB_DAL,5,under,yes,0.5000,1,-7.639,,,0.6266,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S3,2026_05_TB_DAL,5,home,no,0.6266,0,0.435,-535,0.8425,0.6266,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S8,2026_05_TB_DAL,5,away + under,yes,,1,,,,0.6266,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-5
+S2,2026_06_BAL_CLE,6,over,no,0.5043,0,3.766,,,0.4068,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S3,2026_06_BAL_CLE,6,away,no,0.5932,0,-0.197,-170,0.6296,0.4068,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S3,2026_06_BUF_LV,6,away,yes,0.6434,1,-0.318,-238,0.7041,0.3566,model,1.0,0.4202,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S1,2026_06_CAR_PHI,6,away,yes,0.7473,1,-3.885,-162,0.6183,0.2527,model,1.0,0.6173,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S2,2026_06_CAR_PHI,6,over,no,0.5043,0,3.383,,,0.2527,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S3,2026_06_CAR_PHI,6,away,yes,0.7473,1,-0.341,-162,0.6183,0.2527,model,1.0,0.6173,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S5,2026_06_CAR_PHI,6,away,yes,,1,-7.000,,,0.2527,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S8,2026_06_CAR_PHI,6,away + over,no,,0,,,,0.2527,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S1,2026_06_CHI_ATL,6,away,yes,0.6700,1,-3.047,-118,0.5413,0.3300,model,1.0,0.8475,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S2,2026_06_CHI_ATL,6,under,no,0.5108,0,-7.128,,,0.3300,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S3,2026_06_CHI_ATL,6,away,yes,0.6700,1,-0.187,-118,0.5413,0.3300,model,1.0,0.8475,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S8,2026_06_CHI_ATL,6,away + under,no,,0,,,,0.3300,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S1,2026_06_DAL_GB,6,home,yes,0.5795,1,3.574,-105,0.5122,0.5795,model,1.0,0.9524,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S2,2026_06_DAL_GB,6,under,yes,0.4892,1,-10.772,,,0.5795,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S3,2026_06_DAL_GB,6,home,yes,0.5795,1,0.069,-105,0.5122,0.5795,model,1.0,0.9524,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S5,2026_06_DAL_GB,6,away,no,,0,-3.000,,,0.5795,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S8,2026_06_DAL_GB,6,home + under,yes,,1,,,,0.5795,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S1,2026_06_HOU_JAX,6,home,no,0.8630,0,8.808,-142,0.5868,0.8630,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S4,2026_06_HOU_JAX,6,home,yes,,1,,-142,0.5868,0.8630,,1.0,0.7042,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S3,2026_06_HOU_JAX,6,home,no,0.8630,0,0.426,-142,0.5868,0.8630,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S6,2026_06_HOU_JAX,6,home,yes,,1,,-142,0.5868,0.8630,,1.0,0.7042,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S1,2026_06_LAC_KC,6,home,yes,0.9211,1,7.098,-455,0.8198,0.9211,model,1.0,0.2198,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S4,2026_06_LAC_KC,6,home,no,,0,,-455,0.8198,0.9211,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S3,2026_06_LAC_KC,6,home,yes,0.9211,1,0.708,-455,0.8198,0.9211,model,1.0,0.2198,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S5,2026_06_LAC_KC,6,home,yes,,1,7.000,,,0.9211,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S6,2026_06_LAC_KC,6,home,no,,0,,-455,0.8198,0.9211,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S2,2026_06_NO_NYG,6,under,no,0.5108,0,-6.706,,,0.5074,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S4,2026_06_NYJ_NE,6,home,no,,0,,-345,0.7753,0.7507,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S2,2026_06_NYJ_NE,6,under,no,0.5174,0,-3.563,,,0.7507,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S3,2026_06_NYJ_NE,6,home,yes,0.7507,1,0.495,-345,0.7753,0.7507,model,1.0,0.2899,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S6,2026_06_NYJ_NE,6,home,no,,0,,-345,0.7753,0.7507,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S3,2026_06_PIT_TB,6,away,yes,0.5711,1,-0.135,-142,0.5868,0.4289,model,1.0,0.7042,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S5,2026_06_PIT_TB,6,home,no,,0,3.000,,,0.4289,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S2,2026_06_SEA_DEN,6,over,no,0.5043,0,3.050,,,0.4083,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S3,2026_06_SEA_DEN,6,away,no,0.5917,0,-0.175,-155,0.6078,0.4083,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S4,2026_06_TEN_IND,6,home,yes,,1,,-298,0.7487,0.7814,,1.0,0.3356,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S2,2026_06_TEN_IND,6,under,no,0.4957,0,-11.502,,,0.7814,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S3,2026_06_TEN_IND,6,home,no,0.7814,0,0.499,-298,0.7487,0.7814,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S6,2026_06_TEN_IND,6,home,yes,,1,,-298,0.7487,0.7814,,1.0,0.3356,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S1,2026_06_WAS_SF,6,home,no,0.9349,0,8.144,-395,0.7980,0.9349,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S4,2026_06_WAS_SF,6,home,no,,0,,-395,0.7980,0.9349,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S2,2026_06_WAS_SF,6,under,yes,0.4892,1,-3.617,,,0.9349,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S3,2026_06_WAS_SF,6,home,yes,0.9349,1,0.701,-395,0.7980,0.9349,model,1.0,0.2532,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S8,2026_06_WAS_SF,6,home + under,no,,0,,,,0.9349,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-6
+S3,2026_07_CIN_BAL,7,away,yes,0.6064,1,-0.200,-162,0.6183,0.3936,model,1.0,0.6173,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S5,2026_07_CIN_BAL,7,away,yes,,1,-7.000,,,0.3936,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S1,2026_07_CLE_TEN,7,away,yes,0.7829,1,-6.259,-130,0.5652,0.2171,model,1.0,0.7692,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S2,2026_07_CLE_TEN,7,under,no,0.4826,0,-6.346,,,0.2171,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S3,2026_07_CLE_TEN,7,away,yes,0.7829,1,-0.326,-130,0.5652,0.2171,model,1.0,0.7692,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S8,2026_07_CLE_TEN,7,away + under,no,,0,,,,0.2171,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S2,2026_07_DAL_PHI,7,under,no,0.4957,0,-5.285,,,0.4347,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S3,2026_07_DAL_PHI,7,away,yes,0.5653,1,-0.229,-225,0.6923,0.4347,model,1.0,0.4444,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S1,2026_07_DEN_ARI,7,away,yes,0.7992,1,-3.823,-230,0.6970,0.2008,model,1.0,0.4348,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S2,2026_07_DEN_ARI,7,under,no,0.5108,0,-8.242,,,0.2008,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S3,2026_07_DEN_ARI,7,away,yes,0.7992,1,-0.468,-230,0.6970,0.2008,model,1.0,0.4348,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S5,2026_07_DEN_ARI,7,away,yes,,1,-3.000,,,0.2008,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S8,2026_07_DEN_ARI,7,away + under,no,,0,,,,0.2008,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S4,2026_07_GB_DET,7,home,no,,0,,-192,0.6575,0.5232,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S2,2026_07_GB_DET,7,under,yes,0.5043,1,-6.830,,,0.5232,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S3,2026_07_GB_DET,7,home,yes,0.5232,1,0.154,-192,0.6575,0.5232,model,1.0,0.5208,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S5,2026_07_GB_DET,7,home,yes,,1,7.000,,,0.5232,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S6,2026_07_GB_DET,7,home,no,,0,,-192,0.6575,0.5232,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S1,2026_07_IND_MIN,7,home,no,0.8548,0,3.988,-325,0.7647,0.8548,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S4,2026_07_IND_MIN,7,home,no,,0,,-325,0.7647,0.8548,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S3,2026_07_IND_MIN,7,home,yes,0.8548,1,0.588,-325,0.7647,0.8548,model,1.0,0.3077,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S5,2026_07_IND_MIN,7,home,yes,,1,7.000,,,0.8548,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S1,2026_07_KC_SEA,7,away,no,0.6648,0,-7.223,136,0.4237,0.3352,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S4,2026_07_KC_SEA,7,home,no,,0,,-162,0.6183,0.3352,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S2,2026_07_KC_SEA,7,over,no,0.4826,0,6.381,,,0.3352,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S3,2026_07_KC_SEA,7,away,no,0.6648,0,-0.071,136,0.4237,0.3352,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S5,2026_07_KC_SEA,7,home,yes,,1,3.000,,,0.3352,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S8,2026_07_KC_SEA,7,away + over,no,,0,,,,0.3352,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S4,2026_07_MIA_NYJ,7,home,yes,,1,,-218,0.6855,0.7211,,1.0,0.4587,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S2,2026_07_MIA_NYJ,7,under,no,0.5174,0,-8.980,,,0.7211,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S3,2026_07_MIA_NYJ,7,home,no,0.7211,0,0.379,-218,0.6855,0.7211,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S5,2026_07_MIA_NYJ,7,away,yes,,1,-7.000,,,0.7211,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S6,2026_07_MIA_NYJ,7,home,yes,,1,,-218,0.6855,0.7211,,1.0,0.4587,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S4,2026_07_NE_CHI,7,home,no,,0,,-155,0.6078,0.5075,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S2,2026_07_NE_CHI,7,under,no,0.4783,0,-3.589,,,0.5075,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S3,2026_07_NE_CHI,7,home,yes,0.5075,1,0.090,-155,0.6078,0.5075,model,1.0,0.6452,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S1,2026_07_NYG_HOU,7,away,yes,0.3080,1,-5.024,390,0.2041,0.6920,model,1.0,3.9000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S4,2026_07_NYG_HOU,7,home,yes,,1,,-520,0.8387,0.6920,,1.0,0.1923,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S7,2026_07_NYG_HOU,7,away,yes,,1,,390,0.2041,0.6920,,1.0,3.9000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S3,2026_07_NYG_HOU,7,home,no,0.6920,0,0.496,-520,0.8387,0.6920,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S3,2026_07_PIT_NO,7,away,yes,0.6883,1,-0.282,-162,0.6183,0.3117,model,1.0,0.6173,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S1,2026_07_SF_ATL,7,away,no,0.7540,0,-4.319,-155,0.6078,0.2460,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S3,2026_07_SF_ATL,7,away,no,0.7540,0,-0.337,-155,0.6078,0.2460,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S4,2026_07_TB_CAR,7,home,yes,,1,,-166,0.6241,0.7101,,1.0,0.6024,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S3,2026_07_TB_CAR,7,home,no,0.7101,0,0.310,-166,0.6241,0.7101,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S6,2026_07_TB_CAR,7,home,yes,,1,,-166,0.6241,0.7101,,1.0,0.6024,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-7
+S4,2026_08_ARI_DAL,8,home,yes,,1,,-340,0.7727,0.7546,,1.0,0.2941,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S2,2026_08_ARI_DAL,8,under,no,0.5000,0,-13.553,,,0.7546,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S3,2026_08_ARI_DAL,8,home,no,0.7546,0,0.495,-340,0.7727,0.7546,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S4,2026_08_ATL_TB,8,home,no,,0,,-130,0.5652,0.5578,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S3,2026_08_ATL_TB,8,home,yes,0.5578,1,0.101,-130,0.5652,0.5578,model,1.0,0.7692,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S6,2026_08_ATL_TB,8,home,no,,0,,-130,0.5652,0.5578,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S4,2026_08_BAL_BUF,8,home,no,,0,,-162,0.6183,0.6196,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S2,2026_08_BAL_BUF,8,under,yes,0.4892,1,-3.536,,,0.6196,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S3,2026_08_BAL_BUF,8,home,yes,0.6196,1,0.213,-162,0.6183,0.6196,model,1.0,0.6173,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S5,2026_08_BAL_BUF,8,home,yes,,1,7.000,,,0.6196,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S4,2026_08_CAR_GB,8,home,no,,0,,-192,0.6575,0.5571,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S2,2026_08_CAR_GB,8,under,yes,0.5108,1,-3.892,,,0.5571,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S3,2026_08_CAR_GB,8,home,yes,0.5571,1,0.188,-192,0.6575,0.5571,model,1.0,0.5208,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S1,2026_08_CHI_SEA,8,away,yes,0.5683,1,-4.781,140,0.4167,0.4317,model,1.0,1.4000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S4,2026_08_CHI_SEA,8,home,yes,,1,,-166,0.6241,0.4317,,1.0,0.6024,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S5,2026_08_CHI_SEA,8,away,yes,,1,-3.000,,,0.4317,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S4,2026_08_CLE_PIT,8,home,no,,0,,-198,0.6644,0.6277,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S3,2026_08_CLE_PIT,8,home,yes,0.6277,1,0.265,-198,0.6644,0.6277,model,1.0,0.5051,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S6,2026_08_CLE_PIT,8,home,no,,0,,-198,0.6644,0.6277,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S4,2026_08_IND_JAX,8,home,no,,0,,-485,0.8291,0.8522,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S7,2026_08_IND_JAX,8,away,no,,0,,370,0.2128,0.8522,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S3,2026_08_IND_JAX,8,home,yes,0.8522,1,0.648,-485,0.8291,0.8522,model,1.0,0.2062,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S5,2026_08_IND_JAX,8,home,yes,,1,7.000,,,0.8522,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S6,2026_08_IND_JAX,8,home,no,,0,,-485,0.8291,0.8522,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S1,2026_08_KC_DEN,8,away,no,0.6268,0,-4.849,-108,0.5192,0.3732,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S3,2026_08_KC_DEN,8,away,no,0.6268,0,-0.122,-108,0.5192,0.3732,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S6,2026_08_KC_DEN,8,home,no,,0,,-112,0.5283,0.3732,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S2,2026_08_LV_NYJ,8,under,no,0.5108,0,-5.560,,,0.4903,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S1,2026_08_MIN_DET,8,away,no,0.7285,0,-9.300,142,0.4132,0.2715,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S4,2026_08_MIN_DET,8,home,no,,0,,-170,0.6296,0.2715,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S3,2026_08_MIN_DET,8,away,no,0.7285,0,-0.125,142,0.4132,0.2715,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S6,2026_08_MIN_DET,8,home,no,,0,,-170,0.6296,0.2715,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S1,2026_08_NE_MIA,8,away,no,0.8596,0,-4.172,-345,0.7753,0.1404,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S2,2026_08_NE_MIA,8,under,no,0.5043,0,-4.347,,,0.1404,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S3,2026_08_NE_MIA,8,away,yes,0.8596,1,-0.604,-345,0.7753,0.1404,model,1.0,0.2899,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S5,2026_08_NE_MIA,8,away,yes,,1,-3.000,,,0.1404,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S8,2026_08_NE_MIA,8,away + under,no,,0,,,,0.1404,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S1,2026_08_PHI_WAS,8,away,no,0.5302,0,-6.786,225,0.3077,0.4698,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S4,2026_08_PHI_WAS,8,home,no,,0,,-278,0.7354,0.4698,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S2,2026_08_PHI_WAS,8,under,yes,0.5000,1,-5.378,,,0.4698,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S3,2026_08_PHI_WAS,8,home,yes,0.4698,1,0.175,-278,0.7354,0.4698,model,1.0,0.3597,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S5,2026_08_PHI_WAS,8,home,yes,,1,7.000,,,0.4698,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S6,2026_08_PHI_WAS,8,home,no,,0,,-278,0.7354,0.4698,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S8,2026_08_PHI_WAS,8,away + under,no,,0,,,,0.4698,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S4,2026_08_TEN_CIN,8,home,no,,0,,-900,0.9000,0.9111,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S7,2026_08_TEN_CIN,8,away,no,,0,,600,0.1429,0.9111,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S2,2026_08_TEN_CIN,8,under,no,0.4892,0,-5.668,,,0.9111,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S3,2026_08_TEN_CIN,8,home,yes,0.9111,1,0.774,-900,0.9000,0.9111,model,1.0,0.1111,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-8
+S4,2026_09_ARI_SEA,9,home,no,,0,,-455,0.8198,0.8222,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S3,2026_09_ARI_SEA,9,home,yes,0.8222,1,0.609,-455,0.8198,0.8222,model,1.0,0.2198,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S6,2026_09_ARI_SEA,9,home,no,,0,,-455,0.8198,0.8222,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S1,2026_09_BUF_MIN,9,home,no,0.5044,0,3.117,154,0.3937,0.5044,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S2,2026_09_BUF_MIN,9,over,no,0.5043,0,6.627,,,0.5044,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S3,2026_09_BUF_MIN,9,away,yes,0.4956,1,-0.118,-185,0.6491,0.5044,model,1.0,0.5405,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S8,2026_09_BUF_MIN,9,home + over,no,,0,,,,0.5044,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S1,2026_09_CIN_ATL,9,away,yes,0.7323,1,-3.531,-180,0.6429,0.2677,model,1.0,0.5556,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S2,2026_09_CIN_ATL,9,under,yes,0.5108,1,-4.698,,,0.2677,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S3,2026_09_CIN_ATL,9,away,yes,0.7323,1,-0.349,-180,0.6429,0.2677,model,1.0,0.5556,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S8,2026_09_CIN_ATL,9,away + under,yes,,1,,,,0.2677,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S1,2026_09_CLE_NO,9,away,yes,0.5177,1,-4.968,185,0.3509,0.4823,model,1.0,1.8500,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S4,2026_09_CLE_NO,9,home,no,,0,,-225,0.6923,0.4823,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S2,2026_09_CLE_NO,9,under,no,0.5108,0,-6.420,,,0.4823,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S3,2026_09_CLE_NO,9,home,yes,0.4823,1,0.146,-225,0.6923,0.4823,model,1.0,0.4444,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S5,2026_09_CLE_NO,9,home,yes,,1,7.000,,,0.4823,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S8,2026_09_CLE_NO,9,away + under,no,,0,,,,0.4823,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S2,2026_09_DAL_IND,9,under,yes,0.5108,1,-9.898,,,0.3244,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S3,2026_09_DAL_IND,9,away,yes,0.6756,1,-0.333,-218,0.6855,0.3244,model,1.0,0.4587,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S3,2026_09_DEN_CAR,9,away,yes,0.6194,1,-0.202,-155,0.6078,0.3806,model,1.0,0.6452,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S5,2026_09_DEN_CAR,9,home,no,,0,3.000,,,0.3806,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S2,2026_09_DET_MIA,9,under,yes,0.4739,1,-7.716,,,0.2140,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S3,2026_09_DET_MIA,9,away,yes,0.7860,1,-0.508,-305,0.7531,0.2140,model,1.0,0.3279,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S4,2026_09_GB_NE,9,home,yes,,1,,-185,0.6491,0.5833,,1.0,0.5405,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S3,2026_09_GB_NE,9,home,no,0.5833,0,0.206,-185,0.6491,0.5833,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S5,2026_09_GB_NE,9,away,yes,,1,-3.000,,,0.5833,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S1,2026_09_HOU_LAC,9,away,yes,0.7920,1,-3.069,-230,0.6970,0.2080,model,1.0,0.4348,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S2,2026_09_HOU_LAC,9,under,no,0.5000,0,-5.245,,,0.2080,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S3,2026_09_HOU_LAC,9,away,yes,0.7920,1,-0.461,-230,0.6970,0.2080,model,1.0,0.4348,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S5,2026_09_HOU_LAC,9,away,yes,,1,-7.000,,,0.2080,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S8,2026_09_HOU_LAC,9,away + under,no,,0,,,,0.2080,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S1,2026_09_JAX_BAL,9,away,yes,0.9093,1,-5.581,-455,0.8198,0.0907,model,1.0,0.2198,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S2,2026_09_JAX_BAL,9,over,yes,0.4892,1,7.995,,,0.0907,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S3,2026_09_JAX_BAL,9,away,yes,0.9093,1,-0.696,-455,0.8198,0.0907,model,1.0,0.2198,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S8,2026_09_JAX_BAL,9,away + over,yes,,1,,,,0.0907,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S4,2026_09_LV_SF,9,home,no,,0,,-410,0.8039,0.7580,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S3,2026_09_LV_SF,9,home,yes,0.7580,1,0.530,-410,0.8039,0.7580,model,1.0,0.2439,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S5,2026_09_LV_SF,9,home,yes,,1,7.000,,,0.7580,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S3,2026_09_NYG_PHI,9,away,yes,0.6790,1,-0.272,-162,0.6183,0.3210,model,1.0,0.6173,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S5,2026_09_NYG_PHI,9,away,yes,,1,-7.000,,,0.3210,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S1,2026_09_NYJ_KC,9,away,no,0.3264,0,-4.761,390,0.2041,0.6736,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S4,2026_09_NYJ_KC,9,home,no,,0,,-520,0.8387,0.6736,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S2,2026_09_NYJ_KC,9,under,yes,0.5000,1,-4.938,,,0.6736,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S3,2026_09_NYJ_KC,9,home,yes,0.6736,1,0.478,-520,0.8387,0.6736,model,1.0,0.1923,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S8,2026_09_NYJ_KC,9,away + under,no,,0,,,,0.6736,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S1,2026_09_TB_CHI,9,away,yes,0.4214,1,-4.410,235,0.2985,0.5786,model,1.0,2.3500,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S4,2026_09_TB_CHI,9,home,no,,0,,-290,0.7436,0.5786,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S3,2026_09_TB_CHI,9,home,yes,0.5786,1,0.292,-290,0.7436,0.5786,model,1.0,0.3448,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-9
+S1,2026_10_BUF_NYJ,10,away,yes,0.8725,1,-3.299,-440,0.8148,0.1275,model,1.0,0.2273,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-10
+S3,2026_10_BUF_NYJ,10,away,yes,0.8725,1,-0.654,-440,0.8148,0.1275,model,1.0,0.2273,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-10
+S1,2026_10_CAR_NO,10,away,yes,0.6027,1,-5.199,110,0.4762,0.3973,model,1.0,1.1000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-10
+S4,2026_10_CAR_NO,10,home,yes,,1,,-130,0.5652,0.3973,,1.0,0.7692,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-10
+S2,2026_10_CAR_NO,10,under,yes,0.4957,1,-6.157,,,0.3973,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-10
+S3,2026_10_CAR_NO,10,away,yes,0.6027,1,-0.060,110,0.4762,0.3973,model,1.0,1.1000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-10
+S6,2026_10_CAR_NO,10,home,yes,,1,,-130,0.5652,0.3973,,1.0,0.7692,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-10
+S8,2026_10_CAR_NO,10,away + under,yes,,1,,,,0.3973,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-10
+S3,2026_10_HOU_CLE,10,away,no,0.7073,0,-0.371,-225,0.6923,0.2927,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-10
+S1,2026_10_JAX_TEN,10,away,yes,0.9720,1,-9.315,-600,0.8571,0.0280,model,1.0,0.1667,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-10
+S3,2026_10_JAX_TEN,10,away,yes,0.9720,1,-0.794,-600,0.8571,0.0280,model,1.0,0.1667,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-10
+S5,2026_10_JAX_TEN,10,home,no,,0,4.000,,,0.0280,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-10
+S3,2026_10_KC_ATL,10,away,yes,0.7164,1,-0.339,-185,0.6491,0.2836,model,1.0,0.5405,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-10
+S1,2026_10_MIA_IND,10,away,yes,0.5141,1,-3.867,170,0.3704,0.4859,model,1.0,1.7000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-10
+S4,2026_10_MIA_IND,10,home,no,,0,,-205,0.6721,0.4859,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-10
+S2,2026_10_MIA_IND,10,under,no,0.5043,0,-5.785,,,0.4859,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-10
+S3,2026_10_MIA_IND,10,home,yes,0.4859,1,0.131,-205,0.6721,0.4859,model,1.0,0.4878,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-10
+S8,2026_10_MIA_IND,10,away + under,no,,0,,,,0.4859,,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-10
+S1,2026_10_MIN_GB,10,away,yes,0.5373,1,-3.970,136,0.4237,0.4627,model,1.0,1.3600,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-10
+S4,2026_10_MIN_GB,10,home,yes,,1,,-162,0.6183,0.4627,,1.0,0.6173,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-10
+S3,2026_10_MIN_GB,10,home,no,0.4627,0,0.056,-162,0.6183,0.4627,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-10
+S6,2026_10_MIN_GB,10,home,yes,,1,,-162,0.6183,0.4627,,1.0,0.6173,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-10
+S4,2026_10_NE_DET,10,home,no,,0,,-155,0.6078,0.4979,,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-10
+S2,2026_10_NE_DET,10,under,yes,0.5217,1,-3.065,,,0.4979,market de-vig,1.0,,,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-10
+S3,2026_10_NE_DET,10,home,yes,0.4979,1,0.081,-155,0.6078,0.4979,model,1.0,0.6452,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-10
+S4,2026_10_WAS_NYG,10,home,yes,,1,,-135,0.5745,0.5810,,1.0,0.7407,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-10
+S3,2026_10_WAS_NYG,10,home,no,0.5810,0,0.132,-135,0.5745,0.5810,model,1.0,-1.0000,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-10
+S6,2026_10_WAS_NYG,10,home,yes,,1,,-135,0.5745,0.5810,,1.0,0.7407,AGGREGATOR,OFFICIAL,https://www.nfl.com/schedules/2026/by-week/week-10
