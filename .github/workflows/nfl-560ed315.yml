@@ -1,0 +1,101 @@
+name: Verify NFL decision-readiness desk (560ed315)
+
+# Rebuilds the decision-readiness register and every page from the verified
+# sibling registers, then proves row by row that every published table row links
+# to a source (or carries an explicit UNVERIFIED badge).  A row that cannot be
+# sourced never fails the build silently.
+#
+# The desk is served by this repository's existing GitHub Pages source (repo
+# root), at /Own5/nfl-560ed315/.  Nothing here calls deploy-pages, which would
+# fight with that source.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'nfl-560ed315/**'
+      - '.github/workflows/nfl-560ed315.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'nfl-560ed315/**'
+      - '.github/workflows/nfl-560ed315.yml'
+  workflow_dispatch:
+  schedule:
+    - cron: '41 6 * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nfl-560ed315-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Build the decision-readiness register and registers
+        working-directory: nfl-560ed315
+        run: |
+          python3 readiness.py
+          python3 registers.py
+
+      - name: Build every page
+        working-directory: nfl-560ed315
+        run: python3 build_site.py
+
+      - name: Deterministic rebuild check (data must not drift)
+        working-directory: nfl-560ed315
+        run: |
+          python3 readiness.py > /dev/null
+          python3 registers.py > /dev/null
+          python3 build_site.py > /dev/null
+
+      - name: Row-level source-link proof on the generated HTML
+        working-directory: nfl-560ed315
+        run: python3 verify.py
+
+      - name: Unit tests
+        working-directory: nfl-560ed315
+        run: python3 -W ignore -m unittest discover -s tests -v
+
+      - name: Committed artefacts match the deterministic build
+        run: git diff --exit-code -- nfl-560ed315/data nfl-560ed315/*.html
+
+      - name: Upload the built desk for review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nfl-560ed315
+          path: nfl-560ed315
+
+  pages-smoke:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: verify
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check the published desk is live
+        run: |
+          base="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/nfl-560ed315"
+          for path in "/" "/readiness.html" "/questions.html" "/flagged.html"; do
+            url="$base$path"
+            ok=0
+            for attempt in $(seq 1 24); do
+              if curl --fail --silent --show-error --location "$url" | grep -q 'OWN5'; then
+                echo "OK $url"; ok=1; break
+              fi
+              sleep 10
+            done
+            if [ "$ok" -ne 1 ]; then
+              echo "Published page did not become ready: $url" >&2
+              exit 1
+            fi
+          done
