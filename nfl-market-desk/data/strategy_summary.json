@@ -1,0 +1,22 @@
+{
+  "best_signal_family": "Home underdog >= 2.5 points",
+  "best_signal_p_holm": "0.0001",
+  "best_staking_family": "Fade large home favourite >= 10 points",
+  "best_staking_roi_pct": "63.33",
+  "certified": 0,
+  "control_brier_c1_random": "0.2500",
+  "control_brier_c2_favourites": "0.2500",
+  "control_brier_c3_coinflip": "0.2500",
+  "control_definitions": 3,
+  "control_hit_c1_random": "0.4444",
+  "control_hit_c2_favourites": "0.2763",
+  "controls": 238,
+  "demotion_rules": 7,
+  "graded_bets": 264,
+  "leaderboard_rows": 7,
+  "luck_panel_rows": 2,
+  "official_correlations": 5,
+  "rank_disagreement_example": "S7 Fade large home favourite >= 10 points: signal rank 2 of 4, staking rank 1 of 5",
+  "registered_families": 9,
+  "withheld_correlations": 5
+}

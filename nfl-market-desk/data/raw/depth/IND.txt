@@ -1,0 +1,33 @@
+# club: Indianapolis Colts
+# url: https://www.colts.com/team/depth-chart
+# page_dated: (no date published on the page)
+# shape: markdown_table
+# captured_utc: 2026-11-15T23:24:00Z
+# format: POSITION|slot1|slot2|slot3|slot4   (';' = two players in one slot)
+
+OFFENSE
+WR|Laquon Treadwell|Nick Westbrook-Ikhine|
+LT|Bernhard Raimann|Charlie Heck|
+LG|Jalen Farmer|Dalton Tucker|
+C|Tanor Bortolini|Sedrick Van Pran-Granger|
+RG|Matt Goncalves||
+RT|Jalen Travis|Luke Tenuta|
+TE|Tyler Warren|Mo Alie-Cox|Drew Ogletree|Will Mallory;Pharaoh Brown
+WR|Anthony Gould||
+WR|Ashton Dulin|Deion Burks|
+QB|Daniel Jones|Anthony Richardson Sr.|Riley Leonard|
+RB|Jonathan Taylor|Seth McGowan|DJ Giddens|
+
+DEFENSE
+DE|Jaylahn Tuimoloau|George Gumbs Jr.|
+DT|Adetomiwa Adebawore|Kevin Givens|
+NT|Grover Stewart|Jerry Tillery|Tim Smith|
+DE|Laiatu Latu|Caden Curry|
+WLB|Jaylon Carlies|Bryce Boettcher|Tahj Chambers|
+MLB|Akeem Davis-Gaither|CJ Allen|Austin Ajiake|
+CB|Charvarius Ward|Kenneth Harris|
+FS|Cam Bynum|Jonathan Owens|
+SS|AJ Haulcy|Hunter Wohler|
+N|Justin Walley|Kapena Gushiken|
+CB|Sauce Gardner||
+

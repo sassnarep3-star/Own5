@@ -1,0 +1,13 @@
+gate_id,name,test,class,status,blocking_flags,source_url
+G0,Source integrity,"Every input row carries a URL, a tier and a capture time; the results feed reconciles 32/32 against the official standings",hard,MET,,https://www.nfl.com/standings/league/2026/REG
+G1,Pre-registration,"The family's rule file exists, its sha256 matches the ledger, and its registration predates the first graded bet",hard,MET,,https://www.nfl.com/standings/league/2026/REG
+G2,Verified price,Opening and closing prices from an official or named-operator source exist for the market,hard,NOT MET,"F-01, F-02",https://www.nfl.com/standings/league/2026/REG
+G3,No lookahead,"Every forecast is produced from games strictly before its own week, and the forecast file records train_last_week",hard,MET,,https://www.nfl.com/standings/league/2026/REG
+G4,Sample adequacy,Prospective graded bets >= 300 per family (the power note fixes that number before results); n is published,hard,NOT MET,F-10,https://www.nfl.com/standings/league/2026/REG
+G5,Multiplicity,"Holm adjustment across all registered families, with the family count published",hard,MET,,https://www.nfl.com/standings/league/2026/REG
+G6,Calibration,Market-relative skill is positive with a cluster-bootstrap lower bound above zero,hard,NOT MET,F-01,https://www.nfl.com/standings/league/2026/REG
+G7,Joint probability,A parlay or prop combo is ranked only where a directly validated joint probability and the operator's void/push rules are both present,hard,NOT MET,F-17,https://www.nfl.com/standings/league/2026/REG
+G8,Availability evidence,"Personnel enters only from official, timestamped observations; ablations replace fixed penalties",hard,PARTIAL,"F-11, F-12",https://www.nfl.com/standings/league/2026/REG
+G9,Demotion,A live strategy has a written trigger that returns it to paper,hard,MET,,https://www.nfl.com/standings/league/2026/REG
+G10,Control baselines,Every leaderboard run carries random-pick and favourites-only controls graded the same way,hard,MET,,https://www.nfl.com/standings/league/2026/REG
+G11,Persistence outside the design,The edge is re-measured on a season not used to design the rule,soft,NOT MET,no archived injury history,https://www.nfl.com/standings/league/2026/REG

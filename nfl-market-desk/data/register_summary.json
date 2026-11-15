@@ -1,0 +1,48 @@
+{
+  "announcements": 4,
+  "decision_readiness_rows": 78,
+  "desks_catalogued": 11,
+  "flags": 34,
+  "flags_blocking": 9,
+  "gates": {
+    "G0": "MET",
+    "G1": "MET",
+    "G10": "MET",
+    "G11": "NOT MET",
+    "G2": "NOT MET",
+    "G3": "MET",
+    "G4": "NOT MET",
+    "G5": "MET",
+    "G6": "NOT MET",
+    "G7": "NOT MET",
+    "G8": "PARTIAL",
+    "G9": "MET"
+  },
+  "gates_met": 6,
+  "gates_not_met": 5,
+  "numbers": {
+    "corpus_rows": 145,
+    "depth_clubs_parsed": 11,
+    "depth_rows": 551,
+    "flags": 34,
+    "graded_bets": 264,
+    "injury_rows": 347,
+    "leaderboard_rows": 7,
+    "official_correlations": 5,
+    "originated_markets": 39,
+    "price_snapshot_rows": 195,
+    "questions": 15,
+    "registered_families": 9,
+    "results_feed_rows": 145,
+    "suggestions": 19
+  },
+  "questions": 15,
+  "requirements": 78,
+  "requirements_by_status": {
+    "MET": 46,
+    "NOT MET": 9,
+    "PARTIAL": 21,
+    "REJECTED": 2
+  },
+  "suggestions": 19
+}

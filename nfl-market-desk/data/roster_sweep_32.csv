@@ -1,0 +1,33 @@
+club,on_week10_report,reason_if_absent,depth_chart_status,roster_rows_captured,roster_active_rows,roster_url,roster_source_tier,roster_status_note,report_source_url
+ATL,yes,,not captured this session,,,,,,https://www.nfl.com/injuries/league/2026/reg10
+AZ,yes,,not captured this session,,,,,,https://www.nfl.com/injuries/league/2026/reg10
+BAL,yes,,parsed,,,,,,https://www.nfl.com/injuries/league/2026/reg10
+BUF,yes,,parsed,,,,,,https://www.nfl.com/injuries/league/2026/reg10
+CAR,yes,,not captured this session,,,,,,https://www.nfl.com/injuries/league/2026/reg10
+CHI,no,club is on bye in Week 10 per the official schedule page,not captured this session,,,,,,https://www.nfl.com/schedules/2026/by-week/week-10
+CIN,yes,,not captured this session,,,,,,https://www.nfl.com/injuries/league/2026/reg10
+CLE,yes,,not captured this session,,,,,,https://www.nfl.com/injuries/league/2026/reg10
+DAL,yes,,not captured this session,,,,,,https://www.nfl.com/injuries/league/2026/reg10
+DEN,no,club is on bye in Week 10 per the official schedule page,not captured this session,,,,,,https://www.nfl.com/schedules/2026/by-week/week-10
+DET,yes,,parsed,,,,,,https://www.nfl.com/injuries/league/2026/reg10
+GB,yes,,parsed,,,,,,https://www.nfl.com/injuries/league/2026/reg10
+HOU,yes,,"image-only, not parsed",,,,,,https://www.nfl.com/injuries/league/2026/reg10
+IND,yes,,parsed,,,,,,https://www.nfl.com/injuries/league/2026/reg10
+JAX,yes,,not captured this session,,,,,,https://www.nfl.com/injuries/league/2026/reg10
+KC,yes,,parsed,,,,,,https://www.nfl.com/injuries/league/2026/reg10
+LAC,yes,,not captured this session,,,,,,https://www.nfl.com/injuries/league/2026/reg10
+LAR,yes,,not captured this session,,,,,,https://www.nfl.com/injuries/league/2026/reg10
+LV,yes,,not captured this session,,,,,,https://www.nfl.com/injuries/league/2026/reg10
+MIA,yes,,not captured this session,,,,,,https://www.nfl.com/injuries/league/2026/reg10
+MIN,yes,,not captured this session,,,,,,https://www.nfl.com/injuries/league/2026/reg10
+NE,yes,,not captured this session,59,59,https://www.nfl.com/teams/new-england-patriots/roster,OFFICIAL,"full roster read (3 chunks); every listed player carries status ACT. No IR/RES status appears, which is consistent with the club's only IR move (TreVeyon Henderson) being announced 2026-11-14, after this page state.",https://www.nfl.com/injuries/league/2026/reg10
+NO,yes,,not captured this session,,,,,,https://www.nfl.com/injuries/league/2026/reg10
+NYG,yes,,parsed,,,,,,https://www.nfl.com/injuries/league/2026/reg10
+NYJ,yes,,not captured this session,,,,,,https://www.nfl.com/injuries/league/2026/reg10
+PHI,no,club is on bye in Week 10 per the official schedule page,parsed,,,,,,https://www.nfl.com/schedules/2026/by-week/week-10
+PIT,yes,,not captured this session,,,,,,https://www.nfl.com/injuries/league/2026/reg10
+SEA,yes,,parsed,,,,,,https://www.nfl.com/injuries/league/2026/reg10
+SF,yes,,parsed,,,,,,https://www.nfl.com/injuries/league/2026/reg10
+TB,no,club is on bye in Week 10 per the official schedule page,not captured this session,,,,,,https://www.nfl.com/schedules/2026/by-week/week-10
+TEN,yes,,not captured this session,,,,,,https://www.nfl.com/injuries/league/2026/reg10
+WAS,yes,,parsed,,,,,,https://www.nfl.com/injuries/league/2026/reg10

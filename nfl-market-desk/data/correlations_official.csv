@@ -1,0 +1,6 @@
+corr_id,unit_of_analysis,metric_a,metric_b,r,r_squared,p_two_sided,n,n_definition,inputs_tier,source_url,note
+C-01,team (32 clubs),points for per game,winning percentage,0.7250,0.5256,0.000003,32,clubs in the official 2026 league standings,OFFICIAL,https://www.nfl.com/standings/league/2026/REG,Team level. Both columns from one official standings page.
+C-02,team (32 clubs),points allowed per game,winning percentage,-0.7134,0.5090,0.000005,32,clubs in the official 2026 league standings,OFFICIAL,https://www.nfl.com/standings/league/2026/REG,Team level. Both columns from one official standings page.
+C-03,team (32 clubs),net points per game,winning percentage,0.8864,0.7858,0.000000,32,clubs in the official 2026 league standings,OFFICIAL,https://www.nfl.com/standings/league/2026/REG,Team level. Both columns from one official standings page.
+C-04,team (32 clubs),points for per game,points allowed per game,-0.3158,0.0997,0.078275,32,clubs in the official 2026 league standings,OFFICIAL,https://www.nfl.com/standings/league/2026/REG,Team level. Both columns from one official standings page.
+C-05,team (32 clubs),wins,points for,0.6871,0.4720,0.000014,32,clubs in the official 2026 league standings,OFFICIAL,https://www.nfl.com/standings/league/2026/REG,Team level. Both columns from one official standings page.

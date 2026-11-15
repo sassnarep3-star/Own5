@@ -1,0 +1,4 @@
+control_id,name,bet_class,rule_text
+C1,"Random picks (deterministic, game-id seeded)",single,"Bet the home side when the sum of the game id's characters is even, else the away side. Flat 1 unit. Deterministic and reviewable, so it cannot be re-rolled."
+C2,Favourites only,single,Bet the aggregator favourite on every game. Flat 1 unit.
+C3,Coin-flip probability,single,Assign probability 0.5 to the home team on every game. Its Brier score is 0.25 by construction; that is the floor every proper score is measured against.

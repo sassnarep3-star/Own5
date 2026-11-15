@@ -1,0 +1,10 @@
+game_id,week,home,away,out_home,out_away,doubtful_home,doubtful_away,questionable_home,questionable_away,starters_named_out_home,starters_named_out_away,availability_diff,depth_chart_available_home,depth_chart_available_away,prob_home_win_no_personnel,prob_home_win_with_personnel,actual_home_win,injury_source_url,depth_note
+2026_10_BUF_NYJ,10,NYJ,BUF,1,0,0,1,8,4,,0,1.5000,no,yes,0.1275,0.1275,0,https://www.nfl.com/injuries/league/2026/reg10,starter-out counts use only the 11 clubs whose chart this desk parsed
+2026_10_CAR_NO,10,NO,CAR,4,1,0,2,2,4,,,1.5000,no,no,0.3973,0.3973,0,https://www.nfl.com/injuries/league/2026/reg10,starter-out counts use only the 11 clubs whose chart this desk parsed
+2026_10_HOU_CLE,10,CLE,HOU,2,5,0,0,1,6,,,-4.2500,no,no,0.2927,0.2927,1,https://www.nfl.com/injuries/league/2026/reg10,starter-out counts use only the 11 clubs whose chart this desk parsed
+2026_10_JAX_TEN,10,TEN,JAX,5,3,0,0,1,1,,,2.0000,no,no,0.0280,0.0280,0,https://www.nfl.com/injuries/league/2026/reg10,starter-out counts use only the 11 clubs whose chart this desk parsed
+2026_10_KC_ATL,10,ATL,KC,1,3,1,0,3,3,,1,-1.5000,no,yes,0.2836,0.2836,0,https://www.nfl.com/injuries/league/2026/reg10,starter-out counts use only the 11 clubs whose chart this desk parsed
+2026_10_MIA_IND,10,IND,MIA,6,2,0,1,1,1,3,,3.5000,yes,no,0.4859,0.4859,1,https://www.nfl.com/injuries/league/2026/reg10,starter-out counts use only the 11 clubs whose chart this desk parsed
+2026_10_MIN_GB,10,GB,MIN,4,5,1,0,7,3,2,,0.5000,yes,no,0.4627,0.4627,0,https://www.nfl.com/injuries/league/2026/reg10,starter-out counts use only the 11 clubs whose chart this desk parsed
+2026_10_NE_DET,10,DET,NE,3,3,0,0,2,9,2,,-1.7500,yes,no,0.4979,0.4979,1,https://www.nfl.com/injuries/league/2026/reg10,starter-out counts use only the 11 clubs whose chart this desk parsed
+2026_10_WAS_NYG,10,NYG,WAS,0,2,0,0,1,0,0,0,-1.7500,yes,yes,0.5810,0.5810,0,https://www.nfl.com/injuries/league/2026/reg10,starter-out counts use only the 11 clubs whose chart this desk parsed

@@ -1,0 +1,34 @@
+# club: Philadelphia Eagles
+# url: https://www.philadelphiaeagles.com/team/depth-chart
+# page_dated: The unofficial depth chart is compiled by the Eagles' communications department
+# shape: markdown_table
+# captured_utc: 2026-11-15T23:24:00Z
+# format: POSITION|slot1|slot2|slot3|slot4   (';' = two players in one slot)
+
+OFFENSE
+WR|DeVonta Smith|Hollywood Brown|
+LT|Jordan Mailata||
+LG|Willie Lampkin||
+C|Drew Kendall|Jake Majors|
+RG|Tyler Steen|Micah Morris|
+RT|Markel Bell|Fred Johnson|
+TE|Dallas Goedert|Johnny Mundt|
+WR|Makai Lemon|Elijah Moore|Britain Covey|
+WR|Dontayvion Wicks|Darius Cooper|
+RB|Saquon Barkley||
+QB|Tanner McKee|Cole Payton|Joe Milton|
+
+DEFENSE
+EDGE|Jalyx Hunt;Jonathan Greenard|Arnold Ebiketie|
+DT|Jalen Carter|Byron Young|
+DT||Ty Robinson|
+DT|Moro Ojomo||
+EDGE|Nolan Smith Jr.;Jonathan Greenard|A.J. Epenesa|
+LB|Zack Baun|Smael Mondon Jr.|
+LB|Jihaad Campbell|Jeremiah Trotter Jr.|
+CB|Riq Woolen|Jonathan Jones|
+CB|Quinyon Mitchell|Kelee Ringo|
+NCB|Cooper DeJean|Mac McWilliams|
+S|Marcus Epps|Michael Carter II|
+S|Andrew Mukuba|Kenny Moore II|
+

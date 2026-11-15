@@ -1,0 +1,6 @@
+withheld_id,pair,why_not_published,prior_input_tier,status
+W-01,player receiving volume vs team passing yards,would need official per-player game logs joined to official team totals,AGGREGATOR in prior desks,WITHHELD - not computed here
+W-02,same-game prop-leg dependence,needs player-prop prices; none exist (F-17),no source,WITHHELD - blocked
+W-03,injury designation vs points allowed,needs designation reliability first (F-12),not measured,WITHHELD - blocked
+W-04,rest days vs margin,rest is AGGREGATOR tier from the mirror,AGGREGATOR,WITHHELD - published as a strategy input only
+W-05,depth rank vs snap share,no official snap counts captured (F-11),not measured,WITHHELD - blocked

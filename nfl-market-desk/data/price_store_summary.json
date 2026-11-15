@@ -1,0 +1,36 @@
+{
+  "by_type": {
+    "MARKET_CLOSE": {
+      "empty": 39,
+      "populated": 0,
+      "rows": 39,
+      "tier": "n/a"
+    },
+    "MARKET_OPEN": {
+      "empty": 39,
+      "populated": 0,
+      "rows": 39,
+      "tier": "n/a"
+    },
+    "MARKET_REFERENCE": {
+      "empty": 0,
+      "populated": 39,
+      "rows": 39,
+      "tier": "AGGREGATOR"
+    },
+    "MODEL_CLOSE": {
+      "empty": 39,
+      "populated": 0,
+      "rows": 39,
+      "tier": "n/a"
+    },
+    "MODEL_ORIGIN": {
+      "empty": 0,
+      "populated": 39,
+      "rows": 39,
+      "tier": "DERIVED"
+    }
+  },
+  "captured_utc": "2026-11-15T23:30:00Z",
+  "rows": 195
+}

@@ -1,0 +1,18 @@
+club,player_display,live_position,live_rank,inherited_position,inherited_rank,result,note,source_url
+BUF,Keleki Latu,TE,4,,,"IN LIVE PAGE, ABSENT FROM INHERITED REGISTER",player is published by the club today but has no row in the inherited 2026-11-13 register,https://www.buffalobills.com/team/depth-chart
+BUF,Te'Cory Couch,,,NCB,2,"IN INHERITED REGISTER, NOT ON LIVE PAGE",player was in the inherited 2026-11-13 register but is not on today's published page,https://www.buffalobills.com/team/depth-chart
+DET,Jackson Meeks,TE,4,,,"IN LIVE PAGE, ABSENT FROM INHERITED REGISTER",player is published by the club today but has no row in the inherited 2026-11-13 register,https://www.detroitlions.com/team/depth-chart
+DET,Nick Whiteside,CB,4,,,"IN LIVE PAGE, ABSENT FROM INHERITED REGISTER",player is published by the club today but has no row in the inherited 2026-11-13 register,https://www.detroitlions.com/team/depth-chart
+GB,Kaleb Johnson,RB,4,,,"IN LIVE PAGE, ABSENT FROM INHERITED REGISTER",player is published by the club today but has no row in the inherited 2026-11-13 register,https://www.packers.com/team/depth-chart
+GB,Coleman Owen,,,WR,2,"IN INHERITED REGISTER, NOT ON LIVE PAGE",player was in the inherited 2026-11-13 register but is not on today's published page,https://www.packers.com/team/depth-chart
+IND,Pharaoh Brown,TE,4,,,"IN LIVE PAGE, ABSENT FROM INHERITED REGISTER",player is published by the club today but has no row in the inherited 2026-11-13 register,https://www.colts.com/team/depth-chart
+IND,Will Mallory,TE,4,,,"IN LIVE PAGE, ABSENT FROM INHERITED REGISTER",player is published by the club today but has no row in the inherited 2026-11-13 register,https://www.colts.com/team/depth-chart
+KC,Jake Briningstool,TE,4,,,"IN LIVE PAGE, ABSENT FROM INHERITED REGISTER",player is published by the club today but has no row in the inherited 2026-11-13 register,https://www.chiefs.com/team/depth-chart
+NYG,Thomas Fidone II,TE,4,,,"IN LIVE PAGE, ABSENT FROM INHERITED REGISTER",player is published by the club today but has no row in the inherited 2026-11-13 register,https://www.giants.com/team/depth-chart
+PHI,A.J. Epenesa,EDGE,2,EDGE,3,RANK DIFFERS,"same player, different published rank (shared-slot rank 1)",https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Arnold Ebiketie,EDGE,2,EDGE,3,RANK DIFFERS,"same player, different published rank (shared-slot rank 1)",https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Jonathan Greenard,EDGE,1,EDGE,2,RANK DIFFERS,"same player, different published rank (shared-slot rank 1)",https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Ty Robinson,DT,2,DT,1,RANK DIFFERS,"same player, different published rank (empty cell earlier in the row)",https://www.philadelphiaeagles.com/team/depth-chart
+SEA,George Holani,RB,4,,,"IN LIVE PAGE, ABSENT FROM INHERITED REGISTER",player is published by the club today but has no row in the inherited 2026-11-13 register,https://www.seahawks.com/team/depth-chart/
+SEA,Irvin Charles,WR,2,WR,3,RANK DIFFERS,"same player, different published rank (shared-slot rank 1)",https://www.seahawks.com/team/depth-chart/
+SEA,Rashid Shaheed,WR,1,WR,2,RANK DIFFERS,"same player, different published rank (shared-slot rank 1)",https://www.seahawks.com/team/depth-chart/

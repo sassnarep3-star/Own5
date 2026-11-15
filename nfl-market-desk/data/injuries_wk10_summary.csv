@@ -1,0 +1,29 @@
+club,club_name,player_rows,practice_DNP,practice_LP,practice_FP,game_Out,game_Doubtful,game_Questionable,game_status_blank,injury_description_blank,source_url
+WAS,Washington Commanders,9,3,1,5,2,0,0,7,7,https://www.nfl.com/injuries/league/2026/reg10
+NYG,New York Giants,11,0,1,10,0,0,1,10,10,https://www.nfl.com/injuries/league/2026/reg10
+NE,New England Patriots,15,3,7,5,3,0,9,3,3,https://www.nfl.com/injuries/league/2026/reg10
+DET,Detroit Lions,9,3,2,4,3,0,2,4,4,https://www.nfl.com/injuries/league/2026/reg10
+KC,Kansas City Chiefs,13,3,2,8,3,0,3,7,7,https://www.nfl.com/injuries/league/2026/reg10
+ATL,Atlanta Falcons,11,3,4,4,1,1,3,6,6,https://www.nfl.com/injuries/league/2026/reg10
+MIN,Minnesota Vikings,13,5,5,3,5,0,3,5,5,https://www.nfl.com/injuries/league/2026/reg10
+GB,Green Bay Packers,17,5,9,3,4,1,7,5,5,https://www.nfl.com/injuries/league/2026/reg10
+JAX,Jacksonville Jaguars,11,0,8,3,3,0,1,7,7,https://www.nfl.com/injuries/league/2026/reg10
+TEN,Tennessee Titans,12,5,0,7,5,0,1,6,6,https://www.nfl.com/injuries/league/2026/reg10
+BUF,Buffalo Bills,14,3,1,10,0,1,4,9,9,https://www.nfl.com/injuries/league/2026/reg10
+NYJ,New York Jets,9,1,1,7,1,0,8,0,0,https://www.nfl.com/injuries/league/2026/reg10
+MIA,Miami Dolphins,11,3,1,7,2,1,1,7,7,https://www.nfl.com/injuries/league/2026/reg10
+IND,Indianapolis Colts,14,6,1,7,6,0,1,7,7,https://www.nfl.com/injuries/league/2026/reg10
+CAR,Carolina Panthers,12,1,3,8,1,2,4,5,5,https://www.nfl.com/injuries/league/2026/reg10
+NO,New Orleans Saints,12,4,1,7,4,0,2,6,6,https://www.nfl.com/injuries/league/2026/reg10
+HOU,Houston Texans,16,7,1,8,5,0,6,5,5,https://www.nfl.com/injuries/league/2026/reg10
+CLE,Cleveland Browns,12,2,3,7,2,0,1,9,9,https://www.nfl.com/injuries/league/2026/reg10
+LAR,Los Angeles Rams,14,7,5,2,2,0,5,7,7,https://www.nfl.com/injuries/league/2026/reg10
+AZ,Arizona Cardinals,15,3,6,6,3,0,6,6,6,https://www.nfl.com/injuries/league/2026/reg10
+SEA,Seattle Seahawks,15,5,1,9,4,0,0,11,11,https://www.nfl.com/injuries/league/2026/reg10
+LV,Las Vegas Raiders,5,1,0,4,0,0,2,3,3,https://www.nfl.com/injuries/league/2026/reg10
+SF,San Francisco 49ers,12,2,4,6,1,0,7,4,4,https://www.nfl.com/injuries/league/2026/reg10
+DAL,Dallas Cowboys,19,9,2,8,5,1,5,8,8,https://www.nfl.com/injuries/league/2026/reg10
+PIT,Pittsburgh Steelers,8,0,0,8,0,0,1,7,7,https://www.nfl.com/injuries/league/2026/reg10
+CIN,Cincinnati Bengals,9,3,1,5,1,3,0,5,5,https://www.nfl.com/injuries/league/2026/reg10
+LAC,Los Angeles Chargers,19,5,2,12,3,1,6,9,9,https://www.nfl.com/injuries/league/2026/reg10
+BAL,Baltimore Ravens,10,2,1,7,1,0,1,8,8,https://www.nfl.com/injuries/league/2026/reg10

@@ -1,0 +1,4 @@
+control_id,name,n_rows,n_decided,brier,hit_rate,signal_score_vs_coinflip
+C1,"Random picks (deterministic, game-id seeded)",81,81,0.2500,0.4444,0.00
+C2,Favourites only,76,76,0.2500,0.2763,0.00
+C3,Coin-flip probability,81,0,0.2500,,0.00
