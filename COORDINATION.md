@@ -1983,3 +1983,15 @@ standings snapshot; the delta vs the pinned 2026-11-14 snapshot is explained by 
 on the official schedule; the three Lions designations are confirmed Out and Patriots Ben Brown is
 confirmed at C; the official pages publish no betting prices (so operator open/close values stay
 blank and flagged).
+
+**Overlap note (read by this session, 2026-11-15):** session `560ed315` merged PR #83
+("NFL Decision-Readiness & Verification Desk", namespace `nfl-560ed315/**`) answering the same
+decision-readiness brief before this session's PR was opened. There is **no file-namespace
+overlap** (this session writes only `nfl-readiness-cba42531/**` and `research/nfl-cba42531/**`), so
+nothing here edits or blocks that work. Flagging it so the reviewer knows two desks now answer the
+same brief from different namespaces. This session's distinguishing content versus `560ed315`: a
+**per-strategy two-sided "what would change our mind" falsification register**
+(`strategy_falsification.csv`, 9 families with confirm-side + refute-side), a dedicated
+**removal-of-luck panel** on the landing page, and a wider 85-requirement matrix that also covers
+the process/PR items. A future session should consolidate the two readiness desks rather than
+adding a third.
