@@ -1,0 +1,34 @@
+# club: San Francisco 49ers
+# url: https://www.49ers.com/team/depth-chart
+# page_dated: Updated as of 11/10/26
+# shape: markdown_table
+# captured_utc: 2026-11-15T23:24:00Z
+# format: POSITION|slot1|slot2|slot3|slot4   (';' = two players in one slot)
+
+OFFENSE
+WR|Mike Evans|Jordan Watkins|Brandin Cooks|
+LT|Trent Williams|Vederian Lowe|Enrique Cruz Jr.|
+LG|Connor Colby|Carver Willis|
+C|Jake Brendel|Jarrett Patterson|
+RG|Dominick Puni||
+RT|Colton McKivitz||
+TE|George Kittle|Luke Farrell|Brayden Willis|
+WR|Deebo Samuel Sr.|Demarcus Robinson|Jacob Cowing|
+RB|Christian McCaffrey|Kaelon Black|Jordan James|
+FB|Kyle Juszczyk||
+QB|Brock Purdy|Mac Jones|Kurtis Rourke|
+
+DEFENSE
+LDE|Keion White|Mykel Williams|Khalid Kareem|
+LDT|DeForest Buckner|Gracen Halton|Sebastian Valdez|
+RDT|Osa Odighizuwa|James Thompson Jr.|
+RDE|Nick Bosa|Romello Height|
+SAM|Jaden Dugger|Luke Gifford|
+MIKE|Fred Warner|Tatum Bethune|
+WILL|Dre Greenlaw|Garret Wallow|
+LCB|Renardo Green||
+RCB|Deommodore Lenoir|Ephesians Prysock|
+NB|Upton Stout||
+FS|Ji'Ayir Brown|Siran Neal|
+SS|Malik Mustapha|Marques Sigle|Ashtyn Davis|
+

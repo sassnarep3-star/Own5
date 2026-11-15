@@ -1,0 +1,32 @@
+# Pre-registration: Moneyline value >= 5 probability points
+# family: S3
+# class: single
+# signal type: model
+# registered_utc: 2026-11-15T23:40:00Z
+# registered_by: session 83a7d6a8 (branch arena/83a7d6a8-own5)
+# status at registration: PAPER. No result existed when this text was written;
+#   thresholds are fixed and must never be re-tuned after seeing outcomes.
+# universe: Any game with both moneylines present.
+
+RULE
+Bet the moneyline side whose model probability exceeds the de-vigged market probability by at least 0.05. Flat 1 unit.
+
+PRIMARY ENDPOINT
+Model families: Brier score of the published probability, with a game-clustered
+95% bootstrap interval, on the prospective universe only.
+Market-state families: hit rate against the null rate implied by the price paid,
+exact two-sided binomial test, on the prospective universe only.
+Joint families: not evaluable until a measured joint probability exists.
+
+SECONDARY ENDPOINTS
+Flat-stake return on the prices actually available (reported at AGGREGATOR tier),
+hit rate, and the number of graded bets.
+
+WHAT WOULD CHANGE OUR MIND (both directions)
+DOWN: (a) the lower bound of the 95% cluster-bootstrap interval of skill falls at
+or below zero over the next 100 prospective bets, or (b) the Holm-adjusted p exceeds
+0.05 at n >= 300, or (c) market-relative skill is negative on two consecutive
+50-bet blocks. One of (a)-(c) sends this family back to paper; two retires it.
+UP: (d) a licensed price feed supplies true opening and closing numbers, which
+would let gates G2 and G6 be tested at all, and (e) three consecutive 50-bet
+blocks each with a positive, interval-supported market-relative skill.

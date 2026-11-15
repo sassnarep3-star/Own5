@@ -1,0 +1,15 @@
+{
+  "captured_utc": "2026-11-15T23:20:00Z",
+  "clubs_missing_from_feed": [],
+  "corpus_rows": 145,
+  "feed_captured_utc": "2026-11-15T23:26:00Z",
+  "feed_rows": 145,
+  "feed_rows_week_10": 9,
+  "feed_rows_weeks_1_9": 136,
+  "mirror_absent": 18,
+  "mirror_agrees": 127,
+  "mirror_disagrees": 0,
+  "standings_mismatches": 0,
+  "standings_reconciled": "32/32",
+  "standings_rows": 32
+}

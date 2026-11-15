@@ -1,0 +1,16 @@
+question_id,question,have_information,have_what,missing_what,cheapest_route_to_answer,blocks,related_flags,answerable_today
+Q-01,Where do any sportsbook prices come from?,HAVE,NO,None reachable from this sandbox; nfl.com publishes no prices.,"Buy a licensed feed, or have a human paste dated screenshots into a private store.","Blocks G2, G6, all staking claims.","OWN-01, OWN-02",no
+Q-02,What exactly does the aggregator's spread_line mean?,HAVE,PARTIAL,"No book, no timestamp, no close; the dictionary documents the field but not its provenance.",Ask nflverse for the upstream source of the line columns.,"Blocks CLV and certification, not research.",OWN-02,no
+Q-03,Is the Week 11 injury report published?,HAVE,YES,When it will appear.,Poll daily; log every served page with its stated week.,Blocks any Week 11 personnel feature.,OWN-07,no
+Q-04,Who actually started each Week 10 game?,HAVE,NO,"Snap counts, inactive lists and the official game book.",Capture the inactive list 90 minutes before kickoff; obtain snap counts after the game.,Blocks starter/backup measurement and depth-from-playing-time.,"OWN-11, OWN-11",no
+Q-05,Can historical weekly injury reports be obtained?,HAVE,NO,Every prior week and season.,Find an archive that republishes the league's weekly PDFs; none was reachable here.,Blocks designation calibration and the pre-season surprise baseline.,OWN-64,no
+Q-06,What is the play rate of 'Questionable'?,HAVE,NO,Whether those players played.,Join several seasons of designations to inactive lists (needs Q-04 and Q-05).,Blocks the injury signal as a feature.,OWN-12,no
+Q-07,How many games are in the pre-registered corpus?,HAVE,YES,Nothing.,Nothing; it is published with both counts.,Unblocks the backtest.,-,no
+Q-08,Does depth order carry information beyond the published column order?,HAVE,PARTIAL,"Snap shares, so ranked order can be tested against playing time.",Capture snap counts.,Blocks a defensible replacement-value feature.,"OWN-08, OWN-09",no
+Q-09,Are the eight Week 11 games with an empty roof field indoors or outdoors?,HAVE,NO,Official stadium roof designation.,Read the official stadium pages or the league's stadium guide.,Blocks the weather overlay for those games.,OWN-56,no
+Q-10,Is the personnel effect real?,HAVE,PARTIAL,A sample large enough to distinguish that from zero.,Extend the injury archive and re-estimate on a chronological holdout.,Blocks the feature; does not block the ablation.,OWN-10,no
+Q-11,Which prior desk's number is authoritative?,HAVE,NO,A single merged register.,"Consolidate, or designate one desk and archive the rest.",Blocks any external reader from citing this work.,OWN-19,no
+Q-12,What reward structure does the competition have?,HAVE,PARTIAL,Any funded amount.,The user decides.,"Blocks marketing the competition, not running it.",-,no
+Q-13,Can prop prices be obtained?,HAVE,NO,Any player-level price.,A licensed prop feed.,Blocks S9 and prop correlations entirely.,OWN-17,no
+Q-14,Do the clubs' charts age at the same rate?,HAVE,NO,A capture history.,Daily capture with hashes.,Affects staleness flags only.,-,no
+Q-15,What is the true closing line?,HAVE,NO,A second observation after kickoff.,Append a second capture.,Blocks CLV and stage-two of the leaderboard.,OWN-03,no

@@ -1,0 +1,33 @@
+club,club_name,games_in_feed,w_feed,l_feed,t_feed,w_official,l_official,t_official,pf_feed,pa_feed,pf_official,pa_official,result,difference,source_url
+BUF,Buffalo Bills,9,8,1,0,8,1,0,287,199,287,199,MATCH,none,https://www.nfl.com/standings/league/2026/REG
+SF,San Francisco 49ers,8,7,1,0,7,1,0,235,156,235,156,MATCH,none,https://www.nfl.com/standings/league/2026/REG
+CHI,Chicago Bears,9,7,2,0,7,2,0,241,184,241,184,MATCH,none,https://www.nfl.com/standings/league/2026/REG
+DEN,Denver Broncos,9,7,2,0,7,2,0,198,186,198,186,MATCH,none,https://www.nfl.com/standings/league/2026/REG
+DET,Detroit Lions,9,7,2,0,7,2,0,257,199,257,199,MATCH,none,https://www.nfl.com/standings/league/2026/REG
+JAX,Jacksonville Jaguars,9,7,2,0,7,2,0,269,144,269,144,MATCH,none,https://www.nfl.com/standings/league/2026/REG
+KC,Kansas City Chiefs,9,7,2,0,7,2,0,237,156,237,156,MATCH,none,https://www.nfl.com/standings/league/2026/REG
+MIN,Minnesota Vikings,9,7,2,0,7,2,0,176,126,176,126,MATCH,none,https://www.nfl.com/standings/league/2026/REG
+CIN,Cincinnati Bengals,8,6,2,0,6,2,0,240,175,240,175,MATCH,none,https://www.nfl.com/standings/league/2026/REG
+PIT,Pittsburgh Steelers,8,6,2,0,6,2,0,180,144,180,144,MATCH,none,https://www.nfl.com/standings/league/2026/REG
+NYG,New York Giants,9,5,3,1,5,3,1,203,196,203,196,MATCH,none,https://www.nfl.com/standings/league/2026/REG
+CLE,Cleveland Browns,10,6,4,0,6,4,0,188,220,188,220,MATCH,none,https://www.nfl.com/standings/league/2026/REG
+GB,Green Bay Packers,10,6,4,0,6,4,0,226,221,226,221,MATCH,none,https://www.nfl.com/standings/league/2026/REG
+LAR,Los Angeles Rams,9,5,4,0,5,4,0,214,181,214,181,MATCH,none,https://www.nfl.com/standings/league/2026/REG
+SEA,Seattle Seahawks,9,5,4,0,5,4,0,202,162,202,162,MATCH,none,https://www.nfl.com/standings/league/2026/REG
+NE,New England Patriots,10,5,5,0,5,5,0,221,242,221,242,MATCH,none,https://www.nfl.com/standings/league/2026/REG
+BAL,Baltimore Ravens,9,4,5,0,4,5,0,189,236,189,236,MATCH,none,https://www.nfl.com/standings/league/2026/REG
+CAR,Carolina Panthers,9,4,5,0,4,5,0,219,236,219,236,MATCH,none,https://www.nfl.com/standings/league/2026/REG
+DAL,Dallas Cowboys,9,4,5,0,4,5,0,246,236,246,236,MATCH,none,https://www.nfl.com/standings/league/2026/REG
+LV,Las Vegas Raiders,9,4,5,0,4,5,0,238,268,238,268,MATCH,none,https://www.nfl.com/standings/league/2026/REG
+WAS,Washington Commanders,9,3,5,1,3,5,1,196,223,196,223,MATCH,none,https://www.nfl.com/standings/league/2026/REG
+ARI,Arizona Cardinals,9,3,6,0,3,6,0,178,255,178,255,MATCH,none,https://www.nfl.com/standings/league/2026/REG
+HOU,Houston Texans,9,3,6,0,3,6,0,233,219,233,219,MATCH,none,https://www.nfl.com/standings/league/2026/REG
+NO,New Orleans Saints,9,3,6,0,3,6,0,202,236,202,236,MATCH,none,https://www.nfl.com/standings/league/2026/REG
+TB,Tampa Bay Buccaneers,9,3,6,0,3,6,0,202,178,202,178,MATCH,none,https://www.nfl.com/standings/league/2026/REG
+ATL,Atlanta Falcons,10,3,7,0,3,7,0,201,258,201,258,MATCH,none,https://www.nfl.com/standings/league/2026/REG
+IND,Indianapolis Colts,10,3,7,0,3,7,0,208,271,208,271,MATCH,none,https://www.nfl.com/standings/league/2026/REG
+PHI,Philadelphia Eagles,9,2,7,0,2,7,0,148,221,148,221,MATCH,none,https://www.nfl.com/standings/league/2026/REG
+NYJ,New York Jets,10,2,8,0,2,8,0,194,254,194,254,MATCH,none,https://www.nfl.com/standings/league/2026/REG
+MIA,Miami Dolphins,9,1,8,0,1,8,0,148,224,148,224,MATCH,none,https://www.nfl.com/standings/league/2026/REG
+TEN,Tennessee Titans,9,1,8,0,1,8,0,167,239,167,239,MATCH,none,https://www.nfl.com/standings/league/2026/REG
+LAC,Los Angeles Chargers,8,0,8,0,0,8,0,121,219,121,219,MATCH,none,https://www.nfl.com/standings/league/2026/REG

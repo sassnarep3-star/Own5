@@ -444,3 +444,48 @@ python3 nfl-desk-3fb93d11/run.py      # rebuild every CSV + the 16-page site (de
 python3 nfl-desk-3fb93d11/verify.py   # row-level proof: every published row is sourced or UNVERIFIED
 python3 -W ignore -m unittest discover -s nfl-desk-3fb93d11/tests   # 51 tests
 ```
+
+---
+
+## NFL Market Desk — consolidation + executable pricing core (session 83a7d6a8, 2026-11-15)
+
+**Served at:** https://sassnarep3-star.github.io/Own5/nfl-market-desk/ ·
+**Executive summary:** [`research/nfl-83a7d6a8/EXECUTIVE_SUMMARY.md`](research/nfl-83a7d6a8/EXECUTIVE_SUMMARY.md) ·
+**Methodology:** [`research/nfl-83a7d6a8/METHODOLOGY.md`](research/nfl-83a7d6a8/METHODOLOGY.md) ·
+**Verification log:** [`research/nfl-83a7d6a8/VERIFICATION_LOG.md`](research/nfl-83a7d6a8/VERIFICATION_LOG.md)
+
+A 13-page desk that reconciles the eleven NFL desks already in this repository rather than adding a
+twelfth unaudited slice. It tracks the reviewer's brief as **78 numbered requirements**, each with a
+machine-checked evidence pointer, its blocking gate and **the number that would clear it**; a
+**34-item flag register** (14 inherited from PR #79 under an `INH-` namespace, 20 from this desk under
+`OWN-`); **15 questions** with the cheapest route to each answer; and **19 suggestions**, each with
+its options, the recommended path and the rule that would reverse it.
+
+Verified values: **145** official 2026 finals reconciling **32/32** against
+[nfl.com/standings](https://www.nfl.com/standings/league/2026/REG) on W-L-T, PF and PA; **39**
+originated Week-11 markets with fair line, market line and difference as three separate columns;
+**195** price-snapshot rows of which **78 carry a number and 117 are empty by policy with a flag**;
+**9** pre-registered strategy families with published SHA-256 rule files; **264** graded bets;
+**12** validation gates (**6 MET, 1 PARTIAL, 5 NOT MET**); **3** control baselines on the same games;
+**5** official correlations each with its n and p, and 5 withheld with the reason; **551** depth rows
+from **11** clubs with shared and empty slots preserved; **14** named replacements, all 2nd string,
+**0** compounding; and **0** strategies certified, **0** bets placed, **0** rewards issued.
+
+The model is honest about itself: on the validation window (weeks 5–8) its Brier score is **0.2427**
+against the market's **0.2192** on 57 games, and on the final holdout (weeks 9–10) it is **0.1524**
+against **0.1570** on 24 games. A 24-game holdout is not an edge and is not presented as one. The
+personnel ablation gives **−1.892 points per extra unavailable player with a standard error of
+2.260** — an interval spanning zero — so no injury penalty is applied anywhere, and the replacement
+table is published as evidence rather than as an adjustment.
+
+Reproduce/verify (stdlib only, no packages installed):
+
+```sh
+cd nfl-market-desk
+python3 build_results.py && python3 build_model.py && python3 build_prices.py \
+  && python3 build_strategies.py && python3 build_availability.py \
+  && python3 build_registers.py && python3 build.py && python3 build_summary.py
+python3 verify.py                      # 10 checks: row-level source coverage, links, evidence
+                                       # paths, flag namespaces, hashes, drift, determinism
+python3 tests/test_market_desk.py      # 27 tests
+```

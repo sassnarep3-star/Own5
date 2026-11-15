@@ -1,0 +1,12 @@
+# club: Houston Texans
+# url: https://www.houstontexans.com/team/depth-chart
+# page_dated: Unofficial Depth Chart
+# shape: image_only
+# captured_utc: 2026-11-15T23:24:00Z
+# note: Page body: '## Unofficial Depth Chart' followed by a single rendered image (static.clubs.nfl.com/.../texans/a5or0zowuo36y1txf4ly). No table, no list, no machine-readable player rows. Not parsed; deliberately not transcribed by eye.
+# format: POSITION|slot1|slot2|slot3|slot4   (';' = two players in one slot)
+
+OFFENSE
+
+DEFENSE
+

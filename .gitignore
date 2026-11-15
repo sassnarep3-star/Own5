@@ -12,3 +12,7 @@ build/
 .work/
 .DS_Store
 *.log
+
+# session 83a7d6a8
+__pycache__/
+*.pyc

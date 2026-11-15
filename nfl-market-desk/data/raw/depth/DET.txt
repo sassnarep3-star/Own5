@@ -1,0 +1,33 @@
+# club: Detroit Lions
+# url: https://www.detroitlions.com/team/depth-chart
+# page_dated: 2026 Unofficial Depth Chart Compiled by Lions Football Communications
+# shape: markdown_table
+# captured_utc: 2026-11-15T23:24:00Z
+# format: POSITION|slot1|slot2|slot3|slot4   (';' = two players in one slot)
+
+OFFENSE
+WR|Jameson Williams||
+WR|Amon-Ra St. Brown|DeAndre Carter|
+LT|Penei Sewell||
+LG|Christian Mahogany|Miles Frazier|
+C|Cade Mays|Juice Scruggs|
+RG|Tate Ratledge|Seth McLaughlin|
+RT|Blake Miller|Larry Borom|
+TE|Sam LaPorta|Brock Wright|Tyler Conklin|Jackson Meeks|
+WR|Isaac TeSlaa|Tay Martin|
+QB|Jared Goff|Joshua Dobbs|
+RB|Jahmyr Gibbs|Sione Vaki|Jacob Saylors|
+
+DEFENSE
+EDGE|Aidan Hutchinson|Derrick Moore|Eric O'Neill|
+DL|Alim McNeill|Skyler Gill-Howard|Mekhi Wingo|
+DL|Tyleik Williams|Levi Onwuzurike|
+EDGE|DJ Wonnum|Tyler Lacy|Ahmed Hassanein|
+LB|Derrick Barnes|Joe Bachie|
+LB|Malcolm Rodriguez|K.J. Britt|
+LB|Trevor Nowaske|Amen Ogbongbemiga|
+CB|D.J. Reed|Rock Ya-Sin|Khalil Dorsey|Nick Whiteside|
+CB|Roger McCreary|Ennis Rakestraw Jr.|Keith Abney II|
+S|Chuck Clark||
+S|Brian Branch|Christian Izien|
+

@@ -1,0 +1,3 @@
+holdout,n_games,n_with_market_price,brier_model,brier_market,brier_climatology,brier_coinflip,bss_vs_market,bss_vs_climatology,bss_vs_coinflip,mae_margin_model,mae_margin_market,mae_total_model,mae_total_market,mae_total_naive_league,sigma_margin,sigma_total,hfa_pts_final_fit
+VALIDATION (weeks 5-8),57,53,0.2427,0.2192,0.2500,0.2500,-0.1072,0.0293,0.0293,10.7315,9.4623,12.1447,10.3679,,9.9420,13.2825,-0.7340
+FINAL HOLDOUT (weeks 9-10),24,23,0.1524,0.1570,0.2373,0.2500,0.0292,0.3579,0.3905,8.4688,10.0435,9.9934,8.8913,8.7083,10.4736,13.9126,-0.3440
