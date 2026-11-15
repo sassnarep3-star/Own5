@@ -1984,9 +1984,35 @@ any other session's files.
 | D56-04 | Pages dashboard: landing page with decision-readiness table + category subpages (questions, suggestions, sources, flagged, review) | done | 560ed315 | `nfl-560ed315/**`, `nfl-560ed315/build_site.py` | Deterministic, stdlib-only; every body row carries an official source link or an explicit UNVERIFIED badge. |
 | D56-05 | Line-by-line verification harness, unit tests, scoped CI workflow | done | 560ed315 | `nfl-560ed315/verify.py`, `nfl-560ed315/tests/`, `.github/workflows/nfl-560ed315.yml` | Deterministic rebuild + row/link/provenance audit; fail closed. |
 | D56-06 | Executive summary + flagged-for-review register | done | 560ed315 | `research/nfl-560ed315/EXECUTIVE_SUMMARY.md`, `research/nfl-560ed315/FLAGGED.md`, `nfl-560ed315/data/flagged.csv` | Restates only computed or officially sourced values. |
-| D56-07 | Integration: rebase, PR to main, autonomous merge, live Pages check, record | in progress | 560ed315 | COORDINATION.md, README.md | Merge only after verify PASS and a live URL check. |
+| D56-07 | Integration: rebase, PR to main, autonomous merge, live Pages check, record | done | 560ed315 | COORDINATION.md, README.md | Merge only after verify PASS and a live URL check. |
 
 **Cross-session note:** prior session `3fb93d11` already owns price snapshots, the verified results
 feed, origination order and the signal/staking leaderboard. This desk adds the decision-readiness
 matrix and the "number that would clear it" column on top of that verified work, without touching its
 files. No task on the board is claimed by another session within this desk's file scope.
+
+
+## Session 560ed315 — PR, merge and deployment record (2026-11-15 UTC)
+
+**PR #83** (`arena/560ed315-own5` -> `main`): "NFL Decision-Readiness & Verification Desk (560ed315)".
+**Merged:** yes, merge commit `fc6240be816b7d18352148419702baa1a9deeea5` at 2026-11-15T23:41:32Z.
+**Rebase:** rebased onto `main` (commit `849ba62`); resolved a `COORDINATION.md` tail conflict with
+session `a991e3fb` by preserving **both** sessions' append-only blocks (no work discarded).
+
+**Check status at merge time:**
+- This session's scoped workflow **`nfl-560ed315.yml`** -> job `verify` -> **PASS**.
+- One non-required check failed: **`decision-desk.yml`** (NFL Decision Desk — fetch & verify), job
+  `verify`, at the step `Confirm the committed site matches a clean rebuild`. This is a **pre-existing**
+  rebuild-drift failure owned by the decision-desk session(s) (`nfl-decision-desk/**`,
+  `data/decision-desk/**`), confirmed by its run list failing for sessions a991e3fb, 3fb93d11,
+  d38e90c5 and 853c0074 too, and by session a991e3fb's own log. It is not caused by session 560ed315,
+  which touches none of those paths. Logged as a **cross-session request** above, not edited here.
+  Per the brief, flagged irregularities do not block the merge; the site itself is not broken.
+
+**Live GitHub Pages:** source `main / /`. The desk is live at
+https://sassnarep3-star.github.io/Own5/nfl-560ed315/ (landing page with the 81-row decision-readiness
+table, plus readiness / questions / suggestions / sources / flagged / review subpages). Verified live:
+the landing page and `readiness.html` both render the full table with per-row source links and
+UNVERIFIED badges; `pages-build-deployment` succeeded.
+
+**Task board:** D56-01 through D56-07 all **done**.
