@@ -2235,3 +2235,55 @@ previous build, not a repository defect; the repository has carried the correcte
 
 **Session 83a7d6a8 is complete.** M1–M12 are done. Nothing is certified, no bet is live, no reward is
 issued, and the five unmet gates are documented with the number that would clear each one.
+
+---
+
+## Session log — e46fb855 (NFL decision-readiness desk) — 2026-11-15
+
+**Working branch:** `arena/e46fb855-own5` (base `a03dfb7`). Session ID: `e46fb855`.
+
+**Claimed namespaces (strictly additive, zero overlap with any other session):**
+- `nfl-desk-e46fb855/**` (GitHub Pages dashboard: landing page + category subpages, data CSV/JSON,
+  deterministic engine, raw official page captures, unit tests, verification harness)
+- `research/nfl-e46fb855/**` (executive summary, methodology, requirements matrix, questions
+  register, suggestions register, flagged register, verification log)
+- `.github/workflows/nfl-desk-e46fb855.yml` (scoped deterministic verification only)
+- Append-only blocks in `COORDINATION.md` and one additive table row in `README.md`
+
+**Read-only for this session (never edited):** root `index.html`, `pages/**`, `data/research.json`,
+`scripts/**`, `tools/**`, `tests/**`, `assets/**`, `docs/**`, `own5-desk/**`, `site/**`,
+`nfl_model/**`, `line-lab/**`, `nfl-strategy-lab/**`, every other `nfl-*/**` and `nba-*/**` and
+`sf-*`/`rental-*` namespace, all existing workflows, all existing CSV/JSON outside claimed scope.
+
+**Scope of this session** (the brief's own wording):
+1. Line-by-line repo review against official sources; irregularities flagged, never silently "fixed".
+2. Full requirements register for every requirement line in the brief, with the gate that blocks it
+   and the number that would clear it -> decision-readiness table on the landing page.
+3. Questions register: what we have, what we do not have, and the cheapest route to discover each.
+4. Suggestions register: reviewable paths (options / recommendation / what would change the call),
+   nothing implemented without a decision.
+5. Official-source ingestion (standings, week-by-week results, current slate with venues, injury
+   report) captured to `data/raw_official/**` with URL + retrieval UTC + SHA-256.
+6. Price-snapshot store, verified results feed, origination chain side -> total -> moneyline with
+   model / market / difference columns, signal-vs-staking leaderboard, demotion gate,
+   official-only correlations with n published, replacement-depth tracker.
+7. Executive summary. Then PR to main, autonomous merge, live Pages check.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| E1 | Coordination claim | done | e46fb855 | COORDINATION.md | Claim pushed before any build work. |
+| E2 | Official-source ingestion (captures + hashes) | in progress | e46fb855 | `nfl-desk-e46fb855/data/raw_official/**`, `data/sources.csv` | URL + retrieval UTC + SHA-256 per capture. |
+| E3 | Verified results feed + standings reconciliation | unclaimed -> e46fb855 | `data/results_feed.csv`, `data/results_reconciliation.csv` | Week-by-week from nfl.com schedule pages. |
+| E4 | Price-snapshot store (schema + ledger) | unclaimed | `data/price_snapshots.csv`, `data/price_store_schema.csv` | Operator open/close blank+flagged where no official source. |
+| E5 | Origination pipeline side -> total -> moneyline | unclaimed | `data/originated_markets.csv`, `data/origination_steps.csv` | Dependency order recorded per row. |
+| E6 | Strategies, gates, demotion gate, signal-vs-staking leaderboard | unclaimed | `data/strategies.csv`, `data/gates.csv`, `data/demotion_gate.csv`, `data/leaderboard_signal.csv`, `data/leaderboard_staking.csv` | Pre-registered before results are seen. |
+| E7 | Official-only correlations with n published | unclaimed | `data/correlations.csv`, `data/correlations_withheld.csv` | Aggregator-derived values moved to withheld. |
+| E8 | Injuries, replacement depth, deficiency matrix | unclaimed | `data/injuries.csv`, `data/depth_slots.csv`, `data/replacement_depth.csv` | Depth from official club charts / official snap evidence only. |
+| E9 | Requirements matrix + decision-readiness table | unclaimed | `data/requirements.csv` | Every requirement line in the brief. |
+| E10 | Questions register (have / missing / discovery route) | unclaimed | `data/questions.csv` | Blocking vs non-blocking. |
+| E11 | Suggestions register (reviewable paths) | unclaimed | `data/suggestions.csv` | Options A/B/C + recommended + falsifier. |
+| E12 | Line-by-line repo audit vs official sources | unclaimed | `data/repo_audit.csv` | Headline claims of prior desks re-checked. |
+| E13 | GitHub Pages dashboard (landing + category subpages + Flagged) | unclaimed | `build_site.py`, `nfl-desk-e46fb855/*.html`, `assets/style.css` | Every body row sourced or explicitly UNVERIFIED. |
+| E14 | Verification harness, unit tests, scoped CI workflow | unclaimed | `verify.py`, `tests/test_desk.py`, `.github/workflows/nfl-desk-e46fb855.yml` | Deterministic rebuild + row/link/provenance audit. |
+| E15 | Executive summary | unclaimed | `research/nfl-e46fb855/EXECUTIVE_SUMMARY.md`, `executive-summary.html` | Only computed or officially sourced values. |
+| E16 | Rebase on origin/main, PR to main, autonomous merge, live Pages check | unclaimed | COORDINATION.md, README.md | Merge only after verify PASS + live URL check. |
