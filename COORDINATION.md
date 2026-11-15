@@ -1939,3 +1939,45 @@ audit.
 PR #81 is merged on this basis: the failures are pre-existing, the PR changes no file on either path, and the Pages site builds.
 
 **a991e3fb — PR and deployment record (2026-11-15).** PR #81 (`arena/a991e3fb-own5` → `main`) merged with a merge commit, `264264f`, at 2026-11-15T23:30:24Z. Pages source is `main` `/`. Pages status is `built`, and the workflow run completed with success. Live check: https://sassnarep3-star.github.io/Own5/nfl-capture-a991e3fb/ returns the page with 347 live rows, 28 clubs, 276 published rows, 268 differing rows, and 0 failing checks. The non-required failures (B34 desk; decision-desk rebuild drift) are logged above. Task board: A1, A2 and A3 are done.
+
+---
+
+## Session 560ed315 — NFL Decision-Readiness & Verification Desk (2026-11-15 UTC)
+
+**Session ID:** `560ed315` (branch `arena/560ed315-own5`, base `a03dfb7`).
+**Claimed namespaces (strictly additive, zero overlap with every prior session):**
+- `nfl-560ed315/**` (GitHub Pages dashboard: landing page carrying the **decision-readiness table**,
+  plus category subpages, data CSV/JSON, deterministic engine, unit tests, verification harness)
+- `research/nfl-560ed315/**` (executive summary, methodology, flagged register, verification log)
+- `.github/workflows/nfl-560ed315.yml` (scoped deterministic verification only)
+- Append-only blocks in `COORDINATION.md` and one additive table row in `README.md`
+
+**Read-only for this session (never edited):** root `index.html`, `pages/**`, `data/research.json`,
+`scripts/**`, `tools/**`, `tests/**`, `assets/**`, `docs/**`, `own5-desk/**`, `site/**`, `nfl_model/**`,
+`line-lab/**`, `nfl-strategy-lab/**`, every prior `nfl-*` / `nba-*` / `sf-*` / `rental-*` desk,
+all existing workflows, all existing CSV/JSON outside the claimed scope.
+
+**Purpose (why this desk exists):** the brief's central decision-support ask — *"Put a decision-readiness
+table on the landing page: one row per requirement, with the gate that blocks it and the number that
+would clear it."* Earlier NFL desks (notably `3fb93d11`) built the price store, verified results feed,
+origination pipeline, gates, leaderboard and correlations and published a requirements register. This
+desk is additive: it consolidates those verified registers into a single **decision-readiness matrix**
+where every requirement row carries (a) the validation gate that blocks it, (b) the concrete number /
+threshold that would clear it, and (c) the observed number today — source-linked, or blank + flagged
+where no official source exists. It does **not** re-derive the underlying data and does **not** edit
+any other session's files.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| D56-01 | Claim + baseline audit of open NFL desks | in progress | 560ed315 | COORDINATION.md | Claim pushed before any build work began. |
+| D56-02 | Official-source re-verification snapshot + consolidation of verified registers | unclaimed | 560ed315 | `research/nfl-560ed315/**`, `nfl-560ed315/data/sources.csv` | Live nfl.com standings re-read 2026-11-15; consolidated verified R/Q/S/F registers with source URLs. |
+| D56-03 | Decision-readiness engine (one row per requirement: blocking gate + clearing number + observed number) | unclaimed | 560ed315 | `nfl-560ed315/data/decision_readiness.csv`, `nfl-560ed315/readiness.py` | Every row source-linked or blank+flagged; clearing number is a concrete threshold/count. |
+| D56-04 | Pages dashboard: landing page with decision-readiness table + category subpages (questions, suggestions, sources, flagged, review) | unclaimed | 560ed315 | `nfl-560ed315/**`, `nfl-560ed315/build_site.py` | Deterministic, stdlib-only; every body row carries an official source link or an explicit UNVERIFIED badge. |
+| D56-05 | Line-by-line verification harness, unit tests, scoped CI workflow | unclaimed | 560ed315 | `nfl-560ed315/verify.py`, `nfl-560ed315/tests/`, `.github/workflows/nfl-560ed315.yml` | Deterministic rebuild + row/link/provenance audit; fail closed. |
+| D56-06 | Executive summary + flagged-for-review register | unclaimed | 560ed315 | `research/nfl-560ed315/EXECUTIVE_SUMMARY.md`, `research/nfl-560ed315/FLAGGED.md`, `nfl-560ed315/data/flagged.csv` | Restates only computed or officially sourced values. |
+| D56-07 | Integration: rebase, PR to main, autonomous merge, live Pages check, record | unclaimed | 560ed315 | COORDINATION.md, README.md | Merge only after verify PASS and a live URL check. |
+
+**Cross-session note:** prior session `3fb93d11` already owns price snapshots, the verified results
+feed, origination order and the signal/staking leaderboard. This desk adds the decision-readiness
+matrix and the "number that would clear it" column on top of that verified work, without touching its
+files. No task on the board is claimed by another session within this desk's file scope.
