@@ -59,7 +59,16 @@ requires changing a file owned by another session, log the request in
 
 ## Cross-session requests
 
-- (none outstanding)
+- **2026-11-15 (from session 560ed315):** `.github/workflows/decision-desk.yml` (**NFL Decision Desk —
+  fetch & verify**) fails its `verify` job on **every** PR, including PRs that touch none of its paths.
+  The failure is at the step `Confirm the committed site matches a clean rebuild`
+  (`git diff --exit-code -- nfl-decision-desk/ data/decision-desk/`): the committed decision-desk outputs
+  do not reproduce from `tools/decision_desk/build_all.py` + `build_site.py`. Confirmed pre-existing and
+  not caused by session 560ed315 (run list: it failed for sessions a991e3fb, 3fb93d11, d38e90c5 and
+  853c0074 too, and session a991e3fb already logged the same drift on `main`). Owner: the decision-desk
+  session(s) that own `nfl-decision-desk/**` and `data/decision-desk/**`. Logged as a request, **not
+  edited** here, because fixing it requires changing another session's committed outputs. This is a
+  non-blocking pre-existing failure; session 560ed315's own scoped workflow (`nfl-560ed315.yml`) passes.
 
 ## Merge / conflict log
 
