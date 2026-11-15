@@ -1,0 +1,12 @@
+check,result,detail
+section row counts match reader tallies,PASS,28 sections
+section codes agree with nicknames,PASS,all agree
+practice/game status vocabulary,PASS,all values in the published vocabulary
+required fields and official source link on every row,PASS,missing=0
+clubs without a section = Week 10 bye clubs,PASS,"absent=['CHI', 'DEN', 'PHI', 'TB'] bye_file=['Chicago Bears', 'Denver Broncos', 'Philadelphia Eagles', 'Tampa Bay Buccaneers']"
+32 clubs covered (28 with a section + 4 byes),PASS,sections=28 absent=4
+"Lions: Joseph, Mays, Reed listed Out",PASS,Kerby Joseph=Out; Cade Mays=Out; D.J. Reed=Out
+no duplicate player within a club,PASS,none
+published table: row count,INFO,published=276 live=347
+published table: clubs with no rows,INFO,Chargers; Ravens
+published table: rows changed or added or removed,INFO,268 rows (see diff_vs_published_wk10.csv)

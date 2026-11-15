@@ -1900,3 +1900,35 @@ session's distinguishing content versus theirs: the replacement-**depth** tracke
 replacement, compounding, offence/defence split), the official-only correlation rule with a
 withheld register carrying the previous values, the 6-trigger demotion gate, and the 150-check repo
 audit.
+
+---
+
+## Session a991e3fb — Week 10 official injury report re-capture (2026-11-15 UTC)
+
+**Branch:** `arena/a991e3fb-own5` (base `a03dfb7` = `main`). This session works only on this branch. The session-branch naming in the protocol above was not used because Arena fixes one branch per session.
+
+**Claimed namespace (only these paths were written):** `nfl-capture-a991e3fb/**`, plus this append-only block. Nothing else was edited. Other sessions' files, including `nfl-desk-3fb93d11/**` and `data/decision-desk/**`, are untouched and read-only here.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| A1 | Re-read official Week 10 injury report, all 8 chunks | done | a991e3fb | `nfl-capture-a991e3fb/raw/reg10_official_transcription.txt` | Source: https://www.nfl.com/injuries/league/2026/reg10 (fetched 2026-11-15, before 23:24:44Z). 347 rows, 28 clubs, 14 games. |
+| A2 | Build live CSV, checks, diff against published table, page | done | a991e3fb | `nfl-capture-a991e3fb/build.py`, `data/*.csv`, `index.html`, `README.md` | `python3 nfl-capture-a991e3fb/build.py` exits 0; all 8 hard checks PASS. Page: `/Own5/nfl-capture-a991e3fb/`. |
+| A3 | Flag irregularities | done | a991e3fb | `nfl-capture-a991e3fb/index.html` (Flagged section) | See irregularities below. |
+
+**Verification performed**
+- Per-club row counts equal the counts read from the page (28/28 sections).
+- Clubs without a section (CHI, DEN, PHI, TB) equal the Week 10 bye clubs in `data/bye-weeks-2026.csv` (source cited there: amp.nfl.com 2026 bye-week article).
+- Lions: Kerby Joseph, Cade Mays and D.J. Reed are Out on the official page. The previously published table had them blank.
+- Every row has an `https://www.nfl.com/` source link. No duplicate player within a club.
+- Limit: bash cannot reach nfl.com, so the raw file is a transcription of fetch-tool output, not a stored byte copy, and it has no SHA-256. Rows are flagged for spot-check.
+
+**Irregularities (published on the page, not blocking)**
+1. The published Week 10 table (`data/decision-desk/official/official_injuries_wk10.csv`, captured 2026-11-12T16:52:39Z from `/injuries/`) has 276 rows versus 347 on the live page, and no Ravens or Chargers sections. 268 rows differ.
+2. Lions blanks confirmed as an error in the published table (see above).
+3. `/injuries/league/2026/reg11` redirected to the Week 10 page (canonical `reg10`). This is consistent with the Week 11 report not yet being published. Earlier entry F-04 described it as a Week 10 serving error; the redirect alone does not show that.
+4. Malik Willis (IR) and Lamar Jackson (IR) are absent from the report. Both are recorded from official news headlines on the same page, not inferred as healthy.
+5. The official page shows no publication timestamp, so the capture time is the read time.
+
+**Not done (blocked; see `nfl-capture-a991e3fb/README.md`):** scheduled multi-day captures and retained hashes (needs a scheduled job with nfl.com access), depth charts for 32 clubs, snap counts, inactive lists, archives of past injury reports, fixture venues, and the Texans depth image (needs an authorized source). Each is blocked on a source or access this sandbox does not have.
+
+**Cross-session notes:** none. No conflicts with other sessions' files.
