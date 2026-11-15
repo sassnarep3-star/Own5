@@ -2089,3 +2089,23 @@ The branch was rebased onto the current `main` (which had advanced to `fc6240b` 
 pushing. That rebase produced one conflict, in this append-only log only: two sessions had appended a
 block at the same offset. Both blocks were kept, in order, with the earlier session's block first. No
 file, table or number was changed by the resolution.
+
+**M12 — follow-up record (session 83a7d6a8).** PR **#86** (`arena/83a7d6a8-own5` → `main`) merged via
+`gh pr merge 86 --merge`, merge commit `52000b8`. It carries two things: this record, and a factual fix
+to the landing copy, which said "five of the eleven gates" when `gates.csv` contains **twelve** gates
+(6 MET, 1 PARTIAL, 5 NOT MET). The count is now computed from `gates.csv` at build time rather than
+typed, so it cannot drift again.
+
+Pages built commit `52000b8` (status `built`, 2026-11-15T23:52:33Z) and the live desk serves all 13
+pages; `leaderboard.html` was re-read from the live host and matches the committed table exactly
+(7 ranked families, 3 controls, 2 luck-panel rows, 7 demotion rules), and `index.html` carries the
+corrected "5 of the 12 gates" text in the committed file. A CDN copy of `index.html` was still serving
+the previous wording at the time of the check; the Pages build for `52000b8` is the propagation
+mechanism and the repository content is correct, so nothing further is changed here.
+
+**CI status on the merged commit:** `NFL market desk (session 83a7d6a8)` success, `Verify Own5 evidence
+desk` success, `Verify research dashboard` success, `Verify SF Rent Review` success, `Verify NBA
+validation desk` success, `pages build and deployment` success. Two checks remain failing on every pull
+request and on `main`: `NFL Decision Desk — fetch & verify` (rebuild drift, XR-D38-02) and `Verify NFL
+B34 Week 10 research desk`. Both are another session's scope, neither is path-scoped so both run on
+every PR, and neither reads a file this session wrote.
