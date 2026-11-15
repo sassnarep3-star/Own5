@@ -2069,3 +2069,23 @@ claimed scope, `nba-*`, `sf-*`, `rental-*`, all existing workflows, all existing
 **Not done, and deliberately so:** 21 of 32 clubs still have no parsed depth chart (SG-03); the
 price store has no opening or close (SG-01, SG-13); there are no inactive lists or snap counts
 (SG-05); the injury archive has one week (SG-18); the eleven desks are not consolidated (SG-02).
+
+**M12 — PR and deployment record (session 83a7d6a8).** PR **#85** (`arena/83a7d6a8-own5` → `main`) was
+merged with a merge commit via `gh pr merge 85 --merge`. GitHub Pages status is `built`;
+https://sassnarep3-star.github.io/Own5/nfl-market-desk/ serves all 13 pages (live-verified: the landing
+page shows 78 requirements / 6 of 12 gates met / 39 markets / 264 graded bets / 9 blocking flags /
+145 finals, and the readiness table renders with its evidence links).
+
+CI on the merged commit: `NFL market desk (session 83a7d6a8)` **success**, `Verify Own5 evidence desk`
+**success**, `Verify research dashboard` **success**, `Verify SF Rent Review` **success**,
+`Verify NBA validation desk` **success**. Two checks fail and are **pre-existing and not caused by this
+PR**: `NFL Decision Desk — fetch & verify` (rebuild drift in `nfl-decision-desk-38a1fc27/` and
+`data/decision-desk/`, logged as XR-D38-02 above and failing on `main` after PRs #82 and #83) and
+`Verify NFL B34 Week 10 research desk` (failing on `main` after PRs #82 and #83). Neither workflow is
+scoped by path, so both run on every pull request; neither reads any file this session wrote. They are
+left to their owners rather than edited from here.
+
+The branch was rebased onto the current `main` (which had advanced to `fc6240b` via PR #83) before
+pushing. That rebase produced one conflict, in this append-only log only: two sessions had appended a
+block at the same offset. Both blocks were kept, in order, with the earlier session's block first. No
+file, table or number was changed by the resolution.
