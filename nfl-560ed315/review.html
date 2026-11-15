@@ -1,0 +1,73 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Repo review &middot; Own5 decision-readiness desk</title><meta name="description" content="A decision-readiness and verification desk for the Own5 NFL line-originator, with every value traceable to an official source and every gap labelled"><style>
+:root{--bg:#f5f7f6;--card:#ffffff;--ink:#12211d;--muted:#5d7168;--line:#dfe6e2;
+--accent:#14614f;--accent-soft:#e3f0eb;--warn:#8a5a00;--warn-soft:#fdf3e0;
+--bad:#8c2f2f;--bad-soft:#fbeaea;--ok:#14614f;--ok-soft:#e3f0eb;--slate:#3d4f48}
+*{box-sizing:border-box}
+body{margin:0;font:15px/1.55 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+color:var(--ink);background:var(--bg)}
+a{color:var(--accent)}
+.skip{position:absolute;left:-9999px}.skip:focus{left:8px;top:8px;background:#fff;padding:8px;z-index:9}
+.layout{display:grid;grid-template-columns:250px 1fr;min-height:100vh}
+.sidebar{background:#0f2b25;color:#cfe3dc;padding:20px 16px;position:sticky;top:0;height:100vh;overflow:auto}
+.brand{display:flex;gap:10px;align-items:center;color:#fff;text-decoration:none;font-weight:700;font-size:17px;margin-bottom:4px}
+.brand span.badge{background:var(--accent);border-radius:6px;padding:2px 8px;font-size:13px}
+.brand small{display:block;font-weight:500;font-size:11px;color:#8fb3a7;letter-spacing:.08em}
+.navcap{font-size:10px;letter-spacing:.14em;color:#7fa394;margin:16px 0 6px;text-transform:uppercase}
+.sidebar nav a{display:block;color:#cfe3dc;text-decoration:none;padding:7px 10px;border-radius:7px;font-size:13.5px}
+.sidebar nav a:hover{background:#173a32}
+.sidebar nav a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidefoot{margin-top:18px;font-size:11.5px;color:#8fb3a7;border-top:1px solid #234a40;padding-top:12px}
+main{padding:26px 30px 60px;max-width:1500px}
+h1{font-size:27px;margin:0 0 6px}h2{font-size:19px;margin:30px 0 10px}h3{font-size:15px;margin:20px 0 8px}
+p.lede{color:var(--muted);margin:0 0 18px;max-width:95ch}
+.eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.stamp{font-size:12px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:18px 0 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px}
+.card span{display:block;font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.card strong{display:block;font-size:24px;margin-top:4px;font-variant-numeric:tabular-nums}
+.card small{color:var(--muted);font-size:12px}
+.card.ok strong{color:var(--ok)}.card.warn strong{color:var(--warn)}.card.bad strong{color:var(--bad)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin:16px 0}
+.panel h2{margin-top:0}
+.tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0}
+.tools input,.tools select{border:1px solid var(--line);border-radius:7px;padding:7px 9px;font-size:13px;background:#fff}
+.count{font-size:12.5px;color:var(--muted)}
+.tw{overflow:auto;border:1px solid var(--line);border-radius:10px;background:#fff}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{text-align:left;padding:7px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{background:#eef3f1;position:sticky;top:0;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--slate);white-space:nowrap}
+tbody tr:hover{background:#f7faf9}
+td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.pill{display:inline-block;border-radius:20px;padding:1px 9px;font-size:11.5px;font-weight:600;white-space:nowrap}
+.p-ok{background:var(--ok-soft);color:var(--ok)}.p-warn{background:var(--warn-soft);color:var(--warn)}
+.p-bad{background:var(--bad-soft);color:var(--bad)}.p-grey{background:#eef1f0;color:var(--slate)}
+.src{white-space:nowrap;font-size:12px}.src a{text-decoration:none}
+.blank{display:inline-block;background:var(--warn-soft);color:var(--warn);border:1px solid #f0dcb4;border-radius:5px;padding:0 6px;font-size:11px;font-weight:700}
+.note{font-size:12.5px;color:var(--muted);margin-top:8px}
+.prose{max-width:95ch}.prose li{margin-bottom:6px}
+footer{margin-top:40px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.sidebar{position:static;height:auto}main{padding:18px}}
+</style></head><body><a class="skip" href="#main">Skip to content</a><div class="layout"><aside class="sidebar"><a class="brand" href="index.html"><span class="badge">O5</span><span>OWN5<small>DECISION READINESS DESK</small></span></a><nav aria-label="Main navigation"><div class="navcap">Dashboard</div><a href="index.html">Overview</a><div class="navcap">Decision support</div><a href="readiness.html">Decision readiness</a><div class="navcap">Governance</div><a href="questions.html">Open questions</a><a href="suggestions.html">Suggestions</a><div class="navcap">Assurance</div><a href="sources.html">Sources</a><a href="flagged.html">Flagged for review</a><a class="active" href="review.html">Repo review</a></nav><div class="sidefoot">Official data retrieved<br>2026-11-15 UTC<br><br>Every row links to its source. Blank cells are labelled UNVERIFIED &mdash; never filled in.</div></aside><main id="main"><span class="eyebrow">Assurance</span><h1>Repo review</h1><span class="stamp">Official sources retrieved 2026-11-15 UTC &middot; rebuilt deterministically &middot; verify.py enforces source-or-flag on every body row</span><h2>Repo review &amp; verification log</h2><p class="lede">Line-by-line review of what this desk does, against official and verified sources, with the irregularities and unverified values published rather than corrected. The headline claims of earlier NFL desks are re-checked on their own pages; this desk adds the decision-readiness matrix on top of that verified work.</p><div class="tw"><table><thead><tr><th>Check</th><th>What was verified</th><th>Status</th><th>Source</th></tr></thead><tbody><tr data-table="review"><td>Coordination claim</td><td>Session 560ed315 claimed a non-overlapping scope and pushed the claim before any build work began.</td><td><span class="pill p-grey">committed</span></td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/COORDINATION.md" target="_blank" rel="noopener">link</a></td></tr><tr data-table="review"><td>Decision-readiness engine</td><td>readiness.py builds decision_readiness.csv; the observed-number column is computed mechanically from verified sibling data, never typed.</td><td><span class="pill p-grey">committed</span></td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-560ed315/readiness.py" target="_blank" rel="noopener">link</a></td></tr><tr data-table="review"><td>Current numbers</td><td>Counts (137 official games, 156/390 price snapshots populated, 705 slots / 31 clubs, 9 official correlation pairs, 162 gate evaluations, 0 certified) were read from the verified sibling CSVs, not re-derived.</td><td><span class="pill p-ok">verified</span></td><td class="src"><a href="https://sassnarep3-star.github.io/Own5/nfl-desk-3fb93d11/" target="_blank" rel="noopener">link</a></td></tr><tr data-table="review"><td>Official standings re-read</td><td>The 2026 NFL League Standings page was re-read on 2026-11-15 and the 32-team W-L-T / PF / PA table was used as the benchmark.</td><td><span class="pill p-ok">verified</span></td><td class="src"><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">link</a></td></tr><tr data-table="review"><td>Source-or-flag invariant</td><td>verify.py walks every generated page and fails the build if any body row has neither a source link nor an explicit UNVERIFIED badge.</td><td><span class="pill p-grey">committed</span></td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-560ed315/verify.py" target="_blank" rel="noopener">link</a></td></tr><tr data-table="review"><td>Read-only scope</td><td>No file outside nfl-560ed315/**, research/nfl-560ed315/** and the append-only COORDINATION.md / README.md entries was modified.</td><td><span class="pill p-ok">verified</span></td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/COORDINATION.md" target="_blank" rel="noopener">link</a></td></tr></tbody></table></div><div class="panel"><h2>Irregularities flagged for review</h2><p class="note">See the <a href="flagged.html">Flagged for review</a> page for the irregularities and unverified blanks published with their source links.</p></div><footer>Own5 decision-readiness desk &middot; additive to the NFL price/results desk (session 3fb93d11) &middot; research, not betting advice. Luck cannot be eliminated from sports outcomes; statistical evidence reduces false confidence, it does not guarantee returns.</footer></main></div><script>
+document.querySelectorAll('input[data-search]').forEach(function(inp){
+  var id=inp.getAttribute('data-search');
+  inp.addEventListener('input',function(){
+    var q=inp.value.toLowerCase();
+    var rows=document.querySelectorAll('tr[data-table="'+id+'"]');
+    var shown=0;
+    rows.forEach(function(tr){var hit=tr.textContent.toLowerCase().indexOf(q)>-1;
+      tr.style.display=hit?'':'none';if(hit)shown++;});
+    var c=document.querySelector('[data-count="'+id+'"]');if(c)c.textContent=shown+' rows shown';
+  });
+});
+document.querySelectorAll('select[data-filter]').forEach(function(sel){
+  var id=sel.getAttribute('data-filter');
+  sel.addEventListener('change',function(){
+    var v=sel.value.toLowerCase();
+    document.querySelectorAll('tr[data-table="'+id+'"]').forEach(function(tr){
+      var cat=(tr.getAttribute('data-cat')||'').toLowerCase();
+      tr.style.display=(v===''||cat===v)?'':'none';
+    });
+  });
+});
+</script></body></html>

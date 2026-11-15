@@ -1,0 +1,7 @@
+source_id,publisher,title,url,tier,fetched_utc,used_for
+SRC-STD,NFL.com,2026 NFL League Standings (regular season),https://www.nfl.com/standings/league/2026/REG,OFFICIAL,2026-11-15,32-team W-L-T / PF / PA benchmark; live re-read for this desk
+SRC-SCH,NFL.com,2026 NFL Schedule - all weeks,https://www.nfl.com/schedules/2026/by-week/,OFFICIAL,2026-11-15,"Final scores, matchups and kickoff dates for the verified results feed"
+SRC-INJ,NFL.com,"Official NFL Injury Report - Week 10, 2026",https://www.nfl.com/injuries/league/2026/reg10,OFFICIAL,2026-11-14,Practice status and game status driving the replacement-depth tracker
+SRC-TEAM,32 NFL club sites,Official club depth charts (one page per club),https://www.nfl.com/teams/,OFFICIAL,2026-11-13,Published 1st/2nd/3rd-string order that defines replacement depth
+SRC-MIR,nflverse (third-party mirror),"nflverse games.csv - schedules, scores and market lines",https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,AGGREGATOR,2026-11-12,"Cross-source reconciliation of scores; AGGREGATOR-tier market reference only, never a fact source"
+SRC-DESK,Own5 desk (session 3fb93d11),Verified price/results/depth/gate registers,https://sassnarep3-star.github.io/Own5/nfl-desk-3fb93d11/,DERIVED,2026-11-14,Consolidated verified registers this desk reads (read-only)
