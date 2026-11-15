@@ -226,8 +226,8 @@ AGGREGATOR and are barred from certification and from any closing-line claim.</l
 model Brier {v_bm} against the market's {v_bk} on the same {v_n} games. It does beat it on the final
 holdout (weeks 9&ndash;10: {h_bm} vs {h_bk} on {h_n} games), but a 24-game holdout is not evidence of
 an edge and we do not present it as one.</li>
-<li><strong>No bet is live and no reward is issued.</strong> Every family is registered PAPER. Five of
-the eleven gates are not met, and the two that matter most &mdash; a certifiable price and a
+<li><strong>No bet is live and no reward is issued.</strong> Every family is registered PAPER. {n_notmet} of
+the {n_gates} gates are not met, and the two that matter most &mdash; a certifiable price and a
 prospective sample &mdash; cannot be met from inside this repository.</li>
 <li><strong>Depth coverage is 11 of 32 clubs</strong> and every one of those charts is undated or one
 capture old. The replacement matrix is therefore a partial view, labelled as such.</li>
@@ -237,7 +237,8 @@ capture old. The replacement matrix is therefore a partial view, labelled as suc
            v_n=ma["VALIDATION (weeks 5-8)"]["n_games"],
            h_bm=ma["FINAL HOLDOUT (weeks 9-10)"]["brier_model"],
            h_bk=ma["FINAL HOLDOUT (weeks 9-10)"]["brier_market"],
-           h_n=ma["FINAL HOLDOUT (weeks 9-10)"]["n_games"])
+           h_n=ma["FINAL HOLDOUT (weeks 9-10)"]["n_games"],
+           n_notmet=notmet, n_gates=len(gates))
 
     changed = """
 <div class="panel note"><h3 style="margin-top:0">What changed in this build</h3>
