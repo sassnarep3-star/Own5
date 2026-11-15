@@ -1,0 +1,79 @@
+name: NFL market desk (session 83a7d6a8)
+
+# Scoped to this session's own directory. No other session's files are read or written,
+# and nothing here publishes: the job proves the committed desk rebuilds byte-identically
+# and that every published row still carries its source.
+on:
+  push:
+    paths:
+      - "nfl-market-desk/**"
+      - ".github/workflows/nfl-market-desk.yml"
+  pull_request:
+    paths:
+      - "nfl-market-desk/**"
+      - ".github/workflows/nfl-market-desk.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: nfl-market-desk
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Show the interpreter
+        run: python3 --version
+
+      - name: Rebuild every table from the committed inputs
+        run: |
+          python3 build_results.py
+          python3 build_model.py
+          python3 build_prices.py
+          python3 build_strategies.py
+          python3 build_availability.py
+          python3 build_registers.py
+          python3 build.py
+          python3 build_summary.py
+
+      - name: Fail if the rebuild changed a committed file
+        run: |
+          if ! git diff --quiet -- . ../research/nfl-83a7d6a8; then
+            echo "::error::rebuild produced different output from the committed files"
+            git --no-pager diff --stat -- . ../research/nfl-83a7d6a8
+            exit 1
+          fi
+
+      - name: Verify (source coverage, links, evidence paths, hashes, drift)
+        run: python3 verify.py
+
+      - name: Unit tests
+        run: python3 tests/test_market_desk.py
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "### NFL market desk" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          python3 - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json, os
+          for name in ("register_summary.json", "price_store_summary.json", "strategy_summary.json"):
+              p = os.path.join("data", name)
+              if not os.path.exists(p):
+                  continue
+              d = json.load(open(p))
+              print("**%s**" % name)
+              print("")
+              print("```")
+              print(json.dumps(d, indent=1, sort_keys=True)[:1800])
+              print("```")
+              print("")
+          PY
