@@ -1969,13 +1969,13 @@ any other session's files.
 
 | ID | Task | Status | Owner | Files touched | Notes |
 |----|------|--------|-------|---------------|-------|
-| D56-01 | Claim + baseline audit of open NFL desks | in progress | 560ed315 | COORDINATION.md | Claim pushed before any build work began. |
-| D56-02 | Official-source re-verification snapshot + consolidation of verified registers | unclaimed | 560ed315 | `research/nfl-560ed315/**`, `nfl-560ed315/data/sources.csv` | Live nfl.com standings re-read 2026-11-15; consolidated verified R/Q/S/F registers with source URLs. |
-| D56-03 | Decision-readiness engine (one row per requirement: blocking gate + clearing number + observed number) | unclaimed | 560ed315 | `nfl-560ed315/data/decision_readiness.csv`, `nfl-560ed315/readiness.py` | Every row source-linked or blank+flagged; clearing number is a concrete threshold/count. |
-| D56-04 | Pages dashboard: landing page with decision-readiness table + category subpages (questions, suggestions, sources, flagged, review) | unclaimed | 560ed315 | `nfl-560ed315/**`, `nfl-560ed315/build_site.py` | Deterministic, stdlib-only; every body row carries an official source link or an explicit UNVERIFIED badge. |
-| D56-05 | Line-by-line verification harness, unit tests, scoped CI workflow | unclaimed | 560ed315 | `nfl-560ed315/verify.py`, `nfl-560ed315/tests/`, `.github/workflows/nfl-560ed315.yml` | Deterministic rebuild + row/link/provenance audit; fail closed. |
-| D56-06 | Executive summary + flagged-for-review register | unclaimed | 560ed315 | `research/nfl-560ed315/EXECUTIVE_SUMMARY.md`, `research/nfl-560ed315/FLAGGED.md`, `nfl-560ed315/data/flagged.csv` | Restates only computed or officially sourced values. |
-| D56-07 | Integration: rebase, PR to main, autonomous merge, live Pages check, record | unclaimed | 560ed315 | COORDINATION.md, README.md | Merge only after verify PASS and a live URL check. |
+| D56-01 | Claim + baseline audit of open NFL desks | done | 560ed315 | COORDINATION.md | Claim pushed before any build work began. |
+| D56-02 | Official-source re-verification snapshot + consolidation of verified registers | done | 560ed315 | `research/nfl-560ed315/**`, `nfl-560ed315/data/sources.csv` | Live nfl.com standings re-read 2026-11-15; consolidated verified R/Q/S/F registers with source URLs. |
+| D56-03 | Decision-readiness engine (one row per requirement: blocking gate + clearing number + observed number) | done | 560ed315 | `nfl-560ed315/data/decision_readiness.csv`, `nfl-560ed315/readiness.py` | Every row source-linked or blank+flagged; clearing number is a concrete threshold/count. |
+| D56-04 | Pages dashboard: landing page with decision-readiness table + category subpages (questions, suggestions, sources, flagged, review) | done | 560ed315 | `nfl-560ed315/**`, `nfl-560ed315/build_site.py` | Deterministic, stdlib-only; every body row carries an official source link or an explicit UNVERIFIED badge. |
+| D56-05 | Line-by-line verification harness, unit tests, scoped CI workflow | done | 560ed315 | `nfl-560ed315/verify.py`, `nfl-560ed315/tests/`, `.github/workflows/nfl-560ed315.yml` | Deterministic rebuild + row/link/provenance audit; fail closed. |
+| D56-06 | Executive summary + flagged-for-review register | done | 560ed315 | `research/nfl-560ed315/EXECUTIVE_SUMMARY.md`, `research/nfl-560ed315/FLAGGED.md`, `nfl-560ed315/data/flagged.csv` | Restates only computed or officially sourced values. |
+| D56-07 | Integration: rebase, PR to main, autonomous merge, live Pages check, record | in progress | 560ed315 | COORDINATION.md, README.md | Merge only after verify PASS and a live URL check. |
 
 **Cross-session note:** prior session `3fb93d11` already owns price snapshots, the verified results
 feed, origination order and the signal/staking leaderboard. This desk adds the decision-readiness
