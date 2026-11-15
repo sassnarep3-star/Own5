@@ -1985,7 +1985,7 @@ repo file the row cites (existence + marker), never copied on trust.
 | RR-08 | Consolidated flagged + sources | done | 12 flags and 15 sources in `data/flagged.csv`, `data/sources.csv`, with pages. |
 | RR-09 | Build, verifier, tests, CI | done | `run.py` deterministic; `verify.py` 268 rows PASS (all source-linked or UNVERIFIED, 0 broken links); 14 unit tests pass; scoped workflow added. |
 | RR-10 | Executive summary | done | `research/nfl-cba42531/EXECUTIVE_SUMMARY.md` + `executive-summary.html`. |
-| RR-11 | Rebase, PR, merge, Pages, record | in progress | See the final record appended below. |
+| RR-11 | Rebase, PR, merge, Pages, record | done | PR #84 merged; scoped workflow + Pages `built`; live smoke test passed. See final record below. |
 
 **Official verification performed (2026-11-15):** the league PF==PA identity holds on the 2026-11-15
 standings snapshot; the delta vs the pinned 2026-11-14 snapshot is explained by the Week 10 finals
@@ -2004,6 +2004,29 @@ same brief from different namespaces. This session's distinguishing content vers
 **removal-of-luck panel** on the landing page, and a wider 85-requirement matrix that also covers
 the process/PR items. A future session should consolidate the two readiness desks rather than
 adding a third.
+
+### Session cba42531 — final integration & publication record (2026-11-15)
+
+- **PR:** https://github.com/sassnarep3-star/Own5/pull/84 (`arena/cba42531-own5` → `main`),
+  "NFL decision-readiness & consolidation desk (cba42531)".
+- **Merge:** `gh pr merge 84 --merge` succeeded at **2026-11-15T23:56:01Z**; merge commit
+  **`e2f8406960b2ba0aaa9973ddf325da043e1cb3af`**. The first merge attempt was not clean because
+  `main` had advanced (sessions `560ed315` PR #83 and `83a7d6a8` PR #85/#86 merged concurrently);
+  the conflict was resolved locally in the append-only `COORDINATION.md` and `README.md` by keeping
+  **both** this session's block and every `origin/main` session block in full. No other file
+  conflicted and no other session's work was discarded.
+- **Scoped CI on the merged commit:** `Verify NFL decision-readiness desk (cba42531)` **success**
+  (run 43777449790) — deterministic rebuild, row-level source-link proof (268 rows), 14 unit tests.
+  The workflow's `pages-smoke` job also passed, which curls the live URL and confirms it returns the
+  desk (`OWN5`).
+- **GitHub Pages:** deployment run 43777448939 **success** (build, deploy, report); Pages API status
+  `built`, source `main` `/`.
+- **Live site:** https://sassnarep3-star.github.io/Own5/nfl-readiness-cba42531/ (landing page with the
+  decision-readiness matrix and removal-of-luck panel, plus requirements / strategies /
+  suggestions / questions / luck / flagged / repo-audit / sources / executive-summary subpages).
+- **Result:** RR-01–RR-11 all done. 0 strategies certified, no bets placed, no performance claims.
+  Blocking flags and the overlap with the `560ed315` readiness desk are published on the Flagged for
+  Review page and in this log; they do not block the merge.
 
 ## Session a991e3fb — Week 10 official injury report re-capture (2026-11-15 UTC)
 
