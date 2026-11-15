@@ -1932,3 +1932,8 @@ audit.
 **Not done (blocked; see `nfl-capture-a991e3fb/README.md`):** scheduled multi-day captures and retained hashes (needs a scheduled job with nfl.com access), depth charts for 32 clubs, snap counts, inactive lists, archives of past injury reports, fixture venues, and the Texans depth image (needs an authorized source). Each is blocked on a source or access this sandbox does not have.
 
 **Cross-session notes:** none. No conflicts with other sessions' files.
+
+**a991e3fb — PR #81 checks and irregularity log (2026-11-15).** Two non-required jobs fail. Both were reproduced on `main` at `a03dfb7` before this PR, and this PR touches neither path:
+1. `Verify NFL B34 Week 10 research desk` (`.github/workflows/nfl-b34253a1.yml`) fails at the step "Check deterministic generated outputs" on `main` (run 43647189340). Owner: session that owns `nfl-b34253a1/**` (b34253a1).
+2. `NFL Decision Desk — fetch & verify` (`.github/workflows/decision-desk.yml`), job `verify`, fails at "Confirm the committed site matches a clean rebuild". A fresh export of `origin/main` rebuilt with `tools/decision_desk/build_all.py` and `build_site.py` modifies `data/decision-desk/audit_summary.json`, `injuries_wk10_players.csv`, `team_deficiency_wk10.csv` and `nfl-decision-desk-38a1fc27/{audit,index,verification}.html`. The committed outputs do not reproduce. Owner: the decision-desk session(s). Logged as a cross-session request, not edited here.
+PR #81 is merged on this basis: the failures are pre-existing, the PR changes no file on either path, and the Pages site builds.
