@@ -1900,3 +1900,68 @@ session's distinguishing content versus theirs: the replacement-**depth** tracke
 replacement, compounding, offence/defence split), the official-only correlation rule with a
 withheld register carrying the previous values, the 6-trigger demotion gate, and the 150-check repo
 audit.
+
+---
+
+## Session 9fa39047 — Own5 NFL Decision Desk (consolidation + final integration), 2026-11-15 UTC
+
+Branch `arena/9fa39047-own5` (base `a03dfb7` = `main`). Claim written **2026-11-15T23:2xZ UTC**,
+committed and pushed before any implementation work.
+
+**Role:** this session is the **final integration session** for the NFL line-origination brief. All
+substantive requirement work is already merged (`main` @ `a03dfb7`, PR #79). What is missing is not
+another per-requirement desk — it is the *single consolidated surface* the brief asks for: one clean
+landing page, subpages organised by category, a **decision-readiness table (one row per requirement,
+with the blocking gate and the number that would clear it)** on the landing page, a questions /
+missing-information register, a suggestions register with a review path, and an executive summary.
+
+**Network fact established before designing the pipeline (2026-11-15):** the sandbox has **no direct
+TLS egress to nfl.com** (`curl`/`urllib` → `SSL_ERROR_SYSCALL`), while `github.com`,
+`codeload.github.com`, `api.github.com`, `registry.npmjs.org`, `pypi.org` and `files.pythonhosted.org`
+are reachable. Official NFL pages are therefore captured through the session's page-fetch tool and
+written to disk with a SHA-256 hash and a UTC retrieval stamp; aggregator data (nflverse) is fetched
+from its GitHub release and is labelled **AGGREGATOR**, never official.
+
+**Claimed namespaces (strictly additive; no overlap with any other session's scope):**
+
+| Namespace | Contents |
+|---|---|
+| `nfl-desk-9fa39047/**` | The consolidated Own5 NFL Decision Desk: deterministic stdlib-only build, data CSVs/JSON, 16 static pages, verification harness, unit tests |
+| `research/nfl-9fa39047/**` | Executive summary, methodology, requirements matrix, verification log |
+| `.github/workflows/nfl-desk-9fa39047.yml` | Scoped deterministic-rebuild + row/link/provenance verification for the desk above only |
+
+**Append-only edits outside the namespace:** this file (`COORDINATION.md`) and one additive section in
+`README.md`. The root `index.html` / `pages/**` navigation is owned by session `cd43258e` and is
+CI-locked by `scripts/build.py`; the root-nav link this desk needs is requested below rather than
+hand-edited.
+
+**Read-only for this session (never edited):** every other desk namespace (`own5-desk/**`,
+`nfl-desk-3fb93d11/**`, `nfl-engine-39086ec8/**`, `nfl-desk-d38e90c5/**`, `nfl-desk-26d4cafb/**`,
+`nfl-desk-864d5668/**`, `nfl-b34253a1/**`, `nfl-hub-28431d9c/**`, `nfl-price-results-853c0074/**`,
+`nfl-decision-desk*/**`, `nfl-strategy-lab/**`, `nfl_model/**`, `line-lab/**`, `nba-*/**`,
+`sf-*/**`, `rental-*/**`), `data/**` outside the claimed namespace, `scripts/**`, `tools/**`,
+`tests/**`, `assets/**`, `docs/**`, `pages/**`, root `index.html`, all existing workflows.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| Q1 | Coordination claim + CI-lock inspection | done | 9fa39047 | COORDINATION.md | Claim pushed before implementation. |
+| Q2 | Live official capture (injury report, schedule, standings, scores) with SHA-256 + UTC | in progress | 9fa39047 | `nfl-desk-9fa39047/data/raw_official/**` | Captured via the page-fetch tool; no nfl.com TLS from the sandbox. |
+| Q3 | Decision-readiness table: one row per brief requirement, blocking gate, clearing number | unclaimed | 9fa39047 | `data/readiness.csv`, `index.html` | Flagship unmet requirement. |
+| Q4 | Consolidated data model (lines, prices, results, strategies, leaderboard, correlations, gates, depth, questions, suggestions, flagged) | unclaimed | 9fa39047 | `nfl-desk-9fa39047/data/**` | Each row carries an official source link or an explicit UNVERIFIED flag. |
+| Q5 | Line-by-line repo audit of every desk's headline claim against live official pages | unclaimed | 9fa39047 | `data/repo_audit.csv`, `audit.html` | Independent re-verification, not a copy of the 3fb93d11 audit. |
+| Q6 | Consolidated static site (16 pages, category navigation, clean dashboard UI) | unclaimed | 9fa39047 | `nfl-desk-9fa39047/*.html`, `build.py` | Deterministic; stdlib only. |
+| Q7 | Executive summary + methodology + verification log | unclaimed | 9fa39047 | `research/nfl-9fa39047/**`, `executive-summary.html` | Only computed or officially sourced values. |
+| Q8 | Verification harness, unit tests, scoped CI workflow | unclaimed | 9fa39047 | `verify.py`, `tests/`, workflow | Every body row sourced or flagged; 0 broken links; byte-identical rebuild. |
+| Q9 | Integration: re-verify combined data, root-nav request, PR to main, merge, Pages deploy check | unclaimed | 9fa39047 | COORDINATION.md, README.md | Merge only after verify PASS + live URL check. |
+
+**Cross-session requests**
+
+- **Root navigation (owner: session `cd43258e`, CI-locked by `scripts/build.py`):** please add one
+  root-nav entry labelled "**NFL Decision Desk**" pointing to `nfl-desk-9fa39047/index.html`, so the
+  consolidated desk is reachable from the root landing page. This session did **not** hand-edit the
+  CI-locked `index.html`/`pages/**`.
+- **Open PRs from other sessions at claim time** (not merged by this session, no file overlap):
+  #80 `arena/ce1f16ff-own5` (price store / results feed / origination desk — functionally overlaps
+  PR #79's scope), #78 `arena/d38e90c5-own5` (COORDINATION record only), #69 `arena/dc1b9e9f-own5`,
+  #62 `arena/b34253a1-own5`. Logged here so the reviewer knows they remain open; they are not
+  blocked by this session.
