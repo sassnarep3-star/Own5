@@ -1900,3 +1900,67 @@ session's distinguishing content versus theirs: the replacement-**depth** tracke
 replacement, compounding, offence/defence split), the official-only correlation rule with a
 withheld register carrying the previous values, the 6-trigger demotion gate, and the 150-check repo
 audit.
+
+---
+
+## Session cba42531 — NFL Decision-Readiness & Consolidation Desk (2026-11-15 UTC)
+
+Arena fixes this session's branch to `arena/cba42531-own5` (base `a03dfb7` = `origin/main`); no
+other branch will be created, renamed or pushed. Claim timestamp: **2026-11-15 UTC**, committed and
+pushed **before** any implementation.
+
+**Why this session exists.** `main` now carries many NFL desks (3fb93d11, d38e90c5, 853c0074,
+39086ec8, 864d5668, 26d4cafb, b34253a1, 28431d9c, plus the older labs). Session 3fb93d11's own
+overlap note states that three desks answer the same brief from different namespaces and that "a
+future session consolidates rather than adding a fourth"; session d38e90c5's repo audit logs
+cross-desk drift (SUG-07/SUG-08) for "a final integration session." This session performs that
+consolidation at the **governance / decision-readiness** layer. It does not re-run any desk's
+engine and does not edit any other session's files; it reads them and reconciles.
+
+**Gap claimed (explicitly requested by the owner, absent as a consolidated artifact):**
+1. A **decision-readiness table on the landing page** — one row per requirement, each carrying the
+   **gate that blocks it** and the **number that would clear it**. No existing desk publishes this as
+   a structured (requirement × blocking-gate × clearing-number) matrix on its landing page.
+2. A **two-sided "what would change our mind" field on every strategy entry** (confirm-side and
+   refute-side falsification criteria), not just a per-suggestion review test.
+3. A **"removal of luck" panel on the dashboard** consolidating the repo's computed luck-vs-skill
+   evidence with `n` and sources on every value.
+4. A **dedicated suggestions section** for review, consolidating the desks' proposals so one reviewer
+   can choose a path before anything is implemented.
+5. A consolidated **questions / have-vs-missing** register and a consolidated **flagged** register
+   across desks.
+
+**Claimed namespaces (strictly additive, zero overlap with any other session):**
+- `nfl-readiness-cba42531/**` (static GitHub Pages dashboard: landing page + category subpages,
+  canonical CSV under `nfl-readiness-cba42531/data/`, deterministic build `build_site.py`, verifier
+  `verify.py`, unit tests `tests/`, consolidation checker `consolidate.py`)
+- `research/nfl-cba42531/**` (executive summary, methodology, consolidation log, flagged register)
+- `.github/workflows/nfl-readiness-cba42531.yml` (scoped deterministic verification only)
+- Append-only blocks in `COORDINATION.md` and one additive table row in `README.md`
+
+**Read-only for this session (never edited):** every other NFL/NBA desk directory, root
+`index.html` / `pages/` / `data/research.json`, `docs/`, `own5-desk/`, `site/`, `nfl_model/`,
+`line-lab/`, `nfl-strategy-lab/`, `scripts/`, `tools/`, `analysis/`, `tests/` (root), existing
+workflows, and all existing CSV/JSON outside the claimed scope.
+
+**Verification rule (inherited, hard):** every factual value in any table row links to an official,
+verified source. A value that cannot be confirmed from an official source is left **blank** and
+flagged on the Flagged for Review page. Readiness *status* cells are derived by checking the actual
+repo file the row cites (existence + marker), never copied on trust.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| RR-01 | Coordination claim + CI-lock / scope inspection | done | cba42531 | COORDINATION.md | Claim pushed before implementation. |
+| RR-02 | Official-source verification for 2026-11-15 (nfl.com standings, schedule, injury report) | unclaimed | cba42531 | `nfl-readiness-cba42531/data/official_evidence.csv`, `data/sources.csv` | Each page recorded with URL + retrieval UTC + what it proves. |
+| RR-03 | Consolidated decision-readiness matrix: one row per requirement × blocking gate × clearing number, landing page | unclaimed | cba42531 | `data/readiness.csv`, `index.html` | Statuses checked against the cited repo file by `consolidate.py`. |
+| RR-04 | Per-strategy two-sided "what would change our mind" register | unclaimed | cba42531 | `data/strategy_falsification.csv`, `strategies.html` | Confirm-side + refute-side for every strategy found in the repo. |
+| RR-05 | "Removal of luck" dashboard panel | unclaimed | cba42531 | `data/luck_panel.csv`, `luck.html` | Every value with `n` + source; no performance claim. |
+| RR-06 | Consolidated suggestions register (dedicated review section) | unclaimed | cba42531 | `data/suggestions.csv`, `suggestions.html` | Options, recommended path, decision status, review test, implemented flag. |
+| RR-07 | Consolidated questions / have-vs-missing register | unclaimed | cba42531 | `data/questions.csv`, `questions.html` | Blocking vs non-blocking; cheapest discovery route. |
+| RR-08 | Consolidated flagged register + sources registry | unclaimed | cba42531 | `data/flagged.csv`, `data/sources.csv`, `flagged.html`, `sources.html` | Irregularities published, never silently corrected. |
+| RR-09 | Deterministic build, row-level verifier, unit tests, scoped CI workflow | unclaimed | cba42531 | `build_site.py`, `verify.py`, `consolidate.py`, `tests/`, workflow | Every body row source-linked or explicit blank+flag. |
+| RR-10 | Executive summary | unclaimed | cba42531 | `research/nfl-cba42531/EXECUTIVE_SUMMARY.md`, `executive-summary.html` | Restates only computed/verified values. |
+| RR-11 | Rebase on origin/main, PR to main, autonomous merge, live Pages check, record | unclaimed | cba42531 | COORDINATION.md, README.md | Merge only after verify PASS and a live URL check. |
+
+### Session cba42531 — status log
+(Updated as tasks complete; the final record is appended at the bottom of this block.)
