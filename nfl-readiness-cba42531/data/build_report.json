@@ -1,0 +1,551 @@
+{
+  "csvs_written": [
+    "nfl-readiness-cba42531/data/official_evidence.csv",
+    "nfl-readiness-cba42531/data/readiness.csv",
+    "nfl-readiness-cba42531/data/strategy_falsification.csv",
+    "nfl-readiness-cba42531/data/suggestions.csv",
+    "nfl-readiness-cba42531/data/questions.csv",
+    "nfl-readiness-cba42531/data/flagged.csv",
+    "nfl-readiness-cba42531/data/luck_panel.csv",
+    "nfl-readiness-cba42531/data/sources.csv",
+    "nfl-readiness-cba42531/data/repo_consolidation.csv"
+  ],
+  "failures": [],
+  "ok": true,
+  "retrieved_utc": "2026-11-15T00:00:00Z",
+  "session": "cba42531",
+  "standings_checks": [
+    {
+      "check": "PF==PA identity (2026-11-15 official standings)",
+      "detail": "league PF=6664, PA=6664 over 32 teams",
+      "status": "MATCH"
+    },
+    {
+      "check": "2026-11-15 vs pinned 2026-11-14 standings",
+      "detail": "16 of 32 teams advanced (Week 10 games played on 2026-11-15); 0 teams absent from pin",
+      "status": "MATCH"
+    },
+    {
+      "check": "Week 10 finals explain the standings delta",
+      "detail": "9 of 9 observed Week 10 finals present in the 2026-11-15 snapshot",
+      "status": "MATCH"
+    }
+  ],
+  "status_checks": [
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-3fb93d11/data/price_snapshots.csv exists and contains 'snapshot_type'",
+      "req_id": "R-01",
+      "status": "Met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-3fb93d11/data/results_feed.csv exists and contains 'home_margin'",
+      "req_id": "R-02",
+      "status": "Met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-3fb93d11/data/origination_steps.csv exists and contains 'step'",
+      "req_id": "R-03",
+      "status": "Met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-3fb93d11/data/originated_markets.csv exists and contains 'difference_model_minus_market'",
+      "req_id": "R-04",
+      "status": "Met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-d38e90c5/data/leaderboard_signal.csv exists and contains 'brier_score'",
+      "req_id": "R-05",
+      "status": "Met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-d38e90c5/data/depth_detail.csv exists and contains 'depth'",
+      "req_id": "R-06",
+      "status": "Partially met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-3fb93d11/data/correlations_official.csv exists and contains 'n'",
+      "req_id": "R-07",
+      "status": "Met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-3fb93d11/data/demotion_gate.csv exists and contains 'trigger'",
+      "req_id": "R-08",
+      "status": "Met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-3fb93d11/data/strategy_ledger.csv exists and contains 'parameters'",
+      "req_id": "R-09",
+      "status": "Met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-d38e90c5/data/depth_detail.csv exists and contains 'depth'",
+      "req_id": "R-10",
+      "status": "Partially met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-3fb93d11/data/replacement_depth.csv exists and contains 'depth_string'",
+      "req_id": "R-11",
+      "status": "Partially met"
+    },
+    {
+      "check": "not-applicable",
+      "detail": "no file claim",
+      "req_id": "R-12",
+      "status": "Proposed"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-d38e90c5/data/depth_detail.csv exists and contains 'depth'",
+      "req_id": "R-13",
+      "status": "Partially met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "data/raw/schedule_2026_wk9.csv exists",
+      "req_id": "R-14",
+      "status": "Partially met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-3fb93d11/data/originated_markets.csv exists and contains 'model_line'",
+      "req_id": "R-15",
+      "status": "Partially met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-readiness-cba42531/data/luck_panel.csv exists and contains 'value'",
+      "req_id": "R-16",
+      "status": "Met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-readiness-cba42531/data/strategy_falsification.csv exists and contains 'refute_side'",
+      "req_id": "R-17",
+      "status": "Met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-3fb93d11/data/originated_markets.csv exists and contains 'difference_model_minus_market'",
+      "req_id": "R-18",
+      "status": "Partially met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "data/backtest_results.csv exists",
+      "req_id": "R-19",
+      "status": "Partially met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "research/nfl-39086ec8/ exists",
+      "req_id": "R-20",
+      "status": "Partially met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-3fb93d11/data/sources.csv exists and contains 'fetched_utc'",
+      "req_id": "R-21",
+      "status": "Partially met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-readiness-cba42531/data/readiness.csv exists and contains 'blocking_gate'",
+      "req_id": "R-22",
+      "status": "Met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "data/raw/schedule_2026_wk9.csv exists",
+      "req_id": "R-23",
+      "status": "Partially met"
+    },
+    {
+      "check": "not-applicable",
+      "detail": "no file claim",
+      "req_id": "R-24",
+      "status": "Absent"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-d38e90c5/data/depth_detail.csv exists and contains 'depth'",
+      "req_id": "R-25",
+      "status": "Partially met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "data/backtest_results.csv exists",
+      "req_id": "R-26",
+      "status": "Partially met"
+    },
+    {
+      "check": "not-applicable",
+      "detail": "no file claim",
+      "req_id": "R-27",
+      "status": "Proposed"
+    },
+    {
+      "check": "not-applicable",
+      "detail": "no file claim",
+      "req_id": "R-28",
+      "status": "Proposed"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-3fb93d11/data/sources.csv exists and contains 'fetched_utc'",
+      "req_id": "R-29",
+      "status": "Partially met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-3fb93d11/data/sources.csv exists and contains 'fetched_utc'",
+      "req_id": "R-30",
+      "status": "Partially met"
+    },
+    {
+      "check": "not-applicable",
+      "detail": "no file claim",
+      "req_id": "R-31",
+      "status": "Absent"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-d38e90c5/data/depth_detail.csv exists and contains 'depth'",
+      "req_id": "R-32",
+      "status": "Partially met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-3fb93d11/data/replacement_depth.csv exists and contains 'depth_string'",
+      "req_id": "R-33",
+      "status": "Partially met"
+    },
+    {
+      "check": "not-applicable",
+      "detail": "no file claim",
+      "req_id": "R-34",
+      "status": "Proposed"
+    },
+    {
+      "check": "MATCH",
+      "detail": "data/leaderboard.csv exists",
+      "req_id": "R-35",
+      "status": "Partially met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-3fb93d11/data/gates.csv exists and contains 'G7'",
+      "req_id": "R-36",
+      "status": "Met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-3fb93d11/data/leaderboard.csv exists",
+      "req_id": "R-37",
+      "status": "Partially met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-3fb93d11/data/leaderboard.csv exists and contains 'signal_score'",
+      "req_id": "R-38",
+      "status": "Met"
+    },
+    {
+      "check": "not-applicable",
+      "detail": "no file claim",
+      "req_id": "R-39",
+      "status": "Proposed"
+    },
+    {
+      "check": "not-applicable",
+      "detail": "no file claim",
+      "req_id": "R-40",
+      "status": "Proposed"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-d38e90c5/data/depth_team_summary.csv exists",
+      "req_id": "R-41",
+      "status": "Partially met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-3fb93d11/data/replacement_depth.csv exists and contains 'depth_string'",
+      "req_id": "R-42",
+      "status": "Partially met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-d38e90c5/data/depth_detail.csv exists and contains 'depth'",
+      "req_id": "R-43",
+      "status": "Partially met"
+    },
+    {
+      "check": "not-applicable",
+      "detail": "no file claim",
+      "req_id": "R-44",
+      "status": "Proposed"
+    },
+    {
+      "check": "not-applicable",
+      "detail": "no file claim",
+      "req_id": "R-45",
+      "status": "Proposed"
+    },
+    {
+      "check": "not-applicable",
+      "detail": "no file claim",
+      "req_id": "R-46",
+      "status": "Proposed"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-3fb93d11/data/sources.csv exists and contains 'fetched_utc'",
+      "req_id": "R-47",
+      "status": "Partially met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-readiness-cba42531/data/official_evidence.csv exists and contains 'Lions'",
+      "req_id": "R-48",
+      "status": "Met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-readiness-cba42531/data/official_evidence.csv exists and contains 'Week 10'",
+      "req_id": "R-49",
+      "status": "Met"
+    },
+    {
+      "check": "not-applicable",
+      "detail": "no file claim",
+      "req_id": "R-50",
+      "status": "Rejected (by design)"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-3fb93d11/data/replacement_depth.csv exists and contains 'depth_string'",
+      "req_id": "R-51",
+      "status": "Partially met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-d38e90c5/data/depth_detail.csv exists and contains 'depth'",
+      "req_id": "R-52",
+      "status": "Partially met"
+    },
+    {
+      "check": "not-applicable",
+      "detail": "no file claim",
+      "req_id": "R-53",
+      "status": "Proposed"
+    },
+    {
+      "check": "not-applicable",
+      "detail": "no file claim",
+      "req_id": "R-54",
+      "status": "Proposed"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-3fb93d11/data/sources.csv exists and contains 'fetched_utc'",
+      "req_id": "R-55",
+      "status": "Partially met"
+    },
+    {
+      "check": "not-applicable",
+      "detail": "no file claim",
+      "req_id": "R-56",
+      "status": "Absent"
+    },
+    {
+      "check": "MATCH",
+      "detail": "data/leaderboard.csv exists",
+      "req_id": "R-57",
+      "status": "Partially met"
+    },
+    {
+      "check": "not-applicable",
+      "detail": "no file claim",
+      "req_id": "R-58",
+      "status": "Absent"
+    },
+    {
+      "check": "not-applicable",
+      "detail": "no file claim",
+      "req_id": "R-59",
+      "status": "Proposed"
+    },
+    {
+      "check": "not-applicable",
+      "detail": "no file claim",
+      "req_id": "R-60",
+      "status": "Proposed"
+    },
+    {
+      "check": "not-applicable",
+      "detail": "no file claim",
+      "req_id": "R-61",
+      "status": "Proposed"
+    },
+    {
+      "check": "not-applicable",
+      "detail": "no file claim",
+      "req_id": "R-62",
+      "status": "Proposed"
+    },
+    {
+      "check": "not-applicable",
+      "detail": "no file claim",
+      "req_id": "R-63",
+      "status": "Proposed"
+    },
+    {
+      "check": "not-applicable",
+      "detail": "no file claim",
+      "req_id": "R-64",
+      "status": "Absent"
+    },
+    {
+      "check": "not-applicable",
+      "detail": "no file claim",
+      "req_id": "R-65",
+      "status": "Rejected (by design)"
+    },
+    {
+      "check": "not-applicable",
+      "detail": "no file claim",
+      "req_id": "R-66",
+      "status": "Absent"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-3fb93d11/data/strategy_ledger.csv exists and contains 'parameters'",
+      "req_id": "R-67",
+      "status": "Met"
+    },
+    {
+      "check": "not-applicable",
+      "detail": "no file claim",
+      "req_id": "R-68",
+      "status": "Absent"
+    },
+    {
+      "check": "MATCH",
+      "detail": "COORDINATION.md exists and contains 'cba42531'",
+      "req_id": "R-69",
+      "status": "Met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "data/backtest_results.csv exists",
+      "req_id": "R-70",
+      "status": "Partially met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-readiness-cba42531/data/suggestions.csv exists and contains 'recommended'",
+      "req_id": "R-71",
+      "status": "Met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-3fb93d11/data/originated_markets.csv exists and contains 'model_line'",
+      "req_id": "R-72",
+      "status": "Met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-3fb93d11/data/strategy_ledger.csv exists and contains 'bet_class'",
+      "req_id": "R-73",
+      "status": "Partially met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-3fb93d11/data/gates.csv exists and contains 'G0'",
+      "req_id": "R-74",
+      "status": "Met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-3fb93d11/data/correlations_official.csv exists and contains 'n'",
+      "req_id": "R-75",
+      "status": "Met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-readiness-cba42531/data/luck_panel.csv exists and contains 'value'",
+      "req_id": "R-76",
+      "status": "Partially met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-d38e90c5/data/depth_detail.csv exists and contains 'depth'",
+      "req_id": "R-77",
+      "status": "Partially met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-desk-d38e90c5/data/depth_detail.csv exists and contains 'depth'",
+      "req_id": "R-78",
+      "status": "Partially met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "research/nfl-cba42531/EXECUTIVE_SUMMARY.md exists and contains 'Executive Summary'",
+      "req_id": "R-79",
+      "status": "Met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-readiness-cba42531/verify.py exists and contains 'UNVERIFIED'",
+      "req_id": "R-80",
+      "status": "Met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-readiness-cba42531/data/repo_consolidation.csv exists and contains 'status'",
+      "req_id": "R-81",
+      "status": "Met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-readiness-cba42531/index.html exists and contains '<!DOCTYPE'",
+      "req_id": "R-82",
+      "status": "Met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "nfl-readiness-cba42531/verify.py exists and contains 'UNVERIFIED'",
+      "req_id": "R-83",
+      "status": "Met"
+    },
+    {
+      "check": "MATCH",
+      "detail": "COORDINATION.md exists and contains 'cba42531'",
+      "req_id": "R-84",
+      "status": "Met"
+    },
+    {
+      "check": "not-applicable",
+      "detail": "no file claim",
+      "req_id": "R-85",
+      "status": "In progress"
+    }
+  ],
+  "status_counts": {
+    "IRREGULAR": 0,
+    "MATCH": 59,
+    "not-applicable": 26
+  }
+}

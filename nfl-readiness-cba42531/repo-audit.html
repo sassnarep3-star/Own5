@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repo consolidation log - Own5 NFL Decision Readiness</title>
+<style>
+:root{--bg:#f5f7f6;--card:#fff;--ink:#12211d;--muted:#5d7168;--line:#dfe6e2;
+--accent:#14614f;--accent-soft:#e3f0eb;--warn:#8a5a00;--warn-soft:#fdf3e0;
+--bad:#8c2f2f;--bad-soft:#fbeaea;--ok:#14614f;--ok-soft:#e3f0eb;--slate:#3d4f48}
+*{box-sizing:border-box}
+body{margin:0;font:15px/1.55 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+color:var(--ink);background:var(--bg)}
+a{color:var(--accent)}
+.layout{display:grid;grid-template-columns:250px 1fr;min-height:100vh}
+.sidebar{background:#0f2b25;color:#cfe3dc;padding:20px 16px;position:sticky;top:0;height:100vh;overflow:auto}
+.brand{display:flex;gap:10px;align-items:center;color:#fff;text-decoration:none;font-weight:700;font-size:17px}
+.brand span.badge{background:var(--accent);border-radius:6px;padding:2px 8px;font-size:12px}
+.brand small{display:block;font-weight:500;font-size:11px;color:#8fb3a7;letter-spacing:.08em}
+.navcap{font-size:10px;letter-spacing:.14em;color:#7fa394;margin:16px 0 6px;text-transform:uppercase}
+.sidebar nav a{display:block;color:#cfe3dc;text-decoration:none;padding:7px 10px;border-radius:7px;font-size:13.5px}
+.sidebar nav a:hover{background:#173a32}
+.sidebar nav a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar nav a small{display:block;color:#8fb3a7;font-weight:400;font-size:11px}
+.sidebar nav a.active small{color:#bfe0d4}
+.sidefoot{margin-top:18px;font-size:11.5px;color:#8fb3a7;border-top:1px solid #234a40;padding-top:12px}
+main{padding:26px 30px 60px;max-width:1500px}
+h1{font-size:26px;margin:0 0 6px}
+h2{font-size:19px;margin:30px 0 10px}
+p.lede{color:var(--muted);margin:0 0 18px;max-width:95ch}
+.eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.stamp{font-size:12px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:18px 0 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px}
+.card span{display:block;font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.card strong{display:block;font-size:24px;margin-top:4px;font-variant-numeric:tabular-nums}
+.card small{color:var(--muted);font-size:12px}
+.card.warn strong{color:var(--warn)} .card.bad strong{color:var(--bad)} .card.ok strong{color:var(--ok)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin:16px 0}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:13px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#eef3f0;font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;color:#33473f;position:sticky;top:0}
+tbody tr:hover{background:#f3f7f4}
+td.num{font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+.pill{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11.5px;font-weight:600;white-space:nowrap}
+.pill.met{background:var(--ok-soft);color:var(--ok)}
+.pill.partial{background:var(--warn-soft);color:var(--warn)}
+.pill.absent{background:var(--bad-soft);color:var(--bad)}
+.pill.rejected{background:#ececec;color:#555}
+.pill.proposed{background:#e7eefb;color:#2a4d8f}
+.pill.blocking{background:var(--bad-soft);color:var(--bad)}
+.pill.review{background:var(--warn-soft);color:var(--warn)}
+.pill.watch{background:#e7eefb;color:#2a4d8f}
+.pill.info{background:#ececec;color:#555}
+.pill.match{background:var(--ok-soft);color:var(--ok)}
+.pill.irregular{background:var(--bad-soft);color:var(--bad)}
+.pill.notchecked{background:#ececec;color:#555}
+.unverified{color:var(--bad);font-weight:600;font-size:11px;white-space:nowrap}
+.src a{font-size:11.5px;word-break:break-all}
+.footnote{font-size:12px;color:var(--muted);margin-top:10px}
+.note{background:var(--warn-soft);border:1px solid #efd9a8;border-radius:10px;padding:12px 14px;font-size:13px;margin:14px 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.sidebar{position:static;height:auto}.grid2{grid-template-columns:1fr}}
+</style></head>
+<body><div class="layout">
+<aside class="sidebar"><a class="brand" href="index.html"><span class="badge">OWN5</span>
+<span>NFL Decision<br>Readiness<small>session cba42531</small></span></a>
+<div class="navcap">Navigation</div><a class="" href="index.html">Overview<small>Dashboard</small></a><a class="" href="executive-summary.html">Executive summary<small>Summary</small></a><a class="" href="requirements.html">Decision-readiness<small>Governance</small></a><a class="" href="strategies.html">Strategy falsification<small>Governance</small></a><a class="" href="suggestions.html">Suggestions for review<small>Governance</small></a><a class="" href="questions.html">Open questions<small>Governance</small></a><a class="" href="luck.html">Removal of luck<small>Statistics</small></a><a class="" href="flagged.html">Flagged for review<small>Assurance</small></a><a class="active" href="repo-audit.html">Repo consolidation<small>Assurance</small></a><a class="" href="sources.html">Sources<small>Assurance</small></a>
+<div class="sidefoot">Deterministic build. Every table row carries an official source link or an explicit UNVERIFIED badge. Retrieved 2026-11-15T00:00:00Z.</div>
+</aside>
+<main><div class="eyebrow">Assurance</div>
+<h1>Repo consolidation log</h1>
+<p class="lede">Consolidated, verified review of the existing NFL desks.</p>
+<div class="note">A line-by-line review of the desks' headline claims against the official pages fetched for this build. Irregularities are flagged, never silently corrected.</div><table><thead><tr><th>ID</th><th>Claim</th><th>Desk</th><th>Status</th><th>Evidence</th><th>Reason</th><th>Source</th></tr></thead><tbody><tr><td>RC-01</td><td>A price-snapshot store with opening/closing slots exists for every originated market</td><td>3fb93d11 / d38e90c5 / 853c0074 / 39086ec8</td><td><span class="pill match">MATCH</span></td><td>nfl-desk-3fb93d11/data/price_snapshots.csv (78 markets x snapshot types)</td><td>Store present; operator open/close blank and flagged because no official price source exists.</td><td class="src"><a href="https://sassnarep3-star.github.io/Own5/nfl-desk-3fb93d11/price-store.html" target="_blank" rel="noopener">source</a></td></tr><tr><td>RC-02</td><td>A verified results feed of official finals exists</td><td>3fb93d11 / d38e90c5 / 853c0074</td><td><span class="pill match">MATCH</span></td><td>nfl-desk-3fb93d11/data/results_feed.csv (137 official finals)</td><td>Feed present with per-row source URLs; reconciles to standings.</td><td class="src"><a href="https://sassnarep3-star.github.io/Own5/nfl-desk-3fb93d11/results.html" target="_blank" rel="noopener">source</a></td></tr><tr><td>RC-03</td><td>Origination order is side -&gt; total -&gt; moneyline with model/market/difference columns</td><td>3fb93d11</td><td><span class="pill match">MATCH</span></td><td>nfl-desk-3fb93d11/data/origination_steps.csv; originated_markets.csv</td><td>Order recorded per row; three separate columns present.</td><td class="src"><a href="https://sassnarep3-star.github.io/Own5/nfl-desk-3fb93d11/lines.html" target="_blank" rel="noopener">source</a></td></tr><tr><td>RC-04</td><td>Signal and staking are ranked separately</td><td>d38e90c5 / 3fb93d11 / 39086ec8</td><td><span class="pill match">MATCH</span></td><td>nfl-desk-d38e90c5/data/leaderboard_signal.csv; leaderboard_staking.csv</td><td>Two independent scorecards; a masking example demonstrates the split matters.</td><td class="src"><a href="https://sassnarep3-star.github.io/Own5/nfl-desk-d38e90c5/" target="_blank" rel="noopener">source</a></td></tr><tr><td>RC-05</td><td>Correlations are published only from official inputs, with n</td><td>3fb93d11 / 39086ec8</td><td><span class="pill match">MATCH</span></td><td>nfl-desk-3fb93d11/data/correlations_official.csv (9 pairs, each with n)</td><td>Official inputs only; prior aggregator values moved to a withheld register.</td><td class="src"><a href="https://sassnarep3-star.github.io/Own5/nfl-desk-3fb93d11/correlations.html" target="_blank" rel="noopener">source</a></td></tr><tr><td>RC-06</td><td>A demotion gate sends a live strategy back to paper</td><td>3fb93d11 / 39086ec8</td><td><span class="pill match">MATCH</span></td><td>nfl-desk-3fb93d11/data/demotion_gate.csv (D1a-D1f)</td><td>Six triggers defined and fail-closed; armed, not yet fired.</td><td class="src"><a href="https://sassnarep3-star.github.io/Own5/nfl-desk-3fb93d11/gates.html" target="_blank" rel="noopener">source</a></td></tr><tr><td>RC-07</td><td>Replacement depth (1st-4th string) is tracked, offence and defence</td><td>d38e90c5 / 3fb93d11 / 39086ec8</td><td><span class="pill notchecked">REVIEW</span></td><td>nfl-desk-d38e90c5/data/depth_detail.csv</td><td>Depth tracked per slot with compounding; Houston&#x27;s raster chart is blank+flagged, so coverage is 31/32.</td><td class="src"><a href="https://sassnarep3-star.github.io/Own5/nfl-desk-3fb93d11/depth.html" target="_blank" rel="noopener">source</a></td></tr><tr><td>RC-08</td><td>No strategy is certified; the leaderboard is honest about it</td><td>3fb93d11</td><td><span class="pill match">MATCH</span></td><td>strategy_ledger.csv: 0 families pass all gates</td><td>No certified entrant; the board is empty by design, not an omission.</td><td class="src"><a href="https://sassnarep3-star.github.io/Own5/nfl-desk-3fb93d11/leaderboard.html" target="_blank" rel="noopener">source</a></td></tr><tr><td>RC-09</td><td>The Week 11 injury report is unavailable (serves Week 10)</td><td>3fb93d11</td><td><span class="pill match">MATCH</span></td><td>https://www.nfl.com/injuries/league/2026/reg11 returns Week 10</td><td>Re-confirmed on 2026-11-15: the live report is Week 10; Week 11 is not published.</td><td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" target="_blank" rel="noopener">source</a></td></tr><tr><td>RC-10</td><td>The three Lions designations are Out</td><td>cba42531 (verified)</td><td><span class="pill match">MATCH</span></td><td>Official Week 10 injury report, 2026-11-15</td><td>Kerby Joseph (S), Cade Mays (C), D.J. Reed (CB) all listed Out on the official page.</td><td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" target="_blank" rel="noopener">source</a></td></tr><tr><td>RC-11</td><td>Standings advanced between the 2026-11-14 pin and 2026-11-15</td><td>cba42531 (verified)</td><td><span class="pill match">MATCH</span></td><td>Official standings 2026-11-15 vs nfl-desk-3fb93d11/data/standings_official.csv</td><td>The delta is explained by Week 10 finals on the official schedule (e.g. BUF 8-1, DET 7-2, KC 7-2); PF=PA identity holds on the 2026-11-15 snapshot.</td><td class="src"><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">source</a></td></tr><tr><td>RC-12</td><td>Cross-desk drift in earlier desks (depth_crosscheck, mixed leaderboard, third-party prices)</td><td>d38e90c5</td><td><span class="pill irregular">IRREGULAR</span></td><td>d38e90c5 repo audit findings RA-01, RA-03</td><td>Irregularities are in other sessions&#x27; files; logged here, not edited.</td><td class="src"><a href="https://sassnarep3-star.github.io/Own5/nfl-desk-d38e90c5/" target="_blank" rel="noopener">source</a></td></tr><tr><td>RC-13</td><td>Two pre-existing workflows fail on main at deterministic output checks</td><td>d38e90c5 / 853c0074</td><td><span class="pill notchecked">REVIEW</span></td><td>CI run logs cited in COORDINATION.md</td><td>Pre-existing and outside this session&#x27;s scope; logged for the owning sessions.</td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/actions" target="_blank" rel="noopener">source</a></td></tr></tbody></table>
+</main></div></body></html>

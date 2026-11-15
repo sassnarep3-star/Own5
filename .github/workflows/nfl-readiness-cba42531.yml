@@ -1,0 +1,91 @@
+name: Verify NFL decision-readiness desk (cba42531)
+
+# Rebuilds every table and page from the pinned registers, proves row by row
+# that every published table row links to a source (or carries an explicit
+# UNVERIFIED badge), and fails the build otherwise.  The desk is served by this
+# repository's existing GitHub Pages source (repo root), at
+# /Own5/nfl-readiness-cba42531/.  Nothing here calls deploy-pages.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'nfl-readiness-cba42531/**'
+      - '.github/workflows/nfl-readiness-cba42531.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'nfl-readiness-cba42531/**'
+      - '.github/workflows/nfl-readiness-cba42531.yml'
+  workflow_dispatch:
+  schedule:
+    - cron: '23 6 * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nfl-readiness-cba42531-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Consolidate registers and build every page
+        working-directory: nfl-readiness-cba42531
+        run: python3 run.py
+
+      - name: Deterministic rebuild check (data must not drift)
+        working-directory: nfl-readiness-cba42531
+        run: |
+          python3 run.py > /dev/null
+          python3 run.py > /dev/null
+
+      - name: Row-level source-link proof on the generated HTML
+        working-directory: nfl-readiness-cba42531
+        run: python3 verify.py
+
+      - name: Unit tests
+        working-directory: nfl-readiness-cba42531
+        run: python3 -W ignore -m unittest discover -s tests -v
+
+      - name: Committed artefacts match the deterministic build
+        run: git diff --exit-code -- nfl-readiness-cba42531
+
+      - name: Upload the built desk for review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nfl-readiness-cba42531
+          path: nfl-readiness-cba42531
+
+  pages-smoke:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: verify
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check the published desk is live
+        run: |
+          base="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/nfl-readiness-cba42531"
+          for path in "/" "/requirements.html" "/strategies.html" "/flagged.html"; do
+            url="$base$path"
+            ok=0
+            for attempt in $(seq 1 24); do
+              if curl --fail --silent --show-error --location "$url" | grep -q 'OWN5'; then
+                echo "OK $url"; ok=1; break
+              fi
+              sleep 10
+            done
+            if [ "$ok" -ne 1 ]; then
+              echo "Published page did not become ready: $url" >&2
+              exit 1
+            fi
+          done

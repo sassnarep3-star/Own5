@@ -1,0 +1,16 @@
+source_id,publisher,title,url,tier,retrieved_utc,used_for,source_desk
+SRC-STANDINGS,NFL.com,2026 NFL League Standings,https://www.nfl.com/standings/league/2026/REG,OFFICIAL,2026-11-15T00:00:00Z,"Readiness status, results reconciliation, no-price evidence",cba42531
+SRC-SCHED-W10,NFL.com,2026 NFL Week 10 Schedule,https://www.nfl.com/schedules/2026/by-week/week-10,OFFICIAL,2026-11-15T00:00:00Z,"Week 10 finals, venues, kickoff times",cba42531
+SRC-INJ-W10,NFL.com,Official NFL Injury Report - Week 10,https://www.nfl.com/injuries/league/2026/reg10,OFFICIAL,2026-11-15T00:00:00Z,"Lions designations, practice/game status",cba42531
+SRC-STANDINGS-PIN,NFL.com (pinned),2026 standings snapshot (2026-11-14),https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-3fb93d11/data/standings_official.csv,OFFICIAL,2026-11-14T21:33:19Z,Prior-state reconciliation for the 2026-11-15 standings delta,3fb93d11
+SRC-RESULTS-PIN,NFL.com (pinned),137-game official results feed,https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-3fb93d11/data/results_feed.csv,OFFICIAL,2026-11-14T21:33:19Z,Verified results feed (R-02) and backtest corpus,3fb93d11
+SRC-PRICE-STORE,This repository,Price-snapshot store (3fb93d11),https://sassnarep3-star.github.io/Own5/nfl-desk-3fb93d11/price-store.html,REPOSITORY,2026-11-14T21:33:19Z,"Price-snapshot store (R-01), open/close slots",3fb93d11
+SRC-LINES,This repository,Originated lines (3fb93d11),https://sassnarep3-star.github.io/Own5/nfl-desk-3fb93d11/lines.html,REPOSITORY,2026-11-14T21:33:19Z,Side/total/moneyline origination and residual columns,3fb93d11
+SRC-STRATEGIES,This repository,Strategy ledger (3fb93d11),https://sassnarep3-star.github.io/Own5/nfl-desk-3fb93d11/strategies.html,REPOSITORY,2026-11-14T21:33:19Z,"Strategy families, falsification register",3fb93d11
+SRC-GATES,This repository,Validation & demotion gates (3fb93d11),https://sassnarep3-star.github.io/Own5/nfl-desk-3fb93d11/gates.html,REPOSITORY,2026-11-14T21:33:19Z,Gates G0-G8 and demotion triggers D1a-D1f,3fb93d11
+SRC-LEADERBOARD,This repository,Leaderboard (3fb93d11 / d38e90c5),https://sassnarep3-star.github.io/Own5/nfl-desk-3fb93d11/leaderboard.html,REPOSITORY,2026-11-14T21:33:19Z,"Signal/staking split, ranking method",3fb93d11
+SRC-DEPTH,This repository,Injuries & replacement depth (3fb93d11),https://sassnarep3-star.github.io/Own5/nfl-desk-3fb93d11/depth.html,REPOSITORY,2026-11-14T21:33:19Z,"Replacement depth, availability",3fb93d11
+SRC-CORR,This repository,Official-only correlations (3fb93d11),https://sassnarep3-star.github.io/Own5/nfl-desk-3fb93d11/correlations.html,REPOSITORY,2026-11-14T21:33:19Z,Correlations with n (R-07),3fb93d11
+SRC-ENGINE,This repository,NFL engine desk (39086ec8),https://sassnarep3-star.github.io/Own5/nfl-engine-39086ec8/,REPOSITORY,2026-11-14T21:33:19Z,"Luck reference, staking-masking example, price capture options",39086ec8
+SRC-LUCK,This repository,Luck-vs-skill table (nfl-strategy-lab),https://github.com/sassnarep3-star/Own5/blob/main/data/luck_skill.csv,REPOSITORY,2026-11-02T00:00:00Z,Removal-of-luck panel values,arena-f1d30421
+SRC-COORD,This repository,COORDINATION.md shared task board,https://github.com/sassnarep3-star/Own5/blob/main/COORDINATION.md,REPOSITORY,2026-11-15T00:00:00Z,"Session claims, merge/deploy records",all
