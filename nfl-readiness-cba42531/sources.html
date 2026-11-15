@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sources registry - Own5 NFL Decision Readiness</title>
+<style>
+:root{--bg:#f5f7f6;--card:#fff;--ink:#12211d;--muted:#5d7168;--line:#dfe6e2;
+--accent:#14614f;--accent-soft:#e3f0eb;--warn:#8a5a00;--warn-soft:#fdf3e0;
+--bad:#8c2f2f;--bad-soft:#fbeaea;--ok:#14614f;--ok-soft:#e3f0eb;--slate:#3d4f48}
+*{box-sizing:border-box}
+body{margin:0;font:15px/1.55 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+color:var(--ink);background:var(--bg)}
+a{color:var(--accent)}
+.layout{display:grid;grid-template-columns:250px 1fr;min-height:100vh}
+.sidebar{background:#0f2b25;color:#cfe3dc;padding:20px 16px;position:sticky;top:0;height:100vh;overflow:auto}
+.brand{display:flex;gap:10px;align-items:center;color:#fff;text-decoration:none;font-weight:700;font-size:17px}
+.brand span.badge{background:var(--accent);border-radius:6px;padding:2px 8px;font-size:12px}
+.brand small{display:block;font-weight:500;font-size:11px;color:#8fb3a7;letter-spacing:.08em}
+.navcap{font-size:10px;letter-spacing:.14em;color:#7fa394;margin:16px 0 6px;text-transform:uppercase}
+.sidebar nav a{display:block;color:#cfe3dc;text-decoration:none;padding:7px 10px;border-radius:7px;font-size:13.5px}
+.sidebar nav a:hover{background:#173a32}
+.sidebar nav a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar nav a small{display:block;color:#8fb3a7;font-weight:400;font-size:11px}
+.sidebar nav a.active small{color:#bfe0d4}
+.sidefoot{margin-top:18px;font-size:11.5px;color:#8fb3a7;border-top:1px solid #234a40;padding-top:12px}
+main{padding:26px 30px 60px;max-width:1500px}
+h1{font-size:26px;margin:0 0 6px}
+h2{font-size:19px;margin:30px 0 10px}
+p.lede{color:var(--muted);margin:0 0 18px;max-width:95ch}
+.eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.stamp{font-size:12px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:18px 0 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px}
+.card span{display:block;font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.card strong{display:block;font-size:24px;margin-top:4px;font-variant-numeric:tabular-nums}
+.card small{color:var(--muted);font-size:12px}
+.card.warn strong{color:var(--warn)} .card.bad strong{color:var(--bad)} .card.ok strong{color:var(--ok)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin:16px 0}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:13px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#eef3f0;font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;color:#33473f;position:sticky;top:0}
+tbody tr:hover{background:#f3f7f4}
+td.num{font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+.pill{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11.5px;font-weight:600;white-space:nowrap}
+.pill.met{background:var(--ok-soft);color:var(--ok)}
+.pill.partial{background:var(--warn-soft);color:var(--warn)}
+.pill.absent{background:var(--bad-soft);color:var(--bad)}
+.pill.rejected{background:#ececec;color:#555}
+.pill.proposed{background:#e7eefb;color:#2a4d8f}
+.pill.blocking{background:var(--bad-soft);color:var(--bad)}
+.pill.review{background:var(--warn-soft);color:var(--warn)}
+.pill.watch{background:#e7eefb;color:#2a4d8f}
+.pill.info{background:#ececec;color:#555}
+.pill.match{background:var(--ok-soft);color:var(--ok)}
+.pill.irregular{background:var(--bad-soft);color:var(--bad)}
+.pill.notchecked{background:#ececec;color:#555}
+.unverified{color:var(--bad);font-weight:600;font-size:11px;white-space:nowrap}
+.src a{font-size:11.5px;word-break:break-all}
+.footnote{font-size:12px;color:var(--muted);margin-top:10px}
+.note{background:var(--warn-soft);border:1px solid #efd9a8;border-radius:10px;padding:12px 14px;font-size:13px;margin:14px 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.sidebar{position:static;height:auto}.grid2{grid-template-columns:1fr}}
+</style></head>
+<body><div class="layout">
+<aside class="sidebar"><a class="brand" href="index.html"><span class="badge">OWN5</span>
+<span>NFL Decision<br>Readiness<small>session cba42531</small></span></a>
+<div class="navcap">Navigation</div><a class="" href="index.html">Overview<small>Dashboard</small></a><a class="" href="executive-summary.html">Executive summary<small>Summary</small></a><a class="" href="requirements.html">Decision-readiness<small>Governance</small></a><a class="" href="strategies.html">Strategy falsification<small>Governance</small></a><a class="" href="suggestions.html">Suggestions for review<small>Governance</small></a><a class="" href="questions.html">Open questions<small>Governance</small></a><a class="" href="luck.html">Removal of luck<small>Statistics</small></a><a class="" href="flagged.html">Flagged for review<small>Assurance</small></a><a class="" href="repo-audit.html">Repo consolidation<small>Assurance</small></a><a class="active" href="sources.html">Sources<small>Assurance</small></a>
+<div class="sidefoot">Deterministic build. Every table row carries an official source link or an explicit UNVERIFIED badge. Retrieved 2026-11-15T00:00:00Z.</div>
+</aside>
+<main><div class="eyebrow">Assurance</div>
+<h1>Sources registry</h1>
+<p class="lede">The sources behind every published value.</p>
+<div class="note">Every official and repository source the readiness matrix and the luck panel rest on. OFFICIAL = NFL.com; REPOSITORY = this repo's own verified files.</div><table><thead><tr><th>ID</th><th>Publisher</th><th>Title</th><th>URL</th><th>Tier</th><th>Retrieved (UTC)</th><th>Used for</th><th>Source desk</th></tr></thead><tbody><tr><td>SRC-STANDINGS</td><td>NFL.com</td><td>2026 NFL League Standings</td><td class="src"><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">open</a></td><td>OFFICIAL</td><td>2026-11-15T00:00:00Z</td><td>Readiness status, results reconciliation, no-price evidence</td><td>cba42531</td></tr><tr><td>SRC-SCHED-W10</td><td>NFL.com</td><td>2026 NFL Week 10 Schedule</td><td class="src"><a href="https://www.nfl.com/schedules/2026/by-week/week-10" target="_blank" rel="noopener">open</a></td><td>OFFICIAL</td><td>2026-11-15T00:00:00Z</td><td>Week 10 finals, venues, kickoff times</td><td>cba42531</td></tr><tr><td>SRC-INJ-W10</td><td>NFL.com</td><td>Official NFL Injury Report - Week 10</td><td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" target="_blank" rel="noopener">open</a></td><td>OFFICIAL</td><td>2026-11-15T00:00:00Z</td><td>Lions designations, practice/game status</td><td>cba42531</td></tr><tr><td>SRC-STANDINGS-PIN</td><td>NFL.com (pinned)</td><td>2026 standings snapshot (2026-11-14)</td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-3fb93d11/data/standings_official.csv" target="_blank" rel="noopener">open</a></td><td>OFFICIAL</td><td>2026-11-14T21:33:19Z</td><td>Prior-state reconciliation for the 2026-11-15 standings delta</td><td>3fb93d11</td></tr><tr><td>SRC-RESULTS-PIN</td><td>NFL.com (pinned)</td><td>137-game official results feed</td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-3fb93d11/data/results_feed.csv" target="_blank" rel="noopener">open</a></td><td>OFFICIAL</td><td>2026-11-14T21:33:19Z</td><td>Verified results feed (R-02) and backtest corpus</td><td>3fb93d11</td></tr><tr><td>SRC-PRICE-STORE</td><td>This repository</td><td>Price-snapshot store (3fb93d11)</td><td class="src"><a href="https://sassnarep3-star.github.io/Own5/nfl-desk-3fb93d11/price-store.html" target="_blank" rel="noopener">open</a></td><td>REPOSITORY</td><td>2026-11-14T21:33:19Z</td><td>Price-snapshot store (R-01), open/close slots</td><td>3fb93d11</td></tr><tr><td>SRC-LINES</td><td>This repository</td><td>Originated lines (3fb93d11)</td><td class="src"><a href="https://sassnarep3-star.github.io/Own5/nfl-desk-3fb93d11/lines.html" target="_blank" rel="noopener">open</a></td><td>REPOSITORY</td><td>2026-11-14T21:33:19Z</td><td>Side/total/moneyline origination and residual columns</td><td>3fb93d11</td></tr><tr><td>SRC-STRATEGIES</td><td>This repository</td><td>Strategy ledger (3fb93d11)</td><td class="src"><a href="https://sassnarep3-star.github.io/Own5/nfl-desk-3fb93d11/strategies.html" target="_blank" rel="noopener">open</a></td><td>REPOSITORY</td><td>2026-11-14T21:33:19Z</td><td>Strategy families, falsification register</td><td>3fb93d11</td></tr><tr><td>SRC-GATES</td><td>This repository</td><td>Validation &amp; demotion gates (3fb93d11)</td><td class="src"><a href="https://sassnarep3-star.github.io/Own5/nfl-desk-3fb93d11/gates.html" target="_blank" rel="noopener">open</a></td><td>REPOSITORY</td><td>2026-11-14T21:33:19Z</td><td>Gates G0-G8 and demotion triggers D1a-D1f</td><td>3fb93d11</td></tr><tr><td>SRC-LEADERBOARD</td><td>This repository</td><td>Leaderboard (3fb93d11 / d38e90c5)</td><td class="src"><a href="https://sassnarep3-star.github.io/Own5/nfl-desk-3fb93d11/leaderboard.html" target="_blank" rel="noopener">open</a></td><td>REPOSITORY</td><td>2026-11-14T21:33:19Z</td><td>Signal/staking split, ranking method</td><td>3fb93d11</td></tr><tr><td>SRC-DEPTH</td><td>This repository</td><td>Injuries &amp; replacement depth (3fb93d11)</td><td class="src"><a href="https://sassnarep3-star.github.io/Own5/nfl-desk-3fb93d11/depth.html" target="_blank" rel="noopener">open</a></td><td>REPOSITORY</td><td>2026-11-14T21:33:19Z</td><td>Replacement depth, availability</td><td>3fb93d11</td></tr><tr><td>SRC-CORR</td><td>This repository</td><td>Official-only correlations (3fb93d11)</td><td class="src"><a href="https://sassnarep3-star.github.io/Own5/nfl-desk-3fb93d11/correlations.html" target="_blank" rel="noopener">open</a></td><td>REPOSITORY</td><td>2026-11-14T21:33:19Z</td><td>Correlations with n (R-07)</td><td>3fb93d11</td></tr><tr><td>SRC-ENGINE</td><td>This repository</td><td>NFL engine desk (39086ec8)</td><td class="src"><a href="https://sassnarep3-star.github.io/Own5/nfl-engine-39086ec8/" target="_blank" rel="noopener">open</a></td><td>REPOSITORY</td><td>2026-11-14T21:33:19Z</td><td>Luck reference, staking-masking example, price capture options</td><td>39086ec8</td></tr><tr><td>SRC-LUCK</td><td>This repository</td><td>Luck-vs-skill table (nfl-strategy-lab)</td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/luck_skill.csv" target="_blank" rel="noopener">open</a></td><td>REPOSITORY</td><td>2026-11-02T00:00:00Z</td><td>Removal-of-luck panel values</td><td>arena-f1d30421</td></tr><tr><td>SRC-COORD</td><td>This repository</td><td>COORDINATION.md shared task board</td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/COORDINATION.md" target="_blank" rel="noopener">open</a></td><td>REPOSITORY</td><td>2026-11-15T00:00:00Z</td><td>Session claims, merge/deploy records</td><td>all</td></tr></tbody></table>
+</main></div></body></html>
