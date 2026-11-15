@@ -1963,4 +1963,23 @@ repo file the row cites (existence + marker), never copied on trust.
 | RR-11 | Rebase on origin/main, PR to main, autonomous merge, live Pages check, record | unclaimed | cba42531 | COORDINATION.md, README.md | Merge only after verify PASS and a live URL check. |
 
 ### Session cba42531 — status log
-(Updated as tasks complete; the final record is appended at the bottom of this block.)
+
+| ID | Task | Status | Notes |
+|----|------|--------|-------|
+| RR-01 | Coordination claim | done | Claim pushed (`eb64af1`-equivalent first commit) before implementation. |
+| RR-02 | Official-source verification 2026-11-15 | done | nfl.com standings, Week 10 schedule, Week 10 injury report fetched and read; recorded in `data/official_evidence.csv` and `data/sources.csv`. |
+| RR-03 | Decision-readiness matrix | done | 85 requirements × status × blocking gate × clearing number on the landing page; statuses checked against cited repo files by `consolidate.py` (59 MATCH, 0 IRREGULAR). |
+| RR-04 | Per-strategy two-sided "what would change our mind" | done | 9 strategy families with confirm-side + refute-side in `data/strategy_falsification.csv`. |
+| RR-05 | Removal-of-luck panel | done | `data/luck_panel.csv` (9 values, each with n + source) on the landing page and `luck.html`. |
+| RR-06 | Consolidated suggestions register | done | 15 suggestions (options + recommended path + review test) in `data/suggestions.csv`, `suggestions.html`. |
+| RR-07 | Consolidated questions register | done | 16 questions (have/missing/cheapest route) in `data/questions.csv`, `questions.html`. |
+| RR-08 | Consolidated flagged + sources | done | 12 flags and 15 sources in `data/flagged.csv`, `data/sources.csv`, with pages. |
+| RR-09 | Build, verifier, tests, CI | done | `run.py` deterministic; `verify.py` 268 rows PASS (all source-linked or UNVERIFIED, 0 broken links); 14 unit tests pass; scoped workflow added. |
+| RR-10 | Executive summary | done | `research/nfl-cba42531/EXECUTIVE_SUMMARY.md` + `executive-summary.html`. |
+| RR-11 | Rebase, PR, merge, Pages, record | in progress | See the final record appended below. |
+
+**Official verification performed (2026-11-15):** the league PF==PA identity holds on the 2026-11-15
+standings snapshot; the delta vs the pinned 2026-11-14 snapshot is explained by the Week 10 finals
+on the official schedule; the three Lions designations are confirmed Out and Patriots Ben Brown is
+confirmed at C; the official pages publish no betting prices (so operator open/close values stay
+blank and flagged).
