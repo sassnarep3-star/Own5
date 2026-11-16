@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Removal of luck — OWN5 NFL decision desk (e46fb855)</title>
+<style>
+:root{
+  --bg:#0e1116; --panel:#161b22; --panel2:#1c232c; --line:#2a323d;
+  --ink:#e6edf3; --muted:#9aa7b4; --accent:#4cc2ff; --ok:#3fb950; --warn:#d29922;
+  --bad:#f85149; --blank:#8b949e;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+header.top{background:linear-gradient(180deg,#111823,#0e1116);border-bottom:1px solid var(--line);
+  padding:18px 22px;position:sticky;top:0;z-index:20}
+header.top h1{margin:0;font-size:17px;letter-spacing:.02em}
+header.top .sub{color:var(--muted);font-size:12.5px;margin-top:3px}
+.shell{display:grid;grid-template-columns:236px minmax(0,1fr);gap:0;align-items:start}
+nav.side{border-right:1px solid var(--line);padding:16px 10px 40px;position:sticky;top:70px;
+  height:calc(100vh - 70px);overflow:auto}
+nav.side a{display:block;padding:7px 10px;border-radius:6px;color:var(--muted);font-size:13.5px}
+nav.side a:hover{background:var(--panel);color:var(--ink);text-decoration:none}
+nav.side a.on{background:#1d2b38;color:var(--ink);font-weight:600}
+nav.side .grp{color:#6e7b8b;font-size:11px;text-transform:uppercase;letter-spacing:.08em;
+  padding:14px 10px 6px}
+main{padding:22px 26px 80px;min-width:0;max-width:1500px}
+h2{margin:26px 0 8px;font-size:19px}
+h2:first-child{margin-top:4px}
+h3{margin:20px 0 6px;font-size:15px;color:var(--ink)}
+p{color:#c9d4de;max-width:100ch}
+p.lead{color:var(--muted)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:12px;margin:14px 0 6px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 15px;
+  display:flex;flex-direction:column;gap:5px}
+.kpi-value{font-size:25px;font-weight:650;letter-spacing:-.01em}
+.kpi-label{color:var(--muted);font-size:12px;line-height:1.35}
+.callout{border-left:3px solid var(--accent);background:var(--panel);padding:12px 15px;
+  border-radius:0 8px 8px 0;margin:14px 0}
+.callout.warn{border-color:var(--warn)}
+.callout.bad{border-color:var(--bad)}
+.callout.ok{border-color:var(--ok)}
+.tablewrap{margin:12px 0 22px;background:var(--panel);border:1px solid var(--line);
+  border-radius:10px;padding:12px 13px 4px;overflow:auto}
+.table-note{color:var(--muted);font-size:12px;margin:0 0 8px}
+input.filter{width:100%;max-width:340px;margin-bottom:10px;padding:7px 10px;border-radius:7px;
+  border:1px solid var(--line);background:#0d1218;color:var(--ink);font-size:13px}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{text-align:left;padding:6px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+th{position:sticky;top:0;background:var(--panel2);color:#b9c6d3;font-weight:600;
+  white-space:nowrap;z-index:2}
+tbody tr:hover{background:#1a212b}
+td .wrap{display:block;max-width:52ch;white-space:normal;color:#c9d4de}
+td.num{font-variant-numeric:tabular-nums}
+.pill{display:inline-block;padding:1px 7px;border-radius:999px;font-size:11.5px;font-weight:600;
+  border:1px solid transparent;white-space:nowrap}
+.pill.ok{background:rgba(63,185,80,.14);color:#7ee787;border-color:rgba(63,185,80,.35)}
+.pill.warn{background:rgba(210,153,34,.14);color:#e3b341;border-color:rgba(210,153,34,.35)}
+.pill.bad{background:rgba(248,81,73,.14);color:#ff7b72;border-color:rgba(248,81,73,.35)}
+.pill.mute{background:#222a33;color:#9aa7b4;border-color:#2f3944}
+.pill.blank2{background:#222a33;color:#8b949e;border-color:#2f3944}
+.blank{display:inline-block;padding:1px 7px;border-radius:999px;font-size:11.5px;font-weight:700;
+  background:#242c36;color:#8b949e;border:1px dashed #46515e;white-space:nowrap}
+.empty{color:var(--muted);font-style:italic}
+ul.tight{padding-left:20px;max-width:100ch}
+ul.tight li{margin:4px 0;color:#c9d4de}
+footer{color:#6e7b8b;font-size:12px;padding:20px 26px;border-top:1px solid var(--line)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:18px}
+@media(max-width:900px){
+  .shell{grid-template-columns:1fr}
+  nav.side{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line);
+    display:flex;flex-wrap:wrap;gap:4px}
+  nav.side .grp{display:none}
+  main{padding:16px}
+}
+</style></head>
+<body>
+<header class="top">
+  <h1>OWN5 · NFL decision-readiness desk</h1>
+  <div class="sub">Session e46fb855 · built 2026-11-15T23:40:00Z · every table row links to
+  the official page it was read from; anything that cannot be sourced is left blank and flagged.</div>
+</header>
+<div class="shell">
+<nav class="side">
+  <div class="grp">Read first</div>
+  <a class="" href="index.html">Overview</a><a class="" href="executive-summary.html">Executive summary</a><a class="" href="requirements.html">Requirements</a><a class="" href="questions.html">Questions</a><a class="" href="suggestions.html">Suggestions</a>
+  <div class="grp">Evidence</div>
+  <a class="" href="results.html">Results feed</a><a class="" href="slate.html">Week 11 slate</a><a class="" href="lines.html">Originated lines</a><a class="" href="price-store.html">Price store</a><a class="" href="depth.html">Depth &amp; replacements</a><a class="" href="injuries.html">Injuries</a><a class="" href="matchup.html">Matchup matrix</a><a class="" href="strategies.html">Strategies</a><a class="" href="gates.html">Gates</a>
+  <div class="grp">Registers</div>
+  <a class="" href="leaderboard.html">Leaderboard</a><a class="" href="correlations.html">Correlations</a><a class="on" href="luck.html">Luck panel</a><a class="" href="flagged.html">Flagged for review</a><a class="" href="sources.html">Sources</a><a class="" href="audit.html">Repo audit</a><a class="" href="verification.html">Verification</a>
+</nav>
+<main>
+<h2>Removal of luck</h2>
+<p class="lead">How much of each club&#x27;s record survives a luck test, and how big a sample a real edge needs before it can be distinguished from noise.</p>
+<div class="kpis"><div class="card"><span class="kpi-value">32</span><span class="kpi-label">clubs</span></div><div class="card"><span class="kpi-value">2.37</span><span class="kpi-label">Pythagorean exponent (a modelling choice, F-14)</span></div><div class="card"><span class="kpi-value">145</span><span class="kpi-label">games in the sample</span></div></div><div class="callout warn">The Pythagorean exponent of 2.37 is an industry convention, not a league-published number. It is labelled as a modelling choice everywhere it is used.</div><div class="tablewrap"><p class="table-note">32 rows</p><input class="filter" type="search" placeholder="Filter rows…" data-table="t-luck" aria-label="Filter this table"><table id="t-luck"><thead><tr><th>Team</th><th>Club</th><th>Games</th><th>Actual wins</th><th>Actual win%</th><th>Pythagorean exp. wins</th><th>Luck (actual − expected)</th><th>Close-game share</th><th>Binomial SD (wins)</th><th>Binomial 95% low</th><th>Binomial 95% high</th><th>Inside the noise band</th><th>Source</th></tr></thead><tbody><tr><td>ARI</td><td>Arizona Cardinals</td><td>9</td><td>3</td><td>0.3333</td><td>2.691</td><td>0.309</td><td>0.2222</td><td>1.500</td><td>1.56</td><td>7.44</td><td><span class="pill ok">YES</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>ATL</td><td>Atlanta Falcons</td><td>10</td><td>3</td><td>0.3000</td><td>3.562</td><td>-0.562</td><td>0.0000</td><td>1.581</td><td>1.90</td><td>8.10</td><td><span class="pill ok">YES</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>BAL</td><td>Baltimore Ravens</td><td>9</td><td>4</td><td>0.4444</td><td>3.342</td><td>0.658</td><td>0.2222</td><td>1.500</td><td>1.56</td><td>7.44</td><td><span class="pill ok">YES</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>BUF</td><td>Buffalo Bills</td><td>9</td><td>8</td><td>0.8889</td><td>6.339</td><td>1.661</td><td>0.3333</td><td>1.500</td><td>1.56</td><td>7.44</td><td><span class="pill mute">no</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>CAR</td><td>Carolina Panthers</td><td>9</td><td>4</td><td>0.4444</td><td>4.102</td><td>-0.102</td><td>0.2222</td><td>1.500</td><td>1.56</td><td>7.44</td><td><span class="pill ok">YES</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>CHI</td><td>Chicago Bears</td><td>9</td><td>7</td><td>0.7778</td><td>5.892</td><td>1.108</td><td>0.1111</td><td>1.500</td><td>1.56</td><td>7.44</td><td><span class="pill ok">YES</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>CIN</td><td>Cincinnati Bengals</td><td>8</td><td>6</td><td>0.7500</td><td>5.431</td><td>0.569</td><td>0.1250</td><td>1.414</td><td>1.23</td><td>6.77</td><td><span class="pill ok">YES</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>CLE</td><td>Cleveland Browns</td><td>10</td><td>6</td><td>0.6000</td><td>4.079</td><td>1.921</td><td>0.6000</td><td>1.581</td><td>1.90</td><td>8.10</td><td><span class="pill ok">YES</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>DAL</td><td>Dallas Cowboys</td><td>9</td><td>4</td><td>0.4444</td><td>4.721</td><td>-0.721</td><td>0.2222</td><td>1.500</td><td>1.56</td><td>7.44</td><td><span class="pill ok">YES</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>DEN</td><td>Denver Broncos</td><td>9</td><td>7</td><td>0.7778</td><td>4.833</td><td>2.167</td><td>0.1111</td><td>1.500</td><td>1.56</td><td>7.44</td><td><span class="pill ok">YES</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>DET</td><td>Detroit Lions</td><td>9</td><td>7</td><td>0.7778</td><td>5.824</td><td>1.176</td><td>0.2222</td><td>1.500</td><td>1.56</td><td>7.44</td><td><span class="pill ok">YES</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>GB</td><td>Green Bay Packers</td><td>10</td><td>6</td><td>0.6000</td><td>5.133</td><td>0.867</td><td>0.3000</td><td>1.581</td><td>1.90</td><td>8.10</td><td><span class="pill ok">YES</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>HOU</td><td>Houston Texans</td><td>9</td><td>3</td><td>0.3333</td><td>4.830</td><td>-1.830</td><td>0.3333</td><td>1.500</td><td>1.56</td><td>7.44</td><td><span class="pill ok">YES</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>IND</td><td>Indianapolis Colts</td><td>10</td><td>3</td><td>0.3000</td><td>3.482</td><td>-0.482</td><td>0.3000</td><td>1.581</td><td>1.90</td><td>8.10</td><td><span class="pill ok">YES</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>JAX</td><td>Jacksonville Jaguars</td><td>9</td><td>7</td><td>0.7778</td><td>7.333</td><td>-0.333</td><td>0.2222</td><td>1.500</td><td>1.56</td><td>7.44</td><td><span class="pill ok">YES</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>KC</td><td>Kansas City Chiefs</td><td>9</td><td>7</td><td>0.7778</td><td>6.564</td><td>0.436</td><td>0.2222</td><td>1.500</td><td>1.56</td><td>7.44</td><td><span class="pill ok">YES</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>LAC</td><td>Los Angeles Chargers</td><td>8</td><td>0</td><td>0.0000</td><td>1.575</td><td>-1.575</td><td>0.0000</td><td>1.414</td><td>1.23</td><td>6.77</td><td><span class="pill mute">no</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>LAR</td><td>Los Angeles Rams</td><td>9</td><td>5</td><td>0.5556</td><td>5.382</td><td>-0.382</td><td>0.2222</td><td>1.500</td><td>1.56</td><td>7.44</td><td><span class="pill ok">YES</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>LV</td><td>Las Vegas Raiders</td><td>9</td><td>4</td><td>0.4444</td><td>3.871</td><td>0.129</td><td>0.2222</td><td>1.500</td><td>1.56</td><td>7.44</td><td><span class="pill ok">YES</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>MIA</td><td>Miami Dolphins</td><td>9</td><td>1</td><td>0.1111</td><td>2.452</td><td>-1.452</td><td>0.2222</td><td>1.500</td><td>1.56</td><td>7.44</td><td><span class="pill mute">no</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>MIN</td><td>Minnesota Vikings</td><td>9</td><td>7</td><td>0.7778</td><td>6.194</td><td>0.806</td><td>0.0000</td><td>1.500</td><td>1.56</td><td>7.44</td><td><span class="pill ok">YES</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>NE</td><td>New England Patriots</td><td>10</td><td>5</td><td>0.5000</td><td>4.464</td><td>0.536</td><td>0.2000</td><td>1.581</td><td>1.90</td><td>8.10</td><td><span class="pill ok">YES</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>NO</td><td>New Orleans Saints</td><td>9</td><td>3</td><td>0.3333</td><td>3.680</td><td>-0.680</td><td>0.3333</td><td>1.500</td><td>1.56</td><td>7.44</td><td><span class="pill ok">YES</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>NYG</td><td>New York Giants</td><td>9</td><td>5</td><td>0.6111</td><td>4.687</td><td>0.313</td><td>0.2222</td><td>1.500</td><td>1.56</td><td>7.44</td><td><span class="pill ok">YES</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>NYJ</td><td>New York Jets</td><td>10</td><td>2</td><td>0.2000</td><td>3.455</td><td>-1.455</td><td>0.2000</td><td>1.581</td><td>1.90</td><td>8.10</td><td><span class="pill ok">YES</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>PHI</td><td>Philadelphia Eagles</td><td>9</td><td>2</td><td>0.2222</td><td>2.510</td><td>-0.510</td><td>0.2222</td><td>1.500</td><td>1.56</td><td>7.44</td><td><span class="pill ok">YES</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>PIT</td><td>Pittsburgh Steelers</td><td>8</td><td>6</td><td>0.7500</td><td>5.034</td><td>0.966</td><td>0.2500</td><td>1.414</td><td>1.23</td><td>6.77</td><td><span class="pill ok">YES</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>SEA</td><td>Seattle Seahawks</td><td>9</td><td>5</td><td>0.5556</td><td>5.651</td><td>-0.651</td><td>0.4444</td><td>1.500</td><td>1.56</td><td>7.44</td><td><span class="pill ok">YES</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>SF</td><td>San Francisco 49ers</td><td>8</td><td>7</td><td>0.8750</td><td>5.803</td><td>1.197</td><td>0.1250</td><td>1.414</td><td>1.23</td><td>6.77</td><td><span class="pill mute">no</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>TB</td><td>Tampa Bay Buccaneers</td><td>9</td><td>3</td><td>0.3333</td><td>5.169</td><td>-2.169</td><td>0.2222</td><td>1.500</td><td>1.56</td><td>7.44</td><td><span class="pill ok">YES</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>TEN</td><td>Tennessee Titans</td><td>9</td><td>1</td><td>0.1111</td><td>2.696</td><td>-1.696</td><td>0.1111</td><td>1.500</td><td>1.56</td><td>7.44</td><td><span class="pill mute">no</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>WAS</td><td>Washington Commanders</td><td>9</td><td>3</td><td>0.3889</td><td>3.817</td><td>-0.817</td><td>0.4444</td><td>1.500</td><td>1.56</td><td>7.44</td><td><span class="pill ok">YES</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr></tbody></table></div><h3>How much evidence is enough?</h3><div class="tablewrap"><p class="table-note">4 rows</p><input class="filter" type="search" placeholder="Filter rows…" data-table="t-power" aria-label="Filter this table"><table id="t-power"><thead><tr><th>True hit rate</th><th>Bets needed (80% power)</th><th>Coin flip showing ≥55% over 200 bets</th><th>Note</th><th>Source</th></tr></thead><tbody><tr><td>0.53</td><td>2180</td><td>0.0687</td><td><span class="wrap">Computed with a two-sided alpha of 0.05 and 80% power.</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>0.55</td><td>790</td><td>0.0687</td><td><span class="wrap">Exact binomial: the chance a fair coin shows at least 55% over 200 bets.</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>0.57</td><td>400</td><td>0.0687</td><td><span class="wrap">Computed with a two-sided alpha of 0.05 and 80% power.</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>0.60</td><td>200</td><td>0.0687</td><td><span class="wrap">Computed with a two-sided alpha of 0.05 and 80% power.</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr></tbody></table></div>
+</main>
+</div>
+<footer>OWN5 · e46fb855 · Tables are generated from CSVs that are rebuilt deterministically by
+<code>engine.py</code>; the row-level source proof is re-run on every build by <code>verify.py</code>.</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('input.filter').forEach(function (input) {
+    var table = document.getElementById(input.getAttribute('data-table'));
+    if (!table) return;
+    var rows = Array.prototype.slice.call(table.tBodies[0].rows);
+    var note = table.parentNode.querySelector('.table-note');
+    var total = rows.length;
+    input.addEventListener('input', function () {
+      var q = input.value.trim().toLowerCase();
+      var shown = 0;
+      rows.forEach(function (tr) {
+        var hit = !q || tr.textContent.toLowerCase().indexOf(q) !== -1;
+        tr.style.display = hit ? '' : 'none';
+        if (hit) shown++;
+      });
+      if (note) note.textContent = q ? (shown + ' of ' + total + ' rows shown') : (total + ' rows');
+    });
+  });
+});
+</script>
+</body></html>

@@ -1,0 +1,25 @@
+{
+  "source_id": "OFF-SLATE-WK11-2026-1115",
+  "publisher": "NFL.com",
+  "title": "2026 NFL Schedule - Week 11",
+  "url": "https://www.nfl.com/schedules/2026/by-week/week-11",
+  "tier": "OFFICIAL",
+  "fetched_utc": "2026-11-15T23:24:00Z",
+  "venue_provenance": "Every venue string below is the stadium name published by nfl.com on this schedule page (per-game 'Hotel' link parameter destinationAddress.location), except MIN@SF, whose venue is transcribed from the official game centre page https://www.nfl.com/games/vikings-at-49ers-2026-reg-11 (Location: MEXICO CITY, Stadium: ESTADIO BANORTE).",
+  "bye_teams": ["ATL", "CLE", "GB", "LAR", "NE", "SEA"],
+  "games": [
+    {"game_id": "2026_11_IND_HOU", "away": "IND", "home": "HOU", "date": "2026-11-19", "kickoff_et": "8:15 PM", "network": "PRIME", "venue": "NRG Stadium", "neutral": false, "venue_source": "https://www.nfl.com/schedules/2026/by-week/week-11", "game_url": "https://www.nfl.com/games/colts-at-texans-2026-reg-11"},
+    {"game_id": "2026_11_MIA_BUF", "away": "MIA", "home": "BUF", "date": "2026-11-22", "kickoff_et": "1:00 PM", "network": "CBS", "venue": "Highmark Stadium", "neutral": false, "venue_source": "https://www.nfl.com/schedules/2026/by-week/week-11", "game_url": "https://www.nfl.com/games/dolphins-at-bills-2026-reg-11"},
+    {"game_id": "2026_11_BAL_CAR", "away": "BAL", "home": "CAR", "date": "2026-11-22", "kickoff_et": "1:00 PM", "network": "FOX", "venue": "Bank of America Stadium", "neutral": false, "venue_source": "https://www.nfl.com/schedules/2026/by-week/week-11", "game_url": "https://www.nfl.com/games/ravens-at-panthers-2026-reg-11"},
+    {"game_id": "2026_11_NO_CHI", "away": "NO", "home": "CHI", "date": "2026-11-22", "kickoff_et": "1:00 PM", "network": "FOX", "venue": "Soldier Field", "neutral": false, "venue_source": "https://www.nfl.com/schedules/2026/by-week/week-11", "game_url": "https://www.nfl.com/games/saints-at-bears-2026-reg-11"},
+    {"game_id": "2026_11_TEN_DAL", "away": "TEN", "home": "DAL", "date": "2026-11-22", "kickoff_et": "1:00 PM", "network": "FOX", "venue": "AT&T Stadium", "neutral": false, "venue_source": "https://www.nfl.com/schedules/2026/by-week/week-11", "game_url": "https://www.nfl.com/games/titans-at-cowboys-2026-reg-11"},
+    {"game_id": "2026_11_TB_DET", "away": "TB", "home": "DET", "date": "2026-11-22", "kickoff_et": "1:00 PM", "network": "FOX", "venue": "Ford Field", "neutral": false, "venue_source": "https://www.nfl.com/schedules/2026/by-week/week-11", "game_url": "https://www.nfl.com/games/buccaneers-at-lions-2026-reg-11"},
+    {"game_id": "2026_11_ARI_KC", "away": "ARI", "home": "KC", "date": "2026-11-22", "kickoff_et": "1:00 PM", "network": "CBS", "venue": "GEHA Field at Arrowhead Stadium", "neutral": false, "venue_source": "https://www.nfl.com/schedules/2026/by-week/week-11", "game_url": "https://www.nfl.com/games/cardinals-at-chiefs-2026-reg-11"},
+    {"game_id": "2026_11_PIT_PHI", "away": "PIT", "home": "PHI", "date": "2026-11-22", "kickoff_et": "1:00 PM", "network": "CBS", "venue": "Lincoln Financial Field", "neutral": false, "venue_source": "https://www.nfl.com/schedules/2026/by-week/week-11", "game_url": "https://www.nfl.com/games/steelers-at-eagles-2026-reg-11"},
+    {"game_id": "2026_11_NYJ_LAC", "away": "NYJ", "home": "LAC", "date": "2026-11-22", "kickoff_et": "4:05 PM", "network": "FOX", "venue": "SoFi Stadium", "neutral": false, "venue_source": "https://www.nfl.com/schedules/2026/by-week/week-11", "game_url": "https://www.nfl.com/games/jets-at-chargers-2026-reg-11"},
+    {"game_id": "2026_11_JAX_NYG", "away": "JAX", "home": "NYG", "date": "2026-11-22", "kickoff_et": "4:25 PM", "network": "CBS", "venue": "MetLife Stadium", "neutral": false, "venue_source": "https://www.nfl.com/schedules/2026/by-week/week-11", "game_url": "https://www.nfl.com/games/jaguars-at-giants-2026-reg-11"},
+    {"game_id": "2026_11_LV_DEN", "away": "LV", "home": "DEN", "date": "2026-11-22", "kickoff_et": "4:25 PM", "network": "CBS", "venue": "Empower Field at Mile High", "neutral": false, "venue_source": "https://www.nfl.com/schedules/2026/by-week/week-11", "game_url": "https://www.nfl.com/games/raiders-at-broncos-2026-reg-11"},
+    {"game_id": "2026_11_MIN_SF", "away": "MIN", "home": "SF", "date": "2026-11-22", "kickoff_et": "8:20 PM", "network": "NBC", "venue": "Estadio Banorte", "neutral": true, "venue_source": "https://www.nfl.com/games/vikings-at-49ers-2026-reg-11", "game_url": "https://www.nfl.com/games/vikings-at-49ers-2026-reg-11"},
+    {"game_id": "2026_11_CIN_WAS", "away": "CIN", "home": "WAS", "date": "2026-11-23", "kickoff_et": "8:15 PM", "network": "ESPN", "venue": "FedEx Field", "neutral": false, "venue_source": "https://www.nfl.com/schedules/2026/by-week/week-11", "game_url": "https://www.nfl.com/games/bengals-at-commanders-2026-reg-11"}
+  ]
+}

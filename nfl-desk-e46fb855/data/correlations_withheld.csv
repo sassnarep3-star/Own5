@@ -1,0 +1,9 @@
+id,quantity,value_published_elsewhere,n_published_elsewhere,input_tier,published_by,why_withheld
+W1,QB passing yards vs top-WR receiving yards,0.76,3852 team-games,nflverse (third-party aggregator),"session arena-f1d30421, research/arena-f1d30421/correlation.md",AGGREGATOR input - inadmissible under the official-only rule
+W2,Game-line leg outcomes (phi),0.01,9479 pairs,nflverse (third-party aggregator),"session arena-f1d30421, data/correlation_parlays.csv",AGGREGATOR input - inadmissible under the official-only rule
+W3,Cross-game vs same-game parlay coupling ratio,0.984,9479 pairs,nflverse (third-party aggregator),"session arena-f1d30421, data/correlation_parlays.csv",AGGREGATOR input - inadmissible under the official-only rule
+W4,Favourites cover rate,0.481,"10729 games, 1980-2024",nflverse (third-party aggregator),"session arena-f1d30421, data/backtest_results.csv",AGGREGATOR input - inadmissible under the official-only rule
+W5,Home underdogs cover rate,0.526,"10729 games, 1980-2024",nflverse (third-party aggregator),"session arena-f1d30421, data/backtest_results.csv",AGGREGATOR input - inadmissible under the official-only rule
+W6,Overs cover rate,0.491,"10729 games, 1980-2024",nflverse (third-party aggregator),"session arena-f1d30421, data/backtest_results.csv",AGGREGATOR input - inadmissible under the official-only rule
+W7,Market spread vs closing spread (CLV basis),not published,0,no source,no desk in this repo,NO SOURCE - no price data of any kind exists in this repo
+W8,Player prop joint distributions,not published,0,no source,no desk in this repo,NO SOURCE - no prop prices exist in this repo

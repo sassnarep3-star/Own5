@@ -1,0 +1,10 @@
+week,games_evaluated,side_picks_correct,side_hit_rate,margin_mae,total_mae_estimator_a,total_mae_estimator_b,total_mae_league_average_baseline,source_url
+2,16,8,0.5000,15.6542,14.1667,11.5590,14.4609,https://www.nfl.com/standings/league/2026/REG
+3,16,8,0.5000,10.8912,13.7176,10.9502,12.0000,https://www.nfl.com/standings/league/2026/REG
+4,16,12,0.7500,7.1555,10.4779,9.5186,10.6250,https://www.nfl.com/standings/league/2026/REG
+5,15,9,0.6000,12.1202,10.8206,10.9594,12.2521,https://www.nfl.com/standings/league/2026/REG
+6,14,8,0.5714,6.5109,11.9503,9.8384,11.1284,https://www.nfl.com/standings/league/2026/REG
+7,14,8,0.5714,12.0152,10.4807,8.5742,9.3794,https://www.nfl.com/standings/league/2026/REG
+8,14,9,0.6429,12.0274,12.5137,10.6513,12.0768,https://www.nfl.com/standings/league/2026/REG
+9,15,12,0.8000,7.9299,11.2056,9.7754,10.9928,https://www.nfl.com/standings/league/2026/REG
+10,9,7,0.7778,9.6807,7.0911,5.7111,4.8807,https://www.nfl.com/standings/league/2026/REG

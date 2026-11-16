@@ -1,0 +1,11 @@
+correlation_id,variable_a,variable_b,n,r,ci95_lo,ci95_hi,input_tier,inputs,source_url
+C1,points for per game,win percentage,32,0.7252,0.5039,0.8571,OFFICIAL,"32 official standings rows, 2026-11-15",https://www.nfl.com/standings/league/2026/REG
+C2,points against per game,win percentage,32,-0.7131,-0.8503,-0.4850,OFFICIAL,"32 official standings rows, 2026-11-15",https://www.nfl.com/standings/league/2026/REG
+C3,net points per game,win percentage,32,0.8864,0.7782,0.9435,OFFICIAL,"32 official standings rows, 2026-11-15",https://www.nfl.com/standings/league/2026/REG
+C4,points for per game,points against per game,32,-0.3158,-0.5986,0.0370,OFFICIAL,"32 official standings rows, 2026-11-15",https://www.nfl.com/standings/league/2026/REG
+C5,home margin (actual),rating difference (model),145,0.6331,0.5242,0.7217,OFFICIAL,"145 official finals; in-sample by construction, published as a fit diagnostic",https://www.nfl.com/standings/league/2026/REG
+C6,game total (actual),predicted total (estimator A),145,0.4797,0.3435,0.5961,OFFICIAL,145 official finals; in-sample fit diagnostic,https://www.nfl.com/standings/league/2026/REG
+C7,rest-day difference (home minus away),home margin,129,0.3786,0.2201,0.5176,OFFICIAL,129 official finals with a previous game for both teams; dates from the official schedule,https://www.nfl.com/standings/league/2026/REG
+C8,Pythagorean expectation (exponent 2.37),actual win percentage,32,0.8884,0.7820,0.9445,OFFICIAL,"32 official standings rows; the exponent is a MODELLING CHOICE, not an official value (flagged F-14)",https://www.nfl.com/standings/league/2026/REG
+C9,share of games decided by 3 points or fewer,win percentage,32,0.0539,-0.3005,0.3952,OFFICIAL,"32 clubs; close-game share is the standard luck proxy, computed from official finals",https://www.nfl.com/standings/league/2026/REG
+C10,game total (actual),sum of the two teams' points-for rates,145,0.3321,0.1787,0.4696,OFFICIAL,145 official finals; a naive offensive-strength check,https://www.nfl.com/standings/league/2026/REG

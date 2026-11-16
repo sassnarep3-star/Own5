@@ -1,0 +1,4 @@
+control_id,control,n,expected_hit_rate,observed_hit_rate,note,source_url
+C1,Random pick (coin flip),145,0.5000,,The null every family must beat. Its interval is the yardstick on the leaderboard.,https://www.nfl.com/standings/league/2026/REG
+C2,Model favourite wins outright (in-sample),145,,0.7517,In-sample. The out-of-sample version is family F2 and is the one that counts.,https://www.nfl.com/standings/league/2026/REG
+C3,Home team wins outright,144,,0.4861,Identical to family F1; published on both boards so the reader can see the overlap.,https://www.nfl.com/standings/league/2026/REG

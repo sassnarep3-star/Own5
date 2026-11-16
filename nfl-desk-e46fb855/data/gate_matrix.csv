@@ -1,0 +1,91 @@
+family_id,gate_id,gate_name,observed,status,source_url
+F1,G0,Pre-registration,committed,PASS,https://www.nfl.com/standings/league/2026/REG
+F1,G1,Sample size,145,FAIL,https://www.nfl.com/standings/league/2026/REG
+F1,G2,Official price at timestamp,0 markets priced,FAIL,https://www.nfl.com/standings/league/2026/REG
+F1,G3,Proper score vs benchmark,not computable,BLOCKED (F-01),https://www.nfl.com/standings/league/2026/REG
+F1,G4,Walk-forward,walk-forward run,measurement only,https://www.nfl.com/standings/league/2026/REG
+F1,G5,Multiplicity,1.000000,FAIL,https://www.nfl.com/standings/league/2026/REG
+F1,G6,Calibration,see luck page,measurement only,https://www.nfl.com/standings/league/2026/REG
+F1,G7,Joint evidence (parlays and prop combos),no joint evidence,FAIL,https://www.nfl.com/standings/league/2026/REG
+F1,G8,Leakage,0 features after the price,PASS,https://www.nfl.com/standings/league/2026/REG
+F2,G0,Pre-registration,committed,PASS,https://www.nfl.com/standings/league/2026/REG
+F2,G1,Sample size,129,FAIL,https://www.nfl.com/standings/league/2026/REG
+F2,G2,Official price at timestamp,0 markets priced,FAIL,https://www.nfl.com/standings/league/2026/REG
+F2,G3,Proper score vs benchmark,not computable,BLOCKED (F-01),https://www.nfl.com/standings/league/2026/REG
+F2,G4,Walk-forward,walk-forward run,measurement only,https://www.nfl.com/standings/league/2026/REG
+F2,G5,Multiplicity,0.037198,PASS,https://www.nfl.com/standings/league/2026/REG
+F2,G6,Calibration,see luck page,measurement only,https://www.nfl.com/standings/league/2026/REG
+F2,G7,Joint evidence (parlays and prop combos),no joint evidence,FAIL,https://www.nfl.com/standings/league/2026/REG
+F2,G8,Leakage,0 features after the price,PASS,https://www.nfl.com/standings/league/2026/REG
+F3,G0,Pre-registration,committed,PASS,https://www.nfl.com/standings/league/2026/REG
+F3,G1,Sample size,145,FAIL,https://www.nfl.com/standings/league/2026/REG
+F3,G2,Official price at timestamp,0 markets priced,FAIL,https://www.nfl.com/standings/league/2026/REG
+F3,G3,Proper score vs benchmark,not computable,BLOCKED (F-01),https://www.nfl.com/standings/league/2026/REG
+F3,G4,Walk-forward,walk-forward run,measurement only,https://www.nfl.com/standings/league/2026/REG
+F3,G5,Multiplicity,1.000000,FAIL,https://www.nfl.com/standings/league/2026/REG
+F3,G6,Calibration,see luck page,measurement only,https://www.nfl.com/standings/league/2026/REG
+F3,G7,Joint evidence (parlays and prop combos),no joint evidence,FAIL,https://www.nfl.com/standings/league/2026/REG
+F3,G8,Leakage,0 features after the price,PASS,https://www.nfl.com/standings/league/2026/REG
+F4,G0,Pre-registration,committed,PASS,https://www.nfl.com/standings/league/2026/REG
+F4,G1,Sample size,33,FAIL,https://www.nfl.com/standings/league/2026/REG
+F4,G2,Official price at timestamp,0 markets priced,FAIL,https://www.nfl.com/standings/league/2026/REG
+F4,G3,Proper score vs benchmark,not computable,BLOCKED (F-01),https://www.nfl.com/standings/league/2026/REG
+F4,G4,Walk-forward,walk-forward run,measurement only,https://www.nfl.com/standings/league/2026/REG
+F4,G5,Multiplicity,0.002917,PASS,https://www.nfl.com/standings/league/2026/REG
+F4,G6,Calibration,see luck page,measurement only,https://www.nfl.com/standings/league/2026/REG
+F4,G7,Joint evidence (parlays and prop combos),no joint evidence,FAIL,https://www.nfl.com/standings/league/2026/REG
+F4,G8,Leakage,0 features after the price,PASS,https://www.nfl.com/standings/league/2026/REG
+F5,G0,Pre-registration,committed,PASS,https://www.nfl.com/standings/league/2026/REG
+F5,G1,Sample size,15,FAIL,https://www.nfl.com/standings/league/2026/REG
+F5,G2,Official price at timestamp,0 markets priced,FAIL,https://www.nfl.com/standings/league/2026/REG
+F5,G3,Proper score vs benchmark,not computable,BLOCKED (F-01),https://www.nfl.com/standings/league/2026/REG
+F5,G4,Walk-forward,walk-forward run,measurement only,https://www.nfl.com/standings/league/2026/REG
+F5,G5,Multiplicity,0.051697,FAIL,https://www.nfl.com/standings/league/2026/REG
+F5,G6,Calibration,see luck page,measurement only,https://www.nfl.com/standings/league/2026/REG
+F5,G7,Joint evidence (parlays and prop combos),no joint evidence,FAIL,https://www.nfl.com/standings/league/2026/REG
+F5,G8,Leakage,0 features after the price,PASS,https://www.nfl.com/standings/league/2026/REG
+F6,G0,Pre-registration,committed,PASS,https://www.nfl.com/standings/league/2026/REG
+F6,G1,Sample size,29,FAIL,https://www.nfl.com/standings/league/2026/REG
+F6,G2,Official price at timestamp,0 markets priced,FAIL,https://www.nfl.com/standings/league/2026/REG
+F6,G3,Proper score vs benchmark,not computable,BLOCKED (F-01),https://www.nfl.com/standings/league/2026/REG
+F6,G4,Walk-forward,walk-forward run,measurement only,https://www.nfl.com/standings/league/2026/REG
+F6,G5,Multiplicity,0.001037,PASS,https://www.nfl.com/standings/league/2026/REG
+F6,G6,Calibration,see luck page,measurement only,https://www.nfl.com/standings/league/2026/REG
+F6,G7,Joint evidence (parlays and prop combos),no joint evidence,FAIL,https://www.nfl.com/standings/league/2026/REG
+F6,G8,Leakage,0 features after the price,PASS,https://www.nfl.com/standings/league/2026/REG
+F7,G0,Pre-registration,committed,PASS,https://www.nfl.com/standings/league/2026/REG
+F7,G1,Sample size,0,FAIL,https://www.nfl.com/standings/league/2026/REG
+F7,G2,Official price at timestamp,0 markets priced,FAIL,https://www.nfl.com/standings/league/2026/REG
+F7,G3,Proper score vs benchmark,not computable,BLOCKED (F-01),https://www.nfl.com/standings/league/2026/REG
+F7,G4,Walk-forward,no sample,BLOCKED,https://www.nfl.com/standings/league/2026/REG
+F7,G5,Multiplicity,n/a,FAIL,https://www.nfl.com/standings/league/2026/REG
+F7,G6,Calibration,see luck page,measurement only,https://www.nfl.com/standings/league/2026/REG
+F7,G7,Joint evidence (parlays and prop combos),no joint evidence,FAIL,https://www.nfl.com/standings/league/2026/REG
+F7,G8,Leakage,0 features after the price,PASS,https://www.nfl.com/standings/league/2026/REG
+F8,G0,Pre-registration,committed,PASS,https://www.nfl.com/standings/league/2026/REG
+F8,G1,Sample size,0,FAIL,https://www.nfl.com/standings/league/2026/REG
+F8,G2,Official price at timestamp,0 markets priced,FAIL,https://www.nfl.com/standings/league/2026/REG
+F8,G3,Proper score vs benchmark,not computable,BLOCKED (F-01),https://www.nfl.com/standings/league/2026/REG
+F8,G4,Walk-forward,no sample,BLOCKED,https://www.nfl.com/standings/league/2026/REG
+F8,G5,Multiplicity,n/a,FAIL,https://www.nfl.com/standings/league/2026/REG
+F8,G6,Calibration,see luck page,measurement only,https://www.nfl.com/standings/league/2026/REG
+F8,G7,Joint evidence (parlays and prop combos),no joint evidence,FAIL,https://www.nfl.com/standings/league/2026/REG
+F8,G8,Leakage,0 features after the price,PASS,https://www.nfl.com/standings/league/2026/REG
+F9,G0,Pre-registration,committed,PASS,https://www.nfl.com/standings/league/2026/REG
+F9,G1,Sample size,0,FAIL,https://www.nfl.com/standings/league/2026/REG
+F9,G2,Official price at timestamp,0 markets priced,FAIL,https://www.nfl.com/standings/league/2026/REG
+F9,G3,Proper score vs benchmark,not computable,BLOCKED (F-01),https://www.nfl.com/standings/league/2026/REG
+F9,G4,Walk-forward,no sample,BLOCKED,https://www.nfl.com/standings/league/2026/REG
+F9,G5,Multiplicity,n/a,FAIL,https://www.nfl.com/standings/league/2026/REG
+F9,G6,Calibration,see luck page,measurement only,https://www.nfl.com/standings/league/2026/REG
+F9,G7,Joint evidence (parlays and prop combos),no joint evidence,FAIL,https://www.nfl.com/standings/league/2026/REG
+F9,G8,Leakage,0 features after the price,PASS,https://www.nfl.com/standings/league/2026/REG
+F10,G0,Pre-registration,committed,PASS,https://www.nfl.com/standings/league/2026/REG
+F10,G1,Sample size,0,FAIL,https://www.nfl.com/standings/league/2026/REG
+F10,G2,Official price at timestamp,0 markets priced,FAIL,https://www.nfl.com/standings/league/2026/REG
+F10,G3,Proper score vs benchmark,not computable,BLOCKED (F-01),https://www.nfl.com/standings/league/2026/REG
+F10,G4,Walk-forward,no sample,BLOCKED,https://www.nfl.com/standings/league/2026/REG
+F10,G5,Multiplicity,n/a,FAIL,https://www.nfl.com/standings/league/2026/REG
+F10,G6,Calibration,see luck page,measurement only,https://www.nfl.com/standings/league/2026/REG
+F10,G7,Joint evidence (parlays and prop combos),no joint evidence,FAIL,https://www.nfl.com/standings/league/2026/REG
+F10,G8,Leakage,0 features after the price,PASS,https://www.nfl.com/standings/league/2026/REG

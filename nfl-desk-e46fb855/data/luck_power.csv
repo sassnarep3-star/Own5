@@ -1,0 +1,5 @@
+true_hit_rate,bets_to_demonstrate_skill_80pct_power,chance_a_coin_flip_shows_55pct_over_200_bets,note,source_url
+0.53,2180,0.0687,Computed with a two-sided alpha of 0.05 and 80% power.,https://www.nfl.com/standings/league/2026/REG
+0.55,790,0.0687,Exact binomial: the chance a fair coin shows at least 55% over 200 bets.,https://www.nfl.com/standings/league/2026/REG
+0.57,400,0.0687,Computed with a two-sided alpha of 0.05 and 80% power.,https://www.nfl.com/standings/league/2026/REG
+0.60,200,0.0687,Computed with a two-sided alpha of 0.05 and 80% power.,https://www.nfl.com/standings/league/2026/REG

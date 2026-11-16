@@ -1,0 +1,5 @@
+division,definition,families_entered,status
+Singles,"one market, one game",0,eligible to be ranked; none certified
+Game parlays,two or more legs from different games,0,"gate G7 fails - no validated joint probability, no operator void/push rules"
+Same-game parlays,two or more legs from one game,0,gate G7 fails - the side/total joint distribution is not measured
+Prop combos,player props combined,0,gate G7 fails - no prop prices exist in this repo at all

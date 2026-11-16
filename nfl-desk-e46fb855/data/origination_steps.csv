@@ -1,0 +1,40 @@
+game_id,market_id,step,market_type,instruction,depends_on,source_url
+2026_11_IND_HOU,2026_11_IND_HOU:SIDE,1,SIDE,"step 1 (side) - opponent-aware margin model, fitted first",none - fitted first,https://www.nfl.com/standings/league/2026/REG
+2026_11_IND_HOU,2026_11_IND_HOU:TOTAL,2,TOTAL,"step 2 (total) - estimator A (shrunk team game totals), fitted second",step 1 (side),https://www.nfl.com/standings/league/2026/REG
+2026_11_IND_HOU,2026_11_IND_HOU:MONEYLINE,3,MONEYLINE,"step 3 (moneyline) - derived from step 1 (side) and step 2 (total), never fitted separately",step 1 (side) and step 2 (total),https://www.nfl.com/standings/league/2026/REG
+2026_11_MIA_BUF,2026_11_MIA_BUF:SIDE,1,SIDE,"step 1 (side) - opponent-aware margin model, fitted first",none - fitted first,https://www.nfl.com/standings/league/2026/REG
+2026_11_MIA_BUF,2026_11_MIA_BUF:TOTAL,2,TOTAL,"step 2 (total) - estimator A (shrunk team game totals), fitted second",step 1 (side),https://www.nfl.com/standings/league/2026/REG
+2026_11_MIA_BUF,2026_11_MIA_BUF:MONEYLINE,3,MONEYLINE,"step 3 (moneyline) - derived from step 1 (side) and step 2 (total), never fitted separately",step 1 (side) and step 2 (total),https://www.nfl.com/standings/league/2026/REG
+2026_11_BAL_CAR,2026_11_BAL_CAR:SIDE,1,SIDE,"step 1 (side) - opponent-aware margin model, fitted first",none - fitted first,https://www.nfl.com/standings/league/2026/REG
+2026_11_BAL_CAR,2026_11_BAL_CAR:TOTAL,2,TOTAL,"step 2 (total) - estimator A (shrunk team game totals), fitted second",step 1 (side),https://www.nfl.com/standings/league/2026/REG
+2026_11_BAL_CAR,2026_11_BAL_CAR:MONEYLINE,3,MONEYLINE,"step 3 (moneyline) - derived from step 1 (side) and step 2 (total), never fitted separately",step 1 (side) and step 2 (total),https://www.nfl.com/standings/league/2026/REG
+2026_11_NO_CHI,2026_11_NO_CHI:SIDE,1,SIDE,"step 1 (side) - opponent-aware margin model, fitted first",none - fitted first,https://www.nfl.com/standings/league/2026/REG
+2026_11_NO_CHI,2026_11_NO_CHI:TOTAL,2,TOTAL,"step 2 (total) - estimator A (shrunk team game totals), fitted second",step 1 (side),https://www.nfl.com/standings/league/2026/REG
+2026_11_NO_CHI,2026_11_NO_CHI:MONEYLINE,3,MONEYLINE,"step 3 (moneyline) - derived from step 1 (side) and step 2 (total), never fitted separately",step 1 (side) and step 2 (total),https://www.nfl.com/standings/league/2026/REG
+2026_11_TEN_DAL,2026_11_TEN_DAL:SIDE,1,SIDE,"step 1 (side) - opponent-aware margin model, fitted first",none - fitted first,https://www.nfl.com/standings/league/2026/REG
+2026_11_TEN_DAL,2026_11_TEN_DAL:TOTAL,2,TOTAL,"step 2 (total) - estimator A (shrunk team game totals), fitted second",step 1 (side),https://www.nfl.com/standings/league/2026/REG
+2026_11_TEN_DAL,2026_11_TEN_DAL:MONEYLINE,3,MONEYLINE,"step 3 (moneyline) - derived from step 1 (side) and step 2 (total), never fitted separately",step 1 (side) and step 2 (total),https://www.nfl.com/standings/league/2026/REG
+2026_11_TB_DET,2026_11_TB_DET:SIDE,1,SIDE,"step 1 (side) - opponent-aware margin model, fitted first",none - fitted first,https://www.nfl.com/standings/league/2026/REG
+2026_11_TB_DET,2026_11_TB_DET:TOTAL,2,TOTAL,"step 2 (total) - estimator A (shrunk team game totals), fitted second",step 1 (side),https://www.nfl.com/standings/league/2026/REG
+2026_11_TB_DET,2026_11_TB_DET:MONEYLINE,3,MONEYLINE,"step 3 (moneyline) - derived from step 1 (side) and step 2 (total), never fitted separately",step 1 (side) and step 2 (total),https://www.nfl.com/standings/league/2026/REG
+2026_11_ARI_KC,2026_11_ARI_KC:SIDE,1,SIDE,"step 1 (side) - opponent-aware margin model, fitted first",none - fitted first,https://www.nfl.com/standings/league/2026/REG
+2026_11_ARI_KC,2026_11_ARI_KC:TOTAL,2,TOTAL,"step 2 (total) - estimator A (shrunk team game totals), fitted second",step 1 (side),https://www.nfl.com/standings/league/2026/REG
+2026_11_ARI_KC,2026_11_ARI_KC:MONEYLINE,3,MONEYLINE,"step 3 (moneyline) - derived from step 1 (side) and step 2 (total), never fitted separately",step 1 (side) and step 2 (total),https://www.nfl.com/standings/league/2026/REG
+2026_11_PIT_PHI,2026_11_PIT_PHI:SIDE,1,SIDE,"step 1 (side) - opponent-aware margin model, fitted first",none - fitted first,https://www.nfl.com/standings/league/2026/REG
+2026_11_PIT_PHI,2026_11_PIT_PHI:TOTAL,2,TOTAL,"step 2 (total) - estimator A (shrunk team game totals), fitted second",step 1 (side),https://www.nfl.com/standings/league/2026/REG
+2026_11_PIT_PHI,2026_11_PIT_PHI:MONEYLINE,3,MONEYLINE,"step 3 (moneyline) - derived from step 1 (side) and step 2 (total), never fitted separately",step 1 (side) and step 2 (total),https://www.nfl.com/standings/league/2026/REG
+2026_11_NYJ_LAC,2026_11_NYJ_LAC:SIDE,1,SIDE,"step 1 (side) - opponent-aware margin model, fitted first",none - fitted first,https://www.nfl.com/standings/league/2026/REG
+2026_11_NYJ_LAC,2026_11_NYJ_LAC:TOTAL,2,TOTAL,"step 2 (total) - estimator A (shrunk team game totals), fitted second",step 1 (side),https://www.nfl.com/standings/league/2026/REG
+2026_11_NYJ_LAC,2026_11_NYJ_LAC:MONEYLINE,3,MONEYLINE,"step 3 (moneyline) - derived from step 1 (side) and step 2 (total), never fitted separately",step 1 (side) and step 2 (total),https://www.nfl.com/standings/league/2026/REG
+2026_11_JAX_NYG,2026_11_JAX_NYG:SIDE,1,SIDE,"step 1 (side) - opponent-aware margin model, fitted first",none - fitted first,https://www.nfl.com/standings/league/2026/REG
+2026_11_JAX_NYG,2026_11_JAX_NYG:TOTAL,2,TOTAL,"step 2 (total) - estimator A (shrunk team game totals), fitted second",step 1 (side),https://www.nfl.com/standings/league/2026/REG
+2026_11_JAX_NYG,2026_11_JAX_NYG:MONEYLINE,3,MONEYLINE,"step 3 (moneyline) - derived from step 1 (side) and step 2 (total), never fitted separately",step 1 (side) and step 2 (total),https://www.nfl.com/standings/league/2026/REG
+2026_11_LV_DEN,2026_11_LV_DEN:SIDE,1,SIDE,"step 1 (side) - opponent-aware margin model, fitted first",none - fitted first,https://www.nfl.com/standings/league/2026/REG
+2026_11_LV_DEN,2026_11_LV_DEN:TOTAL,2,TOTAL,"step 2 (total) - estimator A (shrunk team game totals), fitted second",step 1 (side),https://www.nfl.com/standings/league/2026/REG
+2026_11_LV_DEN,2026_11_LV_DEN:MONEYLINE,3,MONEYLINE,"step 3 (moneyline) - derived from step 1 (side) and step 2 (total), never fitted separately",step 1 (side) and step 2 (total),https://www.nfl.com/standings/league/2026/REG
+2026_11_MIN_SF,2026_11_MIN_SF:SIDE,1,SIDE,"step 1 (side) - opponent-aware margin model, fitted first",none - fitted first,https://www.nfl.com/standings/league/2026/REG
+2026_11_MIN_SF,2026_11_MIN_SF:TOTAL,2,TOTAL,"step 2 (total) - estimator A (shrunk team game totals), fitted second",step 1 (side),https://www.nfl.com/standings/league/2026/REG
+2026_11_MIN_SF,2026_11_MIN_SF:MONEYLINE,3,MONEYLINE,"step 3 (moneyline) - derived from step 1 (side) and step 2 (total), never fitted separately",step 1 (side) and step 2 (total),https://www.nfl.com/standings/league/2026/REG
+2026_11_CIN_WAS,2026_11_CIN_WAS:SIDE,1,SIDE,"step 1 (side) - opponent-aware margin model, fitted first",none - fitted first,https://www.nfl.com/standings/league/2026/REG
+2026_11_CIN_WAS,2026_11_CIN_WAS:TOTAL,2,TOTAL,"step 2 (total) - estimator A (shrunk team game totals), fitted second",step 1 (side),https://www.nfl.com/standings/league/2026/REG
+2026_11_CIN_WAS,2026_11_CIN_WAS:MONEYLINE,3,MONEYLINE,"step 3 (moneyline) - derived from step 1 (side) and step 2 (total), never fitted separately",step 1 (side) and step 2 (total),https://www.nfl.com/standings/league/2026/REG

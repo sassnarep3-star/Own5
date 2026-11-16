@@ -1,0 +1,7 @@
+slot,what_it_holds,required,populated_this_build,status
+MODEL_ORIGIN,our own line when we first originate the market,yes,39,captured
+MODEL_CLOSE,our own line re-run at the last moment before kickoff,yes,0,EMPTY - not yet observed (F-03 sibling: needs a second run)
+MARKET_OPEN,the operator's opening price with a timestamp,yes,0,EMPTY - no source exists (F-01)
+MARKET_CLOSE,the operator's closing price with a timestamp,yes,0,EMPTY - no source exists (F-01)
+RESULT,the official final score,yes,145,captured from the official results feed
+STAKE,units actually placed,only after certification,0,EMPTY BY DESIGN - nothing is staked until a family is certified
