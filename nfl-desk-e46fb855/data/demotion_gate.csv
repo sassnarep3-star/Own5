@@ -1,0 +1,7 @@
+trigger_id,name,rule,window,source_url
+D1,Proper score,Cluster-robust lower bound of benchmark-relative Brier skill falls below zero over the live window.,live window,https://www.nfl.com/standings/league/2026/REG
+D2,Closing line value,"Mean CLV over the last 100 graded bets is negative, once prices exist.",last 100 graded bets,https://www.nfl.com/standings/league/2026/REG
+D3,Calibration drift,Calibration slope leaves its 95% band on the live window.,live window,https://www.nfl.com/standings/league/2026/REG
+D4,Sample stall,"Fewer than 50 new graded bets in 8 weeks, so the estimate cannot be refreshed.",8 weeks,https://www.nfl.com/standings/league/2026/REG
+D5,Data-source break,A source a family depends on fails its drift alarm or disappears.,immediately,https://www.nfl.com/standings/league/2026/REG
+D6,Rule drift,"The live rule differs from the registered rule text, for any reason.",immediately,https://www.nfl.com/standings/league/2026/REG

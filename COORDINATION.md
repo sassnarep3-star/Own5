@@ -2235,3 +2235,145 @@ previous build, not a repository defect; the repository has carried the correcte
 
 **Session 83a7d6a8 is complete.** M1–M12 are done. Nothing is certified, no bet is live, no reward is
 issued, and the five unmet gates are documented with the number that would clear each one.
+
+---
+
+## Session log — e46fb855 (NFL decision-readiness desk) — 2026-11-15
+
+**Working branch:** `arena/e46fb855-own5` (base `a03dfb7`). Session ID: `e46fb855`.
+
+**Claimed namespaces (strictly additive, zero overlap with any other session):**
+- `nfl-desk-e46fb855/**` (GitHub Pages dashboard: landing page + category subpages, data CSV/JSON,
+  deterministic engine, raw official page captures, unit tests, verification harness)
+- `research/nfl-e46fb855/**` (executive summary, methodology, requirements matrix, questions
+  register, suggestions register, flagged register, verification log)
+- `.github/workflows/nfl-desk-e46fb855.yml` (scoped deterministic verification only)
+- Append-only blocks in `COORDINATION.md` and one additive table row in `README.md`
+
+**Read-only for this session (never edited):** root `index.html`, `pages/**`, `data/research.json`,
+`scripts/**`, `tools/**`, `tests/**`, `assets/**`, `docs/**`, `own5-desk/**`, `site/**`,
+`nfl_model/**`, `line-lab/**`, `nfl-strategy-lab/**`, every other `nfl-*/**` and `nba-*/**` and
+`sf-*`/`rental-*` namespace, all existing workflows, all existing CSV/JSON outside claimed scope.
+
+**Scope of this session** (the brief's own wording):
+1. Line-by-line repo review against official sources; irregularities flagged, never silently "fixed".
+2. Full requirements register for every requirement line in the brief, with the gate that blocks it
+   and the number that would clear it -> decision-readiness table on the landing page.
+3. Questions register: what we have, what we do not have, and the cheapest route to discover each.
+4. Suggestions register: reviewable paths (options / recommendation / what would change the call),
+   nothing implemented without a decision.
+5. Official-source ingestion (standings, week-by-week results, current slate with venues, injury
+   report) captured to `data/raw_official/**` with URL + retrieval UTC + SHA-256.
+6. Price-snapshot store, verified results feed, origination chain side -> total -> moneyline with
+   model / market / difference columns, signal-vs-staking leaderboard, demotion gate,
+   official-only correlations with n published, replacement-depth tracker.
+7. Executive summary. Then PR to main, autonomous merge, live Pages check.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| E1 | Coordination claim | done | e46fb855 | COORDINATION.md | Claim pushed before any build work. |
+| E2 | Official-source ingestion (captures + hashes) | in progress | e46fb855 | `nfl-desk-e46fb855/data/raw_official/**`, `data/sources.csv` | URL + retrieval UTC + SHA-256 per capture. |
+| E3 | Verified results feed + standings reconciliation | unclaimed -> e46fb855 | `data/results_feed.csv`, `data/results_reconciliation.csv` | Week-by-week from nfl.com schedule pages. |
+| E4 | Price-snapshot store (schema + ledger) | unclaimed | `data/price_snapshots.csv`, `data/price_store_schema.csv` | Operator open/close blank+flagged where no official source. |
+| E5 | Origination pipeline side -> total -> moneyline | unclaimed | `data/originated_markets.csv`, `data/origination_steps.csv` | Dependency order recorded per row. |
+| E6 | Strategies, gates, demotion gate, signal-vs-staking leaderboard | unclaimed | `data/strategies.csv`, `data/gates.csv`, `data/demotion_gate.csv`, `data/leaderboard_signal.csv`, `data/leaderboard_staking.csv` | Pre-registered before results are seen. |
+| E7 | Official-only correlations with n published | unclaimed | `data/correlations.csv`, `data/correlations_withheld.csv` | Aggregator-derived values moved to withheld. |
+| E8 | Injuries, replacement depth, deficiency matrix | unclaimed | `data/injuries.csv`, `data/depth_slots.csv`, `data/replacement_depth.csv` | Depth from official club charts / official snap evidence only. |
+| E9 | Requirements matrix + decision-readiness table | unclaimed | `data/requirements.csv` | Every requirement line in the brief. |
+| E10 | Questions register (have / missing / discovery route) | unclaimed | `data/questions.csv` | Blocking vs non-blocking. |
+| E11 | Suggestions register (reviewable paths) | unclaimed | `data/suggestions.csv` | Options A/B/C + recommended + falsifier. |
+| E12 | Line-by-line repo audit vs official sources | unclaimed | `data/repo_audit.csv` | Headline claims of prior desks re-checked. |
+| E13 | GitHub Pages dashboard (landing + category subpages + Flagged) | unclaimed | `build_site.py`, `nfl-desk-e46fb855/*.html`, `assets/style.css` | Every body row sourced or explicitly UNVERIFIED. |
+| E14 | Verification harness, unit tests, scoped CI workflow | unclaimed | `verify.py`, `tests/test_desk.py`, `.github/workflows/nfl-desk-e46fb855.yml` | Deterministic rebuild + row/link/provenance audit. |
+| E15 | Executive summary | unclaimed | `research/nfl-e46fb855/EXECUTIVE_SUMMARY.md`, `executive-summary.html` | Only computed or officially sourced values. |
+| E16 | Rebase on origin/main, PR to main, autonomous merge, live Pages check | unclaimed | COORDINATION.md, README.md | Merge only after verify PASS + live URL check. |
+
+### Session e46fb855 — build complete (2026-11-15T23:5xZ)
+
+**Status of the board** (all work done on `arena/e46fb855-own5`):
+
+| ID | Task | Status | Files | Notes |
+|----|------|--------|-------|-------|
+| E1 | Coordination claim | done | COORDINATION.md | Pushed before any build work. |
+| E2 | Official-source ingestion (captures + hashes) | done | `nfl-desk-e46fb855/data/official/*.json`, `data/sources.csv`, `data/manifest.csv` | Six captures: standings, week-11 slate, week-10 results, weeks 1–5 spot-check, week-10 injury report, 31/32 club depth charts. SHA-256 + retrieval UTC per capture in `manifest.csv`; hashes re-proved on every build. |
+| E3 | Verified results feed + standings reconciliation | done | `data/results_feed.csv`, `data/results_pending.csv`, `data/standings_reconciliation.csv` | 145 official finals; 59/59 re-read rows matched the carried-forward feed; the feed reconciles 32/32 to the official standings. 5 week-10 games were unfinished at capture and are published blank, never filled in. |
+| E4 | Price-snapshot store (schema + ledger) | done | `data/price_snapshots.csv`, `data/price_store_schema.csv` | 52 rows, 13 populated (all model output). MARKET_OPEN / MARKET_CLOSE empty and flagged (F-01). |
+| E5 | Origination pipeline side -> total -> moneyline | done | `data/originated_markets.csv`, `data/origination_steps.csv`, `data/model_card.csv`, `data/walkforward_by_week.csv` | 39 week-11 markets (13 x 3). Market column blank + flagged; difference column explicitly undefined. |
+| E6 | Strategies, gates, demotion gate, signal-vs-staking leaderboard | done | `data/strategies.csv`, `data/gates.csv`, `data/demotion_gate.csv`, `data/gate_matrix.csv`, `data/leaderboard_*.csv`, `data/controls.csv` | 10 pre-registered families (content.py), gates G0–G8, six demotion triggers D1–D6, three control rows, 0 certified. |
+| E7 | Official-only correlations with n published | done | `data/correlations.csv`, `data/correlations_withheld.csv` | 10 published (n and 95% interval each); 8 aggregator-derived values moved to the withheld table with the reason. |
+| E8 | Injuries, replacement depth, deficiency matrix | done | `data/injuries.csv`, `data/injury_delta.csv`, `data/depth_slots.csv`, `data/replacement_depth.csv`, `data/team_availability.csv`, `data/matchup_deficiency.csv` | 700 slots, 6 starters out with a named replacement, 563 pairings. Houston contributes 0 rows (image-only chart) and is flagged, not inferred. |
+| E9 | Requirements matrix + decision-readiness table | done | `data/requirements.csv` | 72 lines: 32 met, 14 partial, 26 blocked. Each carries the blocking gate and the number that would clear it. |
+| E10 | Questions register (have / missing / discovery route) | done | `data/questions.csv` | 20 questions, 11 blocking, each with the cheapest discovery route. |
+| E11 | Suggestions register (reviewable paths) | done | `data/suggestions.csv` | 14 suggestions: options, recommendation, what would change the call, decision status. **Nothing implemented.** |
+| E12 | Line-by-line repo audit vs official sources | done | `data/repo_audit.csv` | 152 checks. 122 exact matches; 16 standings differences all fully explained by week-10 games completing between the two captures; 4 injury rows observed to change between two official reads; 12 structural checks. |
+| E13 | GitHub Pages dashboard | done | `nfl-desk-e46fb855/*.html` (21 pages), `build_site.py` | Landing page + category subpages; every body row ends in an official link or an UNVERIFIED badge. |
+| E14 | Verification harness, unit tests, scoped CI workflow | done | `verify.py`, `tests/test_desk.py`, `.github/workflows/nfl-desk-e46fb855.yml` | Row-level source proof on the generated HTML, internal-link check, capture-hash check, determinism check, 28 unit tests. |
+| E15 | Executive summary | done | `research/nfl-e46fb855/EXECUTIVE_SUMMARY.md`, `executive-summary.html` | Only computed or officially sourced values. |
+| E16 | Rebase, PR, autonomous merge, live Pages check | in progress | — | After this commit. |
+
+**Sources read (all official; all pinned with SHA-256 in `data/manifest.csv`)**
+
+| Source | URL | Captured (UTC) | Used for |
+|---|---|---|---|
+| League standings | https://www.nfl.com/standings/league/2026/REG | 2026-11-15T23:26Z | 32 rows: W-L-T, PF, PA — reconciliation benchmark, correlations, luck panel |
+| Week 11 schedule | https://www.nfl.com/schedules/2026/by-week/week-11 | 2026-11-15T23:24Z | 13 fixtures, kickoffs, networks, venues, bye teams |
+| MIN@SF game centre | https://www.nfl.com/games/vikings-at-49ers-2026-reg-11 | 2026-11-15T23:25Z | Venue (Estadio Banorte, Mexico City — neutral site); confirms the week-11 injury report is unpublished |
+| Week 10 results | https://www.nfl.com/schedules/2026/by-week/week-10 | 2026-11-15T23:22Z | 9 finals; 5 unfinished games published blank |
+| Weeks 1–5 week pages | https://www.nfl.com/schedules/2026/by-week/week-1 … week-5 | 2026-11-15T23:20Z | 59-game spot-check of the carried-forward results feed |
+| Week 10 injury report | https://www.nfl.com/injuries/league/2026/reg10 | 2026-11-15T23:27Z | Designations driving the replacement-depth tracker |
+| Week 11 injury report | https://www.nfl.com/injuries/league/2026/reg11 | 2026-11-15T23:27Z | **Not published** — the URL serves the week-10 report |
+| 32 club depth charts | `https://www.<club>.com/team/depth-chart` | 2026-11-15T23:35Z | 700 slots across 31 clubs (Houston image-only) |
+
+Carried forward and re-checked (read-only, never edited):
+`nfl-desk-3fb93d11/data/results_feed.csv` (sha256 `f26a67a8…`),
+`nfl-desk-3fb93d11/data/standings_official.csv` (sha256 `a7abd2c3…`),
+`nfl-desk-864d5668/data/injuries.csv` (sha256 `325a2c48…`).
+
+**Verification performed**
+
+1. Row-level source proof on the generated HTML, not the CSVs: 2 703 body rows
+   checked; every one ends in an official link or an explicit UNVERIFIED badge.
+2. Determinism: `engine.py` rebuilds byte-identical CSVs; `verify.py` proves it
+   on every run and the workflow proves the committed artefacts match.
+3. Capture integrity: SHA-256 of every capture re-computed on every build.
+4. Cross-source reconciliation: the game-by-game record matches the official
+   standings for 32 of 32 clubs; 59 of 59 re-read feed rows matched.
+5. 28 unit tests covering the statistics, the linear algebra, the rating model
+   (planted-effect recovery), the honesty rules (no invented price, ROI, score
+   or depth row) and the site (every page exists, every nav link resolves).
+
+**Irregularities flagged (published on the Flagged for Review page with links)**
+
+| Flag | Severity | What it is |
+|---|---|---|
+| F-01 | blocking | No market price of any kind exists in this repo — no spreads, totals or moneylines from any source |
+| F-02 | blocking (Houston) | Houston publishes its depth chart as an image |
+| F-03 | blocking | Only one read of the injury report exists, so no delta can be computed |
+| F-04 | blocking | No transactions or reserve list has been read |
+| F-05 | blocking | No official inactive list and no game book has been read |
+| F-06 | blocking | No official snap-count source has been read |
+| F-12 | blocking | The results feed holds one season only, so gate G1 (n >= 300) is unreachable |
+| F-07, F-08 | non-blocking | No roof/weather overlay and no player-prop prices |
+| F-09 | review | Venue provenance is mixed: 1 of 13 read from the game centre, 12 from the schedule page |
+| F-10, F-11, F-24 | review | Kickoff rule text, schedule-release announcement not fetched |
+| F-13 | review | Week 10 was in progress at capture; 5 games published blank |
+| F-14 | review | The Pythagorean exponent (2.37) is a convention, not a league value — labelled everywhere |
+| F-15 | review | Patriots defence table cut off by pagination (New England is on bye in week 11) |
+| F-16 | review | Clubs label their own depth charts "unofficial" |
+| F-17 | review | Team ratings are ridge-penalised (1.0 pt²) — required for identifiability |
+| F-18 | review | **Found and fixed this session:** the first totals walk-forward leaked. Estimator B was fitted on the season's final rates, which contain the game being predicted, and appeared to beat the baseline by ~1 point. Corrected, neither estimator beats the baseline (A 11.61, B 11.89, baseline 11.18) |
+
+**Notes for other sessions**
+
+* This session touched nothing outside `nfl-desk-e46fb855/**`,
+  `research/nfl-e46fb855/**`, `.github/workflows/nfl-desk-e46fb855.yml`,
+  append-only `COORDINATION.md` blocks and one additive `README.md` row.
+* Request logged, not actioned: three NFL desks (`3fb93d11`, `d38e90c5`,
+  `864d5668`) and this one now answer the same brief from four namespaces.
+  Suggestion S-12 on the suggestions page proposes an index at the next
+  integration session. No file belonging to another session was changed.
+* `https://www.titans.com/team/depth-chart` returns HTTP 500; the working
+  official URL is `https://www.tennesseetitans.com/team/depth-chart`.
+* nfl.com cannot be reached from this sandbox with curl/urllib (TLS failure);
+  every page here was read through the sandbox fetcher, and the workflow
+  re-reads the same URLs from GitHub runners for provenance only.

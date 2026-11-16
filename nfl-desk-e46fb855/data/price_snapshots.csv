@@ -1,0 +1,53 @@
+market_id,snapshot_type,value,captured_utc,price_american,status,source_url,source_tier
+2026_11_IND_HOU:MONEYLINE,MODEL_ORIGIN,0.7028,2026-11-15T23:40:00Z,-236.5,captured,https://www.nfl.com/standings/league/2026/REG,OFFICIAL (derived from official results)
+2026_11_IND_HOU:MONEYLINE,MODEL_CLOSE,,,,EMPTY - not yet observed,https://www.nfl.com/standings/league/2026/REG,OFFICIAL (derived from official results)
+2026_11_IND_HOU:MONEYLINE,MARKET_OPEN,,,,EMPTY - no official or licensed price source exists (F-01),,NONE
+2026_11_IND_HOU:MONEYLINE,MARKET_CLOSE,,,,EMPTY - no official or licensed price source exists (F-01),,NONE
+2026_11_MIA_BUF:MONEYLINE,MODEL_ORIGIN,0.8765,2026-11-15T23:40:00Z,-709.6,captured,https://www.nfl.com/standings/league/2026/REG,OFFICIAL (derived from official results)
+2026_11_MIA_BUF:MONEYLINE,MODEL_CLOSE,,,,EMPTY - not yet observed,https://www.nfl.com/standings/league/2026/REG,OFFICIAL (derived from official results)
+2026_11_MIA_BUF:MONEYLINE,MARKET_OPEN,,,,EMPTY - no official or licensed price source exists (F-01),,NONE
+2026_11_MIA_BUF:MONEYLINE,MARKET_CLOSE,,,,EMPTY - no official or licensed price source exists (F-01),,NONE
+2026_11_BAL_CAR:MONEYLINE,MODEL_ORIGIN,0.6003,2026-11-15T23:40:00Z,-150.2,captured,https://www.nfl.com/standings/league/2026/REG,OFFICIAL (derived from official results)
+2026_11_BAL_CAR:MONEYLINE,MODEL_CLOSE,,,,EMPTY - not yet observed,https://www.nfl.com/standings/league/2026/REG,OFFICIAL (derived from official results)
+2026_11_BAL_CAR:MONEYLINE,MARKET_OPEN,,,,EMPTY - no official or licensed price source exists (F-01),,NONE
+2026_11_BAL_CAR:MONEYLINE,MARKET_CLOSE,,,,EMPTY - no official or licensed price source exists (F-01),,NONE
+2026_11_NO_CHI:MONEYLINE,MODEL_ORIGIN,0.7810,2026-11-15T23:40:00Z,-356.6,captured,https://www.nfl.com/standings/league/2026/REG,OFFICIAL (derived from official results)
+2026_11_NO_CHI:MONEYLINE,MODEL_CLOSE,,,,EMPTY - not yet observed,https://www.nfl.com/standings/league/2026/REG,OFFICIAL (derived from official results)
+2026_11_NO_CHI:MONEYLINE,MARKET_OPEN,,,,EMPTY - no official or licensed price source exists (F-01),,NONE
+2026_11_NO_CHI:MONEYLINE,MARKET_CLOSE,,,,EMPTY - no official or licensed price source exists (F-01),,NONE
+2026_11_TEN_DAL:MONEYLINE,MODEL_ORIGIN,0.7105,2026-11-15T23:40:00Z,-245.4,captured,https://www.nfl.com/standings/league/2026/REG,OFFICIAL (derived from official results)
+2026_11_TEN_DAL:MONEYLINE,MODEL_CLOSE,,,,EMPTY - not yet observed,https://www.nfl.com/standings/league/2026/REG,OFFICIAL (derived from official results)
+2026_11_TEN_DAL:MONEYLINE,MARKET_OPEN,,,,EMPTY - no official or licensed price source exists (F-01),,NONE
+2026_11_TEN_DAL:MONEYLINE,MARKET_CLOSE,,,,EMPTY - no official or licensed price source exists (F-01),,NONE
+2026_11_TB_DET:MONEYLINE,MODEL_ORIGIN,0.5393,2026-11-15T23:40:00Z,-117.1,captured,https://www.nfl.com/standings/league/2026/REG,OFFICIAL (derived from official results)
+2026_11_TB_DET:MONEYLINE,MODEL_CLOSE,,,,EMPTY - not yet observed,https://www.nfl.com/standings/league/2026/REG,OFFICIAL (derived from official results)
+2026_11_TB_DET:MONEYLINE,MARKET_OPEN,,,,EMPTY - no official or licensed price source exists (F-01),,NONE
+2026_11_TB_DET:MONEYLINE,MARKET_CLOSE,,,,EMPTY - no official or licensed price source exists (F-01),,NONE
+2026_11_ARI_KC:MONEYLINE,MODEL_ORIGIN,0.8534,2026-11-15T23:40:00Z,-582.0,captured,https://www.nfl.com/standings/league/2026/REG,OFFICIAL (derived from official results)
+2026_11_ARI_KC:MONEYLINE,MODEL_CLOSE,,,,EMPTY - not yet observed,https://www.nfl.com/standings/league/2026/REG,OFFICIAL (derived from official results)
+2026_11_ARI_KC:MONEYLINE,MARKET_OPEN,,,,EMPTY - no official or licensed price source exists (F-01),,NONE
+2026_11_ARI_KC:MONEYLINE,MARKET_CLOSE,,,,EMPTY - no official or licensed price source exists (F-01),,NONE
+2026_11_PIT_PHI:MONEYLINE,MODEL_ORIGIN,0.1751,2026-11-15T23:40:00Z,471.1,captured,https://www.nfl.com/standings/league/2026/REG,OFFICIAL (derived from official results)
+2026_11_PIT_PHI:MONEYLINE,MODEL_CLOSE,,,,EMPTY - not yet observed,https://www.nfl.com/standings/league/2026/REG,OFFICIAL (derived from official results)
+2026_11_PIT_PHI:MONEYLINE,MARKET_OPEN,,,,EMPTY - no official or licensed price source exists (F-01),,NONE
+2026_11_PIT_PHI:MONEYLINE,MARKET_CLOSE,,,,EMPTY - no official or licensed price source exists (F-01),,NONE
+2026_11_NYJ_LAC:MONEYLINE,MODEL_ORIGIN,0.3452,2026-11-15T23:40:00Z,189.7,captured,https://www.nfl.com/standings/league/2026/REG,OFFICIAL (derived from official results)
+2026_11_NYJ_LAC:MONEYLINE,MODEL_CLOSE,,,,EMPTY - not yet observed,https://www.nfl.com/standings/league/2026/REG,OFFICIAL (derived from official results)
+2026_11_NYJ_LAC:MONEYLINE,MARKET_OPEN,,,,EMPTY - no official or licensed price source exists (F-01),,NONE
+2026_11_NYJ_LAC:MONEYLINE,MARKET_CLOSE,,,,EMPTY - no official or licensed price source exists (F-01),,NONE
+2026_11_JAX_NYG:MONEYLINE,MODEL_ORIGIN,0.1277,2026-11-15T23:40:00Z,683.1,captured,https://www.nfl.com/standings/league/2026/REG,OFFICIAL (derived from official results)
+2026_11_JAX_NYG:MONEYLINE,MODEL_CLOSE,,,,EMPTY - not yet observed,https://www.nfl.com/standings/league/2026/REG,OFFICIAL (derived from official results)
+2026_11_JAX_NYG:MONEYLINE,MARKET_OPEN,,,,EMPTY - no official or licensed price source exists (F-01),,NONE
+2026_11_JAX_NYG:MONEYLINE,MARKET_CLOSE,,,,EMPTY - no official or licensed price source exists (F-01),,NONE
+2026_11_LV_DEN:MONEYLINE,MODEL_ORIGIN,0.6901,2026-11-15T23:40:00Z,-222.7,captured,https://www.nfl.com/standings/league/2026/REG,OFFICIAL (derived from official results)
+2026_11_LV_DEN:MONEYLINE,MODEL_CLOSE,,,,EMPTY - not yet observed,https://www.nfl.com/standings/league/2026/REG,OFFICIAL (derived from official results)
+2026_11_LV_DEN:MONEYLINE,MARKET_OPEN,,,,EMPTY - no official or licensed price source exists (F-01),,NONE
+2026_11_LV_DEN:MONEYLINE,MARKET_CLOSE,,,,EMPTY - no official or licensed price source exists (F-01),,NONE
+2026_11_MIN_SF:MONEYLINE,MODEL_ORIGIN,0.5353,2026-11-15T23:40:00Z,-115.2,captured,https://www.nfl.com/standings/league/2026/REG,OFFICIAL (derived from official results)
+2026_11_MIN_SF:MONEYLINE,MODEL_CLOSE,,,,EMPTY - not yet observed,https://www.nfl.com/standings/league/2026/REG,OFFICIAL (derived from official results)
+2026_11_MIN_SF:MONEYLINE,MARKET_OPEN,,,,EMPTY - no official or licensed price source exists (F-01),,NONE
+2026_11_MIN_SF:MONEYLINE,MARKET_CLOSE,,,,EMPTY - no official or licensed price source exists (F-01),,NONE
+2026_11_CIN_WAS:MONEYLINE,MODEL_ORIGIN,0.1709,2026-11-15T23:40:00Z,485.1,captured,https://www.nfl.com/standings/league/2026/REG,OFFICIAL (derived from official results)
+2026_11_CIN_WAS:MONEYLINE,MODEL_CLOSE,,,,EMPTY - not yet observed,https://www.nfl.com/standings/league/2026/REG,OFFICIAL (derived from official results)
+2026_11_CIN_WAS:MONEYLINE,MARKET_OPEN,,,,EMPTY - no official or licensed price source exists (F-01),,NONE
+2026_11_CIN_WAS:MONEYLINE,MARKET_CLOSE,,,,EMPTY - no official or licensed price source exists (F-01),,NONE

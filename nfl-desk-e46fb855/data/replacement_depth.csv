@@ -1,0 +1,7 @@
+team,club,unit,position,starter_named_by_club,starter_game_status,replacement_named_by_club,replacement_depth_string,depth_of_replacement_label,rungs_down,compounding_replacement_also_out,cascade_skipped,replacement_on_injury_report,no_backup_published,depth_source_url,injury_source_url,as_of
+DET,Detroit Lions,Offense,C,Cade Mays,Out,Juice Scruggs,2,3rd string,1,no,,not listed,no,https://www.detroitlions.com/team/depth-chart,https://www.nfl.com/injuries/league/2026/reg10,2026-11-15
+DET,Detroit Lions,Defense,CB,D.J. Reed,Out,Rock Ya-Sin,2,3rd string,1,no,,not listed,no,https://www.detroitlions.com/team/depth-chart,https://www.nfl.com/injuries/league/2026/reg10,2026-11-15
+IND,Indianapolis Colts,Offense,RT,Jalen Travis,Out,Luke Tenuta,2,3rd string,1,no,,not listed,no,https://www.colts.com/team/depth-chart,https://www.nfl.com/injuries/league/2026/reg10,2026-11-15
+IND,Indianapolis Colts,Defense,WLB,Jaylon Carlies,Out,Bryce Boettcher,2,3rd string,1,no,,not listed,no,https://www.colts.com/team/depth-chart,https://www.nfl.com/injuries/league/2026/reg10,2026-11-15
+IND,Indianapolis Colts,Defense,MLB,Akeem Davis-Gaither,Out,CJ Allen,2,3rd string,1,no,,not listed,no,https://www.colts.com/team/depth-chart,https://www.nfl.com/injuries/league/2026/reg10,2026-11-15
+NE,New England Patriots,Offense,LG,Ben Brown,Out,Walter Rouse,2,3rd string,1,no,,Questionable,no,https://www.patriots.com/team/depth-chart,https://www.nfl.com/injuries/league/2026/reg10,2026-11-15

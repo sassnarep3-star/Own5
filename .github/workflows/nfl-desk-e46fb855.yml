@@ -1,0 +1,136 @@
+name: Verify NFL decision-readiness desk (e46fb855)
+
+# Rebuilds every table and page from the pinned official captures, then proves
+# row by row that every published table row links to a source.  A row that
+# cannot be sourced is rendered with an explicit UNVERIFIED badge and listed on
+# the Flagged for Review page; it never fails the build.
+#
+# The desk is served by this repository's existing GitHub Pages source (repo
+# root) at /Own5/nfl-desk-e46fb855/.  Nothing here calls deploy-pages, which
+# would fight with that source.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'nfl-desk-e46fb855/**'
+      - '.github/workflows/nfl-desk-e46fb855.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'nfl-desk-e46fb855/**'
+      - '.github/workflows/nfl-desk-e46fb855.yml'
+  workflow_dispatch:
+  schedule:
+    - cron: '41 7 * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nfl-desk-e46fb855-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Re-read the official pages the desk cites
+        # Deliberately non-blocking and never committed: it exists so a reviewer
+        # can see whether the pinned captures are still what the league serves.
+        continue-on-error: true
+        run: |
+          mkdir -p _fetch-e46fb855
+          python3 - <<'PY'
+          import pathlib, urllib.request
+          urls = [
+              "https://www.nfl.com/standings/league/2026/REG",
+              "https://www.nfl.com/schedules/2026/by-week/week-11",
+              "https://www.nfl.com/schedules/2026/by-week/week-10",
+              "https://www.nfl.com/injuries/league/2026/reg10",
+              "https://www.nfl.com/injuries/league/2026/reg11",
+              "https://www.nfl.com/transactions/",
+          ]
+          lines = []
+          for url in urls:
+              name = url.rstrip("/").rsplit("/", 1)[-1] or "index"
+              try:
+                  req = urllib.request.Request(url, headers={
+                      "User-Agent": "Mozilla/5.0 (Own5 research desk; see repo issues)"})
+                  with urllib.request.urlopen(req, timeout=90) as r:
+                      body = r.read().decode("utf-8", "replace")
+                  pathlib.Path(f"_fetch-e46fb855/{name}.html").write_text(body, encoding="utf-8")
+                  lines.append(f"OK   {url} {len(body)} bytes")
+              except Exception as exc:
+                  lines.append(f"FAIL {url} {type(exc).__name__}: {exc}")
+          pathlib.Path("_fetch-e46fb855/log.txt").write_text("\n".join(lines), encoding="utf-8")
+          print("\n".join(lines))
+          PY
+
+      - name: Build every table and page from the pinned captures
+        working-directory: nfl-desk-e46fb855
+        run: python3 run.py
+
+      - name: Deterministic rebuild check (data must not drift)
+        working-directory: nfl-desk-e46fb855
+        run: |
+          python3 run.py > /dev/null
+          python3 run.py > /dev/null
+
+      - name: Row-level source-link proof on the generated HTML
+        working-directory: nfl-desk-e46fb855
+        run: python3 verify.py
+
+      - name: Unit tests
+        working-directory: nfl-desk-e46fb855
+        run: python3 -W ignore -m unittest discover -s tests -v
+
+      - name: Committed artefacts match the deterministic build
+        run: git diff --exit-code -- nfl-desk-e46fb855/data nfl-desk-e46fb855/*.html
+
+      - name: Upload the built desk for review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nfl-desk-e46fb855
+          path: nfl-desk-e46fb855
+
+      - name: Upload the freshly fetched official pages (provenance only)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nfl-desk-e46fb855-live-fetch
+          path: _fetch-e46fb855
+          if-no-files-found: ignore
+
+  pages-smoke:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: verify
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check the published desk is live
+        run: |
+          base="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/nfl-desk-e46fb855"
+          for path in "/" "/leaderboard.html" "/price-store.html" "/flagged.html" "/suggestions.html" "/questions.html"; do
+            url="$base$path"
+            ok=0
+            for attempt in $(seq 1 24); do
+              if curl --fail --silent --show-error --location "$url" | grep -q 'OWN5'; then
+                echo "OK $url"
+                ok=1
+                break
+              fi
+              sleep 10
+            done
+            if [ "$ok" -ne 1 ]; then
+              echo "Published page did not become ready: $url" >&2
+              exit 1
+            fi
+          done

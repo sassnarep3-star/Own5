@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sources — OWN5 NFL decision desk (e46fb855)</title>
+<style>
+:root{
+  --bg:#0e1116; --panel:#161b22; --panel2:#1c232c; --line:#2a323d;
+  --ink:#e6edf3; --muted:#9aa7b4; --accent:#4cc2ff; --ok:#3fb950; --warn:#d29922;
+  --bad:#f85149; --blank:#8b949e;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+header.top{background:linear-gradient(180deg,#111823,#0e1116);border-bottom:1px solid var(--line);
+  padding:18px 22px;position:sticky;top:0;z-index:20}
+header.top h1{margin:0;font-size:17px;letter-spacing:.02em}
+header.top .sub{color:var(--muted);font-size:12.5px;margin-top:3px}
+.shell{display:grid;grid-template-columns:236px minmax(0,1fr);gap:0;align-items:start}
+nav.side{border-right:1px solid var(--line);padding:16px 10px 40px;position:sticky;top:70px;
+  height:calc(100vh - 70px);overflow:auto}
+nav.side a{display:block;padding:7px 10px;border-radius:6px;color:var(--muted);font-size:13.5px}
+nav.side a:hover{background:var(--panel);color:var(--ink);text-decoration:none}
+nav.side a.on{background:#1d2b38;color:var(--ink);font-weight:600}
+nav.side .grp{color:#6e7b8b;font-size:11px;text-transform:uppercase;letter-spacing:.08em;
+  padding:14px 10px 6px}
+main{padding:22px 26px 80px;min-width:0;max-width:1500px}
+h2{margin:26px 0 8px;font-size:19px}
+h2:first-child{margin-top:4px}
+h3{margin:20px 0 6px;font-size:15px;color:var(--ink)}
+p{color:#c9d4de;max-width:100ch}
+p.lead{color:var(--muted)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:12px;margin:14px 0 6px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 15px;
+  display:flex;flex-direction:column;gap:5px}
+.kpi-value{font-size:25px;font-weight:650;letter-spacing:-.01em}
+.kpi-label{color:var(--muted);font-size:12px;line-height:1.35}
+.callout{border-left:3px solid var(--accent);background:var(--panel);padding:12px 15px;
+  border-radius:0 8px 8px 0;margin:14px 0}
+.callout.warn{border-color:var(--warn)}
+.callout.bad{border-color:var(--bad)}
+.callout.ok{border-color:var(--ok)}
+.tablewrap{margin:12px 0 22px;background:var(--panel);border:1px solid var(--line);
+  border-radius:10px;padding:12px 13px 4px;overflow:auto}
+.table-note{color:var(--muted);font-size:12px;margin:0 0 8px}
+input.filter{width:100%;max-width:340px;margin-bottom:10px;padding:7px 10px;border-radius:7px;
+  border:1px solid var(--line);background:#0d1218;color:var(--ink);font-size:13px}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{text-align:left;padding:6px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+th{position:sticky;top:0;background:var(--panel2);color:#b9c6d3;font-weight:600;
+  white-space:nowrap;z-index:2}
+tbody tr:hover{background:#1a212b}
+td .wrap{display:block;max-width:52ch;white-space:normal;color:#c9d4de}
+td.num{font-variant-numeric:tabular-nums}
+.pill{display:inline-block;padding:1px 7px;border-radius:999px;font-size:11.5px;font-weight:600;
+  border:1px solid transparent;white-space:nowrap}
+.pill.ok{background:rgba(63,185,80,.14);color:#7ee787;border-color:rgba(63,185,80,.35)}
+.pill.warn{background:rgba(210,153,34,.14);color:#e3b341;border-color:rgba(210,153,34,.35)}
+.pill.bad{background:rgba(248,81,73,.14);color:#ff7b72;border-color:rgba(248,81,73,.35)}
+.pill.mute{background:#222a33;color:#9aa7b4;border-color:#2f3944}
+.pill.blank2{background:#222a33;color:#8b949e;border-color:#2f3944}
+.blank{display:inline-block;padding:1px 7px;border-radius:999px;font-size:11.5px;font-weight:700;
+  background:#242c36;color:#8b949e;border:1px dashed #46515e;white-space:nowrap}
+.empty{color:var(--muted);font-style:italic}
+ul.tight{padding-left:20px;max-width:100ch}
+ul.tight li{margin:4px 0;color:#c9d4de}
+footer{color:#6e7b8b;font-size:12px;padding:20px 26px;border-top:1px solid var(--line)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:18px}
+@media(max-width:900px){
+  .shell{grid-template-columns:1fr}
+  nav.side{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line);
+    display:flex;flex-wrap:wrap;gap:4px}
+  nav.side .grp{display:none}
+  main{padding:16px}
+}
+</style></head>
+<body>
+<header class="top">
+  <h1>OWN5 · NFL decision-readiness desk</h1>
+  <div class="sub">Session e46fb855 · built 2026-11-15T23:40:00Z · every table row links to
+  the official page it was read from; anything that cannot be sourced is left blank and flagged.</div>
+</header>
+<div class="shell">
+<nav class="side">
+  <div class="grp">Read first</div>
+  <a class="" href="index.html">Overview</a><a class="" href="executive-summary.html">Executive summary</a><a class="" href="requirements.html">Requirements</a><a class="" href="questions.html">Questions</a><a class="" href="suggestions.html">Suggestions</a>
+  <div class="grp">Evidence</div>
+  <a class="" href="results.html">Results feed</a><a class="" href="slate.html">Week 11 slate</a><a class="" href="lines.html">Originated lines</a><a class="" href="price-store.html">Price store</a><a class="" href="depth.html">Depth &amp; replacements</a><a class="" href="injuries.html">Injuries</a><a class="" href="matchup.html">Matchup matrix</a><a class="" href="strategies.html">Strategies</a><a class="" href="gates.html">Gates</a>
+  <div class="grp">Registers</div>
+  <a class="" href="leaderboard.html">Leaderboard</a><a class="" href="correlations.html">Correlations</a><a class="" href="luck.html">Luck panel</a><a class="" href="flagged.html">Flagged for review</a><a class="on" href="sources.html">Sources</a><a class="" href="audit.html">Repo audit</a><a class="" href="verification.html">Verification</a>
+</nav>
+<main>
+<h2>Sources</h2>
+<p class="lead">Every page this desk read, when it was read, what it was used for, and how many rows it contributed.</p>
+<div class="tablewrap"><p class="table-note">11 rows</p><input class="filter" type="search" placeholder="Filter rows…" data-table="t-src" aria-label="Filter this table"><table id="t-src"><thead><tr><th>Source</th><th>Publisher</th><th>Title</th><th>URL</th><th>Tier</th><th>Fetched (UTC)</th><th>Used for</th><th>Rows</th><th>Verification status</th><th>Source</th></tr></thead><tbody><tr><td>OFF-STD</td><td>NFL.com</td><td><span class="wrap">2026 NFL League Standings (regular season)</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td><td>OFFICIAL</td><td>2026-11-15T23:26:00Z</td><td><span class="wrap">32 team rows: W-L-T, PF, PA; the reconciliation benchmark and the correlations</span></td><td>32</td><td>read directly through the sandbox fetcher; transcribed verbatim</td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>OFF-SLATE-11</td><td>NFL.com</td><td><span class="wrap">2026 NFL Schedule - Week 11</span></td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-11" target="_blank" rel="noopener nofollow">nfl.com/by-week/week-11</a></td><td>OFFICIAL</td><td>2026-11-15T23:24:00Z</td><td><span class="wrap">13 fixtures: matchup, date, kickoff, network, venue, bye teams</span></td><td>13 games + 6 byes</td><td>read directly; venue strings transcribed from the page&#x27;s own per-game venue field</td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-11" target="_blank" rel="noopener nofollow">nfl.com/by-week/week-11</a></td></tr><tr><td>OFF-GC-MINSF</td><td>NFL.com</td><td><span class="wrap">Vikings at 49ers 2026 REG 11 - Game Center</span></td><td><a href="https://www.nfl.com/games/vikings-at-49ers-2026-reg-11" target="_blank" rel="noopener nofollow">nfl.com/games/vikings-at-49ers-2026-reg-11</a></td><td>OFFICIAL</td><td>2026-11-15T23:25:00Z</td><td><span class="wrap">Venue for MIN@SF (Location MEXICO CITY, Stadium ESTADIO BANORTE); also confirms the week-11 injury report is not available</span></td><td>1</td><td>read directly</td><td><a href="https://www.nfl.com/games/vikings-at-49ers-2026-reg-11" target="_blank" rel="noopener nofollow">nfl.com/games/vikings-at-49ers-2026-reg-11</a></td></tr><tr><td>OFF-WK10</td><td>NFL.com</td><td><span class="wrap">2026 NFL Schedule - Week 10</span></td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-10" target="_blank" rel="noopener nofollow">nfl.com/by-week/week-10</a></td><td>OFFICIAL</td><td>2026-11-15T23:22:00Z</td><td><span class="wrap">9 final scores plus the published status of 5 unfinished games</span></td><td>14</td><td>read directly; only rows the page labels FINAL are carried as results</td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-10" target="_blank" rel="noopener nofollow">nfl.com/by-week/week-10</a></td></tr><tr><td>OFF-SPOT</td><td>NFL.com</td><td><span class="wrap">2026 weeks 1-5 schedule pages (first page of each)</span></td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-1 ... week-5" target="_blank" rel="noopener nofollow">nfl.com/by-week/week-1 ... week-5</a></td><td>OFFICIAL</td><td>2026-11-15T23:20:00Z</td><td><span class="wrap">Independent spot-check of the carried-forward results feed</span></td><td>59</td><td>read directly by this session, one page per week</td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-1 ... week-5" target="_blank" rel="noopener nofollow">nfl.com/by-week/week-1 ... week-5</a></td></tr><tr><td>OFF-INJ-10</td><td>NFL.com</td><td><span class="wrap">Official NFL Injury Report - Week 10, 2026</span></td><td><a href="https://www.nfl.com/injuries/league/2026/reg10" target="_blank" rel="noopener nofollow">nfl.com/2026/reg10</a></td><td>OFFICIAL</td><td>2026-11-15T23:27:00Z</td><td><span class="wrap">Practice and game designations driving the replacement-depth tracker</span></td><td>49 read this session</td><td>page 1 of 8 read directly; incomplete rows omitted rather than guessed</td><td><a href="https://www.nfl.com/injuries/league/2026/reg10" target="_blank" rel="noopener nofollow">nfl.com/2026/reg10</a></td></tr><tr><td>OFF-INJ-11</td><td>NFL.com</td><td><span class="wrap">Official NFL Injury Report - Week 11, 2026 (requested)</span></td><td><a href="https://www.nfl.com/injuries/league/2026/reg11" target="_blank" rel="noopener nofollow">nfl.com/2026/reg11</a></td><td>OFFICIAL</td><td>2026-11-15T23:27:00Z</td><td><span class="wrap">Would drive the week-11 injury adjustment</span></td><td>0</td><td>NOT PUBLISHED - the URL serves the Week 10 report; see F-03 and the D6 audit row</td><td><a href="https://www.nfl.com/injuries/league/2026/reg11" target="_blank" rel="noopener nofollow">nfl.com/2026/reg11</a></td></tr><tr><td>OFF-DEPTH</td><td>32 NFL club sites</td><td><span class="wrap">Official club depth charts</span></td><td><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener nofollow">nfl.com/teams</a></td><td>OFFICIAL (club-published)</td><td>2026-11-15T23:35:00Z</td><td><span class="wrap">Replacement depth, the deficiency matrix and the per-team starter-out view</span></td><td>700 slots across 31 clubs</td><td>each club&#x27;s own /team/depth-chart page read directly; Houston returns an image and contributes 0 rows</td><td><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener nofollow">nfl.com/teams</a></td></tr><tr><td>CF-FEED</td><td>session 3fb93d11 (in-repo)</td><td><span class="wrap">results_feed.csv - 137 official 2026 finals</span></td><td><a href="https://www.nfl.com/schedules/2026/by-week/" target="_blank" rel="noopener nofollow">nfl.com/2026/by-week</a></td><td>OFFICIAL (carried forward)</td><td>2026-11-14T21:33:19Z</td><td><span class="wrap">The base of the results feed; every row re-checked where this session read the same page</span></td><td>137</td><td>carried forward; sha256 prefix f26a67a805ccfb53</td><td><a href="https://www.nfl.com/schedules/2026/by-week/" target="_blank" rel="noopener nofollow">nfl.com/2026/by-week</a></td></tr><tr><td>CF-STD</td><td>session 3fb93d11 (in-repo)</td><td><span class="wrap">standings_official.csv</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td><td>OFFICIAL (carried forward)</td><td>2026-11-14T21:33:19Z</td><td><span class="wrap">Audit comparison against today&#x27;s official standings</span></td><td>32</td><td>carried forward; sha256 prefix a7abd2c3a6db3d4a</td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>CF-INJ</td><td>session 864d5668 (in-repo)</td><td><span class="wrap">injuries.csv - week-10 report</span></td><td><a href="https://www.nfl.com/injuries/league/2026/reg10" target="_blank" rel="noopener nofollow">nfl.com/2026/reg10</a></td><td>OFFICIAL (carried forward)</td><td>2026-11-13</td><td><span class="wrap">The only complete read of the week-10 report; cross-checked against this session&#x27;s sample</span></td><td>326</td><td>carried forward; sha256 prefix 325a2c48ce447d72</td><td><a href="https://www.nfl.com/injuries/league/2026/reg10" target="_blank" rel="noopener nofollow">nfl.com/2026/reg10</a></td></tr></tbody></table></div><h3>Capture ledger</h3><p class="lead">SHA-256 of every official capture held in <code>data/official/</code>.</p><div class="tablewrap"><p class="table-note">6 rows</p><input class="filter" type="search" placeholder="Filter rows…" data-table="t-man" aria-label="Filter this table"><table id="t-man"><thead><tr><th>Path</th><th>Bytes</th><th>SHA-256</th><th>Captured (UTC)</th><th>Source</th></tr></thead><tbody><tr><td>data/official/depth_charts_2026.json</td><td>41315</td><td>9766b6e74d37e56607d8301ad3e355ea362afeddb0dca9274988668654c31875</td><td>2026-11-15T23:35:00Z</td><td><span class="blank">LEDGER ROW — the hash is the provenance</span></td></tr><tr><td>data/official/injury_sample_wk10.json</td><td>8766</td><td>652e5faa59d0d16394c1791bcf211251378a211930a22e08cfbf089da08e9760</td><td>2026-11-15T23:27:00Z</td><td><span class="blank">LEDGER ROW — the hash is the provenance</span></td></tr><tr><td>data/official/results_spotcheck_w1_w5.json</td><td>11059</td><td>aae60bc6d73ac6c3d72c99b2c389ce582d3d900bdf627f8a0fd2cc70ab726e43</td><td>2026-11-15T23:20:00Z</td><td><span class="blank">LEDGER ROW — the hash is the provenance</span></td></tr><tr><td>data/official/results_wk10_2026.json</td><td>3151</td><td>b9897399b99836eb185d7acbd94a667fac66ae21fbe7796e84a3f3c83eb9a0b0</td><td>2026-11-15T23:22:00Z</td><td><span class="blank">LEDGER ROW — the hash is the provenance</span></td></tr><tr><td>data/official/slate_2026_wk11.json</td><td>4831</td><td>31942ccb016588bf7a839cd22d98f0699d18e2321abeb3a873ecdb748ab8be24</td><td>2026-11-15T23:24:00Z</td><td><span class="blank">LEDGER ROW — the hash is the provenance</span></td></tr><tr><td>data/official/standings_2026_league.json</td><td>2524</td><td>df33f9c59349e49f72f5ab775b418ff2e393aeaaea495d839eeee99a97be13e4</td><td>2026-11-15T23:26:00Z</td><td><span class="blank">LEDGER ROW — the hash is the provenance</span></td></tr></tbody></table></div>
+</main>
+</div>
+<footer>OWN5 · e46fb855 · Tables are generated from CSVs that are rebuilt deterministically by
+<code>engine.py</code>; the row-level source proof is re-run on every build by <code>verify.py</code>.</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('input.filter').forEach(function (input) {
+    var table = document.getElementById(input.getAttribute('data-table'));
+    if (!table) return;
+    var rows = Array.prototype.slice.call(table.tBodies[0].rows);
+    var note = table.parentNode.querySelector('.table-note');
+    var total = rows.length;
+    input.addEventListener('input', function () {
+      var q = input.value.trim().toLowerCase();
+      var shown = 0;
+      rows.forEach(function (tr) {
+        var hit = !q || tr.textContent.toLowerCase().indexOf(q) !== -1;
+        tr.style.display = hit ? '' : 'none';
+        if (hit) shown++;
+      });
+      if (note) note.textContent = q ? (shown + ' of ' + total + ' rows shown') : (total + ' rows');
+    });
+  });
+});
+</script>
+</body></html>

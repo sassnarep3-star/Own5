@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Correlations — OWN5 NFL decision desk (e46fb855)</title>
+<style>
+:root{
+  --bg:#0e1116; --panel:#161b22; --panel2:#1c232c; --line:#2a323d;
+  --ink:#e6edf3; --muted:#9aa7b4; --accent:#4cc2ff; --ok:#3fb950; --warn:#d29922;
+  --bad:#f85149; --blank:#8b949e;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+header.top{background:linear-gradient(180deg,#111823,#0e1116);border-bottom:1px solid var(--line);
+  padding:18px 22px;position:sticky;top:0;z-index:20}
+header.top h1{margin:0;font-size:17px;letter-spacing:.02em}
+header.top .sub{color:var(--muted);font-size:12.5px;margin-top:3px}
+.shell{display:grid;grid-template-columns:236px minmax(0,1fr);gap:0;align-items:start}
+nav.side{border-right:1px solid var(--line);padding:16px 10px 40px;position:sticky;top:70px;
+  height:calc(100vh - 70px);overflow:auto}
+nav.side a{display:block;padding:7px 10px;border-radius:6px;color:var(--muted);font-size:13.5px}
+nav.side a:hover{background:var(--panel);color:var(--ink);text-decoration:none}
+nav.side a.on{background:#1d2b38;color:var(--ink);font-weight:600}
+nav.side .grp{color:#6e7b8b;font-size:11px;text-transform:uppercase;letter-spacing:.08em;
+  padding:14px 10px 6px}
+main{padding:22px 26px 80px;min-width:0;max-width:1500px}
+h2{margin:26px 0 8px;font-size:19px}
+h2:first-child{margin-top:4px}
+h3{margin:20px 0 6px;font-size:15px;color:var(--ink)}
+p{color:#c9d4de;max-width:100ch}
+p.lead{color:var(--muted)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:12px;margin:14px 0 6px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 15px;
+  display:flex;flex-direction:column;gap:5px}
+.kpi-value{font-size:25px;font-weight:650;letter-spacing:-.01em}
+.kpi-label{color:var(--muted);font-size:12px;line-height:1.35}
+.callout{border-left:3px solid var(--accent);background:var(--panel);padding:12px 15px;
+  border-radius:0 8px 8px 0;margin:14px 0}
+.callout.warn{border-color:var(--warn)}
+.callout.bad{border-color:var(--bad)}
+.callout.ok{border-color:var(--ok)}
+.tablewrap{margin:12px 0 22px;background:var(--panel);border:1px solid var(--line);
+  border-radius:10px;padding:12px 13px 4px;overflow:auto}
+.table-note{color:var(--muted);font-size:12px;margin:0 0 8px}
+input.filter{width:100%;max-width:340px;margin-bottom:10px;padding:7px 10px;border-radius:7px;
+  border:1px solid var(--line);background:#0d1218;color:var(--ink);font-size:13px}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{text-align:left;padding:6px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+th{position:sticky;top:0;background:var(--panel2);color:#b9c6d3;font-weight:600;
+  white-space:nowrap;z-index:2}
+tbody tr:hover{background:#1a212b}
+td .wrap{display:block;max-width:52ch;white-space:normal;color:#c9d4de}
+td.num{font-variant-numeric:tabular-nums}
+.pill{display:inline-block;padding:1px 7px;border-radius:999px;font-size:11.5px;font-weight:600;
+  border:1px solid transparent;white-space:nowrap}
+.pill.ok{background:rgba(63,185,80,.14);color:#7ee787;border-color:rgba(63,185,80,.35)}
+.pill.warn{background:rgba(210,153,34,.14);color:#e3b341;border-color:rgba(210,153,34,.35)}
+.pill.bad{background:rgba(248,81,73,.14);color:#ff7b72;border-color:rgba(248,81,73,.35)}
+.pill.mute{background:#222a33;color:#9aa7b4;border-color:#2f3944}
+.pill.blank2{background:#222a33;color:#8b949e;border-color:#2f3944}
+.blank{display:inline-block;padding:1px 7px;border-radius:999px;font-size:11.5px;font-weight:700;
+  background:#242c36;color:#8b949e;border:1px dashed #46515e;white-space:nowrap}
+.empty{color:var(--muted);font-style:italic}
+ul.tight{padding-left:20px;max-width:100ch}
+ul.tight li{margin:4px 0;color:#c9d4de}
+footer{color:#6e7b8b;font-size:12px;padding:20px 26px;border-top:1px solid var(--line)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:18px}
+@media(max-width:900px){
+  .shell{grid-template-columns:1fr}
+  nav.side{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line);
+    display:flex;flex-wrap:wrap;gap:4px}
+  nav.side .grp{display:none}
+  main{padding:16px}
+}
+</style></head>
+<body>
+<header class="top">
+  <h1>OWN5 · NFL decision-readiness desk</h1>
+  <div class="sub">Session e46fb855 · built 2026-11-15T23:40:00Z · every table row links to
+  the official page it was read from; anything that cannot be sourced is left blank and flagged.</div>
+</header>
+<div class="shell">
+<nav class="side">
+  <div class="grp">Read first</div>
+  <a class="" href="index.html">Overview</a><a class="" href="executive-summary.html">Executive summary</a><a class="" href="requirements.html">Requirements</a><a class="" href="questions.html">Questions</a><a class="" href="suggestions.html">Suggestions</a>
+  <div class="grp">Evidence</div>
+  <a class="" href="results.html">Results feed</a><a class="" href="slate.html">Week 11 slate</a><a class="" href="lines.html">Originated lines</a><a class="" href="price-store.html">Price store</a><a class="" href="depth.html">Depth &amp; replacements</a><a class="" href="injuries.html">Injuries</a><a class="" href="matchup.html">Matchup matrix</a><a class="" href="strategies.html">Strategies</a><a class="" href="gates.html">Gates</a>
+  <div class="grp">Registers</div>
+  <a class="" href="leaderboard.html">Leaderboard</a><a class="on" href="correlations.html">Correlations</a><a class="" href="luck.html">Luck panel</a><a class="" href="flagged.html">Flagged for review</a><a class="" href="sources.html">Sources</a><a class="" href="audit.html">Repo audit</a><a class="" href="verification.html">Verification</a>
+</nav>
+<main>
+<h2>Correlations</h2>
+<p class="lead">Only correlations whose inputs are official are published. Third-party aggregator values are withheld and listed separately with n and tier.</p>
+<div class="kpis"><div class="card"><span class="kpi-value">10</span><span class="kpi-label">published</span></div><div class="card"><span class="kpi-value">8</span><span class="kpi-label">withheld</span></div></div><div class="tablewrap"><p class="table-note">10 rows</p><input class="filter" type="search" placeholder="Filter rows…" data-table="t-corr" aria-label="Filter this table"><table id="t-corr"><thead><tr><th>ID</th><th>Variable A</th><th>Variable B</th><th>n</th><th>r</th><th>95% low</th><th>95% high</th><th>Input tier</th><th>Inputs</th><th>Source</th></tr></thead><tbody><tr><td>C1</td><td>points for per game</td><td>win percentage</td><td>32</td><td>0.7252</td><td>0.5039</td><td>0.8571</td><td>OFFICIAL</td><td><span class="wrap">32 official standings rows, 2026-11-15</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>C2</td><td>points against per game</td><td>win percentage</td><td>32</td><td>-0.7131</td><td>-0.8503</td><td>-0.4850</td><td>OFFICIAL</td><td><span class="wrap">32 official standings rows, 2026-11-15</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>C3</td><td>net points per game</td><td>win percentage</td><td>32</td><td>0.8864</td><td>0.7782</td><td>0.9435</td><td>OFFICIAL</td><td><span class="wrap">32 official standings rows, 2026-11-15</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>C4</td><td>points for per game</td><td>points against per game</td><td>32</td><td>-0.3158</td><td>-0.5986</td><td>0.0370</td><td>OFFICIAL</td><td><span class="wrap">32 official standings rows, 2026-11-15</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>C5</td><td>home margin (actual)</td><td>rating difference (model)</td><td>145</td><td>0.6331</td><td>0.5242</td><td>0.7217</td><td>OFFICIAL</td><td><span class="wrap">145 official finals; in-sample by construction, published as a fit diagnostic</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>C6</td><td>game total (actual)</td><td>predicted total (estimator A)</td><td>145</td><td>0.4797</td><td>0.3435</td><td>0.5961</td><td>OFFICIAL</td><td><span class="wrap">145 official finals; in-sample fit diagnostic</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>C7</td><td>rest-day difference (home minus away)</td><td>home margin</td><td>129</td><td>0.3786</td><td>0.2201</td><td>0.5176</td><td>OFFICIAL</td><td><span class="wrap">129 official finals with a previous game for both teams; dates from the official schedule</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>C8</td><td>Pythagorean expectation (exponent 2.37)</td><td>actual win percentage</td><td>32</td><td>0.8884</td><td>0.7820</td><td>0.9445</td><td>OFFICIAL</td><td><span class="wrap">32 official standings rows; the exponent is a MODELLING CHOICE, not an official value (flagged F-14)</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>C9</td><td>share of games decided by 3 points or fewer</td><td>win percentage</td><td>32</td><td>0.0539</td><td>-0.3005</td><td>0.3952</td><td>OFFICIAL</td><td><span class="wrap">32 clubs; close-game share is the standard luck proxy, computed from official finals</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>C10</td><td>game total (actual)</td><td>sum of the two teams&#x27; points-for rates</td><td>145</td><td>0.3321</td><td>0.1787</td><td>0.4696</td><td>OFFICIAL</td><td><span class="wrap">145 official finals; a naive offensive-strength check</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr></tbody></table></div><h3>Withheld</h3><p class="lead">These numbers exist elsewhere in this repository. They are not reproduced as usable values because their inputs are an aggregator, not an official source, or because no source exists at all.</p><div class="tablewrap"><p class="table-note">8 rows</p><input class="filter" type="search" placeholder="Filter rows…" data-table="t-wit" aria-label="Filter this table"><table id="t-wit"><thead><tr><th>ID</th><th>Quantity</th><th>Value published elsewhere</th><th>n published elsewhere</th><th>Input tier</th><th>Published by</th><th>Why withheld</th><th>Source</th></tr></thead><tbody><tr><td>W1</td><td>QB passing yards vs top-WR receiving yards</td><td>0.76</td><td>3852 team-games</td><td>nflverse (third-party aggregator)</td><td>session arena-f1d30421, research/arena-f1d30421/correlation.md</td><td><span class="wrap">AGGREGATOR input - inadmissible under the official-only rule</span></td><td><span class="blank">WITHHELD — the input is not an official source</span></td></tr><tr><td>W2</td><td>Game-line leg outcomes (phi)</td><td>0.01</td><td>9479 pairs</td><td>nflverse (third-party aggregator)</td><td>session arena-f1d30421, data/correlation_parlays.csv</td><td><span class="wrap">AGGREGATOR input - inadmissible under the official-only rule</span></td><td><span class="blank">WITHHELD — the input is not an official source</span></td></tr><tr><td>W3</td><td>Cross-game vs same-game parlay coupling ratio</td><td>0.984</td><td>9479 pairs</td><td>nflverse (third-party aggregator)</td><td>session arena-f1d30421, data/correlation_parlays.csv</td><td><span class="wrap">AGGREGATOR input - inadmissible under the official-only rule</span></td><td><span class="blank">WITHHELD — the input is not an official source</span></td></tr><tr><td>W4</td><td>Favourites cover rate</td><td>0.481</td><td>10729 games, 1980-2024</td><td>nflverse (third-party aggregator)</td><td>session arena-f1d30421, data/backtest_results.csv</td><td><span class="wrap">AGGREGATOR input - inadmissible under the official-only rule</span></td><td><span class="blank">WITHHELD — the input is not an official source</span></td></tr><tr><td>W5</td><td>Home underdogs cover rate</td><td>0.526</td><td>10729 games, 1980-2024</td><td>nflverse (third-party aggregator)</td><td>session arena-f1d30421, data/backtest_results.csv</td><td><span class="wrap">AGGREGATOR input - inadmissible under the official-only rule</span></td><td><span class="blank">WITHHELD — the input is not an official source</span></td></tr><tr><td>W6</td><td>Overs cover rate</td><td>0.491</td><td>10729 games, 1980-2024</td><td>nflverse (third-party aggregator)</td><td>session arena-f1d30421, data/backtest_results.csv</td><td><span class="wrap">AGGREGATOR input - inadmissible under the official-only rule</span></td><td><span class="blank">WITHHELD — the input is not an official source</span></td></tr><tr><td>W7</td><td>Market spread vs closing spread (CLV basis)</td><td>not published</td><td>0</td><td>no source</td><td>no desk in this repo</td><td><span class="wrap">NO SOURCE - no price data of any kind exists in this repo</span></td><td><span class="blank">WITHHELD — the input is not an official source</span></td></tr><tr><td>W8</td><td>Player prop joint distributions</td><td>not published</td><td>0</td><td>no source</td><td>no desk in this repo</td><td><span class="wrap">NO SOURCE - no prop prices exist in this repo</span></td><td><span class="blank">WITHHELD — the input is not an official source</span></td></tr></tbody></table></div>
+</main>
+</div>
+<footer>OWN5 · e46fb855 · Tables are generated from CSVs that are rebuilt deterministically by
+<code>engine.py</code>; the row-level source proof is re-run on every build by <code>verify.py</code>.</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('input.filter').forEach(function (input) {
+    var table = document.getElementById(input.getAttribute('data-table'));
+    if (!table) return;
+    var rows = Array.prototype.slice.call(table.tBodies[0].rows);
+    var note = table.parentNode.querySelector('.table-note');
+    var total = rows.length;
+    input.addEventListener('input', function () {
+      var q = input.value.trim().toLowerCase();
+      var shown = 0;
+      rows.forEach(function (tr) {
+        var hit = !q || tr.textContent.toLowerCase().indexOf(q) !== -1;
+        tr.style.display = hit ? '' : 'none';
+        if (hit) shown++;
+      });
+      if (note) note.textContent = q ? (shown + ' of ' + total + ' rows shown') : (total + ' rows');
+    });
+  });
+});
+</script>
+</body></html>

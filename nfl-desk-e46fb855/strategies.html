@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Strategies — OWN5 NFL decision desk (e46fb855)</title>
+<style>
+:root{
+  --bg:#0e1116; --panel:#161b22; --panel2:#1c232c; --line:#2a323d;
+  --ink:#e6edf3; --muted:#9aa7b4; --accent:#4cc2ff; --ok:#3fb950; --warn:#d29922;
+  --bad:#f85149; --blank:#8b949e;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+header.top{background:linear-gradient(180deg,#111823,#0e1116);border-bottom:1px solid var(--line);
+  padding:18px 22px;position:sticky;top:0;z-index:20}
+header.top h1{margin:0;font-size:17px;letter-spacing:.02em}
+header.top .sub{color:var(--muted);font-size:12.5px;margin-top:3px}
+.shell{display:grid;grid-template-columns:236px minmax(0,1fr);gap:0;align-items:start}
+nav.side{border-right:1px solid var(--line);padding:16px 10px 40px;position:sticky;top:70px;
+  height:calc(100vh - 70px);overflow:auto}
+nav.side a{display:block;padding:7px 10px;border-radius:6px;color:var(--muted);font-size:13.5px}
+nav.side a:hover{background:var(--panel);color:var(--ink);text-decoration:none}
+nav.side a.on{background:#1d2b38;color:var(--ink);font-weight:600}
+nav.side .grp{color:#6e7b8b;font-size:11px;text-transform:uppercase;letter-spacing:.08em;
+  padding:14px 10px 6px}
+main{padding:22px 26px 80px;min-width:0;max-width:1500px}
+h2{margin:26px 0 8px;font-size:19px}
+h2:first-child{margin-top:4px}
+h3{margin:20px 0 6px;font-size:15px;color:var(--ink)}
+p{color:#c9d4de;max-width:100ch}
+p.lead{color:var(--muted)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:12px;margin:14px 0 6px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 15px;
+  display:flex;flex-direction:column;gap:5px}
+.kpi-value{font-size:25px;font-weight:650;letter-spacing:-.01em}
+.kpi-label{color:var(--muted);font-size:12px;line-height:1.35}
+.callout{border-left:3px solid var(--accent);background:var(--panel);padding:12px 15px;
+  border-radius:0 8px 8px 0;margin:14px 0}
+.callout.warn{border-color:var(--warn)}
+.callout.bad{border-color:var(--bad)}
+.callout.ok{border-color:var(--ok)}
+.tablewrap{margin:12px 0 22px;background:var(--panel);border:1px solid var(--line);
+  border-radius:10px;padding:12px 13px 4px;overflow:auto}
+.table-note{color:var(--muted);font-size:12px;margin:0 0 8px}
+input.filter{width:100%;max-width:340px;margin-bottom:10px;padding:7px 10px;border-radius:7px;
+  border:1px solid var(--line);background:#0d1218;color:var(--ink);font-size:13px}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{text-align:left;padding:6px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+th{position:sticky;top:0;background:var(--panel2);color:#b9c6d3;font-weight:600;
+  white-space:nowrap;z-index:2}
+tbody tr:hover{background:#1a212b}
+td .wrap{display:block;max-width:52ch;white-space:normal;color:#c9d4de}
+td.num{font-variant-numeric:tabular-nums}
+.pill{display:inline-block;padding:1px 7px;border-radius:999px;font-size:11.5px;font-weight:600;
+  border:1px solid transparent;white-space:nowrap}
+.pill.ok{background:rgba(63,185,80,.14);color:#7ee787;border-color:rgba(63,185,80,.35)}
+.pill.warn{background:rgba(210,153,34,.14);color:#e3b341;border-color:rgba(210,153,34,.35)}
+.pill.bad{background:rgba(248,81,73,.14);color:#ff7b72;border-color:rgba(248,81,73,.35)}
+.pill.mute{background:#222a33;color:#9aa7b4;border-color:#2f3944}
+.pill.blank2{background:#222a33;color:#8b949e;border-color:#2f3944}
+.blank{display:inline-block;padding:1px 7px;border-radius:999px;font-size:11.5px;font-weight:700;
+  background:#242c36;color:#8b949e;border:1px dashed #46515e;white-space:nowrap}
+.empty{color:var(--muted);font-style:italic}
+ul.tight{padding-left:20px;max-width:100ch}
+ul.tight li{margin:4px 0;color:#c9d4de}
+footer{color:#6e7b8b;font-size:12px;padding:20px 26px;border-top:1px solid var(--line)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:18px}
+@media(max-width:900px){
+  .shell{grid-template-columns:1fr}
+  nav.side{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line);
+    display:flex;flex-wrap:wrap;gap:4px}
+  nav.side .grp{display:none}
+  main{padding:16px}
+}
+</style></head>
+<body>
+<header class="top">
+  <h1>OWN5 · NFL decision-readiness desk</h1>
+  <div class="sub">Session e46fb855 · built 2026-11-15T23:40:00Z · every table row links to
+  the official page it was read from; anything that cannot be sourced is left blank and flagged.</div>
+</header>
+<div class="shell">
+<nav class="side">
+  <div class="grp">Read first</div>
+  <a class="" href="index.html">Overview</a><a class="" href="executive-summary.html">Executive summary</a><a class="" href="requirements.html">Requirements</a><a class="" href="questions.html">Questions</a><a class="" href="suggestions.html">Suggestions</a>
+  <div class="grp">Evidence</div>
+  <a class="" href="results.html">Results feed</a><a class="" href="slate.html">Week 11 slate</a><a class="" href="lines.html">Originated lines</a><a class="" href="price-store.html">Price store</a><a class="" href="depth.html">Depth &amp; replacements</a><a class="" href="injuries.html">Injuries</a><a class="" href="matchup.html">Matchup matrix</a><a class="on" href="strategies.html">Strategies</a><a class="" href="gates.html">Gates</a>
+  <div class="grp">Registers</div>
+  <a class="" href="leaderboard.html">Leaderboard</a><a class="" href="correlations.html">Correlations</a><a class="" href="luck.html">Luck panel</a><a class="" href="flagged.html">Flagged for review</a><a class="" href="sources.html">Sources</a><a class="" href="audit.html">Repo audit</a><a class="" href="verification.html">Verification</a>
+</nav>
+<main>
+<h2>Strategies</h2>
+<p class="lead">Ten pre-registered families. The rule text is frozen before the evaluation window opens and the commit hash is the registration.</p>
+<div class="kpis"><div class="card"><span class="kpi-value">10</span><span class="kpi-label">families</span></div><div class="card"><span class="kpi-value">7</span><span class="kpi-label">singles</span></div><div class="card"><span class="kpi-value">3</span><span class="kpi-label">parlays / prop combos</span></div><div class="card"><span class="kpi-value">0</span><span class="kpi-label">certified</span></div></div><div class="callout">Backtest numbers are shown for measurement and are never counted towards promotion. A family is promoted only on prospective bets taken after its rule was frozen, and only after gates G1–G8 pass.</div><div class="tablewrap"><p class="table-note">10 rows</p><input class="filter" type="search" placeholder="Filter rows…" data-table="t-st" aria-label="Filter this table"><table id="t-st"><thead><tr><th>Family</th><th>Name</th><th>Division</th><th>Rule (frozen)</th><th>Sample window</th><th>n</th><th>Hits</th><th>Hit rate</th><th>95% low</th><th>95% high</th><th>Binomial p</th><th>Holm p</th><th>Measurement</th><th>ROI</th><th>ROI status</th><th>Gates failed</th><th>Certified</th><th>What would change our mind (down)</th><th>What would change our mind (up)</th><th>Pre-registration</th><th>Source</th></tr></thead><tbody><tr><td>F1</td><td>Home side</td><td>Singles</td><td><span class="wrap">Back the home team on the side in every game.</span></td><td><span class="wrap">home_margin &gt; 0</span></td><td>145</td><td>70</td><td>0.4828</td><td>0.4029</td><td>0.5635</td><td>0.739882</td><td>1.000000</td><td><span class="wrap">no fitting, so nothing can leak; the sample is every completed game</span></td><td><span class="blank">—</span></td><td><span class="wrap">UNVERIFIED - ROI needs a price; no price exists (F-01)</span></td><td><span class="wrap">G1(n&lt;300); G2(no price)</span></td><td><span class="pill mute">NO</span></td><td><span class="wrap">2026 weeks 1-10, all completed games</span></td><td><span class="wrap">Home teams stop winning at a rate the binomial interval can separate from 50%.</span></td><td><span class="wrap">frozen in content.py before the week-11 slate was priced; versioned in git, so the commit that last changed content.py is the registration</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>F2</td><td>Model margin side</td><td>Singles</td><td><span class="wrap">Back the side our own margin model favours, in every game.</span></td><td><span class="wrap">predicted_home_margin &gt; 0</span></td><td>129</td><td>81</td><td>0.6279</td><td>0.5419</td><td>0.7065</td><td>0.004650</td><td>0.037198</td><td><span class="wrap">out of sample: the ratings are refitted on the weeks before each game</span></td><td><span class="blank">—</span></td><td><span class="wrap">UNVERIFIED - ROI needs a price; no price exists (F-01)</span></td><td><span class="wrap">G1(n&lt;300); G2(no price)</span></td><td><span class="pill mute">NO</span></td><td><span class="wrap">2026 weeks 1-10, fitted on prior weeks only (walk-forward)</span></td><td><span class="wrap">The model&#x27;s side pick stops beating a coin flip once the walk-forward interval is applied.</span></td><td><span class="wrap">frozen in content.py before the week-11 slate was priced; versioned in git, so the commit that last changed content.py is the registration</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>F3</td><td>Model total</td><td>Singles</td><td><span class="wrap">Back the over when our totals model is above the league mean total.</span></td><td><span class="wrap">predicted_total &gt; mean_total</span></td><td>64</td><td>31</td><td>0.4844</td><td>0.3663</td><td>0.6042</td><td>0.900653</td><td>1.000000</td><td><span class="wrap">out of sample: the estimator and the league mean are refitted on the weeks before each game</span></td><td><span class="blank">—</span></td><td><span class="wrap">UNVERIFIED - ROI needs a price; no price exists (F-01)</span></td><td><span class="wrap">G1(n&lt;300); G2(no price)</span></td><td><span class="pill mute">NO</span></td><td><span class="wrap">2026 weeks 1-10</span></td><td><span class="wrap">The totals model stops beating the naive league-average baseline out of sample.</span></td><td><span class="wrap">frozen in content.py before the week-11 slate was priced; versioned in git, so the commit that last changed content.py is the registration</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>F4</td><td>Rest edge</td><td>Singles</td><td><span class="wrap">Back the side of the team with at least 3 more rest days than its opponent.</span></td><td><span class="wrap">rest_days_diff &gt;= 3</span></td><td>33</td><td>27</td><td>0.8182</td><td>0.6561</td><td>0.9139</td><td>0.000324</td><td>0.002917</td><td><span class="wrap">no fitting: rest days are fixed by the published kickoff dates</span></td><td><span class="blank">—</span></td><td><span class="wrap">UNVERIFIED - ROI needs a price; no price exists (F-01)</span></td><td><span class="wrap">G1(n&lt;300); G2(no price)</span></td><td><span class="pill mute">NO</span></td><td><span class="wrap">2026 weeks 1-10</span></td><td><span class="wrap">The rest-edge hit rate falls inside the binomial band around 50%.</span></td><td><span class="wrap">frozen in content.py before the week-11 slate was priced; versioned in git, so the commit that last changed content.py is the registration</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>F5</td><td>Divisional away side</td><td>Singles</td><td><span class="wrap">Back the away side in games between two divisional opponents.</span></td><td><span class="wrap">divisional_game == true</span></td><td>15</td><td>13</td><td>0.8667</td><td>0.6212</td><td>0.9626</td><td>0.007385</td><td>0.051697</td><td><span class="wrap">no fitting: bye weeks are published with the schedule</span></td><td><span class="blank">—</span></td><td><span class="wrap">UNVERIFIED - ROI needs a price; no price exists (F-01)</span></td><td><span class="wrap">G1(n&lt;300); G2(no price)</span></td><td><span class="pill mute">NO</span></td><td><span class="wrap">2026 weeks 1-10</span></td><td><span class="wrap">Divisional away sides stop covering at a rate distinguishable from 50%.</span></td><td><span class="wrap">frozen in content.py before the week-11 slate was priced; versioned in git, so the commit that last changed content.py is the registration</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>F6</td><td>Model favourite (moneyline)</td><td>Singles</td><td><span class="wrap">Back the moneyline when our model&#x27;s win probability exceeds 70%.</span></td><td><span class="wrap">model_win_prob &gt; 0.70</span></td><td>29</td><td>25</td><td>0.8621</td><td>0.6944</td><td>0.9450</td><td>0.000104</td><td>0.001037</td><td><span class="wrap">IN-SAMPLE: uses ratings fitted on the whole season, including the games being graded. This row is a diagnostic, not an estimate of skill, and it is excluded from promotion</span></td><td><span class="blank">—</span></td><td><span class="wrap">UNVERIFIED - ROI needs a price; no price exists (F-01)</span></td><td><span class="wrap">G1(n&lt;300); G2(no price)</span></td><td><span class="pill mute">NO</span></td><td><span class="wrap">2026 weeks 1-10</span></td><td><span class="wrap">Favourites at this threshold stop winning at a rate above the break-even implied by the threshold.</span></td><td><span class="wrap">frozen in content.py before the week-11 slate was priced; versioned in git, so the commit that last changed content.py is the registration</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>F7</td><td>Injury-adjusted side</td><td>Singles</td><td><span class="wrap">Back the side of the team whose opponent has more starters out on the official report.</span></td><td><span class="wrap">net_starters_out_diff &gt; 0</span></td><td>0</td><td>0</td><td><span class="blank">—</span></td><td><span class="blank">—</span></td><td><span class="blank">—</span></td><td><span class="blank">—</span></td><td><span class="blank">—</span></td><td><span class="wrap">no sample: the week-10 report publishes a game status for 4 clubs only</span></td><td><span class="blank">—</span></td><td><span class="wrap">UNVERIFIED - ROI needs a price; no price exists (F-01)</span></td><td><span class="wrap">G1(n&lt;300); G2(no price); F-03(no injury time series)</span></td><td><span class="pill mute">NO</span></td><td><span class="wrap">2026 weeks 1-10</span></td><td><span class="wrap">The net-starters-out count stops predicting the margin sign, or the ablation in R-27 shows no effect.</span></td><td><span class="wrap">frozen in content.py before the week-11 slate was priced; versioned in git, so the commit that last changed content.py is the registration</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>F8</td><td>Two-leg game parlay</td><td>Game parlays</td><td><span class="wrap">Parlay the two strongest model sides of the week.</span></td><td><span class="wrap">two highest |predicted margin| sides, same week</span></td><td>0</td><td>0</td><td><span class="blank">—</span></td><td><span class="blank">—</span></td><td><span class="blank">—</span></td><td><span class="blank">—</span></td><td><span class="blank">—</span></td><td><span class="wrap">no sample: gate G7 fails, so nothing is measured</span></td><td><span class="blank">—</span></td><td><span class="wrap">UNVERIFIED - ROI needs a price; no price exists (F-01)</span></td><td><span class="wrap">G1(n&lt;300); G2(no price); G7(no joint evidence)</span></td><td><span class="pill mute">NO</span></td><td><span class="wrap">2026 weeks 1-10</span></td><td><span class="wrap">A validated joint probability becomes available and shows the legs are not independent.</span></td><td><span class="wrap">frozen in content.py before the week-11 slate was priced; versioned in git, so the commit that last changed content.py is the registration</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>F9</td><td>Same-game parlay</td><td>Same-game parlays</td><td><span class="wrap">Parlay a side and a total from the same game.</span></td><td><span class="wrap">side + total, same game</span></td><td>0</td><td>0</td><td><span class="blank">—</span></td><td><span class="blank">—</span></td><td><span class="blank">—</span></td><td><span class="blank">—</span></td><td><span class="blank">—</span></td><td><span class="wrap">no sample: gate G7 fails, so nothing is measured</span></td><td><span class="blank">—</span></td><td><span class="wrap">UNVERIFIED - ROI needs a price; no price exists (F-01)</span></td><td><span class="wrap">G1(n&lt;300); G2(no price); G7(no joint evidence)</span></td><td><span class="pill mute">NO</span></td><td><span class="wrap">2026 weeks 1-10</span></td><td><span class="wrap">The side-total joint distribution is measured and shows the legs are dependent.</span></td><td><span class="wrap">frozen in content.py before the week-11 slate was priced; versioned in git, so the commit that last changed content.py is the registration</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>F10</td><td>Player prop combination</td><td>Prop combos</td><td><span class="wrap">Combine a passer-yard and a receiver-yard prop from the same game.</span></td><td><span class="wrap">QB yards + top WR yards, same game</span></td><td>0</td><td>0</td><td><span class="blank">—</span></td><td><span class="blank">—</span></td><td><span class="blank">—</span></td><td><span class="blank">—</span></td><td><span class="blank">—</span></td><td><span class="wrap">no sample: gate G7 fails, so nothing is measured</span></td><td><span class="blank">—</span></td><td><span class="wrap">UNVERIFIED - ROI needs a price; no price exists (F-01)</span></td><td><span class="wrap">G1(n&lt;300); G2(no price); G7(no joint evidence)</span></td><td><span class="pill mute">NO</span></td><td><span class="wrap">2026 weeks 1-10</span></td><td><span class="wrap">Prop prices become available and the measured correlation is high enough to invalidate independence.</span></td><td><span class="wrap">frozen in content.py before the week-11 slate was priced; versioned in git, so the commit that last changed content.py is the registration</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr></tbody></table></div><h3>Control baselines</h3><div class="tablewrap"><p class="table-note">3 rows</p><input class="filter" type="search" placeholder="Filter rows…" data-table="t-ctl" aria-label="Filter this table"><table id="t-ctl"><thead><tr><th>Control</th><th>Control</th><th>n</th><th>Expected</th><th>Observed</th><th>Note</th><th>Source</th></tr></thead><tbody><tr><td>C1</td><td>Random pick (coin flip)</td><td>145</td><td>0.5000</td><td><span class="blank">—</span></td><td><span class="wrap">The null every family must beat. Its interval is the yardstick on the leaderboard.</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>C2</td><td>Model favourite wins outright (in-sample)</td><td>145</td><td><span class="blank">—</span></td><td>0.7517</td><td><span class="wrap">In-sample. The out-of-sample version is family F2 and is the one that counts.</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr><tr><td>C3</td><td>Home team wins outright</td><td>144</td><td><span class="blank">—</span></td><td>0.4861</td><td><span class="wrap">Identical to family F1; published on both boards so the reader can see the overlap.</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener nofollow">nfl.com/2026/REG</a></td></tr></tbody></table></div>
+</main>
+</div>
+<footer>OWN5 · e46fb855 · Tables are generated from CSVs that are rebuilt deterministically by
+<code>engine.py</code>; the row-level source proof is re-run on every build by <code>verify.py</code>.</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('input.filter').forEach(function (input) {
+    var table = document.getElementById(input.getAttribute('data-table'));
+    if (!table) return;
+    var rows = Array.prototype.slice.call(table.tBodies[0].rows);
+    var note = table.parentNode.querySelector('.table-note');
+    var total = rows.length;
+    input.addEventListener('input', function () {
+      var q = input.value.trim().toLowerCase();
+      var shown = 0;
+      rows.forEach(function (tr) {
+        var hit = !q || tr.textContent.toLowerCase().indexOf(q) !== -1;
+        tr.style.display = hit ? '' : 'none';
+        if (hit) shown++;
+      });
+      if (note) note.textContent = q ? (shown + ' of ' + total + ' rows shown') : (total + ' rows');
+    });
+  });
+});
+</script>
+</body></html>

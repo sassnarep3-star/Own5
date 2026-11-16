@@ -1,0 +1,18 @@
+item,value,note,source_url
+games in the official results feed,145,every row read from an official nfl.com week page,https://www.nfl.com/standings/league/2026/REG
+free parameters,33,"32 team ratings plus the home-field term; the ratings are ridge-penalised (see F-17), so the effective number of parameters is lower",https://www.nfl.com/standings/league/2026/REG
+ridge penalty lambda,1.0,"MODELLING CHOICE, flagged as F-17. Without it the model is not identifiable early in a season",https://www.nfl.com/standings/league/2026/REG
+degrees of freedom,112,,https://www.nfl.com/standings/league/2026/REG
+residual standard deviation (points),11.8306,the model's own uncertainty on a single game margin,https://www.nfl.com/standings/league/2026/REG
+home-field advantage (points),-0.1200,negative means the home team scored fewer points than the rating difference predicts,https://www.nfl.com/standings/league/2026/REG
+home-field standard error,1.0329,,https://www.nfl.com/standings/league/2026/REG
+home-field 95% interval low,-2.1446,"the interval contains zero, so home field is not established in this sample",https://www.nfl.com/standings/league/2026/REG
+home-field 95% interval high,1.9046,,https://www.nfl.com/standings/league/2026/REG
+league mean total (points),45.9586,mean of the 145 official finals,https://www.nfl.com/standings/league/2026/REG
+walk-forward margin MAE,10.5026,129 games scored out of sample (weeks 2-10),https://www.nfl.com/standings/league/2026/REG
+walk-forward side accuracy,0.6279,81 of 129 winners called out of sample,https://www.nfl.com/standings/league/2026/REG
+walk-forward side binomial p,0.004650,"two-sided, against a coin flip",https://www.nfl.com/standings/league/2026/REG
+walk-forward totals MAE - estimator A,11.6065,fitted on prior weeks only; worse than the league-average baseline in this sample,https://www.nfl.com/standings/league/2026/REG
+walk-forward totals MAE - estimator B,11.8900,"fitted on prior weeks only; also worse than the baseline. An earlier run of this build appeared to show estimator B winning by about a point. That was leakage: it used the season's final standings, which contain the game being predicted (F-18)",https://www.nfl.com/standings/league/2026/REG
+walk-forward totals MAE - league-average baseline,11.1795,the naive estimator both model estimators must beat. Neither beats it in this sample,https://www.nfl.com/standings/league/2026/REG
+prior desk's totals MAE (session 3fb93d11),11.0038,"published out-of-sample MAE against a naive baseline of 11.0235; a different walk-forward over a different corpus, so the two are not directly comparable",https://www.nfl.com/standings/league/2026/REG

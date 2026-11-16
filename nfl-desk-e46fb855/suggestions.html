@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Suggestions register — OWN5 NFL decision desk (e46fb855)</title>
+<style>
+:root{
+  --bg:#0e1116; --panel:#161b22; --panel2:#1c232c; --line:#2a323d;
+  --ink:#e6edf3; --muted:#9aa7b4; --accent:#4cc2ff; --ok:#3fb950; --warn:#d29922;
+  --bad:#f85149; --blank:#8b949e;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+header.top{background:linear-gradient(180deg,#111823,#0e1116);border-bottom:1px solid var(--line);
+  padding:18px 22px;position:sticky;top:0;z-index:20}
+header.top h1{margin:0;font-size:17px;letter-spacing:.02em}
+header.top .sub{color:var(--muted);font-size:12.5px;margin-top:3px}
+.shell{display:grid;grid-template-columns:236px minmax(0,1fr);gap:0;align-items:start}
+nav.side{border-right:1px solid var(--line);padding:16px 10px 40px;position:sticky;top:70px;
+  height:calc(100vh - 70px);overflow:auto}
+nav.side a{display:block;padding:7px 10px;border-radius:6px;color:var(--muted);font-size:13.5px}
+nav.side a:hover{background:var(--panel);color:var(--ink);text-decoration:none}
+nav.side a.on{background:#1d2b38;color:var(--ink);font-weight:600}
+nav.side .grp{color:#6e7b8b;font-size:11px;text-transform:uppercase;letter-spacing:.08em;
+  padding:14px 10px 6px}
+main{padding:22px 26px 80px;min-width:0;max-width:1500px}
+h2{margin:26px 0 8px;font-size:19px}
+h2:first-child{margin-top:4px}
+h3{margin:20px 0 6px;font-size:15px;color:var(--ink)}
+p{color:#c9d4de;max-width:100ch}
+p.lead{color:var(--muted)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:12px;margin:14px 0 6px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 15px;
+  display:flex;flex-direction:column;gap:5px}
+.kpi-value{font-size:25px;font-weight:650;letter-spacing:-.01em}
+.kpi-label{color:var(--muted);font-size:12px;line-height:1.35}
+.callout{border-left:3px solid var(--accent);background:var(--panel);padding:12px 15px;
+  border-radius:0 8px 8px 0;margin:14px 0}
+.callout.warn{border-color:var(--warn)}
+.callout.bad{border-color:var(--bad)}
+.callout.ok{border-color:var(--ok)}
+.tablewrap{margin:12px 0 22px;background:var(--panel);border:1px solid var(--line);
+  border-radius:10px;padding:12px 13px 4px;overflow:auto}
+.table-note{color:var(--muted);font-size:12px;margin:0 0 8px}
+input.filter{width:100%;max-width:340px;margin-bottom:10px;padding:7px 10px;border-radius:7px;
+  border:1px solid var(--line);background:#0d1218;color:var(--ink);font-size:13px}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{text-align:left;padding:6px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+th{position:sticky;top:0;background:var(--panel2);color:#b9c6d3;font-weight:600;
+  white-space:nowrap;z-index:2}
+tbody tr:hover{background:#1a212b}
+td .wrap{display:block;max-width:52ch;white-space:normal;color:#c9d4de}
+td.num{font-variant-numeric:tabular-nums}
+.pill{display:inline-block;padding:1px 7px;border-radius:999px;font-size:11.5px;font-weight:600;
+  border:1px solid transparent;white-space:nowrap}
+.pill.ok{background:rgba(63,185,80,.14);color:#7ee787;border-color:rgba(63,185,80,.35)}
+.pill.warn{background:rgba(210,153,34,.14);color:#e3b341;border-color:rgba(210,153,34,.35)}
+.pill.bad{background:rgba(248,81,73,.14);color:#ff7b72;border-color:rgba(248,81,73,.35)}
+.pill.mute{background:#222a33;color:#9aa7b4;border-color:#2f3944}
+.pill.blank2{background:#222a33;color:#8b949e;border-color:#2f3944}
+.blank{display:inline-block;padding:1px 7px;border-radius:999px;font-size:11.5px;font-weight:700;
+  background:#242c36;color:#8b949e;border:1px dashed #46515e;white-space:nowrap}
+.empty{color:var(--muted);font-style:italic}
+ul.tight{padding-left:20px;max-width:100ch}
+ul.tight li{margin:4px 0;color:#c9d4de}
+footer{color:#6e7b8b;font-size:12px;padding:20px 26px;border-top:1px solid var(--line)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:18px}
+@media(max-width:900px){
+  .shell{grid-template-columns:1fr}
+  nav.side{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line);
+    display:flex;flex-wrap:wrap;gap:4px}
+  nav.side .grp{display:none}
+  main{padding:16px}
+}
+</style></head>
+<body>
+<header class="top">
+  <h1>OWN5 · NFL decision-readiness desk</h1>
+  <div class="sub">Session e46fb855 · built 2026-11-15T23:40:00Z · every table row links to
+  the official page it was read from; anything that cannot be sourced is left blank and flagged.</div>
+</header>
+<div class="shell">
+<nav class="side">
+  <div class="grp">Read first</div>
+  <a class="" href="index.html">Overview</a><a class="" href="executive-summary.html">Executive summary</a><a class="" href="requirements.html">Requirements</a><a class="" href="questions.html">Questions</a><a class="on" href="suggestions.html">Suggestions</a>
+  <div class="grp">Evidence</div>
+  <a class="" href="results.html">Results feed</a><a class="" href="slate.html">Week 11 slate</a><a class="" href="lines.html">Originated lines</a><a class="" href="price-store.html">Price store</a><a class="" href="depth.html">Depth &amp; replacements</a><a class="" href="injuries.html">Injuries</a><a class="" href="matchup.html">Matchup matrix</a><a class="" href="strategies.html">Strategies</a><a class="" href="gates.html">Gates</a>
+  <div class="grp">Registers</div>
+  <a class="" href="leaderboard.html">Leaderboard</a><a class="" href="correlations.html">Correlations</a><a class="" href="luck.html">Luck panel</a><a class="" href="flagged.html">Flagged for review</a><a class="" href="sources.html">Sources</a><a class="" href="audit.html">Repo audit</a><a class="" href="verification.html">Verification</a>
+</nav>
+<main>
+<h2>Suggestions register</h2>
+<p class="lead">Paths to improve the site and the desk, written as options for a reviewer to choose between. Nothing in this register has been built.</p>
+<div class="callout warn">Every row here is a decision, not a change. The recommended path is stated, the condition that would change the recommendation is stated, and the decision status is AWAITING DECISION until someone chooses.</div><div class="kpis"><div class="card"><span class="kpi-value">14</span><span class="kpi-label">suggestions</span></div><div class="card"><span class="kpi-value">6</span><span class="kpi-label">awaiting decision</span></div><div class="card"><span class="kpi-value">6</span><span class="kpi-label">implemented as a rule</span></div><div class="card"><span class="kpi-value">1</span><span class="kpi-label">deferred</span></div></div><div class="tablewrap"><p class="table-note">14 rows</p><input class="filter" type="search" placeholder="Filter rows…" data-table="t-s" aria-label="Filter this table"><table id="t-s"><thead><tr><th>ID</th><th>Suggestion</th><th>Options</th><th>Recommended path</th><th>What would change the call</th><th>Decision status</th><th>Note</th><th>Source</th></tr></thead><tbody><tr><td>S-01</td><td><span class="wrap">Where do market prices come from?</span></td><td><span class="wrap">A. Licensed/commercial price feed with timestamps (costs money, clean licence) | B. Free aggregator archive pinned by commit hash (free, but not official and has no timestamp) | C. Hand-record one operator&#x27;s public board three times a week (free, official-ish, slow and sparse)</span></td><td><span class="wrap">C now, A as soon as there is budget: C proves whether the pipeline can consume a price at all, and B must not be used because an untimestamped price cannot be an opening or a closing number</span></td><td><span class="wrap">It would change to A if a licensed feed is available inside the budget, or to B if an aggregator published opening and closing prices with timestamps</span></td><td><span class="pill warn">AWAITING DECISION</span></td><td><span class="wrap">This is the single blocking decision. Nothing can be certified while it is open: gates G2, G3 and G4 all need a price. Note that the aggregator lines another desk holds (session 83a7d6a8) are untimestamped, so they satisfy none of the three gates either.</span></td><td><span class="blank">DECISION — makes no claim about the world</span></td></tr><tr><td>S-02</td><td><span class="wrap">How do we get starter evidence (snap counts)?</span></td><td><span class="wrap">A. Official snap-count source if one is readable and permitted | B. Club game-day inactives articles only (32 fetches a week, gives &#x27;did not play&#x27;, not &#x27;how much&#x27;) | C. Do nothing and keep club depth charts as the only starter source</span></td><td><span class="wrap">B next: it is official, cheap and turns &#x27;expected starter&#x27; into &#x27;confirmed unavailable&#x27;. A only if it is licensed cleanly</span></td><td><span class="wrap">It would change to A if an official snap source is confirmed readable; it would fall back to C if the 32 inactives pages do not parse reliably</span></td><td><span class="pill warn">AWAITING DECISION</span></td><td><span class="wrap">Today 0 of 145 completed games have any starter confirmation. Requirement R-10 is blocked by this choice.</span></td><td><span class="blank">DECISION — makes no claim about the world</span></td></tr><tr><td>S-03</td><td><span class="wrap">Where do immutable snapshots live?</span></td><td><span class="wrap">A. Scheduled job writing to a private bucket with hashes and a freshness alarm | B. Keep them in git (already immutable and hashed) and add a scheduled commit | C. Do nothing, capture by hand each session</span></td><td><span class="wrap">B now: git already gives immutability and a hash per capture, at zero cost. Move to A when there is a budget and an alerting target</span></td><td><span class="wrap">It would change to A as soon as a freshness alert has somewhere to fire</span></td><td><span class="pill warn">AWAITING DECISION</span></td><td><span class="wrap">Requirements R-29, R-39, R-54 all wait on this. The multi-day snapshot idea cannot be tested without it.</span></td><td><span class="blank">DECISION — makes no claim about the world</span></td></tr><tr><td>S-04</td><td><span class="wrap">Public analysis layer vs private data layer</span></td><td><span class="wrap">A. Publish only derived numbers and link to the official page | B. Publish official published facts (standings, schedule, injury designations) but no derived row-level data | C. Publish everything we hold</span></td><td><span class="wrap">A, with B for official published facts: official facts are already public on the source site, but derived rows and any licensed row-level data should not be republished until the terms are read</span></td><td><span class="wrap">It would change to C only after the terms are read and permit it, per source</span></td><td><span class="pill warn">AWAITING DECISION</span></td><td><span class="wrap">No terms have been read for any source. Until they are, this desk publishes official published facts plus its own derived numbers and nothing else.</span></td><td><span class="blank">DECISION — makes no claim about the world</span></td></tr><tr><td>S-05</td><td><span class="wrap">Stadium roof, surface and weather overlay</span></td><td><span class="wrap">A. Official 90-minute roof designation plus an NWS gridpoint forecast per stadium | B. Roof designation only | C. Defer until prices exist</span></td><td><span class="wrap">C: this feature changes totals pricing, and totals pricing cannot be evaluated until there is a market price. Building it now produces a number nobody can score</span></td><td><span class="wrap">It would change to A the moment S-01 is decided</span></td><td><span class="pill mute">DEFERRED</span></td><td><span class="wrap">Requirements R-58. Deferred by design, not forgotten.</span></td><td><span class="blank">DECISION — makes no claim about the world</span></td></tr><tr><td>S-06</td><td><span class="wrap">Extend the official results feed backwards</span></td><td><span class="wrap">A. Transcribe prior seasons week by week from nfl.com | B. Use an aggregator archive | C. Stay on 2026 only</span></td><td><span class="wrap">A for 2025 first: one extra season gives a train/validation split and makes the certification sample real. B is inadmissible under the official-only rule</span></td><td><span class="wrap">It would change to B only if the official-only rule is relaxed by decision</span></td><td><span class="pill warn">AWAITING DECISION</span></td><td><span class="wrap">This is the cheapest route to unblocking R-70 and the sample-size gate G1. It is mechanical work, not research.</span></td><td><span class="blank">DECISION — makes no claim about the world</span></td></tr><tr><td>S-07</td><td><span class="wrap">Two totals estimators or one?</span></td><td><span class="wrap">A. Keep both estimators visible with the gap column until a walk-forward comparison picks one | B. Collapse to the better one now | C. Average them</span></td><td><span class="wrap">A: the brief asks for this explicitly, and with 9 remaining weeks the comparison has a real chance of being informative</span></td><td><span class="wrap">It would change to B if the walk-forward gap stays inside its own interval for the rest of the season</span></td><td>IMPLEMENTED (as a rule, pending the comparison)</td><td><span class="wrap">The gap column is published on the lines page. The collapse rule is pre-registered and has not fired.</span></td><td><span class="blank">DECISION — makes no claim about the world</span></td></tr><tr><td>S-08</td><td><span class="wrap">Should the designation (Out/Questionable) be a model feature?</span></td><td><span class="wrap">A. Yes, at face value | B. No, until the play rate per designation is measured against inactives | C. Yes, but only as a surprise (delta), never as a level</span></td><td><span class="wrap">B now, then C: no designation enters the model this season. Once several seasons of designations and inactives exist, C is the right form</span></td><td><span class="wrap">It would change as soon as Q-15 is answered with a measured play rate and a confidence interval</span></td><td>REJECTED FOR THIS SEASON</td><td><span class="wrap">The ablation in R-27/R-28 is the substitute: same model with and without the personnel block, once a time series exists.</span></td><td><span class="blank">DECISION — makes no claim about the world</span></td></tr><tr><td>S-09</td><td><span class="wrap">Leaderboard ranking metric</span></td><td><span class="wrap">A. Win rate | B. Benchmark-relative Brier skill with a cluster-robust lower bound | C. Season-long ROI</span></td><td><span class="wrap">B, with C explicitly forbidden and A shown only as descriptive context: ROI is banned by the brief and win rate cannot separate skill from variance</span></td><td><span class="wrap">It would change only if a proper score cannot be computed, which is not the case</span></td><td><span class="pill ok">IMPLEMENTED</span></td><td><span class="wrap">The staking board stays empty because ROI cannot be computed without prices - which is the point of the split.</span></td><td><span class="blank">DECISION — makes no claim about the world</span></td></tr><tr><td>S-10</td><td><span class="wrap">Parlays and prop combinations</span></td><td><span class="wrap">A. Rank them on multiplied marginals | B. Rank them only with a validated joint probability and the operator&#x27;s void/push rules | C. Ban them</span></td><td><span class="wrap">B: multiplying marginals is invalid under dependence, and the joint probability is not available, so the divisions are empty rather than populated with a wrong number</span></td><td><span class="wrap">It would change to A never; to C if the joint evidence proves unobtainable after S-01 and S-02 are decided</span></td><td>IMPLEMENTED (gate holds)</td><td><span class="wrap">Both divisions are empty by design. This is a pass, not a failure to deliver.</span></td><td><span class="blank">DECISION — makes no claim about the world</span></td></tr><tr><td>S-11</td><td><span class="wrap">How is a strategy promoted, demoted and re-promoted?</span></td><td><span class="wrap">A. Ad hoc judgement | B. Two stages: proper-score qualification, then prospective CLV/ROI escrow, with six demotion triggers | C. Promote on any positive sample</span></td><td><span class="wrap">B: the demotion triggers are published with thresholds so a live family can be sent back to paper without an argument</span></td><td><span class="wrap">It would change if a trigger proves too noisy once there are prices to test it against</span></td><td>IMPLEMENTED (stage one)</td><td><span class="wrap">Stage two cannot run without prices. Stage one runs and currently certifies nothing.</span></td><td><span class="blank">DECISION — makes no claim about the world</span></td></tr><tr><td>S-12</td><td><span class="wrap">Consolidate the NFL desks in this repo</span></td><td><span class="wrap">A. Add another desk | B. Consolidate the NFL namespaces into one desk | C. Leave them and add an index that says which number is current</span></td><td><span class="wrap">C now, B at the next integration session. Six NFL namespaces now answer this brief, three of them decision-readiness desks built on the same day, and a reader cannot tell which number is current</span></td><td><span class="wrap">It would change to B when an integration session is scheduled</span></td><td><span class="pill warn">AWAITING DECISION</span></td><td><span class="wrap">Namespaces visible on main as this session merged: nfl-desk-3fb93d11, nfl-desk-864d5668, nfl-desk-d38e90c5, nfl-market-desk (83a7d6a8), nfl-560ed315 and nfl-readiness-cba42531. This session publishes its own namespace and touches nothing owned by another session.</span></td><td><span class="blank">DECISION — makes no claim about the world</span></td></tr><tr><td>S-13</td><td><span class="wrap">Should venue be read from the game centre or the schedule page?</span></td><td><span class="wrap">A. Game centre per fixture | B. The venue string nfl.com prints on the schedule page | C. Team home-stadium mapping</span></td><td><span class="wrap">A for completeness, B is what this session used and is defensible: it is the same publisher. 1 of 13 was read from the game centre as a check</span></td><td><span class="wrap">It would change to A once the 12 remaining game-centre reads are done (cheap, pure transcription)</span></td><td>PARTIALLY IMPLEMENTED</td><td><span class="wrap">Flagged as F-09 so the mixed provenance is visible rather than hidden.</span></td><td><span class="blank">DECISION — makes no claim about the world</span></td></tr><tr><td>S-14</td><td><span class="wrap">Drift alarms on the captures</span></td><td><span class="wrap">A. Pin every capture to expected row counts and required fields, fail the build loudly | B. Warn only | C. Nothing</span></td><td><span class="wrap">A: this is already how the build works - a missing field fails verification rather than publishing a blank</span></td><td><span class="wrap">It would change only if a source legitimately changes shape, which is exactly when we want to be told</span></td><td><span class="pill ok">IMPLEMENTED</span></td><td><span class="wrap">The verification harness fails the build on a row-count or field drift.</span></td><td><span class="blank">DECISION — makes no claim about the world</span></td></tr></tbody></table></div>
+</main>
+</div>
+<footer>OWN5 · e46fb855 · Tables are generated from CSVs that are rebuilt deterministically by
+<code>engine.py</code>; the row-level source proof is re-run on every build by <code>verify.py</code>.</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('input.filter').forEach(function (input) {
+    var table = document.getElementById(input.getAttribute('data-table'));
+    if (!table) return;
+    var rows = Array.prototype.slice.call(table.tBodies[0].rows);
+    var note = table.parentNode.querySelector('.table-note');
+    var total = rows.length;
+    input.addEventListener('input', function () {
+      var q = input.value.trim().toLowerCase();
+      var shown = 0;
+      rows.forEach(function (tr) {
+        var hit = !q || tr.textContent.toLowerCase().indexOf(q) !== -1;
+        tr.style.display = hit ? '' : 'none';
+        if (hit) shown++;
+      });
+      if (note) note.textContent = q ? (shown + ' of ' + total + ' rows shown') : (total + ' rows');
+    });
+  });
+});
+</script>
+</body></html>

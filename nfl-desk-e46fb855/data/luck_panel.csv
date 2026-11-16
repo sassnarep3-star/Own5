@@ -1,0 +1,33 @@
+team,club,games,actual_wins,actual_win_pct,pythagorean_expected_wins,luck_wins_actual_minus_expected,close_game_share,binomial_sd_wins,binomial_95_low,binomial_95_high,inside_the_noise_band,source_url
+ARI,Arizona Cardinals,9,3,0.3333,2.691,0.309,0.2222,1.500,1.56,7.44,YES,https://www.nfl.com/standings/league/2026/REG
+ATL,Atlanta Falcons,10,3,0.3000,3.562,-0.562,0.0000,1.581,1.90,8.10,YES,https://www.nfl.com/standings/league/2026/REG
+BAL,Baltimore Ravens,9,4,0.4444,3.342,0.658,0.2222,1.500,1.56,7.44,YES,https://www.nfl.com/standings/league/2026/REG
+BUF,Buffalo Bills,9,8,0.8889,6.339,1.661,0.3333,1.500,1.56,7.44,no,https://www.nfl.com/standings/league/2026/REG
+CAR,Carolina Panthers,9,4,0.4444,4.102,-0.102,0.2222,1.500,1.56,7.44,YES,https://www.nfl.com/standings/league/2026/REG
+CHI,Chicago Bears,9,7,0.7778,5.892,1.108,0.1111,1.500,1.56,7.44,YES,https://www.nfl.com/standings/league/2026/REG
+CIN,Cincinnati Bengals,8,6,0.7500,5.431,0.569,0.1250,1.414,1.23,6.77,YES,https://www.nfl.com/standings/league/2026/REG
+CLE,Cleveland Browns,10,6,0.6000,4.079,1.921,0.6000,1.581,1.90,8.10,YES,https://www.nfl.com/standings/league/2026/REG
+DAL,Dallas Cowboys,9,4,0.4444,4.721,-0.721,0.2222,1.500,1.56,7.44,YES,https://www.nfl.com/standings/league/2026/REG
+DEN,Denver Broncos,9,7,0.7778,4.833,2.167,0.1111,1.500,1.56,7.44,YES,https://www.nfl.com/standings/league/2026/REG
+DET,Detroit Lions,9,7,0.7778,5.824,1.176,0.2222,1.500,1.56,7.44,YES,https://www.nfl.com/standings/league/2026/REG
+GB,Green Bay Packers,10,6,0.6000,5.133,0.867,0.3000,1.581,1.90,8.10,YES,https://www.nfl.com/standings/league/2026/REG
+HOU,Houston Texans,9,3,0.3333,4.830,-1.830,0.3333,1.500,1.56,7.44,YES,https://www.nfl.com/standings/league/2026/REG
+IND,Indianapolis Colts,10,3,0.3000,3.482,-0.482,0.3000,1.581,1.90,8.10,YES,https://www.nfl.com/standings/league/2026/REG
+JAX,Jacksonville Jaguars,9,7,0.7778,7.333,-0.333,0.2222,1.500,1.56,7.44,YES,https://www.nfl.com/standings/league/2026/REG
+KC,Kansas City Chiefs,9,7,0.7778,6.564,0.436,0.2222,1.500,1.56,7.44,YES,https://www.nfl.com/standings/league/2026/REG
+LAC,Los Angeles Chargers,8,0,0.0000,1.575,-1.575,0.0000,1.414,1.23,6.77,no,https://www.nfl.com/standings/league/2026/REG
+LAR,Los Angeles Rams,9,5,0.5556,5.382,-0.382,0.2222,1.500,1.56,7.44,YES,https://www.nfl.com/standings/league/2026/REG
+LV,Las Vegas Raiders,9,4,0.4444,3.871,0.129,0.2222,1.500,1.56,7.44,YES,https://www.nfl.com/standings/league/2026/REG
+MIA,Miami Dolphins,9,1,0.1111,2.452,-1.452,0.2222,1.500,1.56,7.44,no,https://www.nfl.com/standings/league/2026/REG
+MIN,Minnesota Vikings,9,7,0.7778,6.194,0.806,0.0000,1.500,1.56,7.44,YES,https://www.nfl.com/standings/league/2026/REG
+NE,New England Patriots,10,5,0.5000,4.464,0.536,0.2000,1.581,1.90,8.10,YES,https://www.nfl.com/standings/league/2026/REG
+NO,New Orleans Saints,9,3,0.3333,3.680,-0.680,0.3333,1.500,1.56,7.44,YES,https://www.nfl.com/standings/league/2026/REG
+NYG,New York Giants,9,5,0.6111,4.687,0.313,0.2222,1.500,1.56,7.44,YES,https://www.nfl.com/standings/league/2026/REG
+NYJ,New York Jets,10,2,0.2000,3.455,-1.455,0.2000,1.581,1.90,8.10,YES,https://www.nfl.com/standings/league/2026/REG
+PHI,Philadelphia Eagles,9,2,0.2222,2.510,-0.510,0.2222,1.500,1.56,7.44,YES,https://www.nfl.com/standings/league/2026/REG
+PIT,Pittsburgh Steelers,8,6,0.7500,5.034,0.966,0.2500,1.414,1.23,6.77,YES,https://www.nfl.com/standings/league/2026/REG
+SEA,Seattle Seahawks,9,5,0.5556,5.651,-0.651,0.4444,1.500,1.56,7.44,YES,https://www.nfl.com/standings/league/2026/REG
+SF,San Francisco 49ers,8,7,0.8750,5.803,1.197,0.1250,1.414,1.23,6.77,no,https://www.nfl.com/standings/league/2026/REG
+TB,Tampa Bay Buccaneers,9,3,0.3333,5.169,-2.169,0.2222,1.500,1.56,7.44,YES,https://www.nfl.com/standings/league/2026/REG
+TEN,Tennessee Titans,9,1,0.1111,2.696,-1.696,0.1111,1.500,1.56,7.44,no,https://www.nfl.com/standings/league/2026/REG
+WAS,Washington Commanders,9,3,0.3889,3.817,-0.817,0.4444,1.500,1.56,7.44,YES,https://www.nfl.com/standings/league/2026/REG

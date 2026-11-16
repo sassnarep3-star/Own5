@@ -1,0 +1,26 @@
+{
+  "source_id": "OFF-RES-WK10-2026-1115",
+  "publisher": "NFL.com",
+  "title": "2026 NFL Schedule - Week 10 (results as published at retrieval time)",
+  "url": "https://www.nfl.com/schedules/2026/by-week/week-10",
+  "tier": "OFFICIAL",
+  "fetched_utc": "2026-11-15T23:22:00Z",
+  "note": "Week 10 was still in progress at retrieval: three Sunday games were live and two games had not kicked off. Only games the page labels FINAL are carried as results; the others are recorded with their published status and blank scores (flagged, not inferred).",
+  "bye_teams": ["CHI", "DEN", "PHI", "TB"],
+  "games": [
+    {"game_id": "2026_10_WAS_NYG", "away": "WAS", "home": "NYG", "date": "2026-11-12", "away_score": 24, "home_score": 21, "status": "FINAL", "neutral": false},
+    {"game_id": "2026_10_NE_DET", "away": "NE", "home": "DET", "date": "2026-11-15", "away_score": 10, "home_score": 35, "status": "FINAL", "neutral": true, "neutral_label": "Munich"},
+    {"game_id": "2026_10_KC_ATL", "away": "KC", "home": "ATL", "date": "2026-11-15", "away_score": 35, "home_score": 13, "status": "FINAL", "neutral": false},
+    {"game_id": "2026_10_HOU_CLE", "away": "HOU", "home": "CLE", "date": "2026-11-15", "away_score": 24, "home_score": 27, "status": "FINAL", "neutral": false},
+    {"game_id": "2026_10_MIN_GB", "away": "MIN", "home": "GB", "date": "2026-11-15", "away_score": 30, "home_score": 10, "status": "FINAL", "neutral": false},
+    {"game_id": "2026_10_MIA_IND", "away": "MIA", "home": "IND", "date": "2026-11-15", "away_score": 22, "home_score": 24, "status": "FINAL", "neutral": false},
+    {"game_id": "2026_10_CAR_NO", "away": "CAR", "home": "NO", "date": "2026-11-15", "away_score": 20, "home_score": 17, "status": "FINAL", "neutral": false},
+    {"game_id": "2026_10_BUF_NYJ", "away": "BUF", "home": "NYJ", "date": "2026-11-15", "away_score": 31, "home_score": 12, "status": "FINAL", "neutral": false},
+    {"game_id": "2026_10_JAX_TEN", "away": "JAX", "home": "TEN", "date": "2026-11-15", "away_score": 40, "home_score": 23, "status": "FINAL", "neutral": false},
+    {"game_id": "2026_10_LAR_ARI", "away": "LAR", "home": "ARI", "date": "2026-11-15", "away_score": null, "home_score": null, "status": "IN PROGRESS (published: Q4, LAR 34 - ARI 6 at retrieval)", "neutral": false},
+    {"game_id": "2026_10_SEA_LV", "away": "SEA", "home": "LV", "date": "2026-11-15", "away_score": null, "home_score": null, "status": "IN PROGRESS (published: Q4, SEA 21 - LV 10 at retrieval)", "neutral": false},
+    {"game_id": "2026_10_SF_DAL", "away": "SF", "home": "DAL", "date": "2026-11-15", "away_score": null, "home_score": null, "status": "IN PROGRESS (published: Q3, SF 24 - DAL 19 at retrieval)", "neutral": false},
+    {"game_id": "2026_10_PIT_CIN", "away": "PIT", "home": "CIN", "date": "2026-11-15", "away_score": null, "home_score": null, "status": "SCHEDULED (8:20 PM ET, not kicked off at retrieval)", "neutral": false},
+    {"game_id": "2026_10_LAC_BAL", "away": "LAC", "home": "BAL", "date": "2026-11-16", "away_score": null, "home_score": null, "status": "SCHEDULED (Monday 8:15 PM ET, not kicked off at retrieval)", "neutral": false}
+  ]
+}
