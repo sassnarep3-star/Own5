@@ -2377,3 +2377,41 @@ Carried forward and re-checked (read-only, never edited):
 * nfl.com cannot be reached from this sandbox with curl/urllib (TLS failure);
   every page here was read through the sandbox fetcher, and the workflow
   re-reads the same URLs from GitHub runners for provenance only.
+
+### Session e46fb855 — PR merged, Pages verified live
+
+**Pull request:** https://github.com/sassnarep3-star/Own5/pull/90
+("NFL decision-readiness desk (session e46fb855)")
+**Merge:** `gh pr merge 90 --merge` — merged 2026-11-16T00:16:11Z as merge commit
+`90313d514fb2c73694da13fa38ebad923b706b7f`. Branch `arena/e46fb855-own5` → `main`.
+
+Rebased onto `origin/main` (`d5eb46b`) before merging. Two conflicts, both resolved
+by keeping the other session's work and appending this session's:
+
+* `COORDINATION.md` — upstream had added the `cba42531` and `83a7d6a8` session logs at
+  the same place as this session's claim block. Both kept.
+* `README.md` — upstream had added dashboard rows for `nfl-560ed315` and
+  `nfl-readiness-cba42531` immediately before this session's row. Both kept, this
+  session's row appended after them.
+
+**Workflow result** (`.github/workflows/nfl-desk-e46fb855.yml`, run `43779364361` on
+`main`): job `verify` **success** (deterministic rebuild, row-level source proof,
+28 unit tests, committed-artefact diff), job `pages-smoke` **success** (six live
+URLs returned and carried the OWN5 masthead).
+
+**Live site read back after deployment**
+(https://sassnarep3-star.github.io/Own5/nfl-desk-e46fb855/):
+landing page renders the six KPI cards (145 finals, 59/59 spot-check, 32/32
+reconciliation, 39 markets, 0 certified, 7 blocking gaps) and the 72-row
+decision-readiness table; `/suggestions.html` renders the 14-row register with
+every row at AWAITING DECISION / IMPLEMENTED-AS-A-RULE / DEFERRED / REJECTED.
+No broken links: `verify.py` checks every internal `href` against the generated
+page set, and the row-level proof checks 2 706 body rows.
+
+**Board: E1–E16 all done.** Nothing is certified, no bet is live, no reward is
+issued, and every blocked requirement carries the number that would clear it.
+
+**Open items left for a reviewer** (not defects — decisions):
+S-01 (price source), S-02 (starter evidence), S-03 (snapshot storage),
+S-04 (public vs private data layer), S-06 (extend the official feed backwards)
+and S-12 (consolidate the six NFL namespaces). None has been implemented.
