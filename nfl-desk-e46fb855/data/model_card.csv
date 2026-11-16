@@ -12,7 +12,7 @@ league mean total (points),45.9586,mean of the 145 official finals,https://www.n
 walk-forward margin MAE,10.5026,129 games scored out of sample (weeks 2-10),https://www.nfl.com/standings/league/2026/REG
 walk-forward side accuracy,0.6279,81 of 129 winners called out of sample,https://www.nfl.com/standings/league/2026/REG
 walk-forward side binomial p,0.004650,"two-sided, against a coin flip",https://www.nfl.com/standings/league/2026/REG
-walk-forward totals MAE - estimator A,11.6065,worse than the league-average baseline in this sample,https://www.nfl.com/standings/league/2026/REG
-walk-forward totals MAE - estimator B,9.9361,better than the league-average baseline in this sample,https://www.nfl.com/standings/league/2026/REG
-walk-forward totals MAE - league-average baseline,11.1795,the naive estimator both model estimators must beat,https://www.nfl.com/standings/league/2026/REG
-prior desk's totals MAE (session 3fb93d11),11.0038,published out-of-sample MAE against a naive baseline of 11.0235; this session's figures are a different walk-forward over a different corpus,https://www.nfl.com/standings/league/2026/REG
+walk-forward totals MAE - estimator A,11.6065,fitted on prior weeks only; worse than the league-average baseline in this sample,https://www.nfl.com/standings/league/2026/REG
+walk-forward totals MAE - estimator B,11.8900,"fitted on prior weeks only; also worse than the baseline. An earlier run of this build appeared to show estimator B winning by about a point. That was leakage: it used the season's final standings, which contain the game being predicted (F-18)",https://www.nfl.com/standings/league/2026/REG
+walk-forward totals MAE - league-average baseline,11.1795,the naive estimator both model estimators must beat. Neither beats it in this sample,https://www.nfl.com/standings/league/2026/REG
+prior desk's totals MAE (session 3fb93d11),11.0038,"published out-of-sample MAE against a naive baseline of 11.0235; a different walk-forward over a different corpus, so the two are not directly comparable",https://www.nfl.com/standings/league/2026/REG

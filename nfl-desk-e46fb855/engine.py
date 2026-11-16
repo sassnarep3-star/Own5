@@ -424,6 +424,35 @@ def build():
         """Estimator B: points-for / points-against blend."""
         return 0.5 * (pf_pg[home] + pa_pg[home] + pf_pg[away] + pa_pg[away])
 
+    def fit_totals(games):
+        """Fit both totals estimators on a training window only.
+
+        Estimator B needs points-for and points-against rates, and those must
+        come from the training weeks: using the season's final standings to
+        predict a game that is part of those standings would leak the answer.
+        """
+        tot_sum, tot_n = 0.0, 0
+        tt = {t: {"n": 0, "sum": 0.0} for t in teams}
+        pf = {t: 0 for t in teams}
+        pa = {t: 0 for t in teams}
+        gp = {t: 0 for t in teams}
+        for g in games:
+            tp = g["away_score"] + g["home_score"]
+            tot_sum += tp
+            tot_n += 1
+            for side, other in (("home", "away"), ("away", "home")):
+                tt[g[side]]["n"] += 1
+                tt[g[side]]["sum"] += tp
+                pf[g[side]] += g[f"{side}_score"]
+                pa[g[side]] += g[f"{other}_score"]
+                gp[g[side]] += 1
+        base = tot_sum / tot_n if tot_n else league_total
+        avg = {t: (tt[t]["sum"] / tt[t]["n"] if tt[t]["n"] else base) for t in teams}
+        sh = {t: (avg[t] - base) * (tt[t]["n"] / (tt[t]["n"] + K)) for t in teams}
+        pfp = {t: (pf[t] / gp[t] if gp[t] else base / 2) for t in teams}
+        pap = {t: (pa[t] / gp[t] if gp[t] else base / 2) for t in teams}
+        return base, sh, pfp, pap
+
     # walk-forward: fit on weeks < W, predict week W
     def fit_ratings(games):
         rr, yy = [], []
@@ -453,21 +482,10 @@ def build():
         pred_margin = rmap[f["home"]] - rmap[f["away"]] + (0.0 if f["neutral_site"] else hfa_t)
         oos_margin_err.append(f["home_margin"] - pred_margin)
         wk = oos_by_week.setdefault(f["week"], {"n": 0, "hits": 0, "m": [], "a": [], "b": [], "base": []})
-        tt = {t: {"n": 0, "sum": 0.0} for t in teams}
-        tot_sum, tot_n = 0.0, 0
-        for g in train:
-            tp = g["away_score"] + g["home_score"]
-            tot_sum += tp
-            tot_n += 1
-            for side in ("home", "away"):
-                tt[g[side]]["n"] += 1
-                tt[g[side]]["sum"] += tp
-        base = tot_sum / tot_n
-        avg = {t: (tt[t]["sum"] / tt[t]["n"] if tt[t]["n"] else base) for t in teams}
-        sh = {t: (avg[t] - base) * (tt[t]["n"] / (tt[t]["n"] + K)) for t in teams}
+        base, sh, pfp, pap = fit_totals(train)
         e_a = f["total_points"] - (base + sh[f["home"]] + sh[f["away"]])
-        e_b = f["total_points"] - 0.5 * (pf_pg[f["home"]] + pa_pg[f["home"]]
-                                         + pf_pg[f["away"]] + pa_pg[f["away"]])
+        e_b = f["total_points"] - 0.5 * (pfp[f["home"]] + pap[f["home"]]
+                                         + pfp[f["away"]] + pap[f["away"]])
         # baseline: the league mean total as fitted on the training weeks only
         e_base = f["total_points"] - base
         oos_total_err_a.append(e_a)
@@ -978,8 +996,19 @@ def build():
         return (pred > 0) == (f["home_margin"] > 0)
 
     def pick_total(f):
-        pred = total_estimator_a(f["home"], f["away"])
-        return f["total_points"] > pred
+        """Back the over when our estimator is more than 3 points above the
+        league mean, the under when it is more than 3 points below. Both the
+        estimator and the mean are fitted on the weeks before this game."""
+        if f["week"] <= 1:
+            return None
+        train = [g for g in finals if g["week"] < f["week"]]
+        if len(train) < 16:
+            return None
+        base, sh, _, _ = fit_totals(train)
+        pred = base + sh[f["home"]] + sh[f["away"]]
+        if abs(pred - base) <= 3.0:
+            return None
+        return (pred > base) == (f["total_points"] > base)
 
     def pick_rest(f):
         rh, ra = rest_for(f, "home"), rest_for(f, "away")
@@ -1010,29 +1039,39 @@ def build():
         return None  # no historical injury time series exists
 
     fams = [
-        ("F1", pick_home, "home side in every game"),
-        ("F2", pick_model_side, "walk-forward model side (correct winner)"),
-        ("F3", pick_total, "over when estimator A is above the league mean total"),
-        ("F4", pick_rest, "side of the team with a rest edge of 3+ days"),
-        ("F5", pick_bye, "side of the team coming off its bye"),
-        ("F6", pick_fav, "moneyline when model win probability exceeds 70%"),
-        ("F7", pick_injury, "side of the team whose opponent has more starters out"),
+        ("F1", pick_home, "home side in every game",
+         "no fitting, so nothing can leak; the sample is every completed game"),
+        ("F2", pick_model_side, "walk-forward model side (correct winner)",
+         "out of sample: the ratings are refitted on the weeks before each game"),
+        ("F3", pick_total, "over/under against our own estimator, 3-point band",
+         "out of sample: the estimator and the league mean are refitted on the weeks before each game"),
+        ("F4", pick_rest, "side of the team with a rest edge of 3+ days",
+         "no fitting: rest days are fixed by the published kickoff dates"),
+        ("F5", pick_bye, "side of the team coming off its bye",
+         "no fitting: bye weeks are published with the schedule"),
+        ("F6", pick_fav, "moneyline when model win probability exceeds 70%",
+         "IN-SAMPLE: uses ratings fitted on the whole season, including the games being graded. "
+         "This row is a diagnostic, not an estimate of skill, and it is excluded from promotion"),
+        ("F7", pick_injury, "side of the team whose opponent has more starters out",
+         "no sample: the week-10 report publishes a game status for 4 clubs only"),
     ]
     results = {}
-    for fid, fn, note in fams:
+    for fid, fn, note, how in fams:
         results[fid] = eval_family(fid, fn, note)
+        results[fid]["measurement"] = how
     for fid in ("F8", "F9", "F10"):
         results[fid] = {"n": 0, "hits": 0, "rate": None, "p": None, "lo": None, "hi": None,
-                        "note": "blocked by gate G7 - no validated joint probability and no operator void/push rules"}
+                        "note": "blocked by gate G7 - no validated joint probability and no operator void/push rules",
+                        "measurement": "no sample: gate G7 fails, so nothing is measured"}
 
-    order = [fid for fid, _, _ in fams] + ["F8", "F9", "F10"]
+    order = [fid for fid, _, _, _ in fams] + ["F8", "F9", "F10"]
     pvals = [results[f]["p"] if results[f]["p"] is not None else 1.0 for f in order]
     adj = holm(pvals)
     adj_map = dict(zip(order, adj))
 
     strat_rows = []
-    for fid, rule_text, division, rule, window, falsify, would_change in (
-        (s[0], s[3], s[1], s[2], s[4], s[5], s[6]) for s in content.STRATEGIES
+    for fid, name, division, rule_text, window, falsify, would_change in (
+        (s[0], s[1], s[2], s[3], s[4], s[5], s[6]) for s in content.STRATEGIES
     ):
         r = results[fid]
         if r["n"]:
@@ -1049,13 +1088,14 @@ def build():
             gates_fail.append("F-03(no injury time series)")
         certified = "NO"
         strat_rows.append({
-            "family_id": fid, "division": division, "rule_text": rule_text,
-            "rule": rule, "sample_window": window,
+            "family_id": fid, "name": name, "division": division,
+            "rule_text": rule_text, "sample_window": window,
             "n": r["n"], "hits": r["hits"],
             "hit_rate": fmt(r["rate"], 4),
             "wilson_lo": fmt(r["lo"], 4), "wilson_hi": fmt(r["hi"], 4),
             "binomial_p": fmt(r["p"], 6),
             "holm_p": fmt(holm_p, 6) if holm_p is not None else "",
+            "measurement": r["measurement"],
             "roi": "", "roi_status": "UNVERIFIED - ROI needs a price; no price exists (F-01)",
             "gates_failed": "; ".join(gates_fail),
             "certified": certified,
@@ -1467,6 +1507,16 @@ def build():
          "see lines page - both intervals contain zero", STD_URL),
         ("D12", "Slate", "six clubs are on bye in week 11",
          ", ".join(slate["bye_teams"]), "CONFIRMED", SLATE_URL),
+        ("D13", "Rest edge",
+         "session 3fb93d11 reported the rest-edge family (3+ days) at n=24, 62.5% hit rate, ROI +19.3%",
+         f"n={results['F4']['n']}, {fmt(results['F4']['rate'], 4)} hit rate this session",
+         "DIFFERS - same rule, different corpus (145 games here) and this session computes rest from the official kickoff dates rather than a carried-forward field",
+         "https://www.nfl.com/schedules/2026/by-week/week-10"),
+        ("D14", "Totals estimator",
+         "an earlier run of this session's build showed estimator B beating the league-average baseline by about a point",
+         f"A {fmt(model_card['oos_total_mae_a'], 4)} vs baseline {fmt(model_card['oos_total_mae_baseline'], 4)}; B {fmt(model_card['oos_total_mae_b'], 4)}",
+         "CORRECTED - the first run leaked: estimator B used the season's final standings, which contain the game being predicted",
+         STD_URL),
     ]
     for cid, area, claim, val, res, src in structural:
         audit.append({
@@ -1564,6 +1614,15 @@ def build():
          "New England's defensive slots are incomplete. New England is on bye in week 11, so no week-11 market is affected.",
          "Capture the remaining pages (New England is not needed for week 11 but is needed for week 12).", "OPEN",
          "https://www.patriots.com/team/depth-chart"),
+        ("F-18", "review", "Methodology",
+         "A leakage in the first totals walk-forward was found and corrected",
+         "The first run fitted estimator B on the season's final points-for and points-against "
+         "rates, which include the game being predicted. It appeared to beat the league-average "
+         "baseline by about a point. Fitting on prior weeks only reverses the result: neither "
+         "estimator beats the baseline.",
+         "The published totals comparison is the corrected one. Any future estimator must be "
+         "fitted inside the walk-forward loop, never on the full sample.",
+         "FIXED THIS SESSION", STD_URL),
         ("F-17", "review", "Model specification",
          "Team ratings are ridge-penalised",
          "The margin model applies a ridge penalty of 1.0 point squared to the 32 team columns. "
@@ -1798,13 +1857,13 @@ def build():
                ["walk-forward side binomial p", fmt(model_card["oos_side_p"], 6),
                 "two-sided, against a coin flip", STD_URL],
                ["walk-forward totals MAE - estimator A", fmt(model_card["oos_total_mae_a"], 4),
-                "worse than the league-average baseline in this sample", STD_URL],
+                "fitted on prior weeks only; worse than the league-average baseline in this sample", STD_URL],
                ["walk-forward totals MAE - estimator B", fmt(model_card["oos_total_mae_b"], 4),
-                "better than the league-average baseline in this sample", STD_URL],
+                "fitted on prior weeks only; also worse than the baseline. An earlier run of this build appeared to show estimator B winning by about a point. That was leakage: it used the season's final standings, which contain the game being predicted (F-18)", STD_URL],
                ["walk-forward totals MAE - league-average baseline", fmt(model_card["oos_total_mae_baseline"], 4),
-                "the naive estimator both model estimators must beat", STD_URL],
+                "the naive estimator both model estimators must beat. Neither beats it in this sample", STD_URL],
                ["prior desk's totals MAE (session 3fb93d11)", "11.0038",
-                "published out-of-sample MAE against a naive baseline of 11.0235; this session's figures are a different walk-forward over a different corpus", STD_URL],
+                "published out-of-sample MAE against a naive baseline of 11.0235; a different walk-forward over a different corpus, so the two are not directly comparable", STD_URL],
                ])
 
     write_csv("matchup_deficiency.csv",

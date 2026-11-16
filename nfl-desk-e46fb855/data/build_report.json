@@ -1,6 +1,6 @@
 {
-  "audit_checks": 152,
-  "audit_irregular": 20,
+  "audit_checks": 154,
+  "audit_irregular": 22,
   "audit_matched": 122,
   "build_utc": "2026-11-15T23:40:00Z",
   "certified": 0,
@@ -33,7 +33,7 @@
     "oos_side_n": 129,
     "oos_side_p": 0.004649695813417676,
     "oos_total_mae_a": 11.606465639046252,
-    "oos_total_mae_b": 9.93613264427218,
+    "oos_total_mae_b": 11.890043989171895,
     "oos_total_mae_baseline": 11.179529808048574,
     "residual_sd": 11.830606767070448
   },

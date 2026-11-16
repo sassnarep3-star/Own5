@@ -248,7 +248,7 @@ def cell(key: str, value: str):
                "difference_status", "delta_status", "status_this_desk", "registration",
                "what_would_change_our_mind_down", "what_would_change_our_mind_up",
                "used_for", "units", "model_inputs", "depth_status", "pairing",
-               "rule", "sample_window", "gates_failed", "blocking_gate", "title",
+               "rule", "sample_window", "gates_failed", "blocking_gate", "title", "measurement",
                "staking_note"):
         return f'<span class="wrap">{esc(v)}</span>'
     return esc(v)
@@ -522,12 +522,15 @@ def build_pages(manifest: dict):
         f'{mc["hfa_ci95_low"]:.2f} to {mc["hfa_ci95_high"]:.2f} on {rep["official_finals"]} official games. '
         f'The interval contains zero. Any strategy that leans on home field is leaning on a number this '
         f'sample cannot support.</div>',
-        f'<div class="callout ok"><strong>3. One of the two totals estimators already beats the naive '
-        f'baseline out of sample.</strong> Estimator B (points-for/points-against blend) has a '
-        f'walk-forward mean absolute error of {mc["oos_total_mae_b"]:.2f} points against a '
-        f'league-average baseline of {mc["oos_total_mae_baseline"]:.2f}. Estimator A (shrunk team game '
-        f'totals) does not: {mc["oos_total_mae_a"]:.2f}. Both are published side by side with the gap '
-        f'column, as the brief asks, and neither is collapsed until the pre-registered comparison fires.</div>',
+        f'<div class="callout warn"><strong>3. Neither totals estimator beats the naive baseline, and '
+        f'the first run that said otherwise was wrong.</strong> Fitted on prior weeks only, estimator A '
+        f'has a walk-forward mean absolute error of {mc["oos_total_mae_a"]:.2f} points and estimator B '
+        f'{mc["oos_total_mae_b"]:.2f}, against a league-average baseline of '
+        f'{mc["oos_total_mae_baseline"]:.2f}. An earlier run of this build appeared to show estimator B '
+        f'winning by about a point; that was leakage, because it was fitted on the full-season '
+        f'standings, which contain the game being predicted (flag F-18). Both estimators stay published '
+        f'side by side with the gap column, as the brief asks, and neither is collapsed until the '
+        f'pre-registered comparison fires.</div>',
         "<h3>Model card</h3>",
         render_table("t-card", rows_of("model_card.csv"), ["item", "value", "note"]),
         "<h3>Walk-forward by week</h3>",
@@ -788,9 +791,9 @@ def build_pages(manifest: dict):
           'towards promotion. A family is promoted only on prospective bets taken after its rule was '
           'frozen, and only after gates G1–G8 pass.</div>'
         + render_table("t-st", st,
-                       ["family_id", "division", "rule_text", "rule", "sample_window", "n", "hits",
-                        "hit_rate", "wilson_lo", "wilson_hi", "binomial_p", "holm_p", "roi",
-                        "roi_status", "gates_failed", "certified",
+                       ["family_id", "name", "division", "rule_text", "sample_window", "n", "hits",
+                        "hit_rate", "wilson_lo", "wilson_hi", "binomial_p", "holm_p",
+                        "measurement", "roi", "roi_status", "gates_failed", "certified",
                         "what_would_change_our_mind_down", "what_would_change_our_mind_up",
                         "registration"])
         + "<h3>Control baselines</h3>"
