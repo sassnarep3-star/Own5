@@ -2169,7 +2169,7 @@ claimed scope, `nba-*`, `sf-*`, `rental-*`, all existing workflows, all existing
 | M9 | Strategy competition | done | `data/strategy_registration.csv`, `data/preregistration/`, `data/gates.csv`, `data/leaderboard.csv`, `data/luck_panel.csv` | 9 hashed families, 264 graded bets, 12 gates (6/1/5), 3 controls, luck panel. |
 | M10 | Site | done | `nfl-market-desk/*.html`, `build.py`, `report.py` | 13 pages, deterministic; 1,704 body-table rows, every one source-bearing. |
 | M11 | Verification harness, tests, CI, executive summary | done | `verify.py`, `tests/test_market_desk.py`, `.github/workflows/nfl-market-desk.yml`, `research/nfl-83a7d6a8/` | verify: 10 checks PASS. tests: 27 PASS. Summary + methodology + verification log generated from the data. |
-| M12 | PR to `main`, merge, Pages check, record | **in progress** | `COORDINATION.md`, `README.md` | Recorded below once merged. |
+| M12 | PR to `main`, merge, Pages check, record | done | `COORDINATION.md`, `README.md` | Merged via PR #85, #86, #87; Pages built and live-verified (see records below). All twelve M-tasks are done. |
 
 **Defects fixed this session (kept visible, not overwritten):**
 
@@ -2225,3 +2225,13 @@ validation desk` success, `pages build and deployment` success. Two checks remai
 request and on `main`: `NFL Decision Desk — fetch & verify` (rebuild drift, XR-D38-02) and `Verify NFL
 B34 Week 10 research desk`. Both are another session's scope, neither is path-scoped so both run on
 every PR, and neither reads a file this session wrote.
+
+**M12 — final record (session 83a7d6a8).** PR **#87** merged via `gh pr merge 87 --merge`, merge commit
+`5e73579`; Pages built that commit (status `built`). The live desk was then read back from the public URL
+with a cache-busting query and shows the corrected text — "Every family is registered PAPER. **5 of the
+12 gates** are not met" — alongside 78 requirements, 39 originated markets, 264 graded bets, 9 blocking
+flags and 145 verified finals. The earlier reads of the uncorrected sentence were a CDN copy of the
+previous build, not a repository defect; the repository has carried the corrected sentence since `71ed244`.
+
+**Session 83a7d6a8 is complete.** M1–M12 are done. Nothing is certified, no bet is live, no reward is
+issued, and the five unmet gates are documented with the number that would clear each one.
