@@ -454,8 +454,10 @@ def build_pages(manifest: dict):
             (len(blocking), "blocking data gaps, each with the number that would clear it"),
         ]),
         '<div class="callout bad"><strong>Read this before anything else.</strong> '
-        'This desk can originate its own lines but cannot yet grade them, because no market price '
-        'exists anywhere in this repository. Every price column on this site is blank and flagged '
+        'This desk can originate its own lines but cannot yet grade them, because no official or '
+        'licensed market price exists anywhere in this repository. An aggregator reference line '
+        'without a timestamp is held by a parallel desk, and an untimestamped number cannot be an '
+        'opening or a closing price. Every price column on this site is blank and flagged '
         'rather than filled with a guess. The <a href="questions.html">questions register</a> says what '
         'is missing and the cheapest way to get it; the <a href="suggestions.html">suggestions register</a> '
         'sets out the paths a reviewer chooses between. Nothing on those two pages has been built.</div>',
@@ -513,7 +515,10 @@ def build_pages(manifest: dict):
         "<h3>The three findings that matter</h3>",
         f'<div class="callout bad"><strong>1. There is no price data, so nothing can be graded.</strong> '
         f'nfl.com publishes no spreads, totals or moneylines, and no operator price has been read into '
-        f'this repository. Of {rep["price_snapshot_rows"]} price-snapshot rows this desk needs, only '
+        f'this repository; a parallel desk searched the same pages and reached the same conclusion. '
+        f'The only price-like rows anywhere in the repo are aggregator reference lines of unknown '
+        f'timestamp, which cannot be an opening or a closing number. '
+        f'Of {rep["price_snapshot_rows"]} price-snapshot rows this desk needs, only '
         f'{rep["price_snapshots_populated"]} could be filled — and those are our own model outputs, not '
         f'market prices. ROI, closing line value and the residual against the market are undefined, so '
         f'the staking leaderboard is empty by design and no strategy can be certified.</div>',

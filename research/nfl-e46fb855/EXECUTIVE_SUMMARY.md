@@ -29,12 +29,16 @@ certified, nothing is staked, and no performance claim is made.
 
 ## 3. The three findings that matter
 
-1. **There is no price data anywhere in this repository, so nothing can be
-   graded.** nfl.com publishes no spreads, totals or moneylines, and no operator
-   price has ever been read in. ROI, closing line value and the residual against
-   the market are undefined; the staking board is empty by design and no
-   strategy can be certified. This is flag F-01, and it is a decision (S-01),
-   not a defect to be worked around.
+1. **No official or licensed market price exists anywhere in this repository, so
+   nothing can be graded.** nfl.com publishes no spreads, totals or moneylines,
+   and no operator price has ever been read in; a parallel desk
+   (`nfl-market-desk`, session `83a7d6a8`) searched the same pages and recorded
+   the same finding in its own price policy P-01. The only price-like rows
+   anywhere in the repo are aggregator (nflverse) reference lines of unknown
+   timestamp, which cannot serve as an opening or a closing number. ROI, closing
+   line value and the residual against the market are undefined; the staking
+   board is empty by design and no strategy can be certified. This is flag F-01,
+   and it is a decision (S-01), not a defect to be worked around.
 2. **Home-field advantage is not established in this sample.** The model fits it
    at -0.12 points per game, 95% interval
    [-2.14, 1.90] on 145 official games. The
@@ -71,7 +75,16 @@ at AWAITING DECISION, IMPLEMENTED-AS-A-RULE, DEFERRED or REJECTED.
 The single decision that unblocks the most: **S-01, where market prices come
 from.** Until it is answered, gates G2, G3 and G4 cannot pass for any strategy.
 
-## 6. Honesty rules this desk is held to
+## 6. Cross-desk notes
+
+Three decision-readiness desks were built on this branch on the same day
+(`nfl-560ed315`, `nfl-readiness-cba42531` and this one) and they count the
+brief's requirement lines as 81, 85 and 72 respectively. The brief is being split
+into lines three different ways; none of the three is wrong, but a reviewer
+cannot reconcile them. Logged as flag F-19, with consolidation proposed as
+suggestion S-12. No file belonging to another session was changed.
+
+7. Honesty rules this desk is held to
 
 * Every body row on every page ends in a source cell: a link to the official
   page the value was read from, or an explicit UNVERIFIED badge.

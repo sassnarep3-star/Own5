@@ -236,10 +236,13 @@ REQUIREMENTS = [
 # --------------------------------------------------------------------------
 QUESTIONS = [
     ("Q-01", "What was the market price for any 2026 game, at any timestamp?",
-     "Nothing. nfl.com publishes no spreads, totals or moneylines, and no operator price has been read into this repo.",
+     "No official or licensed operator price exists anywhere in this repository. nfl.com publishes no "
+     "spreads, totals or moneylines, and the market desk (session 83a7d6a8) reached the same "
+     "conclusion in its own price policy P-01. What does exist there is an aggregator (nflverse) "
+     "reference line of unknown timestamp, which cannot be an opening or a closing number.",
      "Every opening and closing number, for every market, for every week.",
      "blocking",
-     "Pick one path in S-01 and read one week of prices with timestamps. Cheapest first test: one operator's public line page, one week, hash it.",
+     "Pick one path in S-01 and read one week of prices with timestamps. Cheapest first test: one operator's public line page, one week, hash it. The aggregator lines already in the repo do not clear the gate, because an opening and a closing number need a timestamp.",
      "https://www.nfl.com/schedules/2026/by-week/week-11"),
     ("Q-02", "Which players actually started, and who was inactive?",
      "Club depth charts for 31 of 32 clubs, dated by the club.",
@@ -366,7 +369,7 @@ SUGGESTIONS = [
      "C now, A as soon as there is budget: C proves whether the pipeline can consume a price at all, and B must not be used because an untimestamped price cannot be an opening or a closing number",
      "It would change to A if a licensed feed is available inside the budget, or to B if an aggregator published opening and closing prices with timestamps",
      "AWAITING DECISION",
-     "This is the single blocking decision. Nothing can be certified while it is open: gates G2, G3 and G4 all need a price."),
+     "This is the single blocking decision. Nothing can be certified while it is open: gates G2, G3 and G4 all need a price. Note that the aggregator lines another desk holds (session 83a7d6a8) are untimestamped, so they satisfy none of the three gates either."),
     ("S-02", "How do we get starter evidence (snap counts)?",
      "A. Official snap-count source if one is readable and permitted | B. Club game-day inactives articles only (32 fetches a week, gives 'did not play', not 'how much') | C. Do nothing and keep club depth charts as the only starter source",
      "B next: it is official, cheap and turns 'expected starter' into 'confirmed unavailable'. A only if it is licensed cleanly",
@@ -428,10 +431,12 @@ SUGGESTIONS = [
      "IMPLEMENTED (stage one)",
      "Stage two cannot run without prices. Stage one runs and currently certifies nothing."),
     ("S-12", "Consolidate the NFL desks in this repo",
-     "A. Add a fourth desk | B. Consolidate the three existing NFL desks into one namespace | C. Leave them and add an index",
-     "C now, B at the next integration session: three desks already answer the same brief from different namespaces, and a reader cannot tell which number is current",
+     "A. Add another desk | B. Consolidate the NFL namespaces into one desk | C. Leave them and add an index that says which number is current",
+     "C now, B at the next integration session. Six NFL namespaces now answer this brief, three of them decision-readiness desks built on the same day, and a reader cannot tell which number is current",
      "It would change to B when an integration session is scheduled",
      "AWAITING DECISION",
+     "Namespaces visible on main as this session merged: nfl-desk-3fb93d11, nfl-desk-864d5668, "
+     "nfl-desk-d38e90c5, nfl-market-desk (83a7d6a8), nfl-560ed315 and nfl-readiness-cba42531. "
      "This session publishes its own namespace and touches nothing owned by another session."),
     ("S-13", "Should venue be read from the game centre or the schedule page?",
      "A. Game centre per fixture | B. The venue string nfl.com prints on the schedule page | C. Team home-stadium mapping",

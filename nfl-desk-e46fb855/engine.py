@@ -1517,6 +1517,18 @@ def build():
          f"A {fmt(model_card['oos_total_mae_a'], 4)} vs baseline {fmt(model_card['oos_total_mae_baseline'], 4)}; B {fmt(model_card['oos_total_mae_b'], 4)}",
          "CORRECTED - the first run leaked: estimator B used the season's final standings, which contain the game being predicted",
          STD_URL),
+        ("D15", "Price data",
+         "nfl-market-desk (session 83a7d6a8) records in its price policy that nfl.com publishes no "
+         "sportsbook price on any page it could reach",
+         "this desk reached the same conclusion independently, and holds no official or licensed "
+         "price either",
+         "CONFIRMED - two desks, same finding",
+         "https://www.nfl.com/schedules/2026/by-week/week-11"),
+        ("D16", "Cross-desk consistency",
+         "three decision-readiness desks built on 2026-11-15 count the brief's requirements as 72, 81 and 85",
+         "this desk: 72 lines",
+         "IRREGULARITY - the same brief is being split into lines three different ways (F-19)",
+         "https://github.com/sassnarep3-star/Own5"),
     ]
     for cid, area, claim, val, res, src in structural:
         audit.append({
@@ -1529,9 +1541,12 @@ def build():
     # ---------------- flagged ----------------------------------------------
     flagged = [
         ("F-01", "blocking", "Price data",
-         "No market price of any kind exists in this repo",
-         "nfl.com publishes no spreads, totals or moneylines, and no operator price has been read in. "
-         f"All {len(markets)} originated markets therefore have a blank market column.",
+         "No official or licensed market price exists in this repository",
+         "nfl.com publishes no spreads, totals or moneylines and no operator price has been read in. "
+         "A parallel desk (nfl-market-desk, session 83a7d6a8) searched the same pages and recorded the "
+         "same finding in its own price policy P-01. What does exist there is an aggregator (nflverse) "
+         "reference line of unknown timestamp, which cannot serve as an opening or a closing number. "
+         f"All {len(markets)} originated markets on this desk therefore have a blank market column.",
          "Gates G2, G3 and G4 cannot pass for any family; ROI, CLV and the residual against the market are all undefined.",
          "Decide S-01.", "AWAITING DECISION", STD_URL),
         ("F-02", "blocking (Houston only)", "Depth parsing",
@@ -1614,6 +1629,16 @@ def build():
          "New England's defensive slots are incomplete. New England is on bye in week 11, so no week-11 market is affected.",
          "Capture the remaining pages (New England is not needed for week 11 but is needed for week 12).", "OPEN",
          "https://www.patriots.com/team/depth-chart"),
+        ("F-19", "review", "Cross-desk consistency",
+         "Three decision-readiness desks on this branch count the brief's requirements differently",
+         "This desk enumerates 72 requirement lines, nfl-560ed315 publishes 81 and "
+         "nfl-readiness-cba42531 publishes 85, all from the same brief, on the same day. The counts "
+         "differ because each desk split the prose into lines differently; none is wrong, but a reader "
+         "cannot reconcile them.",
+         "Nothing on this desk is wrong, but a reviewer comparing desks will see three different "
+         "denominators for the same brief.",
+         "Consolidate at the next integration session (S-12). Until then this desk publishes its count "
+         "and the rule it used to split the brief into lines.", "OPEN", STD_URL),
         ("F-18", "review", "Methodology",
          "A leakage in the first totals walk-forward was found and corrected",
          "The first run fitted estimator B on the season's final points-for and points-against "
