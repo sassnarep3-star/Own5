@@ -89,9 +89,20 @@ jobs:
 
       - name: Committed artefacts match the deterministic build
         run: |
-          rm -rf nfl-desk-35a1feb2/__pycache__ nfl-desk-35a1feb2/tests/__pycache__ 2>/dev/null || true
-          git -C "$GITHUB_WORKSPACE" status --porcelain -- nfl-desk-35a1feb2
-          git -C "$GITHUB_WORKSPACE" diff --exit-code -- nfl-desk-35a1feb2/data nfl-desk-35a1feb2/*.html
+          rm -rf __pycache__ tests/__pycache__
+          cd "$GITHUB_WORKSPACE"
+          echo "python: $(python3 -VV)  locale: $(locale charmap 2>/dev/null || echo ?)  umask: $(umask)"
+          echo "--- git status (porcelain, this desk) ---"
+          git status --porcelain -- nfl-desk-35a1feb2 | head -20
+          echo "--- diff stat ---"
+          git diff --stat -- nfl-desk-35a1feb2 | tail -10
+          echo "--- first differing lines, per file (diagnostic before the strict check) ---"
+          for f in $(git diff --name-only -- nfl-desk-35a1feb2); do
+            echo "### $f"
+            git diff -U0 -- "$f" | sed -n '5,14p'
+          done
+          echo "--- end diagnostics ---"
+          git diff --exit-code -- nfl-desk-35a1feb2/data nfl-desk-35a1feb2/*.html
 
       - name: Upload the built desk for review
         if: always()
