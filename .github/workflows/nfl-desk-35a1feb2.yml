@@ -64,28 +64,35 @@ jobs:
         run: python3 -m unittest discover -s tests -t . -v
 
       - name: Negative control — the gates must reject a planted inconsistency
-        # Proves the checks have teeth rather than passing vacuously. Modifies a working copy only;
-        # verify.py restores every data file it rebuilds, and the committed artefacts are untouched.
+        # Proves the checks have teeth rather than passing vacuously: plant a row that contradicts the
+        # summary that quotes it, require verify.py to fail, then put the file back byte-for-byte. The
+        # restore is unconditional — a diagnostic that dirties the tree would itself fail the next step,
+        # which is exactly what a first draft of this step did (caught locally, not in the runner log).
         run: |
+          cp data/luck_panel.csv /tmp/luck_panel.orig.csv
+          set +e
           python3 - <<'PY'
           import csv, io, pathlib, subprocess, sys
           p = pathlib.Path("data/luck_panel.csv")
-          orig = p.read_text(encoding="utf-8")
-          rows = list(csv.reader(io.StringIO(orig)))
-          for r in rows[1:]:
-              if r[0] == "BUF":
-                  r[4] = "9.99"
-          p.write_text("\n".join(",".join(x) for x in rows) + "\n", encoding="utf-8")
+          rows = list(csv.reader(io.open(p, newline="", encoding="utf-8")))
+          target = next(r for r in rows[1:] if r[0] == "BUF")
+          target[rows[0].index("luck_wins")] = "9.99"
+          with io.open(p, "w", newline="", encoding="utf-8") as f:
+              csv.writer(f, lineterminator="\n").writerows(rows)
           rc = subprocess.run([sys.executable, "verify.py"], capture_output=True, text=True)
           caught = [l for l in rc.stdout.splitlines() if "not agree" in l or "not reproducible" in l]
-          print("planted row:", "BUF luck_wins = 9.99")
+          print("planted row: BUF luck_wins = 9.99")
           print("verifier exit:", rc.returncode)
-          print("\n".join(caught))
+          print("\n".join(caught) or "(no complaint raised)")
           if rc.returncode == 0 or not caught:
               print("FAIL  verify.py accepted an inconsistent table", file=sys.stderr)
               raise SystemExit(1)
           print("PASS  the gates rejected it")
           PY
+          control=$?
+          cp /tmp/luck_panel.orig.csv data/luck_panel.csv
+          python3 engine.py > /dev/null && python3 build_site.py > /dev/null
+          exit $control
 
       - name: Committed artefacts match the deterministic build
         run: |
@@ -102,6 +109,9 @@ jobs:
             git diff -U0 -- "$f" | sed -n '5,14p'
           done
           echo "--- end diagnostics ---"
+          if ! git diff --quiet -- nfl-desk-35a1feb2; then
+            echo "The strict check below will fail: the tree drifted during this job." >&2
+          fi
           git diff --exit-code -- nfl-desk-35a1feb2/data nfl-desk-35a1feb2/*.html
 
       - name: Upload the built desk for review
