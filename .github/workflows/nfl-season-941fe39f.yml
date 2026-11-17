@@ -71,4 +71,10 @@ jobs:
 
       - name: Report what changed if the rebuild was not deterministic
         if: failure()
-        run: git status --short && git diff --stat
+        run: |
+          git status --short
+          git diff --stat
+          # Surface the first differing bytes as an annotation so the diff is
+          # readable without log access. Capped so a huge diff cannot flood.
+          git diff --unified=0 | head -c 6000 | sed 's/%/%25/g; s/\r/%0D/g' | \
+            awk '{printf "::error::%s\n", $0}' || true
