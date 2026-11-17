@@ -286,6 +286,7 @@ def check_data():
     # --- registers -----------------------------------------------------------
     sys.path.insert(0, HERE)
     import content as C
+    import engine as E
     reqs = rows_of(C.REQUIREMENTS_CSV)
     gates = rows_of(C.GATES_CSV)
     check("D-38", "DATA",
@@ -332,6 +333,14 @@ def check_data():
           all(f["finding"] and f["what_is_published_instead"] and f["evidence"]
               for f in fl),
           "%d flags" % len(fl))
+    pin = read("carried_manifest.csv")
+    bad = [p_["file"] for p_ in pin
+           if E.sha256_file(os.path.join(DATA, "carried", p_["file"])) != p_["sha256"]]
+    check("D-46", "DATA",
+          "every pinned capture from another session still hashes to the value "
+          "recorded when it was pinned",
+          not bad and bool(pin),
+          "%d pins checked; drifted: %s" % (len(pin), ", ".join(bad) or "none"))
     sr = rows_of(C.SOURCES_CSV)
     check("D-45", "DATA", "every register source is https",
           all(s["url"].startswith("https://") or not s["url"] for s in sr),

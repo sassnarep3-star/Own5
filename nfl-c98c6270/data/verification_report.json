@@ -310,11 +310,18 @@
       "detail": "21 flags"
     },
     {
+      "id": "D-46",
+      "kind": "DATA",
+      "check": "every pinned capture from another session still hashes to the value recorded when it was pinned",
+      "result": "PASS",
+      "detail": "3 pins checked; drifted: none"
+    },
+    {
       "id": "D-45",
       "kind": "DATA",
       "check": "every register source is https",
       "result": "PASS",
-      "detail": "12 sources"
+      "detail": "13 sources"
     },
     {
       "id": "R-01",
@@ -328,7 +335,7 @@
       "kind": "RENDER",
       "check": "every table body row carries a provenance badge",
       "result": "PASS",
-      "detail": "2234 of 2234 rows badged; e.g. none"
+      "detail": "2236 of 2236 rows badged; e.g. none"
     },
     {
       "id": "R-03",
@@ -387,6 +394,6 @@
       "detail": "flagged.html linked from 17 pages"
     }
   ],
-  "passed": 55,
+  "passed": 56,
   "failed": 0
 }
