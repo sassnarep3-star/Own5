@@ -17,7 +17,6 @@ import hashlib
 import json
 import subprocess
 import sys
-from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -45,11 +44,20 @@ def main() -> int:
         print("\nCommit them, then re-run. Use --force only if you intend to re-register.")
         return 1
 
-    commit = git("rev-parse", "HEAD")
+    # The registration is the commit that INTRODUCED the rules, not whatever
+    # HEAD happens to be. Using HEAD would make the file change on every later
+    # commit, which is indistinguishable from drift.
+    commit = git("log", "-1", "--format=%H", "--",
+                 "tools/season_desk_941fe39f/strategies.py")
+    if not commit:
+        print("REFUSING TO WRITE: strategies.py has no commit, so there is nothing")
+        print("to register against. Commit it first.")
+        return 1
     subject = git("log", "-1", "--format=%s", commit)
     out = {
         "desk": "941fe39f",
-        "written_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        # derived from the registration commit, so the file is byte-stable
+        "written_utc": git("log", "-1", "--format=%cI", commit),
         "registration_commit": commit,
         "registration_subject": subject,
         "registration_committed_utc": git("log", "-1", "--format=%cI", commit),
