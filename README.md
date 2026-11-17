@@ -518,3 +518,24 @@ python3 -m unittest discover -s tests -v   # 16 tests, all passing
 
 The build is byte-for-byte deterministic; CI re-runs it and fails on any drift (`git diff --exit-code`).
 
+
+---
+
+## NFL Decision Review Hub (session 3bba0722 · 2026-11-17)
+
+**Review site:** https://sassnarep3-star.github.io/Own5/nfl-review-3bba0722/ ·
+**Executive summary:** [`research/nfl-3bba0722/EXECUTIVE_SUMMARY.md`](research/nfl-3bba0722/EXECUTIVE_SUMMARY.md) ·
+**Suggestions for review:** https://sassnarep3-star.github.io/Own5/nfl-review-3bba0722/suggestions.html ·
+**Flagged for review:** https://sassnarep3-star.github.io/Own5/nfl-review-3bba0722/flagged.html
+
+An additive, source-checked decision docket. It records the 2026-11-17 official-source recheck, 14 known/missing-information questions, 14 priority readiness gates, 13 unapproved suggestions and 13 flagged/rechecked findings. Each table row links to an official league, club, operator or government source, or is explicitly flagged; repository evidence is labeled separately. The hub does not modify earlier data, claim a strategy edge, publish market prices, or implement suggestions.
+
+Key source caveats: the requested Week 12 NFL injury URL returned a Week 10 page; the reviewed NFL Game Book has a written-permission notice for other use; the Texans depth page is image-only in the retrieved content and the Packers page prefixes jersey numbers; the official NFL reserve list is now located, but older snapshots were not backfilled. Only one Game Book and two club depth pages were rechecked in this session, so this is not a complete 32-team audit.
+
+Rebuild and verify (stdlib only):
+
+```sh
+python3 nfl-review-3bba0722/build_site.py
+python3 nfl-review-3bba0722/verify.py
+python3 -m unittest discover -s nfl-review-3bba0722/tests -v
+```
