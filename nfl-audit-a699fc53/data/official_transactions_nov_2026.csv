@@ -1,0 +1,38 @@
+record_type,date_2026,from_club,to_club,name,transaction,source_url,window_note
+trade,11/06,Cardinals (AZ),Ravens (BAL),Jacoby Brissett,Traded,https://www.nfl.com/transactions/league/trades/2026/11,November trades page as captured 2026-11-17
+trade,11/09,Jets (NYJ),Lions (DET),Andre Cisco,Traded,https://www.nfl.com/transactions/league/trades/2026/11,November trades page as captured 2026-11-17
+trade,11/09,Saints (NO),Jaguars (JAX),Davon Godchaux,Traded,https://www.nfl.com/transactions/league/trades/2026/11,November trades page as captured 2026-11-17
+trade,11/10,Falcons (ATL),Jaguars (JAX),Jessie Bates,Traded,https://www.nfl.com/transactions/league/trades/2026/11,November trades page as captured 2026-11-17
+trade,11/10,Eagles (PHI),Jaguars (JAX),Jordan Davis,Traded,https://www.nfl.com/transactions/league/trades/2026/11,November trades page as captured 2026-11-17
+trade,11/10,Titans (TEN),Bills (BUF),Amani Hooker,Traded,https://www.nfl.com/transactions/league/trades/2026/11,November trades page as captured 2026-11-17
+trade,11/10,Colts (IND),49ers (SF),Keenan Allen,Traded,https://www.nfl.com/transactions/league/trades/2026/11,November trades page as captured 2026-11-17
+trade,11/10,Raiders (LV),Vikings (MIN),Kirk Cousins,Traded,https://www.nfl.com/transactions/league/trades/2026/11,November trades page as captured 2026-11-17
+trade,11/10,Chargers (LAC),Broncos (DEN),Daiyan Henley,Traded,https://www.nfl.com/transactions/league/trades/2026/11,November trades page as captured 2026-11-17
+trade,11/10,Colts (IND),Chiefs (KC),Josh Downs,Traded,https://www.nfl.com/transactions/league/trades/2026/11,November trades page as captured 2026-11-17
+trade,11/10,Falcons (ATL),Ravens (BAL),Ryan Neuzil,Traded,https://www.nfl.com/transactions/league/trades/2026/11,November trades page as captured 2026-11-17
+trade,11/10,Ravens (BAL),Falcons (ATL),Andrew Vorhees,Traded,https://www.nfl.com/transactions/league/trades/2026/11,November trades page as captured 2026-11-17
+reserve,11/07,Lions (DET),,Jack Campbell,Reserve/Injured,https://www.nfl.com/transactions/league/reserve-list/2026/11,November reserve-list page as captured 2026-11-17 (dates 11/07-11/16 visible)
+reserve,11/07,Broncos (DEN),,Eyioma Uwazurike,Reserve/Injured,https://www.nfl.com/transactions/league/reserve-list/2026/11,November reserve-list page as captured 2026-11-17 (dates 11/07-11/16 visible)
+reserve,11/07,Rams (LAR),,Jaylen Watson,Reserve/Injured,https://www.nfl.com/transactions/league/reserve-list/2026/11,November reserve-list page as captured 2026-11-17 (dates 11/07-11/16 visible)
+reserve,11/07,Falcons (ATL),,Brian Robinson,Reserve/Injured,https://www.nfl.com/transactions/league/reserve-list/2026/11,November reserve-list page as captured 2026-11-17 (dates 11/07-11/16 visible)
+reserve,11/09,Vikings (MIN),,Demond Claiborne,Reserve/Injured,https://www.nfl.com/transactions/league/reserve-list/2026/11,November reserve-list page as captured 2026-11-17 (dates 11/07-11/16 visible)
+reserve,11/09,Bills (BUF),,Josh Palmer,Reserve/Injured,https://www.nfl.com/transactions/league/reserve-list/2026/11,November reserve-list page as captured 2026-11-17 (dates 11/07-11/16 visible)
+reserve,11/09,Titans (TEN),,James Williams,Reserve/Injured,https://www.nfl.com/transactions/league/reserve-list/2026/11,November reserve-list page as captured 2026-11-17 (dates 11/07-11/16 visible)
+reserve,11/10,Cardinals (AZ),,Michael Wilson,Reserve/Injured,https://www.nfl.com/transactions/league/reserve-list/2026/11,November reserve-list page as captured 2026-11-17 (dates 11/07-11/16 visible)
+reserve,11/10,Cardinals (AZ),,Gardner Minshew,Reserve/Injured,https://www.nfl.com/transactions/league/reserve-list/2026/11,November reserve-list page as captured 2026-11-17 (dates 11/07-11/16 visible)
+reserve,11/10,49ers (SF),,Gracen Halton,Reserve/Injured,https://www.nfl.com/transactions/league/reserve-list/2026/11,November reserve-list page as captured 2026-11-17 (dates 11/07-11/16 visible)
+reserve,11/10,Dolphins (MIA),,Malik Willis,Reserve/Injured,https://www.nfl.com/transactions/league/reserve-list/2026/11,November reserve-list page as captured 2026-11-17 (dates 11/07-11/16 visible)
+reserve,11/10,Dolphins (MIA),,Zach Sieler,Reserve/Injured,https://www.nfl.com/transactions/league/reserve-list/2026/11,November reserve-list page as captured 2026-11-17 (dates 11/07-11/16 visible)
+reserve,11/10,Rams (LAR),,Jordan Whittington,Reserve/Injured,https://www.nfl.com/transactions/league/reserve-list/2026/11,November reserve-list page as captured 2026-11-17 (dates 11/07-11/16 visible)
+reserve,11/12,Rams (LAR),,Puka Nacua,Reserve/Injured,https://www.nfl.com/transactions/league/reserve-list/2026/11,November reserve-list page as captured 2026-11-17 (dates 11/07-11/16 visible)
+reserve,11/14,Packers (GB),,Josh Whyle,Reserve/Injured,https://www.nfl.com/transactions/league/reserve-list/2026/11,November reserve-list page as captured 2026-11-17 (dates 11/07-11/16 visible)
+reserve,11/14,Cowboys (DAL),,Tyler Goodson,Reserve/Injured,https://www.nfl.com/transactions/league/reserve-list/2026/11,November reserve-list page as captured 2026-11-17 (dates 11/07-11/16 visible)
+reserve,11/14,Titans (TEN),,Tommy Townsend,Reserve/Injured,https://www.nfl.com/transactions/league/reserve-list/2026/11,November reserve-list page as captured 2026-11-17 (dates 11/07-11/16 visible)
+reserve,11/14,Titans (TEN),,Peter Skoronski,Reserve/Injured,https://www.nfl.com/transactions/league/reserve-list/2026/11,November reserve-list page as captured 2026-11-17 (dates 11/07-11/16 visible)
+reserve,11/14,Colts (IND),,Akeem Davis-Gaither,Reserve/Injured,https://www.nfl.com/transactions/league/reserve-list/2026/11,November reserve-list page as captured 2026-11-17 (dates 11/07-11/16 visible)
+reserve,11/14,Colts (IND),,Mo Alie-Cox,Reserve/Injured,https://www.nfl.com/transactions/league/reserve-list/2026/11,November reserve-list page as captured 2026-11-17 (dates 11/07-11/16 visible)
+reserve,11/14,Browns (CLE),,Michael Burton,Reserve/Injured,https://www.nfl.com/transactions/league/reserve-list/2026/11,November reserve-list page as captured 2026-11-17 (dates 11/07-11/16 visible)
+reserve,11/14,Patriots (NE),,TreVeyon Henderson,Reserve/Injured,https://www.nfl.com/transactions/league/reserve-list/2026/11,November reserve-list page as captured 2026-11-17 (dates 11/07-11/16 visible)
+reserve,11/14,Saints (NO),,Christen Miller,Reserve/Injured,https://www.nfl.com/transactions/league/reserve-list/2026/11,November reserve-list page as captured 2026-11-17 (dates 11/07-11/16 visible)
+reserve,11/16,Chargers (LAC),,Branson Taylor,Reserve/Injured,https://www.nfl.com/transactions/league/reserve-list/2026/11,November reserve-list page as captured 2026-11-17 (dates 11/07-11/16 visible)
+reserve,11/16,Rams (LAR),,Dylan McMahon,Reserve/Injured,https://www.nfl.com/transactions/league/reserve-list/2026/11,November reserve-list page as captured 2026-11-17 (dates 11/07-11/16 visible)

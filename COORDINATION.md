@@ -2394,13 +2394,50 @@ Carried forward and re-checked (read-only, never edited):
 | ID | Task | Status | Owner | Files touched | Notes |
 |----|------|--------|-------|---------------|-------|
 | X1 | Coordination claim | done | a699fc53 | COORDINATION.md | Claim pushed before build work. |
-| X2 | Full line-by-line re-read of the official Week 10 injury report (all 8 pages) and row-level comparison with the published desk table | in progress | a699fc53 | `nfl-audit-a699fc53/data/official_injury_report_wk10_2026.csv`, `comparison_wk10.csv` | Transcribed from nfl.com via the sandbox page fetcher; cross-checked against the 49 rows re-read on 2026-11-15. |
-| X3 | Official trades and reserve-list capture (Oct window, Nov 2026) | in progress | a699fc53 | `nfl-audit-a699fc53/data/official_transactions_nov_2026.csv` | nfl.com/transactions pages. |
-| X4 | Re-check of the brief's specific claims (Lions blanks, counts, Colts trades, Ravens QB, Willis IR, Henley) | in progress | a699fc53 | `nfl-audit-a699fc53/data/brief_claims_check.csv` | Each claim: official evidence, verdict, link. |
-| X5 | Flagged-for-Review page and cross-session requests | in progress | a699fc53 | `nfl-audit-a699fc53/data/flagged.csv`, `flagged.html` | Non-blocking; every item linked. |
-| X6 | Build, verification and scoped CI workflow | in progress | a699fc53 | `nfl-audit-a699fc53/build.py`, `tests/`, `.github/workflows/nfl-audit-a699fc53.yml` | Row-level source check; counts reconcile; no broken internal links. |
-| X7 | Rebase on main, PR to main, merge, live Pages check | unclaimed | a699fc53 | COORDINATION.md | After X2–X6 pass. |
+| X2 | Full line-by-line re-read of the official Week 10 injury report (all 8 pages) and row-level comparison with the published desk table | done | a699fc53 | `nfl-audit-a699fc53/data/official_injury_report_wk10_2026.csv`, `comparison_wk10.csv` | Transcribed from nfl.com via the sandbox page fetcher; cross-checked against the 49 rows re-read on 2026-11-15. |
+| X3 | Official trades and reserve-list capture (Oct window, Nov 2026) | done | a699fc53 | `nfl-audit-a699fc53/data/official_transactions_nov_2026.csv` | nfl.com/transactions pages. |
+| X4 | Re-check of the brief's specific claims (Lions blanks, counts, Colts trades, Ravens QB, Willis IR, Henley) | done | a699fc53 | `nfl-audit-a699fc53/data/brief_claims_check.csv` | Each claim: official evidence, verdict, link. |
+| X5 | Flagged-for-Review page and cross-session requests | done | a699fc53 | `nfl-audit-a699fc53/data/flagged.csv`, `flagged.html` | Non-blocking; every item linked. |
+| X6 | Build, verification and scoped CI workflow | done | a699fc53 | `nfl-audit-a699fc53/build.py`, `tests/`, `.github/workflows/nfl-audit-a699fc53.yml` | Row-level source check; counts reconcile; no broken internal links. |
+| X7 | Rebase on main, PR to main, merge, live Pages check | in progress | a699fc53 | COORDINATION.md | After X2–X6 pass. |
 
 **Cross-session requests (logged, not actioned)** — addressed to `nfl-desk-e46fb855` (finished) and `nfl-560ed315` (register):
 - R-a699-1: `nfl-desk-e46fb855/data/injuries.csv` is stale for Week 10: 277 of 326 rows are carried forward from an earlier read, 21 official rows are absent, and 192 matched rows differ in at least one field. Re-publish from `nfl-audit-a699fc53/data/official_injury_report_wk10_2026.csv` (347 rows).
 - R-a699-2: `nfl-desk-e46fb855/data/bye_weeks_2026.csv` lists 14 teams for Week 10. The official Week 10 report lists 28 playing clubs, so the byes are CHI, DEN, PHI and TB (also in root `data/bye-weeks-2026.csv`).
+
+### Session a699fc53 — completion record (2026-11-17 UTC, before merge)
+
+**Sources read (all nfl.com, read through the sandbox page fetcher; curl to nfl.com fails from the sandbox)**
+
+| Source | URL | Read (UTC) | Used for |
+|---|---|---|---|
+| Week 10 injury report, all 8 pages | https://www.nfl.com/injuries/league/2026/reg10 | 2026-11-17, before 00:40Z | 347 official rows (28 clubs) |
+| Week 11 injury report URL | https://www.nfl.com/injuries/league/2026/reg11 | 2026-11-17 | Redirects to the Week 10 report; Week 11 not yet published |
+| League transactions index | https://www.nfl.com/transactions/ | 2026-11-17 | Confirms the November trades page |
+| November 2026 trades | https://www.nfl.com/transactions/league/trades/2026/11 | 2026-11-17 | 12 trades, 11/06–11/10 |
+| November 2026 reserve list | https://www.nfl.com/transactions/league/reserve-list/2026/11 | 2026-11-17 | 25 entries, 11/07–11/16 |
+| October 2026 reserve list | https://www.nfl.com/transactions/league/reserve-list/2026/10 | 2026-11-17 | Entries 10/24–10/31 only; no Jackson or Huntley |
+
+**Verification performed**
+
+1. Transcription of all 347 official rows into `nfl-audit-a699fc53/data/official_injury_report_wk10_2026.csv`. Club counts tallied by hand before the comparison; the build asserts the counts club by club.
+2. Independent cross-check: the 49 rows re-read on 2026-11-15T23:27Z by session e46fb855 are identical to this read on all fields (49 of 49). This is the only independent check of the transcription; the other 298 rows are unchecked by a second reader and are disclosed as such.
+3. Row-level comparison of all 347 official rows with the published `nfl-desk-e46fb855/data/injuries.csv` (326 rows): 134 identical (49 re-read plus 85 carried forward), 192 present but differ, 21 absent.
+4. Every claim in the brief that this session could test is in `data/brief_claims_check.csv` with an official link and a verdict; claims that were not checked are labelled NOT CHECKED.
+5. Build (`nfl-audit-a699fc53/build.py`) asserts 28 source and count checks and writes pages only after they pass; `--check` validates the HTML links and the row count of the comparison page. 8 unit tests in `nfl-audit-a699fc53/tests/` pass.
+
+**Irregularities flagged (published on the Flagged for Review page with links; non-blocking)**
+
+- F01 (high): the published Week 10 table is stale. 277 rows are carried forward from an earlier read; 192 of them differ from the live page.
+- F02 (high): game-status designations: 28 published vs 171 official.
+- F03 (high): official sources conflict on Daiyan Henley (traded LAC to DEN on 11/10; listed under LAC on the Week 10 report for the 11/16 game).
+- F04 (high): nfl-desk-e46fb855 bye file lists 14 teams for Week 10; the official set is 4 (CHI, DEN, PHI, TB).
+- F05–F14 (medium/review): Ravens QB IR moves not found in visible windows; reserve-list windows only; starter headlines not opened; Colts starting status unknown; Cincinnati 9 vs 4 cited; live counts move; method limitation (no raw HTML hash in the sandbox); Week 11 not yet published; Houston and Packers depth not checked; "no-injury section" undefined in the brief.
+
+**Notes for other sessions**
+
+- No file owned by another session was edited. R-a699-1 and R-a699-2 are logged above for the owner of nfl-desk-e46fb855 (finished) or the next integration session.
+- Brief-stated counts (254 / 279 rows; 4 vs 2 sections) do not match the live page (347 rows; zero clubs without injury text). Logged as contradicted, not adopted.
+- The desk's own workflow re-reads nfl.com from GitHub runners but stores nothing; a durable capture needs raw bytes plus a hash (see flagged F11).
+
+**Pull request and merge record:** pending — filled in after X7.

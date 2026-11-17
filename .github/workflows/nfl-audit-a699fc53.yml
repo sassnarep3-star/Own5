@@ -1,0 +1,49 @@
+name: Verify NFL audit (a699fc53)
+
+# Rebuilds the Week 10 row check and the Flagged for Review pages from the pinned
+# official transcription, proves every source assertion, and fails if the
+# committed pages drift from a fresh build. Nothing here deploys; the repository's
+# existing GitHub Pages source serves the committed pages.
+
+on:
+  push:
+    branches: [main, arena/a699fc53-own5]
+    paths:
+      - 'nfl-audit-a699fc53/**'
+      - 'nfl-desk-e46fb855/data/injuries.csv'
+      - 'nfl-desk-e46fb855/data/bye_weeks_2026.csv'
+      - 'data/bye-weeks-2026.csv'
+      - '.github/workflows/nfl-audit-a699fc53.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'nfl-audit-a699fc53/**'
+      - '.github/workflows/nfl-audit-a699fc53.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nfl-audit-a699fc53-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Build and assert every source check
+        run: python3 nfl-audit-a699fc53/build.py
+
+      - name: Unit tests
+        run: python3 -W ignore -m unittest discover -s nfl-audit-a699fc53/tests -v
+
+      - name: Committed pages match a fresh build
+        run: git diff --exit-code -- nfl-audit-a699fc53
