@@ -1,0 +1,13 @@
+id,name,url,captured_utc,used_for,tier
+S-01,NFL league standings 2026 REG,https://www.nfl.com/standings/league/2026/REG,2026-11-17T00:00:00Z,"32 club-seasons: W-L-T, points for, points against; correlations, luck panel, ratings reconciliation",OFFICIAL
+S-02,NFL week 11 schedule 2026,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-17T00:00:00Z,"13 fixtures: date, kickoff, network, venue, neutral site, bye teams",OFFICIAL
+S-03,NFL week 10 schedule 2026,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-17T00:00:00Z,13 official finals added to the results feed; 1 game still unplayed at capture,OFFICIAL
+S-04,NFL game centre: Vikings at 49ers 2026 REG 11,https://www.nfl.com/games/vikings-at-49ers-2026-reg-11,2026-11-17T00:00:00Z,venue confirmation for the Mexico City neutral-site game,OFFICIAL
+S-05,NFL official injury report week 10,https://www.nfl.com/injuries/league/2026/reg10,2026-11-17T00:00:00Z,326 player rows with practice and game designations; second read for the delta,OFFICIAL
+S-06,Atlanta Falcons week 10 inactives article,https://www.atlantafalcons.com/news/atlanta-falcons-week-10-inactives-vs-kansas-city-chiefs,2026-11-17T00:00:00Z,proof that official inactives are published on club sites (discovery route),OFFICIAL
+S-07,New England Patriots game book week 10,https://www.patriots.com/news/gamebook-patriots-vs-lions-week-10,2026-11-17T00:00:00Z,proof that official game books are published on club sites (discovery route),OFFICIAL
+S-08,Houston Texans depth chart,https://www.houstontexans.com/team/depth-chart,2026-11-17T00:00:00Z,image-only depth chart; no machine-readable rows,OFFICIAL
+S-09,32 club depth charts,https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-e46fb855/data/depth_slots.csv,2026-11-17T00:00:00Z,"715 depth slots across 31 clubs with rank 1-4, shared and empty slots",OFFICIAL
+S-10,Carried-forward results feed (session e46fb855),https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-e46fb855/data/results_feed.csv,2026-11-15T23:22:00Z,"136 finals for weeks 1-9, re-read and reconciled this session",REUSED
+S-11,Carried-forward injury report (session e46fb855),https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-e46fb855/data/injuries.csv,2026-11-15T23:27:00Z,"first read of the week-10 report, used as the delta baseline",REUSED
+S-12,NFL flexible-scheduling procedures,https://www.nfl.com/legal/flexible-scheduling-procedures,2026-11-17T00:00:00Z,linked from the week page; records that late-season dates are not fixed,OFFICIAL

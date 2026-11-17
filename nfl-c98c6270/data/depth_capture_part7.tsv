@@ -1,0 +1,116 @@
+# club|unit|position|rank1|rank2|rank3|rank4|note|as_of_published
+NE|Offense|WR|A.J. Brown|Efton Chism III|||
+NE|Offense|LT|Will Campbell|Dametrious Crownover|Marcus Bryant||
+NE|Offense|LG|Ben Brown|Walter Rouse|||
+NE|Offense|C|Jared Wilson|Ben Brown|||
+NE|Offense|RG|Matt Pryor|Walter Rouse|||
+NE|Offense|RT|Morgan Moses|Caleb Lomu|||
+NE|Offense|TE|Hunter Henry|Eli Raridon|Cameron Latu||
+NE|Offense|WR|DeMario Douglas|Kyle Williams|||
+NE|Offense|WR|Efton Chism III|Kyle Williams|||
+NE|Offense|RB|Rhamondre Stevenson|TreVeyon Henderson|Corey Kiner|Lan Larison|
+NE|Offense|QB|Drake Maye|Tommy DeVito|Behren Morton||
+NE|Defense|OLB|Dre'Mont Jones|Gabe Jacas|||
+NE|Defense|DT|Christian Barmore|Leonard Taylor III|||
+NE|Defense|DT|Cory Durden|DaQuan Jones|||
+NE|Defense|DT|Milton Williams|Joshua Farmer|||
+NE|Defense|OLB|Elijah Ponder|Gabe Jacas|||
+NE|Defense|LB|Robert Spillane|Darius Muasau|Erick Hunter||
+NE|Defense|LB|Christian Elliss|Namdi Obiazor|||
+NE|Defense|CB|Carlton Davis III|Channing Canada|||
+NE|Defense|S|Craig Woodson|Mike Brown|||
+NE|Defense|S|Kevin Byard III|Jaylen Reed|Brenden Schooler||
+NE|Defense|CB|Marcus Jones|Charles Woods|||
+NE|Defense|CB|Christian Gonzalez|Karon Prunty|||
+NE|Special Teams|K|Andy Borregales||||
+NE|Special Teams|P|Mitch Wishnowsky||||
+NE|Special Teams|H|Mitch Wishnowsky||||
+NE|Special Teams|LS|Julian Ashby||||
+NE|Special Teams|PR|Marcus Jones|DeMario Douglas|||
+NE|Special Teams|KR|Kyle Williams|Corey Kiner|Lan Larison||
+LAR|Offense|WR|Konata Mumpfield|CJ Daniels|||
+LAR|Offense|TE|Davis Allen+Tyler Higbee||||shared_rank1
+LAR|Offense|LT|Alaric Jackson|David Quessenberry|||
+LAR|Offense|LG|Steve Avila|Bill Murray|||
+LAR|Offense|C|Coleman Shelton|Dylan McMahon|||
+LAR|Offense|RG|Kevin Dotson|Beaux Limmer|||
+LAR|Offense|RT|Warren McClendon Jr.|Keagen Trost|||
+LAR|Offense|TE|Colby Parkinson|Max Klare|||
+LAR|Offense|WR|Puka Nacua|Jordan Whittington|Tutu Atwell||
+LAR|Offense|QB|Matthew Stafford|Stetson Bennett IV|Ty Simpson||
+LAR|Offense|RB|Kyren Williams|Blake Corum|Ronnie Rivers||
+LAR|Defense|OLB|Byron Young|Wesley Bailey|||
+LAR|Defense|DE|Braden Fiske||||
+LAR|Defense|NT|Tyler Davis|Ty Hamilton|||
+LAR|Defense|DE|Aaron Donald|Larrell Murchison|||
+LAR|Defense|OLB|Myles Garrett|Josaiah Stewart|Desjuan Johnson||
+LAR|Defense|ILB|Omar Speights|Grant Stuard|||
+LAR|Defense|ILB|Nate Landman|Shaun Dolac|||
+LAR|Defense|CB|Trent McDuffie|Cam Lampkin|||
+LAR|Defense|S|Quentin Lake|Kamren Kinchens|Maximus Pulley||
+LAR|Defense|S|Kam Curl|Jaylen McCollough|||
+LAR|Defense|CB|Emmanuel Forbes Jr.+Josh Wallace||||shared_rank1
+LAR|Special Teams|P|Ethan Evans||||
+LAR|Special Teams|K|Brandon McManus|Joshua Karty|||
+LAR|Special Teams|H|Ethan Evans||||
+LAR|Special Teams|LS|Joe Cardona||||
+LAR|Special Teams|PR|Kyren Williams|Tutu Atwell|||
+LAR|Special Teams|KR|Jordan Whittington|Ronnie Rivers|||
+LV|Offense|WR|Jalen Nailor|Malik Benson|Dont'e Thornton Jr.||
+LV|Offense|LT|Kolton Miller|Charles Grant|||
+LV|Offense|LG|Spencer Burford|Bryce Cabeldue|||
+LV|Offense|C|Tyler Linderbaum||||
+LV|Offense|RG|Jackson Powers-Johnson|Caleb Rogers|||
+LV|Offense|RT|DJ Glaze|Trey Zuhn III|||
+LV|Offense|TE|Brock Bowers|Michael Mayer|Ian Thomas||
+LV|Offense|WR|Tre Tucker|Jack Bech|Dareke Young+Cody White||
+LV|Offense|QB|Fernando Mendoza|Aidan O'Connell|||
+LV|Offense|RB|Ashton Jeanty|Mike Washington Jr.|Dylan Laube||
+LV|Offense|FB|Connor Heyward||||
+LV|Defense|DE|Maxx Crosby|Malcolm Koonce|||
+LV|Defense|DT|Tonka Hemingway|JJ Pegues|Tim Keenan III||
+LV|Defense|DT|Adam Butler|Folorunso Fatukasi|Thomas Booker IV||
+LV|Defense|EDGE|Kwity Paye||||
+LV|Defense|LB|Nakobe Dean|Tommy Eichenberg|Segun Olubi||
+LV|Defense|LB|Quay Walker|Cody Lindenberg|||
+LV|Defense|CB|Eric Stokes|Jermod McCoy|Darrell Luter Jr.||
+LV|Defense|CB|Darien Porter|Hezekiah Masses|||
+LV|Defense|CB|Taron Johnson||||
+LV|Defense|FS|Treydan Stukes|Isaiah Pola-Mao|Tristin McCollum||
+LV|Defense|SS|Jeremy Chinn|Dalton Johnson|||
+LV|Special Teams|P|AJ Cole||||
+LV|Special Teams|K|Matt Gay||||
+LV|Special Teams|H|AJ Cole||||
+LV|Special Teams|LS|Alex Ward||||
+LV|Special Teams|KR|Dylan Laube|Dareke Young|||
+LV|Special Teams|PR|Malik Benson|Dylan Laube|||
+TEN|Offense|WR|Calvin Ridley|Chimere Dike|||
+TEN|Offense|TE|Gunnar Helm|Daniel Bellinger|David Martin-Robinson+Kylen Granson||
+TEN|Offense|LT|Dan Moore Jr.|James Hudson III|||
+TEN|Offense|LG|Peter Skoronski||||
+TEN|Offense|C|Austin Schlottmann|Pat Coogan|||
+TEN|Offense|RG|Atonio Mafi|Garrett Dellinger|||
+TEN|Offense|RT|JC Latham|Brandon Crenshaw-Dickson|||
+TEN|Offense|WR|Wan'Dale Robinson||||
+TEN|Offense|WR|Carnell Tate|Elic Ayomanor|||
+TEN|Offense|QB|Cam Ward|Mitchell Trubisky|||
+TEN|Offense|RB|Tony Pollard|Tyjae Spears+Nick Singleton|Julius Chestnut+Michael Carter||
+TEN|Defense|DE|Jermaine Johnson II|Oluwafemi Oladejo|||
+TEN|Defense|DT|Solomon Thomas|Jonah Laulu|Jackie Marshall||
+TEN|Defense|DL|John Franklin-Myers|Nazir Stackhouse|Timmy Horne||
+TEN|Defense|DE|Jacob Martin|Keldric Faulk|Truman Jones||
+TEN|Defense|LB|Cody Barton||||
+TEN|Defense|LB|Cedric Gray||||
+TEN|Defense|LB|Anthony Hill Jr.|Dorian Mausi|||
+TEN|Defense|CB|Joshua Williams|Alontae Taylor|||
+TEN|Defense|NCB|Marcus Harris|Alontae Taylor|Micah Robinson||
+TEN|Defense|S|Tony Adams||||
+TEN|Defense|S|Kevin Winston Jr.|Terrell Burgess|||
+TEN|Defense|CB|Cor'Dale Flott|Jaylon Jones|||
+TEN|Special Teams|K|Joey Slye|Tommy Townsend|||
+TEN|Special Teams|KO|Joey Slye|Tommy Townsend|||
+TEN|Special Teams|P|Tommy Townsend|Joey Slye|||
+TEN|Special Teams|H|Tommy Townsend|Mitchell Trubisky|||
+TEN|Special Teams|PR|Chimere Dike|Micah Robinson|||
+TEN|Special Teams|KOR|Chimere Dike|Michael Carter|Julius Chestnut||
+TEN|Special Teams|LS|Morgan Cox|Austin Schlottmann|||

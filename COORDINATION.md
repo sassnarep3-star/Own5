@@ -2552,3 +2552,121 @@ without rewriting other sessions' datasets. No other branch will be created or p
 - Expanded the scoped integration workflow to run the 3bba verifier/tests and include that namespace in the generated-output drift check. Latest PR run is pending until the rebased branch is pushed.
 
 - Additional readiness handoff to the `83a7d6a8` and `3bba0722` owners: the three separate registers (78/72/14) need a documented row-level crosswalk or explicitly remain three separate decision dockets; do not publish a combined completion percentage until that mapping is verified. No register data was merged by I-A62-01.
+
+---
+
+## Session `c98c6270` — Own5 NFL Decision Console (2026 week 11)
+
+**Claim (recorded 2026-11-17, before the build):** session `c98c6270`, branch
+`arena/c98c6270-own5`.
+
+| Task | Status | Owner session | Files touched |
+|---|---|---|---|
+| NFL line-origination decision console: originated lines, price store, results feed, gated competition, injury/depth registers, suggestions + questions registers, decision-readiness table, exec summary, repo audit, Pages site | **DONE** | `c98c6270` | `nfl-c98c6270/**`, `research/nfl-c98c6270/**`, `.github/workflows/nfl-desk-c98c6270.yml`, one additive `README.md` row, this append-only block |
+
+Read-only dependencies, never edited: `nfl-desk-e46fb855/data/results_feed.csv`,
+`nfl-desk-e46fb855/data/injuries.csv`, `nfl-desk-e46fb855/data/depth_slots.csv`.
+
+**Live site:** https://sassnarep3-star.github.io/Own5/nfl-c98c6270/
+
+**What was built**
+
+* 17 pages: overview (the decision-readiness table), executive summary,
+  suggestions, questions, decision readiness, originated lines, strategies,
+  leaderboard, injuries, depth charts, deficiency matrix, correlations, luck
+  removal, gates, repo audit, sources, flagged-for-review.
+* 80 requirements, each with the gate that blocks it, the number that would
+  clear it, the number observed today, and a resolvable evidence link.
+  32 met, 19 partial, 29 blocked. 3 of 9 gates met.
+* 65 originated market rows across the 13 week-11 games, originated
+  side (1) → total (2) → moneyline (3), with the dependency recorded so the
+  order can be checked rather than asserted. Two totals estimators published
+  side by side with the gap.
+* 149 official finals reconciling 32 of 32 to the official standings.
+* 889 machine-readable depth slots from a fresh 32-club sweep on 2026-11-17,
+  every row with a club source URL and a capture timestamp; 14 shared rank-1
+  slots and 5 empty first-string slots preserved as published; Houston left
+  as one image-only row.
+* A like-for-like depth delta against the 2026-11-15 read (730 rows, Offense
+  and Defense only — see flag F-21).
+* 232 offense-vs-defense pairings for the week-11 slate, 2 withheld for
+  Houston, 5 carrying a confirmed below-rank-1 expected starter.
+* A suggestions register of 18 reviewable paths, each with options, a
+  recommendation, an explicit "what would change the call", and a decision
+  control that records the reviewer's choice in the browser. **None are
+  implemented.**
+* A questions register of 22 questions, 14 blocking, each stating what we
+  have, what we do not have, and the cheapest route to close the gap.
+
+**Sources read this session**
+
+| Source | URL | Read (UTC) | Used for |
+|---|---|---|---|
+| Official 2026 standings | https://www.nfl.com/standings/league/2026/REG | 2026-11-17T00:00Z | Ratings, luck panel, correlations, reconciliation |
+| Week-11 schedule | https://www.nfl.com/schedules/2026/by-week/week-11 | 2026-11-17T00:00Z | 13-game slate, kickoffs, venues, byes |
+| Week-10 schedule | https://www.nfl.com/schedules/2026/by-week/week-10 | 2026-11-17T00:00Z | 13 official finals; LAC@BAL published pending |
+| Week-10 injury report | https://www.nfl.com/injuries/league/2026/reg10 | 2026-11-17T00:00Z | Availability, replacement depth, deficiency |
+| Week-11 injury report | https://www.nfl.com/injuries/league/2026/reg11 | 2026-11-17T00:00Z | **Serves the week-10 report** — week 11 is not published |
+| 32 club depth charts | `https://www.<club>.com/team/depth-chart` | 2026-11-17T00:00Z | 889 slots across 31 clubs (Houston image-only) |
+| Official inactives (route proof) | https://www.atlantafalcons.com/news/atlanta-falcons-week-10-inactives-vs-kansas-city-chiefs | 2026-11-17T00:00Z | Proves flag F-05 is closable |
+| Official game book (route proof) | https://www.patriots.com/news/gamebook-patriots-vs-lions-week-10 | 2026-11-17T00:00Z | Proves flag F-05 is closable |
+
+**Verification performed**
+
+1. Row-level provenance on the emitted HTML, not the CSVs: 2 234 body rows
+   across 17 pages; every one carries a SOURCE, COMPUTED, GOVERNANCE or
+   UNVERIFIED badge and a resolvable link (`verify.py` check R-02).
+2. 55 checks in `verify.py` (45 data, 10 render), all passing; the report is
+   committed to `nfl-c98c6270/data/verification_report.json`.
+3. 46 unit tests across statistics, honesty, provenance and reproduction.
+4. Determinism: `run.py` rebuilds byte-identical artefacts; the workflow proves
+   the committed files match.
+5. Reconciliation: the game-by-game record rebuilds the official standings for
+   32 of 32 clubs.
+6. Link integrity: every internal link resolves, every external link is https.
+
+**Irregularities flagged (published with links on the Flagged page)**
+
+| Flag | Severity | What it is |
+|---|---|---|
+| F-01 | blocking | No market price of any kind exists anywhere in the repository |
+| F-02 | blocking (Houston) | Houston publishes its depth chart as an image |
+| F-03 | blocking | The week-11 injury report is not published; availability falls back to week 10 |
+| F-04 | blocking | No official snap counts, so the brief's preferred depth signal is unavailable |
+| F-05 | blocking | No official inactives or game book captured — **but this session proved both are published on club sites** (links above) |
+| F-06 | blocking | No transactions or reserve list has been read |
+| F-12 | blocking | One season only, so gate G1 (n >= 300) is unreachable |
+| F-21 | review | The two depth captures differ in shape (e46fb855 took Offense and Defense; this session also took Special Teams). The published delta is restricted to the shared units |
+| F-22 | review | 62 of 730 like-for-like depth rows differ between the two reads. Not yet evidence of a club-side change — a third read is needed |
+| F-14, F-17, F-19 | review | Pythagorean 2.37 and sigma 13.5 are conventions; ratings are ridge-penalised; only 4 of 31 clubs date their chart |
+
+**Bugs found and fixed**
+
+1. `luck_power()` raised `OverflowError` (`math.comb` overflows past n ≈ 1 030);
+   replaced with a log-gamma tail, tested to n = 4 000.
+2. The totals estimators averaged per-team rates, over-weighting clubs with
+   fewer games; replaced with an aggregate over all team-games.
+3. `load_injuries()` referenced a capture file that does not exist (dead code).
+4. Four depth capture rows were malformed (7 fields, note in the rank-4 column)
+   and were silently read as shared first strings; fixed at source, and the
+   shared-first-string test now keys on rank 1 only.
+5. The depth delta compared 889 rows to 702; both sides are now restricted to
+   the units both captures share.
+6. The moneyline step was recorded as depending on the total, contradicting the
+   brief's origination order in its own data; corrected to step 1.
+
+**Notes for other sessions**
+
+* No file belonging to another session was changed. Requests logged, not
+  actioned: at least four NFL namespaces now answer the same brief
+  (`e46fb855`, `560ed315`, `cba42531`, this one). Suggestion S-10 on the
+  suggestions page proposes a desks index at the next integration session.
+* nfl.com is not reachable from this sandbox with curl/urllib (TLS failure).
+  Every page was read through the sandbox fetcher; the workflow re-reads the
+  same URLs from GitHub runners for provenance only.
+* Two gaps previously recorded as "no official source exists" are closable:
+  official inactives and official game books are both published on club sites.
+  Links are in the sources table above and on the questions page.
+* Rebase note: this block conflicted with the block for session `a699fc53`
+  appended to `COORDINATION.md` while this branch was open. Resolved by keeping
+  both blocks in full; nothing from either session was discarded.

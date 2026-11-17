@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luck removal · Own5 NFL Decision Console</title>
+<meta name="description" content="Originate the line, prove the skill, publish the gap. Every row sourced or flagged.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="dot"></span>Own5 <em>NFL Decision Console</em></a>
+  <button class="navtoggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">Menu</button>
+  <nav class="nav" id="nav"><a class="navlink" href="index.html">Overview</a>
+<a class="navlink" href="executive-summary.html">Executive summary</a>
+<a class="navlink" href="suggestions.html">Suggestions</a>
+<a class="navlink" href="questions.html">Questions</a>
+<a class="navlink" href="requirements.html">Decision readiness</a>
+<a class="navlink" href="lines.html">Originated lines</a>
+<a class="navlink" href="strategies.html">Strategies</a>
+<a class="navlink" href="leaderboard.html">Leaderboard</a>
+<a class="navlink" href="injuries.html">Injuries</a>
+<a class="navlink" href="depth.html">Depth charts</a>
+<a class="navlink" href="deficiency.html">Deficiency matrix</a>
+<a class="navlink" href="correlations.html">Correlations</a>
+<a class="navlink active" href="luck.html">Luck removal</a>
+<a class="navlink" href="gates.html">Gates</a>
+<a class="navlink" href="audit.html">Repo audit</a>
+<a class="navlink" href="sources.html">Sources</a>
+<a class="navlink" href="flagged.html">Flagged</a></nav>
+</header>
+<main class="wrap wide">
+  <div class="pagehead">
+    <h1>Luck removal</h1>
+    <p>How much of a record is not performance, and how many bets it takes to tell.</p>
+  </div>
+<div class="panel"><p>Luck cannot be removed from a single game. What can be done is to measure how much of a record is not explained by performance, and to require enough bets that a skill claim survives a proper score. Both panels below are computed from the official standings and the verified results feed only.</p></div>
+<h2>Removal-of-luck panel</h2>
+<div class="filters"><input data-filter="#ltable" placeholder="Filter by club"></div>
+<div class="tablewrap">
+<table id="ltable" class="l"><thead><tr>
+<th>Team</th>
+<th>Games</th>
+<th>Actual win %</th>
+<th>Pythagorean win %</th>
+<th>Residual</th>
+<th>Expected wins minus actual</th>
+<th>One-score games</th>
+<th>One-score wins</th>
+<th>One-score win %</th>
+<th>PF</th>
+<th>PA</th>
+<th>Source</th>
+</tr></thead><tbody>
+<tr><td>ARI</td><td>10</td><td>0.3</td><td>0.2554</td><td>0.0446</td><td>-0.446</td><td>3</td><td>2</td><td>0.6667</td><td>184</td><td>289</td><td><a href="https://www.nfl.com/standings/league/2026/REG">official standings</a> <a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>ATL</td><td>10</td><td>0.3</td><td>0.3562</td><td>-0.0562</td><td>0.562</td><td>3</td><td>0</td><td>0.0</td><td>201</td><td>258</td><td><a href="https://www.nfl.com/standings/league/2026/REG">official standings</a> <a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>BAL</td><td>9</td><td>0.4444</td><td>0.3714</td><td>0.0731</td><td>-0.658</td><td>5</td><td>3</td><td>0.6</td><td>189</td><td>236</td><td><a href="https://www.nfl.com/standings/league/2026/REG">official standings</a> <a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>BUF</td><td>9</td><td>0.8889</td><td>0.7043</td><td>0.1846</td><td>-1.661</td><td>5</td><td>4</td><td>0.8</td><td>287</td><td>199</td><td><a href="https://www.nfl.com/standings/league/2026/REG">official standings</a> <a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>CAR</td><td>9</td><td>0.4444</td><td>0.4558</td><td>-0.0114</td><td>0.102</td><td>5</td><td>2</td><td>0.4</td><td>219</td><td>236</td><td><a href="https://www.nfl.com/standings/league/2026/REG">official standings</a> <a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>CHI</td><td>9</td><td>0.7778</td><td>0.6547</td><td>0.1231</td><td>-1.108</td><td>4</td><td>3</td><td>0.75</td><td>241</td><td>184</td><td><a href="https://www.nfl.com/standings/league/2026/REG">official standings</a> <a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>CIN</td><td>9</td><td>0.7778</td><td>0.7037</td><td>0.0741</td><td>-0.667</td><td>5</td><td>3</td><td>0.6</td><td>278</td><td>193</td><td><a href="https://www.nfl.com/standings/league/2026/REG">official standings</a> <a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>CLE</td><td>10</td><td>0.6</td><td>0.4079</td><td>0.1921</td><td>-1.921</td><td>8</td><td>6</td><td>0.75</td><td>188</td><td>220</td><td><a href="https://www.nfl.com/standings/league/2026/REG">official standings</a> <a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>DAL</td><td>10</td><td>0.4</td><td>0.5083</td><td>-0.1083</td><td>1.083</td><td>7</td><td>2</td><td>0.2857</td><td>286</td><td>282</td><td><a href="https://www.nfl.com/standings/league/2026/REG">official standings</a> <a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>DEN</td><td>9</td><td>0.7778</td><td>0.537</td><td>0.2408</td><td>-2.167</td><td>6</td><td>6</td><td>1.0</td><td>198</td><td>186</td><td><a href="https://www.nfl.com/standings/league/2026/REG">official standings</a> <a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>DET</td><td>9</td><td>0.7778</td><td>0.6471</td><td>0.1307</td><td>-1.176</td><td>5</td><td>4</td><td>0.8</td><td>257</td><td>199</td><td><a href="https://www.nfl.com/standings/league/2026/REG">official standings</a> <a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>GB</td><td>10</td><td>0.6</td><td>0.5133</td><td>0.0867</td><td>-0.867</td><td>4</td><td>3</td><td>0.75</td><td>226</td><td>221</td><td><a href="https://www.nfl.com/standings/league/2026/REG">official standings</a> <a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>HOU</td><td>9</td><td>0.3333</td><td>0.5366</td><td>-0.2033</td><td>1.83</td><td>6</td><td>1</td><td>0.1667</td><td>233</td><td>219</td><td><a href="https://www.nfl.com/standings/league/2026/REG">official standings</a> <a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>IND</td><td>10</td><td>0.3</td><td>0.3482</td><td>-0.0482</td><td>0.482</td><td>6</td><td>2</td><td>0.3333</td><td>208</td><td>271</td><td><a href="https://www.nfl.com/standings/league/2026/REG">official standings</a> <a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>JAX</td><td>9</td><td>0.7778</td><td>0.8147</td><td>-0.0369</td><td>0.333</td><td>4</td><td>2</td><td>0.5</td><td>269</td><td>144</td><td><a href="https://www.nfl.com/standings/league/2026/REG">official standings</a> <a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>KC</td><td>9</td><td>0.7778</td><td>0.7293</td><td>0.0485</td><td>-0.436</td><td>3</td><td>2</td><td>0.6667</td><td>237</td><td>156</td><td><a href="https://www.nfl.com/standings/league/2026/REG">official standings</a> <a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>LAC</td><td>8</td><td>0.0</td><td>0.1969</td><td>-0.1969</td><td>1.575</td><td>3</td><td>0</td><td>0.0</td><td>121</td><td>219</td><td><a href="https://www.nfl.com/standings/league/2026/REG">official standings</a> <a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>LAR</td><td>10</td><td>0.6</td><td>0.6613</td><td>-0.0613</td><td>0.613</td><td>5</td><td>2</td><td>0.4</td><td>248</td><td>187</td><td><a href="https://www.nfl.com/standings/league/2026/REG">official standings</a> <a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>LV</td><td>10</td><td>0.4</td><td>0.4172</td><td>-0.0172</td><td>0.172</td><td>5</td><td>2</td><td>0.4</td><td>251</td><td>289</td><td><a href="https://www.nfl.com/standings/league/2026/REG">official standings</a> <a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>MIA</td><td>9</td><td>0.1111</td><td>0.2725</td><td>-0.1613</td><td>1.452</td><td>5</td><td>1</td><td>0.2</td><td>148</td><td>224</td><td><a href="https://www.nfl.com/standings/league/2026/REG">official standings</a> <a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>MIN</td><td>9</td><td>0.7778</td><td>0.6883</td><td>0.0895</td><td>-0.806</td><td>5</td><td>4</td><td>0.8</td><td>176</td><td>126</td><td><a href="https://www.nfl.com/standings/league/2026/REG">official standings</a> <a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>NE</td><td>10</td><td>0.5</td><td>0.4464</td><td>0.0536</td><td>-0.536</td><td>5</td><td>3</td><td>0.6</td><td>221</td><td>242</td><td><a href="https://www.nfl.com/standings/league/2026/REG">official standings</a> <a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>NO</td><td>9</td><td>0.3333</td><td>0.4089</td><td>-0.0755</td><td>0.68</td><td>7</td><td>3</td><td>0.4286</td><td>202</td><td>236</td><td><a href="https://www.nfl.com/standings/league/2026/REG">official standings</a> <a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>NYG</td><td>9</td><td>0.6111</td><td>0.5208</td><td>0.0903</td><td>-0.813</td><td>6</td><td>4</td><td>0.6667</td><td>203</td><td>196</td><td><a href="https://www.nfl.com/standings/league/2026/REG">official standings</a> <a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>NYJ</td><td>10</td><td>0.2</td><td>0.3455</td><td>-0.1455</td><td>1.455</td><td>6</td><td>1</td><td>0.1667</td><td>194</td><td>254</td><td><a href="https://www.nfl.com/standings/league/2026/REG">official standings</a> <a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>PHI</td><td>9</td><td>0.2222</td><td>0.2788</td><td>-0.0566</td><td>0.51</td><td>5</td><td>2</td><td>0.4</td><td>148</td><td>221</td><td><a href="https://www.nfl.com/standings/league/2026/REG">official standings</a> <a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>PIT</td><td>9</td><td>0.6667</td><td>0.5498</td><td>0.1169</td><td>-1.052</td><td>5</td><td>4</td><td>0.8</td><td>198</td><td>182</td><td><a href="https://www.nfl.com/standings/league/2026/REG">official standings</a> <a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>SEA</td><td>10</td><td>0.6</td><td>0.6398</td><td>-0.0398</td><td>0.398</td><td>6</td><td>3</td><td>0.5</td><td>223</td><td>175</td><td><a href="https://www.nfl.com/standings/league/2026/REG">official standings</a> <a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>SF</td><td>9</td><td>0.8889</td><td>0.7014</td><td>0.1875</td><td>-1.688</td><td>4</td><td>4</td><td>1.0</td><td>281</td><td>196</td><td><a href="https://www.nfl.com/standings/league/2026/REG">official standings</a> <a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>TB</td><td>9</td><td>0.3333</td><td>0.5744</td><td>-0.2411</td><td>2.169</td><td>7</td><td>1</td><td>0.1429</td><td>202</td><td>178</td><td><a href="https://www.nfl.com/standings/league/2026/REG">official standings</a> <a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>TEN</td><td>9</td><td>0.1111</td><td>0.2995</td><td>-0.1884</td><td>1.696</td><td>6</td><td>1</td><td>0.1667</td><td>167</td><td>239</td><td><a href="https://www.nfl.com/standings/league/2026/REG">official standings</a> <a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>WAS</td><td>9</td><td>0.3889</td><td>0.4241</td><td>-0.0352</td><td>0.317</td><td>5</td><td>2</td><td>0.4</td><td>196</td><td>223</td><td><a href="https://www.nfl.com/standings/league/2026/REG">official standings</a> <a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+</tbody></table></div>
+<p class="caption">The Pythagorean exponent (2.37) is a published convention, not a league value. A positive residual means the club has won more than its points suggest.</p>
+<h2>How many bets before a record means anything</h2>
+<div class="tablewrap">
+<table class=""><thead><tr>
+<th>Bets</th>
+<th>Hits needed to beat alpha 0.05</th>
+<th>Chance a break-even bettor gets there</th>
+<th>Power if the true rate is 55%</th>
+<th>Note</th>
+<th>Provenance</th>
+</tr></thead><tbody>
+<tr><td>100</td><td>59</td><td>0.0443</td><td>0.2415</td><td>exact binomial, one-sided, alpha 0.05</td><td><a class="badge b-computed" href="luck.html" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td>200</td><td>113</td><td>0.0384</td><td>0.362</td><td>exact binomial, one-sided, alpha 0.05</td><td><a class="badge b-computed" href="luck.html" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td>300</td><td>165</td><td>0.047</td><td>0.5239</td><td>exact binomial, one-sided, alpha 0.05</td><td><a class="badge b-computed" href="luck.html" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td>500</td><td>269</td><td>0.0489</td><td>0.7208</td><td>exact binomial, one-sided, alpha 0.05</td><td><a class="badge b-computed" href="luck.html" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td>1000</td><td>527</td><td>0.0468</td><td>0.9322</td><td>exact binomial, one-sided, alpha 0.05</td><td><a class="badge b-computed" href="luck.html" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td>2243</td><td>1161</td><td>0.0498</td><td>0.999</td><td>exact binomial, one-sided, alpha 0.05</td><td><a class="badge b-computed" href="luck.html" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+</tbody></table></div>
+<div class="panel bad"><p>Read the second column: with 200 bets a break-even bettor clears the bar about one time in five. That is why gate G1 requires 300 graded prospective bets before any rank is published, and why the reward pool stays blank until then.</p></div>
+</main>
+<footer class="foot">
+  <p><strong>Own5 NFL Decision Console</strong> · session <code>c98c6270</code> ·
+  official pages captured 2026-11-17T00:00:00Z · <a href="flagged.html">Flagged for Review</a> ·
+  <a href="sources.html">Sources</a> · <a href="audit.html">Repo audit</a> ·
+  <a href="../index.html">Own5 dashboard</a> ·
+  <a href="../COORDINATION.md">Coordination log</a></p>
+  <p class="fine">Research only. Nothing here is a bet, a tip, or advice. No strategy is
+  certified, no reward is issued, and no market price exists anywhere in this repository.</p>
+</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

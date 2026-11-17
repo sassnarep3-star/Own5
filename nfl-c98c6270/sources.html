@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sources · Own5 NFL Decision Console</title>
+<meta name="description" content="Originate the line, prove the skill, publish the gap. Every row sourced or flagged.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="dot"></span>Own5 <em>NFL Decision Console</em></a>
+  <button class="navtoggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">Menu</button>
+  <nav class="nav" id="nav"><a class="navlink" href="index.html">Overview</a>
+<a class="navlink" href="executive-summary.html">Executive summary</a>
+<a class="navlink" href="suggestions.html">Suggestions</a>
+<a class="navlink" href="questions.html">Questions</a>
+<a class="navlink" href="requirements.html">Decision readiness</a>
+<a class="navlink" href="lines.html">Originated lines</a>
+<a class="navlink" href="strategies.html">Strategies</a>
+<a class="navlink" href="leaderboard.html">Leaderboard</a>
+<a class="navlink" href="injuries.html">Injuries</a>
+<a class="navlink" href="depth.html">Depth charts</a>
+<a class="navlink" href="deficiency.html">Deficiency matrix</a>
+<a class="navlink" href="correlations.html">Correlations</a>
+<a class="navlink" href="luck.html">Luck removal</a>
+<a class="navlink" href="gates.html">Gates</a>
+<a class="navlink" href="audit.html">Repo audit</a>
+<a class="navlink active" href="sources.html">Sources</a>
+<a class="navlink" href="flagged.html">Flagged</a></nav>
+</header>
+<main class="wrap wide">
+  <div class="pagehead">
+    <h1>Sources</h1>
+    <p>Every source read, with what it was used for.</p>
+  </div>
+<div class="panel"><p>Every source below was read through the session fetcher on the date shown. Where a value could not be confirmed from an official source it is published blank and flagged; none of those blanks were filled in.</p></div>
+<div class="tablewrap">
+<table class=""><thead><tr>
+<th>ID</th>
+<th>Name</th>
+<th>URL</th>
+<th>Captured (UTC)</th>
+<th>Used for</th>
+<th>Tier</th>
+<th>Provenance</th>
+</tr></thead><tbody>
+<tr><td><code>S-01</code></td><td>NFL league standings 2026 REG</td><td><a href="https://www.nfl.com/standings/league/2026/REG">https://www.nfl.com/standings/league/2026/REG</a></td><td>2026-11-17T00:00:00Z</td><td>32 club-seasons: W-L-T, points for, points against; correlations, luck panel, ratings reconciliation</td><td><span class="pill ">OFFICIAL</span></td><td><a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td><code>S-02</code></td><td>NFL week 11 schedule 2026</td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-11">https://www.nfl.com/schedules/2026/by-week/week-11</a></td><td>2026-11-17T00:00:00Z</td><td>13 fixtures: date, kickoff, network, venue, neutral site, bye teams</td><td><span class="pill ">OFFICIAL</span></td><td><a class="badge b-source" href="https://www.nfl.com/schedules/2026/by-week/week-11" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td><code>S-03</code></td><td>NFL week 10 schedule 2026</td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-10">https://www.nfl.com/schedules/2026/by-week/week-10</a></td><td>2026-11-17T00:00:00Z</td><td>13 official finals added to the results feed; 1 game still unplayed at capture</td><td><span class="pill ">OFFICIAL</span></td><td><a class="badge b-source" href="https://www.nfl.com/schedules/2026/by-week/week-10" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td><code>S-04</code></td><td>NFL game centre: Vikings at 49ers 2026 REG 11</td><td><a href="https://www.nfl.com/games/vikings-at-49ers-2026-reg-11">https://www.nfl.com/games/vikings-at-49ers-2026-reg-11</a></td><td>2026-11-17T00:00:00Z</td><td>venue confirmation for the Mexico City neutral-site game</td><td><span class="pill ">OFFICIAL</span></td><td><a class="badge b-source" href="https://www.nfl.com/games/vikings-at-49ers-2026-reg-11" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td><code>S-05</code></td><td>NFL official injury report week 10</td><td><a href="https://www.nfl.com/injuries/league/2026/reg10">https://www.nfl.com/injuries/league/2026/reg10</a></td><td>2026-11-17T00:00:00Z</td><td>326 player rows with practice and game designations; second read for the delta</td><td><span class="pill ">OFFICIAL</span></td><td><a class="badge b-source" href="https://www.nfl.com/injuries/league/2026/reg10" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td><code>S-06</code></td><td>Atlanta Falcons week 10 inactives article</td><td><a href="https://www.atlantafalcons.com/news/atlanta-falcons-week-10-inactives-vs-kansas-city-chiefs">https://www.atlantafalcons.com/news/atlanta-falcons-week-10-inactives-vs-kansas-city-chiefs</a></td><td>2026-11-17T00:00:00Z</td><td>proof that official inactives are published on club sites (discovery route)</td><td><span class="pill ">OFFICIAL</span></td><td><a class="badge b-source" href="https://www.atlantafalcons.com/news/atlanta-falcons-week-10-inactives-vs-kansas-city-chiefs" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td><code>S-07</code></td><td>New England Patriots game book week 10</td><td><a href="https://www.patriots.com/news/gamebook-patriots-vs-lions-week-10">https://www.patriots.com/news/gamebook-patriots-vs-lions-week-10</a></td><td>2026-11-17T00:00:00Z</td><td>proof that official game books are published on club sites (discovery route)</td><td><span class="pill ">OFFICIAL</span></td><td><a class="badge b-source" href="https://www.patriots.com/news/gamebook-patriots-vs-lions-week-10" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td><code>S-08</code></td><td>Houston Texans depth chart</td><td><a href="https://www.houstontexans.com/team/depth-chart">https://www.houstontexans.com/team/depth-chart</a></td><td>2026-11-17T00:00:00Z</td><td>image-only depth chart; no machine-readable rows</td><td><span class="pill ">OFFICIAL</span></td><td><a class="badge b-source" href="https://www.houstontexans.com/team/depth-chart" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td><code>S-09</code></td><td>32 club depth charts</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-e46fb855/data/depth_slots.csv">https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-e46fb855/data/depth_slots.csv</a></td><td>2026-11-17T00:00:00Z</td><td>715 depth slots across 31 clubs with rank 1-4, shared and empty slots</td><td><span class="pill ">OFFICIAL</span></td><td><a class="badge b-source" href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-e46fb855/data/depth_slots.csv" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td><code>S-10</code></td><td>Carried-forward results feed (session e46fb855)</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-e46fb855/data/results_feed.csv">https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-e46fb855/data/results_feed.csv</a></td><td>2026-11-15T23:22:00Z</td><td>136 finals for weeks 1-9, re-read and reconciled this session</td><td><span class="pill warn">REUSED</span></td><td><a class="badge b-source" href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-e46fb855/data/results_feed.csv" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td><code>S-11</code></td><td>Carried-forward injury report (session e46fb855)</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-e46fb855/data/injuries.csv">https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-e46fb855/data/injuries.csv</a></td><td>2026-11-15T23:27:00Z</td><td>first read of the week-10 report, used as the delta baseline</td><td><span class="pill warn">REUSED</span></td><td><a class="badge b-source" href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-e46fb855/data/injuries.csv" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td><code>S-12</code></td><td>NFL flexible-scheduling procedures</td><td><a href="https://www.nfl.com/legal/flexible-scheduling-procedures">https://www.nfl.com/legal/flexible-scheduling-procedures</a></td><td>2026-11-17T00:00:00Z</td><td>linked from the week page; records that late-season dates are not fixed</td><td><span class="pill ">OFFICIAL</span></td><td><a class="badge b-source" href="https://www.nfl.com/legal/flexible-scheduling-procedures" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+</tbody></table></div>
+<h2>Derived data files</h2>
+<div class="tablewrap">
+<table class=""><thead><tr>
+<th>File</th>
+<th>Rows</th>
+<th>Link</th>
+<th>Provenance</th>
+</tr></thead><tbody>
+<tr><td><code>data/controls.csv</code></td><td>3</td><td><a href="data/controls.csv">open</a></td><td><a class="badge b-computed" href="data/controls.csv" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td><code>data/correlations.csv</code></td><td>15</td><td><a href="data/correlations.csv">open</a></td><td><a class="badge b-computed" href="data/correlations.csv" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td><code>data/data_layers.csv</code></td><td>4</td><td><a href="data/data_layers.csv">open</a></td><td><a class="badge b-computed" href="data/data_layers.csv" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td><code>data/demotion_gate.csv</code></td><td>6</td><td><a href="data/demotion_gate.csv">open</a></td><td><a class="badge b-computed" href="data/demotion_gate.csv" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td><code>data/depth_delta.csv</code></td><td>730</td><td><a href="data/depth_delta.csv">open</a></td><td><a class="badge b-computed" href="data/depth_delta.csv" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td><code>data/depth_slots.csv</code></td><td>890</td><td><a href="data/depth_slots.csv">open</a></td><td><a class="badge b-computed" href="data/depth_slots.csv" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td><code>data/flags.csv</code></td><td>21</td><td><a href="data/flags.csv">open</a></td><td><a class="badge b-computed" href="data/flags.csv" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td><code>data/gate_matrix.csv</code></td><td>126</td><td><a href="data/gate_matrix.csv">open</a></td><td><a class="badge b-computed" href="data/gate_matrix.csv" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td><code>data/gates.csv</code></td><td>9</td><td><a href="data/gates.csv">open</a></td><td><a class="badge b-computed" href="data/gates.csv" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td><code>data/injuries.csv</code></td><td>326</td><td><a href="data/injuries.csv">open</a></td><td><a class="badge b-computed" href="data/injuries.csv" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td><code>data/leaderboard_divisions.csv</code></td><td>4</td><td><a href="data/leaderboard_divisions.csv">open</a></td><td><a class="badge b-computed" href="data/leaderboard_divisions.csv" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td><code>data/leaderboard_signal.csv</code></td><td>4</td><td><a href="data/leaderboard_signal.csv">open</a></td><td><a class="badge b-computed" href="data/leaderboard_signal.csv" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td><code>data/leaderboard_staking.csv</code></td><td>4</td><td><a href="data/leaderboard_staking.csv">open</a></td><td><a class="badge b-computed" href="data/leaderboard_staking.csv" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td><code>data/luck_panel.csv</code></td><td>32</td><td><a href="data/luck_panel.csv">open</a></td><td><a class="badge b-computed" href="data/luck_panel.csv" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td><code>data/luck_power.csv</code></td><td>6</td><td><a href="data/luck_power.csv">open</a></td><td><a class="badge b-computed" href="data/luck_power.csv" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td><code>data/matchup_deficiency.csv</code></td><td>232</td><td><a href="data/matchup_deficiency.csv">open</a></td><td><a class="badge b-computed" href="data/matchup_deficiency.csv" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td><code>data/originated_markets.csv</code></td><td>65</td><td><a href="data/originated_markets.csv">open</a></td><td><a class="badge b-computed" href="data/originated_markets.csv" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td><code>data/origination_steps.csv</code></td><td>39</td><td><a href="data/origination_steps.csv">open</a></td><td><a class="badge b-computed" href="data/origination_steps.csv" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td><code>data/price_policy.csv</code></td><td>5</td><td><a href="data/price_policy.csv">open</a></td><td><a class="badge b-computed" href="data/price_policy.csv" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td><code>data/questions.csv</code></td><td>22</td><td><a href="data/questions.csv">open</a></td><td><a class="badge b-computed" href="data/questions.csv" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td><code>data/rejections.csv</code></td><td>5</td><td><a href="data/rejections.csv">open</a></td><td><a class="badge b-computed" href="data/rejections.csv" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td><code>data/replacement_depth.csv</code></td><td>14</td><td><a href="data/replacement_depth.csv">open</a></td><td><a class="badge b-computed" href="data/replacement_depth.csv" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td><code>data/repo_audit.csv</code></td><td>13</td><td><a href="data/repo_audit.csv">open</a></td><td><a class="badge b-computed" href="data/repo_audit.csv" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td><code>data/requirements.csv</code></td><td>80</td><td><a href="data/requirements.csv">open</a></td><td><a class="badge b-computed" href="data/requirements.csv" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td><code>data/results_feed.csv</code></td><td>150</td><td><a href="data/results_feed.csv">open</a></td><td><a class="badge b-computed" href="data/results_feed.csv" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td><code>data/slate_wk11.csv</code></td><td>13</td><td><a href="data/slate_wk11.csv">open</a></td><td><a class="badge b-computed" href="data/slate_wk11.csv" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td><code>data/sources.csv</code></td><td>12</td><td><a href="data/sources.csv">open</a></td><td><a class="badge b-computed" href="data/sources.csv" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td><code>data/standings_official.csv</code></td><td>32</td><td><a href="data/standings_official.csv">open</a></td><td><a class="badge b-computed" href="data/standings_official.csv" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td><code>data/standings_reconciliation.csv</code></td><td>32</td><td><a href="data/standings_reconciliation.csv">open</a></td><td><a class="badge b-computed" href="data/standings_reconciliation.csv" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td><code>data/strategies.csv</code></td><td>14</td><td><a href="data/strategies.csv">open</a></td><td><a class="badge b-computed" href="data/strategies.csv" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td><code>data/suggestions.csv</code></td><td>18</td><td><a href="data/suggestions.csv">open</a></td><td><a class="badge b-computed" href="data/suggestions.csv" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td><code>data/team_availability.csv</code></td><td>32</td><td><a href="data/team_availability.csv">open</a></td><td><a class="badge b-computed" href="data/team_availability.csv" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td><code>data/team_ratings.csv</code></td><td>32</td><td><a href="data/team_ratings.csv">open</a></td><td><a class="badge b-computed" href="data/team_ratings.csv" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td><code>data/week10_finals.csv</code></td><td>14</td><td><a href="data/week10_finals.csv">open</a></td><td><a class="badge b-computed" href="data/week10_finals.csv" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+</tbody></table></div>
+</main>
+<footer class="foot">
+  <p><strong>Own5 NFL Decision Console</strong> · session <code>c98c6270</code> ·
+  official pages captured 2026-11-17T00:00:00Z · <a href="flagged.html">Flagged for Review</a> ·
+  <a href="sources.html">Sources</a> · <a href="audit.html">Repo audit</a> ·
+  <a href="../index.html">Own5 dashboard</a> ·
+  <a href="../COORDINATION.md">Coordination log</a></p>
+  <p class="fine">Research only. Nothing here is a bet, a tip, or advice. No strategy is
+  certified, no reward is issued, and no market price exists anywhere in this repository.</p>
+</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

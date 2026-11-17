@@ -1,0 +1,5 @@
+layer,contents,where_it_lives_today,target,status
+public analysis,"derived indices, ratios, model output, links to the official page",nfl-c98c6270/*.html,unchanged,done
+derived data,computed CSVs that back the public pages,nfl-c98c6270/data/*.csv,"unchanged; these are derived, not raw",done
+raw row-level data,"official page captures, player-level rows",nfl-c98c6270/data/raw_official/ and the depth capture TSVs,private store outside the public site,not done
+alerts,freshness and schema-drift monitors,none,monitor on every parser,not done

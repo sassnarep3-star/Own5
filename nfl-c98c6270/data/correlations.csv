@@ -1,0 +1,16 @@
+pair,n,pearson_r,ci95_low,ci95_high,published,note,withheld_reason,source_url
+win pct vs points for per game,32,0.7233,0.501,0.8561,yes,"official standings, 32 club-seasons",,https://www.nfl.com/standings/league/2026/REG
+win pct vs points against per game,32,-0.7042,-0.8453,-0.4712,yes,"official standings, 32 club-seasons",,https://www.nfl.com/standings/league/2026/REG
+win pct vs net points per game,32,0.8834,0.7727,0.9419,yes,"official standings, 32 club-seasons",,https://www.nfl.com/standings/league/2026/REG
+points for per game vs points against per game,32,-0.3043,-0.5904,0.0496,yes,"official standings, 32 club-seasons",,https://www.nfl.com/standings/league/2026/REG
+wins vs points for (season totals),32,0.6951,0.4572,0.8402,yes,"official standings, 32 club-seasons",,https://www.nfl.com/standings/league/2026/REG
+wins vs points against (season totals),32,-0.5929,-0.7803,-0.3079,yes,"official standings, 32 club-seasons",,https://www.nfl.com/standings/league/2026/REG
+points for vs points against (season totals),32,-0.1233,-0.4526,0.2355,yes,"official standings, 32 club-seasons",,https://www.nfl.com/standings/league/2026/REG
+net points per game vs points for per game,32,0.8395,0.6939,0.9191,yes,"official standings, 32 club-seasons",,https://www.nfl.com/standings/league/2026/REG
+net points per game vs points against per game,32,-0.7731,-0.8836,-0.5811,yes,"official standings, 32 club-seasons",,https://www.nfl.com/standings/league/2026/REG
+games played vs win pct,32,-0.0506,-0.3924,0.3034,yes,official standings; byes make games played unequal,,https://www.nfl.com/standings/league/2026/REG
+same-game side vs total (within-game correlation),,,,,withheld,required by the brief; not computable from officially captured data,requires graded game-level market outcomes; no market price and no multi-season log,
+leg 1 vs leg 2 in a two-leg game parlay,,,,,withheld,required by the brief; not computable from officially captured data,requires an empirically validated joint; no joint probabilities captured,
+quarterback passing yards vs top receiver yards (same game),,,,,withheld,required by the brief; not computable from officially captured data,requires official player-game statistics; no official player-stat source captured,
+injury designation vs actual availability,,,,,withheld,required by the brief; not computable from officially captured data,requires official inactive lists; none captured (flag F-05),
+depth-chart rank vs actual snaps,,,,,withheld,required by the brief; not computable from officially captured data,requires official snap counts; none captured (flag F-06),

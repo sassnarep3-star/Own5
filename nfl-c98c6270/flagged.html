@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flagged for Review · Own5 NFL Decision Console</title>
+<meta name="description" content="Originate the line, prove the skill, publish the gap. Every row sourced or flagged.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="dot"></span>Own5 <em>NFL Decision Console</em></a>
+  <button class="navtoggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">Menu</button>
+  <nav class="nav" id="nav"><a class="navlink" href="index.html">Overview</a>
+<a class="navlink" href="executive-summary.html">Executive summary</a>
+<a class="navlink" href="suggestions.html">Suggestions</a>
+<a class="navlink" href="questions.html">Questions</a>
+<a class="navlink" href="requirements.html">Decision readiness</a>
+<a class="navlink" href="lines.html">Originated lines</a>
+<a class="navlink" href="strategies.html">Strategies</a>
+<a class="navlink" href="leaderboard.html">Leaderboard</a>
+<a class="navlink" href="injuries.html">Injuries</a>
+<a class="navlink" href="depth.html">Depth charts</a>
+<a class="navlink" href="deficiency.html">Deficiency matrix</a>
+<a class="navlink" href="correlations.html">Correlations</a>
+<a class="navlink" href="luck.html">Luck removal</a>
+<a class="navlink" href="gates.html">Gates</a>
+<a class="navlink" href="audit.html">Repo audit</a>
+<a class="navlink" href="sources.html">Sources</a>
+<a class="navlink active" href="flagged.html">Flagged</a></nav>
+</header>
+<main class="wrap wide">
+  <div class="pagehead">
+    <h1>Flagged for Review</h1>
+    <p>Irregularities and unverified blanks, published with their sources.</p>
+  </div>
+<div class="panel"><p>Everything on this page is published rather than hidden. A blocking item means no sound decision can be taken until it is resolved. A review item means the value or the method needs a second opinion. None of these block the site; they block the conclusions.</p></div>
+<div class="tablewrap">
+<table class=""><thead><tr>
+<th>Flag</th>
+<th>Severity</th>
+<th>Area</th>
+<th>Finding</th>
+<th>What is published instead</th>
+<th>Evidence</th>
+<th>Provenance</th>
+</tr></thead><tbody>
+<tr><td><code>F-01</code></td><td><span class="pill bad">blocking</span></td><td>Markets</td><td><strong>No market price of any kind exists anywhere in this repository: no spread, no total, no moneyline, from any source</strong></td><td>the market column is blank on every row and the difference column is explicitly undefined</td><td>data/originated_markets.csv</td><td><a class="badge b-governance" href="flagged.html#F-01" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td><code>F-02</code></td><td><span class="pill bad">blocking</span></td><td>Depth</td><td><strong>Houston publishes its depth chart as an image, so it contributes zero parsed rows</strong></td><td>Houston is listed with an explicit image-only flag and is excluded from every pairing</td><td>source S-08</td><td><a class="badge b-governance" href="flagged.html#F-02" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td><code>F-03</code></td><td><span class="pill bad">blocking</span></td><td>Injuries</td><td><strong>Only two reads of the official injury report exist, two days apart, covering 5 of 32 clubs</strong></td><td>the delta is published only for the 44 rows where both reads exist; every other row is level-only and marked</td><td>data/injuries.csv</td><td><a class="badge b-governance" href="flagged.html#F-03" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td><code>F-04</code></td><td><span class="pill bad">blocking</span></td><td>Roster</td><td><strong>No transactions log and no reserve list has been read, so absent is ambiguous between healthy and ineligible</strong></td><td>absence is recorded as unknown, never as available</td><td>flag F-04</td><td><a class="badge b-governance" href="flagged.html#F-04" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td><code>F-05</code></td><td><span class="pill bad">blocking</span></td><td>Outcomes</td><td><strong>No official inactive list and no game book has been read</strong></td><td>the announced-starter and replacement columns stay blank; the discovery route is recorded as suggestion S-01 and S-02</td><td>source S-06</td><td><a class="badge b-governance" href="flagged.html#F-05" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td><code>F-06</code></td><td><span class="pill bad">blocking</span></td><td>Depth</td><td><strong>No official snap-count source has been read, so playing time is unmeasured</strong></td><td>depth is modelled from club charts only, and the caveat is published on the depth page</td><td>source S-07</td><td><a class="badge b-governance" href="flagged.html#F-06" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td><code>F-07</code></td><td><span class="pill warn">non-blocking</span></td><td>Weather</td><td><strong>No stadium roof designation and no NWS forecast grid has been captured</strong></td><td>the weather overlay is not built; R-58 stays BLOCKED</td><td>flag F-07</td><td><a class="badge b-governance" href="flagged.html#F-07" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td><code>F-08</code></td><td><span class="pill warn">non-blocking</span></td><td>Markets</td><td><strong>No player-prop prices exist, so the prop-combo division cannot be populated</strong></td><td>the division is defined and empty; R-75 stays BLOCKED</td><td>flag F-08</td><td><a class="badge b-governance" href="flagged.html#F-08" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td><code>F-09</code></td><td><span class="pill warn">review</span></td><td>Venue</td><td><strong>Venue provenance is mixed: 1 of 13 venues read from the game centre, 12 taken from the schedule page&#x27;s hotel-link destination</strong></td><td>each row records which of the two it came from</td><td>data/slate_wk11.csv</td><td><a class="badge b-governance" href="flagged.html#F-09" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td><code>F-10</code></td><td><span class="pill warn">review</span></td><td>Schedule</td><td><strong>No dated schedule announcement has been captured</strong></td><td>the live schedule is published without the announcement; R-24 stays BLOCKED</td><td>flag F-10</td><td><a class="badge b-governance" href="flagged.html#F-10" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td><code>F-11</code></td><td><span class="pill warn">review</span></td><td>Rules</td><td><strong>The 2026 kickoff and onside-kick rule text has not been captured</strong></td><td>no regime prior is applied; R-68 stays BLOCKED</td><td>flag F-11</td><td><a class="badge b-governance" href="flagged.html#F-11" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td><code>F-12</code></td><td><span class="pill bad">blocking</span></td><td>Data</td><td><strong>The results feed holds one season, so the chronological holdout in R-70 and the backtest corpus in R-19 are both unreachable</strong></td><td>149 finals published; no holdout declared</td><td>data/results_feed.csv</td><td><a class="badge b-governance" href="flagged.html#F-12" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td><code>F-13</code></td><td><span class="pill bad">blocking</span></td><td>Combos</td><td><strong>No joint probabilities and no operator void/push rules, so no parlay or prop combo can be ranked</strong></td><td>all three combo divisions are defined and empty</td><td>data/leaderboard_divisions.csv</td><td><a class="badge b-governance" href="flagged.html#F-13" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td><code>F-14</code></td><td><span class="pill warn">non-blocking</span></td><td>Ops</td><td><strong>Snapshots live in the repository and there is no freshness monitor or drift alarm</strong></td><td>the private-store policy is written but not executed</td><td>data/data_layers.csv</td><td><a class="badge b-governance" href="flagged.html#F-14" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td><code>F-15</code></td><td><span class="pill warn">non-blocking</span></td><td>Rewards</td><td><strong>The reward pool is blank by policy until G1 clears</strong></td><td>three proposed tiers are published with no amounts</td><td>data/leaderboard_divisions.csv</td><td><a class="badge b-governance" href="flagged.html#F-15" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td><code>F-16</code></td><td><span class="pill warn">review</span></td><td>Depth</td><td><strong>Clubs label their own depth charts unofficial (Kansas City, New England, Detroit, Tennessee, Miami, Philadelphia, the Jets and Dallas)</strong></td><td>the label is carried on every depth row</td><td>data/depth_slots.csv</td><td><a class="badge b-governance" href="flagged.html#F-16" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td><code>F-17</code></td><td><span class="pill warn">review</span></td><td>Depth</td><td><strong>Baltimore&#x27;s kicker slot is empty and Miami&#x27;s kicker slot is empty; both are published as empty first-string slots rather than filled</strong></td><td>the slots are preserved with an empty-first-string flag</td><td>data/depth_slots.csv</td><td><a class="badge b-governance" href="flagged.html#F-17" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td><code>F-18</code></td><td><span class="pill warn">review</span></td><td>Modelling</td><td><strong>Team ratings are ridge-penalised to make them identifiable on one season of results</strong></td><td>the penalty size is published with the ratings</td><td>data/team_ratings.csv</td><td><a class="badge b-governance" href="flagged.html#F-18" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td><code>F-19</code></td><td><span class="pill warn">review</span></td><td>Injuries</td><td><strong>The week-11 injury report URL still serves the week-10 report as of 2026-11-17</strong></td><td>the week-11 availability view falls back to the week-10 report and says so on the page</td><td>source S-05</td><td><a class="badge b-governance" href="flagged.html#F-19" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td><code>F-20</code></td><td><span class="pill warn">review</span></td><td>Coverage</td><td><strong>The second injury read covers only the first chunk of the week-10 report (5 clubs), so most rows have one read only</strong></td><td>coverage per club is published on the injury page</td><td>data/injuries.csv</td><td><a class="badge b-governance" href="flagged.html#F-20" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td><code>F-21</code></td><td><span class="pill warn">review</span></td><td>Depth</td><td><strong>The two depth captures are not the same shape: session e46fb855 captured Offense and Defense only, this session also captured Special Teams (192 rows)</strong></td><td>the published depth delta is restricted to Offense and Defense so the two reads are compared like-for-like</td><td>data/depth_delta.csv</td><td><a class="badge b-governance" href="flagged.html#F-21" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+</tbody></table></div>
+</main>
+<footer class="foot">
+  <p><strong>Own5 NFL Decision Console</strong> · session <code>c98c6270</code> ·
+  official pages captured 2026-11-17T00:00:00Z · <a href="flagged.html">Flagged for Review</a> ·
+  <a href="sources.html">Sources</a> · <a href="audit.html">Repo audit</a> ·
+  <a href="../index.html">Own5 dashboard</a> ·
+  <a href="../COORDINATION.md">Coordination log</a></p>
+  <p class="fine">Research only. Nothing here is a bet, a tip, or advice. No strategy is
+  certified, no reward is issued, and no market price exists anywhere in this repository.</p>
+</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

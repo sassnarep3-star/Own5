@@ -1,0 +1,731 @@
+club,unit,position,rank1,delta,detail,read_a_utc,read_b_utc,source_url
+ARI,Defense,CB,Denzel Burke,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.azcardinals.com/team/depth-chart
+ARI,Defense,CB,Kalen King,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.azcardinals.com/team/depth-chart
+ARI,Defense,CB,Max Melton,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.azcardinals.com/team/depth-chart
+ARI,Defense,DT,Dante Stills,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.azcardinals.com/team/depth-chart
+ARI,Defense,DT,Walter Nolen III,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.azcardinals.com/team/depth-chart
+ARI,Defense,ILB,Jack Gibbens,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.azcardinals.com/team/depth-chart
+ARI,Defense,ILB,Mack Wilson Sr.,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.azcardinals.com/team/depth-chart
+ARI,Defense,NT,Roy Lopez,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.azcardinals.com/team/depth-chart
+ARI,Defense,OLB,Josh Sweat,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.azcardinals.com/team/depth-chart
+ARI,Defense,OLB,Zaven Collins | Baron Browning,removed,"present in the 2026-11-15 read, absent from the 2026-11-17 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.azcardinals.com/team/depth-chart
+ARI,Defense,OLB,Zaven Collins+Baron Browning,added,"present in the 2026-11-17 read, absent from the 2026-11-15 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.azcardinals.com/team/depth-chart
+ARI,Defense,S,Andrew Wingard,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.azcardinals.com/team/depth-chart
+ARI,Defense,S,Budda Baker,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.azcardinals.com/team/depth-chart
+ARI,Offense,C,Hjalte Froholdt,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.azcardinals.com/team/depth-chart
+ARI,Offense,LG,Isaac Seumalo,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.azcardinals.com/team/depth-chart
+ARI,Offense,LT,Jayden Williams,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.azcardinals.com/team/depth-chart
+ARI,Offense,QB,Carson Beck,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.azcardinals.com/team/depth-chart
+ARI,Offense,RB,Tyler Allgeier,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.azcardinals.com/team/depth-chart
+ARI,Offense,RG,Isaiah Adams,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.azcardinals.com/team/depth-chart
+ARI,Offense,RT,Elijah Wilkinson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.azcardinals.com/team/depth-chart
+ARI,Offense,TE,Elijah Higgins,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.azcardinals.com/team/depth-chart
+ARI,Offense,TE,Trey McBride,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.azcardinals.com/team/depth-chart
+ARI,Offense,WR,Reggie Virgil,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.azcardinals.com/team/depth-chart
+ARI,Offense,WR,Simi Fehoko,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.azcardinals.com/team/depth-chart
+ATL,Defense,CB,A.J. Terrell Jr.,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.atlantafalcons.com/team/depth-chart
+ATL,Defense,CB,C.J. Henderson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.atlantafalcons.com/team/depth-chart
+ATL,Defense,DE,Brandon Dorlus,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.atlantafalcons.com/team/depth-chart
+ATL,Defense,DE,Cameron Thomas,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.atlantafalcons.com/team/depth-chart
+ATL,Defense,DL,LaCale London,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.atlantafalcons.com/team/depth-chart
+ATL,Defense,DL,Maason Smith,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.atlantafalcons.com/team/depth-chart
+ATL,Defense,ILB,Divine Deablo,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.atlantafalcons.com/team/depth-chart
+ATL,Defense,ILB,Kendal Daniels,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.atlantafalcons.com/team/depth-chart
+ATL,Defense,NB,Avieon Terrell,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.atlantafalcons.com/team/depth-chart
+ATL,Defense,S,DeMarcco Hellams,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.atlantafalcons.com/team/depth-chart
+ATL,Defense,S,Xavier Watts,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.atlantafalcons.com/team/depth-chart
+ATL,Offense,C,Corey Levin,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.atlantafalcons.com/team/depth-chart
+ATL,Offense,LG,Matthew Bergeron,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.atlantafalcons.com/team/depth-chart
+ATL,Offense,LT,Jake Matthews,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.atlantafalcons.com/team/depth-chart
+ATL,Offense,QB,Michael Penix Jr.,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.atlantafalcons.com/team/depth-chart
+ATL,Offense,RB,Bijan Robinson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.atlantafalcons.com/team/depth-chart
+ATL,Offense,RG,Chris Lindstrom,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.atlantafalcons.com/team/depth-chart
+ATL,Offense,RT,Jawaan Taylor,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.atlantafalcons.com/team/depth-chart
+ATL,Offense,TE,Charlie Woerner,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.atlantafalcons.com/team/depth-chart
+ATL,Offense,TE,Kyle Pitts Sr.,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.atlantafalcons.com/team/depth-chart
+ATL,Offense,WR,Drake London,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.atlantafalcons.com/team/depth-chart
+ATL,Offense,WR,Jahan Dotson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.atlantafalcons.com/team/depth-chart
+ATL,Offense,WR,Olamide Zaccheaus,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.atlantafalcons.com/team/depth-chart
+BAL,Defense,CB,Marlon Humphrey,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL,Defense,CB,Nate Wiggins,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL,Defense,DB,Kyle Hamilton,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL,Defense,DE,Calais Campbell,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL,Defense,DT,Nnamdi Madubuike,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL,Defense,FS,Malaki Starks,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL,Defense,MLB,Roquan Smith,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL,Defense,NT,Travis Jones,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL,Defense,RUSH,Trey Hendrickson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL,Defense,SAM,Mike Green,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL,Defense,SS,Jaylinn Hawkins,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL,Defense,WLB,Trenton Simpson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL,Offense,C,Cam Jurgens,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL,Offense,LG,John Simpson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL,Offense,LT,Ronnie Stanley,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL,Offense,QB,Jacoby Brissett,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL,Offense,RB,Derrick Henry,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL,Offense,RG,Vega Ioane,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL,Offense,RT,Roger Rosengarten,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL,Offense,TE,Mark Andrews,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL,Offense,TE,Matt Hibner,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL,Offense,WR,Rashod Bateman,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL,Offense,WR,Zay Flowers,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.baltimoreravens.com/team/depth-chart
+BUF,Defense,CB,Christian Benford,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buffalobills.com/team/depth-chart
+BUF,Defense,CB,Davison Igbinosun,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buffalobills.com/team/depth-chart
+BUF,Defense,DL,Deone Walker,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buffalobills.com/team/depth-chart
+BUF,Defense,DL,Ed Oliver,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buffalobills.com/team/depth-chart
+BUF,Defense,DL,T.J. Sanders,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buffalobills.com/team/depth-chart
+BUF,Defense,ILB,Dorian Williams,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buffalobills.com/team/depth-chart
+BUF,Defense,ILB,Terrel Bernard,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buffalobills.com/team/depth-chart
+BUF,Defense,NCB,Dee Alford,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buffalobills.com/team/depth-chart
+BUF,Defense,OLB,Bradley Chubb,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buffalobills.com/team/depth-chart
+BUF,Defense,OLB,Greg Rousseau,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buffalobills.com/team/depth-chart
+BUF,Defense,S,Cole Bishop,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buffalobills.com/team/depth-chart
+BUF,Defense,S,Damar Hamlin,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buffalobills.com/team/depth-chart
+BUF,Offense,C,Connor McGovern,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buffalobills.com/team/depth-chart
+BUF,Offense,LG,Alec Anderson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buffalobills.com/team/depth-chart
+BUF,Offense,LT,Dion Dawkins,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buffalobills.com/team/depth-chart
+BUF,Offense,QB,Josh Allen,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buffalobills.com/team/depth-chart
+BUF,Offense,RB,James Cook III,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buffalobills.com/team/depth-chart
+BUF,Offense,RG,O'Cyrus Torrence,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buffalobills.com/team/depth-chart
+BUF,Offense,RT,Spencer Brown,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buffalobills.com/team/depth-chart
+BUF,Offense,TE,Dalton Kincaid,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buffalobills.com/team/depth-chart
+BUF,Offense,WR,DJ Moore,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buffalobills.com/team/depth-chart
+BUF,Offense,WR,Keon Coleman,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buffalobills.com/team/depth-chart
+BUF,Offense,WR,Khalil Shakir,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buffalobills.com/team/depth-chart
+CAR,Defense,CB,Chau Smith-Wade,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.panthers.com/team/depth-chart
+CAR,Defense,CB,Will Lee III,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.panthers.com/team/depth-chart
+CAR,Defense,DL,Bobby Brown III,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.panthers.com/team/depth-chart
+CAR,Defense,DL,Derrick Brown,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.panthers.com/team/depth-chart
+CAR,Defense,DL,Tershawn Wharton,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.panthers.com/team/depth-chart
+CAR,Defense,LB,Bobby Okereke,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.panthers.com/team/depth-chart
+CAR,Defense,LB,Devin Lloyd,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.panthers.com/team/depth-chart
+CAR,Defense,OLB,Jaelan Phillips,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.panthers.com/team/depth-chart
+CAR,Defense,OLB,Patrick Jones II,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.panthers.com/team/depth-chart
+CAR,Defense,S,Nick Scott,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.panthers.com/team/depth-chart
+CAR,Defense,S,Tre'von Moehrig,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.panthers.com/team/depth-chart
+CAR,Offense,C,Luke Fortner,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.panthers.com/team/depth-chart
+CAR,Offense,LG,Damien Lewis,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.panthers.com/team/depth-chart
+CAR,Offense,LT,Rasheed Walker,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.panthers.com/team/depth-chart
+CAR,Offense,QB,Bryce Young,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.panthers.com/team/depth-chart
+CAR,Offense,RB,Chuba Hubbard,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.panthers.com/team/depth-chart
+CAR,Offense,RG,Robert Hunt,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.panthers.com/team/depth-chart
+CAR,Offense,RT,Monroe Freeling,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.panthers.com/team/depth-chart
+CAR,Offense,TE,Tommy Tremble,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.panthers.com/team/depth-chart
+CAR,Offense,WR,Jalen Coker,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.panthers.com/team/depth-chart
+CAR,Offense,WR,John Metchie III,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.panthers.com/team/depth-chart
+CAR,Offense,WR,Tetairoa McMillan,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.panthers.com/team/depth-chart
+CHI,Defense,CB,Jaylon Johnson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chicagobears.com/team/depth-chart
+CHI,Defense,CB,Tyrique Stevenson Sr.,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chicagobears.com/team/depth-chart
+CHI,Defense,DB,Kyler Gordon,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chicagobears.com/team/depth-chart
+CHI,Defense,DL,Austin Booker,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chicagobears.com/team/depth-chart
+CHI,Defense,DL,Grady Jarrett,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chicagobears.com/team/depth-chart
+CHI,Defense,DL,Jeffery Simmons,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chicagobears.com/team/depth-chart
+CHI,Defense,DL,Montez Sweat,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chicagobears.com/team/depth-chart
+CHI,Defense,LB,Devin Bush,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chicagobears.com/team/depth-chart
+CHI,Defense,LB,T.J. Edwards,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chicagobears.com/team/depth-chart
+CHI,Defense,S,Cam Lewis,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chicagobears.com/team/depth-chart
+CHI,Defense,S,Dillon Thieneman,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chicagobears.com/team/depth-chart
+CHI,Offense,C,Garrett Bradbury,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chicagobears.com/team/depth-chart
+CHI,Offense,LG,Joe Thuney,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chicagobears.com/team/depth-chart
+CHI,Offense,LT,Theo Benedet,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chicagobears.com/team/depth-chart
+CHI,Offense,QB,Caleb Williams,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chicagobears.com/team/depth-chart
+CHI,Offense,RB,D'Andre Swift,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chicagobears.com/team/depth-chart
+CHI,Offense,RG,Jonah Jackson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chicagobears.com/team/depth-chart
+CHI,Offense,RT,Darnell Wright,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chicagobears.com/team/depth-chart
+CHI,Offense,TE,Colston Loveland,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chicagobears.com/team/depth-chart
+CHI,Offense,WR,Kalif Raymond,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chicagobears.com/team/depth-chart
+CHI,Offense,WR,Luther Burden III,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chicagobears.com/team/depth-chart
+CHI,Offense,WR,Rome Odunze,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chicagobears.com/team/depth-chart
+CIN,Defense,CB,DJ Ivey,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.bengals.com/team/depth-chart
+CIN,Defense,CB,DJ Turner II,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.bengals.com/team/depth-chart
+CIN,Defense,DT,Jonathan Allen,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.bengals.com/team/depth-chart
+CIN,Defense,LB,Barrett Carter,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.bengals.com/team/depth-chart
+CIN,Defense,LB,Demetrius Knight Jr.,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.bengals.com/team/depth-chart
+CIN,Defense,LDE,Myles Murphy,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.bengals.com/team/depth-chart
+CIN,Defense,NCB,Dax Hill,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.bengals.com/team/depth-chart
+CIN,Defense,NT,Dexter Lawrence II,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.bengals.com/team/depth-chart
+CIN,Defense,RDE,Boye Mafe,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.bengals.com/team/depth-chart
+CIN,Defense,S,Bryan Cook,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.bengals.com/team/depth-chart
+CIN,Defense,S,Jordan Battle,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.bengals.com/team/depth-chart
+CIN,Offense,C,Ted Karras,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.bengals.com/team/depth-chart
+CIN,Offense,HB,Chase Brown,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.bengals.com/team/depth-chart
+CIN,Offense,LG,Dylan Fairchild,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.bengals.com/team/depth-chart
+CIN,Offense,LOT,Orlando Brown Jr.,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.bengals.com/team/depth-chart
+CIN,Offense,QB,Joe Burrow,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.bengals.com/team/depth-chart
+CIN,Offense,RG,Dalton Risner,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.bengals.com/team/depth-chart
+CIN,Offense,ROT,Amarius Mims,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.bengals.com/team/depth-chart
+CIN,Offense,TE,Drew Sample,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.bengals.com/team/depth-chart
+CIN,Offense,WR,Dohnte Meyers,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.bengals.com/team/depth-chart
+CIN,Offense,WR,Ja'Marr Chase,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.bengals.com/team/depth-chart
+CIN,Offense,WR,Tee Higgins,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.bengals.com/team/depth-chart
+CLE,Defense,CB,Denzel Ward,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Defense,CB,Tyson Campbell,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Defense,FS,Ronnie Hickman,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Defense,LDE,Jared Verse,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Defense,LDT,Maliek Collins,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Defense,MIKE,Quincy Williams,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Defense,RDE,Isaiah McGuire,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Defense,RDT,Mason Graham,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Defense,SAM,Easton Mascarenas-Arnold,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Defense,SS,Grant Delpit,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Defense,WILL,Carson Schwesinger,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Offense,C,Elgton Jenkins,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Offense,LG,Zion Johnson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Offense,LT,Spencer Fano,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Offense,QB,Deshaun Watson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Offense,RB,Quinshon Judkins,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Offense,RG,Austin Barber,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Offense,RT,Tytus Howard,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Offense,TE,Harold Fannin Jr.,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Offense,WR,Denzel Boston,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Offense,WR,Jerry Jeudy,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.clevelandbrowns.com/team/depth-chart
+CLE,Offense,WR,KC Concepcion Jr.,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.clevelandbrowns.com/team/depth-chart
+DAL,Defense,CB,DaRon Bland,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.dallascowboys.com/team/depth-chart
+DAL,Defense,CB,Joey Porter Jr.,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.dallascowboys.com/team/depth-chart
+DAL,Defense,DB,Caleb Downs,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.dallascowboys.com/team/depth-chart
+DAL,Defense,DT,Kenny Clark,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.dallascowboys.com/team/depth-chart
+DAL,Defense,DT,Otito Ogbonnia,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.dallascowboys.com/team/depth-chart
+DAL,Defense,DT,Quinnen Williams,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.dallascowboys.com/team/depth-chart
+DAL,Defense,LB,DeMarvion Overshown,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.dallascowboys.com/team/depth-chart
+DAL,Defense,LB,Shemar James | Jaishawn Barham,removed,"present in the 2026-11-15 read, absent from the 2026-11-17 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.dallascowboys.com/team/depth-chart
+DAL,Defense,LB,Shemar James+Jaishawn Barham,added,"present in the 2026-11-17 read, absent from the 2026-11-15 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.dallascowboys.com/team/depth-chart
+DAL,Defense,OLB,Donovan Ezeiruaku,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.dallascowboys.com/team/depth-chart
+DAL,Defense,OLB,Rashan Gary,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.dallascowboys.com/team/depth-chart
+DAL,Defense,S,Malik Hooker,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.dallascowboys.com/team/depth-chart
+DAL,Defense,S,P.J. Locke | Markquese Bell,removed,"present in the 2026-11-15 read, absent from the 2026-11-17 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.dallascowboys.com/team/depth-chart
+DAL,Defense,S,P.J. Locke+Markquese Bell,added,"present in the 2026-11-17 read, absent from the 2026-11-15 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.dallascowboys.com/team/depth-chart
+DAL,Offense,C,Cooper Beebe,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.dallascowboys.com/team/depth-chart
+DAL,Offense,FB,Hunter Luepke,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.dallascowboys.com/team/depth-chart
+DAL,Offense,LG,Tyler Smith,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.dallascowboys.com/team/depth-chart
+DAL,Offense,LT,Tyler Guyton,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.dallascowboys.com/team/depth-chart
+DAL,Offense,QB,Dak Prescott,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.dallascowboys.com/team/depth-chart
+DAL,Offense,RB,Javonte Williams,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.dallascowboys.com/team/depth-chart
+DAL,Offense,RG,Tyler Booker,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.dallascowboys.com/team/depth-chart
+DAL,Offense,RT,Terence Steele,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.dallascowboys.com/team/depth-chart
+DAL,Offense,TE,Jake Ferguson | Brevyn Spann-Ford,removed,"present in the 2026-11-15 read, absent from the 2026-11-17 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.dallascowboys.com/team/depth-chart
+DAL,Offense,TE,Jake Ferguson+Brevyn Spann-Ford,added,"present in the 2026-11-17 read, absent from the 2026-11-15 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.dallascowboys.com/team/depth-chart
+DAL,Offense,WR,CeeDee Lamb,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.dallascowboys.com/team/depth-chart
+DAL,Offense,WR,George Pickens,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.dallascowboys.com/team/depth-chart
+DAL,Offense,WR,Ryan Flournoy,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.dallascowboys.com/team/depth-chart
+DEN,Defense,DE,Malcolm Roach,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.denverbroncos.com/team/depth-chart
+DEN,Defense,DE,Zach Allen,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.denverbroncos.com/team/depth-chart
+DEN,Defense,ILB,Alex Singleton,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.denverbroncos.com/team/depth-chart
+DEN,Defense,ILB,Justin Strnad,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.denverbroncos.com/team/depth-chart
+DEN,Defense,LCB,Pat Surtain II,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.denverbroncos.com/team/depth-chart
+DEN,Defense,NCB,Ja'Quan McMillian,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.denverbroncos.com/team/depth-chart
+DEN,Defense,NT,D.J. Jones,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.denverbroncos.com/team/depth-chart
+DEN,Defense,RCB,Riley Moss,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.denverbroncos.com/team/depth-chart
+DEN,Defense,S,Brandon Jones,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.denverbroncos.com/team/depth-chart
+DEN,Defense,S,Talanoa Hufanga,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.denverbroncos.com/team/depth-chart
+DEN,Defense,SLB,Nik Bonitto,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.denverbroncos.com/team/depth-chart
+DEN,Defense,WLB,Jonathon Cooper,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.denverbroncos.com/team/depth-chart
+DEN,Offense,C,Luke Wattenberg,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.denverbroncos.com/team/depth-chart
+DEN,Offense,FB,Adam Prentice,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.denverbroncos.com/team/depth-chart
+DEN,Offense,LG,Ben Powers,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.denverbroncos.com/team/depth-chart
+DEN,Offense,LT,Garett Bolles,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.denverbroncos.com/team/depth-chart
+DEN,Offense,QB,Bo Nix,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.denverbroncos.com/team/depth-chart
+DEN,Offense,RB,J.K. Dobbins,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.denverbroncos.com/team/depth-chart
+DEN,Offense,RG,Quinn Meinerz,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.denverbroncos.com/team/depth-chart
+DEN,Offense,RT,Mike McGlinchey,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.denverbroncos.com/team/depth-chart
+DEN,Offense,TE,Evan Engram,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.denverbroncos.com/team/depth-chart
+DEN,Offense,WR,Courtland Sutton,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.denverbroncos.com/team/depth-chart
+DEN,Offense,WR,Jaylen Waddle,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.denverbroncos.com/team/depth-chart
+DEN,Offense,WR,Marvin Mims Jr.,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.denverbroncos.com/team/depth-chart
+DET,Defense,CB,D.J. Reed,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.detroitlions.com/team/depth-chart
+DET,Defense,CB,Roger McCreary,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.detroitlions.com/team/depth-chart
+DET,Defense,DL,Alim McNeill,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.detroitlions.com/team/depth-chart
+DET,Defense,DL,Tyleik Williams,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.detroitlions.com/team/depth-chart
+DET,Defense,EDGE,Aidan Hutchinson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.detroitlions.com/team/depth-chart
+DET,Defense,EDGE,DJ Wonnum,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.detroitlions.com/team/depth-chart
+DET,Defense,LB,Derrick Barnes,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.detroitlions.com/team/depth-chart
+DET,Defense,LB,Malcolm Rodriguez,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.detroitlions.com/team/depth-chart
+DET,Defense,LB,Trevor Nowaske,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.detroitlions.com/team/depth-chart
+DET,Defense,S,Brian Branch,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.detroitlions.com/team/depth-chart
+DET,Defense,S,Chuck Clark,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.detroitlions.com/team/depth-chart
+DET,Offense,C,Cade Mays,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.detroitlions.com/team/depth-chart
+DET,Offense,LG,Christian Mahogany,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.detroitlions.com/team/depth-chart
+DET,Offense,LT,Penei Sewell,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.detroitlions.com/team/depth-chart
+DET,Offense,QB,Jared Goff,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.detroitlions.com/team/depth-chart
+DET,Offense,RB,Jahmyr Gibbs,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.detroitlions.com/team/depth-chart
+DET,Offense,RG,Tate Ratledge,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.detroitlions.com/team/depth-chart
+DET,Offense,RT,Blake Miller,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.detroitlions.com/team/depth-chart
+DET,Offense,TE,Sam LaPorta,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.detroitlions.com/team/depth-chart
+DET,Offense,WR,Amon-Ra St. Brown,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.detroitlions.com/team/depth-chart
+DET,Offense,WR,Isaac TeSlaa,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.detroitlions.com/team/depth-chart
+DET,Offense,WR,Jameson Williams,removed,"present in the 2026-11-15 read, absent from the 2026-11-17 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.detroitlions.com/team/depth-chart
+GB,Defense,CB,Brandon Cisse,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.packers.com/team/depth-chart
+GB,Defense,CB,Keisean Nixon,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.packers.com/team/depth-chart
+GB,Defense,DT,Devonte Wyatt,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.packers.com/team/depth-chart
+GB,Defense,DT,Karl Brooks,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.packers.com/team/depth-chart
+GB,Defense,EDGE,Barryn Sorrell,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.packers.com/team/depth-chart
+GB,Defense,EDGE,Lukas Van Ness,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.packers.com/team/depth-chart
+GB,Defense,LB,Isaiah McDuffie,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.packers.com/team/depth-chart
+GB,Defense,LB,Zaire Franklin,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.packers.com/team/depth-chart
+GB,Defense,NB,Javon Bullard,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.packers.com/team/depth-chart
+GB,Defense,S,Evan Williams,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.packers.com/team/depth-chart
+GB,Defense,S,Xavier McKinney,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.packers.com/team/depth-chart
+GB,Offense,C,Sean Rhyan,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.packers.com/team/depth-chart
+GB,Offense,LG,Aaron Banks,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.packers.com/team/depth-chart
+GB,Offense,LT,Jordan Morgan,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.packers.com/team/depth-chart
+GB,Offense,QB,Jordan Love,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.packers.com/team/depth-chart
+GB,Offense,RB,Josh Jacobs,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.packers.com/team/depth-chart
+GB,Offense,RG,Laken Tomlinson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.packers.com/team/depth-chart
+GB,Offense,RT,Anthony Belton,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.packers.com/team/depth-chart
+GB,Offense,TE,Tucker Kraft,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.packers.com/team/depth-chart
+GB,Offense,WR,Christian Watson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.packers.com/team/depth-chart
+GB,Offense,WR,Matthew Golden,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.packers.com/team/depth-chart
+GB,Offense,WR,Savion Williams,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.packers.com/team/depth-chart
+IND,Defense,CB,Charvarius Ward,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.colts.com/team/depth-chart
+IND,Defense,CB,Sauce Gardner,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.colts.com/team/depth-chart
+IND,Defense,DE,Arden Key,added,"present in the 2026-11-17 read, absent from the 2026-11-15 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.colts.com/team/depth-chart
+IND,Defense,DE,Jaylahn Tuimoloau,removed,"present in the 2026-11-15 read, absent from the 2026-11-17 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.colts.com/team/depth-chart
+IND,Defense,DE,Laiatu Latu,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.colts.com/team/depth-chart
+IND,Defense,DT,Adetomiwa Adebawore,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.colts.com/team/depth-chart
+IND,Defense,FS,Cam Bynum,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.colts.com/team/depth-chart
+IND,Defense,MLB,Akeem Davis-Gaither,removed,"present in the 2026-11-15 read, absent from the 2026-11-17 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.colts.com/team/depth-chart
+IND,Defense,MLB,CJ Allen,added,"present in the 2026-11-17 read, absent from the 2026-11-15 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.colts.com/team/depth-chart
+IND,Defense,N,Justin Walley,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.colts.com/team/depth-chart
+IND,Defense,NT,Grover Stewart,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.colts.com/team/depth-chart
+IND,Defense,SS,AJ Haulcy,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.colts.com/team/depth-chart
+IND,Defense,WLB,Jaylon Carlies,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.colts.com/team/depth-chart
+IND,Offense,C,Tanor Bortolini,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.colts.com/team/depth-chart
+IND,Offense,LG,Jalen Farmer,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.colts.com/team/depth-chart
+IND,Offense,LT,Bernhard Raimann,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.colts.com/team/depth-chart
+IND,Offense,QB,Daniel Jones,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.colts.com/team/depth-chart
+IND,Offense,RB,Jonathan Taylor,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.colts.com/team/depth-chart
+IND,Offense,RG,Matt Goncalves,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.colts.com/team/depth-chart
+IND,Offense,RT,Jalen Travis,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.colts.com/team/depth-chart
+IND,Offense,TE,Tyler Warren,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.colts.com/team/depth-chart
+IND,Offense,WR,Anthony Gould,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.colts.com/team/depth-chart
+IND,Offense,WR,Ashton Dulin,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.colts.com/team/depth-chart
+IND,Offense,WR,Laquon Treadwell,removed,"present in the 2026-11-15 read, absent from the 2026-11-17 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.colts.com/team/depth-chart
+JAX,Defense,CB,Jourdan Lewis,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.jaguars.com/team/depth-chart
+JAX,Defense,CB,Montaric Brown,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.jaguars.com/team/depth-chart
+JAX,Defense,CB,Travis Hunter,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.jaguars.com/team/depth-chart
+JAX,Defense,DE,Josh Hines-Allen,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.jaguars.com/team/depth-chart
+JAX,Defense,DE,Travon Walker,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.jaguars.com/team/depth-chart
+JAX,Defense,DT,Arik Armstead,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.jaguars.com/team/depth-chart
+JAX,Defense,LB,Dennis Gardeck,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.jaguars.com/team/depth-chart
+JAX,Defense,LB,Foyesade Oluokun,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.jaguars.com/team/depth-chart
+JAX,Defense,LB,Ventrell Miller | Branson Combs,removed,"present in the 2026-11-15 read, absent from the 2026-11-17 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.jaguars.com/team/depth-chart
+JAX,Defense,LB,Ventrell Miller+Branson Combs,added,"present in the 2026-11-17 read, absent from the 2026-11-15 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.jaguars.com/team/depth-chart
+JAX,Defense,NT,Jordan Davis,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.jaguars.com/team/depth-chart
+JAX,Defense,S,Antonio Johnson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.jaguars.com/team/depth-chart
+JAX,Defense,S,Jessie Bates III,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.jaguars.com/team/depth-chart
+JAX,Offense,C,Robert Hainsey,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.jaguars.com/team/depth-chart
+JAX,Offense,LG,Emmanuel Pregnon,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.jaguars.com/team/depth-chart
+JAX,Offense,LT,Walker Little,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.jaguars.com/team/depth-chart
+JAX,Offense,QB,Trevor Lawrence,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.jaguars.com/team/depth-chart
+JAX,Offense,RB,Bhayshul Tuten | Chris Rodriguez Jr.,removed,"present in the 2026-11-15 read, absent from the 2026-11-17 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.jaguars.com/team/depth-chart
+JAX,Offense,RB,Bhayshul Tuten+Chris Rodriguez Jr.,added,"present in the 2026-11-17 read, absent from the 2026-11-15 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.jaguars.com/team/depth-chart
+JAX,Offense,RG,Ezra Cleveland,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.jaguars.com/team/depth-chart
+JAX,Offense,RT,Cole Van Lanen,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.jaguars.com/team/depth-chart
+JAX,Offense,TE,Brenton Strange,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.jaguars.com/team/depth-chart
+JAX,Offense,WR,Brian Thomas Jr.,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.jaguars.com/team/depth-chart
+JAX,Offense,WR,Jakobi Meyers,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.jaguars.com/team/depth-chart
+JAX,Offense,WR,Parker Washington,removed,"present in the 2026-11-15 read, absent from the 2026-11-17 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.jaguars.com/team/depth-chart
+KC,Defense,CB,Mansoor Delane,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chiefs.com/team/depth-chart
+KC,Defense,CB,Nohl Williams,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chiefs.com/team/depth-chart
+KC,Defense,DE,Felix Anudike-Uzomah,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chiefs.com/team/depth-chart
+KC,Defense,DE,George Karlaftis,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chiefs.com/team/depth-chart
+KC,Defense,DT,Chris Jones,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chiefs.com/team/depth-chart
+KC,Defense,DT,Khyiris Tonga,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chiefs.com/team/depth-chart
+KC,Defense,LB,Drue Tranquill,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chiefs.com/team/depth-chart
+KC,Defense,LB,Jack Cochrane,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chiefs.com/team/depth-chart
+KC,Defense,LB,Nick Bolton,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chiefs.com/team/depth-chart
+KC,Defense,S,Alohi Gilman,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chiefs.com/team/depth-chart
+KC,Defense,S,Chamarri Conner,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chiefs.com/team/depth-chart
+KC,Offense,C,Creed Humphrey,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chiefs.com/team/depth-chart
+KC,Offense,FB,Ben VanSumeren,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chiefs.com/team/depth-chart
+KC,Offense,LG,Kingsley Suamataia,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chiefs.com/team/depth-chart
+KC,Offense,LT,Kahlil Benson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chiefs.com/team/depth-chart
+KC,Offense,QB,Patrick Mahomes,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chiefs.com/team/depth-chart
+KC,Offense,RB,Kenneth Walker,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chiefs.com/team/depth-chart
+KC,Offense,RG,Trey Smith,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chiefs.com/team/depth-chart
+KC,Offense,RT,Jaylon Moore,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chiefs.com/team/depth-chart
+KC,Offense,TE,Travis Kelce,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chiefs.com/team/depth-chart
+KC,Offense,WR,Rashee Rice,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chiefs.com/team/depth-chart
+KC,Offense,WR,Xavier Worthy,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chiefs.com/team/depth-chart
+LAC,Defense,CB,Donte Jackson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chargers.com/team/depth-chart
+LAC,Defense,CB,Tarheeb Still,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chargers.com/team/depth-chart
+LAC,Defense,DL,Dalvin Tomlinson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chargers.com/team/depth-chart
+LAC,Defense,DL,Jamaree Caldwell,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chargers.com/team/depth-chart
+LAC,Defense,DL,Teair Tart,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chargers.com/team/depth-chart
+LAC,Defense,EDGE,Khalil Mack,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chargers.com/team/depth-chart
+LAC,Defense,EDGE,Tuli Tuipulotu,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chargers.com/team/depth-chart
+LAC,Defense,LB,Daiyan Henley,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chargers.com/team/depth-chart
+LAC,Defense,LB,Del'Shawn Phillips,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chargers.com/team/depth-chart
+LAC,Defense,S,Derwin James Jr.,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chargers.com/team/depth-chart
+LAC,Defense,S,Elijah Molden,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chargers.com/team/depth-chart
+LAC,Offense,C,Jake Slaughter,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chargers.com/team/depth-chart
+LAC,Offense,FB,Alec Ingold,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chargers.com/team/depth-chart
+LAC,Offense,LG,Kayode Awosika,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chargers.com/team/depth-chart
+LAC,Offense,LT,Travis Burke,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chargers.com/team/depth-chart
+LAC,Offense,QB,Justin Herbert,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chargers.com/team/depth-chart
+LAC,Offense,RB,Omarion Hampton,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chargers.com/team/depth-chart
+LAC,Offense,RG,Cole Strange,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chargers.com/team/depth-chart
+LAC,Offense,RT,Joe Alt,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chargers.com/team/depth-chart
+LAC,Offense,TE,Charlie Kolar,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chargers.com/team/depth-chart
+LAC,Offense,WR,Ladd McConkey,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chargers.com/team/depth-chart
+LAC,Offense,WR,Quentin Johnston,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.chargers.com/team/depth-chart
+LAR,Defense,CB,Emmanuel Forbes Jr. | Josh Wallace,removed,"present in the 2026-11-15 read, absent from the 2026-11-17 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.therams.com/team/depth-chart
+LAR,Defense,CB,Emmanuel Forbes Jr.+Josh Wallace,added,"present in the 2026-11-17 read, absent from the 2026-11-15 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.therams.com/team/depth-chart
+LAR,Defense,CB,Trent McDuffie,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.therams.com/team/depth-chart
+LAR,Defense,DE,Aaron Donald,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.therams.com/team/depth-chart
+LAR,Defense,DE,Braden Fiske,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.therams.com/team/depth-chart
+LAR,Defense,ILB,Nate Landman,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.therams.com/team/depth-chart
+LAR,Defense,ILB,Omar Speights,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.therams.com/team/depth-chart
+LAR,Defense,NT,Tyler Davis,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.therams.com/team/depth-chart
+LAR,Defense,OLB,Byron Young,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.therams.com/team/depth-chart
+LAR,Defense,OLB,Myles Garrett,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.therams.com/team/depth-chart
+LAR,Defense,S,Kam Curl,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.therams.com/team/depth-chart
+LAR,Defense,S,Quentin Lake,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.therams.com/team/depth-chart
+LAR,Offense,C,Coleman Shelton,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.therams.com/team/depth-chart
+LAR,Offense,LG,Steve Avila,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.therams.com/team/depth-chart
+LAR,Offense,LT,Alaric Jackson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.therams.com/team/depth-chart
+LAR,Offense,QB,Matthew Stafford,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.therams.com/team/depth-chart
+LAR,Offense,RB,Kyren Williams,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.therams.com/team/depth-chart
+LAR,Offense,RG,Kevin Dotson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.therams.com/team/depth-chart
+LAR,Offense,RT,Warren McClendon Jr.,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.therams.com/team/depth-chart
+LAR,Offense,TE,Colby Parkinson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.therams.com/team/depth-chart
+LAR,Offense,TE,Davis Allen | Tyler Higbee,removed,"present in the 2026-11-15 read, absent from the 2026-11-17 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.therams.com/team/depth-chart
+LAR,Offense,TE,Davis Allen+Tyler Higbee,added,"present in the 2026-11-17 read, absent from the 2026-11-15 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.therams.com/team/depth-chart
+LAR,Offense,WR,Konata Mumpfield,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.therams.com/team/depth-chart
+LAR,Offense,WR,Puka Nacua,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.therams.com/team/depth-chart
+LV,Defense,CB,Darien Porter,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.raiders.com/team/depth-chart
+LV,Defense,CB,Eric Stokes,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.raiders.com/team/depth-chart
+LV,Defense,CB,Taron Johnson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.raiders.com/team/depth-chart
+LV,Defense,DE,Maxx Crosby,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.raiders.com/team/depth-chart
+LV,Defense,DT,Adam Butler,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.raiders.com/team/depth-chart
+LV,Defense,DT,Tonka Hemingway,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.raiders.com/team/depth-chart
+LV,Defense,EDGE,Kwity Paye,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.raiders.com/team/depth-chart
+LV,Defense,FS,Treydan Stukes,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.raiders.com/team/depth-chart
+LV,Defense,LB,Nakobe Dean,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.raiders.com/team/depth-chart
+LV,Defense,LB,Quay Walker,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.raiders.com/team/depth-chart
+LV,Defense,SS,Jeremy Chinn,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.raiders.com/team/depth-chart
+LV,Offense,C,Tyler Linderbaum,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.raiders.com/team/depth-chart
+LV,Offense,FB,Connor Heyward,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.raiders.com/team/depth-chart
+LV,Offense,LG,Spencer Burford,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.raiders.com/team/depth-chart
+LV,Offense,LT,Kolton Miller,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.raiders.com/team/depth-chart
+LV,Offense,QB,Fernando Mendoza,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.raiders.com/team/depth-chart
+LV,Offense,RB,Ashton Jeanty,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.raiders.com/team/depth-chart
+LV,Offense,RG,Jackson Powers-Johnson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.raiders.com/team/depth-chart
+LV,Offense,RT,DJ Glaze,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.raiders.com/team/depth-chart
+LV,Offense,TE,Brock Bowers,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.raiders.com/team/depth-chart
+LV,Offense,WR,Jalen Nailor,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.raiders.com/team/depth-chart
+LV,Offense,WR,Tre Tucker,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.raiders.com/team/depth-chart
+MIA,Defense,CB,Jason Marshall Jr.,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.miamidolphins.com/team/depth-chart
+MIA,Defense,CB,JuJu Brents,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.miamidolphins.com/team/depth-chart
+MIA,Defense,DT,Jordan Phillips,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.miamidolphins.com/team/depth-chart
+MIA,Defense,DT,Zeek Biggers,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.miamidolphins.com/team/depth-chart
+MIA,Defense,EDGE,Chop Robinson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.miamidolphins.com/team/depth-chart
+MIA,Defense,EDGE,Josh Uche,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.miamidolphins.com/team/depth-chart
+MIA,Defense,ILB,Jacob Rodriguez,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.miamidolphins.com/team/depth-chart
+MIA,Defense,ILB,Jordyn Brooks,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.miamidolphins.com/team/depth-chart
+MIA,Defense,NB,Chris Johnson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.miamidolphins.com/team/depth-chart
+MIA,Defense,S,Dante Trader Jr.,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.miamidolphins.com/team/depth-chart
+MIA,Defense,S,Michael Taaffe,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.miamidolphins.com/team/depth-chart
+MIA,Offense,C,Aaron Brewer,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.miamidolphins.com/team/depth-chart
+MIA,Offense,FB,DJ Herman,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.miamidolphins.com/team/depth-chart
+MIA,Offense,LG,Kadyn Proctor,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.miamidolphins.com/team/depth-chart
+MIA,Offense,LT,Patrick Paul,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.miamidolphins.com/team/depth-chart
+MIA,Offense,QB,Kyle McCord,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.miamidolphins.com/team/depth-chart
+MIA,Offense,RB,Ollie Gordon II,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.miamidolphins.com/team/depth-chart
+MIA,Offense,RG,Jonah Savaiinaea,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.miamidolphins.com/team/depth-chart
+MIA,Offense,RT,Austin Jackson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.miamidolphins.com/team/depth-chart
+MIA,Offense,TE,Greg Dulcich,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.miamidolphins.com/team/depth-chart
+MIA,Offense,WR,Caleb Douglas,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.miamidolphins.com/team/depth-chart
+MIA,Offense,WR,Chris Bell,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.miamidolphins.com/team/depth-chart
+MIA,Offense,WR,Malik Washington,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.miamidolphins.com/team/depth-chart
+MIN,Defense,CB,Byron Murphy Jr.,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.vikings.com/team/depth-chart
+MIN,Defense,CB,Isaiah Rodgers,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.vikings.com/team/depth-chart
+MIN,Defense,DL,Jalen Redmond,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.vikings.com/team/depth-chart
+MIN,Defense,DL,Levi Drake Rodriguez,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.vikings.com/team/depth-chart
+MIN,Defense,DL,Tyrion Ingram-Dawkins,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.vikings.com/team/depth-chart
+MIN,Defense,LB,Blake Cashman,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.vikings.com/team/depth-chart
+MIN,Defense,LB,Eric Wilson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.vikings.com/team/depth-chart
+MIN,Defense,OLB,Andrew Van Ginkel,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.vikings.com/team/depth-chart
+MIN,Defense,OLB,Dallas Turner,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.vikings.com/team/depth-chart
+MIN,Defense,S,Harrison Smith,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.vikings.com/team/depth-chart
+MIN,Defense,S,Joshua Metellus,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.vikings.com/team/depth-chart
+MIN,Offense,C,Blake Brandel,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.vikings.com/team/depth-chart
+MIN,Offense,FB,Max Bredeson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.vikings.com/team/depth-chart
+MIN,Offense,LG,Joe Huber,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.vikings.com/team/depth-chart
+MIN,Offense,LT,Christian Darrisaw,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.vikings.com/team/depth-chart
+MIN,Offense,QB,Kyler Murray,removed,"present in the 2026-11-15 read, absent from the 2026-11-17 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.vikings.com/team/depth-chart
+MIN,Offense,RB,Aaron Jones Sr. | Jordan Mason,removed,"present in the 2026-11-15 read, absent from the 2026-11-17 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.vikings.com/team/depth-chart
+MIN,Offense,RB,Aaron Jones Sr.+Jordan Mason,added,"present in the 2026-11-17 read, absent from the 2026-11-15 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.vikings.com/team/depth-chart
+MIN,Offense,RG,Will Fries,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.vikings.com/team/depth-chart
+MIN,Offense,RT,Brian O'Neill,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.vikings.com/team/depth-chart
+MIN,Offense,TE,T.J. Hockenson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.vikings.com/team/depth-chart
+MIN,Offense,WR,Jauan Jennings,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.vikings.com/team/depth-chart
+MIN,Offense,WR,Jordan Addison,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.vikings.com/team/depth-chart
+MIN,Offense,WR,Justin Jefferson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.vikings.com/team/depth-chart
+NE,Defense,,,removed,"present in the 2026-11-15 read, absent from the 2026-11-17 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.patriots.com/team/depth-chart
+NE,Defense,CB,Carlton Davis III,added,"present in the 2026-11-17 read, absent from the 2026-11-15 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.patriots.com/team/depth-chart
+NE,Defense,CB,Christian Gonzalez,added,"present in the 2026-11-17 read, absent from the 2026-11-15 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.patriots.com/team/depth-chart
+NE,Defense,CB,Marcus Jones,added,"present in the 2026-11-17 read, absent from the 2026-11-15 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.patriots.com/team/depth-chart
+NE,Defense,DT,Christian Barmore,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.patriots.com/team/depth-chart
+NE,Defense,DT,Cory Durden,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.patriots.com/team/depth-chart
+NE,Defense,DT,Milton Williams,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.patriots.com/team/depth-chart
+NE,Defense,LB,Christian Elliss,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.patriots.com/team/depth-chart
+NE,Defense,LB,Robert Spillane,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.patriots.com/team/depth-chart
+NE,Defense,OLB,Dre'Mont Jones,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.patriots.com/team/depth-chart
+NE,Defense,OLB,Elijah Ponder,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.patriots.com/team/depth-chart
+NE,Defense,S,Craig Woodson,added,"present in the 2026-11-17 read, absent from the 2026-11-15 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.patriots.com/team/depth-chart
+NE,Defense,S,Kevin Byard III,added,"present in the 2026-11-17 read, absent from the 2026-11-15 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.patriots.com/team/depth-chart
+NE,Offense,C,Jared Wilson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.patriots.com/team/depth-chart
+NE,Offense,LG,Ben Brown,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.patriots.com/team/depth-chart
+NE,Offense,LT,Will Campbell,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.patriots.com/team/depth-chart
+NE,Offense,QB,Drake Maye,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.patriots.com/team/depth-chart
+NE,Offense,RB,Rhamondre Stevenson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.patriots.com/team/depth-chart
+NE,Offense,RG,Matt Pryor,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.patriots.com/team/depth-chart
+NE,Offense,RT,Morgan Moses,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.patriots.com/team/depth-chart
+NE,Offense,TE,Hunter Henry,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.patriots.com/team/depth-chart
+NE,Offense,WR,A.J. Brown,removed,"present in the 2026-11-15 read, absent from the 2026-11-17 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.patriots.com/team/depth-chart
+NE,Offense,WR,DeMario Douglas,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.patriots.com/team/depth-chart
+NE,Offense,WR,Efton Chism III,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.patriots.com/team/depth-chart
+NO,Defense,CB,Kool-Aid McKinstry,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.neworleanssaints.com/team/depth-chart
+NO,Defense,CB,Martin Emerson Jr.,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.neworleanssaints.com/team/depth-chart
+NO,Defense,DL,Khristian Boyd,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.neworleanssaints.com/team/depth-chart
+NO,Defense,DL,Nathan Shepherd,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.neworleanssaints.com/team/depth-chart
+NO,Defense,DL,Vernon Broughton,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.neworleanssaints.com/team/depth-chart
+NO,Defense,EDGE,Cameron Jordan,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.neworleanssaints.com/team/depth-chart
+NO,Defense,EDGE,Chase Young | Carl Granderson,removed,"present in the 2026-11-15 read, absent from the 2026-11-17 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.neworleanssaints.com/team/depth-chart
+NO,Defense,EDGE,Chase Young+Carl Granderson,added,"present in the 2026-11-17 read, absent from the 2026-11-15 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.neworleanssaints.com/team/depth-chart
+NO,Defense,LB,Kaden Elliss,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.neworleanssaints.com/team/depth-chart
+NO,Defense,LB,Pete Werner,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.neworleanssaints.com/team/depth-chart
+NO,Defense,S,Jonas Sanker,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.neworleanssaints.com/team/depth-chart
+NO,Defense,S,Julian Blackmon,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.neworleanssaints.com/team/depth-chart
+NO,Defense,S,Justin Reid,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.neworleanssaints.com/team/depth-chart
+NO,Offense,C,Erik McCoy,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.neworleanssaints.com/team/depth-chart
+NO,Offense,LG,David Edwards,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.neworleanssaints.com/team/depth-chart
+NO,Offense,LT,Kelvin Banks Jr.,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.neworleanssaints.com/team/depth-chart
+NO,Offense,QB,Tyler Shough,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.neworleanssaints.com/team/depth-chart
+NO,Offense,RB,Alvin Kamara,removed,"present in the 2026-11-15 read, absent from the 2026-11-17 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.neworleanssaints.com/team/depth-chart
+NO,Offense,RB,Travis Etienne Jr.+Alvin Kamara,added,"present in the 2026-11-17 read, absent from the 2026-11-15 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.neworleanssaints.com/team/depth-chart
+NO,Offense,RG,Cesar Ruiz,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.neworleanssaints.com/team/depth-chart
+NO,Offense,RT,Taliese Fuaga,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.neworleanssaints.com/team/depth-chart
+NO,Offense,TE,Juwan Johnson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.neworleanssaints.com/team/depth-chart
+NO,Offense,WR,Chris Olave,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.neworleanssaints.com/team/depth-chart
+NO,Offense,WR,Devaughn Vele,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.neworleanssaints.com/team/depth-chart
+NO,Offense,WR,Jordyn Tyson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.neworleanssaints.com/team/depth-chart
+NYG,Defense,CB,Deonte Banks,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.giants.com/team/depth-chart
+NYG,Defense,CB,Greg Newsome II,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.giants.com/team/depth-chart
+NYG,Defense,DE,Darius Alexander,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.giants.com/team/depth-chart
+NYG,Defense,DT,Shelby Harris,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.giants.com/team/depth-chart
+NYG,Defense,FS,Jevón Holland,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.giants.com/team/depth-chart
+NYG,Defense,MLB,Micah McFadden,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.giants.com/team/depth-chart
+NYG,Defense,NB,Dru Phillips,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.giants.com/team/depth-chart
+NYG,Defense,NT,DJ Reader,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.giants.com/team/depth-chart
+NYG,Defense,RUSH,Kayvon Thibodeaux,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.giants.com/team/depth-chart
+NYG,Defense,SAM,Abdul Carter,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.giants.com/team/depth-chart
+NYG,Defense,SS,Tyler Nubin,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.giants.com/team/depth-chart
+NYG,Defense,WLB,Arvell Reese,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.giants.com/team/depth-chart
+NYG,Offense,C,Bryan Hudson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.giants.com/team/depth-chart
+NYG,Offense,FB,Patrick Ricard,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.giants.com/team/depth-chart
+NYG,Offense,LG,Jon Runyan Jr.,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.giants.com/team/depth-chart
+NYG,Offense,LT,Andrew Thomas,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.giants.com/team/depth-chart
+NYG,Offense,QB,J.J. McCarthy,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.giants.com/team/depth-chart
+NYG,Offense,RB,Cam Skattebo,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.giants.com/team/depth-chart
+NYG,Offense,RG,"Francis ""Sisi"" Mauigoa",removed,"present in the 2026-11-15 read, absent from the 2026-11-17 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.giants.com/team/depth-chart
+NYG,Offense,RG,Francis Mauigoa,added,"present in the 2026-11-17 read, absent from the 2026-11-15 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.giants.com/team/depth-chart
+NYG,Offense,RT,Jermaine Eluemunor,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.giants.com/team/depth-chart
+NYG,Offense,TE,Isaiah Likely,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.giants.com/team/depth-chart
+NYG,Offense,WR,Darnell Mooney,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.giants.com/team/depth-chart
+NYG,Offense,WR,Malik Nabers,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.giants.com/team/depth-chart
+NYJ,Defense,CB,Azareye'h Thomas,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.newyorkjets.com/team/depth-chart
+NYJ,Defense,CB,Brandon Stephens,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.newyorkjets.com/team/depth-chart
+NYJ,Defense,DL,,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.newyorkjets.com/team/depth-chart
+NYJ,Defense,DL,Harrison Phillips,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.newyorkjets.com/team/depth-chart
+NYJ,Defense,DL,Jowon Briggs,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.newyorkjets.com/team/depth-chart
+NYJ,Defense,EDGE,David Bailey,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.newyorkjets.com/team/depth-chart
+NYJ,Defense,EDGE,Kingsley Enagbare,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.newyorkjets.com/team/depth-chart
+NYJ,Defense,LB,Demario Davis,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.newyorkjets.com/team/depth-chart
+NYJ,Defense,LB,Jamien Sherwood,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.newyorkjets.com/team/depth-chart
+NYJ,Defense,NB,Jarvis Brownlee Jr.,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.newyorkjets.com/team/depth-chart
+NYJ,Defense,S,Dane Belton,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.newyorkjets.com/team/depth-chart
+NYJ,Defense,S,Minkah Fitzpatrick,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.newyorkjets.com/team/depth-chart
+NYJ,Offense,C,Josh Myers,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.newyorkjets.com/team/depth-chart
+NYJ,Offense,FB,Andrew Beck,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.newyorkjets.com/team/depth-chart
+NYJ,Offense,LG,Dylan Parham,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.newyorkjets.com/team/depth-chart
+NYJ,Offense,LT,Olu Fashanu,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.newyorkjets.com/team/depth-chart
+NYJ,Offense,QB,Geno Smith,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.newyorkjets.com/team/depth-chart
+NYJ,Offense,RB,Breece Hall,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.newyorkjets.com/team/depth-chart
+NYJ,Offense,RG,Joe Tippmann,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.newyorkjets.com/team/depth-chart
+NYJ,Offense,RT,Armand Membou,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.newyorkjets.com/team/depth-chart
+NYJ,Offense,TE,Jeremy Ruckert,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.newyorkjets.com/team/depth-chart
+NYJ,Offense,TE,Mason Taylor,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.newyorkjets.com/team/depth-chart
+NYJ,Offense,WR,Adonai Mitchell,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.newyorkjets.com/team/depth-chart
+NYJ,Offense,WR,Garrett Wilson,removed,"present in the 2026-11-15 read, absent from the 2026-11-17 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.newyorkjets.com/team/depth-chart
+PHI,Defense,CB,Quinyon Mitchell,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Defense,CB,Riq Woolen,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Defense,DT,,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Defense,DT,Jalen Carter,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Defense,DT,Moro Ojomo,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Defense,EDGE,Jalyx Hunt | Jonathan Greenard,removed,"present in the 2026-11-15 read, absent from the 2026-11-17 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Defense,EDGE,Jalyx Hunt+Jonathan Greenard,added,"present in the 2026-11-17 read, absent from the 2026-11-15 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Defense,EDGE,Nolan Smith Jr. | Jonathan Greenard,removed,"present in the 2026-11-15 read, absent from the 2026-11-17 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Defense,EDGE,Nolan Smith Jr.+Jonathan Greenard,added,"present in the 2026-11-17 read, absent from the 2026-11-15 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Defense,LB,Jihaad Campbell,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Defense,LB,Zack Baun,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Defense,NCB,Cooper DeJean,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Defense,S,Andrew Mukuba,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Defense,S,Marcus Epps,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Offense,C,Drew Kendall,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Offense,LG,Willie Lampkin,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Offense,LT,Jordan Mailata,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Offense,QB,Tanner McKee,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Offense,RB,Saquon Barkley,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Offense,RG,Tyler Steen,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Offense,RT,Markel Bell,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Offense,TE,Dallas Goedert,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Offense,WR,DeVonta Smith,removed,"present in the 2026-11-15 read, absent from the 2026-11-17 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Offense,WR,Dontayvion Wicks,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.philadelphiaeagles.com/team/depth-chart
+PHI,Offense,WR,Makai Lemon,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.philadelphiaeagles.com/team/depth-chart
+PIT,Defense,CB,Asante Samuel Jr.,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.steelers.com/team/depth-chart
+PIT,Defense,CB,Jamel Dean,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.steelers.com/team/depth-chart
+PIT,Defense,DE,Keeanu Benton,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.steelers.com/team/depth-chart
+PIT,Defense,DT,Cameron Heyward,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.steelers.com/team/depth-chart
+PIT,Defense,LILB,Patrick Queen,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.steelers.com/team/depth-chart
+PIT,Defense,LOLB,T.J. Watt,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.steelers.com/team/depth-chart
+PIT,Defense,NCB,Jalen Ramsey,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.steelers.com/team/depth-chart
+PIT,Defense,NT,Yahya Black,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.steelers.com/team/depth-chart
+PIT,Defense,OLB,Nick Herbig,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.steelers.com/team/depth-chart
+PIT,Defense,RILB,Payton Wilson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.steelers.com/team/depth-chart
+PIT,Defense,ROLB,Alex Highsmith,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.steelers.com/team/depth-chart
+PIT,Defense,S,Jaquan Brisker,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.steelers.com/team/depth-chart
+PIT,Offense,C,Zach Frazier,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.steelers.com/team/depth-chart
+PIT,Offense,FB,Riley Nowakowski,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.steelers.com/team/depth-chart
+PIT,Offense,LG,Mason McCormick,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.steelers.com/team/depth-chart
+PIT,Offense,LT,Troy Fautanu,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.steelers.com/team/depth-chart
+PIT,Offense,QB,Aaron Rodgers,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.steelers.com/team/depth-chart
+PIT,Offense,RB,Jaylen Warren,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.steelers.com/team/depth-chart
+PIT,Offense,RG,Brock Hoffman,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.steelers.com/team/depth-chart
+PIT,Offense,RT,Max Iheanachor,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.steelers.com/team/depth-chart
+PIT,Offense,TE,Pat Freiermuth | Darnell Washington,removed,"present in the 2026-11-15 read, absent from the 2026-11-17 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.steelers.com/team/depth-chart
+PIT,Offense,TE,Pat Freiermuth+Darnell Washington,added,"present in the 2026-11-17 read, absent from the 2026-11-15 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.steelers.com/team/depth-chart
+PIT,Offense,WR,Ben Skowronek,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.steelers.com/team/depth-chart
+PIT,Offense,WR,DK Metcalf,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.steelers.com/team/depth-chart
+PIT,Offense,WR,Germie Bernard,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.steelers.com/team/depth-chart
+SEA,Defense,CB,Devon Witherspoon,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.seahawks.com/team/depth-chart
+SEA,Defense,CB,Josh Jobe,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.seahawks.com/team/depth-chart
+SEA,Defense,DE,Jarran Reed,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.seahawks.com/team/depth-chart
+SEA,Defense,DT,Leonard Williams,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.seahawks.com/team/depth-chart
+SEA,Defense,MLB,Ernest Jones IV,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.seahawks.com/team/depth-chart
+SEA,Defense,NT,Byron Murphy II,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.seahawks.com/team/depth-chart
+SEA,Defense,RUSH,DeMarcus Lawrence,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.seahawks.com/team/depth-chart
+SEA,Defense,S,Julian Love,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.seahawks.com/team/depth-chart
+SEA,Defense,S,Nick Emmanwori,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.seahawks.com/team/depth-chart
+SEA,Defense,S,Ty Okada,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.seahawks.com/team/depth-chart
+SEA,Defense,SLB,Uchenna Nwosu,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.seahawks.com/team/depth-chart
+SEA,Defense,WLB,Drake Thomas,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.seahawks.com/team/depth-chart
+SEA,Offense,C,Jalen Sundell,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.seahawks.com/team/depth-chart
+SEA,Offense,FB,Brady Russell,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.seahawks.com/team/depth-chart
+SEA,Offense,LG,Quenton Nelson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.seahawks.com/team/depth-chart
+SEA,Offense,LT,Charles Cross,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.seahawks.com/team/depth-chart
+SEA,Offense,QB,Sam Darnold,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.seahawks.com/team/depth-chart
+SEA,Offense,RB,Zach Charbonnet,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.seahawks.com/team/depth-chart
+SEA,Offense,RG,Grey Zabel,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.seahawks.com/team/depth-chart
+SEA,Offense,RT,Abraham Lucas,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.seahawks.com/team/depth-chart
+SEA,Offense,TE,AJ Barner,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.seahawks.com/team/depth-chart
+SEA,Offense,WR,Cooper Kupp | Rashid Shaheed,removed,"present in the 2026-11-15 read, absent from the 2026-11-17 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.seahawks.com/team/depth-chart
+SEA,Offense,WR,Jaxon Smith-Njigba,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.seahawks.com/team/depth-chart
+SF,Defense,FS,Ji'Ayir Brown,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.49ers.com/team/depth-chart
+SF,Defense,LCB,Renardo Green,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.49ers.com/team/depth-chart
+SF,Defense,LDE,Keion White,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.49ers.com/team/depth-chart
+SF,Defense,LDT,DeForest Buckner,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.49ers.com/team/depth-chart
+SF,Defense,MIKE,Fred Warner,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.49ers.com/team/depth-chart
+SF,Defense,NB,Upton Stout,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.49ers.com/team/depth-chart
+SF,Defense,RCB,Deommodore Lenoir,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.49ers.com/team/depth-chart
+SF,Defense,RDE,Nick Bosa,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.49ers.com/team/depth-chart
+SF,Defense,RDT,Osa Odighizuwa,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.49ers.com/team/depth-chart
+SF,Defense,SAM,Jaden Dugger,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.49ers.com/team/depth-chart
+SF,Defense,SS,Malik Mustapha,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.49ers.com/team/depth-chart
+SF,Defense,WILL,Dre Greenlaw,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.49ers.com/team/depth-chart
+SF,Offense,C,Jake Brendel,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.49ers.com/team/depth-chart
+SF,Offense,FB,Kyle Juszczyk,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.49ers.com/team/depth-chart
+SF,Offense,LG,Connor Colby,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.49ers.com/team/depth-chart
+SF,Offense,LT,Trent Williams,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.49ers.com/team/depth-chart
+SF,Offense,QB,Brock Purdy,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.49ers.com/team/depth-chart
+SF,Offense,RB,Christian McCaffrey,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.49ers.com/team/depth-chart
+SF,Offense,RG,Dominick Puni,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.49ers.com/team/depth-chart
+SF,Offense,RT,Colton McKivitz,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.49ers.com/team/depth-chart
+SF,Offense,TE,George Kittle,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.49ers.com/team/depth-chart
+SF,Offense,WR,Deebo Samuel Sr.,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.49ers.com/team/depth-chart
+SF,Offense,WR,Mike Evans,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.49ers.com/team/depth-chart
+TB,Defense,CB,Jacob Parrish,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buccaneers.com/team/depth-chart
+TB,Defense,CB,Zyon McCollum,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buccaneers.com/team/depth-chart
+TB,Defense,DL,A'Shawn Robinson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buccaneers.com/team/depth-chart
+TB,Defense,DL,Calijah Kancey,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buccaneers.com/team/depth-chart
+TB,Defense,ILB,Alex Anzalone,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buccaneers.com/team/depth-chart
+TB,Defense,ILB,Josiah Trotter,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buccaneers.com/team/depth-chart
+TB,Defense,NT,Vita Vea,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buccaneers.com/team/depth-chart
+TB,Defense,OLB,Rueben Bain Jr.,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buccaneers.com/team/depth-chart
+TB,Defense,OLB,Yaya Diaby,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buccaneers.com/team/depth-chart
+TB,Defense,S,Antoine Winfield Jr.,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buccaneers.com/team/depth-chart
+TB,Defense,S,Tykee Smith,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buccaneers.com/team/depth-chart
+TB,Offense,C,Graham Barton,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buccaneers.com/team/depth-chart
+TB,Offense,LG,Ben Bredeson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buccaneers.com/team/depth-chart
+TB,Offense,LT,Tristan Wirfs,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buccaneers.com/team/depth-chart
+TB,Offense,QB,Baker Mayfield,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buccaneers.com/team/depth-chart
+TB,Offense,RB,Bucky Irving,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buccaneers.com/team/depth-chart
+TB,Offense,RG,Cody Mauch,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buccaneers.com/team/depth-chart
+TB,Offense,RT,Luke Goedeke,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buccaneers.com/team/depth-chart
+TB,Offense,TE,Cade Otton,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buccaneers.com/team/depth-chart
+TB,Offense,WR,Chris Godwin Jr.,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buccaneers.com/team/depth-chart
+TB,Offense,WR,Emeka Egbuka,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buccaneers.com/team/depth-chart
+TB,Offense,WR,Ted Hurst III,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.buccaneers.com/team/depth-chart
+TEN,Defense,CB,Cor'Dale Flott,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.tennesseetitans.com/team/depth-chart
+TEN,Defense,CB,Joshua Williams,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.tennesseetitans.com/team/depth-chart
+TEN,Defense,DE,Jacob Martin,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.tennesseetitans.com/team/depth-chart
+TEN,Defense,DE,Jermaine Johnson II,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.tennesseetitans.com/team/depth-chart
+TEN,Defense,DL,John Franklin-Myers,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.tennesseetitans.com/team/depth-chart
+TEN,Defense,DT,Solomon Thomas,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.tennesseetitans.com/team/depth-chart
+TEN,Defense,LB,Anthony Hill Jr.,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.tennesseetitans.com/team/depth-chart
+TEN,Defense,LB,Cedric Gray,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.tennesseetitans.com/team/depth-chart
+TEN,Defense,LB,Cody Barton,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.tennesseetitans.com/team/depth-chart
+TEN,Defense,NCB,Marcus Harris,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.tennesseetitans.com/team/depth-chart
+TEN,Defense,S,Kevin Winston Jr.,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.tennesseetitans.com/team/depth-chart
+TEN,Defense,S,Tony Adams,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.tennesseetitans.com/team/depth-chart
+TEN,Offense,C,Austin Schlottmann,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.tennesseetitans.com/team/depth-chart
+TEN,Offense,LG,Peter Skoronski,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.tennesseetitans.com/team/depth-chart
+TEN,Offense,LT,Dan Moore Jr.,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.tennesseetitans.com/team/depth-chart
+TEN,Offense,QB,Cam Ward,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.tennesseetitans.com/team/depth-chart
+TEN,Offense,RB,Tony Pollard,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.tennesseetitans.com/team/depth-chart
+TEN,Offense,RG,Atonio Mafi,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.tennesseetitans.com/team/depth-chart
+TEN,Offense,RT,JC Latham,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.tennesseetitans.com/team/depth-chart
+TEN,Offense,TE,Gunnar Helm,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.tennesseetitans.com/team/depth-chart
+TEN,Offense,WR,Calvin Ridley,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.tennesseetitans.com/team/depth-chart
+TEN,Offense,WR,Carnell Tate,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.tennesseetitans.com/team/depth-chart
+TEN,Offense,WR,Wan'Dale Robinson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.tennesseetitans.com/team/depth-chart
+WAS,Defense,CB,Amik Robertson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.commanders.com/team/depth-chart
+WAS,Defense,CB,Mike Sainristil,removed,"present in the 2026-11-15 read, absent from the 2026-11-17 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.commanders.com/team/depth-chart
+WAS,Defense,CB,Trey Amos,added,"present in the 2026-11-17 read, absent from the 2026-11-15 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.commanders.com/team/depth-chart
+WAS,Defense,DL,Charles Omenihu,added,"present in the 2026-11-17 read, absent from the 2026-11-15 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.commanders.com/team/depth-chart
+WAS,Defense,DL,Daron Payne,removed,"present in the 2026-11-15 read, absent from the 2026-11-17 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.commanders.com/team/depth-chart
+WAS,Defense,DL,Deatrich Wise Jr.,added,"present in the 2026-11-17 read, absent from the 2026-11-15 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.commanders.com/team/depth-chart
+WAS,Defense,DL,Javon Kinlaw,removed,"present in the 2026-11-15 read, absent from the 2026-11-17 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.commanders.com/team/depth-chart
+WAS,Defense,DL,Tim Settle,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.commanders.com/team/depth-chart
+WAS,Defense,FS,Jeremy Reaves,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.commanders.com/team/depth-chart
+WAS,Defense,LB,Frankie Luvu,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.commanders.com/team/depth-chart
+WAS,Defense,LB,Sonny Styles,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.commanders.com/team/depth-chart
+WAS,Defense,OLB,K'Lavon Chaisson,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.commanders.com/team/depth-chart
+WAS,Defense,OLB,Odafe Oweh,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.commanders.com/team/depth-chart
+WAS,Defense,SS,Nick Cross,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.commanders.com/team/depth-chart
+WAS,Offense,C,Lucas Patrick,added,"present in the 2026-11-17 read, absent from the 2026-11-15 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.commanders.com/team/depth-chart
+WAS,Offense,C,Nick Allegretti,removed,"present in the 2026-11-15 read, absent from the 2026-11-17 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.commanders.com/team/depth-chart
+WAS,Offense,LG,Chris Paul,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.commanders.com/team/depth-chart
+WAS,Offense,LT,Brandon Coleman,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.commanders.com/team/depth-chart
+WAS,Offense,QB,Jayden Daniels,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.commanders.com/team/depth-chart
+WAS,Offense,RB,Jacory Croskey-Merritt,removed,"present in the 2026-11-15 read, absent from the 2026-11-17 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.commanders.com/team/depth-chart
+WAS,Offense,RB,Rachaad White,added,"present in the 2026-11-17 read, absent from the 2026-11-15 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.commanders.com/team/depth-chart
+WAS,Offense,RG,Sam Cosmi,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.commanders.com/team/depth-chart
+WAS,Offense,RT,Josh Conerly Jr.,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.commanders.com/team/depth-chart
+WAS,Offense,TE,Chig Okonkwo,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.commanders.com/team/depth-chart
+WAS,Offense,TE,John Bates,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.commanders.com/team/depth-chart
+WAS,Offense,WR,Antonio Williams,added,"present in the 2026-11-17 read, absent from the 2026-11-15 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.commanders.com/team/depth-chart
+WAS,Offense,WR,Dyami Brown,removed,"present in the 2026-11-15 read, absent from the 2026-11-17 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.commanders.com/team/depth-chart
+WAS,Offense,WR,Stefon Diggs,unchanged,same club/unit/position/rank1 present in both reads,2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.commanders.com/team/depth-chart
+WAS,Offense,WR,Terry McLaurin,removed,"present in the 2026-11-15 read, absent from the 2026-11-17 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.commanders.com/team/depth-chart
+WAS,Offense,WR,Treylon Burks,added,"present in the 2026-11-17 read, absent from the 2026-11-15 read",2026-11-15T23:35:00Z,2026-11-17T00:00:00Z,https://www.commanders.com/team/depth-chart

@@ -1,0 +1,392 @@
+{
+  "session": "c98c6270",
+  "checks": [
+    {
+      "id": "D-01",
+      "kind": "DATA",
+      "check": "every depth slot row has a source URL and capture date",
+      "result": "PASS",
+      "detail": "0 of 890 rows missing one"
+    },
+    {
+      "id": "D-02",
+      "kind": "DATA",
+      "check": "every depth source URL is an official club page",
+      "result": "PASS",
+      "detail": "checked 890 URLs"
+    },
+    {
+      "id": "D-03",
+      "kind": "DATA",
+      "check": "Houston is represented faithfully (one image-only row, no invented names)",
+      "result": "PASS",
+      "detail": "1 HOU rows"
+    },
+    {
+      "id": "D-04",
+      "kind": "DATA",
+      "check": "no depth row was derived from jersey order",
+      "result": "PASS",
+      "detail": "jersey-prefix scan over 890 rank-1 names"
+    },
+    {
+      "id": "D-05",
+      "kind": "DATA",
+      "check": "every results-feed row has an official source URL",
+      "result": "PASS",
+      "detail": "0 of 150 missing"
+    },
+    {
+      "id": "D-06",
+      "kind": "DATA",
+      "check": "non-final games are kept as pending rows, never scored",
+      "result": "PASS",
+      "detail": "1 pending rows"
+    },
+    {
+      "id": "D-07",
+      "kind": "DATA",
+      "check": "every final row has both scores and a computed margin",
+      "result": "PASS",
+      "detail": "149 final rows"
+    },
+    {
+      "id": "D-08",
+      "kind": "DATA",
+      "check": "every final row's total equals the sum of its scores",
+      "result": "PASS",
+      "detail": "149 final rows"
+    },
+    {
+      "id": "D-09",
+      "kind": "DATA",
+      "check": "the results feed reconciles to the official standings club by club",
+      "result": "PASS",
+      "detail": "32 of 32 clubs reconcile; mismatches: none"
+    },
+    {
+      "id": "D-10",
+      "kind": "DATA",
+      "check": "every market row has a model value",
+      "result": "PASS",
+      "detail": "65 rows"
+    },
+    {
+      "id": "D-11",
+      "kind": "DATA",
+      "check": "no market row carries a market value (none exists anywhere)",
+      "result": "PASS",
+      "detail": "65 rows checked"
+    },
+    {
+      "id": "D-12",
+      "kind": "DATA",
+      "check": "every blank market column says why it is blank",
+      "result": "PASS",
+      "detail": "65 rows"
+    },
+    {
+      "id": "D-13",
+      "kind": "DATA",
+      "check": "origination order is side (1) -> total (2) -> moneyline (3) per game",
+      "result": "PASS",
+      "detail": "13 games, 39 steps"
+    },
+    {
+      "id": "D-14",
+      "kind": "DATA",
+      "check": "step 3 (moneyline) depends only on step 1 (side), never on the total",
+      "result": "PASS",
+      "detail": "checked 13 moneyline steps"
+    },
+    {
+      "id": "D-15",
+      "kind": "DATA",
+      "check": "two independent totals estimators are published with the gap between them",
+      "result": "PASS",
+      "detail": "estimators present: game total (A minus B gap), game total (estimator A), game total (estimator B), home moneyline, home spread"
+    },
+    {
+      "id": "D-16",
+      "kind": "DATA",
+      "check": "every published correlation carries n",
+      "result": "PASS",
+      "detail": "10 published"
+    },
+    {
+      "id": "D-17",
+      "kind": "DATA",
+      "check": "every published correlation carries a 95%% interval and a source",
+      "result": "PASS",
+      "detail": "10 published"
+    },
+    {
+      "id": "D-18",
+      "kind": "DATA",
+      "check": "withheld correlations state a reason instead of a number",
+      "result": "PASS",
+      "detail": "5 withheld"
+    },
+    {
+      "id": "D-19",
+      "kind": "DATA",
+      "check": "no correlation is published without an official source",
+      "result": "PASS",
+      "detail": "10 published"
+    },
+    {
+      "id": "D-20",
+      "kind": "DATA",
+      "check": "every injury row carries both read clock times or says it was not re-read",
+      "result": "PASS",
+      "detail": "326 rows"
+    },
+    {
+      "id": "D-21",
+      "kind": "DATA",
+      "check": "every injury row has an official source URL",
+      "result": "PASS",
+      "detail": "326 rows"
+    },
+    {
+      "id": "D-22",
+      "kind": "DATA",
+      "check": "no game status is inferred: Out is only ever stated where the official report designates it, and every Out row cites that report",
+      "result": "PASS",
+      "detail": "326 rows, 14 designated Out"
+    },
+    {
+      "id": "D-23",
+      "kind": "DATA",
+      "check": "withheld pairings are blank, not guessed",
+      "result": "PASS",
+      "detail": "2 withheld of 232"
+    },
+    {
+      "id": "D-24",
+      "kind": "DATA",
+      "check": "every live pairing resolves a named expected starter",
+      "result": "PASS",
+      "detail": "230 live pairings"
+    },
+    {
+      "id": "D-25",
+      "kind": "DATA",
+      "check": "a deficiency is only recorded when the expected rank is below 1",
+      "result": "PASS",
+      "detail": "230 live pairings"
+    },
+    {
+      "id": "D-26",
+      "kind": "DATA",
+      "check": "every pairing links to the official schedule page",
+      "result": "PASS",
+      "detail": "232 pairings"
+    },
+    {
+      "id": "D-27",
+      "kind": "DATA",
+      "check": "every confirmed-out rank-1 player either names his replacement or says the slot publishes no replacement",
+      "result": "PASS",
+      "detail": "8 rank-1 rows of 14"
+    },
+    {
+      "id": "D-28",
+      "kind": "DATA",
+      "check": "replacement rank comes from a published chart, never from a guess",
+      "result": "PASS",
+      "detail": "14 rows"
+    },
+    {
+      "id": "D-29",
+      "kind": "DATA",
+      "check": "no division ranks a row before its gate clears",
+      "result": "PASS",
+      "detail": "4 divisions"
+    },
+    {
+      "id": "D-30",
+      "kind": "DATA",
+      "check": "signal and staking are separate ledgers with no shared family rows",
+      "result": "PASS",
+      "detail": "4 signal rows, 4 staking rows"
+    },
+    {
+      "id": "D-31",
+      "kind": "DATA",
+      "check": "every family is held by at least one unmet gate",
+      "result": "PASS",
+      "detail": "14 families"
+    },
+    {
+      "id": "D-32",
+      "kind": "DATA",
+      "check": "every luck-panel row has an official source",
+      "result": "PASS",
+      "detail": "32 rows"
+    },
+    {
+      "id": "D-33",
+      "kind": "DATA",
+      "check": "the Pythagorean exponent is labelled as a convention",
+      "result": "PASS",
+      "detail": "32 rows"
+    },
+    {
+      "id": "D-34",
+      "kind": "DATA",
+      "check": "the power curve is exact, not simulated",
+      "result": "PASS",
+      "detail": "6 sample sizes"
+    },
+    {
+      "id": "D-35",
+      "kind": "DATA",
+      "check": "power rises with n (the curve is monotone)",
+      "result": "PASS",
+      "detail": "6 points"
+    },
+    {
+      "id": "D-36",
+      "kind": "DATA",
+      "check": "every audit row states what it compared against",
+      "result": "PASS",
+      "detail": "13 rows"
+    },
+    {
+      "id": "D-37",
+      "kind": "DATA",
+      "check": "no audit row is marked confirmed without an official source link",
+      "result": "PASS",
+      "detail": "13 rows"
+    },
+    {
+      "id": "D-38",
+      "kind": "DATA",
+      "check": "every requirement names the gate that blocks it",
+      "result": "PASS",
+      "detail": "80 requirements"
+    },
+    {
+      "id": "D-39",
+      "kind": "DATA",
+      "check": "a requirement reads MET only when the gate that blocks it also reads MET",
+      "result": "PASS",
+      "detail": "80 requirements; inconsistent: none"
+    },
+    {
+      "id": "D-40",
+      "kind": "DATA",
+      "check": "every question states what we have, what we lack and a discovery route",
+      "result": "PASS",
+      "detail": "22 questions"
+    },
+    {
+      "id": "D-41",
+      "kind": "DATA",
+      "check": "every suggestion offers a choice and a falsifier, and none is implemented",
+      "result": "PASS",
+      "detail": "18 suggestions"
+    },
+    {
+      "id": "D-42",
+      "kind": "DATA",
+      "check": "every suggestion links to the question it answers",
+      "result": "PASS",
+      "detail": "18 suggestions"
+    },
+    {
+      "id": "D-43",
+      "kind": "DATA",
+      "check": "every strategy is frozen, two-sided and still in paper",
+      "result": "PASS",
+      "detail": "14 strategies"
+    },
+    {
+      "id": "D-44",
+      "kind": "DATA",
+      "check": "every flag says what was published in its place",
+      "result": "PASS",
+      "detail": "21 flags"
+    },
+    {
+      "id": "D-45",
+      "kind": "DATA",
+      "check": "every register source is https",
+      "result": "PASS",
+      "detail": "12 sources"
+    },
+    {
+      "id": "R-01",
+      "kind": "RENDER",
+      "check": "the site has a landing page and subpages",
+      "result": "PASS",
+      "detail": "17 pages"
+    },
+    {
+      "id": "R-02",
+      "kind": "RENDER",
+      "check": "every table body row carries a provenance badge",
+      "result": "PASS",
+      "detail": "2234 of 2234 rows badged; e.g. none"
+    },
+    {
+      "id": "R-03",
+      "kind": "RENDER",
+      "check": "every internal link resolves and every external link is https",
+      "result": "PASS",
+      "detail": "0 broken; e.g. []"
+    },
+    {
+      "id": "R-04",
+      "kind": "RENDER",
+      "check": "no placeholder or template artefact is rendered",
+      "result": "PASS",
+      "detail": "[]"
+    },
+    {
+      "id": "R-05",
+      "kind": "RENDER",
+      "check": "the market column is visibly blank, never filled with a guess",
+      "result": "PASS",
+      "detail": "lines.html shows blank / undefined cells"
+    },
+    {
+      "id": "R-06",
+      "kind": "RENDER",
+      "check": "the landing page carries the decision-readiness table",
+      "result": "PASS",
+      "detail": "index.html"
+    },
+    {
+      "id": "R-07",
+      "kind": "RENDER",
+      "check": "the suggestions page offers a reviewable decision control per item",
+      "result": "PASS",
+      "detail": "18 decision controls"
+    },
+    {
+      "id": "R-08",
+      "kind": "RENDER",
+      "check": "every suggestion on the page is unimplemented",
+      "result": "PASS",
+      "detail": "19 PROPOSED badges"
+    },
+    {
+      "id": "R-09",
+      "kind": "RENDER",
+      "check": "the questions page separates what we have from what we do not",
+      "result": "PASS",
+      "detail": "question register rendered"
+    },
+    {
+      "id": "R-10",
+      "kind": "RENDER",
+      "check": "the flagged page exists and is linked from every page",
+      "result": "PASS",
+      "detail": "flagged.html linked from 17 pages"
+    }
+  ],
+  "passed": 55,
+  "failed": 0
+}

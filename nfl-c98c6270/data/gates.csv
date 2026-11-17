@@ -1,0 +1,10 @@
+id,name,threshold,why,measured,status
+G0,SOURCE,every published row carries an official source link or an explicit UNVERIFIED marker,the brief's verification rule; without it nothing downstream is trustworthy,verified by verify.py on every build,MET
+G1,SAMPLE,n >= 300 graded prospective bets before any strategy leaves paper,exact-binomial power: proving a true 55% hit rate at 80% power needs about 2243 bets; 300 is the minimum for any rank to be interpretable,0,NOT MET
+G2,PRICE,opening and closing market prices captured for >= 95% of originated markets,"without a market price there is no residual, no CLV and no ROI",0 of 65 (0.0%),NOT MET
+G3,AVAILABILITY,">= 2 dated reads per game week for >= 28 of 32 clubs, with retained hashes","the injury signal must be a surprise, which needs a prior read to be a surprise against",2 reads for 5 of 32 clubs (15.6%),NOT MET
+G4,DEPTH,machine-readable depth with an explicit date and source for >= 30 of 32 clubs,the deficiency matrix needs both sides of every pairing,"31 of 32 clubs (96.9%), 715 rows",MET
+G5,OUTCOMES,official finals ingested for >= 2 full seasons,a chronological holdout and a multi-season split both need more than one season,"1 season, 149 finals",NOT MET
+G6,JOINT,a directly validated joint probability plus the operator's void/push rules before any combo is ranked,multiplying marginals is invalid under dependence,0 combos eligible,NOT MET
+G7,OUTCOMES-AVAILABILITY,designation-to-outcome reliability measured on n >= 200,the label cannot be a feature until its reliability is measured,n = 0,NOT MET
+G8,REPRO,deterministic rebuild plus a row-level provenance audit on the generated HTML,without it no published number can be re-derived,verified by verify.py on every build,MET

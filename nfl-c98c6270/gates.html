@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gates · Own5 NFL Decision Console</title>
+<meta name="description" content="Originate the line, prove the skill, publish the gap. Every row sourced or flagged.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="dot"></span>Own5 <em>NFL Decision Console</em></a>
+  <button class="navtoggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">Menu</button>
+  <nav class="nav" id="nav"><a class="navlink" href="index.html">Overview</a>
+<a class="navlink" href="executive-summary.html">Executive summary</a>
+<a class="navlink" href="suggestions.html">Suggestions</a>
+<a class="navlink" href="questions.html">Questions</a>
+<a class="navlink" href="requirements.html">Decision readiness</a>
+<a class="navlink" href="lines.html">Originated lines</a>
+<a class="navlink" href="strategies.html">Strategies</a>
+<a class="navlink" href="leaderboard.html">Leaderboard</a>
+<a class="navlink" href="injuries.html">Injuries</a>
+<a class="navlink" href="depth.html">Depth charts</a>
+<a class="navlink" href="deficiency.html">Deficiency matrix</a>
+<a class="navlink" href="correlations.html">Correlations</a>
+<a class="navlink" href="luck.html">Luck removal</a>
+<a class="navlink active" href="gates.html">Gates</a>
+<a class="navlink" href="audit.html">Repo audit</a>
+<a class="navlink" href="sources.html">Sources</a>
+<a class="navlink" href="flagged.html">Flagged</a></nav>
+</header>
+<main class="wrap wide">
+  <div class="pagehead">
+    <h1>Gates</h1>
+    <p>Every gate, the price policy, the data layers and the standing rejections.</p>
+  </div>
+<div class="tablewrap">
+<table class=""><thead><tr>
+<th>Gate</th>
+<th>Name</th>
+<th>Threshold</th>
+<th>Why</th>
+<th>Measured</th>
+<th>Status</th>
+<th>Provenance</th>
+</tr></thead><tbody>
+<tr><td><code>G0</code></td><td><strong>SOURCE</strong></td><td>every published row carries an official source link or an explicit UNVERIFIED marker</td><td>the brief&#x27;s verification rule; without it nothing downstream is trustworthy</td><td>verified by verify.py on every build</td><td><span class="pill ok">MET</span></td><td><a class="badge b-governance" href="gates.html#G0" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td><code>G1</code></td><td><strong>SAMPLE</strong></td><td>n &gt;= 300 graded prospective bets before any strategy leaves paper</td><td>exact-binomial power: proving a true 55% hit rate at 80% power needs about 2243 bets; 300 is the minimum for any rank to be interpretable</td><td>0</td><td><span class="pill bad">NOT MET</span></td><td><a class="badge b-governance" href="gates.html#G1" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td><code>G2</code></td><td><strong>PRICE</strong></td><td>opening and closing market prices captured for &gt;= 95% of originated markets</td><td>without a market price there is no residual, no CLV and no ROI</td><td>0 of 65 (0.0%)</td><td><span class="pill bad">NOT MET</span></td><td><a class="badge b-governance" href="gates.html#G2" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td><code>G3</code></td><td><strong>AVAILABILITY</strong></td><td>&gt;= 2 dated reads per game week for &gt;= 28 of 32 clubs, with retained hashes</td><td>the injury signal must be a surprise, which needs a prior read to be a surprise against</td><td>2 reads for 5 of 32 clubs (15.6%)</td><td><span class="pill bad">NOT MET</span></td><td><a class="badge b-governance" href="gates.html#G3" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td><code>G4</code></td><td><strong>DEPTH</strong></td><td>machine-readable depth with an explicit date and source for &gt;= 30 of 32 clubs</td><td>the deficiency matrix needs both sides of every pairing</td><td>31 of 32 clubs (96.9%), 715 rows</td><td><span class="pill ok">MET</span></td><td><a class="badge b-governance" href="gates.html#G4" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td><code>G5</code></td><td><strong>OUTCOMES</strong></td><td>official finals ingested for &gt;= 2 full seasons</td><td>a chronological holdout and a multi-season split both need more than one season</td><td>1 season, 149 finals</td><td><span class="pill bad">NOT MET</span></td><td><a class="badge b-governance" href="gates.html#G5" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td><code>G6</code></td><td><strong>JOINT</strong></td><td>a directly validated joint probability plus the operator&#x27;s void/push rules before any combo is ranked</td><td>multiplying marginals is invalid under dependence</td><td>0 combos eligible</td><td><span class="pill bad">NOT MET</span></td><td><a class="badge b-governance" href="gates.html#G6" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td><code>G7</code></td><td><strong>OUTCOMES-AVAILABILITY</strong></td><td>designation-to-outcome reliability measured on n &gt;= 200</td><td>the label cannot be a feature until its reliability is measured</td><td>n = 0</td><td><span class="pill bad">NOT MET</span></td><td><a class="badge b-governance" href="gates.html#G7" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td><code>G8</code></td><td><strong>REPRO</strong></td><td>deterministic rebuild plus a row-level provenance audit on the generated HTML</td><td>without it no published number can be re-derived</td><td>verified by verify.py on every build</td><td><span class="pill ok">MET</span></td><td><a class="badge b-governance" href="gates.html#G8" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+</tbody></table></div>
+<h2>Price-data policy (frozen before any backtest is published)</h2>
+<div class="tablewrap">
+<table class=""><thead><tr>
+<th>Clause</th>
+<th>Rule</th>
+<th>Status</th>
+<th>Reason</th>
+<th>Provenance</th>
+</tr></thead><tbody>
+<tr><td>P1</td><td>No backtest is published until a price source is named and its storage terms are recorded</td><td>FROZEN</td><td>R-20 requires the policy before the first backtest</td><td><a class="badge b-governance" href="gates.html" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td>P2</td><td>Every price row stores the source URL, the retrieval UTC timestamp and a SHA-256 of the raw capture</td><td>FROZEN</td><td>provenance; matches the capture policy used for official pages</td><td><a class="badge b-governance" href="gates.html" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td>P3</td><td>Opening price is the first capture after publication; closing price is the last capture before kickoff</td><td>FROZEN</td><td>CLV is graded against the close</td><td><a class="badge b-governance" href="gates.html" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td>P4</td><td>If no price can be captured, the market column stays blank and the row is flagged; it is never filled in</td><td>FROZEN</td><td>the brief&#x27;s verification rule</td><td><a class="badge b-governance" href="gates.html" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td>P5</td><td>No residual, no CLV and no ROI figure is published until P1-P4 hold for that market</td><td>FROZEN</td><td>prevents publishing a number that looks like an edge but is an artefact</td><td><a class="badge b-governance" href="gates.html" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+</tbody></table></div>
+<h2>Data layers</h2>
+<div class="tablewrap">
+<table class=""><thead><tr>
+<th>Layer</th>
+<th>Contents</th>
+<th>Where it lives today</th>
+<th>Target</th>
+<th>Status</th>
+<th>Provenance</th>
+</tr></thead><tbody>
+<tr><td>public analysis</td><td>derived indices, ratios, model output, links to the official page</td><td>nfl-c98c6270/*.html</td><td>unchanged</td><td><span class="pill ok">done</span></td><td><a class="badge b-governance" href="gates.html" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td>derived data</td><td>computed CSVs that back the public pages</td><td>nfl-c98c6270/data/*.csv</td><td>unchanged; these are derived, not raw</td><td><span class="pill ok">done</span></td><td><a class="badge b-governance" href="gates.html" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td>raw row-level data</td><td>official page captures, player-level rows</td><td>nfl-c98c6270/data/raw_official/ and the depth capture TSVs</td><td>private store outside the public site</td><td><span class="pill bad">not done</span></td><td><a class="badge b-governance" href="gates.html" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td>alerts</td><td>freshness and schema-drift monitors</td><td>none</td><td>monitor on every parser</td><td><span class="pill bad">not done</span></td><td><a class="badge b-governance" href="gates.html" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+</tbody></table></div>
+<h2>Standing rejections</h2>
+<div class="tablewrap">
+<table class=""><thead><tr>
+<th>ID</th>
+<th>Rejected shortcut</th>
+<th>Reason</th>
+<th>Recorded</th>
+<th>Status</th>
+<th>Provenance</th>
+</tr></thead><tbody>
+<tr><td>X-01</td><td>Derive depth order from jersey number, experience or salary</td><td>the brief rejects it explicitly, and the Packers page prepends jersey numbers to every name, which would silently corrupt the parse</td><td>2026-11-17T00:00:00Z</td><td><span class="pill bad">REJECTED</span></td><td><a class="badge b-governance" href="gates.html#X-01" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td>X-02</td><td>Rank strategies by season-long ROI</td><td>raw short-run ROI cannot separate skill from variance; the brief rejects it</td><td>2026-11-17T00:00:00Z</td><td><span class="pill bad">REJECTED</span></td><td><a class="badge b-governance" href="gates.html#X-02" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td>X-03</td><td>Transcribe the Houston depth image by eye</td><td>an image is not an authorised structured source; transcription is unverifiable</td><td>2026-11-17T00:00:00Z</td><td><span class="pill bad">REJECTED</span></td><td><a class="badge b-governance" href="gates.html#X-03" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td>X-04</td><td>Fill a blank game-status cell by inference</td><td>the brief requires blank plus a flag, never an inferred value</td><td>2026-11-17T00:00:00Z</td><td><span class="pill bad">REJECTED</span></td><td><a class="badge b-governance" href="gates.html#X-04" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td>X-05</td><td>Collapse the two total estimators on in-sample fit</td><td>the first walk-forward in this repo leaked and was corrected; the comparison must be chronological</td><td>2026-11-17T00:00:00Z</td><td><span class="pill bad">REJECTED</span></td><td><a class="badge b-governance" href="gates.html#X-05" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+</tbody></table></div>
+<h2>Controls</h2>
+<div class="tablewrap">
+<table class=""><thead><tr>
+<th>ID</th>
+<th>Control</th>
+<th>Rule</th>
+<th>Purpose</th>
+<th>Provenance</th>
+</tr></thead><tbody>
+<tr><td>C1</td><td>Random singles</td><td>pick the home side with probability 0.5 on every game</td><td>separates any skill from the coin-flip floor</td><td><a class="badge b-computed" href="leaderboard.html" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td>C2</td><td>Favourites only</td><td>always back the side our own model makes the favourite</td><td>shows how much of a record comes from picking favourites</td><td><a class="badge b-computed" href="leaderboard.html" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td>C3</td><td>Home only</td><td>always back the home side</td><td>shows the value of the home-field term alone</td><td><a class="badge b-computed" href="leaderboard.html" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+</tbody></table></div>
+</main>
+<footer class="foot">
+  <p><strong>Own5 NFL Decision Console</strong> · session <code>c98c6270</code> ·
+  official pages captured 2026-11-17T00:00:00Z · <a href="flagged.html">Flagged for Review</a> ·
+  <a href="sources.html">Sources</a> · <a href="audit.html">Repo audit</a> ·
+  <a href="../index.html">Own5 dashboard</a> ·
+  <a href="../COORDINATION.md">Coordination log</a></p>
+  <p class="fine">Research only. Nothing here is a bet, a tip, or advice. No strategy is
+  certified, no reward is issued, and no market price exists anywhere in this repository.</p>
+</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+row,division,family,graded_bets,brier,benchmark_brier,brier_skill,cluster_lower_bound,status,note
+-,singles,,0,,,,,empty by design,blocked by G1 SAMPLE; no backtest number may ever appear here (R-09)
+-,game parlays,,0,,,,,empty by design,blocked by G6 JOINT; no backtest number may ever appear here (R-09)
+-,same-game parlays,,0,,,,,empty by design,blocked by G6 JOINT; no backtest number may ever appear here (R-09)
+-,prop combos,,0,,,,,empty by design,blocked by G6 JOINT; no backtest number may ever appear here (R-09)

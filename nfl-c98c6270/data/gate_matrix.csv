@@ -1,0 +1,127 @@
+family,gate,status,note
+Team-strength singles baseline,G0,MET,no strategy leaves paper until every gate reads MET
+Team-strength singles baseline,G1,NOT MET,no strategy leaves paper until every gate reads MET
+Team-strength singles baseline,G2,NOT MET,no strategy leaves paper until every gate reads MET
+Team-strength singles baseline,G3,NOT MET,no strategy leaves paper until every gate reads MET
+Team-strength singles baseline,G4,NOT MET,no strategy leaves paper until every gate reads MET
+Team-strength singles baseline,G5,NOT MET,no strategy leaves paper until every gate reads MET
+Team-strength singles baseline,G6,NOT MET,no strategy leaves paper until every gate reads MET
+Team-strength singles baseline,G7,NOT MET,no strategy leaves paper until every gate reads MET
+Team-strength singles baseline,G8,NOT MET,no strategy leaves paper until every gate reads MET
+"Totals baseline, estimator A",G0,MET,no strategy leaves paper until every gate reads MET
+"Totals baseline, estimator A",G1,NOT MET,no strategy leaves paper until every gate reads MET
+"Totals baseline, estimator A",G2,NOT MET,no strategy leaves paper until every gate reads MET
+"Totals baseline, estimator A",G3,NOT MET,no strategy leaves paper until every gate reads MET
+"Totals baseline, estimator A",G4,NOT MET,no strategy leaves paper until every gate reads MET
+"Totals baseline, estimator A",G5,NOT MET,no strategy leaves paper until every gate reads MET
+"Totals baseline, estimator A",G6,NOT MET,no strategy leaves paper until every gate reads MET
+"Totals baseline, estimator A",G7,NOT MET,no strategy leaves paper until every gate reads MET
+"Totals baseline, estimator A",G8,NOT MET,no strategy leaves paper until every gate reads MET
+"Totals baseline, estimator B",G0,MET,no strategy leaves paper until every gate reads MET
+"Totals baseline, estimator B",G1,NOT MET,no strategy leaves paper until every gate reads MET
+"Totals baseline, estimator B",G2,NOT MET,no strategy leaves paper until every gate reads MET
+"Totals baseline, estimator B",G3,NOT MET,no strategy leaves paper until every gate reads MET
+"Totals baseline, estimator B",G4,NOT MET,no strategy leaves paper until every gate reads MET
+"Totals baseline, estimator B",G5,NOT MET,no strategy leaves paper until every gate reads MET
+"Totals baseline, estimator B",G6,NOT MET,no strategy leaves paper until every gate reads MET
+"Totals baseline, estimator B",G7,NOT MET,no strategy leaves paper until every gate reads MET
+"Totals baseline, estimator B",G8,NOT MET,no strategy leaves paper until every gate reads MET
+Moneyline value baseline,G0,MET,no strategy leaves paper until every gate reads MET
+Moneyline value baseline,G1,NOT MET,no strategy leaves paper until every gate reads MET
+Moneyline value baseline,G2,NOT MET,no strategy leaves paper until every gate reads MET
+Moneyline value baseline,G3,NOT MET,no strategy leaves paper until every gate reads MET
+Moneyline value baseline,G4,NOT MET,no strategy leaves paper until every gate reads MET
+Moneyline value baseline,G5,NOT MET,no strategy leaves paper until every gate reads MET
+Moneyline value baseline,G6,NOT MET,no strategy leaves paper until every gate reads MET
+Moneyline value baseline,G7,NOT MET,no strategy leaves paper until every gate reads MET
+Moneyline value baseline,G8,NOT MET,no strategy leaves paper until every gate reads MET
+Rest-and-travel fade,G0,MET,no strategy leaves paper until every gate reads MET
+Rest-and-travel fade,G1,NOT MET,no strategy leaves paper until every gate reads MET
+Rest-and-travel fade,G2,NOT MET,no strategy leaves paper until every gate reads MET
+Rest-and-travel fade,G3,NOT MET,no strategy leaves paper until every gate reads MET
+Rest-and-travel fade,G4,NOT MET,no strategy leaves paper until every gate reads MET
+Rest-and-travel fade,G5,NOT MET,no strategy leaves paper until every gate reads MET
+Rest-and-travel fade,G6,NOT MET,no strategy leaves paper until every gate reads MET
+Rest-and-travel fade,G7,NOT MET,no strategy leaves paper until every gate reads MET
+Rest-and-travel fade,G8,NOT MET,no strategy leaves paper until every gate reads MET
+Division-underdog filter,G0,MET,no strategy leaves paper until every gate reads MET
+Division-underdog filter,G1,NOT MET,no strategy leaves paper until every gate reads MET
+Division-underdog filter,G2,NOT MET,no strategy leaves paper until every gate reads MET
+Division-underdog filter,G3,NOT MET,no strategy leaves paper until every gate reads MET
+Division-underdog filter,G4,NOT MET,no strategy leaves paper until every gate reads MET
+Division-underdog filter,G5,NOT MET,no strategy leaves paper until every gate reads MET
+Division-underdog filter,G6,NOT MET,no strategy leaves paper until every gate reads MET
+Division-underdog filter,G7,NOT MET,no strategy leaves paper until every gate reads MET
+Division-underdog filter,G8,NOT MET,no strategy leaves paper until every gate reads MET
+Rank-1 offensive-line deficiency fade,G0,MET,no strategy leaves paper until every gate reads MET
+Rank-1 offensive-line deficiency fade,G1,NOT MET,no strategy leaves paper until every gate reads MET
+Rank-1 offensive-line deficiency fade,G2,NOT MET,no strategy leaves paper until every gate reads MET
+Rank-1 offensive-line deficiency fade,G3,NOT MET,no strategy leaves paper until every gate reads MET
+Rank-1 offensive-line deficiency fade,G4,NOT MET,no strategy leaves paper until every gate reads MET
+Rank-1 offensive-line deficiency fade,G5,NOT MET,no strategy leaves paper until every gate reads MET
+Rank-1 offensive-line deficiency fade,G6,NOT MET,no strategy leaves paper until every gate reads MET
+Rank-1 offensive-line deficiency fade,G7,NOT MET,no strategy leaves paper until every gate reads MET
+Rank-1 offensive-line deficiency fade,G8,NOT MET,no strategy leaves paper until every gate reads MET
+Secondary-deficiency over,G0,MET,no strategy leaves paper until every gate reads MET
+Secondary-deficiency over,G1,NOT MET,no strategy leaves paper until every gate reads MET
+Secondary-deficiency over,G2,NOT MET,no strategy leaves paper until every gate reads MET
+Secondary-deficiency over,G3,NOT MET,no strategy leaves paper until every gate reads MET
+Secondary-deficiency over,G4,NOT MET,no strategy leaves paper until every gate reads MET
+Secondary-deficiency over,G5,NOT MET,no strategy leaves paper until every gate reads MET
+Secondary-deficiency over,G6,NOT MET,no strategy leaves paper until every gate reads MET
+Secondary-deficiency over,G7,NOT MET,no strategy leaves paper until every gate reads MET
+Secondary-deficiency over,G8,NOT MET,no strategy leaves paper until every gate reads MET
+Two-leg game parlay,G0,MET,no strategy leaves paper until every gate reads MET
+Two-leg game parlay,G1,NOT MET,no strategy leaves paper until every gate reads MET
+Two-leg game parlay,G2,NOT MET,no strategy leaves paper until every gate reads MET
+Two-leg game parlay,G3,NOT MET,no strategy leaves paper until every gate reads MET
+Two-leg game parlay,G4,NOT MET,no strategy leaves paper until every gate reads MET
+Two-leg game parlay,G5,NOT MET,no strategy leaves paper until every gate reads MET
+Two-leg game parlay,G6,NOT MET,no strategy leaves paper until every gate reads MET
+Two-leg game parlay,G7,NOT MET,no strategy leaves paper until every gate reads MET
+Two-leg game parlay,G8,NOT MET,no strategy leaves paper until every gate reads MET
+Three-leg game parlay,G0,MET,no strategy leaves paper until every gate reads MET
+Three-leg game parlay,G1,NOT MET,no strategy leaves paper until every gate reads MET
+Three-leg game parlay,G2,NOT MET,no strategy leaves paper until every gate reads MET
+Three-leg game parlay,G3,NOT MET,no strategy leaves paper until every gate reads MET
+Three-leg game parlay,G4,NOT MET,no strategy leaves paper until every gate reads MET
+Three-leg game parlay,G5,NOT MET,no strategy leaves paper until every gate reads MET
+Three-leg game parlay,G6,NOT MET,no strategy leaves paper until every gate reads MET
+Three-leg game parlay,G7,NOT MET,no strategy leaves paper until every gate reads MET
+Three-leg game parlay,G8,NOT MET,no strategy leaves paper until every gate reads MET
+Same-game parlay: side plus total,G0,MET,no strategy leaves paper until every gate reads MET
+Same-game parlay: side plus total,G1,NOT MET,no strategy leaves paper until every gate reads MET
+Same-game parlay: side plus total,G2,NOT MET,no strategy leaves paper until every gate reads MET
+Same-game parlay: side plus total,G3,NOT MET,no strategy leaves paper until every gate reads MET
+Same-game parlay: side plus total,G4,NOT MET,no strategy leaves paper until every gate reads MET
+Same-game parlay: side plus total,G5,NOT MET,no strategy leaves paper until every gate reads MET
+Same-game parlay: side plus total,G6,NOT MET,no strategy leaves paper until every gate reads MET
+Same-game parlay: side plus total,G7,NOT MET,no strategy leaves paper until every gate reads MET
+Same-game parlay: side plus total,G8,NOT MET,no strategy leaves paper until every gate reads MET
+Same-game parlay: favourite side plus favourite team total,G0,MET,no strategy leaves paper until every gate reads MET
+Same-game parlay: favourite side plus favourite team total,G1,NOT MET,no strategy leaves paper until every gate reads MET
+Same-game parlay: favourite side plus favourite team total,G2,NOT MET,no strategy leaves paper until every gate reads MET
+Same-game parlay: favourite side plus favourite team total,G3,NOT MET,no strategy leaves paper until every gate reads MET
+Same-game parlay: favourite side plus favourite team total,G4,NOT MET,no strategy leaves paper until every gate reads MET
+Same-game parlay: favourite side plus favourite team total,G5,NOT MET,no strategy leaves paper until every gate reads MET
+Same-game parlay: favourite side plus favourite team total,G6,NOT MET,no strategy leaves paper until every gate reads MET
+Same-game parlay: favourite side plus favourite team total,G7,NOT MET,no strategy leaves paper until every gate reads MET
+Same-game parlay: favourite side plus favourite team total,G8,NOT MET,no strategy leaves paper until every gate reads MET
+Quarterback-prop combo,G0,MET,no strategy leaves paper until every gate reads MET
+Quarterback-prop combo,G1,NOT MET,no strategy leaves paper until every gate reads MET
+Quarterback-prop combo,G2,NOT MET,no strategy leaves paper until every gate reads MET
+Quarterback-prop combo,G3,NOT MET,no strategy leaves paper until every gate reads MET
+Quarterback-prop combo,G4,NOT MET,no strategy leaves paper until every gate reads MET
+Quarterback-prop combo,G5,NOT MET,no strategy leaves paper until every gate reads MET
+Quarterback-prop combo,G6,NOT MET,no strategy leaves paper until every gate reads MET
+Quarterback-prop combo,G7,NOT MET,no strategy leaves paper until every gate reads MET
+Quarterback-prop combo,G8,NOT MET,no strategy leaves paper until every gate reads MET
+Receiver-prop combo,G0,MET,no strategy leaves paper until every gate reads MET
+Receiver-prop combo,G1,NOT MET,no strategy leaves paper until every gate reads MET
+Receiver-prop combo,G2,NOT MET,no strategy leaves paper until every gate reads MET
+Receiver-prop combo,G3,NOT MET,no strategy leaves paper until every gate reads MET
+Receiver-prop combo,G4,NOT MET,no strategy leaves paper until every gate reads MET
+Receiver-prop combo,G5,NOT MET,no strategy leaves paper until every gate reads MET
+Receiver-prop combo,G6,NOT MET,no strategy leaves paper until every gate reads MET
+Receiver-prop combo,G7,NOT MET,no strategy leaves paper until every gate reads MET
+Receiver-prop combo,G8,NOT MET,no strategy leaves paper until every gate reads MET

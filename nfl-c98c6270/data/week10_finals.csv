@@ -1,0 +1,15 @@
+game_id,season,week,kickoff_date,away,home,away_score,home_score,neutral_site,status,note,source_url,captured_utc
+2026_10_WAS_NYG,2026,10,2026-11-12,WAS,NYG,24,21,,FINAL,Thursday Night Football,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-17T00:00:00Z
+2026_10_NE_DET,2026,10,2026-11-15,NE,DET,10,35,Munich,FINAL,International Game (Munich),https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-17T00:00:00Z
+2026_10_KC_ATL,2026,10,2026-11-15,KC,ATL,35,13,,FINAL,,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-17T00:00:00Z
+2026_10_HOU_CLE,2026,10,2026-11-15,HOU,CLE,24,27,,FINAL,,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-17T00:00:00Z
+2026_10_MIN_GB,2026,10,2026-11-15,MIN,GB,30,10,,FINAL,,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-17T00:00:00Z
+2026_10_MIA_IND,2026,10,2026-11-15,MIA,IND,22,24,,FINAL,,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-17T00:00:00Z
+2026_10_CAR_NO,2026,10,2026-11-15,CAR,NO,20,17,,FINAL,,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-17T00:00:00Z
+2026_10_BUF_NYJ,2026,10,2026-11-15,BUF,NYJ,31,12,,FINAL,,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-17T00:00:00Z
+2026_10_JAX_TEN,2026,10,2026-11-15,JAX,TEN,40,23,,FINAL,,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-17T00:00:00Z
+2026_10_LAR_ARI,2026,10,2026-11-15,LAR,ARI,34,6,,FINAL,,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-17T00:00:00Z
+2026_10_SEA_LV,2026,10,2026-11-15,SEA,LV,21,13,,FINAL,,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-17T00:00:00Z
+2026_10_SF_DAL,2026,10,2026-11-15,SF,DAL,46,40,,FINAL,,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-17T00:00:00Z
+2026_10_PIT_CIN,2026,10,2026-11-15,PIT,CIN,18,38,,FINAL,Sunday Night Football,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-17T00:00:00Z
+2026_10_LAC_BAL,2026,10,2026-11-16,LAC,BAL,,,,,NOT FINAL AT CAPTURE,official week page showed no final score at capture; published blank by policy,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-17T00:00:00Z

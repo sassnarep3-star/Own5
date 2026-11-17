@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leaderboard · Own5 NFL Decision Console</title>
+<meta name="description" content="Originate the line, prove the skill, publish the gap. Every row sourced or flagged.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="dot"></span>Own5 <em>NFL Decision Console</em></a>
+  <button class="navtoggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">Menu</button>
+  <nav class="nav" id="nav"><a class="navlink" href="index.html">Overview</a>
+<a class="navlink" href="executive-summary.html">Executive summary</a>
+<a class="navlink" href="suggestions.html">Suggestions</a>
+<a class="navlink" href="questions.html">Questions</a>
+<a class="navlink" href="requirements.html">Decision readiness</a>
+<a class="navlink" href="lines.html">Originated lines</a>
+<a class="navlink" href="strategies.html">Strategies</a>
+<a class="navlink active" href="leaderboard.html">Leaderboard</a>
+<a class="navlink" href="injuries.html">Injuries</a>
+<a class="navlink" href="depth.html">Depth charts</a>
+<a class="navlink" href="deficiency.html">Deficiency matrix</a>
+<a class="navlink" href="correlations.html">Correlations</a>
+<a class="navlink" href="luck.html">Luck removal</a>
+<a class="navlink" href="gates.html">Gates</a>
+<a class="navlink" href="audit.html">Repo audit</a>
+<a class="navlink" href="sources.html">Sources</a>
+<a class="navlink" href="flagged.html">Flagged</a></nav>
+</header>
+<main class="wrap wide">
+  <div class="pagehead">
+    <h1>Leaderboard</h1>
+    <p>Proper-score divisions, signal split from staking, controls on every run.</p>
+  </div>
+<div class="panel warn"><p><strong>Every division is empty, and that is the correct state.</strong> Four divisions are defined and each one names the gate that blocks it. Ranking a strategy before its gate clears would publish noise, and a backtest number may never appear here at all (R-09).</p></div>
+<div class="tablewrap">
+<table class=""><thead><tr>
+<th>Division</th>
+<th>Registered families</th>
+<th>Graded bets</th>
+<th>Rows ranked</th>
+<th>Ranking metric</th>
+<th>Blocking gate</th>
+<th>Note</th>
+<th>Provenance</th>
+</tr></thead><tbody>
+<tr><td>singles</td><td>8</td><td>0</td><td>0</td><td>benchmark-relative Brier skill, game-cluster lower bound, multiplicity-adjusted</td><td><span class="pill bad">G1 SAMPLE</span></td><td>eligible once 300 graded prospective bets exist</td><td><a class="badge b-governance" href="gates.html" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td>game parlays</td><td>0</td><td>0</td><td>0</td><td>benchmark-relative Brier skill, game-cluster lower bound, multiplicity-adjusted</td><td><span class="pill bad">G6 JOINT</span></td><td>needs a directly validated joint probability and the operator void/push rules</td><td><a class="badge b-governance" href="gates.html" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td>same-game parlays</td><td>0</td><td>0</td><td>0</td><td>benchmark-relative Brier skill, game-cluster lower bound, multiplicity-adjusted</td><td><span class="pill bad">G6 JOINT</span></td><td>needs a measured within-game correlation on n&gt;=300 same-game pairs</td><td><a class="badge b-governance" href="gates.html" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td>prop combos</td><td>2</td><td>0</td><td>0</td><td>benchmark-relative Brier skill, game-cluster lower bound, multiplicity-adjusted</td><td><span class="pill bad">G6 JOINT</span></td><td>needs captured prop prices and a measured within-game prop correlation</td><td><a class="badge b-governance" href="gates.html" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+</tbody></table></div>
+<h2>Signal ledger (separate from staking by construction)</h2>
+<div class="tablewrap">
+<table class=""><thead><tr>
+<th>Row</th>
+<th>Division</th>
+<th>Family</th>
+<th>Graded bets</th>
+<th>Brier</th>
+<th>Benchmark Brier</th>
+<th>Brier skill</th>
+<th>Cluster lower bound</th>
+<th>Status</th>
+<th>Note</th>
+<th>Provenance</th>
+</tr></thead><tbody>
+<tr><td>-</td><td>singles</td><td>-</td><td>0</td><td>-</td><td>-</td><td>-</td><td>-</td><td><span class="pill warn">empty by design</span></td><td>blocked by G1 SAMPLE; no backtest number may ever appear here (R-09)</td><td><a class="badge b-governance" href="leaderboard.html" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td>-</td><td>game parlays</td><td>-</td><td>0</td><td>-</td><td>-</td><td>-</td><td>-</td><td><span class="pill warn">empty by design</span></td><td>blocked by G6 JOINT; no backtest number may ever appear here (R-09)</td><td><a class="badge b-governance" href="leaderboard.html" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td>-</td><td>same-game parlays</td><td>-</td><td>0</td><td>-</td><td>-</td><td>-</td><td>-</td><td><span class="pill warn">empty by design</span></td><td>blocked by G6 JOINT; no backtest number may ever appear here (R-09)</td><td><a class="badge b-governance" href="leaderboard.html" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td>-</td><td>prop combos</td><td>-</td><td>0</td><td>-</td><td>-</td><td>-</td><td>-</td><td><span class="pill warn">empty by design</span></td><td>blocked by G6 JOINT; no backtest number may ever appear here (R-09)</td><td><a class="badge b-governance" href="leaderboard.html" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+</tbody></table></div>
+<h2>Staking ledger</h2>
+<div class="tablewrap">
+<table class=""><thead><tr>
+<th>Row</th>
+<th>Division</th>
+<th>Family</th>
+<th>Graded bets</th>
+<th>Brier</th>
+<th>Benchmark Brier</th>
+<th>Brier skill</th>
+<th>Cluster lower bound</th>
+<th>Status</th>
+<th>Note</th>
+<th>Provenance</th>
+</tr></thead><tbody>
+<tr><td>-</td><td>singles</td><td>-</td><td>0</td><td>-</td><td>-</td><td>-</td><td>-</td><td><span class="pill warn">empty by design</span></td><td>blocked by G1 SAMPLE; no backtest number may ever appear here (R-09)</td><td><a class="badge b-governance" href="leaderboard.html" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td>-</td><td>game parlays</td><td>-</td><td>0</td><td>-</td><td>-</td><td>-</td><td>-</td><td><span class="pill warn">empty by design</span></td><td>blocked by G6 JOINT; no backtest number may ever appear here (R-09)</td><td><a class="badge b-governance" href="leaderboard.html" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td>-</td><td>same-game parlays</td><td>-</td><td>0</td><td>-</td><td>-</td><td>-</td><td>-</td><td><span class="pill warn">empty by design</span></td><td>blocked by G6 JOINT; no backtest number may ever appear here (R-09)</td><td><a class="badge b-governance" href="leaderboard.html" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+<tr><td>-</td><td>prop combos</td><td>-</td><td>0</td><td>-</td><td>-</td><td>-</td><td>-</td><td><span class="pill warn">empty by design</span></td><td>blocked by G6 JOINT; no backtest number may ever appear here (R-09)</td><td><a class="badge b-governance" href="leaderboard.html" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+</tbody></table></div>
+<div class="panel"><p class="fine">The two ledgers are rendered separately so a lucky staking run can never be mistaken for a good signal (R-05). Both are graded on the same proper score.</p></div>
+</main>
+<footer class="foot">
+  <p><strong>Own5 NFL Decision Console</strong> · session <code>c98c6270</code> ·
+  official pages captured 2026-11-17T00:00:00Z · <a href="flagged.html">Flagged for Review</a> ·
+  <a href="sources.html">Sources</a> · <a href="audit.html">Repo audit</a> ·
+  <a href="../index.html">Own5 dashboard</a> ·
+  <a href="../COORDINATION.md">Coordination log</a></p>
+  <p class="fine">Research only. Nothing here is a bet, a tip, or advice. No strategy is
+  certified, no reward is issued, and no market price exists anywhere in this repository.</p>
+</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>
