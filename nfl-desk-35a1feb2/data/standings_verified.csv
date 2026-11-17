@@ -1,0 +1,33 @@
+team,club,w,l,t,games_played,pct_published,pct_recomputed,pct_agrees,pf,pa,net_published,net_recomputed,net_agrees,pf_per_game,pa_per_game,net_per_game,record_from_game_log,points_from_game_log,matches_game_log,read_utc,source_url
+BUF,Buffalo Bills,8,1,0,9,0.889,0.889,yes,287,199,88,88,yes,31.8889,22.1111,9.7778,8-1-0,287:199,yes,2026-11-17T00:39:30Z,https://www.nfl.com/standings/league/2026/REG
+SF,San Francisco 49ers,8,1,0,9,0.889,0.889,yes,281,196,85,85,yes,31.2222,21.7778,9.4444,8-1-0,281:196,yes,2026-11-17T00:39:30Z,https://www.nfl.com/standings/league/2026/REG
+CHI,Chicago Bears,7,2,0,9,0.778,0.778,yes,241,184,57,57,yes,26.7778,20.4444,6.3333,7-2-0,241:184,yes,2026-11-17T00:39:30Z,https://www.nfl.com/standings/league/2026/REG
+CIN,Cincinnati Bengals,7,2,0,9,0.778,0.778,yes,278,193,85,85,yes,30.8889,21.4444,9.4444,7-2-0,278:193,yes,2026-11-17T00:39:30Z,https://www.nfl.com/standings/league/2026/REG
+DEN,Denver Broncos,7,2,0,9,0.778,0.778,yes,198,186,12,12,yes,22.0000,20.6667,1.3333,7-2-0,198:186,yes,2026-11-17T00:39:30Z,https://www.nfl.com/standings/league/2026/REG
+DET,Detroit Lions,7,2,0,9,0.778,0.778,yes,257,199,58,58,yes,28.5556,22.1111,6.4444,7-2-0,257:199,yes,2026-11-17T00:39:30Z,https://www.nfl.com/standings/league/2026/REG
+JAX,Jacksonville Jaguars,7,2,0,9,0.778,0.778,yes,269,144,125,125,yes,29.8889,16.0000,13.8889,7-2-0,269:144,yes,2026-11-17T00:39:30Z,https://www.nfl.com/standings/league/2026/REG
+KC,Kansas City Chiefs,7,2,0,9,0.778,0.778,yes,237,156,81,81,yes,26.3333,17.3333,9.0000,7-2-0,237:156,yes,2026-11-17T00:39:30Z,https://www.nfl.com/standings/league/2026/REG
+MIN,Minnesota Vikings,7,2,0,9,0.778,0.778,yes,176,126,50,50,yes,19.5556,14.0000,5.5556,7-2-0,176:126,yes,2026-11-17T00:39:30Z,https://www.nfl.com/standings/league/2026/REG
+PIT,Pittsburgh Steelers,6,3,0,9,0.667,0.667,yes,198,182,16,16,yes,22.0000,20.2222,1.7778,6-3-0,198:182,yes,2026-11-17T00:39:30Z,https://www.nfl.com/standings/league/2026/REG
+NYG,New York Giants,5,3,1,9,0.611,0.611,yes,203,196,7,7,yes,22.5556,21.7778,0.7778,5-3-1,203:196,yes,2026-11-17T00:39:30Z,https://www.nfl.com/standings/league/2026/REG
+CLE,Cleveland Browns,6,4,0,10,0.600,0.600,yes,188,220,-32,-32,yes,18.8000,22.0000,-3.2000,6-4-0,188:220,yes,2026-11-17T00:39:30Z,https://www.nfl.com/standings/league/2026/REG
+GB,Green Bay Packers,6,4,0,10,0.600,0.600,yes,226,221,5,5,yes,22.6000,22.1000,0.5000,6-4-0,226:221,yes,2026-11-17T00:39:30Z,https://www.nfl.com/standings/league/2026/REG
+LA,Los Angeles Rams,6,4,0,10,0.600,0.600,yes,248,187,61,61,yes,24.8000,18.7000,6.1000,6-4-0,248:187,yes,2026-11-17T00:39:30Z,https://www.nfl.com/standings/league/2026/REG
+SEA,Seattle Seahawks,6,4,0,10,0.600,0.600,yes,223,175,48,48,yes,22.3000,17.5000,4.8000,6-4-0,223:175,yes,2026-11-17T00:39:30Z,https://www.nfl.com/standings/league/2026/REG
+NE,New England Patriots,5,5,0,10,0.500,0.500,yes,221,242,-21,-21,yes,22.1000,24.2000,-2.1000,5-5-0,221:242,yes,2026-11-17T00:39:30Z,https://www.nfl.com/standings/league/2026/REG
+BAL,Baltimore Ravens,4,5,0,9,0.444,0.444,yes,189,236,-47,-47,yes,21.0000,26.2222,-5.2222,4-5-0,189:236,yes,2026-11-17T00:39:30Z,https://www.nfl.com/standings/league/2026/REG
+CAR,Carolina Panthers,4,5,0,9,0.444,0.444,yes,219,236,-17,-17,yes,24.3333,26.2222,-1.8889,4-5-0,219:236,yes,2026-11-17T00:39:30Z,https://www.nfl.com/standings/league/2026/REG
+DAL,Dallas Cowboys,4,6,0,10,0.400,0.400,yes,286,282,4,4,yes,28.6000,28.2000,0.4000,4-6-0,286:282,yes,2026-11-17T00:39:30Z,https://www.nfl.com/standings/league/2026/REG
+LV,Las Vegas Raiders,4,6,0,10,0.400,0.400,yes,251,289,-38,-38,yes,25.1000,28.9000,-3.8000,4-6-0,251:289,yes,2026-11-17T00:39:30Z,https://www.nfl.com/standings/league/2026/REG
+WAS,Washington Commanders,3,5,1,9,0.389,0.389,yes,196,223,-27,-27,yes,21.7778,24.7778,-3.0000,3-5-1,196:223,yes,2026-11-17T00:39:30Z,https://www.nfl.com/standings/league/2026/REG
+HOU,Houston Texans,3,6,0,9,0.333,0.333,yes,233,219,14,14,yes,25.8889,24.3333,1.5556,3-6-0,233:219,yes,2026-11-17T00:39:30Z,https://www.nfl.com/standings/league/2026/REG
+NO,New Orleans Saints,3,6,0,9,0.333,0.333,yes,202,236,-34,-34,yes,22.4444,26.2222,-3.7778,3-6-0,202:236,yes,2026-11-17T00:39:30Z,https://www.nfl.com/standings/league/2026/REG
+TB,Tampa Bay Buccaneers,3,6,0,9,0.333,0.333,yes,202,178,24,24,yes,22.4444,19.7778,2.6667,3-6-0,202:178,yes,2026-11-17T00:39:30Z,https://www.nfl.com/standings/league/2026/REG
+AZ,Arizona Cardinals,3,7,0,10,0.300,0.300,yes,184,289,-105,-105,yes,18.4000,28.9000,-10.5000,3-7-0,184:289,yes,2026-11-17T00:39:30Z,https://www.nfl.com/standings/league/2026/REG
+ATL,Atlanta Falcons,3,7,0,10,0.300,0.300,yes,201,258,-57,-57,yes,20.1000,25.8000,-5.7000,3-7-0,201:258,yes,2026-11-17T00:39:30Z,https://www.nfl.com/standings/league/2026/REG
+IND,Indianapolis Colts,3,7,0,10,0.300,0.300,yes,208,271,-63,-63,yes,20.8000,27.1000,-6.3000,3-7-0,208:271,yes,2026-11-17T00:39:30Z,https://www.nfl.com/standings/league/2026/REG
+PHI,Philadelphia Eagles,2,7,0,9,0.222,0.222,yes,148,221,-73,-73,yes,16.4444,24.5556,-8.1111,2-7-0,148:221,yes,2026-11-17T00:39:30Z,https://www.nfl.com/standings/league/2026/REG
+NYJ,New York Jets,2,8,0,10,0.200,0.200,yes,194,254,-60,-60,yes,19.4000,25.4000,-6.0000,2-8-0,194:254,yes,2026-11-17T00:39:30Z,https://www.nfl.com/standings/league/2026/REG
+MIA,Miami Dolphins,1,8,0,9,0.111,0.111,yes,148,224,-76,-76,yes,16.4444,24.8889,-8.4444,1-8-0,148:224,yes,2026-11-17T00:39:30Z,https://www.nfl.com/standings/league/2026/REG
+TEN,Tennessee Titans,1,8,0,9,0.111,0.111,yes,167,239,-72,-72,yes,18.5556,26.5556,-8.0000,1-8-0,167:239,yes,2026-11-17T00:39:30Z,https://www.nfl.com/standings/league/2026/REG
+LAC,Los Angeles Chargers,0,8,0,8,0.000,0.000,yes,121,219,-98,-98,yes,15.1250,27.3750,-12.2500,0-8-0,121:219,yes,2026-11-17T00:39:30Z,https://www.nfl.com/standings/league/2026/REG

@@ -1,0 +1,6 @@
+game_id,week,old_status,old_score,new_status,new_score,changed,read_utc,source_url
+2026_10_LAR_ARI,10,PENDING (published blank on 2026-11-15 by session e46fb855),(blank),FINAL,34-6,yes,2026-11-17T00:39:30Z,https://www.nfl.com/schedules/2026/by-week/week-10
+2026_10_SEA_LV,10,PENDING (published blank on 2026-11-15 by session e46fb855),(blank),FINAL,21-13,yes,2026-11-17T00:39:30Z,https://www.nfl.com/schedules/2026/by-week/week-10
+2026_10_SF_DAL,10,PENDING (published blank on 2026-11-15 by session e46fb855),(blank),FINAL,46-40,yes,2026-11-17T00:39:30Z,https://www.nfl.com/schedules/2026/by-week/week-10
+2026_10_PIT_CIN,10,PENDING (published blank on 2026-11-15 by session e46fb855),(blank),FINAL,18-38,yes,2026-11-17T00:39:30Z,https://www.nfl.com/schedules/2026/by-week/week-10
+2026_10_LAC_BAL,10,PENDING (published blank on 2026-11-15 by session e46fb855),(blank),SCHEDULED - NOT KICKED OFF AT READ TIME,(blank),no - still no official final,2026-11-17T00:39:30Z,https://www.nfl.com/schedules/2026/by-week/week-10

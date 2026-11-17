@@ -1,0 +1,8 @@
+metric,value
+dated roster events read from the league register,62
+clubs touched,27
+events contradicted by a carried-forward depth row,13
+depth slots in the carried-forward table,702
+clubs represented in that table,32
+register read,November 2026 trades (12 rows) + reserve list November (25) and late October (25)
+limit stated plainly,"each month page returned ~25 rows and stopped; the register is capped or paginated, so absence from the rows read is not proof a move did not happen"

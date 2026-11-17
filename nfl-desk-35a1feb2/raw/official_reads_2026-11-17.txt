@@ -1,0 +1,213 @@
+RAW OFFICIAL READS — session 35a1feb2, batch of 2026-11-17
+===========================================================
+Read channel: sandbox web fetcher (markdown rendering of the live page). nfl.com is NOT reachable from this
+sandbox by curl/urllib (TLS handshake failure), a limitation prior sessions logged too. Nothing below is
+inferred: where the page carried no value the line says "(blank)". Retrieval window 00:38Z–00:52Z.
+
+-----------------------------------------------------------
+[R1] https://www.nfl.com/schedules/2026/by-week/week-10
+     retrieved 2026-11-17T00:39Z  · page title "NFL Week 10 Schedule 2026: Games, Times, Matchups & Tickets"
+     HEADINGS AND SCORE LINES AS PUBLISHED (a "FINAL" line = complete; a fixture with no FINAL line is
+     published by the league as scheduled and is recorded here with NO score at all):
+
+  Thursday Night Football, November 12th
+    Commanders 24, Giants 21, FINAL                             -> WAS 24 at NYG 21
+  International Game, November 15th (Munich 2026 logo on the block)
+    Patriots 10, Lions 35, FINAL                                -> NE 10 at DET 35
+  Sunday, November 15th
+    Chiefs 35, Falcons 13, FINAL                                -> KC 35 at ATL 13
+    Texans 24, Browns 27, FINAL                                 -> HOU 24 at CLE 27
+    Vikings 30, Packers 10, FINAL                               -> MIN 30 at GB 10
+    Dolphins 22, Colts 24, FINAL                                -> MIA 22 at IND 24
+    Panthers 20, Saints 17, FINAL                               -> CAR 20 at NO 17
+    Bills 31, Jets 12, FINAL                                    -> BUF 31 at NYJ 12
+    Jaguars 40, Titans 23, FINAL                                -> JAX 40 at TEN 23
+    Rams 34, Cardinals 6, FINAL                                 -> LA 34 at AZ 6
+    Seahawks 21, Raiders 13, FINAL                              -> SEA 21 at LV 13
+    49ers 46, Cowboys 40, FINAL                                 -> SF 46 at DAL 40
+  Sunday Night Football, November 15th
+    Steelers 18, Bengals 38, FINAL                              -> PIT 18 at CIN 38
+  Monday Night Football, November 16th
+    Chargers at Ravens, Monday, November 16th, 8:15 PM, ESPN    -> NO SCORE PUBLISHED AT READ TIME
+      retrieval 00:39Z = 19:39 ET, 36 minutes before kickoff. Status recorded as SCHEDULED, score blank.
+  Teams on Bye (as published, with the record chip shown): CHI 7-2, DEN 7-2, PHI 2-7, TB 3-6
+  Page also carries the league's flexible-scheduling notice: week 16/17 designated matchups to be announced
+  "no later than immediately after Week 14"/"after Week 15", week 18 "following the conclusion of Week 17",
+  with the procedures document linked at https://www.nfl.com/legal/flexible-scheduling-procedures
+
+-----------------------------------------------------------
+[R2] https://www.nfl.com/standings/league/2026/REG
+     retrieved 2026-11-17T00:39Z · page title "2026 NFL League Standings"
+     Columns used: team | W | L | T | PCT | PF | PA | NET PTS  (order as published, league rank)
+
+  BUF|8|1|0|0.889|287|199|88      SF|8|1|0|0.889|281|196|85      CHI|7|2|0|0.778|241|184|57
+  CIN|7|2|0|0.778|278|193|85      DEN|7|2|0|0.778|198|186|12    DET|7|2|0|0.778|257|199|58
+  JAX|7|2|0|0.778|269|144|125     KC|7|2|0|0.778|237|156|81     MIN|7|2|0|0.778|176|126|50
+  PIT|6|3|0|0.667|198|182|16      NYG|5|3|1|0.611|203|196|7    CLE|6|4|0|0.600|188|220|-32
+  GB|6|4|0|0.600|226|221|5        LA|6|4|0|0.600|248|187|61    SEA|6|4|0|0.600|223|175|48
+  NE|5|5|0|0.500|221|242|-21      BAL|4|5|0|0.444|189|236|-47  CAR|4|5|0|0.444|219|236|-17
+  DAL|4|6|0|0.400|286|282|4       LV|4|6|0|0.400|251|289|-38   WAS|3|5|1|0.389|196|223|-27
+  HOU|3|6|0|0.333|233|219|14      NO|3|6|0|0.333|202|236|-34   TB|3|6|0|0.333|202|178|24
+  AZ|3|7|0|0.300|184|289|-105     ATL|3|7|0|0.300|201|258|-57  IND|3|7|0|0.300|208|271|-63
+  PHI|2|7|0|0.222|148|221|-73     NYJ|2|8|0|0.200|194|254|-60  MIA|1|8|0|0.111|148|224|-76
+  TEN|1|8|0|0.111|167|239|-72     LAC|0|8|0|0.000|121|219|-98
+     Legend on page: W L T PCT HOME ROAD DIV CONF PF PA NET PTS STRK; x clinched playoff, y wild card,
+     z clinched division, * division + homefield. (Legend text recorded; no club carries a marker.)
+     CURRENCY: this state does not include LAC at BAL, unplayed at read time. Games played differs by club.
+
+-----------------------------------------------------------
+[R3] https://www.nfl.com/schedules/2026/by-week/week-11
+     retrieved 2026-11-17T00:41Z (3 chunks) · title "NFL Week 11 Schedule 2026: Games, Times, Matchups & Tickets"
+  IND @ HOU  Thu Nov 19 8:15 PM PRIME        | MIA @ BUF Sun Nov 22 1:00 PM CBS
+  BAL @ CAR  Sun Nov 22 1:00 PM FOX          | NO  @ CHI Sun Nov 22 1:00 PM FOX
+  TEN @ DAL  Sun Nov 22 1:00 PM FOX          | TB  @ DET Sun Nov 22 1:00 PM FOX
+  AZ  @ KC   Sun Nov 22 1:00 PM CBS         | PIT @ PHI Sun Nov 22 1:00 PM CBS
+  NYJ @ LAC  Sun Nov 22 4:05 PM FOX         | JAX @ NYG Sun Nov 22 4:25 PM CBS
+  LV  @ DEN  Sun Nov 22 4:25 PM CBS          | MIN @ SF  Sun Nov 22 8:20 PM NBC (Mexico City 2026 logo)
+  CIN @ WAS  Mon Nov 23 8:15 PM ESPN
+  Teams on Bye (as published): ATL 3-7, CLE 6-4, GB 6-4, LA 6-4, NE 5-5, SEA 6-4
+  Fixture record chips as published: IND 3-7, HOU 3-6, MIA 1-8, BUF 8-1, BAL 4-5, CAR 4-5, NO 3-6, CHI 7-2,
+  TEN 1-8, DAL 4-6, TB 3-6, DET 7-2, AZ 3-7, KC 7-2, PIT 6-3, PHI 2-7, NYJ 2-8, LAC 0-8, JAX 7-2,
+  NYG 5-3-1, LV 4-6, DEN 7-2, MIN 7-2, SF 8-1, CIN 7-2, WAS 3-5-1
+  Count check (arithmetic, not a claim): 13 fixtures x 2 = 26 clubs + 6 byes = 32.
+
+-----------------------------------------------------------
+[R4] https://www.nfl.com/games/vikings-at-49ers-2026-reg-11?tab=overview
+     retrieved 2026-11-17T00:50Z · title "Minnesota Vikings at San Francisco 49ers 2026 REG 11 - Game Center"
+  Game Info: "Location LOCATION MEXICO CITY" · "Stadium STADIUM ESTADIO BANORTE" · Network NBC
+  Header: "Nov 22 8:20PM" · MIN 7-2 · SF 8-1
+  REGULAR SEASON AT A GLANCE (as published, with the page's own ranks):
+    POINTS PER GAME              MIN 19.6 (25th)   SF 31.2 (2nd)
+    YARDS PER GAME               MIN 271.8 (31st)  SF 399.8 (1st)
+    TIME OF POSSESSION PER GAME  MIN 30:22 (14th)  SF 30:13 (15th)
+    TOTAL DEF SACKS              MIN 37 (1st)      SF 16 (28th)
+    TOTAL DEF INTS               MIN 10 (4th)      SF 7 (10th)
+    TOTAL TURNOVER DIFFERENTIAL  MIN +8 (2nd)      SF +3 (10th)
+  TEAM LEADERS: MIN K. Murray 1022 YDS 64.9% 5TD 3INT | SF B. Purdy 2369 YDS 70.1% 20TD 5INT
+                MIN A. Jones 521 YDS 126 ATT 3TD 4.1AVG | SF C. McCaffrey 519 YDS 115 ATT 10TD 4.5AVG
+                MIN J. Jefferson 467 YDS 40 REC 4TD 11.7AVG | SF G. Kittle 557 YDS 44 REC 5TD 12.7AVG
+  INJURY BLOCK ON THE GAME CENTRE, VERBATIM:
+    "Warning Vikings' Injury Report is not available at this time."
+    "Warning 49ers' Injury Report is not available at this time."
+  This is the SECOND independent official confirmation, in the same minute-scale window, that no week-11
+  availability report exists yet (the other is R6 below).
+
+-----------------------------------------------------------
+[R5] https://www.nfl.com/transactions/  (Trades, November 2026)
+     retrieved 2026-11-17T00:43Z · title "2026 NFL League Transactions - Trades Waivers, Signings & more."
+  Columns as published: From | To | Date | Name | Position | Transaction  (Position column is BLANK on
+  every row of this page; recorded, not filled in.)
+  ATL -> JAX   11/10  Jessie Bates      Traded
+  PHI -> JAX   11/10  Jordan Davis        Traded
+  TEN -> BUF   11/10  Amani Hooker        Traded
+  IND -> SF    11/10  Keenan Allen        Traded
+  LV  -> MIN   11/10  Kirk Cousins        Traded
+  LAC -> DEN   11/10  Daiyan Henley        Traded
+  IND -> KC    11/10  Josh Downs           Traded
+  ATL -> BAL   11/10  Ryan Neuzil          Traded
+  BAL -> ATL   11/10  Andrew Vorhees       Traded
+  NYJ -> DET   11/09  Andre Cisco          Traded
+  NO  -> JAX   11/09  Davon Godchaux       Traded
+  AZ  -> BAL   11/06  Jacoby Brissett      Traded
+  12 rows. The November trades page ended after 11/06 in this read; earlier November trades (11/01-11/05)
+  and other months were NOT read.
+
+-----------------------------------------------------------
+[R6] https://www.nfl.com/transactions/league/reserve-list/2026/11
+     retrieved 2026-11-17T00:46Z · title "2026 NFL reserve-list by month | NFL.com"
+  All 25 rows as published (From | To | Date | Name | Transaction); all are Reserve/Injured:
+  LA  11/16 Dylan McMahon      | LAC 11/16 Branson Taylor     | NO  11/14 Christen Miller
+  NE  11/14 TreVeyon Henderson | CLE 11/14 Michael Burton     | IND 11/14 Mo Alie-Cox
+  IND 11/14 Akeem Davis-Gaither| TEN 11/14 Peter Skoronski    | TEN 11/14 Tommy Townsend
+  DAL 11/14 Tyler Goodson      | GB  11/14 Josh Whyle         | LA  11/12 Puka Nacua
+  LA  11/10 Jordan Whittington | MIA 11/10 Zach Sieler        | MIA 11/10 Malik Willis
+  SF  11/10 Gracen Halton      | AZ  11/10 Gardner Minshew    | AZ  11/10 Michael Wilson
+  TEN 11/09 James Williams     | MIN 11/09 Demond Claiborne   | BUF 11/09 Josh Palmer
+  ATL 11/07 Brian Robinson     | LA  11/07 Jaylen Watson      | DEN 11/07 Eyioma Uwazurike
+  DET 11/07 Jack Campbell
+  NEGATIVE FINDING (stated as a negative, with its limit): the November reserve list carries NO row for
+  Baltimore. The last read row is 11/07 and the page ended there.
+
+-----------------------------------------------------------
+[R7] https://www.nfl.com/transactions/league/reserve-list/2026/10
+     retrieved 2026-11-17T00:51Z (2 chunks)
+  25 rows, spanning 10/24 to 10/31 only, then the table ends:
+  KC  10/31 L'Jarius Sneed     | NYJ 10/31 T'Vondre Sweat     | LV  10/31 Patrick Johnson
+  DEN 10/31 RJ Harvey           | LAC 10/31 Derwin James       | CAR 10/29 Akayleb Evans
+  WAS 10/28 Terry McLaurin      | HOU 10/28 Jaylin Noel        | PHI 10/28 Dameon Pierce
+  CAR 10/27 Taylor Moton        | CIN 10/27 Erick All          | NYG 10/27 Tyrone Tracy Jr.
+  IND 10/27 Cam Taylor-Britt    | AZ  10/27 Jalen Brooks       | BUF 10/26 C.J. Gardner-Johnson
+  GB  10/26 Jacob Monk           | ATL 10/24 Michael Jerrell    | CAR 10/24 Thomas Incoom
+  CLE 10/24 Teven Jenkins        | KC  10/24 Brashard Smith     | NYG 10/24 Tremaine Edmunds
+  NYJ 10/24 Francisco Mauigoa   | DEN 10/24 Tyler Badie        | DEN 10/24 Jonah Elliss
+  BAL 10/24 Tavius Robinson
+  One row is not an injury move and is published as such: BUF 10/26 C.J. Gardner-Johnson =
+  "Reserve/Suspended By Commissioner-Less than One Year".
+  COVERAGE LIMIT, NOT AN INFERENCE: the October page ends at 10/24 and the November page ends at 11/07 in
+  these reads. A month page therefore returned ~25 rows and stopped: the register is capped/paginated, so
+  "not in the rows read" is NOT evidence that a move did not happen. The capture job must paginate.
+
+-----------------------------------------------------------
+[R8] https://www.nfl.com/injuries/league/2026/reg10  (READ #2 of the same report; read #1 was 2026-11-15T23:27Z)
+     retrieved 2026-11-17T00:40Z
+  URL TESTED WAS reg11 (the week-11 report). The page returned and titled itself:
+     "Official NFL Injury Report for Players - Week 10 of the 2026 Season | NFL.com"
+     body heading "Injuries - WEEK 10", and the week selector lists WEEK 1 ... WEEK 10 (no WEEK 11).
+  => As of 2026-11-17T00:40Z the week-11 report is NOT published; the endpoint serves week 10.
+  Rows below are every complete club table in the chunk read (columns: Player | Position | Injuries |
+  Practice Status | Game Status; "(blank)" where the cell is empty).
+  THURSDAY, NOVEMBER 12TH — WAS at NYG (WAS 3-5-1, NYG 5-3-1)
+  WAS: John Bates|TE|(blank)|(Full Participation in Practice)|(blank)
+       Treylon Burks|WR|(blank)|(Did Not Participate In Practice)|(blank)
+       Jayden Daniels|QB|(blank)|(Full Participation in Practice)|(blank)
+       Matt Gulbin|C|(blank)|(Full Participation in Practice)|(blank)
+       Chig Okonkwo|TE|(blank)|(Full Participation in Practice)|(blank)
+       Lucas Patrick|C|Concussion|(Did Not Participate In Practice)|Out
+       Amik Robertson|CB|(blank)|(Limited Participation in Practice)|(blank)
+       Shy Tuttle|DT|(blank)|(Full Participation in Practice)|(blank)
+       Colson Yankoff|TE|Knee|(Did Not Participate In Practice)|Out
+  NYG: Abdul Carter|LB|(blank)|(FP)|(blank) · Jermaine Eluemunor|T|(blank)|(FP)|(blank)
+       Malik Harrison|LB|Groin|(Limited Participation in Practice)|Questionable
+       Colton Hood|CB|(blank)|(FP)|(blank) · Theo Johnson|TE|(blank)|(FP)|(blank)
+       Charlie Jones|WR|(blank)|(FP)|(blank) · J.J. McCarthy|QB|(blank)|(FP)|(blank)
+       Darnell Mooney|WR|(blank)|(FP)|(blank) · Malik Nabers|WR|(blank)|(FP)|(blank)
+       Cam Skattebo|RB|(blank)|(FP)|(blank) · Andrew Thomas|T|(blank)|(FP)|(blank)
+  SUNDAY NOVEMBER 15TH 9:30 AM EST — NE at DET (NE 5-5, DET 7-2)
+  NE:  Ben Brown|C|Knee|DNP|Out · A.J. Brown|WR|Ankle, Knee|LP|Questionable
+       Kevin Byard|S|Chest|FP|Questionable · Carlton Davis III|CB|Knee|DNP|Out
+       Reggie Gilliam|FB|Knee|LP|Questionable · TreVeyon Henderson|RB|Illness|DNP|Out
+       Hunter Henry|TE|(blank)|LP|(blank) · Cameron Latu|TE|Back|LP|Questionable
+       Drake Maye|QB|(blank)|FP|(blank) · Morgan Moses|T|(blank)|FP|(blank)
+       Walter Rouse|T|Concussion|LP|Questionable · Brenden Schooler|S|Hamstring|LP|Questionable
+       Rhamondre Stevenson|RB|Knee|LP|Questionable · Greg Van Roten|G|Hamstring|FP|Questionable
+       Charles Woods|CB|Hamstring|FP|Questionable
+  DET: Brian Branch|S|(blank)|FP|(blank) · Jared Goff|QB|(blank)|FP|(blank)
+       Kerby Joseph|S|Knee|DNP|Out · Cade Mays|C|Ankle|DNP|Out · D.J. Reed|CB|Hip|DNP|Out
+       Jacob Saylors|RB|(blank)|FP|(blank) · Amon-Ra St. Brown|WR|Rib|LP|Questionable
+       Sione Vaki|RB|Ankle|LP|Questionable · DJ Wonnum|DE|(blank)|FP|(blank)
+  SUNDAY 1:00 PM EST — KC at ATL (KC 7-2, ATL 3-7) — CHUNK ENDED MID-CLUB, PARTIAL READ OF KC:
+  KC:  Jeffrey Bassa|LB|(blank)|FP|(blank) · Mansoor Delane|CB|Shoulder|FP|Questionable
+       Justin Fields|QB|(blank)|FP|(blank) · Jaden Hicks|S|(blank)|FP|(blank)
+       Travis Kelce|TE|(blank)|FP|(blank) · Patrick Mahomes|QB|(blank)|FP|(cut off in retrieval)
+  ATL: not read in this chunk (marked NOT READ below, never guessed).
+
+-----------------------------------------------------------
+[R9] Official news rail rendered on the same injury-report page (R8), retrieved 2026-11-17T00:52Z.
+  Headlines and URLs exactly as published on nfl.com — recorded as dated league reporting, not as
+  availability designations:
+   "Sam Darnold ruled out for Seahawks' Week 10 game vs. Raiders; Drew Lock expected to start again"
+     https://www.nfl.com/news/sam-darnold-ruled-out-for-seahawks-week-10-game-vs-raiders-drew-lock-expected-to-start-again
+   "NFL news roundup: J.J. McCarthy expected to play Week 10; Justin Herbert avoids finger fracture"
+     https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-nov-9
+   "Notable injuries, news from Sunday's Week 9 games: Rams WR Puka Nacua to undergo testing on knee injury"
+     https://www.nfl.com/news/notable-injuries-news-sunday-week-9-games-2026
+   "NFL Network: Ravens' Lamar Jackson (right thumb) out 6-9 weeks, expects to return this season"
+     https://www.nfl.com/news/ravens-lamar-jackson-right-thumb-out-6-9-weeks-expects-to-return-this-season
+   "NFL Week 9 inactives: Players ruled out for Sunday's 13 games"
+     https://www.nfl.com/news/nfl-week-9-inactives-players-ruled-out-sunday-2026-season
+   "NFL news roundup: Saints waive Kendre Miller; Cowboys place Malachi Lawrence on IR"
+     https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-saturday-nov-7
+   "NFL news roundup: Jets' Garrett Wilson ruled out; Falcons RB Brian Robinson out for Madrid game"
+     https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-nov-6
+   "Pats' TreVeyon Henderson says he was hospitalized after 'unusual' emergency; RB focused on recovery"
+     https://www.nfl.com/news/pats-treveyon-henderson-says-he-was-hospitalized-after-unusual-emergency-focused-on-recovery

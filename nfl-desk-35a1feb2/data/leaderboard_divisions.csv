@@ -1,0 +1,5 @@
+division,eligibility,scoring,uncertainty_handler,entries_registered,settled_weeks
+singles,"a forecast recorded before kickoff with every input sourced","Brier score against the league-average-probability benchmark, reported as skill",game-cluster bootstrap lower bound over 4 settled weeks,39,0
+game-parlay,"only legs that individually pass the singles gate; no same-game legs","Brier on the joint outcome using the published joint assumption, not a product of marginals",same plus a published dependence sensitivity row,0,0
+same-game-parlay,"a validated joint probability plus the operator void and push rules for that product","same as game-parlay with the joint from the operator's own pricing structure",same,0,0
+prop-combo,"a directly measured player-level joint distribution","same, and only if the sample clears 300 player-games",same,0,0

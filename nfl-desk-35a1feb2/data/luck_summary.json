@@ -1,0 +1,11 @@
+{
+  "games_used": 149,
+  "max_negative_luck": "-2.17",
+  "max_negative_luck_team": "TB",
+  "max_positive_luck": "2.17",
+  "max_positive_luck_team": "DEN",
+  "note": "luck here is actual wins minus Pythagorean expected wins; the exponent 2.37 is a convention and is labelled on every row, so the panel ranks uncertainty rather than certifying a team",
+  "one_possession_share": "0.56",
+  "spread_across_league": "4.34",
+  "teams": 32
+}

@@ -1,0 +1,160 @@
+name: Verify NFL read-and-decide desk (35a1feb2)
+
+# Rebuilds every table and page from the hash-pinned official captures in nfl-desk-35a1feb2/raw/, then
+# proves row by row that each published table row links to a source, that a summary never disagrees with
+# the table it summarises, and that a second rebuild changes no bytes.
+#
+# The desk is served by this repository's existing GitHub Pages source (repo root) at
+# /Own5/nfl-desk-35a1feb2/.  Nothing here calls actions/deploy-pages, which would fight that source.
+# A step re-fetches nothing on purpose: nfl.com is not reachable from this sandbox either, and the
+# transcript in raw/ is what the numbers were read from.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'nfl-desk-35a1feb2/**'
+      - '.github/workflows/nfl-desk-35a1feb2.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'nfl-desk-35a1feb2/**'
+      - '.github/workflows/nfl-desk-35a1feb2.yml'
+  workflow_dispatch:
+  schedule:
+    # Re-proves the pinned captures still regenerate a matching site; it does not go to the network.
+    - cron: '17 3 * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nfl-desk-35a1feb2-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: nfl-desk-35a1feb2
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: What this checkout contains (sibling-desk inventory input)
+        # The index page enumerates sibling desks from the tree it is built in, so the run is worth
+        # recording: it says which desks were present, and that the inventory step did not silently
+        # find an empty tree.
+        run: |
+          echo "python: $(python3 -VV | head -1)"
+          echo "sibling desk directories with an index.html: \
+          $(cd "$GITHUB_WORKSPACE" && ls -d */ 2>/dev/null | while read d; do [ -f "$d/index.html" ] && printf '%s ' "$d"; done | wc -w)"
+
+      - name: Rebuild every derived table from the pinned captures
+        run: python3 engine.py
+
+      - name: Rebuild the site from the derived tables
+        run: python3 build_site.py
+
+      - name: Determinism — two further rebuilds must change no bytes
+        run: |
+          python3 engine.py > /dev/null && python3 build_site.py > /dev/null
+          python3 engine.py > /dev/null && python3 build_site.py > /dev/null
+
+      - name: Capture hashes, transcript containment, row provenance, internal links
+        run: python3 verify.py
+
+      - name: Unit tests
+        run: python3 -m unittest discover -s tests -t . -v
+
+      - name: Negative control — the gates must reject a planted inconsistency
+        # Proves the checks have teeth rather than passing vacuously: plant a row that contradicts the
+        # summary that quotes it, require verify.py to fail, then put the file back byte-for-byte. The
+        # restore is unconditional — a diagnostic that dirties the tree would itself fail the next step,
+        # which is exactly what a first draft of this step did (caught locally, not in the runner log).
+        run: |
+          cp data/luck_panel.csv /tmp/luck_panel.orig.csv
+          set +e
+          python3 - <<'PY'
+          import csv, io, pathlib, subprocess, sys
+          p = pathlib.Path("data/luck_panel.csv")
+          rows = list(csv.reader(io.open(p, newline="", encoding="utf-8")))
+          target = next(r for r in rows[1:] if r[0] == "BUF")
+          target[rows[0].index("luck_wins")] = "9.99"
+          with io.open(p, "w", newline="", encoding="utf-8") as f:
+              csv.writer(f, lineterminator="\n").writerows(rows)
+          rc = subprocess.run([sys.executable, "verify.py"], capture_output=True, text=True)
+          caught = [l for l in rc.stdout.splitlines() if "not agree" in l or "not reproducible" in l]
+          print("planted row: BUF luck_wins = 9.99")
+          print("verifier exit:", rc.returncode)
+          print("\n".join(caught) or "(no complaint raised)")
+          if rc.returncode == 0 or not caught:
+              print("FAIL  verify.py accepted an inconsistent table", file=sys.stderr)
+              raise SystemExit(1)
+          print("PASS  the gates rejected it")
+          PY
+          control=$?
+          cp /tmp/luck_panel.orig.csv data/luck_panel.csv
+          python3 engine.py > /dev/null && python3 build_site.py > /dev/null
+          exit $control
+
+      - name: Committed artefacts match the deterministic build
+        run: |
+          rm -rf __pycache__ tests/__pycache__
+          cd "$GITHUB_WORKSPACE"
+          echo "python: $(python3 -VV)  locale: $(locale charmap 2>/dev/null || echo ?)  umask: $(umask)"
+          echo "--- git status (porcelain, this desk) ---"
+          git status --porcelain -- nfl-desk-35a1feb2 | head -20
+          echo "--- diff stat ---"
+          git diff --stat -- nfl-desk-35a1feb2 | tail -10
+          echo "--- first differing lines, per file (diagnostic before the strict check) ---"
+          for f in $(git diff --name-only -- nfl-desk-35a1feb2); do
+            echo "### $f"
+            git diff -U0 -- "$f" | sed -n '5,14p'
+          done
+          echo "--- end diagnostics ---"
+          if ! git diff --quiet -- nfl-desk-35a1feb2; then
+            echo "The strict check below will fail: the tree drifted during this job." >&2
+          fi
+          git diff --exit-code -- nfl-desk-35a1feb2/data nfl-desk-35a1feb2/*.html
+
+      - name: Upload the built desk for review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nfl-desk-35a1feb2
+          path: nfl-desk-35a1feb2
+          if-no-files-found: warn
+
+  pages-smoke:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: verify
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check the published desk is live
+        run: |
+          base="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/nfl-desk-35a1feb2"
+          for path in "/" "/executive-summary.html" "/requirements.html" "/results.html" "/availability.html" \
+                      "/origination.html" "/price-store.html" "/analytics.html" "/competition.html" \
+                      "/verification.html" "/flagged.html" "/suggestions.html" "/questions.html" \
+                      "/roster-events.html" "/sources.html"; do
+            url="$base$path"
+            ok=0
+            for attempt in $(seq 1 24); do
+              if curl --fail --silent --show-error --location "$url" | grep -q 'OWN5'; then
+                echo "OK $url"
+                ok=1
+                break
+              fi
+              sleep 10
+            done
+            if [ "$ok" -ne 1 ]; then
+              echo "Published page did not become ready: $url" >&2
+              exit 1
+            fi
+          done

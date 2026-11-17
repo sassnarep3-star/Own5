@@ -1,0 +1,13 @@
+field,type,rule,required
+snapshot_id,text,game_id|market|side|stage|captured_utc,yes
+captured_utc,iso8601,"clock time of the read, never a page date",yes
+stage,enum,MARKET_OPEN | MID | MARKET_CLOSE | MODEL_RECORD,yes
+market,enum,side | total | moneyline | prop | combo,yes
+line,decimal,"the number itself; blank is legal, zero is not",conditional
+price_american,integer,juice as published; never modelled,conditional
+overround,decimal,only computed when both sides of the same book and time are held,no
+source_class,enum,official | operator | third-party | manual-audited,yes
+terms_state,enum,read | unread | not-applicable - blocks public row-level display when unread,yes
+raw_sha256,hex,hash of the artefact the number came from,yes
+model_line,decimal,"the originated fair number, from originated_wk11.csv",yes
+difference,decimal,model minus market; undefined if either side is blank,conditional

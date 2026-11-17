@@ -1,0 +1,9 @@
+strategy,division,forecasts_recorded,settled,mean_brier,benchmark_brier,skill_score,skill_lower_bound,calibration_slope,status,note
+P-01,singles,13,0,,,,,,registered,"shadow only: no number exists until the week settles, and none is imputed"
+P-02,singles,13,0,,,,,,registered,blocked by the price policy; the total residual is undefined
+P-03,singles,13,0,,,,,,registered,"two dated reads show zero designation change, so the signal has no events yet"
+P-04,singles,0,0,,,,,,blocked,not evaluated: blocked upstream on the depth-order source
+P-05,singles,0,0,,,,,,blocked,not evaluated: no roof designation or forecast capture exists
+P-06,game-parlay,0,0,,,,,,withheld,joint-evidence gate: no validated joint probability and no operator void rules
+P-07,same-game-parlay,0,0,,,,,,withheld,joint-evidence gate
+P-08,prop-combo,0,0,,,,,,withheld,the brief rejects multiplying marginal probabilities

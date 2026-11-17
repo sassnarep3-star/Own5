@@ -1,0 +1,26 @@
+check,method,result,status,note,source_url
+standings row count,32 clubs in the read,32,PASS,pinned; a 31-row read is a drift event,https://www.nfl.com/standings/league/2026/REG
+games played vs game log,sum of W+L+T equals 2 x completed games,298 = 2 x 149,PASS,this is what catches a duplicated or dropped fixture,https://www.nfl.com/schedules/2026/by-week/week-10
+league points balance,sum of points for equals sum of points against,6880 = 6880,PASS,,https://www.nfl.com/standings/league/2026/REG
+published PCT,recomputed as (W + 0.5T)/GP for every club,32 of 32 agree,PASS,,https://www.nfl.com/standings/league/2026/REG
+published NET PTS,recomputed as PF - PA for every club,32 of 32 agree,PASS,,https://www.nfl.com/standings/league/2026/REG
+per-club reconciliation,standings record and points equal the game-by-game record,32 of 32 after the alias map (31 of 32 before),PASS,"caught CU-F03, the club-code defect",https://www.nfl.com/standings/league/2026/REG
+week-10 slate completeness,"14 fixtures published, 13 final at read time","13 final, 1 blank",PASS,"the unplayed game is blank, not zero",https://www.nfl.com/schedules/2026/by-week/week-10
+week-11 slate shape,13 fixtures and 6 byes as published,26 clubs in fixtures + 6 byes = 32,PASS,,https://www.nfl.com/schedules/2026/by-week/week-11
+venue transcription,venue read from the fixture's own game centre,1 of 13 read here,PARTIAL,12 left blank with their URL listed rather than copied from a ticketing link,https://www.nfl.com/games/vikings-at-49ers-2026-reg-11
+week-11 report existence,endpoint serves week 11,no: serves week 10,FAIL-AS-EXPECTED,recorded as an empty capture (CU-F01),https://www.nfl.com/injuries/league/2026/reg11
+Lions blank designations,three rows carry a game status now,"Kerby Joseph Out, Cade Mays Out, D.J. Reed Out",PASS,confirms the fix claimed by the earlier flag,https://www.nfl.com/injuries/league/2026/reg10
+second read of the weekly report,compare 49 rows field by field against the first read,0 of 147 values changed,PASS,the delta is what we publish; the null result is the finding (CU-F08),https://www.nfl.com/injuries/league/2026/reg10
+reserve list for Baltimore QBs,search the November and late-October register,no matching row; only a defensive lineman on 10/24,CORRECTION,see CU-F05,https://www.nfl.com/transactions/league/reserve-list/2026/11
+Colts receiver trades,two receivers leave Indianapolis on one date,"Keenan Allen to SF and Josh Downs to KC, both 11/10",PASS,the depth chart published alongside these moves is not durable,https://www.nfl.com/transactions/league/trades/2026/11
+Malik Willis,absent from the weekly report but not healthy,placed on reserve/injured by Miami 11/10,PASS,the exact case the reserve-list requirement names,https://www.nfl.com/transactions/league/reserve-list/2026/11
+depth rows contradicting roster events,join 62 dated events to the carried-forward depth table,13 contradictions,FLAG,REQ-45 satisfied with a number; REQ-34 stays partial until the register is paginated,https://www.nfl.com/transactions/league/reserve-list/2026/10
+third-party price log,count rows carrying a spread or moneyline,7439 of 7548 games; 163 of 272 in 2026,CORRECTION,contradicts the claim that no market price exists in-repo (CU-F04),https://github.com/nflverse/nflverse-data
+snap corpus identity,distinct games in the 2026 snap file,"136 games, 12693 rows",PASS,"the brief's 136-game log identified by count, not assumed",https://github.com/nflverse/nflverse-data
+designation play rates,join 2023-2026 designations to game sheets,Out 0.0002 of 4001; Questionable 0.6180 of 4820,DESCRIPTIVE,not admitted as a model feature while the source class is undecided,https://github.com/nflverse/nflverse-data
+home-field advantage,mean home margin over 149 verified finals,"-0.51 points, -0.26 excluding 8 neutral games, home win share 47.65%",PASS,a +2.5 style assumption would misprice every side in this season's record,https://www.nfl.com/schedules/2026/by-week/week-10
+no-inference rule,every published body row ends in an official link or an UNVERIFIED badge,enforced by verify.py at build time,PASS,a blank is a value; a fabricated number is a defect,https://github.com/sassnarep3-star/Own5
+determinism,engine rebuilds byte-identical tables,checked on every build,PASS,,https://github.com/sassnarep3-star/Own5
+unit test suite,"unittest discover in tests/, invoked by this very run","29 pass, OK",PASS,"covers the scorer, the game-cluster bound, the alias map and every no-invention rule",
+row provenance gate,verify.py walks every generated <tbody> row,42 data tables rendered; gate is verify.py step 4,PASS,a row with no official link and no UNVERIFIED badge fails the build,
+manifest coverage,"every raw read, authored input and carried-forward pin hashed",12 entries pinned,PASS,"derived tables are pinned too by the rebuild-equality check, so they are not listed twice",

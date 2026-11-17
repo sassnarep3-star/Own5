@@ -2707,3 +2707,85 @@ you eventually.
 request, including branches that do not touch this namespace
 (`arena/35a1feb2-own5`, `arena/a620f5a5-own5`). Out of scope here; logged for
 the integration session.
+
+
+## Session 35a1feb2 — NFL Currency, Corrections & Registration Desk (claimed 2026-11-17T00:45Z)
+
+Session ID `35a1feb2`, branch `arena/35a1feb2-own5`, branched from `90313d514fb2c73694da13fa38ebad923b706b7f`
+(main @ PR #90 merge, session e46fb855's desk).
+
+**Why this session exists (no duplicate work).** `main` carries seven NFL desks answering the same brief in
+seven namespaces. None of them holds data fresher than **2026-11-15T23:35Z**, and the most consequential
+gates they flagged as blocking are all time-gated, not analysis-gated. This session adds (a) a currency
+increment — the week-10 slate is now complete except the in-progress Monday game, and (b) the two registers
+nobody has read: the league **transactions** register and the **reserve list**, which is what "not listed ≠
+available" needs. It also **corrects** a claim repeated across desks from the official record.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| CU1 | Claim + board entry | in progress | 35a1feb2 | COORDINATION.md | This block. |
+| CU2 | Fresh official captures with hashes (wk10 results, league standings, wk11 slate, wk11 game centre, Nov+Oct reserve list, Nov trades, targeted wk10 injury re-read) | in progress | 35a1feb2 | `nfl-desk-35a1feb2/raw/**`, `.../data/manifest.csv` | Read through the sandbox fetcher at 2026-11-17T00:39–00:52Z; nfl.com is unreachable from this sandbox by curl (TLS), as prior sessions logged. |
+| CU3 | Verified results feed increment + standings integrity reconciliation | in progress | 35a1feb2 | `nfl-desk-35a1feb2/data/*.csv` | 149 finals + 1 in-progress published blank; 32/32 standings reconciled against the game-by-game record. |
+| CU4 | Transactions + reserve-list register (first read repo-wide) | in progress | 35a1feb2 | `nfl-desk-35a1feb2/data/transactions_register.csv`, `reserve_list_register.csv` | Closes F-04 for Nov 2026; documents that the month page is capped, so the capture job must paginate. |
+| CU5 | Injury-read delta (two clock times, same report) | in progress | 35a1feb2 | `nfl-desk-35a1feb2/data/availability_snapshot_read2.csv`, `injury_read_delta.csv` | Publishes the delta, never the level. |
+| CU6 | Week-11 shadow forecast registration (side → total → moneyline) recorded before kickoff, frozen model, git hash as registration | in progress | 35a1feb2 | `nfl-desk-35a1feb2/data/originated_wk11.csv`, `.../pre_registration.md` | Market price columns blank + flagged: no operator price is held in this repo and the price-data policy is an open decision. |
+| CU7 | Correlations + removal-of-luck panel from official numbers only, n published | in progress | 35a1feb2 | `nfl-desk-35a1feb2/data/correlations.csv`, `luck_panel.csv` | Computed in-repo from the standings read; withheld values listed with the reason. |
+| CU8 | Requirements decision-readiness master table (one row per brief line: gate that blocks, number that clears) | in progress | 35a1feb2 | `nfl-desk-35a1feb2/data/requirements_master.csv` | Consolidates the brief's own requirement lines across desks. |
+| CU9 | Questions + suggestions registers (review-before-implement) | in progress | 35a1feb2 | `nfl-desk-35a1feb2/data/questions_register.csv`, `suggestions_register.csv` | Suggestions carry options, a recommendation and a two-sided "what would change our mind". Nothing is implemented on a suggestion. |
+| CU10 | Repo audit vs official sources, incl. corrections to prior claims | in progress | 35a1feb2 | `nfl-desk-35a1feb2/data/repo_audit.csv`, `.../data/flagged.csv` | Key correction: no Reserve/Injured transaction exists for BAL QBs in the Nov or late-Oct register; the "out 6–9 weeks" item is a news report, not a roster event. |
+| CU11 | Site (landing + category subpages + Flagged for Review) | in progress | 35a1feb2 | `nfl-desk-35a1feb2/*.html`, `build_site.py` | Every body row ends in an official link or an UNVERIFIED badge. |
+| CU12 | Verification harness, tests, scoped CI workflow | in progress | 35a1feb2 | `verify.py`, `tests/test_desk.py`, `.github/workflows/nfl-desk-35a1feb2.yml` | Scoped to this session's paths only. |
+| CU13 | Rebase, PR to main, autonomous merge, Pages check | in progress | 35a1feb2 | COORDINATION.md, README.md | Record appended here. |
+
+**Cross-session requests (logged, not actioned).**
+* Root `index.html`, `assets/**` and `pages/**` remain owned by session arena-cd43258e and are described in
+  its board as CI-locked, and they still render the 2026-11-02 state (8 candidates, 10 review items).
+  The site now has eight NFL desks with no index. This session does **not** edit those files; the request is
+  that the next integration session publishes a root index that lists every desk with its capture date.
+* `.github/workflows/decision-desk.yml` still fails its rebuild check on every PR (logged by 560ed315 and
+  a991e3fb). Not touched here.
+
+**Files owned by this session:** `nfl-desk-35a1feb2/**`, `research/nfl-35a1feb2/**`,
+`.github/workflows/nfl-desk-35a1feb2.yml`, `COORDINATION.md` (append-only block above), one additive
+README.md row.
+
+### 35a1feb2 — completion record and shared-board items (2026-11-17T01:05Z)
+
+Statuses above move to **done**. Verified this turn, printed by the commands, not asserted:
+`engine.py` exit 0 → standings 32 rows, 149 finals, ΣGP 298 = 2×149, ΣPF 6880 = ΣPA 6880, **reconciled
+32/32**, 6/6 integrity checks PASS · `build_site.py` → **15 pages** · `verify.py` →
+`verify: 15 pages, 807 table rows, 12 manifest entries` + `PASS determinism, capture hashes, transcript
+containment, row provenance, internal links` · `unittest` → **Ran 29 tests, OK** · two further rebuilds
+changed **0 bytes across 67 hashed files** · desk total **74 files, 1,045,504 bytes**.
+
+**Five items for every desk on this brief.** Each is in `nfl-desk-35a1feb2/data/flagged.csv` as CU-F01…F15;
+these five change other sessions' numbers or claims, not just this page.
+
+| ID | Shared consequence | Evidence | What to do |
+|----|--------------------|--------|------------|
+| **CU-F03** | A carried-forward results feed keys Arizona as `ARI` and Los Angeles as `LAR` where the standings page publishes `AZ` and `LA`. Joining them by code silently loses **18 club-games** while *every league total still balances* (ΣGP 298 and ΣPF=ΣPA both passed with a club short a game). | `nfl-desk-35a1feb2/data/standings_integrity_checks.csv`, `results_feed_2026.csv` (`code_before_alias` / `code_after_alias` columns) | Any desk that reports team-level records, per-team rates, or a per-club join off `nfl-desk-e46fb855/data/results_feed.csv` must re-check it. Apply `{LAR:LA, ARI:AZ, SD:LAC, OAK:LV, STL:LA}` and **reconcile club by club, never at the total**. |
+| **CU-F04** | The claim repeated across desks that *"no market price of any kind exists in this repo"* is **false**. `data/decision-desk/raw/` holds a 7,548-row game log with **7,439 priced games** (163 of 272 in 2026), provenanced to nflverse. | `nfl-desk-35a1feb2/data/third_party_inventory.csv`, `repo_audit.csv` row "third-party price log" | The blank-price policy is a **source-class** decision, not an absence of data. Say which, or stop citing absence. The policy call itself is still open and user-owned (CU-F10). |
+| **CU-F05** | The claim *"Baltimore placed both quarterbacks on IR"* is **not in the official register**. The only BAL reserve row in the window is 2026-10-24 **T.Robinson**; the other QB was **traded** (Brissett, AZ→BAL, 11/06); "out 6–9 weeks" is a medical report, not a roster event. | `nfl-desk-35a1feb2/data/reserve_register_2026_10_11.csv`, `trades_register_2026_11.csv`, `raw/official_reads_2026-11-17.txt` R5–R7 | Do not repeat it. A roster claim needs a dated register row, and `position` is blank on every transaction row — it cannot be read from that page. |
+| **CU-F06** | `nfl.com/transactions/league/reserve-list/YYYY/MM` returns **exactly 25 rows then stops**, on both months read. "Absent from the register" ≠ "did not happen". | `raw/official_reads_2026-11-17.txt` R6, R7; `flagged.csv` CU-F06 | Every capture job must **paginate or query per club** before publishing any absence-based claim. |
+| **CU-F01 / F08** | Week-11 availability is **blocked-by-source**, and the delta experiment says daily capture of a weekly report is the wrong design: two reads **1 hour 13 min apart found 0 of 147 field values changed** while the report itself was still serving week 10. | `availability_census_read2.csv`, `injury_read_delta.csv`, game centre "Injury Report is not available at this time" | Capture on the **publication days** (Wed/Thu) and treat the report as a step function; retry after 2026-11-18T00:00Z. Nobody should publish a week-11 availability number before that. |
+
+**Cross-session notes.** `nfl-desk-35a1feb2/**` and `.github/workflows/nfl-desk-35a1feb2.yml` are the only
+paths this session writes in the tree, plus one additive README table row and this block; root
+`index.html`/`pages/**`/`assets/**` were not touched (still CI-locked to the integration session, and still
+rendering 2026-11-02 while eight NFL desks have no index — request stands). `.github/workflows/
+decision-desk.yml` still fails its clean-rebuild step on every PR; not ours, not touched. Session
+`ce1f16ff` (PR #80, open against main) is building the same price-store / results-feed / origination / gates
+surfaces in its own namespace: no file conflicts (namespaced), but the **alias defect and the two false
+claims above apply to it too** — it carries the same `results_feed.csv`.
+
+**Addendum, 2026-11-17T01:5xZ.** `nfl-desk-35a1feb2/index.html` now renders `data/sibling_desks.csv`: **24
+sibling desks** in this checkout, each row carrying the desk's entry point, the newest 2026 date string found
+inside *its own* files, the last commit touching it, and its data-file count. The inventory is built by
+reading those files at render time rather than being kept by hand, so it cannot go stale in the way a typed
+list does — and two honesty notes ship with it: a date string may be a capture stamp *or* a scheduled kickoff
+(several desks show 2026-11-23), and `last commit` reflects a merge landing, not the currency of the numbers.
+This does not claim the root index: `index.html`/`pages/**`/`assets/**` remain the integration session's, and
+the request that the root list every desk with its capture date is now answered *for this desk's readers only*.
+Also corrected in place: the executive summary had said the two reads of the weekly injury report were "49
+hours apart"; they were 1 hour 13 minutes apart, which is the stronger version of the same finding and the
+one the delta table actually shows.

@@ -1,0 +1,16 @@
+source,url,retrieved_utc,source_class,what_it_contained,used_for
+league standings,https://www.nfl.com/standings/league/2026/REG,2026-11-17T00:39:30Z,official,32 club rows: W L T PF PA,"records, correlations, ratings inputs, luck panel"
+week 10 schedule page,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-17T00:39:30Z,official,14 fixtures with finals and the bye list,"verified results feed increment, home-field measurement"
+week 11 schedule page,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-17T00:41:00Z,official,"13 fixtures, times, networks, byes","slate and fixture-context table, registration window"
+week 11 game centre (MIN at SF),https://www.nfl.com/games/vikings-at-49ers-2026-reg-11,2026-11-17T00:50:00Z,official,"venue, listed home club, per-club availability state","venue transcription, empty-capture evidence"
+week 10 injury report (read 2),https://www.nfl.com/injuries/league/2026/reg10,2026-11-17T00:40:00Z,official,"49 rows across four clubs, five partial at Kansas City","delta against read 1, designation census"
+week 11 injury report attempt,https://www.nfl.com/injuries/league/2026/reg11,2026-11-17T00:40:00Z,official,endpoint serves the week-10 report,evidence that the week-11 report is unpublished
+"trades register, November",https://www.nfl.com/transactions/league/trades/2026/11,2026-11-17T00:43:30Z,official,12 dated trades,"roster-event register, staleness join"
+"reserve list, November",https://www.nfl.com/transactions/league/reserve-list/2026/11,2026-11-17T00:46:00Z,official,"25 dated moves, 11/16 down to 11/07","reserve capture, the Baltimore correction"
+"reserve list, October",https://www.nfl.com/transactions/league/reserve-list/2026/10,2026-11-17T00:51:00Z,official,"25 dated moves, 10/31 down to 10/24","the depth-staleness join, pagination finding"
+league news rail on the report page,https://www.nfl.com/news/sam-darnold-ruled-out-for-seahawks-week-10-game-vs-raiders-drew-lock-expected-to-start-again,2026-11-17T00:52:00Z,official,dated announcements of starters and absences,announced-starter evidence field
+prior desk results feed,../nfl-desk-e46fb855/data/results_feed.csv,"carried forward, read-only",prior session's official read,145 games weeks 1 to 10,walk-forward training block; sha256 pinned in the manifest
+prior desk injury capture,../nfl-desk-e46fb855/data/injuries.csv,"carried forward, read-only",prior session's official read,326 rows of the week-10 report,the first read for the delta
+prior desk depth capture,../nfl-desk-e46fb855/data/depth_slots.csv,"carried forward, read-only",prior session's club-page read,702 slots across 32 clubs,the staleness join
+multi-season game log,https://github.com/nflverse/nflverse-data (data/decision-desk/raw/games.csv.gz),"in-repo, hashed in its own provenance file",THIRD-PARTY - not official,7548 games 1999 to 2026 with spreads and totals on 7439,capability audit and the policy question only; never a published model input here
+snap counts and mirrored reports,"https://github.com/nflverse/nflverse-data (data/decision-desk/raw/snap_counts_*.csv.gz, injuries_*.csv.gz)","in-repo, hashed",THIRD-PARTY - not official,2023 to 2026; the 136-game snap file,"designation play rates, labelled descriptive"
