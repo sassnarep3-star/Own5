@@ -1,0 +1,50 @@
+{
+  "title": "Executive summary",
+  "as_of": "2026-11-17",
+  "lead": "The repository contains several NFL research desks, but no single cross-desk snapshot should be treated as live or wagering-ready without a fresh source check. This additive review hub isolates what was verified on 2026-11-17, what remains unknown, and the decisions that should be made before a model or leaderboard can be trusted.",
+  "decision": "Do not publish a market residual, CLV, ROI, starter replacement depth, injury surprise or combo ranking unless its point-in-time inputs, source rights and validation gates are satisfied. Keep unknown values blank and visibly flagged.",
+  "verified_findings": [
+    {
+      "title": "The requested Week 12 injury route did not show Week 12",
+      "detail": "The URL retrieved as the Week 10 report. No Week 12 data was accepted; it may be an unpublished-week or routing issue, so the finding is limited to that response.",
+      "source_ids": ["NFL-INJURY-REQUESTED-WEEK12"]
+    },
+    {
+      "title": "Official Game Books contain useful game-day fields, with a use restriction",
+      "detail": "The reviewed sample has Lineups, Did Not Play, Not Active, final statistics and game-time conditions. Its notice requires written NFL permission for other use of the summary/play-by-play material.",
+      "source_ids": ["NFL-GAMEBOOK-RAMS-CARDINALS-W10"]
+    },
+    {
+      "title": "Depth-chart ingestion needs club-specific handling",
+      "detail": "The checked Texans chart is image-only and labeled unofficial; the checked Packers table prefixes jersey numbers and is also labeled unofficial. These examples do not certify the other clubs.",
+      "source_ids": ["TEXANS-DEPTH-CHART", "PACKERS-DEPTH-CHART", "NFL-TEAMS-32"]
+    },
+    {
+      "title": "The official reserve-list source is now located",
+      "detail": "The NFL's November 2026 reserve-list page contains dated Reserve/Injured entries, including Malik Willis on Nov. 10. The earlier e46 capture remains historical and was not rewritten.",
+      "source_ids": ["NFL-TRANSACTIONS-RESERVE-NOV2026"]
+    },
+    {
+      "title": "A dated schedule announcement and season-specific rulebook are available",
+      "detail": "The NFL schedule release is dated May 14, 2026. The official 2026 rulebook includes a kickoff rule change; any feature using it must be season-versioned and tested rather than assumed predictive.",
+      "source_ids": ["NFL-SCHEDULE-ANNOUNCEMENT-2026", "NFL-RULEBOOK-2026"]
+    }
+  ],
+  "blocking_gaps": [
+    "No current operator opening/closing price was captured in this hub; price-dependent residual, CLV and ROI fields remain blank.",
+    "No complete, immutable, multi-day injury/depth/inactive history or 32-club parser certification was built here.",
+    "No official snap-count source was confirmed by this review; a failed URL is not proof that none exists.",
+    "The Game Book use restriction is not cleared for automated retention, modeling or public display.",
+    "No strategy is certified by this hub; backtests, win rate and staking outcomes are not evidence of prospective skill."
+  ],
+  "recommended_order": [
+    "Resolve source rights and data policy first, especially raw Game Book and operator price data.",
+    "Automate dated, hashed official source captures and fail closed on wrong-week pages, missing fields or stale reads.",
+    "Complete the 32-club depth-source sweep while preserving raw cells, grouped/empty slots and the distinction between unofficial depth expectations and actual game evidence.",
+    "Build the expected-versus-actual availability graph from dated club sources, official Game Books/inactives and reserve-list events; keep snap counts separate until an official source is verified.",
+    "Pre-register a singles-only shadow baseline and a chronological train/validation/final holdout; publish each probability with its inputs and keep signal scoring separate from staking.",
+    "Keep parlays and prop combos blocked until direct joint probabilities, operator prices and the applicable void/push rules are validated.",
+    "Only then add venue/weather context, publish weekly diffs and show a removal-of-luck panel with sample sizes and uncertainty."
+  ],
+  "scope_note": "This hub is additive and read-only with respect to every prior desk. Suggestions are proposals for review, not approvals or implemented model changes. The source check records the date but not an exact retrieval time because the page retriever did not expose one."
+}

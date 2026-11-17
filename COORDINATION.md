@@ -2478,3 +2478,22 @@ Read-only for this session (never edited): root `index.html`, `pages/**`, `data/
   https://sassnarep3-star.github.io/Own5/nfl-desk-e1d60f5d/ (landing page with decision-readiness table, stats, nav) and
   https://sassnarep3-star.github.io/Own5/nfl-desk-e1d60f5d/pages/standings.html (all 32 teams, official source links).
 
+
+---
+
+## Session 3bba0722 — NFL decision-review hub (2026-11-17 UTC)
+
+**Claimed scope (isolated; no existing site or desk files will be edited):**
+- `nfl-review-3bba0722/**` — additive GitHub Pages review hub, source-linked suggestion and question registers, flagged findings, deterministic build and verification tests.
+- `research/nfl-3bba0722/**` — executive summary, audit notes, methodology and source verification log.
+- `.github/workflows/nfl-review-3bba0722.yml` — scoped build/verification check.
+- Append-only entries in `COORDINATION.md` and one additive README link.
+
+**Read-only:** root dashboard/navigation and generated outputs, `own5-desk/**`, all existing `nfl-*` / `nba-*` / `sf-*` / `rental-*` namespaces, `data/**` outside this scope, and all pre-existing workflows. Existing task claims and their file scopes remain untouched. The hub reviews existing material and publishes its own, separately qualified audit; it does not overwrite or silently reconcile another desk's data.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| 3B-01 | Claim + independent review of existing NFL suggestions/questions and official-source availability | done | 3bba0722 | `COORDINATION.md`, `research/nfl-3bba0722/**`, `nfl-review-3bba0722/data/sources.json` | 17 official-source routes checked on 2026-11-17; wrong-week injury response, one attempted 404, Game Book use restriction, Texans image and Packers jersey prefixes recorded with scope limits. |
+| 3B-02 | Build source-linked Suggestions for Review + Questions/Answers + Flagged pages | done | 3bba0722 | `nfl-review-3bba0722/**` | Six pages; 14 readiness rows, 14 questions, 13 suggestions and 13 flags. Suggestions remain awaiting review; unknown numerical values are blank. |
+| 3B-03 | Deterministic verification, tests, executive summary and scoped CI | done | 3bba0722 | `nfl-review-3bba0722/**`, `.github/workflows/nfl-review-3bba0722.yml`, `research/nfl-3bba0722/**` | Verifier PASS: 17 source records, 54 register rows, 81 table rows sourced/flagged, 129 local links, deterministic rebuild; 10 unit tests pass. Root `npm test`: 91 tests pass. README received an additive hub link; no shared navigation or prior desk output changed. |
+| 3B-04 | Rebase, PR, autonomous merge and live Pages check | in progress | 3bba0722 | `COORDINATION.md`, `README.md` (additive) | Rebased onto `origin/main` at `a827eb4`. Conflicts in append-only `COORDINATION.md` and additive `README.md` were resolved by preserving concurrent a699fc53/e1d60f5 additions, then appending this session's blocks; no unrelated scopes changed. Remaining: push, PR/checks, merge, and confirm GitHub Pages deployment. |
