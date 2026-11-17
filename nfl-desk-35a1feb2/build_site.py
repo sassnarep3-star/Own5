@@ -77,9 +77,10 @@ NAV = [
 def sibling_inventory():
     """An index of every sibling desk present in the tree, with the newest capture timestamp its own data
     files advertise. Built by reading their files at render time so it cannot rot into a hand-kept list.
-    Caveats published with it: `last commit` reflects when a merge landed here, not whether the numbers are
-    current, and the inventory covers only the tree this build sees."""
-    import re, subprocess
+    Nothing here is read from git history on purpose: a commit date would depend on how deep the checkout is
+    (CI builds run against a one-commit clone), and a published table must not change when a reviewer's clone
+    differs from the runner's. The inventory covers only the tree this build sees, and it says so."""
+    import re
     ts = re.compile(r"20\d{2}-\d{2}-\d{2}(?:T\d{2}:\d{2}(?::\d{2})?Z?)?")
     mine = HERE.name
     out = []
@@ -99,11 +100,8 @@ def sibling_inventory():
             for m in ts.findall(blob):
                 if m > newest:
                     newest = m
-        commit = subprocess.run(["git", "log", "-1", "--format=%cd", "--date=format:%Y-%m-%dT%H:%MZ", "--",
-                                 str(d.relative_to(REPO))], cwd=REPO, capture_output=True, text=True).stdout.strip()
         out.append(dict(desk=d.name, entry=("index.html" if has else "(no index page at that path)"),
                         newest_date_string_in_their_own_files=newest or "not found in data/",
-                        last_commit_touching_it=commit or "untracked in this checkout",
                         data_files=str(ndata),
                         note=("This desk's own capture is 2026-11-17T00:38-00:55Z; nothing here was re-read "
                               "for this row."),
@@ -308,7 +306,7 @@ def build():
                 "capture stamp or a scheduled kickoff, so read it with that in mind; "
                 "the root index is owned by the integration session, so this is the desk's own view of the field"),
         ("table", "sibling_desks.csv", ["desk", "entry", "newest_date_string_in_their_own_files",
-                                        "last_commit_touching_it", "data_files", "note"],
+                                        "data_files", "note"],
          "Two things this row cannot tell you: whether a desk's numbers are still true, and whether two desks "
          "disagree. The timestamp is the newest one that desk's own <code>data/</code> files advertise "
          "(bottom rows publish none), so it says when a file was written, nothing more. The corrections this desk published against "
