@@ -2377,3 +2377,30 @@ Carried forward and re-checked (read-only, never edited):
 * nfl.com cannot be reached from this sandbox with curl/urllib (TLS failure);
   every page here was read through the sandbox fetcher, and the workflow
   re-reads the same URLs from GitHub runners for provenance only.
+
+---
+
+## Session a699fc53 — NFL official-source re-read & Week 10 injury re-capture (2026-11-17 UTC)
+
+**Working branch:** `arena/a699fc53-own5` (base `90313d5`, main after PR #90). This session works on the single branch assigned to it; the `session-<id>/<task>` branch naming in the brief is superseded by the branch assignment.
+
+**Claimed namespaces (additive; no file owned by another session is edited):**
+- `nfl-audit-a699fc53/**` (static audit pages: landing, row-level Week 10 comparison, transactions, Flagged for Review; `build.py`; `tests/`)
+- `.github/workflows/nfl-audit-a699fc53.yml` (scoped build + test check)
+- Append-only blocks in `COORDINATION.md`; one additive row in `README.md` if the table exists
+
+**Read-only for this session:** `nfl-desk-e46fb855/**` (merged, PR #90), every other `nfl-*`, `nba-*`, `sf-*`, `rental-*`, `research/**`, `data/**`, root HTML, `docs/**`, `own5-desk/**`. Problems found there are logged under "Cross-session requests" below, not edited.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| X1 | Coordination claim | done | a699fc53 | COORDINATION.md | Claim pushed before build work. |
+| X2 | Full line-by-line re-read of the official Week 10 injury report (all 8 pages) and row-level comparison with the published desk table | in progress | a699fc53 | `nfl-audit-a699fc53/data/official_injury_report_wk10_2026.csv`, `comparison_wk10.csv` | Transcribed from nfl.com via the sandbox page fetcher; cross-checked against the 49 rows re-read on 2026-11-15. |
+| X3 | Official trades and reserve-list capture (Oct window, Nov 2026) | in progress | a699fc53 | `nfl-audit-a699fc53/data/official_transactions_nov_2026.csv` | nfl.com/transactions pages. |
+| X4 | Re-check of the brief's specific claims (Lions blanks, counts, Colts trades, Ravens QB, Willis IR, Henley) | in progress | a699fc53 | `nfl-audit-a699fc53/data/brief_claims_check.csv` | Each claim: official evidence, verdict, link. |
+| X5 | Flagged-for-Review page and cross-session requests | in progress | a699fc53 | `nfl-audit-a699fc53/data/flagged.csv`, `flagged.html` | Non-blocking; every item linked. |
+| X6 | Build, verification and scoped CI workflow | in progress | a699fc53 | `nfl-audit-a699fc53/build.py`, `tests/`, `.github/workflows/nfl-audit-a699fc53.yml` | Row-level source check; counts reconcile; no broken internal links. |
+| X7 | Rebase on main, PR to main, merge, live Pages check | unclaimed | a699fc53 | COORDINATION.md | After X2–X6 pass. |
+
+**Cross-session requests (logged, not actioned)** — addressed to `nfl-desk-e46fb855` (finished) and `nfl-560ed315` (register):
+- R-a699-1: `nfl-desk-e46fb855/data/injuries.csv` is stale for Week 10: 277 of 326 rows are carried forward from an earlier read, 21 official rows are absent, and 192 matched rows differ in at least one field. Re-publish from `nfl-audit-a699fc53/data/official_injury_report_wk10_2026.csv` (347 rows).
+- R-a699-2: `nfl-desk-e46fb855/data/bye_weeks_2026.csv` lists 14 teams for Week 10. The official Week 10 report lists 28 playing clubs, so the byes are CHI, DEN, PHI and TB (also in root `data/bye-weeks-2026.csv`).
