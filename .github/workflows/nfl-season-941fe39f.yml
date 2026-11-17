@@ -1,0 +1,69 @@
+name: NFL Season Desk 941fe39f — build & verify
+
+on:
+  push:
+    branches: [main, arena/941fe39f-own5]
+    paths:
+      - 'tools/season_desk_941fe39f/**'
+      - 'nfl-season-941fe39f/**'
+      - 'tests/test_season_desk*'
+      - '.github/workflows/nfl-season-941fe39f.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'tools/season_desk_941fe39f/**'
+      - 'nfl-season-941fe39f/**'
+      - 'tests/test_season_desk*'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nfl-season-941fe39f-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Corpus pin is intact
+        run: |
+          python3 - <<'PY'
+          import hashlib, pathlib, sys
+          p = pathlib.Path('nfl-season-941fe39f/data/corpus/raw/nfldata_e045566e.tar.gz')
+          pin = '9a6a736819bd6587f135d0995778c23ef9e51a9587d9e901f5dc84072504462c'
+          got = hashlib.sha256(p.read_bytes()).hexdigest()
+          print('sha256', got)
+          sys.exit(0 if got == pin else 1)
+          PY
+
+      - name: Rebuild every derived file from the pinned corpus (no network)
+        run: python3 tools/season_desk_941fe39f/build.py
+
+      - name: Regenerate the site
+        run: python3 tools/season_desk_941fe39f/site.py
+
+      - name: Verify row-level provenance and internal links
+        run: python3 tools/season_desk_941fe39f/verify.py
+
+      - name: Unit tests
+        run: python3 -m unittest discover -s tests -p "test_season_desk*" -v
+
+      - name: Pre-registration has not drifted
+        run: |
+          python3 tools/season_desk_941fe39f/prereg.py
+          git diff --exit-code -- nfl-season-941fe39f/data/strategy/prereg.json
+
+      - name: Committed derived data and site match a clean rebuild
+        run: git diff --exit-code -- nfl-season-941fe39f/
+
+      - name: Report what changed if the rebuild was not deterministic
+        if: failure()
+        run: git status --short && git diff --stat
