@@ -46,6 +46,15 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: What this checkout contains (sibling-desk inventory input)
+        # The index page enumerates sibling desks from the tree it is built in, so the run is worth
+        # recording: it says which desks were present, and that the inventory step did not silently
+        # find an empty tree.
+        run: |
+          echo "python: $(python3 -VV | head -1)"
+          echo "sibling desk directories with an index.html: \
+          $(cd "$GITHUB_WORKSPACE" && ls -d */ 2>/dev/null | while read d; do [ -f "$d/index.html" ] && printf '%s ' "$d"; done | wc -w)"
+
       - name: Rebuild every derived table from the pinned captures
         run: python3 engine.py
 
