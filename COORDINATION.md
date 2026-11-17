@@ -2477,6 +2477,16 @@ Read-only for this session (never edited): root `index.html`, `pages/**`, `data/
 - **Live verification:** fetched successfully after deployment:
   https://sassnarep3-star.github.io/Own5/nfl-desk-e1d60f5d/ (landing page with decision-readiness table, stats, nav) and
   https://sassnarep3-star.github.io/Own5/nfl-desk-e1d60f5d/pages/standings.html (all 32 teams, official source links).
+## Session a620f5a5 — final NFL portfolio integration (2026-11-17 UTC)
+
+Arena fixes this session to branch `arena/a620f5a5-own5` (base `90313d5`, current `main`).
+This is the final integration scope: make the existing evidence desks discoverable from the root
+landing page, publish a concise evidence-first portfolio hub, and re-run the combined verification
+without rewriting other sessions' datasets. No other branch will be created or pushed.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| I-A62-01 | Final NFL portfolio integration: current-desk hub, root entry point, cross-desk audit, combined verification and publication | in progress | a620f5a5 | `nfl-integration-a620f5a5/**`, `index.html`, `scripts/build.py`, `README.md` (additive), `.github/workflows/nfl-integration-a620f5a5.yml`, append-only `COORDINATION.md` | Existing desk datasets remain read-only; verified facts must link to official sources; stale, conflicting or missing evidence stays visibly flagged. |
 
 
 ---
@@ -2506,3 +2516,39 @@ Read-only for this session (never edited): root `index.html`, `pages/**`, `data/
 - **Other PR checks:** the unrelated legacy `NFL Decision Desk — fetch & verify` and `Verify NFL B34 Week 10 research desk` workflows failed at their deterministic-output checks. They touch no files in this session's scope; the same unrelated failures are recorded in the preceding e1d60f5 PR #91 completion note (and B34 also failed on the pre-PR main build at [run 43991168372](https://github.com/sassnarep3-star/Own5/actions/runs/43991168372) on `a827eb4`). Other repository and NBA/SF checks passed. These failures did not block the requested merge.
 - **GitHub Pages:** deployment [7841028094](https://api.github.com/repos/sassnarep3-star/Own5/deployments/7841028094) reached `success` at 2026-11-17T01:09:42Z for merge commit `f03b821`; GitHub Pages API reports `built`, source `main` `/`. Pages workflow run [43992945545](https://github.com/sassnarep3-star/Own5/actions/runs/43992945545) succeeded.
 - **Live verification:** the landing page and all five subpages were fetched successfully: [overview](https://sassnarep3-star.github.io/Own5/nfl-review-3bba0722/), [questions](https://sassnarep3-star.github.io/Own5/nfl-review-3bba0722/questions.html), [suggestions](https://sassnarep3-star.github.io/Own5/nfl-review-3bba0722/suggestions.html), [flags](https://sassnarep3-star.github.io/Own5/nfl-review-3bba0722/flagged.html), [sources](https://sassnarep3-star.github.io/Own5/nfl-review-3bba0722/sources.html), [executive summary](https://sassnarep3-star.github.io/Own5/nfl-review-3bba0722/summary.html). |
+### I-A62-01 — progress log and cross-scope handoff (2026-11-17 UTC)
+
+- Added `nfl-integration-a620f5a5/`: a seven-page static entry point, audit, questions, reviewable suggestions, official-source register, Flagged for Review page, and a score-free prospective leaderboard. Its line-by-line registers hold 18 official source links, 12 cross-desk findings, 10 questions and 10 proposed paths. The dated NFL schedule-release announcement is linked beside the live Week 11 schedule.
+- Added the evidence-first executive summary, scoped static-site builder and fail-closed verifier; added the root landing-page/README links and a scoped GitHub Actions build/audit/Pages smoke workflow.
+- Checks run on this branch: root build PASS; hub build and verifier PASS (650 checks, all local links resolve); e46 verifier PASS (2,706 body rows, 2,635 official links, 71 explicitly UNVERIFIED); market desk verifier PASS (10 checks); independent Week 10 capture build PASS (all 8 hard checks). The capture namespace has no standalone `verify.py`; the hard checks in its `build.py` were run directly.
+- The public market and e46 numeric leaderboard pages are preserved because they belong to completed, separate desk scopes. The integration hub does not reproduce their metrics and flags their prospective eligibility for review; the merged-site state still needs the owning desks to correct those older pages.
+
+#### Cross-scope handoff requested (not implemented in this session)
+
+**To sessions `83a7d6a8` and `e46fb855`, owners of `nfl-market-desk/**` and `nfl-desk-e46fb855/**`:** please remove historical/backtest performance figures from the public leaderboard pages (retain them only on clearly labelled research/audit pages), keep all public rankings blank until a strategy is registered before a future prospective window and passes the predeclared gates, and add a machine check that verifies event dates against the registration timestamp rather than trusting a “prospective” label. The market desk currently has a registration timestamp of `2026-11-15T23:40:00Z`; its displayed Weeks 5–9 window predates that record, and Week 10's game-level overlap is not yet audited. Reconcile the readiness rows/verification language that currently presents this leaderboard requirement as met. This integration did not edit either desk's code, data or HTML. The requested change is queued for its owning scopes and remains a published flag, not an integration merge blocker.
+
+**I-A62-01 scope amendment (2026-11-17 UTC, claimed before edit):** add `_config.yml` solely to correct the root GitHub Pages SEO description. The existing metadata claims the portfolio is fully sourced from official NFL and operator sources, which overstates provenance while no qualifying market operator open/close feed is available. No other Jekyll configuration changes are authorized by this amendment.
+
+- Scope amendment implemented: `_config.yml` metadata now states that official links are provided while market-price provenance and availability coverage remain incomplete, instead of claiming the full portfolio is already sourced from official and operator feeds.
+
+### I-A62-01 — post-rebase portfolio update (2026-11-17 UTC)
+
+- `main` advanced from `90313d5` to `a827eb4` after this task was claimed (PRs #91–#93). The rebase had append-point conflicts in `COORDINATION.md` and `README.md`; both sides were preserved. No files from the merged `a699fc53` or `e1d60f5d` scopes were edited.
+- The hub now links the newly merged `nfl-audit-a699fc53` Week 10 injury/transactions audit and `nfl-desk-e1d60f5d` official standings/Week 11 schedule desk. The snapshot-date note now distinguishes the market desk's 2026-11-15 model/availability captures from the 2026-11-17 standings/schedule reads.
+- Expanded the integration finding from the a699 comparison: 347 official Week 10 rows vs. 326 e46 rows yielded 134 identical, 192 different and 21 absent; only 49 official rows were independently re-read against the November 15 capture. The separate a991 comparison remains 268 changed/added/removed rows vs. an older 276-row table.
+- Added finding A62-13: e46's Week 10 bye register lists 14 teams, while the official Week 10 slate/report and the a699 source audit identify four byes (CHI, DEN, PHI, TB). The discrepancy is flagged and linked; the e46 file is not changed here.
+- Cross-scope handoff to the completed e46 owner: correct or explicitly deprecate the 14-team Week 10 bye set and add an official-slate assertion to its verifier; reconcile the 326-row Week 10 table with the independently audited 347-row read and disclose the 49-row limit of the double-read. Underlying e46 and a699 files remain read-only to I-A62-01.
+- Read-only verification on this re-based checkout: the e1 desk verifier (241 checks) and 16 tests passed; the a699 report build and 8 tests passed; the e46 and market desk verifiers passed (2,706 sourced/flagged e46 rows; 10 market checks); the a991 capture build's hard checks passed; and the integration hub passed 705 checks. This log precedes the final PR/Pages checks.
+
+- Additional handoff to the completed market-desk owner (`83a7d6a8`): document a row-level crosswalk between the 78-row and 72-row requirements registers; add the dated May 8 full-schedule announcement to the canonical `schedule_announcements.csv`; and continue the fixture-by-fixture Game Center venue audit, preserving the published `Reliant Stadium` label as flagged rather than normalizing it. These owner-scope changes are requested, not applied by I-A62-01.
+
+- Integration follow-up: the executive summary is now rendered as a dedicated `executive-summary.html` page (not only Markdown), and the hub links both later-merged evidence desks. The current build emits eight hub pages and the hub verifier passes 749 checks across the 18-source, 13-audit, 10-question and 10-suggestion registers. The scoped workflow now runs the e46, market, a699 and e1 verifiers/tests plus capture hard checks and the post-merge Pages smoke test. The earlier branch CI result predates this follow-up; the updated PR run is still pending.
+
+### I-A62-01 — latest-main integration update (2026-11-17 UTC)
+
+- `main` advanced again to `ddac6bb` after PRs #95/#97 added the `nfl-review-3bba0722` docket. The second rebase had append-point conflicts in `COORDINATION.md` and `README.md`; both the 3bba0722 records and this session's scope/log are retained. No 3bba0722 files were changed.
+- Added the new review docket to the integration dashboard and README. Updated the readiness-register audit/suggestion to keep the market 78-row, e46 72-row and review-hub 14-gate registers separate until a crosswalk exists. The hub now has a dedicated rendered executive-summary page.
+- Current local integration result: 8 generated pages; 18 official source-register entries; 13 audit findings; 10 questions; 10 suggestions; 759 verifier checks pass. The 3bba verifier reports 17 official-source records, 54 register rows, 81 source-linked/flagged table rows, 129 local links and deterministic rebuild; all 10 of its unit tests pass. Its namespace remains read-only.
+- Expanded the scoped integration workflow to run the 3bba verifier/tests and include that namespace in the generated-output drift check. Latest PR run is pending until the rebased branch is pushed.
+
+- Additional readiness handoff to the `83a7d6a8` and `3bba0722` owners: the three separate registers (78/72/14) need a documented row-level crosswalk or explicitly remain three separate decision dockets; do not publish a combined completion percentage until that mapping is verified. No register data was merged by I-A62-01.

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Decision-review suggestions with options, recommendations, reversal tests, official references and implementation status.">
+  <meta name="theme-color" content="#10251f">
+  <title>Suggestions &amp; Review Paths · Own5 NFL Evidence Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Own5 NFL evidence hub home"><span class="brand-mark">O5</span><span>OWN5 <small>NFL EVIDENCE HUB</small></span></a>
+    <nav aria-label="Portfolio navigation"><a class="nav-link" href="index.html">Overview</a><a class="nav-link" href="executive-summary.html">Executive summary</a><a class="nav-link" href="audit.html">Audit</a><a class="nav-link" href="questions.html">Questions</a><a class="nav-link active" href="suggestions.html" aria-current="page">Suggestions</a><a class="nav-link" href="leaderboard.html">Safe leaderboard</a><a class="nav-link" href="sources.html">Official sources</a><a class="nav-link" href="flagged.html">Flagged for Review</a></nav>
+    <span class="review-date">INTEGRATION REVIEW · 17 NOV 2026</span>
+  </header>
+  <main id="main">
+    <div class="page-title"><p class="eyebrow">NFL · FINAL INTEGRATION</p><h1>Suggestions &amp; Review Paths</h1><p>Decision-review suggestions with options, recommendations, reversal tests, official references and implementation status.</p></div>
+    <section class="notice"><strong>Review before data or model changes.</strong><p>These are reversible paths, not new NFL facts. The recommended path is explicit; each proposal states what evidence would change it. Requirements already requested by the owner (including this hub and the dated schedule links) are implemented; blocked data ingestion remains blocked by evidence or terms.</p></section>
+<section class="suggestion-grid"><article class="suggestion-card">
+  <div class="suggestion-head"><span class="card-kicker">SG-A62-01</span><span class="badge review">high</span></div>
+  <h2>Single source of truth for readiness</h2>
+  <p><strong>Options:</strong> A: keep every desk separate; B: designate one versioned requirements register and map every row across the three current registers; C: delete older registers.</p>
+  <p><strong>Recommended path:</strong> B: use the 78-row decision-readiness register as the primary navigation target for this hub; crosswalk all 72 e46 requirements and the 14 priority gates in the newer review hub before publishing any combined completion count, and retain the separate pages as linked views.</p>
+  <p><strong>What would change the recommendation:</strong> A verified row-by-row crosswalk with no dropped or silently changed requirement would permit a single combined dataset.</p>
+  <div class="links-row"><span><strong>Official references:</strong> <span class="source-missing">UNVERIFIED — repository-only finding; no NFL fact asserted</span></span><span><strong>Repository evidence:</strong> <span class="source-list"><a class="evidence-link" href="../nfl-market-desk/data/decision_readiness.csv">decision_readiness.csv ↗</a><a class="evidence-link" href="../nfl-desk-e46fb855/data/requirements.csv">requirements.csv ↗</a><a class="evidence-link" href="../nfl-review-3bba0722/data/readiness.json">readiness.json ↗</a></span></span></div>
+  <p class="status-line"><span class="badge neutral">PROPOSED; no other session data modified</span></p>
+</article><article class="suggestion-card">
+  <div class="suggestion-head"><span class="card-kicker">SG-A62-02</span><span class="badge critical">blocking</span></div>
+  <h2>Opening and closing price policy</h2>
+  <p><strong>Options:</strong> A: license a timestamped feed; B: capture one named operator only after terms and permission are verified; C: publish no price-relative score until a permitted source exists.</p>
+  <p><strong>Recommended path:</strong> C now; evaluate A or B only after source terms, jurisdiction, timestamp semantics and settlement rules are written down. Keep market-open and market-close blank meanwhile.</p>
+  <p><strong>What would change the recommendation:</strong> A signed source/terms record and test captures with a bookmaker, timestamp, market ID, price, rules and repeatable retrieval would change the recommendation.</p>
+  <div class="links-row"><span><strong>Official references:</strong> <span class="source-missing">UNVERIFIED — no qualifying official source identified</span></span><span><strong>Repository evidence:</strong> <span class="source-list"><a class="evidence-link" href="../nfl-market-desk/data/price_policy.csv">price_policy.csv ↗</a><a class="evidence-link" href="../nfl-market-desk/data/price_snapshots.csv">price_snapshots.csv ↗</a></span></span></div>
+  <p class="status-line"><span class="badge neutral">PROPOSED; no odds are fabricated</span></p>
+</article><article class="suggestion-card">
+  <div class="suggestion-head"><span class="card-kicker">SG-A62-03</span><span class="badge critical">blocking</span></div>
+  <h2>Immutable availability time series</h2>
+  <p><strong>Options:</strong> A: retain daily public copies; B: retain raw captures in a private store and publish permitted derivatives; C: keep one weekly snapshot.</p>
+  <p><strong>Recommended path:</strong> B: capture the official injury report at each publication time, record timestamp/hash/conflicts in a private immutable store, and publish only authorized deltas. Do not treat a scheduled fetch as an archive unless the artifact is retained.</p>
+  <p><strong>What would change the recommendation:</strong> Source terms permitting the retained fields and a successful replay of a known Questionable-to-Out change would support public-derived publication.</p>
+  <div class="links-row"><span><strong>Official references:</strong> <span class="source-list"><a class="source-link" href="https://www.nfl.com/injuries/league/2026/reg10" target="_blank" rel="noopener noreferrer">Official NFL Injury Report Week 10 of 2026 ↗</a></span></span><span><strong>Repository evidence:</strong> <span class="source-list"><a class="evidence-link" href="../nfl-desk-e46fb855/data/manifest.csv">manifest.csv ↗</a><a class="evidence-link" href="../nfl-capture-a991e3fb/README.md">README.md ↗</a></span></span></div>
+  <p class="status-line"><span class="badge neutral">PROPOSED; no scheduler/store added here</span></p>
+</article><article class="suggestion-card">
+  <div class="suggestion-head"><span class="card-kicker">SG-A62-04</span><span class="badge critical">blocking</span></div>
+  <h2>Official Game Book reuse</h2>
+  <p><strong>Options:</strong> A: ingest Game Books now; B: obtain written permission or another authorized feed; C: infer starters from depth charts.</p>
+  <p><strong>Recommended path:</strong> B. Reject C. The official PDF states that uses outside its media-coverage purpose require written permission; do not ingest or publish player-level Game Book data until authorized.</p>
+  <p><strong>What would change the recommendation:</strong> Written permission, a license, or an official source whose terms expressly allow this use would reopen ingestion.</p>
+  <div class="links-row"><span><strong>Official references:</strong> <span class="source-list"><a class="source-link" href="https://support.nfl.com/hc/en-us/articles/35869678028180-Game-Books" target="_blank" rel="noopener noreferrer">Game Books support article ↗</a><a class="source-link" href="https://static.www.nfl.com/image/upload/v1794570519/gamecenter/ab5828d9-4feb-11f1-abca-2c54536568a9.pdf" target="_blank" rel="noopener noreferrer">Official Week 10 Game Book PDF linked by the Game Center ↗</a></span></span><span><strong>Repository evidence:</strong> <span class="source-list"><a class="evidence-link" href="../nfl-market-desk/data/announced_starter_changes.csv">announced_starter_changes.csv ↗</a></span></span></div>
+  <p class="status-line"><span class="badge neutral">PROPOSED; raw Game Book rows intentionally not copied</span></p>
+</article><article class="suggestion-card">
+  <div class="suggestion-head"><span class="card-kicker">SG-A62-05</span><span class="badge review">high</span></div>
+  <h2>32-club roster and depth coverage</h2>
+  <p><strong>Options:</strong> A: trust the depth chart as a single starter list; B: verify official club charts and preserve grouped/empty slots; C: use an authorized official snap-count proxy where a club chart cannot be structured.</p>
+  <p><strong>Recommended path:</strong> B, then C only if an official, permitted snap source is verified for every club. Keep Houston image rows blank; never transcribe by eye or infer rank from jersey, experience or salary.</p>
+  <p><strong>What would change the recommendation:</strong> A source-by-source audit covering every club and position, with retained source dates and explicit conflicts, would clear the coverage gate.</p>
+  <div class="links-row"><span><strong>Official references:</strong> <span class="source-list"><a class="source-link" href="https://www.houstontexans.com/team/depth-chart" target="_blank" rel="noopener noreferrer">Official Texans depth chart ↗</a><a class="source-link" href="https://www.packers.com/team/depth-chart" target="_blank" rel="noopener noreferrer">Official Packers depth chart ↗</a><a class="source-link" href="https://www.bengals.com/team/depth-chart" target="_blank" rel="noopener noreferrer">Official Bengals depth chart ↗</a><a class="source-link" href="https://www.nfl.com/transactions/league/reserve-list/2026/11" target="_blank" rel="noopener noreferrer">2026 November reserve-list transactions ↗</a></span></span><span><strong>Repository evidence:</strong> <span class="source-list"><a class="evidence-link" href="../nfl-market-desk/data/roster_sweep_32.csv">roster_sweep_32.csv ↗</a><a class="evidence-link" href="../nfl-market-desk/data/depth_coverage.csv">depth_coverage.csv ↗</a><a class="evidence-link" href="../nfl-desk-e46fb855/data/team_availability.csv">team_availability.csv ↗</a></span></span></div>
+  <p class="status-line"><span class="badge neutral">PROPOSED; no depth values inferred</span></p>
+</article><article class="suggestion-card">
+  <div class="suggestion-head"><span class="card-kicker">SG-A62-06</span><span class="badge critical">critical</span></div>
+  <h2>Prospective-only two-stage competition</h2>
+  <p><strong>Options:</strong> A: display backtest scores as provisional ranks; B: keep backtests in research/audit only and qualify on prospective proper-score evidence before any staking panel; C: rank only by season ROI.</p>
+  <p><strong>Recommended path:</strong> B. Remove all historical result numbers from public leaderboards; first qualify singles by benchmark-relative proper score with game-cluster uncertainty and a multiple-testing adjustment, then escrow CLV/ROI separately on a prospective window. Keep parlay/prop-combo divisions locked until direct joint validation and settlement rules exist.</p>
+  <p><strong>What would change the recommendation:</strong> A future preregistered prospective sample passing the frozen score, uncertainty, multiplicity, price and replication gates would permit a rank; a failed demotion gate returns the strategy to paper.</p>
+  <div class="links-row"><span><strong>Official references:</strong> <span class="source-list"><a class="source-link" href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener noreferrer">2026 regular-season league standings ↗</a><a class="source-link" href="https://www.nfl.com/schedules/2026/by-week/week-11" target="_blank" rel="noopener noreferrer">2026 Week 11 live schedule ↗</a></span></span><span><strong>Repository evidence:</strong> <span class="source-list"><a class="evidence-link" href="../nfl-market-desk/data/strategy_registration.csv">strategy_registration.csv ↗</a><a class="evidence-link" href="../nfl-market-desk/data/gates.csv">gates.csv ↗</a><a class="evidence-link" href="../nfl-desk-e46fb855/data/leaderboard_signal.csv">leaderboard_signal.csv ↗</a></span></span></div>
+  <p class="status-line"><span class="badge neutral">PROPOSED; safe hub leaderboard contains no performance figures</span></p>
+</article><article class="suggestion-card">
+  <div class="suggestion-head"><span class="card-kicker">SG-A62-07</span><span class="badge review">high</span></div>
+  <h2>Official schedule announcement next to live schedule</h2>
+  <p><strong>Options:</strong> A: link only the current weekly schedule; B: pair the dated league announcement and the live schedule; C: copy schedule facts without versioning.</p>
+  <p><strong>Recommended path:</strong> B. This hub now links the May 8 league announcement beside the live Week 11 schedule; add the same source pair to the canonical schedule-announcement dataset when its owner can integrate it.</p>
+  <p><strong>What would change the recommendation:</strong> A future dated schedule revision with a matching official release would be appended as a new version, not overwrite the old announcement.</p>
+  <div class="links-row"><span><strong>Official references:</strong> <span class="source-list"><a class="source-link" href="https://media.nfl.com/news-and-releases/2026-nfl-schedule-powered-by-aws-to-be-released-thursday--may-14" target="_blank" rel="noopener noreferrer">2026 NFL Schedule Powered by AWS to be Released Thursday May 14 ↗</a><a class="source-link" href="https://www.nfl.com/schedules/2026/by-week/week-11" target="_blank" rel="noopener noreferrer">2026 Week 11 live schedule ↗</a></span></span><span><strong>Repository evidence:</strong> <span class="source-list"><a class="evidence-link" href="../nfl-market-desk/data/schedule_announcements.csv">schedule_announcements.csv ↗</a></span></span></div>
+  <p class="status-line"><span class="badge neutral">HUB IMPLEMENTED; canonical dataset sync pending</span></p>
+</article><article class="suggestion-card">
+  <div class="suggestion-head"><span class="card-kicker">SG-A62-08</span><span class="badge review">high</span></div>
+  <h2>Public analysis and private raw store</h2>
+  <p><strong>Options:</strong> A: keep every raw row in the static site; B: hold raw snapshots privately and expose only permitted aggregates, derived analysis and official links; C: stop all historical work.</p>
+  <p><strong>Recommended path:</strong> B, after source-term and retention review. Do not publish raw Game Book content; do not claim a private store exists until a storage backend and access policy are implemented.</p>
+  <p><strong>What would change the recommendation:</strong> A source-by-source rights matrix and access-controlled archive with a deletion/retention policy would support deployment.</p>
+  <div class="links-row"><span><strong>Official references:</strong> <span class="source-list"><a class="source-link" href="https://support.nfl.com/hc/en-us/articles/35869678028180-Game-Books" target="_blank" rel="noopener noreferrer">Game Books support article ↗</a></span></span><span><strong>Repository evidence:</strong> <span class="source-list"><a class="evidence-link" href="../nfl-market-desk/data/injuries_wk10.csv">injuries_wk10.csv ↗</a><a class="evidence-link" href="../nfl-market-desk/data/depth_rows.csv">depth_rows.csv ↗</a></span></span></div>
+  <p class="status-line"><span class="badge neutral">PROPOSED; this hub contains no raw player-level rows</span></p>
+</article><article class="suggestion-card">
+  <div class="suggestion-head"><span class="card-kicker">SG-A62-09</span><span class="badge review">high</span></div>
+  <h2>Per-fixture venue provenance</h2>
+  <p><strong>Options:</strong> A: take the location from the week page; B: read the venue from each linked Game Center; C: infer a venue from the club or city.</p>
+  <p><strong>Recommended path:</strong> B. The user explicitly requested Game Center provenance; keep a venue blank until that fixture&#x27;s Game Center confirms it, and retain the source URL per row.</p>
+  <p><strong>What would change the recommendation:</strong> Every fixture in the published slate has a matching Game Center URL and a verified venue field.</p>
+  <div class="links-row"><span><strong>Official references:</strong> <span class="source-list"><a class="source-link" href="https://www.nfl.com/schedules/2026/by-week/week-11" target="_blank" rel="noopener noreferrer">2026 Week 11 live schedule ↗</a><a class="source-link" href="https://www.nfl.com/games/colts-at-texans-2026-reg-11" target="_blank" rel="noopener noreferrer">Indianapolis Colts at Houston Texans Week 11 Game Center ↗</a></span></span><span><strong>Repository evidence:</strong> <span class="source-list"><a class="evidence-link" href="../nfl-market-desk/data/venues.csv">venues.csv ↗</a></span></span></div>
+  <p class="status-line"><span class="badge neutral">PROPOSED; one source example is linked</span></p>
+</article><article class="suggestion-card">
+  <div class="suggestion-head"><span class="card-kicker">SG-A62-10</span><span class="badge review">medium</span></div>
+  <h2>Injury designation reliability</h2>
+  <p><strong>Options:</strong> A: map Questionable to a fixed percentage; B: treat the designation as a surprise feature and calibrate it against official game-day status/participation; C: exclude it permanently.</p>
+  <p><strong>Recommended path:</strong> B only after a multi-season official join with confidence intervals; until then keep the label out of the model and retain levels/deltas only as descriptive evidence.</p>
+  <p><strong>What would change the recommendation:</strong> A validated, season-held-out reliability estimate with its sample size and interval, joined to a permitted official inactive/participation source.</p>
+  <div class="links-row"><span><strong>Official references:</strong> <span class="source-list"><a class="source-link" href="https://www.nfl.com/injuries/league/2026/reg10" target="_blank" rel="noopener noreferrer">Official NFL Injury Report Week 10 of 2026 ↗</a><a class="source-link" href="https://support.nfl.com/hc/en-us/articles/35869678028180-Game-Books" target="_blank" rel="noopener noreferrer">Game Books support article ↗</a></span></span><span><strong>Repository evidence:</strong> <span class="source-list"><a class="evidence-link" href="../nfl-market-desk/data/personnel_ablation.csv">personnel_ablation.csv ↗</a><a class="evidence-link" href="../nfl-market-desk/data/questions.csv">questions.csv ↗</a></span></span></div>
+  <p class="status-line"><span class="badge neutral">PROPOSED; no fixed injury penalty applied by this hub</span></p>
+</article></section>
+<section class="section-footer-links"><a href="../nfl-market-desk/suggestions.html">Full 19-item suggestions register ↗</a></section>
+  </main>
+  <footer class="site-footer">
+    <span>OWN5 · Independent research · Not affiliated with the NFL.</span>
+    <span>Static analysis only. No live feed, wager placement or reward system.</span>
+    <a href="../index.html">Original proposal workspace ↗</a>
+  </footer>
+</body>
+</html>

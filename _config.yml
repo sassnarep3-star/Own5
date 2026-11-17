@@ -1,5 +1,5 @@
 title: "Own5 — NFL Line Originator"
-description: "Originate your own NFL lines. Fully sourced from official NFL and operator sources; unverifiable values are blank and flagged."
+description: "NFL line-origination research with linked official sources; market-price provenance and availability coverage remain incomplete, and unresolved gaps are flagged."
 url: "https://sassnarep3-star.github.io/Own5"
 exclude:
   - tools/
