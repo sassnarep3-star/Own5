@@ -539,3 +539,38 @@ python3 nfl-review-3bba0722/build_site.py
 python3 nfl-review-3bba0722/verify.py
 python3 -m unittest discover -s nfl-review-3bba0722/tests -v
 ```
+
+---
+
+## NFL portfolio integration — session a620f5a5 (2026-11-17)
+
+**Entry point (after Pages deploy):** `https://sassnarep3-star.github.io/Own5/nfl-integration-a620f5a5/` ·
+[Executive summary](nfl-integration-a620f5a5/EXECUTIVE_SUMMARY.md) ·
+[Cross-desk audit](nfl-integration-a620f5a5/audit.html) ·
+[Questions](nfl-integration-a620f5a5/questions.html) ·
+[Suggestions](nfl-integration-a620f5a5/suggestions.html) ·
+[Flagged for Review](nfl-integration-a620f5a5/flagged.html) ·
+[Official sources](nfl-integration-a620f5a5/sources.html)
+
+This is the repository-wide landing page for existing NFL decision desks. It adds the dated NFL Media
+schedule-release announcement beside the live Week 11 schedule, links to the row-by-row readiness and
+analysis pages, publishes a cross-desk audit, and provides a score-free prospective leaderboard view.
+It does not copy raw Game Book player rows or make any strategy bet-eligible. The hub's read of the
+official pages is dated 2026-11-17; the structured NFL data captures it references are dated no later
+than 2026-11-15 in their pinned manifests/readme files.
+
+**Integration findings that remain open:** legacy strategy pages still display historical outcome
+metrics despite the prospective-only requirement; operator opening/closing prices are not verified;
+Week 10 injury tables disagree across captures; the Week 11 injury URL returned Week 10; the 32-team
+roster/depth graph is incomplete; Game Book reuse requires written permission; fixture venue sources
+are not all individual Game Centers; and the 78-row and 72-row requirements registers are unmapped.
+All items are published with source links or explicit UNVERIFIED labels. Owning-session files are not
+edited by this integration; see the cross-session requests in `COORDINATION.md`.
+
+Rebuild and verify:
+
+```sh
+python3 nfl-integration-a620f5a5/build_site.py
+python3 nfl-integration-a620f5a5/verify.py
+python3 scripts/build.py
+```
