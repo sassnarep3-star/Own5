@@ -1,0 +1,114 @@
+slot_id,team,unit,position,rank1_raw,rank1_names,rank1_count,rank2,rank3,rank4,shared_rank1,empty_rank1,jersey_numbers_stripped,published_date,captured_utc,source_url
+DET|Offense|WR|1,DET,Offense,WR,Jameson Williams,Jameson Williams,1,,,,no,no,no,,2026-11-17T01:12:00Z,https://www.detroitlions.com/team/depth-chart
+DET|Offense|WR|2,DET,Offense,WR,Amon-Ra St. Brown,Amon-Ra St. Brown,1,DeAndre Carter,,,no,no,no,,2026-11-17T01:12:00Z,https://www.detroitlions.com/team/depth-chart
+DET|Offense|LT|3,DET,Offense,LT,Penei Sewell,Penei Sewell,1,,,,no,no,no,,2026-11-17T01:12:00Z,https://www.detroitlions.com/team/depth-chart
+DET|Offense|LG|4,DET,Offense,LG,Christian Mahogany,Christian Mahogany,1,Miles Frazier,,,no,no,no,,2026-11-17T01:12:00Z,https://www.detroitlions.com/team/depth-chart
+DET|Offense|C|5,DET,Offense,C,Cade Mays,Cade Mays,1,Juice Scruggs,,,no,no,no,,2026-11-17T01:12:00Z,https://www.detroitlions.com/team/depth-chart
+DET|Offense|RG|6,DET,Offense,RG,Tate Ratledge,Tate Ratledge,1,Seth McLaughlin,,,no,no,no,,2026-11-17T01:12:00Z,https://www.detroitlions.com/team/depth-chart
+DET|Offense|RT|7,DET,Offense,RT,Blake Miller,Blake Miller,1,Larry Borom,,,no,no,no,,2026-11-17T01:12:00Z,https://www.detroitlions.com/team/depth-chart
+DET|Offense|TE|8,DET,Offense,TE,Sam LaPorta,Sam LaPorta,1,Brock Wright,Tyler Conklin,Jackson Meeks,no,no,no,,2026-11-17T01:12:00Z,https://www.detroitlions.com/team/depth-chart
+DET|Offense|WR|9,DET,Offense,WR,Isaac TeSlaa,Isaac TeSlaa,1,Tay Martin,,,no,no,no,,2026-11-17T01:12:00Z,https://www.detroitlions.com/team/depth-chart
+DET|Offense|QB|10,DET,Offense,QB,Jared Goff,Jared Goff,1,Joshua Dobbs,,,no,no,no,,2026-11-17T01:12:00Z,https://www.detroitlions.com/team/depth-chart
+DET|Offense|RB|11,DET,Offense,RB,Jahmyr Gibbs,Jahmyr Gibbs,1,Sione Vaki,Jacob Saylors,,no,no,no,,2026-11-17T01:12:00Z,https://www.detroitlions.com/team/depth-chart
+DET|Defense|EDGE|12,DET,Defense,EDGE,Aidan Hutchinson,Aidan Hutchinson,1,Derrick Moore,Eric O'Neill,,no,no,no,,2026-11-17T01:12:00Z,https://www.detroitlions.com/team/depth-chart
+DET|Defense|DL|13,DET,Defense,DL,Alim McNeill,Alim McNeill,1,Skyler Gill-Howard,Mekhi Wingo,,no,no,no,,2026-11-17T01:12:00Z,https://www.detroitlions.com/team/depth-chart
+DET|Defense|DL|14,DET,Defense,DL,Tyleik Williams,Tyleik Williams,1,Levi Onwuzurike,,,no,no,no,,2026-11-17T01:12:00Z,https://www.detroitlions.com/team/depth-chart
+DET|Defense|EDGE|15,DET,Defense,EDGE,DJ Wonnum,DJ Wonnum,1,Tyler Lacy,Ahmed Hassanein,,no,no,no,,2026-11-17T01:12:00Z,https://www.detroitlions.com/team/depth-chart
+DET|Defense|LB|16,DET,Defense,LB,Derrick Barnes,Derrick Barnes,1,Joe Bachie,,,no,no,no,,2026-11-17T01:12:00Z,https://www.detroitlions.com/team/depth-chart
+DET|Defense|LB|17,DET,Defense,LB,Malcolm Rodriguez,Malcolm Rodriguez,1,K.J. Britt,,,no,no,no,,2026-11-17T01:12:00Z,https://www.detroitlions.com/team/depth-chart
+DET|Defense|LB|18,DET,Defense,LB,Trevor Nowaske,Trevor Nowaske,1,Amen Ogbongbemiga,,,no,no,no,,2026-11-17T01:12:00Z,https://www.detroitlions.com/team/depth-chart
+DET|Defense|CB|19,DET,Defense,CB,D.J. Reed,D.J. Reed,1,Rock Ya-Sin,Khalil Dorsey,,no,no,no,,2026-11-17T01:12:00Z,https://www.detroitlions.com/team/depth-chart
+DET|Defense|CB|20,DET,Defense,CB,Roger McCreary,Roger McCreary,1,Ennis Rakestraw Jr.,Keith Abney II,,no,no,no,,2026-11-17T01:12:00Z,https://www.detroitlions.com/team/depth-chart
+DET|Defense|S|21,DET,Defense,S,Chuck Clark,Chuck Clark,1,,,,no,no,no,,2026-11-17T01:12:00Z,https://www.detroitlions.com/team/depth-chart
+DET|Defense|S|22,DET,Defense,S,Brian Branch,Brian Branch,1,Christian Izien,,,no,no,no,,2026-11-17T01:12:00Z,https://www.detroitlions.com/team/depth-chart
+BAL|Offense|WR|1,BAL,Offense,WR,Zay Flowers,Zay Flowers,1,Devontez Walker,Elijah Sarratt,,no,no,no,,2026-11-17T01:12:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL|Offense|WR|2,BAL,Offense,WR,Rashod Bateman,Rashod Bateman,1,Ja'Kobi Lane,LaJohntay Wester,,no,no,no,,2026-11-17T01:12:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL|Offense|LT|3,BAL,Offense,LT,Ronnie Stanley,Ronnie Stanley,1,Carson Vinson,,,no,no,no,,2026-11-17T01:12:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL|Offense|LG|4,BAL,Offense,LG,John Simpson,John Simpson,1,Ryan Neuzil,,,no,no,no,,2026-11-17T01:12:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL|Offense|C|5,BAL,Offense,C,Cam Jurgens,Cam Jurgens,1,Ryan Neuzil,,,no,no,no,,2026-11-17T01:12:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL|Offense|RG|6,BAL,Offense,RG,Vega Ioane,Vega Ioane,1,Emery Jones Jr.,,,no,no,no,,2026-11-17T01:12:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL|Offense|RT|7,BAL,Offense,RT,Roger Rosengarten,Roger Rosengarten,1,Carson Vinson,,,no,no,no,,2026-11-17T01:12:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL|Offense|TE|8,BAL,Offense,TE,Mark Andrews,Mark Andrews,1,Josh Cuevas,,,no,no,no,,2026-11-17T01:12:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL|Offense|TE|9,BAL,Offense,TE,Matt Hibner,Matt Hibner,1,,,,no,no,no,,2026-11-17T01:12:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL|Offense|QB|10,BAL,Offense,QB,Jacoby Brissett,Jacoby Brissett,1,Joe Fagnano,Kedon Slovis,,no,no,no,,2026-11-17T01:12:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL|Offense|RB|11,BAL,Offense,RB,Derrick Henry,Derrick Henry,1,Justice Hill,Rasheen Ali,,no,no,no,,2026-11-17T01:12:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL|Defense|DT|12,BAL,Defense,DT,Nnamdi Madubuike,Nnamdi Madubuike,1,Broderick Washington Jr.,,,no,no,no,,2026-11-17T01:12:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL|Defense|NT|13,BAL,Defense,NT,Travis Jones,Travis Jones,1,John Jenkins,,,no,no,no,,2026-11-17T01:12:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL|Defense|DE|14,BAL,Defense,DE,Calais Campbell,Calais Campbell,1,Aeneas Peebles,,,no,no,no,,2026-11-17T01:12:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL|Defense|RUSH|15,BAL,Defense,RUSH,Trey Hendrickson,Trey Hendrickson,1,Mike Green,,,no,no,no,,2026-11-17T01:12:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL|Defense|MLB|16,BAL,Defense,MLB,Roquan Smith,Roquan Smith,1,Jay Higgins IV,,,no,no,no,,2026-11-17T01:12:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL|Defense|WLB|17,BAL,Defense,WLB,Trenton Simpson,Trenton Simpson,1,Teddye Buchanan,,,no,no,no,,2026-11-17T01:12:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL|Defense|SAM|18,BAL,Defense,SAM,Mike Green,Mike Green,1,Zion Young,Ethan Burke,,no,no,no,,2026-11-17T01:12:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL|Defense|CB|19,BAL,Defense,CB,Marlon Humphrey,Marlon Humphrey,1,Chidobe Awuzie,,,no,no,no,,2026-11-17T01:12:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL|Defense|DB|20,BAL,Defense,DB,Kyle Hamilton,Kyle Hamilton,1,Keyon Martin,Chandler Rivers,,no,no,no,,2026-11-17T01:12:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL|Defense|SS|21,BAL,Defense,SS,Jaylinn Hawkins,Jaylinn Hawkins,1,Keondre Jackson,,,no,no,no,,2026-11-17T01:12:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL|Defense|FS|22,BAL,Defense,FS,Malaki Starks,Malaki Starks,1,K'Von Wallace,,,no,no,no,,2026-11-17T01:12:00Z,https://www.baltimoreravens.com/team/depth-chart
+BAL|Defense|CB|23,BAL,Defense,CB,Nate Wiggins,Nate Wiggins,1,T.J. Tampa Jr.,,,no,no,no,,2026-11-17T01:12:00Z,https://www.baltimoreravens.com/team/depth-chart
+GB|Offense|WR|1,GB,Offense,WR,9 Christian Watson,Christian Watson,1,Bo Melton,,,no,no,YES,2026-11-10,2026-11-17T01:12:00Z,https://www.packers.com/team/depth-chart
+GB|Offense|WR|2,GB,Offense,WR,0 Matthew Golden,Matthew Golden,1,J. Michael Sturdivant,,,no,no,YES,2026-11-10,2026-11-17T01:12:00Z,https://www.packers.com/team/depth-chart
+GB|Offense|LT|3,GB,Offense,LT,77 Jordan Morgan,Jordan Morgan,1,John Williams,,,no,no,YES,2026-11-10,2026-11-17T01:12:00Z,https://www.packers.com/team/depth-chart
+GB|Offense|LG|4,GB,Offense,LG,65 Aaron Banks,Aaron Banks,1,Travis Glover,Donovan Jennings,,no,no,YES,2026-11-10,2026-11-17T01:12:00Z,https://www.packers.com/team/depth-chart
+GB|Offense|C|5,GB,Offense,C,75 Sean Rhyan,Sean Rhyan,1,Jager Burton,,,no,no,YES,2026-11-10,2026-11-17T01:12:00Z,https://www.packers.com/team/depth-chart
+GB|Offense|RG|6,GB,Offense,RG,72 Laken Tomlinson,Laken Tomlinson,1,Kevin Zeitler,,,no,no,YES,2026-11-10,2026-11-17T01:12:00Z,https://www.packers.com/team/depth-chart
+GB|Offense|RT|7,GB,Offense,RT,71 Anthony Belton,Anthony Belton,1,Mekhi Becton Sr.,,,no,no,YES,2026-11-10,2026-11-17T01:12:00Z,https://www.packers.com/team/depth-chart
+GB|Offense|TE|8,GB,Offense,TE,85 Tucker Kraft,Tucker Kraft,1,Jonnu Smith,Mark Redman,,no,no,YES,2026-11-10,2026-11-17T01:12:00Z,https://www.packers.com/team/depth-chart
+GB|Offense|WR|9,GB,Offense,WR,83 Savion Williams,Savion Williams,1,,,,no,no,YES,2026-11-10,2026-11-17T01:12:00Z,https://www.packers.com/team/depth-chart
+GB|Offense|QB|10,GB,Offense,QB,10 Jordan Love,Jordan Love,1,Tyrod Taylor,,,no,no,YES,2026-11-10,2026-11-17T01:12:00Z,https://www.packers.com/team/depth-chart
+GB|Offense|RB|11,GB,Offense,RB,8 Josh Jacobs,Josh Jacobs,1,MarShawn Lloyd,Pierre Strong Jr.,Kaleb Johnson,no,no,YES,2026-11-10,2026-11-17T01:12:00Z,https://www.packers.com/team/depth-chart
+GB|Defense|DT|12,GB,Defense,DT,94 Karl Brooks,Karl Brooks,1,Jordon Riley,Anthony Campbell,,no,no,YES,2026-11-10,2026-11-17T01:12:00Z,https://www.packers.com/team/depth-chart
+GB|Defense|DT|13,GB,Defense,DT,95 Devonte Wyatt,Devonte Wyatt,1,Chris McClellan,,,no,no,YES,2026-11-10,2026-11-17T01:12:00Z,https://www.packers.com/team/depth-chart
+GB|Defense|EDGE|14,GB,Defense,EDGE,90 Lukas Van Ness,Lukas Van Ness,1,Brenton Cox Jr,,,no,no,YES,2026-11-10,2026-11-17T01:12:00Z,https://www.packers.com/team/depth-chart
+GB|Defense|LB|15,GB,Defense,LB,44 Zaire Franklin,Zaire Franklin,1,Ty’Ron Hopper,Kristian Welch,,no,no,YES,2026-11-10,2026-11-17T01:12:00Z,https://www.packers.com/team/depth-chart
+GB|Defense|LB|16,GB,Defense,LB,58 Isaiah McDuffie,Isaiah McDuffie,1,Nick Niemann,,,no,no,YES,2026-11-10,2026-11-17T01:12:00Z,https://www.packers.com/team/depth-chart
+GB|Defense|EDGE|17,GB,Defense,EDGE,99 Barryn Sorrell,Barryn Sorrell,1,Dani Dennis-Sutton,,,no,no,YES,2026-11-10,2026-11-17T01:12:00Z,https://www.packers.com/team/depth-chart
+GB|Defense|CB|18,GB,Defense,CB,25 Keisean Nixon,Keisean Nixon,1,Carrington Valentine,,,no,no,YES,2026-11-10,2026-11-17T01:12:00Z,https://www.packers.com/team/depth-chart
+GB|Defense|CB|19,GB,Defense,CB,2 Brandon Cisse,Brandon Cisse,1,Benjamin St-Juste,,,no,no,YES,2026-11-10,2026-11-17T01:12:00Z,https://www.packers.com/team/depth-chart
+GB|Defense|S|20,GB,Defense,S,29 Xavier McKinney,Xavier McKinney,1,Kitan Oladapo,,,no,no,YES,2026-11-10,2026-11-17T01:12:00Z,https://www.packers.com/team/depth-chart
+GB|Defense|S|21,GB,Defense,S,33 Evan Williams,Evan Williams,1,Kitan Oladapo,,,no,no,YES,2026-11-10,2026-11-17T01:12:00Z,https://www.packers.com/team/depth-chart
+GB|Defense|NB|22,GB,Defense,NB,7 Javon Bullard,Javon Bullard,1,Kamal Hadden,,,no,no,YES,2026-11-10,2026-11-17T01:12:00Z,https://www.packers.com/team/depth-chart
+SEA|Offense|WR|1,SEA,Offense,WR,Cooper Kupp|Rashid Shaheed,Cooper Kupp | Rashid Shaheed,2,Irvin Charles,,,YES,no,no,,2026-11-17T01:12:00Z,https://www.seahawks.com/team/depth-chart/
+SEA|Offense|LT|2,SEA,Offense,LT,Charles Cross,Charles Cross,1,Josh Jones,,,no,no,no,,2026-11-17T01:12:00Z,https://www.seahawks.com/team/depth-chart/
+SEA|Offense|LG|3,SEA,Offense,LG,Quenton Nelson,Quenton Nelson,1,Anthony Bradford,,,no,no,no,,2026-11-17T01:12:00Z,https://www.seahawks.com/team/depth-chart/
+SEA|Offense|C|4,SEA,Offense,C,Jalen Sundell,Jalen Sundell,1,Olu Oluwatimi,,,no,no,no,,2026-11-17T01:12:00Z,https://www.seahawks.com/team/depth-chart/
+SEA|Offense|RG|5,SEA,Offense,RG,Grey Zabel,Grey Zabel,1,Anthony Bradford,Beau Stephens,,no,no,no,,2026-11-17T01:12:00Z,https://www.seahawks.com/team/depth-chart/
+SEA|Offense|RT|6,SEA,Offense,RT,Abraham Lucas,Abraham Lucas,1,Josh Jones,,,no,no,no,,2026-11-17T01:12:00Z,https://www.seahawks.com/team/depth-chart/
+SEA|Offense|TE|7,SEA,Offense,TE,AJ Barner,AJ Barner,1,Eric Saubert,Nick Kallerup,,no,no,no,,2026-11-17T01:12:00Z,https://www.seahawks.com/team/depth-chart/
+SEA|Offense|WR|8,SEA,Offense,WR,Jaxon Smith-Njigba,Jaxon Smith-Njigba,1,Tory Horton,,,no,no,no,,2026-11-17T01:12:00Z,https://www.seahawks.com/team/depth-chart/
+SEA|Offense|QB|9,SEA,Offense,QB,Sam Darnold,Sam Darnold,1,Drew Lock,Jalen Milroe,,no,no,no,,2026-11-17T01:12:00Z,https://www.seahawks.com/team/depth-chart/
+SEA|Offense|FB|10,SEA,Offense,FB,Brady Russell,Brady Russell,1,,,,no,no,no,,2026-11-17T01:12:00Z,https://www.seahawks.com/team/depth-chart/
+SEA|Offense|RB|11,SEA,Offense,RB,Zach Charbonnet,Zach Charbonnet,1,Jadarian Price,Emanuel Wilson,George Holani,no,no,no,,2026-11-17T01:12:00Z,https://www.seahawks.com/team/depth-chart/
+SEA|Defense|DT|12,SEA,Defense,DT,Leonard Williams,Leonard Williams,1,Rylie Mills,,,no,no,no,,2026-11-17T01:12:00Z,https://www.seahawks.com/team/depth-chart/
+SEA|Defense|NT|13,SEA,Defense,NT,Byron Murphy II,Byron Murphy II,1,Brandon Pili,,,no,no,no,,2026-11-17T01:12:00Z,https://www.seahawks.com/team/depth-chart/
+SEA|Defense|DE|14,SEA,Defense,DE,Jarran Reed,Jarran Reed,1,Mike Morris,,,no,no,no,,2026-11-17T01:12:00Z,https://www.seahawks.com/team/depth-chart/
+SEA|Defense|RUSH|15,SEA,Defense,RUSH,DeMarcus Lawrence,DeMarcus Lawrence,1,Derick Hall,,,no,no,no,,2026-11-17T01:12:00Z,https://www.seahawks.com/team/depth-chart/
+SEA|Defense|MLB|16,SEA,Defense,MLB,Ernest Jones IV,Ernest Jones IV,1,Patrick O'Connell,,,no,no,no,,2026-11-17T01:12:00Z,https://www.seahawks.com/team/depth-chart/
+SEA|Defense|WLB|17,SEA,Defense,WLB,Drake Thomas,Drake Thomas,1,Tyrice Knight,Chazz Surratt,,no,no,no,,2026-11-17T01:12:00Z,https://www.seahawks.com/team/depth-chart/
+SEA|Defense|SLB|18,SEA,Defense,SLB,Uchenna Nwosu,Uchenna Nwosu,1,Dante Fowler Jr.,Connor O'Toole,,no,no,no,,2026-11-17T01:12:00Z,https://www.seahawks.com/team/depth-chart/
+SEA|Defense|CB|19,SEA,Defense,CB,Devon Witherspoon,Devon Witherspoon,1,Nehemiah Pritchett,,,no,no,no,,2026-11-17T01:12:00Z,https://www.seahawks.com/team/depth-chart/
+SEA|Defense|CB|20,SEA,Defense,CB,Josh Jobe,Josh Jobe,1,Avery Smith,,,no,no,no,,2026-11-17T01:12:00Z,https://www.seahawks.com/team/depth-chart/
+SEA|Defense|S|21,SEA,Defense,S,Ty Okada,Ty Okada,1,Rodney Thomas II,,,no,no,no,,2026-11-17T01:12:00Z,https://www.seahawks.com/team/depth-chart/
+SEA|Defense|S|22,SEA,Defense,S,Julian Love,Julian Love,1,,,,no,no,no,,2026-11-17T01:12:00Z,https://www.seahawks.com/team/depth-chart/
+SEA|Defense|S|23,SEA,Defense,S,Nick Emmanwori,Nick Emmanwori,1,,,,no,no,no,,2026-11-17T01:12:00Z,https://www.seahawks.com/team/depth-chart/
+WAS|Offense|WR|1,WAS,Offense,WR,Treylon Burks,Treylon Burks,1,Van Jefferson,,,no,no,no,,2026-11-17T01:12:00Z,https://www.commanders.com/team/depth-chart
+WAS|Offense|LT|2,WAS,Offense,LT,Brandon Coleman,Brandon Coleman,1,Andrew Wylie,,,no,no,no,,2026-11-17T01:12:00Z,https://www.commanders.com/team/depth-chart
+WAS|Offense|LG|3,WAS,Offense,LG,Chris Paul,Chris Paul,1,Nick Allegretti,,,no,no,no,,2026-11-17T01:12:00Z,https://www.commanders.com/team/depth-chart
+WAS|Offense|C|4,WAS,Offense,C,Lucas Patrick,Lucas Patrick,1,Matt Gulbin,,,no,no,no,,2026-11-17T01:12:00Z,https://www.commanders.com/team/depth-chart
+WAS|Offense|RG|5,WAS,Offense,RG,Sam Cosmi,Sam Cosmi,1,Tanoa Togiai,,,no,no,no,,2026-11-17T01:12:00Z,https://www.commanders.com/team/depth-chart
+WAS|Offense|RT|6,WAS,Offense,RT,Josh Conerly Jr.,Josh Conerly Jr.,1,Andrew Wylie,,,no,no,no,,2026-11-17T01:12:00Z,https://www.commanders.com/team/depth-chart
+WAS|Offense|TE|7,WAS,Offense,TE,Chig Okonkwo,Chig Okonkwo,1,Ben Sinnott,,,no,no,no,,2026-11-17T01:12:00Z,https://www.commanders.com/team/depth-chart
+WAS|Offense|TE|8,WAS,Offense,TE,John Bates,John Bates,1,Colson Yankoff,,,no,no,no,,2026-11-17T01:12:00Z,https://www.commanders.com/team/depth-chart
+WAS|Offense|WR|9,WAS,Offense,WR,Stefon Diggs,Stefon Diggs,1,Luke McCaffrey,,,no,no,no,,2026-11-17T01:12:00Z,https://www.commanders.com/team/depth-chart
+WAS|Offense|WR|10,WAS,Offense,WR,Antonio Williams,Antonio Williams,1,,,,no,no,no,,2026-11-17T01:12:00Z,https://www.commanders.com/team/depth-chart
+WAS|Offense|QB|11,WAS,Offense,QB,Jayden Daniels,Jayden Daniels,1,Marcus Mariota,Athan Kaliakmanis,,no,no,no,,2026-11-17T01:12:00Z,https://www.commanders.com/team/depth-chart
+WAS|Offense|RB|12,WAS,Offense,RB,Rachaad White,Rachaad White,1,Austin Ekeler,Robert Henry Jr.,,no,no,no,,2026-11-17T01:12:00Z,https://www.commanders.com/team/depth-chart
+WAS|Defense|DL|13,WAS,Defense,DL,Charles Omenihu,Charles Omenihu,1,Jer'Zhan Newton,,,no,no,no,,2026-11-17T01:12:00Z,https://www.commanders.com/team/depth-chart
+WAS|Defense|DL|14,WAS,Defense,DL,Tim Settle,Tim Settle,1,Shy Tuttle,,,no,no,no,,2026-11-17T01:12:00Z,https://www.commanders.com/team/depth-chart
+WAS|Defense|DL|15,WAS,Defense,DL,Deatrich Wise Jr.,Deatrich Wise Jr.,1,Ricky Barber,,,no,no,no,,2026-11-17T01:12:00Z,https://www.commanders.com/team/depth-chart
+WAS|Defense|OLB|16,WAS,Defense,OLB,Odafe Oweh,Odafe Oweh,1,Joshua Josephs,,,no,no,no,,2026-11-17T01:12:00Z,https://www.commanders.com/team/depth-chart
+WAS|Defense|LB|17,WAS,Defense,LB,Sonny Styles,Sonny Styles,1,Kain Medrano,,,no,no,no,,2026-11-17T01:12:00Z,https://www.commanders.com/team/depth-chart
+WAS|Defense|LB|18,WAS,Defense,LB,Frankie Luvu,Frankie Luvu,1,Jordan Magee,,,no,no,no,,2026-11-17T01:12:00Z,https://www.commanders.com/team/depth-chart
+WAS|Defense|OLB|19,WAS,Defense,OLB,K'Lavon Chaisson,K'Lavon Chaisson,1,Dorance Armstrong,,,no,no,no,,2026-11-17T01:12:00Z,https://www.commanders.com/team/depth-chart
+WAS|Defense|CB|20,WAS,Defense,CB,Amik Robertson,Amik Robertson,1,Rasul Douglas,Isaac Yiadom,,no,no,no,,2026-11-17T01:12:00Z,https://www.commanders.com/team/depth-chart
+WAS|Defense|CB|21,WAS,Defense,CB,Trey Amos,Trey Amos,1,Mike Sainristil,Fabian Moreau,,no,no,no,,2026-11-17T01:12:00Z,https://www.commanders.com/team/depth-chart
+WAS|Defense|SS|22,WAS,Defense,SS,Nick Cross,Nick Cross,1,Tyler Owens,,,no,no,no,,2026-11-17T01:12:00Z,https://www.commanders.com/team/depth-chart
+WAS|Defense|FS|23,WAS,Defense,FS,Jeremy Reaves,Jeremy Reaves,1,Quan Martin,Percy Butler,,no,no,no,,2026-11-17T01:12:00Z,https://www.commanders.com/team/depth-chart

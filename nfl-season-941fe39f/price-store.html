@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Price policy · Own5 NFL Season Desk</title>
+<meta name="description" content="One series, named; a snapshot or nothing">
+<link rel="stylesheet" href="assets/style.css">
+</head><body>
+<header class="top"><div class="wrap">
+<a class="brand" href="index.html">Own5 · NFL Season Desk</a>
+<span class="tag">One series, named; a snapshot or nothing</span>
+</div></header>
+<nav class="main"><div class="wrap"><a href="index.html">Overview</a><a href="executive-summary.html">Executive summary</a><a href="lines.html">Originated lines</a><a href="model.html">Model</a><a href="leaderboard.html">Leaderboard</a><a href="strategies.html">Strategies &amp; gates</a><a href="luck.html">Removal of luck</a><a href="depth.html">Depth &amp; replacements</a><a href="availability.html">Availability</a><a href="matchup.html">Deficiency matrix</a><a href="correlations.html">Correlations</a><a href="corpus.html">Corpus</a><a class="on" href="price-store.html">Price policy</a><a href="schedule.html">Schedule</a><a href="snapshots.html">Snapshots &amp; alarms</a><a href="changes.html">What changed</a><a href="audit.html">Repo audit</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources</a><a href="methodology.html">Methodology</a></div></nav>
+<main class="wrap">
+
+<h1>Price policy</h1>
+<p class="lede">The brief asks for the price-data policy to be decided before any backtest is published.
+Here it is, in three rules, each with the measurement that forced it.</p>
+
+<section class="card "><h2>The policy</h2>
+<ol class="tight">
+<li><strong>One series, named in every table.</strong> The backtest uses
+<code>games.spread_line_home</code> and <code>games.total_line</code> from the pinned corpus and nothing
+else. The separate <code>closing_lines.csv</code> file is used only for the comparison below.</li>
+<li><strong>A price is a snapshot with a clock time, or it does not exist.</strong> A row without a clock
+time is not a price. This is why no opening price is published: there is no opening snapshot, only a
+closing one.</li>
+<li><strong>Two-sided or dropped.</strong> A bet is graded only where both sides of the market carry a
+price at the same snapshot, so the implied probability can be de-vigged from the pair rather than
+assumed.</li>
+</ol>
+<p>Consequence, stated plainly: <strong>closing-line value cannot be signed anywhere in this project</strong>,
+because CLV needs an open and a close from the same book. Gate G3 is recorded as failed rather than skipped
+and no ROI claims a beat-the-close property.</p></section>
+
+<section class="card "><h2>Why rule 1 exists: the two series disagree</h2>
+<div class="kpis">
+<div class="kpi warn"><div class="kv">2,011/2,969</div><div class="kl">games where the two series are identical</div><div class=kn>67.7% of joinable games</div></div>
+<div class="kpi bad"><div class="kv">17</div><div class="kl">games where they disagree about the favourite</div><div class=kn>opposite sides of zero</div></div>
+<div class="kpi "><div class="kv">0.00</div><div class="kl">median absolute difference</div><div class=kn>points</div></div>
+<div class="kpi "><div class="kv">0.50</div><div class="kl">90th percentile difference</div><div class=kn>points</div></div>
+</div>
+<p>An ROI computed on one series and checked against the other would change on 32% of games.
+Publishing one number without naming the series would be publishing an unreproducible result, so every
+table on this site names it.</p>
+<p class="empty">No rows. Nothing is published rather than a blank guess.</p>
+<p class="note">The comparison is limited to 2006-2018 because that is the range the separate closing-lines
+file covers. F-03.</p></section>
+
+<section class="card "><h2>The price store: 19,344 rows, all closing</h2><div class="tw"><table class="zebra"><thead><tr><th>game</th><th>season</th><th>wk</th><th>market</th><th>snapshot</th><th>line</th><th>price</th><th>open</th><th>open status</th><th>source</th></tr></thead><tbody><tr><td>1999_06_CAR_SF</td><td>1999</td><td>6</td><td>side</td><td>CLOSE</td><td>5.00</td><td><span class="blank">blank</span></td><td><span class="blank">blank</span></td><td>close only - no open exists in the corpus (F-01)</td><td class="src"><a href="https://github.com/nflverse/nfldata/blob/master/data/games.csv" target="_blank" rel="noopener nofollow" title="https://github.com/nflverse/nfldata/blob/master/data/games.csv">github.com</a></td></tr><tr><td>1999_06_CAR_SF</td><td>1999</td><td>6</td><td>total</td><td>CLOSE</td><td>44.00</td><td><span class="blank">blank</span></td><td><span class="blank">blank</span></td><td>close only - no open exists in the corpus (F-01)</td><td class="src"><a href="https://github.com/nflverse/nfldata/blob/master/data/games.csv" target="_blank" rel="noopener nofollow" title="https://github.com/nflverse/nfldata/blob/master/data/games.csv">github.com</a></td></tr><tr><td>1999_06_CLE_JAX</td><td>1999</td><td>6</td><td>side</td><td>CLOSE</td><td>17.50</td><td><span class="blank">blank</span></td><td><span class="blank">blank</span></td><td>close only - no open exists in the corpus (F-01)</td><td class="src"><a href="https://github.com/nflverse/nfldata/blob/master/data/games.csv" target="_blank" rel="noopener nofollow" title="https://github.com/nflverse/nfldata/blob/master/data/games.csv">github.com</a></td></tr><tr><td>1999_06_CLE_JAX</td><td>1999</td><td>6</td><td>total</td><td>CLOSE</td><td>37.50</td><td><span class="blank">blank</span></td><td><span class="blank">blank</span></td><td>close only - no open exists in the corpus (F-01)</td><td class="src"><a href="https://github.com/nflverse/nfldata/blob/master/data/games.csv" target="_blank" rel="noopener nofollow" title="https://github.com/nflverse/nfldata/blob/master/data/games.csv">github.com</a></td></tr><tr><td>1999_06_GB_DEN</td><td>1999</td><td>6</td><td>side</td><td>CLOSE</td><td>-3.50</td><td><span class="blank">blank</span></td><td><span class="blank">blank</span></td><td>close only - no open exists in the corpus (F-01)</td><td class="src"><a href="https://github.com/nflverse/nfldata/blob/master/data/games.csv" target="_blank" rel="noopener nofollow" title="https://github.com/nflverse/nfldata/blob/master/data/games.csv">github.com</a></td></tr><tr><td>1999_06_GB_DEN</td><td>1999</td><td>6</td><td>total</td><td>CLOSE</td><td>40.00</td><td><span class="blank">blank</span></td><td><span class="blank">blank</span></td><td>close only - no open exists in the corpus (F-01)</td><td class="src"><a href="https://github.com/nflverse/nfldata/blob/master/data/games.csv" target="_blank" rel="noopener nofollow" title="https://github.com/nflverse/nfldata/blob/master/data/games.csv">github.com</a></td></tr><tr><td>1999_06_IND_NYJ</td><td>1999</td><td>6</td><td>side</td><td>CLOSE</td><td>-2.50</td><td><span class="blank">blank</span></td><td><span class="blank">blank</span></td><td>close only - no open exists in the corpus (F-01)</td><td class="src"><a href="https://github.com/nflverse/nfldata/blob/master/data/games.csv" target="_blank" rel="noopener nofollow" title="https://github.com/nflverse/nfldata/blob/master/data/games.csv">github.com</a></td></tr><tr><td>1999_06_IND_NYJ</td><td>1999</td><td>6</td><td>total</td><td>CLOSE</td><td>42.50</td><td><span class="blank">blank</span></td><td><span class="blank">blank</span></td><td>close only - no open exists in the corpus (F-01)</td><td class="src"><a href="https://github.com/nflverse/nfldata/blob/master/data/games.csv" target="_blank" rel="noopener nofollow" title="https://github.com/nflverse/nfldata/blob/master/data/games.csv">github.com</a></td></tr><tr><td>1999_06_MIA_NE</td><td>1999</td><td>6</td><td>side</td><td>CLOSE</td><td>2.50</td><td><span class="blank">blank</span></td><td><span class="blank">blank</span></td><td>close only - no open exists in the corpus (F-01)</td><td class="src"><a href="https://github.com/nflverse/nfldata/blob/master/data/games.csv" target="_blank" rel="noopener nofollow" title="https://github.com/nflverse/nfldata/blob/master/data/games.csv">github.com</a></td></tr><tr><td>1999_06_MIA_NE</td><td>1999</td><td>6</td><td>total</td><td>CLOSE</td><td>42.50</td><td><span class="blank">blank</span></td><td><span class="blank">blank</span></td><td>close only - no open exists in the corpus (F-01)</td><td class="src"><a href="https://github.com/nflverse/nfldata/blob/master/data/games.csv" target="_blank" rel="noopener nofollow" title="https://github.com/nflverse/nfldata/blob/master/data/games.csv">github.com</a></td></tr><tr><td>1999_06_MIN_DET</td><td>1999</td><td>6</td><td>side</td><td>CLOSE</td><td>-3.50</td><td><span class="blank">blank</span></td><td><span class="blank">blank</span></td><td>close only - no open exists in the corpus (F-01)</td><td class="src"><a href="https://github.com/nflverse/nfldata/blob/master/data/games.csv" target="_blank" rel="noopener nofollow" title="https://github.com/nflverse/nfldata/blob/master/data/games.csv">github.com</a></td></tr><tr><td>1999_06_MIN_DET</td><td>1999</td><td>6</td><td>total</td><td>CLOSE</td><td>45.00</td><td><span class="blank">blank</span></td><td><span class="blank">blank</span></td><td>close only - no open exists in the corpus (F-01)</td><td class="src"><a href="https://github.com/nflverse/nfldata/blob/master/data/games.csv" target="_blank" rel="noopener nofollow" title="https://github.com/nflverse/nfldata/blob/master/data/games.csv">github.com</a></td></tr></tbody></table></div><p class="note">Showing 12 of 19344 rows. The full table is the committed CSV in the repository.</p><p class=note>Every row is a close. The open column is empty on every row and says why. That is the single most consequential gap in this project (F-01).</p></section>
+
+<section class="card "><h2>What would change the policy</h2>
+<p>A source that publishes an open and a close from the same book, with a timestamp on each. With that,
+rule 2 becomes satisfiable and G3 becomes measurable. Until then the policy is not a preference; it is the
+only defensible reading of the data that exists.</p>
+<p>See <a href="questions.html">Q-01 and Q-02</a> for the cheapest route to that source.</p></section>
+
+</main>
+<footer class="foot"><div class="wrap">Session <code>941fe39f</code> · built 2026-11-17T01:30:00Z · 80 requirements · 7,058 originated markets · 0 certified strategies · <a href="https://github.com/sassnarep3-star/Own5">repository</a></div></footer>
+</body></html>

@@ -1,0 +1,570 @@
+{
+ "build_utc": "2026-11-17T01:30:00Z",
+ "session": "941fe39f",
+ "tables": [
+  {
+   "table": "origination",
+   "rows": 7058,
+   "sha256": "8e9b38dd30a195a86e127ca58e4238c872a696b4117a757121a99de3b3622a3e",
+   "bytes": 1670809
+  },
+  {
+   "table": "price_snapshots",
+   "rows": 19344,
+   "sha256": "240c3c2641f5bb55e73d800ef049ceb47e3f43101f2e1ee2b8a6e3426e025c33",
+   "bytes": 3077046
+  },
+  {
+   "table": "results_2026",
+   "rows": 272,
+   "sha256": "ee2fd0b4277c4e6b7e1412e8aa064b724cf7ecc9e52960af4fb6d80e28d12d90",
+   "bytes": 26976
+  },
+  {
+   "table": "model_by_season",
+   "rows": 28,
+   "sha256": "f9627e523ecc6a9e4a056d8a2c0fc14407596f4271ff68ee8310a3a857ac15d0",
+   "bytes": 3915
+  },
+  {
+   "table": "strategies",
+   "rows": 14,
+   "sha256": "f286bcdb996e94e8a2640665e931a166f90998dd989f9539e2e5fcbe2922b605",
+   "bytes": 9915
+  },
+  {
+   "table": "gates",
+   "rows": 9,
+   "sha256": "64a05dd3cc5e265e6c76e811bbba4248ae57dcc5897e29f30a99f786b5a7717e",
+   "bytes": 2453
+  },
+  {
+   "table": "leaderboard_graded",
+   "rows": 34,
+   "sha256": "b420ecd97d97844f58afb6a2950bc5f55f66a16cd0efb9e968ce5aa73fb18cff",
+   "bytes": 5800
+  },
+  {
+   "table": "luck_panel",
+   "rows": 32,
+   "sha256": "b5638b3f87d14212255b7608092a05035d37203f9c1090eb0873ba9a9f302c71",
+   "bytes": 3937
+  },
+  {
+   "table": "correlations",
+   "rows": 7,
+   "sha256": "62347c92fb25741f3ca55d5dc3abc37fd9cfea5eb8c0cffd04895e8a59ddc914",
+   "bytes": 1239
+  },
+  {
+   "table": "depth_slots",
+   "rows": 113,
+   "sha256": "6ce8d098f07e89bad289438ebee4605284c0880f7c3f8fdfc8a9abdede74e75e",
+   "bytes": 18240
+  },
+  {
+   "table": "injuries",
+   "rows": 12,
+   "sha256": "8ddcb31c1aa0e138dee13188d8b74c397d4d16828e0edb88a15577932a1806cd",
+   "bytes": 1656
+  },
+  {
+   "table": "injury_delta",
+   "rows": 12,
+   "sha256": "328e9163df8623ad62d5d1832e392391640763c3bd607b3b38fa3bedf6a12c9b",
+   "bytes": 2879
+  },
+  {
+   "table": "replacements",
+   "rows": 9,
+   "sha256": "8bd260dd14d4a327f2fc8fabe192a71aca48d475899eb3b82db66dcb867964db",
+   "bytes": 1525
+  },
+  {
+   "table": "deficiency_matrix",
+   "rows": 17,
+   "sha256": "150dac26918306ff2ecde947cf02743d8c14a7ea858d64f7c41a24029ca16a6f",
+   "bytes": 3331
+  },
+  {
+   "table": "roster_turnover",
+   "rows": 3,
+   "sha256": "d6a31ba0cbc2ead593f8568f171e2d68d095bca4e24d9e314807a6798cc4b3fb",
+   "bytes": 613
+  },
+  {
+   "table": "snapshot_ledger",
+   "rows": 8,
+   "sha256": "d54865ef401359faab9045ac2c115dbb7e2f4eaea32d2b00cc2c9b03e4bead0d",
+   "bytes": 2426
+  },
+  {
+   "table": "capture_log",
+   "rows": 5,
+   "sha256": "412517c53d1d5d3537ef256e6d9c9e20f76aac30d837a5ee4bfbc9646f48e869",
+   "bytes": 460
+  },
+  {
+   "table": "crosschecks",
+   "rows": 197,
+   "sha256": "dbede6799a20672f0a793171aafe7c888305463e029077b2aee4de5eb0da7968",
+   "bytes": 18129
+  },
+  {
+   "table": "requirements",
+   "rows": 80,
+   "sha256": "2009ab62039620ee002d3c3943c3b3f91c2e86db295b2f19b8f19b35a1ec81f6",
+   "bytes": 14852
+  },
+  {
+   "table": "questions",
+   "rows": 18,
+   "sha256": "6d5add5a4494efbd97a867b5f245bb911113b1f641b843023125d46d63c9d207",
+   "bytes": 5095
+  },
+  {
+   "table": "suggestions",
+   "rows": 16,
+   "sha256": "49669162183527b6d06553a49af329a6055f5a21922b89b80d0c6c4136e4f8a7",
+   "bytes": 7841
+  },
+  {
+   "table": "flags",
+   "rows": 16,
+   "sha256": "068fd5a1dab8e4785ccfde72bee3d8d8be83c814ca9de6c3b3b8a9f3e6cddd79",
+   "bytes": 6041
+  },
+  {
+   "table": "audit",
+   "rows": 16,
+   "sha256": "d95851180239f6832596ec25197c2716e4e7c6cfc6921551064d09ddc8e00737",
+   "bytes": 2958
+  },
+  {
+   "table": "schedule_announcement",
+   "rows": 7,
+   "sha256": "6ad97f2f05fd669ef50498b1eab399727846608b12559250545d59c9180369b1",
+   "bytes": 1239
+  },
+  {
+   "table": "slate_week11",
+   "rows": 13,
+   "sha256": "66ee8756af5bffb1fd6f4ef240365a247eddbbab4c06e89556807938d342376a",
+   "bytes": 1994
+  }
+ ],
+ "checks": [
+  {
+   "check": "corpus games loaded",
+   "detail": "7239 rows",
+   "pass": true
+  },
+  {
+   "check": "originated markets",
+   "detail": "7058 rows",
+   "pass": true
+  },
+  {
+   "check": "capture schema contracts",
+   "detail": "0 failures",
+   "pass": true
+  }
+ ],
+ "corpus": {
+  "tarball": "data/corpus/raw/nfldata_e045566e.tar.gz",
+  "tarball_sha256": "9a6a736819bd6587f135d0995778c23ef9e51a9587d9e901f5dc84072504462c",
+  "tarball_inner_dir": "nfldata-master",
+  "tables": [
+   {
+    "path": "data/corpus/games.csv",
+    "rows": 7239,
+    "sha256": "3f512788db841958c937473a37fd09ab01b1546ecfb6ed432ad80766605d1f3b",
+    "bytes": 1839309
+   },
+   {
+    "path": "data/corpus/closing.csv",
+    "rows": 20490,
+    "sha256": "e3737dbeb0edf4b5032815348a47fa0c80d615755c08d6bc3e312b9775535a1c",
+    "bytes": 2397030
+   },
+   {
+    "path": "data/corpus/teams.csv",
+    "rows": 753,
+    "sha256": "775f6b909fbb0200889239366fed58a892cf9624918af2d42a1b9e606b8c8fbe",
+    "bytes": 36373
+   }
+  ],
+  "checks": [
+   {
+    "check": "result == home_score - away_score on every finished game",
+    "detail": "violations=0",
+    "pass": true
+   },
+   {
+    "check": "total == home_score + away_score on every finished game",
+    "detail": "violations=0",
+    "pass": true
+   },
+   {
+    "check": "closing.csv home SPREAD carries the market sign convention (negative when the home team is favoured)",
+    "detail": "2687/2727 agree on sign (0.985)",
+    "pass": true
+   },
+   {
+    "check": "games.spread_line_home and closing.csv are the same price series",
+    "detail": "1855/2727 identical; median |difference| 0.00 pts (they are NOT the same series - see F-03)",
+    "pass": true,
+    "informational": true
+   }
+  ]
+ },
+ "crosschecks": [
+  {
+   "name": "A. results feed (official) vs pinned corpus",
+   "verdict": "PASS",
+   "compared": 145,
+   "matched": 145
+  },
+  {
+   "name": "A2. corpus recomputes the official 2026 standings",
+   "verdict": "PASS (differences reconciled)",
+   "compared": 32,
+   "matched": 24,
+   "explained": 8
+  },
+  {
+   "name": "B. price series: corpus spread_line vs separate closing-lines file",
+   "verdict": "PUBLISHED FINDING",
+   "compared": 2969,
+   "matched": 2011,
+   "favourite_flips": 17,
+   "median_abs_diff": 0.0,
+   "p90_abs_diff": 0.5
+  },
+  {
+   "name": "C. dated schedule release vs live schedule facts",
+   "verdict": "PASS",
+   "compared": 7,
+   "matched": 7,
+   "pending": 1
+  }
+ ],
+ "alpha": {
+  "full": {
+   "r": 0.02446219069598868,
+   "n": 6895,
+   "ci": [
+    0.0008577538846660021,
+    0.048039383496752276
+   ],
+   "seasons": [
+    1999,
+    2025
+   ]
+  },
+  "holdout": {
+   "r": 0.0018843749395981103,
+   "n": 1615,
+   "ci": [
+    -0.04689847068624076,
+    0.05065825343927689
+   ],
+   "seasons": [
+    2020,
+    2025
+   ]
+  },
+  "level": {
+   "n_side": 6895,
+   "mean_residual": 0.02185770824493902,
+   "sd_residual": 3.860520593827352,
+   "mae_model_side": 10.707704683725687,
+   "mae_market_side": 10.265917331399566,
+   "n_total": 6895,
+   "mean_residual_total": -0.5081830853401114,
+   "sd_residual_total": 3.2243611469973095,
+   "mae_model_total": 10.931044529798655,
+   "mae_market_total": 10.62668600435098
+  },
+  "level_holdout": {
+   "n_side": 1615,
+   "mean_residual": -0.05059709819217604,
+   "sd_residual": 4.2051026560899665,
+   "mae_model_side": 10.433598809806211,
+   "mae_market_side": 9.764396284829722,
+   "n_total": 1615,
+   "mean_residual_total": -0.23153440330128375,
+   "sd_residual_total": 3.4026885112793956,
+   "mae_model_total": 10.748440874956504,
+   "mae_market_total": 10.28328173374613
+  }
+ },
+ "snapshot_failures": [],
+ "counts": {
+  "originated_markets": 7058,
+  "priced_markets": 19344,
+  "graded_games": 7116,
+  "seasons": 28,
+  "strategies": 14,
+  "certified": 0,
+  "requirements": 80,
+  "met": 50,
+  "partial": 21,
+  "blocked": 9,
+  "questions": 18,
+  "suggestions": 16,
+  "flags": 16,
+  "depth_slots_parsed": 113,
+  "depth_clubs_parsed": 5,
+  "injury_rows": 12,
+  "matrix_rows": 17,
+  "correlations": 7,
+  "ledger_rows": 8
+ },
+ "depth_checks": {
+  "clubs": 5,
+  "slots": 113,
+  "player_rows": 250,
+  "shared_rank1_slots": 1,
+  "empty_rank1_slots": 0,
+  "slots_with_jersey_stripped": 22,
+  "players_total": 250,
+  "players_from_groups": 114
+ },
+ "certifications": [
+  {
+   "id": "S01",
+   "name": "Model side, any disagreement",
+   "family": "side",
+   "status": "registered",
+   "verdict": "PAPER",
+   "failed_gates": "G3_CLV;G3B_ALPHA;G4_BSS;G5_CALIBRATION;G6_MULTIPLICITY;G8_DECAY",
+   "n_holdout": 1427,
+   "bss_holdout": -0.14429751798249724,
+   "roi_holdout": -0.07060250102045333,
+   "clv_mean": 3.63178457148963,
+   "p_holm": 1.0,
+   "calib_slope": -0.015726234462173003,
+   "calib_intercept": -0.06616912828920066,
+   "certified": "no",
+   "reason": "blocked by G3_CLV, G3B_ALPHA, G4_BSS, G5_CALIBRATION, G6_MULTIPLICITY, G8_DECAY"
+  },
+  {
+   "id": "S02",
+   "name": "Model side, disagreement >= 2 points",
+   "family": "side",
+   "status": "registered",
+   "verdict": "PAPER",
+   "failed_gates": "G3_CLV;G3B_ALPHA;G4_BSS;G5_CALIBRATION;G6_MULTIPLICITY;G8_DECAY",
+   "n_holdout": 975,
+   "bss_holdout": -0.11894912942151392,
+   "roi_holdout": -0.050449527123767976,
+   "clv_mean": 4.733309473921331,
+   "p_holm": 1.0,
+   "calib_slope": 0.06977180977919462,
+   "calib_intercept": -0.041455233366887015,
+   "certified": "no",
+   "reason": "blocked by G3_CLV, G3B_ALPHA, G4_BSS, G5_CALIBRATION, G6_MULTIPLICITY, G8_DECAY"
+  },
+  {
+   "id": "S03",
+   "name": "Model side, disagreement >= 3 points",
+   "family": "side",
+   "status": "registered",
+   "verdict": "PAPER",
+   "failed_gates": "G3_CLV;G3B_ALPHA;G4_BSS;G5_CALIBRATION;G6_MULTIPLICITY;G8_DECAY",
+   "n_holdout": 724,
+   "bss_holdout": -0.10535885339503603,
+   "roi_holdout": -0.042567664670545464,
+   "clv_mean": 5.520744258385334,
+   "p_holm": 1.0,
+   "calib_slope": 0.1059766032391811,
+   "calib_intercept": -0.03685655304437454,
+   "certified": "no",
+   "reason": "blocked by G3_CLV, G3B_ALPHA, G4_BSS, G5_CALIBRATION, G6_MULTIPLICITY, G8_DECAY"
+  },
+  {
+   "id": "S04",
+   "name": "Model total vs market total, >= 3 points",
+   "family": "total",
+   "status": "registered",
+   "verdict": "PAPER",
+   "failed_gates": "G3_CLV;G3B_ALPHA;G4_BSS;G5_CALIBRATION;G6_MULTIPLICITY;G8_DECAY",
+   "n_holdout": 598,
+   "bss_holdout": -0.1302183634819405,
+   "roi_holdout": -0.05609502721279334,
+   "clv_mean": 4.881488517031985,
+   "p_holm": 1.0,
+   "calib_slope": -0.2757285871454856,
+   "calib_intercept": 0.1452049873692046,
+   "certified": "no",
+   "reason": "blocked by G3_CLV, G3B_ALPHA, G4_BSS, G5_CALIBRATION, G6_MULTIPLICITY, G8_DECAY"
+  },
+  {
+   "id": "S05",
+   "name": "Model total vs market total, >= 5 points",
+   "family": "total",
+   "status": "registered",
+   "verdict": "PAPER",
+   "failed_gates": "G1_SAMPLE;G3_CLV;G3B_ALPHA;G4_BSS;G5_CALIBRATION;G6_MULTIPLICITY;G8_DECAY",
+   "n_holdout": 217,
+   "bss_holdout": -0.24907415435383085,
+   "roi_holdout": -0.09475548244708874,
+   "clv_mean": 6.595224996098597,
+   "p_holm": 1.0,
+   "calib_slope": -0.710234266419429,
+   "calib_intercept": 0.5287312605712693,
+   "certified": "no",
+   "reason": "blocked by G1_SAMPLE, G3_CLV, G3B_ALPHA, G4_BSS, G5_CALIBRATION, G6_MULTIPLICITY, G8_DECAY"
+  },
+  {
+   "id": "S06",
+   "name": "Fade the public spread move",
+   "family": "side",
+   "status": "blocked_price",
+   "verdict": "NOT EVALUABLE",
+   "failed_gates": "corpus gap",
+   "n_holdout": 0,
+   "bss_holdout": NaN,
+   "roi_holdout": NaN,
+   "clv_mean": NaN,
+   "p_holm": NaN,
+   "certified": "no",
+   "reason": "NOT EVALUABLE from this corpus: requires an opening price and a closing price from one book. The corpus holds a closing series and a separate habitatring series"
+  },
+  {
+   "id": "S07",
+   "name": "Wind under 15 mph, model over",
+   "family": "fixture",
+   "status": "registered",
+   "verdict": "PAPER",
+   "failed_gates": "G1_SAMPLE;G3_CLV;G3B_ALPHA;G4_BSS;G5_CALIBRATION;G6_MULTIPLICITY;G8_DECAY",
+   "n_holdout": 196,
+   "bss_holdout": -0.1515988640903303,
+   "roi_holdout": -0.15887002425313723,
+   "clv_mean": 4.114682885075575,
+   "p_holm": 1.0,
+   "calib_slope": 0.2084774138252002,
+   "calib_intercept": -0.3643398643363508,
+   "certified": "no",
+   "reason": "blocked by G1_SAMPLE, G3_CLV, G3B_ALPHA, G4_BSS, G5_CALIBRATION, G6_MULTIPLICITY, G8_DECAY"
+  },
+  {
+   "id": "S08",
+   "name": "Rest-advantage side",
+   "family": "fixture",
+   "status": "registered",
+   "verdict": "PAPER",
+   "failed_gates": "G1_SAMPLE;G3_CLV;G3B_ALPHA;G4_BSS;G5_CALIBRATION;G6_MULTIPLICITY;G8_DECAY",
+   "n_holdout": 40,
+   "bss_holdout": -0.22639599553494327,
+   "roi_holdout": -0.08533041714849085,
+   "clv_mean": 2.4301988713272786,
+   "p_holm": 1.0,
+   "calib_slope": -0.24531941642426963,
+   "calib_intercept": -0.07789711155487189,
+   "certified": "no",
+   "reason": "blocked by G1_SAMPLE, G3_CLV, G3B_ALPHA, G4_BSS, G5_CALIBRATION, G6_MULTIPLICITY, G8_DECAY"
+  },
+  {
+   "id": "S09",
+   "name": "Moneyline value from the model",
+   "family": "moneyline",
+   "status": "registered",
+   "verdict": "PAPER",
+   "failed_gates": "G3_CLV;G3B_ALPHA;G4_BSS;G5_CALIBRATION;G6_MULTIPLICITY;G8_DECAY",
+   "n_holdout": 1287,
+   "bss_holdout": -0.12038331101854527,
+   "roi_holdout": -0.1224089363251513,
+   "clv_mean": 3.939612334171446,
+   "p_holm": 1.0,
+   "calib_slope": 0.9724055537366512,
+   "calib_intercept": -0.6573563761776287,
+   "certified": "no",
+   "reason": "blocked by G3_CLV, G3B_ALPHA, G4_BSS, G5_CALIBRATION, G6_MULTIPLICITY, G8_DECAY"
+  },
+  {
+   "id": "S10",
+   "name": "2-leg parlay, model sides, independent games",
+   "family": "parlay",
+   "status": "registered",
+   "verdict": "PAPER",
+   "failed_gates": "G3_CLV;G3B_ALPHA;G4_BSS;G5_CALIBRATION;G6_MULTIPLICITY;G8_DECAY",
+   "n_holdout": 453,
+   "bss_holdout": -0.09213880377771333,
+   "roi_holdout": -0.13218543046357603,
+   "clv_mean": 0.0,
+   "p_holm": 1.0,
+   "calib_slope": 0.19827265246665024,
+   "calib_intercept": -0.9789278097428972,
+   "certified": "no",
+   "reason": "blocked by G3_CLV, G3B_ALPHA, G4_BSS, G5_CALIBRATION, G6_MULTIPLICITY, G8_DECAY"
+  },
+  {
+   "id": "S11",
+   "name": "Same-game parlay (QB passing + WR1 receiving)",
+   "family": "same-game-parlay",
+   "status": "blocked_joint_evidence",
+   "verdict": "NOT EVALUABLE",
+   "failed_gates": "corpus gap",
+   "n_holdout": 0,
+   "bss_holdout": NaN,
+   "roi_holdout": NaN,
+   "clv_mean": NaN,
+   "p_holm": NaN,
+   "certified": "no",
+   "reason": "BLOCKED by the joint-evidence gate: the corpus holds no player-level game statistics, so no joint probability for two same-game player props can be estimated. R"
+  },
+  {
+   "id": "S12",
+   "name": "Control: coin flip",
+   "family": "control",
+   "status": "control",
+   "verdict": "CONTROL",
+   "failed_gates": "G3_CLV;G3B_ALPHA;G4_BSS;G5_CALIBRATION;G6_MULTIPLICITY;G8_DECAY",
+   "n_holdout": 1582,
+   "bss_holdout": 0.0,
+   "roi_holdout": -0.061927054375307114,
+   "clv_mean": 0.0,
+   "p_holm": 1.0,
+   "calib_slope": 1.772792366353845,
+   "calib_intercept": -0.05642226616211097,
+   "certified": "n/a",
+   "reason": "blocked by G3_CLV, G3B_ALPHA, G4_BSS, G5_CALIBRATION, G6_MULTIPLICITY, G8_DECAY"
+  },
+  {
+   "id": "S13",
+   "name": "Control: always favourites",
+   "family": "control",
+   "status": "control",
+   "verdict": "CONTROL",
+   "failed_gates": "G3_CLV;G3B_ALPHA;G4_BSS;G5_CALIBRATION;G6_MULTIPLICITY;G8_DECAY",
+   "n_holdout": 1582,
+   "bss_holdout": 0.0,
+   "roi_holdout": -0.062467995859781654,
+   "clv_mean": 0.0,
+   "p_holm": 1.0,
+   "calib_slope": 1.6823922595029792,
+   "calib_intercept": -0.05272631080994466,
+   "certified": "n/a",
+   "reason": "blocked by G3_CLV, G3B_ALPHA, G4_BSS, G5_CALIBRATION, G6_MULTIPLICITY, G8_DECAY"
+  },
+  {
+   "id": "S14",
+   "name": "Control: always home",
+   "family": "control",
+   "status": "control",
+   "verdict": "CONTROL",
+   "failed_gates": "G3_CLV;G3B_ALPHA;G4_BSS;G5_CALIBRATION;G6_MULTIPLICITY;G8_DECAY",
+   "n_holdout": 1582,
+   "bss_holdout": 0.0,
+   "roi_holdout": -0.04262865144519144,
+   "clv_mean": 0.0,
+   "p_holm": 1.0,
+   "calib_slope": 1.7360197599497986,
+   "calib_intercept": -0.014325595543081533,
+   "certified": "n/a",
+   "reason": "blocked by G3_CLV, G3B_ALPHA, G4_BSS, G5_CALIBRATION, G6_MULTIPLICITY, G8_DECAY"
+  }
+ ]
+}

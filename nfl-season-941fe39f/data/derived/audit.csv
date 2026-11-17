@@ -1,0 +1,17 @@
+id,claim,verification_performed,result,source_url
+AU-01,README claims eleven NFL desks answer this brief,verified against the repository,11 namespaces listed,https://github.com/sassnarep3-star/Own5
+AU-02,Prior desk claims 145 official finals,recomputed from the pinned corpus,"149 finals in the corpus, 145 in the feed, 145/145 matched",https://www.nfl.com/schedules/2026/by-week/week-10
+AU-03,Prior desk claims 31 of 32 depth charts parse,recomputed from the carried-forward capture,"31 parsed, Houston not parsed, 700 slots",https://www.nfl.com/teams/
+AU-04,Prior desk claims 0 of 39 markets have a market price,superseded by this desk,163 of 272 2026 games now carry a market spread and 13 week-11 markets are priced against it,https://github.com/nflverse/nfldata/blob/master/data/games.csv
+AU-05,Prior desk claims no correlations are computable,superseded by this desk,12 correlations computed from the corpus with n and intervals,https://github.com/nflverse/nfldata/blob/master/data/games.csv
+AU-06,Brief claims 136-game log,counted,145 rows in the file the brief refers to,https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-e46fb855/data/results_feed.csv
+AU-07,Brief claims 254 injury rows with 4 no-injury sections,counted in the carried-forward capture,326 rows in that file; the brief's 279-row figure refers to a re-read this session did not repeat,https://www.nfl.com/injuries/league/2026/reg10
+AU-08,Brief claims only 6 of 254 report rows carry a game designation,counted in this session's read,5 of 12 transcribed rows carry a game status; a full-table count is not claimed,https://www.nfl.com/injuries/league/2026/reg10
+AU-09,Brief claims 149 club/unit/position slots list more than one rank-1 player,recomputed,14 shared rank-1 slots in the carried-forward capture; the 149 figure is not reproduced,https://www.nfl.com/teams/
+AU-10,Brief claims Baltimore publishes Jackson and Huntley at QB,re-read,not reproduced; Brissett is rank 1 (F-06),https://www.baltimoreravens.com/team/depth-chart
+AU-11,Brief claims Washington leaves a slot empty,re-read,not reproduced (F-07),https://www.commanders.com/team/depth-chart
+AU-12,Brief claims the three Detroit designations are blank,re-read,all three read as Out on 2026-11-17,https://www.nfl.com/injuries/league/2026/reg10
+AU-13,Brief claims Seattle publishes two players in one slot,re-read,reproduced: Cooper Kupp and Rashid Shaheed in one rank-1 cell,https://www.seahawks.com/team/depth-chart/
+AU-14,Brief claims the Packers prepend jersey numbers,re-read,reproduced: every cell begins with a number; 22 slots stripped,https://www.packers.com/team/depth-chart
+AU-15,Brief claims the Texans chart is an image,re-read,reproduced: page text has no player names,https://www.houstontexans.com/team/depth-chart
+AU-16,Brief claims Malik Willis is absent from the report because he is on IR,re-read,reproduced: MIA 11/10 Reserve/Injured,https://www.nfl.com/transactions/league/reserve-list/2026/11

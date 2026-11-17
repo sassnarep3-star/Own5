@@ -1,0 +1,6 @@
+unit,distinct_clock_times,first_capture,last_capture,can_replay,captures
+depth_chart,2,2026-11-17T01:10:00Z,2026-11-17T01:12:00Z,YES,2
+injury_report,3,2026-11-15T23:27:00Z,2026-11-17T00:57:00Z,YES,3
+reserve_list,1,2026-11-17T01:02:00Z,2026-11-17T01:02:00Z,NO - one clock time only,1
+schedule_announcement,1,2026-11-17T01:05:00Z,2026-11-17T01:05:00Z,NO - one clock time only,1
+transactions,1,2026-11-17T00:58:00Z,2026-11-17T00:58:00Z,NO - one clock time only,1

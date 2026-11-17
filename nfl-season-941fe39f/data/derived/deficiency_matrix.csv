@@ -1,0 +1,18 @@
+attacking_team,attacking_slot,attacking_starter_out,attacking_replacement,attacking_replacement_rank,defending_team,defending_slot,defending_starter_out,defending_player_expected,defending_depth_rank,matchup_deficiency,both_sides_deficient,source_attacking,source_defending
+DET,C,Cade Mays,Juice Scruggs,2,BAL,DT,,Nnamdi Madubuike,1,DET C rank-2 vs BAL DT rank-1,no,https://www.detroitlions.com/team/depth-chart,https://www.baltimoreravens.com/team/depth-chart
+DET,C,Cade Mays,Juice Scruggs,2,BAL,NT,,Travis Jones,1,DET C rank-2 vs BAL NT rank-1,no,https://www.detroitlions.com/team/depth-chart,https://www.baltimoreravens.com/team/depth-chart
+DET,C,Cade Mays,Juice Scruggs,2,GB,DT,,Karl Brooks,1,DET C rank-2 vs GB DT rank-1,no,https://www.detroitlions.com/team/depth-chart,https://www.packers.com/team/depth-chart
+DET,C,Cade Mays,Juice Scruggs,2,GB,DT,,Devonte Wyatt,1,DET C rank-2 vs GB DT rank-1,no,https://www.detroitlions.com/team/depth-chart,https://www.packers.com/team/depth-chart
+DET,C,Cade Mays,Juice Scruggs,2,SEA,DT,,Leonard Williams,1,DET C rank-2 vs SEA DT rank-1,no,https://www.detroitlions.com/team/depth-chart,https://www.seahawks.com/team/depth-chart/
+DET,C,Cade Mays,Juice Scruggs,2,SEA,NT,,Byron Murphy II,1,DET C rank-2 vs SEA NT rank-1,no,https://www.detroitlions.com/team/depth-chart,https://www.seahawks.com/team/depth-chart/
+DET,C,Cade Mays,Juice Scruggs,2,WAS,DL,,Charles Omenihu,1,DET C rank-2 vs WAS DL rank-1,no,https://www.detroitlions.com/team/depth-chart,https://www.commanders.com/team/depth-chart
+DET,C,Cade Mays,Juice Scruggs,2,WAS,DL,,Tim Settle,1,DET C rank-2 vs WAS DL rank-1,no,https://www.detroitlions.com/team/depth-chart,https://www.commanders.com/team/depth-chart
+DET,C,Cade Mays,Juice Scruggs,2,WAS,DL,,Deatrich Wise Jr.,1,DET C rank-2 vs WAS DL rank-1,no,https://www.detroitlions.com/team/depth-chart,https://www.commanders.com/team/depth-chart
+WAS,C,Lucas Patrick,Matt Gulbin,2,BAL,DT,,Nnamdi Madubuike,1,WAS C rank-2 vs BAL DT rank-1,no,https://www.commanders.com/team/depth-chart,https://www.baltimoreravens.com/team/depth-chart
+WAS,C,Lucas Patrick,Matt Gulbin,2,BAL,NT,,Travis Jones,1,WAS C rank-2 vs BAL NT rank-1,no,https://www.commanders.com/team/depth-chart,https://www.baltimoreravens.com/team/depth-chart
+WAS,C,Lucas Patrick,Matt Gulbin,2,DET,DL,,Alim McNeill,1,WAS C rank-2 vs DET DL rank-1,no,https://www.commanders.com/team/depth-chart,https://www.detroitlions.com/team/depth-chart
+WAS,C,Lucas Patrick,Matt Gulbin,2,DET,DL,,Tyleik Williams,1,WAS C rank-2 vs DET DL rank-1,no,https://www.commanders.com/team/depth-chart,https://www.detroitlions.com/team/depth-chart
+WAS,C,Lucas Patrick,Matt Gulbin,2,GB,DT,,Karl Brooks,1,WAS C rank-2 vs GB DT rank-1,no,https://www.commanders.com/team/depth-chart,https://www.packers.com/team/depth-chart
+WAS,C,Lucas Patrick,Matt Gulbin,2,GB,DT,,Devonte Wyatt,1,WAS C rank-2 vs GB DT rank-1,no,https://www.commanders.com/team/depth-chart,https://www.packers.com/team/depth-chart
+WAS,C,Lucas Patrick,Matt Gulbin,2,SEA,DT,,Leonard Williams,1,WAS C rank-2 vs SEA DT rank-1,no,https://www.commanders.com/team/depth-chart,https://www.seahawks.com/team/depth-chart/
+WAS,C,Lucas Patrick,Matt Gulbin,2,SEA,NT,,Byron Murphy II,1,WAS C rank-2 vs SEA NT rank-1,no,https://www.commanders.com/team/depth-chart,https://www.seahawks.com/team/depth-chart/

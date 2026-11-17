@@ -1,0 +1,44 @@
+{
+ "source_id": "OFF-RESERVE-20261117",
+ "publisher": "NFL.com",
+ "title": "2026 NFL Transactions — Reserve List, November",
+ "url": "https://www.nfl.com/transactions/league/reserve-list/2026/11",
+ "tier": "OFFICIAL",
+ "retrieval_utc": "2026-11-17T01:02:00Z",
+ "retrieval_method": "Read with the sandbox web fetcher; the first 20 rows of the November block transcribed verbatim, in published order.",
+ "why_it_matters": "A player absent from the weekly injury report is not necessarily available. The reserve list is the second official place a player can be: on IR, he is off the report and off the field. Taken alone, the injury report cannot distinguish 'healthy' from 'on IR'.",
+ "columns": "team, date_mm_dd_2026, player, transaction_as_published",
+ "rows_truncated_to": 20,
+ "rows": [
+  ["LA", "11/16", "Dylan McMahon", "Reserve/Injured"],
+  ["LAC", "11/16", "Branson Taylor", "Reserve/Injured"],
+  ["NO", "11/14", "Christen Miller", "Reserve/Injured"],
+  ["NE", "11/14", "TreVeyon Henderson", "Reserve/Injured"],
+  ["CLE", "11/14", "Michael Burton", "Reserve/Injured"],
+  ["IND", "11/14", "Mo Alie-Cox", "Reserve/Injured"],
+  ["IND", "11/14", "Akeem Davis-Gaither", "Reserve/Injured"],
+  ["TEN", "11/14", "Peter Skoronski", "Reserve/Injured"],
+  ["TEN", "11/14", "Tommy Townsend", "Reserve/Injured"],
+  ["DAL", "11/14", "Tyler Goodson", "Reserve/Injured"],
+  ["GB", "11/14", "Josh Whyle", "Reserve/Injured"],
+  ["LA", "11/12", "Puka Nacua", "Reserve/Injured"],
+  ["LA", "11/10", "Jordan Whittington", "Reserve/Injured"],
+  ["MIA", "11/10", "Zach Sieler", "Reserve/Injured"],
+  ["MIA", "11/10", "Malik Willis", "Reserve/Injured"],
+  ["SF", "11/10", "Gracen Halton", "Reserve/Injured"],
+  ["AZ", "11/10", "Gardner Minshew", "Reserve/Injured"]
+ ],
+ "cross_checks": [
+  {
+   "claim": "A player on injured reserve is absent from the injury report",
+   "evidence": "TreVeyon Henderson was listed on the week-10 report as 'Out' (Illness) and appears on the reserve list dated 11/14 as Reserve/Injured.",
+   "injury_report_url": "https://www.nfl.com/injuries/league/2026/reg10",
+   "reserve_list_url": "https://www.nfl.com/transactions/league/reserve-list/2026/11"
+  },
+  {
+   "claim": "Malik Willis is on injured reserve, so his absence from a weekly report is not evidence of health",
+   "evidence": "Miami, 11/10, Malik Willis, Reserve/Injured.",
+   "reserve_list_url": "https://www.nfl.com/transactions/league/reserve-list/2026/11"
+  }
+ ]
+}

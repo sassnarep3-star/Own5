@@ -1,0 +1,8 @@
+id,pair,r,n,ci_lo,ci_hi,window,source_url
+C-01,closing spread vs actual margin,0.4317,7116,0.4126,0.4504,"pooled 1999-2026, all games with both values",https://github.com/nflverse/nfldata/blob/master/data/games.csv
+C-02,closing total vs actual total,0.3221,7116,0.3011,0.3427,"pooled 1999-2026, all games with both values",https://github.com/nflverse/nfldata/blob/master/data/games.csv
+C-03,closing spread vs closing total,-0.0106,7116,-0.0338,0.0126,"pooled 1999-2026, all games with both values",https://github.com/nflverse/nfldata/blob/master/data/games.csv
+C-04,home rest vs actual margin,0.0178,7116,-0.0054,0.0410,"pooled 1999-2026, all games with both values",https://github.com/nflverse/nfldata/blob/master/data/games.csv
+C-05,rest difference vs actual margin,0.0336,7116,0.0104,0.0568,"pooled 1999-2026, all games with both values",https://github.com/nflverse/nfldata/blob/master/data/games.csv
+C-06,wind vs actual total,-0.0950,5026,-0.1223,-0.0675,"pooled 1999-2026, all games with both values",https://github.com/nflverse/nfldata/blob/master/data/games.csv
+C-07,temperature vs actual total,0.0058,5026,-0.0218,0.0335,"pooled 1999-2026, all games with both values",https://github.com/nflverse/nfldata/blob/master/data/games.csv

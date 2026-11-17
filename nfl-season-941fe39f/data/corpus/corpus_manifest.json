@@ -1,0 +1,48 @@
+{
+ "tarball": "data/corpus/raw/nfldata_e045566e.tar.gz",
+ "tarball_sha256": "9a6a736819bd6587f135d0995778c23ef9e51a9587d9e901f5dc84072504462c",
+ "tarball_inner_dir": "nfldata-master",
+ "tables": [
+  {
+   "path": "data/corpus/games.csv",
+   "rows": 7239,
+   "sha256": "3f512788db841958c937473a37fd09ab01b1546ecfb6ed432ad80766605d1f3b",
+   "bytes": 1839309
+  },
+  {
+   "path": "data/corpus/closing.csv",
+   "rows": 20490,
+   "sha256": "e3737dbeb0edf4b5032815348a47fa0c80d615755c08d6bc3e312b9775535a1c",
+   "bytes": 2397030
+  },
+  {
+   "path": "data/corpus/teams.csv",
+   "rows": 753,
+   "sha256": "775f6b909fbb0200889239366fed58a892cf9624918af2d42a1b9e606b8c8fbe",
+   "bytes": 36373
+  }
+ ],
+ "checks": [
+  {
+   "check": "result == home_score - away_score on every finished game",
+   "detail": "violations=0",
+   "pass": true
+  },
+  {
+   "check": "total == home_score + away_score on every finished game",
+   "detail": "violations=0",
+   "pass": true
+  },
+  {
+   "check": "closing.csv home SPREAD carries the market sign convention (negative when the home team is favoured)",
+   "detail": "2687/2727 agree on sign (0.985)",
+   "pass": true
+  },
+  {
+   "check": "games.spread_line_home and closing.csv are the same price series",
+   "detail": "1855/2727 identical; median |difference| 0.00 pts (they are NOT the same series - see F-03)",
+   "pass": true,
+   "informational": true
+  }
+ ]
+}

@@ -1,0 +1,8 @@
+claim_id,official_claim,checked_against,result,match,source_url
+SA-1,"272 games, 18 weeks","272 games, 18 weeks",,YES,https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced
+SA-2,"Wed 2026-09-09 20:20 ET, NE at SEA",Wednesday 2026-09-09 20:20 NE at SEA,,YES,https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced
+SA-3,"16 games, all division; 3 on Saturday 2027-01-09","16 games, 16 division, 0 Saturday; dates ['2027-01-10']",,PENDING,https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced
+SA-4,"Thu 2026-09-10, LA at SF, Melbourne, neutral",Thursday 2026-09-10 location=Neutral stadium=Melbourne Cricket Ground,,YES,https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced
+SA-5,"BAL at DAL, Rio, neutral",location=Neutral stadium=Maracana Stadium,,YES,https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced
+SA-6,"Mexico City in week 11, neutral",location=Neutral stadium=Estadio Banorte,,YES,https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced
+SA-7,nine international games,9 neutral-site games,,YES,https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced

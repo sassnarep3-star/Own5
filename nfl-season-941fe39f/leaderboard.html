@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Leaderboard · Own5 NFL Season Desk</title>
+<meta name="description" content="Signal and staking kept apart; zero certified">
+<link rel="stylesheet" href="assets/style.css">
+</head><body>
+<header class="top"><div class="wrap">
+<a class="brand" href="index.html">Own5 · NFL Season Desk</a>
+<span class="tag">Signal and staking kept apart; zero certified</span>
+</div></header>
+<nav class="main"><div class="wrap"><a href="index.html">Overview</a><a href="executive-summary.html">Executive summary</a><a href="lines.html">Originated lines</a><a href="model.html">Model</a><a class="on" href="leaderboard.html">Leaderboard</a><a href="strategies.html">Strategies &amp; gates</a><a href="luck.html">Removal of luck</a><a href="depth.html">Depth &amp; replacements</a><a href="availability.html">Availability</a><a href="matchup.html">Deficiency matrix</a><a href="correlations.html">Correlations</a><a href="corpus.html">Corpus</a><a href="price-store.html">Price policy</a><a href="schedule.html">Schedule</a><a href="snapshots.html">Snapshots &amp; alarms</a><a href="changes.html">What changed</a><a href="audit.html">Repo audit</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources</a><a href="methodology.html">Methodology</a></div></nav>
+<main class="wrap">
+
+<h1>Leaderboard</h1>
+<p class="lede">Two boards, kept apart on purpose. The signal board ranks by a proper score with an
+interval. The staking board is empty, and stays empty until a strategy is certified, so a lucky staking
+run cannot stand in for a bad signal.</p>
+
+<section class="card "><h2>Board 1 — signal (proper score, uncertainty, no win rates)</h2>
+<p>Ranked by Brier skill score against the de-vigged closing market on the holdout. The interval is a
+game-cluster bootstrap, and the p-value is Holm-adjusted across every family tested. <strong>No row here
+is eligible for the leaderboard</strong>, because no row passes the certification gates; this board exists
+to show the evidence, not to crown a winner.</p>
+<div class="tw"><table class="zebra"><thead><tr><th>strategy</th><th>division</th><th>n</th><th>Brier</th><th>market Brier</th><th>Brier skill</th><th>hit rate</th><th>break-even</th><th>p (raw)</th><th>source</th></tr></thead><tbody><tr><td>S10</td><td>parlay</td><td>453</td><td>0.19800</td><td>0.18130</td><td>-0.0921</td><td>0.2384</td><td>0.2747</td><td>0.9643</td><td class="src"><a href="https://github.com/nflverse/nfldata/blob/master/data/games.csv" target="_blank" rel="noopener nofollow" title="https://github.com/nflverse/nfldata/blob/master/data/games.csv">github.com</a></td></tr><tr><td>S03</td><td>side</td><td>724</td><td>0.27588</td><td>0.24958</td><td>-0.1054</td><td>0.4972</td><td>0.5194</td><td>0.8907</td><td class="src"><a href="https://github.com/nflverse/nfldata/blob/master/data/games.csv" target="_blank" rel="noopener nofollow" title="https://github.com/nflverse/nfldata/blob/master/data/games.csv">github.com</a></td></tr><tr><td>S02</td><td>side</td><td>975</td><td>0.27896</td><td>0.24931</td><td>-0.1189</td><td>0.4933</td><td>0.5192</td><td>0.9505</td><td class="src"><a href="https://github.com/nflverse/nfldata/blob/master/data/games.csv" target="_blank" rel="noopener nofollow" title="https://github.com/nflverse/nfldata/blob/master/data/games.csv">github.com</a></td></tr><tr><td>S09</td><td>moneyline</td><td>1287</td><td>0.23287</td><td>0.20785</td><td>-0.1204</td><td>0.3955</td><td>0.4352</td><td>0.9982</td><td class="src"><a href="https://github.com/nflverse/nfldata/blob/master/data/games.csv" target="_blank" rel="noopener nofollow" title="https://github.com/nflverse/nfldata/blob/master/data/games.csv">github.com</a></td></tr><tr><td>S04</td><td>total</td><td>598</td><td>0.28247</td><td>0.24993</td><td>-0.1302</td><td>0.4900</td><td>0.5189</td><td>0.9276</td><td class="src"><a href="https://github.com/nflverse/nfldata/blob/master/data/games.csv" target="_blank" rel="noopener nofollow" title="https://github.com/nflverse/nfldata/blob/master/data/games.csv">github.com</a></td></tr><tr><td>S01</td><td>side</td><td>1427</td><td>0.28532</td><td>0.24934</td><td>-0.1443</td><td>0.4828</td><td>0.5191</td><td>0.9972</td><td class="src"><a href="https://github.com/nflverse/nfldata/blob/master/data/games.csv" target="_blank" rel="noopener nofollow" title="https://github.com/nflverse/nfldata/blob/master/data/games.csv">github.com</a></td></tr><tr><td>S07</td><td>fixture</td><td>196</td><td>0.28675</td><td>0.24901</td><td>-0.1516</td><td>0.4388</td><td>0.5201</td><td>0.9906</td><td class="src"><a href="https://github.com/nflverse/nfldata/blob/master/data/games.csv" target="_blank" rel="noopener nofollow" title="https://github.com/nflverse/nfldata/blob/master/data/games.csv">github.com</a></td></tr><tr><td>S08</td><td>fixture</td><td>40</td><td>0.30627</td><td>0.24973</td><td>-0.2264</td><td>0.4750</td><td>0.5197</td><td>0.7655</td><td class="src"><a href="https://github.com/nflverse/nfldata/blob/master/data/games.csv" target="_blank" rel="noopener nofollow" title="https://github.com/nflverse/nfldata/blob/master/data/games.csv">github.com</a></td></tr><tr><td>S05</td><td>total</td><td>217</td><td>0.31225</td><td>0.24999</td><td>-0.2491</td><td>0.4700</td><td>0.5191</td><td>0.9348</td><td class="src"><a href="https://github.com/nflverse/nfldata/blob/master/data/games.csv" target="_blank" rel="noopener nofollow" title="https://github.com/nflverse/nfldata/blob/master/data/games.csv">github.com</a></td></tr></tbody></table></div>
+<p class="note">9 families are graded. The best is
+<strong>S10</strong> at
+-0.0921; every one is negative, which means every one
+is worse than simply quoting the market.</p></section>
+
+<section class="card "><h2>Board 2 — staking</h2>
+<p><strong>Empty. By rule.</strong> The staking board admits only strategies that hold a certification,
+ and 0 do. The rule is written on <a href="strategies.html">Gates</a> and the reason is the
+ brief's own: a lucky staking run must never be able to mask a bad signal.</p>
+<p>What would fill it: one family clearing all eight gates on the holdout. The closest is
+<code>S10</code>, blocked by
+G3_CLV;G3B_ALPHA;G4_BSS;G5_CALIBRATION;G6_MULTIPLICITY;G8_DECAY.</p></section>
+
+<section class="card "><h2>Divisions, with proper scores only</h2>
+<table class="zebra"><thead><tr><th>division</th><th>definition</th><th>families graded</th>
+<th>rank rule</th></tr></thead><tbody>
+<tr><td>Singles</td><td>side, total and moneyline bets taken one at a time</td><td>8</td><td>Brier skill with a game-cluster interval; Holm across all trials</td></tr><tr><td>Game parlays</td><td>legs from different games</td><td>1</td><td>Brier skill with a game-cluster interval; Holm across all trials</td></tr><tr><td>Same-game parlays</td><td>legs from one game</td><td>0</td><td>Brier skill with a game-cluster interval; Holm across all trials</td></tr><tr><td>Prop combos</td><td>player-level legs</td><td>0</td><td>Brier skill with a game-cluster interval; Holm across all trials</td></tr>
+</tbody></table>
+<p class="note">Same-game parlays and prop combos are empty because the corpus holds no player-level
+game statistics (F-16). Their absence is a data gap, not a result.</p></section>
+
+<section class="card "><h2>Controls — the floor every strategy must beat</h2><div class="tw"><table class="zebra"><thead><tr><th>control</th><th>n</th><th>hit rate</th><th>ROI at -110</th><th>Brier skill</th><th>source</th></tr></thead><tbody><tr><td>S12</td><td>1582</td><td>0.4867</td><td>-0.0619</td><td>0.0000</td><td class="src"><a href="https://github.com/nflverse/nfldata/blob/master/data/games.csv" target="_blank" rel="noopener nofollow" title="https://github.com/nflverse/nfldata/blob/master/data/games.csv">github.com</a></td></tr><tr><td>S13</td><td>1582</td><td>0.4855</td><td>-0.0625</td><td>0.0000</td><td class="src"><a href="https://github.com/nflverse/nfldata/blob/master/data/games.csv" target="_blank" rel="noopener nofollow" title="https://github.com/nflverse/nfldata/blob/master/data/games.csv">github.com</a></td></tr><tr><td>S14</td><td>1582</td><td>0.4962</td><td>-0.0426</td><td>0.0000</td><td class="src"><a href="https://github.com/nflverse/nfldata/blob/master/data/games.csv" target="_blank" rel="noopener nofollow" title="https://github.com/nflverse/nfldata/blob/master/data/games.csv">github.com</a></td></tr></tbody></table></div><p class=note>Each control has no model, so its Brier skill against the market is exactly zero by construction and its ROI is the vig. That is the point: it is the number a real strategy has to clear, and none does.</p></section>
+
+<section class="card "><h2>Demotion gate</h2>
+<p>A strategy that is live is sent back to paper when any of six triggers fires. None can fire today
+because nothing is live, but the thresholds are frozen now so that they cannot be chosen after the fact:</p>
+<table class="zebra"><thead><tr><th>trigger</th><th>condition</th></tr></thead><tbody>
+<tr><td>D1</td><td>rolling 100-bet Brier skill against the close below 0</td></tr>
+<tr><td>D2</td><td>calibration slope outside [0.8, 1.25] on the live sample</td></tr>
+<tr><td>D3</td><td>mean residual alpha below 0 over the live sample with an interval excluding 0</td></tr>
+<tr><td>D4</td><td>price source changes book, or the capture cadence breaks for 7 days</td></tr>
+<tr><td>D5</td><td>any gate that was cleared now fails on a fresh validation window</td></tr>
+<tr><td>D6</td><td>the rule text is edited without a new pre-registration commit</td></tr>
+</tbody></table></section>
+
+</main>
+<footer class="foot"><div class="wrap">Session <code>941fe39f</code> · built 2026-11-17T01:30:00Z · 80 requirements · 7,058 originated markets · 0 certified strategies · <a href="https://github.com/sassnarep3-star/Own5">repository</a></div></footer>
+</body></html>

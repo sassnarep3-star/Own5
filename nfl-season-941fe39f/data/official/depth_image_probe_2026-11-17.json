@@ -1,0 +1,16 @@
+{
+ "source_id": "OFF-DEPTH-HOU-IMAGEPROBE-20261117",
+ "publisher": "Houston Texans (houstontexans.com)",
+ "url": "https://www.houstontexans.com/team/depth-chart",
+ "tier": "OFFICIAL (club-published)",
+ "retrieval_utc": "2026-11-17T01:10:00Z",
+ "what_was_read": "The page text. It contains the heading 'Unofficial Depth Chart' and, where a table would be, a single image element: https://static.clubs.nfl.com/image/upload/texans/a5or0zowuo36y1txf4ly . No player names, positions or slots appear anywhere in the page text.",
+ "probe_result": {
+  "attempt": "Fetch the image bytes directly so that an authorised reading tool (not a human transcription) could interpret the chart.",
+  "outcome": "BLOCKED",
+  "why": "static.clubs.nfl.com is not reachable from the execution sandbox: TLS connection closed (SSL_ERROR_SYSCALL), the same block that prevents direct nfl.com reads. The sandbox web fetcher, which is the only permitted read path, returns page text and does not transcribe images.",
+  "conclusion": "Houston remains image-only and is NOT transcribed. Any Houston depth rows on this desk would be a fabricated reading of a picture, so there are none. This is published as a blocking flag, not silently omitted."
+ },
+ "account_wide_impact": "Houston has no depth rows in depth_parsed.csv; every Houston-based deficiency pairing is therefore withheld rather than assumed.",
+ "prior_evidence": "The e46fb855 desk reached the same conclusion on 2026-11-15 (its flag F-02) with the identical page."
+}

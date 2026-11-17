@@ -1,0 +1,31 @@
+{
+ "source_id": "OFF-TRANSACTIONS-20261117",
+ "publisher": "NFL.com",
+ "title": "2026 NFL League Transactions - Trades, Waivers, Signings & more (November 2026, Trades tab)",
+ "url": "https://www.nfl.com/transactions/",
+ "tab_captured": "Trades",
+ "league_month_page": "https://www.nfl.com/transactions/league/trades/2026/11",
+ "tier": "OFFICIAL",
+ "retrieval_utc": "2026-11-17T00:58:00Z",
+ "retrieval_method": "Read with the sandbox web fetcher. The month view renders November 2026; the table below is transcribed row for row, in published order.",
+ "note": "The page's month selector was set to November and the URL https://www.nfl.com/transactions/league/2026/reg11 returns HTTP 404; https://www.nfl.com/transactions/ renders the month view. Rows dated 11/06 to 11/10 are the complete trades block visible in that read.",
+ "columns": "from_team, to_team, date_mm_dd_2026, player, position_as_published, transaction_as_published",
+ "rows": [
+  ["ATL", "JAX", "11/10", "Jessie Bates", "", "Traded"],
+  ["PHI", "JAX", "11/10", "Jordan Davis", "", "Traded"],
+  ["TEN", "BUF", "11/10", "Amani Hooker", "", "Traded"],
+  ["IND", "SF", "11/10", "Keenan Allen", "", "Traded"],
+  ["LV", "MIN", "11/10", "Kirk Cousins", "", "Traded"],
+  ["LAC", "DEN", "11/10", "Daiyan Henley", "", "Traded"],
+  ["IND", "KC", "11/10", "Josh Downs", "", "Traded"],
+  ["ATL", "BAL", "11/10", "Ryan Neuzil", "", "Traded"],
+  ["BAL", "ATL", "11/10", "Andrew Vorhees", "", "Traded"],
+  ["NYJ", "DET", "11/09", "Andre Cisco", "", "Traded"],
+  ["NO", "JAX", "11/09", "Davon Godchaux", "", "Traded"],
+  ["AZ", "BAL", "11/06", "Jacoby Brissett", "", "Traded"]
+ ],
+ "checks_against_other_official_reads": [
+  "Jacoby Brissett appears on the Baltimore depth chart captured the same day (data/official/depth_2026-11-17.json), and the transaction that put him there is dated 11/06. The two official reads are consistent.",
+  "Ryan Neuzil appears twice on the Baltimore depth chart (LG rank 2 and C rank 2) and the transaction list shows him arriving from Atlanta on 11/10 and Andrew Vorhees leaving for Atlanta the same day."
+ ]
+}

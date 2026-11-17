@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Snapshots and alarms · Own5 NFL Season Desk</title>
+<meta name="description" content="Hashed captures, replay and drift alarms">
+<link rel="stylesheet" href="assets/style.css">
+</head><body>
+<header class="top"><div class="wrap">
+<a class="brand" href="index.html">Own5 · NFL Season Desk</a>
+<span class="tag">Hashed captures, replay and drift alarms</span>
+</div></header>
+<nav class="main"><div class="wrap"><a href="index.html">Overview</a><a href="executive-summary.html">Executive summary</a><a href="lines.html">Originated lines</a><a href="model.html">Model</a><a href="leaderboard.html">Leaderboard</a><a href="strategies.html">Strategies &amp; gates</a><a href="luck.html">Removal of luck</a><a href="depth.html">Depth &amp; replacements</a><a href="availability.html">Availability</a><a href="matchup.html">Deficiency matrix</a><a href="correlations.html">Correlations</a><a href="corpus.html">Corpus</a><a href="price-store.html">Price policy</a><a href="schedule.html">Schedule</a><a class="on" href="snapshots.html">Snapshots &amp; alarms</a><a href="changes.html">What changed</a><a href="audit.html">Repo audit</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources</a><a href="methodology.html">Methodology</a></div></nav>
+<main class="wrap">
+
+<h1>Snapshots and alarms</h1>
+<p class="lede">An append-only ledger with a hash per capture, a clock time per read, a schema contract per
+parser, a freshness alarm and point-in-time replay. The mechanism for the brief's snapshot requirements is
+one mechanism, not five.</p>
+
+<section class="card "><h2>The ledger</h2><div class="tw"><table class="zebra"><thead><tr><th>capture</th><th>unit</th><th>clock time</th><th>age (h)</th><th>freshness</th><th>sha256 (head)</th><th>schema ok</th><th>missing</th><th>source</th></tr></thead><tbody><tr><td>OFF-DEPTH-3CLUB-20261117</td><td>depth_chart</td><td>2026-11-17T01:12:00Z</td><td>0.30</td><td>FRESH</td><td>19fc93d9f72232e5bb91b26afb93547211a84fbc27442aa7e2cfa8825983c5db</td><td>YES</td><td><span class="blank">blank</span></td><td class="src"><span class="badge b-bad">UNVERIFIED</span></td></tr><tr><td>OFF-DEPTH-HOU-IMAGEPROBE-20261117</td><td>depth_chart</td><td>2026-11-17T01:10:00Z</td><td>0.33</td><td>FRESH</td><td>c2e0625dbffab7b77a18d17073dea5dea379dc6d76cbdb56f17c7a96936d56a2</td><td>YES</td><td><span class="blank">blank</span></td><td class="src"><a href="https://www.houstontexans.com/team/depth-chart" target="_blank" rel="noopener nofollow" title="https://www.houstontexans.com/team/depth-chart">houstontexans.com</a></td></tr><tr><td>OFF-INJURY-DATED-20261117#read</td><td>injury_report</td><td>2026-11-15T23:27:00Z</td><td>26.05</td><td>STALE</td><td>2de59aca7b82e8c593cc3eddca72a8b552a38316cf0c1d277713d5650efeffde</td><td>YES</td><td><span class="blank">blank</span></td><td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" target="_blank" rel="noopener nofollow" title="https://www.nfl.com/injuries/league/2026/reg10">nfl.com</a></td></tr><tr><td>OFF-INJURY-DATED-20261117#week_11_url</td><td>injury_report</td><td>2026-11-17T00:50:00Z</td><td>0.67</td><td>FRESH</td><td>2de59aca7b82e8c593cc3eddca72a8b552a38316cf0c1d277713d5650efeffde</td><td>YES</td><td><span class="blank">blank</span></td><td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg11" target="_blank" rel="noopener nofollow" title="https://www.nfl.com/injuries/league/2026/reg11">nfl.com</a></td></tr><tr><td>OFF-INJURY-DATED-20261117#week_10_report</td><td>injury_report</td><td>2026-11-17T00:57:00Z</td><td>0.55</td><td>FRESH</td><td>2de59aca7b82e8c593cc3eddca72a8b552a38316cf0c1d277713d5650efeffde</td><td>YES</td><td><span class="blank">blank</span></td><td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" target="_blank" rel="noopener nofollow" title="https://www.nfl.com/injuries/league/2026/reg10">nfl.com</a></td></tr><tr><td>OFF-RESERVE-20261117</td><td>reserve_list</td><td>2026-11-17T01:02:00Z</td><td>0.47</td><td>FRESH</td><td>5bd56ef0d608339aaf10753ad538840b8f4ccbc73d96ac6ed63b4c9cfa11fe95</td><td>YES</td><td><span class="blank">blank</span></td><td class="src"><a href="https://www.nfl.com/transactions/league/reserve-list/2026/11" target="_blank" rel="noopener nofollow" title="https://www.nfl.com/transactions/league/reserve-list/2026/11">nfl.com</a></td></tr><tr><td>OFF-SCHEDULE-RELEASE-2026</td><td>schedule_announcement</td><td>2026-11-17T01:05:00Z</td><td>0.42</td><td>FRESH</td><td>01b5fd684e7af46ffaa82372000c52181c035206796e0726e83d749ab71251df</td><td>YES</td><td><span class="blank">blank</span></td><td class="src"><a href="https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced" target="_blank" rel="noopener nofollow" title="https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced">media.nfl.com</a></td></tr><tr><td>OFF-TRANSACTIONS-20261117</td><td>transactions</td><td>2026-11-17T00:58:00Z</td><td>0.53</td><td>FRESH</td><td>38111232cfc50d18873d723468145b5650ec0e17c68c7ad7c767aa88b533c0cd</td><td>YES</td><td><span class="blank">blank</span></td><td class="src"><a href="https://www.nfl.com/transactions/" target="_blank" rel="noopener nofollow" title="https://www.nfl.com/transactions/">nfl.com</a></td></tr></tbody></table></div><p class=note>Age is computed against the build clock. A capture older than the unit's limit turns the row to STALE and the build reports it; it does not silently pass.</p></section>
+
+<section class="card "><h2>Replay by unit</h2><div class="tw"><table class="zebra"><thead><tr><th>unit</th><th>distinct clock times</th><th>first</th><th>last</th><th>replayable?</th><th>source</th></tr></thead><tbody><tr><td>depth_chart</td><td>2</td><td>2026-11-17T01:10:00Z</td><td>2026-11-17T01:12:00Z</td><td>YES</td><td class="src"><span class="badge b-bad">UNVERIFIED</span></td></tr><tr><td>injury_report</td><td>3</td><td>2026-11-15T23:27:00Z</td><td>2026-11-17T00:57:00Z</td><td>YES</td><td class="src"><span class="badge b-bad">UNVERIFIED</span></td></tr><tr><td>reserve_list</td><td>1</td><td>2026-11-17T01:02:00Z</td><td>2026-11-17T01:02:00Z</td><td>NO - one clock time only</td><td class="src"><span class="badge b-bad">UNVERIFIED</span></td></tr><tr><td>schedule_announcement</td><td>1</td><td>2026-11-17T01:05:00Z</td><td>2026-11-17T01:05:00Z</td><td>NO - one clock time only</td><td class="src"><span class="badge b-bad">UNVERIFIED</span></td></tr><tr><td>transactions</td><td>1</td><td>2026-11-17T00:58:00Z</td><td>2026-11-17T00:58:00Z</td><td>NO - one clock time only</td><td class="src"><span class="badge b-bad">UNVERIFIED</span></td></tr></tbody></table></div><p class=note>A unit with one clock time cannot answer 'what was known at kickoff'. This table is the honest status of that requirement: injuries and depth have two or more clock times; transactions, the reserve list and the schedule announcement have one.</p></section>
+
+<section class="card "><h2>The three alarms</h2>
+<table class="zebra"><thead><tr><th>alarm</th><th>fires when</th><th>consequence</th></tr></thead><tbody>
+<tr><td>Freshness</td><td>a unit's newest capture is older than its limit (24 h for the injury report,
+168 h for depth, transactions and reserve list)</td><td>the row is marked STALE on this page and reported
+in the build output</td></tr>
+<tr><td>Schema drift</td><td>a required field disappears from a capture</td><td>the build fails before any
+page is written; a blank is never published in place of a field</td></tr>
+<tr><td>Corpus drift</td><td>the tarball's SHA-256 no longer matches the pin</td><td>the build stops and
+says to record a new pin, because a new commit means a new corpus</td></tr>
+</tbody></table>
+<p>All three are exercised by the unit tests, and the schema alarm is proved by a test that removes a field
+and asserts the build refuses.</p></section>
+
+<section class="card "><h2>Storage</h2>
+<p>The captures live in the repository under <code>nfl-season-941fe39f/data/official/</code> and the
+derived tables under <code>data/derived/</code>. The public site publishes only the derived layer; the raw
+capture rows stay in the repository, which is the public/private split the brief asks for. The pinned
+corpus tarball is also committed, because a hash is only useful if the bytes behind it can be checked.</p>
+<p class="note">The capture cadence is manual in this session. Making it a scheduled job is suggestion
+S-05 and S-15; it is not implemented, and the freshness table says so rather than implying a cron.</p></section>
+
+</main>
+<footer class="foot"><div class="wrap">Session <code>941fe39f</code> · built 2026-11-17T01:30:00Z · 80 requirements · 7,058 originated markets · 0 certified strategies · <a href="https://github.com/sassnarep3-star/Own5">repository</a></div></footer>
+</body></html>

@@ -1,0 +1,158 @@
+{
+ "source_id": "OFF-INJURY-DATED-20261117",
+ "publisher": "NFL.com",
+ "title": "Official NFL Injury Report (league view, week 10 and the week-11 URL)",
+ "tier": "OFFICIAL",
+ "retrieval_method": "Read with the sandbox web fetcher; the page text is transcribed below with the retrieval clock time.",
+ "clock_note": "This is the second clock time this repository holds for the week-10 report. The e46fb855 session captured the same page on 2026-11-15T23:27:00Z (nfl-desk-e46fb855/data/injuries.csv). The delta between the two reads is computed in the build, never asserted here.",
+ "reads": [
+  {
+   "label": "week_11_url",
+   "requested_url": "https://www.nfl.com/injuries/league/2026/reg11",
+   "retrieval_utc": "2026-11-17T00:50:00Z",
+   "observed_page_title": "Official NFL Injury Report for Players - Week 10 of the 2026 Season | NFL.com",
+   "observed_heading": "Injuries - WEEK 10",
+   "observed_week_selector": "WEEK 1 ... WEEK 10 (no WEEK 11 entry available in the selector)",
+   "finding": "The week-11 URL serves the week-10 report. The league had not published a week-11 injury report at this clock time. Use the game centre as the independent check of that claim.",
+   "cross_check": {
+    "url": "https://www.nfl.com/games/colts-at-texans-2026-reg-11",
+    "retrieval_utc": "2026-11-17T00:48:00Z",
+    "text": "For both clubs the game centre prints 'Injury Report is not available at this time.'"
+   }
+  },
+  {
+   "label": "week_10_report",
+   "requested_url": "https://www.nfl.com/injuries/league/2026/reg10",
+   "retrieval_utc": "2026-11-17T00:57:00Z",
+   "observed_heading": "Injuries - WEEK 10",
+   "rows_from_this_read": [
+    {
+     "team": "WAS",
+     "player": "John Bates",
+     "position": "TE",
+     "injury": "",
+     "practice_status": "Full Participation in Practice",
+     "game_status": ""
+    },
+    {
+     "team": "WAS",
+     "player": "Treylon Burks",
+     "position": "WR",
+     "injury": "",
+     "practice_status": "Did Not Participate In Practice",
+     "game_status": ""
+    },
+    {
+     "team": "WAS",
+     "player": "Jayden Daniels",
+     "position": "QB",
+     "injury": "",
+     "practice_status": "Full Participation in Practice",
+     "game_status": ""
+    },
+    {
+     "team": "WAS",
+     "player": "Lucas Patrick",
+     "position": "C",
+     "injury": "Concussion",
+     "practice_status": "Did Not Participate In Practice",
+     "game_status": "Out"
+    },
+    {
+     "team": "WAS",
+     "player": "Colson Yankoff",
+     "position": "TE",
+     "injury": "Knee",
+     "practice_status": "Did Not Participate In Practice",
+     "game_status": "Out"
+    },
+    {
+     "team": "NYG",
+     "player": "Malik Harrison",
+     "position": "LB",
+     "injury": "Groin",
+     "practice_status": "Limited Participation in Practice",
+     "game_status": "Questionable"
+    },
+    {
+     "team": "NE",
+     "player": "A.J. Brown",
+     "position": "WR",
+     "injury": "Ankle, Knee",
+     "practice_status": "Limited Participation in Practice",
+     "game_status": "Questionable"
+    },
+    {
+     "team": "NE",
+     "player": "TreVeyon Henderson",
+     "position": "RB",
+     "injury": "Illness",
+     "practice_status": "Did Not Participate In Practice",
+     "game_status": "Out"
+    },
+    {
+     "team": "DET",
+     "player": "Kerby Joseph",
+     "position": "S",
+     "injury": "Knee",
+     "practice_status": "Did Not Participate In Practice",
+     "game_status": "Out"
+    },
+    {
+     "team": "DET",
+     "player": "Cade Mays",
+     "position": "C",
+     "injury": "Ankle",
+     "practice_status": "Did Not Participate In Practice",
+     "game_status": "Out"
+    },
+    {
+     "team": "DET",
+     "player": "D.J. Reed",
+     "position": "CB",
+     "injury": "Hip",
+     "practice_status": "Did Not Participate In Practice",
+     "game_status": "Out"
+    },
+    {
+     "team": "DET",
+     "player": "Amon-Ra St. Brown",
+     "position": "WR",
+     "injury": "Rib",
+     "practice_status": "Limited Participation in Practice",
+     "game_status": "Questionable"
+    }
+   ],
+   "note": "Only the rows that this session uses as named evidence are transcribed here. The full 279-row week-10 table already exists in the repository from the 2026-11-15 capture (nfl-desk-e46fb855/data/injuries.csv, 326 rows including club/article metadata) and is used as the first clock time."
+  }
+ ],
+ "cross_checks": [
+  {
+   "claim": "The three Detroit players the brief names (Kerby Joseph, Cade Mays, D.J. Reed) are published as Out",
+   "result": "Confirmed in this read: all three carry game_status 'Out' in the week-10 report.",
+   "url": "https://www.nfl.com/injuries/league/2026/reg10"
+  },
+  {
+   "claim": "Cade Mays is still listed as the Lions' first-team centre",
+   "result": "Confirmed: the Detroit depth chart captured the same day lists Cade Mays at C rank 1 with Juice Scruggs at rank 2, while the injury report lists Mays 'Out' with an ankle injury. Both facts are official and they are simultaneously true.",
+   "url": "https://www.detroitlions.com/team/depth-chart"
+  }
+ ],
+ "carried_forward_reads": [
+  {
+   "source_id": "OFF-INJURY-CARRIED-20261115",
+   "publisher": "NFL.com",
+   "url": "https://www.nfl.com/injuries/league/2026/reg10",
+   "tier": "OFFICIAL",
+   "retrieval_utc": "2026-11-15T23:27:00Z",
+   "retrieval_method": "Second clock time for the same page. Not re-read by this session: the 326 rows were read and committed by the e46fb855 session on 2026-11-15 and are carried forward read-only from nfl-desk-e46fb855/data/injuries.csv, whose SHA-256 is recorded in prior_capture.sha256 below. Including it here is what makes the two-clock-time delta computable without pretending this session read it.",
+   "prior_capture": {
+    "file": "nfl-desk-e46fb855/data/injuries.csv",
+    "sha256": "7e9d37d836f49ad1bc7c0a6894e77f49e4d175fc5c86a9bf384f3632b847ffcf",
+    "rows": 326,
+    "captured_utc": "2026-11-15T23:27:00Z"
+   },
+   "note": "Point-in-time injury reads, prior clock time."
+  }
+ ]
+}

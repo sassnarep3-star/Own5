@@ -1,0 +1,983 @@
+{
+ "source_id": "OFF-DEPTH-3CLUB-20261117",
+ "publisher": "Club websites (Detroit Lions, Baltimore Ravens, Green Bay Packers)",
+ "tier": "OFFICIAL (club-published, self-labelled 'unofficial')",
+ "retrieval_utc": "2026-11-17T01:12:00Z",
+ "retrieval_method": "Read with the sandbox web fetcher (nfl.com and club domains are not reachable from the execution sandbox shell: TLS connection closed). Cells transcribed verbatim including jersey numbers and empty cells. No cell was normalised at capture time.",
+ "why_these_clubs": "Each club is a named case in the brief or a parsing edge case: Green Bay prepends jersey numbers; Baltimore was reported to publish two injured-reserve quarterbacks; Detroit is the club whose game-status cells were reported blank; Seattle publishes two players in one cell (shared slot); Washington was reported to leave a slot empty. Houston is image-only and is captured separately as a blocked probe.",
+ "columns": "Each row is [unit, position_label_as_published, cell_1, cell_2, cell_3, cell_4]. A cell is the raw string the club published, e.g. '9 Christian Watson' or 'Amon-Ra St. Brown'. An empty string means the club published an empty cell.",
+ "clubs": [
+  {
+   "team": "DET",
+   "url": "https://www.detroitlions.com/team/depth-chart",
+   "page_title": "Detroit Lions Depth Chart | Detroit Lions - DetroitLions.com",
+   "published_label": "2026 Unofficial Depth Chart Compiled by Lions Football Communications",
+   "published_date": "",
+   "published_date_note": "The page carries no dated stamp in the read text; unlike Green Bay it does not print a date.",
+   "rows": [
+    [
+     "Offense",
+     "WR",
+     "Jameson Williams",
+     "",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "WR",
+     "Amon-Ra St. Brown",
+     "DeAndre Carter",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "LT",
+     "Penei Sewell",
+     "",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "LG",
+     "Christian Mahogany",
+     "Miles Frazier",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "C",
+     "Cade Mays",
+     "Juice Scruggs",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "RG",
+     "Tate Ratledge",
+     "Seth McLaughlin",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "RT",
+     "Blake Miller",
+     "Larry Borom",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "TE",
+     "Sam LaPorta",
+     "Brock Wright",
+     "Tyler Conklin",
+     "Jackson Meeks"
+    ],
+    [
+     "Offense",
+     "WR",
+     "Isaac TeSlaa",
+     "Tay Martin",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "QB",
+     "Jared Goff",
+     "Joshua Dobbs",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "RB",
+     "Jahmyr Gibbs",
+     "Sione Vaki",
+     "Jacob Saylors",
+     ""
+    ],
+    [
+     "Defense",
+     "EDGE",
+     "Aidan Hutchinson",
+     "Derrick Moore",
+     "Eric O'Neill",
+     ""
+    ],
+    [
+     "Defense",
+     "DL",
+     "Alim McNeill",
+     "Skyler Gill-Howard",
+     "Mekhi Wingo",
+     ""
+    ],
+    [
+     "Defense",
+     "DL",
+     "Tyleik Williams",
+     "Levi Onwuzurike",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "EDGE",
+     "DJ Wonnum",
+     "Tyler Lacy",
+     "Ahmed Hassanein",
+     ""
+    ],
+    [
+     "Defense",
+     "LB",
+     "Derrick Barnes",
+     "Joe Bachie",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "LB",
+     "Malcolm Rodriguez",
+     "K.J. Britt",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "LB",
+     "Trevor Nowaske",
+     "Amen Ogbongbemiga",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "CB",
+     "D.J. Reed",
+     "Rock Ya-Sin",
+     "Khalil Dorsey",
+     ""
+    ],
+    [
+     "Defense",
+     "CB",
+     "Roger McCreary",
+     "Ennis Rakestraw Jr.",
+     "Keith Abney II",
+     ""
+    ],
+    [
+     "Defense",
+     "S",
+     "Chuck Clark",
+     "",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "S",
+     "Brian Branch",
+     "Christian Izien",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "team": "BAL",
+   "url": "https://www.baltimoreravens.com/team/depth-chart",
+   "page_title": "Ravens Depth Chart | Baltimore Ravens – baltimoreravens.com",
+   "published_label": "DEPTH CHART",
+   "published_date": "",
+   "published_date_note": "No date is printed on the page text.",
+   "rows": [
+    [
+     "Offense",
+     "WR",
+     "Zay Flowers",
+     "Devontez Walker",
+     "Elijah Sarratt",
+     ""
+    ],
+    [
+     "Offense",
+     "WR",
+     "Rashod Bateman",
+     "Ja'Kobi Lane",
+     "LaJohntay Wester",
+     ""
+    ],
+    [
+     "Offense",
+     "LT",
+     "Ronnie Stanley",
+     "Carson Vinson",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "LG",
+     "John Simpson",
+     "Ryan Neuzil",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "C",
+     "Cam Jurgens",
+     "Ryan Neuzil",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "RG",
+     "Vega Ioane",
+     "Emery Jones Jr.",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "RT",
+     "Roger Rosengarten",
+     "Carson Vinson",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "TE",
+     "Mark Andrews",
+     "Josh Cuevas",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "TE",
+     "Matt Hibner",
+     "",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "QB",
+     "Jacoby Brissett",
+     "Joe Fagnano",
+     "Kedon Slovis",
+     ""
+    ],
+    [
+     "Offense",
+     "RB",
+     "Derrick Henry",
+     "Justice Hill",
+     "Rasheen Ali",
+     ""
+    ],
+    [
+     "Defense",
+     "DT",
+     "Nnamdi Madubuike",
+     "Broderick Washington Jr.",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "NT",
+     "Travis Jones",
+     "John Jenkins",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "DE",
+     "Calais Campbell",
+     "Aeneas Peebles",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "RUSH",
+     "Trey Hendrickson",
+     "Mike Green",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "MLB",
+     "Roquan Smith",
+     "Jay Higgins IV",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "WLB",
+     "Trenton Simpson",
+     "Teddye Buchanan",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "SAM",
+     "Mike Green",
+     "Zion Young",
+     "Ethan Burke",
+     ""
+    ],
+    [
+     "Defense",
+     "CB",
+     "Marlon Humphrey",
+     "Chidobe Awuzie",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "DB",
+     "Kyle Hamilton",
+     "Keyon Martin",
+     "Chandler Rivers",
+     ""
+    ],
+    [
+     "Defense",
+     "SS",
+     "Jaylinn Hawkins",
+     "Keondre Jackson",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "FS",
+     "Malaki Starks",
+     "K'Von Wallace",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "CB",
+     "Nate Wiggins",
+     "T.J. Tampa Jr.",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "team": "GB",
+   "url": "https://www.packers.com/team/depth-chart",
+   "page_title": "Packers Depth Chart | Green Bay Packers – packers.com",
+   "published_label": "Unofficial, Nov. 10, 2026",
+   "published_date": "2026-11-10",
+   "published_date_note": "The club prints the date under the table: 'Unofficial, Nov. 10, 2026'. This is the only one of the three charts that carries a machine-readable date.",
+   "rows": [
+    [
+     "Offense",
+     "WR",
+     "9 Christian Watson",
+     "16 Bo Melton",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "WR",
+     "0 Matthew Golden",
+     "87 J. Michael Sturdivant",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "LT",
+     "77 Jordan Morgan",
+     "73 John Williams",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "LG",
+     "65 Aaron Banks",
+     "79 Travis Glover",
+     "67 Donovan Jennings",
+     ""
+    ],
+    [
+     "Offense",
+     "C",
+     "75 Sean Rhyan",
+     "52 Jager Burton",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "RG",
+     "72 Laken Tomlinson",
+     "70 Kevin Zeitler",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "RT",
+     "71 Anthony Belton",
+     "74 Mekhi Becton Sr.",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "TE",
+     "85 Tucker Kraft",
+     "18 Jonnu Smith",
+     "86 Mark Redman",
+     ""
+    ],
+    [
+     "Offense",
+     "WR",
+     "83 Savion Williams",
+     "",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "QB",
+     "10 Jordan Love",
+     "6 Tyrod Taylor",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "RB",
+     "8 Josh Jacobs",
+     "32 MarShawn Lloyd",
+     "22 Pierre Strong Jr.",
+     ""
+    ],
+    [
+     "Offense",
+     "",
+     "",
+     "",
+     "26 Kaleb Johnson",
+     ""
+    ],
+    [
+     "Defense",
+     "DT",
+     "94 Karl Brooks",
+     "97 Jordon Riley",
+     "93 Anthony Campbell",
+     ""
+    ],
+    [
+     "Defense",
+     "DT",
+     "95 Devonte Wyatt",
+     "55 Chris McClellan",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "EDGE",
+     "90 Lukas Van Ness",
+     "57 Brenton Cox Jr",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "LB",
+     "44 Zaire Franklin",
+     "59 Ty’Ron Hopper",
+     "54 Kristian Welch",
+     ""
+    ],
+    [
+     "Defense",
+     "LB",
+     "58 Isaiah McDuffie",
+     "31 Nick Niemann",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "EDGE",
+     "99 Barryn Sorrell",
+     "51 Dani Dennis-Sutton",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "CB",
+     "25 Keisean Nixon",
+     "24 Carrington Valentine",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "CB",
+     "2 Brandon Cisse",
+     "21 Benjamin St-Juste",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "S",
+     "29 Xavier McKinney",
+     "27 Kitan Oladapo",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "S",
+     "33 Evan Williams",
+     "27 Kitan Oladapo",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "NB",
+     "7 Javon Bullard",
+     "36 Kamal Hadden",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "team": "SEA",
+   "url": "https://www.seahawks.com/team/depth-chart/",
+   "page_title": "Seattle Seahawks",
+   "published_label": "",
+   "published_date": "",
+   "published_date_note": "No date printed on the page text.",
+   "note_on_shared_slots": "The WR row publishes TWO players in the first cell: Cooper Kupp and Rashid Shaheed. A parser that takes 'the first player in the first cell' would silently drop Shaheed and would fabricate a single starter the club never named.",
+   "rows": [
+    [
+     "Offense",
+     "WR",
+     "Cooper Kupp|Rashid Shaheed",
+     "Irvin Charles",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "LT",
+     "Charles Cross",
+     "Josh Jones",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "LG",
+     "Quenton Nelson",
+     "Anthony Bradford",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "C",
+     "Jalen Sundell",
+     "Olu Oluwatimi",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "RG",
+     "Grey Zabel",
+     "Anthony Bradford",
+     "Beau Stephens",
+     ""
+    ],
+    [
+     "Offense",
+     "RT",
+     "Abraham Lucas",
+     "Josh Jones",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "TE",
+     "AJ Barner",
+     "Eric Saubert",
+     "Nick Kallerup",
+     ""
+    ],
+    [
+     "Offense",
+     "WR",
+     "Jaxon Smith-Njigba",
+     "Tory Horton",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "QB",
+     "Sam Darnold",
+     "Drew Lock",
+     "Jalen Milroe",
+     ""
+    ],
+    [
+     "Offense",
+     "FB",
+     "Brady Russell",
+     "",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "RB",
+     "Zach Charbonnet",
+     "Jadarian Price",
+     "Emanuel Wilson",
+     "George Holani"
+    ],
+    [
+     "Defense",
+     "DT",
+     "Leonard Williams",
+     "Rylie Mills",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "NT",
+     "Byron Murphy II",
+     "Brandon Pili",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "DE",
+     "Jarran Reed",
+     "Mike Morris",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "RUSH",
+     "DeMarcus Lawrence",
+     "Derick Hall",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "MLB",
+     "Ernest Jones IV",
+     "Patrick O'Connell",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "WLB",
+     "Drake Thomas",
+     "Tyrice Knight",
+     "Chazz Surratt",
+     ""
+    ],
+    [
+     "Defense",
+     "SLB",
+     "Uchenna Nwosu",
+     "Dante Fowler Jr.",
+     "Connor O'Toole",
+     ""
+    ],
+    [
+     "Defense",
+     "CB",
+     "Devon Witherspoon",
+     "Nehemiah Pritchett",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "CB",
+     "Josh Jobe",
+     "Avery Smith",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "S",
+     "Ty Okada",
+     "Rodney Thomas II",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "S",
+     "Julian Love",
+     "",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "S",
+     "Nick Emmanwori",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "team": "WAS",
+   "url": "https://www.commanders.com/team/depth-chart",
+   "page_title": "Washington Commanders l Team Depth Chart | Washington Commanders - Commanders.comcom",
+   "published_label": "DEPTH CHART",
+   "published_date": "",
+   "published_date_note": "No date printed on the page text.",
+   "note_on_empty_slots": "No offence or defence row in this read has an empty first cell. Empty cells appear only at ranks 2-4, and only in the normal way (a club naming one player at a position). The brief's claim that Washington leaves a slot empty is NOT reproduced in this read; see the flag register.",
+   "rows": [
+    [
+     "Offense",
+     "WR",
+     "Treylon Burks",
+     "Van Jefferson",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "LT",
+     "Brandon Coleman",
+     "Andrew Wylie",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "LG",
+     "Chris Paul",
+     "Nick Allegretti",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "C",
+     "Lucas Patrick",
+     "Matt Gulbin",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "RG",
+     "Sam Cosmi",
+     "Tanoa Togiai",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "RT",
+     "Josh Conerly Jr.",
+     "Andrew Wylie",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "TE",
+     "Chig Okonkwo",
+     "Ben Sinnott",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "TE",
+     "John Bates",
+     "Colson Yankoff",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "WR",
+     "Stefon Diggs",
+     "Luke McCaffrey",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "WR",
+     "Antonio Williams",
+     "",
+     "",
+     ""
+    ],
+    [
+     "Offense",
+     "QB",
+     "Jayden Daniels",
+     "Marcus Mariota",
+     "Athan Kaliakmanis",
+     ""
+    ],
+    [
+     "Offense",
+     "RB",
+     "Rachaad White",
+     "Austin Ekeler",
+     "Robert Henry Jr.",
+     ""
+    ],
+    [
+     "Defense",
+     "DL",
+     "Charles Omenihu",
+     "Jer'Zhan Newton",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "DL",
+     "Tim Settle",
+     "Shy Tuttle",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "DL",
+     "Deatrich Wise Jr.",
+     "Ricky Barber",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "OLB",
+     "Odafe Oweh",
+     "Joshua Josephs",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "LB",
+     "Sonny Styles",
+     "Kain Medrano",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "LB",
+     "Frankie Luvu",
+     "Jordan Magee",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "OLB",
+     "K'Lavon Chaisson",
+     "Dorance Armstrong",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "CB",
+     "Amik Robertson",
+     "Rasul Douglas",
+     "Isaac Yiadom",
+     ""
+    ],
+    [
+     "Defense",
+     "CB",
+     "Trey Amos",
+     "Mike Sainristil",
+     "Fabian Moreau",
+     ""
+    ],
+    [
+     "Defense",
+     "SS",
+     "Nick Cross",
+     "Tyler Owens",
+     "",
+     ""
+    ],
+    [
+     "Defense",
+     "FS",
+     "Jeremy Reaves",
+     "Quan Martin",
+     "Percy Butler",
+     ""
+    ]
+   ]
+  }
+ ],
+ "known_edge_cases_visible_in_this_capture": [
+  "GB prints jersey numbers inside every cell ('9 Christian Watson'). A parser must split once from the left on the first space and STORE THE RAW STRING too.",
+  "GB has a continuation row with an empty position label carrying '26 Kaleb Johnson' in the third player cell. Dropping rows with an empty position label loses a player.",
+  "SEA WR rank 1 holds two players in one cell (Cooper Kupp and Rashid Shaheed). Parsers that read one name per cell lose the second.",
+  "WAS publishes no empty rank-1 cell in offence or defence on this read; the brief's empty-slot claim for Washington is not reproduced (flag F-07).",
+  "BAL now lists Jacoby Brissett at QB rank 1, consistent with the 11/06 trade from Arizona; the stale-chart claim in the brief (Jackson/Huntley at QB) is NOT reproduced on this read (flag F-06).",
+  "DET publishes one safety row with a single player and no FS/SS distinction."
+ ]
+}

@@ -1,0 +1,25 @@
+{
+ "source_id": "OFF-SCHEDULE-RELEASE-2026",
+ "publisher": "NFL Football Communications (media.nfl.com)",
+ "title": "2026 NFL Schedule Announced",
+ "url": "https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced",
+ "published_date": "2026-05-14",
+ "tier": "OFFICIAL",
+ "retrieval_utc": "2026-11-17T01:05:00Z",
+ "retrieval_method": "Read with the sandbox web fetcher.",
+ "attachment_urls": {
+  "by_week_pdf": "http://media.nfl.com/content/dam/communications/football-communications/2026/news/05%2014%2026%20-%202026%20NFL%20Schedule%20-%20By%20Week.pdf",
+  "by_division_pdf": "http://media.nfl.com/content/dam/communications/football-communications/2026/news/05%2014%2026%20-%202026%20NFL%20Schedule%20-%20By%20Division.pdf",
+  "preseason_pdf": "http://media.nfl.com/content/dam/communications/football-communications/2026/news/05%2014%2026%20-%20Preseason%20Schedule.pdf"
+ },
+ "claims": [
+  {"claim_id": "SA-1", "text": "The 2026 regular season is 18 weeks and 272 games.", "checkable_against": "corpus/games.csv 2026 REG row count"},
+  {"claim_id": "SA-2", "text": "The season kicks off on Wednesday night, September 9, in Seattle: Seattle Seahawks host New England Patriots at Lumen Field, 8:20 p.m. ET, NBC, a rematch of Super Bowl LX.", "checkable_against": "corpus/games.csv 2026 week 1 NE@SEA row (gameday, weekday, gametime, location, stadium)"},
+  {"claim_id": "SA-3", "text": "Week 18 has 16 division games - three on Saturday, January 9, and 13 on Sunday, January 10.", "checkable_against": "corpus/games.csv 2026 week 18 rows (div_game count, weekday)"},
+  {"claim_id": "SA-4", "text": "Week 1 Thursday, September 10: Los Angeles Rams and San Francisco 49ers at Melbourne Cricket Ground (Australia), 8:35 p.m. ET, Netflix.", "checkable_against": "corpus/games.csv 2026 week 1 SF@LA row (weekday, gametime, location == Neutral)"},
+  {"claim_id": "SA-5", "text": "Week 3: first regular-season game in Rio de Janeiro at Maracana Stadium, Baltimore Ravens and Dallas Cowboys.", "checkable_against": "corpus/games.csv 2026 week 3 BAL/DAL row"},
+  {"claim_id": "SA-6", "text": "Week 11 concludes the international schedule with the first game in Mexico City since 2022 (San Francisco at ...).", "checkable_against": "corpus/games.csv 2026 week 11 MIN@SF row (location == Neutral)"},
+  {"claim_id": "SA-7", "text": "Nine international games, the most ever in a season.", "checkable_against": "corpus/games.csv 2026 rows with location == Neutral"}
+ ],
+ "note": "This page is the league's dated announcement of the schedule; the live schedule page is the operational version of the same artefact. Both are published side by side on the schedule page of this desk, per the brief's requirement."
+}

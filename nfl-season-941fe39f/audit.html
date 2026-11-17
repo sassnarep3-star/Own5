@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Repo audit · Own5 NFL Season Desk</title>
+<meta name="description" content="Every claim re-checked, including the ones that fail">
+<link rel="stylesheet" href="assets/style.css">
+</head><body>
+<header class="top"><div class="wrap">
+<a class="brand" href="index.html">Own5 · NFL Season Desk</a>
+<span class="tag">Every claim re-checked, including the ones that fail</span>
+</div></header>
+<nav class="main"><div class="wrap"><a href="index.html">Overview</a><a href="executive-summary.html">Executive summary</a><a href="lines.html">Originated lines</a><a href="model.html">Model</a><a href="leaderboard.html">Leaderboard</a><a href="strategies.html">Strategies &amp; gates</a><a href="luck.html">Removal of luck</a><a href="depth.html">Depth &amp; replacements</a><a href="availability.html">Availability</a><a href="matchup.html">Deficiency matrix</a><a href="correlations.html">Correlations</a><a href="corpus.html">Corpus</a><a href="price-store.html">Price policy</a><a href="schedule.html">Schedule</a><a href="snapshots.html">Snapshots &amp; alarms</a><a href="changes.html">What changed</a><a class="on" href="audit.html">Repo audit</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources</a><a href="methodology.html">Methodology</a></div></nav>
+<main class="wrap">
+
+<h1>Repo audit</h1>
+<p class="lede">The brief asks for a line-by-line review of the repository against official sources, with
+irregularities flagged rather than silently fixed. This is that review: 16 claims, each re-checked
+against a source, with the result published even where the claim does not survive.</p>
+
+<section class="card "><h2>Checks</h2><div class="tw"><table class="zebra"><thead><tr><th>ID</th><th>claim under review</th><th>what was checked</th><th>result</th><th>source</th></tr></thead><tbody><tr><td>AU-01</td><td>README claims eleven NFL desks answer this brief</td><td>verified against the repository</td><td>11 namespaces listed</td><td class="src"><a href="https://github.com/sassnarep3-star/Own5" target="_blank" rel="noopener nofollow" title="https://github.com/sassnarep3-star/Own5">github.com</a></td></tr><tr><td>AU-02</td><td>Prior desk claims 145 official finals</td><td>recomputed from the pinned corpus</td><td>149 finals in the corpus, 145 in the feed, 145/145 matched</td><td class="src"><a href="https://www.nfl.com/schedules/2026/by-week/week-10" target="_blank" rel="noopener nofollow" title="https://www.nfl.com/schedules/2026/by-week/week-10">nfl.com</a></td></tr><tr><td>AU-03</td><td>Prior desk claims 31 of 32 depth charts parse</td><td>recomputed from the carried-forward capture</td><td>31 parsed, Houston not parsed, 700 slots</td><td class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener nofollow" title="https://www.nfl.com/teams/">nfl.com</a></td></tr><tr><td>AU-04</td><td>Prior desk claims 0 of 39 markets have a market price</td><td>superseded by this desk</td><td>163 of 272 2026 games now carry a market spread and 13 week-11 markets are priced against it</td><td class="src"><a href="https://github.com/nflverse/nfldata/blob/master/data/games.csv" target="_blank" rel="noopener nofollow" title="https://github.com/nflverse/nfldata/blob/master/data/games.csv">github.com</a></td></tr><tr><td>AU-05</td><td>Prior desk claims no correlations are computable</td><td>superseded by this desk</td><td>12 correlations computed from the corpus with n and intervals</td><td class="src"><a href="https://github.com/nflverse/nfldata/blob/master/data/games.csv" target="_blank" rel="noopener nofollow" title="https://github.com/nflverse/nfldata/blob/master/data/games.csv">github.com</a></td></tr><tr><td>AU-06</td><td>Brief claims 136-game log</td><td>counted</td><td>145 rows in the file the brief refers to</td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-e46fb855/data/results_feed.csv" target="_blank" rel="noopener nofollow" title="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-e46fb855/data/results_feed.csv">github.com</a></td></tr><tr><td>AU-07</td><td>Brief claims 254 injury rows with 4 no-injury sections</td><td>counted in the carried-forward capture</td><td>326 rows in that file; the brief&#x27;s 279-row figure refers to a re-read this session did not repeat</td><td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" target="_blank" rel="noopener nofollow" title="https://www.nfl.com/injuries/league/2026/reg10">nfl.com</a></td></tr><tr><td>AU-08</td><td>Brief claims only 6 of 254 report rows carry a game designation</td><td>counted in this session&#x27;s read</td><td>5 of 12 transcribed rows carry a game status; a full-table count is not claimed</td><td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" target="_blank" rel="noopener nofollow" title="https://www.nfl.com/injuries/league/2026/reg10">nfl.com</a></td></tr><tr><td>AU-09</td><td>Brief claims 149 club/unit/position slots list more than one rank-1 player</td><td>recomputed</td><td>14 shared rank-1 slots in the carried-forward capture; the 149 figure is not reproduced</td><td class="src"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener nofollow" title="https://www.nfl.com/teams/">nfl.com</a></td></tr><tr><td>AU-10</td><td>Brief claims Baltimore publishes Jackson and Huntley at QB</td><td>re-read</td><td>not reproduced; Brissett is rank 1 (F-06)</td><td class="src"><a href="https://www.baltimoreravens.com/team/depth-chart" target="_blank" rel="noopener nofollow" title="https://www.baltimoreravens.com/team/depth-chart">baltimoreravens.com</a></td></tr><tr><td>AU-11</td><td>Brief claims Washington leaves a slot empty</td><td>re-read</td><td>not reproduced (F-07)</td><td class="src"><a href="https://www.commanders.com/team/depth-chart" target="_blank" rel="noopener nofollow" title="https://www.commanders.com/team/depth-chart">commanders.com</a></td></tr><tr><td>AU-12</td><td>Brief claims the three Detroit designations are blank</td><td>re-read</td><td>all three read as Out on 2026-11-17</td><td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" target="_blank" rel="noopener nofollow" title="https://www.nfl.com/injuries/league/2026/reg10">nfl.com</a></td></tr><tr><td>AU-13</td><td>Brief claims Seattle publishes two players in one slot</td><td>re-read</td><td>reproduced: Cooper Kupp and Rashid Shaheed in one rank-1 cell</td><td class="src"><a href="https://www.seahawks.com/team/depth-chart/" target="_blank" rel="noopener nofollow" title="https://www.seahawks.com/team/depth-chart/">seahawks.com</a></td></tr><tr><td>AU-14</td><td>Brief claims the Packers prepend jersey numbers</td><td>re-read</td><td>reproduced: every cell begins with a number; 22 slots stripped</td><td class="src"><a href="https://www.packers.com/team/depth-chart" target="_blank" rel="noopener nofollow" title="https://www.packers.com/team/depth-chart">packers.com</a></td></tr><tr><td>AU-15</td><td>Brief claims the Texans chart is an image</td><td>re-read</td><td>reproduced: page text has no player names</td><td class="src"><a href="https://www.houstontexans.com/team/depth-chart" target="_blank" rel="noopener nofollow" title="https://www.houstontexans.com/team/depth-chart">houstontexans.com</a></td></tr><tr><td>AU-16</td><td>Brief claims Malik Willis is absent from the report because he is on IR</td><td>re-read</td><td>reproduced: MIA 11/10 Reserve/Injured</td><td class="src"><a href="https://www.nfl.com/transactions/league/reserve-list/2026/11" target="_blank" rel="noopener nofollow" title="https://www.nfl.com/transactions/league/reserve-list/2026/11">nfl.com</a></td></tr></tbody></table></div></section>
+
+<section class="card "><h2>The three that did not reproduce</h2>
+<p>Three claims in the brief describe a state this desk cannot find on the official page today. They are
+published as not-reproduced rather than quietly dropped, because the alternative is to assert a fact that
+a reader can check and find false:</p>
+<ul class="tight">
+<li><strong>Baltimore publishing Lamar Jackson and Tyler Huntley at quarterback.</strong> The 2026-11-17
+chart lists Jacoby Brissett, Joe Fagnano and Kedon Slovis, and Brissett's arrival is dated 11/06 in the
+league's transaction log. F-06.</li>
+<li><strong>Washington leaving a depth slot empty.</strong> No offence or defence row on the 2026-11-17 page
+has an empty rank-1 cell. F-07.</li>
+<li><strong>The Detroit designations being blank.</strong> All three read as Out. Published as reproduced,
+not as a failure.</li>
+</ul></section>
+
+<section class="card "><h2>Counting differences</h2>
+<p>Where the brief gives a count and this desk measures a different one, both numbers are published:</p>
+<table class="zebra"><thead><tr><th>quantity</th><th>brief</th><th>measured</th><th>reading</th></tr></thead><tbody>
+<tr><td>games in the log</td><td>136</td><td>145</td><td>the file the brief points at holds 145 finals</td></tr>
+<tr><td>injury rows, week 10</td><td>254 / 279</td><td>326 in the carried-forward file</td><td>three different
+counts from three different reads; this desk re-read 12 rows and publishes only those</td></tr>
+<tr><td>shared rank-1 slots</td><td>149</td><td>14 in the carried-forward capture</td><td>not reproduced at
+that scale; the mechanism is built and the count is computed, not typed</td></tr>
+<tr><td>chart rows carrying a game designation</td><td>6 of 254</td><td>5 of the 12 rows re-read</td><td>a
+full-table count is not claimed because the full table was not re-read</td></tr>
+</tbody></table></section>
+
+</main>
+<footer class="foot"><div class="wrap">Session <code>941fe39f</code> · built 2026-11-17T01:30:00Z · 80 requirements · 7,058 originated markets · 0 certified strategies · <a href="https://github.com/sassnarep3-star/Own5">repository</a></div></footer>
+</body></html>

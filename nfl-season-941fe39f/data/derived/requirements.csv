@@ -1,0 +1,81 @@
+id,requirement,status,blocking_gate,number_that_would_clear_it,page
+R-01,Add a price-snapshot store that records opening and closing numbers for every market we originate,partial,G2_PRICE (open/close pair),Two clock times per market (open and close) from one book. Today: 162 markets carry a closing price; 0 carry an opening price,price-store
+R-02,Add a verified results feed so backtests and ROI can be computed at all,met,-,"n/a - 145 official 2026 finals reconcile 145/145 to the corpus; 7,088 graded results in the corpus",lines
+R-03,"Originate the side first, then the total, then the moneyline",met,-,n/a - the chain is enforced in code and recorded per row in origination.csv,lines
+R-04,"Publish the model's fair line, the market line and the difference as separate columns",met,-,n/a - three separate columns on every originated market,lines
+R-05,Separate 'signal' from 'staking' in the leaderboard so a lucky staking run cannot mask a bad signal,met,-,n/a - two independent boards; no staking rank is published at all while G2 fails,leaderboard
+R-06,"Track the depth of the replacement, not just the fact of a replacement",partial,coverage (5 of 32 clubs),An official machine-readable chart for all 32 clubs. Today 5 clubs are parsed; the reported substitute carries a rank on every row,depth
+R-07,Compute correlations only from officially sourced numbers and publish n with each value,met,-,"n/a - every correlation carries n and a 95% interval, and the source of the numbers",correlations
+R-08,Define a demotion gate that sends a live strategy back to paper,met,-,n/a - six triggers D1-D6 with thresholds; none can fire because nothing is live,strategies
+R-09,Pre-register every strategy; forbid backtest numbers from ever appearing on the leaderboard,met,-,n/a - 14 frozen rules with commit hash; the leaderboard shows zero backtest rows,strategies
+R-10,"Build the availability graph as a first-class dataset (who was expected to start, who actually did)",blocked,official inactive lists + game books,"nfl.com returns HTTP 404 for the inactives URL, and no game book has been read. Without them the graph can hold expectation but not outcome",availability
+R-11,Do not model depth from jersey order; model it from playing time,partial,official snap counts,"A per-game official snap-count feed. Depth here is club-published order, which is not jersey order but is not playing time either",depth
+R-12,"Make the injury signal a surprise, never a level",partial,capture cadence,Daily captures. Today two clock times exist for the week-10 report and the observed delta between them is zero rows,availability
+R-13,Run the 32-team roster/IR sweep before any team-level model is trusted,partial,"coverage (32 charts, 5 parsed)","All 32 charts read; 31 parse, 1 is an image. This desk re-read 5 and treats the 27 carried-forward charts as another session's verified work",depth
+R-14,Add a fixture-context feature set built only from published schedule facts,met,-,"n/a - roof, surface, wind, temperature, rest, division, neutral site, all from the corpus schedule fields",model
+R-15,"Store every model output as a probability plus its inputs, not just a pick",met,-,"n/a - 7,058 originated rows, each with probability, fit size, cutoff date and sigma",lines
+R-16,Compute and publish the 'removal of luck' panel on the site dashboard,met,-,"n/a - expected-vs-actual wins, one-score record and unit-level luck for all 32 clubs",luck
+R-17,Add a two-sided 'what would change our mind' field to every strategy entry,met,-,n/a - every strategy row carries both directions,strategies
+R-18,"Price a line ourselves and publish the residual against the market, on a schedule, from day one",met,-,n/a - residual published per market and summarised by season,lines
+R-19,Turn the 136-game log into the pre-registered backtest corpus,met,-,"n/a - the corpus holds 7,088 graded games and 46,812 line observations; the 136-row feed is reconciled into it",corpus
+R-20,Decide the price-data policy before any backtest is published,met,-,"n/a - the policy is written, sourced and enforced in code (see price-store)",price-store
+R-21,"Store every injury-hub read with its clock time and publish the delta, never the level",met,-,"n/a - every read has a clock time; the delta table publishes the change, the level table is separate",availability
+R-22,"Put a decision-readiness table on the landing page: one row per requirement, with the gate that blocks it and the number that would clear it",met,-,n/a - this page,index
+R-23,Transcribe the venue of every fixture from the official game centre and publish it,partial,"13 of 13 fixtures, 1 from the game centre",A game-centre read for each fixture. Today 1 venue is from the game centre and 12 from the schedule page,schedule
+R-24,Publish the league's dated schedule announcement beside the live schedule page,met,-,"n/a - the May 14, 2026 announcement is captured and its 7 claims are checked against the live schedule",schedule
+R-25,Use official NFL Game Books for actual starters and game-day status; do not infer depth rank or snaps,blocked,game book source,One official game book (PDF) per game. None has been read; no starter is inferred anywhere in this desk,availability
+R-26,Ingest game-level results to make the ratings opponent-aware,met,-,n/a - ratings are fitted on opponent-adjusted margins,model
+R-27,Add injury and personnel ablations instead of fixed penalties,partial,injury feature coverage,"Injury features for all 32 clubs and all weeks. Today 12 rows across 4 clubs, so an ablation has nothing to ablate",model
+R-28,Automate immutable multi-day availability snapshots,partial,scheduler + retention,A scheduled job outside this session. The ledger and hashes exist; the cadence is manual,snapshots
+R-29,Build immutable official availability snapshots,met,-,"n/a - 8 ledger rows, each with SHA-256, clock time and schema fingerprint",snapshots
+R-30,Capture official inactive lists and snap counts,blocked,source availability,The inactives URL returns 404 and no snap-count feed is reachable from this sandbox. 0 of 2 captured,availability
+R-31,Fix the two depth-parsing failures before widening coverage,met,-,n/a - jersey-number stripping recovers Green Bay; Houston is confirmed image-only and left blank,depth
+R-32,"Model depth slots as groups, not a single starter",met,-,n/a - a rank-1 cell with two players is stored as a group and counted,depth
+R-33,Treat roster turnover as a first-class data event,partial,versioned depth,A depth capture taken after each transaction. Today 12 transactions are checked against one capture,depth
+R-34,Start with a singles-only shadow baseline,met,-,"n/a - 9 singles families registered and graded; zero certified, which is the expected shadow result",leaderboard
+R-35,Keep parlays and prop combos behind a joint-evidence gate,met,-,n/a - the joint-evidence gate is defined and both parlay families are blocked by it,strategies
+R-36,Use proper-score leaderboard divisions,met,-,"n/a - four divisions, each ranked by Brier skill with an interval",leaderboard
+R-37,"Rank with proper scores and uncertainty, not win rate",met,-,n/a - ranking is by Brier skill score; win rate is published but never ranked,leaderboard
+R-38,Add durable snapshot storage and alerts,met,-,"n/a - append-only ledger, freshness alarm and schema alarm",snapshots
+R-39,Split the site into a public analysis layer and a private data layer,met,-,n/a - the public site publishes derived analysis only; raw rows stay in the repository,methodology
+R-40,"Add a per-team view: starters out, replacements named, net injury count",partial,coverage (4 clubs with reads),Injury reads for all 32 clubs. Today 4 clubs have a read in this capture,availability
+R-41,Add an announced-starter evidence field (not an inferred replacement),blocked,official starter announcement,A dated league or club statement naming the starter. None has been read for this week,availability
+R-42,Add an official depth-chart register with date and source per row,met,-,n/a - every depth row carries the club URL and the capture clock time; only 1 club prints its own date,depth
+R-43,Calibrate what 'Questionable' means empirically,blocked,several seasons of designations joined to inactives,Two feeds: historical designations and historical inactive lists. Neither is reachable from this sandbox,strategies
+R-44,Interactive Offense vs. Defense Matchup Deficiency Matrix (1st-4th string),partial,coverage,Both clubs parsed for both fixtures. Today 22 matrix rows exist across the 5 parsed clubs,matchup
+R-45,Flag stale depth rows against the official transactions log,met,-,n/a - 12 transactions checked; the reported Baltimore staleness does not reproduce,depth
+R-46,"Point-in-Time Snapshot Ledger for Injuries, Depth Charts & Inactives",partial,inactive captures,At least two clock times for every unit. Today injuries and depth have two; inactives have none,snapshots
+R-47,Populate the three missing Lions game-status designations,met,-,"n/a - all three (Kerby Joseph, Cade Mays, D.J. Reed) read as Out on 2026-11-17",availability
+R-48,Re-capture and republish the Week 10 injury tables,partial,full table re-read,"A full 279-row re-read with a clock time. This session re-read the 12 rows it depends on, not the whole table",availability
+R-49,"Reject: deriving depth order from jersey number, experience or salary",met,-,n/a - rejected in the methodology and enforced: the parser strips a jersey number but never orders by one,methodology
+R-50,Represent shared and empty depth slots faithfully,met,-,n/a - shared and empty slots are stored and counted; the live chart shows 1 shared and 0 empty among the 5 parsed clubs,depth
+R-51,Resolve the depth-order source before building the backup-deficiency feature,met,-,"n/a - route (a), per-club official charts, is verified for 5 clubs; the feature is published only for those clubs",depth
+R-52,Score injury-designation reliability before using it as a feature,blocked,designations joined to inactives,The same missing inactive feed as R-43,strategies
+R-53,"Snapshot the nfl.com injury report every Wed, Thu and Fri and keep a dated history",partial,cadence (2 clock times),"A scheduler plus 3 captures per week. Today 2 clock times exist, both in week 10",snapshots
+R-54,"Treat the injury report as a timestamped series, not a weekly snapshot",partial,cadence,"Same mechanism as R-53; the ledger is built for it, the cadence is not automated",snapshots
+R-55,Use snap counts as the starter proxy when the depth chart is unavailable,blocked,snap-count feed,An official snap-count feed. Not reachable from this sandbox; 0 rows,availability
+R-56,Add a control baseline (random picks; favorites only) to every leaderboard run,met,-,n/a - three controls on every run,leaderboard
+R-57,Stadium Roof/Surface & NWS Hourly Wind/Precipitation Overlay,partial,NWS hourly feed,"An hourly NWS forecast per stadium. Roof and surface are present for 7,088 games; wind and temperature are present for outdoor games only",model
+R-58,Two-Stage Skill Leaderboard (proper-score qualification -> prospective CLV/ROI escrow),partial,prospective samples,"Settled prospective bets. Zero exist, so stage two is empty by construction",leaderboard
+R-59,Vig-Free Market Consensus vs. Originated Fair-Line Decomposition View,met,-,n/a - the de-vigged market probability is published beside the model probability on every market,lines
+R-60,Publish a weekly 'what changed' diff instead of a static snapshot,met,-,n/a - the change table diffs two official reads on every unit,changes
+R-61,Publish every model total twice until one wins,partial,walk-forward comparison,"A walk-forward MAE comparison between the two estimators over the holdout. The two estimators are both published, but with only a single-season holdout the comparison is not yet decisive",model
+R-62,Add a drift alarm to every scraper,met,-,n/a - 6 capture contracts with required-field checks that fail the build,snapshots
+R-63,Capture the reserve list so 'not listed' never means 'available',met,-,n/a - 17 reserve-list rows captured with the official URL; Malik Willis confirmed on IR,availability
+R-64,Reject: ranking strategies by season-long ROI,met,-,n/a - rejected; ROI is published but never used to rank,methodology
+R-65,Archive weekly injury reports for past seasons,blocked,historical injury archive,A multi-season injury archive. Not reachable from this sandbox,strategies
+R-66,Pre-register each strategy (definition frozen before results are seen),met,-,n/a - see R-09,strategies
+R-67,2026 Kickoff & Declared Onside-Kick Regime Priors Filter,blocked,rule text,The 2026 rulebook text for the kickoff and onside-kick regime. Not read in this session,strategies
+R-68,Freeze a rule before it sees data (pre-registration),met,-,"n/a - frozen rule text plus commit hash, published",strategies
+R-69,"Split data into train, validation and final holdout seasons",met,-,n/a - 1999-2012 / 2013-2019 / 2020-2025 / 2026 prospective,model
+R-70,"Make suggestions on how to improve the site, with a reviewable suggestions section",met,-,"n/a - 16 suggestions with options, a recommendation and a falsifier",suggestions
+R-71,"Produce a clear list of questions, information and answers needed before a decision",met,-,"n/a - 18 questions, each with the cheapest discovery route and what it unblocks",questions
+R-72,"Originate my own NFL lines from research, and generate useful signals",partial,G4_BSS,A positive Brier skill score against the de-vigged close on the holdout. Today the best family is 0.00 (controls) and the model families are negative,lines
+R-73,Treat it as a leaderboard competition with rewards for top strategies,partial,certified strategies,"At least one strategy clearing all eight gates. Zero do, so the reward pool is empty by rule",leaderboard
+R-74,Determine correlation values,met,-,"n/a - 12 correlations with n and intervals, and 4 withheld with the reason",correlations
+R-75,Remove luck from the equation and build selectively skill-based strategies,met,-,"n/a - cluster-bootstrap intervals, Holm adjustment and a published luck panel",luck
+R-76,Track injuries and know deficiencies such as 2nd/3rd/4th-string replacements,partial,coverage (5 of 32 clubs),Machine-readable charts for the clubs in play; the replacement's depth rank is published where a club names one,matchup
+R-77,Create an executive summary outlining important details,met,-,n/a - published with sources,executive-summary
+R-78,Review the repo line by line against official sources and flag irregularities,met,-,"n/a - 152-row audit, published with flags",audit
+R-79,Create a GitHub Pages site with a clean landing page and category subpages,met,-,n/a - this site,index
+R-80,Every table row must have a source link; leave unverifiable values blank and flag them,met,-,"n/a - enforced by verify.py on the generated HTML, not on the CSVs",flagged

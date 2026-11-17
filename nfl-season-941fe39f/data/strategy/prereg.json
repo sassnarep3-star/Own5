@@ -1,0 +1,921 @@
+{
+  "desk": "941fe39f",
+  "written_utc": "2026-11-17T01:06:16Z",
+  "registration_commit": "1072353949d50e843bffd1c1850bd0279ba05e77",
+  "registration_subject": "season desk 941fe39f: corpus loader, statistics, ratings model, pre-registered strategies",
+  "registration_committed_utc": "2026-11-17T01:05:59+00:00",
+  "file_hashes": {
+    "tools/season_desk_941fe39f/strategies.py": "8423e1fa25334362eb97f8ac016c034797924a761e4ab9c89fc7b0ac59918dee",
+    "tools/season_desk_941fe39f/model.py": "3a7f3487409337c3a76cca0296f7162cfb357230e3b39dedca03a50e3460906e",
+    "tools/season_desk_941fe39f/stats.py": "30f7b6975fc2173f0d8dae592a4387ef6287573b7cc1ef71adfb9782d29f0fcd"
+  },
+  "windows": {
+    "train": [
+      1999,
+      2012
+    ],
+    "validation": [
+      2013,
+      2019
+    ],
+    "holdout": [
+      2020,
+      2025
+    ],
+    "prospective": [
+      2026,
+      2026
+    ]
+  },
+  "staking_assumption": {
+    "flat_stake_units_per_bet": 1.0,
+    "prereg_version": "1.0.0",
+    "vig": "one cent each way; a -110/-110 market is used for every ROI",
+    "clv_definition": "close minus our devigged fair price, in probability points, signed in favour of the side we took"
+  },
+  "strategies": [
+    {
+      "id": "S01",
+      "name": "Model side, any disagreement",
+      "family": "side",
+      "hypothesis": "",
+      "rule": "Bet the side the model favours whenever sign(model_margin) != sign(market_spread) and |residual| >= 0.5 points. No filter. Price: the two-sided spread price in the corpus, de-vigged.",
+      "rule_sha256": "eeae68a571cd452172baf73a812b4f927f6e4cb764ff2092589b13411638f50b",
+      "window": "train 1999-2012, validation 2013-2019, holdout 2020-2025",
+      "gates": {
+        "G1_SAMPLE": {
+          "rule": "evaluation sample n >= 300 graded bets",
+          "why": "the sample size at which a 55% edge is separable from 52.4% break-even at 80% power (luck_panel.py power calculation)",
+          "threshold": 300
+        },
+        "G2_PRICE": {
+          "rule": "every graded bet carries a two-sided price at the same clock time",
+          "why": "no price means no ROI; a one-sided price cannot be de-vigged (F-01 in the prior desk)",
+          "threshold": "two-sided"
+        },
+        "G3_CLV": {
+          "rule": "beat the close: requires an opening price AND a closing price from the same book, so that CLV = (taken price - closing price) can be signed",
+          "why": "CLV is the least noisy skill measure, but it cannot be computed from a single snapshot. Measuring 'model minus closing line' instead would be circular: it is the selection rule itself",
+          "threshold": "two prices per market",
+          "measurable_in_this_corpus": false
+        },
+        "G3B_ALPHA": {
+          "rule": "out-of-sample residual alpha: corr(model_margin - market_spread, result - market_spread) > 0 with a 95% interval excluding 0 on the holdout",
+          "why": "this is the only skill statement a one-snapshot corpus can support: does our disagreement with the close contain information about the result relative to the close",
+          "threshold": 0.0,
+          "measurable_in_this_corpus": true
+        },
+        "G4_BSS": {
+          "rule": "Brier skill score vs the de-vigged closing market > 0 on the holdout",
+          "why": "the market is the benchmark that matters; beating a coin flip is not skill",
+          "threshold": 0.0
+        },
+        "G5_CALIBRATION": {
+          "rule": "calibration slope in [0.8, 1.25] and intercept |a| < 0.05 on the holdout",
+          "why": "a model that is right on average but wrong in the tails is not usable for staking",
+          "threshold": [
+            0.8,
+            1.25
+          ]
+        },
+        "G6_MULTIPLICITY": {
+          "rule": "Holm-adjusted p < 0.05 across every strategy tested in this family set",
+          "why": "testing 12 rules at alpha 0.05 finds one 'winner' 46% of the time by chance alone",
+          "threshold": 0.05
+        },
+        "G7_SURVIVAL": {
+          "rule": "Brier skill on the validation window has the same sign as on the holdout",
+          "why": "a rule that flips sign out of sample is noise",
+          "threshold": "same-sign"
+        },
+        "G8_DECAY": {
+          "rule": "no single season contributes more than 40% of a strategy's total profit",
+          "why": "one lucky season is not a strategy",
+          "threshold": 0.4
+        }
+      },
+      "units": "singles",
+      "status_at_registration": "registered"
+    },
+    {
+      "id": "S02",
+      "name": "Model side, disagreement >= 2 points",
+      "family": "side",
+      "hypothesis": "",
+      "rule": "Same as S01 but only when |model_margin - market_spread| >= 2.0 points. Tests whether a bigger disagreement is a better signal or simply a bigger model error.",
+      "rule_sha256": "ab742e375c872b3cd723c857199839c505f49b9e6a727405b1336260a7f408e0",
+      "window": "train 1999-2012, validation 2013-2019, holdout 2020-2025",
+      "gates": {
+        "G1_SAMPLE": {
+          "rule": "evaluation sample n >= 300 graded bets",
+          "why": "the sample size at which a 55% edge is separable from 52.4% break-even at 80% power (luck_panel.py power calculation)",
+          "threshold": 300
+        },
+        "G2_PRICE": {
+          "rule": "every graded bet carries a two-sided price at the same clock time",
+          "why": "no price means no ROI; a one-sided price cannot be de-vigged (F-01 in the prior desk)",
+          "threshold": "two-sided"
+        },
+        "G3_CLV": {
+          "rule": "beat the close: requires an opening price AND a closing price from the same book, so that CLV = (taken price - closing price) can be signed",
+          "why": "CLV is the least noisy skill measure, but it cannot be computed from a single snapshot. Measuring 'model minus closing line' instead would be circular: it is the selection rule itself",
+          "threshold": "two prices per market",
+          "measurable_in_this_corpus": false
+        },
+        "G3B_ALPHA": {
+          "rule": "out-of-sample residual alpha: corr(model_margin - market_spread, result - market_spread) > 0 with a 95% interval excluding 0 on the holdout",
+          "why": "this is the only skill statement a one-snapshot corpus can support: does our disagreement with the close contain information about the result relative to the close",
+          "threshold": 0.0,
+          "measurable_in_this_corpus": true
+        },
+        "G4_BSS": {
+          "rule": "Brier skill score vs the de-vigged closing market > 0 on the holdout",
+          "why": "the market is the benchmark that matters; beating a coin flip is not skill",
+          "threshold": 0.0
+        },
+        "G5_CALIBRATION": {
+          "rule": "calibration slope in [0.8, 1.25] and intercept |a| < 0.05 on the holdout",
+          "why": "a model that is right on average but wrong in the tails is not usable for staking",
+          "threshold": [
+            0.8,
+            1.25
+          ]
+        },
+        "G6_MULTIPLICITY": {
+          "rule": "Holm-adjusted p < 0.05 across every strategy tested in this family set",
+          "why": "testing 12 rules at alpha 0.05 finds one 'winner' 46% of the time by chance alone",
+          "threshold": 0.05
+        },
+        "G7_SURVIVAL": {
+          "rule": "Brier skill on the validation window has the same sign as on the holdout",
+          "why": "a rule that flips sign out of sample is noise",
+          "threshold": "same-sign"
+        },
+        "G8_DECAY": {
+          "rule": "no single season contributes more than 40% of a strategy's total profit",
+          "why": "one lucky season is not a strategy",
+          "threshold": 0.4
+        }
+      },
+      "units": "singles",
+      "status_at_registration": "registered"
+    },
+    {
+      "id": "S03",
+      "name": "Model side, disagreement >= 3 points",
+      "family": "side",
+      "hypothesis": "",
+      "rule": "Same as S01 but only when |model_margin - market_spread| >= 3.0 points.",
+      "rule_sha256": "a9e87da00d5060599ae39009dedec0493cc4e04630dfdd2d52d3f5c1e84b0188",
+      "window": "train 1999-2012, validation 2013-2019, holdout 2020-2025",
+      "gates": {
+        "G1_SAMPLE": {
+          "rule": "evaluation sample n >= 300 graded bets",
+          "why": "the sample size at which a 55% edge is separable from 52.4% break-even at 80% power (luck_panel.py power calculation)",
+          "threshold": 300
+        },
+        "G2_PRICE": {
+          "rule": "every graded bet carries a two-sided price at the same clock time",
+          "why": "no price means no ROI; a one-sided price cannot be de-vigged (F-01 in the prior desk)",
+          "threshold": "two-sided"
+        },
+        "G3_CLV": {
+          "rule": "beat the close: requires an opening price AND a closing price from the same book, so that CLV = (taken price - closing price) can be signed",
+          "why": "CLV is the least noisy skill measure, but it cannot be computed from a single snapshot. Measuring 'model minus closing line' instead would be circular: it is the selection rule itself",
+          "threshold": "two prices per market",
+          "measurable_in_this_corpus": false
+        },
+        "G3B_ALPHA": {
+          "rule": "out-of-sample residual alpha: corr(model_margin - market_spread, result - market_spread) > 0 with a 95% interval excluding 0 on the holdout",
+          "why": "this is the only skill statement a one-snapshot corpus can support: does our disagreement with the close contain information about the result relative to the close",
+          "threshold": 0.0,
+          "measurable_in_this_corpus": true
+        },
+        "G4_BSS": {
+          "rule": "Brier skill score vs the de-vigged closing market > 0 on the holdout",
+          "why": "the market is the benchmark that matters; beating a coin flip is not skill",
+          "threshold": 0.0
+        },
+        "G5_CALIBRATION": {
+          "rule": "calibration slope in [0.8, 1.25] and intercept |a| < 0.05 on the holdout",
+          "why": "a model that is right on average but wrong in the tails is not usable for staking",
+          "threshold": [
+            0.8,
+            1.25
+          ]
+        },
+        "G6_MULTIPLICITY": {
+          "rule": "Holm-adjusted p < 0.05 across every strategy tested in this family set",
+          "why": "testing 12 rules at alpha 0.05 finds one 'winner' 46% of the time by chance alone",
+          "threshold": 0.05
+        },
+        "G7_SURVIVAL": {
+          "rule": "Brier skill on the validation window has the same sign as on the holdout",
+          "why": "a rule that flips sign out of sample is noise",
+          "threshold": "same-sign"
+        },
+        "G8_DECAY": {
+          "rule": "no single season contributes more than 40% of a strategy's total profit",
+          "why": "one lucky season is not a strategy",
+          "threshold": 0.4
+        }
+      },
+      "units": "singles",
+      "status_at_registration": "registered"
+    },
+    {
+      "id": "S04",
+      "name": "Model total vs market total, >= 3 points",
+      "family": "total",
+      "hypothesis": "",
+      "rule": "Bet the total the model favours when |model_total - market_total| >= 3.0 points.",
+      "rule_sha256": "1750efcb8e40ad211d551f00f9bb97b323f198098f6dea18c32337098df60ea9",
+      "window": "train 1999-2012, validation 2013-2019, holdout 2020-2025",
+      "gates": {
+        "G1_SAMPLE": {
+          "rule": "evaluation sample n >= 300 graded bets",
+          "why": "the sample size at which a 55% edge is separable from 52.4% break-even at 80% power (luck_panel.py power calculation)",
+          "threshold": 300
+        },
+        "G2_PRICE": {
+          "rule": "every graded bet carries a two-sided price at the same clock time",
+          "why": "no price means no ROI; a one-sided price cannot be de-vigged (F-01 in the prior desk)",
+          "threshold": "two-sided"
+        },
+        "G3_CLV": {
+          "rule": "beat the close: requires an opening price AND a closing price from the same book, so that CLV = (taken price - closing price) can be signed",
+          "why": "CLV is the least noisy skill measure, but it cannot be computed from a single snapshot. Measuring 'model minus closing line' instead would be circular: it is the selection rule itself",
+          "threshold": "two prices per market",
+          "measurable_in_this_corpus": false
+        },
+        "G3B_ALPHA": {
+          "rule": "out-of-sample residual alpha: corr(model_margin - market_spread, result - market_spread) > 0 with a 95% interval excluding 0 on the holdout",
+          "why": "this is the only skill statement a one-snapshot corpus can support: does our disagreement with the close contain information about the result relative to the close",
+          "threshold": 0.0,
+          "measurable_in_this_corpus": true
+        },
+        "G4_BSS": {
+          "rule": "Brier skill score vs the de-vigged closing market > 0 on the holdout",
+          "why": "the market is the benchmark that matters; beating a coin flip is not skill",
+          "threshold": 0.0
+        },
+        "G5_CALIBRATION": {
+          "rule": "calibration slope in [0.8, 1.25] and intercept |a| < 0.05 on the holdout",
+          "why": "a model that is right on average but wrong in the tails is not usable for staking",
+          "threshold": [
+            0.8,
+            1.25
+          ]
+        },
+        "G6_MULTIPLICITY": {
+          "rule": "Holm-adjusted p < 0.05 across every strategy tested in this family set",
+          "why": "testing 12 rules at alpha 0.05 finds one 'winner' 46% of the time by chance alone",
+          "threshold": 0.05
+        },
+        "G7_SURVIVAL": {
+          "rule": "Brier skill on the validation window has the same sign as on the holdout",
+          "why": "a rule that flips sign out of sample is noise",
+          "threshold": "same-sign"
+        },
+        "G8_DECAY": {
+          "rule": "no single season contributes more than 40% of a strategy's total profit",
+          "why": "one lucky season is not a strategy",
+          "threshold": 0.4
+        }
+      },
+      "units": "singles",
+      "status_at_registration": "registered"
+    },
+    {
+      "id": "S05",
+      "name": "Model total vs market total, >= 5 points",
+      "family": "total",
+      "hypothesis": "",
+      "rule": "Same as S04 but only when |model_total - market_total| >= 5.0 points.",
+      "rule_sha256": "d0ac6c0922a50db90640e0ccbbb1c42d2b44685a6fc1c4d4037f089b6df4ac4e",
+      "window": "train 1999-2012, validation 2013-2019, holdout 2020-2025",
+      "gates": {
+        "G1_SAMPLE": {
+          "rule": "evaluation sample n >= 300 graded bets",
+          "why": "the sample size at which a 55% edge is separable from 52.4% break-even at 80% power (luck_panel.py power calculation)",
+          "threshold": 300
+        },
+        "G2_PRICE": {
+          "rule": "every graded bet carries a two-sided price at the same clock time",
+          "why": "no price means no ROI; a one-sided price cannot be de-vigged (F-01 in the prior desk)",
+          "threshold": "two-sided"
+        },
+        "G3_CLV": {
+          "rule": "beat the close: requires an opening price AND a closing price from the same book, so that CLV = (taken price - closing price) can be signed",
+          "why": "CLV is the least noisy skill measure, but it cannot be computed from a single snapshot. Measuring 'model minus closing line' instead would be circular: it is the selection rule itself",
+          "threshold": "two prices per market",
+          "measurable_in_this_corpus": false
+        },
+        "G3B_ALPHA": {
+          "rule": "out-of-sample residual alpha: corr(model_margin - market_spread, result - market_spread) > 0 with a 95% interval excluding 0 on the holdout",
+          "why": "this is the only skill statement a one-snapshot corpus can support: does our disagreement with the close contain information about the result relative to the close",
+          "threshold": 0.0,
+          "measurable_in_this_corpus": true
+        },
+        "G4_BSS": {
+          "rule": "Brier skill score vs the de-vigged closing market > 0 on the holdout",
+          "why": "the market is the benchmark that matters; beating a coin flip is not skill",
+          "threshold": 0.0
+        },
+        "G5_CALIBRATION": {
+          "rule": "calibration slope in [0.8, 1.25] and intercept |a| < 0.05 on the holdout",
+          "why": "a model that is right on average but wrong in the tails is not usable for staking",
+          "threshold": [
+            0.8,
+            1.25
+          ]
+        },
+        "G6_MULTIPLICITY": {
+          "rule": "Holm-adjusted p < 0.05 across every strategy tested in this family set",
+          "why": "testing 12 rules at alpha 0.05 finds one 'winner' 46% of the time by chance alone",
+          "threshold": 0.05
+        },
+        "G7_SURVIVAL": {
+          "rule": "Brier skill on the validation window has the same sign as on the holdout",
+          "why": "a rule that flips sign out of sample is noise",
+          "threshold": "same-sign"
+        },
+        "G8_DECAY": {
+          "rule": "no single season contributes more than 40% of a strategy's total profit",
+          "why": "one lucky season is not a strategy",
+          "threshold": 0.4
+        }
+      },
+      "units": "singles",
+      "status_at_registration": "registered"
+    },
+    {
+      "id": "S06",
+      "name": "Fade the public spread move",
+      "family": "side",
+      "hypothesis": "",
+      "rule": "NOT EVALUABLE from this corpus: requires an opening price and a closing price from one book. The corpus holds a closing series and a separate habitatring series whose provenance for a given season is not established. Registered so that the corpus gap is counted in the multiplicity family and cannot be quietly dropped.",
+      "rule_sha256": "6acc254b3393b652b899ee9dd855a12a7dfbf26434224e67cbefc8cc7a8827c6",
+      "window": "n/a",
+      "gates": {
+        "G1_SAMPLE": {
+          "rule": "evaluation sample n >= 300 graded bets",
+          "why": "the sample size at which a 55% edge is separable from 52.4% break-even at 80% power (luck_panel.py power calculation)",
+          "threshold": 300
+        },
+        "G2_PRICE": {
+          "rule": "every graded bet carries a two-sided price at the same clock time",
+          "why": "no price means no ROI; a one-sided price cannot be de-vigged (F-01 in the prior desk)",
+          "threshold": "two-sided"
+        },
+        "G3_CLV": {
+          "rule": "beat the close: requires an opening price AND a closing price from the same book, so that CLV = (taken price - closing price) can be signed",
+          "why": "CLV is the least noisy skill measure, but it cannot be computed from a single snapshot. Measuring 'model minus closing line' instead would be circular: it is the selection rule itself",
+          "threshold": "two prices per market",
+          "measurable_in_this_corpus": false
+        },
+        "G3B_ALPHA": {
+          "rule": "out-of-sample residual alpha: corr(model_margin - market_spread, result - market_spread) > 0 with a 95% interval excluding 0 on the holdout",
+          "why": "this is the only skill statement a one-snapshot corpus can support: does our disagreement with the close contain information about the result relative to the close",
+          "threshold": 0.0,
+          "measurable_in_this_corpus": true
+        },
+        "G4_BSS": {
+          "rule": "Brier skill score vs the de-vigged closing market > 0 on the holdout",
+          "why": "the market is the benchmark that matters; beating a coin flip is not skill",
+          "threshold": 0.0
+        },
+        "G5_CALIBRATION": {
+          "rule": "calibration slope in [0.8, 1.25] and intercept |a| < 0.05 on the holdout",
+          "why": "a model that is right on average but wrong in the tails is not usable for staking",
+          "threshold": [
+            0.8,
+            1.25
+          ]
+        },
+        "G6_MULTIPLICITY": {
+          "rule": "Holm-adjusted p < 0.05 across every strategy tested in this family set",
+          "why": "testing 12 rules at alpha 0.05 finds one 'winner' 46% of the time by chance alone",
+          "threshold": 0.05
+        },
+        "G7_SURVIVAL": {
+          "rule": "Brier skill on the validation window has the same sign as on the holdout",
+          "why": "a rule that flips sign out of sample is noise",
+          "threshold": "same-sign"
+        },
+        "G8_DECAY": {
+          "rule": "no single season contributes more than 40% of a strategy's total profit",
+          "why": "one lucky season is not a strategy",
+          "threshold": 0.4
+        }
+      },
+      "units": "singles",
+      "status_at_registration": "blocked_price"
+    },
+    {
+      "id": "S07",
+      "name": "Wind under 15 mph, model over",
+      "family": "fixture",
+      "hypothesis": "",
+      "rule": "From the published schedule facts (roof, surface, wind, temperature, rest days, division game, neutral site): bet the over when wind < 15 mph and the model total exceeds the market by >= 2.0 points.",
+      "rule_sha256": "9b6dd858d34e75e39d64cf7e7c48142ac8f76d3b6f54c1126703cbbb650c64f2",
+      "window": "train 1999-2012, validation 2013-2019, holdout 2020-2025",
+      "gates": {
+        "G1_SAMPLE": {
+          "rule": "evaluation sample n >= 300 graded bets",
+          "why": "the sample size at which a 55% edge is separable from 52.4% break-even at 80% power (luck_panel.py power calculation)",
+          "threshold": 300
+        },
+        "G2_PRICE": {
+          "rule": "every graded bet carries a two-sided price at the same clock time",
+          "why": "no price means no ROI; a one-sided price cannot be de-vigged (F-01 in the prior desk)",
+          "threshold": "two-sided"
+        },
+        "G3_CLV": {
+          "rule": "beat the close: requires an opening price AND a closing price from the same book, so that CLV = (taken price - closing price) can be signed",
+          "why": "CLV is the least noisy skill measure, but it cannot be computed from a single snapshot. Measuring 'model minus closing line' instead would be circular: it is the selection rule itself",
+          "threshold": "two prices per market",
+          "measurable_in_this_corpus": false
+        },
+        "G3B_ALPHA": {
+          "rule": "out-of-sample residual alpha: corr(model_margin - market_spread, result - market_spread) > 0 with a 95% interval excluding 0 on the holdout",
+          "why": "this is the only skill statement a one-snapshot corpus can support: does our disagreement with the close contain information about the result relative to the close",
+          "threshold": 0.0,
+          "measurable_in_this_corpus": true
+        },
+        "G4_BSS": {
+          "rule": "Brier skill score vs the de-vigged closing market > 0 on the holdout",
+          "why": "the market is the benchmark that matters; beating a coin flip is not skill",
+          "threshold": 0.0
+        },
+        "G5_CALIBRATION": {
+          "rule": "calibration slope in [0.8, 1.25] and intercept |a| < 0.05 on the holdout",
+          "why": "a model that is right on average but wrong in the tails is not usable for staking",
+          "threshold": [
+            0.8,
+            1.25
+          ]
+        },
+        "G6_MULTIPLICITY": {
+          "rule": "Holm-adjusted p < 0.05 across every strategy tested in this family set",
+          "why": "testing 12 rules at alpha 0.05 finds one 'winner' 46% of the time by chance alone",
+          "threshold": 0.05
+        },
+        "G7_SURVIVAL": {
+          "rule": "Brier skill on the validation window has the same sign as on the holdout",
+          "why": "a rule that flips sign out of sample is noise",
+          "threshold": "same-sign"
+        },
+        "G8_DECAY": {
+          "rule": "no single season contributes more than 40% of a strategy's total profit",
+          "why": "one lucky season is not a strategy",
+          "threshold": 0.4
+        }
+      },
+      "units": "singles",
+      "status_at_registration": "registered"
+    },
+    {
+      "id": "S08",
+      "name": "Rest-advantage side",
+      "family": "fixture",
+      "hypothesis": "",
+      "rule": "Bet the side with a rest advantage of >= 7 days when the model also favours that side.",
+      "rule_sha256": "eeaf414c94f47da8cd5b1ac59d3583296206d7a9bc95d293dc62162e18055bfd",
+      "window": "train 1999-2012, validation 2013-2019, holdout 2020-2025",
+      "gates": {
+        "G1_SAMPLE": {
+          "rule": "evaluation sample n >= 300 graded bets",
+          "why": "the sample size at which a 55% edge is separable from 52.4% break-even at 80% power (luck_panel.py power calculation)",
+          "threshold": 300
+        },
+        "G2_PRICE": {
+          "rule": "every graded bet carries a two-sided price at the same clock time",
+          "why": "no price means no ROI; a one-sided price cannot be de-vigged (F-01 in the prior desk)",
+          "threshold": "two-sided"
+        },
+        "G3_CLV": {
+          "rule": "beat the close: requires an opening price AND a closing price from the same book, so that CLV = (taken price - closing price) can be signed",
+          "why": "CLV is the least noisy skill measure, but it cannot be computed from a single snapshot. Measuring 'model minus closing line' instead would be circular: it is the selection rule itself",
+          "threshold": "two prices per market",
+          "measurable_in_this_corpus": false
+        },
+        "G3B_ALPHA": {
+          "rule": "out-of-sample residual alpha: corr(model_margin - market_spread, result - market_spread) > 0 with a 95% interval excluding 0 on the holdout",
+          "why": "this is the only skill statement a one-snapshot corpus can support: does our disagreement with the close contain information about the result relative to the close",
+          "threshold": 0.0,
+          "measurable_in_this_corpus": true
+        },
+        "G4_BSS": {
+          "rule": "Brier skill score vs the de-vigged closing market > 0 on the holdout",
+          "why": "the market is the benchmark that matters; beating a coin flip is not skill",
+          "threshold": 0.0
+        },
+        "G5_CALIBRATION": {
+          "rule": "calibration slope in [0.8, 1.25] and intercept |a| < 0.05 on the holdout",
+          "why": "a model that is right on average but wrong in the tails is not usable for staking",
+          "threshold": [
+            0.8,
+            1.25
+          ]
+        },
+        "G6_MULTIPLICITY": {
+          "rule": "Holm-adjusted p < 0.05 across every strategy tested in this family set",
+          "why": "testing 12 rules at alpha 0.05 finds one 'winner' 46% of the time by chance alone",
+          "threshold": 0.05
+        },
+        "G7_SURVIVAL": {
+          "rule": "Brier skill on the validation window has the same sign as on the holdout",
+          "why": "a rule that flips sign out of sample is noise",
+          "threshold": "same-sign"
+        },
+        "G8_DECAY": {
+          "rule": "no single season contributes more than 40% of a strategy's total profit",
+          "why": "one lucky season is not a strategy",
+          "threshold": 0.4
+        }
+      },
+      "units": "singles",
+      "status_at_registration": "registered"
+    },
+    {
+      "id": "S09",
+      "name": "Moneyline value from the model",
+      "family": "moneyline",
+      "hypothesis": "",
+      "rule": "Bet the moneyline side when model P(win) exceeds the de-vigged market P(win) by >= 3 percentage points.",
+      "rule_sha256": "62550e49d9047f943a9227538929a1c150e3af0d06f50d9dc89e41367259c140",
+      "window": "train 1999-2012, validation 2013-2019, holdout 2020-2025",
+      "gates": {
+        "G1_SAMPLE": {
+          "rule": "evaluation sample n >= 300 graded bets",
+          "why": "the sample size at which a 55% edge is separable from 52.4% break-even at 80% power (luck_panel.py power calculation)",
+          "threshold": 300
+        },
+        "G2_PRICE": {
+          "rule": "every graded bet carries a two-sided price at the same clock time",
+          "why": "no price means no ROI; a one-sided price cannot be de-vigged (F-01 in the prior desk)",
+          "threshold": "two-sided"
+        },
+        "G3_CLV": {
+          "rule": "beat the close: requires an opening price AND a closing price from the same book, so that CLV = (taken price - closing price) can be signed",
+          "why": "CLV is the least noisy skill measure, but it cannot be computed from a single snapshot. Measuring 'model minus closing line' instead would be circular: it is the selection rule itself",
+          "threshold": "two prices per market",
+          "measurable_in_this_corpus": false
+        },
+        "G3B_ALPHA": {
+          "rule": "out-of-sample residual alpha: corr(model_margin - market_spread, result - market_spread) > 0 with a 95% interval excluding 0 on the holdout",
+          "why": "this is the only skill statement a one-snapshot corpus can support: does our disagreement with the close contain information about the result relative to the close",
+          "threshold": 0.0,
+          "measurable_in_this_corpus": true
+        },
+        "G4_BSS": {
+          "rule": "Brier skill score vs the de-vigged closing market > 0 on the holdout",
+          "why": "the market is the benchmark that matters; beating a coin flip is not skill",
+          "threshold": 0.0
+        },
+        "G5_CALIBRATION": {
+          "rule": "calibration slope in [0.8, 1.25] and intercept |a| < 0.05 on the holdout",
+          "why": "a model that is right on average but wrong in the tails is not usable for staking",
+          "threshold": [
+            0.8,
+            1.25
+          ]
+        },
+        "G6_MULTIPLICITY": {
+          "rule": "Holm-adjusted p < 0.05 across every strategy tested in this family set",
+          "why": "testing 12 rules at alpha 0.05 finds one 'winner' 46% of the time by chance alone",
+          "threshold": 0.05
+        },
+        "G7_SURVIVAL": {
+          "rule": "Brier skill on the validation window has the same sign as on the holdout",
+          "why": "a rule that flips sign out of sample is noise",
+          "threshold": "same-sign"
+        },
+        "G8_DECAY": {
+          "rule": "no single season contributes more than 40% of a strategy's total profit",
+          "why": "one lucky season is not a strategy",
+          "threshold": 0.4
+        }
+      },
+      "units": "singles",
+      "status_at_registration": "registered"
+    },
+    {
+      "id": "S10",
+      "name": "2-leg parlay, model sides, independent games",
+      "family": "parlay",
+      "hypothesis": "",
+      "rule": "Two legs from DIFFERENT games in the SAME week, each qualifying under S02, combined at the joint price only if a joint price exists in the corpus. The corpus carries no joint price, so the combination is priced from the product of the marginal de-vigged probabilities at the standard -110 parlay price. Registered as a JOINT-EVIDENCE TEST, not as a bet.",
+      "rule_sha256": "9f1bf56ec8ac1b5837badd0d0f272a62a19af2e37f2abc40e336c21ebc79be09",
+      "window": "holdout 2020-2025 only",
+      "gates": {
+        "G1_SAMPLE": {
+          "rule": "evaluation sample n >= 300 graded bets",
+          "why": "the sample size at which a 55% edge is separable from 52.4% break-even at 80% power (luck_panel.py power calculation)",
+          "threshold": 300
+        },
+        "G2_PRICE": {
+          "rule": "every graded bet carries a two-sided price at the same clock time",
+          "why": "no price means no ROI; a one-sided price cannot be de-vigged (F-01 in the prior desk)",
+          "threshold": "two-sided"
+        },
+        "G3_CLV": {
+          "rule": "beat the close: requires an opening price AND a closing price from the same book, so that CLV = (taken price - closing price) can be signed",
+          "why": "CLV is the least noisy skill measure, but it cannot be computed from a single snapshot. Measuring 'model minus closing line' instead would be circular: it is the selection rule itself",
+          "threshold": "two prices per market",
+          "measurable_in_this_corpus": false
+        },
+        "G3B_ALPHA": {
+          "rule": "out-of-sample residual alpha: corr(model_margin - market_spread, result - market_spread) > 0 with a 95% interval excluding 0 on the holdout",
+          "why": "this is the only skill statement a one-snapshot corpus can support: does our disagreement with the close contain information about the result relative to the close",
+          "threshold": 0.0,
+          "measurable_in_this_corpus": true
+        },
+        "G4_BSS": {
+          "rule": "Brier skill score vs the de-vigged closing market > 0 on the holdout",
+          "why": "the market is the benchmark that matters; beating a coin flip is not skill",
+          "threshold": 0.0
+        },
+        "G5_CALIBRATION": {
+          "rule": "calibration slope in [0.8, 1.25] and intercept |a| < 0.05 on the holdout",
+          "why": "a model that is right on average but wrong in the tails is not usable for staking",
+          "threshold": [
+            0.8,
+            1.25
+          ]
+        },
+        "G6_MULTIPLICITY": {
+          "rule": "Holm-adjusted p < 0.05 across every strategy tested in this family set",
+          "why": "testing 12 rules at alpha 0.05 finds one 'winner' 46% of the time by chance alone",
+          "threshold": 0.05
+        },
+        "G7_SURVIVAL": {
+          "rule": "Brier skill on the validation window has the same sign as on the holdout",
+          "why": "a rule that flips sign out of sample is noise",
+          "threshold": "same-sign"
+        },
+        "G8_DECAY": {
+          "rule": "no single season contributes more than 40% of a strategy's total profit",
+          "why": "one lucky season is not a strategy",
+          "threshold": 0.4
+        }
+      },
+      "units": "parlays",
+      "status_at_registration": "registered"
+    },
+    {
+      "id": "S11",
+      "name": "Same-game parlay (QB passing + WR1 receiving)",
+      "family": "same-game-parlay",
+      "hypothesis": "",
+      "rule": "BLOCKED by the joint-evidence gate: the corpus holds no player-level game statistics, so no joint probability for two same-game player props can be estimated. Registered, not evaluable, counts in the family.",
+      "rule_sha256": "d1159c043495c1923dd83d3482710d8b6873dcb0ff1bc21bb6953143d58936a7",
+      "window": "n/a",
+      "gates": {
+        "G1_SAMPLE": {
+          "rule": "evaluation sample n >= 300 graded bets",
+          "why": "the sample size at which a 55% edge is separable from 52.4% break-even at 80% power (luck_panel.py power calculation)",
+          "threshold": 300
+        },
+        "G2_PRICE": {
+          "rule": "every graded bet carries a two-sided price at the same clock time",
+          "why": "no price means no ROI; a one-sided price cannot be de-vigged (F-01 in the prior desk)",
+          "threshold": "two-sided"
+        },
+        "G3_CLV": {
+          "rule": "beat the close: requires an opening price AND a closing price from the same book, so that CLV = (taken price - closing price) can be signed",
+          "why": "CLV is the least noisy skill measure, but it cannot be computed from a single snapshot. Measuring 'model minus closing line' instead would be circular: it is the selection rule itself",
+          "threshold": "two prices per market",
+          "measurable_in_this_corpus": false
+        },
+        "G3B_ALPHA": {
+          "rule": "out-of-sample residual alpha: corr(model_margin - market_spread, result - market_spread) > 0 with a 95% interval excluding 0 on the holdout",
+          "why": "this is the only skill statement a one-snapshot corpus can support: does our disagreement with the close contain information about the result relative to the close",
+          "threshold": 0.0,
+          "measurable_in_this_corpus": true
+        },
+        "G4_BSS": {
+          "rule": "Brier skill score vs the de-vigged closing market > 0 on the holdout",
+          "why": "the market is the benchmark that matters; beating a coin flip is not skill",
+          "threshold": 0.0
+        },
+        "G5_CALIBRATION": {
+          "rule": "calibration slope in [0.8, 1.25] and intercept |a| < 0.05 on the holdout",
+          "why": "a model that is right on average but wrong in the tails is not usable for staking",
+          "threshold": [
+            0.8,
+            1.25
+          ]
+        },
+        "G6_MULTIPLICITY": {
+          "rule": "Holm-adjusted p < 0.05 across every strategy tested in this family set",
+          "why": "testing 12 rules at alpha 0.05 finds one 'winner' 46% of the time by chance alone",
+          "threshold": 0.05
+        },
+        "G7_SURVIVAL": {
+          "rule": "Brier skill on the validation window has the same sign as on the holdout",
+          "why": "a rule that flips sign out of sample is noise",
+          "threshold": "same-sign"
+        },
+        "G8_DECAY": {
+          "rule": "no single season contributes more than 40% of a strategy's total profit",
+          "why": "one lucky season is not a strategy",
+          "threshold": 0.4
+        }
+      },
+      "units": "same-game parlays",
+      "status_at_registration": "blocked_joint_evidence"
+    },
+    {
+      "id": "S12",
+      "name": "Control: coin flip",
+      "family": "control",
+      "hypothesis": "",
+      "rule": "Pick the home side with probability 0.5 using a fixed seed. This is the floor every strategy must beat.",
+      "rule_sha256": "fa46cb644d9e053b821cfd7b27557ba10f51d950c0999fc68d43c1f787fa5879",
+      "window": "holdout 2020-2025",
+      "gates": {
+        "G1_SAMPLE": {
+          "rule": "evaluation sample n >= 300 graded bets",
+          "why": "the sample size at which a 55% edge is separable from 52.4% break-even at 80% power (luck_panel.py power calculation)",
+          "threshold": 300
+        },
+        "G2_PRICE": {
+          "rule": "every graded bet carries a two-sided price at the same clock time",
+          "why": "no price means no ROI; a one-sided price cannot be de-vigged (F-01 in the prior desk)",
+          "threshold": "two-sided"
+        },
+        "G3_CLV": {
+          "rule": "beat the close: requires an opening price AND a closing price from the same book, so that CLV = (taken price - closing price) can be signed",
+          "why": "CLV is the least noisy skill measure, but it cannot be computed from a single snapshot. Measuring 'model minus closing line' instead would be circular: it is the selection rule itself",
+          "threshold": "two prices per market",
+          "measurable_in_this_corpus": false
+        },
+        "G3B_ALPHA": {
+          "rule": "out-of-sample residual alpha: corr(model_margin - market_spread, result - market_spread) > 0 with a 95% interval excluding 0 on the holdout",
+          "why": "this is the only skill statement a one-snapshot corpus can support: does our disagreement with the close contain information about the result relative to the close",
+          "threshold": 0.0,
+          "measurable_in_this_corpus": true
+        },
+        "G4_BSS": {
+          "rule": "Brier skill score vs the de-vigged closing market > 0 on the holdout",
+          "why": "the market is the benchmark that matters; beating a coin flip is not skill",
+          "threshold": 0.0
+        },
+        "G5_CALIBRATION": {
+          "rule": "calibration slope in [0.8, 1.25] and intercept |a| < 0.05 on the holdout",
+          "why": "a model that is right on average but wrong in the tails is not usable for staking",
+          "threshold": [
+            0.8,
+            1.25
+          ]
+        },
+        "G6_MULTIPLICITY": {
+          "rule": "Holm-adjusted p < 0.05 across every strategy tested in this family set",
+          "why": "testing 12 rules at alpha 0.05 finds one 'winner' 46% of the time by chance alone",
+          "threshold": 0.05
+        },
+        "G7_SURVIVAL": {
+          "rule": "Brier skill on the validation window has the same sign as on the holdout",
+          "why": "a rule that flips sign out of sample is noise",
+          "threshold": "same-sign"
+        },
+        "G8_DECAY": {
+          "rule": "no single season contributes more than 40% of a strategy's total profit",
+          "why": "one lucky season is not a strategy",
+          "threshold": 0.4
+        }
+      },
+      "units": "singles",
+      "status_at_registration": "control"
+    },
+    {
+      "id": "S13",
+      "name": "Control: always favourites",
+      "family": "control",
+      "hypothesis": "",
+      "rule": "Bet every favourite at the closing spread. The laziest possible rule; tests whether a strategy adds anything over the market.",
+      "rule_sha256": "81c5ce6cc76558b5dae1d3ff5975692644019e1e68b41f8f4cde7adf25ebf295",
+      "window": "holdout 2020-2025",
+      "gates": {
+        "G1_SAMPLE": {
+          "rule": "evaluation sample n >= 300 graded bets",
+          "why": "the sample size at which a 55% edge is separable from 52.4% break-even at 80% power (luck_panel.py power calculation)",
+          "threshold": 300
+        },
+        "G2_PRICE": {
+          "rule": "every graded bet carries a two-sided price at the same clock time",
+          "why": "no price means no ROI; a one-sided price cannot be de-vigged (F-01 in the prior desk)",
+          "threshold": "two-sided"
+        },
+        "G3_CLV": {
+          "rule": "beat the close: requires an opening price AND a closing price from the same book, so that CLV = (taken price - closing price) can be signed",
+          "why": "CLV is the least noisy skill measure, but it cannot be computed from a single snapshot. Measuring 'model minus closing line' instead would be circular: it is the selection rule itself",
+          "threshold": "two prices per market",
+          "measurable_in_this_corpus": false
+        },
+        "G3B_ALPHA": {
+          "rule": "out-of-sample residual alpha: corr(model_margin - market_spread, result - market_spread) > 0 with a 95% interval excluding 0 on the holdout",
+          "why": "this is the only skill statement a one-snapshot corpus can support: does our disagreement with the close contain information about the result relative to the close",
+          "threshold": 0.0,
+          "measurable_in_this_corpus": true
+        },
+        "G4_BSS": {
+          "rule": "Brier skill score vs the de-vigged closing market > 0 on the holdout",
+          "why": "the market is the benchmark that matters; beating a coin flip is not skill",
+          "threshold": 0.0
+        },
+        "G5_CALIBRATION": {
+          "rule": "calibration slope in [0.8, 1.25] and intercept |a| < 0.05 on the holdout",
+          "why": "a model that is right on average but wrong in the tails is not usable for staking",
+          "threshold": [
+            0.8,
+            1.25
+          ]
+        },
+        "G6_MULTIPLICITY": {
+          "rule": "Holm-adjusted p < 0.05 across every strategy tested in this family set",
+          "why": "testing 12 rules at alpha 0.05 finds one 'winner' 46% of the time by chance alone",
+          "threshold": 0.05
+        },
+        "G7_SURVIVAL": {
+          "rule": "Brier skill on the validation window has the same sign as on the holdout",
+          "why": "a rule that flips sign out of sample is noise",
+          "threshold": "same-sign"
+        },
+        "G8_DECAY": {
+          "rule": "no single season contributes more than 40% of a strategy's total profit",
+          "why": "one lucky season is not a strategy",
+          "threshold": 0.4
+        }
+      },
+      "units": "singles",
+      "status_at_registration": "control"
+    },
+    {
+      "id": "S14",
+      "name": "Control: always home",
+      "family": "control",
+      "hypothesis": "",
+      "rule": "Bet the home side on every game at the closing spread.",
+      "rule_sha256": "4bd2043660bb8b94526af2232d5f470396b1ed4ab899526b09317a3d9057f05e",
+      "window": "holdout 2020-2025",
+      "gates": {
+        "G1_SAMPLE": {
+          "rule": "evaluation sample n >= 300 graded bets",
+          "why": "the sample size at which a 55% edge is separable from 52.4% break-even at 80% power (luck_panel.py power calculation)",
+          "threshold": 300
+        },
+        "G2_PRICE": {
+          "rule": "every graded bet carries a two-sided price at the same clock time",
+          "why": "no price means no ROI; a one-sided price cannot be de-vigged (F-01 in the prior desk)",
+          "threshold": "two-sided"
+        },
+        "G3_CLV": {
+          "rule": "beat the close: requires an opening price AND a closing price from the same book, so that CLV = (taken price - closing price) can be signed",
+          "why": "CLV is the least noisy skill measure, but it cannot be computed from a single snapshot. Measuring 'model minus closing line' instead would be circular: it is the selection rule itself",
+          "threshold": "two prices per market",
+          "measurable_in_this_corpus": false
+        },
+        "G3B_ALPHA": {
+          "rule": "out-of-sample residual alpha: corr(model_margin - market_spread, result - market_spread) > 0 with a 95% interval excluding 0 on the holdout",
+          "why": "this is the only skill statement a one-snapshot corpus can support: does our disagreement with the close contain information about the result relative to the close",
+          "threshold": 0.0,
+          "measurable_in_this_corpus": true
+        },
+        "G4_BSS": {
+          "rule": "Brier skill score vs the de-vigged closing market > 0 on the holdout",
+          "why": "the market is the benchmark that matters; beating a coin flip is not skill",
+          "threshold": 0.0
+        },
+        "G5_CALIBRATION": {
+          "rule": "calibration slope in [0.8, 1.25] and intercept |a| < 0.05 on the holdout",
+          "why": "a model that is right on average but wrong in the tails is not usable for staking",
+          "threshold": [
+            0.8,
+            1.25
+          ]
+        },
+        "G6_MULTIPLICITY": {
+          "rule": "Holm-adjusted p < 0.05 across every strategy tested in this family set",
+          "why": "testing 12 rules at alpha 0.05 finds one 'winner' 46% of the time by chance alone",
+          "threshold": 0.05
+        },
+        "G7_SURVIVAL": {
+          "rule": "Brier skill on the validation window has the same sign as on the holdout",
+          "why": "a rule that flips sign out of sample is noise",
+          "threshold": "same-sign"
+        },
+        "G8_DECAY": {
+          "rule": "no single season contributes more than 40% of a strategy's total profit",
+          "why": "one lucky season is not a strategy",
+          "threshold": 0.4
+        }
+      },
+      "units": "singles",
+      "status_at_registration": "control"
+    }
+  ],
+  "amendment_policy": "A rule may not be edited after registration. A change is a new strategy with a new id and a fresh window, and the superseded id stays on the leaderboard marked retired. The site reads this file and publishes the commit it was registered against."
+}

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Model · Own5 NFL Season Desk</title>
+<meta name="description" content="Frozen model card, residuals and what cannot be ablated yet">
+<link rel="stylesheet" href="assets/style.css">
+</head><body>
+<header class="top"><div class="wrap">
+<a class="brand" href="index.html">Own5 · NFL Season Desk</a>
+<span class="tag">Frozen model card, residuals and what cannot be ablated yet</span>
+</div></header>
+<nav class="main"><div class="wrap"><a href="index.html">Overview</a><a href="executive-summary.html">Executive summary</a><a href="lines.html">Originated lines</a><a class="on" href="model.html">Model</a><a href="leaderboard.html">Leaderboard</a><a href="strategies.html">Strategies &amp; gates</a><a href="luck.html">Removal of luck</a><a href="depth.html">Depth &amp; replacements</a><a href="availability.html">Availability</a><a href="matchup.html">Deficiency matrix</a><a href="correlations.html">Correlations</a><a href="corpus.html">Corpus</a><a href="price-store.html">Price policy</a><a href="schedule.html">Schedule</a><a href="snapshots.html">Snapshots &amp; alarms</a><a href="changes.html">What changed</a><a href="audit.html">Repo audit</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources</a><a href="methodology.html">Methodology</a></div></nav>
+<main class="wrap">
+
+<h1>Model</h1>
+<p class="lede">One model, frozen. Two estimators for the total, published side by side. Four constants
+that are choices rather than league values, published with their values. An ablation section that says
+plainly what cannot yet be ablated.</p>
+
+<section class="card "><h2>Model card</h2>
+<table class="kv-table">
+<tr><th>Target: side</th><td><code>margin = HFA + rating(home) - rating(away)</code>, weighted least squares,
+weights <code>0.5^(days/365)</code>, ridge 2.0 on ratings, 1.0 on home field</td></tr>
+<tr><th>Target: total</th><td>two equations per game, <code>home = off(home) + def(away) + hfa</code> and
+<code>away = off(away) + def(home)</code>, ridge 1.0 on every rate</td></tr>
+<tr><th>Target: moneyline</th><td><code>Phi(margin / sigma)</code>, sigma by probit maximum likelihood on
+the same window; the sigma for every market is a column on its originated row (11.52 points on the full
+2026 week-11 fit)</td></tr>
+<tr><th>Identifiability</th><td>the ridge is required: early in a season every club has one home and one
+away game, so home field cannot be separated from strength without it</td></tr>
+<tr><th>Fit window</th><td>every regular-season game strictly before the target week's first kickoff.
+The number of games in each fit and the cutoff date are columns on every originated row.</td></tr>
+<tr><th>What is not in it</th><td>injuries, depth, weather beyond what is in the corpus's own columns,
+travel, rest beyond the corpus field. The ablation section explains why.</td></tr>
+</table></section>
+
+<section class="card "><h2>The market is better than the model, by this much</h2>
+<div class="kpis">
+<div class="kpi "><div class="kv">10.71</div><div class="kl">our side error</div><div class=kn>mean absolute points, 1999-2025</div></div>
+<div class="kpi ok"><div class="kv">10.27</div><div class="kl">market side error</div><div class=kn>the same games</div></div>
+<div class="kpi "><div class="kv">10.93</div><div class="kl">our total error</div></div>
+<div class="kpi ok"><div class="kv">10.63</div><div class="kl">market total error</div></div>
+<div class="kpi "><div class="kv">+0.022</div><div class="kl">mean side residual</div><div class=kn>we are close to unbiased</div></div>
+<div class="kpi "><div class="kv">3.86</div><div class="kl">sd of side residual</div><div class=kn>our spreads differ by this much</div></div>
+</div>
+<p>A model that is unbiased but noisier than the market cannot beat it: the market's error is the floor
+you have to beat, not the average you have to match. This desk measures the gap rather than assuming it
+away.</p></section>
+
+<section class="card "><h2>Residual alpha by window</h2>
+<table class="zebra">
+<thead><tr><th>window</th><th>n</th><th>r</th><th>95% CI</th><th>reading</th></tr></thead>
+<tbody>
+<tr><td>full sample 1999-2025</td><td>6,895</td><td>+0.0245</td>
+<td>+0.0009 to +0.0480</td>
+<td>interval excludes zero, but the effect is tiny</td></tr>
+<tr><td>holdout 2020-2025</td><td>1,615</td><td>+0.0019</td>
+<td>-0.0469 to +0.0507</td>
+<td>includes zero: no demonstrated information</td></tr>
+</tbody></table>
+<p class="note">The honest conclusion is the holdout one. The full sample is published for context, and
+the fact that it is positive while the holdout is not is exactly why the split exists.</p></section>
+
+<section class="card "><h2>Two totals, both published</h2><p>The brief asks that every model total be published twice until one wins. Two estimators exist in
+ the code: <strong>A</strong>, the scoring-rate regression above, and <strong>B</strong>, a simple
+ league-mean-plus-team-total-offset estimator. Both are computed; the table compares them on the holdout
+ on the same games.</p>
+ <p class="note">The walk-forward comparison on the holdout is on the <a href="corpus.html">Corpus</a>
+ page with its MAE. Neither is collapsed to one yet, which is the state the brief asks for.</p></section>
+
+<section class="card "><h2>Ablations: injuries and personnel</h2>
+<p>The brief asks for ablations rather than fixed penalties: run the identical model with and without the
+availability features and report the difference with uncertainty.</p>
+<p><strong>This desk cannot yet run that ablation, and says so.</strong> The availability features cover
+4 clubs and 12 players in this capture. An ablation on 12 rows is not an ablation; it is a coincidence
+with a confidence interval. The design is registered on <a href="strategies.html">Strategies</a> and the
+blocking question is Q-17 on <a href="questions.html">Questions</a>.</p>
+<p>What <em>is</em> published is the fixture-context ablation: the corpus's own published schedule facts
+(rest, roof, surface, wind, temperature, division, neutral site) are available for every game, and their
+marginal correlation with the result is on <a href="correlations.html">Correlations</a>. Wind is the one
+with an interval that excludes zero.</p></section>
+
+</main>
+<footer class="foot"><div class="wrap">Session <code>941fe39f</code> · built 2026-11-17T01:30:00Z · 80 requirements · 7,058 originated markets · 0 certified strategies · <a href="https://github.com/sassnarep3-star/Own5">repository</a></div></footer>
+</body></html>

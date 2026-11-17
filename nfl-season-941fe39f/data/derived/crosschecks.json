@@ -1,0 +1,1599 @@
+[
+ {
+  "name": "A. results feed (official) vs pinned corpus",
+  "compared": 145,
+  "matched": 145,
+  "rows": [
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_01_NE_SEA",
+    "official": "10-13",
+    "corpus": "10-13",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-1"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_01_SF_LA",
+    "official": "27-7",
+    "corpus": "27-7",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-1"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_01_ARI_LAC",
+    "official": "26-14",
+    "corpus": "26-14",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-1"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_01_ATL_PIT",
+    "official": "13-20",
+    "corpus": "13-20",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-1"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_01_BAL_IND",
+    "official": "41-23",
+    "corpus": "41-23",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-1"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_01_BUF_HOU",
+    "official": "36-31",
+    "corpus": "36-31",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-1"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_01_CHI_CAR",
+    "official": "59-37",
+    "corpus": "59-37",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-1"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_01_CLE_JAX",
+    "official": "10-34",
+    "corpus": "10-34",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-1"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_01_DAL_NYG",
+    "official": "20-28",
+    "corpus": "20-28",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-1"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_01_GB_MIN",
+    "official": "22-39",
+    "corpus": "22-39",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-1"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_01_MIA_LV",
+    "official": "13-27",
+    "corpus": "13-27",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-1"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_01_NO_DET",
+    "official": "30-31",
+    "corpus": "30-31",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-1"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_01_NYJ_TEN",
+    "official": "23-10",
+    "corpus": "23-10",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-1"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_01_TB_CIN",
+    "official": "27-33",
+    "corpus": "27-33",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-1"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_01_WAS_PHI",
+    "official": "22-24",
+    "corpus": "22-24",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-1"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_01_DEN_KC",
+    "official": "10-31",
+    "corpus": "10-31",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-1"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_02_DET_BUF",
+    "official": "31-41",
+    "corpus": "31-41",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-2"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_02_CAR_ATL",
+    "official": "34-3",
+    "corpus": "34-3",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-2"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_02_CIN_HOU",
+    "official": "20-6",
+    "corpus": "20-6",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-2"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_02_CLE_TB",
+    "official": "23-19",
+    "corpus": "23-19",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-2"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_02_GB_NYJ",
+    "official": "20-17",
+    "corpus": "20-17",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-2"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_02_IND_KC",
+    "official": "30-33",
+    "corpus": "30-33",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-2"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_02_JAX_DEN",
+    "official": "13-20",
+    "corpus": "13-20",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-2"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_02_LV_LAC",
+    "official": "26-14",
+    "corpus": "26-14",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-2"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_02_MIA_SF",
+    "official": "13-35",
+    "corpus": "13-35",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-2"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_02_MIN_CHI",
+    "official": "9-3",
+    "corpus": "9-3",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-2"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_02_NO_BAL",
+    "official": "24-17",
+    "corpus": "24-17",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-2"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_02_PHI_TEN",
+    "official": "24-20",
+    "corpus": "24-20",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-2"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_02_PIT_NE",
+    "official": "3-20",
+    "corpus": "3-20",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-2"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_02_SEA_ARI",
+    "official": "31-7",
+    "corpus": "31-7",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-2"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_02_WAS_DAL",
+    "official": "20-37",
+    "corpus": "20-37",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-2"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_02_NYG_LA",
+    "official": "6-28",
+    "corpus": "6-28",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-2"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_03_ATL_GB",
+    "official": "35-14",
+    "corpus": "35-14",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-3"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_03_ARI_SF",
+    "official": "30-36",
+    "corpus": "30-36",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-3"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_03_BAL_DAL",
+    "official": "34-31",
+    "corpus": "34-31",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-3"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_03_CAR_CLE",
+    "official": "18-21",
+    "corpus": "18-21",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-3"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_03_CIN_PIT",
+    "official": "27-30",
+    "corpus": "27-30",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-3"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_03_HOU_IND",
+    "official": "17-19",
+    "corpus": "17-19",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-3"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_03_KC_MIA",
+    "official": "24-10",
+    "corpus": "24-10",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-3"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_03_LAC_BUF",
+    "official": "16-24",
+    "corpus": "16-24",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-3"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_03_LA_DEN",
+    "official": "26-30",
+    "corpus": "26-30",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-3"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_03_LV_NO",
+    "official": "35-27",
+    "corpus": "35-27",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-3"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_03_MIN_TB",
+    "official": "23-16",
+    "corpus": "23-16",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-3"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_03_NE_JAX",
+    "official": "6-35",
+    "corpus": "6-35",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-3"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_03_NYJ_DET",
+    "official": "24-31",
+    "corpus": "24-31",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-3"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_03_SEA_WAS",
+    "official": "31-33",
+    "corpus": "31-33",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-3"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_03_TEN_NYG",
+    "official": "7-12",
+    "corpus": "7-12",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-3"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_03_PHI_CHI",
+    "official": "7-27",
+    "corpus": "7-27",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-3"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_04_PIT_CLE",
+    "official": "24-27",
+    "corpus": "24-27",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-4"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_04_ARI_NYG",
+    "official": "24-36",
+    "corpus": "24-36",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-4"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_04_DAL_HOU",
+    "official": "34-30",
+    "corpus": "34-30",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-4"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_04_DEN_SF",
+    "official": "14-24",
+    "corpus": "14-24",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-4"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_04_DET_CAR",
+    "official": "26-32",
+    "corpus": "26-32",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-4"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_04_GB_TB",
+    "official": "17-14",
+    "corpus": "17-14",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-4"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_04_IND_WAS",
+    "official": "30-13",
+    "corpus": "30-13",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-4"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_04_JAX_CIN",
+    "official": "22-17",
+    "corpus": "22-17",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-4"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_04_KC_LV",
+    "official": "30-27",
+    "corpus": "30-27",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-4"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_04_LAC_SEA",
+    "official": "23-30",
+    "corpus": "23-30",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-4"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_04_LA_PHI",
+    "official": "24-20",
+    "corpus": "24-20",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-4"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_04_MIA_MIN",
+    "official": "10-15",
+    "corpus": "10-15",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-4"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_04_NE_BUF",
+    "official": "29-26",
+    "corpus": "29-26",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-4"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_04_NYJ_CHI",
+    "official": "12-23",
+    "corpus": "12-23",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-4"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_04_TEN_BAL",
+    "official": "18-24",
+    "corpus": "18-24",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-4"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_04_ATL_NO",
+    "official": "45-24",
+    "corpus": "45-24",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-4"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_05_TB_DAL",
+    "official": "24-16",
+    "corpus": "24-16",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-5"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_05_BAL_ATL",
+    "official": "30-23",
+    "corpus": "30-23",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-5"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_05_CHI_GB",
+    "official": "7-31",
+    "corpus": "7-31",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-5"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_05_CIN_MIA",
+    "official": "31-24",
+    "corpus": "31-24",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-5"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_05_CLE_NYJ",
+    "official": "12-17",
+    "corpus": "12-17",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-5"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_05_DEN_LAC",
+    "official": "23-17",
+    "corpus": "23-17",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-5"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_05_DET_ARI",
+    "official": "45-21",
+    "corpus": "45-21",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-5"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_05_HOU_TEN",
+    "official": "26-3",
+    "corpus": "26-3",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-5"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_05_IND_PIT",
+    "official": "22-34",
+    "corpus": "22-34",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-5"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_05_LV_NE",
+    "official": "17-45",
+    "corpus": "17-45",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-5"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_05_MIN_NO",
+    "official": "23-13",
+    "corpus": "23-13",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-5"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_05_NYG_WAS",
+    "official": "27-27",
+    "corpus": "27-27",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-5"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_05_PHI_JAX",
+    "official": "17-19",
+    "corpus": "17-19",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-5"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_05_SF_SEA",
+    "official": "32-29",
+    "corpus": "32-29",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-5"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_05_BUF_LA",
+    "official": "37-34",
+    "corpus": "37-34",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-5"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_06_SEA_DEN",
+    "official": "14-17",
+    "corpus": "14-17",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-6"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_06_ARI_LA",
+    "official": "18-16",
+    "corpus": "18-16",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-6"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_06_BAL_CLE",
+    "official": "10-13",
+    "corpus": "10-13",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-6"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_06_BUF_LV",
+    "official": "33-30",
+    "corpus": "33-30",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-6"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_06_CAR_PHI",
+    "official": "25-14",
+    "corpus": "25-14",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-6"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_06_CHI_ATL",
+    "official": "31-23",
+    "corpus": "31-23",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-6"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_06_DAL_GB",
+    "official": "13-23",
+    "corpus": "13-23",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-6"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_06_HOU_JAX",
+    "official": "34-31",
+    "corpus": "34-31",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-6"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_06_LAC_KC",
+    "official": "6-22",
+    "corpus": "6-22",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-6"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_06_NO_NYG",
+    "official": "34-27",
+    "corpus": "34-27",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-6"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_06_NYJ_NE",
+    "official": "19-26",
+    "corpus": "19-26",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-6"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_06_PIT_TB",
+    "official": "26-19",
+    "corpus": "26-19",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-6"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_06_TEN_IND",
+    "official": "26-20",
+    "corpus": "26-20",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-6"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_06_WAS_SF",
+    "official": "17-23",
+    "corpus": "17-23",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-6"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_07_NE_CHI",
+    "official": "24-30",
+    "corpus": "24-30",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_07_CIN_BAL",
+    "official": "35-13",
+    "corpus": "35-13",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_07_CLE_TEN",
+    "official": "27-24",
+    "corpus": "27-24",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_07_DEN_ARI",
+    "official": "30-16",
+    "corpus": "30-16",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_07_GB_DET",
+    "official": "17-20",
+    "corpus": "17-20",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_07_IND_MIN",
+    "official": "10-16",
+    "corpus": "10-16",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_07_KC_SEA",
+    "official": "3-20",
+    "corpus": "3-20",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_07_LA_LV",
+    "official": "35-21",
+    "corpus": "35-21",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_07_MIA_NYJ",
+    "official": "28-25",
+    "corpus": "28-25",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_07_NYG_HOU",
+    "official": "27-21",
+    "corpus": "27-21",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_07_PIT_NO",
+    "official": "16-10",
+    "corpus": "16-10",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_07_SF_ATL",
+    "official": "20-29",
+    "corpus": "20-29",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_07_TB_CAR",
+    "official": "43-13",
+    "corpus": "43-13",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_07_DAL_PHI",
+    "official": "38-21",
+    "corpus": "38-21",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-7"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_08_CAR_GB",
+    "official": "19-27",
+    "corpus": "19-27",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_08_ARI_DAL",
+    "official": "33-30",
+    "corpus": "33-30",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_08_ATL_TB",
+    "official": "0-16",
+    "corpus": "0-16",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_08_BAL_BUF",
+    "official": "10-36",
+    "corpus": "10-36",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_08_CLE_PIT",
+    "official": "6-27",
+    "corpus": "6-27",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_08_IND_JAX",
+    "official": "7-42",
+    "corpus": "7-42",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_08_KC_DEN",
+    "official": "24-28",
+    "corpus": "24-28",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_08_LAC_LA",
+    "official": "9-24",
+    "corpus": "9-24",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_08_LV_NYJ",
+    "official": "38-33",
+    "corpus": "38-33",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_08_MIN_DET",
+    "official": "15-19",
+    "corpus": "15-19",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_08_NE_MIA",
+    "official": "24-19",
+    "corpus": "24-19",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_08_PHI_WAS",
+    "official": "10-27",
+    "corpus": "10-27",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_08_TEN_CIN",
+    "official": "36-43",
+    "corpus": "36-43",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_08_CHI_SEA",
+    "official": "34-17",
+    "corpus": "34-17",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-8"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_09_JAX_BAL",
+    "official": "33-10",
+    "corpus": "33-10",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-9"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_09_ARI_SEA",
+    "official": "3-17",
+    "corpus": "3-17",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-9"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_09_CIN_ATL",
+    "official": "34-17",
+    "corpus": "34-17",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-9"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_09_CLE_NO",
+    "official": "22-23",
+    "corpus": "22-23",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-9"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_09_DAL_IND",
+    "official": "27-23",
+    "corpus": "27-23",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-9"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_09_DEN_CAR",
+    "official": "26-21",
+    "corpus": "26-21",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-9"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_09_DET_MIA",
+    "official": "19-9",
+    "corpus": "19-9",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-9"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_09_GB_NE",
+    "official": "45-27",
+    "corpus": "45-27",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-9"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_09_HOU_LAC",
+    "official": "44-22",
+    "corpus": "44-22",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-9"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_09_LA_WAS",
+    "official": "20-13",
+    "corpus": "20-13",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-9"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_09_LV_SF",
+    "official": "17-38",
+    "corpus": "17-38",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-9"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_09_NYG_PHI",
+    "official": "19-11",
+    "corpus": "19-11",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-9"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_09_NYJ_KC",
+    "official": "12-35",
+    "corpus": "12-35",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-9"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_09_TB_CHI",
+    "official": "24-27",
+    "corpus": "24-27",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-9"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_09_BUF_MIN",
+    "official": "23-6",
+    "corpus": "23-6",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-9"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_10_WAS_NYG",
+    "official": "24-21",
+    "corpus": "24-21",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-10"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_10_BUF_NYJ",
+    "official": "31-12",
+    "corpus": "31-12",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-10"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_10_CAR_NO",
+    "official": "20-17",
+    "corpus": "20-17",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-10"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_10_HOU_CLE",
+    "official": "24-27",
+    "corpus": "24-27",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-10"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_10_JAX_TEN",
+    "official": "40-23",
+    "corpus": "40-23",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-10"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_10_KC_ATL",
+    "official": "35-13",
+    "corpus": "35-13",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-10"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_10_MIA_IND",
+    "official": "22-24",
+    "corpus": "22-24",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-10"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_10_MIN_GB",
+    "official": "30-10",
+    "corpus": "30-10",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-10"
+   },
+   {
+    "check": "results_feed_vs_corpus",
+    "game_id": "2026_10_NE_DET",
+    "official": "10-35",
+    "corpus": "10-35",
+    "match": "YES",
+    "source_url": "https://www.nfl.com/schedules/2026/by-week/week-10"
+   }
+  ],
+  "verdict": "PASS"
+ },
+ {
+  "name": "A2. corpus recomputes the official 2026 standings",
+  "compared": 32,
+  "matched": 24,
+  "explained": 8,
+  "team_codes_missing_from_corpus": [],
+  "rows": [
+   {
+    "team": "BUF",
+    "official": "8-1-0 287/199",
+    "corpus": "8-1-0 287/199",
+    "match": "YES",
+    "explanation": "",
+    "source_url": "https://www.nfl.com/standings/league/2026/REG"
+   },
+   {
+    "team": "SF",
+    "official": "7-1-0 235/156",
+    "corpus": "8-1-0 281/196",
+    "match": "EXPLAINED",
+    "explanation": "difference fully explained by 2026_10_SF_DAL (SF 46 at DAL 40)",
+    "source_url": "https://www.nfl.com/standings/league/2026/REG"
+   },
+   {
+    "team": "CHI",
+    "official": "7-2-0 241/184",
+    "corpus": "7-2-0 241/184",
+    "match": "YES",
+    "explanation": "",
+    "source_url": "https://www.nfl.com/standings/league/2026/REG"
+   },
+   {
+    "team": "DEN",
+    "official": "7-2-0 198/186",
+    "corpus": "7-2-0 198/186",
+    "match": "YES",
+    "explanation": "",
+    "source_url": "https://www.nfl.com/standings/league/2026/REG"
+   },
+   {
+    "team": "DET",
+    "official": "7-2-0 257/199",
+    "corpus": "7-2-0 257/199",
+    "match": "YES",
+    "explanation": "",
+    "source_url": "https://www.nfl.com/standings/league/2026/REG"
+   },
+   {
+    "team": "JAX",
+    "official": "7-2-0 269/144",
+    "corpus": "7-2-0 269/144",
+    "match": "YES",
+    "explanation": "",
+    "source_url": "https://www.nfl.com/standings/league/2026/REG"
+   },
+   {
+    "team": "KC",
+    "official": "7-2-0 237/156",
+    "corpus": "7-2-0 237/156",
+    "match": "YES",
+    "explanation": "",
+    "source_url": "https://www.nfl.com/standings/league/2026/REG"
+   },
+   {
+    "team": "MIN",
+    "official": "7-2-0 176/126",
+    "corpus": "7-2-0 176/126",
+    "match": "YES",
+    "explanation": "",
+    "source_url": "https://www.nfl.com/standings/league/2026/REG"
+   },
+   {
+    "team": "CIN",
+    "official": "6-2-0 240/175",
+    "corpus": "7-2-0 278/193",
+    "match": "EXPLAINED",
+    "explanation": "difference fully explained by 2026_10_PIT_CIN (PIT 18 at CIN 38)",
+    "source_url": "https://www.nfl.com/standings/league/2026/REG"
+   },
+   {
+    "team": "PIT",
+    "official": "6-2-0 180/144",
+    "corpus": "6-3-0 198/182",
+    "match": "EXPLAINED",
+    "explanation": "difference fully explained by 2026_10_PIT_CIN (PIT 18 at CIN 38)",
+    "source_url": "https://www.nfl.com/standings/league/2026/REG"
+   },
+   {
+    "team": "NYG",
+    "official": "5-3-1 203/196",
+    "corpus": "5-3-1 203/196",
+    "match": "YES",
+    "explanation": "",
+    "source_url": "https://www.nfl.com/standings/league/2026/REG"
+   },
+   {
+    "team": "CLE",
+    "official": "6-4-0 188/220",
+    "corpus": "6-4-0 188/220",
+    "match": "YES",
+    "explanation": "",
+    "source_url": "https://www.nfl.com/standings/league/2026/REG"
+   },
+   {
+    "team": "GB",
+    "official": "6-4-0 226/221",
+    "corpus": "6-4-0 226/221",
+    "match": "YES",
+    "explanation": "",
+    "source_url": "https://www.nfl.com/standings/league/2026/REG"
+   },
+   {
+    "team": "LAR",
+    "official": "5-4-0 214/181",
+    "corpus": "6-4-0 248/187",
+    "match": "EXPLAINED",
+    "explanation": "difference fully explained by 2026_10_LA_ARI (LA 34 at ARI 6)",
+    "source_url": "https://www.nfl.com/standings/league/2026/REG"
+   },
+   {
+    "team": "SEA",
+    "official": "5-4-0 202/162",
+    "corpus": "6-4-0 223/175",
+    "match": "EXPLAINED",
+    "explanation": "difference fully explained by 2026_10_SEA_LV (SEA 21 at LV 13)",
+    "source_url": "https://www.nfl.com/standings/league/2026/REG"
+   },
+   {
+    "team": "NE",
+    "official": "5-5-0 221/242",
+    "corpus": "5-5-0 221/242",
+    "match": "YES",
+    "explanation": "",
+    "source_url": "https://www.nfl.com/standings/league/2026/REG"
+   },
+   {
+    "team": "BAL",
+    "official": "4-5-0 189/236",
+    "corpus": "4-5-0 189/236",
+    "match": "YES",
+    "explanation": "",
+    "source_url": "https://www.nfl.com/standings/league/2026/REG"
+   },
+   {
+    "team": "CAR",
+    "official": "4-5-0 219/236",
+    "corpus": "4-5-0 219/236",
+    "match": "YES",
+    "explanation": "",
+    "source_url": "https://www.nfl.com/standings/league/2026/REG"
+   },
+   {
+    "team": "DAL",
+    "official": "4-5-0 246/236",
+    "corpus": "4-6-0 286/282",
+    "match": "EXPLAINED",
+    "explanation": "difference fully explained by 2026_10_SF_DAL (SF 46 at DAL 40)",
+    "source_url": "https://www.nfl.com/standings/league/2026/REG"
+   },
+   {
+    "team": "LV",
+    "official": "4-5-0 238/268",
+    "corpus": "4-6-0 251/289",
+    "match": "EXPLAINED",
+    "explanation": "difference fully explained by 2026_10_SEA_LV (SEA 21 at LV 13)",
+    "source_url": "https://www.nfl.com/standings/league/2026/REG"
+   },
+   {
+    "team": "WAS",
+    "official": "3-5-1 196/223",
+    "corpus": "3-5-1 196/223",
+    "match": "YES",
+    "explanation": "",
+    "source_url": "https://www.nfl.com/standings/league/2026/REG"
+   },
+   {
+    "team": "ARI",
+    "official": "3-6-0 178/255",
+    "corpus": "3-7-0 184/289",
+    "match": "EXPLAINED",
+    "explanation": "difference fully explained by 2026_10_LA_ARI (LA 34 at ARI 6)",
+    "source_url": "https://www.nfl.com/standings/league/2026/REG"
+   },
+   {
+    "team": "HOU",
+    "official": "3-6-0 233/219",
+    "corpus": "3-6-0 233/219",
+    "match": "YES",
+    "explanation": "",
+    "source_url": "https://www.nfl.com/standings/league/2026/REG"
+   },
+   {
+    "team": "NO",
+    "official": "3-6-0 202/236",
+    "corpus": "3-6-0 202/236",
+    "match": "YES",
+    "explanation": "",
+    "source_url": "https://www.nfl.com/standings/league/2026/REG"
+   },
+   {
+    "team": "TB",
+    "official": "3-6-0 202/178",
+    "corpus": "3-6-0 202/178",
+    "match": "YES",
+    "explanation": "",
+    "source_url": "https://www.nfl.com/standings/league/2026/REG"
+   },
+   {
+    "team": "ATL",
+    "official": "3-7-0 201/258",
+    "corpus": "3-7-0 201/258",
+    "match": "YES",
+    "explanation": "",
+    "source_url": "https://www.nfl.com/standings/league/2026/REG"
+   },
+   {
+    "team": "IND",
+    "official": "3-7-0 208/271",
+    "corpus": "3-7-0 208/271",
+    "match": "YES",
+    "explanation": "",
+    "source_url": "https://www.nfl.com/standings/league/2026/REG"
+   },
+   {
+    "team": "PHI",
+    "official": "2-7-0 148/221",
+    "corpus": "2-7-0 148/221",
+    "match": "YES",
+    "explanation": "",
+    "source_url": "https://www.nfl.com/standings/league/2026/REG"
+   },
+   {
+    "team": "NYJ",
+    "official": "2-8-0 194/254",
+    "corpus": "2-8-0 194/254",
+    "match": "YES",
+    "explanation": "",
+    "source_url": "https://www.nfl.com/standings/league/2026/REG"
+   },
+   {
+    "team": "MIA",
+    "official": "1-8-0 148/224",
+    "corpus": "1-8-0 148/224",
+    "match": "YES",
+    "explanation": "",
+    "source_url": "https://www.nfl.com/standings/league/2026/REG"
+   },
+   {
+    "team": "TEN",
+    "official": "1-8-0 167/239",
+    "corpus": "1-8-0 167/239",
+    "match": "YES",
+    "explanation": "",
+    "source_url": "https://www.nfl.com/standings/league/2026/REG"
+   },
+   {
+    "team": "LAC",
+    "official": "0-8-0 121/219",
+    "corpus": "0-8-0 121/219",
+    "match": "YES",
+    "explanation": "",
+    "source_url": "https://www.nfl.com/standings/league/2026/REG"
+   }
+  ],
+  "verdict": "PASS (differences reconciled)",
+  "note": "The corpus was captured later than the standings page, so a club whose record changed between the two captures can differ by exactly the games played in between. Every difference is listed, not hidden."
+ },
+ {
+  "name": "B. price series: corpus spread_line vs separate closing-lines file",
+  "compared": 2969,
+  "matched": 2011,
+  "rows": [
+   {
+    "season": "2006",
+    "games_compared": 232,
+    "identical": 138,
+    "agree_pct": "59.5%",
+    "source_url": "https://github.com/nflverse/nfldata/blob/master/data/closing_lines.csv"
+   },
+   {
+    "season": "2007",
+    "games_compared": 231,
+    "identical": 140,
+    "agree_pct": "60.6%",
+    "source_url": "https://github.com/nflverse/nfldata/blob/master/data/closing_lines.csv"
+   },
+   {
+    "season": "2008",
+    "games_compared": 230,
+    "identical": 145,
+    "agree_pct": "63.0%",
+    "source_url": "https://github.com/nflverse/nfldata/blob/master/data/closing_lines.csv"
+   },
+   {
+    "season": "2009",
+    "games_compared": 230,
+    "identical": 126,
+    "agree_pct": "54.8%",
+    "source_url": "https://github.com/nflverse/nfldata/blob/master/data/closing_lines.csv"
+   },
+   {
+    "season": "2010",
+    "games_compared": 227,
+    "identical": 146,
+    "agree_pct": "64.3%",
+    "source_url": "https://github.com/nflverse/nfldata/blob/master/data/closing_lines.csv"
+   },
+   {
+    "season": "2011",
+    "games_compared": 230,
+    "identical": 146,
+    "agree_pct": "63.5%",
+    "source_url": "https://github.com/nflverse/nfldata/blob/master/data/closing_lines.csv"
+   },
+   {
+    "season": "2012",
+    "games_compared": 232,
+    "identical": 149,
+    "agree_pct": "64.2%",
+    "source_url": "https://github.com/nflverse/nfldata/blob/master/data/closing_lines.csv"
+   },
+   {
+    "season": "2013",
+    "games_compared": 230,
+    "identical": 132,
+    "agree_pct": "57.4%",
+    "source_url": "https://github.com/nflverse/nfldata/blob/master/data/closing_lines.csv"
+   },
+   {
+    "season": "2014",
+    "games_compared": 229,
+    "identical": 135,
+    "agree_pct": "59.0%",
+    "source_url": "https://github.com/nflverse/nfldata/blob/master/data/closing_lines.csv"
+   },
+   {
+    "season": "2015",
+    "games_compared": 228,
+    "identical": 152,
+    "agree_pct": "66.7%",
+    "source_url": "https://github.com/nflverse/nfldata/blob/master/data/closing_lines.csv"
+   },
+   {
+    "season": "2016",
+    "games_compared": 222,
+    "identical": 159,
+    "agree_pct": "71.6%",
+    "source_url": "https://github.com/nflverse/nfldata/blob/master/data/closing_lines.csv"
+   },
+   {
+    "season": "2017",
+    "games_compared": 231,
+    "identical": 228,
+    "agree_pct": "98.7%",
+    "source_url": "https://github.com/nflverse/nfldata/blob/master/data/closing_lines.csv"
+   },
+   {
+    "season": "2018",
+    "games_compared": 217,
+    "identical": 215,
+    "agree_pct": "99.1%",
+    "source_url": "https://github.com/nflverse/nfldata/blob/master/data/closing_lines.csv"
+   }
+  ],
+  "median_abs_diff": 0.0,
+  "p90_abs_diff": 0.5,
+  "favourite_flips": 17,
+  "verdict": "PUBLISHED FINDING",
+  "policy": "The two series are NOT interchangeable. They agree exactly on 2011 of 2969 joinable games (67.7%), the median absolute difference is 0.00 points, and 17 games have them on opposite sides of zero. Therefore: the backtest uses ONE series only, `games.spread_line_home` and `games.total_line`, and every table says so. Any edge that appears only when the series is swapped is not an edge."
+ },
+ {
+  "name": "C. dated schedule release vs live schedule facts",
+  "compared": 7,
+  "matched": 7,
+  "pending": 1,
+  "rows": [
+   {
+    "claim": "SA-1",
+    "official": "272 games, 18 weeks",
+    "corpus": "272 games, 18 weeks",
+    "match": "YES",
+    "source_url": "https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced"
+   },
+   {
+    "claim": "SA-2",
+    "official": "Wed 2026-09-09 20:20 ET, NE at SEA",
+    "corpus": "Wednesday 2026-09-09 20:20 NE at SEA",
+    "match": "YES",
+    "source_url": "https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced"
+   },
+   {
+    "claim": "SA-3",
+    "official": "16 games, all division; 3 on Saturday 2027-01-09",
+    "corpus": "16 games, 16 division, 0 Saturday; dates ['2027-01-10']",
+    "match": "PENDING",
+    "note": "The announcement itself says Week 18 dates are assigned after Week 17, so zero scheduled Saturdays is the expected state, not a disagreement.",
+    "source_url": "https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced"
+   },
+   {
+    "claim": "SA-4",
+    "official": "Thu 2026-09-10, LA at SF, Melbourne, neutral",
+    "corpus": "Thursday 2026-09-10 location=Neutral stadium=Melbourne Cricket Ground",
+    "match": "YES",
+    "source_url": "https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced"
+   },
+   {
+    "claim": "SA-5",
+    "official": "BAL at DAL, Rio, neutral",
+    "corpus": "location=Neutral stadium=Maracana Stadium",
+    "match": "YES",
+    "source_url": "https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced"
+   },
+   {
+    "claim": "SA-6",
+    "official": "Mexico City in week 11, neutral",
+    "corpus": "location=Neutral stadium=Estadio Banorte",
+    "match": "YES",
+    "source_url": "https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced"
+   },
+   {
+    "claim": "SA-7",
+    "official": "nine international games",
+    "corpus": "9 neutral-site games",
+    "match": "YES",
+    "source_url": "https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced"
+   }
+  ],
+  "verdict": "PASS"
+ }
+]

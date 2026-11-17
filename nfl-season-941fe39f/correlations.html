@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Correlations · Own5 NFL Season Desk</title>
+<meta name="description" content="Every value with its n and interval">
+<link rel="stylesheet" href="assets/style.css">
+</head><body>
+<header class="top"><div class="wrap">
+<a class="brand" href="index.html">Own5 · NFL Season Desk</a>
+<span class="tag">Every value with its n and interval</span>
+</div></header>
+<nav class="main"><div class="wrap"><a href="index.html">Overview</a><a href="executive-summary.html">Executive summary</a><a href="lines.html">Originated lines</a><a href="model.html">Model</a><a href="leaderboard.html">Leaderboard</a><a href="strategies.html">Strategies &amp; gates</a><a href="luck.html">Removal of luck</a><a href="depth.html">Depth &amp; replacements</a><a href="availability.html">Availability</a><a href="matchup.html">Deficiency matrix</a><a class="on" href="correlations.html">Correlations</a><a href="corpus.html">Corpus</a><a href="price-store.html">Price policy</a><a href="schedule.html">Schedule</a><a href="snapshots.html">Snapshots &amp; alarms</a><a href="changes.html">What changed</a><a href="audit.html">Repo audit</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources</a><a href="methodology.html">Methodology</a></div></nav>
+<main class="wrap">
+
+<h1>Correlations</h1>
+<p class="lede">Every value computed from officially sourced numbers, with n published beside it and a 95%
+interval. Nothing is quoted from an aggregator without saying so, and nothing is published without a
+sample size.</p>
+
+<section class="card "><h2>7 correlations from the pinned corpus</h2><div class="tw"><table class="zebra"><thead><tr><th>ID</th><th>pair</th><th>r</th><th>n</th><th>CI low</th><th>CI high</th><th>window</th><th>source</th></tr></thead><tbody><tr><td>C-01</td><td>closing spread vs actual margin</td><td>0.4317</td><td>7116</td><td>0.4126</td><td>0.4504</td><td>pooled 1999-2026, all games with both values</td><td class="src"><a href="https://github.com/nflverse/nfldata/blob/master/data/games.csv" target="_blank" rel="noopener nofollow" title="https://github.com/nflverse/nfldata/blob/master/data/games.csv">github.com</a></td></tr><tr><td>C-02</td><td>closing total vs actual total</td><td>0.3221</td><td>7116</td><td>0.3011</td><td>0.3427</td><td>pooled 1999-2026, all games with both values</td><td class="src"><a href="https://github.com/nflverse/nfldata/blob/master/data/games.csv" target="_blank" rel="noopener nofollow" title="https://github.com/nflverse/nfldata/blob/master/data/games.csv">github.com</a></td></tr><tr><td>C-03</td><td>closing spread vs closing total</td><td>-0.0106</td><td>7116</td><td>-0.0338</td><td>0.0126</td><td>pooled 1999-2026, all games with both values</td><td class="src"><a href="https://github.com/nflverse/nfldata/blob/master/data/games.csv" target="_blank" rel="noopener nofollow" title="https://github.com/nflverse/nfldata/blob/master/data/games.csv">github.com</a></td></tr><tr><td>C-04</td><td>home rest vs actual margin</td><td>0.0178</td><td>7116</td><td>-0.0054</td><td>0.0410</td><td>pooled 1999-2026, all games with both values</td><td class="src"><a href="https://github.com/nflverse/nfldata/blob/master/data/games.csv" target="_blank" rel="noopener nofollow" title="https://github.com/nflverse/nfldata/blob/master/data/games.csv">github.com</a></td></tr><tr><td>C-05</td><td>rest difference vs actual margin</td><td>0.0336</td><td>7116</td><td>0.0104</td><td>0.0568</td><td>pooled 1999-2026, all games with both values</td><td class="src"><a href="https://github.com/nflverse/nfldata/blob/master/data/games.csv" target="_blank" rel="noopener nofollow" title="https://github.com/nflverse/nfldata/blob/master/data/games.csv">github.com</a></td></tr><tr><td>C-06</td><td>wind vs actual total</td><td>-0.0950</td><td>5026</td><td>-0.1223</td><td>-0.0675</td><td>pooled 1999-2026, all games with both values</td><td class="src"><a href="https://github.com/nflverse/nfldata/blob/master/data/games.csv" target="_blank" rel="noopener nofollow" title="https://github.com/nflverse/nfldata/blob/master/data/games.csv">github.com</a></td></tr><tr><td>C-07</td><td>temperature vs actual total</td><td>0.0058</td><td>5026</td><td>-0.0218</td><td>0.0335</td><td>pooled 1999-2026, all games with both values</td><td class="src"><a href="https://github.com/nflverse/nfldata/blob/master/data/games.csv" target="_blank" rel="noopener nofollow" title="https://github.com/nflverse/nfldata/blob/master/data/games.csv">github.com</a></td></tr></tbody></table></div><p class=note>Pooled across all games where both values exist, 1999-2026. Pooling is a choice: a within-season estimate would answer a slightly different question (does wind matter relative to the league that season) and is not published here.</p></section>
+
+<section class="card "><h2>Reading them</h2>
+<p>Three of the seven have intervals that exclude zero, and each says something usable:</p>
+<ul class="tight">
+<li><strong>Wind and total: r = -0.095, n = 5,026.</strong> More wind, fewer points. The interval is
+-0.122 to -0.068. It is small, and it is already in the closing total, which is why it is not a strategy
+on its own. It is the one fixture fact that shows a real marginal signal.</li>
+<li><strong>Rest difference and margin: r = 0.034, n = 7,116.</strong> Real, tiny, and priced.</li>
+<li><strong>Closing spread and margin: r = 0.432, n = 7,116.</strong> The market's own accuracy, published
+as the benchmark a model would have to beat.</li>
+</ul>
+<p>The two that do not exclude zero are worth naming for what they rule out: temperature has no
+detectable marginal relationship with the total in this sample, and the closing spread is essentially
+uncorrelated with the closing total (r = -0.011), which is why the side and total models can be fitted
+separately.</p></section>
+
+<section class="card "><h2>What is withheld, and why</h2>
+<p>No correlation on this page is computed from a source that is not the pinned corpus or an official
+capture. Where a value would need a feed this environment cannot reach — same-game prop correlation, for
+instance — nothing is published: there is no number, only a question (Q-12).</p></section>
+
+</main>
+<footer class="foot"><div class="wrap">Session <code>941fe39f</code> · built 2026-11-17T01:30:00Z · 80 requirements · 7,058 originated markets · 0 certified strategies · <a href="https://github.com/sassnarep3-star/Own5">repository</a></div></footer>
+</body></html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Methodology · Own5 NFL Season Desk</title>
+<meta name="description" content="The rules that make the numbers checkable">
+<link rel="stylesheet" href="assets/style.css">
+</head><body>
+<header class="top"><div class="wrap">
+<a class="brand" href="index.html">Own5 · NFL Season Desk</a>
+<span class="tag">The rules that make the numbers checkable</span>
+</div></header>
+<nav class="main"><div class="wrap"><a href="index.html">Overview</a><a href="executive-summary.html">Executive summary</a><a href="lines.html">Originated lines</a><a href="model.html">Model</a><a href="leaderboard.html">Leaderboard</a><a href="strategies.html">Strategies &amp; gates</a><a href="luck.html">Removal of luck</a><a href="depth.html">Depth &amp; replacements</a><a href="availability.html">Availability</a><a href="matchup.html">Deficiency matrix</a><a href="correlations.html">Correlations</a><a href="corpus.html">Corpus</a><a href="price-store.html">Price policy</a><a href="schedule.html">Schedule</a><a href="snapshots.html">Snapshots &amp; alarms</a><a href="changes.html">What changed</a><a href="audit.html">Repo audit</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources</a><a class="on" href="methodology.html">Methodology</a></div></nav>
+<main class="wrap">
+
+<h1>Methodology</h1>
+<p class="lede">The rules that make the numbers on this site checkable, written down so they can be
+attacked. If a rule here is wrong, the numbers it produced are wrong in a way a reader can name.</p>
+
+<section class="card "><h2>1. Nothing is inferred</h2>
+<p>Every table row ends in a source link or an explicit UNVERIFIED badge, and the check runs on the
+generated HTML rather than on the CSVs, so a blank that escapes the data layer is still caught. Where a
+value cannot be confirmed — a venue, a designation, a depth slot, a price — the cell is blank. A blank is
+information: it says the official page did not say.</p></section>
+
+<section class="card "><h2>2. The corpus is pinned, not tracked</h2>
+<p>The backtest reads a single tarball of one commit, whose SHA-256 is re-proved on every build. A new
+commit is a new corpus and requires a new pin, recorded with the reason. Tracking a moving branch would
+mean that a number published today could not be reproduced tomorrow.</p></section>
+
+<section class="card "><h2>3. Walk-forward, with the cutoff published</h2>
+<p>Every originated market comes from a fit that used only games strictly before the target week's first
+kickoff. The number of games in the fit and the cutoff date are columns on the row, so a reader does not
+have to trust the claim; they can check it. No market is ever fitted on its own week.</p></section>
+
+<section class="card "><h2>4. Rules are frozen before results exist</h2>
+<p>The fourteen rule texts, the three windows and the eight gate thresholds were written before the
+evaluation code ran. Changing one requires a new commit, which is the new registration. This is why the
+strategy table shows the rule text verbatim rather than a summary.</p></section>
+
+<section class="card "><h2>5. Proper scores, and intervals that respect dependence</h2>
+<p>Ranking is by Brier skill against the de-vigged close. Intervals come from a cluster bootstrap that
+resamples whole weeks, because games in a week share a slate and bets in a game share a result. The
+p-values are Holm-adjusted across every family tested, so the number of trials is priced in rather than
+ignored.</p></section>
+
+<section class="card "><h2>6. De-vig, or drop</h2>
+<p>A probability is taken from a two-sided price pair and normalised, so the vig is removed from the pair
+rather than assigned to one side. Where a pair does not exist, the bet is dropped and the count of dropped
+rows is published. No vig-free probability is ever assumed.</p></section>
+
+<section class="card "><h2>7. Two-sided falsification</h2>
+<p>Every strategy entry carries what would confirm it and what would refute it. A rule that can only be
+confirmed is not a hypothesis; it is a belief.</p></section>
+
+<section class="card "><h2>8. The public/private split</h2>
+<p>The site publishes derived analysis: indices, ratios, model output and links to the official page. The
+raw row-level captures stay in the repository rather than being re-published as a data service. That is a
+deliberate choice about the terms of the source data, not an oversight, and it is why every table links
+out rather than embedding the original rows.</p></section>
+
+<section class="card "><h2>9. Modelling choices are labelled as choices</h2>
+<p>Four constants are not measured: the 365-day half-life, the ridge penalties, the probit's starting
+sigma, and the Pythagorean exponent. Each is published with its value, applied identically to every club
+or every game, and flagged. A choice that is labelled can be argued with; a choice presented as a
+measurement cannot.</p></section>
+
+<section class="card "><h2>10. Reproduce it</h2>
+<pre><code>python3 tools/season_desk_941fe39f/fetch.py --check     # prove the corpus hash
+python3 tools/season_desk_941fe39f/build.py             # rebuild every table and page
+python3 tools/season_desk_941fe39f/verify.py            # re-check every published row
+python3 -m unittest discover -s tests -p "test_season_desk*"</code></pre>
+<p>No network access is needed for the rebuild: the corpus is committed, and every official capture is a
+JSON file with its clock time and hash.</p></section>
+
+</main>
+<footer class="foot"><div class="wrap">Session <code>941fe39f</code> · built 2026-11-17T01:30:00Z · 80 requirements · 7,058 originated markets · 0 certified strategies · <a href="https://github.com/sassnarep3-star/Own5">repository</a></div></footer>
+</body></html>

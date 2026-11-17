@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Executive summary · Own5 NFL Season Desk</title>
+<meta name="description" content="Findings, limits and the highest-value unblock">
+<link rel="stylesheet" href="assets/style.css">
+</head><body>
+<header class="top"><div class="wrap">
+<a class="brand" href="index.html">Own5 · NFL Season Desk</a>
+<span class="tag">Findings, limits and the highest-value unblock</span>
+</div></header>
+<nav class="main"><div class="wrap"><a href="index.html">Overview</a><a class="on" href="executive-summary.html">Executive summary</a><a href="lines.html">Originated lines</a><a href="model.html">Model</a><a href="leaderboard.html">Leaderboard</a><a href="strategies.html">Strategies &amp; gates</a><a href="luck.html">Removal of luck</a><a href="depth.html">Depth &amp; replacements</a><a href="availability.html">Availability</a><a href="matchup.html">Deficiency matrix</a><a href="correlations.html">Correlations</a><a href="corpus.html">Corpus</a><a href="price-store.html">Price policy</a><a href="schedule.html">Schedule</a><a href="snapshots.html">Snapshots &amp; alarms</a><a href="changes.html">What changed</a><a href="audit.html">Repo audit</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources</a><a href="methodology.html">Methodology</a></div></nav>
+<main class="wrap">
+
+<h1>Executive summary</h1>
+<p class="lede">What this desk found, what it could not find, and what it would take to change the
+answer. Every number below is computed by the build; none is transcribed from elsewhere.</p>
+
+<section class="card "><h2>1. The headline</h2>
+<p><strong>We originated 7,058 NFL markets and could not beat the closing line.</strong>
+The pre-registered rules were frozen before evaluation, graded on a holdout the fitting never saw, and
+14 of the 14 families cleared the gates. That is the designed outcome for a
+first honest pass, and it is stated here rather than buried.</p>
+<p>The measured size of the gap: our side error is 10.71 points against the
+market's 10.27; our total error 10.93 against
+10.63. On the holdout, residual alpha is +0.0019
+(CI -0.047 to +0.051, n=1,615).</p></section>
+
+<section class="card "><h2>2. What was built and what it proves</h2>
+<ul class="tight">
+<li><strong>A pinned corpus.</strong> 7,116 graded regular-season games, 1999-2026, from a
+single commit of the nflverse repository, fetched as one tarball whose SHA-256 is re-proved on every
+build. 28 seasons, 46,812 closing-line observations, and every result recomputed from the
+scores rather than trusted. <a href="corpus.html">Corpus</a></li>
+<li><strong>Origination in the required order.</strong> Side, then total, then moneyline, walk-forward,
+with the fit cutoff recorded on every row so a reader can prove no future game entered a forecast.
+<a href="lines.html">Originated lines</a></li>
+<li><strong>Three columns, always.</strong> Model fair line, market line and the difference, side by side.
+<a href="lines.html">Originated lines</a></li>
+<li><strong>14 pre-registered strategies</strong> with frozen rule text, three windows
+(train, validation, holdout), eight gates, and a two-sided "what would change our mind" field.
+<a href="strategies.html">Strategies</a></li>
+<li><strong>Signal and staking kept apart.</strong> The signal board ranks by Brier skill with a
+cluster-bootstrap interval; the staking board is empty because no strategy is certified. A lucky staking
+run has nowhere to appear. <a href="leaderboard.html">Leaderboard</a></li>
+<li><strong>The removal-of-luck panel</strong> for all 32 clubs: expected versus actual wins, one-score
+record, and the power calculation that says how many bets would be needed to prove a real edge.
+<a href="luck.html">Removal of luck</a></li>
+<li><strong>Availability as a first-class dataset.</strong> Depth from official club charts only, with
+shared slots stored as groups, jersey numbers stripped and the raw cell kept, and the replacement's
+<em>depth rank</em> published rather than the bare fact of a replacement. <a href="depth.html">Depth</a></li>
+<li><strong>An append-only capture ledger</strong> with SHA-256 per capture, a clock time per read, a
+schema contract per parser, a freshness alarm, and point-in-time replay.
+<a href="snapshots.html">Snapshots</a></li>
+<li><strong>80 requirement rows</strong>, 18 questions and
+16 reviewable suggestions. Nothing in the suggestions register has been implemented
+without being named here. <a href="questions.html">Questions</a> ·
+<a href="suggestions.html">Suggestions</a></li>
+</ul></section>
+
+<section class="card "><h2>3. The three findings worth acting on</h2>
+<ol class="tight">
+<li><strong>The market is the benchmark, and it wins.</strong> Not one of the nine non-control families
+shows positive Brier skill against the de-vigged close on the holdout. The best of them is
+<code>S10</code> at
+-0.0921. Any future strategy should be judged on this
+axis first, because it is the axis that cannot be gamed by staking patterns.</li>
+<li><strong>The two price series are not interchangeable.</strong> They agree exactly on
+2,011 of 2,969 joinable games and flip the favourite on 17 of them.
+Publishing an ROI without naming the series would be publishing an unreproducible number.
+<a href="price-store.html">Price policy</a></li>
+<li><strong>Availability is the unexplored edge, and it is blocked.</strong> If anything on this site is
+likely to beat a closing line, it is information about who is actually playing. Every route to that
+information that this environment can reach is exhausted: the inactives URL 404s, no game book has been
+read, and the public snap-count files sit behind a host the sandbox cannot reach. That is the single
+highest-value unblock. <a href="questions.html">Questions</a></li>
+</ol></section>
+
+<section class="card "><h2>4. Requirements, by status</h2>
+<div class="kpis">
+<div class="kpi ok"><div class="kv">50</div><div class="kl">met</div><div class=kn>with the evidence linked on the landing table</div></div>
+<div class="kpi warn"><div class="kv">21</div><div class="kl">partial</div><div class=kn>a working version exists; the clean version is blocked</div></div>
+<div class="kpi bad"><div class="kv">9</div><div class="kl">blocked</div><div class=kn>no honest version is possible from the reachable sources</div></div>
+<div class="kpi muted"><div class="kv">16</div><div class="kl">irregularities published</div><div class=kn>each with a source link</div></div>
+</div>
+<p>The blocked set is worth reading in full: it is 9 items and each one names what would clear
+it. <a href="index.html">Back to the readiness table</a>.</p></section>
+
+<section class="card "><h2>5. What this desk does not claim</h2>
+<ul class="tight">
+<li>It does not claim an edge. The measured alpha is indistinguishable from zero on the holdout.</li>
+<li>It does not claim the club depth charts are the game-day lineup. Clubs label them "unofficial".</li>
+<li>It does not claim a replacement played. It claims the club named him at that rank on that day.</li>
+<li>It does not claim 2026 is a holdout. 2026 has no graded bets in this desk.</li>
+<li>It does not rank anything by ROI or win rate, and the leaderboard holds zero backtest rows.</li>
+</ul></section>
+
+</main>
+<footer class="foot"><div class="wrap">Session <code>941fe39f</code> · built 2026-11-17T01:30:00Z · 80 requirements · 7,058 originated markets · 0 certified strategies · <a href="https://github.com/sassnarep3-star/Own5">repository</a></div></footer>
+</body></html>

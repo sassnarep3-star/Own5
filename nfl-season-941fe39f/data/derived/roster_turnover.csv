@@ -1,0 +1,4 @@
+player,from_team,to_team,transaction_date,appears_on_chart_of,slot,depth_capture_utc,consistent,source_transaction,source_depth
+Ryan Neuzil,ATL,BAL,2026-11-10,BAL,Offense LG rank 2,2026-11-17T01:12:00Z,YES,https://www.nfl.com/transactions/,https://www.baltimoreravens.com/team/depth-chart
+Ryan Neuzil,ATL,BAL,2026-11-10,BAL,Offense C rank 2,2026-11-17T01:12:00Z,YES,https://www.nfl.com/transactions/,https://www.baltimoreravens.com/team/depth-chart
+Jacoby Brissett,AZ,BAL,2026-11-06,BAL,Offense QB rank 1,2026-11-17T01:12:00Z,YES,https://www.nfl.com/transactions/,https://www.baltimoreravens.com/team/depth-chart
