@@ -1,0 +1,327 @@
+team,player,position,injury,practice_status,game_status,week,first_read_utc,second_read_utc,delta,source_url
+WAS,John Bates,TE,,Full Participation in Practice,,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+WAS,Treylon Burks,WR,,Did Not Participate In Practice,,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+WAS,Jayden Daniels,QB,,Full Participation in Practice,,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+WAS,Matt Gulbin,C,,Full Participation in Practice,,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+WAS,Chig Okonkwo,TE,,Full Participation in Practice,,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+WAS,Lucas Patrick,C,Concussion,Did Not Participate In Practice,Out,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+WAS,Amik Robertson,CB,,Limited Participation in Practice,,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+WAS,Shy Tuttle,DT,,Full Participation in Practice,,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+WAS,Colson Yankoff,TE,Knee,Did Not Participate In Practice,Out,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+NYG,Abdul Carter,LB,,Full Participation in Practice,,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+NYG,Jermaine Eluemunor,T,,Full Participation in Practice,,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+NYG,Malik Harrison,LB,Groin,Limited Participation in Practice,Questionable,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+NYG,Colton Hood,CB,,Full Participation in Practice,,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+NYG,Theo Johnson,TE,,Full Participation in Practice,,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+NYG,Charlie Jones,WR,,Full Participation in Practice,,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+NYG,J.J. McCarthy,QB,,Full Participation in Practice,,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+NYG,Darnell Mooney,WR,,Full Participation in Practice,,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+NYG,Malik Nabers,WR,,Full Participation in Practice,,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+NYG,Cam Skattebo,RB,,Full Participation in Practice,,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+NYG,Andrew Thomas,T,,Full Participation in Practice,,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+NE,Ben Brown,C,Knee,Did Not Participate In Practice,Out,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+NE,A.J. Brown,WR,"Ankle, Knee",Limited Participation in Practice,Questionable,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+NE,Kevin Byard,S,Chest,Full Participation in Practice,Questionable,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+NE,Carlton Davis III,CB,Knee,Did Not Participate In Practice,Out,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+NE,Reggie Gilliam,FB,Knee,Limited Participation in Practice,Questionable,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+NE,TreVeyon Henderson,RB,Illness,Did Not Participate In Practice,Out,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+NE,Hunter Henry,TE,,Limited Participation in Practice,,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+NE,Cameron Latu,TE,Back,Limited Participation in Practice,Questionable,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+NE,Drake Maye,QB,,Full Participation in Practice,,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+NE,Morgan Moses,T,,Full Participation in Practice,,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+NE,Walter Rouse,T,Concussion,Limited Participation in Practice,Questionable,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+NE,Brenden Schooler,S,Hamstring,Limited Participation in Practice,Questionable,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+NE,Rhamondre Stevenson,RB,Knee,Limited Participation in Practice,Questionable,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+NE,Greg Van Roten,G,Hamstring,Full Participation in Practice,Questionable,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+NE,Charles Woods,CB,Hamstring,Full Participation in Practice,Questionable,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+DET,Brian Branch,S,,Full Participation in Practice,,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+DET,Jared Goff,QB,,Full Participation in Practice,,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+DET,Kerby Joseph,S,Knee,Did Not Participate In Practice,Out,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+DET,Cade Mays,C,Ankle,Did Not Participate In Practice,Out,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+DET,D.J. Reed,CB,Hip,Did Not Participate In Practice,Out,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+DET,Jacob Saylors,RB,,Full Participation in Practice,,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+DET,Amon-Ra St. Brown,WR,Rib,Limited Participation in Practice,Questionable,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+DET,Sione Vaki,RB,Ankle,Limited Participation in Practice,Questionable,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+DET,DJ Wonnum,DE,,Full Participation in Practice,,10,2026-11-15T23:27:00Z,2026-11-17T00:00:00Z,no change between the two reads,https://www.nfl.com/injuries/league/2026/reg10
+KC,Jeffrey Bassa,LB,,Full Participation in Practice,,10,2026-11-15T23:27:00Z,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+KC,Mansoor Delane,CB,Shoulder,Full Participation in Practice,Questionable,10,2026-11-15T23:27:00Z,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+KC,Justin Fields,QB,,Full Participation in Practice,,10,2026-11-15T23:27:00Z,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+KC,Jaden Hicks,S,,Full Participation in Practice,,10,2026-11-15T23:27:00Z,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+KC,Travis Kelce,TE,,Full Participation in Practice,,10,2026-11-15T23:27:00Z,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+KC,Patrick Mahomes,QB,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+KC,Jaylon Moore,T,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+KC,Omarr Norman-Lott,DT,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+KC,Jaydn Ott,RB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+KC,Rashee Rice,WR,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+KC,Peter Woods,DT,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+KC,Xavier Worthy,WR,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+ATL,Zachariah Branch,WR,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+ATL,Kendal Daniels,LB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+ATL,Divine Deablo,LB,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+ATL,Gervon Dexter Sr.,DT,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+ATL,James Pearce Jr.,DE,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+ATL,Za'Darius Smith,DE,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+ATL,Jawaan Taylor,T,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+ATL,Cameron Thomas,DE,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+ATL,Josh Woods,LB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+MIN,Blake Cashman,LB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+MIN,T.J. Hockenson,TE,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+MIN,Tyrion Ingram-Dawkins,DT,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+MIN,Theo Jackson,S,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+MIN,Jauan Jennings,WR,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+MIN,Kyler Murray,QB,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+MIN,Kyle Van Noy,LB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+MIN,Jay Ward,S,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+MIN,Carson Wentz,QB,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+GB,Aaron Banks,G,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+GB,Chris Brooks,RB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+GB,Javon Bullard,S,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+GB,Zaire Franklin,LB,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+GB,Travis Glover,G,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+GB,Ty'Ron Hopper,LB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+GB,Josh Jacobs,RB,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+GB,Bo Melton,WR,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+GB,Skyy Moore,WR,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+GB,Micah Parsons,LB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+GB,Sean Rhyan,C,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+GB,Trey Smack,K,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+GB,Lukas Van Ness,LB,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+GB,Josh Whyle,TE,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+GB,Savion Williams,WR,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+GB,Kevin Zeitler,G,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+JAX,Jessie Bates,S,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+JAX,Ezra Cleveland,G,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+JAX,Branson Combs,LB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+JAX,Jordan Davis,DT,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+JAX,BJ Green II,DE,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+JAX,Robert Hainsey,C,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+JAX,Antonio Johnson,S,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+JAX,Jakobi Meyers,WR,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+JAX,Chris Rodriguez Jr.,RB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+JAX,Bhayshul Tuten,RB,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+JAX,Travon Walker,DE,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+TEN,Cody Barton,LB,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+TEN,John Franklin-Myers,DE,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+TEN,Marcus Harris,CB,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+TEN,Anthony Hill Jr.,LB,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+TEN,Jaylon Jones,CB,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+TEN,JC Latham,T,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+TEN,Tony Pollard,RB,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+TEN,Peter Skoronski,G,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+TEN,Tyjae Spears,RB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+TEN,Carnell Tate,WR,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+TEN,Tommy Townsend,P,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+TEN,Kevin Winston Jr.,S,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+BUF,Alec Anderson,G,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+BUF,Christian Benford,CB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+BUF,Spencer Brown,T,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+BUF,Dion Dawkins,T,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+BUF,Sam Franklin Jr.,S,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+BUF,Greg Gaines,DT,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+BUF,Jordan Hancock,CB,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+BUF,Dalton Kincaid,TE,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+BUF,Connor McGovern,C,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+BUF,Ar'maj Reed-Adams,G,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+BUF,T.J. Sanders,DE,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+BUF,Tyrell Shavers,WR,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+NYJ,Jarvis Brownlee Jr.,CB,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+NYJ,Omar Cooper Jr.,WR,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+NYJ,Joseph Ossai,DE,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+NYJ,VJ Payne,S,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+NYJ,Harrison Phillips,DT,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+NYJ,Trevin Wallace,LB,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+NYJ,Garrett Wilson,WR,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+NYJ,Nahshon Wright,CB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+MIA,Tucker Addington,LS,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+MIA,Kaytron Allen,RB,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+MIA,Darrell Baker Jr.,CB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+MIA,Chris Bell,WR,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+MIA,Aaron Brewer,C,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+MIA,Malik Herring,DE,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+MIA,Will Kacmarek,TE,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+MIA,Michael Taaffe,S,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+MIA,Dante Trader Jr.,S,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+MIA,Jared Wayne,WR,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+MIA,Jaylen Wright,RB,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+IND,Mo Alie-Cox,TE,Groin,Did Not Participate In Practice,Out,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+IND,CJ Allen,LB,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+IND,Jaylon Carlies,LB,Neck,Did Not Participate In Practice,Out,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+IND,Akeem Davis-Gaither,LB,Knee,Did Not Participate In Practice,Out,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+IND,A.J. Haulcy,S,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+IND,Arden Key,DE,Hamstring,Full Participation in Practice,Questionable,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+IND,Luke Rhodes,LS,Hamstring,Did Not Participate In Practice,Out,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+IND,Grover Stewart,DT,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+IND,Jonathan Taylor,RB,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+IND,Jerry Tillery,DT,Calf,Did Not Participate In Practice,Out,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+IND,Jalen Travis,T,Knee,Did Not Participate In Practice,Out,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+IND,Justin Walley,CB,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+IND,Charvarius Ward,CB,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+CAR,Jonathon Brooks,RB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+CAR,Brady Christensen,G,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+CAR,Trevor Etienne,RB,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+CAR,Chuba Hubbard,RB,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+CAR,Lee Hunter,DT,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+CAR,Mike Jackson,CB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+CAR,Will Lee III,CB,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+CAR,Xavier Legette,WR,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+CAR,Damien Lewis,G,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+CAR,Bobby Okereke,LB,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+CAR,Jaelan Phillips,LB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+CAR,Torricelli Simpkins III,G,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+NO,Kelvin Banks Jr.,T,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+NO,CJ Donaldson,RB,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+NO,David Edwards,G,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+NO,Martin Emerson,CB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+NO,Travis Etienne,RB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+NO,Noah Fant,TE,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+NO,Taliese Fuaga,T,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+NO,Alvin Kamara,RB,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+NO,Erik McCoy,C,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+NO,Christen Miller,DT,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+NO,Asim Richards,T,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+NO,Quincy Riley,CB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+HOU,Azeez Al-Shaair,LB,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+HOU,Will Anderson Jr.,DE,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+HOU,Reed Blankenship,S,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+HOU,Trent Brown,T,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+HOU,Tank Dell,WR,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+HOU,Blake Fisher,T,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+HOU,Marvin Harrison Jr.,WR,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+HOU,Jacob Hummel,LB,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+HOU,Danielle Hunter,DE,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+HOU,Brevin Jordan,TE,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+HOU,Woody Marks,RB,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+HOU,David Montgomery,RB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+HOU,Keylan Rutledge,G,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+HOU,Jaylin Smith,CB,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+HOU,Wyatt Teller,G,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+HOU,Tommy Togiai,DT,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+CLE,Austin Barber,T,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+CLE,Denzel Boston,WR,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+CLE,Michael Burton,FB,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+CLE,Maliek Collins,DT,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+CLE,Harold Fannin Jr.,TE,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+CLE,Ronnie Hickman Jr.,S,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+CLE,Tytus Howard,T,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+CLE,Elgton Jenkins,C,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+CLE,Donovan McMillon,S,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+CLE,Carson Schwesinger,LB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+CLE,Denzel Ward,CB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+CLE,Quincy Williams,LB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+LAR,Davis Allen,TE,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+LAR,Steve Avila,G,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+LAR,Joe Cardona,LS,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+LAR,Kam Curl,S,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+LAR,Terrance Ferguson,TE,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+LAR,Myles Garrett,LB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+LAR,Tyler Higbee,TE,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+LAR,Trent McDuffie,CB,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+LAR,Puka Nacua,WR,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+LAR,Colby Parkinson,TE,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+LAR,Matthew Stafford,QB,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+ARI,Budda Baker,S,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+ARI,Zachary Carter,DT,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+ARI,Hjalte Froholdt,C,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+ARI,Jon Gaines II,G,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+ARI,Bam Knight,RB,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+ARI,Hunter Long,TE,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+ARI,Roy Lopez,DT,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+ARI,Max Melton,CB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+ARI,Darius Robinson,DT,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+ARI,Isaac Seumalo,G,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+ARI,Dante Stills,DT,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+ARI,Josh Sweat,LB,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+ARI,Jayden Williams,T,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+ARI,Mack Wilson,LB,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+ARI,Andrew Wingard,S,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+SEA,AJ Barner,TE,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+SEA,Anthony Bradford,G,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+SEA,Charles Cross,T,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+SEA,Sam Darnold,QB,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+SEA,Derick Hall,LB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+SEA,Drew Lock,QB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+SEA,Quenton Nelson,G,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+SEA,Uchenna Nwosu,LB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+SEA,Patrick O'Connell,LB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+SEA,Connor O'Toole,LB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+SEA,Brandon Pili,DT,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+SEA,Jarran Reed,DT,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+SEA,Rashid Shaheed,WR,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+SEA,Jaxon Smith-Njigba,WR,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+SEA,Leonard Williams,DT,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+LV,Thomas Booker,DT,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+LV,Foley Fatukasi,DT,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+LV,Ian Thomas,TE,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+LV,Trey Zuhn III,C,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+SF,Mike Evans,WR,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+SF,Renardo Green,CB,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+SF,Dre Greenlaw,LB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+SF,Nate Hobbs,CB,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+SF,Deommodore Lenoir,CB,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+SF,Christian McCaffrey,RB,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+SF,Siran Neal,S,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+SF,Demarcus Robinson,WR,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+SF,Deebo Samuel Sr.,WR,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+SF,Upton Stout,CB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+SF,C.J. West,DT,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+SF,Trent Williams,T,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+DAL,Jonathan Bullard,DT,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+DAL,Alijah Clark,S,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+DAL,Donovan Ezeiruaku,LB,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+DAL,Jake Ferguson,TE,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+DAL,Tyler Goodson,RB,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+DAL,Malik Hooker,S,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+DAL,Marist Liufau,LB,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+DAL,P.J. Locke,S,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+DAL,Von Miller,LB,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+DAL,Jonathan Mingo,WR,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+DAL,Devin Moore,CB,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+DAL,DeMarvion Overshown,LB,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+DAL,George Pickens,WR,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+DAL,Joey Porter Jr.,CB,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+DAL,Luke Schoonmaker,TE,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+DAL,Brevyn Spann-Ford,TE,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+DAL,Juanyeh Thomas,S,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+DAL,KaVontae Turpin,WR,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+PIT,Brandin Echols,CB,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+PIT,DeShon Elliott,S,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+PIT,Derrick Harmon,DT,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+PIT,Cameron Heyward,DT,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+PIT,Ben Skowronek,WR,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+PIT,Doneiko Slaughter,CB,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+PIT,Darnell Washington,TE,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+PIT,T.J. Watt,LB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+CIN,Jonathan Allen,DT,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+CIN,Jalen Davis,CB,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+CIN,Kyle Dugger,S,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+CIN,Dylan Fairchild,G,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+CIN,B.J. Hill,DT,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+CIN,Andrei Iosivas,WR,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+CIN,Brian Parker II,G,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+CIN,DJ Turner II,CB,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+LAC,Kayode Awosika,G,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+LAC,Justin Eboigbe,DE,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+LAC,Alex Harkey,G,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+LAC,Tre Harris,WR,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+LAC,Cam Hart,CB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+LAC,Daiyan Henley,LB,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+LAC,Deane Leonard,CB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+LAC,Khalil Mack,LB,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+LAC,Ladd McConkey,WR,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+LAC,Keaton Mitchell,RB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+LAC,David Njoku,TE,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+LAC,Denzel Perryman,LB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+LAC,Trey Pipkins,T,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+LAC,Rodney Shelley,CB,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+LAC,Branson Taylor,G,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+LAC,Brenen Thompson,WR,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+LAC,Isas Waxter,CB,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+LAC,Kendall Williamson,S,,Did Not Participate In Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+BAL,Rasheen Ali,RB,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+BAL,Rashod Bateman,WR,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+BAL,Kyle Hamilton,S,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+BAL,Jaylinn Hawkins,S,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+BAL,Matthew Hibner,TE,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+BAL,Olaivavega Ioane,G,,Limited Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+BAL,Adam Randall,RB,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10
+BAL,Nate Wiggins,CB,,Full Participation in Practice,,10,2026-11-13,,not covered by the second read (chunk 0 covers 5 clubs),https://www.nfl.com/injuries/league/2026/reg10

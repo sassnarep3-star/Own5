@@ -1,0 +1,6 @@
+clause,rule,status,reason
+P1,No backtest is published until a price source is named and its storage terms are recorded,FROZEN,R-20 requires the policy before the first backtest
+P2,"Every price row stores the source URL, the retrieval UTC timestamp and a SHA-256 of the raw capture",FROZEN,provenance; matches the capture policy used for official pages
+P3,Opening price is the first capture after publication; closing price is the last capture before kickoff,FROZEN,CLV is graded against the close
+P4,"If no price can be captured, the market column stays blank and the row is flagged; it is never filled in",FROZEN,the brief's verification rule
+P5,"No residual, no CLV and no ROI figure is published until P1-P4 hold for that market",FROZEN,prevents publishing a number that looks like an edge but is an artefact

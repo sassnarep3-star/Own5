@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suggestions · Own5 NFL Decision Console</title>
+<meta name="description" content="Originate the line, prove the skill, publish the gap. Every row sourced or flagged.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="dot"></span>Own5 <em>NFL Decision Console</em></a>
+  <button class="navtoggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">Menu</button>
+  <nav class="nav" id="nav"><a class="navlink" href="index.html">Overview</a>
+<a class="navlink" href="executive-summary.html">Executive summary</a>
+<a class="navlink active" href="suggestions.html">Suggestions</a>
+<a class="navlink" href="questions.html">Questions</a>
+<a class="navlink" href="requirements.html">Decision readiness</a>
+<a class="navlink" href="lines.html">Originated lines</a>
+<a class="navlink" href="strategies.html">Strategies</a>
+<a class="navlink" href="leaderboard.html">Leaderboard</a>
+<a class="navlink" href="injuries.html">Injuries</a>
+<a class="navlink" href="depth.html">Depth charts</a>
+<a class="navlink" href="deficiency.html">Deficiency matrix</a>
+<a class="navlink" href="correlations.html">Correlations</a>
+<a class="navlink" href="luck.html">Luck removal</a>
+<a class="navlink" href="gates.html">Gates</a>
+<a class="navlink" href="audit.html">Repo audit</a>
+<a class="navlink" href="sources.html">Sources</a>
+<a class="navlink" href="flagged.html">Flagged</a></nav>
+</header>
+<main class="wrap">
+  <div class="pagehead">
+    <h1>Suggestions</h1>
+    <p>Reviewable paths. Nothing here is implemented until a decision is recorded.</p>
+  </div>
+
+<div class="panel ok">
+<h3 style="margin-top:0">How to use this page</h3>
+<p>Every suggestion below is a <strong>proposed path, not a decision and not an
+implementation</strong>. Each one carries the problem it solves, two or three
+options, a recommendation, and an explicit "what would change the call" so the
+recommendation can be falsified rather than argued about.</p>
+<p>Use the buttons on each card to record your choice. They are stored in this
+browser only - there is no backend, no account and no network call - and you can
+export the whole set to CSV with the button at the bottom. Nothing in this
+repository changes until a decision is recorded and implemented deliberately in a
+later session.</p>
+<p class="fine">Decision status of every item today: <strong>PROPOSED</strong>.
+Zero suggestions have been implemented in this session.</p>
+</div>
+<div class="filters"><input data-filter="#suggwrap" placeholder="Filter suggestions (try: data, markets, competition)"></div><div id="suggwrap">
+<div class="suggestion" id="S-01" data-sugg="S-01">
+<h3>S-01 · Capture official inactives from club news feeds <span class="pill">Data</span> <span class="pill warn">PROPOSED</span></h3>
+<div class="kv">
+<div class="k">Problem</div><div>The availability graph is blocked because no inactive list has ever been read, yet the route is now proven</div>
+<div class="k">Recommendation</div><div><strong>Option B, piloted on 3 clubs for one week before scaling to 32</strong></div>
+<div class="k">Effort</div><div>medium</div>
+<div class="k">Linked question</div><div><a href="questions.html#Q-03">Q-03</a></div>
+<div class="k">Evidence</div><div>source S-06</div>
+</div>
+<div class="optgrid">
+<div class="opt"><div class="t">Option A</div>Ad hoc: fetch each club&#x27;s Week N inactives article by hand each week</div>
+<div class="opt"><div class="t">Option B</div>Scheduled: a daily job that lists club news feeds and stores any article whose title matches inactives</div>
+<div class="opt"><div class="t">Option C</div>Skip inactives and treat the game designation as the outcome</div>
+</div>
+<div class="panel warn" style="margin:10px 0"><strong>What would change the call:</strong> If fewer than 20 of 32 clubs publish inactives within 90 minutes of kickoff, fall back to A</div>
+<div class="decide"><strong>Record a decision:</strong>
+<button class="btn" data-dec="APPROVED">Approved</button>
+<button class="btn" data-dec="REJECTED">Rejected</button>
+<button class="btn" data-dec="DEFERRED">Deferred</button>
+<span class="fine">stored in this browser only</span>
+<a class="badge b-governance" href="suggestions.html#S-16" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a>
+</div></div>
+<div class="suggestion" id="S-02" data-sugg="S-02">
+<h3>S-02 · Capture official snap counts from club game books <span class="pill">Data</span> <span class="pill warn">PROPOSED</span></h3>
+<div class="kv">
+<div class="k">Problem</div><div>Depth is currently modelled from club charts, which several clubs label unofficial; the brief demands playing time</div>
+<div class="k">Recommendation</div><div><strong>Option A, piloted on one game book; if it carries no snap counts, do C and flag it</strong></div>
+<div class="k">Effort</div><div>medium</div>
+<div class="k">Linked question</div><div><a href="questions.html#Q-04">Q-04</a></div>
+<div class="k">Evidence</div><div>source S-07</div>
+</div>
+<div class="optgrid">
+<div class="opt"><div class="t">Option A</div>Scrape the club Gamebook article for participation</div>
+<div class="opt"><div class="t">Option B</div>Use the NFL game book PDF endpoint if one is reachable</div>
+<div class="opt"><div class="t">Option C</div>Model depth from charts and publish a caveat on every row</div>
+</div>
+<div class="panel warn" style="margin:10px 0"><strong>What would change the call:</strong> If no official snap-count source exists for any club, formally adopt C and record the limitation on the deficiency page</div>
+<div class="decide"><strong>Record a decision:</strong>
+<button class="btn" data-dec="APPROVED">Approved</button>
+<button class="btn" data-dec="REJECTED">Rejected</button>
+<button class="btn" data-dec="DEFERRED">Deferred</button>
+<span class="fine">stored in this browser only</span>
+<a class="badge b-governance" href="suggestions.html#S-16" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a>
+</div></div>
+<div class="suggestion" id="S-03" data-sugg="S-03">
+<h3>S-03 · Automate the injury-report capture on a Wednesday-Friday cadence <span class="pill">Data</span> <span class="pill warn">PROPOSED</span></h3>
+<div class="kv">
+<div class="k">Problem</div><div>Two reads exist, both made by hand, so the injury series cannot be replayed</div>
+<div class="k">Recommendation</div><div><strong>Option A; it is cheap and it is the only route that also builds the archive the brief requires</strong></div>
+<div class="k">Effort</div><div>low</div>
+<div class="k">Linked question</div><div><a href="questions.html#Q-19">Q-19</a></div>
+<div class="k">Evidence</div><div>source S-05</div>
+</div>
+<div class="optgrid">
+<div class="opt"><div class="t">Option A</div>Write a scheduled job that fetches the league injury page daily and stores raw text with a hash</div>
+<div class="opt"><div class="t">Option B</div>Pay a data vendor for a historical designation feed</div>
+<div class="opt"><div class="t">Option C</div>Keep manual reads and accept that the series is incomplete</div>
+</div>
+<div class="panel warn" style="margin:10px 0"><strong>What would change the call:</strong> If the league blocks automated access, escalate to B</div>
+<div class="decide"><strong>Record a decision:</strong>
+<button class="btn" data-dec="APPROVED">Approved</button>
+<button class="btn" data-dec="REJECTED">Rejected</button>
+<button class="btn" data-dec="DEFERRED">Deferred</button>
+<span class="fine">stored in this browser only</span>
+<a class="badge b-governance" href="suggestions.html#S-16" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a>
+</div></div>
+<div class="suggestion" id="S-04" data-sugg="S-04">
+<h3>S-04 · Resolve the Houston depth chart <span class="pill">Data</span> <span class="pill warn">PROPOSED</span></h3>
+<div class="kv">
+<div class="k">Problem</div><div>One of 32 clubs is invisible to the deficiency matrix</div>
+<div class="k">Recommendation</div><div><strong>Try A then B; only use C if both fail. Never transcribe the image by eye</strong></div>
+<div class="k">Effort</div><div>low</div>
+<div class="k">Linked question</div><div><a href="questions.html#Q-08">Q-08</a></div>
+<div class="k">Evidence</div><div>source S-08</div>
+</div>
+<div class="optgrid">
+<div class="opt"><div class="t">Option A</div>Test the club&#x27;s JSON endpoints for a structured chart</div>
+<div class="opt"><div class="t">Option B</div>Use the league&#x27;s own depth endpoint if it exists</div>
+<div class="opt"><div class="t">Option C</div>Ask the club&#x27;s media-relations desk for a structured feed</div>
+</div>
+<div class="panel warn" style="margin:10px 0"><strong>What would change the call:</strong> If a structured source appears for Houston, drop C immediately</div>
+<div class="decide"><strong>Record a decision:</strong>
+<button class="btn" data-dec="APPROVED">Approved</button>
+<button class="btn" data-dec="REJECTED">Rejected</button>
+<button class="btn" data-dec="DEFERRED">Deferred</button>
+<span class="fine">stored in this browser only</span>
+<a class="badge b-governance" href="suggestions.html#S-16" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a>
+</div></div>
+<div class="suggestion" id="S-05" data-sugg="S-05">
+<h3>S-05 · Capture the league transactions and reserve lists <span class="pill">Data</span> <span class="pill warn">PROPOSED</span></h3>
+<div class="kv">
+<div class="k">Problem</div><div>Not listed cannot be distinguished from healthy, and stale depth rows cannot be proven stale</div>
+<div class="k">Recommendation</div><div><strong>A, then join to depth rows to flag staleness automatically</strong></div>
+<div class="k">Effort</div><div>low</div>
+<div class="k">Linked question</div><div><a href="questions.html#Q-09">Q-09</a></div>
+<div class="k">Evidence</div><div>source S-09</div>
+</div>
+<div class="optgrid">
+<div class="opt"><div class="t">Option A</div>Fetch the league transactions page daily and diff against depth rows</div>
+<div class="opt"><div class="t">Option B</div>Track reserve moves from club news pages only</div>
+<div class="opt"><div class="t">Option C</div>Do nothing and label every absence as unknown</div>
+</div>
+<div class="panel warn" style="margin:10px 0"><strong>What would change the call:</strong> If the transactions page does not carry reserve designations, add B</div>
+<div class="decide"><strong>Record a decision:</strong>
+<button class="btn" data-dec="APPROVED">Approved</button>
+<button class="btn" data-dec="REJECTED">Rejected</button>
+<button class="btn" data-dec="DEFERRED">Deferred</button>
+<span class="fine">stored in this browser only</span>
+<a class="badge b-governance" href="suggestions.html#S-16" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a>
+</div></div>
+<div class="suggestion" id="S-06" data-sugg="S-06">
+<h3>S-06 · Decide the price-data policy before the first backtest <span class="pill">Markets</span> <span class="pill warn">PROPOSED</span></h3>
+<div class="kv">
+<div class="k">Problem</div><div>A residual against the market cannot be published because no market price exists</div>
+<div class="k">Recommendation</div><div><strong>A then B: one operator first, consensus second, because the decomposition in R-60 needs the margin</strong></div>
+<div class="k">Effort</div><div>medium</div>
+<div class="k">Linked question</div><div><a href="questions.html#Q-01">Q-01</a></div>
+<div class="k">Evidence</div><div>flag F-01</div>
+</div>
+<div class="optgrid">
+<div class="opt"><div class="t">Option A</div>Capture one licensed operator&#x27;s prices</div>
+<div class="opt"><div class="t">Option B</div>Capture two or more and build a vig-free consensus</div>
+<div class="opt"><div class="t">Option C</div>Publish our own line only and never claim a residual</div>
+</div>
+<div class="panel warn" style="margin:10px 0"><strong>What would change the call:</strong> If the operator terms forbid storage, stop and re-open this decision before capturing anything</div>
+<div class="decide"><strong>Record a decision:</strong>
+<button class="btn" data-dec="APPROVED">Approved</button>
+<button class="btn" data-dec="REJECTED">Rejected</button>
+<button class="btn" data-dec="DEFERRED">Deferred</button>
+<span class="fine">stored in this browser only</span>
+<a class="badge b-governance" href="suggestions.html#S-16" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a>
+</div></div>
+<div class="suggestion" id="S-07" data-sugg="S-07">
+<h3>S-07 · Store prices on a fixed schedule, not on demand <span class="pill">Markets</span> <span class="pill warn">PROPOSED</span></h3>
+<div class="kv">
+<div class="k">Problem</div><div>Price snapshots need an opening and a closing number, which needs a schedule</div>
+<div class="k">Recommendation</div><div><strong>B; the close is what CLV is graded against, and the open is what makes the move visible</strong></div>
+<div class="k">Effort</div><div>low</div>
+<div class="k">Linked question</div><div><a href="questions.html#Q-01">Q-01</a></div>
+<div class="k">Evidence</div><div>flag F-01</div>
+</div>
+<div class="optgrid">
+<div class="opt"><div class="t">Option A</div>Capture twice daily: on publication and 90 minutes before kickoff</div>
+<div class="opt"><div class="t">Option B</div>Capture hourly</div>
+<div class="opt"><div class="t">Option C</div>Capture only the close</div>
+</div>
+<div class="panel warn" style="margin:10px 0"><strong>What would change the call:</strong> If storage cost becomes material, drop to A</div>
+<div class="decide"><strong>Record a decision:</strong>
+<button class="btn" data-dec="APPROVED">Approved</button>
+<button class="btn" data-dec="REJECTED">Rejected</button>
+<button class="btn" data-dec="DEFERRED">Deferred</button>
+<span class="fine">stored in this browser only</span>
+<a class="badge b-governance" href="suggestions.html#S-16" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a>
+</div></div>
+<div class="suggestion" id="S-08" data-sugg="S-08">
+<h3>S-08 · Promote the suggestions page to the top-level navigation <span class="pill">Site</span> <span class="pill warn">PROPOSED</span></h3>
+<div class="kv">
+<div class="k">Problem</div><div>Suggestions exist but a reviewer has to know to look for them</div>
+<div class="k">Recommendation</div><div><strong>Option A; the brief asks for a dedicated, reviewable section</strong></div>
+<div class="k">Effort</div><div>low</div>
+<div class="k">Linked question</div><div><a href="questions.html#Q-22">Q-22</a></div>
+<div class="k">Evidence</div><div>index.html</div>
+</div>
+<div class="optgrid">
+<div class="opt"><div class="t">Option A</div>Put Suggestions and Questions in the primary nav on every page</div>
+<div class="opt"><div class="t">Option B</div>Keep them as subpages and link from the landing page only</div>
+<div class="opt"><div class="t">Option C</div>Merge them into one review page</div>
+</div>
+<div class="panel warn" style="margin:10px 0"><strong>What would change the call:</strong> None; this is a presentation choice, reversible at any time</div>
+<div class="decide"><strong>Record a decision:</strong>
+<button class="btn" data-dec="APPROVED">Approved</button>
+<button class="btn" data-dec="REJECTED">Rejected</button>
+<button class="btn" data-dec="DEFERRED">Deferred</button>
+<span class="fine">stored in this browser only</span>
+<a class="badge b-governance" href="suggestions.html#S-16" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a>
+</div></div>
+<div class="suggestion" id="S-09" data-sugg="S-09">
+<h3>S-09 · Add a decision log that records each review decision and its date <span class="pill">Site</span> <span class="pill warn">PROPOSED</span></h3>
+<div class="kv">
+<div class="k">Problem</div><div>Suggestions carry a status but no history of who decided what</div>
+<div class="k">Recommendation</div><div><strong>Option A; a reviewer needs the decision and its date together, not spread across commits</strong></div>
+<div class="k">Effort</div><div>low</div>
+<div class="k">Linked question</div><div><a href="questions.html#Q-22">Q-22</a></div>
+<div class="k">Evidence</div><div>suggestions.html</div>
+</div>
+<div class="optgrid">
+<div class="opt"><div class="t">Option A</div>Append a dated row to a decision log whenever a status changes</div>
+<div class="opt"><div class="t">Option B</div>Use git history as the decision log</div>
+<div class="opt"><div class="t">Option C</div>Do not track decisions</div>
+</div>
+<div class="panel warn" style="margin:10px 0"><strong>What would change the call:</strong> None</div>
+<div class="decide"><strong>Record a decision:</strong>
+<button class="btn" data-dec="APPROVED">Approved</button>
+<button class="btn" data-dec="REJECTED">Rejected</button>
+<button class="btn" data-dec="DEFERRED">Deferred</button>
+<span class="fine">stored in this browser only</span>
+<a class="badge b-governance" href="suggestions.html#S-16" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a>
+</div></div>
+<div class="suggestion" id="S-10" data-sugg="S-10">
+<h3>S-10 · Consolidate the eleven NFL desks behind one index <span class="pill">Site</span> <span class="pill warn">PROPOSED</span></h3>
+<div class="kv">
+<div class="k">Problem</div><div>Four namespaces now answer the same brief, so a reviewer cannot tell which is current</div>
+<div class="k">Recommendation</div><div><strong>Option A first; it is additive and needs no one to give up a scope</strong></div>
+<div class="k">Effort</div><div>medium</div>
+<div class="k">Linked question</div><div><a href="questions.html#Q-22">Q-22</a></div>
+<div class="k">Evidence</div><div>COORDINATION.md</div>
+</div>
+<div class="optgrid">
+<div class="opt"><div class="t">Option A</div>Build a desks index page listing every namespace with its as-of date and scope</div>
+<div class="opt"><div class="t">Option B</div>Nominate one desk as canonical and archive the rest</div>
+<div class="opt"><div class="t">Option C</div>Leave as is</div>
+</div>
+<div class="panel warn" style="margin:10px 0"><strong>What would change the call:</strong> If an integration session is scheduled, defer to it and do B there</div>
+<div class="decide"><strong>Record a decision:</strong>
+<button class="btn" data-dec="APPROVED">Approved</button>
+<button class="btn" data-dec="REJECTED">Rejected</button>
+<button class="btn" data-dec="DEFERRED">Deferred</button>
+<span class="fine">stored in this browser only</span>
+<a class="badge b-governance" href="suggestions.html#S-16" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a>
+</div></div>
+<div class="suggestion" id="S-11" data-sugg="S-11">
+<h3>S-11 · Keep both total estimators until a walk-forward separates them <span class="pill">Modelling</span> <span class="pill warn">PROPOSED</span></h3>
+<div class="kv">
+<div class="k">Problem</div><div>The brief asks for two estimators and a gap column; collapsing early would repeat a documented leakage error</div>
+<div class="k">Recommendation</div><div><strong>B; the first totals walk-forward in this repo leaked and was corrected, so the comparison must be chronological and out-of-sample</strong></div>
+<div class="k">Effort</div><div>low</div>
+<div class="k">Linked question</div><div><a href="questions.html#Q-20">Q-20</a></div>
+<div class="k">Evidence</div><div>data/originated_markets.csv</div>
+</div>
+<div class="optgrid">
+<div class="opt"><div class="t">Option A</div>Publish both and compare weekly on chronological holdouts</div>
+<div class="opt"><div class="t">Option B</div>Collapse to the better in-sample estimator now</div>
+<div class="opt"><div class="t">Option C</div>Add a third estimator</div>
+</div>
+<div class="panel warn" style="margin:10px 0"><strong>What would change the call:</strong> If the gap stays inside its own standard error for 6 weeks, collapse to the simpler estimator</div>
+<div class="decide"><strong>Record a decision:</strong>
+<button class="btn" data-dec="APPROVED">Approved</button>
+<button class="btn" data-dec="REJECTED">Rejected</button>
+<button class="btn" data-dec="DEFERRED">Deferred</button>
+<span class="fine">stored in this browser only</span>
+<a class="badge b-governance" href="suggestions.html#S-16" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a>
+</div></div>
+<div class="suggestion" id="S-12" data-sugg="S-12">
+<h3>S-12 · Promote the ratings model only after an opponent-aware backtest <span class="pill">Modelling</span> <span class="pill warn">PROPOSED</span></h3>
+<div class="kv">
+<div class="k">Problem</div><div>Ratings are fitted on one season and ridge-penalised, which is necessary but not yet validated</div>
+<div class="k">Recommendation</div><div><strong>Option C; publishing is free once nothing is certified, and the backtest gate cannot clear on one season</strong></div>
+<div class="k">Effort</div><div>medium</div>
+<div class="k">Linked question</div><div><a href="questions.html#Q-14">Q-14</a></div>
+<div class="k">Evidence</div><div>data/team_ratings.csv</div>
+</div>
+<div class="optgrid">
+<div class="opt"><div class="t">Option A</div>Backtest the ratings on chronological holdouts once 2+ seasons exist</div>
+<div class="opt"><div class="t">Option B</div>Ship week-11 lines now as PAPER and backtest later</div>
+<div class="opt"><div class="t">Option C</div>Both: publish PAPER now, backtest on the schedule</div>
+</div>
+<div class="panel warn" style="margin:10px 0"><strong>What would change the call:</strong> If the holdout shows the ratings are worse than the market baseline, demote to a baseline only</div>
+<div class="decide"><strong>Record a decision:</strong>
+<button class="btn" data-dec="APPROVED">Approved</button>
+<button class="btn" data-dec="REJECTED">Rejected</button>
+<button class="btn" data-dec="DEFERRED">Deferred</button>
+<span class="fine">stored in this browser only</span>
+<a class="badge b-governance" href="suggestions.html#S-16" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a>
+</div></div>
+<div class="suggestion" id="S-13" data-sugg="S-13">
+<h3>S-13 · Keep every division empty until its gate clears <span class="pill">Competition</span> <span class="pill warn">PROPOSED</span></h3>
+<div class="kv">
+<div class="k">Problem</div><div>Ranking before the gates clear would make the leaderboard noise</div>
+<div class="k">Recommendation</div><div><strong>Option A; an empty table with the blocking gate is more honest than a rank</strong></div>
+<div class="k">Effort</div><div>low</div>
+<div class="k">Linked question</div><div><a href="questions.html#Q-14">Q-14</a></div>
+<div class="k">Evidence</div><div>leaderboard.html</div>
+</div>
+<div class="optgrid">
+<div class="opt"><div class="t">Option A</div>Publish the divisions with zero rows and the gate that blocks each</div>
+<div class="opt"><div class="t">Option B</div>Publish placeholder ranks</div>
+<div class="opt"><div class="t">Option C</div>Hide the leaderboard until it has rows</div>
+</div>
+<div class="panel warn" style="margin:10px 0"><strong>What would change the call:</strong> None</div>
+<div class="decide"><strong>Record a decision:</strong>
+<button class="btn" data-dec="APPROVED">Approved</button>
+<button class="btn" data-dec="REJECTED">Rejected</button>
+<button class="btn" data-dec="DEFERRED">Deferred</button>
+<span class="fine">stored in this browser only</span>
+<a class="badge b-governance" href="suggestions.html#S-16" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a>
+</div></div>
+<div class="suggestion" id="S-14" data-sugg="S-14">
+<h3>S-14 · Fund the reward pool only after G1 clears <span class="pill">Competition</span> <span class="pill warn">PROPOSED</span></h3>
+<div class="kv">
+<div class="k">Problem</div><div>Reward amounts are currently blank by policy</div>
+<div class="k">Recommendation</div><div><strong>Option A or D (non-cash badges) while G1 is unmet; a funded pool before 300 graded bets would pay for variance</strong></div>
+<div class="k">Effort</div><div>low</div>
+<div class="k">Linked question</div><div><a href="questions.html#Q-22">Q-22</a></div>
+<div class="k">Evidence</div><div>flag F-15</div>
+</div>
+<div class="optgrid">
+<div class="opt"><div class="t">Option A</div>Leave the pool blank and publish the gate that unlocks it</div>
+<div class="opt"><div class="t">Option B</div>Set a notional pool now for motivation</div>
+<div class="opt"><div class="t">Option C</div>Offer non-cash badges only</div>
+</div>
+<div class="panel warn" style="margin:10px 0"><strong>What would change the call:</strong> If a sponsor requires a published figure before results exist, use D</div>
+<div class="decide"><strong>Record a decision:</strong>
+<button class="btn" data-dec="APPROVED">Approved</button>
+<button class="btn" data-dec="REJECTED">Rejected</button>
+<button class="btn" data-dec="DEFERRED">Deferred</button>
+<span class="fine">stored in this browser only</span>
+<a class="badge b-governance" href="suggestions.html#S-16" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a>
+</div></div>
+<div class="suggestion" id="S-15" data-sugg="S-15">
+<h3>S-15 · Publish the injury delta as the feature, never the level <span class="pill">Injuries</span> <span class="pill warn">PROPOSED</span></h3>
+<div class="kv">
+<div class="k">Problem</div><div>A level tells you a player is hurt; a delta tells you something changed this week</div>
+<div class="k">Recommendation</div><div><strong>Option A; the brief is explicit, and the level is kept only as context</strong></div>
+<div class="k">Effort</div><div>low</div>
+<div class="k">Linked question</div><div><a href="questions.html#Q-06">Q-06</a></div>
+<div class="k">Evidence</div><div>data/injuries.csv</div>
+</div>
+<div class="optgrid">
+<div class="opt"><div class="t">Option A</div>Delta only, with the level shown beside it for context</div>
+<div class="opt"><div class="t">Option B</div>Level only</div>
+<div class="opt"><div class="t">Option C</div>Both equally weighted</div>
+</div>
+<div class="panel warn" style="margin:10px 0"><strong>What would change the call:</strong> If the delta series proves to have no signal on outcomes, revisit</div>
+<div class="decide"><strong>Record a decision:</strong>
+<button class="btn" data-dec="APPROVED">Approved</button>
+<button class="btn" data-dec="REJECTED">Rejected</button>
+<button class="btn" data-dec="DEFERRED">Deferred</button>
+<span class="fine">stored in this browser only</span>
+<a class="badge b-governance" href="suggestions.html#S-16" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a>
+</div></div>
+<div class="suggestion" id="S-16" data-sugg="S-16">
+<h3>S-16 · Separate the reward decision from the ranking decision <span class="pill">Governance</span> <span class="pill warn">PROPOSED</span></h3>
+<div class="kv">
+<div class="k">Problem</div><div>One decision (who wins) is being asked to settle another (what the prize is)</div>
+<div class="k">Recommendation</div><div><strong>Option A; a prize decided after seeing ranks invites result-chasing</strong></div>
+<div class="k">Effort</div><div>low</div>
+<div class="k">Linked question</div><div><a href="questions.html#Q-22">Q-22</a></div>
+<div class="k">Evidence</div><div>suggestions.html</div>
+</div>
+<div class="optgrid">
+<div class="opt"><div class="t">Option A</div>Two entries in the decision log, two dates</div>
+<div class="opt"><div class="t">Option B</div>One combined decision</div>
+<div class="opt"><div class="t">Option C</div>Decide prize first, then rank</div>
+</div>
+<div class="panel warn" style="margin:10px 0"><strong>What would change the call:</strong> None</div>
+<div class="decide"><strong>Record a decision:</strong>
+<button class="btn" data-dec="APPROVED">Approved</button>
+<button class="btn" data-dec="REJECTED">Rejected</button>
+<button class="btn" data-dec="DEFERRED">Deferred</button>
+<span class="fine">stored in this browser only</span>
+<a class="badge b-governance" href="suggestions.html#S-16" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a>
+</div></div>
+<div class="suggestion" id="S-17" data-sugg="S-17">
+<h3>S-17 · Move raw captures out of the public site <span class="pill">Data</span> <span class="pill warn">PROPOSED</span></h3>
+<div class="kv">
+<div class="k">Problem</div><div>The brief asks for a public analysis layer and a private data layer; raw captures are currently published</div>
+<div class="k">Recommendation</div><div><strong>Option A; it matches the brief and removes the only plausible terms-of-use exposure</strong></div>
+<div class="k">Effort</div><div>medium</div>
+<div class="k">Linked question</div><div><a href="questions.html#Q-18">Q-18</a></div>
+<div class="k">Evidence</div><div>flag F-14</div>
+</div>
+<div class="optgrid">
+<div class="opt"><div class="t">Option A</div>Create a private store and keep only derived analysis public</div>
+<div class="opt"><div class="t">Option B</div>Keep raw captures public</div>
+<div class="opt"><div class="t">Option C</div>Publish raw captures but strip player names</div>
+</div>
+<div class="panel warn" style="margin:10px 0"><strong>What would change the call:</strong> If legal review clears redistribution, B is acceptable</div>
+<div class="decide"><strong>Record a decision:</strong>
+<button class="btn" data-dec="APPROVED">Approved</button>
+<button class="btn" data-dec="REJECTED">Rejected</button>
+<button class="btn" data-dec="DEFERRED">Deferred</button>
+<span class="fine">stored in this browser only</span>
+<a class="badge b-governance" href="suggestions.html#S-16" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a>
+</div></div>
+<div class="suggestion" id="S-18" data-sugg="S-18">
+<h3>S-18 · Add a drift alarm to every parser before automating capture <span class="pill">Data</span> <span class="pill warn">PROPOSED</span></h3>
+<div class="kv">
+<div class="k">Problem</div><div>Without pins, an automated scraper can silently publish blanks</div>
+<div class="k">Recommendation</div><div><strong>Option A; the brief asks for the alarm before the automation, and this session&#x27;s Houston and Packers findings are exactly the failures the pins would have caught</strong></div>
+<div class="k">Effort</div><div>low</div>
+<div class="k">Linked question</div><div><a href="questions.html#Q-19">Q-19</a></div>
+<div class="k">Evidence</div><div>flag F-14</div>
+</div>
+<div class="optgrid">
+<div class="opt"><div class="t">Option A</div>Pin row counts and required fields, and fail the build loudly when a field goes missing</div>
+<div class="opt"><div class="t">Option B</div>Automate capture first and add pins later</div>
+<div class="opt"><div class="t">Option C</div>Rely on manual review</div>
+</div>
+<div class="panel warn" style="margin:10px 0"><strong>What would change the call:</strong> None</div>
+<div class="decide"><strong>Record a decision:</strong>
+<button class="btn" data-dec="APPROVED">Approved</button>
+<button class="btn" data-dec="REJECTED">Rejected</button>
+<button class="btn" data-dec="DEFERRED">Deferred</button>
+<span class="fine">stored in this browser only</span>
+<a class="badge b-governance" href="suggestions.html#S-16" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a>
+</div></div>
+</div>
+
+<div class="tray" id="tray">
+  <h3 style="margin-top:0">Decision tray (<span id="traycount">0</span> recorded)</h3>
+  <ul class="tight" id="traylist"></ul>
+  <button class="btn" id="trayexport">Export decision log (CSV)</button>
+  <button class="btn" id="trayclear">Clear all</button>
+  <p class="fine">These choices live in this browser's local storage. To make one
+  permanent, paste the exported CSV into the repository as
+  <code>data/decision_log.csv</code> or raise it in the coordination log.</p>
+</div>
+</main>
+<footer class="foot">
+  <p><strong>Own5 NFL Decision Console</strong> · session <code>c98c6270</code> ·
+  official pages captured 2026-11-17T00:00:00Z · <a href="flagged.html">Flagged for Review</a> ·
+  <a href="sources.html">Sources</a> · <a href="audit.html">Repo audit</a> ·
+  <a href="../index.html">Own5 dashboard</a> ·
+  <a href="../COORDINATION.md">Coordination log</a></p>
+  <p class="fine">Research only. Nothing here is a bet, a tip, or advice. No strategy is
+  certified, no reward is issued, and no market price exists anywhere in this repository.</p>
+</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

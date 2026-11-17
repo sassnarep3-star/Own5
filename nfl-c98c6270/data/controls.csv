@@ -1,0 +1,4 @@
+id,name,rule,purpose,source
+C1,Random singles,pick the home side with probability 0.5 on every game,separates any skill from the coin-flip floor,"computed, not sourced from an official page"
+C2,Favourites only,always back the side our own model makes the favourite,shows how much of a record comes from picking favourites,computed from data/team_ratings.csv
+C3,Home only,always back the home side,shows the value of the home-field term alone,computed from data/team_ratings.csv

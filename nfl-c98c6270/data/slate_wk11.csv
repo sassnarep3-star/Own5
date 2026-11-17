@@ -1,0 +1,14 @@
+game_id,season,week,kickoff_date,kickoff_et,away,home,network,venue,neutral_site,status,venue_source,source_url,captured_utc
+2026_11_IND_HOU,2026,11,2026-11-19,8:15 PM,IND,HOU,PRIME,NRG Stadium,no,scheduled,schedule page (hotel link destination),https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-17T00:00:00Z
+2026_11_MIA_BUF,2026,11,2026-11-22,1:00 PM,MIA,BUF,CBS,Highmark Stadium,no,scheduled,schedule page (hotel link destination),https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-17T00:00:00Z
+2026_11_BAL_CAR,2026,11,2026-11-22,1:00 PM,BAL,CAR,FOX,Bank of America Stadium,no,scheduled,schedule page (hotel link destination),https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-17T00:00:00Z
+2026_11_NO_CHI,2026,11,2026-11-22,1:00 PM,NO,CHI,FOX,Soldier Field,no,scheduled,schedule page (hotel link destination),https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-17T00:00:00Z
+2026_11_TEN_DAL,2026,11,2026-11-22,1:00 PM,TEN,DAL,FOX,AT&T Stadium,no,scheduled,schedule page (hotel link destination),https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-17T00:00:00Z
+2026_11_TB_DET,2026,11,2026-11-22,1:00 PM,TB,DET,FOX,Ford Field,no,scheduled,schedule page (hotel link destination),https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-17T00:00:00Z
+2026_11_ARI_KC,2026,11,2026-11-22,1:00 PM,ARI,KC,CBS,GEHA Field at Arrowhead Stadium,no,scheduled,schedule page (hotel link destination),https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-17T00:00:00Z
+2026_11_PIT_PHI,2026,11,2026-11-22,1:00 PM,PIT,PHI,CBS,Lincoln Financial Field,no,scheduled,schedule page (hotel link destination),https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-17T00:00:00Z
+2026_11_NYJ_LAC,2026,11,2026-11-22,4:05 PM,NYJ,LAC,FOX,SoFi Stadium,no,scheduled,schedule page (hotel link destination),https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-17T00:00:00Z
+2026_11_JAX_NYG,2026,11,2026-11-22,4:25 PM,JAX,NYG,CBS,MetLife Stadium,no,scheduled,schedule page (hotel link destination),https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-17T00:00:00Z
+2026_11_LV_DEN,2026,11,2026-11-22,4:25 PM,LV,DEN,CBS,Empower Field at Mile High,no,scheduled,schedule page (hotel link destination),https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-17T00:00:00Z
+2026_11_MIN_SF,2026,11,2026-11-22,8:20 PM,MIN,SF,NBC,Estadio Banorte (Mexico City),yes,scheduled,schedule page (Mexico City 2026 logo) + game centre,https://www.nfl.com/games/vikings-at-49ers-2026-reg-11,2026-11-17T00:00:00Z
+2026_11_CIN_WAS,2026,11,2026-11-23,8:15 PM,CIN,WAS,ESPN,FedEx Field,no,scheduled,schedule page (hotel link destination),https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-17T00:00:00Z

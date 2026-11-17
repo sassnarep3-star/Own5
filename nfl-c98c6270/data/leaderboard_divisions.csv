@@ -1,0 +1,5 @@
+division,registered_families,graded_bets,rows_ranked,ranking_metric,blocking_gate,note
+singles,8,0,0,"benchmark-relative Brier skill, game-cluster lower bound, multiplicity-adjusted",G1 SAMPLE,eligible once 300 graded prospective bets exist
+game parlays,0,0,0,"benchmark-relative Brier skill, game-cluster lower bound, multiplicity-adjusted",G6 JOINT,needs a directly validated joint probability and the operator void/push rules
+same-game parlays,0,0,0,"benchmark-relative Brier skill, game-cluster lower bound, multiplicity-adjusted",G6 JOINT,needs a measured within-game correlation on n>=300 same-game pairs
+prop combos,2,0,0,"benchmark-relative Brier skill, game-cluster lower bound, multiplicity-adjusted",G6 JOINT,needs captured prop prices and a measured within-game prop correlation

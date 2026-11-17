@@ -1,0 +1,6 @@
+id,rejected_shortcut,reason,recorded_utc,status
+X-01,"Derive depth order from jersey number, experience or salary","the brief rejects it explicitly, and the Packers page prepends jersey numbers to every name, which would silently corrupt the parse",2026-11-17T00:00:00Z,REJECTED
+X-02,Rank strategies by season-long ROI,raw short-run ROI cannot separate skill from variance; the brief rejects it,2026-11-17T00:00:00Z,REJECTED
+X-03,Transcribe the Houston depth image by eye,an image is not an authorised structured source; transcription is unverifiable,2026-11-17T00:00:00Z,REJECTED
+X-04,Fill a blank game-status cell by inference,"the brief requires blank plus a flag, never an inferred value",2026-11-17T00:00:00Z,REJECTED
+X-05,Collapse the two total estimators on in-sample fit,the first walk-forward in this repo leaked and was corrected; the comparison must be chronological,2026-11-17T00:00:00Z,REJECTED

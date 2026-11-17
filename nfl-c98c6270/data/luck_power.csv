@@ -1,0 +1,7 @@
+n_bets,critical_hits_at_alpha_0.05,break_even_runner_probability_of_passing,power_at_true_55pct,note,source_url
+100,59,0.0443,0.2415,"exact binomial, one-sided, alpha 0.05",exact binomial
+200,113,0.0384,0.362,"exact binomial, one-sided, alpha 0.05",exact binomial
+300,165,0.047,0.5239,"exact binomial, one-sided, alpha 0.05",exact binomial
+500,269,0.0489,0.7208,"exact binomial, one-sided, alpha 0.05",exact binomial
+1000,527,0.0468,0.9322,"exact binomial, one-sided, alpha 0.05",exact binomial
+2243,1161,0.0498,0.999,"exact binomial, one-sided, alpha 0.05",exact binomial

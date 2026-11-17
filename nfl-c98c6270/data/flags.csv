@@ -1,0 +1,22 @@
+id,severity,area,finding,what_is_published_instead,evidence
+F-01,blocking,Markets,"No market price of any kind exists anywhere in this repository: no spread, no total, no moneyline, from any source",the market column is blank on every row and the difference column is explicitly undefined,data/originated_markets.csv
+F-02,blocking,Depth,"Houston publishes its depth chart as an image, so it contributes zero parsed rows",Houston is listed with an explicit image-only flag and is excluded from every pairing,source S-08
+F-03,blocking,Injuries,"Only two reads of the official injury report exist, two days apart, covering 5 of 32 clubs",the delta is published only for the 44 rows where both reads exist; every other row is level-only and marked,data/injuries.csv
+F-04,blocking,Roster,"No transactions log and no reserve list has been read, so absent is ambiguous between healthy and ineligible","absence is recorded as unknown, never as available",flag F-04
+F-05,blocking,Outcomes,No official inactive list and no game book has been read,the announced-starter and replacement columns stay blank; the discovery route is recorded as suggestion S-01 and S-02,source S-06
+F-06,blocking,Depth,"No official snap-count source has been read, so playing time is unmeasured","depth is modelled from club charts only, and the caveat is published on the depth page",source S-07
+F-07,non-blocking,Weather,No stadium roof designation and no NWS forecast grid has been captured,the weather overlay is not built; R-58 stays BLOCKED,flag F-07
+F-08,non-blocking,Markets,"No player-prop prices exist, so the prop-combo division cannot be populated",the division is defined and empty; R-75 stays BLOCKED,flag F-08
+F-09,review,Venue,"Venue provenance is mixed: 1 of 13 venues read from the game centre, 12 taken from the schedule page's hotel-link destination",each row records which of the two it came from,data/slate_wk11.csv
+F-10,review,Schedule,No dated schedule announcement has been captured,the live schedule is published without the announcement; R-24 stays BLOCKED,flag F-10
+F-11,review,Rules,The 2026 kickoff and onside-kick rule text has not been captured,no regime prior is applied; R-68 stays BLOCKED,flag F-11
+F-12,blocking,Data,"The results feed holds one season, so the chronological holdout in R-70 and the backtest corpus in R-19 are both unreachable",149 finals published; no holdout declared,data/results_feed.csv
+F-13,blocking,Combos,"No joint probabilities and no operator void/push rules, so no parlay or prop combo can be ranked",all three combo divisions are defined and empty,data/leaderboard_divisions.csv
+F-14,non-blocking,Ops,Snapshots live in the repository and there is no freshness monitor or drift alarm,the private-store policy is written but not executed,data/data_layers.csv
+F-15,non-blocking,Rewards,The reward pool is blank by policy until G1 clears,three proposed tiers are published with no amounts,data/leaderboard_divisions.csv
+F-16,review,Depth,"Clubs label their own depth charts unofficial (Kansas City, New England, Detroit, Tennessee, Miami, Philadelphia, the Jets and Dallas)",the label is carried on every depth row,data/depth_slots.csv
+F-17,review,Depth,Baltimore's kicker slot is empty and Miami's kicker slot is empty; both are published as empty first-string slots rather than filled,the slots are preserved with an empty-first-string flag,data/depth_slots.csv
+F-18,review,Modelling,Team ratings are ridge-penalised to make them identifiable on one season of results,the penalty size is published with the ratings,data/team_ratings.csv
+F-19,review,Injuries,The week-11 injury report URL still serves the week-10 report as of 2026-11-17,the week-11 availability view falls back to the week-10 report and says so on the page,source S-05
+F-20,review,Coverage,"The second injury read covers only the first chunk of the week-10 report (5 clubs), so most rows have one read only",coverage per club is published on the injury page,data/injuries.csv
+F-21,review,Depth,"The two depth captures are not the same shape: session e46fb855 captured Offense and Defense only, this session also captured Special Teams (192 rows)",the published depth delta is restricted to Offense and Defense so the two reads are compared like-for-like,data/depth_delta.csv

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Executive summary · Own5 NFL Decision Console</title>
+<meta name="description" content="Originate the line, prove the skill, publish the gap. Every row sourced or flagged.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="dot"></span>Own5 <em>NFL Decision Console</em></a>
+  <button class="navtoggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">Menu</button>
+  <nav class="nav" id="nav"><a class="navlink" href="index.html">Overview</a>
+<a class="navlink active" href="executive-summary.html">Executive summary</a>
+<a class="navlink" href="suggestions.html">Suggestions</a>
+<a class="navlink" href="questions.html">Questions</a>
+<a class="navlink" href="requirements.html">Decision readiness</a>
+<a class="navlink" href="lines.html">Originated lines</a>
+<a class="navlink" href="strategies.html">Strategies</a>
+<a class="navlink" href="leaderboard.html">Leaderboard</a>
+<a class="navlink" href="injuries.html">Injuries</a>
+<a class="navlink" href="depth.html">Depth charts</a>
+<a class="navlink" href="deficiency.html">Deficiency matrix</a>
+<a class="navlink" href="correlations.html">Correlations</a>
+<a class="navlink" href="luck.html">Luck removal</a>
+<a class="navlink" href="gates.html">Gates</a>
+<a class="navlink" href="audit.html">Repo audit</a>
+<a class="navlink" href="sources.html">Sources</a>
+<a class="navlink" href="flagged.html">Flagged</a></nav>
+</header>
+<main class="wrap">
+  <div class="pagehead">
+    <h1>Executive summary</h1>
+    <p>Only computed values or values read from an official source appear here.</p>
+  </div>
+<div class="panel"><h3 style="margin-top:0">The one-paragraph version</h3><p>We now originate our own NFL line for every game on the week-11 slate, from official league results only, and we publish it next to a blank market column. 32 of 80 requirements in the brief are met, 19 are partial and 29 are blocked. The blocking fact is simple and it is not a modelling problem: <strong>there is no market price anywhere in this repository</strong>, so no residual, no closing-line value and no return can be computed, and by our own rules no strategy may leave paper. Everything else - the 31-club depth sweep, the 149 official finals, the 65 originated markets, the correlations with n, the luck panel - is ready and waiting on that one missing input.</p></div>
+<h2>Numbers that are settled</h2>
+<div class="tablewrap">
+<table class=""><thead><tr>
+<th>Item</th>
+<th>Value</th>
+<th>Basis</th>
+<th>Provenance</th>
+</tr></thead><tbody>
+<tr><td>Week-11 games originated</td><td>65 market rows</td><td>side -> total -> moneyline, in that order, for 13 games</td><td><a class="badge b-computed" href="lines.html" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td>Official finals ingested</td><td>149</td><td>reconciles to the official standings 32 of 32</td><td><a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>Measured home-field advantage</td><td>-0.1381 pts</td><td>negative: road sides have been marginally better in this 2026 sample (raw mean home margin -0.26 on non-neutral games, n=141)</td><td><a class="badge b-computed" href="lines.html" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td>League points per team-game</td><td>23.0872</td><td>from the official standings</td><td><a class="badge b-source" href="https://www.nfl.com/standings/league/2026/REG" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>Clubs with parsed depth</td><td>31 of 32</td><td>889 rows; 14 shared rank-1 slots; 5 empty first-string slots</td><td><a class="badge b-source" href="https://www.seahawks.com/team/depth-chart" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>Injury rows</td><td>326</td><td>44 re-read on 2026-11-17; no designation changed</td><td><a class="badge b-source" href="https://www.nfl.com/injuries/league/2026/reg10" title="Value read from an official source; the link opens that page.">SOURCE</a></td></tr>
+<tr><td>Matchup pairings</td><td>232</td><td>offense slot vs defense slot for the week-11 slate; 2 withheld for Houston</td><td><a class="badge b-computed" href="deficiency.html" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td>Correlations published</td><td>10 withheld 5</td><td>every published value carries n and a 95% interval</td><td><a class="badge b-computed" href="correlations.html" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td>Bets needed to prove a 55% edge</td><td>2,243</td><td>exact binomial, 80% power, alpha 0.05</td><td><a class="badge b-computed" href="luck.html" title="Value computed by the deterministic engine from official inputs; the link opens the inputs.">COMPUTED</a></td></tr>
+<tr><td>Strategies certified</td><td>0 of 14</td><td>all remain PAPER until gate G1 clears</td><td><a class="badge b-governance" href="strategies.html" title="A rule, gate or decision, not a claim about the world; the link opens the register that holds it.">GOVERNANCE</a></td></tr>
+</tbody></table></div>
+<h2>The 8 blockers</h2>
+<ul class="tight">
+<li><code>F-01</code> <strong>Markets</strong> - No market price of any kind exists anywhere in this repository: no spread, no total, no moneyline, from any source <em>Published instead:</em> the market column is blank on every row and the difference column is explicitly undefined</li>
+<li><code>F-02</code> <strong>Depth</strong> - Houston publishes its depth chart as an image, so it contributes zero parsed rows <em>Published instead:</em> Houston is listed with an explicit image-only flag and is excluded from every pairing</li>
+<li><code>F-03</code> <strong>Injuries</strong> - Only two reads of the official injury report exist, two days apart, covering 5 of 32 clubs <em>Published instead:</em> the delta is published only for the 44 rows where both reads exist; every other row is level-only and marked</li>
+<li><code>F-04</code> <strong>Roster</strong> - No transactions log and no reserve list has been read, so absent is ambiguous between healthy and ineligible <em>Published instead:</em> absence is recorded as unknown, never as available</li>
+<li><code>F-05</code> <strong>Outcomes</strong> - No official inactive list and no game book has been read <em>Published instead:</em> the announced-starter and replacement columns stay blank; the discovery route is recorded as suggestion S-01 and S-02</li>
+<li><code>F-06</code> <strong>Depth</strong> - No official snap-count source has been read, so playing time is unmeasured <em>Published instead:</em> depth is modelled from club charts only, and the caveat is published on the depth page</li>
+<li><code>F-12</code> <strong>Data</strong> - The results feed holds one season, so the chronological holdout in R-70 and the backtest corpus in R-19 are both unreachable <em>Published instead:</em> 149 finals published; no holdout declared</li>
+<li><code>F-13</code> <strong>Combos</strong> - No joint probabilities and no operator void/push rules, so no parlay or prop combo can be ranked <em>Published instead:</em> all three combo divisions are defined and empty</li>
+</ul>
+<h2>Two gaps we proved are closable</h2>
+<div class="panel ok"><p>For two full sessions these were recorded as "no official source exists". This session found the source: club sites publish both.</p><ul class="tight"><li><strong>Official inactives</strong> - <a href="https://www.atlantafalcons.com/news/atlanta-falcons-week-10-inactives-vs-kansas-city-chiefs">Atlanta Falcons Week 10 inactives vs Kansas City Chiefs</a> <span class="badge b-source">source</span></li><li><strong>Official game book</strong> - <a href="https://www.patriots.com/news/gamebook-patriots-vs-lions-week-10">Patriots vs Lions Week 10 game book</a> <span class="badge b-source">source</span></li></ul><p>Neither is captured yet. Suggestions <a href="suggestions.html#S-01">S-01</a> and <a href="suggestions.html#S-02">S-02</a> propose a three-club pilot before scaling to 32.</p></div>
+<h2>What we recommend, in order</h2>
+<ol class="tight"><li>Decide the price policy and capture one operator (<a href="suggestions.html#S-06">S-06</a>). Nothing else matters until this is true.</li><li>Pilot official inactives on three clubs (<a href="suggestions.html#S-01">S-01</a>).</li><li>Automate the injury capture on the Wednesday-Friday cadence (<a href="suggestions.html#S-03">S-03</a>).</li><li>Add parser drift alarms before automating anything (<a href="suggestions.html#S-18">S-18</a>).</li><li>Resolve Houston with a structured source, never by transcribing the image (<a href="suggestions.html#S-04">S-04</a>).</li></ol>
+<h2>Limitations, stated plainly</h2>
+<ul class="tight"><li>Clubs label their own depth charts unofficial. Depth order is a club statement, not a league one.</li><li>Snap counts are not captured, so playing time is unmeasured and the brief's preferred depth signal is unavailable.</li><li>Ratings are fitted on one season and ridge-penalised; that is necessary for identifiability and it shrinks every rating toward zero.</li><li>The Pythagorean exponent (2.37) is a published convention, not a league value, and it is labelled as such everywhere it appears.</li><li>Two depth reads two days apart differ on 62 of 730 like-for-like rows. A third read is needed before that is called a club-side change rather than a parser difference.</li></ul>
+</main>
+<footer class="foot">
+  <p><strong>Own5 NFL Decision Console</strong> · session <code>c98c6270</code> ·
+  official pages captured 2026-11-17T00:00:00Z · <a href="flagged.html">Flagged for Review</a> ·
+  <a href="sources.html">Sources</a> · <a href="audit.html">Repo audit</a> ·
+  <a href="../index.html">Own5 dashboard</a> ·
+  <a href="../COORDINATION.md">Coordination log</a></p>
+  <p class="fine">Research only. Nothing here is a bet, a tip, or advice. No strategy is
+  certified, no reward is issued, and no market price exists anywhere in this repository.</p>
+</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

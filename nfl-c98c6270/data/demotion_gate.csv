@@ -1,0 +1,7 @@
+id,trigger,threshold,action,applies_from
+D1,Cluster-lower-bound breach,game-cluster lower bound of benchmark-relative Brier skill falls below 0 over the trailing 100 graded bets,return to PAPER immediately,first promotion
+D2,Sample shortfall,fewer than 20 graded bets in any rolling 4-week window,return to PAPER pending review,first promotion
+D3,Lookahead found,any input with a timestamp after the kickoff it predicts,"quarantine the family, publish the finding, re-run every past grade",first promotion
+D4,Source change,the official source for a feature changes schema or disappears,freeze new bets on the family until the parser is re-verified,first promotion
+D5,Staking masking,the staking ledger outperforms the signal ledger for 2 consecutive months,"publish both, force a signal-only review",first promotion
+D6,Calibration drift,Brier score on the trailing 100 bets worse than the control baseline,return to PAPER,first promotion
