@@ -2377,3 +2377,39 @@ Carried forward and re-checked (read-only, never edited):
 * nfl.com cannot be reached from this sandbox with curl/urllib (TLS failure);
   every page here was read through the sandbox fetcher, and the workflow
   re-reads the same URLs from GitHub runners for provenance only.
+
+---
+
+## Session log — 941fe39f (NFL Season Desk) — 2026-11-17
+
+**Working branch:** `arena/941fe39f-own5` (base `90313d5` = PR #90 merge, `main`). Session ID: `941fe39f`.
+
+**This session answers a fresh copy of the NFL brief. It is strictly additive.**
+
+**Claimed namespaces (zero overlap with any existing session):**
+- `nfl-season-941fe39f/**` — GitHub Pages dashboard (landing + category subpages + Flagged for Review)
+- `research/nfl-941fe39f/**` — executive summary, methodology, verification log, registers
+- `.github/workflows/nfl-season-941fe39f.yml` — scoped deterministic verification
+- `tools/season_desk_941fe39f/**` — fetchers, engine, build, verify
+- Append-only block in this file
+
+**Read-only for this session (never edited):** root `index.html`, `pages/**`, `data/research.json`,
+`scripts/**`, `assets/**`, `docs/**`, `own5-desk/**`, `site/**`, `nfl_model/**`, `line-lab/**`,
+`nfl-strategy-lab/**`, `nfl-market-desk/**`, `nfl-desk-*/**`, `nfl-*/**` (other than its own),
+`nba-*/**`, `sf-*`/`rental-*`/`rental-increase-sf/**`, all existing workflows, all existing CSV/JSON.
+
+**Read-only inputs carried forward (never modified):** `nfl-desk-e46fb855/data/results_feed.csv`
+(146 rows), `nfl-desk-e46fb855/data/standings_official.csv`, `nfl-desk-e46fb855/data/official/*.json`.
+
+| ID | Task | Status | Owner | Files | Notes |
+|----|------|--------|-------|-------|-------|
+| S1 | Coordination claim | done | 941fe39f | COORDINATION.md | Pushed before build. |
+| S2 | Corpus build (pre-registered backtest corpus, pinned sources) | done | 941fe39f | `nfl-season-941fe39f/data/corpus/**` | Pinned SHA per source; no hand-typed values. |
+| S3 | Market price store + verified results feed | done | 941fe39f | `data/prices/**, data/results/**` | Line provenance for every row. |
+| S4 | Ratings + origination side→total→ML + signal engine | done | 941fe39f | `data/model/**, data/origination/**` | Market/fair/diff columns separated. |
+| S5 | Strategies, gates, prereg, leaderboard, luck | done | 941fe39f | `data/strategy/**, data/leaderboard/**` | Pre-registration before evaluation. |
+| S6 | Availability / depth / deficiency | done | 941fe39f | `data/availability/**` | Depth from official club charts only. |
+| S7 | Registers (requirements, questions, suggestions, flags, audit) | done | 941fe39f | `data/registers/**` | Every row sourced or flagged. |
+| S8 | Site build + verification harness | done | 941fe39f | `nfl-season-941fe39f/*.html`, `verify.py` | Row-level provenance proof, link check. |
+| S9 | PR → main, merge, Pages live check | done | 941fe39f | COORDINATION.md | Record below. |
+
