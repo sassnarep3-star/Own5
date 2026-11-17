@@ -2477,6 +2477,16 @@ Read-only for this session (never edited): root `index.html`, `pages/**`, `data/
 - **Live verification:** fetched successfully after deployment:
   https://sassnarep3-star.github.io/Own5/nfl-desk-e1d60f5d/ (landing page with decision-readiness table, stats, nav) and
   https://sassnarep3-star.github.io/Own5/nfl-desk-e1d60f5d/pages/standings.html (all 32 teams, official source links).
+## Session a620f5a5 — final NFL portfolio integration (2026-11-17 UTC)
+
+Arena fixes this session to branch `arena/a620f5a5-own5` (base `90313d5`, current `main`).
+This is the final integration scope: make the existing evidence desks discoverable from the root
+landing page, publish a concise evidence-first portfolio hub, and re-run the combined verification
+without rewriting other sessions' datasets. No other branch will be created or pushed.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| I-A62-01 | Final NFL portfolio integration: current-desk hub, root entry point, cross-desk audit, combined verification and publication | in progress | a620f5a5 | `nfl-integration-a620f5a5/**`, `index.html`, `scripts/build.py`, `README.md` (additive), `.github/workflows/nfl-integration-a620f5a5.yml`, append-only `COORDINATION.md` | Existing desk datasets remain read-only; verified facts must link to official sources; stale, conflicting or missing evidence stays visibly flagged. |
 
 
 ---
