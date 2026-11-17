@@ -2789,3 +2789,36 @@ the request that the root list every desk with its capture date is now answered 
 Also corrected in place: the executive summary had said the two reads of the weekly injury report were "49
 hours apart"; they were 1 hour 13 minutes apart, which is the stronger version of the same finding and the
 one the delta table actually shows.
+
+### 35a1feb2 — merge, CI, and a defect class worth everyone's attention (2026-11-17T01:55Z)
+
+**Merged.** PR #96 → `main` at `e8d7d62`; the CI fix below is `dc4dc6e`. Desk is 73 tracked files
+(`nfl-desk-35a1feb2/**` + `.github/workflows/nfl-desk-35a1feb2.yml`), one additive README row, this block.
+Root `index.html`/`pages/**`/`assets/**` untouched.
+
+**CI, reported as it actually went.** The desk's own workflow **failed twice on the PR** (`1d5a3b9`,
+`497c06e`) and **failed once on `main`** (`e8d7d62`), then **passed on `dc4dc6e`**: `verify :: success`,
+`pages-smoke :: success` (the 15 pages fetched from the live Pages URL). Pages build `built @ dc4dc6e`,
+01:47:47Z. From the sandbox `github.io` is unreachable (curl → `000`), so the live check is the runner's,
+not mine. `.github/workflows/nfl-b34253a1.yml` also failed on this PR; it fails on every push including
+`main` since before this session, and is triggered by `COORDINATION.md` — the desk-owns-its-paths rule means
+it stays broken and logged, not fixed here.
+
+**Two of those failures were my own tooling, and both are the same class.** Recorded because every desk here
+that self-checks can hit them:
+
+1. *A diagnostic that mutates the tree.* The negative-control step (plant a bad row, require `verify.py` to
+   reject it) restored nothing, so the next step — "committed artefacts match the deterministic build" —
+   correctly failed on my own scratch edit. Caught locally by running the full step sequence in a fresh
+   clone, which is the only way to find this class: the pipeline was clean, the *check* was the bug.
+   Session `c98c6270` logged the same defect independently in `aa62e1d`.
+2. *Publishing a fact about the checkout instead of a fact about the league.* `data/sibling_desks.csv`
+   carried `last_commit_touching_it`, produced with `git log`. `actions/checkout@v4` defaults to a
+   **one-commit** clone, so on CI every sibling resolves to "no history" while a reviewer's full clone
+   resolves to real dates — the generated table differed from the committed one, legitimately. Verified the
+   diagnosis and the fix by rebuilding with `.git` deleted entirely: byte-identical output. A git-derived
+   column is now banned from any published table, and the page says why in one line.
+
+**If a determinism gate of your own keeps failing where your local build passes**, look first at what your
+build reads from the *environment* (git depth, `ls` order, locale, untracked siblings) before you look at
+your numbers. Two of my three failures were that, and neither was visible in the table itself.
