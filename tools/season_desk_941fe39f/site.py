@@ -325,7 +325,8 @@ def page_exec(m: dict) -> str:
             "flips": _b.get("favourite_flips", 0)}
     a = m["alpha"]
     hold = a["holdout"]
-    certs = m.get("certifications", [])
+    certs = m.get("certified_strategies", [])
+    verdicts = m.get("strategy_verdicts", [])
     graded = {r["strategy"]: r for r in read_csv("leaderboard_graded") if r["window"] == "holdout"}
     best = sorted([r for r in graded.values() if r["family"] != "control"],
                   key=lambda r: -num(r["brier_skill"], -9))[:3]
@@ -337,8 +338,8 @@ answer. Every number below is computed by the build; none is transcribed from el
 {card("1. The headline", f'''
 <p><strong>We originated {c['originated_markets']:,} NFL markets and could not beat the closing line.</strong>
 The pre-registered rules were frozen before evaluation, graded on a holdout the fitting never saw, and
-{len(certs)} of the {c['strategies']} families cleared the gates. That is the designed outcome for a
-first honest pass, and it is stated here rather than buried.</p>
+{"not one" if not certs else str(len(certs))} of the {c['strategies']} families cleared the gates. That is the
+designed outcome for a first honest pass, and it is stated here rather than buried.</p>
 <p>The measured size of the gap: our side error is {a['level']['mae_model_side']:.2f} points against the
 market's {a['level']['mae_market_side']:.2f}; our total error {a['level']['mae_model_total']:.2f} against
 {a['level']['mae_market_total']:.2f}. On the holdout, residual alpha is {hold['r']:+.4f}
@@ -356,7 +357,7 @@ with the fit cutoff recorded on every row so a reader can prove no future game e
 <li><strong>Three columns, always.</strong> Model fair line, market line and the difference, side by side.
 <a href="lines.html">Originated lines</a></li>
 <li><strong>{c['strategies']} pre-registered strategies</strong> with frozen rule text, three windows
-(train, validation, holdout), eight gates, and a two-sided "what would change our mind" field.
+(train, validation, holdout), nine gates, and a two-sided "what would change our mind" field.
 <a href="strategies.html">Strategies</a></li>
 <li><strong>Signal and staking kept apart.</strong> The signal board ranks by Brier skill with a
 cluster-bootstrap interval; the staking board is empty because no strategy is certified. A lucky staking
@@ -561,7 +562,8 @@ with an interval that excludes zero.</p>''')}
 def page_leaderboard(m: dict) -> str:
     c = m["counts"]
     graded = read_csv("leaderboard_graded")
-    certs = m.get("certifications", [])
+    certs = m.get("certified_strategies", [])
+    verdicts = m.get("strategy_verdicts", [])
     hold = [r for r in graded if r["window"] == "holdout" and r["family"] != "control"]
     hold.sort(key=lambda r: -num(r["brier_skill"], -9))
     controls = [r for r in graded if r["window"] == "holdout" and r["family"] == "control"]
@@ -596,9 +598,9 @@ is worse than simply quoting the market.</p>''')}
 <p><strong>Empty. By rule.</strong> The staking board admits only strategies that hold a certification,
  and {c['certified']} do. The rule is written on <a href="strategies.html">Gates</a> and the reason is the
  brief's own: a lucky staking run must never be able to mask a bad signal.</p>
-<p>What would fill it: one family clearing all eight gates on the holdout. The closest is
+<p>What would fill it: one family clearing all nine gates on the holdout. The closest is
 <code>{esc(hold[0]['strategy']) if hold else 'n/a'}</code>, blocked by
-{esc(next((x['failed_gates'] for x in certs if x['id'] == (hold[0]['strategy'] if hold else '')), 'n/a'))}.</p>''')}
+{esc(next((x['failed_gates'] for x in verdicts if x['id'] == (hold[0]['strategy'] if hold else '')), 'n/a'))}.</p>''')}
 
 {card("Divisions, with proper scores only", f'''
 <table class="zebra"><thead><tr><th>division</th><th>definition</th><th>families graded</th>
@@ -705,7 +707,7 @@ quietly dropped.</p>
  note=("Every non-control row is PAPER. The ROI column is published because the brief asks for it, and "
        "it is never used to rank: ranking is by Brier skill on the leaderboard, and no row is eligible."))}
 
-{card("The eight gates", table(g, cols=[("gate", "gate"), ("rule", "rule"), ("why", "why it exists"),
+{card("The nine gates", table(g, cols=[("gate", "gate"), ("rule", "rule"), ("why", "why it exists"),
      ("threshold", "threshold"), ("measurable_in_corpus", "measurable here?")], cls="zebra"),
  note=("G3 (beat the close) needs an opening price and cannot be computed from one snapshot, so it fails "
        "by construction and is recorded as failed rather than skipped. G3B is the measurable substitute: "
@@ -725,7 +727,7 @@ the tails.</li>
 that is too weak.</p>''')}
 """
     return page("strategies.html", "Strategies and gates",
-                "Frozen rules, eight gates, zero certified", body, m)
+                "Frozen rules, nine gates, zero certified", body, m)
 
 
 def page_luck(m: dict) -> str:

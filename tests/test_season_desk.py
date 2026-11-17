@@ -11,6 +11,7 @@ from __future__ import annotations
 import importlib.util
 import json
 import math
+import re
 import sys
 import unittest
 from pathlib import Path
@@ -369,6 +370,30 @@ class TestSite(unittest.TestCase):
         for p in DESK.glob("*.html"):
             raw = p.read_text(encoding="utf-8").lower()
             self.assertNotIn("certified strategy:</strong> yes", raw)
+
+    def test_no_page_says_more_strategies_passed_than_are_certified(self):
+        """The bug this guards: a manifest key named `certifications` that held
+        every graded row made the executive summary open with "14 of the 14
+        families cleared the gates" on a site whose headline is zero certified."""
+        m = json.loads((DERIVED / "manifest.json").read_text())
+        certified = m["counts"]["certified"]
+        for p in DESK.glob("*.html"):
+            text = re.sub(r"<[^>]+>", " ", p.read_text(encoding="utf-8"))
+            text = re.sub(r"\s+", " ", text)
+            for match in re.finditer(r"(\d+) of the (\d+) (?:families|strategies) cleared", text):
+                n, total = int(match.group(1)), int(match.group(2))
+                self.assertEqual(n, certified,
+                                 f"{p.name} claims {n} cleared but {certified} are certified")
+                self.assertLessEqual(n, total)
+            self.assertNotIn("14 of the 14", text, p.name)
+
+    def test_gate_count_is_nine_everywhere(self):
+        """The gate register has nine entries. A page that says eight is stale."""
+        import strategies as S
+        self.assertEqual(len(S.GATES), 9)
+        for p in DESK.glob("*.html"):
+            text = re.sub(r"<[^>]+>", " ", p.read_text(encoding="utf-8"))
+            self.assertNotIn("eight gates", text, p.name)
 
     def test_manifest_counts_match_the_registers(self):
         m = json.loads((DERIVED / "manifest.json").read_text())

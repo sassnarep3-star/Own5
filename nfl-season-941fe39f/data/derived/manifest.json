@@ -113,8 +113,8 @@
   {
    "table": "requirements",
    "rows": 80,
-   "sha256": "2009ab62039620ee002d3c3943c3b3f91c2e86db295b2f19b8f19b35a1ec81f6",
-   "bytes": 14852
+   "sha256": "64819f2c83f9288676b1c0517bb1e906e2ab7b7fda50fbbe69764e65912d629c",
+   "bytes": 14851
   },
   {
    "table": "questions",
@@ -125,8 +125,8 @@
   {
    "table": "suggestions",
    "rows": 16,
-   "sha256": "49669162183527b6d06553a49af329a6055f5a21922b89b80d0c6c4136e4f8a7",
-   "bytes": 7841
+   "sha256": "a3f8050ca9e0095c14de1e2b0c9e2c2640f6ec15831d5447532e179fa06d3117",
+   "bytes": 7840
   },
   {
    "table": "flags",
@@ -331,7 +331,7 @@
   "players_total": 250,
   "players_from_groups": 114
  },
- "certifications": [
+ "strategy_verdicts": [
   {
    "id": "S01",
    "name": "Model side, any disagreement",
@@ -566,5 +566,10 @@
    "certified": "n/a",
    "reason": "blocked by G3_CLV, G3B_ALPHA, G4_BSS, G5_CALIBRATION, G6_MULTIPLICITY, G8_DECAY"
   }
- ]
+ ],
+ "certified_strategies": [],
+ "index_badge": {
+  "href": "nfl-season-941fe39f/index.html",
+  "html": "<!-- own5-index-badge:941fe39f --><p id=\"desk-941fe39f-link\" style=\"margin:10px 0 0\"><a href=\"nfl-season-941fe39f/index.html\">NFL Season Desk (941fe39f) &#8599;</a> &middot; 2026 season, 7,058 originated markets, 0 certified</p><!-- /own5-index-badge:941fe39f -->"
+ }
 }

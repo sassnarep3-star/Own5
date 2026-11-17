@@ -479,9 +479,22 @@ def main() -> int:
         "ledger_rows": len(led["rows"]),
     }
     manifest["depth_checks"] = depth["checks"]
-    manifest["certifications"] = cert
+    # `certifications` used to hold EVERY graded row, which made
+    # len(certifications) read as "14 certified" on a page whose whole
+    # point is that zero are certified. The key now names what it holds.
+    manifest["strategy_verdicts"] = cert
+    manifest["certified_strategies"] = [x["id"] for x in cert
+                                        if x.get("certified") == "yes"]
 
     # write manifest + all derived rows for the site builder
+    manifest["index_badge"] = {
+        "href": "nfl-season-941fe39f/index.html",
+        "html": ("<!-- own5-index-badge:941fe39f -->"
+                 '<p id="desk-941fe39f-link" style="margin:10px 0 0">'
+                 '<a href="nfl-season-941fe39f/index.html">NFL Season Desk (941fe39f) &#8599;</a>'
+                 " &middot; 2026 season, 7,058 originated markets, 0 certified</p>"
+                 "<!-- /own5-index-badge:941fe39f -->"),
+    }
     (DERIVED / "manifest.json").write_text(json.dumps(manifest, indent=1) + "\n")
     (DERIVED / "crosschecks.json").write_text(json.dumps(checks, indent=1) + "\n")
     print(json.dumps(manifest["counts"], indent=1))

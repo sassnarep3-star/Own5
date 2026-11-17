@@ -71,7 +71,7 @@ R-69,"Split data into train, validation and final holdout seasons",met,-,n/a - 1
 R-70,"Make suggestions on how to improve the site, with a reviewable suggestions section",met,-,"n/a - 16 suggestions with options, a recommendation and a falsifier",suggestions
 R-71,"Produce a clear list of questions, information and answers needed before a decision",met,-,"n/a - 18 questions, each with the cheapest discovery route and what it unblocks",questions
 R-72,"Originate my own NFL lines from research, and generate useful signals",partial,G4_BSS,A positive Brier skill score against the de-vigged close on the holdout. Today the best family is 0.00 (controls) and the model families are negative,lines
-R-73,Treat it as a leaderboard competition with rewards for top strategies,partial,certified strategies,"At least one strategy clearing all eight gates. Zero do, so the reward pool is empty by rule",leaderboard
+R-73,Treat it as a leaderboard competition with rewards for top strategies,partial,certified strategies,"At least one strategy clearing all nine gates. Zero do, so the reward pool is empty by rule",leaderboard
 R-74,Determine correlation values,met,-,"n/a - 12 correlations with n and intervals, and 4 withheld with the reason",correlations
 R-75,Remove luck from the equation and build selectively skill-based strategies,met,-,"n/a - cluster-bootstrap intervals, Holm adjustment and a published luck panel",luck
 R-76,Track injuries and know deficiencies such as 2nd/3rd/4th-string replacements,partial,coverage (5 of 32 clubs),Machine-readable charts for the clubs in play; the replacement's depth rank is published where a club names one,matchup
