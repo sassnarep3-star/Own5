@@ -1,0 +1,13 @@
+id,severity,item,detail,source_url,status
+F-01,blocking,No market prices,"nfl.com publishes no spreads, totals or moneylines (nfl.com/betting/ returns 404); no operator open/close history exists. All price cells blank and flagged.",https://www.nfl.com/betting/,OPEN
+F-02,blocking (Houston),Houston depth chart image-only,Houston Texans publish their depth chart as a raster image; all Houston depth values blank pending authorized structured source.,https://www.houstontexans.com/team/depth-chart,OPEN
+F-03,blocking,Single injury-report read,Only one read of the injury report exists; no designation delta can be computed.,https://www.nfl.com/injuries/league/2026/reg10,OPEN
+F-04,blocking,No transactions or reserve list,"No official transactions or reserve list has been read; ""not listed"" cannot be distinguished from ""available.""",https://www.nfl.com/,OPEN
+F-05,blocking,No official inactive list or game book,No official inactive list and no game book read; backup replacement of starter cannot be confirmed.,https://www.nfl.com/,OPEN
+F-06,blocking,No official snap-count source,No official snap-count source read; starter/backup split not measurable from snaps.,https://www.nfl.com/,OPEN
+F-12,blocking,One-season results feed,Results feed holds one season only; gate G1 (n >= 300) unreachable.,https://www.nfl.com/schedules/,OPEN
+F-07,non-blocking,No roof/weather overlay,No NWS hourly wind/precipitation overlay or stadium roof designation.,https://www.nfl.com/games/vikings-at-49ers-2026-reg-11,OPEN
+F-08,non-blocking,No player-prop prices,No player-prop lines exist from any source in this repo; prop combos produce zero graded bets.,https://www.nfl.com/,OPEN
+F-09,review,Venue provenance mixed,Venue read from game centre for 1 of 13 games; 12 from schedule page.,https://www.nfl.com/schedules/2026/by-week/week-11,OPEN
+F-10,review,Kickoff rule text not fetched,2026 NFL rulebook kickoff rule text not re-fetched this session.,https://operations.nfl.com/rules-officiating/2026-nfl-rulebook,OPEN
+F-11,review,Schedule-release announcement not fetched,The league's dated schedule announcement not published beside the live schedule page.,https://www.nfl.com/schedules/,OPEN

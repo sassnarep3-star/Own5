@@ -1,0 +1,33 @@
+rank,team,conference,division,wins,losses,ties,pct,pf,pa,net,streak,source_url,capture_utc,status
+1,Buffalo Bills,AFC,East,8,1,0,0.889,287,199,88,5W,https://www.nfl.com/standings/league/2026/REG,2026-11-17T00:00Z,official
+1,San Francisco 49ers,NFC,West,8,1,0,0.889,281,196,85,2W,https://www.nfl.com/standings/league/2026/REG,2026-11-17T00:00Z,official
+3,Chicago Bears,NFC,North,7,2,0,0.778,241,184,57,4W,https://www.nfl.com/standings/league/2026/REG,2026-11-17T00:00Z,official
+3,Cincinnati Bengals,AFC,North,7,2,0,0.778,278,193,85,5W,https://www.nfl.com/standings/league/2026/REG,2026-11-17T00:00Z,official
+3,Denver Broncos,AFC,West,7,2,0,0.778,198,186,12,5W,https://www.nfl.com/standings/league/2026/REG,2026-11-17T00:00Z,official
+3,Detroit Lions,NFC,North,7,2,0,0.778,257,199,58,5W,https://www.nfl.com/standings/league/2026/REG,2026-11-17T00:00Z,official
+3,Jacksonville Jaguars,AFC,South,7,2,0,0.778,269,144,125,3W,https://www.nfl.com/standings/league/2026/REG,2026-11-17T00:00Z,official
+3,Kansas City Chiefs,AFC,West,7,2,0,0.778,237,156,81,2W,https://www.nfl.com/standings/league/2026/REG,2026-11-17T00:00Z,official
+3,Minnesota Vikings,NFC,North,7,2,0,0.778,176,126,50,1W,https://www.nfl.com/standings/league/2026/REG,2026-11-17T00:00Z,official
+10,Pittsburgh Steelers,AFC,North,6,3,0,0.667,198,182,16,1L,https://www.nfl.com/standings/league/2026/REG,2026-11-17T00:00Z,official
+11,New York Giants,NFC,East,5,3,1,0.611,203,196,7,1L,https://www.nfl.com/standings/league/2026/REG,2026-11-17T00:00Z,official
+12,Cleveland Browns,AFC,North,6,4,0,0.600,188,220,-32,1W,https://www.nfl.com/standings/league/2026/REG,2026-11-17T00:00Z,official
+12,Green Bay Packers,NFC,North,6,4,0,0.600,226,221,5,1L,https://www.nfl.com/standings/league/2026/REG,2026-11-17T00:00Z,official
+12,Los Angeles Rams,NFC,West,6,4,0,0.600,248,187,61,4W,https://www.nfl.com/standings/league/2026/REG,2026-11-17T00:00Z,official
+12,Seattle Seahawks,NFC,West,6,4,0,0.600,223,175,48,2W,https://www.nfl.com/standings/league/2026/REG,2026-11-17T00:00Z,official
+16,New England Patriots,AFC,East,5,5,0,0.500,221,242,-21,2L,https://www.nfl.com/standings/league/2026/REG,2026-11-17T00:00Z,official
+17,Baltimore Ravens,AFC,North,4,5,0,0.444,189,236,-47,4L,https://www.nfl.com/standings/league/2026/REG,2026-11-17T00:00Z,official
+17,Carolina Panthers,NFC,South,4,5,0,0.444,219,236,-17,1W,https://www.nfl.com/standings/league/2026/REG,2026-11-17T00:00Z,official
+19,Dallas Cowboys,NFC,East,4,6,0,0.400,286,282,4,1L,https://www.nfl.com/standings/league/2026/REG,2026-11-17T00:00Z,official
+19,Las Vegas Raiders,AFC,West,4,6,0,0.400,251,289,-38,2L,https://www.nfl.com/standings/league/2026/REG,2026-11-17T00:00Z,official
+21,Washington Commanders,NFC,East,3,5,1,0.389,196,223,-27,1W,https://www.nfl.com/standings/league/2026/REG,2026-11-17T00:00Z,official
+22,Houston Texans,AFC,South,3,6,0,0.333,233,219,14,1L,https://www.nfl.com/standings/league/2026/REG,2026-11-17T00:00Z,official
+22,New Orleans Saints,NFC,South,3,6,0,0.333,202,236,-34,1L,https://www.nfl.com/standings/league/2026/REG,2026-11-17T00:00Z,official
+22,Tampa Bay Buccaneers,NFC,South,3,6,0,0.333,202,178,24,1L,https://www.nfl.com/standings/league/2026/REG,2026-11-17T00:00Z,official
+25,Arizona Cardinals,NFC,West,3,7,0,0.300,184,289,-105,2L,https://www.nfl.com/standings/league/2026/REG,2026-11-17T00:00Z,official
+25,Atlanta Falcons,NFC,South,3,7,0,0.300,201,258,-57,3L,https://www.nfl.com/standings/league/2026/REG,2026-11-17T00:00Z,official
+25,Indianapolis Colts,AFC,South,3,7,0,0.300,208,271,-63,1W,https://www.nfl.com/standings/league/2026/REG,2026-11-17T00:00Z,official
+28,Philadelphia Eagles,NFC,East,2,7,0,0.222,148,221,-73,7L,https://www.nfl.com/standings/league/2026/REG,2026-11-17T00:00Z,official
+29,New York Jets,AFC,East,2,8,0,0.200,194,254,-60,5L,https://www.nfl.com/standings/league/2026/REG,2026-11-17T00:00Z,official
+30,Miami Dolphins,AFC,East,1,8,0,0.111,148,224,-76,3L,https://www.nfl.com/standings/league/2026/REG,2026-11-17T00:00Z,official
+30,Tennessee Titans,AFC,South,1,8,0,0.111,167,239,-72,3L,https://www.nfl.com/standings/league/2026/REG,2026-11-17T00:00Z,official
+32,Los Angeles Chargers,AFC,West,0,8,0,0.000,121,219,-98,8L,https://www.nfl.com/standings/league/2026/REG,2026-11-17T00:00Z,official

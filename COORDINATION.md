@@ -2441,3 +2441,30 @@ Carried forward and re-checked (read-only, never edited):
 - The desk's own workflow re-reads nfl.com from GitHub runners but stores nothing; a durable capture needs raw bytes plus a hash (see flagged F11).
 
 **Pull request and merge record:** pending — filled in after X7.
+
+## Session e1d60f5d — NFL Decision Desk: questions register, suggestions register, verified standings & schedule (2026-11-17 UTC)
+
+Arena fixes this session's branch to `arena/e1d60f5d-own5` (branched from `90313d51` = `main`); no other branch will be created, renamed, or pushed. This session claims a strictly additive, collision-free namespace: `nfl-desk-e1d60f5d/**` (static GitHub Pages desk: landing page + category subpages, official 2026 standings + Week 11 schedule verified from nfl.com, questions register, suggestions register, sources register, flagged-for-review, deterministic build, verifier, unit tests) plus `.github/workflows/nfl-desk-e1d60f5d.yml` and append-only entries in `COORDINATION.md` and `README.md`.
+
+Read-only for this session (never edited): root `index.html`, `pages/**`, `data/research.json`, `scripts/**`, `tools/**`, `tests/**`, `assets/**`, `docs/**`, `own5-desk/**`, `site/**`, `nfl_model/**`, `line-lab/**`, every other `nfl-*`/`nba-*`/`sf-*`/`rental-*` desk, `data/` outside the claimed scope, all existing workflows, all existing CSV/JSON.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| E1D-01 | Coordination claim + scope inspection | done | e1d60f5d | COORDINATION.md | Claim pushed before implementation. |
+| E1D-02 | Official 2026 standings (32 teams) verified from nfl.com | done | e1d60f5d | `nfl-desk-e1d60f5d/data/standings_2026_wk11.csv` | Captured 2026-11-17 from https://www.nfl.com/standings/league/2026/REG; PF-PA=NET and PCT arithmetic re-checked. |
+| E1D-03 | Official Week 11 schedule (13 games + 6 byes) verified from nfl.com | done | e1d60f5d | `nfl-desk-e1d60f5d/data/schedule_2026_wk11.csv`, `data/byes_2026_wk11.csv` | Captured 2026-11-17 from https://www.nfl.com/schedules/2026/by-week/week-11; Vikings@49ers Mexico City neutral site confirmed. |
+| E1D-04 | Questions register (have / missing / answers / discovery route) | done | e1d60f5d | `nfl-desk-e1d60f5d/data/questions.csv`, `pages/questions.html` | 10 questions, 7 blocking, each official-source-linked. |
+| E1D-05 | Suggestions register (reviewable paths, options, recommended, falsifier) | done | e1d60f5d | `nfl-desk-e1d60f5d/data/suggestions.csv`, `pages/suggestions.html` | 12 suggestions, 11 awaiting decision, 1 implemented; nothing implemented without a reviewer decision. |
+| E1D-06 | Sources register + flagged-for-review register | done | e1d60f5d | `nfl-desk-e1d60f5d/data/sources.csv`, `data/flagged.csv`, `pages/sources.html`, `pages/flagged.html` | 10 sources, 12 flags (7 blocking); unverified values left blank, never inferred. |
+| E1D-07 | Landing page + category subpages (executive summary, standings, schedule, questions, suggestions, sources, flagged) | done | e1d60f5d | `nfl-desk-e1d60f5d/index.html`, `pages/*.html`, `assets/style.css`, `build.py` | Deterministic build; every table row source-linked or explicitly blank/flagged. |
+| E1D-08 | Verification harness + unit tests + CI workflow | done | e1d60f5d | `nfl-desk-e1d60f5d/verify.py`, `tests/test_desk.py`, `.github/workflows/nfl-desk-e1d60f5d.yml` | verify.py: 241 checks, 0 failures; tests: 16/16 pass; deterministic rebuild byte-identical. |
+| E1D-09 | PR to main, autonomous merge, live Pages check, record | in progress | e1d60f5d | COORDINATION.md, README.md | Merge only after verify PASS and a live URL check. |
+
+### Session e1d60f5d — verification record (2026-11-17 UTC)
+
+- Official sources read via the platform fetcher (sandbox egress is GitHub-only): https://www.nfl.com/standings/league/2026/REG (32 teams) and https://www.nfl.com/schedules/2026/by-week/week-11 (13 games, 6 byes, Mexico City neutral site). Both URLs recorded with capture UTC in each data file.
+- Standings arithmetic: PF - PA = NET verified for all 32 rows; PCT = (W + 0.5*T) / GP verified to 3 decimals.
+- `python3 verify.py`: 241 checks, 0 failures (data well-formed, every row sourced, every page has a table, internal targets exist, flags/sources/questions have URLs, deterministic rebuild byte-identical).
+- `python3 -m unittest discover -s tests -v`: 16 tests, all passing.
+- Cross-session discipline: no file owned by another session was edited; root index.html/pages/data/research.json (CI-locked) untouched; every improvement is a proposal on the Suggestions page awaiting a chosen path.
+

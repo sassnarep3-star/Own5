@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Questions Register — OWN5 NFL decision desk. Source-linked, verified or blank-and-flagged.">
+<title>Questions Register · OWN5 NFL Decision Desk</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="layout">
+<aside class="sidebar">
+<a class="brand" href="index.html"><span class="brand-icon">O<span>5</span></span><span>OWN5<small>NFL DECISION DESK</small></span></a>
+<div class="workspace"><span class="live-dot"></span> Research workspace <span class="workspace-arrow">⌄</span></div>
+<span class="nav-caption">DESK</span>
+<nav aria-label="Main navigation">
+<a href="index.html" class="nav-item" aria-current="false"><span class="nav-number">01</span>Overview</a>
+<a href="pages/executive-summary.html" class="nav-item"><span class="nav-number">02</span>Executive summary</a>
+<a href="pages/standings.html" class="nav-item"><span class="nav-number">03</span>2026 standings</a>
+<a href="pages/schedule.html" class="nav-item"><span class="nav-number">04</span>Week 11 schedule</a>
+<a href="pages/questions.html" class="nav-item active"><span class="nav-number">05</span>Questions register</a>
+<a href="pages/suggestions.html" class="nav-item"><span class="nav-number">06</span>Suggestions register</a>
+<a href="pages/sources.html" class="nav-item"><span class="nav-number">07</span>Sources</a>
+<a href="pages/flagged.html" class="nav-item"><span class="nav-number">08</span>Flagged for Review</a>
+</nav>
+<div class="side-bottom"><div class="mode"><span class="live-dot"></span> Paper research only</div>
+<p>No bets. No fabricated results.<br>Evidence before exposure.</p>
+<a href="https://github.com/sassnarep3-star/Own5" target="_blank" rel="noopener noreferrer">View repository ↗</a></div>
+</aside>
+<div class="main-shell">
+<header class="topbar"><div><span class="breadcrumb">Desk <span>/</span> Questions Register</span></div><div class="topbar-right"><span class="desktop-only">NFL / METHODOLOGY</span><span class="avatar">O5</span></div></header>
+<main id="main"><section class="panel"><div class="panel-head"><div><h2>Questions Register — Have vs Missing vs Answers</h2><p>Information that must be addressed before any decision can be reasonably made, based on what we already have and do not have. Each question carries its discovery route.</p></div></div>
+<div class="stat-card"><span class="stat-label">Total questions</span><strong class="stat-value">10</strong></div><div class="stat-card"><span class="stat-label">Blocking (decision-gated)</span><strong class="stat-value warn">7</strong></div><div class="stat-card"><span class="stat-label">Resolved / not blocking</span><strong class="stat-value">3</strong></div>
+<table class="data-table"><caption>Questions register. Blocking = the answer is required before a decision can be made.</caption>
+<thead><tr><th scope="col">ID</th><th scope="col">Question</th><th scope="col">What we have</th><th scope="col">What we lack</th><th scope="col">Answer / status</th><th scope="col">Discovery route</th><th scope="col">Blocking</th><th scope="col">Source</th></tr></thead>
+<tr><td>Q01</td><td>What are the official opening and closing prices for each originated market (spread, total, moneyline)?</td><td>Official standings and schedule (32 teams, 13 Week-11 games) verified from nfl.com.</td><td>No operator price feed exists in this repo; nfl.com publishes no betting prices (nfl.com/betting/ returns 404).</td><td>OPEN — price cells blank and flagged.</td><td>Choose an admissible price source and record open/close snapshots; see SUG-01.</td><td><span class="badge warn">Yes</span></td><td><span class="sourced"><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener noreferrer" title="Official source">Official source</a></span></td></tr>
+<tr><td>Q02</td><td>Can backtests and ROI be computed at all?</td><td>A verified results feed (137 official 2026 final scores) reconciles 32/32 to official standings.</td><td>No settled bet ledger or matched outcome sample with timestamps exists.</td><td>PARTIAL — results feed exists; no bet settlement engine.</td><td>Ingest official game books and define settlement rules per market.</td><td><span class="badge warn">Yes</span></td><td><span class="sourced"><a href="https://www.nfl.com/schedules/2026/by-week/week-11" target="_blank" rel="noopener noreferrer" title="Official source">Official source</a></span></td></tr>
+<tr><td>Q03</td><td>Which teams are on bye and which are playing in Week 11?</td><td>Bye list (ATL, CLE, GB, LAR, NE, SEA) and 13-game Week-11 slate verified from nfl.com.</td><td>None for Week 11.</td><td>RESOLVED — bye teams and slate published above.</td><td>None needed; official schedule page captured.</td><td><span class="badge ok">No</span></td><td><span class="sourced"><a href="https://www.nfl.com/schedules/2026/by-week/week-11" target="_blank" rel="noopener noreferrer" title="Official source">Official source</a></span></td></tr>
+<tr><td>Q04</td><td>Is the Vikings@49ers game a neutral-site game?</td><td>Venue listed as Estadio Banorte, Mexico City on the official Week-11 schedule page.</td><td>None.</td><td>RESOLVED — neutral site confirmed; SNF, Nov 22, 8:20 PM NBC.</td><td>None needed; official schedule page captured.</td><td><span class="badge ok">No</span></td><td><span class="sourced"><a href="https://www.nfl.com/schedules/2026/by-week/week-11" target="_blank" rel="noopener noreferrer" title="Official source">Official source</a></span></td></tr>
+<tr><td>Q05</td><td>What does &quot;Questionable&quot; mean empirically (play rate per designation)?</td><td>Official Week-10 injury report captured (347 rows, 28 clubs).</td><td>No multi-season join of designations to official inactive lists; no confidence intervals.</td><td>OPEN — designation reliability not yet scored.</td><td>Join several seasons of official designations to official inactive lists; measure play rate per designation with CIs.</td><td><span class="badge warn">Yes</span></td><td><span class="sourced"><a href="https://www.nfl.com/injuries/league/2026/reg10" target="_blank" rel="noopener noreferrer" title="Official source">Official source</a></span></td></tr>
+<tr><td>Q06</td><td>Has a 32-team roster/IR sweep been run before trusting team-level models?</td><td>One club-depth capture exists (31 of 32 clubs; Houston image-only).</td><td>No transactions or reserve list read; no official inactive list or game book.</td><td>BLOCKED — depth sweep incomplete (Houston unreadable; no reserve list).</td><td>Read official club depth charts, transactions, and reserve list; flag Houston as image-only.</td><td><span class="badge warn">Yes</span></td><td><span class="sourced"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener noreferrer" title="Official source">Official source</a></span></td></tr>
+<tr><td>Q07</td><td>Can the site show fixture context (venue, roof, surface, weather) built only from published schedule facts?</td><td>Venue captured for all 13 Week-11 games; Mexico City neutral site confirmed.</td><td>No NWS hourly wind/precipitation overlay; no official 90-minute stadium roof designations.</td><td>PARTIAL — venue only; weather/roof blank and flagged.</td><td>Couple NWS forecast grids with official stadium roof designations.</td><td><span class="badge warn">Yes</span></td><td><span class="sourced"><a href="https://www.nfl.com/games/vikings-at-49ers-2026-reg-11" target="_blank" rel="noopener noreferrer" title="Official source">Official source</a></span></td></tr>
+<tr><td>Q08</td><td>Are strategy backtest numbers ever shown on the leaderboard?</td><td>Leaderboard design separates signal from staking; all strategies start PAPER; 0 certified.</td><td>No strategy has yet passed all validation gates.</td><td>RESOLVED (policy) — backtest numbers barred from leaderboard by pre-registration rule.</td><td>None; enforce at publication.</td><td><span class="badge ok">No</span></td><td><span class="sourced"><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener noreferrer" title="Official source">Official source</a></span></td></tr>
+<tr><td>Q09</td><td>What is the home-field advantage for the 2026 season?</td><td>Measured -0.054 pts on 130 non-neutral games (95% CI [-2.34, +2.23], p=0.96) from official results.</td><td>Interval contains zero; season cannot establish HFA.</td><td>OPEN — HFA not established for 2026; +2.0 used elsewhere is flagged assumption.</td><td>Estimate HFA from official results as more games complete.</td><td><span class="badge warn">Yes</span></td><td><span class="sourced"><a href="https://www.nfl.com/schedules/2026/by-week/week-11" target="_blank" rel="noopener noreferrer" title="Official source">Official source</a></span></td></tr>
+<tr><td>Q10</td><td>Who was expected to start vs who actually started (availability graph)?</td><td>Club depth charts captured for 31 of 32 clubs (Houston image-only).</td><td>No official inactive lists, no snap counts, no game books.</td><td>BLOCKED — availability graph incomplete.</td><td>Read official inactive lists and snap counts; version depth against last official roster event.</td><td><span class="badge warn">Yes</span></td><td><span class="sourced"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener noreferrer" title="Official source">Official source</a></span></td></tr>
+</tbody></table>
+<p class="note">Blank answer cells mean the information is not available from an official source and is intentionally left blank, never inferred.</p>
+</section></main>
+</div>
+</div>
+</body>
+</html>

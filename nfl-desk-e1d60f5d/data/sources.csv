@@ -1,0 +1,11 @@
+source_id,source_name,url,official_tier,used_for,capture_utc,notes
+SRC-01,NFL League Standings (2026 REG),https://www.nfl.com/standings/league/2026/REG,OFFICIAL,"32-team W-L-T, PF, PA, PCT; standings reconciliation benchmark",2026-11-17T00:00Z,Captured via fetch_page; all 32 teams transcribed.
+SRC-02,NFL Schedule — Week 11 2026,https://www.nfl.com/schedules/2026/by-week/week-11,OFFICIAL,"13 fixtures, kickoff times, networks, venues, bye teams",2026-11-17T00:00Z,Includes Vikings@49ers Mexico City neutral site; 6 bye teams.
+SRC-03,NFL Game Centre — Vikings at 49ers,https://www.nfl.com/games/vikings-at-49ers-2026-reg-11,OFFICIAL,"Venue (Estadio Banorte, Mexico City); neutral-site confirmation",2026-11-17T00:00Z,Corroborates schedule page.
+SRC-04,NFL Injury Report — Week 10,https://www.nfl.com/injuries/league/2026/reg10,OFFICIAL,Week-10 practice/game designations (347 rows captured by session a991e3fb),2026-11-15T23:27Z,Week-11 report not yet published (serves Week-10).
+SRC-05,NFL Club Depth Charts (32 clubs),https://www.nfl.com/teams/,OFFICIAL,31 of 32 club depth charts transcribed; Houston image-only,2026-11-15T23:35Z,Houston publishes depth chart as raster image; not transcribed.
+SRC-06,2026 NFL Rulebook,https://operations.nfl.com/rules-officiating/2026-nfl-rulebook,OFFICIAL,"Rule 4 (60 min, 4x15), Rule 16 OT, tie = half W/half L",2026-11-02T00:00Z,Inherited from session 0f468a47; not re-fetched this session.
+SRC-07,NFL Football Operations,https://operations.nfl.com/,OFFICIAL,League operations and policy context,2026-11-02T00:00Z,Inherited; not re-fetched this session.
+SRC-08,Next Gen Stats Glossary,https://nextgenstats.nfl.com/glossary,OFFICIAL,Metric definitions for player features,2026-11-02T00:00Z,Inherited; not re-fetched this session.
+SRC-09,National Council on Problem Gambling,https://www.ncpgambling.org/help-treatment/national-helpline-1-800-522-4700/,OFFICIAL,Responsible-gambling helpline,2026-11-02T00:00Z,Inherited; not re-fetched this session.
+SRC-10,DraftKings NFL Market Rules,https://sportsbook.draftkings.com/help/general-betting-rules/market-rules,INDUSTRY,Bet-type definitions and grading rules (methodological reference only),2026-11-02T00:00Z,Not an official NFL source; flagged as industry convention.
