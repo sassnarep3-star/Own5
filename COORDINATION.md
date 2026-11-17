@@ -2478,3 +2478,22 @@ Read-only for this session (never edited): root `index.html`, `pages/**`, `data/
   https://sassnarep3-star.github.io/Own5/nfl-desk-e1d60f5d/ (landing page with decision-readiness table, stats, nav) and
   https://sassnarep3-star.github.io/Own5/nfl-desk-e1d60f5d/pages/standings.html (all 32 teams, official source links).
 
+
+---
+
+## Session 3bba0722 — NFL decision-review hub (2026-11-17 UTC)
+
+**Claimed scope (isolated; no existing site or desk files will be edited):**
+- `nfl-review-3bba0722/**` — additive GitHub Pages review hub, source-linked suggestion and question registers, flagged findings, deterministic build and verification tests.
+- `research/nfl-3bba0722/**` — executive summary, audit notes, methodology and source verification log.
+- `.github/workflows/nfl-review-3bba0722.yml` — scoped build/verification check.
+- Append-only entries in `COORDINATION.md` and one additive README link.
+
+**Read-only:** root dashboard/navigation and generated outputs, `own5-desk/**`, all existing `nfl-*` / `nba-*` / `sf-*` / `rental-*` namespaces, `data/**` outside this scope, and all pre-existing workflows. Existing task claims and their file scopes remain untouched. The hub reviews existing material and publishes its own, separately qualified audit; it does not overwrite or silently reconcile another desk's data.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| 3B-01 | Claim + independent review of existing NFL suggestions/questions and official-source availability | in progress | 3bba0722 | `COORDINATION.md`, `research/nfl-3bba0722/**` | Verify only what official pages support; record stale, unavailable or unsupported evidence as flags. |
+| 3B-02 | Build source-linked Suggestions for Review + Questions/Answers + Flagged pages | in progress | 3bba0722 | `nfl-review-3bba0722/**` | Every recommendation is labeled as a proposal; every factual row carries a direct official-source URL or an explicit UNVERIFIED flag. |
+| 3B-03 | Deterministic verification, tests, executive summary and scoped CI | in progress | 3bba0722 | `nfl-review-3bba0722/**`, `.github/workflows/nfl-review-3bba0722.yml`, `research/nfl-3bba0722/**` | No edits to shared root navigation. |
+| 3B-04 | Rebase, PR, autonomous merge and live Pages check | unclaimed | 3bba0722 | `COORDINATION.md`, `README.md` (additive) | Start after 3B-01–03 pass; merge only after the scoped site is verified. |
