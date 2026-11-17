@@ -61,34 +61,10 @@ jobs:
       - name: Unit tests
         run: python3 -m unittest discover -s tests -p "test_season_desk*" -v
 
-      - name: Pre-registration has not drifted
+      - name: Pre-registration is intact and predates the evaluation code
         run: |
-          python3 tools/season_desk_941fe39f/prereg.py
-          git diff --exit-code -- nfl-season-941fe39f/data/strategy/prereg.json
-
-      - name: Pre-registration predates the evaluation code
-        run: |
-          python3 - <<'PY'
-          import json, subprocess, sys
-          pre = json.load(open('nfl-season-941fe39f/data/strategy/prereg.json'))
-          reg = pre['registration_commit']
-          # The registration commit must be an ANCESTOR of (or equal to) the
-          # commit that last touched the evaluation code. If the rules were
-          # edited after the evaluator moved, the registration proves nothing.
-          files = ['tools/season_desk_941fe39f/build.py',
-                   'tools/season_desk_941fe39f/strategies.py']
-          ok = True
-          for f in files:
-              last = subprocess.run(['git', 'log', '-1', '--format=%H', '--', f],
-                                    capture_output=True, text=True).stdout.strip()
-              if not last:
-                  print(f'SKIP {f}: not committed'); continue
-              anc = subprocess.run(['git', 'merge-base', '--is-ancestor', reg, last],
-                                   capture_output=True).returncode == 0
-              print(('OK  ' if anc else 'FAIL') + f' {f}: registered {reg[:8]}, last edit {last[:8]}')
-              ok = ok and anc
-          sys.exit(0 if ok else 1)
-          PY
+          python3 tools/season_desk_941fe39f/prereg.py --check \
+            nfl-season-941fe39f/data/strategy/prereg.json
 
       - name: Committed derived data and site match a clean rebuild
         run: git diff --exit-code -- nfl-season-941fe39f/

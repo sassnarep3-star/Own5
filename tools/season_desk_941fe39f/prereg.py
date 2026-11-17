@@ -34,7 +34,85 @@ def git(*args: str) -> str:
                           text=True, check=False).stdout.strip()
 
 
+def check(path: Path) -> int:
+    """Verify a committed registration without rewriting it.
+
+    A pre-registration is evidence, and evidence is read, not refreshed. This
+    check answers three questions:
+
+      1. does each strategy's rule text still hash to what was registered?
+      2. does each watched file still hash to what was registered?
+      3. is the registration commit an ancestor of every commit that has touched
+         the watched files since?
+
+    Question 3 is the one that matters. If the rules were edited after the
+    evaluator moved, the registration proves nothing, and this exits non-zero.
+    """
+    if not path.exists():
+        print(f"MISSING {path.relative_to(ROOT)}: run prereg.py and commit it")
+        return 1
+    reg = json.loads(path.read_text())
+    failures: list[str] = []
+
+    by_id = {x["id"]: x for x in reg["strategies"]}
+    import strategies as S
+    if len(S.PREREG) != len(by_id):
+        failures.append(f"{len(S.PREREG)} strategies in code vs {len(by_id)} registered")
+    for p_ in S.PREREG:
+        got = hashlib.sha256(p_["rule"].encode()).hexdigest()
+        want = by_id.get(p_["id"], {}).get("rule_sha256")
+        if got != want:
+            failures.append(f"{p_['id']} rule text changed after registration")
+        # JSON turns a tuple threshold into a list, so compare canonical forms
+        # rather than raw Python objects.
+        registered_gates = by_id.get(p_["id"], {}).get("gates") or {}
+        canon = lambda o: json.loads(json.dumps(o, sort_keys=True, default=list))
+        if canon(registered_gates) != canon(S.GATES):
+            failures.append(f"{p_['id']}: the gate register changed after registration")
+
+    for f, want in reg["file_hashes"].items():
+        full = ROOT / f
+        if not full.exists():
+            failures.append(f"{f} is registered but missing")
+        elif hashlib.sha256(full.read_bytes()).hexdigest() != want:
+            failures.append(f"{f} changed after registration")
+
+    commit = reg["registration_commit"]
+    if not git("cat-file", "-e", commit + "^{commit}") == "" and \
+            subprocess.run(["git", "cat-file", "-e", commit + "^{commit}"],
+                           cwd=ROOT, capture_output=True).returncode != 0:
+        failures.append(f"registration commit {commit[:12]} is not in this clone")
+    else:
+        for f in reg["file_hashes"]:
+            last = git("log", "-1", "--format=%H", "--", f)
+            if not last:
+                continue
+            rc = subprocess.run(["git", "merge-base", "--is-ancestor", commit, last],
+                                cwd=ROOT, capture_output=True).returncode
+            if rc != 0:
+                failures.append(f"{f} was touched by {last[:12]} AFTER registration "
+                                f"{commit[:12]}")
+            elif last != commit:
+                print(f"  note: {f} last touched by {last[:12]}, after registration "
+                      f"{commit[:12]} (ancestry holds)")
+
+    print(f"registration {commit[:12]} {reg['registration_subject'][:56]}")
+    print(f"  {len(by_id)} strategies, {len(reg['file_hashes'])} watched files")
+    if failures:
+        print(f"\n{len(failures)} PROBLEM(S):")
+        for f in failures:
+            print(f"  - {f}")
+        return 1
+    print("\nPRE-REGISTRATION INTACT")
+    return 0
+
+
 def main() -> int:
+    if "--check" in sys.argv:
+        out = Path(sys.argv[sys.argv.index("--check") + 1]) if \
+            len(sys.argv) > sys.argv.index("--check") + 1 else OUT
+        return check(out)
+
     dirty = [f for f in WATCH if git("status", "--porcelain", "--", f)]
     if dirty and "--force" not in sys.argv:
         print("REFUSING TO WRITE: these files are uncommitted, so a pre-registration")

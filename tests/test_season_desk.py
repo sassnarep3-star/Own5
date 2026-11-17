@@ -181,6 +181,25 @@ class TestStrategies(unittest.TestCase):
                 self.assertIn("positive", text)
                 self.assertIn("negative", text)
 
+    def test_preregistration_check_passes_on_the_committed_file(self):
+        """The check CI runs. It must pass on the file in the repository."""
+        import prereg
+        out = ROOT / "nfl-season-941fe39f" / "data" / "strategy" / "prereg.json"
+        self.assertEqual(prereg.check(out), 0)
+
+    def test_preregistration_check_catches_a_changed_rule(self):
+        """If a rule were edited after registration, the check must fail."""
+        import prereg
+        import strategies as S
+        out = ROOT / "nfl-season-941fe39f" / "data" / "strategy" / "prereg.json"
+        original = S.PREREG[0]["rule"]
+        try:
+            S.PREREG[0]["rule"] = original + " (quietly retuned after seeing the holdout)"
+            self.assertEqual(prereg.check(out), 1)
+        finally:
+            S.PREREG[0]["rule"] = original
+        self.assertEqual(prereg.check(out), 0)
+
     def test_no_control_is_certified(self):
         for p in STRAT.PREREG:
             if p["family"] == "control":
