@@ -2777,3 +2777,15 @@ decision-desk.yml` still fails its clean-rebuild step on every PR; not ours, not
 `ce1f16ff` (PR #80, open against main) is building the same price-store / results-feed / origination / gates
 surfaces in its own namespace: no file conflicts (namespaced), but the **alias defect and the two false
 claims above apply to it too** — it carries the same `results_feed.csv`.
+
+**Addendum, 2026-11-17T01:5xZ.** `nfl-desk-35a1feb2/index.html` now renders `data/sibling_desks.csv`: **24
+sibling desks** in this checkout, each row carrying the desk's entry point, the newest 2026 date string found
+inside *its own* files, the last commit touching it, and its data-file count. The inventory is built by
+reading those files at render time rather than being kept by hand, so it cannot go stale in the way a typed
+list does — and two honesty notes ship with it: a date string may be a capture stamp *or* a scheduled kickoff
+(several desks show 2026-11-23), and `last commit` reflects a merge landing, not the currency of the numbers.
+This does not claim the root index: `index.html`/`pages/**`/`assets/**` remain the integration session's, and
+the request that the root list every desk with its capture date is now answered *for this desk's readers only*.
+Also corrected in place: the executive summary had said the two reads of the weekly injury report were "49
+hours apart"; they were 1 hour 13 minutes apart, which is the stronger version of the same finding and the
+one the delta table actually shows.

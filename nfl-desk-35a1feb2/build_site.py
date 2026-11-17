@@ -12,6 +12,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 DATA = HERE / "data"
+REPO = HERE.parent
 AS_OF = "2026-11-17T01:05Z"
 CAPTURE = "2026-11-17T00:38Z – 00:52Z"
 
@@ -70,6 +71,51 @@ NAV = [
     ("Competition", [("competition.html", "Strategies, gates, leaderboard"),
                      ("verification.html", "Verification log"), ("flagged.html", "Flagged for review")]),
 ]
+
+
+
+def sibling_inventory():
+    """An index of every sibling desk present in the tree, with the newest capture timestamp its own data
+    files advertise. Built by reading their files at render time so it cannot rot into a hand-kept list.
+    Caveats published with it: `last commit` reflects when a merge landed here, not whether the numbers are
+    current, and the inventory covers only the tree this build sees."""
+    import re, subprocess
+    ts = re.compile(r"20\d{2}-\d{2}-\d{2}(?:T\d{2}:\d{2}(?::\d{2})?Z?)?")
+    mine = HERE.name
+    out = []
+    for d in sorted(REPO.iterdir()):
+        if not d.is_dir() or not (d.name.startswith("nfl") or d.name in ("line-lab", "own5-desk")):
+            continue
+        if d.name == mine:
+            continue
+        has = (d / "index.html").exists()
+        newest, ndata = "", 0
+        for f in sorted((d / "data").glob("*")) if (d / "data").is_dir() else []:
+            ndata += 1
+            try:
+                blob = f.read_text(encoding="utf-8", errors="ignore")[:400000]
+            except OSError:
+                continue
+            for m in ts.findall(blob):
+                if m > newest:
+                    newest = m
+        commit = subprocess.run(["git", "log", "-1", "--format=%cd", "--date=format:%Y-%m-%dT%H:%MZ", "--",
+                                 str(d.relative_to(REPO))], cwd=REPO, capture_output=True, text=True).stdout.strip()
+        out.append(dict(desk=d.name, entry=("index.html" if has else "(no index page at that path)"),
+                        newest_date_string_in_their_own_files=newest or "not found in data/",
+                        last_commit_touching_it=commit or "untracked in this checkout",
+                        data_files=str(ndata),
+                        note=("This desk's own capture is 2026-11-17T00:38-00:55Z; nothing here was re-read "
+                              "for this row."),
+                        source_url=f"https://github.com/sassnarep3-star/Own5/tree/main/{d.name}"))
+    out = sorted([r for r in out if r["newest_date_string_in_their_own_files"].startswith("20")],
+                 key=lambda r: r["newest_date_string_in_their_own_files"], reverse=True) + \
+        [r for r in out if not r["newest_date_string_in_their_own_files"].startswith("20")]
+    with io.open(DATA / "sibling_desks.csv", "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=list(out[0].keys()) if out else ["desk"], lineterminator="\n")
+        w.writeheader()
+        w.writerows(out)
+    return out
 
 
 def rd(name):
@@ -257,7 +303,17 @@ def build():
          "A value labelled <i>third-party</i> comes from a hashed in-repo mirror that is not the league's own "
          "publication; the brief's policy gate decides whether those numbers may ever be used, so they are "
          "kept in separate tables and off the leaderboard."),
-        ("h", "Where things stand, by category", ""),
+        ("h", "Every desk on this brief, in one table", "built from the sibling directories in this checkout — "
+                "the date column is the newest 2026 date string a desk's own files contain, which may be a "
+                "capture stamp or a scheduled kickoff, so read it with that in mind; "
+                "the root index is owned by the integration session, so this is the desk's own view of the field"),
+        ("table", "sibling_desks.csv", ["desk", "entry", "newest_date_string_in_their_own_files",
+                                        "last_commit_touching_it", "data_files", "note"],
+         "Two things this row cannot tell you: whether a desk's numbers are still true, and whether two desks "
+         "disagree. The timestamp is the newest one that desk's own <code>data/</code> files advertise "
+         "(bottom rows publish none), so it says when a file was written, nothing more. The corrections this desk published against "
+         "several of them are on the <a href='flagged.html'>flagged page</a>."),
+        ("h", "Where things stand, by category", "",),
         ("list", [
             f"<b>Decision readiness</b> — {tot} rows, one per requirement in the brief: <a href='requirements.html'>the table</a>.",
             "<b>Questions</b> — 18, six answered by today's reads, twelve open with the cheapest route: <a href='questions.html'>register</a>.",
@@ -267,8 +323,10 @@ def build():
             "<b>Corrections</b> — 15 published irregularities with their official sources: <a href='flagged.html'>flagged for review</a>.",
         ]),
     ]
+    n_siblings = len(sibling_inventory())
     (dist / "index.html").write_text(page("index.html", "NFL line origination — currency & corrections desk",
                                           intro_index, blocks), encoding="utf-8")
+    print("siblings indexed:", n_siblings)
 
     (dist / "executive-summary.html").write_text(page("executive-summary.html", "Executive summary",
         "Written only from the tables on this desk; every number here appears in a table with a source.", [
@@ -290,7 +348,7 @@ def build():
             "margin is <b>−0.51</b> points (−0.26 excluding eight neutral-site games), home teams won "
             "<b>47.65%</b>. A +2.5 anchor would misprice every side this season.",
             "Designation levels carry almost no information on their own, but designation <i>changes</i> are "
-            "rare too: two reads of the same weekly report 49 hours apart differ by nothing across 147 field "
+            "rare too: two reads of the same weekly report 1 hour 13 minutes apart differ by nothing across 147 field "
             "values. The informative artefacts are the report's publication days, the roster register, and the "
             "inactive list nobody is capturing.",
             "The reserve list settles why a player is missing from a report (e.g. a quarterback on the injured "
