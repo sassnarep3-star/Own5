@@ -1,0 +1,36 @@
+name: NFL decision review hub — 3bba0722
+
+on:
+  pull_request:
+    paths:
+      - 'nfl-review-3bba0722/**'
+      - 'research/nfl-3bba0722/**'
+      - '.github/workflows/nfl-review-3bba0722.yml'
+  push:
+    branches:
+      - main
+      - arena/3bba0722-own5
+    paths:
+      - 'nfl-review-3bba0722/**'
+      - 'research/nfl-3bba0722/**'
+      - '.github/workflows/nfl-review-3bba0722.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build and verify source-linked site
+        run: python3 nfl-review-3bba0722/verify.py
+      - name: Run unit tests
+        run: python3 -m unittest discover -s nfl-review-3bba0722/tests -v
+      - name: Confirm committed pages match a clean build
+        run: git diff --exit-code -- nfl-review-3bba0722/

@@ -1,0 +1,145 @@
+[
+  {
+    "flag_id": "F-01",
+    "severity": "BLOCKING",
+    "area": "Injury-report freshness",
+    "finding": "The requested Week 12 injury-report URL retrieved a page identified as Week 10 on 2026-11-17. No Week 12 designation rows were accepted from that response.",
+    "impact": "A stale or wrong-week capture cannot support a current availability feature or an injury-change calculation.",
+    "action": "Capture only when the page's own season/week identity matches the target; retain timestamp and raw hash, otherwise fail closed and publish blank.",
+    "status": "OPEN — current-week source not confirmed",
+    "source_ids": ["NFL-INJURY-REQUESTED-WEEK12", "NFL-WEEK12-SCHEDULE"],
+    "repo_evidence": [{"label": "Prior source manifest", "url": "../nfl-desk-e46fb855/data/sources.csv"}]
+  },
+  {
+    "flag_id": "F-02",
+    "severity": "BLOCKING",
+    "area": "Houston depth chart",
+    "finding": "The official Texans page labels its chart unofficial and exposes it as an image in the retrieved content; no structured player rows were confirmed.",
+    "impact": "Houston depth/replacement values cannot be safely parsed from this page as text.",
+    "action": "Find an authorized structured club source; do not transcribe the image by eye or substitute jersey/experience order.",
+    "status": "OPEN — no structured source confirmed",
+    "source_ids": ["TEXANS-DEPTH-CHART", "NFL-TEAMS-32"],
+    "repo_evidence": [{"label": "Prior Houston depth flag", "url": "../nfl-desk-e46fb855/flagged.html"}]
+  },
+  {
+    "flag_id": "F-03",
+    "severity": "REVIEW",
+    "area": "Green Bay depth parser",
+    "finding": "The Packers' official club table prefixes player cells with jersey numbers and labels the chart unofficial; raw source strings must be retained when a parser normalizes names.",
+    "impact": "A simplistic player-name parser can publish jersey numbers as names or silently shift slot meaning.",
+    "action": "Keep raw and normalized fields, add regression fixtures for jersey-prefixed cells, and preserve the club's slot columns and empty cells.",
+    "status": "OPEN — parser regression test required",
+    "source_ids": ["PACKERS-DEPTH-CHART", "NFL-TEAMS-32"],
+    "repo_evidence": [{"label": "Prior depth page", "url": "../nfl-desk-e46fb855/depth.html"}]
+  },
+  {
+    "flag_id": "F-04",
+    "severity": "BLOCKING — RIGHTS",
+    "area": "NFL Game Book terms",
+    "finding": "The reviewed official Game Book states that the summary/play-by-play is for assisting media coverage and that any other use requires written NFL permission.",
+    "impact": "Automated raw retention, model use and public display require a documented source-use decision; official availability alone does not clear reuse.",
+    "action": "Obtain and record the applicable written permission/terms decision before archiving, processing or publishing this source; keep restricted raw data private meanwhile.",
+    "status": "OPEN — rights review not completed",
+    "source_ids": ["NFL-GAMEBOOK-RAMS-CARDINALS-W10", "NFL-GAMECENTER-RAMS-CARDINALS-W10"],
+    "repo_evidence": [{"label": "Prior source manifest", "url": "../nfl-desk-e46fb855/data/manifest.csv"}]
+  },
+  {
+    "flag_id": "F-05",
+    "severity": "BLOCKING",
+    "area": "Market price evidence",
+    "finding": "The reviewed prior price-snapshot CSV has no populated MARKET_OPEN or MARKET_CLOSE values. This hub has not captured operator odds.",
+    "impact": "Market residuals, CLV, price-based ROI and price-dependent leaderboard qualification remain unavailable; no price is imputed.",
+    "action": "Choose a permitted automated price source and record book, market, line, odds and timestamps; if no source clears terms, continue to show the fields blank.",
+    "status": "OPEN — no verified market quote",
+    "source_ids": ["NFL-WEEK12-SCHEDULE", "FANDUEL-FOOTBALL-RULES"],
+    "repo_evidence": [{"label": "Prior price-snapshot CSV", "url": "../nfl-desk-e46fb855/data/price_snapshots.csv"}, {"label": "Prior price-store page", "url": "../nfl-desk-e46fb855/price-store.html"}]
+  },
+  {
+    "flag_id": "F-06",
+    "severity": "BLOCKING",
+    "area": "Snap counts",
+    "finding": "The attempted NFL defensive-snap statistics URL returned 404 in this check. No official snap-count source was confirmed here; this is not proof that none exists elsewhere.",
+    "impact": "Do not publish snap share or model playing-time depth from an unverified feed.",
+    "action": "Locate and verify an official source plus field definition and use terms; until then keep snap values blank and do not infer them from jersey order or a depth chart.",
+    "status": "UNVERIFIED — source discovery incomplete",
+    "source_ids": ["NFL-SNAP-COUNT-ATTEMPT", "NFL-GAMEBOOK-RAMS-CARDINALS-W10"],
+    "repo_evidence": [{"label": "Prior snap-count readiness rows", "url": "../nfl-desk-e46fb855/requirements.html"}]
+  },
+  {
+    "flag_id": "F-07",
+    "severity": "REVIEW",
+    "area": "Reserve list / absence semantics",
+    "finding": "The prior e46 source manifest said no transaction/reserve list had been read. This review now verifies the official NFL November reserve-list route, which includes a dated Reserve/Injured row for Malik Willis; the older snapshot itself has not been backfilled.",
+    "impact": "Older point-in-time availability tables may still treat an omitted player as unknown; they should not be relabeled from a later read.",
+    "action": "Add a new dated transaction capture and join by effective time. Preserve the older snapshot as historical rather than rewriting it.",
+    "status": "PARTIAL RESOLUTION — source found; prior corpus not updated",
+    "source_ids": ["NFL-TRANSACTIONS-INDEX", "NFL-TRANSACTIONS-RESERVE-NOV2026", "NFL-INJURY-REQUESTED-WEEK12"],
+    "repo_evidence": [{"label": "Prior transaction gap flag", "url": "../nfl-desk-e46fb855/flagged.html"}]
+  },
+  {
+    "flag_id": "F-08",
+    "severity": "REVIEW",
+    "area": "Existing suggestions — citation support",
+    "finding": "Several quantitative statements in the existing Own5 suggestions page are not reproducible from the official links displayed in those rows: schedule pages show fixtures/results, injury pages show designations, and operator help explains settlement rules, not the referenced model coefficients or backtest calculations. This hub does not repeat those numerical values.",
+    "impact": "Readers could mistake an unverified analysis value for an official-source fact.",
+    "action": "For each metric, publish the exact row-level input data, calculation code/version, sample n, time window and uncertainty; otherwise leave the value blank and label it UNVERIFIED.",
+    "status": "OPEN — underlying data/code not linked by the cited rows",
+    "source_ids": ["NFL-WEEK9-SCHEDULE", "NFL-INJURY-REQUESTED-WEEK12", "FANDUEL-FOOTBALL-RULES"],
+    "repo_evidence": [{"label": "Existing Own5 suggestions page (rows are not edited by this session)", "url": "../own5-desk/suggestions.html"}]
+  },
+  {
+    "flag_id": "F-09",
+    "severity": "REVIEW",
+    "area": "Manual-capture proposal conflict",
+    "finding": "An existing suggestions row proposes manual price recording as a fallback. The user's project requirement is no manual input, so this hub does not adopt that path.",
+    "impact": "Manual fallback would create an operational dependency and could break timestamp consistency.",
+    "action": "Use an approved automated source or fail closed with blank market fields; do not ask the user to enter prices or injury facts.",
+    "status": "OPEN — replace with automated-only/fail-closed policy",
+    "source_ids": ["NFL-WEEK12-SCHEDULE", "FANDUEL-FOOTBALL-RULES"],
+    "repo_evidence": [{"label": "Existing Own5 suggestions page", "url": "../own5-desk/suggestions.html"}]
+  },
+  {
+    "flag_id": "F-10",
+    "severity": "REVIEW",
+    "area": "32-team depth coverage",
+    "finding": "Only the Texans and Packers club depth pages were rechecked in this session. The NFL directory covers all 32 clubs, but this source review is not a 32/32 parser certification.",
+    "impact": "No full-league deficiency claim should rely on these two examples.",
+    "action": "Run the official route/parser sweep for every club and preserve shared/empty slots, raw strings, dates and source links.",
+    "status": "OPEN — full sweep not performed",
+    "source_ids": ["NFL-TEAMS-32", "TEXANS-DEPTH-CHART", "PACKERS-DEPTH-CHART"],
+    "repo_evidence": [{"label": "Prior depth coverage page", "url": "../nfl-desk-e46fb855/depth.html"}]
+  },
+  {
+    "flag_id": "F-11",
+    "severity": "REVIEW",
+    "area": "Detroit Week 10 designations",
+    "finding": "The specific missing-status issue is not reproduced in the checked e46 Week 10 injury CSV: Kerby Joseph, Cade Mays and D.J. Reed each have Game Status Out, matching the official Week 10 injury page text reviewed. Recheck any other published copy before treating the item as closed everywhere.",
+    "impact": "A stale or different table copy may still show blank designations; this finding applies only to the cited Week 10 capture and page.",
+    "action": "Keep the source-linked Week 10 rows and compare the generated public page against them; do not generalize this check to another week.",
+    "status": "RECHECKED — issue not present in this cited snapshot",
+    "source_ids": ["NFL-INJURY-WEEK10"],
+    "repo_evidence": [{"label": "Checked e46 injury CSV", "url": "../nfl-desk-e46fb855/data/injuries.csv"}, {"label": "Prior injury page", "url": "../nfl-desk-e46fb855/injuries.html"}]
+  },
+  {
+    "flag_id": "F-12",
+    "severity": "REVIEW",
+    "area": "Root dashboard freshness label",
+    "finding": "The root landing page displays a Reviewed 2026-11-02 label, while this source review was performed on 2026-11-17. This session leaves the root-owned page unchanged.",
+    "impact": "The root page's review stamp can be mistaken for the most recent source check.",
+    "action": "At the next integration pass, update the root review timestamp only after its data has actually been rechecked; otherwise label it as the legacy review date.",
+    "status": "OPEN — root page outside this session's edit scope",
+    "source_ids": ["NFL-WEEK12-SCHEDULE", "NFL-STANDINGS-2026"],
+    "repo_evidence": [{"label": "Root dashboard", "url": "../index.html"}]
+  },
+  {
+    "flag_id": "F-13",
+    "severity": "REVIEW",
+    "area": "Pregame roof/weather vs postgame observation",
+    "finding": "The reviewed Game Book records actual game-time weather and a roof state for one completed game; no fixture-specific pregame NWS forecast or 90-minute roof notice was captured in this audit.",
+    "impact": "Using a postgame observation as a pregame predictor would create lookahead leakage.",
+    "action": "Store NWS forecast issue time/location and a separate official pregame stadium/club roof and surface announcement; retain postgame observation in a distinct field.",
+    "status": "OPEN — pregame context not captured",
+    "source_ids": ["NFL-GAMEBOOK-RAMS-CARDINALS-W10", "NWS-API-DOCUMENTATION", "NFL-GAMECENTER-RAMS-CARDINALS-W10"],
+    "repo_evidence": [{"label": "Prior slate page", "url": "../nfl-desk-e46fb855/slate.html"}]
+  }
+]

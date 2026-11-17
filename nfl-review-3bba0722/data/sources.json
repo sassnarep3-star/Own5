@@ -1,0 +1,189 @@
+[
+  {
+    "id": "NFL-WEEK12-SCHEDULE",
+    "publisher": "NFL.com",
+    "publisher_type": "NFL league source",
+    "title": "2026 NFL Schedule — Week 12",
+    "url": "https://www.nfl.com/schedules/2026/by-week/week-12",
+    "checked_on": "2026-11-17",
+    "verification_status": "VERIFIED",
+    "observation": "The official page rendered the 2026 Week 12 schedule. This check did not transcribe or certify every fixture row.",
+    "use_limit": "Schedule facts only; it is not a sportsbook price source."
+  },
+  {
+    "id": "NFL-STANDINGS-2026",
+    "publisher": "NFL.com",
+    "publisher_type": "NFL league source",
+    "title": "2026 NFL League Standings",
+    "url": "https://www.nfl.com/standings/league/2026/REG",
+    "checked_on": "2026-11-17",
+    "verification_status": "VERIFIED",
+    "observation": "The official 2026 regular-season league standings page rendered. No standings values are reproduced in this review hub.",
+    "use_limit": "Use as a dated result/standings source; values can change as games finish."
+  },
+  {
+    "id": "NFL-WEEK9-SCHEDULE",
+    "publisher": "NFL.com",
+    "publisher_type": "NFL league source",
+    "title": "2026 NFL Schedule — Week 9",
+    "url": "https://www.nfl.com/schedules/2026/by-week/week-9",
+    "checked_on": "2026-11-17",
+    "verification_status": "VERIFIED",
+    "observation": "The official page displays Week 9 fixtures and final scores and links to the corresponding Game Centers. It does not contain the modeling metrics cited by an existing site suggestion that links to this page.",
+    "use_limit": "Use as fixture/result evidence only; a schedule page is not a source for a regression coefficient, p-value or joint-probability estimate."
+  },
+  {
+    "id": "NFL-INJURY-WEEK10",
+    "publisher": "NFL.com",
+    "publisher_type": "NFL league source",
+    "title": "Official NFL Injury Report — 2026 Week 10",
+    "url": "https://www.nfl.com/injuries/league/2026/reg10",
+    "checked_on": "2026-11-17",
+    "verification_status": "VERIFIED — Week 10 page",
+    "observation": "The official Week 10 report lists the Detroit players Kerby Joseph, Cade Mays and D.J. Reed with Game Status Out in the retrieved section.",
+    "use_limit": "Week 10 only; it does not confirm another week or the requested Week 12 report."
+  },
+  {
+    "id": "NFL-INJURY-REQUESTED-WEEK12",
+    "publisher": "NFL.com",
+    "publisher_type": "NFL league source",
+    "title": "Requested 2026 Week 12 injury-report route",
+    "url": "https://www.nfl.com/injuries/league/2026/reg12",
+    "checked_on": "2026-11-17",
+    "verification_status": "MISMATCH — page rendered Week 10, not Week 12",
+    "observation": "The retrieved page title and body identify the Week 10 injury report. No Week 12 injury rows were verified at this route on the check date.",
+    "use_limit": "Do not treat the Week 10 page as a current Week 12 snapshot or infer that an absent player is available."
+  },
+  {
+    "id": "NFL-GAMECENTER-RAMS-CARDINALS-W10",
+    "publisher": "NFL.com",
+    "publisher_type": "NFL league source",
+    "title": "Los Angeles Rams at Arizona Cardinals — 2026 REG Week 10 Game Center",
+    "url": "https://www.nfl.com/games/rams-at-cardinals-2026-reg-10",
+    "checked_on": "2026-11-17",
+    "verification_status": "VERIFIED",
+    "observation": "The official game center displays a final score, location and stadium, and links to a downloadable Game Book PDF.",
+    "use_limit": "This is one game-center example, not a full-season venue transcription."
+  },
+  {
+    "id": "NFL-GAMEBOOK-RAMS-CARDINALS-W10",
+    "publisher": "NFL.com / NFL static media",
+    "publisher_type": "NFL league source",
+    "title": "Official NFL Game Book — Rams at Cardinals, 2026 Week 10",
+    "url": "https://static.www.nfl.com/image/upload/v1794854921/gamecenter/ab78a133-4feb-11f1-abca-2c54536568a9.pdf",
+    "checked_on": "2026-11-17",
+    "verification_status": "VERIFIED WITH MATERIAL-USE RESTRICTION",
+    "observation": "The PDF includes a game summary, lineups, substitutions, Did Not Play, Not Active, final individual statistics, and game-time weather/roof text. Its notice says the summary and play-by-play are for assisting media coverage and other use requires written NFL permission.",
+    "use_limit": "Obtain a documented terms/permission decision before automated retention, republication or other use of the raw material. This review is not legal advice."
+  },
+  {
+    "id": "NFL-TEAMS-32",
+    "publisher": "NFL.com",
+    "publisher_type": "NFL league source",
+    "title": "NFL Football Teams — Official Sites of all 32 NFL Teams",
+    "url": "https://www.nfl.com/teams/",
+    "checked_on": "2026-11-17",
+    "verification_status": "VERIFIED",
+    "observation": "The official directory title identifies sites for all 32 NFL teams.",
+    "use_limit": "A directory is not proof that each club has a machine-readable depth chart."
+  },
+  {
+    "id": "TEXANS-DEPTH-CHART",
+    "publisher": "Houston Texans",
+    "publisher_type": "Official club source",
+    "title": "Depth Chart — Houston Texans",
+    "url": "https://www.houstontexans.com/team/depth-chart",
+    "checked_on": "2026-11-17",
+    "verification_status": "VERIFIED — image-only chart / club labels it unofficial",
+    "observation": "The club page is headed Unofficial Depth Chart and exposes the chart as an image rather than a text table in the retrieved content.",
+    "use_limit": "Do not transcribe the image by eye or invent structured slots; seek an authorized structured source or leave the values blank and flagged."
+  },
+  {
+    "id": "PACKERS-DEPTH-CHART",
+    "publisher": "Green Bay Packers",
+    "publisher_type": "Official club source",
+    "title": "Green Bay Packers Depth Chart",
+    "url": "https://www.packers.com/team/depth-chart",
+    "checked_on": "2026-11-17",
+    "verification_status": "VERIFIED — raw jersey-number prefixes / club labels it unofficial",
+    "observation": "The club table shows jersey numbers in the player cells (for example, a number before a player name) and is dated Unofficial, Nov. 10, 2026.",
+    "use_limit": "Store the unmodified cell string alongside any tested normalization; do not interpret jersey order as depth."
+  },
+  {
+    "id": "NFL-TRANSACTIONS-RESERVE-NOV2026",
+    "publisher": "NFL.com",
+    "publisher_type": "NFL league source",
+    "title": "2026 NFL Reserve List — November",
+    "url": "https://www.nfl.com/transactions/league/reserve-list/2026/11",
+    "checked_on": "2026-11-17",
+    "verification_status": "VERIFIED",
+    "observation": "The official November reserve-list table includes dated Reserve/Injured entries, including Malik Willis on Nov. 10, 2026.",
+    "use_limit": "Join by player and effective date; a reserve-list row is not a substitute for a game-specific inactive list."
+  },
+  {
+    "id": "NFL-TRANSACTIONS-INDEX",
+    "publisher": "NFL.com",
+    "publisher_type": "NFL league source",
+    "title": "2026 NFL League Transactions",
+    "url": "https://www.nfl.com/transactions/",
+    "checked_on": "2026-11-17",
+    "verification_status": "VERIFIED",
+    "observation": "The official index exposes separate Trades, Signings, Reserve List, Waivers, Terminations and Other categories for November 2026.",
+    "use_limit": "Capture the exact category URL, date and page content for each archived event."
+  },
+  {
+    "id": "NFL-SCHEDULE-ANNOUNCEMENT-2026",
+    "publisher": "NFL Football Communications",
+    "publisher_type": "NFL league source",
+    "title": "2026 NFL Schedule Announced — May 14, 2026",
+    "url": "https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced",
+    "checked_on": "2026-11-17",
+    "verification_status": "VERIFIED",
+    "observation": "The official release displays the publication date May 14, 2026 and links to the 2026 schedule by week and by division.",
+    "use_limit": "Publish beside the mutable live schedule, and keep both the announcement and each game-center source linked."
+  },
+  {
+    "id": "NFL-RULEBOOK-2026",
+    "publisher": "NFL Football Operations",
+    "publisher_type": "NFL league source",
+    "title": "2026 NFL Rulebook",
+    "url": "https://operations.nfl.com/rules-officiating/2026-nfl-rulebook",
+    "checked_on": "2026-11-17",
+    "verification_status": "VERIFIED",
+    "observation": "The official 2026 rulebook lists Rule 6-1-6 as permitting a team to declare an onside kick at any time during the game.",
+    "use_limit": "Treat rules as season-versioned facts; do not carry a rule-era feature across seasons without versioning."
+  },
+  {
+    "id": "FANDUEL-FOOTBALL-RULES",
+    "publisher": "FanDuel Support",
+    "publisher_type": "Official sportsbook operator source — example only",
+    "title": "Football with FanDuel",
+    "url": "https://support.fanduel.com/s/article/Betting-football-with-FanDuel",
+    "checked_on": "2026-11-17",
+    "verification_status": "VERIFIED — operator rules, not odds",
+    "observation": "The operator help page lists possible football markets including moneylines, spreads, totals, player props and parlays; it says markets vary by game and location and describes player-prop settlement conditions.",
+    "use_limit": "This is an operator-policy example, not a current price feed and not confirmation that the operator is available in the user's jurisdiction."
+  },
+  {
+    "id": "NWS-API-DOCUMENTATION",
+    "publisher": "National Weather Service",
+    "publisher_type": "U.S. federal agency source",
+    "title": "Weather.gov API Web Service Documentation",
+    "url": "https://www.weather.gov/documentation/services-web-api",
+    "checked_on": "2026-11-17",
+    "verification_status": "VERIFIED",
+    "observation": "The NWS documentation describes an API for forecasts, alerts and observations and specifies request/format guidance; it says the API information is intended as open data, free to use, subject to rate limits.",
+    "use_limit": "Use a forecast's issue time and grid/location in any pregame feature; forecast and postgame observed weather are different facts."
+  },
+  {
+    "id": "NFL-SNAP-COUNT-ATTEMPT",
+    "publisher": "NFL.com",
+    "publisher_type": "NFL league source — attempted route",
+    "title": "Attempted NFL defensive-snap statistics route",
+    "url": "https://www.nfl.com/stats/player-stats/category/defense/2026/REG/all/defensivesnaps/desc",
+    "checked_on": "2026-11-17",
+    "verification_status": "UNVERIFIED — attempted route returned 404",
+    "observation": "This particular URL did not resolve to a statistics table in the page retriever. This does not establish that no official snap-count source exists elsewhere.",
+    "use_limit": "Do not publish snap share or infer playing time until an official source and its terms are verified."
+  }
+]

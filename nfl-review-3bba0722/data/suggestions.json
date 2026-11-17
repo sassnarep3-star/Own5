@@ -1,0 +1,236 @@
+[
+  {
+    "id": "S-01",
+    "title": "Set the price-data policy before publishing any residual, CLV or ROI",
+    "problem": "The latest reviewed price-snapshot table in the repository has blank market-open and market-close fields. NFL schedule/standings pages are not sportsbook quotes. No market residual, CLV or ROI should be inferred from those blanks.",
+    "options": [
+      {"label": "A — Licensed feed", "text": "Use a licensed price feed that provides operator, market, line, odds, capture time, and written storage/display rights."},
+      {"label": "B — Operator page, automated only", "text": "Use a first-party operator page only after its terms and automated capture rights are reviewed; store timestamps and hashes."},
+      {"label": "C — Fail closed", "text": "Until A or B is approved, keep market line, residual, CLV and ROI blank and block price-dependent rankings."}
+    ],
+    "recommendation": "C now; evaluate A and B as permitted automated sources. Do not use manual entry or an untimestamped reference line as an opening/closing price.",
+    "decision_gate": "Price provenance + source-use policy",
+    "review_test": "Pilot on one originated market only after an approved automated source is selected. Expand only when every originated market has a source-linked opening and closing quote with timestamps; otherwise the market fields remain blank.",
+    "what_would_change_our_mind": "A source with documented rights, complete market/price fields, stable timestamps and reproducible retrieval would move this from blocked to a capture pilot. A source with missing timestamps or unclear rights would not.",
+    "decision_status": "AWAITING REVIEW — no source selected",
+    "priority": "Blocking",
+    "source_ids": ["NFL-WEEK12-SCHEDULE", "FANDUEL-FOOTBALL-RULES"],
+    "source_note": "The NFL schedule is a fixture source; FanDuel's page is an operator-rules example, not a price feed and not evidence of local availability."
+  },
+  {
+    "id": "S-02",
+    "title": "Automate immutable injury, depth and transaction snapshots with freshness alarms",
+    "problem": "A single capture cannot reconstruct what was known before kickoff. The requested Week 12 injury URL returned a Week 10 page during this review, so a stale page must fail closed rather than be republished as current.",
+    "options": [
+      {"label": "A — Private immutable archive", "text": "Schedule automated source reads, preserve raw responses and SHA-256 hashes in a private durable store, and publish only permitted derived data."},
+      {"label": "B — Public manifest, private raw payload", "text": "Publish timestamps, hashes, parser status and source links; retain raw payloads privately unless the source terms permit public storage."},
+      {"label": "C — No feature until capture works", "text": "If the official page is unavailable, stale or terms-restricted, leave the feature unknown and block its use."}
+    ],
+    "recommendation": "A with B as the public audit surface; C is the required fail-safe. Run an automated capture daily from Wednesday through kickoff. If the official report is not yet published, record that state rather than carrying forward an older page as current.",
+    "decision_gate": "Point-in-time capture, retention, source rights and freshness",
+    "review_test": "Run a scheduled test through one full report cycle. Each expected daily capture must have source URL, page/week identity, timestamp, raw hash, parser status and a recorded missing/error state; a wrong-week page must fail the run.",
+    "what_would_change_our_mind": "A source with stable, permitted machine-readable access and an auditable capture history supports automation. If access, retention rights or report identity cannot be confirmed, keep its derived signal disabled.",
+    "decision_status": "AWAITING REVIEW — storage/retention policy open",
+    "priority": "Blocking",
+    "source_ids": ["NFL-INJURY-REQUESTED-WEEK12", "NFL-TRANSACTIONS-INDEX", "NFL-TRANSACTIONS-RESERVE-NOV2026"],
+    "source_note": "The current injury route did not return the requested week. The transaction and reserve-list pages are separately available official sources."
+  },
+  {
+    "id": "S-03",
+    "title": "Build an expected-versus-actual availability graph from dated evidence",
+    "problem": "A depth-chart name is not proof that a player started, and an injury-report row is not proof of who played. The reviewed official Game Book sample contains distinct Lineups, Did Not Play and Not Active sections.",
+    "options": [
+      {"label": "A — Expected/actual edges", "text": "Store the dated club depth slot as expected evidence and the per-game NFL Game Book as actual lineup, did-not-play and inactive evidence."},
+      {"label": "B — Inferred starter", "text": "Infer actual starters from jersey order, experience, salary or an unverified snap proxy."},
+      {"label": "C — Unknown unless evidenced", "text": "If either expected or actual evidence is absent, retain an explicit unknown and do not create a replacement edge."}
+    ],
+    "recommendation": "A plus C. Reject B. Record every edge with the source URL, capture time, game key, source field/slot and conflict flag.",
+    "decision_gate": "Official expected-starter and actual-game evidence",
+    "review_test": "For every game in an evaluation window, attach a dated expected-source record and an official game-day record; unresolved names or conflicts stay unknown. Keep snap counts as a separate measure, never as inferred depth rank.",
+    "what_would_change_our_mind": "Only an official, dated source that explicitly identifies starters or playing time can replace an unknown. A roster page or jersey-number sequence cannot.",
+    "decision_status": "AWAITING REVIEW — source rights and full-game coverage required",
+    "priority": "Blocking",
+    "source_ids": ["NFL-GAMECENTER-RAMS-CARDINALS-W10", "NFL-GAMEBOOK-RAMS-CARDINALS-W10", "NFL-TEAMS-32"],
+    "source_note": "The Game Book is direct evidence for one reviewed game only; do not generalize this sample to all games without capture."
+  },
+  {
+    "id": "S-04",
+    "title": "Certify all 32 club depth-chart routes before trusting team-level depth features",
+    "problem": "Club pages differ in structure. The current Texans page exposes an image and calls its chart unofficial; the Packers table includes jersey numbers in the player field and also labels the chart unofficial.",
+    "options": [
+      {"label": "A — Club page, verified per team", "text": "Inspect each official club page, save its raw source and date, and record whether it is a structured table, grouped chart, image or unavailable."},
+      {"label": "B — Authorized structured source", "text": "For an image-only or inaccessible page, use only a structured alternative whose publisher and use rights are verified."},
+      {"label": "C — Block incomplete coverage", "text": "Do not produce a 32-team deficiency view or a team-level model if any club lacks a verified route."}
+    ],
+    "recommendation": "A for machine-readable pages; B for unresolved pages; C until every club has an explicit status. Preserve the raw text, normalize jersey prefixes only with tested parsing, and retain shared or empty slots as published.",
+    "decision_gate": "32-team source and parser certification",
+    "review_test": "Clear only when the official directory's 32 clubs each have a dated source record and parser outcome. Add regression fixtures for the Texans image-only page and Packers jersey-prefixed cells; no inference from jersey number, experience or salary.",
+    "what_would_change_our_mind": "An authorized structured Texans source and successful club-by-club verification of every remaining chart would lift the coverage block. Visual transcription or a partial sample would not.",
+    "decision_status": "AWAITING REVIEW — 32-team sweep not completed in this session",
+    "priority": "Blocking",
+    "source_ids": ["NFL-TEAMS-32", "TEXANS-DEPTH-CHART", "PACKERS-DEPTH-CHART"],
+    "source_note": "The two club examples establish parser risks, not league-wide coverage or NFL-approved starter status."
+  },
+  {
+    "id": "S-05",
+    "title": "Version roster turnover and reserve-list events against each availability record",
+    "problem": "A player omitted from a weekly injury table may be on a reserve list. The official November 2026 reserve list contains dated Reserve/Injured entries, including Malik Willis on Nov. 10.",
+    "options": [
+      {"label": "A — Join dated events", "text": "Capture official trades, reserve-list and roster events and join them to the player/team state effective at each forecast time."},
+      {"label": "B — Treat report absence as healthy", "text": "Assume a player not listed on the weekly injury report is available."},
+      {"label": "C — Preserve unknown state", "text": "If the transaction/roster event history is missing, keep availability unresolved rather than assigning healthy."}
+    ],
+    "recommendation": "A plus C. Reject B. Keep event effective date and capture date separate so historical lineups cannot inherit later roster moves.",
+    "decision_gate": "Roster/IR event chronology and point-in-time join",
+    "review_test": "Before a player can be labelled available, the point-in-time roster and official reserve-list evidence must be checked; every unjoined row stays unknown. Re-run a dated transaction example through the join test.",
+    "what_would_change_our_mind": "A complete official event history with effective dates and stable player identifiers would allow the join to clear. A current roster page without history would not.",
+    "decision_status": "AWAITING REVIEW — latest official route located; historical join not built",
+    "priority": "Blocking",
+    "source_ids": ["NFL-TRANSACTIONS-INDEX", "NFL-TRANSACTIONS-RESERVE-NOV2026", "NFL-INJURY-REQUESTED-WEEK12"],
+    "source_note": "The reserve-list page proves that an official event source exists; it does not by itself establish a player's game-day status."
+  },
+  {
+    "id": "S-06",
+    "title": "Treat injury as a timestamped surprise and validate personnel value with ablations",
+    "problem": "A single designation level cannot show what changed. Fixed point penalties are unsupported until the same model is compared with and without verified availability features on chronological holdouts.",
+    "options": [
+      {"label": "A — Dated transitions + ablation", "text": "Derive report changes only between timestamped snapshots, then compare identical models with and without verified availability features."},
+      {"label": "B — Fixed injury penalty", "text": "Subtract a preset number of points for a missing player or assign uncalibrated percentages to Questionable."},
+      {"label": "C — No injury feature yet", "text": "Disable the feature until multi-season designations can be joined to official inactive/gamebook evidence."}
+    ],
+    "recommendation": "A with C as the fail-safe. Reject B. Report the ablation delta with uncertainty and publish the actual capture timestamps; do not treat an injury level as a surprise.",
+    "decision_gate": "Historical designation reliability + no-lookahead ablation",
+    "review_test": "Use chronological train, validation and final holdout windows. Freeze features before the holdout; compare identical models with/without verified availability; publish sample size and uncertainty. No result is claimed in this review.",
+    "what_would_change_our_mind": "Only a reproducible holdout improvement with uncertainty excluding no benefit, using point-in-time injury and actual-status evidence, supports keeping the feature. A level-only or fixed-penalty result does not.",
+    "decision_status": "AWAITING REVIEW — current-week series and multi-season join absent",
+    "priority": "Blocking",
+    "source_ids": ["NFL-INJURY-REQUESTED-WEEK12", "NFL-GAMEBOOK-RAMS-CARDINALS-W10", "NFL-TRANSACTIONS-RESERVE-NOV2026"],
+    "source_note": "Official sources establish designations and game evidence; the ablation design and acceptance rule are proposed methodology, not NFL rules."
+  },
+  {
+    "id": "S-07",
+    "title": "Pre-register a singles shadow baseline and separate signal skill from staking",
+    "problem": "A short-run win rate or ROI can reward variance. Backtest selections must not be copied to a prospective leaderboard, and stake size must not alter the signal score.",
+    "options": [
+      {"label": "A — Prospective, preregistered singles", "text": "Freeze the rule text, sample window, features, market, baseline and model hash before the evaluation window; use chronological train/validation/final holdout seasons."},
+      {"label": "B — Rank by realized win rate or season ROI", "text": "Use outcomes or return alone to sort strategies."},
+      {"label": "C — Keep all candidates unranked", "text": "If the evaluation or price data is not ready, show registration and gate status only."}
+    ],
+    "recommendation": "A for signal testing and C until all gates pass. Rank a signal by benchmark-relative proper score with game-cluster uncertainty and a pre-registered multiplicity correction; show staking in a separate panel. Keep random and favorites-only controls. Do not publish backtest scores on the leaderboard.",
+    "decision_gate": "Pre-registration, holdout integrity, official outcomes and price benchmark",
+    "review_test": "Before evaluation, commit a registration hash and freeze the sample plan. A proposed qualification rule is a positive lower 95% game-cluster confidence bound for benchmark-relative Brier skill on the untouched holdout after multiplicity adjustment; the sample-size/power target must be frozen before opening that holdout.",
+    "what_would_change_our_mind": "A strategy can be promoted only after it meets its own preregistered holdout gate and prospective price/settlement requirements. A backtest win rate or staking run alone cannot promote it.",
+    "decision_status": "AWAITING REVIEW — no prospective qualification claim made",
+    "priority": "High",
+    "source_ids": ["NFL-STANDINGS-2026", "NFL-WEEK12-SCHEDULE", "FANDUEL-FOOTBALL-RULES"],
+    "source_note": "Official NFL results sources can supply outcomes; the proper-score threshold is a proposed research gate, not a league statistic."
+  },
+  {
+    "id": "S-08",
+    "title": "Keep parlays and prop combinations behind a joint-evidence and rules gate",
+    "problem": "Multiplying marginal probabilities assumes independence. Operator settlement and void rules can change what a combination means; the operator source says available markets and rules vary by game and location.",
+    "options": [
+      {"label": "A — Direct joint probability", "text": "Estimate and validate the joint outcome on a chronological holdout for the exact leg/market definition."},
+      {"label": "B — Multiply marginal probabilities", "text": "Treat correlated legs as independent without a validated joint model."},
+      {"label": "C — Suppress combinations", "text": "Keep same-game parlays and prop combos off the leaderboard until a joint model and jurisdiction-specific settlement rules are verified."}
+    ],
+    "recommendation": "C now; move to A only after the joint probability, operator price and void/push rules are directly documented. Reject B.",
+    "decision_gate": "Joint calibration + price + operator settlement rules",
+    "review_test": "For each combo type, verify a directly estimated joint probability and its holdout calibration, capture the operator's applicable void/push rules, and record a source-linked price. Otherwise publish no ranking or ROI.",
+    "what_would_change_our_mind": "A direct, prospective joint validation plus jurisdiction-specific rules and prices would open that combo division. A product of marginal probabilities will not.",
+    "decision_status": "AWAITING REVIEW — joint evidence not established",
+    "priority": "Blocking for combinations",
+    "source_ids": ["FANDUEL-FOOTBALL-RULES"],
+    "source_note": "FanDuel is an operator example only; its page does not provide current odds or establish rules for another operator or jurisdiction."
+  },
+  {
+    "id": "S-09",
+    "title": "Store every model output as a probability with its inputs and preserve model-estimator versions",
+    "problem": "A pick alone cannot be calibrated, reproduced or compared with a market. The model output must preserve the probability, fair line, market line, residual and exact point-in-time inputs; unavailable market values stay blank.",
+    "options": [
+      {"label": "A — Versioned forecast record", "text": "Store probability/distribution, fair line, separate market line and difference, model code hash, feature values, source snapshot IDs and forecast timestamp."},
+      {"label": "B — Pick-only output", "text": "Store only the selected side/total/moneyline and omit the inputs."},
+      {"label": "C — Keep both totals visible", "text": "If two total estimators exist, publish both and their gap until a walk-forward comparison selects one."}
+    ],
+    "recommendation": "A and C. Preserve the requested origination dependency order: side, then total, then moneyline. Do not collapse two totals until a preregistered chronological comparison supports it.",
+    "decision_gate": "Forecast reproducibility and no-lookahead inputs",
+    "review_test": "Every forecast row carries a probability, model/version ID, timestamp and all input/source snapshot IDs. Fair line, market line and difference remain separate fields; the market fields are blank unless a valid price is captured.",
+    "what_would_change_our_mind": "A model/version may be retired only after a frozen chronological comparison; unrecorded inputs or post-game data invalidate the forecast rather than repair it.",
+    "decision_status": "AWAITING REVIEW — schema and two-estimator rule not integrated here",
+    "priority": "High",
+    "source_ids": ["NFL-WEEK12-SCHEDULE", "NFL-STANDINGS-2026"],
+    "source_note": "These official sources define candidate fixture/result inputs; the forecast schema is a proposed audit contract."
+  },
+  {
+    "id": "S-10",
+    "title": "Use the dated schedule announcement, game-center venues and time-stamped weather context",
+    "problem": "A live schedule can change, a venue should not be inferred from the home team, and a postgame weather observation is not a pregame forecast or a 90-minute roof decision.",
+    "options": [
+      {"label": "A — Schedule fact bundle", "text": "Store the dated NFL schedule release, current by-week schedule and official game-center venue for each fixture."},
+      {"label": "B — Weather and roof bundle", "text": "Join an NWS forecast grid with issue time and a stadium/club roof/surface source captured at the relevant pregame time; retain postgame Game Book observation separately."},
+      {"label": "C — Infer context", "text": "Assume venue, roof, surface or weather from the home club or prior game."}
+    ],
+    "recommendation": "A and B; reject C. Keep published schedule facts separate from modeled effects and version the 2026 rulebook regime for any kickoff-related feature.",
+    "decision_gate": "Fixture source, venue, forecast timestamp, roof/surface and rule-season provenance",
+    "review_test": "Every fixture in the evaluated slate has an official game-center link and venue field; every weather feature has an NWS issue time and location; any pregame roof value has a dated official stadium/club source. Unavailable fields stay blank.",
+    "what_would_change_our_mind": "A direct official source captured at the relevant time can clear each field; the Game Book's after-game observation alone cannot clear the pregame roof/forecast field.",
+    "decision_status": "AWAITING REVIEW — full-slate venue and pregame roof capture not audited",
+    "priority": "High",
+    "source_ids": ["NFL-SCHEDULE-ANNOUNCEMENT-2026", "NFL-WEEK12-SCHEDULE", "NFL-GAMECENTER-RAMS-CARDINALS-W10", "NFL-GAMEBOOK-RAMS-CARDINALS-W10", "NWS-API-DOCUMENTATION", "NFL-RULEBOOK-2026"],
+    "source_note": "The official Game Book sample shows game-time conditions; it is not the pregame forecast or 90-minute roof notice."
+  },
+  {
+    "id": "S-11",
+    "title": "Keep raw evidence private until source terms are checked; publish derived analysis and links",
+    "problem": "An official source is not automatically permission to archive or republish its raw content. The reviewed NFL Game Book explicitly restricts other use without written permission.",
+    "options": [
+      {"label": "A — Source-by-source rights register", "text": "Record capture, retention, derived-use and public-display terms separately for every source before automated ingestion."},
+      {"label": "B — Publish all raw captures", "text": "Expose every scraped row and source capture on the public site without checking terms."},
+      {"label": "C — Private raw, public derived", "text": "Store raw snapshots in a private durable store; publish only permitted derived measures, source links, timestamps and hashes."}
+    ],
+    "recommendation": "A and C. Hold any restricted raw source out of public storage and modeling use until the permissions question is resolved; ask the source owner or qualified counsel when needed.",
+    "decision_gate": "Terms and permission for capture, retention, modeling and publication",
+    "review_test": "Every source has an explicit permission/terms status for each intended use. A blank or unclear status blocks raw retention and public derived rows from that source.",
+    "what_would_change_our_mind": "Written permission or clearly applicable terms can open a source for the documented uses. A public web page alone is not permission evidence.",
+    "decision_status": "AWAITING REVIEW — use terms not cleared for every source",
+    "priority": "Blocking",
+    "source_ids": ["NFL-GAMEBOOK-RAMS-CARDINALS-W10", "NWS-API-DOCUMENTATION", "FANDUEL-FOOTBALL-RULES"],
+    "source_note": "The Game Book carries an express restriction. NWS documentation describes open-data use. Operator rules are source-specific and jurisdiction-specific."
+  },
+  {
+    "id": "S-12",
+    "title": "Publish weekly change diffs and fail loudly on source/schema drift",
+    "problem": "A single static snapshot hides designation changes, roster events and changed source shapes. Silent missing fields can turn a parser break into a false clean report.",
+    "options": [
+      {"label": "A — Immutable versions + field checks", "text": "Retain each permitted dated capture, required fields, parser version and content hash; produce a diff for status, slot, roster and schedule changes."},
+      {"label": "B — Pin one expected row count only", "text": "Fail on row-count changes even where the official report legitimately changes, without checking field-level meaning."},
+      {"label": "C — Silent fallback", "text": "Publish an empty table or carry forward yesterday's value when parsing fails."}
+    ],
+    "recommendation": "A. Use schema and identity checks plus explicit source-specific expectations; treat legitimate count changes as data changes, not automatically as parse failure. Reject C.",
+    "decision_gate": "Deterministic snapshot diff + parser drift alarm",
+    "review_test": "A missing required field, wrong-week page, duplicate key or hash mismatch must fail the build and publish a flagged error; a legitimate row-count change must produce a reviewed diff rather than a silent blank.",
+    "what_would_change_our_mind": "Only a tested parser/source contract with explicit change handling can permit publication; stale carry-forward is never a verified value.",
+    "decision_status": "AWAITING REVIEW — scheduler and diff service not integrated",
+    "priority": "High",
+    "source_ids": ["NFL-INJURY-REQUESTED-WEEK12", "NFL-TRANSACTIONS-INDEX", "NFL-WEEK12-SCHEDULE"],
+    "source_note": "Official report, transaction and schedule pages are mutable inputs; this suggestion does not assert a fixed official row count."
+  },
+  {
+    "id": "S-13",
+    "title": "Make the review docket the only path from suggestion to implementation",
+    "problem": "Recommendations can be mistaken for approved work. The user asked for a clear list of questions, known and missing information, and a chance to choose a path before shared changes are made.",
+    "options": [
+      {"label": "A — Evidence-backed docket", "text": "For each proposal publish alternatives, tradeoffs, recommended path, cost/owner, a two-sided change-my-mind test, sources and a decision state."},
+      {"label": "B — Implement all suggestions immediately", "text": "Treat recommendations as approvals and change shared models/sites without an explicit decision record."},
+      {"label": "C — No recommendation register", "text": "Keep open design questions in unstructured notes."}
+    ],
+    "recommendation": "A. This page is a review docket only; all entries remain awaiting review and no suggestion is implemented by this session.",
+    "decision_gate": "Review state and change-control record",
+    "review_test": "Every strategy has a frozen definition/hash plus explicit positive and negative falsification criteria. Every site proposal remains unimplemented until a recorded selection; suggestions do not alter data or model results.",
+    "what_would_change_our_mind": "A recorded decision with owner, evidence, selected path and revisit condition permits a scoped implementation task. No response or an unverified source does not.",
+    "decision_status": "AWAITING REVIEW — all entries are proposals",
+    "priority": "High",
+    "source_ids": ["NFL-WEEK12-SCHEDULE", "NFL-SCHEDULE-ANNOUNCEMENT-2026"],
+    "source_note": "The proposal workflow is project policy, not an NFL policy; schedule links are included as examples of dated official inputs."
+  }
+]
