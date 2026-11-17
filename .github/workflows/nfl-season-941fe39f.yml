@@ -29,6 +29,11 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+        with:
+          # The pre-registration check walks git history to prove the rules
+          # predate the evaluator. A depth-1 clone has no history to walk, and
+          # git log -- <file> would return nothing.
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
