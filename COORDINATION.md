@@ -2458,7 +2458,7 @@ Read-only for this session (never edited): root `index.html`, `pages/**`, `data/
 | E1D-06 | Sources register + flagged-for-review register | done | e1d60f5d | `nfl-desk-e1d60f5d/data/sources.csv`, `data/flagged.csv`, `pages/sources.html`, `pages/flagged.html` | 10 sources, 12 flags (7 blocking); unverified values left blank, never inferred. |
 | E1D-07 | Landing page + category subpages (executive summary, standings, schedule, questions, suggestions, sources, flagged) | done | e1d60f5d | `nfl-desk-e1d60f5d/index.html`, `pages/*.html`, `assets/style.css`, `build.py` | Deterministic build; every table row source-linked or explicitly blank/flagged. |
 | E1D-08 | Verification harness + unit tests + CI workflow | done | e1d60f5d | `nfl-desk-e1d60f5d/verify.py`, `tests/test_desk.py`, `.github/workflows/nfl-desk-e1d60f5d.yml` | verify.py: 241 checks, 0 failures; tests: 16/16 pass; deterministic rebuild byte-identical. |
-| E1D-09 | PR to main, autonomous merge, live Pages check, record | in progress | e1d60f5d | COORDINATION.md, README.md | Merge only after verify PASS and a live URL check. |
+| E1D-09 | PR to main, autonomous merge, live Pages check, record | done | e1d60f5d | COORDINATION.md, README.md | PR #91 merged; Pages built + live URL verified. |
 
 ### Session e1d60f5d — verification record (2026-11-17 UTC)
 
@@ -2467,4 +2467,14 @@ Read-only for this session (never edited): root `index.html`, `pages/**`, `data/
 - `python3 verify.py`: 241 checks, 0 failures (data well-formed, every row sourced, every page has a table, internal targets exist, flags/sources/questions have URLs, deterministic rebuild byte-identical).
 - `python3 -m unittest discover -s tests -v`: 16 tests, all passing.
 - Cross-session discipline: no file owned by another session was edited; root index.html/pages/data/research.json (CI-locked) untouched; every improvement is a proposal on the Suggestions page awaiting a chosen path.
+
+### Session e1d60f5d — PR / merge / Pages record
+
+- **PR:** https://github.com/sassnarep3-star/Own5/pull/91 ("feat(nfl-desk-e1d60f5d): add verified NFL decision desk with questions & suggestions registers")
+- **Merge:** `gh pr merge 91 --merge` succeeded at 2026-11-17T00:50:33Z; state MERGED.
+- **Scoped CI on the PR:** "Verify NFL decision desk (e1d60f5d)" = success. Two unrelated repo-wide checks failed (pre-existing, documented in this log as failing on `main` independently of any session): "NFL Decision Desk — fetch & verify" and "Verify NFL B34 Week 10 research desk". Neither reads any file this session wrote.
+- **GitHub Pages:** deployment status `built` for commit 4c760bf; source `main` `/`.
+- **Live verification:** fetched successfully after deployment:
+  https://sassnarep3-star.github.io/Own5/nfl-desk-e1d60f5d/ (landing page with decision-readiness table, stats, nav) and
+  https://sassnarep3-star.github.io/Own5/nfl-desk-e1d60f5d/pages/standings.html (all 32 teams, official source links).
 
