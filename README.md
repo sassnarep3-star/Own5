@@ -558,14 +558,15 @@ analysis pages, publishes a cross-desk audit, and provides a score-free prospect
 It does not copy raw Game Book player rows or make any strategy bet-eligible. The hub's read of the
 official pages is dated 2026-11-17; the market desk's model/price/availability snapshots are dated
 through 2026-11-15, while the separate e1d60f5d standings/schedule desk was read on 2026-11-17.
-The hub also links the [a699fc53 row-level injury/transactions audit](nfl-audit-a699fc53/index.html)
-and the [e1d60f5d official standings and Week 11 schedule pages](nfl-desk-e1d60f5d/index.html).
+The hub also links the [a699fc53 row-level injury/transactions audit](nfl-audit-a699fc53/index.html),
+the [e1d60f5d official standings and Week 11 schedule pages](nfl-desk-e1d60f5d/index.html), and the
+[3bba0722 decision-review docket](nfl-review-3bba0722/index.html).
 
 **Integration findings that remain open:** legacy strategy pages still display historical outcome
 metrics despite the prospective-only requirement; operator opening/closing prices are not verified;
 Week 10 injury tables disagree across captures; the Week 11 injury URL returned Week 10; the 32-team
 roster/depth graph is incomplete; Game Book reuse requires written permission; fixture venue sources
-are not all individual Game Centers; and the 78-row and 72-row requirements registers are unmapped.
+are not all individual Game Centers; and the 78-row, 72-row and 14-gate readiness/review registers are unmapped.
 All items are published with source links or explicit UNVERIFIED labels. Owning-session files are not
 edited by this integration; see the cross-session requests in `COORDINATION.md`.
 

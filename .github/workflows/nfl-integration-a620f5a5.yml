@@ -51,6 +51,8 @@ jobs:
           python3 nfl-market-desk/tests/test_market_desk.py
           python3 nfl-desk-e1d60f5d/verify.py
           python3 -m unittest discover -s nfl-desk-e1d60f5d/tests -v
+          python3 nfl-review-3bba0722/verify.py
+          python3 -m unittest discover -s nfl-review-3bba0722/tests -v
       - name: Re-run the independent Week 10 injury and transaction audit
         run: |
           python3 nfl-audit-a699fc53/build.py
@@ -60,7 +62,7 @@ jobs:
       - name: Check generated pages and whitespace are clean
         run: |
           git diff --check
-          git diff --exit-code -- index.html nfl-integration-a620f5a5 nfl-audit-a699fc53 nfl-desk-e1d60f5d nfl-desk-e46fb855 nfl-market-desk nfl-capture-a991e3fb
+          git diff --exit-code -- index.html nfl-integration-a620f5a5 nfl-audit-a699fc53 nfl-desk-e1d60f5d nfl-review-3bba0722 nfl-desk-e46fb855 nfl-market-desk nfl-capture-a991e3fb
 
   pages-smoke:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
