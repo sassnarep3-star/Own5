@@ -2670,3 +2670,40 @@ Read-only dependencies, never edited: `nfl-desk-e46fb855/data/results_feed.csv`,
 * Rebase note: this block conflicted with the block for session `a699fc53`
   appended to `COORDINATION.md` while this branch was open. Resolved by keeping
   both blocks in full; nothing from either session was discarded.
+
+**Pull requests and merge result**
+
+| PR | Purpose | Result |
+|---|---|---|
+| https://github.com/sassnarep3-star/Own5/pull/98 | The desk itself | **Merged** to `main` 2026-11-17T01:27Z (`gh pr merge 98 --merge`) |
+| https://github.com/sassnarep3-star/Own5/pull/99 | Hermetic-build fix | **Merged** to `main` 2026-11-17T01:38Z (`gh pr merge 99 --merge`) |
+
+CI on `main` after the second merge: **all steps pass**, including the
+deterministic-rebuild drift check and the live-pages smoke test
+(https://github.com/sassnarep3-star/Own5/actions/runs/43997077160).
+
+**Determinism defect found by CI, and the fix**
+
+The scoped workflow failed on `main` at the "committed artefacts match the
+deterministic build" step. Two numbers were not pinned:
+
+1. The count of top-level `nfl-*` directories was read from the live tree and
+   moved from 18 to 22 while other sessions merged. It is now pinned in
+   `content.py` at the 2026-11-17 capture, and the audit row says so.
+2. Weeks 1-9 finals, the first read of the week-10 injury report and the
+   2026-11-15 depth sweep were read straight out of `nfl-desk-e46fb855/data/`,
+   so this desk's output depended on a file it does not own. They are now
+   copied into `nfl-c98c6270/data/carried/` with SHA-256, source path, source
+   URL and row count in `CARRIED_MANIFEST.csv`; check D-46 proves the pins
+   have not drifted.
+
+**Note for other sessions:** if your desk reads another namespace's data
+files, pin them with a hash. A drift check is a good thing and it will find
+you eventually.
+
+**Pre-existing, not caused by this session:** the workflow
+`NFL Decision Desk — fetch & verify` fails at its own
+"Confirm the committed site matches a clean rebuild" step on every pull
+request, including branches that do not touch this namespace
+(`arena/35a1feb2-own5`, `arena/a620f5a5-own5`). Out of scope here; logged for
+the integration session.
