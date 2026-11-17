@@ -1,5 +1,5 @@
 game_id,season,week,kickoff_date,away,home,away_score,home_score,status,neutral_site,previous_state,read_utc,source_url,raw_ref
-2026_10_LAR_ARI,2026,10,2026-11-15,LA,ARI,34,6,FINAL,,IN PROGRESS at 2026-11-15T23:22Z (Q4 34-6),2026-11-17T00:39:30Z,https://www.nfl.com/schedules/2026/by-week/week-10,R1
+2026_10_LAR_ARI,2026,10,2026-11-15,LA,AZ,34,6,FINAL,,IN PROGRESS at 2026-11-15T23:22Z (Q4 34-6),2026-11-17T00:39:30Z,https://www.nfl.com/schedules/2026/by-week/week-10,R1
 2026_10_SEA_LV,2026,10,2026-11-15,SEA,LV,21,13,FINAL,,IN PROGRESS at 2026-11-15T23:22Z (Q4 21-10; final 21-13),2026-11-17T00:39:30Z,https://www.nfl.com/schedules/2026/by-week/week-10,R1
 2026_10_SF_DAL,2026,10,2026-11-15,SF,DAL,46,40,FINAL,,IN PROGRESS at 2026-11-15T23:22Z (Q3 24-19),2026-11-17T00:39:30Z,https://www.nfl.com/schedules/2026/by-week/week-10,R1
 2026_10_PIT_CIN,2026,10,2026-11-15,PIT,CIN,18,38,FINAL,,SCHEDULED at 2026-11-15T23:22Z,2026-11-17T00:39:30Z,https://www.nfl.com/schedules/2026/by-week/week-10,R1

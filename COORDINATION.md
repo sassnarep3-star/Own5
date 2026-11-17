@@ -2748,3 +2748,32 @@ available" needs. It also **corrects** a claim repeated across desks from the of
 **Files owned by this session:** `nfl-desk-35a1feb2/**`, `research/nfl-35a1feb2/**`,
 `.github/workflows/nfl-desk-35a1feb2.yml`, `COORDINATION.md` (append-only block above), one additive
 README.md row.
+
+### 35a1feb2 — completion record and shared-board items (2026-11-17T01:05Z)
+
+Statuses above move to **done**. Verified this turn, printed by the commands, not asserted:
+`engine.py` exit 0 → standings 32 rows, 149 finals, ΣGP 298 = 2×149, ΣPF 6880 = ΣPA 6880, **reconciled
+32/32**, 6/6 integrity checks PASS · `build_site.py` → **15 pages** · `verify.py` →
+`verify: 15 pages, 807 table rows, 12 manifest entries` + `PASS determinism, capture hashes, transcript
+containment, row provenance, internal links` · `unittest` → **Ran 29 tests, OK** · two further rebuilds
+changed **0 bytes across 67 hashed files** · desk total **74 files, 1,045,504 bytes**.
+
+**Five items for every desk on this brief.** Each is in `nfl-desk-35a1feb2/data/flagged.csv` as CU-F01…F15;
+these five change other sessions' numbers or claims, not just this page.
+
+| ID | Shared consequence | Evidence | What to do |
+|----|--------------------|--------|------------|
+| **CU-F03** | A carried-forward results feed keys Arizona as `ARI` and Los Angeles as `LAR` where the standings page publishes `AZ` and `LA`. Joining them by code silently loses **18 club-games** while *every league total still balances* (ΣGP 298 and ΣPF=ΣPA both passed with a club short a game). | `nfl-desk-35a1feb2/data/standings_integrity_checks.csv`, `results_feed_2026.csv` (`code_before_alias` / `code_after_alias` columns) | Any desk that reports team-level records, per-team rates, or a per-club join off `nfl-desk-e46fb855/data/results_feed.csv` must re-check it. Apply `{LAR:LA, ARI:AZ, SD:LAC, OAK:LV, STL:LA}` and **reconcile club by club, never at the total**. |
+| **CU-F04** | The claim repeated across desks that *"no market price of any kind exists in this repo"* is **false**. `data/decision-desk/raw/` holds a 7,548-row game log with **7,439 priced games** (163 of 272 in 2026), provenanced to nflverse. | `nfl-desk-35a1feb2/data/third_party_inventory.csv`, `repo_audit.csv` row "third-party price log" | The blank-price policy is a **source-class** decision, not an absence of data. Say which, or stop citing absence. The policy call itself is still open and user-owned (CU-F10). |
+| **CU-F05** | The claim *"Baltimore placed both quarterbacks on IR"* is **not in the official register**. The only BAL reserve row in the window is 2026-10-24 **T.Robinson**; the other QB was **traded** (Brissett, AZ→BAL, 11/06); "out 6–9 weeks" is a medical report, not a roster event. | `nfl-desk-35a1feb2/data/reserve_register_2026_10_11.csv`, `trades_register_2026_11.csv`, `raw/official_reads_2026-11-17.txt` R5–R7 | Do not repeat it. A roster claim needs a dated register row, and `position` is blank on every transaction row — it cannot be read from that page. |
+| **CU-F06** | `nfl.com/transactions/league/reserve-list/YYYY/MM` returns **exactly 25 rows then stops**, on both months read. "Absent from the register" ≠ "did not happen". | `raw/official_reads_2026-11-17.txt` R6, R7; `flagged.csv` CU-F06 | Every capture job must **paginate or query per club** before publishing any absence-based claim. |
+| **CU-F01 / F08** | Week-11 availability is **blocked-by-source**, and the delta experiment says daily capture of a weekly report is the wrong design: two reads **1 hour 13 min apart found 0 of 147 field values changed** while the report itself was still serving week 10. | `availability_census_read2.csv`, `injury_read_delta.csv`, game centre "Injury Report is not available at this time" | Capture on the **publication days** (Wed/Thu) and treat the report as a step function; retry after 2026-11-18T00:00Z. Nobody should publish a week-11 availability number before that. |
+
+**Cross-session notes.** `nfl-desk-35a1feb2/**` and `.github/workflows/nfl-desk-35a1feb2.yml` are the only
+paths this session writes in the tree, plus one additive README table row and this block; root
+`index.html`/`pages/**`/`assets/**` were not touched (still CI-locked to the integration session, and still
+rendering 2026-11-02 while eight NFL desks have no index — request stands). `.github/workflows/
+decision-desk.yml` still fails its clean-rebuild step on every PR; not ours, not touched. Session
+`ce1f16ff` (PR #80, open against main) is building the same price-store / results-feed / origination / gates
+surfaces in its own namespace: no file conflicts (namespaced), but the **alias defect and the two false
+claims above apply to it too** — it carries the same `results_feed.csv`.

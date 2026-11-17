@@ -1,9 +1,9 @@
 strategy,division,stake_rule,stakes_recorded,exposure,return,roi,roi_interval,drawdown,note
-P-01,singles,flat 1 unit,0,13 fixtures of notional exposure,not computed,not computed,not computed,not computed,staking is reported separately so a lucky run cannot lift a bad signal and a bad run cannot bury a good one
-P-02,singles,flat 1 unit,0,not eligible,no price so no stake can be priced,,,not computed,blocked by the same policy gate
-P-03,singles,flat 1 unit,0,13 fixtures,,,not computed,armed
-P-04,singles,not permitted,0,0,,,,not built,blocked upstream
-P-05,singles,not permitted,0,0,,,,not built,inputs missing
-P-06,game-parlay,not permitted,0,0,,,,division empty,withheld
-P-07,same-game-parlay,not permitted,0,0,,,,division empty,withheld
-P-08,prop-combo,not permitted,0,0,,,,division empty,withheld
+P-01,singles,flat 1 unit,0,13 fixtures of notional exposure,not computed,not computed,not computed,not computed,staking is reported separately so a lucky run cannot lift a bad signal and a losing run cannot bury a good one
+P-02,singles,flat 1 unit,0,not eligible,not computed,not computed,not computed,not computed,"blocked by the same policy gate: no price, so no stake can be priced"
+P-03,singles,flat 1 unit,0,13 fixtures,not computed,not computed,not computed,not computed,armed
+P-04,singles,not permitted,0,0,n/a,n/a,n/a,n/a,blocked upstream
+P-05,singles,not permitted,0,0,n/a,n/a,n/a,n/a,inputs missing
+P-06,game-parlay,not permitted,0,0,n/a,n/a,n/a,n/a,division empty
+P-07,same-game-parlay,not permitted,0,0,n/a,n/a,n/a,n/a,division empty
+P-08,prop-combo,not permitted,0,0,n/a,n/a,n/a,n/a,division empty

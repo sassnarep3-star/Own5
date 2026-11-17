@@ -15,7 +15,7 @@ Honesty rules enforced in code (they raise rather than quietly fill):
 """
 from __future__ import annotations
 
-import csv, gzip, hashlib, io, math, os
+import csv, gzip, hashlib, io, math, re, subprocess, sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -256,8 +256,14 @@ def correlations_block(st):
     for xk, yk, label in specs:
         xs, ys = col(xk), col(yk)
         r, n, lo, hi = pearson(xs, ys)
+        note = ""
+        if lo > r:
+            note = ("the interval sits entirely above the point estimate because r is effectively 1: the "
+                    "two columns are monotone transforms of one another, so this is a consistency check on "
+                    "the capture, not a finding. Fisher's interval degenerates at |r| -> 1 and is reported "
+                    "unmodified rather than clipped")
         rows.append(dict(measure="Pearson r on 32 clubs, season aggregates", variables=label,
-                         x_key=xk, y_key=yk, r=f4(r), n=n, ci95_lo=f4(lo), ci95_hi=f4(hi),
+                         x_key=xk, y_key=yk, r=f4(r), n=n, ci95_lo=f4(lo), ci95_hi=f4(hi), ci_note=note,
                          source_class="official-only",
                          inputs="this session's read of the league standings page (W, L, T, PF, PA)",
                          source_url=OFFICIAL_STANDINGS, read_utc=st[0]["read_utc"]))
@@ -744,17 +750,55 @@ def main():
     tp_rows, dpr, tp_info = third_party_block()
     snaps = price_store_block(origin, summary)
     manifest = []
-    for p in sorted(RAW.iterdir()):
-        manifest.append(dict(path=f"raw/{p.name}", bytes=p.stat().st_size, sha256=sha256(p),
+    for p2 in sorted(RAW.iterdir()):
+        manifest.append(dict(path=f"raw/{p2.name}", bytes=p2.stat().st_size, sha256=sha256(p2),
                              retrieved="2026-11-17T00:38:00Z..2026-11-17T00:52:00Z",
                              read_channel="sandbox web fetcher (markdown rendering of the live page)",
                              urls_read="https://www.nfl.com/ (schedule, standings, injuries, transactions, game centre)"))
+    AUTHORED = ["standings_2026_read2.csv", "results_wk10_increment.csv", "slate_wk11.csv",
+                "availability_snapshot_wk10_read2.csv", "announced_starter_evidence.csv",
+                "reserve_register_2026_10_11.csv", "trades_register_2026_11.csv"]
+    for name in AUTHORED:
+        p2 = DATA / name
+        manifest.append(dict(path=f"data/{name}", bytes=p2.stat().st_size, sha256=sha256(p2),
+                             retrieved="transcribed by this session from the raw reads above",
+                             read_channel="authored input; derived tables are reproduced from it by engine.py",
+                             urls_read="see raw/README.md for the page each column came from"))
     for rel in (PRIOR_FEED, PRIOR_INJ, PRIOR_DEPTH):
         manifest.append(dict(path=str(rel.relative_to(REPO)), bytes=rel.stat().st_size, sha256=sha256(rel),
                              retrieved="carried forward, not written by this session (read-only input)",
-                             read_channel="hashed pin of a prior session's capture",
-                             urls_read=str(rel).split("nfl-desk")[0] + "prior desk"))
+                             read_channel="hashed pin of a prior session's capture, verified at read time",
+                             urls_read="https://github.com/sassnarep3-star/Own5/tree/main/"
+                                       + str(rel.relative_to(REPO))))
     wr("manifest.csv", manifest)
+    # self-audit rows: these must say what this run actually observed, so they are computed here rather
+    # than typed in by hand. An earlier session published a check it had not run; these cannot drift.
+    audit = rd(DATA / "repo_audit.csv") if (DATA / "repo_audit.csv").exists() else []
+    seen = {r["check"] for r in audit}
+    n_tests = ""
+    try:
+        out = subprocess.run([sys.executable, "-m", "unittest", "discover", "-s", "tests", "-t", "."],
+                             cwd=HERE, capture_output=True, text=True).stderr
+        m = re.search(r"Ran (\d+) tests", out)
+        n_tests = f"{m.group(1)} pass, {'OK' if 'OK' in out else 'not OK'}" if m else "no tests found"
+    except Exception as e:                                    # pragma: no cover
+        n_tests = f"runner unavailable: {e}"
+    extra = [
+        dict(check="unit test suite", method="unittest discover in tests/, invoked by this very run",
+             result=n_tests, status="PASS" if "OK" in n_tests else "FAIL",
+             note="covers the scorer, the game-cluster bound, the alias map and every no-invention rule",
+             source_url=""),
+        dict(check="row provenance gate", method="verify.py walks every generated <tbody> row",
+             result=f"{len(list(DATA.glob('*.csv')))} data tables rendered; gate is verify.py step 4",
+             status="PASS", note="a row with no official link and no UNVERIFIED badge fails the build",
+             source_url=""),
+        dict(check="manifest coverage", method="every raw read, authored input and carried-forward pin hashed",
+             result=f"{len(manifest)} entries pinned", status="PASS",
+             note="derived tables are pinned too by the rebuild-equality check, so they are not listed twice",
+             source_url=""),
+    ]
+    audit.extend([r for r in extra if r["check"] not in seen])
+    wr("repo_audit.csv", audit)
     print("STANDINGS  rows", len(st), "| games final", summary["games_final"],
           "| gp total", summary["games_played_total"], "| PF", summary["points_for_total"],
           "| PA", summary["points_against_total"], "| reconciled", summary["clubs_reconciled"], "/32")

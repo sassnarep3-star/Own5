@@ -4,4 +4,4 @@ week,games,estimator_A_MAE,estimator_B_MAE,league_average_MAE,winner,both_kept,n
 7,14,10.39,11.23,9.38,A,yes,"both estimators stay published until a chronological walk-forward retires one; retirement needs 8 test weeks, not 6",https://www.nfl.com/schedules/2026/by-week/week-10
 8,14,12.46,11.51,12.08,B,yes,"both estimators stay published until a chronological walk-forward retires one; retirement needs 8 test weeks, not 6",https://www.nfl.com/schedules/2026/by-week/week-10
 9,15,11.03,11.11,10.99,A,yes,"both estimators stay published until a chronological walk-forward retires one; retirement needs 8 test weeks, not 6",https://www.nfl.com/schedules/2026/by-week/week-10
-10,12,9.72,8.55,8.83,B,yes,"both estimators stay published until a chronological walk-forward retires one; retirement needs 8 test weeks, not 6",https://www.nfl.com/schedules/2026/by-week/week-10
+10,13,9.44,8.16,8.61,B,yes,"both estimators stay published until a chronological walk-forward retires one; retirement needs 8 test weeks, not 6",https://www.nfl.com/schedules/2026/by-week/week-10
