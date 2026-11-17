@@ -1,0 +1,13 @@
+team,game_status,rows,share,read_utc,source_url,note
+DET,(blank),4,0.082,2026-11-17T00:40:00Z,https://www.nfl.com/injuries/league/2026/reg10,blank is a real value: the club listed the player on the report without a game designation
+DET,Out,3,0.061,2026-11-17T00:40:00Z,https://www.nfl.com/injuries/league/2026/reg10,blank is a real value: the club listed the player on the report without a game designation
+DET,Questionable,2,0.041,2026-11-17T00:40:00Z,https://www.nfl.com/injuries/league/2026/reg10,blank is a real value: the club listed the player on the report without a game designation
+KC,(blank),4,0.082,2026-11-17T00:40:00Z,https://www.nfl.com/injuries/league/2026/reg10,blank is a real value: the club listed the player on the report without a game designation
+KC,Questionable,1,0.020,2026-11-17T00:40:00Z,https://www.nfl.com/injuries/league/2026/reg10,blank is a real value: the club listed the player on the report without a game designation
+NE,(blank),3,0.061,2026-11-17T00:40:00Z,https://www.nfl.com/injuries/league/2026/reg10,blank is a real value: the club listed the player on the report without a game designation
+NE,Out,3,0.061,2026-11-17T00:40:00Z,https://www.nfl.com/injuries/league/2026/reg10,blank is a real value: the club listed the player on the report without a game designation
+NE,Questionable,9,0.184,2026-11-17T00:40:00Z,https://www.nfl.com/injuries/league/2026/reg10,blank is a real value: the club listed the player on the report without a game designation
+NYG,(blank),10,0.204,2026-11-17T00:40:00Z,https://www.nfl.com/injuries/league/2026/reg10,blank is a real value: the club listed the player on the report without a game designation
+NYG,Questionable,1,0.020,2026-11-17T00:40:00Z,https://www.nfl.com/injuries/league/2026/reg10,blank is a real value: the club listed the player on the report without a game designation
+WAS,(blank),7,0.143,2026-11-17T00:40:00Z,https://www.nfl.com/injuries/league/2026/reg10,blank is a real value: the club listed the player on the report without a game designation
+WAS,Out,2,0.041,2026-11-17T00:40:00Z,https://www.nfl.com/injuries/league/2026/reg10,blank is a real value: the club listed the player on the report without a game designation

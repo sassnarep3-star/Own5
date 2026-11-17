@@ -1,0 +1,7 @@
+check,value,expected,result,note,source_url
+clubs in the standings read,32,32,PASS,"row count pinned; a read that returns 31 clubs is a drift event, not a shorter league",https://www.nfl.com/standings/league/2026/REG
+sum of games played implied by the standings,298,298,PASS,the game-by-game record holds 149 completed games; 2 x 149 = 298,https://www.nfl.com/schedules/2026/by-week/week-10
+sum of league points scored,6880,6880,PASS,every point is scored once and conceded once; unequal totals would mean a lost or duplicated game,https://www.nfl.com/standings/league/2026/REG
+published PCT equals W and T recomputed,32,32,PASS,recomputed as (W + 0.5T)/GP per club,https://www.nfl.com/standings/league/2026/REG
+published NET PTS equals PF - PA,32,32,PASS,recomputed per club,https://www.nfl.com/standings/league/2026/REG
+standings record equals the game-by-game record,32,32,PASS,"the two official sources - the standings page and the week pages - agree club by club on wins, losses, ties, points for and points against",https://www.nfl.com/schedules/2026/by-week/week-10

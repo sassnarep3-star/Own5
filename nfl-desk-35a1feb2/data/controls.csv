@@ -1,0 +1,4 @@
+control,rule,what_it_proves,current_note
+C1-random-picks,"Deterministic alternating side by fixture order (no RNG: leg i takes home when i is even) ","Whether the signal beats a coin flip at the same sample size","13 picks generated from the same slate; scored the moment week 11 settles"
+C2-better-differential-only,"Take the club with the higher points-per-game differential from the official standings, no model","Whether the rating model adds anything over the simplest official ranking","13 picks; it is also the closest available stand-in for favourites-only while no market price is admitted"
+C3-league-average-total,"Predict the league-average total for every game, ignoring both teams","Whether either total estimator earns its complexity","MAE 9.38 and 10.99 in two of six test weeks, where it beat both estimators - published because it embarrasses the model"

@@ -1,0 +1,10 @@
+gate,name,definition,threshold,current_value,status,why_not_yet
+G0,No-inference provenance,Every published row links to an official source or is blank with a flag,100% of rows,100% of rows in this desk enforced by verify.py,PASS,""
+G1,Sample sufficiency,Settled games available to the strategy,>=300 per strategy,0 settled registered games (week 11 not played),FAIL,"the official in-repo record is one season, 149 finals"
+G2,Point-in-time integrity,Forecasts recorded before kickoff with a hash and a clock,100% of rows,39 snapshots for 13 fixtures recorded 2026-11-17T00:55Z before a 2026-11-19T20:15Z kickoff,PASS,""
+G3,Chronological holdout,Walk-forward test weeks with no refit on the predicted game,>=8 weeks,6 weeks (weeks 5-10 of 2026),FAIL,"one season in an admitted class cannot give 8 clean test weeks and a training block"
+G4,Line value against a market,Residual to an admitted closing number,>=95% of priced markets,0 of 13 week-11 fixtures (no admitted market line),FAIL,"the price-data policy decision (S-01) is open, though a closing-only third-party log exists in-repo"
+G5,Calibration,Reliability slope on >=200 recorded probabilities,0.8 to 1.2,not computable at 39 probabilities,FAIL,"13 fixtures is not a calibration sample"
+G6,Dependence published,Correlations used by a strategy published with n and an interval,100% of multi-leg products,vacuously satisfied: every multi-leg product is withheld,PASS-BY-ABSTENTION,""
+G7,Multiplicity control,Adjustment for the number of strategy families tried,alpha = 0.05 / 8 = 0.00625,0 certified families out of 8,FAIL,"no family has a result at all, so nothing survives an adjustment yet"
+G8,Prospective replication,Independent prospective weeks after registration,>=4 weeks,0 (week 11 is the first registered week),FAIL,"the clock starts with this registration"

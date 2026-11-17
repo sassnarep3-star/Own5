@@ -1,0 +1,5 @@
+quantity,value,note,source_class
+games in the multi-season log,7548,"seasons 1999-2026, regular season",third-party
+rows carrying a spread and total,7439,the log is not empty of market numbers; earlier sessions published a flag saying no market price of any kind exists in this repo - see the corrections page,third-party
+2026 rows carrying a spread and total,163,of 272 2026 rows,third-party
+2026 snap-count rows,12693,"across 136 distinct games - this is the '136-game log' the brief refers to, identified rather than assumed",third-party

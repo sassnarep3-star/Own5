@@ -1,0 +1,9 @@
+fixture,published_fact,as_published,source_url,used_for
+2026_11_IND_HOU,international or marquee marker,none on the fixture block,https://www.nfl.com/schedules/2026/by-week/week-11,no special term
+2026_11_MIN_SF,international marker,Mexico City 2026 logo shown on the fixture,https://www.nfl.com/schedules/2026/by-week/week-11,venue provenance
+2026_11_MIN_SF,game centre location and stadium,Location MEXICO CITY / Stadium ESTADIO BANORTE,https://www.nfl.com/games/vikings-at-49ers-2026-reg-11,the neutral-site question Q-16
+2026_11_MIN_SF,listed home club,San Francisco 49ers listed as the home club,https://www.nfl.com/games/vikings-at-49ers-2026-reg-11,the home-field term is the league-wide fitted value with no venue adjustment
+2026_11_MIN_SF,pre-game availability state,"Vikings' Injury Report is not available at this time, and the same for the 49ers",https://www.nfl.com/games/vikings-at-49ers-2026-reg-11,the empty-capture record for week 11
+bye_week_11,teams on bye,ATL CLE GB LA NE SEA (six clubs as published),https://www.nfl.com/schedules/2026/by-week/week-11,rest and preparation context
+network_pattern,broadcast distribution,"1 PRIME, 6 CBS, 5 FOX, 1 NBC, 1 ESPN",https://www.nfl.com/schedules/2026/by-week/week-11,short-week and rest-day context only
+short_week_flag,Thursday game,IND at HOU on 2026-11-19 then the Sunday slate on 2026-11-22: three rest days for both clubs,https://www.nfl.com/schedules/2026/by-week/week-11,rest-day context

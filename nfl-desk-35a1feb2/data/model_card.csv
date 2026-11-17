@@ -1,0 +1,11 @@
+field,value
+model,ridge team-strength on game margins; single rating per club + fitted home-field term
+objective,"least squares on margin, L2 penalty 1.0 on team ratings only, no penalty on the home-field term"
+training data,"149 verified 2026 games (weeks 1-10), from the official week pages"
+fitted home-field advantage,-0.46 points
+residual sd of margin,10.41 points
+features used,"game margin, home/away flag, team identity only"
+features deliberately NOT used,"injuries, depth, snap counts, weather, market prices - each is a policy or coverage gate on the requirements page, so no unverified input enters a registered forecast"
+leakage control,fitted only on games completed before the recorded forecast time; week-11 fixtures appear in no training row; walk-forward below re-fits per week and never uses the game being predicted
+status,"SHADOW BASELINE - recorded, not certified; no gate in gates.csv is passed by this model"
+source_url,https://www.nfl.com/schedules/2026/by-week/week-10

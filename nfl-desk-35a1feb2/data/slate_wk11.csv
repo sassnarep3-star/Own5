@@ -1,0 +1,14 @@
+game_id,week,kickoff_date,away,home,kickoff_time_et,network,venue_from_game_centre,venue_read,fixture_record_away,fixture_record_home,source_url,raw_ref
+2026_11_IND_HOU,11,2026-11-19,IND,HOU,8:15 PM,PRIME,NOT READ,not read in this session,3-7,3-6,https://www.nfl.com/games/colts-at-texans-2026-reg-11,R3
+2026_11_MIA_BUF,11,2026-11-22,MIA,BUF,1:00 PM,CBS,NOT READ,not read in this session,1-8,8-1,https://www.nfl.com/games/dolphins-at-bills-2026-reg-11,R3
+2026_11_BAL_CAR,11,2026-11-22,BAL,CAR,1:00 PM,FOX,NOT READ,not read in this session,4-5,4-5,https://www.nfl.com/games/ravens-at-panthers-2026-reg-11,R3
+2026_11_NO_CHI,11,2026-11-22,NO,CHI,1:00 PM,FOX,NOT READ,not read in this session,3-6,7-2,https://www.nfl.com/games/saints-at-bears-2026-reg-11,R3
+2026_11_TEN_DAL,11,2026-11-22,TEN,DAL,1:00 PM,FOX,NOT READ,not read in this session,1-8,4-6,https://www.nfl.com/games/titans-at-cowboys-2026-reg-11,R3
+2026_11_TB_DET,11,2026-11-22,TB,DET,1:00 PM,FOX,NOT READ,not read in this session,3-6,7-2,https://www.nfl.com/games/buccaneers-at-lions-2026-reg-11,R3
+2026_11_AZ_KC,11,2026-11-22,AZ,KC,1:00 PM,CBS,NOT READ,not read in this session,3-7,7-2,https://www.nfl.com/games/cardinals-at-chiefs-2026-reg-11,R3
+2026_11_PIT_PHI,11,2026-11-22,PIT,PHI,1:00 PM,CBS,NOT READ,not read in this session,6-3,2-7,https://www.nfl.com/games/steelers-at-eagles-2026-reg-11,R3
+2026_11_NYJ_LAC,11,2026-11-22,NYJ,LAC,4:05 PM,FOX,NOT READ,not read in this session,2-8,0-8,https://www.nfl.com/games/jets-at-chargers-2026-reg-11,R3
+2026_11_JAX_NYG,11,2026-11-22,JAX,NYG,4:25 PM,CBS,NOT READ,not read in this session,7-2,5-3-1,https://www.nfl.com/games/jaguars-at-giants-2026-reg-11,R3
+2026_11_LV_DEN,11,2026-11-22,LV,DEN,4:25 PM,CBS,NOT READ,not read in this session,4-6,7-2,https://www.nfl.com/games/raiders-at-broncos-2026-reg-11,R3
+2026_11_MIN_SF,11,2026-11-22,MIN,SF,8:20 PM,NBC,Estadio Banorte (Mexico City),2026-11-17T00:50:00Z,7-2,8-1,https://www.nfl.com/games/vikings-at-49ers-2026-reg-11,R4
+2026_11_CIN_WAS,11,2026-11-23,CIN,WAS,8:15 PM,ESPN,NOT READ,not read in this session,7-2,3-5-1,https://www.nfl.com/games/bengals-at-commanders-2026-reg-11,R3

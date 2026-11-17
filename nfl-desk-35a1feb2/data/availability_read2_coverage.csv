@@ -1,0 +1,5 @@
+item,value,note
+clubs fully re-read,"4 (WAS, NYG, NE, DET)","49 rows; the Kansas City table was cut off mid-row by the fetcher, so its 5 complete rows are published with PARTIAL coverage and Patrick Mahomes' row is not published at all"
+clubs not re-read,24,"coverage limit of this read, recorded rather than smoothed over"
+read 1 comparison,"147 field-values identical, 0 changed, 0 rows only in one read","both reads are of the same weekly report, taken 49 hours apart, after the league's Friday deadline for that report"
+designations that moved because of a roster event,"TreVeyon Henderson: Out on the report (read 2), then placed on Reserve/Injured 2026-11-14 per the league register",the report and the transactions register are different clocks; a designation is not a roster state and neither substitutes for the other

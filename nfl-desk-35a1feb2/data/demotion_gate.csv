@@ -1,0 +1,7 @@
+trigger,condition,measurement_window,action_if_fired,current_value,status
+D1,Skill lower bound below zero,Rolling 4 settled weeks,Automatic demotion to paper; the strategy keeps its registration but loses escrow eligibility,no settled week yet,armed
+D2,Calibration slope outside 0.7 to 1.3,Rolling 200 recorded forecasts,Demotion to paper plus a published reliability note,39 forecasts - below the minimum to measure,armed
+D3,Drawdown beyond the pre-registered ruin bound,Any time,Demotion to paper and a stop on new stakes in that division,no stakes exist - shadow only,armed
+D4,Any input row loses its official source or gains an inferred value,Per build,Fail the build and demote until repaired,verify.py blocks it at build time,firing on contact
+D5,Source staleness past 36 hours before kickoff,Per fixture,Demotion to paper for that week only,week-11 report not yet published by the league - recorded as an empty capture not a silent pass,armed
+D6,A settled game's record is revised after it was scored,Per week,Void that week's scores and republish with the diff visible,0 revisions since the feed was pinned,armed
