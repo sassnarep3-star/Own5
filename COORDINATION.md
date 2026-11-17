@@ -2552,6 +2552,9 @@ without rewriting other sessions' datasets. No other branch will be created or p
 - Expanded the scoped integration workflow to run the 3bba verifier/tests and include that namespace in the generated-output drift check. Latest PR run is pending until the rebased branch is pushed.
 
 - Additional readiness handoff to the `83a7d6a8` and `3bba0722` owners: the three separate registers (78/72/14) need a documented row-level crosswalk or explicitly remain three separate decision dockets; do not publish a combined completion percentage until that mapping is verified. No register data was merged by I-A62-01.
+
+---
+
 ## Session `c98c6270` — Own5 NFL Decision Console (2026 week 11)
 
 **Claim (recorded 2026-11-17, before the build):** session `c98c6270`, branch
@@ -2664,3 +2667,6 @@ Read-only dependencies, never edited: `nfl-desk-e46fb855/data/results_feed.csv`,
 * Two gaps previously recorded as "no official source exists" are closable:
   official inactives and official game books are both published on club sites.
   Links are in the sources table above and on the questions page.
+* Rebase note: this block conflicted with the block for session `a699fc53`
+  appended to `COORDINATION.md` while this branch was open. Resolved by keeping
+  both blocks in full; nothing from either session was discarded.
