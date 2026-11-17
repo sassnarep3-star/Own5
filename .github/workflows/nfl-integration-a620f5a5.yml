@@ -5,6 +5,7 @@ on:
     branches: [main, arena/a620f5a5-own5]
     paths:
       - "README.md"
+      - "_config.yml"
       - "index.html"
       - "scripts/build.py"
       - "nfl-integration-a620f5a5/**"
@@ -13,6 +14,7 @@ on:
     branches: [main]
     paths:
       - "README.md"
+      - "_config.yml"
       - "index.html"
       - "scripts/build.py"
       - "nfl-integration-a620f5a5/**"
@@ -41,16 +43,24 @@ jobs:
         run: python3 nfl-integration-a620f5a5/build_site.py
       - name: Verify hub source registers, table-row provenance, and local links
         run: python3 nfl-integration-a620f5a5/verify.py
-      - name: Re-verify the official evidence and market desks
+      - name: Re-verify the official evidence, market, standings and schedule desks
         run: |
           python3 nfl-desk-e46fb855/verify.py
+          python3 -m unittest discover -s nfl-desk-e46fb855/tests -v
           python3 nfl-market-desk/verify.py
+          python3 nfl-market-desk/tests/test_market_desk.py
+          python3 nfl-desk-e1d60f5d/verify.py
+          python3 -m unittest discover -s nfl-desk-e1d60f5d/tests -v
+      - name: Re-run the independent Week 10 injury and transaction audit
+        run: |
+          python3 nfl-audit-a699fc53/build.py
+          python3 -m unittest discover -s nfl-audit-a699fc53/tests -v
       - name: Rebuild the independent Week 10 injury capture and run its hard checks
         run: python3 nfl-capture-a991e3fb/build.py
       - name: Check generated pages and whitespace are clean
         run: |
           git diff --check
-          git diff --exit-code -- index.html nfl-integration-a620f5a5
+          git diff --exit-code -- index.html nfl-integration-a620f5a5 nfl-audit-a699fc53 nfl-desk-e1d60f5d nfl-desk-e46fb855 nfl-market-desk nfl-capture-a991e3fb
 
   pages-smoke:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
@@ -63,6 +73,7 @@ jobs:
           REPOSITORY_OWNER: ${{ github.repository_owner }}
           REPOSITORY_NAME: ${{ github.event.repository.name }}
         run: |
+          set -euo pipefail
           base="https://${REPOSITORY_OWNER}.github.io/${REPOSITORY_NAME}"
           for path in "/" "/nfl-integration-a620f5a5/" "/nfl-integration-a620f5a5/flagged.html"; do
             url="$base$path"

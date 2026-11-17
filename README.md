@@ -556,8 +556,10 @@ This is the repository-wide landing page for existing NFL decision desks. It add
 schedule-release announcement beside the live Week 11 schedule, links to the row-by-row readiness and
 analysis pages, publishes a cross-desk audit, and provides a score-free prospective leaderboard view.
 It does not copy raw Game Book player rows or make any strategy bet-eligible. The hub's read of the
-official pages is dated 2026-11-17; the structured NFL data captures it references are dated no later
-than 2026-11-15 in their pinned manifests/readme files.
+official pages is dated 2026-11-17; the market desk's model/price/availability snapshots are dated
+through 2026-11-15, while the separate e1d60f5d standings/schedule desk was read on 2026-11-17.
+The hub also links the [a699fc53 row-level injury/transactions audit](nfl-audit-a699fc53/index.html)
+and the [e1d60f5d official standings and Week 11 schedule pages](nfl-desk-e1d60f5d/index.html).
 
 **Integration findings that remain open:** legacy strategy pages still display historical outcome
 metrics despite the prospective-only requirement; operator opening/closing prices are not verified;

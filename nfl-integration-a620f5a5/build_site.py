@@ -3,12 +3,14 @@ from __future__ import annotations
 
 import csv
 import html
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 
 NAV = [
     ("index.html", "Overview"),
+    ("executive-summary.html", "Executive summary"),
     ("audit.html", "Audit"),
     ("questions.html", "Questions"),
     ("suggestions.html", "Suggestions"),
@@ -132,7 +134,9 @@ def overview() -> str:
         ("Requirements & readiness", "Open the full row-by-row decision table and gate/clearance criteria.", "../nfl-market-desk/readiness.html", "Open 78-row readiness table"),
         ("Own lines & prices", "Side → total → moneyline, model outputs, price policy and blank market snapshots.", "../nfl-market-desk/lines.html", "Review origination"),
         ("Prices, results & model checks", "Opening and closing price policy, official results, standings reconciliation and held-out model accuracy.", "../nfl-market-desk/prices.html", "Review prices & results"),
-        ("Availability & depth", "Injury report, depth slots, replacement evidence and the independent Week 10 recapture.", "../nfl-capture-a991e3fb/index.html", "Open injury recapture"),
+        ("Availability & depth", "Official reports, roster/IR, shared and empty depth slots, replacement cascade and offense/defense matchup deficiencies.", "../nfl-market-desk/availability.html", "Review availability & depth"),
+        ("Week 10 row-by-row audit", "Independent re-read, row-level injury comparison, transactions and claim checks.", "../nfl-audit-a699fc53/index.html", "Open official re-read"),
+        ("Verified standings & slate", "Official 32-team standings, the Week 11 schedule, byes and linked source pages.", "../nfl-desk-e1d60f5d/index.html", "Open standings & schedule"),
         ("Strategies & gates", "Pre-registration files, validation policy, demotion rules and both sides of each strategy's falsifier.", "../nfl-market-desk/strategies.html", "Review strategies"),
         ("Correlations", "Official input tier, n and withheld pairs; prop-combo joint evidence remains a separate gate.", "../nfl-market-desk/correlations.html", "Review correlations"),
         ("Questions & missing information", "Known evidence, missing inputs, discovery routes and decision blockers.", "questions.html", "Open questions"),
@@ -151,8 +155,8 @@ def overview() -> str:
   </div>
   <aside class="hero-state"><span class="state-pill">PAPER / NOT QUALIFIED</span><h3>No live betting decision is supported.</h3><p>Verified operator open/close prices are missing; historical leaderboard figures are quarantined; official availability is not yet replayable across all clubs.</p><a href="flagged.html">See the blocking evidence ↗</a></aside>
 </section>
-<section class="notice warning"><strong>Currency, not a live feed.</strong><p>This integration read current official pages on 2026-11-17. The most recent structured NFL desk captures in the repository are dated 2026-11-15. Links can change; this hub does not preserve a fresh byte-for-byte copy of the pages it checked.</p></section>
-<section class="section-heading"><div><p class="eyebrow">START HERE</p><h2>Choose the decision area</h2></div><a href="EXECUTIVE_SUMMARY.md">Read executive summary ↗</a></section>
+<section class="notice warning"><strong>Currency, not a live feed.</strong><p>This integration read official pages on 2026-11-17. The market desk's model/price/availability snapshots are dated through 2026-11-15; the separate standings/schedule desk was read on 2026-11-17. Links can change; this hub does not preserve a fresh byte-for-byte copy of the pages it checked.</p></section>
+<section class="section-heading"><div><p class="eyebrow">START HERE</p><h2>Choose the decision area</h2></div><a href="executive-summary.html">Read executive summary ↗</a></section>
 <section class="desk-grid">{card_html}</section>
 <section class="schedule-panel">
   <div><p class="eyebrow">SCHEDULE CONTEXT</p><h2>Dated announcement beside the live schedule</h2><p>The league media release is dated May 8, 2026 and announces a May 14 schedule release. Use the linked weekly page for the live fixture list; use the individual Game Center for the venue of each fixture.</p></div>
@@ -161,7 +165,7 @@ def overview() -> str:
 <section class="section-heading"><div><p class="eyebrow">INTEGRATION AUDIT</p><h2>What blocks a decision today</h2><p class="section-subtitle">The rows below are repository findings with official context where available. Missing sources remain blank and flagged.</p></div><a href="audit.html">Open full audit ↗</a></section>
 {table(["Severity", "Finding", "Decision impact & clearance", "Official source", "Repository evidence"], top_rows, "Selected current integration findings")}
 <section class="callout"><div><p class="eyebrow">LEADERBOARD POLICY</p><h2>Signal and staking stay separate.</h2><p>This hub publishes no historical score or ranking. Qualification must be prospective and pre-registered; staking results are a separate escrow after a permitted price source exists.</p></div><a class="button primary" href="leaderboard.html">Open safe leaderboard ↗</a></section>
-<section class="latest-links"><a href="../nfl-desk-e46fb855/index.html">Dated official-capture desk ↗</a><a href="../nfl-market-desk/index.html">Requirements and origination desk ↗</a><a href="../nfl-capture-a991e3fb/index.html">Week 10 injury recapture ↗</a><a href="flagged.html">Flagged for Review ↗</a></section>'''
+<section class="latest-links"><a href="../nfl-desk-e46fb855/index.html">Dated official-capture desk ↗</a><a href="../nfl-market-desk/index.html">Requirements and origination desk ↗</a><a href="../nfl-capture-a991e3fb/index.html">Week 10 injury recapture ↗</a><a href="../nfl-audit-a699fc53/index.html">Week 10 official re-read ↗</a><a href="../nfl-desk-e1d60f5d/index.html">Verified standings and schedule ↗</a><a href="flagged.html">Flagged for Review ↗</a></section>'''
     return page("NFL Line Origination & Decision Hub", "index.html", content, "Repository-wide entry point for NFL line research, dated official sources and decision blockers. No predictions or wagers are represented as qualified.")
 
 
@@ -252,9 +256,101 @@ def leaderboard_page() -> str:
     return page("Safe Leaderboard", "leaderboard.html", content, "Prospective-only, score-free status board. Backtests are not ranked or shown as performance evidence.")
 
 
+def markdown_inline(text: str) -> str:
+    escaped = html.escape(text, quote=False)
+
+    def link(match: re.Match[str]) -> str:
+        label, target = match.groups()
+        return f'<a href="{html.escape(target, quote=True)}">{label}</a>'
+
+    escaped = re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", link, escaped)
+    escaped = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", escaped)
+    escaped = re.sub(r"`([^`]+)`", r"<code>\1</code>", escaped)
+    return escaped
+
+
+def markdown_body(source: str) -> str:
+    output: list[str] = []
+    paragraph: list[str] = []
+    list_tag: str | None = None
+    in_code = False
+    skipped_title = False
+
+    def flush_paragraph() -> None:
+        if paragraph:
+            output.append("<p>" + markdown_inline(" ".join(paragraph)) + "</p>")
+            paragraph.clear()
+
+    def close_list() -> None:
+        nonlocal list_tag
+        if list_tag:
+            output.append(f"</{list_tag}>")
+            list_tag = None
+
+    for line in source.splitlines():
+        if line.startswith("```"):
+            flush_paragraph()
+            close_list()
+            if in_code:
+                output.append("</code></pre>")
+            else:
+                output.append("<pre><code>")
+            in_code = not in_code
+            continue
+        if in_code:
+            output.append(html.escape(line))
+            continue
+        stripped = line.strip()
+        if not stripped:
+            flush_paragraph()
+            close_list()
+            continue
+        if stripped.startswith("# ") and not skipped_title:
+            skipped_title = True
+            flush_paragraph()
+            close_list()
+            continue
+        heading = re.match(r"^(#{2,4})\s+(.+)$", stripped)
+        if heading:
+            flush_paragraph()
+            close_list()
+            level = min(len(heading.group(1)), 3)
+            output.append(f"<h{level}>{markdown_inline(heading.group(2))}</h{level}>")
+            continue
+        if stripped == "---":
+            flush_paragraph()
+            close_list()
+            output.append("<hr>")
+            continue
+        unordered = re.match(r"^-\s+(.+)$", stripped)
+        ordered = re.match(r"^\d+\.\s+(.+)$", stripped)
+        if unordered or ordered:
+            flush_paragraph()
+            tag = "ul" if unordered else "ol"
+            if list_tag != tag:
+                close_list()
+                output.append(f"<{tag} class=\"tight\">")
+                list_tag = tag
+            item = unordered.group(1) if unordered else ordered.group(1)
+            output.append("<li>" + markdown_inline(item) + "</li>")
+            continue
+        close_list()
+        paragraph.append(stripped)
+    flush_paragraph()
+    close_list()
+    return "\n".join(output)
+
+
+def executive_summary_page() -> str:
+    markdown = (ROOT / "EXECUTIVE_SUMMARY.md").read_text(encoding="utf-8")
+    content = '<article class="summary-copy">' + markdown_body(markdown) + "</article>"
+    return page("Executive Summary", "executive-summary.html", content, "Evidence-first summary of the NFL line-origination portfolio, decision blockers and official-source limits.")
+
+
 def main() -> None:
     pages = {
         "index.html": overview(),
+        "executive-summary.html": executive_summary_page(),
         "audit.html": audit_page(),
         "questions.html": questions_page(),
         "suggestions.html": suggestions_page(),

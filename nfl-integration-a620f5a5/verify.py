@@ -17,7 +17,7 @@ EXPECTED = {
     "questions.csv": ["question_id", "question", "known_from_verified_sources", "missing_information", "answer_needed_before_decision", "clearing_evidence", "official_source_urls", "repository_evidence_urls", "source_status"],
     "suggestions.csv": ["suggestion_id", "priority", "topic", "options", "recommended_path", "what_would_change_the_recommendation", "official_source_urls", "related_evidence_urls", "decision_status", "source_status"],
 }
-PAGES = ["index.html", "audit.html", "questions.html", "suggestions.html", "leaderboard.html", "sources.html", "flagged.html"]
+PAGES = ["index.html", "executive-summary.html", "audit.html", "questions.html", "suggestions.html", "leaderboard.html", "sources.html", "flagged.html"]
 ALLOWED_HOSTS = {
     "nfl.com", "www.nfl.com", "media.nfl.com", "support.nfl.com", "static.www.nfl.com",
     "houstontexans.com", "www.houstontexans.com", "packers.com", "www.packers.com",
@@ -116,7 +116,7 @@ def main() -> int:
         check("http" not in source["scope_limit"].lower() or "https" in source["scope_limit"].lower(), f"sources.csv:{line_number}: suspicious URL warning")
 
     check(len(sources) == 18, f"expected 18 source records, found {len(sources)}")
-    check(len(audit) == 12, f"expected 12 audit rows, found {len(audit)}")
+    check(len(audit) == 13, f"expected 13 audit rows, found {len(audit)}")
     check(len(questions) == 10, f"expected 10 question rows, found {len(questions)}")
     check(len(suggestions) == 10, f"expected 10 suggestion rows, found {len(suggestions)}")
 
