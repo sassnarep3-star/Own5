@@ -40,13 +40,30 @@ SESSION = "941fe39f"
 
 
 # --------------------------------------------------------------------- io
+def q(x):
+    """Quantise a float to 10 decimal places before it is published.
+
+    Two machines using different libm builds can differ in the last bit of a
+    probability (1e-16), and that is enough for a committed file to fail a
+    `git diff --exit-code` check on the other machine, as it did here. Rounding
+    at 10 dp is far below anything this data can support (the smallest published
+    quantity is a p-value, and none is quoted past 4 dp) and makes every output
+    bit-identical across platforms.
+    """
+    if isinstance(x, float):
+        if math.isnan(x) or math.isinf(x):
+            return ""
+        return round(x, 10)
+    return x
+
+
 def write_csv(name: str, header: list[str], rows: list[list]) -> dict:
     path = DERIVED / f"{name}.csv"
     path.parent.mkdir(parents=True, exist_ok=True)
     buf = io.StringIO()
     w = csv.writer(buf, lineterminator="\n")
     w.writerow(header)
-    w.writerows(rows)
+    w.writerows([q(c) for c in row] for row in rows)
     data = buf.getvalue().encode("utf-8")
     path.write_bytes(data)
     return {"table": name, "rows": len(rows), "sha256": hashlib.sha256(data).hexdigest(),
@@ -495,7 +512,17 @@ def main() -> int:
                  " &middot; 2026 season, 7,058 originated markets, 0 certified</p>"
                  "<!-- /own5-index-badge:941fe39f -->"),
     }
-    (DERIVED / "manifest.json").write_text(json.dumps(manifest, indent=1) + "\n")
+    def quantise(o):
+        if isinstance(o, float):
+            return q(o)
+        if isinstance(o, dict):
+            return {k: quantise(v) for k, v in o.items()}
+        if isinstance(o, (list, tuple)):
+            return [quantise(v) for v in o]
+        return o
+
+    (DERIVED / "manifest.json").write_text(
+        json.dumps(quantise(manifest), indent=1) + "\n")
     (DERIVED / "crosschecks.json").write_text(json.dumps(checks, indent=1) + "\n")
     print(json.dumps(manifest["counts"], indent=1))
     for c in checks:
