@@ -7,6 +7,19 @@ the brief, (b) a value computed by engine.py from an official source, or
 (c) an explicit blank / UNVERIFIED marker. No invented numbers.
 """
 
+# Top-level nfl-* directories present in the repository at the 2026-11-17
+# capture. Pinned, not counted live: the tree keeps growing as other sessions
+# merge, and a number that moves would break the deterministic rebuild check.
+NAMESPACES_AT_CAPTURE = [
+    "nfl-560ed315", "nfl-audit-a699fc53", "nfl-b34253a1", "nfl-c98c6270",
+    "nfl-capture-a991e3fb", "nfl-decision-desk", "nfl-decision-desk-38a1fc27",
+    "nfl-decision-desk-e413f933", "nfl-desk-26d4cafb", "nfl-desk-3fb93d11",
+    "nfl-desk-864d5668", "nfl-desk-d38e90c5", "nfl-desk-e1d60f5d",
+    "nfl-desk-e46fb855", "nfl-engine-39086ec8", "nfl-hub-28431d9c",
+    "nfl-integration-a620f5a5", "nfl-market-desk", "nfl-price-results-853c0074",
+    "nfl-readiness-cba42531", "nfl-review-3bba0722", "nfl-strategy-lab",
+]
+
 SESSION = "c98c6270"
 CAPTURE_UTC = "2026-11-17T00:00:00Z"
 SEASON = "2026"
@@ -293,6 +306,7 @@ S-08|Houston Texans depth chart|https://www.houstontexans.com/team/depth-chart|2
 S-09|32 club depth charts|https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-e46fb855/data/depth_slots.csv|2026-11-17T00:00:00Z|715 depth slots across 31 clubs with rank 1-4, shared and empty slots|OFFICIAL
 S-10|Carried-forward results feed (session e46fb855)|https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-e46fb855/data/results_feed.csv|2026-11-15T23:22:00Z|136 finals for weeks 1-9, re-read and reconciled this session|REUSED
 S-11|Carried-forward injury report (session e46fb855)|https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-e46fb855/data/injuries.csv|2026-11-15T23:27:00Z|first read of the week-10 report, used as the delta baseline|REUSED
+S-13|Pinned carried captures (session e46fb855)|https://github.com/sassnarep3-star/Own5/blob/main/nfl-c98c6270/data/carried/CARRIED_MANIFEST.csv|2026-11-17T00:00:00Z|Weeks 1-9 finals, the first read of the week-10 injury report and the 2026-11-15 depth sweep, copied into this namespace and hash-pinned so a later change upstream cannot rewrite this desk|REUSED
 S-12|NFL flexible-scheduling procedures|https://www.nfl.com/legal/flexible-scheduling-procedures|2026-11-17T00:00:00Z|linked from the week page; records that late-season dates are not fixed|OFFICIAL
 """
 

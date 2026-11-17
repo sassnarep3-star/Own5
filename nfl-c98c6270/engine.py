@@ -291,8 +291,10 @@ def depth_delta(prev_path, slots):
 # ---------------------------------------------------------------------------
 
 def load_results():
-    carried = read_csv(os.path.join(ROOT, "nfl-desk-e46fb855", "data",
-                                    "results_feed.csv"))
+    # Pinned copies of another session's captures (data/carried/, with SHA-256 in
+    # CARRIED_MANIFEST.csv). We read the pin, not the live file, so a later change
+    # in that namespace can never silently rewrite what this desk publishes.
+    carried = read_csv(os.path.join(DATA, "carried", "e46fb855_results_feed.csv"))
     fresh = read_csv(os.path.join(DATA, "week10_finals.csv"))
 
     by_id = {}
@@ -738,7 +740,7 @@ def luck_power():
 # ---------------------------------------------------------------------------
 
 def load_injuries():
-    prev_path = os.path.join(ROOT, "nfl-desk-e46fb855", "data", "injuries.csv")
+    prev_path = os.path.join(DATA, "carried", "e46fb855_injuries.csv")
     prev = read_csv(prev_path)
     out = []
     for r in prev:
@@ -1012,9 +1014,10 @@ def repo_audit(feed, new_count, carried_n, slots, inj_rows, matched, recon):
         "gap confirmed", "flag F-01 reproduced; the market column is blank everywhere",
         "")
     add("Number of NFL namespaces answering this brief",
-        "one", "%d top-level nfl-* directories" %
-        len([d for d in os.listdir(ROOT) if d.startswith("nfl-")
-             and os.path.isdir(os.path.join(ROOT, d))]),
+        "one", "%d top-level nfl-* directories present at the 2026-11-17 capture "
+        "(pinned in content.py: the live tree keeps growing as other sessions "
+        "merge, and a moving number would break the deterministic rebuild)"
+        % len(C.NAMESPACES_AT_CAPTURE),
         "consolidation needed", "logged as suggestion S-10; no other session's files "
         "were changed", GH_BLOB + "COORDINATION.md")
     return rows
@@ -1035,7 +1038,7 @@ def main():
     write_csv(os.path.join(DATA, "depth_slots.csv"), list(slots[0].keys()),
               [list(s.values()) for s in slots])
 
-    prev_depth = os.path.join(ROOT, "nfl-desk-e46fb855", "data", "depth_slots.csv")
+    prev_depth = os.path.join(DATA, "carried", "e46fb855_depth_slots.csv")
     delta = depth_delta(prev_depth, slots)
     write_csv(os.path.join(DATA, "depth_delta.csv"),
               list(delta[0].keys()) if delta else
@@ -1120,6 +1123,10 @@ def main():
     dump("questions.csv", C.QUESTIONS_CSV)
     dump("suggestions.csv", C.SUGGESTIONS_CSV)
     dump("strategies.csv", C.STRATEGIES_CSV)
+    carried_manifest = read_csv(os.path.join(DATA, "carried", "CARRIED_MANIFEST.csv"))
+    write_csv(os.path.join(DATA, "carried_manifest.csv"),
+              list(carried_manifest[0].keys()),
+              [list(r.values()) for r in carried_manifest])
     dump("gates.csv", C.GATES_CSV)
     dump("demotion_gate.csv", C.DEMOTION_CSV)
     dump("controls.csv", C.CONTROLS_CSV)
