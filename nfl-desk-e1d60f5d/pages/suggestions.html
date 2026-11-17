@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Suggestions Register — OWN5 NFL decision desk. Source-linked, verified or blank-and-flagged.">
+<title>Suggestions Register · OWN5 NFL Decision Desk</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="layout">
+<aside class="sidebar">
+<a class="brand" href="index.html"><span class="brand-icon">O<span>5</span></span><span>OWN5<small>NFL DECISION DESK</small></span></a>
+<div class="workspace"><span class="live-dot"></span> Research workspace <span class="workspace-arrow">⌄</span></div>
+<span class="nav-caption">DESK</span>
+<nav aria-label="Main navigation">
+<a href="index.html" class="nav-item" aria-current="false"><span class="nav-number">01</span>Overview</a>
+<a href="pages/executive-summary.html" class="nav-item"><span class="nav-number">02</span>Executive summary</a>
+<a href="pages/standings.html" class="nav-item"><span class="nav-number">03</span>2026 standings</a>
+<a href="pages/schedule.html" class="nav-item"><span class="nav-number">04</span>Week 11 schedule</a>
+<a href="pages/questions.html" class="nav-item"><span class="nav-number">05</span>Questions register</a>
+<a href="pages/suggestions.html" class="nav-item active"><span class="nav-number">06</span>Suggestions register</a>
+<a href="pages/sources.html" class="nav-item"><span class="nav-number">07</span>Sources</a>
+<a href="pages/flagged.html" class="nav-item"><span class="nav-number">08</span>Flagged for Review</a>
+</nav>
+<div class="side-bottom"><div class="mode"><span class="live-dot"></span> Paper research only</div>
+<p>No bets. No fabricated results.<br>Evidence before exposure.</p>
+<a href="https://github.com/sassnarep3-star/Own5" target="_blank" rel="noopener noreferrer">View repository ↗</a></div>
+</aside>
+<div class="main-shell">
+<header class="topbar"><div><span class="breadcrumb">Desk <span>/</span> Suggestions Register</span></div><div class="topbar-right"><span class="desktop-only">NFL / METHODOLOGY</span><span class="avatar">O5</span></div></header>
+<main id="main"><section class="panel"><div class="panel-head"><div><h2>Suggestions Register — Review Before Implementing</h2><p>Improvement paths for the site and decision-making. Each suggestion carries options, a recommended path, and the test that would change the call. Nothing is implemented without a reviewer decision.</p></div></div>
+<div class="stat-card"><span class="stat-label">Total suggestions</span><strong class="stat-value">12</strong></div><div class="stat-card"><span class="stat-label">Awaiting decision</span><strong class="stat-value warn">11</strong></div><div class="stat-card"><span class="stat-label">Implemented</span><strong class="stat-value ok">1</strong></div>
+<table class="data-table"><caption>Suggestions register. Review these and choose a path before implementing any change.</caption>
+<thead><tr><th scope="col">ID</th><th scope="col">Suggestion</th><th scope="col">Options</th><th scope="col">Recommended</th><th scope="col">What would change the call</th><th scope="col">Decision status</th><th scope="col">Source</th></tr></thead>
+<tr><td>SUG-01</td><td>Decide the price-data policy before any backtest is published.</td><td>A) Use operator quotes from a single bookmaker (date-only, not open/close history). B) Use nfl.com only (no prices) and keep all price cells blank+flagged. C) Establish an immutable, timestamped price snapshot store with source links and retain hashes.</td><td>B</td><td>An official or regulated operator feed providing opening and closing lines per market becomes available and is documented.</td><td><span class="badge warn">AWAITING DECISION</span></td><td><span class="sourced"><a href="https://www.nfl.com/betting/" target="_blank" rel="noopener noreferrer" title="Official source">Official source</a></span></td></tr>
+<tr><td>SUG-02</td><td>Consolidate the eleven existing NFL desks rather than adding a twelfth slice.</td><td>A) Keep each desk isolated (current state). B) Build one index/hub page linking every desk with its status and gaps. C) Merge engines into a single canonical pipeline.</td><td>B</td><td>A reviewer selects a consolidation path and approves shared navigation changes.</td><td><span class="badge warn">AWAITING DECISION</span></td><td><span class="sourced"><a href="https://sassnarep3-star.github.io/Own5/" target="_blank" rel="noopener noreferrer" title="Official source">Official source</a></span></td></tr>
+<tr><td>SUG-03</td><td>Resolve the depth-order source before building the backup-deficiency feature.</td><td>A) Per-club official depth chart pages, verified club by club. B) Derive depth from official snap counts if a source exists.</td><td>A</td><td>An official snap-count source verified for all 32 clubs is found (then route B may be re-evaluated).</td><td><span class="badge warn">AWAITING DECISION</span></td><td><span class="sourced"><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener noreferrer" title="Official source">Official source</a></span></td></tr>
+<tr><td>SUG-04</td><td>Score injury-designation reliability before using it as a feature.</td><td>A) Do not use designations as features. B) Join several seasons of designations to official inactive lists and measure play rate per designation with CIs; use only if reliable.</td><td>B</td><td>The play-rate confidence intervals show designations carry signal; otherwise designations stay out of the model.</td><td><span class="badge warn">AWAITING DECISION</span></td><td><span class="sourced"><a href="https://www.nfl.com/injuries/league/2026/reg10" target="_blank" rel="noopener noreferrer" title="Official source">Official source</a></span></td></tr>
+<tr><td>SUG-05</td><td>Capture official inactive lists and snap counts.</td><td>A) Read official game books/inactive lists per game. B) Find an official snap-count source.</td><td>A</td><td>An official inactive list or snap-count source is located and captured with timestamps.</td><td><span class="badge warn">AWAITING DECISION</span></td><td><span class="sourced"><a href="https://www.nfl.com/" target="_blank" rel="noopener noreferrer" title="Official source">Official source</a></span></td></tr>
+<tr><td>SUG-06</td><td>Extend the official results feed backward so gate G1 (n &gt;= 300) is reachable.</td><td>A) Keep one-season feed (n unreachable). B) Ingest multiple prior seasons of official game results.</td><td>B</td><td>Additional official seasons are added to the results feed.</td><td><span class="badge warn">AWAITING DECISION</span></td><td><span class="sourced"><a href="https://www.nfl.com/schedules/" target="_blank" rel="noopener noreferrer" title="Official source">Official source</a></span></td></tr>
+<tr><td>SUG-07</td><td>Run scheduled, immutable multi-day availability snapshots with retained hashes.</td><td>A) One capture only (current state). B) Capture injury report + club depth pages at least daily from Wednesday to kickoff with SHA-256 hashes.</td><td>B</td><td>A scheduled capture job is configured and hashes are retained.</td><td><span class="badge warn">AWAITING DECISION</span></td><td><span class="sourced"><a href="https://www.nfl.com/injuries/league/2026/reg10" target="_blank" rel="noopener noreferrer" title="Official source">Official source</a></span></td></tr>
+<tr><td>SUG-08</td><td>Fix the two depth-parsing failures before widening coverage.</td><td>A) Transcribe Texans image by eye (not permitted). B) Use an authorized structured source for Houston; recover Packers via number-stripping + raw-string storage.</td><td>B</td><td>An authorized structured depth source for Houston is obtained.</td><td><span class="badge warn">AWAITING DECISION</span></td><td><span class="sourced"><a href="https://www.houstontexans.com/team/depth-chart" target="_blank" rel="noopener noreferrer" title="Official source">Official source</a></span></td></tr>
+<tr><td>SUG-09</td><td>Publish a weekly &quot;what changed&quot; diff instead of a static snapshot.</td><td>A) Static snapshot only. B) Store each weekly snapshot and render a diff column (rank, rating, availability change).</td><td>B</td><td>Weekly snapshots are stored and diff-rendered.</td><td><span class="badge warn">AWAITING DECISION</span></td><td><span class="sourced"><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener noreferrer" title="Official source">Official source</a></span></td></tr>
+<tr><td>SUG-10</td><td>Put a decision-readiness table on the landing page: one row per requirement, with the gate that blocks it and the number that would clear it.</td><td>A) No readiness table. B) Readiness matrix on the landing page (requirement x blocking gate x clearing number x observed number).</td><td>B</td><td>None — this desk implements B.</td><td><span class="badge ok">IMPLEMENTED</span></td><td><span class="sourced"><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener noreferrer" title="Official source">Official source</a></span></td></tr>
+<tr><td>SUG-11</td><td>Add a two-sided &quot;what would change our mind&quot; field to every strategy entry.</td><td>A) Single confirmation field only. B) Confirm-side + refute-side falsification criteria per strategy.</td><td>B</td><td>None — recommended path is B; not yet applied to strategy catalog.</td><td><span class="badge warn">AWAITING DECISION</span></td><td><span class="sourced"><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener noreferrer" title="Official source">Official source</a></span></td></tr>
+<tr><td>SUG-12</td><td>Build an index of all NFL desks so a reviewer can choose a path before implementing changes.</td><td>A) No index. B) Dedicated suggestions/review page listing options, effort, risk, benefit.</td><td>B</td><td>A reviewer selects and approves a path.</td><td><span class="badge warn">AWAITING DECISION</span></td><td><span class="sourced"><a href="https://sassnarep3-star.github.io/Own5/" target="_blank" rel="noopener noreferrer" title="Official source">Official source</a></span></td></tr>
+</tbody></table>
+<p class="note">Suggestions are proposals only. A reviewer picks a path (and records the decision) before anything is implemented.</p>
+</section></main>
+</div>
+</div>
+</body>
+</html>

@@ -13,6 +13,7 @@ This repository hosts work from **three parallel agent sessions** (see `COORDINA
 | **NFL Decision-Readiness** | NFL — consolidated decision-readiness matrix (85 requirements × blocking gate × clearing number), per-strategy two-sided falsification, removal-of-luck panel, suggestions/questions/flagged registers | https://sassnarep3-star.github.io/Own5/nfl-readiness-cba42531/ | `cba42531` (`nfl-readiness-cba42531/`, `research/nfl-cba42531/`, `.github/workflows/nfl-readiness-cba42531.yml`) |
 | **NFL Decision-Readiness Desk** | NFL 2026 — decision-readiness table (requirement → blocking gate → the number that clears it), questions and suggestions registers, 145 official finals reconciled 32/32 to the standings, 39 originated week-11 markets, 700 depth slots, replacement-depth and matchup-deficiency matrices, luck panel; market-price columns blank and flagged | https://sassnarep3-star.github.io/Own5/nfl-desk-e46fb855/ | `e46fb855` (`nfl-desk-e46fb855/`, `.github/workflows/nfl-desk-e46fb855.yml`) |
 | **NFL Official Re-read & Flagged for Review** | NFL 2026 — Week 10 injury report re-read line by line against nfl.com (347 official rows vs 326 published), claim-by-claim verdicts with official links, official trades and reserve-list rows, Flagged for Review register | https://sassnarep3-star.github.io/Own5/nfl-audit-a699fc53/ | `a699fc53` (`nfl-audit-a699fc53/`, `.github/workflows/nfl-audit-a699fc53.yml`) |
+| **NFL Decision Desk — e1d60f5d** | NFL 2026 — verified 32-team standings and Week 11 schedule from nfl.com, questions register (have/missing/answers), suggestions register (reviewable paths), sources register, flagged-for-review, executive summary; every row source-linked or blank-and-flagged; 0 strategies certified | https://sassnarep3-star.github.io/Own5/nfl-desk-e1d60f5d/ | `e1d60f5d` (`nfl-desk-e1d60f5d/`, `.github/workflows/nfl-desk-e1d60f5d.yml`) |
 
 Shared policy: **every table row carries a source link; values that cannot be confirmed from an official/primary source are left blank and published on a Flagged-for-Review page — never inferred. No performance claims; no bets placed; leaderboards empty until strategies pass validation gates.**
 
@@ -492,3 +493,28 @@ python3 verify.py                      # 10 checks: row-level source coverage, l
                                        # paths, flag namespaces, hashes, drift, determinism
 python3 tests/test_market_desk.py      # 27 tests
 ```
+
+## NFL Decision Desk — questions, suggestions and verified schedule (session e1d60f5d, 2026-11-17)
+
+**Live desk:** https://sassnarep3-star.github.io/Own5/nfl-desk-e1d60f5d/
+
+A small, self-contained, source-verified decision desk. It publishes the **verified 2026 NFL standings** (32 teams, W-L-T/PF/PA/PCT reconciled to nfl.com) and the **Week 11 schedule** (13 games + 6 byes, with the Vikings@49ers Mexico City neutral-site game confirmed), plus:
+
+- **Executive summary** — what we have, what we still need, bottom line.
+- **Questions register** (10 questions, 7 blocking) — what we have, what we lack, and the cheapest route to each answer, before any decision can be reasonably made.
+- **Suggestions register** (12 suggestions, 11 awaiting decision) — improvement paths with options, a recommended path, and the test that would change the call; nothing is implemented without a reviewer decision.
+- **Sources register** (10 sources) and **Flagged-for-Review** (12 flags, 7 blocking) — every published value traces to an official source; unverified values are left blank and flagged, never inferred.
+
+Every table row carries an official source link (nfl.com standings / schedule / game centre). No bets are placed, no performance is claimed, and no strategy is certified until it passes validation gates.
+
+Reproduce/verify (stdlib only, no packages installed):
+
+```sh
+cd nfl-desk-e1d60f5d
+python3 build.py            # deterministic rebuild of all 8 pages
+python3 verify.py           # 241 row-level source/link/determinism checks, 0 failures
+python3 -m unittest discover -s tests -v   # 16 tests, all passing
+```
+
+The build is byte-for-byte deterministic; CI re-runs it and fails on any drift (`git diff --exit-code`).
+

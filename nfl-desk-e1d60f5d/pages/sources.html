@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Sources — OWN5 NFL decision desk. Source-linked, verified or blank-and-flagged.">
+<title>Sources · OWN5 NFL Decision Desk</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="layout">
+<aside class="sidebar">
+<a class="brand" href="index.html"><span class="brand-icon">O<span>5</span></span><span>OWN5<small>NFL DECISION DESK</small></span></a>
+<div class="workspace"><span class="live-dot"></span> Research workspace <span class="workspace-arrow">⌄</span></div>
+<span class="nav-caption">DESK</span>
+<nav aria-label="Main navigation">
+<a href="index.html" class="nav-item" aria-current="false"><span class="nav-number">01</span>Overview</a>
+<a href="pages/executive-summary.html" class="nav-item"><span class="nav-number">02</span>Executive summary</a>
+<a href="pages/standings.html" class="nav-item"><span class="nav-number">03</span>2026 standings</a>
+<a href="pages/schedule.html" class="nav-item"><span class="nav-number">04</span>Week 11 schedule</a>
+<a href="pages/questions.html" class="nav-item"><span class="nav-number">05</span>Questions register</a>
+<a href="pages/suggestions.html" class="nav-item"><span class="nav-number">06</span>Suggestions register</a>
+<a href="pages/sources.html" class="nav-item active"><span class="nav-number">07</span>Sources</a>
+<a href="pages/flagged.html" class="nav-item"><span class="nav-number">08</span>Flagged for Review</a>
+</nav>
+<div class="side-bottom"><div class="mode"><span class="live-dot"></span> Paper research only</div>
+<p>No bets. No fabricated results.<br>Evidence before exposure.</p>
+<a href="https://github.com/sassnarep3-star/Own5" target="_blank" rel="noopener noreferrer">View repository ↗</a></div>
+</aside>
+<div class="main-shell">
+<header class="topbar"><div><span class="breadcrumb">Desk <span>/</span> Sources</span></div><div class="topbar-right"><span class="desktop-only">NFL / METHODOLOGY</span><span class="avatar">O5</span></div></header>
+<main id="main"><section class="panel table-panel"><div class="panel-head"><div><h2>Official Source Register</h2><p>Every published value traces to an official or primary source. Tier = OFFICIAL (NFL league/club sources) or INDUSTRY (methodological reference, not an endorsement).</p></div></div>
+<table class="data-table"><caption>Source register behind every published row.</caption>
+<thead><tr><th scope="col">ID</th><th scope="col">Source</th><th scope="col">URL</th><th scope="col">Tier</th><th scope="col">Used for</th><th scope="col">Captured</th><th scope="col">Notes</th></tr></thead>
+<tr><td>SRC-01</td><td>NFL League Standings (2026 REG)</td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener noreferrer">https://www.nfl.com/standings/league/2026/REG</a></td><td>OFFICIAL</td><td>32-team W-L-T, PF, PA, PCT; standings reconciliation benchmark</td><td>2026-11-17T00:00Z</td><td>Captured via fetch_page; all 32 teams transcribed.</td></tr>
+<tr><td>SRC-02</td><td>NFL Schedule — Week 11 2026</td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-11" target="_blank" rel="noopener noreferrer">https://www.nfl.com/schedules/2026/by-week/week-11</a></td><td>OFFICIAL</td><td>13 fixtures, kickoff times, networks, venues, bye teams</td><td>2026-11-17T00:00Z</td><td>Includes Vikings@49ers Mexico City neutral site; 6 bye teams.</td></tr>
+<tr><td>SRC-03</td><td>NFL Game Centre — Vikings at 49ers</td><td><a href="https://www.nfl.com/games/vikings-at-49ers-2026-reg-11" target="_blank" rel="noopener noreferrer">https://www.nfl.com/games/vikings-at-49ers-2026-reg-11</a></td><td>OFFICIAL</td><td>Venue (Estadio Banorte, Mexico City); neutral-site confirmation</td><td>2026-11-17T00:00Z</td><td>Corroborates schedule page.</td></tr>
+<tr><td>SRC-04</td><td>NFL Injury Report — Week 10</td><td><a href="https://www.nfl.com/injuries/league/2026/reg10" target="_blank" rel="noopener noreferrer">https://www.nfl.com/injuries/league/2026/reg10</a></td><td>OFFICIAL</td><td>Week-10 practice/game designations (347 rows captured by session a991e3fb)</td><td>2026-11-15T23:27Z</td><td>Week-11 report not yet published (serves Week-10).</td></tr>
+<tr><td>SRC-05</td><td>NFL Club Depth Charts (32 clubs)</td><td><a href="https://www.nfl.com/teams/" target="_blank" rel="noopener noreferrer">https://www.nfl.com/teams/</a></td><td>OFFICIAL</td><td>31 of 32 club depth charts transcribed; Houston image-only</td><td>2026-11-15T23:35Z</td><td>Houston publishes depth chart as raster image; not transcribed.</td></tr>
+<tr><td>SRC-06</td><td>2026 NFL Rulebook</td><td><a href="https://operations.nfl.com/rules-officiating/2026-nfl-rulebook" target="_blank" rel="noopener noreferrer">https://operations.nfl.com/rules-officiating/2026-nfl-rulebook</a></td><td>OFFICIAL</td><td>Rule 4 (60 min, 4x15), Rule 16 OT, tie = half W/half L</td><td>2026-11-02T00:00Z</td><td>Inherited from session 0f468a47; not re-fetched this session.</td></tr>
+<tr><td>SRC-07</td><td>NFL Football Operations</td><td><a href="https://operations.nfl.com/" target="_blank" rel="noopener noreferrer">https://operations.nfl.com/</a></td><td>OFFICIAL</td><td>League operations and policy context</td><td>2026-11-02T00:00Z</td><td>Inherited; not re-fetched this session.</td></tr>
+<tr><td>SRC-08</td><td>Next Gen Stats Glossary</td><td><a href="https://nextgenstats.nfl.com/glossary" target="_blank" rel="noopener noreferrer">https://nextgenstats.nfl.com/glossary</a></td><td>OFFICIAL</td><td>Metric definitions for player features</td><td>2026-11-02T00:00Z</td><td>Inherited; not re-fetched this session.</td></tr>
+<tr><td>SRC-09</td><td>National Council on Problem Gambling</td><td><a href="https://www.ncpgambling.org/help-treatment/national-helpline-1-800-522-4700/" target="_blank" rel="noopener noreferrer">https://www.ncpgambling.org/help-treatment/national-helpline-1-800-522-4700/</a></td><td>OFFICIAL</td><td>Responsible-gambling helpline</td><td>2026-11-02T00:00Z</td><td>Inherited; not re-fetched this session.</td></tr>
+<tr><td>SRC-10</td><td>DraftKings NFL Market Rules</td><td><a href="https://sportsbook.draftkings.com/help/general-betting-rules/market-rules" target="_blank" rel="noopener noreferrer">https://sportsbook.draftkings.com/help/general-betting-rules/market-rules</a></td><td>INDUSTRY</td><td>Bet-type definitions and grading rules (methodological reference only)</td><td>2026-11-02T00:00Z</td><td>Not an official NFL source; flagged as industry convention.</td></tr>
+</tbody></table>
+<p class="note">INDUSTRY-tier sources are methodological references only — they do not verify that a policy is officially endorsed or a strategy is profitable.</p>
+</section></main>
+</div>
+</div>
+</body>
+</html>
