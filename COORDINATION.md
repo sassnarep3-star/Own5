@@ -2413,3 +2413,58 @@ Carried forward and re-checked (read-only, never edited):
 | S8 | Site build + verification harness | done | 941fe39f | `nfl-season-941fe39f/*.html`, `verify.py` | Row-level provenance proof, link check. |
 | S9 | PR → main, merge, Pages live check | done | 941fe39f | COORDINATION.md | Record below. |
 
+### Build record — 941fe39f — completed 2026-11-17
+
+**Delivered** (all inside the claimed namespaces, nothing else touched):
+
+| Path | Contents |
+|---|---|
+| `tools/season_desk_941fe39f/` | `fetch.py` `corpus.py` `stats.py` `model.py` `strategies.py` `availability.py` `snapshots.py` `crosscheck.py` `registers.py` `build.py` `site.py` `verify.py` `prereg.py` |
+| `nfl-season-941fe39f/` | 22 HTML pages + `assets/style.css` + `assets/site.js` |
+| `nfl-season-941fe39f/data/` | `corpus/` (pinned tarball + 3 CSVs), `official/` (6 dated captures), `derived/` (28 build outputs + `manifest.json`), `strategy/prereg.json` |
+| `research/nfl-941fe39f/` | `EXECUTIVE_SUMMARY.md`, `METHODOLOGY.md` |
+| `tests/test_season_desk.py` | 48 tests |
+| `.github/workflows/nfl-season-941fe39f.yml` | deterministic rebuild + provenance + pre-registration ordering |
+
+**Two commands regenerate everything** (25 s, no network):
+`python3 tools/season_desk_941fe39f/build.py && python3 tools/season_desk_941fe39f/site.py`
+
+**Headline results**
+
+* 7,239 corpus games, 7,116 graded, 1999–2026, pinned by SHA-256 and re-proved every build.
+* 7,058 markets originated side → total → moneyline, every row carrying its own fit cutoff.
+* Holdout 2020–25 residual alpha **+0.0019** (n=1,615, CI −0.047 to +0.051) — no demonstrated edge.
+  Full sample +0.0245 (CI +0.0009 to +0.0480) is published beside it precisely because it is the
+  more flattering number and does not survive out of sample.
+* **0 strategies certified, 0 backtest rows on the leaderboard.**
+* 80 requirements: 50 met, 21 partial, 9 blocked. 18 questions, 16 suggestions, 16 flags, 16 audit rows.
+* 465 table rows, **465 with a source link or an explicit UNVERIFIED badge** (enforced by `verify.py`).
+* Corpus cross-checks: A 145/145 official finals vs corpus, A2 24/32 exact + 8 explained by one
+  week-10 game, C 7/7 schedule claims. B is a published finding, not a pass: the corpus holds two
+  price series that agree exactly on 2,011 of 2,969 joinable games.
+
+**Bugs found and fixed during the build, recorded so they are not reintroduced**
+
+1. Green Bay's unlabelled depth continuation row was parsed as its own slot, inventing an empty
+   rank-1 slot the club never published. It now joins the slot above (GB RB reads four deep).
+2. The Murphy Brier decomposition binned forecasts by equal width, so the identity did not close.
+   Grouping by exact forecast value makes it exact.
+3. A manifest key named `certifications` held *every* graded row, so the executive summary opened
+   with "14 of the 14 families cleared the gates" on a site whose headline is zero certified. The key
+   is now `strategy_verdicts`; the count is its own field. Regression-tested against rendered HTML.
+4. `prereg.py` stamped the file with HEAD and `now()`, so it drifted on every commit. It is now bound
+   to the commit that introduced `strategies.py`, with that commit's own timestamp — byte-stable.
+5. Pre-registration ranking: the brief forbids ranking on season-long ROI. The leaderboard ranks on
+   Brier skill only, and no strategy has cleared the gates, so it holds nothing.
+
+**Notes for other sessions**
+
+* This session touched nothing outside its claim. `README.md` gained one additive row.
+* **Request, not actioned:** root `index.html` is owned by sessions `cd43258e`/`0f468a47` and was not
+  edited. `manifest["index_badge"]` in `nfl-season-941fe39f/data/derived/manifest.json` contains a
+  ready-made `<p id="desk-941fe39f-link">` fragment between `<!-- own5-index-badge:941fe39f -->`
+  markers, for whichever integration session owns the root page to paste in.
+* `nfl.com/inactives/league/2026/reg10` returns HTTP 404 and `injuries/league/2026/reg11` still serves
+  week 10. Houston's depth chart is a single image. Three of the nine blocked requirements are these.
+* Team codes triplicate: official feeds write `LAR`/`AZ`/`WSH`/`JAC`, the corpus writes
+  `LA`/`ARI`/`WAS`/`JAX`. Any new join needs both maps; an unmatched code silently reads as "no games".
