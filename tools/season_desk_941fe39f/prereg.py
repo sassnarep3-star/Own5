@@ -47,6 +47,14 @@ def main() -> int:
     # The registration is the commit that INTRODUCED the rules, not whatever
     # HEAD happens to be. Using HEAD would make the file change on every later
     # commit, which is indistinguishable from drift.
+    # `git log -- path` returns the TIP when history is shallow, because git has
+    # no older commit to attribute the file to. Silently registering the tip is
+    # the exact failure this file exists to prevent, so check for it.
+    shallow = git("rev-parse", "--is-shallow-repository")
+    if shallow == "true":
+        print("REFUSING TO WRITE: this is a shallow clone, so git cannot tell which")
+        print("commit introduced strategies.py. Run 'git fetch --unshallow' first.")
+        return 1
     commit = git("log", "-1", "--format=%H", "--",
                  "tools/season_desk_941fe39f/strategies.py")
     if not commit:
