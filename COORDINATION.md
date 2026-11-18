@@ -2823,6 +2823,29 @@ that self-checks can hit them:
 build reads from the *environment* (git depth, `ls` order, locale, untracked siblings) before you look at
 your numbers. Two of my three failures were that, and neither was visible in the table itself.
 
+## Session 9cabfdb9 — Own5 NFL Hub: verified re-read, daily official captures, decision-readiness table (2026-11-18 UTC)
+**PR record (9cabfdb9):** PR #114 `arena/9cabfdb9-own5` → `main`, https://github.com/sassnarep3-star/Own5/pull/114. Head 88d0f52 merges cleanly with main (MERGEABLE/CLEAN). Hub CI `Verify Own5 hub` passed at 8ac5a24 (unit tests, gates G1–G7, clean-rebuild check). Later scheduled captures (capture commits, `[skip ci]`) add data only; local rebuild at 88d0f52 produces no diff. Pre-existing failure on main-based PRs, not this scope: `NFL Decision Desk — fetch & verify`. Flagged items are on `own5-hub/flagged.html` and do not block merge.
+
+
+Branch `arena/9cabfdb9-own5` (base `92d5017`). Scope is `own5-hub/**`, `.github/workflows/own5-hub*.yml`, and one additive row in `README.md`. No other desk's files were edited. The brief's `session-<id>/<task>` branch convention conflicts with the single-branch rule in this session's instructions; the single assigned branch was used.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| H1 | Repo review, checked against official pages | done | 9cabfdb9 | `own5-hub/data/flagged.csv` (F01–F15) | Irregularities listed with links; nothing edited in other desks |
+| H2 | Runner reachability probe | done | 9cabfdb9 | `.github/workflows/own5-hub-runner-probe.yml` | Job success = HTTP 200 for the three official pages from a GitHub runner (run 44229050173). Job logs are not retrievable from the sandbox; status is the evidence |
+| H3 | Immutable daily capture (sha256, UTC, pins, raw injury HTML) | done (first capture); schedule running | 9cabfdb9 | `own5-hub/capture.py`, `parse_injuries.py`, `derive_counts.py`, `captures/**`, `.github/workflows/own5-hub-capture.yml` | First capture 2026-11-18T03:28:38Z: 3/3 HTTP 200, pins passed. Raw kept for injuries only (size) |
+| H4 | Re-verify key claims against nfl.com | done | 9cabfdb9 | `own5-hub/data/verified_checks.csv`, `verified_standings_read_2026-11-18.csv` | Lions Out ×3 confirmed; Willis MIA 11/10 confirmed; standings 30/32 exact, BAL and LAC one game stale; luck panel recomputed (0 mismatches) |
+| H5 | Decision-readiness table, requirements register, questions, suggestions, sources | done | 9cabfdb9 | `own5-hub/data/*.csv`, `own5-hub/*.html` | 80 rows; every row has a source link or a NO SOURCE badge (verify.py G6) |
+| H6 | Verification gates and CI | done | 9cabfdb9 | `own5-hub/verify.py`, `own5-hub/tests/test_hub.py`, `.github/workflows/own5-hub.yml` | verify.py: 34 checks pass (G1–G7); unit tests: 4 pass |
+| H7 | Merge to main and Pages check | in progress | 9cabfdb9 | this block, PR record below | |
+
+**Sources used (all official unless labelled):** nfl.com injury report `https://www.nfl.com/injuries/` (read 2026-11-18; captured 2026-11-18T03:28:38Z, sha256 `327a2b160c6b6e2e…`); nfl.com 2026 standings `https://www.nfl.com/standings/league/2026/REG` (read 2026-11-18); nfl.com November 2026 reserve list `https://www.nfl.com/transactions/league/reserve-list/2026/11` (read 2026-11-18). Third-party: nflverse (cited by other desks, not re-read). The nfl.com terms page was not found at the URL tried (404), so storage terms are unverified.
+
+**Verification performed:** parser run on the stored official bytes (28 club tables, 347 player rows, 171 with a game status); Lions and Willis rows checked by fetch; 32-club standings transcribed and compared with `nfl-desk-35a1feb2/data/standings_verified.csv`; luck panel recomputed from that file; capture raw bytes re-hashed against the manifest; committed counts re-derived byte-for-byte; rebuild changes no bytes.
+
+**Irregularities for review (also on `own5-hub/flagged.html`):** F01 the brief's 254 / 279 / "6 designations" are contradicted by the official read (347 rows, 171 designations); F02 other desks still publish 254 / 279; F03 the "25-row cap" on the reserve list is not established; F04 raw captures in a public repo, terms unread; F05 BAL and LAC one game stale in the standings register; F06 pre-registration first-add commit is a merge commit; F07 24 requirement rows in `nfl-desk-35a1feb2` link to pages that cannot support them; F08 REQ-62 claims a capture-workflow drift alarm that did not exist; F09 standings and reserve pins are presence checks only; F10 root `index.html` is stale (2026-11-02) and lists no desks; F11 desks say nfl.com is unreachable, but a GitHub runner reaches it; F12 third-party data is mixed with official claims; F13 Texans depth is an image, unresolved; F14 Week 11 report not captured yet.
+
+**Cross-session requests (logged, not actioned):** (a) `nfl-560ed315` DR-53, `nfl-audit-a699fc53` K02, and `nfl-desk-35a1feb2` REQ-62/REQ-29 should be corrected per F02, F07, F08; (b) the root `index.html` owner should link `own5-hub/`; (c) the sandbox "nfl.com unreachable" note should not be used as a capture blocker (F11).
 ## Session 38430fe3 — NFL first-hand re-read, claim verification and decision-readiness desk (claimed 2026-11-18T03:2xZ)
 
 Session ID `38430fe3`, branch `arena/38430fe3-own5`, branched from `92d50179a17a391b436eae650979f7bc192c52ad`.

@@ -1,0 +1,18 @@
+
+:root{--ink:#1d2430;--mut:#667085;--line:#e4e7ec;--bg:#f7f8fa;--ok:#067647;--okbg:#ecfdf3;--mid:#7a4f00;--midbg:#fffaeb;--bad:#b42318;--badbg:#fef3f2;--warn:#8a4b00;--warnbg:#fff4e5;--muted:#475467;--mutedbg:#f2f4f7;--acc:#1849a9}
+*{box-sizing:border-box}body{margin:0;font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg)}
+header.top{background:#fff;border-bottom:1px solid var(--line);padding:10px 20px;position:sticky;top:0;z-index:2}
+.brand{font-weight:700;margin-bottom:6px}nav{display:flex;flex-wrap:wrap;gap:4px 14px}nav a{color:var(--acc);text-decoration:none;font-size:14px}nav a.active{font-weight:700;text-decoration:underline}
+main{max-width:1280px;margin:0 auto;padding:18px 20px 40px}h1{font-size:26px;margin:8px 0 4px}h2{font-size:19px;margin:26px 0 8px}
+.sub{color:var(--mut);margin:0 0 14px}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:8px 0 16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px}.card .n{font-size:26px;font-weight:700}.card .l{color:var(--mut);font-size:13px}
+.card.ok{border-left:4px solid var(--ok)}.card.mid{border-left:4px solid #b54708}.card.bad{border-left:4px solid var(--bad)}.card.warn{border-left:4px solid #dc6803}
+.callout{background:#fff;border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:10px;padding:12px 14px}
+.tw{overflow:auto;background:#fff;border:1px solid var(--line);border-radius:10px}table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{text-align:left;vertical-align:top;padding:8px 10px;border-bottom:1px solid var(--line)}th{background:#f9fafb;position:sticky;top:0;font-size:12.5px;color:var(--muted)}
+tr:last-child td{border-bottom:0}td a{color:var(--acc)}
+.badge{display:inline-block;padding:1px 8px;border-radius:999px;font-size:12px;font-weight:600;white-space:nowrap}
+.badge.ok{background:var(--okbg);color:var(--ok)}.badge.mid{background:var(--midbg);color:var(--mid)}.badge.bad{background:var(--badbg);color:var(--bad)}
+.badge.warn{background:var(--warnbg);color:var(--warn)}.badge.muted{background:var(--mutedbg);color:var(--muted)}
+.prose{background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 18px 14px}.prose li{margin:4px 0}.prose a{color:var(--acc)}
+footer{max-width:1280px;margin:0 auto;padding:0 20px 30px;color:var(--mut);font-size:12.5px}code{font-size:12.5px}
