@@ -1,0 +1,29 @@
+desk,entry_point,title,files,flagged_file,flagged_rows
+nfl-560ed315,nfl-560ed315/index.html,Overview · Own5 decision-readiness desk,17,nfl-560ed315/data/flagged.csv,12
+nfl-98a211b8,nfl-98a211b8/index.html,Overview · NFL review desk 98a211b8,15,nfl-98a211b8/flagged.html,
+nfl-audit-a699fc53,nfl-audit-a699fc53/index.html,Week 10 official re-read — overview — Own5 NFL audit (a699fc53),12,nfl-audit-a699fc53/data/flagged.csv,14
+nfl-b34253a1,nfl-b34253a1/index.html,Overview · Week 10 NFL research,45,nfl-b34253a1/flagged.html,
+nfl-c98c6270,nfl-c98c6270/index.html,Overview · Own5 NFL Decision Console,75,nfl-c98c6270/flagged.html,
+nfl-capture-a991e3fb,nfl-capture-a991e3fb/index.html,Week 10 official injury report: live capture (a991e3fb),7,,
+nfl-decision-desk,nfl-decision-desk/index.html,Executive summary · NFL Decision Desk,16,nfl-decision-desk/flagged.html,
+nfl-decision-desk-38a1fc27,nfl-decision-desk-38a1fc27/index.html,Decision overview · NFL Decision Desk,16,nfl-decision-desk-38a1fc27/flagged.html,
+nfl-decision-desk-e413f933,nfl-decision-desk-e413f933/index.html,Dashboard · NFL Decision Desk,35,nfl-decision-desk-e413f933/flagged.html,
+nfl-desk-26d4cafb,nfl-desk-26d4cafb/index.html,Overview · NFL Decision Desk 26d4cafb,60,nfl-desk-26d4cafb/data/flagged.csv,16
+nfl-desk-35a1feb2,nfl-desk-35a1feb2/index.html,NFL line origination — currency & corrections desk · Own5 currency desk,73,nfl-desk-35a1feb2/data/flagged.csv,15
+nfl-desk-3cb7800c,nfl-desk-3cb7800c/index.html,Week 11 official-source desk · NFL official-source desk (3cb7800c),25,nfl-desk-3cb7800c/data/flagged.csv,10
+nfl-desk-3fb93d11,nfl-desk-3fb93d11/index.html,Overview · Own5 price-snapshot desk,51,nfl-desk-3fb93d11/data/flagged.csv,14
+nfl-desk-864d5668,nfl-desk-864d5668/index.html,Overview — Own5 NFL Own-Line Lab,59,nfl-desk-864d5668/flagged.html,
+nfl-desk-b8227c47,nfl-desk-b8227c47/index.html,Overview · NFL official injury-report capture desk (b8227c47),21,nfl-desk-b8227c47/data/flagged.csv,9
+nfl-desk-d38e90c5,nfl-desk-d38e90c5/index.html,NFL line origination and strategy desk - Own5 NFL desk d38e90c5,55,nfl-desk-d38e90c5/pages/flagged.html,
+nfl-desk-e1d60f5d,nfl-desk-e1d60f5d/index.html,Overview · OWN5 NFL Decision Desk,19,nfl-desk-e1d60f5d/data/flagged.csv,12
+nfl-desk-e46fb855,nfl-desk-e46fb855/index.html,Overview — OWN5 NFL decision desk (e46fb855),72,nfl-desk-e46fb855/data/flagged.csv,19
+nfl-engine-39086ec8,nfl-engine-39086ec8/index.html,Overview · Own5 NFL Engine Desk,65,nfl-engine-39086ec8/flagged.html,
+nfl-hub-28431d9c,nfl-hub-28431d9c/index.html,Dashboard | NFL Cross-Desk Hub,23,nfl-hub-28431d9c/data/flagged.csv,16
+nfl-integration-a620f5a5,nfl-integration-a620f5a5/index.html,NFL Line Origination & Decision Hub · Own5 NFL Evidence Hub,16,nfl-integration-a620f5a5/flagged.html,
+nfl-market-desk,nfl-market-desk/index.html,Overview · NFL Market Desk,99,,
+nfl-price-results-853c0074,nfl-price-results-853c0074/index.html,Overview · NFL Price & Results Lab,28,nfl-price-results-853c0074/data/flagged.csv,7
+nfl-readiness-cba42531,nfl-readiness-cba42531/index.html,Decision-readiness dashboard - Own5 NFL Decision Readiness,26,nfl-readiness-cba42531/data/flagged.csv,12
+nfl-review-3bba0722,nfl-review-3bba0722/index.html,NFL decision review · Own5 NFL Decision Review,16,nfl-review-3bba0722/data/flagged.json,
+nfl-strategy-lab,nfl-strategy-lab/index.html,Dashboard · Own5 NFL Strategy Lab,13,nfl-strategy-lab/flagged.html,
+nfl_model,,,16,,
+own5-desk,own5-desk/index.html,NFL research overview · Own5,46,,

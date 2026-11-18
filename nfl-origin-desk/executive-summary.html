@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Verified vs computed vs missing, and decisions waiting on the owner.">
+<title>Executive summary &middot; NFL Origin Desk</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <span class="mark">O5</span>
+      <div>
+        <h1><a href="index.html" style="color:inherit;text-decoration:none">NFL Origin Desk</a></h1>
+        <p>Own lines &middot; validated strategies &middot; injuries &amp; depth intelligence</p>
+      </div>
+    </div>
+    <div class="stamp">
+      <strong>2026 season &middot; Week 9</strong>
+      <span>Snapshot 2026-11-18 UTC</span>
+    </div>
+  </div>
+<nav class="wrap"><a class="" href="index.html">Overview</a><a class="" href="requirements.html">Requirements</a><a class="" href="questions.html">Open questions</a><a class="" href="suggestions.html">Suggestions</a><a class="" href="lines.html">Own lines</a><a class="" href="strategies.html">Strategies</a><a class="" href="gates.html">Gates</a><a class="" href="leaderboard.html">Leaderboard</a><a class="" href="correlations.html">Correlations</a><a class="" href="injuries.html">Injuries & depth</a><a class="" href="sources.html">Sources</a><a class="" href="flagged.html">Flagged for review</a><a class="" href="executive-summary.html">Executive summary</a></nav>
+</header>
+<main class="wrap">
+<section class="pagehead"><h2>Executive summary</h2><p>Verified vs computed vs missing, and decisions waiting on the owner.</p></section>
+
+<div class="prose">
+<h2>Executive summary &mdash; NFL Origin Desk</h2>
+<p><strong>What this desk is.</strong> A research workspace for originating NFL lines and running a leaderboard competition in which strategies must pass validation gates before being ranked. It is additive to the existing session desks in this repo (root NFL Research Desk, NFL Strategy Lab, NFL Line Lab, NBA labs and several NFL decision desks); it touches no file owned by another session.</p>
+
+<h3>Verified</h3>
+<ul class="tight">
+<li>15 Week 9, 2026 games originated side &rarr; total &rarr; moneyline from official standings and schedule (model spread / total / model-implied moneyline; model output only).</li>
+<li>120 verified final games (Weeks 1-8, 2026) reconciled game-by-game against nfl.com scores and the official standings.</li>
+<li>32/32 official clubs reconciled; 14 fixture-context features from published schedule facts.</li>
+<li>6 official-source correlations published with n (NET/G vs win% r=0.8391, n=32; QB vs top-WR yards r=0.76, n=3,852; same-team QB+WR1 joint hit rate 32.5% vs 24.8% independent).</li>
+<li>12 validation gates defined; 7 strategy families pre-registered; all 7 fail at least G2/G3/G4/G6/G8; 0 certified strategies (leaderboard empty by design).</li>
+<li>Signal separated from staking (flat unit stakes) on every strategy; two-sided "what would change our mind" field on each entry.</li>
+<li>16 suggestions registered (reviewable), 18 questions registered (4 blocking), 14 flagged irregularities/unverified blanks.</li>
+</ul>
+
+<h3>Computed but not certified</h3>
+<ul class="tight">
+<li>Model-implied moneyline per game (derived from model spread; labelled "not an operator quote").</li>
+<li>Strategy backtest records (win rate, CI, ROI, p vs break-even 52.38%) &mdash; kept off the leaderboard until G4/G8 pass.</li>
+<li>Brier-skill leaderboard skeleton across four divisions, with CI and multiplicity adjustment placeholders.</li>
+</ul>
+
+<h3>Missing / blocked (blank + flagged, never inferred)</h3>
+<ul class="tight">
+<li><strong>Verified operator price snapshot</strong> (F01) &mdash; blocks G4/G8, leaderboard certification, CLV and any skill claim. Requires S01 (price capture) or an owner decision on a paid feed (Q18).</li>
+<li><strong>Player-prop lines</strong> (F02) &mdash; no official public prop-line history; prop combos held behind the joint-evidence gate.</li>
+<li><strong>Timestamped injury series and full availability coverage</strong> (F04, F06, F08) &mdash; nfl.com unreachable from the sandbox; daily Wed-Fri captures and the reserve list not yet built.</li>
+<li><strong>Depth-chart register, venues, Game Book starters, stadium/weather overlay, weekly diff, drift alarms, immutable snapshots</strong> &mdash; all flagged, awaiting official data or owner decision.</li>
+<li><strong>Reward funding and jurisdiction</strong> (Q04/Q05, F14) &mdash; owner decision; competition stays points-only until answered.</li>
+</ul>
+
+<h3>Decisions waiting on the owner</h3>
+<ul class="tight">
+<li>Q04: cash, points or no rewards?</li>
+<li>Q05: jurisdiction and governing operator rules?</li>
+<li>Q03: bankroll, staking rule, maximum drawdown?</li>
+<li>Q18: budget for a paid odds feed?</li>
+<li>S01/S09: ship the operator price snapshot and dual-source fail-closed checks.</li>
+</ul>
+
+<div class="callout"><p><strong>Bottom line.</strong> No edge, ROI, certification, cash payout or bet is claimed. Luck is reduced (binomial tests, Bonferroni, holdouts, uncertainty published) but not eliminated. Nothing here is betting advice.</p></div>
+</div>
+
+</main>
+<footer class="wrap">
+<p><strong>Verification policy.</strong> Every table row links to an official page or to the
+script and pinned input that produced it. Values that cannot be confirmed are left blank and
+published on the <a href="flagged.html">Flagged for review</a> page &mdash; never inferred.</p>
+<p>Research only. No bets are placed, no performance is claimed, and nothing here is betting
+advice. If gambling is a problem: 1-800-GAMBLER.</p>
+</footer>
+</body>
+</html>

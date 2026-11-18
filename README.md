@@ -4,6 +4,7 @@ This repository hosts work from **three parallel agent sessions** (see `COORDINA
 
 | Dashboard | Scope | Live URL | Session |
 |---|---|---|---|
+| **NFL Official Injury-Report Capture Desk** | NFL 2026 — verified Week 10 injury-report counts (14 games, 28 club tables, 347 rows, one hashed read), 4 byes verified against the official schedule, Terms s.1.3 read (automated capture blocked pending written consent, decision D-01), decision-readiness table, Flagged for Review | https://sassnarep3-star.github.io/Own5/nfl-desk-b8227c47/ | `b8227c47` (`nfl-desk-b8227c47/`, `COORDINATION.md` § Session b8227c47) |
 | **NBA Line-Origination Lab** | NBA — singles, parlays, player-prop combos; validation gates; leaderboard design | https://sassnarep3-star.github.io/Own5/docs/ | `9c3a0a69` (`docs/`, `research/nba/`, `analysis/`, `EXECUTIVE_SUMMARY.md`) |
 | **NFL Research Desk** | NFL — line origination, strategy lab, correlation questions, review register | https://sassnarep3-star.github.io/Own5/ | `cd43258e` + `0f468a47` (root, `pages/`, `data/`, `scripts/`, `tools/`, `tests/`) |
 | **NFL Strategy Lab** | NFL — own lines from official data, pre-registered singles/parlays/prop combos, validation gates G0–G7, computed correlations, luck-deflated leaderboard | https://sassnarep3-star.github.io/Own5/nfl-strategy-lab/ | `arena-f1d30421` (`nfl-strategy-lab/`, `research/arena-f1d30421/`, `data/`, `scripts/compute_*`, `scripts/originate_lines.py`) |
@@ -18,6 +19,9 @@ This repository hosts work from **three parallel agent sessions** (see `COORDINA
 | **Own5 NFL Hub (single entry point)** | NFL 2026 — one decision-readiness table (80 brief lines → status, blocking gate, number that clears it), daily official injury-report captures with sha256 and UTC stamps, re-checks against nfl.com on 2026-11-18, questions, suggestions awaiting your choice, Flagged for Review | https://sassnarep3-star.github.io/Own5/own5-hub/ | `9cabfdb9` (`own5-hub/`, `.github/workflows/own5-hub-*.yml`) |
 
 | **NFL Decision Console** | NFL 2026 — own lines originated side→total→moneyline for the 13 week-11 games (65 market rows, market column blank and flagged); 80-requirement decision-readiness table; 18 reviewable suggestions with a decision control; 22 questions with discovery routes; 889 depth slots from a fresh 32-club sweep with a like-for-like delta; deficiency matrix (232 pairings); injury deltas; luck panel; 4 empty gated leaderboards; line-by-line repo audit | https://sassnarep3-star.github.io/Own5/nfl-c98c6270/ | `c98c6270` (`nfl-c98c6270/`, `research/nfl-c98c6270/`, `.github/workflows/nfl-desk-c98c6270.yml`) |
+| **NFL Week 10 injury-report desk (38430fe3)** | Official nfl.com Week 10 injury report read in full 2026-11-18: 347 rows, 28 clubs, 14 games, with claim checks, delta vs 2026-11-12, decision readiness and a Flagged for Review page. Source: `nfl-desk-38430fe3/` · [Desk](https://sassnarep3-star.github.io/Own5/nfl-desk-38430fe3/) |
+
+| **NFL Week 11 Official-Source Desk** | NFL 2026 — official Week 11 slate (13 games, 6 byes; read 2026-11-18 03:13Z); Week 11 injury report **not published** at read time (URL serves Week 10); 25 NFL desk directories cross-checked against the 5c5f4aaf directory; 2 blocking and 8 review flags; 6 suggestions and 8 questions, all pending review; venues left blank | https://sassnarep3-star.github.io/Own5/nfl-desk-3cb7800c/ | `3cb7800c` (`nfl-desk-3cb7800c/`, `research/nfl-3cb7800c/`, `.github/workflows/nfl-desk-3cb7800c.yml`) |
 
 Shared policy: **every table row carries a source link; values that cannot be confirmed from an official/primary source are left blank and published on a Flagged-for-Review page — never inferred. No performance claims; no bets placed; leaderboards empty until strategies pass validation gates.**
 
@@ -581,3 +585,11 @@ python3 nfl-integration-a620f5a5/build_site.py
 python3 nfl-integration-a620f5a5/verify.py
 python3 scripts/build.py
 ```
+
+---
+
+## NFL review desk · session 98a211b8
+
+**Live page:** https://sassnarep3-star.github.io/Own5/nfl-98a211b8/ · **Flagged for Review:** https://sassnarep3-star.github.io/Own5/nfl-98a211b8/flagged.html
+
+Bounded review, not another decision desk: a repo review register (each check linked), a dated capture log of the official nfl.com injury pages with a line-by-line comparison of 44 visible rows against the repo copy, links the NFL desk directory published by session 5c5f4aaf (PR #102) rather than duplicating it, and a Flagged for Review register. Sources: `nfl-98a211b8/data/sources.csv`. Rebuild and verify: `python3 nfl-98a211b8/build.py && python3 nfl-98a211b8/verify.py`.
