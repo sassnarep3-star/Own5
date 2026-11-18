@@ -1,6 +1,9 @@
 name: NFL desk b8227c47 — probe (temporary)
 
 on:
+  push:
+    branches: [arena/b8227c47-own5]
+    paths: ['.github/workflows/nfl-desk-b8227c47.yml']
   workflow_dispatch:
 
 permissions:
