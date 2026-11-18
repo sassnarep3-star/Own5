@@ -1,0 +1,74 @@
+name: Own5 hub - daily official capture
+
+# Captures the official NFL injury report, standings and reserve list every day with raw-byte sha256,
+# a UTC timestamp, and structural pins. Captures are append-only (own5-hub/captures/). A failed pin fails
+# this job; the capture files are committed regardless so the failure is itself evidence.
+
+on:
+  schedule:
+    - cron: '20 13 * * *'
+  workflow_dispatch:
+  push:
+    branches: [arena/9cabfdb9-own5]
+    paths: ['own5-hub/capture.py', 'own5-hub/parse_injuries.py', '.github/workflows/own5-hub-capture.yml']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: own5-hub-capture
+  cancel-in-progress: false
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Capture official pages
+        id: capture
+        run: |
+          set +e
+          mkdir -p own5-hub/captures/raw
+          python3 own5-hub/capture.py > own5-hub/captures/last_run.txt 2>&1
+          rc=$?
+          echo "exit_code=$rc" >> own5-hub/captures/last_run.txt
+          cat own5-hub/captures/last_run.txt
+          exit $rc
+        continue-on-error: true
+      - name: Rebuild the hub pages from the captures (the site never lags the ledger)
+        run: |
+          python3 own5-hub/build.py
+          python3 own5-hub/verify.py
+      - name: Stage and commit immutable captures
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "own5-hub-capture"
+          git config user.email "own5-hub-capture@users.noreply.github.com"
+          a=0; git add own5-hub/captures own5-hub/*.html own5-hub/assets > /tmp/add.txt 2>&1 || a=$?
+          if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
+          true
+          c=0; git commit -m "own5-hub: capture official NFL pages $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]" > /tmp/commit.txt 2>&1 || c=$?
+          echo "add_rc=$a commit_rc=$c"
+          if [ "$a" -ne 0 ] || [ "$c" -ne 0 ]; then
+            { echo "add_rc=$a commit_rc=$c"; echo "== add"; cat /tmp/add.txt; echo "== commit"; cat /tmp/commit.txt; echo "== status"; git status 2>&1; echo "== identity"; git config user.name; git --version; } > /tmp/diag.txt
+            gh api -X PUT "repos/${GITHUB_REPOSITORY}/contents/own5-hub/captures/diagnostics/$(date -u +%Y%m%dT%H%M%SZ).txt" -f message="own5-hub: capture diagnostics (commit step failed)" -f branch="${GITHUB_REF_NAME}" -f content="$(base64 -w0 /tmp/diag.txt)" > /dev/null || true
+            exit 1
+          fi
+      - name: Rebase onto the branch tip
+        run: git pull --rebase origin "$GITHUB_REF_NAME"
+      - name: Push the capture commit
+        run: |
+          git push origin "HEAD:$GITHUB_REF_NAME"
+          echo "pushed $(git rev-parse --short HEAD)"
+      - name: Fail loudly if a pin or fetch failed
+        if: steps.capture.outcome == 'failure'
+        run: |
+          echo "Capture pins or fetch failed; see own5-hub/captures/manifest.csv" >&2
+          exit 1

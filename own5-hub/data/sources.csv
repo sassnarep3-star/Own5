@@ -1,0 +1,8 @@
+id,source,url,what_it_supports,read_how,read_date
+SRC01,NFL.com 2026 injury report (official),https://www.nfl.com/injuries/,"Injury counts, designations, Lions Out",fetch tool; GitHub runner capture (sha256 327a2b16...),2026-11-18
+SRC02,"NFL.com 2026 league standings, regular season (official)",https://www.nfl.com/standings/league/2026/REG,Records and points for 32 clubs,fetch tool (2 chunks),2026-11-18
+SRC03,"NFL.com 2026 reserve list, November (official)",https://www.nfl.com/transactions/league/reserve-list/2026/11,Malik Willis MIA 11/10 Reserve/Injured; 25 rows,fetch tool (2 chunks); runner capture (sha256 8070069c...),2026-11-18
+SRC04,GitHub Actions run: runner reachability probe (own repo),https://github.com/sassnarep3-star/Own5/actions/runs/44229050173,Runner HTTP 200 for the three official pages,Actions run status (job log text not retrievable from the sandbox),2026-11-18
+SRC05,Capture workflow (own repo),https://github.com/sassnarep3-star/Own5/actions/workflows/own5-hub-capture.yml,"Daily capture, pins, commit",Actions tab,2026-11-18
+SRC06,"Third-party NFL data mirror (nflverse), as cited by other desks",https://github.com/nflverse/nflverse-data,"Snap counts, designations, roof, prices (third-party, not official)","Cited, not re-read",n/a
+SRC07,nfl.com terms of use,https://www.nfl.com/terms-of-use,Storage and redistribution terms,Attempted; 404 at this URL; not read,2026-11-18
