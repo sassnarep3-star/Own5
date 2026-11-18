@@ -616,7 +616,7 @@ against.</div>
 a diagnostic and is never the ranking.</p>
 {table(["Division", "ID", "Strategy", "Window", "Bets", "Brier", "BSS vs flat", "95% CI",
         "p (exact)", "p (Holm)", "Certified", "MAE", "Bias", "Source"],
-       [[r["division"], r["strategy_id"] or ("none", "badge"), r["name"], r["window"],
+       [[r["division"], r["strategy_id"] or ("none registered", "raw"), r["name"], r["window"],
          (r["bets"], "num"), (r["brier"], "num"), (r["bss_vs_flat"], "num"),
          f'{r["ci_low"]}..{r["ci_high"]}' if r["ci_low"] else ("", "blank"),
          (r["p_exact"], "num"), (r["p_holm"], "num"), (r["certified"] or "", "badge"),
