@@ -858,7 +858,10 @@ def main() -> int:
         for w in weeks:
             designations += capture_injuries(led, args.season, w)
             fixtures += capture_schedule(led, args.season, w)
-        slugs = [f["slug"] for f in fixtures if f.get("slug")]
+        # Game centres and game books are captured for the most recent week
+        # only; the historical weeks are archived at designation level.
+        last_week = max(weeks) if weeks else 0
+        slugs = [f["slug"] for f in fixtures if f.get("slug") and int(f.get("week") or 0) == last_week]
         for slug in slugs:
             info = capture_game_center(led, slug)
             if not info:

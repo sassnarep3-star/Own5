@@ -17,7 +17,7 @@ on:
         required: true
         default: 'injuries'
         type: choice
-        options: [injuries, schedule, gamecenter, gamebook, roster, depth]
+        options: [injuries, schedule, gamecenter, gamebook, roster, depth, everything]
       season:
         description: 'season'
         required: true
@@ -93,6 +93,7 @@ jobs:
           if-no-files-found: warn
 
   verify:
+    if: github.event_name != 'workflow_dispatch'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
