@@ -67,7 +67,7 @@ R65,Freeze a rule before it sees data; the commit hash is the registration,Gover
 R66,"Split data into train, validation and final holdout seasons",Model,G03,Three fixed windows,"weeks 1-4 / 5-8 / 9-10, fixed before any probability was computed",MET,preregistration,2026-11-18
 R67,Dedicated suggestions section so a reviewer can choose the best path before implementation,Decision layer,n/a,A reviewable suggestions register with a decision column,"12 suggestions, decision column blank for the reviewer",MET,suggestions,2026-11-18
 R68,"Clear list of questions, information and answers needed before any decision",Decision layer,n/a,One row per question with what is missing and how to obtain it,18 questions with the missing information and the discovery route,MET,questions,2026-11-18
-R69,Leaderboard competition with rewards for top-performing strategies,Leaderboard,G07,An eligible strategy before any reward is assigned,0 eligible strategies; reward column blank,BLOCKED,leaderboard,2026-11-18
+R69,Leaderboard competition with rewards for top-performing strategies,Leaderboard,G07,An eligible strategy before any reward is assigned,0 eligible strategies; reward column blank,BLOCKED,FLAG-S1,2026-11-18
 R70,Determine correlation values,Correlations,G01,A joint outcome table with an official source,0 values; see R07,BLOCKED,FLAG-C1,2026-11-18
 R71,Remove luck from the equation; build selectively skill-based strategies,Leaderboard,G05,A skill lower bound above zero,"85 forecasts, Brier skill CI -0.405..0.089",PARTIAL,luck_panel,2026-11-18
 R72,"Track injuries and know deficiencies (2nd/3rd/4th string replacing starters), offence and defence",Availability,G11,A verified depth position per replacement,,BLOCKED,FLAG-D1,2026-11-18

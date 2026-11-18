@@ -240,7 +240,7 @@ REQUIREMENTS = [
      "18 questions with the missing information and the discovery route", "MET", "questions"),
     ("R69", "Leaderboard competition with rewards for top-performing strategies",
      "Leaderboard", "G07", "An eligible strategy before any reward is assigned",
-     "0 eligible strategies; reward column blank", "BLOCKED", "leaderboard"),
+     "0 eligible strategies; reward column blank", "BLOCKED", "FLAG-S1"),
     ("R70", "Determine correlation values",
      "Correlations", "G01", "A joint outcome table with an official source",
      "0 values; see R07", "BLOCKED", "FLAG-C1"),

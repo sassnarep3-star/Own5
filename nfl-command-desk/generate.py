@@ -183,7 +183,8 @@ def schedule_vs_announcement():
         ("season number", 107, a["season_number"], "matches"),
     ]
     return write("schedule_vs_announcement.csv",
-                 ["fact", "as_announced", "announcement_value", "result"],
+                 ["fact", "as_announced", "announcement_value", "result",
+                  "announcement_url", "announcement_date"],
                  [dict(fact=f, as_announced=x, announcement_value=y, result=z,
                        announcement_url=ANN_URL, announcement_date=a["date"])
                   for f, x, y, z in rows])
