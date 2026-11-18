@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/home/runner/work/Own5/Own5/own5-hub/capture.py", line 99, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/runner/work/Own5/Own5/own5-hub/capture.py", line 78, in main
+    with gzip.open(p, "wb", mtime=0) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: open() got an unexpected keyword argument 'mtime'
+exit_code=1
