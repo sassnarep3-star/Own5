@@ -3227,3 +3227,25 @@ echo "appended"; wc -l COORDINATION.md
 ## Cross-session requests
 
 - None. All work is in the additive `nfl-origin-desk/` namespace; no other session's files are touched.
+
+---
+
+## Session arena/47e3185b-own5 (Official Availability Graph & Game-Day Ledger) — A-ids
+
+**Branch:** `arena/47e3185b-own5` (branched from main `cb2d3b8`, rebased onto `589205d`). **Scope (additive namespace, no other session's files touched):** `nfl-avail-graph/**`, `data/avail-graph/**`, `scripts/build_avail_graph.py`, `scripts/verify_avail_graph.py`, `.github/workflows/nfl-avail-graph.yml`.
+
+**Mandate (user brief):** Make availability a first-class, officially-sourced dataset — every fixture's venue transcribed from the official game centre, a verified results feed, the complete official injury report re-captured with clock time and hash (delta, never level), official depth charts widened so a replacement carries a *depth string*, and a roster/reserve view so "not listed" never means "available". Every published row links to an official source or is blank and flagged. No inference.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| A1 | Claim scope in COORDINATION.md + push claim | in progress | arena/47e3185b-own5 | COORDINATION.md | This row. Claim pushed before build work. |
+| A2 | Official capture ledger: game centre per fixture — final score, official Location, official Stadium, official Game Book (PDF) link | unclaimed | arena/47e3185b-own5 | data/avail-graph/official_captures.csv, data/avail-graph/results_official.csv, data/avail-graph/venues_official.csv, data/avail-graph/gamebooks.csv | 2026 Week 10, 13 fixtures, read from www.nfl.com game centres on 2026-11-18. |
+| A3 | Official injury report re-capture with clock time + hash; designation subset; delta vs the committed Week 10 capture | unclaimed | arena/47e3185b-own5 | data/avail-graph/injury_report_*.csv, data/avail-graph/injury_delta.csv | Publishes the delta, not the level. |
+| A4 | Official depth-chart capture for the clubs not yet covered, with raw text + sha256 + slot/rank/group semantics | unclaimed | arena/47e3185b-own5 | data/avail-graph/depth/*.txt, data/avail-graph/depth_coverage.csv, data/avail-graph/depth_rows.csv | Depth string (1st/2nd/3rd/4th string) from official club charts only; jersey order, experience and salary are rejected as depth proxies. |
+| A5 | Availability graph: expected starter vs actual starter, replacement depth, inactives | unclaimed | arena/47e3185b-own5 | data/avail-graph/availability_graph.csv, data/avail-graph/replacements.csv | Actual side sourced from the official Game Book; where the Game Book text cannot be read in this sandbox the cell is blank and flagged with the official PDF link. |
+| A6 | Site: landing + category subpages (results, venues, availability, depth, game books, flags, sources) + fail-closed verifier | unclaimed | arena/47e3185b-own5 | nfl-avail-graph/**, scripts/build_avail_graph.py, scripts/verify_avail_graph.py | Every table row source-linked or explicit blank+flag; internal links resolve. |
+| A7 | Executive summary, integration, PR to main, merge, Pages deploy verification, merge record | unclaimed | arena/47e3185b-own5 | nfl-avail-graph/executive-summary.html, COORDINATION.md, README.md | PR link and Pages URL recorded here. |
+
+## Cross-session requests (logged, not actioned)
+
+- **2026-11-18 (from session 47e3185b):** `nfl-market-desk/data/roster_sweep_32.csv` has `roster_rows_captured` and `roster_active_rows` blank for all 32 clubs (`roster_status_note` = "not captured this session"), and `nfl-market-desk/data/venues.csv` covers only the 13 **Week 11** fixtures with venue names read from ticket/hotel link destinations rather than from the official game centre's own `Location`/`Stadium` fields. This session captures the official game-centre `Location` + `Stadium` fields for the 13 **Week 10** fixtures in its own additive namespace (`data/avail-graph/venues_official.csv`) and does **not** edit `nfl-market-desk/**`. If the market-desk owner wants the Week 10 venue rows and/or the roster sweep rows, the values and their source links are published here for copy-across.
