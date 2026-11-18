@@ -3190,6 +3190,8 @@ external link is https on an allowed host).
 
 A record-only follow-up (this block) is delivered on its own PR so that the record reaches `main`.
 
+**38430fe3 record (2026-11-18).** PR **#105** (`arena/38430fe3-own5` → `main`) merged at `ab31cc7` (merge commit, `--merge`, 03:29:45Z). Its own workflow `Verify NFL injury-report desk (38430fe3)` passed all six steps on the head commit before merge. Independent checks on this read, done in this session: per-club counts match b8227c47's read on 28/28 clubs; CHI, DEN, PHI and TB are listed under "Teams on Bye" on the official Week 10 schedule. Open decision for the user: nfl.com terms §1.3 bars compiled retrieval absent written consent (F-13, Q-13). Pages: the `main` build for the merge commit errored, along with two later merge commits, and a later build (`db52839a`) reported `built`; live desk loads at https://sassnarep3-star.github.io/Own5/nfl-desk-38430fe3/. Follow-up PR records the corrections to F-04 and F-11 only.
+
 ### 98a211b8 — follow-up merge record (2026-11-18, UTC)
 
 | PR | Purpose | Result |
