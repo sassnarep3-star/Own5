@@ -33,7 +33,13 @@ jobs:
           python-version: '3.11'
       - name: Capture official pages
         id: capture
-        run: python3 own5-hub/capture.py
+        run: |
+          set +e
+          python3 own5-hub/capture.py > own5-hub/captures/last_run.txt 2>&1
+          rc=$?
+          echo "exit_code=$rc" >> own5-hub/captures/last_run.txt
+          cat own5-hub/captures/last_run.txt
+          exit $rc
         continue-on-error: true
       - name: Commit immutable captures
         run: |
