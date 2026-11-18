@@ -1,0 +1,21 @@
+metric,value,n,note,source_url
+"Week-10 home margin (home - away), mean",-5.64,14,Not used as the model intercept (small n); the registered HFA prior is 2.0,https://www.nfl.com/scores/2026/REG10
+Week-10 margin SD (sigma used for moneyline conversion),15.29,14,Sample SD of realised margins; published with n; recomputed as the feed grows,https://www.nfl.com/scores/2026/REG10
+Week-10 average game total,48.36,14,Published with n,https://www.nfl.com/scores/2026/REG10
+Home teams won,4 of 14,14,Descriptive only,https://www.nfl.com/scores/2026/REG10
+Power to clear 52.4% (break-even at -110) if true rate = 0.500,0.316,100,P(observed rate > 0.524) = 1 - Phi((0.524 - p)/sqrt(p(1-p)/n)); normal approximation,https://www.nfl.com/standings/league/2026/REG
+Power to clear 52.4% (break-even at -110) if true rate = 0.500,0.249,200,P(observed rate > 0.524) = 1 - Phi((0.524 - p)/sqrt(p(1-p)/n)); normal approximation,https://www.nfl.com/standings/league/2026/REG
+Power to clear 52.4% (break-even at -110) if true rate = 0.500,0.142,500,P(observed rate > 0.524) = 1 - Phi((0.524 - p)/sqrt(p(1-p)/n)); normal approximation,https://www.nfl.com/standings/league/2026/REG
+Power to clear 52.4% (break-even at -110) if true rate = 0.500,0.065,1000,P(observed rate > 0.524) = 1 - Phi((0.524 - p)/sqrt(p(1-p)/n)); normal approximation,https://www.nfl.com/standings/league/2026/REG
+Power to clear 52.4% (break-even at -110) if true rate = 0.524,0.500,100,P(observed rate > 0.524) = 1 - Phi((0.524 - p)/sqrt(p(1-p)/n)); normal approximation,https://www.nfl.com/standings/league/2026/REG
+Power to clear 52.4% (break-even at -110) if true rate = 0.524,0.500,200,P(observed rate > 0.524) = 1 - Phi((0.524 - p)/sqrt(p(1-p)/n)); normal approximation,https://www.nfl.com/standings/league/2026/REG
+Power to clear 52.4% (break-even at -110) if true rate = 0.524,0.500,500,P(observed rate > 0.524) = 1 - Phi((0.524 - p)/sqrt(p(1-p)/n)); normal approximation,https://www.nfl.com/standings/league/2026/REG
+Power to clear 52.4% (break-even at -110) if true rate = 0.524,0.500,1000,P(observed rate > 0.524) = 1 - Phi((0.524 - p)/sqrt(p(1-p)/n)); normal approximation,https://www.nfl.com/standings/league/2026/REG
+Power to clear 52.4% (break-even at -110) if true rate = 0.550,0.699,100,P(observed rate > 0.524) = 1 - Phi((0.524 - p)/sqrt(p(1-p)/n)); normal approximation,https://www.nfl.com/standings/league/2026/REG
+Power to clear 52.4% (break-even at -110) if true rate = 0.550,0.770,200,P(observed rate > 0.524) = 1 - Phi((0.524 - p)/sqrt(p(1-p)/n)); normal approximation,https://www.nfl.com/standings/league/2026/REG
+Power to clear 52.4% (break-even at -110) if true rate = 0.550,0.879,500,P(observed rate > 0.524) = 1 - Phi((0.524 - p)/sqrt(p(1-p)/n)); normal approximation,https://www.nfl.com/standings/league/2026/REG
+Power to clear 52.4% (break-even at -110) if true rate = 0.550,0.951,1000,P(observed rate > 0.524) = 1 - Phi((0.524 - p)/sqrt(p(1-p)/n)); normal approximation,https://www.nfl.com/standings/league/2026/REG
+Power to clear 52.4% (break-even at -110) if true rate = 0.570,0.824,100,P(observed rate > 0.524) = 1 - Phi((0.524 - p)/sqrt(p(1-p)/n)); normal approximation,https://www.nfl.com/standings/league/2026/REG
+Power to clear 52.4% (break-even at -110) if true rate = 0.570,0.906,200,P(observed rate > 0.524) = 1 - Phi((0.524 - p)/sqrt(p(1-p)/n)); normal approximation,https://www.nfl.com/standings/league/2026/REG
+Power to clear 52.4% (break-even at -110) if true rate = 0.570,0.981,500,P(observed rate > 0.524) = 1 - Phi((0.524 - p)/sqrt(p(1-p)/n)); normal approximation,https://www.nfl.com/standings/league/2026/REG
+Power to clear 52.4% (break-even at -110) if true rate = 0.570,0.998,1000,P(observed rate > 0.524) = 1 - Phi((0.524 - p)/sqrt(p(1-p)/n)); normal approximation,https://www.nfl.com/standings/league/2026/REG

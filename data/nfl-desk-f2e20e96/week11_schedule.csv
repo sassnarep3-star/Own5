@@ -1,0 +1,14 @@
+game_id,game_date,kickoff_et,network,away,away_record,home,home_record,venue_gamecentre,venue_schedule_page_string,venue_source_status,source_url,notes
+g11-01,2026-11-19,8:15 PM,PRIME,IND,3-7,HOU,3-6,RELIANT STADIUM (HOUSTON TX),NRG Stadium,game centre confirmed,https://www.nfl.com/games/colts-at-texans-2026-reg-11,TNF; venue discrepancy between two official pages logged as flag F-03
+g11-02,2026-11-22,1:00 PM,CBS,MIA,1-8,BUF,8-1,,Highmark Stadium,schedule-page string only,https://www.nfl.com/games/dolphins-at-bills-2026-reg-11,game-centre venue transcription pending
+g11-03,2026-11-22,1:00 PM,FOX,BAL,4-6,CAR,4-5,,Bank of America Stadium,schedule-page string only,https://www.nfl.com/games/ravens-at-panthers-2026-reg-11,game-centre venue transcription pending
+g11-04,2026-11-22,1:00 PM,FOX,NO,3-6,CHI,7-2,,Soldier Field,schedule-page string only,https://www.nfl.com/games/saints-at-bears-2026-reg-11,game-centre venue transcription pending
+g11-05,2026-11-22,1:00 PM,FOX,TEN,1-8,DAL,4-6,,AT&T Stadium,schedule-page string only,https://www.nfl.com/games/titans-at-cowboys-2026-reg-11,game-centre venue transcription pending
+g11-06,2026-11-22,1:00 PM,FOX,TB,3-6,DET,7-2,,Ford Field,schedule-page string only,https://www.nfl.com/games/buccaneers-at-lions-2026-reg-11,game-centre venue transcription pending
+g11-07,2026-11-22,1:00 PM,CBS,AZ,3-7,KC,7-2,,GEHA Field at Arrowhead Stadium,schedule-page string only,https://www.nfl.com/games/cardinals-at-chiefs-2026-reg-11,game-centre venue transcription pending
+g11-08,2026-11-22,1:00 PM,CBS,PIT,6-3,PHI,2-7,,Lincoln Financial Field,schedule-page string only,https://www.nfl.com/games/steelers-at-eagles-2026-reg-11,game-centre venue transcription pending
+g11-09,2026-11-22,4:05 PM,FOX,NYJ,2-8,LAC,1-8,,SoFi Stadium,schedule-page string only,https://www.nfl.com/games/jets-at-chargers-2026-reg-11,game-centre venue transcription pending
+g11-10,2026-11-22,4:25 PM,CBS,JAX,7-2,NYG,5-3-1,,MetLife Stadium,schedule-page string only,https://www.nfl.com/games/jaguars-at-giants-2026-reg-11,game-centre venue transcription pending
+g11-11,2026-11-22,4:25 PM,CBS,LV,4-6,DEN,7-2,,Empower Field at Mile High,schedule-page string only,https://www.nfl.com/games/raiders-at-broncos-2026-reg-11,game-centre venue transcription pending
+g11-12,2026-11-22,8:20 PM,NBC,MIN,7-2,SF,8-1,ESTADIO BANORTE (MEXICO CITY),Mexico City,game centre confirmed,https://www.nfl.com/games/vikings-at-49ers-2026-reg-11,SNF international game; Mexico City 2026 logo on the schedule page; schedule page prints no stadium name
+g11-13,2026-11-23,8:15 PM,ESPN,CIN,7-2,WAS,3-5-1,,FedEx Field,schedule-page string only,https://www.nfl.com/games/bengals-at-commanders-2026-reg-11,MNF; game-centre venue transcription pending

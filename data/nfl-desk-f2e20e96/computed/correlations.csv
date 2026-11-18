@@ -1,0 +1,5 @@
+correlation_id,pair,method,r,n,source_url,note
+C-01,Points for per game vs points against per game,"Pearson r, in-repo from the standings read",-0.2911,32,https://www.nfl.com/standings/league/2026/REG,Official numbers only; n published per brief
+C-02,Net points per game vs winning percentage,"Pearson r, in-repo from the standings read",0.8824,32,https://www.nfl.com/standings/league/2026/REG,Official numbers only; n published per brief
+C-03,Points for per game vs winning percentage,"Pearson r, in-repo from the standings read",0.7152,32,https://www.nfl.com/standings/league/2026/REG,Official numbers only; n published per brief
+C-04,Points against per game vs winning percentage,"Pearson r, in-repo from the standings read",-0.7043,32,https://www.nfl.com/standings/league/2026/REG,Official numbers only; n published per brief

@@ -1,0 +1,47 @@
+name: NFL line-originator decision desk (f2e20e96)
+
+# Scoped to this desk's paths only. Does not touch the root site or other desks.
+on:
+  push:
+    branches: [arena/f2e20e96-own5]
+    paths:
+      - 'nfl-desk-f2e20e96/**'
+      - 'data/nfl-desk-f2e20e96/**'
+      - 'scripts/build_f2e20e96.py'
+      - 'scripts/verify_f2e20e96.py'
+      - '.github/workflows/nfl-desk-f2e20e96.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'nfl-desk-f2e20e96/**'
+      - 'data/nfl-desk-f2e20e96/**'
+      - 'scripts/build_f2e20e96.py'
+      - 'scripts/verify_f2e20e96.py'
+      - '.github/workflows/nfl-desk-f2e20e96.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nfl-desk-f2e20e96-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Unit and negative-control tests
+        run: python3 -m unittest discover -s nfl-desk-f2e20e96/tests -v
+      - name: Verify desk (row sources, provenance in every row, links, pinned counts, model identities)
+        run: python3 scripts/verify_f2e20e96.py
+      - name: Committed pages and computed outputs match a clean deterministic rebuild
+        run: |
+          python3 scripts/build_f2e20e96.py
+          git diff --exit-code -- nfl-desk-f2e20e96/ data/nfl-desk-f2e20e96/computed/
+          test -z "$(git status --porcelain -- nfl-desk-f2e20e96/ data/nfl-desk-f2e20e96/computed/)"
