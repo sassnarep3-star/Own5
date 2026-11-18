@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Questions that block decisions · NFL official-source desk (3cb7800c)</title>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="brand">NFL official-source desk <span>3cb7800c</span></div>
+  <nav aria-label="Pages"><a href="index.html">Home</a><a href="schedule.html">Week 11 schedule</a><a href="availability.html">Availability</a><a href="desks.html">Desks index</a><a href="repo.html">Repo state</a><a href="sources.html">Sources</a><a href="summary.html">Executive summary</a><a href="suggestions.html">Suggestions (review)</a><a href="questions.html" class="current" aria-current="page">Questions</a><a href="flagged.html">Flagged for review</a></nav>
+</header>
+<main id="main">
+<h1>Questions that block decisions</h1>
+<p class="lead">Each question says what we have, what we lack, and the cheapest official route to close the gap.</p>
+<div class="table-wrap"><table>
+<caption>Questions (8)</caption>
+<thead><tr><th>ID</th><th>Question</th><th>What we have</th><th>What we lack</th><th>Cheapest route to close</th><th>Blocks</th><th>Source</th></tr></thead>
+<tbody>
+<tr><td>Q-01</td><td>When does the Week 11 injury report first appear on the official page?</td><td>Week 11 URL serves Week 10 at 2026-11-18T03:13Z (F-01)</td><td>Official publication schedule for the Week 11 report</td><td>Re-read the Week 11 URL on each publication day; record the first served date</td><td>Any Week 11 availability value</td><td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener" target="_blank">source</a></td></tr>
+<tr><td>Q-02</td><td>Which Week 11 game (if any) is in Mexico City?</td><td>A Mexico City logo above Vikings at 49ers; no venue in the printed line (F-03)</td><td>Game-centre venue for each Week 11 game</td><td>Read each game page (URL printed on the schedule) and record the venue as printed</td><td>Venue column; any travel or weather overlay</td><td><a href="https://www.nfl.com/games/vikings-at-49ers-2026-reg-11" rel="noopener" target="_blank">source</a></td></tr>
+<tr><td>Q-03</td><td>What time zone is each kickoff in?</td><td>Printed times with no zone on game lines (F-04)</td><td>Zone per game</td><td>Read the game pages; record the zone as printed</td><td>Any time-based feature</td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-11" rel="noopener" target="_blank">source</a></td></tr>
+<tr><td>Q-04</td><td>Which club code is canonical across official pages?</td><td>AZ and LA on standings; LAR in the schedule bye block (F-02)</td><td>A written rule and a test</td><td>Adopt S-03 and add a test that fails on LAR-to-LA mismatch</td><td>Any code-keyed join</td><td><a href="https://www.nfl.com/standings/league/2026/REG" rel="noopener" target="_blank">source</a></td></tr>
+<tr><td>Q-05</td><td>Is the decision-desk workflow a required check?</td><td>11 of 12 PR runs failed (F-05)</td><td>Branch-protection settings</td><td>Read the repository settings (owner access needed)</td><td>Merge policy for PRs</td><td><a href="https://github.com/sassnarep3-star/Own5/actions/workflows/decision-desk.yml" rel="noopener" target="_blank">source</a></td></tr>
+<tr><td>Q-06</td><td>Which of the open PRs are superseded?</td><td>10 open PRs; overlapping desks (F-06)</td><td>Owner decision per PR</td><td>Owner reads desks.html and picks a canonical desk (S-05)</td><td>Clean merge of the NFL desks</td><td><a href="https://github.com/sassnarep3-star/Own5/pulls" rel="noopener" target="_blank">source</a></td></tr>
+<tr><td>Q-07</td><td>Is third-party price data allowed in this project?</td><td>PR #101 reports a third-party priced file (inherited, F-10)</td><td>Owner policy decision</td><td>Owner answers S-06</td><td>Any price, edge or backtest number</td><td><a href="https://github.com/sassnarep3-star/Own5/pull/101" rel="noopener" target="_blank">source</a></td></tr>
+<tr><td>Q-08</td><td>Which official sources exist for snap counts and game-day inactives?</td><td>Not verified in this desk</td><td>A read of the official pages for both</td><td>Read the official inactive and game-book pages for one completed game and record the URLs</td><td>Starter and depth-deficiency features</td><td><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="noopener" target="_blank">source</a></td></tr>
+</tbody></table></div>
+</main>
+<footer>
+  <p>Not a betting feed. No prices, odds, picks or model outputs are published here.
+  Every value comes from a CSV in <code>data/</code>; each row carries a source link or an explicit
+  badge. Blank cells are unverified and are not inferred.</p>
+  <p>Rebuild: <code>python3 nfl-desk-3cb7800c/tools/build_site.py</code> · Checks:
+  <code>python3 nfl-desk-3cb7800c/verify.py</code> · Pages are generated; do not hand-edit.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suggestions for review · NFL official-source desk (3cb7800c)</title>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="brand">NFL official-source desk <span>3cb7800c</span></div>
+  <nav aria-label="Pages"><a href="index.html">Home</a><a href="schedule.html">Week 11 schedule</a><a href="availability.html">Availability</a><a href="desks.html">Desks index</a><a href="repo.html">Repo state</a><a href="sources.html">Sources</a><a href="summary.html">Executive summary</a><a href="suggestions.html" class="current" aria-current="page">Suggestions (review)</a><a href="questions.html">Questions</a><a href="flagged.html">Flagged for review</a></nav>
+</header>
+<main id="main">
+<h1>Suggestions for review</h1>
+<p class="lead">Suggestions to improve how decisions are made from this site. Each has options, a recommendation, and what would change it.</p>
+<section class="notice"><strong>For review only.</strong> No suggestion here has been implemented. The Decision column is set by the reviewer. Choose an option by recording it in the next COORDINATION.md entry.</section><div class="table-wrap"><table>
+<caption>Suggestions (6)</caption>
+<thead><tr><th>ID</th><th>Suggestion</th><th>Options</th><th>Recommendation</th><th>What would change the call</th><th>Decision</th><th>Evidence</th></tr></thead>
+<tbody>
+<tr><td>S-01</td><td>Give the repo one front door that lists every NFL desk</td><td>(a) Extend scripts/build.py (the root pipeline) to emit a desks index; (b) keep this desk&#x27;s desks.html as the index and link it from the README; (c) leave it as is</td><td>Option (b) now; option (a) at the next integration session when the owner of scripts/build.py agrees</td><td>If the owner wants root navigation during the current build cycle, choose (a)</td><td><span class="badge b-review">PENDING REVIEW</span></td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/.github/workflows/verify.yml" rel="noopener" target="_blank">evidence</a></td></tr>
+<tr><td>S-02</td><td>Capture the Week 11 availability report only on publication days</td><td>(a) Capture daily from Wednesday to kickoff; (b) capture on the publication days and retry until the Week 11 page is served; (c) do not capture; use sibling desks&#x27; week-10 data</td><td>Option (b). Store each fetch with its timestamp and hash. Never publish a Week 11 availability value before the page serves Week 11</td><td>If the league publishes a dated feed, use that instead of the page</td><td><span class="badge b-review">PENDING REVIEW</span></td><td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener" target="_blank">evidence</a></td></tr>
+<tr><td>S-03</td><td>Use official club codes as the canonical join key</td><td>(a) Use the codes printed on nfl.com standings (AZ, LA); (b) keep an alias table (LAR to LA, ARI to AZ) with a test; (c) use team names only</td><td>Option (a) with option (b) as a tested alias table. A join that drops any club must fail the build</td><td>If a source uses a different official code set, add it to the alias table with a source link</td><td><span class="badge b-review">PENDING REVIEW</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" rel="noopener" target="_blank">evidence</a></td></tr>
+<tr><td>S-04</td><td>Fix or retire the decision-desk PR check before more PRs are merged</td><td>(a) Fix the clean-rebuild step; (b) remove the pull_request trigger from that workflow; (c) leave it failing</td><td>Option (a) if the owner can name the drift; otherwise option (b). Do not merge PRs that depend on a failing required check</td><td>If the workflow is not a required check, option (c) is acceptable</td><td><span class="badge b-review">PENDING REVIEW</span></td><td><a href="https://github.com/sassnarep3-star/Own5/actions/workflows/decision-desk.yml" rel="noopener" target="_blank">evidence</a></td></tr>
+<tr><td>S-05</td><td>Consolidate the nine older open PRs</td><td>(a) Close superseded PRs and keep one canonical NFL desk; (b) keep all desks as separate namespaces; (c) merge the most recent desk only</td><td>Option (a) with a canonical desk chosen by the owner after reading the desks index. Record each closed PR in COORDINATION.md</td><td>If the owner wants parallel comparisons, choose (b)</td><td><span class="badge b-review">PENDING REVIEW</span></td><td><a href="https://github.com/sassnarep3-star/Own5/pulls" rel="noopener" target="_blank">evidence</a></td></tr>
+<tr><td>S-06</td><td>Set the price-data policy before any price or backtest page is published</td><td>(a) Official sources only (prices stay blank); (b) third-party archives with provenance and a source class label; (c) a licensed feed</td><td>Decision needed from the owner. Until then, publish no price-based number as verified</td><td>If an official price source is confirmed, choose (a) for official and (b) for archive data, kept separate</td><td><span class="badge b-review">PENDING REVIEW</span></td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-11" rel="noopener" target="_blank">evidence</a></td></tr>
+</tbody></table></div>
+</main>
+<footer>
+  <p>Not a betting feed. No prices, odds, picks or model outputs are published here.
+  Every value comes from a CSV in <code>data/</code>; each row carries a source link or an explicit
+  badge. Blank cells are unverified and are not inferred.</p>
+  <p>Rebuild: <code>python3 nfl-desk-3cb7800c/tools/build_site.py</code> · Checks:
+  <code>python3 nfl-desk-3cb7800c/verify.py</code> · Pages are generated; do not hand-edit.</p>
+</footer>
+</body>
+</html>

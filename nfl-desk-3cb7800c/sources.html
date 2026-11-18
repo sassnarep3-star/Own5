@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sources · NFL official-source desk (3cb7800c)</title>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="brand">NFL official-source desk <span>3cb7800c</span></div>
+  <nav aria-label="Pages"><a href="index.html">Home</a><a href="schedule.html">Week 11 schedule</a><a href="availability.html">Availability</a><a href="desks.html">Desks index</a><a href="repo.html">Repo state</a><a href="sources.html" class="current" aria-current="page">Sources</a><a href="summary.html">Executive summary</a><a href="suggestions.html">Suggestions (review)</a><a href="questions.html">Questions</a><a href="flagged.html">Flagged for review</a></nav>
+</header>
+<main id="main">
+<h1>Sources</h1>
+<p class="lead">Every source used on this site. OFFICIAL links point to NFL.com pages; a REPO row points to GitHub and is never used for a league fact.</p>
+<section class="notice"><strong>Method limit.</strong> The fetch tool returns processed page text, not server bytes. The hashes in <code>raw/SHA256SUMS.txt</code> cover the extracts this desk uses (flag F-09).</section><div class="table-wrap"><table>
+<caption>Sources</caption>
+<thead><tr><th>ID</th><th>Source</th><th>Class</th><th>Link</th><th>Supports</th><th>Read (UTC)</th><th>Extract</th><th>Caveat</th></tr></thead>
+<tbody>
+<tr><td>S-01</td><td>NFL Week 11 Schedule 2026 (official league schedule page)</td><td><span class="badge b-official">OFFICIAL (NFL.com)</span></td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-11" rel="noopener" target="_blank">https://www.nfl.com/schedules/2026/by-week/week-11</a></td><td>13 games with kickoff and network as printed; 6 teams on bye</td><td>2026-11-18T03:13:31Z</td><td><a href="raw/nfl_week11_schedule_extract.txt">raw/nfl_week11_schedule_extract.txt</a></td><td>Read via sandbox fetch tool (processed markdown). Chunks 0 and 1 of 2 read.</td></tr>
+<tr><td>S-02</td><td>Official NFL Injury Report - Week 10 of 2026 (served at the Week 11 URL)</td><td><span class="badge b-official">OFFICIAL (NFL.com)</span></td><td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener" target="_blank">https://www.nfl.com/injuries/league/2026/reg11</a></td><td>Week 11 availability status: NOT PUBLISHED at read time</td><td>2026-11-18T03:13:31Z</td><td><a href="raw/nfl_injury_reg11_fetch_meta.txt">raw/nfl_injury_reg11_fetch_meta.txt</a></td><td>Requested reg11; fetch tool reported final URL reg10. Row contents not captured here.</td></tr>
+<tr><td>S-03</td><td>Official NFL Injury Report - Week 10 of 2026</td><td><span class="badge b-official">OFFICIAL (NFL.com)</span></td><td><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="noopener" target="_blank">https://www.nfl.com/injuries/league/2026/reg10</a></td><td>Title and heading check only</td><td>2026-11-18T03:13:31Z</td><td><a href="raw/nfl_injury_reg11_fetch_meta.txt">raw/nfl_injury_reg11_fetch_meta.txt</a></td><td>Row-level values not verified in this desk.</td></tr>
+<tr><td>S-04</td><td>2026 NFL League Standings (regular season)</td><td><span class="badge b-official">OFFICIAL (NFL.com)</span></td><td><a href="https://www.nfl.com/standings/league/2026/REG" rel="noopener" target="_blank">https://www.nfl.com/standings/league/2026/REG</a></td><td>Club logo codes (AZ and LA) used for the club-code check</td><td>2026-11-18T03:13:31Z</td><td><a href="raw/nfl_standings_extract.txt">raw/nfl_standings_extract.txt</a></td><td>Chunk 0 of 2 read; standings values not used.</td></tr>
+<tr><td>S-05</td><td>Game pages printed on S-01 (one per game)</td><td><span class="badge b-official">OFFICIAL (NFL.com) - link only</span></td><td><a href="https://www.nfl.com/games/colts-at-texans-2026-reg-11" rel="noopener" target="_blank">https://www.nfl.com/games/colts-at-texans-2026-reg-11</a></td><td>Link target for each game row (example shown; each row carries its own game URL)</td><td>2026-11-18T03:13:31Z</td><td><span class="muted">none</span></td><td>NOT fetched in this session. The URL is printed on S-01. Venue, weather and status were not read.</td></tr>
+<tr><td>S-06</td><td>This repository (GitHub) - repo-state facts only</td><td><span class="badge b-repo">REPO STATE (GitHub; not a league source)</span></td><td><a href="https://github.com/sassnarep3-star/Own5" rel="noopener" target="_blank">https://github.com/sassnarep3-star/Own5</a></td><td>Open PR count; decision-desk workflow run results; root index banner; CI wiring</td><td>2026-11-18T03:14:00Z</td><td><span class="muted">none</span></td><td>Self-referential. Used only for repo hygiene rows, never for league facts.</td></tr>
+</tbody></table></div>
+</main>
+<footer>
+  <p>Not a betting feed. No prices, odds, picks or model outputs are published here.
+  Every value comes from a CSV in <code>data/</code>; each row carries a source link or an explicit
+  badge. Blank cells are unverified and are not inferred.</p>
+  <p>Rebuild: <code>python3 nfl-desk-3cb7800c/tools/build_site.py</code> · Checks:
+  <code>python3 nfl-desk-3cb7800c/verify.py</code> · Pages are generated; do not hand-edit.</p>
+</footer>
+</body>
+</html>
