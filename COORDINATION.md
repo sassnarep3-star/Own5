@@ -3225,3 +3225,33 @@ echo "appended"; wc -l COORDINATION.md
 ## Cross-session requests
 
 - None. All work is in the additive `nfl-origin-desk/` namespace; no other session's files are touched.
+
+## Session f2e20e96 — NFL Line-Originator Decision Desk (claimed 2026-11-18T03:42Z)
+
+**Branch:** `arena/f2e20e96-own5` (branched from main `cb2d3b8`). **Scope (additive namespace only):**
+`nfl-desk-f2e20e96/**`, `data/nfl-desk-f2e20e96/**`, `scripts/build_f2e20e96.py`, `scripts/verify_f2e20e96.py`,
+`.github/workflows/nfl-desk-f2e20e96.yml`, one additive README row, and this append-only block.
+No file owned by another session is edited. D-ids used below to avoid collision with T-, N-, R-, C-, O-, X-, K-, CU-ids.
+
+**Mandate (user brief):** first-hand re-read of official NFL sources on 2026-11-18; originate own lines
+(side → total → moneyline) with model fair line / market line / difference as separate columns; price-snapshot
+store (opening + closing) for every originated market; verified results feed; leaderboard separating signal
+from staking with a demotion gate and control baselines; correlations from officially sourced numbers with n
+published; injury/availability tracking with replacement depth; pre-registration discipline (backtest numbers
+forbidden on the leaderboard); decision-readiness table (requirement → blocking gate → number that clears it),
+questions/information/answers register, suggestions register with a review-before-implement section,
+executive summary, and a GitHub Pages desk — every table row source-linked or blank-and-flagged; never inferred.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| D1 | Claim + board entry (this block), pushed before build work | in progress | f2e20e96 | COORDINATION.md | |
+| D2 | First-hand official reads (schedule W11, scores REG10, standings 2026 REG, injury report reg11/reg10), dated extracts + read clock | unclaimed→in progress | f2e20e96 | `nfl-desk-f2e20e96/raw/**`, `data/nfl-desk-f2e20e96/sources.csv` | fetch_page processed text (not server bytes — hashed extracts only) |
+| D3 | Data layer: readiness, questions, suggestions, lines (side→total→ML), price snapshots, results feed, leaderboard, correlations, availability/depth, gates, flagged CSVs | unclaimed→in progress | f2e20e96 | `data/nfl-desk-f2e20e96/*.csv` | Every row: official source_url, or blank + UNVERIFIED flag. Market-price columns blank by policy P-01. |
+| D4 | Build script: deterministic static desk (landing + category subpages + flagged page) | unclaimed→in progress | f2e20e96 | `scripts/build_f2e20e96.py`, `nfl-desk-f2e20e96/style.css` | No clock/git/network in the builder. |
+| D5 | Verify script + unit tests (negative controls) + scoped CI workflow | unclaimed→in progress | f2e20e96 | `scripts/verify_f2e20e96.py`, `nfl-desk-f2e20e96/tests/**`, `.github/workflows/nfl-desk-f2e20e96.yml` | Fail-closed: row/link/source integrity. |
+| D6 | Executive summary + decision-readiness landing page + suggestions review section | unclaimed→in progress | f2e20e96 | `nfl-desk-f2e20e96/*.html` | |
+| D7 | Rebase, push, PR to main, autonomous merge, Pages live-check, record | unclaimed→in progress | f2e20e96 | COORDINATION.md, README.md | Record PR link + merge result below. |
+
+## Cross-session requests
+
+- None yet. All work is in the additive `nfl-desk-f2e20e96/` namespace.
