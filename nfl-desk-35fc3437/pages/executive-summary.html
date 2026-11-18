@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Executive Summary — Own5 NFL Line-Origination Dashboard</title><style>
+:root{--bg:#f7f8fa;--card:#ffffff;--ink:#111827;--muted:#6b7280;--line:#e5e7eb;
+  --blue:#1f6feb;--blue-dark:#155ccb;--green:#15803d;--red:#b91c1c;--amber:#b45309;
+  --flag-bg:#fef3c7;--flag-text:#92400e;}
+* {box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.5}
+.skip{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+header{background:#0b2545;color:#fff;padding:1rem 1.5rem}
+header h1{margin:0;font-size:1.25rem;letter-spacing:0.04em}
+header p{margin:.25rem 0 0;font-size:.9rem;opacity:.85}
+nav{display:flex;gap:.5rem;flex-wrap:wrap;padding:.6rem 1.5rem;background:#fff;
+  border-bottom:1px solid var(--line)}
+nav a{padding:.35rem .7rem;border-radius:.4rem;text-decoration:none;color:var(--blue);
+  font-size:.88rem;border:1px solid transparent}
+nav a:hover{background:#eef3fb;border-color:var(--blue)}
+.container{max-width:1200px;margin:0 auto;padding:1rem 1.5rem}
+.badge{display:inline-block;padding:.05rem .5rem;border-radius:.9rem;font-size:.76rem;
+  font-weight:600;margin-left:.35rem;vertical-align:middle}
+.badge-src{background:#e7f0fd;color:#1d4ed8}
+.badge-flag{background:var(--flag-bg);color:var(--flag-text)}
+.badge-unverified{background:#fee2e2;color:#991b1b}
+.badge-met{background:#dcfce7;color:#166534}
+.badge-partial{background:#fef3c7;color:#92400e}
+.badge-notmet{background:#fee2e2;color:#991b1b}
+.badge-notstarted{background:#e5e7eb;color:#4b5563}
+h2{font-size:1.2rem;margin:1.5rem 0 .75rem;border-bottom:2px solid var(--line);
+  padding-bottom:.35rem}
+h3{font-size:1.05rem;margin:1rem 0 .5rem}
+p{margin:.5rem 0}
+table{width:100%;border-collapse:collapse;margin:.75rem 0;background:var(--card);
+  font-size:.86rem}
+th,td{border:1px solid var(--line);padding:.45rem .6rem;text-align:left;vertical-align:top}
+th{background:#f1f5f9;font-weight:700;color:#334155;position:sticky;top:0}
+tr:nth-child(even)td{background:#fbfdff}
+td.blank{color:var(--muted);font-style:italic}
+td.num{text-align:right}
+a{color:var(--blue-dark)}
+a:hover{text-decoration:underline}
+.src{color:var(--muted);font-size:.78rem}
+.src a{color:#1d4ed8}
+.flagstrip{padding:.5rem 1rem;margin:.75rem 0;border-radius:.4rem;border-left:4px solid}
+.flagstrip.red{background:#fef2f2;border-color:var(--red);color:#7f1d1d}
+.flagstrip.amber{background:#fffbeb;border-color:var(--amber);color:#78350f}
+.flagstrip.green{background:#f0fdf4;border-color:var(--green);color:#14532d}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1rem 0}
+.stat{border:1px solid var(--line);background:var(--card);border-radius:.6rem;padding:1rem}
+.stat .v{font-size:1.75rem;font-weight:700;color:var(--blue-dark)}
+.stat .l{font-size:.82rem;color:var(--muted);margin-top:.2rem}
+.section{border:1px solid var(--line);background:var(--card);border-radius:.6rem;
+  padding:1rem 1.25rem;margin:1rem 0}
+.kicker{font-size:.78rem;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+.notice{background:#fffbeb;border:1px solid #f59e0b;color:#78350f;padding:.75rem 1rem;
+  border-radius:.4rem;margin:1rem 0;font-size:.88rem}
+.disclaimer{margin-top:2rem;border-top:1px solid var(--line);padding-top:1rem;
+  font-size:.8rem;color:var(--muted)}
+.small{font-size:.82rem;color:var(--muted)}
+ul{margin:.4rem 0 .8rem 1.15rem}
+ul li{margin:.25rem 0}
+</style></head><body><a class="skip" href="#main">Skip to main content</a><header><h1>Own5 &middot; NFL Line-Origination Dashboard</h1><p>Evidence-first NFL line origination &middot; every table row source-linked or explicitly blank-and-flagged &middot; no performance claims, no bets placed</p></header><nav><a href="../index.html">Overview</a><a href="standings.html">Standings</a><a href="schedule.html">Schedule (Wk 11)</a><a href="results.html">Results feed (Wk 10)</a><a href="lines.html">Originated lines</a><a href="leaderboard.html">Leaderboard</a><a href="correlations.html">Correlations</a><a href="injuries.html">Injuries / Depth</a><a href="gates.html">Validation gates</a><a href="questions.html">Questions &amp; answers</a><a href="suggestions.html">Suggestions (review)</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for Review</a></nav><div class="container"><h2>Executive Summary</h2><section class='section'><div class='kicker'>Own5 NFL Line-Origination Dashboard</div><h2>Executive summary</h2><div class='grid'><div class='stat'><div class='v'>14</div><div class='l'>Verified finals (Wk 10)</div><div class='small'>32/32 standings reconciliation</div></div><div class='stat'><div class='v'>13</div><div class='l'>Week-11 games originated</div><div class='small'>model/market/difference columns</div></div><div class='stat'><div class='v'>10</div><div class='l'>Requirements met</div><div class='small'>of 24</div></div><div class='stat'><div class='v'>5</div><div class='l'>Gates met</div><div class='small'>of 12 (fail-closed)</div></div><div class='stat'><div class='v'>0</div><div class='l'>Certified strategies</div><div class='small'>leaderboard empty</div></div></div><h3>What is verified</h3><ul><li>32-team 2026 standings from NFL.com (W-L-T-PCT-PF-PA-NET).</li><li>Week 10 results: 14 finals, all FINAL, reconciled to standings.</li><li>Week 11 schedule: 13 games, 6 byes, networks and venues from NFL.com.</li><li>Week 10 injury report: players with game-status designations for 28 clubs.</li><li>4 correlations computed in-repo from official standings, n=32 each.</li></ul><h3>What is computed (labeled, not verified performance)</h3><ul><li>Model fair spread/total/moneyline + home win probability for all 13 Week-11 games (HFA=2.0 pts, logistic scale 7.6 — both flagged assumptions).</li><li>Validation gates G01–G12; G09 (signal vs staking) and G11 (no backtest on leaderboard) met by design.</li></ul><h3>What is blocked (not inferred)</h3><ul><li>No market price exists anywhere in the repo; nfl.com publishes no betting prices (F-01). G02/G06/G12 block ROI, CLV, backtest publication.</li><li>Week 11 injury report not yet published (F-02). Price-snapshot store empty+flagged (F-08).</li><li>One season only; n=14, far below the n>=300 skill threshold (F-03).</li></ul><h3>Bottom line</h3><p class='small'>The infrastructure is built and source-linked. No edge, no ROI, no certified strategy, and no bet is claimed or placed. The price-data policy decision (G12) is user-owned and unblocks everything downstream.</p></section></div><div class="disclaimer">Research only — not betting advice, not a sportsbook, no payouts. Every value traces to an official/primary source (linked per row) or is left blank and flagged. Model outputs are computed in-repo from official standings and are labeled as such.</div></body></html>

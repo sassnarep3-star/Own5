@@ -34,12 +34,12 @@
 <h3>Verified</h3>
 <ul class="tight">
 <li>15 Week 9, 2026 games originated side &rarr; total &rarr; moneyline from official standings and schedule (model spread / total / model-implied moneyline; model output only).</li>
-<li>120 verified final games (Weeks 1-8, 2026) reconciled game-by-game against nfl.com scores and the official standings.</li>
-<li>32/32 official clubs reconciled; 14 fixture-context features from published schedule facts.</li>
-<li>6 official-source correlations published with n (NET/G vs win% r=0.8391, n=32; QB vs top-WR yards r=0.76, n=3,852; same-team QB+WR1 joint hit rate 32.5% vs 24.8% independent).</li>
-<li>12 validation gates defined; 7 strategy families pre-registered; all 7 fail at least G2/G3/G4/G6/G8; 0 certified strategies (leaderboard empty by design).</li>
+<li>120 final games (Weeks 1-8, 2026) in the results feed: 58 checked game-by-game on nfl.com; 62 reconciled via Pro-Football-Reference, which is not an official NFL source (F21). Weeks 9-10 are not ingested.</li>
+<li>Official standings for all 32 clubs read 2026-11-18; league totals reconcile (W=L=149, T=2, PF=PA=6,923). The fixture-context feature count (14) is not re-verified in this pass (F23).</li>
+<li>4 official-source correlations published with n=32 clubs each, from the 2026-11-18 official standings: NET/G vs win% r=0.8824 (95% CI 0.771 to 0.942); PF/G vs win% r=0.7152; PA/G vs win% r=-0.7043; PF/G vs PA/G r=-0.2911 (CI includes 0). Two third-party rows retired (F16); the Week 8 snapshot values are superseded (F17).</li>
+<li>12 validation gates defined; 7 strategy families listed (pre-registration not verifiable from git history, F15); all 7 fail at least G2/G3/G4/G6/G8; 0 certified strategies (leaderboard empty by design).</li>
 <li>Signal separated from staking (flat unit stakes) on every strategy; two-sided "what would change our mind" field on each entry.</li>
-<li>16 suggestions registered (reviewable), 18 questions registered (4 blocking), 14 flagged irregularities/unverified blanks.</li>
+<li>16 suggestions registered (reviewable), 18 questions registered (7 blocking), 24 flagged irregularities/unverified blanks.</li>
 </ul>
 
 <h3>Computed but not certified</h3>
@@ -53,7 +53,7 @@
 <ul class="tight">
 <li><strong>Verified operator price snapshot</strong> (F01) &mdash; blocks G4/G8, leaderboard certification, CLV and any skill claim. Requires S01 (price capture) or an owner decision on a paid feed (Q18).</li>
 <li><strong>Player-prop lines</strong> (F02) &mdash; no official public prop-line history; prop combos held behind the joint-evidence gate.</li>
-<li><strong>Timestamped injury series and full availability coverage</strong> (F04, F06, F08) &mdash; nfl.com unreachable from the sandbox; daily Wed-Fri captures and the reserve list not yet built.</li>
+<li><strong>Timestamped injury series and full availability coverage</strong> (F04, F06, F08, F20) &mdash; daily Wed-Fri captures and the reserve list are not built; scheduled capture needs NFL written consent under Terms s.1.3 (F20).</li>
 <li><strong>Depth-chart register, venues, Game Book starters, stadium/weather overlay, weekly diff, drift alarms, immutable snapshots</strong> &mdash; all flagged, awaiting official data or owner decision.</li>
 <li><strong>Reward funding and jurisdiction</strong> (Q04/Q05, F14) &mdash; owner decision; competition stays points-only until answered.</li>
 </ul>

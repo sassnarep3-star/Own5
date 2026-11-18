@@ -1,0 +1,173 @@
+window,week,date,away,home,rating_home,rating_away,fair_margin,fair_total_a,fair_total_b,p_home_ml,actual_home_margin,actual_total,home_win,inputs,source_url
+validation (weeks 5-8),5,2026-10-08,TB,DAL,2.5,-5.0,9.5,49.5,46.219,0.8297,-8,40,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),5,2026-10-11,BAL,ATL,1.0,5.0,-2.0,53.0,46.219,0.4174,-7,53,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),5,2026-10-11,CHI,GB,-8.0,11.75,-17.75,46.25,46.219,0.0493,24,38,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),5,2026-10-11,CIN,MIA,-13.75,3.0,-14.75,35.75,46.219,0.0788,-7,55,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),5,2026-10-11,CLE,NYJ,-2.0,-3.5,3.5,39.25,46.219,0.6418,5,29,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),5,2026-10-11,DEN,LAC,-9.75,-5.0,-2.75,35.25,46.219,0.3874,-6,40,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),5,2026-10-11,DET,ARI,-7.5,-2.0,-3.5,51.5,46.219,0.3582,-24,66,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),5,2026-10-11,HOU,TEN,-7.0,-6.25,1.25,34.75,46.219,0.5519,-23,29,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),5,2026-10-11,IND,PIT,-2.5,-0.5,0.0,44.75,46.219,0.5,12,56,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),5,2026-10-11,LV,NE,-3.0,7.75,-8.75,45.0,46.219,0.1887,28,62,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),5,2026-10-11,MIN,NO,-5.75,8.75,-12.5,47.75,46.219,0.1107,-10,36,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),5,2026-10-11,NYG,WAS,-8.5,0.75,-7.25,42.5,46.219,0.23,0,54,,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),5,2026-10-11,PHI,JAX,12.75,-4.5,19.25,44.75,46.219,0.9611,2,36,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),5,2026-10-11,SF,SEA,8.0,14.5,-4.5,56.75,46.219,0.3208,-3,61,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),5,2026-10-12,BUF,LAR,0.5,5.0,-2.5,53.0,46.219,0.3973,-3,71,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),6,2026-10-15,SEA,DEN,-5.0,8.0,-11.0,44.75,46.219,0.1378,3,31,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),6,2026-10-18,ARI,LAR,0.5,-7.5,10.0,43.0,46.219,0.8411,-2,34,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),6,2026-10-18,BAL,CLE,-3.5,5.0,-6.5,49.25,46.219,0.2529,3,23,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),6,2026-10-18,BUF,LV,7.75,5.0,4.75,60.5,46.219,0.6882,-3,63,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),6,2026-10-18,CAR,PHI,-4.5,3.0,-5.5,49.0,46.219,0.2856,-11,39,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),6,2026-10-18,CHI,ATL,1.0,11.75,-8.75,52.0,46.219,0.1887,-8,54,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),6,2026-10-18,GB,DAL,2.5,-8.0,12.5,48.75,46.219,0.8893,-10,36,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),6,2026-10-18,HOU,JAX,12.75,-6.25,21.0,47.0,46.219,0.9707,-3,65,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),6,2026-10-18,LAC,KC,10.25,-9.75,22.0,46.25,46.219,0.9751,16,28,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),6,2026-10-18,NE,NYJ,-2.0,-3.0,3.0,35.25,46.219,0.6225,-7,45,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),6,2026-10-18,NO,NYG,0.75,-5.75,8.5,46.75,46.219,0.8048,-7,61,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),6,2026-10-18,PIT,TB,-5.0,-2.5,-0.5,38.25,46.219,0.4792,-7,45,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),6,2026-10-18,TEN,IND,-0.5,-7.0,8.5,39.25,46.219,0.8048,-6,46,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),6,2026-10-19,WAS,SF,14.5,-8.5,25.0,52.5,46.219,0.9847,6,40,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),7,2026-10-22,NE,CHI,11.75,-3.0,16.75,44.25,46.219,0.9422,6,54,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),7,2026-10-25,CIN,BAL,5.0,3.0,4.0,53.25,46.219,0.6608,-22,48,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),7,2026-10-25,CLE,TEN,-7.0,-3.5,-1.5,34.0,46.219,0.4378,-3,51,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),7,2026-10-25,DEN,ARI,-7.5,-5.0,-0.5,40.25,46.219,0.4792,-14,46,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),7,2026-10-25,GB,DET,-2.0,-8.0,8.0,48.0,46.219,0.7914,3,37,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),7,2026-10-25,IND,MIN,8.75,-0.5,11.25,47.0,46.219,0.867,6,26,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),7,2026-10-25,LAR,LV,7.75,0.5,9.25,50.0,46.219,0.8237,-14,56,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),7,2026-10-25,MIA,NYJ,-2.0,-13.75,13.75,30.5,46.219,0.9082,-3,53,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),7,2026-10-25,NYG,HOU,-6.25,0.75,-5.0,41.5,46.219,0.3029,-6,48,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),7,2026-10-25,PIT,NO,-5.75,-2.5,-1.25,45.5,46.219,0.4481,-6,26,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),7,2026-10-25,SEA,KC,10.25,8.0,4.25,55.75,46.219,0.67,-17,23,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),7,2026-10-25,SF,ATL,1.0,14.5,-11.5,54.5,46.219,0.1282,9,49,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),7,2026-10-25,TB,CAR,3.0,-5.0,10.0,49.25,46.219,0.8411,-30,56,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),7,2026-10-26,DAL,PHI,-4.5,2.5,-5.0,49.25,46.219,0.3029,-17,59,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),8,2026-10-29,CAR,GB,-8.0,3.0,-9.0,48.5,46.219,0.1824,8,46,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),8,2026-11-01,ARI,DAL,2.5,-7.5,12.0,52.25,46.219,0.8808,-3,63,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),8,2026-11-01,ATL,TB,-5.0,1.0,-4.0,43.0,46.219,0.3392,16,16,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),8,2026-11-01,BAL,BUF,5.0,5.0,2.0,60.75,46.219,0.5826,26,46,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),8,2026-11-01,CLE,PIT,-2.5,-3.5,3.0,39.5,46.219,0.6225,21,33,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),8,2026-11-01,IND,JAX,12.75,-0.5,15.25,51.5,46.219,0.927,35,49,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),8,2026-11-01,KC,DEN,-5.0,10.25,-13.25,48.0,46.219,0.099,4,52,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),8,2026-11-01,LAC,LAR,0.5,-9.75,12.25,38.0,46.219,0.8851,15,33,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),8,2026-11-01,LV,NYJ,-2.0,7.75,-7.75,47.75,46.219,0.2156,-5,71,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),8,2026-11-01,MIN,DET,-2.0,8.75,-8.75,51.25,46.219,0.1887,4,34,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),8,2026-11-01,NE,MIA,-13.75,-3.0,-8.75,27.75,46.219,0.1887,-5,43,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),8,2026-11-01,PHI,WAS,-8.5,-4.5,-2.0,40.75,46.219,0.4174,17,37,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),8,2026-11-01,TEN,CIN,3.0,-7.0,12.0,38.0,46.219,0.8808,7,79,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+validation (weeks 5-8),8,2026-11-02,CHI,SEA,8.0,11.75,-1.75,54.25,46.219,0.4276,-17,51,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+holdout (weeks 9-10),9,2026-11-05,JAX,BAL,5.0,12.75,-5.75,55.0,46.219,0.2772,-23,43,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+holdout (weeks 9-10),9,2026-11-08,ARI,SEA,8.0,-7.5,17.5,48.0,46.219,0.9487,14,20,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+holdout (weeks 9-10),9,2026-11-08,CIN,ATL,1.0,3.0,0.0,48.25,46.219,0.5,-17,51,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+holdout (weeks 9-10),9,2026-11-08,CLE,NO,-5.75,-3.5,-0.25,46.5,46.219,0.4896,1,45,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+holdout (weeks 9-10),9,2026-11-08,DAL,IND,-0.5,2.5,-1.0,56.0,46.219,0.4584,-4,50,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+holdout (weeks 9-10),9,2026-11-08,DEN,CAR,3.0,-5.0,10.0,48.75,46.219,0.8411,-5,47,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+holdout (weeks 9-10),9,2026-11-08,DET,MIA,-13.75,-2.0,-9.75,41.25,46.219,0.1645,-10,28,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+holdout (weeks 9-10),9,2026-11-08,GB,NE,-3.0,-8.0,7.0,34.5,46.219,0.7625,-18,72,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+holdout (weeks 9-10),9,2026-11-08,HOU,LAC,-9.75,-6.25,-1.5,37.75,46.219,0.4378,-22,66,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+holdout (weeks 9-10),9,2026-11-08,LAR,WAS,-8.5,0.5,-7.0,43.25,46.219,0.2375,-7,33,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+holdout (weeks 9-10),9,2026-11-08,LV,SF,14.5,7.75,8.75,59.25,46.219,0.8113,21,55,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+holdout (weeks 9-10),9,2026-11-08,NYG,PHI,-4.5,0.75,-3.25,39.25,46.219,0.3678,-8,30,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+holdout (weeks 9-10),9,2026-11-08,NYJ,KC,10.25,-2.0,14.25,48.5,46.219,0.9149,23,47,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+holdout (weeks 9-10),9,2026-11-08,TB,CHI,11.75,-5.0,18.75,47.0,46.219,0.9579,3,51,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+holdout (weeks 9-10),9,2026-11-09,BUF,MIN,8.75,5.0,5.75,53.25,46.219,0.7228,-17,29,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+holdout (weeks 9-10),10,2026-11-12,WAS,NYG,0.75,-8.5,11.25,42.5,46.219,0.867,-3,45,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+holdout (weeks 9-10),10,2026-11-15,BUF,NYJ,-2.0,5.0,-5.0,50.75,46.219,0.3029,-19,43,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+holdout (weeks 9-10),10,2026-11-15,CAR,NO,-5.75,3.0,-6.75,56.5,46.219,0.2451,-3,37,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+holdout (weeks 9-10),10,2026-11-15,HOU,CLE,-3.5,-6.25,4.75,41.25,46.219,0.6882,3,51,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+holdout (weeks 9-10),10,2026-11-15,JAX,TEN,-7.0,12.75,-17.75,39.75,46.219,0.0493,-17,63,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+holdout (weeks 9-10),10,2026-11-15,KC,ATL,1.0,10.25,-7.25,53.5,46.219,0.23,-22,48,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+holdout (weeks 9-10),10,2026-11-15,LAR,ARI,-7.5,0.5,-6.0,43.0,46.219,0.2689,-28,40,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+holdout (weeks 9-10),10,2026-11-15,MIA,IND,-0.5,-13.75,15.25,37.0,46.219,0.927,2,46,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+holdout (weeks 9-10),10,2026-11-15,MIN,GB,-8.0,8.75,-14.75,39.75,46.219,0.0788,-20,40,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+holdout (weeks 9-10),10,2026-11-15,NE,DET,-2.0,-3.0,3.0,46.0,46.219,0.6225,25,45,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+holdout (weeks 9-10),10,2026-11-15,PIT,CIN,3.0,-2.5,7.5,43.5,46.219,0.7773,20,56,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+holdout (weeks 9-10),10,2026-11-15,SEA,LV,7.75,8.0,1.75,55.0,46.219,0.5724,-8,34,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+holdout (weeks 9-10),10,2026-11-15,SF,DAL,2.5,14.5,-10.0,61.0,46.219,0.1589,-6,86,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+holdout (weeks 9-10),10,2026-11-16,LAC,BAL,5.0,-9.75,16.75,45.75,46.219,0.9422,-3,43,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),5,2026-10-08,TB,DAL,2.5,-5.0,9.5,49.5,46.219,0.8297,-8,40,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),5,2026-10-11,BAL,ATL,1.0,5.0,-2.0,53.0,46.219,0.4174,-7,53,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),5,2026-10-11,CHI,GB,-8.0,11.75,-17.75,46.25,46.219,0.0493,24,38,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),5,2026-10-11,CIN,MIA,-13.75,3.0,-14.75,35.75,46.219,0.0788,-7,55,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),5,2026-10-11,CLE,NYJ,-2.0,-3.5,3.5,39.25,46.219,0.6418,5,29,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),5,2026-10-11,DEN,LAC,-9.75,-5.0,-2.75,35.25,46.219,0.3874,-6,40,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),5,2026-10-11,DET,ARI,-7.5,-2.0,-3.5,51.5,46.219,0.3582,-24,66,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),5,2026-10-11,HOU,TEN,-7.0,-6.25,1.25,34.75,46.219,0.5519,-23,29,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),5,2026-10-11,IND,PIT,-2.5,-0.5,0.0,44.75,46.219,0.5,12,56,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),5,2026-10-11,LV,NE,-3.0,7.75,-8.75,45.0,46.219,0.1887,28,62,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),5,2026-10-11,MIN,NO,-5.75,8.75,-12.5,47.75,46.219,0.1107,-10,36,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),5,2026-10-11,NYG,WAS,-8.5,0.75,-7.25,42.5,46.219,0.23,0,54,,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),5,2026-10-11,PHI,JAX,12.75,-4.5,19.25,44.75,46.219,0.9611,2,36,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),5,2026-10-11,SF,SEA,8.0,14.5,-4.5,56.75,46.219,0.3208,-3,61,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),5,2026-10-12,BUF,LAR,0.5,5.0,-2.5,53.0,46.219,0.3973,-3,71,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),6,2026-10-15,SEA,DEN,-5.0,8.0,-11.0,44.75,46.219,0.1378,3,31,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),6,2026-10-18,ARI,LAR,0.5,-7.5,10.0,43.0,46.219,0.8411,-2,34,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),6,2026-10-18,BAL,CLE,-3.5,5.0,-6.5,49.25,46.219,0.2529,3,23,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),6,2026-10-18,BUF,LV,7.75,5.0,4.75,60.5,46.219,0.6882,-3,63,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),6,2026-10-18,CAR,PHI,-4.5,3.0,-5.5,49.0,46.219,0.2856,-11,39,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),6,2026-10-18,CHI,ATL,1.0,11.75,-8.75,52.0,46.219,0.1887,-8,54,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),6,2026-10-18,GB,DAL,2.5,-8.0,12.5,48.75,46.219,0.8893,-10,36,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),6,2026-10-18,HOU,JAX,12.75,-6.25,21.0,47.0,46.219,0.9707,-3,65,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),6,2026-10-18,LAC,KC,10.25,-9.75,22.0,46.25,46.219,0.9751,16,28,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),6,2026-10-18,NE,NYJ,-2.0,-3.0,3.0,35.25,46.219,0.6225,-7,45,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),6,2026-10-18,NO,NYG,0.75,-5.75,8.5,46.75,46.219,0.8048,-7,61,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),6,2026-10-18,PIT,TB,-5.0,-2.5,-0.5,38.25,46.219,0.4792,-7,45,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),6,2026-10-18,TEN,IND,-0.5,-7.0,8.5,39.25,46.219,0.8048,-6,46,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),6,2026-10-19,WAS,SF,14.5,-8.5,25.0,52.5,46.219,0.9847,6,40,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),7,2026-10-22,NE,CHI,11.75,-3.0,16.75,44.25,46.219,0.9422,6,54,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),7,2026-10-25,CIN,BAL,5.0,3.0,4.0,53.25,46.219,0.6608,-22,48,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),7,2026-10-25,CLE,TEN,-7.0,-3.5,-1.5,34.0,46.219,0.4378,-3,51,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),7,2026-10-25,DEN,ARI,-7.5,-5.0,-0.5,40.25,46.219,0.4792,-14,46,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),7,2026-10-25,GB,DET,-2.0,-8.0,8.0,48.0,46.219,0.7914,3,37,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),7,2026-10-25,IND,MIN,8.75,-0.5,11.25,47.0,46.219,0.867,6,26,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),7,2026-10-25,LAR,LV,7.75,0.5,9.25,50.0,46.219,0.8237,-14,56,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),7,2026-10-25,MIA,NYJ,-2.0,-13.75,13.75,30.5,46.219,0.9082,-3,53,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),7,2026-10-25,NYG,HOU,-6.25,0.75,-5.0,41.5,46.219,0.3029,-6,48,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),7,2026-10-25,PIT,NO,-5.75,-2.5,-1.25,45.5,46.219,0.4481,-6,26,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),7,2026-10-25,SEA,KC,10.25,8.0,4.25,55.75,46.219,0.67,-17,23,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),7,2026-10-25,SF,ATL,1.0,14.5,-11.5,54.5,46.219,0.1282,9,49,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),7,2026-10-25,TB,CAR,3.0,-5.0,10.0,49.25,46.219,0.8411,-30,56,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),7,2026-10-26,DAL,PHI,-4.5,2.5,-5.0,49.25,46.219,0.3029,-17,59,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),8,2026-10-29,CAR,GB,-8.0,3.0,-9.0,48.5,46.219,0.1824,8,46,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),8,2026-11-01,ARI,DAL,2.5,-7.5,12.0,52.25,46.219,0.8808,-3,63,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),8,2026-11-01,ATL,TB,-5.0,1.0,-4.0,43.0,46.219,0.3392,16,16,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),8,2026-11-01,BAL,BUF,5.0,5.0,2.0,60.75,46.219,0.5826,26,46,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),8,2026-11-01,CLE,PIT,-2.5,-3.5,3.0,39.5,46.219,0.6225,21,33,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),8,2026-11-01,IND,JAX,12.75,-0.5,15.25,51.5,46.219,0.927,35,49,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),8,2026-11-01,KC,DEN,-5.0,10.25,-13.25,48.0,46.219,0.099,4,52,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),8,2026-11-01,LAC,LAR,0.5,-9.75,12.25,38.0,46.219,0.8851,15,33,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),8,2026-11-01,LV,NYJ,-2.0,7.75,-7.75,47.75,46.219,0.2156,-5,71,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),8,2026-11-01,MIN,DET,-2.0,8.75,-8.75,51.25,46.219,0.1887,4,34,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),8,2026-11-01,NE,MIA,-13.75,-3.0,-8.75,27.75,46.219,0.1887,-5,43,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),8,2026-11-01,PHI,WAS,-8.5,-4.5,-2.0,40.75,46.219,0.4174,17,37,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),8,2026-11-01,TEN,CIN,3.0,-7.0,12.0,38.0,46.219,0.8808,7,79,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),8,2026-11-02,CHI,SEA,8.0,11.75,-1.75,54.25,46.219,0.4276,-17,51,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),9,2026-11-05,JAX,BAL,5.0,12.75,-5.75,55.0,46.219,0.2772,-23,43,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),9,2026-11-08,ARI,SEA,8.0,-7.5,17.5,48.0,46.219,0.9487,14,20,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),9,2026-11-08,CIN,ATL,1.0,3.0,0.0,48.25,46.219,0.5,-17,51,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),9,2026-11-08,CLE,NO,-5.75,-3.5,-0.25,46.5,46.219,0.4896,1,45,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),9,2026-11-08,DAL,IND,-0.5,2.5,-1.0,56.0,46.219,0.4584,-4,50,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),9,2026-11-08,DEN,CAR,3.0,-5.0,10.0,48.75,46.219,0.8411,-5,47,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),9,2026-11-08,DET,MIA,-13.75,-2.0,-9.75,41.25,46.219,0.1645,-10,28,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),9,2026-11-08,GB,NE,-3.0,-8.0,7.0,34.5,46.219,0.7625,-18,72,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),9,2026-11-08,HOU,LAC,-9.75,-6.25,-1.5,37.75,46.219,0.4378,-22,66,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),9,2026-11-08,LAR,WAS,-8.5,0.5,-7.0,43.25,46.219,0.2375,-7,33,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),9,2026-11-08,LV,SF,14.5,7.75,8.75,59.25,46.219,0.8113,21,55,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),9,2026-11-08,NYG,PHI,-4.5,0.75,-3.25,39.25,46.219,0.3678,-8,30,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),9,2026-11-08,NYJ,KC,10.25,-2.0,14.25,48.5,46.219,0.9149,23,47,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),9,2026-11-08,TB,CHI,11.75,-5.0,18.75,47.0,46.219,0.9579,3,51,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),9,2026-11-09,BUF,MIN,8.75,5.0,5.75,53.25,46.219,0.7228,-17,29,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),10,2026-11-12,WAS,NYG,0.75,-8.5,11.25,42.5,46.219,0.867,-3,45,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),10,2026-11-15,BUF,NYJ,-2.0,5.0,-5.0,50.75,46.219,0.3029,-19,43,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),10,2026-11-15,CAR,NO,-5.75,3.0,-6.75,56.5,46.219,0.2451,-3,37,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),10,2026-11-15,HOU,CLE,-3.5,-6.25,4.75,41.25,46.219,0.6882,3,51,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),10,2026-11-15,JAX,TEN,-7.0,12.75,-17.75,39.75,46.219,0.0493,-17,63,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),10,2026-11-15,KC,ATL,1.0,10.25,-7.25,53.5,46.219,0.23,-22,48,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),10,2026-11-15,LAR,ARI,-7.5,0.5,-6.0,43.0,46.219,0.2689,-28,40,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),10,2026-11-15,MIA,IND,-0.5,-13.75,15.25,37.0,46.219,0.927,2,46,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),10,2026-11-15,MIN,GB,-8.0,8.75,-14.75,39.75,46.219,0.0788,-20,40,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),10,2026-11-15,NE,DET,-2.0,-3.0,3.0,46.0,46.219,0.6225,25,45,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),10,2026-11-15,PIT,CIN,3.0,-2.5,7.5,43.5,46.219,0.7773,20,56,1,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),10,2026-11-15,SEA,LV,7.75,8.0,1.75,55.0,46.219,0.5724,-8,34,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),10,2026-11-15,SF,DAL,2.5,14.5,-10.0,61.0,46.219,0.1589,-6,86,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG
+all out-of-sample (weeks 5-10),10,2026-11-16,LAC,BAL,5.0,-9.75,16.75,45.75,46.219,0.9422,-3,43,0,ratings from weeks 1-4; HFA 2.0; logistic scale 6.0,https://www.nfl.com/standings/league/2026/REG

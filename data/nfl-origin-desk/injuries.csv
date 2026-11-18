@@ -1,8 +1,9 @@
-team,team_name,player,position,pos_group,practice_status,game_status,season_snap_share,depth_string,is_starter,next_man_up_share,replacement_drop,availability_weight,weight_basis,source_url,retrieved_utc
-DET,Lions,Jared Goff,QB,QB,Limited Participation in Practice,,0.99375,1,yes,0.05,0.235937,0.25,provisional (practice status; no game status published),https://www.nfl.com/injuries/,2026-11-12T16:47:34Z
-DET,Lions,Amon-Ra St. Brown,WR,WR,Limited Participation in Practice,,0.8325,2,yes,0.5625,0.0675,0.25,provisional (practice status; no game status published),https://www.nfl.com/injuries/,2026-11-12T16:47:34Z
-DET,Lions,Kerby Joseph,S,DB,Limited Participation in Practice,,,,,,,0.25,provisional (practice status; no game status published),https://www.nfl.com/injuries/,2026-11-12T16:47:34Z
-DET,Lions,Cade Mays,C,OL,Did Not Participate In Practice,,0.655,7,yes,0.21375,0.220625,0.5,provisional (practice status; no game status published),https://www.nfl.com/injuries/,2026-11-12T16:47:34Z
-WAS,Commanders,John Bates,TE,TE,Full Participation in Practice,,0.39625,2,no,0.3925,0,0,provisional (practice status; no game status published),https://www.nfl.com/injuries/,2026-11-12T16:47:34Z
-WAS,Commanders,Treylon Burks,WR,WR,Did Not Participate In Practice,,0.533333,4,yes,0.435714,0.0488095,0.5,provisional (practice status; no game status published),https://www.nfl.com/injuries/,2026-11-12T16:47:34Z
-WAS,Commanders,Jayden Daniels,QB,QB,Full Participation in Practice,,0.925,1,yes,0.84,0,0,provisional (practice status; no game status published),https://www.nfl.com/injuries/,2026-11-12T16:47:34Z
+team,team_name,player,position,injury,pos_group,practice_status,game_status,season_snap_share,depth_string,is_starter,next_man_up_share,replacement_drop,availability_weight,weight_basis,source_url,retrieved_utc
+DET,Lions,Jared Goff,QB,,,Full Participation in Practice,,,,,,,,UNVERIFIED: derived values removed 2026-11-18 (F18); no official basis,https://www.nfl.com/injuries/league/2026/reg10,2026-11-18
+DET,Lions,Amon-Ra St. Brown,WR,Rib,,Limited Participation in Practice,Questionable,,,,,,,UNVERIFIED: derived values removed 2026-11-18 (F18); no official basis,https://www.nfl.com/injuries/league/2026/reg10,2026-11-18
+DET,Lions,Kerby Joseph,S,Knee,,Did Not Participate In Practice,Out,,,,,,,UNVERIFIED: derived values removed 2026-11-18 (F18); no official basis,https://www.nfl.com/injuries/league/2026/reg10,2026-11-18
+DET,Lions,Cade Mays,C,Ankle,,Did Not Participate In Practice,Out,,,,,,,UNVERIFIED: derived values removed 2026-11-18 (F18); no official basis,https://www.nfl.com/injuries/league/2026/reg10,2026-11-18
+DET,Lions,D.J. Reed,CB,Hip,,Did Not Participate In Practice,Out,,,,,,,UNVERIFIED: derived values removed 2026-11-18 (F18); no official basis,https://www.nfl.com/injuries/league/2026/reg10,2026-11-18
+WAS,Commanders,John Bates,TE,,,Full Participation in Practice,,,,,,,,UNVERIFIED: derived values removed 2026-11-18 (F18); no official basis,https://www.nfl.com/injuries/league/2026/reg10,2026-11-18
+WAS,Commanders,Treylon Burks,WR,,,Did Not Participate In Practice,,,,,,,,UNVERIFIED: derived values removed 2026-11-18 (F18); no official basis,https://www.nfl.com/injuries/league/2026/reg10,2026-11-18
+WAS,Commanders,Jayden Daniels,QB,,,Full Participation in Practice,,,,,,,,UNVERIFIED: derived values removed 2026-11-18 (F18); no official basis,https://www.nfl.com/injuries/league/2026/reg10,2026-11-18

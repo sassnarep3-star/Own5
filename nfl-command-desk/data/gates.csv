@@ -1,0 +1,13 @@
+gate_id,name,rule,status,blocking
+G01,Source provenance,Every input row carries an official URL read on a stamped date; no aggregator,fail-closed,blocking
+G02,Leakage control,Every forecast uses only data timestamped before kickoff; point-in-time join,partial: forecasts use weeks already completed,blocking
+G03,Chronological split,Train/validation/holdout fixed before results are seen,met: weeks 1-4 / 5-8 / 9-10 registered,met
+G04,Calibration,Reliability slope in 0.8-1.2 and intercept |a|<0.05 on >=500 forecasts,not met: n=85 out-of-sample,blocking
+G05,Skill evidence,Brier skill vs flat control > 0 with 95% CI lower bound > 0,not met: CI crosses 0 (-0.405..0.089),blocking
+G06,Multiplicity,Holm-adjusted p < 0.05 across the registered family,not met: best Holm p=0.030 is a non-strategy exposure,blocking
+G07,Prospective replication,>=200 bets recorded live before kickoff after registration,not met: 0 bets,blocking
+G08,Market benchmark,Closing line captured with timestamp; CLV computed,blocked: no official market feed in repo (FLAG-P1),blocking
+G09,Joint evidence (parlays),Directly validated joint probability and operator void/push rules,blocked: 0 joint estimates,blocking
+G10,Staking separation,Signal score and staking P&L reported as separate columns,"met: separate columns, staking blank",met
+G11,Availability point-in-time,Injury/depth snapshot with hash and timestamp before kickoff,"blocked: 1 capture, 0 pre-kickoff retained",blocking
+G12,Injury/depth ablation,"Same model with and without availability features, chronological holdouts",blocked: no 2026 availability data,blocking

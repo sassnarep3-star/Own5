@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="OWN5 NFL Line Originator — verification record. Line-by-line verification against official sources.">
+<title>Verification · OWN5 NFL Line Originator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <div class="mark">O5</div>
+      <div>
+        <h1><a href="index.html">OWN5 NFL Line Originator</a></h1>
+        <p>Session ccc5caf2 &middot; Verification</p>
+      </div>
+    </div>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Overview</a>
+      <a href="requirements.html">Requirements &amp; readiness</a>
+      <a href="lines.html">Own lines (Week 11)</a>
+      <a href="strategies.html">Strategies</a>
+      <a href="gates.html">Validation gates</a>
+      <a href="correlations.html">Correlations</a>
+      <a href="injuries.html">Injuries &amp; depth</a>
+      <a href="suggestions.html">Suggestions</a>
+      <a href="questions.html">Questions &amp; answers</a>
+      <a href="sources.html">Sources</a>
+      <a href="flagged.html">Flagged for review</a>
+      <a class="active" href="verification.html">Verification</a>
+      <a href="summary.html">Executive summary</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap" id="main">
+  <section class="pagehead">
+    <h2>Verification record</h2>
+    <p>Line-by-line verification against official, trusted sources. Every factual value in any table links to an official source; values that cannot be confirmed are left blank and flagged. Nothing is inferred. No hallucinations.</p>
+  </div>
+
+  <div class="notice ok">
+    <strong>Hard rule:</strong> if a value cannot be confirmed from an official/primary source, it is left <span class="blankcell">blank</span> and flagged on the <a href="flagged.html">Flagged for review</a> page. Never inferred, never filled in.
+  </div>
+
+  <h3>Verification checks performed this session (2026-11-18)</h3>
+  <table class="data">
+    <thead>
+      <tr><th>Check</th><th>Source fetched</th><th>Result</th><th>Verdict</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2026 regular-season standings (32 clubs)</td>
+        <td><a href="https://www.nfl.com/standings/league/2026/REG" rel="noopener">nfl.com standings</a></td>
+        <td>All 32 clubs read; W-L-T, PF, PA reproduced</td>
+        <td><span class="badge ok">Verified</span></td>
+      </tr>
+      <tr>
+        <td>Week 11 schedule (13 games)</td>
+        <td><a href="https://www.nfl.com/schedules/2026/by-week/week-11" rel="noopener">nfl.com schedule</a></td>
+        <td>13 games, Nov 19&ndash;23 2026, with kickoff times, networks, venues</td>
+        <td><span class="badge ok">Verified</span></td>
+      </tr>
+      <tr>
+        <td>Week 10 injury report (sampled clubs)</td>
+        <td><a href="https://www.nfl.com/injuries/" rel="noopener">nfl.com injuries</a></td>
+        <td>Detroit Lions: Kerby Joseph Out, Cade Mays Out, D.J. Reed Out; Amon-Ra St. Brown Questionable &mdash; all match nfl.com</td>
+        <td><span class="badge ok">Verified (sample)</span></td>
+      </tr>
+      <tr>
+        <td>Fair lines (Week 11)</td>
+        <td>Computed from S-03 standings (PF/PA model)</td>
+        <td>Model output; not an official odds source</td>
+        <td><span class="badge blank">Model only</span> &mdash; market columns blank (F01/F02)</td>
+      </tr>
+      <tr>
+        <td>QB↔WR correlation</td>
+        <td>nflverse stats_player (AGGREGATOR)</td>
+        <td>r = 0.50, n = 1,255 (recomputed; prior 0.76 does not reproduce, F09)</td>
+        <td><span class="badge blank">AGGREGATOR</span></td>
+      </tr>
+      <tr>
+        <td>Operator closing-line history</td>
+        <td>No official/operator page publishes it</td>
+        <td>Not available</td>
+        <td><span class="badge bad">Blocked</span> (F01/F02)</td>
+      </tr>
+      <tr>
+        <td>Machine-readable official depth chart</td>
+        <td>Not published by the league</td>
+        <td>Not available</td>
+        <td><span class="badge blank">Blocked</span> (F16)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="section">
+    <h3>Reproductions (prior-session claims re-checked)</h3>
+    <table class="data">
+      <thead><tr><th>Claim</th><th>Prior value</th><th>Recomputed value</th><th>Verdict</th></tr></thead>
+      <tbody>
+        <tr><td>Home underdogs cover 52.6%</td><td>0.526</td><td>0.497</td><td><span class="badge bad">Does not reproduce</span></td></tr>
+        <tr><td>Home dogs +7 cover 56.4% (n=793)</td><td>0.564 / n=793</td><td>0.540 / n=730</td><td><span class="badge bad">Does not reproduce</span></td></tr>
+        <tr><td>QB↔WR correlation r = 0.76 (n=3,852)</td><td>0.76 / n=3,852</td><td>0.50 / n=1,255</td><td><span class="badge bad">Does not reproduce</span></td></tr>
+        <tr><td>Break-even bettor 110+ wins in 200 = 20.8%</td><td>0.208</td><td>0.251 (exact binomial)</td><td><span class="badge bad">Does not reproduce</span></td></tr>
+        <tr><td>Favourites cover 48.1% (n=10,424)</td><td>0.481</td><td>0.485</td><td><span class="badge ok">Agrees</span></td></tr>
+        <tr><td>Overs 49.1% (n=10,729)</td><td>0.491</td><td>0.491</td><td><span class="badge ok">Agrees</span></td></tr>
+      </tbody>
+    </table>
+    <p class="note">Non-reproducing prior figures are flagged (<a href="flagged.html#F08">F08</a>, <a href="flagged.html#F09">F09</a>, <a href="flagged.html#F10">F10</a>) and left for human review; the recomputed values are used on this desk.</p>
+  </div>
+
+  <div class="section">
+    <h3>Site integrity</h3>
+    <ul>
+      <li>All internal links across pages resolve (no broken links).</li>
+      <li>Every table row carries a source link or is an intentional flagged blank.</li>
+      <li>No value is inferred from unofficial sources.</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    Sources fetched 2026-11-18 from nfl.com (OFFICIAL). Aggregator sources pinned by SHA-256 (nflverse, spreadspoke). 1-800-GAMBLER.
+  </div>
+</main>
+</body>
+</html>

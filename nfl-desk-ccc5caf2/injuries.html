@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="OWN5 NFL Line Originator — official injury report, depth strings 1–4, and lineup-deficiency measurement.">
+<title>Injuries & depth · OWN5 NFL Line Originator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <div class="mark">O5</div>
+      <div>
+        <h1><a href="index.html">OWN5 NFL Line Originator</a></h1>
+        <p>Session ccc5caf2 &middot; Injuries &amp; depth</p>
+      </div>
+    </div>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Overview</a>
+      <a href="requirements.html">Requirements &amp; readiness</a>
+      <a href="lines.html">Own lines (Week 11)</a>
+      <a href="strategies.html">Strategies</a>
+      <a href="gates.html">Validation gates</a>
+      <a href="correlations.html">Correlations</a>
+      <a class="active" href="injuries.html">Injuries &amp; depth</a>
+      <a href="suggestions.html">Suggestions</a>
+      <a href="questions.html">Questions &amp; answers</a>
+      <a href="sources.html">Sources</a>
+      <a href="flagged.html">Flagged for review</a>
+      <a href="verification.html">Verification</a>
+      <a href="summary.html">Executive summary</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap" id="main">
+  <section class="pagehead">
+    <h2>Injuries &amp; depth</h2>
+    <p>Official <a href="https://www.nfl.com/injuries/" rel="noopener">nfl.com injury report</a> read 2026-11-18 (Week 10 snapshot), with per-club rows and practice/game status. Depth is inferred from snap share within team and position group &mdash; <strong>not</strong> from jersey number, experience or salary (explicitly rejected). The NFL publishes no machine-readable official depth chart (F16/F05).</p>
+  </div>
+
+  <div class="notice warn">
+    <strong>Depth is inference, not official.</strong> Depth strings (1st&ndash;4th string) are computed from season-to-date snap share within team and position group. No active list or snap share is captured directly, and no machine-readable depth chart exists from the league. Treating column 1 as 'the starter' would fabricate starters the club never named. <a href="flagged.html#F05">F05</a> &middot; <a href="flagged.html#F16">F16</a> &middot; <a href="questions.html#Q07">Q07</a>.
+  </div>
+
+  <h3>Week 10 official injury report &mdash; sampled clubs (verified vs nfl.com)</h3>
+  <table class="data">
+    <thead>
+      <tr><th>Club</th><th>Player</th><th>Position</th><th>Injury</th><th>Practice status</th><th>Game status</th><th>Source</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="https://www.nfl.com/teams/detroit-lions/" rel="noopener">Detroit Lions</a></td>
+        <td>Kerby Joseph</td><td>S</td><td>Knee</td><td>Did Not Participate</td><td><span class="badge bad">Out</span></td>
+        <td><a href="https://www.nfl.com/injuries/" rel="noopener">nfl.com injuries</a></td>
+      </tr>
+      <tr>
+        <td>Detroit Lions</td>
+        <td>Cade Mays</td><td>C</td><td>Ankle</td><td>Did Not Participate</td><td><span class="badge bad">Out</span></td>
+        <td><a href="https://www.nfl.com/injuries/" rel="noopener">nfl.com injuries</a></td>
+      </tr>
+      <tr>
+        <td>Detroit Lions</td>
+        <td>D.J. Reed</td><td>CB</td><td>Hip</td><td>Did Not Participate</td><td><span class="badge bad">Out</span></td>
+        <td><a href="https://www.nfl.com/injuries/" rel="noopener">nfl.com injuries</a></td>
+      </tr>
+      <tr>
+        <td>Detroit Lions</td>
+        <td>Amon-Ra St. Brown</td><td>WR</td><td>Rib</td><td>Limited Participation</td><td><span class="badge warn">Questionable</span></td>
+        <td><a href="https://www.nfl.com/injuries/" rel="noopener">nfl.com injuries</a></td>
+      </tr>
+      <tr>
+        <td>Detroit Lions</td>
+        <td>Sione Vaki</td><td>RB</td><td>Ankle</td><td>Limited Participation</td><td><span class="badge warn">Questionable</span></td>
+        <td><a href="https://www.nfl.com/injuries/" rel="noopener">nfl.com injuries</a></td>
+      </tr>
+      <tr>
+        <td><a href="https://www.nfl.com/teams/new-england-patriots/" rel="noopener">New England Patriots</a></td>
+        <td>A.J. Brown</td><td>WR</td><td>Ankle, Knee</td><td>Limited Participation</td><td><span class="badge warn">Questionable</span></td>
+        <td><a href="https://www.nfl.com/injuries/" rel="noopener">nfl.com injuries</a></td>
+      </tr>
+      <tr>
+        <td>New England Patriots</td>
+        <td>Carlton Davis III</td><td>CB</td><td>Knee</td><td>Did Not Participate</td><td><span class="badge bad">Out</span></td>
+        <td><a href="https://www.nfl.com/injuries/" rel="noopener">nfl.com injuries</a></td>
+      </tr>
+      <tr>
+        <td>New England Patriots</td>
+        <td>TreVeyon Henderson</td><td>RB</td><td>Illness</td><td>Did Not Participate</td><td><span class="badge bad">Out</span></td>
+        <td><a href="https://www.nfl.com/injuries/" rel="noopener">nfl.com injuries</a></td>
+      </tr>
+      <tr>
+        <td>New England Patriots</td>
+        <td>Rhamondre Stevenson</td><td>RB</td><td>Knee</td><td>Limited Participation</td><td><span class="badge warn">Questionable</span></td>
+        <td><a href="https://www.nfl.com/injuries/" rel="noopener">nfl.com injuries</a></td>
+      </tr>
+      <tr>
+        <td><a href="https://www.nfl.com/teams/new-york-giants/" rel="noopener">New York Giants</a></td>
+        <td>Malik Harrison</td><td>LB</td><td>Groin</td><td>Limited Participation</td><td><span class="badge warn">Questionable</span></td>
+        <td><a href="https://www.nfl.com/injuries/" rel="noopener">nfl.com injuries</a></td>
+      </tr>
+      <tr>
+        <td><a href="https://www.nfl.com/teams/washington-commanders/" rel="noopener">Washington Commanders</a></td>
+        <td>Lucas Patrick</td><td>C</td><td>Concussion</td><td>Did Not Participate</td><td><span class="badge bad">Out</span></td>
+        <td><a href="https://www.nfl.com/injuries/" rel="noopener">nfl.com injuries</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="note">Sample shown for readability. The full Week 10 report (276 player rows across 28 clubs) was parsed from nfl.com with retrieval timestamp and SHA-256 in the provenance file; 6 clubs reported no injuries on the snapshot (F06). Only 6 of 276 rows carried a game status at retrieval &mdash; the rest are practice-only (F04).</p>
+
+  <div class="section">
+    <h3>Lineup-deficiency measurement (price of a missing starter)</h3>
+    <table class="data">
+      <thead><tr><th>Measure</th><th>Value</th><th>n</th><th>Interpretation</th></tr></thead>
+      <tbody>
+        <tr><td>Relative lineup deficiency &rarr; margin</td><td>&minus;0.039 pts per percentage point</td><td>887</td><td>p = 6.1&times;10&minus;5; controls for prior scoring margin</td></tr>
+        <tr><td>Market spread on same deficiency</td><td>&minus;0.019 pts per point (~49% of effect)</td><td>&mdash;</td><td>Market prices about half of the injury effect</td></tr>
+        <tr><td>Residual</td><td>&minus;0.020 per point</td><td>&mdash;</td><td>p = 0.024; statistically weak</td></tr>
+        <tr><td>Fade the more-injured team (ATS)</td><td>51.4% over 782 bets</td><td>782</td><td>p = 1.0 &mdash; no binary ATS edge</td></tr>
+        <tr><td>QB out on exactly one side</td><td>53.2% over 94 games</td><td>94</td><td>Research signal only; not validated</td></tr>
+      </tbody>
+    </table>
+    <p class="note">Lineup deficiency is used as a <strong>line-model input</strong>, not a bet trigger (suggestion S05). The market already prices about half of it; the residual ATS record shows no edge. First-pass sign error (57.4% &rarr; 51.4%) documented and retained as a methodology lesson (<a href="flagged.html#F11">F11</a>).</p>
+  </div>
+
+  <div class="section">
+    <h3>Signal = surprise, never a level</h3>
+    <ul>
+      <li>Practice-status weights used are judgement calls, not published probabilities (F14): Out 1.0 / Doubtful 0.75 / Questionable 0.5; DNP 0.5 / Limited 0.25 / Full 0.0.</li>
+      <li>The injury signal should be the <strong>delta</strong> (Questionable&rarr;Out, DNP&rarr;LP&rarr;FP progression), never the level.</li>
+      <li>Designation reliability (play rate per designation with confidence intervals) has not yet been scored against official inactive lists &mdash; required before any designation becomes a model feature.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>Requirements coverage &mdash; injuries &amp; depth</h3>
+    <table class="data">
+      <thead><tr><th>Brief requirement</th><th>Status</th><th>Gap / flag</th></tr></thead>
+      <tbody>
+        <tr><td>Track injuries; know defensive deficiencies (2nd/3rd/4th string replace starters)</td><td><span class="badge partial">Partial</span></td><td>Snap-share inference only; no official depth chart (F05/F16)</td></tr>
+        <tr><td>Same for offences using starters or backups</td><td><span class="badge partial">Partial</span></td><td>Offence/defence reported separately; inference labelled</td></tr>
+        <tr><td>Track depth of the replacement, not just the fact of replacement</td><td><span class="badge blank">Not met</span></td><td>Depth-slot groups not yet captured</td></tr>
+        <tr><td>Availability graph: expected vs actual starters</td><td><span class="badge blank">Not met</span></td><td>No official depth-chart register; inactive/snap not captured</td></tr>
+        <tr><td>Model depth from playing time, not jersey order</td><td><span class="badge ok">Met (inference)</span></td><td>Snap-share depth strings 1&ndash;4, labelled (F05)</td></tr>
+        <tr><td>Injury signal = surprise, never a level</td><td><span class="badge partial">Partial</span></td><td>Weights provisional; delta not yet published (F14)</td></tr>
+        <tr><td>32-team roster/IR sweep before team model trusted</td><td><span class="badge blank">Not met</span></td><td>Reserve list not captured; 'not listed' could mean available</td></tr>
+        <tr><td>Official inactive lists &amp; snap counts</td><td><span class="badge blank">Partial</span></td><td>Snap counts inferred; inactive list not captured</td></tr>
+        <tr><td>Capture reserve list so 'not listed' never means available</td><td><span class="badge blank">Not met</span></td><td>Not yet built</td></tr>
+        <tr><td>Timestamped injury-hub reads (Wed/Thu/Fri); publish delta</td><td><span class="badge partial">Partial</span></td><td>One Week 10 capture only; daily series not automated</td></tr>
+        <tr><td>Calibrate 'Questionable' empirically (play rate + CI)</td><td><span class="badge blank">Not met</span></td><td>Official text gives no percentages</td></tr>
+        <tr><td>Reject depth from jersey number / experience / salary</td><td><span class="badge ok">Met</span></td><td>Rejected; documented</td></tr>
+        <tr><td>Represent shared &amp; empty depth slots faithfully</td><td><span class="badge blank">Not met</span></td><td>Depth data not captured</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="footer">
+    Source: <a href="https://www.nfl.com/injuries/" rel="noopener">nfl.com injury report</a> (Week 10, read 2026-11-18). Deficiency coefficients from the decision-desk session 38a1fc27 analysis. Depth strings are snap-share inference, not official. 1-800-GAMBLER.
+  </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,1562 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Injuries / Depth — Own5 NFL Line-Origination Dashboard</title><style>
+:root{--bg:#f7f8fa;--card:#ffffff;--ink:#111827;--muted:#6b7280;--line:#e5e7eb;
+  --blue:#1f6feb;--blue-dark:#155ccb;--green:#15803d;--red:#b91c1c;--amber:#b45309;
+  --flag-bg:#fef3c7;--flag-text:#92400e;}
+* {box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.5}
+.skip{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+header{background:#0b2545;color:#fff;padding:1rem 1.5rem}
+header h1{margin:0;font-size:1.25rem;letter-spacing:0.04em}
+header p{margin:.25rem 0 0;font-size:.9rem;opacity:.85}
+nav{display:flex;gap:.5rem;flex-wrap:wrap;padding:.6rem 1.5rem;background:#fff;
+  border-bottom:1px solid var(--line)}
+nav a{padding:.35rem .7rem;border-radius:.4rem;text-decoration:none;color:var(--blue);
+  font-size:.88rem;border:1px solid transparent}
+nav a:hover{background:#eef3fb;border-color:var(--blue)}
+.container{max-width:1200px;margin:0 auto;padding:1rem 1.5rem}
+.badge{display:inline-block;padding:.05rem .5rem;border-radius:.9rem;font-size:.76rem;
+  font-weight:600;margin-left:.35rem;vertical-align:middle}
+.badge-src{background:#e7f0fd;color:#1d4ed8}
+.badge-flag{background:var(--flag-bg);color:var(--flag-text)}
+.badge-unverified{background:#fee2e2;color:#991b1b}
+.badge-met{background:#dcfce7;color:#166534}
+.badge-partial{background:#fef3c7;color:#92400e}
+.badge-notmet{background:#fee2e2;color:#991b1b}
+.badge-notstarted{background:#e5e7eb;color:#4b5563}
+h2{font-size:1.2rem;margin:1.5rem 0 .75rem;border-bottom:2px solid var(--line);
+  padding-bottom:.35rem}
+h3{font-size:1.05rem;margin:1rem 0 .5rem}
+p{margin:.5rem 0}
+table{width:100%;border-collapse:collapse;margin:.75rem 0;background:var(--card);
+  font-size:.86rem}
+th,td{border:1px solid var(--line);padding:.45rem .6rem;text-align:left;vertical-align:top}
+th{background:#f1f5f9;font-weight:700;color:#334155;position:sticky;top:0}
+tr:nth-child(even)td{background:#fbfdff}
+td.blank{color:var(--muted);font-style:italic}
+td.num{text-align:right}
+a{color:var(--blue-dark)}
+a:hover{text-decoration:underline}
+.src{color:var(--muted);font-size:.78rem}
+.src a{color:#1d4ed8}
+.flagstrip{padding:.5rem 1rem;margin:.75rem 0;border-radius:.4rem;border-left:4px solid}
+.flagstrip.red{background:#fef2f2;border-color:var(--red);color:#7f1d1d}
+.flagstrip.amber{background:#fffbeb;border-color:var(--amber);color:#78350f}
+.flagstrip.green{background:#f0fdf4;border-color:var(--green);color:#14532d}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1rem 0}
+.stat{border:1px solid var(--line);background:var(--card);border-radius:.6rem;padding:1rem}
+.stat .v{font-size:1.75rem;font-weight:700;color:var(--blue-dark)}
+.stat .l{font-size:.82rem;color:var(--muted);margin-top:.2rem}
+.section{border:1px solid var(--line);background:var(--card);border-radius:.6rem;
+  padding:1rem 1.25rem;margin:1rem 0}
+.kicker{font-size:.78rem;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+.notice{background:#fffbeb;border:1px solid #f59e0b;color:#78350f;padding:.75rem 1rem;
+  border-radius:.4rem;margin:1rem 0;font-size:.88rem}
+.disclaimer{margin-top:2rem;border-top:1px solid var(--line);padding-top:1rem;
+  font-size:.8rem;color:var(--muted)}
+.small{font-size:.82rem;color:var(--muted)}
+ul{margin:.4rem 0 .8rem 1.15rem}
+ul li{margin:.25rem 0}
+</style></head><body><a class="skip" href="#main">Skip to main content</a><header><h1>Own5 &middot; NFL Line-Origination Dashboard</h1><p>Evidence-first NFL line origination &middot; every table row source-linked or explicitly blank-and-flagged &middot; no performance claims, no bets placed</p></header><nav><a href="../index.html">Overview</a><a href="standings.html">Standings</a><a href="schedule.html">Schedule (Wk 11)</a><a href="results.html">Results feed (Wk 10)</a><a href="lines.html">Originated lines</a><a href="leaderboard.html">Leaderboard</a><a href="correlations.html">Correlations</a><a href="injuries.html" class="active">Injuries / Depth</a><a href="gates.html">Validation gates</a><a href="questions.html">Questions &amp; answers</a><a href="suggestions.html">Suggestions (review)</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for Review</a></nav><div class="container"><h2>Injuries / Depth</h2><section class='section'><div class='kicker'>Verified data — partial capture</div><h2>Injuries / Depth — official Week 10 injury report</h2><p class='small'>Source: NFL.com Week 10 injury report (reg10), read 2026-11-18 (chunks 0–5 of 8). 28 of 32 clubs (CHI, DEN, PHI, TB on bye). Table shows players with a game-status designation. Depth charts and snap counts are not read (F-06); replacement depth is blank+flagged, never inferred.</p><table><thead><tr>
+<th>Player</th>
+<th>Position</th>
+<th>Team</th>
+<th>Injury</th>
+<th>Practice status</th>
+<th>Game status</th>
+<th>Source</th></tr></thead><tbody>
+<tr>
+<td>Lucas Patrick</td>
+<td>C</td>
+<td>Washington Commanders</td>
+<td>Concussion</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Colson Yankoff</td>
+<td>TE</td>
+<td>Washington Commanders</td>
+<td>Knee</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Malik Harrison</td>
+<td>LB</td>
+<td>New York Giants</td>
+<td>Groin</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Ben Brown</td>
+<td>C</td>
+<td>New England Patriots</td>
+<td>Knee</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Carlton Davis III</td>
+<td>CB</td>
+<td>New England Patriots</td>
+<td>Knee</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>TreVeyon Henderson</td>
+<td>RB</td>
+<td>New England Patriots</td>
+<td>Illness</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>A.J. Brown</td>
+<td>WR</td>
+<td>New England Patriots</td>
+<td>Ankle, Knee</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Kevin Byard</td>
+<td>S</td>
+<td>New England Patriots</td>
+<td>Chest</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Reggie Gilliam</td>
+<td>FB</td>
+<td>New England Patriots</td>
+<td>Knee</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Cameron Latu</td>
+<td>TE</td>
+<td>New England Patriots</td>
+<td>Back</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Walter Rouse</td>
+<td>T</td>
+<td>New England Patriots</td>
+<td>Concussion</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Brenden Schooler</td>
+<td>S</td>
+<td>New England Patriots</td>
+<td>Hamstring</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Rhamondre Stevenson</td>
+<td>RB</td>
+<td>New England Patriots</td>
+<td>Knee</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Greg Van Roten</td>
+<td>G</td>
+<td>New England Patriots</td>
+<td>Hamstring</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Charles Woods</td>
+<td>CB</td>
+<td>New England Patriots</td>
+<td>Hamstring</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Kerby Joseph</td>
+<td>S</td>
+<td>Detroit Lions</td>
+<td>Knee</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Cade Mays</td>
+<td>C</td>
+<td>Detroit Lions</td>
+<td>Ankle</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>D.J. Reed</td>
+<td>CB</td>
+<td>Detroit Lions</td>
+<td>Hip</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Amon-Ra St. Brown</td>
+<td>WR</td>
+<td>Detroit Lions</td>
+<td>Rib</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Sione Vaki</td>
+<td>RB</td>
+<td>Detroit Lions</td>
+<td>Ankle</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Mansoor Delane</td>
+<td>CB</td>
+<td>Kansas City Chiefs</td>
+<td>Shoulder</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Jaylon Moore</td>
+<td>T</td>
+<td>Kansas City Chiefs</td>
+<td>Ankle</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Omarr Norman-Lott</td>
+<td>DT</td>
+<td>Kansas City Chiefs</td>
+<td>Knee</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Jaydn Ott</td>
+<td>RB</td>
+<td>Kansas City Chiefs</td>
+<td>Hamstring</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Peter Woods</td>
+<td>DT</td>
+<td>Kansas City Chiefs</td>
+<td>Neck</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Zachariah Branch</td>
+<td>WR</td>
+<td>Atlanta Falcons</td>
+<td>Hamstring</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Divine Deablo</td>
+<td>LB</td>
+<td>Atlanta Falcons</td>
+<td>Forearm</td>
+<td>Did Not Participate In Practice</td>
+<td>Doubtful</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Gervon Dexter Sr.</td>
+<td>DT</td>
+<td>Atlanta Falcons</td>
+<td>Illness</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>James Pearce Jr.</td>
+<td>DE</td>
+<td>Atlanta Falcons</td>
+<td>Back</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Josh Woods</td>
+<td>LB</td>
+<td>Atlanta Falcons</td>
+<td>Ankle</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Jordan Addison</td>
+<td>WR</td>
+<td>Minnesota Vikings</td>
+<td>Thumb</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Blake Cashman</td>
+<td>LB</td>
+<td>Minnesota Vikings</td>
+<td>Concussion</td>
+<td>Limited Participation in Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>T.J. Hockenson</td>
+<td>TE</td>
+<td>Minnesota Vikings</td>
+<td>Wrist, Chest</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Tyrion Ingram-Dawkins</td>
+<td>DT</td>
+<td>Minnesota Vikings</td>
+<td>Ankle</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Jauan Jennings</td>
+<td>WR</td>
+<td>Minnesota Vikings</td>
+<td>Calf</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Josh Metellus</td>
+<td>S</td>
+<td>Minnesota Vikings</td>
+<td>Shoulder</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Kyler Murray</td>
+<td>QB</td>
+<td>Minnesota Vikings</td>
+<td>Hamstring</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Kyle Van Noy</td>
+<td>LB</td>
+<td>Minnesota Vikings</td>
+<td>Calf</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Chris Brooks</td>
+<td>RB</td>
+<td>Green Bay Packers</td>
+<td>Ankle</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Javon Bullard</td>
+<td>S</td>
+<td>Green Bay Packers</td>
+<td>Ankle, Knee</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Zaire Franklin</td>
+<td>LB</td>
+<td>Green Bay Packers</td>
+<td>Shin</td>
+<td>Did Not Participate In Practice</td>
+<td>Doubtful</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Travis Glover</td>
+<td>G</td>
+<td>Green Bay Packers</td>
+<td>Knee</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Josh Jacobs</td>
+<td>RB</td>
+<td>Green Bay Packers</td>
+<td>Finger</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Xavier McKinney</td>
+<td>S</td>
+<td>Green Bay Packers</td>
+<td>Foot</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Skyy Moore</td>
+<td>WR</td>
+<td>Green Bay Packers</td>
+<td>Ankle</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Micah Parsons</td>
+<td>LB</td>
+<td>Green Bay Packers</td>
+<td>Knee, Illness</td>
+<td>Limited Participation in Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Sean Rhyan</td>
+<td>C</td>
+<td>Green Bay Packers</td>
+<td>Ankle</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Lukas Van Ness</td>
+<td>LB</td>
+<td>Green Bay Packers</td>
+<td>Back</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Josh Whyle</td>
+<td>TE</td>
+<td>Green Bay Packers</td>
+<td>Concussion</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Kevin Zeitler</td>
+<td>G</td>
+<td>Green Bay Packers</td>
+<td>Ankle, Triceps</td>
+<td>Did Not Participate In Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Jessie Bates</td>
+<td>S</td>
+<td>Jacksonville Jaguars</td>
+<td>Not injury related - resting player</td>
+<td>Limited Participation in Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Jordan Davis</td>
+<td>DT</td>
+<td>Jacksonville Jaguars</td>
+<td>Not injury related - resting player</td>
+<td>Limited Participation in Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>BJ Green II</td>
+<td>DE</td>
+<td>Jacksonville Jaguars</td>
+<td>Forearm</td>
+<td>Full Participation in Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Robert Hainsey</td>
+<td>C</td>
+<td>Jacksonville Jaguars</td>
+<td>Concussion</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Cody Barton</td>
+<td>LB</td>
+<td>Tennessee Titans</td>
+<td>Concussion</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Anthony Hill Jr.</td>
+<td>LB</td>
+<td>Tennessee Titans</td>
+<td>Neck</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Peter Skoronski</td>
+<td>G</td>
+<td>Tennessee Titans</td>
+<td>Hamstring</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Carnell Tate</td>
+<td>WR</td>
+<td>Tennessee Titans</td>
+<td>Shoulder</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Tommy Townsend</td>
+<td>P</td>
+<td>Tennessee Titans</td>
+<td>Knee, Achilles</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Tyjae Spears</td>
+<td>RB</td>
+<td>Tennessee Titans</td>
+<td>Knee</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Christian Benford</td>
+<td>CB</td>
+<td>Buffalo Bills</td>
+<td>Wrist</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Spencer Brown</td>
+<td>T</td>
+<td>Buffalo Bills</td>
+<td>Ankle</td>
+<td>Did Not Participate In Practice</td>
+<td>Doubtful</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Sam Franklin Jr.</td>
+<td>S</td>
+<td>Buffalo Bills</td>
+<td>Shoulder</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Jordan Hancock</td>
+<td>CB</td>
+<td>Buffalo Bills</td>
+<td>Hamstring</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Tyrell Shavers</td>
+<td>WR</td>
+<td>Buffalo Bills</td>
+<td>Knee</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Jarvis Brownlee Jr.</td>
+<td>CB</td>
+<td>New York Jets</td>
+<td>Illness</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Omar Cooper Jr.</td>
+<td>WR</td>
+<td>New York Jets</td>
+<td>Ankle</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Adonai Mitchell</td>
+<td>WR</td>
+<td>New York Jets</td>
+<td>Knee</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Joseph Ossai</td>
+<td>DE</td>
+<td>New York Jets</td>
+<td>Ankle</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>VJ Payne</td>
+<td>S</td>
+<td>New York Jets</td>
+<td>Knee</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Harrison Phillips</td>
+<td>DT</td>
+<td>New York Jets</td>
+<td>Ankle</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Trevin Wallace</td>
+<td>LB</td>
+<td>New York Jets</td>
+<td>Groin</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Garrett Wilson</td>
+<td>WR</td>
+<td>New York Jets</td>
+<td>Concussion</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Nahshon Wright</td>
+<td>CB</td>
+<td>New York Jets</td>
+<td>Back</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Chris Bell</td>
+<td>WR</td>
+<td>Miami Dolphins</td>
+<td>Knee</td>
+<td>Did Not Participate In Practice</td>
+<td>Doubtful</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Aaron Brewer</td>
+<td>C</td>
+<td>Miami Dolphins</td>
+<td>Concussion</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Darrell Baker Jr.</td>
+<td>CB</td>
+<td>Miami Dolphins</td>
+<td>Knee</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Jared Wayne</td>
+<td>WR</td>
+<td>Miami Dolphins</td>
+<td>Quadricep</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Mo Alie-Cox</td>
+<td>TE</td>
+<td>Indianapolis Colts</td>
+<td>Groin</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Jaylon Carlies</td>
+<td>LB</td>
+<td>Indianapolis Colts</td>
+<td>Neck</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Akeem Davis-Gaither</td>
+<td>LB</td>
+<td>Indianapolis Colts</td>
+<td>Knee</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Will Mallory</td>
+<td>TE</td>
+<td>Indianapolis Colts</td>
+<td>Hamstring</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Luke Rhodes</td>
+<td>LS</td>
+<td>Indianapolis Colts</td>
+<td>Hamstring</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Jerry Tillery</td>
+<td>DT</td>
+<td>Indianapolis Colts</td>
+<td>Calf</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Jalen Travis</td>
+<td>T</td>
+<td>Indianapolis Colts</td>
+<td>Knee</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Jonathon Brooks</td>
+<td>RB</td>
+<td>Carolina Panthers</td>
+<td>Groin</td>
+<td>Limited Participation in Practice</td>
+<td>Doubtful</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Mike Jackson</td>
+<td>CB</td>
+<td>Carolina Panthers</td>
+<td>Groin</td>
+<td>Limited Participation in Practice</td>
+<td>Doubtful</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Bobby Okereke</td>
+<td>LB</td>
+<td>Carolina Panthers</td>
+<td>Foot</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Brady Christensen</td>
+<td>G</td>
+<td>Carolina Panthers</td>
+<td>Hamstring</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Will Lee III</td>
+<td>CB</td>
+<td>Carolina Panthers</td>
+<td>Hamstring</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Xavier Legette</td>
+<td>WR</td>
+<td>Carolina Panthers</td>
+<td>Knee</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Jaelan Phillips</td>
+<td>LB</td>
+<td>Carolina Panthers</td>
+<td>Hamstring</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>CJ Donaldson</td>
+<td>RB</td>
+<td>New Orleans Saints</td>
+<td>Shoulder</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Taliese Fuaga</td>
+<td>T</td>
+<td>New Orleans Saints</td>
+<td>Knee</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Erik McCoy</td>
+<td>C</td>
+<td>New Orleans Saints</td>
+<td>Biceps</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Christen Miller</td>
+<td>DT</td>
+<td>New Orleans Saints</td>
+<td>Knee</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Martin Emerson</td>
+<td>CB</td>
+<td>New Orleans Saints</td>
+<td>Shin</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Travis Etienne</td>
+<td>RB</td>
+<td>New Orleans Saints</td>
+<td>Hamstring</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Azeez Al-Shaair</td>
+<td>LB</td>
+<td>Houston Texans</td>
+<td>Groin, Not injury related - personal matter</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Marvin Harrison Jr.</td>
+<td>WR</td>
+<td>Houston Texans</td>
+<td>Hamstring</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Danielle Hunter</td>
+<td>DE</td>
+<td>Houston Texans</td>
+<td>Hamstring</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Brevin Jordan</td>
+<td>TE</td>
+<td>Houston Texans</td>
+<td>Finger, Foot</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Keylan Rutledge</td>
+<td>G</td>
+<td>Houston Texans</td>
+<td>Neck, Shoulder</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Will Anderson Jr.</td>
+<td>DE</td>
+<td>Houston Texans</td>
+<td>Ankle</td>
+<td>Did Not Participate In Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Trent Brown</td>
+<td>T</td>
+<td>Houston Texans</td>
+<td>Wrist, Illness</td>
+<td>Did Not Participate In Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Jacob Hummel</td>
+<td>LB</td>
+<td>Houston Texans</td>
+<td>Groin</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>David Montgomery</td>
+<td>RB</td>
+<td>Houston Texans</td>
+<td>Groin</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Jaylin Smith</td>
+<td>CB</td>
+<td>Houston Texans</td>
+<td>Hamstring</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Wyatt Teller</td>
+<td>G</td>
+<td>Houston Texans</td>
+<td>Illness, Back</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Michael Burton</td>
+<td>FB</td>
+<td>Cleveland Browns</td>
+<td>Calf</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Ronnie Hickman Jr.</td>
+<td>S</td>
+<td>Cleveland Browns</td>
+<td>Concussion</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Denzel Boston</td>
+<td>WR</td>
+<td>Cleveland Browns</td>
+<td>Toe</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Steve Avila</td>
+<td>G</td>
+<td>Los Angeles Rams</td>
+<td>Hamstring</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Terrance Ferguson</td>
+<td>TE</td>
+<td>Los Angeles Rams</td>
+<td>Ankle, Hamstring</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Davis Allen</td>
+<td>TE</td>
+<td>Los Angeles Rams</td>
+<td>Oblique</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Joe Cardona</td>
+<td>LS</td>
+<td>Los Angeles Rams</td>
+<td>Ankle</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Kam Curl</td>
+<td>S</td>
+<td>Los Angeles Rams</td>
+<td>Toe</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Myles Garrett</td>
+<td>LB</td>
+<td>Los Angeles Rams</td>
+<td>Knee, Not injury related - resting player</td>
+<td>Did Not Participate In Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Trent McDuffie</td>
+<td>CB</td>
+<td>Los Angeles Rams</td>
+<td>Back</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Zachary Carter</td>
+<td>DT</td>
+<td>Arizona Cardinals</td>
+<td>Knee</td>
+<td>Limited Participation in Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Hjalte Froholdt</td>
+<td>C</td>
+<td>Arizona Cardinals</td>
+<td>Concussion</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Jon Gaines II</td>
+<td>G</td>
+<td>Arizona Cardinals</td>
+<td>Ankle</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Hunter Long</td>
+<td>TE</td>
+<td>Arizona Cardinals</td>
+<td>Knee</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Roy Lopez</td>
+<td>DT</td>
+<td>Arizona Cardinals</td>
+<td>Toe, Ankle</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Max Melton</td>
+<td>CB</td>
+<td>Arizona Cardinals</td>
+<td>Knee, Hand</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Darius Robinson</td>
+<td>DT</td>
+<td>Arizona Cardinals</td>
+<td>Wrist</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Jayden Williams</td>
+<td>T</td>
+<td>Arizona Cardinals</td>
+<td>Knee</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Andrew Wingard</td>
+<td>S</td>
+<td>Arizona Cardinals</td>
+<td>Groin</td>
+<td>Did Not Participate In Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Charles Cross</td>
+<td>T</td>
+<td>Seattle Seahawks</td>
+<td>Ankle</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Sam Darnold</td>
+<td>QB</td>
+<td>Seattle Seahawks</td>
+<td>Ribs, Quadricep</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Quenton Nelson</td>
+<td>G</td>
+<td>Seattle Seahawks</td>
+<td>Knee</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Leonard Williams</td>
+<td>DT</td>
+<td>Seattle Seahawks</td>
+<td>Stinger</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Thomas Booker</td>
+<td>DT</td>
+<td>Las Vegas Raiders</td>
+<td>Ankle</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Dont&#x27;e Thornton Jr.</td>
+<td>WR</td>
+<td>Las Vegas Raiders</td>
+<td>Back</td>
+<td>Did Not Participate In Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Mike Evans</td>
+<td>WR</td>
+<td>San Francisco 49ers</td>
+<td>Achilles</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Renardo Green</td>
+<td>CB</td>
+<td>San Francisco 49ers</td>
+<td>Back</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Dre Greenlaw</td>
+<td>LB</td>
+<td>San Francisco 49ers</td>
+<td>Knee</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Nate Hobbs</td>
+<td>CB</td>
+<td>San Francisco 49ers</td>
+<td class='blank'><span class="badge badge-unverified">blank</span></td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Deommodore Lenoir</td>
+<td>CB</td>
+<td>San Francisco 49ers</td>
+<td>Foot</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Upton Stout</td>
+<td>CB</td>
+<td>San Francisco 49ers</td>
+<td>Shoulder, Neck</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>C.J. West</td>
+<td>DT</td>
+<td>San Francisco 49ers</td>
+<td>Knee</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Trent Williams</td>
+<td>T</td>
+<td>San Francisco 49ers</td>
+<td>Shoulder</td>
+<td>Did Not Participate In Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>DaRon Bland</td>
+<td>CB</td>
+<td>Dallas Cowboys</td>
+<td>Ankle</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Donovan Ezeiruaku</td>
+<td>LB</td>
+<td>Dallas Cowboys</td>
+<td>Ankle</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Jake Ferguson</td>
+<td>TE</td>
+<td>Dallas Cowboys</td>
+<td>Knee, Ankle</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Tyler Goodson</td>
+<td>RB</td>
+<td>Dallas Cowboys</td>
+<td>Ankle, Knee</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>P.J. Locke</td>
+<td>S</td>
+<td>Dallas Cowboys</td>
+<td>Concussion</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Jonathan Mingo</td>
+<td>WR</td>
+<td>Dallas Cowboys</td>
+<td>Ankle</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Juanyeh Thomas</td>
+<td>S</td>
+<td>Dallas Cowboys</td>
+<td>Hamstring</td>
+<td>Did Not Participate In Practice</td>
+<td>Doubtful</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Joey Porter Jr.</td>
+<td>CB</td>
+<td>Dallas Cowboys</td>
+<td>Ankle, Foot</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Alijah Clark</td>
+<td>S</td>
+<td>Dallas Cowboys</td>
+<td>Illness</td>
+<td>Did Not Participate In Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Devin Moore</td>
+<td>CB</td>
+<td>Dallas Cowboys</td>
+<td>Hip</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Derrick Harmon</td>
+<td>DT</td>
+<td>Pittsburgh Steelers</td>
+<td>Foot</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Jalen Davis</td>
+<td>CB</td>
+<td>Cincinnati Bengals</td>
+<td>Hamstring</td>
+<td>Full Participation in Practice</td>
+<td>Doubtful</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Kyle Dugger</td>
+<td>S</td>
+<td>Cincinnati Bengals</td>
+<td>Quadricep</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Andrei Iosivas</td>
+<td>WR</td>
+<td>Cincinnati Bengals</td>
+<td>Thumb</td>
+<td>Full Participation in Practice</td>
+<td>Doubtful</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Brian Parker II</td>
+<td>G</td>
+<td>Cincinnati Bengals</td>
+<td>Knee</td>
+<td>Full Participation in Practice</td>
+<td>Doubtful</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Kayode Awosika</td>
+<td>G</td>
+<td>Los Angeles Chargers</td>
+<td>Fibula</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Justin Eboigbe</td>
+<td>DE</td>
+<td>Los Angeles Chargers</td>
+<td>Ankle</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Ladd McConkey</td>
+<td>WR</td>
+<td>Los Angeles Chargers</td>
+<td>Back</td>
+<td>Did Not Participate In Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>David Njoku</td>
+<td>TE</td>
+<td>Los Angeles Chargers</td>
+<td>Fibula</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Denzel Perryman</td>
+<td>LB</td>
+<td>Los Angeles Chargers</td>
+<td>Pectoral</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Trey Pipkins</td>
+<td>T</td>
+<td>Los Angeles Chargers</td>
+<td>Not injury related - personal matter, Knee</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Branson Taylor</td>
+<td>G</td>
+<td>Los Angeles Chargers</td>
+<td>Ankle</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Jaylinn Hawkins</td>
+<td>S</td>
+<td>Baltimore Ravens</td>
+<td>Knee</td>
+<td>Limited Participation in Practice</td>
+<td>Out</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>Adam Randall</td>
+<td>RB</td>
+<td>Baltimore Ravens</td>
+<td>Neck, Hamstring</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+</tbody></table></div><div class="disclaimer">Research only — not betting advice, not a sportsbook, no payouts. Every value traces to an official/primary source (linked per row) or is left blank and flagged. Model outputs are computed in-repo from official standings and are labeled as such.</div></body></html>

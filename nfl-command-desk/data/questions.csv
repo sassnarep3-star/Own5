@@ -1,0 +1,19 @@
+question_id,question,information_missing,how_to_discover,blocks,answer
+Q01,"What price source may we legally store, and how often?",An operator's terms of use read by a human; no official market feed is in the repository,Read the terms of each operator and record the permitted fields; do not scrape until then,R01 R04 R18 R58,
+Q02,Is the 2026 Week 11 injury report published at all?,nfl.com served Week 10 at the reg11 URL on 2026-11-18T03:45Z,Re-read after the league's Wednesday publication window and compare the title string,R12 R21 R52,Answered for 2026-11-18: no. The served page was Week 10.
+Q03,How many rows does the live Week 10 report contain?,Only 1 of 8 chunks was read (4 clubs); the repository holds 276 rows,Read chunks 1-7 and count rows per club table,R47,
+Q04,"Where is the official depth chart for each club, and is it structured?",No club depth page read; Houston publishes an image,Read each of the 32 club pages in one pass and record the format,R06 R41 R43,
+Q05,Do official snap counts exist in a permitted source?,No snap-count source identified in the repository,Check the NFL Game Book PDFs and the official stats pages for a snap-count table,R11 R29 R54,
+Q06,"How often do designations change from Wed to Fri, and do they predict playing?",No multi-day capture; no inactive lists,"Capture the report daily Wed-Fri for >=3 weeks, then join to official inactive lists",R42 R51 R53,
+Q07,Does the home-field assumption of 2.0 match 2026?,Official 2026 home margin is -0.98 over 150 games (95% CI -3.07..1.13),"Recompute at n>=272 at the end of the season, or fit a conference-specific value",R26 R60,"Partially: the 2026 sample does not support 2.0, but the CI includes it."
+Q08,Which total estimator should survive?,A and B differ by 0.95 points of MAE with a CI that includes 0,"Extend the window until the paired difference CI excludes 0, or keep both",R60,Not yet answered.
+Q09,Is the away-side result in weeks 5-10 skill or sample?,"33.7% home cover rate at a frozen 2.0 line, n=86, all one direction",Test the same exposure on a second season before any claim,R36 R71,Open; this desk does not call it an edge.
+Q10,What are the operator void and push rules for the markets we will price?,DraftKings and FanDuel house rules are cited by older desks but were not re-read here,Re-read the two house-rule pages and record the void/push clauses,R34,
+Q11,Do we have a legal basis to publish player-level rows?,No terms read for player data,Read the NFL terms; keep row-level data private until then,R38,Policy applied: this desk publishes no player-level rows.
+Q12,What is the official inactive list for each Week 10 game?,No inactive list captured,Capture the official inactive list on game day from the club or league page,R29 R42,
+Q13,Which clubs publish depth as an image?,Only Houston is documented (by an earlier desk),One pass over 32 club pages recording the format,R30,
+Q14,Can the 136-game log be extended to a full season?,No Week 11 results (games not played) and no past seasons in the repository,Add results weekly; archive the official weekly pages,R19 R64,
+Q15,What counts as a 'verified' source for stadium roof and surface?,No official roof/surface page read,Read the NFL stadium guide pages and record the roof designation,R56,
+Q16,What is the reward pool and who funds it?,"No sponsor, no pool, no payout mechanism",Decide after the first strategy passes G01-G07,R69,
+Q17,Which injuries actually changed a result?,No ablation is possible without availability features,"Build the point-in-time availability set first, then run the paired ablation",R27 R72,
+Q18,Are the three Lions designations now stable?,"Joseph, Mays and Reed read OUT with injury text on 2026-11-18; the repository copy was blank",Re-read on game day and compare,R46,"Answered for 2026-11-18: yes, all three are OUT."

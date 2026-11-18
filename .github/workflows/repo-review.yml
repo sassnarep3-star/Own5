@@ -1,0 +1,36 @@
+name: Repo review (arena-51cf3786)
+
+on:
+  push:
+    branches: [main, arena/51cf3786-own5]
+    paths:
+      - 'repo-review/**'
+      - 'nfl-integration-a620f5a5/**'
+      - '.github/workflows/repo-review.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'repo-review/**'
+      - 'nfl-integration-a620f5a5/**'
+      - '.github/workflows/repo-review.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Repo review registers, source links, row counts and internal links
+        run: python3 repo-review/verify.py
+      - name: NFL integration hub verifier and rebuild check
+        run: |
+          python3 nfl-integration-a620f5a5/build_site.py
+          python3 nfl-integration-a620f5a5/verify.py
+          git diff --exit-code -- nfl-integration-a620f5a5
