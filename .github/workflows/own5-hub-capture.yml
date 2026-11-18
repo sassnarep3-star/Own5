@@ -37,15 +37,15 @@ jobs:
         continue-on-error: true
       - name: Commit immutable captures
         run: |
+          set -euo pipefail
           git config user.name "own5-hub-capture"
           git config user.email "own5-hub-capture@users.noreply.github.com"
           git add own5-hub/captures
           if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
           git commit -m "own5-hub: capture official NFL pages $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
-          for i in 1 2 3; do
-            git pull --rebase -q origin "${GITHUB_REF_NAME}" && git push -q origin "HEAD:${GITHUB_REF_NAME}" && break
-            sleep 5
-          done
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"
+          echo "pushed $(git rev-parse --short HEAD)"
       - name: Fail loudly if a pin or fetch failed
         if: steps.capture.outcome == 'failure'
         run: |
