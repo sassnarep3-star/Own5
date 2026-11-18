@@ -1,0 +1,10 @@
+# Fetch record for https://www.nfl.com/injuries/league/2026/reg11 (requested URL, 2026-11-18, sandbox fetch tool)
+requested_url: https://www.nfl.com/injuries/league/2026/reg11
+final_url_reported_by_fetch_tool: https://www.nfl.com/injuries/league/2026/reg10
+page_title: Official NFL Injury Report for Players - Week 10 of the 2026 Season | NFL.com
+verbatim_heading: ## Injuries - WEEK 10
+verbatim_week_selector_text: WEEK 1WEEK 2WEEK 3WEEK 4WEEK 5WEEK 6WEEK 7WEEK 8WEEK 9WEEK 10WEEK 11
+verbatim_first_section: ## THURSDAY, NOVEMBER 12TH
+verbatim_first_section_2: ## SUNDAY, NOVEMBER 15TH
+fetch_tool_total_chunks: 8
+note: fetch tool returns processed markdown, not server bytes; chunks 1-7 were not read in this session

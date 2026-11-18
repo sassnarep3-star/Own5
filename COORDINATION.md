@@ -2844,6 +2844,8 @@ It does not re-publish the other desks' analysis.
 | B5 | Static pages: overview, Week 10 counts, games & byes, terms & decisions, flagged, sources | done | b8227c47 | `nfl-desk-b8227c47/*.html`, `build.py`, `assets/style.css` | Six pages; every body row links to nfl.com or is UNVERIFIED. |
 | B6 | Unit tests + verify harness | done | b8227c47 | `nfl-desk-b8227c47/tests/**`, `verify.py` | 8 unit tests OK. verify.py PASS. Negative control (planted non-nfl link and removed row link) → 3 failures, exit 1. |
 | B7 | Scheduled workflow, live run, live Pages check | done (verify-only; live Pages checked) | b8227c47 | `.github/workflows/nfl-desk-b8227c47.yml` | No schedule and no network job. Probe workflow removed. Pages URL checked after merge. |
+
+| B7 | Scheduled workflow, live run, live Pages check | changed: verify-only | b8227c47 | `.github/workflows/nfl-desk-b8227c47.yml` | No schedule and no network job. Probe workflow removed. Pages URL checked after merge. |
 | B8 | Cross-session request: root index must link this desk | open | b8227c47 | COORDINATION.md (request only) | Root `index.html`, `pages/**`, `assets/**` not edited here. See cross-session request below. |
 
 ### 8 — completion record (2026-11-18)
@@ -2997,3 +2999,151 @@ Statuses above: K1–K4 **done**; K5 (PR, merge, Pages check) recorded below aft
 - **Not done in this session (honest):** scheduled capture (blocked by Terms s.1.3, decision D-01); field-level deltas (B4, blocked); the Week 11 designation (not yet published); the root index link (B8, cross-session request). The brief's other requirement lines (depth charts, snap counts, reserve list, injury/depth ablations, strategy and leaderboard work) are owned by other desks or are not started here.
 - **Decisions for the user** (on `terms.html` and `flagged.html`): D-01 consent or stop automated capture; D-02 legal read of s.1.3 commercial-use wording; D-03 git history for the probe bytes (squash-merge chosen for PR #107).
 
+
+**K5 — PR, merge and Pages record (2026-11-18T03:17Z).**
+* **PR #102** (`arena/5c5f4aaf-own5` → `main`) **merged** at `983b0d9` (merge commit, `--merge`, 03:17:01Z).
+* **Pages:** `pages build and deployment` → **success** on `983b0d9`. Live check (fetch tool, 03:2xZ):
+  `https://sassnarep3-star.github.io/Own5/nfl-desk-5c5f4aaf/index.html` renders the 25-row directory with live links.
+  The root page's notice aside is not visible in that text render (asides are dropped by the converter, along with the sidebar); it is confirmed in the merged file on `main`.
+* **CI on the PR, reported as it went:**
+  * `Build, evidence integrity and browser smoke tests` (verify.yml, covers the root build and determinism) → **pass**.
+  * `verify` (2 runs), `build-and-audit` and `desk-verify` (nfl-desk-35a1feb2 and other desk workflows) → **pass**.
+  * `NFL Decision Desk — fetch & verify` (`decision-desk.yml`) → **fail** at *Confirm the committed site matches a clean rebuild*. This is the
+    defect logged as **CU-F13**. Correction to the first draft of this record: that workflow's `pull_request` trigger has **no** `paths`
+    filter, so it runs on every PR to `main`, whatever files change. The failing step rebuilds the committed `data/decision-desk`
+    outputs, which this session did not touch, so the failure is pre-existing and not caused by this change.
+  * `Verify NFL B34 Week 10 research desk` (`nfl-b34253a1.yml`) → **fail**. Verified on `main` at `92d5017` (runs 2026-11-17T01:43–01:48Z, all failure). Predates this session.
+  * Neither failing workflow was edited. Both are owned by their desks and need regenerating, not hand-patching, so they are logged here rather than fixed.
+* Merge decision: the failing checks predate this change and do not cover its files, so the PR was merged under the user's standing
+  instruction. The Pages build for the merge commit succeeded.
+
+**Next session (not started here).** Week 11 availability waits for the league's Wednesday publication; the desk directory should be
+rebuilt then only if a new desk folder appears.
+### 98a211b8 — PR and deployment record (2026-11-18)
+
+| PR | Purpose | Result |
+|----|---------|--------|
+| https://github.com/sassnarep3-star/Own5/pull/103 | Review desk, capture log, Flagged-for-Review register, CI | **Merged** to `main` at 2026-11-18T03:20:31Z, merge commit `b7a0e51` (`gh pr merge 103 --merge`, no approval wait, no `--auto`). Own check `verify` **success** (3 runs). |
+| follow-up PR (see GitHub) | Removes one stale page reference found on the live Flagged page (R17 pointed to a deleted `desks.html`); adds check V10 so a visible page name that the desk does not publish fails the build | Opened from `arena/98a211b8-own5`; merged by explicit `gh pr merge <n> --merge` in the same session. |
+
+**Pages.** `gh api repos/sassnarep3-star/Own5/pages/builds/latest` → `built`, commit `b7a0e51`, 2026-11-18T03:20:57Z.
+**Live check (fetch tool, 2026-11-18):** `/nfl-98a211b8/flagged.html`, `/nfl-98a211b8/availability.html` and the desk directory
+`/nfl-desk-5c5f4aaf/index.html` (5c5f4aaf) all served.
+
+**Checks not ours, not changed (pre-existing, logged).** On PR #103 two checks were red and are not in this session's scope:
+`Verify NFL B34 Week 10 research desk` (`nfl-b34253a1.yml`, "Check deterministic generated outputs") and
+`NFL Decision Desk — fetch & verify` (`decision-desk.yml`, "Confirm the committed site matches a clean rebuild").
+Both are the failures already recorded earlier on this board (B34 fails on every push; decision-desk fails on PRs). Their owners should fix them; this session did not edit their files.
+
+## Session 3cb7800c — NFL Week-11 official-source desk, desk index, flagged & suggestions (claimed 2026-11-18T03:2xZ)
+
+Session ID `3cb7800c`, branch `arena/3cb7800c-own5`, branched from `92d50179a17a391b436eae650979f7bc192c52ad` (main).
+
+**Why this scope (no duplicate work).** Eleven NFL desks already answer the brief in their own namespaces. None of
+them publishes a root index, and the root `index.html` is regenerated by `verify.yml` (`scripts/build.py`) and
+diff-checked, so it cannot be hand-edited. This session therefore builds one namespace, `nfl-desk-3cb7800c/`, that
+(a) re-reads the official Week-11 pages on 2026-11-18 with timestamps, (b) publishes the official Week-11 slate,
+(c) lists every sibling desk and its entry point (no git-derived columns), (d) publishes flagged items, sources,
+an executive summary, suggestions and questions. It does not change any other session's files.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| W11-1 | Claim + coordination | done | 3cb7800c | COORDINATION.md | This block. |
+| W11-2 | Official Week-11 slate and availability-report status (dated read) | done | 3cb7800c | `nfl-desk-3cb7800c/data/week11_schedule.csv`, `.../data/availability_status.csv` | Week-11 injury URL still serves Week-10 content at read time. |
+| W11-3 | Sibling-desk index | superseded by K3 (5c5f4aaf) | 3cb7800c | none (own copy removed) | K3 (`nfl-desk-5c5f4aaf/`, merged PR #102, commit 2490b85) claimed and built the same directory. This desk removed its duplicate and cross-checks the count (repo_checks R-07, verify.py `check_desk_crosscheck`). |
+| W11-4 | Pages site, flagged, sources, summary, suggestions, questions | done | 3cb7800c | `nfl-desk-3cb7800c/*.html`, `research/nfl-3cb7800c/**` | Every table row carries an official link or an UNVERIFIED / INTERNAL badge. |
+| W11-5 | Verification + scoped CI workflow | done | 3cb7800c | `nfl-desk-3cb7800c/verify.py`, `.github/workflows/nfl-desk-3cb7800c.yml` | Scoped to this session's paths. |
+| W11-6 | Rebase, PR to main, merge, Pages check | done | 3cb7800c | COORDINATION.md | PR #104 merged at `f14ea55` (2026-11-18T03:23:29Z). Pages build for `f14ea55` completed successfully. Live URL checked. See the record below. |
+
+**Cross-session requests (logged, not actioned).**
+* Root `index.html`, `pages/**`, `assets/**`, `data/research.json` are regenerated by `scripts/build.py` in `verify.yml`
+  and diff-checked. A root index that lists every desk needs an edit to that pipeline. Owner: whoever owns
+  `scripts/build.py` (arena-cd43258e, done). Requested again here; this session did not touch it.
+* `.github/workflows/decision-desk.yml` (`NFL Decision Desk — fetch & verify`) runs on `pull_request` and fails its
+  clean-rebuild step. Logged previously by 560ed315, a991e3fb, 35a1feb2; not touched here.
+
+### 3cb7800c — completion record (2026-11-18T03:2xZ)
+
+**Task status.** W11-2 to W11-5 **done**. W11-6 (PR, merge, Pages check) recorded below, after the merge.
+
+**Live site (after merge):** https://sassnarep3-star.github.io/Own5/nfl-desk-3cb7800c/ (9 pages: home, Week 11 schedule,
+availability, repo state, sources, executive summary, suggestions for review, questions, flagged for review). The desk directory is 5c5f4aaf's page, linked from the navigation.
+
+**Sources read (2026-11-18 03:13–03:14Z, sandbox fetch tool; processed text, not server bytes)**
+
+| Source | URL | Used for |
+|---|---|---|
+| NFL Week 11 schedule (chunks 1–2 of 2) | https://www.nfl.com/schedules/2026/by-week/week-11 | 13 games, kickoff and network as printed, 6 byes, club codes |
+| NFL injury report, requested as Week 11 | https://www.nfl.com/injuries/league/2026/reg11 | **Final URL reported was reg10; title says Week 10.** Week 11 not published at read time |
+| NFL 2026 standings (chunk 1 of 2) | https://www.nfl.com/standings/league/2026/REG | Club logo codes AZ and LA |
+| GitHub (repo state only) | `gh pr list`, `gh run list`, `index.html`, `verify.yml` | Open PRs, decision-desk runs, root banner, CI wiring. Labelled REPO, never a league source |
+
+Game pages linked from the schedule were **not** fetched; each game row links to its page as printed and says so.
+
+**Verification performed (printed, not asserted)**
+
+1. `verify.py` → `PASS games=13, byes=6, flags=10, open_flags=9, blocking=2, pages=9, rows=62, links=197`.
+2. `unittest` → 23 tests OK, including negative controls that plant a missing game, a weekday mismatch, a duplicated
+   club, an altered raw line, a non-official game URL, a non-canonical bye code, an unsupported "published" claim,
+   an invented count, an unmarked suggestion decision, an http link and a table row with no source.
+3. Schedule: 13 games + 6 byes = 32 distinct clubs; each weekday matches its 2026 date (computed); each game line appears
+   verbatim in `raw/nfl_week11_schedule_extract.txt`.
+4. Hashes: `raw/SHA256SUMS.txt` (3 extracts) matches the files. These hash the extracts, not NFL.com bytes (flag F-09).
+5. Build is deterministic: no clock, no git, no network in `build_site.py` (tested). CI workflow also checks a clean rebuild.
+6. Desk directory cross-check (R-07). PR #103 (`nfl-98a211b8`) merged to main while this branch was open; the check reports it as INFO, not as a failure, by design (a live-tree rule that fails on new desks would break every desk on every merge): under the rule nfl-*, nfl_*, own5-desk, excluding both session directories (this one and
+   5c5f4aaf), the checkout has 25 directories. The 5c5f4aaf `desks.csv` lists the same 25 names. `verify.py` compares them.
+7. Repo facts re-read with gh: 10 open PRs (#8, #34, #43, #51, #59, #62, #69, #78, #80, #101); 11 of the 12 most recent
+   decision-desk PR runs concluded failure (1 in progress).
+
+**Duplicate work, and how it was handled.** Session 5c5f4aaf claimed a desk directory (K3, commit 2b356b1, 03:13:15Z) that
+duplicates this session's W11-3. This session removed its own copy rather than run two directories. Its official-status file
+(`nfl-desk-5c5f4aaf/data/official_status_2026-11-18.csv`) independently records the same Week 11 finding (reg11 serves Week 10),
+which corroborates F-01. The rebase conflict in this file, when this branch met PR #102, was resolved by keeping both blocks in full.
+
+**Irregularities (published on the Flagged page, not blocking the merge)**
+
+| Flag | Severity | What |
+|---|---|---|
+| F-01 | BLOCKING | Week 11 injury report not published at read time; reg11 request served reg10 |
+| F-02 | REVIEW | Official pages print the Rams as `LAR` (schedule bye block) and `LA` (standings logo path); Arizona `AZ`. The ARI/LAR alias defect logged by 35a1feb2 is consistent with this |
+| F-03 | REVIEW | A "Mexico City 2026" logo sits above Vikings at 49ers; the printed line gives no venue. Not confirmed; venue left blank |
+| F-04 | REVIEW | Game lines carry no time zone; stored as printed |
+| F-05 | BLOCKING | decision-desk workflow fails on PR runs (11 of 12) |
+| F-06 | REVIEW | Nine older open PRs unresolved |
+| F-07 | REVIEW | Root banner still says AS OF 2026-11-02 (its notice now links the desk directory, PR #102); the banner is generated and diff-checked by `verify.yml` |
+| F-08 | CLOSED | Desk count depends on the counting rule. Resolved by the cross-check: 25 under the stated rule, same names as 5c5f4aaf |
+| F-09 | REVIEW | Hashes cover extracts, not server bytes |
+| F-10 | REVIEW | Inherited claims from other desks (no market price; Baltimore QBs on IR) were not re-verified here |
+
+**What this session did not do (stated plainly).** It did not build the injury/depth model, the price store, the backtest,
+the leaderboard, the venue transcription for 13 games, or any snap-count or inactives capture. It did not change any
+other session's files. Visual browser check of the pages was **not** done: the sandbox Chromium lacks NSS libraries; the
+HTML was checked structurally (parser: every table row has a link or badge; every internal link resolves; every
+external link is https on an allowed host).
+
+**Branch history.** The claim commit was rebased twice, once onto PR #102 and again onto PR #103. The branch was force-pushed with
+`--force-with-lease` to replace the first claim commit (`a91084e`). This branch has no other users.
+
+**Cross-session requests (logged, not actioned).**
+* Root `index.html` / `pages/**` / `assets/**` / `data/research.json` are regenerated by `scripts/build.py` in `verify.yml`.
+  PR #102 added a notice link to the desk directory through the generator. The banner date (AS OF 2026-11-02) still needs the generator. Owner decision (S-01).
+* `.github/workflows/decision-desk.yml` PR failures (F-05) — suggestion S-04.
+* PR #101 (`arena/68bfa568-own5`, raw-data audit) is open with a scope that does not overlap this desk.
+
+### 3cb7800c — PR and merge record
+
+| PR | Purpose | Result |
+|---|---|---|
+| https://github.com/sassnarep3-star/Own5/pull/104 | The desk (branch `arena/3cb7800c-own5`, 10 files of scope + README row + COORDINATION block) | **Merged** to `main` at `f14ea55` (`gh pr merge 104 --merge`, 2026-11-18T03:23:29Z) |
+
+**Checks at merge.** This desk's workflow `NFL Week 11 official-source desk (3cb7800c)`: **success** on the PR commit `a5ded9a` and on the push. Other checks on the PR:
+* `NFL Decision Desk — fetch & verify` (`verify`): **failure**. Pre-existing on PRs (see F-05 and earlier logs). Not triggered by this desk's files.
+* `Rebuild, audit, and test isolated NFL desk` (B34 Week 10 research desk): **failure**. Pre-existing; triggered by changes to COORDINATION.md (noted by 35a1feb2).
+* Branch protection could not be read (`gh api …/protection`: HTTP 403), so it is not known whether these two were required. The merge command succeeded; the PR was `MERGEABLE` and `UNSTABLE`.
+* This session did **not** edit those two pipelines: they belong to other sessions (COORDINATION rules). Logged here for their owners.
+
+**Pages.** `pages-build-deployment` for `f14ea55`: **completed, success**. Live checks through the sandbox fetch tool (not curl, which cannot reach github.io): `https://sassnarep3-star.github.io/Own5/nfl-desk-3cb7800c/` (landing, 6 status cards, blocking-items table) and `…/nfl-desk-3cb7800c/schedule.html` (13 game rows, 6 bye rows, each with a source link) both render.
+
+**Known consequence of the merge.** The desk's read stamps (2026-11-18T03:13Z) are the times the official pages were read. The open-PR card (10) is the count at that read; the merge of #104 and later PRs changes the live count. The stamp, not the live count, is the value to cite.
+
+A record-only follow-up (this block) is delivered on its own PR so that the record reaches `main`.

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Availability (Week 11) · NFL official-source desk (3cb7800c)</title>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="brand">NFL official-source desk <span>3cb7800c</span></div>
+  <nav aria-label="Pages"><a href="index.html">Home</a><a href="schedule.html">Week 11 schedule</a><a href="availability.html" class="current" aria-current="page">Availability</a><a href="https://sassnarep3-star.github.io/Own5/nfl-desk-5c5f4aaf/">Desks index (5c5f4aaf)</a><a href="repo.html">Repo state</a><a href="sources.html">Sources</a><a href="summary.html">Executive summary</a><a href="suggestions.html">Suggestions (review)</a><a href="questions.html">Questions</a><a href="flagged.html">Flagged for review</a></nav>
+</header>
+<main id="main">
+<h1>Availability (Week 11)</h1>
+<p class="lead">Only the status of the official injury report, read today, is recorded. A page that serves last week&#x27;s report is not treated as this week&#x27;s report.</p>
+<section class="notice"><strong>No availability values are published here.</strong> The Week 11 report is not served, so no Week 11 designation can be read. Week 10 rows are not captured in this desk.</section><div class="table-wrap"><table>
+<caption>Availability evidence</caption>
+<thead><tr><th>ID</th><th>Item</th><th>Requested</th><th>Final URL</th><th>Title seen</th><th>Status</th><th>Read (UTC)</th><th>Note</th></tr></thead>
+<tbody>
+<tr><td>A-01</td><td>Week 11 official injury report</td><td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener" target="_blank">requested</a></td><td><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="noopener" target="_blank">final URL</a></td><td>Official NFL Injury Report for Players - Week 10 of the 2026 Season | NFL.com</td><td><span class="badge b-blocking">NOT PUBLISHED AT READ TIME (page serves Week 10)</span></td><td>2026-11-18T03:13:31Z</td><td>Requested reg11; reported final URL reg10. No Week 11 player row exists in this desk. Do not publish a Week 11 availability number from this page.</td></tr>
+<tr><td>A-02</td><td>Week 10 official injury report (title check only)</td><td><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="noopener" target="_blank">requested</a></td><td><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="noopener" target="_blank">final URL</a></td><td>Official NFL Injury Report for Players - Week 10 of the 2026 Season | NFL.com</td><td><span class="badge b-official">Served (title and heading only; row-level capture not repeated here)</span></td><td>2026-11-18T03:13:31Z</td><td>Row counts and designations are NOT verified in this desk. Sibling desks hold their own captures.</td></tr>
+<tr><td>A-03</td><td>Week 11 official schedule</td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-11" rel="noopener" target="_blank">requested</a></td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-11" rel="noopener" target="_blank">final URL</a></td><td>NFL Week 11 Schedule 2026: Games, Times, Matchups &amp; Tickets</td><td><span class="badge b-official">Published: 13 games and 6 teams on bye</span></td><td>2026-11-18T03:13:31Z</td><td>13 games x 2 = 26 clubs; 26 + 6 bye = 32. Checked by verify.py.</td></tr>
+<tr><td>A-04</td><td>Official 2026 standings (logo-code check)</td><td><a href="https://www.nfl.com/standings/league/2026/REG" rel="noopener" target="_blank">requested</a></td><td><a href="https://www.nfl.com/standings/league/2026/REG" rel="noopener" target="_blank">final URL</a></td><td>2026 NFL League Standings</td><td><span class="badge b-official">Served; club logo codes include AZ and LA (not ARI or LAR)</span></td><td>2026-11-18T03:13:31Z</td><td>Only chunk 0 of 2 was read. Used to test the club-code alias issue (flag F-02).</td></tr>
+</tbody></table></div><h2>What would make this usable</h2><ul><li>A Week 11 injury report served by the official page, read on the publication days and stored with its timestamp and hash.</li><li>A rule that a club-code join must map LAR to LA and must fail on any unmatched club (suggestion S-03).</li><li>An official inactives source for each game (question Q-08). Not captured here.</li></ul>
+</main>
+<footer>
+  <p>Not a betting feed. No prices, odds, picks or model outputs are published here.
+  Every value comes from a CSV in <code>data/</code>; each row carries a source link or an explicit
+  badge. Blank cells are unverified and are not inferred.</p>
+  <p>Rebuild: <code>python3 nfl-desk-3cb7800c/tools/build_site.py</code> · Checks:
+  <code>python3 nfl-desk-3cb7800c/verify.py</code> · Pages are generated; do not hand-edit.</p>
+</footer>
+</body>
+</html>
