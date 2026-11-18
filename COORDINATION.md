@@ -2844,3 +2844,36 @@ session publishes it, and nothing else of the analysis.
 
 **Cross-session notes.** `index.html` and `pages/**` were CI-locked to arena-cd43258e. That session is done, and this
 change is one notice line produced through the generator, so the `verify.yml` determinism diff still holds.
+
+### 5c5f4aaf — completion record (2026-11-18T03:2xZ)
+
+Statuses above: K1–K4 **done**; K5 (PR, merge, Pages check) recorded below after it runs.
+
+**What was published.**
+* `nfl-desk-5c5f4aaf/index.html`: the NFL desk directory. 25 desk folders listed, 24 with an entry page, 21 with a
+  flagged-items file, 137 flagged CSV rows (summed across files, *not* de-duplicated: the same irregularity can be logged by two desks).
+  Counts come from files on disk; no git, clock or network input.
+* `nfl-desk-5c5f4aaf/data/desks.csv`: the same table as data.
+* `nfl-desk-5c5f4aaf/data/official_status_2026-11-18.csv`: what the two injury-report endpoints served on 2026-11-18 03:12Z.
+* Root `index.html`: one notice sentence that links the directory (generated through `scripts/build.py`; the diff is that one line).
+* `tools/build_desk_directory.py` and `tests/test_desk_directory.py` (4 tests).
+
+**Verification, printed by commands, not asserted.**
+* `python3 tools/build_desk_directory.py --check` → `PASS determinism, 25 desk rows, every link resolves`.
+* `python3 -m unittest tests.test_desk_directory` → 4 tests OK.
+* `python3 scripts/seed.py && python3 scripts/build.py` → the only tracked changes are the one notice line in `index.html` and `scripts/build.py`. `data/research.json` is unchanged, so the `verify.yml` determinism diff is clean.
+* The full root suite (`python3 -m unittest discover -s tests`) passes.
+
+**Official sources read this session (via the fetch tool, which reaches nfl.com; the bash sandbox was not used for nfl.com).**
+* https://www.nfl.com/injuries/ — served **Week 10**, read 2026-11-18T03:12Z.
+* https://www.nfl.com/injuries/league/2026/reg11 — served **Week 10** (title and heading), read 2026-11-18T03:12Z.
+  Consequence: no Week 11 availability value exists yet. The league publishes the report on Wednesday; this read is before that.
+  The Week 11 read is therefore **not** done in this session, and nothing from it is published.
+
+**Irregularities (flagged, not fixed in this session).**
+* **Root landing page is stale.** `index.html` still says `Reviewed 2026-11-02` and lists eight candidates. Only its notice was touched here. A full root rewrite needs the generator's seed data reviewed, and that is a separate decision.
+* **Flag counts are not de-duplicated.** Any total built from the desk CSVs over-counts shared items (for example CU-F03/04/05 in 35a1feb2 are repeated elsewhere).
+* **`nfl_model/` has no entry page.** It is listed in the directory with `none` as its entry point.
+* **Two CI workflows were already failing before this session** (`decision-desk.yml`, `nfl-b34253a1.yml`), per the notes above. Not touched.
+
+**Not done (honest scope).** The brief's open items remain open: the Week 11 availability capture (blocked until the league publishes), the price-data policy decision (CU-F10, user-owned), roster-depth verification for all 32 clubs, the pre-registered backtest corpus, and the demotion gate. Each is already logged by a prior desk; this session added no new analysis and makes no new performance claim.
