@@ -1,0 +1,10 @@
+# extract: https://www.nfl.com/games/vikings-at-49ers-2026-reg-11
+# page_title: Minnesota Vikings at San Francisco 49ers 2026 REG 11 - Game Center
+# chunks_fetched: 1
+# read_utc: 2026-11-18T03:55:13Z
+
+location | MEXICO CITY
+stadium | ESTADIO BANORTE
+kickoff | Nov 22, 8:20PM
+network | NBC
+records_printed | {'MIN': '7-2', 'SF': '8-1'}
