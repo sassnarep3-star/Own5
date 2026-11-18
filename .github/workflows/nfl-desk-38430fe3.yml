@@ -1,0 +1,48 @@
+name: Verify NFL injury-report desk (38430fe3)
+
+# Rebuilds the Week 10 injury-report desk from its hand transcript of the official nfl.com page, recomputes
+# every count, checks that every row carries an official link or an explicit marker, and proves the build is
+# deterministic. It does not touch the network: the transcript in nfl-desk-38430fe3/raw/ is the input.
+# The desk is served by this repository's existing GitHub Pages source (repo root) at /Own5/nfl-desk-38430fe3/.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'nfl-desk-38430fe3/**'
+      - '.github/workflows/nfl-desk-38430fe3.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'nfl-desk-38430fe3/**'
+      - '.github/workflows/nfl-desk-38430fe3.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nfl-desk-38430fe3-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: nfl-desk-38430fe3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Unit tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Rebuild, recompute and verify (counts, provenance, evidence paths, links, determinism)
+        run: python3 verify.py
+      - name: Confirm committed desk matches the deterministic build
+        working-directory: ${{ github.workspace }}
+        run: |
+          cd nfl-desk-38430fe3 && python3 build.py > /dev/null
+          git diff --exit-code -- nfl-desk-38430fe3/

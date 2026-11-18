@@ -2823,6 +2823,48 @@ that self-checks can hit them:
 build reads from the *environment* (git depth, `ls` order, locale, untracked siblings) before you look at
 your numbers. Two of my three failures were that, and neither was visible in the table itself.
 
+## Session 38430fe3 — NFL first-hand re-read, claim verification and decision-readiness desk (claimed 2026-11-18T03:2xZ)
+
+Session ID `38430fe3`, branch `arena/38430fe3-own5`, branched from `92d50179a17a391b436eae650979f7bc192c52ad`.
+
+**Why this session exists (no duplicate work).** 24 sibling desks already answer this brief. What none of them holds is a
+first-hand read of the nfl.com **Week 10 injury report taken on 2026-11-18**, after the 2026-11-12 capture that
+`data/decision-desk/raw/` pins and after the Lions' Week 10 designations changed on the live page. This session re-reads
+that page in full, checks the brief's specific count and designation claims against it line by line, and publishes the
+result as one namespaced desk. It does **not** edit the root `index.html`, `pages/**`, `assets/**`, `scripts/build.py`
+or any sibling desk.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| R1 | Claim + board entry | in progress | 38430fe3 | COORDINATION.md | This block. |
+| R2 | First-hand re-read of the official Week 10 injury report (all 8 pages), row-level CSV, hash of the captured text | unclaimed→in progress | 38430fe3 | `nfl-desk-38430fe3/raw/**`, `nfl-desk-38430fe3/data/injury_report_wk10_2026-11-18.csv` | Source https://www.nfl.com/injuries/league/2026/reg10 |
+| R3 | Verify the brief's count and designation claims (279/254 rows, 2 vs 4 no-injury sections, Seattle 15, Cincinnati 4, three Lions Out designations) | in progress | 38430fe3 | `nfl-desk-38430fe3/data/claim_checks.csv` | Verdict per claim, with the official link. |
+| R4 | Delta against the repo's 2026-11-12 capture (`data/decision-desk/raw/official_text/injury_report_wk10.txt`) | in progress | 38430fe3 | `nfl-desk-38430fe3/data/injury_delta_2026-11-12_vs_11-18.csv` | Publishes the change, not the level. |
+| R5 | Decision-readiness table: one row per brief requirement, blocking gate, clearing number, evidence path | in progress | 38430fe3 | `nfl-desk-38430fe3/data/requirements_readiness.csv` | Each row names the desk that holds the evidence. |
+| R6 | Questions, answers, unknowns; suggestions register (options + recommendation + what would change our mind; nothing implemented) | in progress | 38430fe3 | `nfl-desk-38430fe3/data/questions.csv`, `suggestions.csv` | |
+| R7 | Site: landing page, category subpages, Flagged for Review, executive summary | in progress | 38430fe3 | `nfl-desk-38430fe3/*.html`, `build_site.py` | Served by legacy Pages at `/Own5/nfl-desk-38430fe3/` after merge. |
+| R8 | Verification harness + scoped CI workflow | in progress | 38430fe3 | `nfl-desk-38430fe3/verify.py`, `.github/workflows/nfl-desk-38430fe3.yml` | Scoped to this session's paths. |
+| R9 | Rebase, PR to main, merge, Pages check, record | in progress | 38430fe3 | COORDINATION.md, README.md (one additive row) | |
+
+**Cross-session requests (logged, not actioned).** The root `index.html`/`pages/**`/`assets/**` (owned by cd43258e,
+CI-locked) still render the 2026-11-02 state. The request to publish a root index that lists every desk stands; this
+session does not edit those files. `.github/workflows/decision-desk.yml` still fails its clean-rebuild step on pull requests;
+not ours, not touched.
+
+**38430fe3 status update (2026-11-18, before PR).** Build complete; PR opened next. File names differ from the plan above where noted.
+
+| ID | Result | Sources | Verification |
+|----|--------|---------|--------------|
+| R2 | 347 rows, 28 clubs, 14 games transcribed from the 8 official pages. Transcript at `nfl-desk-38430fe3/raw/injury_report_wk10_transcript.psv` (sha256 `184f7ac0…115cd7`); row CSV at `data/injury_report_wk10_2026-11-18.csv`. | https://www.nfl.com/injuries/league/2026/reg10 | `verify.py` counts; transcript hash pinned in `data/summary.json`. Full line-by-line re-fetch against the raw page bytes is not done (fetch tool renders text only; see F-10). |
+| R3 | Claim verdicts: 2 CONTRADICTED (279-row / 2-no-injury claim; Seattle injury-free), 4 CONFIRMED, 4 PARTLY, 2 NOT REPRODUCED (254-row claim; Baltimore "not on the report" is partly right: news says IR, report silent). | nfl.com reg10; NFL.com articles for Willis, Jackson, Lock, Maye, Nacua (full slugs fetched 2026-11-18). | `data/claim_checks.csv`; news-URL slugs re-fetched; three short-slug guesses returned 404 and were discarded. |
+| R4 | Delta vs 2026-11-12 capture: 276 common players, 197 changed, 79 unchanged, 71 added, 0 removed. Delta vs 2026-11-17 partial read: 49 overlapping rows, 49 identical. | repo `data/decision-desk/official/official_injuries_wk10.csv`; repo `nfl-desk-35a1feb2/raw/official_reads_2026-11-17.txt` | `data/delta_2026-11-12_to_2026-11-18.csv`, `data/delta_2026-11-17_to_2026-11-18.csv`. |
+| R5 | 76 requirements, status counts: BLOCKED 20, MET 10, NOT STARTED 14, PARTIAL 29, REJECTED 3. | Brief; each row names its evidence path. | `data/requirements_readiness.csv`. |
+| R6 | 16 questions, 8 suggestions (review only, none implemented). | As cited per row. | `data/questions.csv`, `data/suggestions.csv`. |
+| R7 | 11 pages: overview, injury rows (filterable), team view, what changed, claim checks, decision readiness, questions, suggestions, executive summary, Flagged for Review (14 items), sources. | As above. | `verify.py` checks internal links, row-level source marker, determinism (two builds, identical bytes). |
+| R8 | Scoped workflow `.github/workflows/nfl-desk-38430fe3.yml`: unit tests (7), `verify.py`, committed-output diff. No network. | n/a | Runs in CI on PRs touching the desk. |
+
+Not done and logged: Week 11 availability (report not published on 2026-11-18); starters, depth, snap shares and replacements (not on the injury report; left blank); prices and any model result (no price archive; no strategy qualifies; no bets placed). Team-view "Starters out" and "Replacements named" are blank with a reason, not inferred.
+
 ## Session b8227c47 — NFL official injury-report capture ledger (claimed 2026-11-18T03:20Z)
 
 Session ID `b8227c47`, branch `arena/b8227c47-own5`, branched from `92d5017` (main).
