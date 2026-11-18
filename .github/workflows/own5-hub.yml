@@ -1,0 +1,32 @@
+name: Verify Own5 hub
+
+on:
+  push:
+    branches: [arena/9cabfdb9-own5]
+    paths: ['own5-hub/**', '.github/workflows/own5-hub*.yml', 'README.md']
+  pull_request:
+    branches: [main]
+    paths: ['own5-hub/**', '.github/workflows/own5-hub*.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Unit tests (parser, drift alarm, committed capture)
+        run: python3 -m unittest discover -s own5-hub/tests -v
+      - name: Build the hub and run gates G1-G7
+        run: |
+          python3 own5-hub/build.py
+          python3 own5-hub/verify.py
+      - name: The committed pages match a clean rebuild (no tracked or untracked change)
+        run: |
+          if [ -n "$(git status --porcelain -- own5-hub/)" ]; then git status --porcelain -- own5-hub/; echo 'rebuild changed files' >&2; exit 1; fi

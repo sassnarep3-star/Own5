@@ -12,6 +12,8 @@ Sources (all official NFL pages):
   reserve    https://www.nfl.com/transactions/league/reserve-list/<YYYY>/<MM>  (reserve list, current month)
 """
 import csv, datetime as dt, gzip, hashlib, os, re, sys, urllib.request, urllib.error
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from parse_injuries import parse_injury_html
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 RAW = os.path.join(HERE, "captures", "raw")
@@ -25,10 +27,13 @@ def pins_for(name, body: str):
     """Return (passed: bool, detail: str). Pins are structural, not content-judgements."""
     checks = []
     if name == "injuries":
-        checks = [("title_week", bool(re.search(r"Injuries\s*-\s*WEEK\s*\d+", body, re.I)) or "2026 NFL Injury Report" in body),
-                  ("practice_status_header", "Practice Status" in body),
-                  ("game_status_header", "Game Status" in body),
-                  ("player_rows>=100", len(re.findall(r"/players/", body)) >= 100)]
+        try:
+            rows, n_tables = parse_injury_html(body)
+            checks = [("tables_even_and_2to32", 2 <= n_tables <= 32 and n_tables % 2 == 0),
+                      ("parsed_rows>=50", len(rows) >= 50),
+                      ("game_status_header", "Game Status" in body)]
+        except ValueError as e:
+            checks = [("parse:" + str(e)[:80], False)]
     elif name == "standings":
         checks = [("club_logos>=32", len(re.findall(r"clubs/logos/", body)) >= 32),
                   ("pf_pa_header", ("PF" in body and "PA" in body))]
@@ -58,6 +63,7 @@ def main():
     os.makedirs(os.path.dirname(MANIFEST), exist_ok=True)
     new_manifest = not os.path.exists(MANIFEST)
     rows, all_ok = [], True
+    body_for = {}
     for name, url in targets:
         status, body, err = None, b"", ""
         try:
@@ -66,9 +72,12 @@ def main():
             status, err = e.code, str(e)
         except Exception as e:  # network or TLS failure is recorded, never silently dropped
             err = repr(e)
+        body_for[name] = body
         sha = hashlib.sha256(body).hexdigest() if body else ""
         raw_rel = ""
-        if body:
+        # Raw bytes are kept only for the injury report (the series that must be replayable); the
+        # standings and reserve list keep sha256 + size only, to keep git growth bounded.
+        if body and name == "injuries":
             d = os.path.join(RAW, name)
             os.makedirs(d, exist_ok=True)
             raw_rel = os.path.relpath(os.path.join(d, f"{stamp}.html.gz"), HERE).replace(os.sep, "/")
@@ -90,6 +99,10 @@ def main():
         if new_manifest:
             w.writeheader()
         w.writerows(rows)
+    inj = next((r for r in rows if r["name"] == "injuries"), None)
+    if inj and inj["pins_passed"] == "yes":
+        import derive_counts  # counts are a pure function of the stored raw captures
+        derive_counts.build()
     for r in rows:
         print(f"{r['name']:10s} http={r['http_status']} bytes={r['bytes']} sha256={r['sha256_raw'][:16]} pins={r['pins_passed']} {r['pins_detail']}")
     return 0 if all_ok else 1

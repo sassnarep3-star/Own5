@@ -7,11 +7,10 @@ name: Own5 hub - daily official capture
 on:
   schedule:
     - cron: '20 13 * * *'
-    - cron: '20 21 * * *'
   workflow_dispatch:
   push:
     branches: [arena/9cabfdb9-own5]
-    paths: ['own5-hub/capture.py', '.github/workflows/own5-hub-capture.yml']
+    paths: ['own5-hub/capture.py', 'own5-hub/parse_injuries.py', '.github/workflows/own5-hub-capture.yml']
 
 permissions:
   contents: write
