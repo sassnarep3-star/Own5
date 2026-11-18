@@ -3220,7 +3220,7 @@ echo "appended"; wc -l COORDINATION.md
 | O4 | Verify script: every CSV row source-linked or explicit blank+flag; no broken internal links | done | arena/abb5f8be-own5 | scripts/verify_origin_desk.py | Fail-closed; gates the build; 0 failures. |
 | O5 | Executive summary page | done | arena/abb5f8be-own5 | nfl-origin-desk/executive-summary.html | Rolls up verified vs computed vs missing. |
 | O6 | Landing page with decision-readiness table | done | arena/abb5f8be-own5 | nfl-origin-desk/index.html | One row per requirement → gate → number to clear → observed status (80 rows). |
-| O7 | Commit, push, open PR to main, merge, confirm Pages deploys | in progress | arena/abb5f8be-own5 | COORDINATION.md | Record PR link and merge result below. |
+| O7 | Commit, push, open PR to main, merge, confirm Pages deploys | done | arena/abb5f8be-own5 | COORDINATION.md | PR #112 merged via `gh pr merge 112 --merge`, merge commit db52839a; Pages build `built` (no error) at https://sassnarep3-star.github.io/Own5/nfl-origin-desk/ |
 
 ## Cross-session requests
 
