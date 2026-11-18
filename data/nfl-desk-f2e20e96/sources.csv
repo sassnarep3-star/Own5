@@ -1,5 +1,5 @@
 source_id,name,url,read_at_utc,method,used_for
-S01,NFL Week 11 schedule 2026,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-18T03:44Z,sandbox fetch tool (processed text; not server bytes),Week 11 slate (13 games), kickoff/network as printed, bye list, records, stadium strings in hotel-destination fields
+S01,NFL Week 11 schedule 2026,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-18T03:44Z,sandbox fetch tool (processed text; not server bytes),"Week 11 slate (13 games), kickoff/network as printed, bye list, records, stadium strings in hotel-destination fields"
 S02,NFL scores Week 10 2026,https://www.nfl.com/scores/2026/REG10,2026-11-18T03:44Z,sandbox fetch tool (processed text; not server bytes),Week 10 game list and Final statuses (scores render as Hidden Score on this page)
 S03,NFL league standings 2026 REG,https://www.nfl.com/standings/league/2026/REG,2026-11-18T03:46Z,sandbox fetch tool (processed text; not server bytes),32-club W-L-T / PCT / PF / PA / NET / streak — model inputs and correlations
 S04,NFL injury report Week 10 2026 (requested reg11),https://www.nfl.com/injuries/league/2026/reg11,2026-11-18T03:47Z-03:52Z,sandbox fetch tool (processed text; not server bytes),Full Week 10 injury report: 347 rows / 28 club tables; the reg11 request resolved to reg10 (Week 10)

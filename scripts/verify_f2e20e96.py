@@ -120,6 +120,38 @@ for name, want in pins.items():
     if got != want:
         fail(f"V5 {name}: pinned {want} rows, found {got}")
 
+# V5b: strict field counts — an unquoted comma inside a field shifts every
+# later column silently, so every row must parse to exactly the header width.
+for d in (DATA, COMPUTED):
+    if not os.path.isdir(d):
+        continue
+    for name in sorted(os.listdir(d)):
+        if not name.endswith(".csv"):
+            continue
+        with open(os.path.join(d, name), newline="", encoding="utf-8") as f:
+            rows = list(csv.reader(f))
+        width = len(rows[0])
+        for i, r in enumerate(rows):
+            if len(r) != width:
+                fail(f"V5b {name}:{i+1} parses to {len(r)} fields, header has {width} "
+                     f"(unquoted comma inside a field?)")
+
+# V5c: schema pinning — shifted rows would land values in the wrong columns
+for r in read_csv(os.path.join(DATA, "readiness.csv")):
+    if r["status"] not in ("MET", "PARTIAL", "BLOCKED", "PENDING"):
+        fail(f"V5c readiness.csv {r.get('req_id')}: status out of schema: {r['status']!r}")
+    if not re.search(r"\.(html|csv|py)$", r["evidence"] or ""):
+        fail(f"V5c readiness.csv {r.get('req_id')}: evidence not a repo pointer: {r['evidence']!r}")
+for r in read_csv(os.path.join(DATA, "questions.csv")):
+    if r["answer_status"] not in ("OPEN", "PARTIAL", "ANSWERED"):
+        fail(f"V5c questions.csv {r.get('q_id')}: answer_status out of schema: {r['answer_status']!r}")
+for r in read_csv(os.path.join(DATA, "suggestions.csv")):
+    if not (r["status"] or "").startswith(("PROPOSED", "ACCEPTED", "REJECTED", "IMPLEMENTED")):
+        fail(f"V5c suggestions.csv {r.get('s_id')}: status out of schema: {r['status']!r}")
+for r in read_csv(os.path.join(DATA, "price_snapshots_wk11.csv")):
+    if r["market"] not in ("side", "total", "moneyline"):
+        fail(f"V5c price_snapshots_wk11.csv {r.get('snapshot_id')}: market out of schema")
+
 inj = read_csv(os.path.join(DATA, "injury_wk10_players.csv"))
 if len({r["club"] for r in inj}) != 28:
     fail("V5 injury capture: expected 28 club tables")
