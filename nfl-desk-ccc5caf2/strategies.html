@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="OWN5 NFL Line Originator — strategy catalogue. Every strategy pre-registered; backtest numbers barred from the leaderboard until certified.">
+<title>Strategies · OWN5 NFL Line Originator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <div class="mark">O5</div>
+      <div>
+        <h1><a href="index.html">OWN5 NFL Line Originator</a></h1>
+        <p>Session ccc5caf2 &middot; Strategy catalogue</p>
+      </div>
+    </div>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Overview</a>
+      <a href="requirements.html">Requirements &amp; readiness</a>
+      <a href="lines.html">Own lines (Week 11)</a>
+      <a class="active" href="strategies.html">Strategies</a>
+      <a href="gates.html">Validation gates</a>
+      <a href="correlations.html">Correlations</a>
+      <a href="injuries.html">Injuries &amp; depth</a>
+      <a href="suggestions.html">Suggestions</a>
+      <a href="questions.html">Questions &amp; answers</a>
+      <a href="sources.html">Sources</a>
+      <a href="flagged.html">Flagged for review</a>
+      <a href="verification.html">Verification</a>
+      <a href="summary.html">Executive summary</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap" id="main">
+  <section class="pagehead">
+    <h2>Strategy catalogue</h2>
+    <p>Every strategy is <strong>pre-registered</strong> (definition frozen before results are seen) and must pass the validation gates on <a href="gates.html">gates.html</a> before appearing on the leaderboard. Backtest numbers are <strong>forbidden</strong> on the leaderboard until a strategy is certified. No strategy is currently certified &mdash; the leaderboard is intentionally empty.</p>
+  </div>
+
+  <div class="notice bad">
+    <strong>Zero certified strategies.</strong> All candidate families below are blocked by the verified-market gate (G8) and the CLV gate (G4), which require a timestamped operator price history that does not yet exist (flags <a href="flagged.html#F01">F01</a>, <a href="flagged.html#F02">F02</a>). Backtest figures shown are research specifications only &mdash; none is a claim of edge.
+  </div>
+
+  <h3>Strategy register (pre-registered)</h3>
+  <table class="data">
+    <thead>
+      <tr><th>ID</th><th>Strategy / signal family</th><th>Bet class</th><th>Pre-registration</th><th>Gate status</th><th>Leaderboard</th><th>What would change our mind</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="record-id">ST-01</span></td>
+        <td><strong>Opponent-adjusted team strength (shadow baseline)</strong> &mdash; PF/PA model from official standings, side → total → moneyline</td>
+        <td>Single</td>
+        <td><span class="badge blank">Not yet frozen</span></td>
+        <td><span class="badge warn">Blocked · G4/G8</span></td>
+        <td><span class="badge blank">Barred</span></td>
+        <td><span class="blankcell">Not yet recorded</span></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">ST-02</span></td>
+        <td><strong>Availability repricing</strong> &mdash; lineup deficiency (snap-share depth strings 1&ndash;4) as a line input, not a bet trigger</td>
+        <td>Single</td>
+        <td><span class="badge blank">Not yet frozen</span></td>
+        <td><span class="badge warn">Blocked · G4/G8</span></td>
+        <td><span class="badge blank">Barred</span></td>
+        <td><span class="blankcell">Not yet recorded</span></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">ST-03</span></td>
+        <td><strong>Receiver opportunity (player prop)</strong> &mdash; target share / air yards from official player stats</td>
+        <td>Player prop</td>
+        <td><span class="badge blank">Not yet frozen</span></td>
+        <td><span class="badge warn">Blocked · F03</span></td>
+        <td><span class="badge blank">Barred</span></td>
+        <td><span class="blankcell">Not yet recorded</span></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">ST-04</span></td>
+        <td><strong>QB × top-WR same-game prop combo</strong> &mdash; requires empirical joint probability (r = 0.50, n = 1,255)</td>
+        <td>Prop combo</td>
+        <td><span class="badge blank">Not yet frozen</span></td>
+        <td><span class="badge warn">Blocked · joint-evidence gate</span></td>
+        <td><span class="badge blank">Barred</span></td>
+        <td><span class="blankcell">Not yet recorded</span></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">ST-05</span></td>
+        <td><strong>Cross-game value basket (parlay)</strong> &mdash; independent legs only (phi = 0.006)</td>
+        <td>Game parlay</td>
+        <td><span class="badge blank">Not yet frozen</span></td>
+        <td><span class="badge warn">Blocked · G4/G8</span></td>
+        <td><span class="badge blank">Barred</span></td>
+        <td><span class="blankcell">Not yet recorded</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="section">
+    <h3>Control baselines (run on every leaderboard)</h3>
+    <table class="data">
+      <thead><tr><th>Baseline</th><th>Rule</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Random picks</td><td>Uniform random side/total per game, vig-free price</td><td><span class="badge blank">Not yet implemented</span></td></tr>
+        <tr><td>Favorites only</td><td>Back the moneyline favourite every game</td><td><span class="badge blank">Not yet implemented</span></td></tr>
+      </tbody>
+    </table>
+    <p class="note">Baselines separate skill from luck and are published beside any strategy once the leaderboard is active.</p>
+  </div>
+
+  <div class="section">
+    <h3>Policy rules (from the brief)</h3>
+    <ul>
+      <li><strong>Pre-registration:</strong> rule text, sample window and gates committed to git before the evaluation window opens; the commit hash is the registration. Backtest numbers never appear on the leaderboard.</li>
+      <li><strong>Joint-evidence gate (parlays / prop combos):</strong> a combo may only be ranked when a directly validated joint probability <em>and</em> the operator's void/push rules are both available. Multiplying marginal probabilities under dependence is invalid.</li>
+      <li><strong>Proper-score leaderboard:</strong> singles, game parlays, same-game parlays and prop combos are separate divisions. Rank by benchmark-relative Brier skill with a game-cluster lower bound and a multiplicity adjustment for the number of trials &mdash; never raw win rate or season-long ROI.</li>
+      <li><strong>Two-stage skill leaderboard:</strong> proper-score qualification first, then prospective CLV/ROI escrow.</li>
+      <li><strong>Demotion gate:</strong> a live strategy that fails any hard gate (G4 CLV, G8 market integrity) is sent back to paper.</li>
+      <li><strong>Signal vs staking:</strong> signal and staking are separated on the leaderboard so a lucky staking run cannot mask a bad signal.</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    Source policy: every row links to its gate or a flagged gap. No performance is claimed; no bets are placed. 1-800-GAMBLER.
+  </div>
+</main>
+</body>
+</html>

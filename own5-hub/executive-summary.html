@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Executive summary · Own5 NFL hub</title>
+<link rel="stylesheet" href="assets/hub.css">
+</head><body>
+<header class="top"><div class="brand">Own5 · NFL line-origination hub</div><nav><a href="index.html">Dashboard</a><a href="executive-summary.html" class=active>Executive summary</a><a href="requirements.html">Requirements</a><a href="verified.html">Verified today</a><a href="injuries.html">Injury captures</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged for Review</a><a href="sources.html">Sources</a></nav></header>
+<main>
+<h1>Executive summary</h1>
+<p class="sub">Short, sourced, and dated 2026-11-18.</p>
+
+<section class="prose">
+<h2>What is true today</h2>
+<ul>
+<li><strong>Official injury report (captured 2026-11-18T03:28:38Z):</strong> 28 club tables, 347 player rows, 171 rows with a game status (Out 70, Questionable 90, Doubtful 11). Source: <a href="https://www.nfl.com/injuries/">nfl.com/injuries</a>. See <a href="injuries.html">injury captures</a>.</li>
+<li><strong>Lions:</strong> Kerby Joseph, Cade Mays and D.J. Reed are Out on the official page (resolves a long-standing blank). <a href="https://www.nfl.com/injuries/">Source</a>.</li>
+<li><strong>Malik Willis</strong> is listed as Reserve/Injured (MIA, 11/10) on the official November reserve list, which is why he is absent from the report. <a href="https://www.nfl.com/transactions/league/reserve-list/2026/11">Source</a>.</li>
+<li><strong>Standings:</strong> 30 of 32 clubs match the repo's stored standings exactly. BAL and LAC are one game further on at the official page. The repo's totals are stale by that game. <a href="https://www.nfl.com/standings/league/2026/REG">Source</a>.</li>
+<li><strong>Luck panel:</strong> recomputed from the repo's standings with a 2.37 exponent convention, 0 mismatches; spread 4.34 wins (DEN +2.17, TB -2.17). It bounds luck; it does not remove it.</li>
+<li><strong>Automation:</strong> a GitHub-hosted runner received HTTP 200 for the three official pages. A daily capture now writes hashes, UTC timestamps and structural pins.</li>
+</ul>
+<h2>What is blocked, and by what</h2>
+<ul>
+<li><strong>Prices.</strong> No admitted operator price. The price-data policy (decision D1) is open, so no CLV, residual or backtest ROI can be published as verified.</li>
+<li><strong>Depth and snaps.</strong> No verified depth-order source for 32 clubs and no admitted snap-count or game-book source. The Texans depth chart is an image.</li>
+<li><strong>Reserve completeness.</strong> The November list shows 25 rows. A cap is not established, so "not listed" still cannot be read as "available" for every club.</li>
+<li><strong>History.</strong> One official season in the repo. Holdout and ablation studies need at least three.</li>
+<li><strong>Storage terms.</strong> The raw captures sit in a public repository. The nfl.com terms page was not found at the URL tried.</li>
+</ul>
+<h2>What we recommend, and what needs your choice</h2>
+<p>Nothing has been implemented from the suggestions. Each one is listed with its options and what would change our mind on the <a href="suggestions.html">suggestions page</a>.
+The three most consequential are S03 (price-data policy), S04 (where raw captures live) and S05 (depth route).</p>
+<h2>Repo review</h2>
+<p>Irregularities in other desks are listed on <a href="flagged.html">Flagged for Review</a> with links. The largest: 24 requirement rows in one desk cite a page that cannot support them (F07); other desks still publish the stale 254 and 279 counts (F02). Corrections are requested, not made, in those desks.</p>
+</section>
+
+</main>
+<footer>Built 2026-11-18 from data files in <code>own5-hub/data/</code> and <code>own5-hub/captures/</code>.
+Official sources are linked on every row. Anything without a source is badged and listed on
+<a href="flagged.html">Flagged for Review</a>. Nothing here is a betting recommendation.</footer>
+</body></html>

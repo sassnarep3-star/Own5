@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="OWN5 NFL Line Originator — validation gates G0–G12 that every strategy must pass before leaderboard entry.">
+<title>Validation gates · OWN5 NFL Line Originator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <div class="mark">O5</div>
+      <div>
+        <h1><a href="index.html">OWN5 NFL Line Originator</a></h1>
+        <p>Session ccc5caf2 &middot; Validation gates</p>
+      </div>
+    </div>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Overview</a>
+      <a href="requirements.html">Requirements &amp; readiness</a>
+      <a href="lines.html">Own lines (Week 11)</a>
+      <a href="strategies.html">Strategies</a>
+      <a class="active" href="gates.html">Validation gates</a>
+      <a href="correlations.html">Correlations</a>
+      <a href="injuries.html">Injuries &amp; depth</a>
+      <a href="suggestions.html">Suggestions</a>
+      <a href="questions.html">Questions &amp; answers</a>
+      <a href="sources.html">Sources</a>
+      <a href="flagged.html">Flagged for review</a>
+      <a href="verification.html">Verification</a>
+      <a href="summary.html">Executive summary</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap" id="main">
+  <section class="pagehead">
+    <h2>Validation gates</h2>
+    <p>Every strategy must pass all hard gates before leaderboard entry. A strategy that passes and goes live, then fails any hard gate, is <strong>demoted back to paper</strong>. Gates are applied with proper scores and uncertainty &mdash; never win rate or season-long ROI.</p>
+  </div>
+
+  <table class="data">
+    <thead>
+      <tr><th>ID</th><th>Gate</th><th>What it requires</th><th>Hard / soft</th><th>Status (this desk)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>G0</strong></td><td>Pre-registration</td><td>Rule text, sample window and gates frozen in git before results seen; commit hash is the registration</td><td>Hard</td><td><span class="badge ok">Defined</span></td></tr>
+      <tr><td><strong>G1</strong></td><td>Parameter budget</td><td>Limited free parameters; no result-chasing</td><td>Hard</td><td><span class="badge ok">Defined</span></td></tr>
+      <tr><td><strong>G2</strong></td><td>Walk-forward out-of-sample</td><td>Chronological holdout; train / validation / final holdout seasons split</td><td>Hard</td><td><span class="badge blank">Not yet applied</span></td></tr>
+      <tr><td><strong>G3</strong></td><td>Calibration</td><td>Stored forecast = probability + inputs; reliability checked</td><td>Hard</td><td><span class="badge blank">Not yet applied</span></td></tr>
+      <tr><td><strong>G4</strong></td><td>Closing-line value (CLV)</td><td>De-vigged CLV vs a verified timestamped closing price</td><td>Hard</td><td><span class="badge bad">Failed</span> &mdash; no closing price source (F01/F02)</td></tr>
+      <tr><td><strong>G5</strong></td><td>Permutation null</td><td>Strategy beats a 500-draw permutation null</td><td>Hard</td><td><span class="badge blank">Not yet applied</span></td></tr>
+      <tr><td><strong>G6</strong></td><td>Economic realism</td><td>Bankroll, staking rule, max drawdown defined (owner decision, Q03)</td><td>Hard</td><td><span class="badge blank">Blocked</span> &mdash; Q03 open</td></tr>
+      <tr><td><strong>G7</strong></td><td>Fractional-Kelly staking</td><td>Staking separated from signal; no full-Kelly</td><td>Hard</td><td><span class="badge blank">Not yet applied</span></td></tr>
+      <tr><td><strong>G8</strong></td><td>Market integrity / verified price</td><td>Verified closing price + matched outcome per game</td><td>Hard</td><td><span class="badge bad">Failed</span> &mdash; no closing price source (F01/F02)</td></tr>
+      <tr><td><strong>G9</strong></td><td>Joint-evidence (parlays / combos)</td><td>Directly validated joint probability + operator void/push rules</td><td>Hard</td><td><span class="badge blank">Blocked</span> &mdash; no prop lines (F03)</td></tr>
+      <tr><td><strong>G10</strong></td><td>Multiplicity adjustment</td><td>Bonferroni / false-discovery control over number of variants tested</td><td>Hard</td><td><span class="badge ok">Defined</span></td></tr>
+      <tr><td><strong>G11</strong></td><td>Proper-score ranking</td><td>Benchmark-relative Brier skill + cluster lower bound; not win rate / ROI</td><td>Hard</td><td><span class="badge ok">Defined</span></td></tr>
+      <tr><td><strong>G12</strong></td><td>Demotion gate</td><td>Live strategy failing any hard gate returns to paper</td><td>Hard</td><td><span class="badge ok">Defined</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="section">
+    <h3>Luck removal (removal-of-luck panel)</h3>
+    <table class="data">
+      <thead><tr><th>Measure</th><th>Value</th><th>Basis</th></tr></thead>
+      <tbody>
+        <tr><td>Break-even rate at &minus;110</td><td>52.38%</td><td>Standard vig-free break-even</td></tr>
+        <tr><td>P(110+ wins in 200 bets at 52.38%)</td><td>25.1%</td><td>Exact binomial (prior 20.8% figure does not reproduce; flagged <a href="flagged.html#F10">F10</a>)</td></tr>
+        <tr><td>Bets needed to prove true 55% skill (80% power)</td><td>~2,241</td><td>One-sided normal approximation, alpha 0.05</td></tr>
+        <tr><td>Minimum sample for provisional listing</td><td>300 bets</td><td>Policy (Q11 answered)</td></tr>
+        <tr><td>Leaderboard metric</td><td>Brier skill score + uncertainty</td><td>Never raw win rate; never season-long ROI</td></tr>
+      </tbody>
+    </table>
+    <p class="note">A 55% season over 200 bets happens 25.1% of the time to a break-even bettor &mdash; win rate cannot distinguish skill from variance. That is why the leaderboard uses Brier skill with uncertainty, and why certification needs ~2,241 bets.</p>
+  </div>
+
+  <div class="section">
+    <h3>Why no strategy is certified yet</h3>
+    <ul>
+      <li><strong>G4 and G8 cannot pass</strong> without a timestamped operator closing-price history. No official NFL or operator source publishes historical closing lines with timestamps (F01, F02).</li>
+      <li><strong>G9 cannot pass</strong> without player-prop lines; no official prop-line archive exists (F03).</li>
+      <li><strong>G6 is blocked</strong> until the owner sets bankroll, staking and drawdown tolerance (Q03).</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    Gate definitions: research/ccc5caf2/ (this desk). No strategy is certified; no performance is claimed. 1-800-GAMBLER.
+  </div>
+</main>
+</body>
+</html>

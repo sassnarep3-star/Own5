@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="OWN5 NFL Line Originator — correlations computed only from official sources, with n published for each value.">
+<title>Correlations · OWN5 NFL Line Originator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <div class="mark">O5</div>
+      <div>
+        <h1><a href="index.html">OWN5 NFL Line Originator</a></h1>
+        <p>Session ccc5caf2 &middot; Correlations</p>
+      </div>
+    </div>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Overview</a>
+      <a href="requirements.html">Requirements &amp; readiness</a>
+      <a href="lines.html">Own lines (Week 11)</a>
+      <a href="strategies.html">Strategies</a>
+      <a href="gates.html">Validation gates</a>
+      <a class="active" href="correlations.html">Correlations</a>
+      <a href="injuries.html">Injuries &amp; depth</a>
+      <a href="suggestions.html">Suggestions</a>
+      <a href="questions.html">Questions &amp; answers</a>
+      <a href="sources.html">Sources</a>
+      <a href="flagged.html">Flagged for review</a>
+      <a href="verification.html">Verification</a>
+      <a href="summary.html">Executive summary</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap" id="main">
+  <section class="pagehead">
+    <h2>Correlations</h2>
+    <p>Correlations are computed <strong>only from officially sourced numbers</strong>, and <strong>n is published with each value</strong>. No value is inferred. Same-game prop legs are <strong>not</strong> priced as independent; a directly validated joint probability is required (joint-evidence gate, G9).</p>
+  </div>
+
+  <table class="data">
+    <thead>
+      <tr><th>Pair</th><th>Coefficient</th><th>n</th><th>Sample</th><th>Source</th><th>Use</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>QB passing yards &harr; team top-WR receiving yards (same team, weekly)</td>
+        <td><strong>r = 0.50</strong></td>
+        <td><strong>1,255</strong> team-games</td>
+        <td>2024&ndash;2026 weekly stats</td>
+        <td><a href="https://github.com/nflverse/nflverse-data/releases/tag/stats_player" rel="noopener">nflverse stats_player (AGGREGATOR)</a></td>
+        <td>Same-game QB×WR prop combo joint pricing (ST-04); reject independent pricing</td>
+      </tr>
+      <tr>
+        <td>Spread vs total (cross-game/market legs)</td>
+        <td><strong>phi = 0.006</strong></td>
+        <td><strong>7,103</strong> games</td>
+        <td>2010&ndash;2026 completed games</td>
+        <td><a href="https://github.com/nflverse/nflverse-data/releases/tag/schedules" rel="noopener">nflverse schedules (AGGREGATOR)</a></td>
+        <td>Game-parlay leg independence (ST-05)</td>
+      </tr>
+      <tr>
+        <td>NET/G vs win pct</td>
+        <td>r = 0.8391</td>
+        <td>32</td>
+        <td>2026 REG standings</td>
+        <td><a href="https://www.nfl.com/standings/league/2026/REG" rel="noopener">nfl.com (OFFICIAL)</a></td>
+        <td>Ratings input (prior session; reproduced)</td>
+      </tr>
+      <tr>
+        <td>PF/G vs win pct</td>
+        <td>r = 0.6136</td>
+        <td>32</td>
+        <td>2026 REG standings</td>
+        <td><a href="https://www.nfl.com/standings/league/2026/REG" rel="noopener">nfl.com (OFFICIAL)</a></td>
+        <td>Ratings input</td>
+      </tr>
+      <tr>
+        <td>PA/G vs win pct</td>
+        <td>r = &minus;0.5796</td>
+        <td>32</td>
+        <td>2026 REG standings</td>
+        <td><a href="https://www.nfl.com/standings/league/2026/REG" rel="noopener">nfl.com (OFFICIAL)</a></td>
+        <td>Ratings input</td>
+      </tr>
+      <tr>
+        <td>PF/G vs PA/G</td>
+        <td>r = &minus;0.0117</td>
+        <td>32</td>
+        <td>2026 REG standings</td>
+        <td><a href="https://www.nfl.com/standings/league/2026/REG" rel="noopener">nfl.com (OFFICIAL)</a></td>
+        <td>Ratings input</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="notice warn">
+    <strong>Tier note.</strong> The QB↔WR and spread/total coefficients come from the nflverse mirror (AGGREGATOR tier, pinned by SHA-256), not from an official NFL page &mdash; the NFL does not publish these correlations. Standings-based correlations come directly from nfl.com (OFFICIAL). Where a value cannot be confirmed from an official source, it is labelled AGGREGATOR and never presented as official (suggestion S13).
+  </div>
+
+  <div class="section">
+    <h3>Same-game prop pricing (joint-evidence gate)</h3>
+    <table class="data">
+      <thead><tr><th>Measure</th><th>Value</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td>QB &ge; median &amp; WR1 &ge; median, joint hit rate</td><td>32.5%</td><td>Empirical, same team, median lines</td></tr>
+        <tr><td>Joint hit rate if legs independent</td><td>24.8%</td><td>0.5 &times; 0.5 &mdash; invalid under dependence</td></tr>
+        <tr><td>Gap (correlation premium)</td><td>+7.7 pp</td><td>Changes the fair price of the combination</td></tr>
+      </tbody>
+    </table>
+    <p class="note">A same-team QB×WR combination may only be ranked when the empirical joint probability <em>and</em> the operator's void/push rules are both available (G9). No prop lines exist from an official source (F03), so this remains a research input, not a ranked combo.</p>
+  </div>
+
+  <div class="section">
+    <h3>Flagged irregularities</h3>
+    <ul>
+      <li><a href="flagged.html#F09">F09</a> &mdash; prior QB/WR correlation of 0.76 does not reproduce; recomputed 0.50 (n = 1,255) on 2024&ndash;2026 weekly stats.</li>
+      <li><a href="flagged.html#F03">F03</a> &mdash; no official player-prop line history; prop legs cannot be priced economically.</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    Every coefficient carries n and a source link. Values that cannot be confirmed from an official source are labelled AGGREGATOR or left blank &mdash; never inferred. 1-800-GAMBLER.
+  </div>
+</main>
+</body>
+</html>

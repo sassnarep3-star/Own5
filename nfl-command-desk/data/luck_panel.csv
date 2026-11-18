@@ -1,0 +1,4 @@
+bets,expected_wins,sd,wins_for_55,prob_55_or_more,bets_needed_80_power
+57,28.5,3.77,31,0.2983,617
+86,43.0,4.64,47,0.2253,617
+150,75.0,6.12,82,0.1442,617

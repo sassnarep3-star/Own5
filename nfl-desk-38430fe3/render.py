@@ -5,6 +5,11 @@ import content as C
 HERE = os.path.dirname(os.path.abspath(__file__))
 E = lambda s: html.escape(str(s), quote=True)
 
+import re as _re
+def fmt_date(d):
+    """Title-case a printed date but keep ordinal suffixes lower-case (NOVEMBER 12TH -> November 12th)."""
+    return _re.sub(r"(\d+)(St|Nd|Rd|Th)\b", lambda m: m.group(1) + m.group(2).lower(), d.title())
+
 NAV = [("index.html","Overview"),("injuries.html","Week 10 injury rows"),("team-view.html","Team view"),
        ("delta.html","What changed"),("claims.html","Claim checks"),("requirements.html","Decision readiness"),
        ("questions.html","Questions"),("suggestions.html","Suggestions"),("executive-summary.html","Executive summary"),
@@ -108,7 +113,7 @@ def render_all(S, rows, team_rows, drows, cmp_rows):
     hdr = ['Row','Game','Date (as printed)','Kickoff ET (as printed)','Club','Player','Pos','Injury','Practice status','Game status','Source']
     trs = []
     for r in rows:
-        trs.append([E(r['row_id']), E(r['game']), E(r['date'].title()), E(r['kickoff']), E(r['team']), E(r['player']), E(r['position']),
+        trs.append([E(r['row_id']), E(r['game']), E(fmt_date(r['date'])), E(r['kickoff']), E(r['team']), E(r['player']), E(r['position']),
                     E(r['injury']), E(r['practice']), E(r['game_status']), link(C.INJ)])
     body = f"""<h2>Official Week 10 injury report — every listed row</h2>
 <p class="note">Transcribed from nfl.com on {E(S['read_date'])}. Blank cells are blank on the page. Every row links to the same official page. The row count is {S['rows']}. A row is a listed player; a blank injury cell with 'Did Not Participate' is shown as printed (see Flagged F-05). <b>Publication of row-level data is pending a user decision on nfl.com terms §1.3 (F-13, Q-13).</b></p>

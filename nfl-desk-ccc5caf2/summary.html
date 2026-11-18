@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="OWN5 NFL Line Originator — executive summary. What is verified, computed, missing, and what to decide next.">
+<title>Executive summary · OWN5 NFL Line Originator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <div class="mark">O5</div>
+      <div>
+        <h1><a href="index.html">OWN5 NFL Line Originator</a></h1>
+        <p>Session ccc5caf2 &middot; Executive summary</p>
+      </div>
+    </div>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Overview</a>
+      <a href="requirements.html">Requirements &amp; readiness</a>
+      <a href="lines.html">Own lines (Week 11)</a>
+      <a href="strategies.html">Strategies</a>
+      <a href="gates.html">Validation gates</a>
+      <a href="correlations.html">Correlations</a>
+      <a href="injuries.html">Injuries &amp; depth</a>
+      <a href="suggestions.html">Suggestions</a>
+      <a href="questions.html">Questions &amp; answers</a>
+      <a href="sources.html">Sources</a>
+      <a href="flagged.html">Flagged for review</a>
+      <a href="verification.html">Verification</a>
+      <a class="active" href="summary.html">Executive summary</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap" id="main">
+  <section class="pagehead">
+    <h2>Executive summary</h2>
+    <p>What is verified, what is computed, what is missing, and what must be decided before any betting decision can reasonably be made. Full detail: <a href="research/ccc5caf2/EXECUTIVE_SUMMARY.md">research/ccc5caf2/EXECUTIVE_SUMMARY.md</a>.</p>
+  </div>
+
+  <div class="notice ok">
+    <strong>Bottom line:</strong> infrastructure is in place and inputs are verified from official nfl.com sources. No strategy is certified, no edge is claimed, and no bets are placed. The honest output of a process that removes luck is: <em>not yet ready to bet.</em>
+  </div>
+
+  <h3>1. Verified inputs (official sources, read 2026-11-18)</h3>
+  <table class="data">
+    <thead><tr><th>Input</th><th>Source</th><th>Result</th></tr></thead>
+    <tbody>
+      <tr><td>2026 regular-season standings</td><td><a href="https://www.nfl.com/standings/league/2026/REG" rel="noopener">nfl.com standings</a></td><td>32/32 clubs; W-L-T, PF, PA reproduced exactly</td></tr>
+      <tr><td>Week 11 schedule</td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-11" rel="noopener">nfl.com schedule</a></td><td>13 games, Nov 19&ndash;23, with kickoff times, networks, venues</td></tr>
+      <tr><td>Week 10 injury report</td><td><a href="https://www.nfl.com/injuries/" rel="noopener">nfl.com injuries</a></td><td>Parsed; e.g. Lions Kerby Joseph/Cade Mays/D.J. Reed Out; sampled rows match nfl.com</td></tr>
+    </tbody>
+  </table>
+
+  <h3>2. What is computed (model outputs, not odds)</h3>
+  <table class="data">
+    <thead><tr><th>Output</th><th>Value</th><th>Basis</th></tr></thead>
+    <tbody>
+      <tr><td>Fair lines, Week 11</td><td>Spread &amp; total for all 13 games (side &rarr; total &rarr; moneyline)</td><td>PF/PA model, HFA +1.22, neutral Mexico City = 0</td></tr>
+      <tr><td>QB&harr;WR1 correlation</td><td>r = 0.50</td><td>n = 1,255 team-games, 2024&ndash;2026</td></tr>
+      <tr><td>Spread vs total (phi)</td><td>0.006</td><td>n = 7,103 games, 2010&ndash;2026</td></tr>
+      <tr><td>Lineup deficiency &rarr; margin</td><td>&minus;0.039 pts per percentage point</td><td>n = 887, p = 6.1&times;10&minus;5</td></tr>
+      <tr><td>Fade-the-injured ATS edge</td><td>51.4% over 782 bets</td><td>p = 1.0 &mdash; no edge</td></tr>
+    </tbody>
+  </table>
+
+  <h3>3. What is missing (blocking)</h3>
+  <ul>
+    <li><strong>Operator closing-price history</strong> (Q01/Q02, F01/F02) &mdash; without it, no CLV, no certification, no skill claim.</li>
+    <li><strong>Player-prop lines</strong> (F03) &mdash; no official prop-line archive exists.</li>
+    <li><strong>Machine-readable official depth chart</strong> (F16) &mdash; depth is snap-share inference.</li>
+    <li><strong>Jurisdiction &amp; reward funding</strong> (Q04/Q05) &mdash; rewards stay points-only.</li>
+  </ul>
+
+  <h3>4. Irregularities found and flagged</h3>
+  <p>18 flagged items (F01&ndash;F18). Key ones: prior home-underdog claims do not reproduce (F08); prior QB/WR correlation 0.76 does not reproduce, recomputed 0.50 (F09); prior luck figure 20.8% does not reproduce, exact binomial 25.1% (F10); first-pass sign-convention error 57.4% &rarr; 51.4% (F11). Full list: <a href="flagged.html">Flagged for review</a>.</p>
+
+  <h3>5. Decisions that need a human</h3>
+  <ol>
+    <li>Capture a real, timestamped operator price history (S01) &mdash; without it nothing can be certified.</li>
+    <li>Adopt the sign-convention regression test (S02).</li>
+    <li>Close jurisdiction and reward-funding questions (Q04, Q05) before publishing any reward amount.</li>
+    <li>Accept or reject the corrections to the four non-reproducing prior figures.</li>
+    <li>Treat lineup deficiency as a pricing input (recommended), not a bet trigger.</li>
+  </ol>
+
+  <div class="footer">
+    Research only &mdash; no bets are placed, no performance is claimed, nothing here is betting advice. Not affiliated with the NFL. Support: 1-800-GAMBLER.
+  </div>
+</main>
+</body>
+</html>

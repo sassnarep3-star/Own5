@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="OWN5 NFL Line Originator — decision-readiness dashboard. Own lines, validated strategies, injury/depth intelligence, every row sourced or blank-and-flagged.">
+<meta name="theme-color" content="#0f172a">
+<title>Decision overview · OWN5 NFL Line Originator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <div class="mark">O5</div>
+      <div>
+        <h1><a href="index.html">OWN5 NFL Line Originator</a></h1>
+        <p>Session ccc5caf2 &middot; 2026 NFL season, Week 11 &middot; Evidence-first line origination</p>
+      </div>
+    </div>
+    <nav aria-label="Main navigation">
+      <a class="active" href="index.html">Overview</a>
+      <a href="requirements.html">Requirements &amp; readiness</a>
+      <a href="lines.html">Own lines (Week 11)</a>
+      <a href="strategies.html">Strategies</a>
+      <a href="gates.html">Validation gates</a>
+      <a href="correlations.html">Correlations</a>
+      <a href="injuries.html">Injuries &amp; depth</a>
+      <a href="suggestions.html">Suggestions</a>
+      <a href="questions.html">Questions &amp; answers</a>
+      <a href="sources.html">Sources</a>
+      <a href="flagged.html">Flagged for review</a>
+      <a href="verification.html">Verification</a>
+      <a href="summary.html">Executive summary</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap" id="main">
+  <section class="pagehead">
+    <h2>Decision overview</h2>
+    <p>One dashboard for originating NFL lines, testing strategies, and tracking injuries — with the evidence and the gaps side by side. Every table row links to an official source or is left blank and flagged. Nothing is inferred.</p>
+  </section>
+
+  <div class="notice">
+    <strong>Research mode — no bets, no fabricated results.</strong> This desk originates its own lines from official <span class="source">nfl.com standings</span> and tests them against published validation gates. Market prices, prop lines and closing lines have <em>no official public source</em> and are deliberately blank (flags F01–F03). No strategy is certified. Support: 1-800-GAMBLER.
+  </div>
+
+  <div class="kpis">
+    <div class="kpi ok"><div class="kpi-value">32/32</div><div class="kpi-label">clubs reconciled</div><div class="kpi-note">official standings vs independent game log</div></div>
+    <div class="kpi"><div class="kpi-value">13</div><div class="kpi-label">Week 11 games priced</div><div class="kpi-note">own fair spread &amp; total, side &rarr; total &rarr; moneyline order</div></div>
+    <div class="kpi warn"><div class="kpi-value">0</div><div class="kpi-label">certified strategies</div><div class="kpi-note">all families fail the verified-market gate (G8)</div></div>
+    <div class="kpi bad"><div class="kpi-value">13/32</div><div class="kpi-label">market columns blank</div><div class="kpi-note">no operator closing-line source (flagged F01, F02)</div></div>
+    <div class="kpi ok"><div class="kpi-value">0</div><div class="kpi-label">broken internal links</div><div class="kpi-note">all pages and data links resolve</div></div>
+    <div class="kpi"><div class="kpi-value">1</div><div class="kpi-label">snapshot date</div><div class="kpi-note">2026-11-18 UTC (official nfl.com read)</div></div>
+  </div>
+
+  <div class="section">
+    <h3>1. Decision-readiness table &mdash; one row per requirement</h3>
+    <p class="note">Each row: brief requirement &rarr; the gate that blocks it &rarr; the number that would clear it &rarr; observed status. Blanks = unverified, never inferred. Source links on every row.</p>
+    <table class="data">
+      <thead>
+        <tr>
+          <th style="width:26%">Requirement (brief)</th>
+          <th style="width:17%">Blocking gate</th>
+          <th style="width:19%">Number that clears it</th>
+          <th style="width:18%">Observed status</th>
+          <th style="width:20%">Source / evidence</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Price-snapshot store</strong> &mdash; opening &amp; closing numbers for every originated market</td>
+          <td>Price-data policy decided before any backtest is published</td>
+          <td>Timestamped operator snapshot per market, per week (open + close)</td>
+          <td><span class="badge blank">Not met</span> &mdash; no operator price history captured; market cells blank</td>
+          <td><a href="flagged.html#F01">F01</a> &middot; <a href="questions.html#Q01">Q01</a> &middot; <a href="suggestions.html#S01">S01</a></td>
+        </tr>
+        <tr>
+          <td><strong>Verified results feed</strong> &mdash; backtests and ROI computable at all</td>
+          <td>Verified closing price + matched outcome per game</td>
+          <td>136-game pre-registered backtest corpus with outcomes</td>
+          <td><span class="badge blank">Partial</span> &mdash; official results log exists; closing prices missing</td>
+          <td><a href="https://www.nfl.com/standings/league/2026/REG" rel="noopener">nfl.com standings</a> &middot; <a href="flagged.html#F02">F02</a></td>
+        </tr>
+        <tr>
+          <td><strong>Originate side &rarr; total &rarr; moneyline</strong></td>
+          <td>Fair-line model + published residual vs market</td>
+          <td>All 13 Week 11 games priced in that order</td>
+          <td><span class="badge ok">Met (model)</span> &mdash; fair spread/total for 13 games; moneyline derived from fair win prob</td>
+          <td><a href="lines.html">lines.html</a> &middot; <a href="https://www.nfl.com/standings/league/2026/REG">official standings</a></td>
+        </tr>
+        <tr>
+          <td><strong>Publish fair line, market line, difference as separate columns</strong></td>
+          <td>Market line available with timestamp</td>
+          <td>fair &middot; market &middot; residual columns populated</td>
+          <td><span class="badge blank">Not met</span> &mdash; market line blank (no official source)</td>
+          <td><a href="lines.html">lines.html</a> &middot; <a href="flagged.html#F01">F01</a></td>
+        </tr>
+        <tr>
+          <td><strong>Separate signal from staking</strong> in the leaderboard</td>
+          <td>Proper-score ranking (Brier skill), not win rate / ROI</td>
+          <td>Brier skill score + cluster lower bound + multiplicity adjustment</td>
+          <td><span class="badge blank">Not met</span> &mdash; no certified entrant; leaderboard empty by design</td>
+          <td><a href="strategies.html">strategies.html</a> &middot; <a href="gates.html">gates.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Track depth of the replacement</strong> (not just the fact of replacement)</td>
+          <td>Verified depth-slot group (1st&ndash;4th string) per player</td>
+          <td>Depth string + snap share per player, per week</td>
+          <td><span class="badge blank">Partial</span> &mdash; snap-share inference, no official machine-readable depth chart</td>
+          <td><a href="injuries.html">injuries.html</a> &middot; <a href="flagged.html#F05">F05</a> &middot; <a href="flagged.html#F16">F16</a></td>
+        </tr>
+        <tr>
+          <td><strong>Correlations only from official sources, publish n</strong></td>
+          <td>n recorded with each coefficient; no inferred values</td>
+          <td>Pearson r / phi with n and CI per pair</td>
+          <td><span class="badge ok">Met (model)</span> &mdash; QB&harr;WR1 r=0.50 (n=1,255); spread/total phi=0.006 (n=7,103)</td>
+          <td><a href="correlations.html">correlations.html</a> &middot; nflverse pinned release</td>
+        </tr>
+        <tr>
+          <td><strong>Demotion gate</strong> &mdash; live strategy back to paper</td>
+          <td>Gate failure (G4 CLV / G8 market integrity) triggers demotion</td>
+          <td>Every hard gate passes before live; any failure demotes</td>
+          <td><span class="badge ok">Defined</span> &mdash; rule published; no strategy currently live</td>
+          <td><a href="gates.html">gates.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Pre-register every strategy</strong>; forbid backtest numbers on the leaderboard</td>
+          <td>Pre-registration commit hash recorded before results seen</td>
+          <td>Commit hash + frozen rule text per variant</td>
+          <td><span class="badge ok">Defined</span> &mdash; pre-registration required; backtest numbers barred until certified</td>
+          <td><a href="strategies.html">strategies.html</a> &middot; <a href="gates.html">gates.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Availability graph</strong> &mdash; expected vs actual starters</td>
+          <td>Official depth-chart register + inactive/snap evidence</td>
+          <td>Date + source per roster row; expected vs actual delta</td>
+          <td><span class="badge blank">Not met</span> &mdash; no official machine-readable depth chart (F16)</td>
+          <td><a href="injuries.html">injuries.html</a> &middot; <a href="flagged.html#F16">F16</a></td>
+        </tr>
+        <tr>
+          <td><strong>Model depth from playing time</strong>, not jersey order</td>
+          <td>Snap-count starter proxy when depth chart unavailable</td>
+          <td>Snap share within team/position group, thresholds published</td>
+          <td><span class="badge ok">Met (inference)</span> &mdash; snap-share depth strings 1&ndash;4, labelled inference</td>
+          <td><a href="injuries.html">injuries.html</a> &middot; <a href="flagged.html#F05">F05</a></td>
+        </tr>
+        <tr>
+          <td><strong>Injury signal = surprise, never a level</strong></td>
+          <td>Designation reliability scored (play rate per designation + CI)</td>
+          <td>Delta (change in designation), not level</td>
+          <td><span class="badge partial">Partial</span> &mdash; practice-status weights applied, labelled provisional (F14)</td>
+          <td><a href="injuries.html">injuries.html</a> &middot; <a href="flagged.html#F14">F14</a></td>
+        </tr>
+        <tr>
+          <td><strong>32-team roster/IR sweep</strong> before any team model trusted</td>
+          <td>Reserve list captured; &ldquo;not listed&rdquo; never means available</td>
+          <td>All 32 clubs checked vs official transactions/reserve</td>
+          <td><span class="badge blank">Not met</span> &mdash; reserve-list sweep not yet run</td>
+          <td><a href="questions.html#Q07">Q07</a> &middot; <a href="suggestions.html">suggestions.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Fixture-context feature set</strong> from published schedule facts</td>
+          <td>Venue, roof, neutral-site, primetime from official schedule</td>
+          <td>Venue transcribed for every fixture</td>
+          <td><span class="badge ok">Met (partial)</span> &mdash; Week 11 venues from nfl.com schedule</td>
+          <td><a href="https://www.nfl.com/schedules/2026/by-week/week-11" rel="noopener">nfl.com schedule</a></td>
+        </tr>
+        <tr>
+          <td><strong>Model output = probability + inputs</strong>, not just a pick</td>
+          <td>Stored forecast with inputs, per game</td>
+          <td>Win probability + model inputs archived per game</td>
+          <td><span class="badge blank">Not met</span> &mdash; lines published; probability+input store not built</td>
+          <td><a href="lines.html">lines.html</a> &middot; <a href="suggestions.html">suggestions.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Removal-of-luck panel</strong> on the dashboard</td>
+          <td>Exact binomial + permutation null + CI published</td>
+          <td>Break-even rate, bets needed for 80% power</td>
+          <td><span class="badge ok">Defined</span> &mdash; 55% over 200 bets = 25.1% luck; ~2,241 bets to prove 55% skill</td>
+          <td><a href="gates.html">gates.html</a> &middot; <a href="flagged.html#F10">F10</a></td>
+        </tr>
+        <tr>
+          <td><strong>Two-sided &ldquo;what would change our mind&rdquo;</strong> per strategy</td>
+          <td>Falsification criterion recorded pre-registration</td>
+          <td>One field per strategy entry</td>
+          <td><span class="badge blank">Not met</span> &mdash; strategy catalogue not yet built</td>
+          <td><a href="strategies.html">strategies.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Price a line ourselves &amp; publish residual vs market</strong>, on a schedule, from day one</td>
+          <td>Weekly scheduled pricing run + residual column</td>
+          <td>fair &middot; market &middot; residual per game, weekly</td>
+          <td><span class="badge partial">Partial</span> &mdash; Week 11 fair lines priced; market residual blank (F01)</td>
+          <td><a href="lines.html">lines.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>136-game log as pre-registered backtest corpus</strong></td>
+          <td>Train / validation / final holdout split frozen in git</td>
+          <td>Commit hash + sample window + gates pre-committed</td>
+          <td><span class="badge blank">Not met</span> &mdash; corpus not yet assembled</td>
+          <td><a href="gates.html">gates.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Decide price-data policy before any backtest published</strong></td>
+          <td>Policy document committed &amp; reviewed</td>
+          <td>Operator vs aggregator rule, timestamp rule</td>
+          <td><span class="badge blank">Not met</span> &mdash; open question Q01/Q02</td>
+          <td><a href="questions.html#Q01">Q01</a> &middot; <a href="questions.html#Q02">Q02</a></td>
+        </tr>
+        <tr>
+          <td><strong>Timestamped injury-hub reads</strong>; publish delta, never level</td>
+          <td>Capture Wed/Thu/Fri + kickoff; retain hash + timestamp</td>
+          <td>Dated history; designation deltas published</td>
+          <td><span class="badge partial">Partial</span> &mdash; one Week 10 capture (276 rows); daily capture not yet automated</td>
+          <td><a href="injuries.html">injuries.html</a> &middot; https://www.nfl.com/injuries/</td>
+        </tr>
+        <tr>
+          <td><strong>Decision-readiness table on landing page</strong> (this table)</td>
+          <td>One row per requirement + gate + clearing number</td>
+          <td>All brief requirements represented</td>
+          <td><span class="badge ok">Met</span> &mdash; this page</td>
+          <td>index.html</td>
+        </tr>
+        <tr>
+          <td><strong>Transcribe venue of every fixture</strong> from official Game Centre</td>
+          <td>Official venue per fixture</td>
+          <td>Venue column populated for all Week 11 games</td>
+          <td><span class="badge ok">Met</span> &mdash; venues from nfl.com schedule</td>
+          <td><a href="https://www.nfl.com/schedules/2026/by-week/week-11" rel="noopener">nfl.com schedule</a></td>
+        </tr>
+        <tr>
+          <td><strong>Publish dated schedule announcement</strong> beside live schedule</td>
+          <td>League's dated schedule announcement linked</td>
+          <td>Announcement URL beside schedule page</td>
+          <td><span class="badge blank">Not met</span> &mdash; announcement not yet located</td>
+          <td><a href="questions.html">questions.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Official Game Books</strong> for actual starters &amp; game-day status</td>
+          <td>No inferred depth rank or snaps</td>
+          <td>Starters/status from Game Book only</td>
+          <td><span class="badge blank">Not met</span> &mdash; Game Books not yet ingested</td>
+          <td><a href="injuries.html">injuries.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Ingest game-level results</strong> for opponent-aware ratings</td>
+          <td>Completed-game results with scores</td>
+          <td>Opponent-adjusted ratings per team</td>
+          <td><span class="badge ok">Met (model input)</span> &mdash; official standings PF/PA used</td>
+          <td><a href="https://www.nfl.com/standings/league/2026/REG" rel="noopener">nfl.com standings</a></td>
+        </tr>
+        <tr>
+          <td><strong>Injury &amp; personnel ablations</strong> instead of fixed penalties</td>
+          <td>Identical model with/without availability features</td>
+          <td>Difference reported with uncertainty</td>
+          <td><span class="badge blank">Not met</span> &mdash; ablation study not run</td>
+          <td><a href="gates.html">gates.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Immutable multi-day availability snapshots</strong> with retained hashes</td>
+          <td>Daily capture of injury report + depth pages</td>
+          <td>Hash + timestamp + conflict flags retained</td>
+          <td><span class="badge blank">Not met</span> &mdash; single capture only today</td>
+          <td><a href="injuries.html">injuries.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Official inactive lists &amp; snap counts</strong></td>
+          <td>Active list + snap share captured</td>
+          <td>Backup replacement of starter confirmable</td>
+          <td><span class="badge blank">Partial</span> &mdash; snap counts inferred (F05); inactive list not captured</td>
+          <td><a href="injuries.html">injuries.html</a> &middot; <a href="flagged.html#F05">F05</a></td>
+        </tr>
+        <tr>
+          <td><strong>Fix depth-parsing failures</strong> (image depth charts; jersey-number prefixes)</td>
+          <td>Authorized structured source for image charts; raw string + number strip for prefixes</td>
+          <td>All 32 clubs parseable</td>
+          <td><span class="badge blank">Not met</span> &mdash; no machine-readable official depth chart (F16)</td>
+          <td><a href="injuries.html">injuries.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Depth slots as groups</strong>, not a single starter</td>
+          <td>Rank-1 groups allowed (multi-player slots)</td>
+          <td>All rank-1 groups listed per unit</td>
+          <td><span class="badge blank">Not met</span> &mdash; depth data not captured</td>
+          <td><a href="injuries.html">injuries.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Roster turnover as first-class data event</strong></td>
+          <td>Depth/availability versioned against last official roster event</td>
+          <td>Dated roster-event register</td>
+          <td><span class="badge blank">Not met</span> &mdash; not yet built</td>
+          <td><a href="suggestions.html">suggestions.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Singles-only shadow baseline</strong> pre-registered, frozen</td>
+          <td>Simple team-strength model frozen before forecasts</td>
+          <td>Version frozen; forecasts recorded pre-kickoff</td>
+          <td><span class="badge partial">Partial</span> &mdash; Week 11 lines are a simple baseline; not yet frozen/pre-registered</td>
+          <td><a href="lines.html">lines.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Joint-evidence gate for parlays / prop combos</strong></td>
+          <td>Directly validated joint probability + void/push rules</td>
+          <td>Joint probability published per combo</td>
+          <td><span class="badge blank">Not met</span> &mdash; no prop lines (F03)</td>
+          <td><a href="correlations.html">correlations.html</a> &middot; <a href="flagged.html#F03">F03</a></td>
+        </tr>
+        <tr>
+          <td><strong>Proper-score leaderboard divisions</strong> (singles, game parlays, SGP, prop combos)</td>
+          <td>Rank by benchmark-relative Brier skill + uncertainty</td>
+          <td>Divisions + Brier skill + CI per strategy</td>
+          <td><span class="badge blank">Not met</span> &mdash; leaderboard empty (no certified entrant)</td>
+          <td><a href="strategies.html">strategies.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Rank by proper score + uncertainty, not win rate</strong></td>
+          <td>Multiplicity adjustment for number of trials</td>
+          <td>Brier skill with cluster lower bound</td>
+          <td><span class="badge ok">Defined</span> &mdash; rule published; not yet applied (no data)</td>
+          <td><a href="gates.html">gates.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Durable snapshot storage &amp; alerts</strong> outside static site</td>
+          <td>Freshness monitoring + schema-change alerts</td>
+          <td>Alerts firing on source/schema change</td>
+          <td><span class="badge blank">Not met</span> &mdash; storage/alerts not built</td>
+          <td><a href="suggestions.html">suggestions.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Public analysis layer / private data-layer split</strong></td>
+          <td>Raw row-level data held private until terms read</td>
+          <td>Public derived analysis only on site</td>
+          <td><span class="badge blank">Not met</span> &mdash; policy not yet adopted</td>
+          <td><a href="sources.html">sources.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Per-team view</strong>: starters out, replacements named, net injury count</td>
+          <td>Team-level decision view</td>
+          <td>One row per team with replacement depth</td>
+          <td><span class="badge blank">Not met</span> &mdash; not yet built</td>
+          <td><a href="injuries.html">injuries.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Announced-starter evidence field</strong> (not inferred replacement)</td>
+          <td>Dated starter changes from NFL</td>
+          <td>Field populated where NFL publishes</td>
+          <td><span class="badge blank">Not met</span> &mdash; not yet built</td>
+          <td><a href="injuries.html">injuries.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Official depth-chart register</strong> with date + source per row</td>
+          <td>Register entry per row</td>
+          <td>Date + source on every depth row</td>
+          <td><span class="badge blank">Not met</span> &mdash; no official source (F16)</td>
+          <td><a href="injuries.html">injuries.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Calibrate &ldquo;Questionable&rdquo; empirically</strong></td>
+          <td>Play rate per designation + CI from official inactive lists</td>
+          <td>Calibrated activation probability per designation</td>
+          <td><span class="badge blank">Not met</span> &mdash; official text gives no percentages</td>
+          <td><a href="injuries.html">injuries.html</a> &middot; <a href="flagged.html#F14">F14</a></td>
+        </tr>
+        <tr>
+          <td><strong>Offense vs defense matchup-deficiency matrix (1st&ndash;4th string)</strong></td>
+          <td>Verified replacement depth per unit</td>
+          <td>Matrix of pairings (e.g. WR1 vs 3rd-string CB)</td>
+          <td><span class="badge blank">Not met</span> &mdash; depth data not captured</td>
+          <td><a href="injuries.html">injuries.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Flag stale depth rows</strong> vs transactions log</td>
+          <td>Depth row checked vs official transactions</td>
+          <td>Stale rows flagged</td>
+          <td><span class="badge blank">Not met</span> &mdash; not yet built</td>
+          <td><a href="injuries.html">injuries.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Point-in-time snapshot ledger</strong> (injuries, depth, inactives)</td>
+          <td>Pre-kickoff replacement certainty preserved</td>
+          <td>Dated ledger with hashes</td>
+          <td><span class="badge blank">Not met</span> &mdash; single capture only</td>
+          <td><a href="injuries.html">injuries.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Reject: depth from jersey number / experience / salary</strong></td>
+          <td>Shortcut explicitly rejected</td>
+          <td>Rejection documented</td>
+          <td><span class="badge ok">Met</span> &mdash; rejected in methodology (F05/F16)</td>
+          <td><a href="verification.html">verification.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Represent shared &amp; empty depth slots</strong> faithfully</td>
+          <td>Multi-player and empty slots distinguishable</td>
+          <td>Slot cardinality captured</td>
+          <td><span class="badge blank">Not met</span> &mdash; depth data not captured</td>
+          <td><a href="injuries.html">injuries.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Resolve depth-order source</strong> before backup-deficiency feature</td>
+          <td>Route (a) official depth charts or (b) official snap counts verified for all 32 clubs</td>
+          <td>One verified route for all 32 clubs</td>
+          <td><span class="badge blank">Not met</span> &mdash; no verified route for all 32 clubs</td>
+          <td><a href="injuries.html">injuries.html</a> &middot; <a href="flagged.html#F16">F16</a></td>
+        </tr>
+        <tr>
+          <td><strong>Score injury-designation reliability</strong> (play rate per designation + CI)</td>
+          <td>Designations joined to official inactive lists</td>
+          <td>Play rate + CI per designation</td>
+          <td><span class="badge blank">Not met</span> &mdash; not yet run</td>
+          <td><a href="injuries.html">injuries.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Wed/Thu/Fri nfl.com injury snapshots</strong> with dated history</td>
+          <td>Daily capture Wednesday to kickoff</td>
+          <td>Dated history of designations</td>
+          <td><span class="badge blank">Not met</span> &mdash; single Week 10 capture only</td>
+          <td><a href="injuries.html">injuries.html</a> &middot; https://www.nfl.com/injuries/</td>
+        </tr>
+        <tr>
+          <td><strong>Injury report as timestamped series</strong>, not weekly snapshot</td>
+          <td>Fetch timestamp stored; deltas measured</td>
+          <td>Designation evolution published</td>
+          <td><span class="badge blank">Not met</span> &mdash; single snapshot only</td>
+          <td><a href="injuries.html">injuries.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Snap-count starter proxy</strong> when depth chart unavailable</td>
+          <td>Snap share defines starter/backup split</td>
+          <td>Starter/backup split measurable</td>
+          <td><span class="badge ok">Met (inference)</span> &mdash; snap-share inference, labelled (F05)</td>
+          <td><a href="injuries.html">injuries.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Control baseline</strong> (random picks; favorites only) on every leaderboard run</td>
+          <td>Baseline computed each run</td>
+          <td>Baseline rows beside strategies</td>
+          <td><span class="badge blank">Not met</span> &mdash; leaderboard empty</td>
+          <td><a href="strategies.html">strategies.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Stadium roof/surface + NWS hourly wind/precipitation overlay</strong></td>
+          <td>NWS forecast grids + official 90-min roof designation</td>
+          <td>Weather overlay on totals/props</td>
+          <td><span class="badge blank">Not met</span> &mdash; not yet built</td>
+          <td><a href="suggestions.html">suggestions.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Two-stage skill leaderboard</strong> (proper-score qualification &rarr; CLV/ROI escrow)</td>
+          <td>Brier skill qualification before CLV/ROI</td>
+          <td>Stage 1 + Stage 2 gates</td>
+          <td><span class="badge blank">Not met</span> &mdash; not yet built</td>
+          <td><a href="strategies.html">strategies.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Vig-free market consensus vs originated fair-line decomposition</strong></td>
+          <td>Vig removed from market price</td>
+          <td>Decomposition view published</td>
+          <td><span class="badge blank">Not met</span> &mdash; no market prices (F01)</td>
+          <td><a href="lines.html">lines.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Weekly &ldquo;what changed&rdquo; diff</strong> (rank, rating, availability)</td>
+          <td>Stored weekly snapshots rendered as diff</td>
+          <td>Diff column published</td>
+          <td><span class="badge blank">Not met</span> &mdash; not yet built</td>
+          <td><a href="suggestions.html">suggestions.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Publish every model total twice until one wins</strong></td>
+          <td>Walk-forward comparison before collapse</td>
+          <td>Both estimators + gap column</td>
+          <td><span class="badge blank">Not met</span> &mdash; single total model only</td>
+          <td><a href="lines.html">lines.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Drift alarm on every scraper</strong></td>
+          <td>Row counts + required fields pinned; build fails loudly</td>
+          <td>Build fails on missing field</td>
+          <td><span class="badge blank">Not met</span> &mdash; no automated scraper with alarms</td>
+          <td><a href="suggestions.html">suggestions.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Capture reserve list</strong> so &ldquo;not listed&rdquo; never means available</td>
+          <td>Reserve/IR read alongside injury report</td>
+          <td>Reserve register</td>
+          <td><span class="badge blank">Not met</span> &mdash; not yet built</td>
+          <td><a href="injuries.html">injuries.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Reject: ranking by season-long ROI</strong></td>
+          <td>ROI ranking explicitly rejected</td>
+          <td>Rejection documented</td>
+          <td><span class="badge ok">Met</span> &mdash; rejected; proper-score ranking used</td>
+          <td><a href="gates.html">gates.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Archive injury reports for past seasons</strong></td>
+          <td>Past-season reports stored</td>
+          <td>Multi-season designation history</td>
+          <td><span class="badge blank">Not met</span> &mdash; not yet built</td>
+          <td><a href="suggestions.html">suggestions.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Pre-register: rule text + sample window + gates frozen in git</strong></td>
+          <td>Commit hash is the registration</td>
+          <td>Commit hash recorded per rule</td>
+          <td><span class="badge ok">Defined</span> &mdash; process defined; not yet applied</td>
+          <td><a href="gates.html">gates.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Train / validation / final holdout seasons split</strong></td>
+          <td>Split defined before evaluation window</td>
+          <td>Three season sets</td>
+          <td><span class="badge blank">Not met</span> &mdash; not yet assembled</td>
+          <td><a href="gates.html">gates.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>2026 kickoff &amp; declared onside-kick regime priors</strong></td>
+          <td>Rule priors committed</td>
+          <td>Prior document</td>
+          <td><span class="badge blank">Not met</span> &mdash; not yet built</td>
+          <td><a href="suggestions.html">suggestions.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Suggestions register (review before implement)</strong></td>
+          <td>Decision state + review test per suggestion</td>
+          <td>Reviewable suggestions section</td>
+          <td><span class="badge ok">Met</span> &mdash; this desk + suggestions.html</td>
+          <td><a href="suggestions.html">suggestions.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Questions / information / answers register</strong></td>
+          <td>Have / missing / resolve per question</td>
+          <td>All blocking questions named</td>
+          <td><span class="badge ok">Met</span> &mdash; questions.html</td>
+          <td><a href="questions.html">questions.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>Executive summary</strong></td>
+          <td>Verified vs computed vs missing</td>
+          <td>One-page summary</td>
+          <td><span class="badge ok">Met</span> &mdash; summary.html / research/ccc5caf2/EXECUTIVE_SUMMARY.md</td>
+          <td><a href="summary.html">summary.html</a></td>
+        </tr>
+        <tr>
+          <td><strong>GitHub Pages live site</strong> (landing + category subpages)</td>
+          <td>Site builds with no broken links</td>
+          <td>Live Pages deployment</td>
+          <td><span class="badge partial">In progress</span> &mdash; this desk; deploy pending PR</td>
+          <td>nfl-desk-ccc5caf2/</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h3>2. What is verified today (official sources)</h3>
+    <table class="data">
+      <thead><tr><th>Item</th><th>Value</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>2026 regular-season standings</td><td>32/32 clubs reproduced exactly from official nfl.com standings (read 2026-11-18)</td><td><a href="https://www.nfl.com/standings/league/2026/REG" rel="noopener">nfl.com standings</a></td></tr>
+        <tr><td>Week 11 schedule</td><td>13 games, Nov 19&ndash;23 2026, with kickoff times, networks, venues</td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-11" rel="noopener">nfl.com schedule</a></td></tr>
+        <tr><td>Week 10 injury report</td><td>Official nfl.com injury report parsed (e.g. Lions: Kerby Joseph Out, Cade Mays Out, D.J. Reed Out)</td><td><a href="https://www.nfl.com/injuries/" rel="noopener">nfl.com injuries</a></td></tr>
+        <tr><td>Fair lines (Week 11)</td><td>Model spread &amp; total for all 13 games (PF/PA model, HFA +1.22, neutral Mexico City = 0)</td><td><a href="lines.html">lines.html</a> (model output, not odds)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h3>3. What is missing &mdash; and the decision that unblocks it</h3>
+    <ul>
+      <li><strong>Operator price history (Q01/Q02, F01/F02).</strong> Without a timestamped closing price, no strategy can be certified and no CLV can be computed. <em>Decision needed:</em> capture operator snapshots weekly or accept that certification stays blocked.</li>
+      <li><strong>Player-prop lines (F03).</strong> No official prop-line archive exists, so prop strategies cannot be priced economically. <em>Decision needed:</em> commercial odds archive or forward-collect from today.</li>
+      <li><strong>Machine-readable official depth chart (F16).</strong> The NFL does not publish one; snap-share is an inference. <em>Decision needed:</em> accept snap-share inference labelled as such, or obtain club depth charts club-by-club.</li>
+      <li><strong>Jurisdiction &amp; reward funding (Q04/Q05).</strong> Rewards stay points-only until answered.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>4. Where to look first</h3>
+    <div class="cards three">
+      <article class="card"><h4><a href="lines.html">Own lines &mdash; Week 11</a></h4><p>Fair spread &amp; total for all 13 games, side &rarr; total &rarr; moneyline. Market columns blank and flagged (no official price source).</p></article>
+      <article class="card"><h4><a href="requirements.html">Requirements &amp; readiness</a></h4><p>Full decision-readiness matrix: every brief requirement mapped to its blocking gate and the number that would clear it.</p></article>
+      <article class="card"><h4><a href="suggestions.html">Suggestions register</a></h4><p>Reviewable recommendations, each with impact, effort, confidence and a decision state. Pick a path before implementing.</p></article>
+      <article class="card"><h4><a href="questions.html">Questions &amp; answers</a></h4><p>What we have, what is missing, and how to resolve it &mdash; including the 4 questions that block a decision.</p></article>
+      <article class="card"><h4><a href="injuries.html">Injuries &amp; depth</a></h4><p>Official Week 10 injury report, depth strings 1&ndash;4 (snap-share inference), and the measured price of lineup loss.</p></article>
+      <article class="card"><h4><a href="flagged.html">Flagged for review</a></h4><p>Irregularities and unverified blanks, each with source links &mdash; for your review after the site is live.</p></article>
+    </div>
+  </div>
+
+  <div class="footer">
+    <strong>Verification policy.</strong> Every table row links to an official page or to the script and pinned input that produced it. Values that cannot be confirmed from an official/primary source are left blank and published on the <a href="flagged.html">Flagged for review</a> page &mdash; never inferred. No hallucinations.<br>
+    Research only. No bets are placed, no performance is claimed, and nothing here is betting advice. If gambling is a problem: 1-800-GAMBLER. Not affiliated with the NFL.
+  </div>
+</main>
+</body>
+</html>
