@@ -1,5 +1,5 @@
 directory,scope,tracked_files,entry_point,live_url,verifier,verifier_result,workflow_files,source_url
-.github,CI configuration,34,,,,NO VERIFIER,,https://github.com/sassnarep3-star/Own5/tree/main/.github
+.github,CI configuration,35,,,,NO VERIFIER,,https://github.com/sassnarep3-star/Own5/tree/main/.github
 analysis,"Shared site, data or tools",5,,,,NO VERIFIER,,https://github.com/sassnarep3-star/Own5/tree/main/analysis
 artifacts,"Shared site, data or tools",1,,,,NO VERIFIER,,https://github.com/sassnarep3-star/Own5/tree/main/artifacts
 assets,"Shared site, data or tools",5,,,,NO VERIFIER,,https://github.com/sassnarep3-star/Own5/tree/main/assets
@@ -23,7 +23,7 @@ nba-validation,NBA (not NFL),15,nba-validation/index.html,https://sassnarep3-sta
 nfl-560ed315,NFL,17,nfl-560ed315/index.html,https://sassnarep3-star.github.io/Own5/nfl-560ed315/index.html,nfl-560ed315/verify.py,PASS,nfl-560ed315.yml,https://github.com/sassnarep3-star/Own5/tree/main/nfl-560ed315
 nfl-98a211b8,NFL,15,nfl-98a211b8/index.html,https://sassnarep3-star.github.io/Own5/nfl-98a211b8/index.html,nfl-98a211b8/verify.py,PASS,nfl-98a211b8.yml,https://github.com/sassnarep3-star/Own5/tree/main/nfl-98a211b8
 nfl-audit-a699fc53,NFL,12,nfl-audit-a699fc53/index.html,https://sassnarep3-star.github.io/Own5/nfl-audit-a699fc53/index.html,,NO VERIFIER,,https://github.com/sassnarep3-star/Own5/tree/main/nfl-audit-a699fc53
-nfl-b34253a1,NFL,45,nfl-b34253a1/index.html,https://sassnarep3-star.github.io/Own5/nfl-b34253a1/index.html,nfl-b34253a1/verify.py,PASS,nfl-b34253a1.yml,https://github.com/sassnarep3-star/Own5/tree/main/nfl-b34253a1
+nfl-b34253a1,NFL,45,nfl-b34253a1/index.html,https://sassnarep3-star.github.io/Own5/nfl-b34253a1/index.html,nfl-b34253a1/verify.py,FAIL,nfl-b34253a1.yml,https://github.com/sassnarep3-star/Own5/tree/main/nfl-b34253a1
 nfl-c98c6270,NFL,75,nfl-c98c6270/index.html,https://sassnarep3-star.github.io/Own5/nfl-c98c6270/index.html,nfl-c98c6270/verify.py,PASS,nfl-desk-c98c6270.yml,https://github.com/sassnarep3-star/Own5/tree/main/nfl-c98c6270
 nfl-capture-a991e3fb,NFL,7,nfl-capture-a991e3fb/index.html,https://sassnarep3-star.github.io/Own5/nfl-capture-a991e3fb/index.html,,NO VERIFIER,,https://github.com/sassnarep3-star/Own5/tree/main/nfl-capture-a991e3fb
 nfl-command-desk,NFL,40,nfl-command-desk/index.html,https://sassnarep3-star.github.io/Own5/nfl-command-desk/index.html,nfl-command-desk/verify.py,PASS,nfl-command-desk.yml,https://github.com/sassnarep3-star/Own5/tree/main/nfl-command-desk
@@ -51,6 +51,7 @@ nfl-price-results-853c0074,NFL,28,nfl-price-results-853c0074/index.html,https://
 nfl-readiness-cba42531,NFL,26,nfl-readiness-cba42531/index.html,https://sassnarep3-star.github.io/Own5/nfl-readiness-cba42531/index.html,nfl-readiness-cba42531/verify.py,PASS,nfl-readiness-cba42531.yml,https://github.com/sassnarep3-star/Own5/tree/main/nfl-readiness-cba42531
 nfl-review-3bba0722,NFL,16,nfl-review-3bba0722/index.html,https://sassnarep3-star.github.io/Own5/nfl-review-3bba0722/index.html,nfl-review-3bba0722/verify.py,PASS,nfl-integration-a620f5a5.yml;nfl-review-3bba0722.yml,https://github.com/sassnarep3-star/Own5/tree/main/nfl-review-3bba0722
 nfl-strategy-lab,NFL,13,nfl-strategy-lab/index.html,https://sassnarep3-star.github.io/Own5/nfl-strategy-lab/index.html,,NO VERIFIER,,https://github.com/sassnarep3-star/Own5/tree/main/nfl-strategy-lab
+nfl-venue-390e13fd,NFL,31,nfl-venue-390e13fd/index.html,https://sassnarep3-star.github.io/Own5/nfl-venue-390e13fd/index.html,nfl-venue-390e13fd/verify.py,PASS,nfl-venue-390e13fd.yml,https://github.com/sassnarep3-star/Own5/tree/main/nfl-venue-390e13fd
 nfl_model,NFL,8,,,,NO VERIFIER,,https://github.com/sassnarep3-star/Own5/tree/main/nfl_model
 own5-desk,NFL,46,own5-desk/index.html,https://sassnarep3-star.github.io/Own5/own5-desk/index.html,,NO VERIFIER,,https://github.com/sassnarep3-star/Own5/tree/main/own5-desk
 own5-hub,"Shared site, data or tools",34,own5-hub/index.html,https://sassnarep3-star.github.io/Own5/own5-hub/index.html,own5-hub/verify.py,PASS,own5-hub-capture.yml;own5-hub.yml,https://github.com/sassnarep3-star/Own5/tree/main/own5-hub
@@ -58,7 +59,7 @@ pages,"Shared site, data or tools",7,pages/correlations.html,https://sassnarep3-
 rental-increase-sf,San Francisco rent (not NFL),7,rental-increase-sf/index.html,https://sassnarep3-star.github.io/Own5/rental-increase-sf/index.html,,NO VERIFIER,,https://github.com/sassnarep3-star/Own5/tree/main/rental-increase-sf
 rental-sf,San Francisco rent (not NFL),15,rental-sf/index.html,https://sassnarep3-star.github.io/Own5/rental-sf/index.html,rental-sf/verify.py,PASS,,https://github.com/sassnarep3-star/Own5/tree/main/rental-sf
 repo-review,"Shared site, data or tools",15,repo-review/index.html,https://sassnarep3-star.github.io/Own5/repo-review/index.html,repo-review/verify.py,RUN IN CI,,https://github.com/sassnarep3-star/Own5/tree/main/repo-review
-research,"Shared site, data or tools",154,,,,NO VERIFIER,,https://github.com/sassnarep3-star/Own5/tree/main/research
+research,"Shared site, data or tools",155,,,,NO VERIFIER,,https://github.com/sassnarep3-star/Own5/tree/main/research
 scripts,"Shared site, data or tools",15,,,,NO VERIFIER,,https://github.com/sassnarep3-star/Own5/tree/main/scripts
 sf-rent,San Francisco rent (not NFL),9,sf-rent/index.html,https://sassnarep3-star.github.io/Own5/sf-rent/index.html,,NO VERIFIER,,https://github.com/sassnarep3-star/Own5/tree/main/sf-rent
 sf-rent-94122,San Francisco rent (not NFL),16,sf-rent-94122/index.html,https://sassnarep3-star.github.io/Own5/sf-rent-94122/index.html,sf-rent-94122/verify.py,PASS,,https://github.com/sassnarep3-star/Own5/tree/main/sf-rent-94122
