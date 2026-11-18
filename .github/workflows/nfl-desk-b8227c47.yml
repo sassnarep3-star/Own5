@@ -1,0 +1,39 @@
+name: NFL desk b8227c47 - verify (no network)
+
+# This workflow never contacts nfl.com. Scheduled or automated capture is disabled because NFL.com
+# Terms s.1.3 prohibit systematic retrieval to compile a database without written consent (decision D-01).
+on:
+  pull_request:
+    paths: ['nfl-desk-b8227c47/**', '.github/workflows/nfl-desk-b8227c47.yml']
+  push:
+    branches: [arena/b8227c47-own5]
+    paths: ['nfl-desk-b8227c47/**', '.github/workflows/nfl-desk-b8227c47.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nfl-desk-b8227c47-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Unit tests (synthetic fixtures; no network)
+        working-directory: nfl-desk-b8227c47
+        run: python3 -m unittest discover -s tests -v
+      - name: Verify every row is linked, links resolve, counts reconcile, rebuild is byte-identical
+        working-directory: nfl-desk-b8227c47
+        run: python3 verify.py
+      - name: Committed pages match a clean rebuild
+        run: |
+          cd nfl-desk-b8227c47
+          python3 build.py
+          git diff --exit-code -- '*.html'
