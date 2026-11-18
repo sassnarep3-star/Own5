@@ -11,6 +11,7 @@ Checks:
  V7  every relative link in every page resolves to a file in this folder
  V8  no http:// links anywhere in the pages
  V9  rebuilding into a temp folder reproduces the committed pages byte for byte
+ V10 visible text names only pages this desk publishes
 """
 import csv
 import io
@@ -162,6 +163,17 @@ def main():
         check("V9 committed pages reproduce byte for byte from the CSVs", not diffs, ",".join(diffs))
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
+
+    # V10 every page-name token in visible text refers to a file this desk publishes
+    for_names = [n for n, _ in build.PAGES]
+    dangling = []
+    for name in for_names:
+        with open(os.path.join(HERE, name), encoding="utf-8") as fh:
+            text = re.sub(r"<[^>]+>", " ", re.sub(r"<style.*?</style>", "", fh.read(), flags=re.S))
+        for tok in set(re.findall(r"[A-Za-z0-9_-]+\.html", text)):
+            if tok not in for_names:
+                dangling.append(f"{name}->{tok}")
+    check("V10 no visible text names a page this desk does not publish", not dangling, ",".join(sorted(dangling)[:5]))
 
     print()
     if failures:
