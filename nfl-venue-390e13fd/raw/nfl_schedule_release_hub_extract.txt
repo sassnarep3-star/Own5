@@ -1,0 +1,24 @@
+# Raw extract — official NFL schedule-release hub: "2026 NFL Schedule Release | NFL.com"
+# URL: https://www.nfl.com/nfl-schedule-release/
+# Page dated (as published): Thursday, May 14, 2026
+# Retrieved (UTC): 2026-11-18T03:43:57Z
+# Method: fetch_page tool, chunk 0; header and Week 11 international block copied verbatim.
+# Source class: OFFICIAL (NFL.com)
+
+# 2026 NFL Schedule Release | NFL.com
+
+## 2026 Schedule Release
+
+## Get Ready for the 2026 Season
+
+## 2026 International Games
+
+##### Nine regular season games will be played internationally during the 2026 season. The 2026 NFL International Games slate will include games in Rio de Janeiro, Brazil; Mexico City, Mexico; London, England; Munich, Germany; Madrid, Spain, Paris, France; & Melbourne, Australia.
+
+WEEK 11SUN11/22
+Minnesota Vikings
+@
+[49ers logo]
+NBC | NFL+
+[Learn More](https://www.nfl.com/international/games)
+Estadio Banorte
