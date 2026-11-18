@@ -65,14 +65,30 @@ jobs:
         run: python3 -m pip install --quiet pypdf
       - name: Capture official availability evidence
         env:
-          MODE: ${{ inputs.mode || 'injuries' }}
-          SEASON: ${{ inputs.season || '2026' }}
-          WEEKS: ${{ inputs.weeks || '10' }}
+          MODE: ${{ inputs.mode }}
+          SEASON: ${{ inputs.season }}
+          WEEKS: ${{ inputs.weeks }}
           CAPTURE_DATE: ${{ inputs.capture_date }}
         run: |
-          python3 scripts/capture_availability.py \
-            --mode "$MODE" --season "$SEASON" --weeks "$WEEKS" \
-            ${CAPTURE_DATE:+--capture-date "$CAPTURE_DATE"}
+          # Parameters come from the dispatch inputs when the run was
+          # dispatched, otherwise from the committed request file.  The request
+          # file is what makes the capture reproducible from any branch.
+          ARGS=$(python3 - <<'PY'
+          import json, os
+          req = "data/nfl-evidence-7cac9edd/capture_request.json"
+          d = json.load(open(req)) if os.path.exists(req) else {}
+          import os as _o
+          mode = _o.environ.get("MODE") or d.get("mode", "injuries")
+          season = _o.environ.get("SEASON") or d.get("season", "2026")
+          weeks = _o.environ.get("WEEKS") or d.get("weeks", "10")
+          cmd = "--mode %s --season %s --weeks %s" % (mode, season, weeks)
+          if _o.environ.get("CAPTURE_DATE"):
+              cmd += ' --capture-date "%s"' % _o.environ["CAPTURE_DATE"]
+          print(cmd)
+          PY
+          )
+          echo "capture args: $ARGS"
+          python3 scripts/capture_availability.py $ARGS
       - name: Commit the dated capture (append-only ledger)
         run: |
           git config user.name "nfl-evidence-bot"
