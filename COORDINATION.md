@@ -3548,16 +3548,24 @@ Session ID `35fc3437`, branch `arena/35fc3437-own5` (base `cb2d3b84` = current `
 
 | ID | Task | Status | Owner | Files touched | Notes |
 |----|------|--------|-------|---------------|-------|
-| O35-01 | Claim scope in COORDINATION.md + push claim | in progress | 35fc3437 | COORDINATION.md | This block. Claim pushed before any build work. |
-| O35-02 | Data layer: verified standings, schedule, results, injury CSVs (every row source_url or blank+flag) | in progress | 35fc3437 | nfl-desk-35fc3437/data/*.csv | Built from the official nfl.com reads listed above. |
-| O35-03 | Originated lines + correlations + gates + leaderboard + registers CSVs | in progress | 35fc3437 | nfl-desk-35fc3437/data/*.csv | Model lines computed in-repo from official standings; market columns blank+flagged. |
-| O35-04 | Build script: render category subpages + landing page from CSVs | in progress | 35fc3437 | nfl-desk-35fc3437/build_desk.py | Deterministic; no JS required for content. |
-| O35-05 | Verify script: every row source-linked or explicit blank+flag; no broken links | in progress | 35fc3437 | nfl-desk-35fc3437/verify_desk.py | Fail-closed; gates the build. |
-| O35-06 | Unit tests | in progress | 35fc3437 | nfl-desk-35fc3437/tests/test_desk.py | Stdlib tests. |
-| O35-07 | Executive summary + Flagged for Review + sources | in progress | 35fc3437 | research/nfl-35fc3437/**, flagged page | Restates only computed/officially-sourced values. |
-| O35-08 | Scoped CI workflow | in progress | 35fc3437 | .github/workflows/nfl-desk-35fc3437.yml | Rebuild + verify + tests on PR/push. |
-| O35-09 | Commit, push, open PR to main, autonomous merge, live Pages check, record | in progress | 35fc3437 | COORDINATION.md, README.md (one row) | Merge only after verify PASS + live URL check. |
+| O35-01 | Claim scope in COORDINATION.md + push claim | done | 35fc3437 | COORDINATION.md | Claim pushed before any build work. |
+| O35-02 | Data layer: verified standings, schedule, results, injury CSVs (every row source_url or blank+flag) | done | 35fc3437 | nfl-desk-35fc3437/data/*.csv | Built from the official nfl.com reads listed above. |
+| O35-03 | Originated lines + correlations + gates + leaderboard + registers CSVs | done | 35fc3437 | nfl-desk-35fc3437/data/*.csv | Model lines computed in-repo from official standings; market columns blank+flagged. |
+| O35-04 | Build script: render category subpages + landing page from CSVs | done | 35fc3437 | nfl-desk-35fc3437/build_desk.py | Deterministic; no JS required for content. |
+| O35-05 | Verify script: every row source-linked or explicit blank+flag; no broken links | done | 35fc3437 | nfl-desk-35fc3437/verify_desk.py | Fail-closed V0–V10; gates the build; PASSED. |
+| O35-06 | Unit tests | done | 35fc3437 | nfl-desk-35fc3437/tests/test_desk.py | Stdlib tests; 9/9 PASSED. |
+| O35-07 | Executive summary + Flagged for Review + sources | done | 35fc3437 | research/nfl-35fc3437/**, flagged page | Restates only computed/officially-sourced values. |
+| O35-08 | Scoped CI workflow | done | 35fc3437 | .github/workflows/nfl-desk-35fc3437.yml | Rebuild + verify + tests on PR/push; PASSED. |
+| O35-09 | Commit, push, open PR to main, autonomous merge, live Pages check, record | done | 35fc3437 | COORDINATION.md, README.md (one row) | PR #127 merged (merge commit c40e3593); Pages build+deploy success at https://sassnarep3-star.github.io/Own5/nfl-desk-35fc3437/ |
 
 **Cross-session requests**
 
 - None. All work is in the additive `nfl-desk-35fc3437/` namespace; no other session's files are touched.
+
+### Session 35fc3437 — PR / merge / Pages record
+
+- **PR:** https://github.com/sassnarep3-star/Own5/pull/127 — "35fc3437: NFL line-origination desk (verified build, gates, registers)" (`arena/35fc3437-own5` → `main`)
+- **Merge:** `gh pr merge 127 --merge` succeeded; state MERGED; merge commit `c40e35937257137a8ac4921a24fe6d134ef49696`
+- **Scoped CI:** "NFL desk 35fc3437 — verify" SUCCESS on the PR (deterministic build → fail-closed verify V0–V10 → 9 unit tests → committed-artefact diff cleanliness)
+- **GitHub Pages:** API status `built`, error `null`, commit `c40e3593…`; deployment state `success`; environment_url https://sassnarep3-star.github.io/Own5/. Live desk: https://sassnarep3-star.github.io/Own5/nfl-desk-35fc3437/
+- **Bottom line:** no edge, no ROI, no certified strategy, no bet placed. Market columns blank+flagged (nfl.com publishes no prices); the price-data policy decision (G12) is user-owned and unblocks everything downstream. O35-01…O35-09 done.
