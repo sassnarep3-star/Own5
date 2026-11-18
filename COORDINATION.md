@@ -2941,3 +2941,19 @@ Statuses above: K1–K4 **done**; K5 (PR, merge, Pages check) recorded below aft
 * **Two CI workflows were already failing before this session** (`decision-desk.yml`, `nfl-b34253a1.yml`), per the notes above. Not touched.
 
 **Not done (honest scope).** The brief's open items remain open: the Week 11 availability capture (blocked until the league publishes), the price-data policy decision (CU-F10, user-owned), roster-depth verification for all 32 clubs, the pre-registered backtest corpus, and the demotion gate. Each is already logged by a prior desk; this session added no new analysis and makes no new performance claim.
+
+### 98a211b8 — PR and deployment record (2026-11-18)
+
+| PR | Purpose | Result |
+|----|---------|--------|
+| https://github.com/sassnarep3-star/Own5/pull/103 | Review desk, capture log, Flagged-for-Review register, CI | **Merged** to `main` at 2026-11-18T03:20:31Z, merge commit `b7a0e51` (`gh pr merge 103 --merge`, no approval wait, no `--auto`). Own check `verify` **success** (3 runs). |
+| follow-up PR (see GitHub) | Removes one stale page reference found on the live Flagged page (R17 pointed to a deleted `desks.html`); adds check V10 so a visible page name that the desk does not publish fails the build | Opened from `arena/98a211b8-own5`; merged by explicit `gh pr merge <n> --merge` in the same session. |
+
+**Pages.** `gh api repos/sassnarep3-star/Own5/pages/builds/latest` → `built`, commit `b7a0e51`, 2026-11-18T03:20:57Z.
+**Live check (fetch tool, 2026-11-18):** `/nfl-98a211b8/flagged.html`, `/nfl-98a211b8/availability.html` and the desk directory
+`/nfl-desk-5c5f4aaf/index.html` (5c5f4aaf) all served.
+
+**Checks not ours, not changed (pre-existing, logged).** On PR #103 two checks were red and are not in this session's scope:
+`Verify NFL B34 Week 10 research desk` (`nfl-b34253a1.yml`, "Check deterministic generated outputs") and
+`NFL Decision Desk — fetch & verify` (`decision-desk.yml`, "Confirm the committed site matches a clean rebuild").
+Both are the failures already recorded earlier on this board (B34 fails on every push; decision-desk fails on PRs). Their owners should fix them; this session did not edit their files.
