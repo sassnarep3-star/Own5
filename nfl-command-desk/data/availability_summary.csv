@@ -1,0 +1,5 @@
+club,rows_read,game_status_out,game_status_questionable,game_status_blank,starters_out,replacements_named,source_url,read_utc
+DET,9,3,2,4,,,https://www.nfl.com/injuries/league/2026/reg10,2026-11-18T03:45:00Z
+NE,15,3,9,3,,,https://www.nfl.com/injuries/league/2026/reg10,2026-11-18T03:45:00Z
+NYG,11,0,1,10,,,https://www.nfl.com/injuries/league/2026/reg10,2026-11-18T03:45:00Z
+WAS,9,2,0,7,,,https://www.nfl.com/injuries/league/2026/reg10,2026-11-18T03:45:00Z

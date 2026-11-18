@@ -1,0 +1,74 @@
+requirement_id,requirement,category,gate,clearing_number,observed,status,evidence,verified_utc
+R01,Price-snapshot store recording opening and closing numbers for every market we originate,Price data,G08,>=1 opening quote and 1 closing quote with UTC timestamp per originated market,,BLOCKED,FLAG-P1,2026-11-18
+R02,Verified results feed so backtests and ROI can be computed at all,Results,G01,Every game row reconciles to official standings,"150/150 games, 32/32 clubs match W-L-T, PF and PA",MET,results_reconciliation,2026-11-18
+R03,"Originate the side first, then the total, then the moneyline",Origination,G03,Published order enforced in the data and the page,side -> total -> moneyline (columns ordered accordingly),MET,origination_wk11,2026-11-18
+R04,"Publish fair line, market line and difference as separate columns",Origination,G08,Three columns populated for the same market,fair line populated; market line and residual BLANK (no official feed),PARTIAL,FLAG-P1,2026-11-18
+R05,Separate signal from staking in the leaderboard,Leaderboard,G10,Signal and staking are separate columns,separate columns present; staking blank by design,MET,leaderboard,2026-11-18
+R06,"Track the depth of the replacement, not just the fact of a replacement",Availability,G11,A published depth position for the named replacement,,BLOCKED,FLAG-D1,2026-11-18
+R07,Compute correlations only from officially sourced numbers and publish n with each value,Correlations,G01,Every correlation row carries n and an official source,no joint outcome table exists in the repository; 0 correlation values published,BLOCKED,FLAG-C1,2026-11-18
+R08,Demotion gate that sends a live strategy back to paper,Governance,G07,A written demotion rule with a numeric trigger,rule text below; no live strategy exists to demote,MET,gates,2026-11-18
+R09,Pre-register every strategy; forbid backtest numbers from appearing on the leaderboard,Governance,G03,Registration commit hash recorded before results,registration committed; leaderboard carries walk-forward numbers only,MET,preregistration,2026-11-18
+R10,"Availability graph as a first-class dataset (who was expected to start, who actually did)",Availability,G11,Expected-starter and actual-starter fields with official evidence,,BLOCKED,FLAG-A2,2026-11-18
+R11,Do not model depth from jersey order; model it from playing time,Availability,G11,Snap-count (playing time) input per player,,BLOCKED,FLAG-A2,2026-11-18
+R12,"Injury signal must be a surprise, never a level",Availability,G11,Two timestamps per player so a change can be computed,1 capture only; 0 deltas computable for 28 of 32 clubs,PARTIAL,availability_diff,2026-11-18
+R13,32-team roster/IR sweep before any team-level model is trusted,Availability,G01,32/32 clubs with a roster and reserve-list read on one date,,BLOCKED,FLAG-A3,2026-11-18
+R14,Fixture-context feature set built only from published schedule facts,Features,G01,Every feature traceable to a published schedule announcement,"13/13 Week 11 fixtures with date, time, network; announcement dated 2026-05-14",MET,fixtures,2026-11-18
+R15,"Store every model output as a probability plus its inputs, not just a pick",Model,G02,One row per forecast with p and its inputs,85 out-of-sample forecasts with both club ratings and the fair line,MET,forecast_ledger,2026-11-18
+R16,Compute and publish the removal-of-luck panel on the dashboard,Leaderboard,G05,Panel showing the luck arithmetic at the observed n,"published for n=57, 86, 150",MET,luck_panel,2026-11-18
+R17,Two-sided 'what would change our mind' field on every strategy entry,Governance,G03,Non-empty text on every strategy row,present on all 5 registered strategies,MET,preregistration,2026-11-18
+R18,"Price a line ourselves and publish the residual against the market, on a schedule, from day one",Origination,G08,A published residual per market per week,,BLOCKED,FLAG-P1,2026-11-18
+R19,Turn the 136-game log into the pre-registered backtest corpus,Corpus,G03,"Corpus row count, source per row, and a registration commit",136 rows adopted + 14 Week 10 rows added; 150 rows,MET,results_corpus,2026-11-18
+R20,Decide the price-data policy before any backtest is published,Policy,G08,A written policy naming the permitted price source,policy written: only operator-published closing lines with a UTC stamp are admissible,MET,methodology,2026-11-18
+R21,"Store every injury-hub read with its clock time and publish the delta, never the level",Availability,G11,Clock time on every read; a delta column,44 rows re-read with a clock time; delta published for 4 clubs,PARTIAL,availability_diff,2026-11-18
+R22,"Decision-readiness table on the landing page: one row per requirement, the gate that blocks it and the number that would clear it",Decision layer,n/a,One row per requirement on the landing page,this desk's landing page: one row per requirement,MET,requirements,2026-11-18
+R23,Transcribe the venue of every fixture from the official game centre and publish it,Fixtures,G01,13/13 venues with an official source per row,13/13 venues; method = hotel link destination on the official week page (only Minnesota is named in prose),PARTIAL,fixtures,2026-11-18
+R24,Publish the league's dated schedule announcement beside the live schedule page,Fixtures,G01,Announcement with a publication date linked beside the schedule,2026-05-14 announcement linked beside the Week 11 schedule page,MET,fixtures,2026-11-18
+R25,Use official NFL Game Books for actual starters and game-day status; do not infer depth rank or snaps,Availability,G01,A Game Book read per game with starters extracted,0 Game Books parsed; the PDF link is published for the spot-checked game,NOT-STARTED,FLAG-A3,2026-11-18
+R26,Ingest game-level results so the ratings are opponent-aware,Model,G03,Ratings computed from game rows whose margins reconcile,ratings from 64 games; margins reconcile 150/150,MET,ratings,2026-11-18
+R27,Injury and personnel ablations instead of fixed penalties,Model,G12,Paired ablation with uncertainty,,BLOCKED,FLAG-A3,2026-11-18
+R28,Automate immutable multi-day availability snapshots with retained hashes,Availability,G11,">=1 daily capture with a hash, retained",1 capture in the repository; 0 hashed captures for 2026,BLOCKED,FLAG-A4,2026-11-18
+R29,Capture official inactive lists and snap counts,Availability,G11,Inactive list per game and snap share per player,,BLOCKED,FLAG-A3,2026-11-18
+R30,"Fix the two depth-parsing failures (Texans image, Packers jersey prefixes)",Availability,G11,Both clubs parsed with the raw string retained,,BLOCKED,FLAG-D1,2026-11-18
+R31,"Model depth slots as groups, not a single starter",Availability,G11,Slot group schema with a shared-slot field,,BLOCKED,FLAG-D1,2026-11-18
+R32,Treat roster turnover as a first-class data event,Availability,G11,Roster events versioned; depth tied to the last event,,BLOCKED,FLAG-D1,2026-11-18
+R33,Start with a singles-only shadow baseline,Leaderboard,G03,"One pre-registered baseline, frozen, forecast before kickoff",REG-M1 registered and frozen; forecasts on 85 out-of-sample games,MET,preregistration,2026-11-18
+R34,Keep parlays and prop combos behind a joint-evidence gate,Parlays,G09,A validated joint probability per combo,0 combos admitted; gate published,MET,gates,2026-11-18
+R35,"Proper-score leaderboard divisions (singles, game parlays, SGP, prop combos)",Leaderboard,G05,"Four divisions, ranked by benchmark-relative skill","4 divisions defined; singles has one row, the other three are empty",PARTIAL,leaderboard,2026-11-18
+R36,"Rank with proper scores and uncertainty, not win rate",Leaderboard,G06,Brier skill with a lower bound and multiplicity adjustment,published with Holm p; win rate shown only as a diagnostic,MET,leaderboard,2026-11-18
+R37,Durable snapshot storage and alerts,Availability,G11,Off-site immutable store plus a freshness alert,,BLOCKED,FLAG-A4,2026-11-18
+R38,Split the site into a public analysis layer and a private data layer,Publication,G01,No row-level private data in the public tree,this desk publishes only derived analysis and official links,MET,methodology,2026-11-18
+R39,"Per-team view: starters out, replacements named, net injury count",Availability,G11,Per-club counts with a named replacement per out player,counts derivable for 4 clubs; replacements blank (no official name),PARTIAL,availability,2026-11-18
+R40,An announced-starter evidence field (not an inferred replacement),Availability,G01,A dated official statement per starter change,,BLOCKED,FLAG-A5,2026-11-18
+R41,Official depth-chart register with date and source per row,Availability,G11,One row per club/unit/slot with a date and a source,,BLOCKED,FLAG-D1,2026-11-18
+R42,Calibrate what 'Questionable' means empirically,Availability,G11,Play rate per designation with a confidence interval,,BLOCKED,FLAG-A6,2026-11-18
+R43,Interactive Offense vs Defense matchup-deficiency matrix (1st-4th string),Availability,G11,A depth position per player on both sides,,BLOCKED,FLAG-D1,2026-11-18
+R44,Flag stale depth rows against the official transactions log,Availability,G11,A transactions-log timestamp per depth row,,BLOCKED,FLAG-D1,2026-11-18
+R45,"Point-in-time snapshot ledger for injuries, depth charts and inactives",Availability,G11,One immutable capture per day per source,,BLOCKED,FLAG-A4,2026-11-18
+R46,Populate the three missing Lions game-status designations,Availability,G01,Three cells filled from the official page,"Kerby Joseph, Cade Mays, D.J. Reed all read as OUT with an injury and a DNP practice status",MET,availability_diff,2026-11-18
+R47,Re-capture and republish the Week 10 injury tables,Availability,G01,A fresh capture whose row count is stated,44 rows re-read for the 4 clubs fully visible in chunk 0 of 8; full-page count not read,PARTIAL,availability,2026-11-18
+R48,"Reject deriving depth order from jersey number, experience or salary",Governance,n/a,The shortcut is recorded as rejected,recorded as REJECTED with the reason,REJECTED,questions,2026-11-18
+R49,Represent shared and empty depth slots faithfully,Availability,G11,A shared-slot and empty-slot representation,,BLOCKED,FLAG-D1,2026-11-18
+R50,Resolve the depth-order source before building the backup-deficiency feature,Availability,G11,One verified route for 32/32 clubs,0/32 clubs verified for a snap-count route; no official snap-count source in the repository,BLOCKED,FLAG-D1,2026-11-18
+R51,Score injury-designation reliability before using it as a feature,Availability,G11,Play rate per designation with CI over >=3 seasons,,BLOCKED,FLAG-A6,2026-11-18
+R52,"Snapshot the nfl.com injury report every Wed, Thu and Fri with a dated history",Availability,G11,3 captures per week with dates,1 capture for Week 10 (2026-11-12),BLOCKED,FLAG-A4,2026-11-18
+R53,"Treat the injury report as a timestamped series, not a weekly snapshot",Availability,G11,>=3 timestamps inside one week,1 timestamp for Week 10,BLOCKED,FLAG-A4,2026-11-18
+R54,Use snap counts as the starter proxy when the depth chart is unavailable,Availability,G11,Snap share per player per game,,BLOCKED,FLAG-A2,2026-11-18
+R55,Control baseline (random picks; favourites only) on every leaderboard run,Leaderboard,G10,Every run shows both controls,flat 0.5 control and always-home control on every run,MET,leaderboard,2026-11-18
+R56,Stadium roof/surface and NWS hourly wind/precipitation overlay,Features,G01,Roof designation per stadium plus an NWS forecast per kickoff,0 NWS reads; 0 roof designations read; the Week 10 page printed 'Weather Clear' for one game only,BLOCKED,FLAG-W1,2026-11-18
+R57,Two-stage skill leaderboard (proper-score qualification then prospective CLV/ROI),Leaderboard,G08,Stage 1 pass before any staking number is shown,stage 1: 0 strategies passed; stage 2 not reached,PARTIAL,leaderboard,2026-11-18
+R58,Vig-free market consensus and originated fair-line decomposition,Origination,G08,Two operator quotes per market for the same event,,BLOCKED,FLAG-P1,2026-11-18
+R59,Weekly 'what changed' diff instead of a static snapshot,Decision layer,G11,A prior capture to diff against,this desk publishes one diff: the 2026-11-12 repository capture against the 2026-11-18 re-read,PARTIAL,availability_diff,2026-11-18
+R60,Publish every model total twice until one wins,Model,G03,Both estimators visible with the gap column,estimator A and B published side by side with the paired difference,MET,totals,2026-11-18
+R61,Drift alarm on every scraper: pinned row counts and required fields,Engineering,G01,A pinned expectation that fails the build,"verify.py pins 150 corpus rows, 32 reconciliation rows, 13 fixtures, 44 re-read rows",MET,methodology,2026-11-18
+R62,Capture the reserve list so 'not listed' never means 'available',Availability,G01,A reserve-list read per club,,BLOCKED,FLAG-A3,2026-11-18
+R63,Reject ranking strategies by season-long ROI,Governance,n/a,The shortcut is recorded as rejected,recorded as REJECTED,REJECTED,questions,2026-11-18
+R64,Archive weekly injury reports for past seasons,Availability,G11,>=1 archived past season,,BLOCKED,FLAG-A4,2026-11-18
+R65,Freeze a rule before it sees data; the commit hash is the registration,Governance,G03,A commit hash that predates the numbers,registration commit hash published on the site,MET,preregistration,2026-11-18
+R66,"Split data into train, validation and final holdout seasons",Model,G03,Three fixed windows,"weeks 1-4 / 5-8 / 9-10, fixed before any probability was computed",MET,preregistration,2026-11-18
+R67,Dedicated suggestions section so a reviewer can choose the best path before implementation,Decision layer,n/a,A reviewable suggestions register with a decision column,"12 suggestions, decision column blank for the reviewer",MET,suggestions,2026-11-18
+R68,"Clear list of questions, information and answers needed before any decision",Decision layer,n/a,One row per question with what is missing and how to obtain it,18 questions with the missing information and the discovery route,MET,questions,2026-11-18
+R69,Leaderboard competition with rewards for top-performing strategies,Leaderboard,G07,An eligible strategy before any reward is assigned,0 eligible strategies; reward column blank,BLOCKED,leaderboard,2026-11-18
+R70,Determine correlation values,Correlations,G01,A joint outcome table with an official source,0 values; see R07,BLOCKED,FLAG-C1,2026-11-18
+R71,Remove luck from the equation; build selectively skill-based strategies,Leaderboard,G05,A skill lower bound above zero,"85 forecasts, Brier skill CI -0.405..0.089",PARTIAL,luck_panel,2026-11-18
+R72,"Track injuries and know deficiencies (2nd/3rd/4th string replacing starters), offence and defence",Availability,G11,A verified depth position per replacement,,BLOCKED,FLAG-D1,2026-11-18
+R73,Executive summary outlining important details,Decision layer,n/a,One page with the counts and the blockers,executive summary page,MET,executive-summary,2026-11-18
