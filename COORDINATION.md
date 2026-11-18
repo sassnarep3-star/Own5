@@ -2837,11 +2837,34 @@ It does not re-publish the other desks' analysis.
 
 | ID | Task | Status | Owner | Files touched | Notes |
 |----|------|--------|-------|---------------|-------|
-| B1 | Claim + board entry | in progress | b8227c47 | COORDINATION.md | This block. |
-| B2 | Capture job: raw bytes + SHA-256 + UTC fetch time + final URL + served-week check; dedupe by hash; ledger CSV | in progress | b8227c47 | `nfl-desk-b8227c47/capture.py`, `nfl-desk-b8227c47/data/ledger.csv`, `nfl-desk-b8227c47/captures/**` | Only changed bytes are stored (step function, not a level series). |
-| B3 | HTML parser for the official injury report with column pins and a drift alarm (fails loudly on a missing field or a count outside the pin) | in progress | b8227c47 | `nfl-desk-b8227c47/parse.py`, `nfl-desk-b8227c47/data/injury_rows.csv` | Every row carries source URL, capture id and raw-hash. |
-| B4 | Delta publisher: change between consecutive captures of the same served week (field-level), never the level | in progress | b8227c47 | `nfl-desk-b8227c47/data/injury_deltas.csv` | |
-| B5 | Static pages: landing, ledger, deltas, sources, Flagged for Review | in progress | b8227c47 | `nfl-desk-b8227c47/*.html`, `nfl-desk-b8227c47/build.py` | Every body row source-linked or flagged UNVERIFIED. |
-| B6 | Unit tests + verify harness | in progress | b8227c47 | `nfl-desk-b8227c47/tests/**`, `nfl-desk-b8227c47/verify.py` | |
-| B7 | Scheduled workflow (Wed–Sat hourly, plus dispatch), live run, live Pages check | in progress | b8227c47 | `.github/workflows/nfl-desk-b8227c47.yml` | Cron runs only from the default branch; first run verified by dispatch. |
-| B8 | Cross-session request: root index must link this desk | open | b8227c47 | COORDINATION.md (request only) | Root `index.html` / `pages/**` / `assets/**` are not edited here. |
+| B1 | Claim + board entry | done | b8227c47 | COORDINATION.md | Claimed 2026-11-18T03:20Z and pushed at 5bcb098. |
+| B2 | Capture job with raw bytes, SHA-256, UTC fetch time, final URL, served-week check, dedupe, ledger | blocked (built; disabled) | b8227c47 | `nfl-desk-b8227c47/capture.py`, `data/ledger.csv` (empty) | Terms s.1.3 bar systematic retrieval without written consent. `capture.py` exits 4 without `NFL_CAPTURE_CONSENT=1`. No schedule set. Decision D-01. |
+| B3 | Parser with column pins and drift alarm | done | b8227c47 | `nfl-desk-b8227c47/parse.py`, `tests/test_desk.py` | Parses the Week 10 read: 14 games, 28 tables, 347 rows. Eight synthetic-fixture tests cover drift, unknown codes, blanks, served-week mismatch. |
+| B4 | Delta publisher (field-level change between captures) | blocked | b8227c47 | — | Needs at least two distinct captures of one served week. Zero exist under consent; one out-of-band read. Not built, not claimed. |
+| B5 | Static pages: overview, Week 10 counts, games & byes, terms & decisions, flagged, sources | done | b8227c47 | `nfl-desk-b8227c47/*.html`, `build.py`, `assets/style.css` | Six pages; every body row links to nfl.com or is UNVERIFIED. |
+| B6 | Unit tests + verify harness | done | b8227c47 | `nfl-desk-b8227c47/tests/**`, `verify.py` | 8 unit tests OK. verify.py PASS. Negative control (planted non-nfl link and removed row link) → 3 failures, exit 1. |
+| B7 | Scheduled workflow, live run, live Pages check | changed: verify-only | b8227c47 | `.github/workflows/nfl-desk-b8227c47.yml` | No schedule and no network job. Probe workflow removed. Pages URL checked after merge. |
+| B8 | Cross-session request: root index must link this desk | open | b8227c47 | COORDINATION.md (request only) | Root `index.html`, `pages/**`, `assets/**` not edited here. See cross-session request below. |
+
+### 8 — completion record (2026-11-18)
+
+**What was verified, and how** (every value below is printed or checked by the commands named, not asserted):
+- Full official Week 10 injury report read once by a GitHub Actions probe run (run 44229055582; SHA-256 `1b54ba18…b5e3`, 402,343 bytes). Parsed by `parse.py`: 14 games, 28 team tables, 347 rows. Per-club counts in `nfl-desk-b8227c47/data/week10_read.csv` reconcile to the row total (unit test + `verify.py`).
+- The 14 games match the official Week 10 schedule (https://www.nfl.com/schedules/2026/by-week/week-10); the "Teams on Bye" block lists CHI, DEN, PHI, TB, which are the 4 clubs absent from the report.
+- `https://www.nfl.com/injuries/league/2026/reg11` returns HTTP 302 to `reg10` (probe run headers), so Week 11 is not published.
+- NFL.com Terms and Conditions (updated May 16, 2024), s.1.3: "Systematic retrieval of data or other content from the Services, whether to create or compile, directly or indirectly, a collection, compilation, database, or directory, is prohibited absent our express prior written consent." https://www.nfl.com/news/2024-nfl-com-terms-and-conditions
+- Lions Out designations (Kerby Joseph, Cade Mays, D.J. Reed) are present on the official page.
+
+**Corrections to other desks (logged, not edited).**
+- 35a1feb2 CU-F09 said Patrick Mahomes' row was not published. The full official HTML contains it (Full Participation in Practice, blank game status). The earlier omission was a truncated fetch.
+- Week 10 counts conflict across desks (254, 279, 326 seen in the repo; this read is 347). The older counts cannot be reproduced from any dated capture here, so they are not called wrong.
+- CIN: this read shows 9 rows; the brief's older figure of 4 cannot be reproduced.
+
+**Irregularities for review (also on `nfl-desk-b8227c47/flagged.html`):** B-F01 terms bar on automated capture; B-F02 Mahomes correction; B-F03 count conflicts; B-F04 unread US subscription terms; B-F05 CIN count; B-F06 LAR/LA and AZ code aliasing; B-F07 Week 11 not yet served; B-F08 **other desks already store nfl.com captures in git (for example `data/decision-desk/raw/official_text/injury_report_wk10.txt` and `nfl-desk-35a1feb2/raw/**`); the same Terms clause applies to them**; B-F09 the two probe runs fetched each page once from a runner; B-F10 raw probe bytes remain in this branch's git history.
+
+**Cross-session request (B8, needs review):** the root `index.html` (CI-locked to the integration session) should list this desk alongside the other NFL desks, with its verified date (2026-11-18).
+
+**Request to every NFL desk (needs review):** re-check any scheduled or automated retrieval of nfl.com against Terms s.1.3 before it runs. Decide consent (D-01) once, centrally, rather than per desk.
+
+**Status:** B1, B3, B5, B6 done; B2 blocked (built, disabled); B4 blocked; B7 changed to verify-only; B8 open (cross-session request). Desk verification: unit tests OK; `verify.py` PASS; rebuild byte-identical.
+

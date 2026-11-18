@@ -1,38 +1,39 @@
-name: NFL desk b8227c47 — probe (temporary)
+name: NFL desk b8227c47 - verify (no network)
 
+# This workflow never contacts nfl.com. Scheduled or automated capture is disabled because NFL.com
+# Terms s.1.3 prohibit systematic retrieval to compile a database without written consent (decision D-01).
 on:
+  pull_request:
+    paths: ['nfl-desk-b8227c47/**', '.github/workflows/nfl-desk-b8227c47.yml']
   push:
     branches: [arena/b8227c47-own5]
-    paths: ['.github/workflows/nfl-desk-b8227c47.yml']
+    paths: ['nfl-desk-b8227c47/**', '.github/workflows/nfl-desk-b8227c47.yml']
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+
+concurrency:
+  group: nfl-desk-b8227c47-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  probe:
+  verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
-          ref: arena/b8227c47-own5
-      - name: Fetch official injury report pages (raw)
+          python-version: '3.11'
+      - name: Unit tests (synthetic fixtures; no network)
+        working-directory: nfl-desk-b8227c47
+        run: python3 -m unittest discover -s tests -v
+      - name: Verify every row is linked, links resolve, counts reconcile, rebuild is byte-identical
+        working-directory: nfl-desk-b8227c47
+        run: python3 verify.py
+      - name: Committed pages match a clean rebuild
         run: |
-          mkdir -p nfl-desk-b8227c47/probe
-          cd nfl-desk-b8227c47/probe
-          for w in 10 11; do
-            curl -sS -L -A "Mozilla/5.0 (compatible; own5-desk-capture/1.0)" \
-              -D headers_reg$w.txt -o reg$w.html \
-              -w "reg$w http=%{http_code} effective=%{url_effective} bytes=%{size_download}\n" \
-              "https://www.nfl.com/injuries/league/2026/reg$w" || echo "reg$w FAILED"
-          done
-          date -u
-          sha256sum *.html
-      - name: Commit probe output
-        run: |
-          git config user.name "own5-capture-bot"
-          git config user.email "own5-capture-bot@users.noreply.github.com"
-          git add nfl-desk-b8227c47/probe
-          git commit -m "b8227c47 probe capture" || echo "nothing"
-          git push origin HEAD:arena/b8227c47-own5
+          cd nfl-desk-b8227c47
+          python3 build.py
+          git diff --exit-code -- '*.html'

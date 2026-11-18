@@ -4,6 +4,7 @@ This repository hosts work from **three parallel agent sessions** (see `COORDINA
 
 | Dashboard | Scope | Live URL | Session |
 |---|---|---|---|
+| **NFL Official Injury-Report Capture Desk** | NFL 2026 — verified Week 10 injury-report counts (14 games, 28 club tables, 347 rows, one hashed read), 4 byes verified against the official schedule, Terms s.1.3 read (automated capture blocked pending written consent, decision D-01), decision-readiness table, Flagged for Review | https://sassnarep3-star.github.io/Own5/nfl-desk-b8227c47/ | `b8227c47` (`nfl-desk-b8227c47/`, `COORDINATION.md` § Session b8227c47) |
 | **NBA Line-Origination Lab** | NBA — singles, parlays, player-prop combos; validation gates; leaderboard design | https://sassnarep3-star.github.io/Own5/docs/ | `9c3a0a69` (`docs/`, `research/nba/`, `analysis/`, `EXECUTIVE_SUMMARY.md`) |
 | **NFL Research Desk** | NFL — line origination, strategy lab, correlation questions, review register | https://sassnarep3-star.github.io/Own5/ | `cd43258e` + `0f468a47` (root, `pages/`, `data/`, `scripts/`, `tools/`, `tests/`) |
 | **NFL Strategy Lab** | NFL — own lines from official data, pre-registered singles/parlays/prop combos, validation gates G0–G7, computed correlations, luck-deflated leaderboard | https://sassnarep3-star.github.io/Own5/nfl-strategy-lab/ | `arena-f1d30421` (`nfl-strategy-lab/`, `research/arena-f1d30421/`, `data/`, `scripts/compute_*`, `scripts/originate_lines.py`) |
