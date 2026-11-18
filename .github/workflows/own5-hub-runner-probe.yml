@@ -6,6 +6,9 @@ name: Own5 hub - runner reachability probe (manual)
 
 on:
   workflow_dispatch:
+  push:
+    branches: [arena/9cabfdb9-own5]
+    paths: ['.github/workflows/own5-hub-runner-probe.yml']
 
 permissions:
   contents: read
