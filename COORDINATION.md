@@ -3486,3 +3486,16 @@ to chunk 0 of 8 only, so the full-page row count is unknown and quoted as unknow
 adopted rows carry an earlier session's venue and kickoff notes, which are not re-verified here —
 only their scores are. No market price exists anywhere in the repository, so ROI, CLV, residual
 and vig-free consensus are all blank by policy (FLAG-P1).
+
+### arena-51cf3786 — PR and merge record (2026-11-18)
+
+- **PR:** https://github.com/sassnarep3-star/Own5/pull/121 (`arena/51cf3786-own5` → `main`), "NFL repo review (arena-51cf3786): verifier fixes, official spot-checks, hub link, flagged register".
+- **Scope:** `repo-review/**`, `.github/workflows/repo-review.yml`, R3 desk fixes (`nfl-desk-3cb7800c`, `nfl-b34253a1` audit scope and regenerated output), R5 hub navigation (`nfl-integration-a620f5a5`), `README.md` (one note paragraph), and this file. Branch merged with `origin/main` twice before the PR (the second time after PR #123 landed); each merge was followed by a regenerated audit so the desk's deterministic-output check matches the merged tree.
+- **Checks at head `cb0a07d`:** passing: `Repo review (arena-51cf3786)` (push run), `Rebuild, audit, and test isolated NFL desk` (nfl-b34253a1, including deterministic-output check), `Build, evidence integrity and browser smoke tests`, `build-and-audit`, `desk-verify`, and the Own5 and research verifiers. Live/legacy Pages smoke jobs are skipped on PRs and run after the push to `main`.
+- **Failing check, not caused by this PR:** `NFL Decision Desk — fetch & verify` (`decision-desk.yml`), step "Confirm the committed site matches a clean rebuild". This branch changes nothing under `nfl-decision-desk/`, `data/decision-desk/`, or the workflow. The same step fails on other open PRs (`arena/390e13fd-own5`, `arena/2025930f-own5`). Logged as X51-13.
+- **Merge:** `gh pr merge 121 --merge`, run after this record was pushed. The merge result is shown on PR #121.
+
+**Cross-session request.**
+
+- **X51-13 → owners of `.github/workflows/decision-desk.yml` (sessions 38a1fc27 and d0343637).** The workflow runs live fetches on every PR to `main`, and its "committed site matches a clean rebuild" step fails on PRs that do not touch its paths. Request: scope the trigger, or pin the snapshot so unrelated PRs do not fail. Not fixed here; those files belong to the owning sessions.
+- **X51-06 (extended).** The `nfl-b34253a1` audit must be regenerated after every merge of `main` that adds files, because its scope includes shared files. This happened three times on this branch. Owner review requested on whether the audit should exclude files owned by other sessions.
