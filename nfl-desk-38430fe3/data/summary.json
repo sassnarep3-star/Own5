@@ -1,0 +1,62 @@
+{
+  "clubs": 28,
+  "clubs_zero_injury": 0,
+  "delta": {
+    "added": 71,
+    "changed": 197,
+    "common": 276,
+    "live_clubs": 28,
+    "live_rows": 347,
+    "live_with_game_status": 171,
+    "live_with_injury": 171,
+    "old_clubs": 26,
+    "old_rows": 276,
+    "old_with_game_status": 6,
+    "old_with_injury": 6,
+    "removed": 0,
+    "unchanged": 79
+  },
+  "dnp_no_injury": 16,
+  "doubtful": 11,
+  "games": 14,
+  "lions": [
+    [
+      "Kerby Joseph",
+      "Out"
+    ],
+    [
+      "Cade Mays",
+      "Out"
+    ],
+    [
+      "D.J. Reed",
+      "Out"
+    ]
+  ],
+  "n_claims": 12,
+  "n_flags": 14,
+  "n_questions": 16,
+  "n_requirements": 76,
+  "n_sources": 8,
+  "n_suggestions": 8,
+  "out": 70,
+  "partial_1117": {
+    "compared": 49,
+    "different": 0,
+    "identical": 49
+  },
+  "questionable": 90,
+  "read_date": "2026-11-18",
+  "read_window": "2026-11-18 (fetch tool returns no clock time; the date is the only time recorded)",
+  "req_status": {
+    "BLOCKED": 20,
+    "MET": 10,
+    "NOT STARTED": 14,
+    "PARTIAL": 29,
+    "REJECTED": 3
+  },
+  "rows": 347,
+  "transcript_sha256": "184f7ac01a2885d518f7528b2b7028ae3ee108ec5c77d306802ec9339a115cd7",
+  "with_game_status": 171,
+  "with_injury": 171
+}

@@ -2850,3 +2850,17 @@ or any sibling desk.
 CI-locked) still render the 2026-11-02 state. The request to publish a root index that lists every desk stands; this
 session does not edit those files. `.github/workflows/decision-desk.yml` still fails its clean-rebuild step on pull requests;
 not ours, not touched.
+
+**38430fe3 status update (2026-11-18, before PR).** Build complete; PR opened next. File names differ from the plan above where noted.
+
+| ID | Result | Sources | Verification |
+|----|--------|---------|--------------|
+| R2 | 347 rows, 28 clubs, 14 games transcribed from the 8 official pages. Transcript at `nfl-desk-38430fe3/raw/injury_report_wk10_transcript.psv` (sha256 `184f7ac0…115cd7`); row CSV at `data/injury_report_wk10_2026-11-18.csv`. | https://www.nfl.com/injuries/league/2026/reg10 | `verify.py` counts; transcript hash pinned in `data/summary.json`. Full line-by-line re-fetch against the raw page bytes is not done (fetch tool renders text only; see F-10). |
+| R3 | Claim verdicts: 2 CONTRADICTED (279-row / 2-no-injury claim; Seattle injury-free), 4 CONFIRMED, 4 PARTLY, 2 NOT REPRODUCED (254-row claim; Baltimore "not on the report" is partly right: news says IR, report silent). | nfl.com reg10; NFL.com articles for Willis, Jackson, Lock, Maye, Nacua (full slugs fetched 2026-11-18). | `data/claim_checks.csv`; news-URL slugs re-fetched; three short-slug guesses returned 404 and were discarded. |
+| R4 | Delta vs 2026-11-12 capture: 276 common players, 197 changed, 79 unchanged, 71 added, 0 removed. Delta vs 2026-11-17 partial read: 49 overlapping rows, 49 identical. | repo `data/decision-desk/official/official_injuries_wk10.csv`; repo `nfl-desk-35a1feb2/raw/official_reads_2026-11-17.txt` | `data/delta_2026-11-12_to_2026-11-18.csv`, `data/delta_2026-11-17_to_2026-11-18.csv`. |
+| R5 | 76 requirements, status counts: BLOCKED 20, MET 10, NOT STARTED 14, PARTIAL 29, REJECTED 3. | Brief; each row names its evidence path. | `data/requirements_readiness.csv`. |
+| R6 | 16 questions, 8 suggestions (review only, none implemented). | As cited per row. | `data/questions.csv`, `data/suggestions.csv`. |
+| R7 | 11 pages: overview, injury rows (filterable), team view, what changed, claim checks, decision readiness, questions, suggestions, executive summary, Flagged for Review (14 items), sources. | As above. | `verify.py` checks internal links, row-level source marker, determinism (two builds, identical bytes). |
+| R8 | Scoped workflow `.github/workflows/nfl-desk-38430fe3.yml`: unit tests (7), `verify.py`, committed-output diff. No network. | n/a | Runs in CI on PRs touching the desk. |
+
+Not done and logged: Week 11 availability (report not published on 2026-11-18); starters, depth, snap shares and replacements (not on the injury report; left blank); prices and any model result (no price archive; no strategy qualifies; no bets placed). Team-view "Starters out" and "Replacements named" are blank with a reason, not inferred.

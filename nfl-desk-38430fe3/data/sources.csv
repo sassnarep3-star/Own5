@@ -1,0 +1,9 @@
+id,source,url,how_read,used_for
+SRC-01,"NFL.com 2026 injury report, Week 10 (official)",https://www.nfl.com/injuries/league/2026/reg10,"Read 2026-11-18, 8 pages, first-hand","Primary: all 347 rows, counts, designations"
+SRC-02,NFL.com 2026 injury report URL for Week 11 (official),https://www.nfl.com/injuries/league/2026/reg11,Fetched 2026-11-18 (time not recorded); returned the Week 10 page,Status check only
+SRC-03,NFL.com news headlines on the Week 10 injury page (official),https://www.nfl.com/news/patriots-drake-maye-ankle-injury-lions,"Read on the same page (news rail, 2026-11-18)",Headlines cited in C-07..C-11 (titles and links as published)
+SRC-04,NFL.com standings page (official),https://www.nfl.com/standings/,Opened 2026-11-18; first chunk read; not transcribed,Not used for any figure in this desk
+SRC-05,NFL.com Week 10 schedule (official),https://www.nfl.com/schedules/2026/by-week/week-10,Cited by sibling desk; not re-read here,Not used for any figure in this desk
+SRC-06,"Repo capture of the Week 10 injury page, 2026-11-12 (pinned)",https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/official/official_injuries_wk10.csv,Repo file; retrieved_utc 2026-11-12T16:52:39Z,"Delta baseline only (276 rows, 26 clubs)"
+SRC-07,"Sibling desk read of the Week 10 page, 2026-11-17 (partial)",https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-35a1feb2/raw/official_reads_2026-11-17.txt,Repo transcription; not the league's HTTP body,Delta check on overlapping rows only
+SRC-08,NFL.com Week 9 inactives article (official),https://www.nfl.com/news/nfl-week-9-inactives-players-ruled-out-sunday-2026-season,Listed in the news rail; not read here,Discovery route for inactive lists (Q-07)
