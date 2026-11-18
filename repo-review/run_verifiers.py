@@ -23,7 +23,8 @@ FIELDS = ["directory", "command", "exit_code", "result", "summary_line", "run_ut
 
 def tree_snapshot(dest: Path) -> None:
     def ignore(_dir: str, names: list[str]) -> set[str]:
-        return {n for n in names if n in {".git", "__pycache__", "node_modules"}}
+        # .git is kept so history-based checks (e.g. a registration commit on this branch) behave as in place.
+        return {n for n in names if n in {"__pycache__", "node_modules"}}
     shutil.copytree(REPO, dest, ignore=ignore, dirs_exist_ok=True)
 
 

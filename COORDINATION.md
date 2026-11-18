@@ -3368,3 +3368,18 @@ request is logged below instead.
 * `decision-desk.yml` (`NFL Decision Desk — fetch & verify`) and `nfl-b34253a1.yml` (`Verify NFL B34 Week 10
   research desk`) are red on `main` and on every PR (recorded by sessions 560ed315, a991e3fb, 35a1feb2, 98a211b8,
   3cb7800c). Their owners should regenerate those desks. Not edited here.
+
+### arena-51cf3786 — post-merge update (2026-11-18)
+
+Branch `arena/51cf3786-own5` was merged with `origin/main` (425 commits ahead of base `cb2d3b8`) before the PR. The append-point conflict in this file was resolved by keeping both sides. Numbers in the status table above are as of the review commit; the current numbers are these:
+
+- Verifier sweep (`repo-review/run_verifiers.py`, scratch copy with `.git` kept): 28 desk verifiers, 27 PASS, 1 FAIL (`nba-commission`). The earlier 26-verifier count predates main's new desks.
+- Top-level directories: 68 (34 NFL, 15 NBA, 6 San Francisco rent, 12 shared or site, 1 CI configuration). Register: `repo-review/data/inventory.csv`.
+- `nba-commission` link scan: 127 broken links across 584 pages, now including one in `nfl-desk-ccc5caf2`. This supersedes the 126 / 546 figures in X51-05.
+- `nfl-b34253a1/data/repo_audit.csv` regenerated again after the merge (the audit scope now includes main's new files). Rebuild is byte-identical. Logged as the same cross-session item, X51-06.
+
+**Additional cross-session request.**
+
+- **X51-12 → `nfl-desk-ccc5caf2` (session ccc5caf2).** `summary.html` links to `research/ccc5caf2/EXECUTIVE_SUMMARY.md`, which does not exist. It is the only broken link in that desk and is counted in the `nba-commission` scan (X51-05). This desk has no `verify.py` (inventory: NO VERIFIER). Request: fix the link or add the file, and add a verifier if the desk is to be published.
+
+Flag register: `repo-review/data/irregularities.csv` (18 entries). Corrections applied on this update: RV-07 (desk list is 28 rows) and RV-14 (127 links, three desks).
