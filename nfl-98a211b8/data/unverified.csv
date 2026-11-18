@@ -1,0 +1,7 @@
+id,item,status,why_unverified,official_source_link,verified_utc
+U01,Any Week 11 availability value (injury status for any club),UNVERIFIED,Week 11 report not served at read time (see availability.html and C02),https://www.nfl.com/injuries/league/2026/reg11,2026-11-18
+U02,Full Week 10 row count (276 repo / 254 board / 279 board),UNVERIFIED,Only chunk 0 of 8 of the official page was read,https://www.nfl.com/injuries/league/2026/reg10,2026-11-18
+U03,"Week 10 rows for the clubs not shown in chunk 0 (all clubs except WAS, NYG, NE, DET)",UNVERIFIED,Chunks 1-7 not read; the Chiefs table is cut off in chunk 0,https://www.nfl.com/injuries/league/2026/reg10,2026-11-18
+U04,Houston depth chart (published as an image per desks e46fb855 and c98c6270),UNVERIFIED,Not read in this session; no authorised structured source identified,,2026-11-18
+U05,Completed-game count from the live standings page (chunk 2 unread),UNVERIFIED,Only the first chunk of the standings page was read,https://www.nfl.com/standings/league/2026/REG,2026-11-18
+U06,Market prices (spread / total / moneyline) as an admissible source,UNVERIFIED,Source-class policy is an open decision for the user; third-party prices exist in the repo but are not official,,2026-11-18

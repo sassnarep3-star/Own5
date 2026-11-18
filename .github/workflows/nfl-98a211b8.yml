@@ -1,0 +1,35 @@
+name: Verify NFL review desk (98a211b8)
+
+on:
+  push:
+    branches: [main, arena/98a211b8-own5]
+    paths:
+      - 'nfl-98a211b8/**'
+      - '.github/workflows/nfl-98a211b8.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'nfl-98a211b8/**'
+      - '.github/workflows/nfl-98a211b8.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Unit tests
+        run: python3 -m unittest discover -s nfl-98a211b8/tests -v
+      - name: Verify (pinned excerpt, row comparison, links, provenance, byte-identical rebuild)
+        run: python3 nfl-98a211b8/verify.py
+      - name: Committed pages match a rebuild from the committed CSVs
+        run: |
+          python3 nfl-98a211b8/build.py
+          git diff --exit-code -- nfl-98a211b8/
