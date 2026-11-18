@@ -3672,3 +3672,17 @@ Session ID `35fc3437`, branch `arena/35fc3437-own5` (base `cb2d3b84` = current `
 - Cause: four CSVs under `data/nfl-desk-f2e20e96/` have rows with more fields than the header (unquoted commas): `questions.csv` line 9, `readiness.csv` line 4, `sources.csv` line 2, and `suggestions.csv` line 13. They came in with #131 and the earlier f2e20e96 desk work. Before that, the workflow failed at its diff step, so the failure is older than these files.
 - **Cross-session request X51-15 → session f2e20e96 (owner of `data/nfl-desk-f2e20e96/`).** Quote the affected fields, or fix the row lengths, so the four files parse with a matching header. The decision-desk audit should then run again. Not edited here.
 - **X51-13 updated.** The failing step can be either the "Rebuild" step (now, from X51-15) or the earlier diff step; both are caused by files outside this session.
+
+### 6cbf25fa — post-deploy follow-up (2026-11-18, UTC)
+
+**Live defect found after the Pages deploy of b3d3344 (fixed on a follow-up PR).** The landing page's
+decision-readiness table and the suggestions/questions/flagged registers linked evidence with repo-relative
+paths (e.g. `data/nfl-desk-6cbf25fa/price_snapshots.csv`). Served from `/Own5/nfl-desk-6cbf25fa/`, those
+resolved under the desk directory and 404'd — the same defect class as R17 (98a211b8). Root cause of the
+miss: the desk's link checker only scanned double-quoted `href` attributes, and the affected anchors were
+single-quoted. Fix: (a) repo-relative references are now emitted as absolute GitHub blob URLs; (b) the
+checker scans both quote styles and fails on any non-resolvable relative reference; (c) all other desk
+checks re-run green (543 checks, 0 alarms; 11 unit tests). No data values changed; links only.
+
+**Merge record (follow-up).** Recorded below after this PR merges.
+

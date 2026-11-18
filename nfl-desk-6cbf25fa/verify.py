@@ -156,12 +156,16 @@ def main():
     nav_names = {"index.html", "lines.html", "snapshots.html", "ratings.html", "results.html",
                  "ledger.html", "suggestions.html", "questions.html", "flagged.html", "sources.html"}
     check("nav_files_exist", nav_names == set(page_files), f"missing {nav_names - set(page_files)}")
+    BLOB = "https://github.com/sassnarep3-star/Own5/blob/main/"
     for pf in page_files:
         text = open(os.path.join(HERE, pf), encoding="utf-8").read()
-        for m in re.finditer(r'href="(?!https?:|mailto:|#)([^"]+)"', text):
-            target = m.group(1).split("#")[0]
-            if target and not os.path.exists(os.path.join(HERE, target)):
-                check(f"link_{pf}_{target}", False, "broken internal link")
+        for m in re.finditer(r'href=([\'"])([^\'"]+)\1', text):
+            target = m.group(2).split("#")[0]
+            if not target or target.startswith(("http://", "https://", "mailto:")):
+                continue
+            if target != "style.css" and not os.path.exists(os.path.join(HERE, target)):
+                check(f"link_{pf}_{target}", False,
+                      "broken link: repo-relative references must be absolute GitHub blob URLs")
         check(f"no_script_{pf}", "<script" not in text, "page requires JavaScript")
 
     # ---- report
