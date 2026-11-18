@@ -1,28 +1,28 @@
 {
   "as_of": "2026-11-12",
-  "files": 456,
-  "physical_lines": 98997,
+  "files": 458,
+  "physical_lines": 99200,
   "status_counts": {
     "DATED_OFFICIAL_FACT_ROW": 1588,
     "DATED_SNAPSHOT_RECOMPUTED_OR_STALE": 730,
     "DERIVED_OR_LEGACY_LINE_REVIEW": 35,
     "FLAGGED_LEGACY_MARKET_VALUE": 903,
     "FLAGGED_NONOFFICIAL_HISTORICAL_INPUT": 14406,
-    "IMPLEMENTATION_LINE_REVIEW": 13116,
+    "IMPLEMENTATION_LINE_REVIEW": 13136,
     "LEGACY_JSON_RECORD_REVIEW": 4624,
     "LEGACY_RESEARCH_CLAIM_SCOPE": 5731,
     "LEGACY_SNAPSHOT_SOURCE_REGISTERED": 10815,
-    "LINE_ITEM_SOURCE_LINK_OR_FLAG": 32105,
+    "LINE_ITEM_SOURCE_LINK_OR_FLAG": 32278,
     "OFFICIAL_LINK_PRESENT_NOT_REFETCHED": 30,
-    "PUBLISHED_RENDER_LINE_REVIEW": 12989,
+    "PUBLISHED_RENDER_LINE_REVIEW": 12999,
     "REPOSITORY_METADATA_LINE": 133,
     "REVERIFIED_CURRENT_GAME_LOG": 1792
   },
   "source_basis_counts": {
-    "HTTPS_OFFICIAL_LINK_IN_LINE": 2268,
+    "HTTPS_OFFICIAL_LINK_IN_LINE": 2389,
     "OFFICIAL_COUNTERPART_FOR_FLAGGED_INPUT_NOT_INPUT_PROVENANCE": 15309,
-    "OFFICIAL_SCOPE_REFERENCE_FALLBACK_NOT_ROW_PROVENANCE": 80504,
-    "ROW_SOURCE_FIELD": 916
+    "OFFICIAL_SCOPE_REFERENCE_FALLBACK_NOT_ROW_PROVENANCE": 80553,
+    "ROW_SOURCE_FIELD": 949
   },
   "scope": "Line-indexed inventory of previous NFL sites, generators, datasets, research references and shared navigation/CI context; this is not a claim that every legacy historical statistic was re-fetched.",
   "critical_findings": [
@@ -539,14 +539,19 @@
       "bytes": 8292
     },
     {
+      "path": "data/nfl-origin-desk/audit_log_2026-11-18.csv",
+      "physical_lines": 128,
+      "bytes": 31265
+    },
+    {
       "path": "data/nfl-origin-desk/correlations.csv",
-      "physical_lines": 7,
-      "bytes": 1301
+      "physical_lines": 5,
+      "bytes": 1274
     },
     {
       "path": "data/nfl-origin-desk/flagged.csv",
-      "physical_lines": 15,
-      "bytes": 5367
+      "physical_lines": 25,
+      "bytes": 11482
     },
     {
       "path": "data/nfl-origin-desk/gates.csv",
@@ -555,8 +560,8 @@
     },
     {
       "path": "data/nfl-origin-desk/injuries.csv",
-      "physical_lines": 8,
-      "bytes": 1604
+      "physical_lines": 9,
+      "bytes": 1834
     },
     {
       "path": "data/nfl-origin-desk/leaderboard.csv",
@@ -576,17 +581,22 @@
     {
       "path": "data/nfl-origin-desk/requirements.csv",
       "physical_lines": 81,
-      "bytes": 25933
+      "bytes": 26217
     },
     {
       "path": "data/nfl-origin-desk/sources.csv",
-      "physical_lines": 21,
-      "bytes": 4393
+      "physical_lines": 24,
+      "bytes": 5174
+    },
+    {
+      "path": "data/nfl-origin-desk/standings_2026_reg_20261118.csv",
+      "physical_lines": 33,
+      "bytes": 7217
     },
     {
       "path": "data/nfl-origin-desk/strategies.csv",
       "physical_lines": 8,
-      "bytes": 3355
+      "bytes": 3655
     },
     {
       "path": "data/nfl-origin-desk/suggestions.csv",
@@ -1276,17 +1286,17 @@
     {
       "path": "nfl-origin-desk/executive-summary.html",
       "physical_lines": 82,
-      "bytes": 5717
+      "bytes": 6127
     },
     {
       "path": "nfl-origin-desk/flagged.html",
-      "physical_lines": 59,
-      "bytes": 9971
+      "physical_lines": 69,
+      "bytes": 17420
     },
     {
       "path": "nfl-origin-desk/index.html",
       "physical_lines": 144,
-      "bytes": 29691
+      "bytes": 29953
     },
     {
       "path": "nfl-price-results-853c0074/README.md",
@@ -1731,12 +1741,12 @@
     {
       "path": "repo-review/flagged.html",
       "physical_lines": 23,
-      "bytes": 17754
+      "bytes": 17933
     },
     {
       "path": "repo-review/index.html",
       "physical_lines": 51,
-      "bytes": 7664
+      "bytes": 7771
     },
     {
       "path": "research/38a1fc27/VERIFICATION.md",
@@ -2115,8 +2125,8 @@
     },
     {
       "path": "scripts/build_origin_desk.py",
-      "physical_lines": 737,
-      "bytes": 109017
+      "physical_lines": 757,
+      "bytes": 118038
     },
     {
       "path": "scripts/build_site.py",
