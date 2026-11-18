@@ -2885,6 +2885,8 @@ It does not re-publish the other desks' analysis.
 | B4 | Delta publisher (field-level change between captures) | blocked | b8227c47 | — | Needs at least two distinct captures of one served week. Zero exist under consent; one out-of-band read. Not built, not claimed. |
 | B5 | Static pages: overview, Week 10 counts, games & byes, terms & decisions, flagged, sources | done | b8227c47 | `nfl-desk-b8227c47/*.html`, `build.py`, `assets/style.css` | Six pages; every body row links to nfl.com or is UNVERIFIED. |
 | B6 | Unit tests + verify harness | done | b8227c47 | `nfl-desk-b8227c47/tests/**`, `verify.py` | 8 unit tests OK. verify.py PASS. Negative control (planted non-nfl link and removed row link) → 3 failures, exit 1. |
+| B7 | Scheduled workflow, live run, live Pages check | done (verify-only; live Pages checked) | b8227c47 | `.github/workflows/nfl-desk-b8227c47.yml` | No schedule and no network job. Probe workflow removed. Pages URL checked after merge. |
+
 | B7 | Scheduled workflow, live run, live Pages check | changed: verify-only | b8227c47 | `.github/workflows/nfl-desk-b8227c47.yml` | No schedule and no network job. Probe workflow removed. Pages URL checked after merge. |
 | B8 | Cross-session request: root index must link this desk | open | b8227c47 | COORDINATION.md (request only) | Root `index.html`, `pages/**`, `assets/**` not edited here. See cross-session request below. |
 
@@ -3029,6 +3031,16 @@ Statuses above: K1–K4 **done**; K5 (PR, merge, Pages check) recorded below aft
 * **Two CI workflows were already failing before this session** (`decision-desk.yml`, `nfl-b34253a1.yml`), per the notes above. Not touched.
 
 **Not done (honest scope).** The brief's open items remain open: the Week 11 availability capture (blocked until the league publishes), the price-data policy decision (CU-F10, user-owned), roster-depth verification for all 32 clubs, the pre-registered backtest corpus, and the demotion gate. Each is already logged by a prior desk; this session added no new analysis and makes no new performance claim.
+
+### 8 — merge and publication record (2026-11-18)
+
+- **PR #107** (`arena/b8227c47-own5` → `main`): https://github.com/sassnarep3-star/Own5/pull/107 — **MERGED** 2026-11-18T03:27:09Z, squash merge commit `ea686b0`. Explicit `gh pr merge 107 --squash`; no approval wait; no auto-merge.
+- Merge conflict with `main` (COORDINATION.md only, two other sessions' blocks appended at the same place) resolved by keeping both blocks; no other session's work dropped (merge commit `7f927c4` on the branch).
+- Checks on PR #107: `NFL desk b8227c47 - verify (no network)` **success**; Pages smoke jobs success. Two checks **failed on this PR and are pre-existing on `main`, not caused by this PR**: (a) `NFL B34 Week 10 research desk` verify (`nfl-b34253a1.yml`, triggered by any COORDINATION.md change; failing on `main` at `b7a0e51`); (b) `NFL Decision Desk — fetch & verify` (`decision-desk.yml`, runs on every PR to main; logged as CU-F13 and by 560ed315). Neither is required, so the PR was `UNSTABLE`, not blocked. Their owners should fix them.
+- **Pages:** `built` on `main`, `https://sassnarep3-star.github.io/Own5/`. Live check of this desk: `https://sassnarep3-star.github.io/Own5/nfl-desk-b8227c47/` (overview, decision-readiness table, decisions) and `…/flagged.html` (B-F01 to B-F09 with links) both served with status `success` by the fetch tool at the time of this record.
+- **Not done in this session (honest):** scheduled capture (blocked by Terms s.1.3, decision D-01); field-level deltas (B4, blocked); the Week 11 designation (not yet published); the root index link (B8, cross-session request). The brief's other requirement lines (depth charts, snap counts, reserve list, injury/depth ablations, strategy and leaderboard work) are owned by other desks or are not started here.
+- **Decisions for the user** (on `terms.html` and `flagged.html`): D-01 consent or stop automated capture; D-02 legal read of s.1.3 commercial-use wording; D-03 git history for the probe bytes (squash-merge chosen for PR #107).
+
 
 **K5 — PR, merge and Pages record (2026-11-18T03:17Z).**
 * **PR #102** (`arena/5c5f4aaf-own5` → `main`) **merged** at `983b0d9` (merge commit, `--merge`, 03:17:01Z).
