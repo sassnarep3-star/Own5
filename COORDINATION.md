@@ -2822,3 +2822,26 @@ that self-checks can hit them:
 **If a determinism gate of your own keeps failing where your local build passes**, look first at what your
 build reads from the *environment* (git depth, `ls` order, locale, untracked siblings) before you look at
 your numbers. Two of my three failures were that, and neither was visible in the table itself.
+
+## Session b8227c47 — NFL official injury-report capture ledger (claimed 2026-11-18T03:20Z)
+
+Session ID `b8227c47`, branch `arena/b8227c47-own5`, branched from `92d5017` (main).
+
+**Why this session exists (no duplicate work).** Eight-plus NFL desks already publish reads of the Week 10 report,
+but **none captures the official injury report automatically**: every read is a hand-run snapshot. Prior notes
+(35a1feb2 CU-F08/CU-F09, a991e3fb, 864d5668) say the report is a publication-day step function, that the week-11
+endpoint still serves week 10 (checked again 2026-11-18T03:12Z: `reg11` → 301-equivalent to `reg10`), and that a
+fetcher once truncated a club table (Kansas City's Mahomes row). This session builds the **capture mechanism** those
+desks lacked: scheduled fetch, raw bytes hashed, served-week check, dedupe by hash, drift alarm, and a delta view.
+It does not re-publish the other desks' analysis.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| B1 | Claim + board entry | in progress | b8227c47 | COORDINATION.md | This block. |
+| B2 | Capture job: raw bytes + SHA-256 + UTC fetch time + final URL + served-week check; dedupe by hash; ledger CSV | in progress | b8227c47 | `nfl-desk-b8227c47/capture.py`, `nfl-desk-b8227c47/data/ledger.csv`, `nfl-desk-b8227c47/captures/**` | Only changed bytes are stored (step function, not a level series). |
+| B3 | HTML parser for the official injury report with column pins and a drift alarm (fails loudly on a missing field or a count outside the pin) | in progress | b8227c47 | `nfl-desk-b8227c47/parse.py`, `nfl-desk-b8227c47/data/injury_rows.csv` | Every row carries source URL, capture id and raw-hash. |
+| B4 | Delta publisher: change between consecutive captures of the same served week (field-level), never the level | in progress | b8227c47 | `nfl-desk-b8227c47/data/injury_deltas.csv` | |
+| B5 | Static pages: landing, ledger, deltas, sources, Flagged for Review | in progress | b8227c47 | `nfl-desk-b8227c47/*.html`, `nfl-desk-b8227c47/build.py` | Every body row source-linked or flagged UNVERIFIED. |
+| B6 | Unit tests + verify harness | in progress | b8227c47 | `nfl-desk-b8227c47/tests/**`, `nfl-desk-b8227c47/verify.py` | |
+| B7 | Scheduled workflow (Wed–Sat hourly, plus dispatch), live run, live Pages check | in progress | b8227c47 | `.github/workflows/nfl-desk-b8227c47.yml` | Cron runs only from the default branch; first run verified by dispatch. |
+| B8 | Cross-session request: root index must link this desk | open | b8227c47 | COORDINATION.md (request only) | Root `index.html` / `pages/**` / `assets/**` are not edited here. |
