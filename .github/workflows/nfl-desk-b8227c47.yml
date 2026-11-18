@@ -7,25 +7,32 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   probe:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: arena/b8227c47-own5
       - name: Fetch official injury report pages (raw)
         run: |
-          mkdir -p probe
+          mkdir -p nfl-desk-b8227c47/probe
+          cd nfl-desk-b8227c47/probe
           for w in 10 11; do
             curl -sS -L -A "Mozilla/5.0 (compatible; own5-desk-capture/1.0)" \
-              -D probe/headers_reg$w.txt -o probe/reg$w.html \
+              -D headers_reg$w.txt -o reg$w.html \
               -w "reg$w http=%{http_code} effective=%{url_effective} bytes=%{size_download}\n" \
               "https://www.nfl.com/injuries/league/2026/reg$w" || echo "reg$w FAILED"
           done
           date -u
-          sha256sum probe/*.html
-      - uses: actions/upload-artifact@v4
-        with:
-          name: probe-injury-html
-          path: probe/
+          sha256sum *.html
+      - name: Commit probe output
+        run: |
+          git config user.name "own5-capture-bot"
+          git config user.email "own5-capture-bot@users.noreply.github.com"
+          git add nfl-desk-b8227c47/probe
+          git commit -m "b8227c47 probe capture" || echo "nothing"
+          git push origin HEAD:arena/b8227c47-own5
