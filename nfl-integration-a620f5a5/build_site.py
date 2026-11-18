@@ -17,6 +17,7 @@ NAV = [
     ("leaderboard.html", "Safe leaderboard"),
     ("sources.html", "Official sources"),
     ("flagged.html", "Flagged for Review"),
+    ("../repo-review/index.html", "Repo review"),
 ]
 
 
