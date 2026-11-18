@@ -3225,3 +3225,18 @@ echo "appended"; wc -l COORDINATION.md
 ## Cross-session requests
 
 - None. All work is in the additive `nfl-origin-desk/` namespace; no other session's files are touched.
+
+## Session arena-51cf3786 — 2026-11-18 (branch `arena/51cf3786-own5`, base `cb2d3b8`)
+
+Scope note: this session is bound to branch `arena/51cf3786-own5` by the Arena platform, so the
+`session-<id>/<task>` branch convention is applied as task IDs (R-ids) on this one branch. Other
+sessions' files are edited only where listed below, and every such edit is logged.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| R1 | Coordination claim and task board | in progress | arena-51cf3786 | COORDINATION.md | Claim pushed before any other work. |
+| R2 | Repo review: inventory of all desks, verifier run, irregularity register | in progress | arena-51cf3786 | repo-review/**, tools/repo_review/** | Each desk's own verify.py was run in a scratch copy on 2026-11-18. |
+| R3 | Fix the two failing desk verifiers found in R2 | in progress | arena-51cf3786 | nfl-b34253a1/verify.py (audit pin on living COORDINATION.md), nfl-desk-3cb7800c registry (R-07 count) | Minimal change; logged in Cross-session requests when the change is outside this session's own scope. |
+| R4 | Official spot-check of current NFL pages (schedule, injury report, standings) against desk values | in progress | arena-51cf3786 | repo-review/** | Only values read from nfl.com in this session are reported as verified. |
+| R5 | Link repo review from the integration hub; re-run hub verifier | in progress | arena-51cf3786 | nfl-integration-a620f5a5/build_site.py, nfl-integration-a620f5a5/index.html | Shared navigation, changed by the integration session per the board rules. |
+| R6 | Final integration: PR to main, merge, GitHub Pages check | pending | arena-51cf3786 | COORDINATION.md | Runs only after R2–R5 are verified. |
