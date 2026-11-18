@@ -1,0 +1,5 @@
+correlation_id,metric_a,metric_b,n,r,r_rounded,note,source_url,capture_utc
+CORR-01,NET/G x PCT,PCT,32,0.882514,0.8825,Computed in-repo from official nfl.com standings (2026 REG); Pearson product-moment; n = all 32 clubs; no market/prop data used,https://www.nfl.com/standings/league/2026/REG,2026-11-18T00:00Z
+CORR-02,PF/G x PCT,PCT,32,0.715277,0.7153,Computed in-repo from official nfl.com standings (2026 REG); Pearson product-moment; n = all 32 clubs; no market/prop data used,https://www.nfl.com/standings/league/2026/REG,2026-11-18T00:00Z
+CORR-03,PA/G x PCT,PCT,32,-0.704275,-0.7043,Computed in-repo from official nfl.com standings (2026 REG); Pearson product-moment; n = all 32 clubs; no market/prop data used,https://www.nfl.com/standings/league/2026/REG,2026-11-18T00:00Z
+CORR-04,PF/G x PA/G,PA/G,32,-0.291066,-0.2911,Computed in-repo from official nfl.com standings (2026 REG); Pearson product-moment; n = all 32 clubs; no market/prop data used,https://www.nfl.com/standings/league/2026/REG,2026-11-18T00:00Z

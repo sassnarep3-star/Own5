@@ -3442,3 +3442,40 @@ and vig-free consensus are all blank by policy (FLAG-P1).
 
 **Not done (open, flagged).** Week 11 origination (V6) was deferred; its draft files are untracked and not committed. No scheduled capture (NFL.com Terms s.1.3, F20). Re-check of the other origin rows and sources (F22, F23) is open. The price-data policy, the 136-game backtest corpus, and the owner decisions (Q01–Q06, Q18) remain open.
 
+
+---
+## Session 35fc3437 — Own5 NFL Line-Origination Dashboard (claimed 2026-11-18 UTC)
+
+Session ID `35fc3437`, branch `arena/35fc3437-own5` (base `cb2d3b84` = current `main`).
+
+**Claimed namespace (strictly additive, zero overlap with any other session):**
+- `nfl-desk-35fc3437/**` (GitHub Pages desk: landing page + category subpages, deterministic stdlib-only build, data CSV/JSON, verification harness, unit tests)
+- `research/nfl-35fc3437/**` (executive summary, methodology, verification log, flagged register)
+- `.github/workflows/nfl-desk-35fc3437.yml` (scoped deterministic verification only)
+- Append-only blocks in `COORDINATION.md` and one additive row in `README.md`
+
+**Read-only (never edited):** root `index.html`, `pages/**`, `data/research.json`, `scripts/**`, `tools/**`, `tests/**`, `assets/**`, `docs/**`, `own5-desk/**`, `site/**`, `nfl_model/**`, `line-lab/**`, every other `nfl-*` / `nba-*` / `sf-*` / `rental-*` namespace, `data/**` outside claimed scope, all existing workflows, all existing CSV/JSON.
+
+**Purpose:** a clean, source-linked, GitHub Pages live site that delivers the reviewer's brief in one namespace: (1) originate own NFL lines side → total → moneyline with model/market/difference as separate columns; (2) price-snapshot store (opening/closing, blank+flagged where no operator price exists); (3) verified results feed (Week 10 finals reconciled to official standings); (4) leaderboard scoring signal separately from staking (no certified strategies until gates pass); (5) correlations computed only from official standings, n published with each value; (6) injury/depth view from the official Week 10 injury report (starters out, named replacements, 1st–4th string); (7) validation gates + demotion gate (paper); (8) decision-readiness table on the landing page (one row per requirement → blocking gate → number to clear → observed); (9) questions/information/answers register and a reviewable suggestions register (options + recommendation + what would change our mind; nothing implemented without a decision); (10) executive summary; (11) Flagged for Review page — every table row source-linked or explicitly blank+flagged, never inferred.
+
+**Official sources already read (nfl.com, via fetch_page; all capture UTC 2026-11-18):**
+- Standings: https://www.nfl.com/standings/league/2026/REG (32 teams, W-L-T-PCT-PF-PA-NET)
+- Week 10 schedule/results: https://www.nfl.com/schedules/2026/by-week/week-10 (14 finals)
+- Week 11 schedule: https://www.nfl.com/schedules/2026/by-week/week-11 (13 games + 6 byes ATL/CLE/GB/LAR/NE/SEA; Vikings@49ers Mexico City)
+- Week 10 injury report: https://www.nfl.com/injuries/league/2026/reg10 (chunks 0–5 read; 28 teams; CHI/DEN/PHI/TB on bye)
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| O35-01 | Claim scope in COORDINATION.md + push claim | in progress | 35fc3437 | COORDINATION.md | This block. Claim pushed before any build work. |
+| O35-02 | Data layer: verified standings, schedule, results, injury CSVs (every row source_url or blank+flag) | in progress | 35fc3437 | nfl-desk-35fc3437/data/*.csv | Built from the official nfl.com reads listed above. |
+| O35-03 | Originated lines + correlations + gates + leaderboard + registers CSVs | in progress | 35fc3437 | nfl-desk-35fc3437/data/*.csv | Model lines computed in-repo from official standings; market columns blank+flagged. |
+| O35-04 | Build script: render category subpages + landing page from CSVs | in progress | 35fc3437 | nfl-desk-35fc3437/build_desk.py | Deterministic; no JS required for content. |
+| O35-05 | Verify script: every row source-linked or explicit blank+flag; no broken links | in progress | 35fc3437 | nfl-desk-35fc3437/verify_desk.py | Fail-closed; gates the build. |
+| O35-06 | Unit tests | in progress | 35fc3437 | nfl-desk-35fc3437/tests/test_desk.py | Stdlib tests. |
+| O35-07 | Executive summary + Flagged for Review + sources | in progress | 35fc3437 | research/nfl-35fc3437/**, flagged page | Restates only computed/officially-sourced values. |
+| O35-08 | Scoped CI workflow | in progress | 35fc3437 | .github/workflows/nfl-desk-35fc3437.yml | Rebuild + verify + tests on PR/push. |
+| O35-09 | Commit, push, open PR to main, autonomous merge, live Pages check, record | in progress | 35fc3437 | COORDINATION.md, README.md (one row) | Merge only after verify PASS + live URL check. |
+
+**Cross-session requests**
+
+- None. All work is in the additive `nfl-desk-35fc3437/` namespace; no other session's files are touched.

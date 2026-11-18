@@ -1,0 +1,125 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Suggestions — Own5 NFL Line-Origination Dashboard</title><style>
+:root{--bg:#f7f8fa;--card:#ffffff;--ink:#111827;--muted:#6b7280;--line:#e5e7eb;
+  --blue:#1f6feb;--blue-dark:#155ccb;--green:#15803d;--red:#b91c1c;--amber:#b45309;
+  --flag-bg:#fef3c7;--flag-text:#92400e;}
+* {box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.5}
+.skip{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+header{background:#0b2545;color:#fff;padding:1rem 1.5rem}
+header h1{margin:0;font-size:1.25rem;letter-spacing:0.04em}
+header p{margin:.25rem 0 0;font-size:.9rem;opacity:.85}
+nav{display:flex;gap:.5rem;flex-wrap:wrap;padding:.6rem 1.5rem;background:#fff;
+  border-bottom:1px solid var(--line)}
+nav a{padding:.35rem .7rem;border-radius:.4rem;text-decoration:none;color:var(--blue);
+  font-size:.88rem;border:1px solid transparent}
+nav a:hover{background:#eef3fb;border-color:var(--blue)}
+.container{max-width:1200px;margin:0 auto;padding:1rem 1.5rem}
+.badge{display:inline-block;padding:.05rem .5rem;border-radius:.9rem;font-size:.76rem;
+  font-weight:600;margin-left:.35rem;vertical-align:middle}
+.badge-src{background:#e7f0fd;color:#1d4ed8}
+.badge-flag{background:var(--flag-bg);color:var(--flag-text)}
+.badge-unverified{background:#fee2e2;color:#991b1b}
+.badge-met{background:#dcfce7;color:#166534}
+.badge-partial{background:#fef3c7;color:#92400e}
+.badge-notmet{background:#fee2e2;color:#991b1b}
+.badge-notstarted{background:#e5e7eb;color:#4b5563}
+h2{font-size:1.2rem;margin:1.5rem 0 .75rem;border-bottom:2px solid var(--line);
+  padding-bottom:.35rem}
+h3{font-size:1.05rem;margin:1rem 0 .5rem}
+p{margin:.5rem 0}
+table{width:100%;border-collapse:collapse;margin:.75rem 0;background:var(--card);
+  font-size:.86rem}
+th,td{border:1px solid var(--line);padding:.45rem .6rem;text-align:left;vertical-align:top}
+th{background:#f1f5f9;font-weight:700;color:#334155;position:sticky;top:0}
+tr:nth-child(even)td{background:#fbfdff}
+td.blank{color:var(--muted);font-style:italic}
+td.num{text-align:right}
+a{color:var(--blue-dark)}
+a:hover{text-decoration:underline}
+.src{color:var(--muted);font-size:.78rem}
+.src a{color:#1d4ed8}
+.flagstrip{padding:.5rem 1rem;margin:.75rem 0;border-radius:.4rem;border-left:4px solid}
+.flagstrip.red{background:#fef2f2;border-color:var(--red);color:#7f1d1d}
+.flagstrip.amber{background:#fffbeb;border-color:var(--amber);color:#78350f}
+.flagstrip.green{background:#f0fdf4;border-color:var(--green);color:#14532d}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1rem 0}
+.stat{border:1px solid var(--line);background:var(--card);border-radius:.6rem;padding:1rem}
+.stat .v{font-size:1.75rem;font-weight:700;color:var(--blue-dark)}
+.stat .l{font-size:.82rem;color:var(--muted);margin-top:.2rem}
+.section{border:1px solid var(--line);background:var(--card);border-radius:.6rem;
+  padding:1rem 1.25rem;margin:1rem 0}
+.kicker{font-size:.78rem;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+.notice{background:#fffbeb;border:1px solid #f59e0b;color:#78350f;padding:.75rem 1rem;
+  border-radius:.4rem;margin:1rem 0;font-size:.88rem}
+.disclaimer{margin-top:2rem;border-top:1px solid var(--line);padding-top:1rem;
+  font-size:.8rem;color:var(--muted)}
+.small{font-size:.82rem;color:var(--muted)}
+ul{margin:.4rem 0 .8rem 1.15rem}
+ul li{margin:.25rem 0}
+</style></head><body><a class="skip" href="#main">Skip to main content</a><header><h1>Own5 &middot; NFL Line-Origination Dashboard</h1><p>Evidence-first NFL line origination &middot; every table row source-linked or explicitly blank-and-flagged &middot; no performance claims, no bets placed</p></header><nav><a href="../index.html">Overview</a><a href="standings.html">Standings</a><a href="schedule.html">Schedule (Wk 11)</a><a href="results.html">Results feed (Wk 10)</a><a href="lines.html">Originated lines</a><a href="leaderboard.html">Leaderboard</a><a href="correlations.html">Correlations</a><a href="injuries.html">Injuries / Depth</a><a href="gates.html">Validation gates</a><a href="questions.html">Questions &amp; answers</a><a href="suggestions.html" class="active">Suggestions (review)</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for Review</a></nav><div class="container"><h2>Suggestions</h2><section class='section'><div class='kicker'>Reviewable</div><h2>Suggestions for review — nothing implemented without a decision</h2><p class='small'>Each suggestion carries options, a recommended path, and a two-sided \u201cwhat would change our mind\u201d field. Nothing is implemented until a reviewer records a decision.</p><table><thead><tr>
+<th>ID</th>
+<th>Suggestion</th>
+<th>Options</th>
+<th>Recommended path</th>
+<th>What would change our mind</th>
+<th>Decision</th>
+<th>Owner</th>
+<th>Due</th>
+<th>Source</th></tr></thead><tbody>
+<tr>
+<td>S01</td>
+<td>Price-data source for market lines</td>
+<td>(A) Subscribe to/integrate a regulated operator price feed (DraftKings/FanDuel/BetMGM official). (B) Record a documented user-supplied price-data policy and keep market columns blank+flagged until then. (C) Do not publish market lines at all.</td>
+<td>B — adopt a written price-data policy first; gate G12 blocks all backtest/ROI publication until decided.</td>
+<td>A regulated price feed becomes available and is verified, or the user formally selects A or C.</td>
+<td>PENDING</td>
+<td>User</td>
+<td>2026-11-20</td>
+<td class="src"><a href="https://www.nfl.com/standings/league/2026/REG" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>S02</td>
+<td>Injury/depth capture frequency</td>
+<td>(A) Daily capture Wed→kickoff with timestamps (per brief). (B) Single weekly capture only. (C) No capture; flag blank.</td>
+<td>A — capture on publication days (Wed/Thu) and treat the report as a step function; retry after publication.</td>
+<td>The official report begins publishing Week-11 content or a club-depth/snaps source is verified.</td>
+<td>PENDING</td>
+<td>User</td>
+<td>2026-11-19</td>
+<td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>S03</td>
+<td>Backtest corpus construction</td>
+<td>(A) Turn the 136-game log into the pre-registered backtest corpus. (B) Use only verified Week-10 finals (n=14). (C) No backtest until multi-season data obtained.</td>
+<td>B — publish only verified finals; clearly label corpus size and power limits.</td>
+<td>A verified 136-game corpus with official results is assembled.</td>
+<td>PENDING</td>
+<td>User</td>
+<td>2026-11-23</td>
+<td class="src"><a href="https://www.nfl.com/schedules/2026/by-week/week-10" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>S04</td>
+<td>Leaderboard reward structure</td>
+<td>(A) Non-cash badges only. (B) Prospective CLV/ROI escrow with rewards. (C) No rewards until certified.</td>
+<td>A — non-cash badges; no funded rewards or payouts.</td>
+<td>A regulated price feed and certified strategy exist (G02/G04 pass)</td>
+<td>PENDING</td>
+<td>User</td>
+<td>2026-11-20</td>
+<td class="src"><a href="https://www.nfl.com/standings/league/2026/REG" rel="nofollow">source &rarr;</a></td>
+</tr>
+<tr>
+<td>S05</td>
+<td>Mexico City venue confirmation</td>
+<td>(A) Transcribe venue from the official Vikings@49ers game centre. (B) Leave as “Mexico City (neutral site)” flagged.</td>
+<td>B — keep flagged until game-centre confirms the specific stadium.</td>
+<td>The official game centre prints a named stadium for the neutral-site game.</td>
+<td>PENDING</td>
+<td>User</td>
+<td>2026-11-22</td>
+<td class="src"><a href="https://www.nfl.com/schedules/2026/by-week/week-11" rel="nofollow">source &rarr;</a></td>
+</tr>
+</tbody></table></div><div class="disclaimer">Research only — not betting advice, not a sportsbook, no payouts. Every value traces to an official/primary source (linked per row) or is left blank and flagged. Model outputs are computed in-repo from official standings and are labeled as such.</div></body></html>
