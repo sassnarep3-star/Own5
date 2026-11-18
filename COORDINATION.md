@@ -3561,3 +3561,11 @@ Session ID `35fc3437`, branch `arena/35fc3437-own5` (base `cb2d3b84` = current `
 **Cross-session requests**
 
 - None. All work is in the additive `nfl-desk-35fc3437/` namespace; no other session's files are touched.
+
+### arena-51cf3786 — merge result and follow-up (2026-11-18)
+
+- **PR #121 merged** (`gh pr merge 121 --merge`) at 2026-11-18T04:10:18Z. Merge commit `4169082`. Head before merge: `dfda1b0`.
+- **Pages:** `pages build and deployment` for `4169082`: success. Live pages checked through the fetch tool: `https://sassnarep3-star.github.io/Own5/repo-review/` and `https://sassnarep3-star.github.io/Own5/nfl-integration-a620f5a5/` both load.
+- **Pre-merge failing check, not caused by this PR:** `NFL Decision Desk — fetch & verify`, step "Confirm the committed site matches a clean rebuild" (X51-13).
+- **Post-merge correction:** the published review's verifier sweep was captured before the last audit fix. The live page said "2 FAIL"; the true sweep on the merged tree is 29 verifiers, 28 PASS, 1 FAIL (`nba-commission`, X51-05). Corrected in a follow-up PR from the same branch (`arena/51cf3786-own5`), with `nfl-b34253a1` regenerated after the review rebuild and main's new desk `nfl-desk-35fc3437`.
+- **Standing caveat (X51-06):** `nfl-b34253a1/data/repo_audit.csv` covers the review's own files, so the order of rebuilds matters. Run the review sweep and build first, then regenerate the audit, then commit both.
