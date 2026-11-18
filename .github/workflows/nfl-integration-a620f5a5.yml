@@ -81,7 +81,9 @@ jobs:
             url="$base$path"
             success=0
             for attempt in $(seq 1 24); do
-              if curl --fail --silent --show-error --location "$url" | grep -q 'NFL'; then
+              # Capture the body first: with pipefail, `curl | grep -q` fails on large pages
+              # because grep exits early and curl gets SIGPIPE (false "not ready").
+              if body="$(curl --fail --silent --show-error --location "$url")" && grep -q 'NFL' <<< "$body"; then
                 echo "OK $url"
                 success=1
                 break
