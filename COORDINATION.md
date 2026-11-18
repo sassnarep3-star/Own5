@@ -2868,3 +2868,122 @@ It does not re-publish the other desks' analysis.
 
 **Status:** B1, B3, B5, B6 done; B2 blocked (built, disabled); B4 blocked; B7 changed to verify-only; B8 open (cross-session request). Desk verification: unit tests OK; `verify.py` PASS; rebuild byte-identical.
 
+
+## Session 98a211b8 — NFL repo review, dated availability status, desk index & flagged register (claimed 2026-11-18T03:12Z)
+
+Session ID `98a211b8`, branch `arena/98a211b8-own5`, base `92d5017` (main). Branch fixed by the platform; the
+per-session `session-<id>/<task>` branch naming in the brief cannot be used, so all work stays on this branch.
+
+**Why a bounded scope (no duplicate work).** At least 20 NFL desks already answer the brief in separate namespaces
+(see the Sibling-desk list above and `nfl-desk-35a1feb2/data/sibling_desks.csv`). No root index links them, and the
+root `index.html` still shows the 2026-11-02 state. This session therefore does **not** build another decision desk.
+It takes the three items on the board that have no owner: a bounded repo review, a dated status capture of the
+official availability pages, and a single index plus Flagged-for-Review register. Everything else is logged as a request.
+
+| ID | Task | Status | Owner | Files touched |
+|----|------|--------|-------|---------------|
+| X1 | Claim + baseline (this block) | in progress | 98a211b8 | `COORDINATION.md` (append-only block) |
+| X2 | Repo review: check the board's central data claims against committed files and official pages; irregularity register | unclaimed→in progress | 98a211b8 | `nfl-98a211b8/data/repo_review.csv` (read-only on all other namespaces) |
+| X3 | Dated status capture of the official nfl.com injury-report pages (Week 10, Week 11): fetch time, SHA-256 of the text read, publication state | unclaimed→in progress | 98a211b8 | `nfl-98a211b8/data/official_status_captures.csv`, `nfl-98a211b8/captures/` |
+| X4 | Flagged-for-Review register, executive summary, overview (static, deterministic build). Desk index **not built**: session 5c5f4aaf published one (PR #102), linked from this desk | unclaimed→in progress | 98a211b8 | `nfl-98a211b8/**`, `research/nfl-98a211b8/**` |
+| X5 | Verification (every body row linked or flagged), tests, PR to `main`, merge, Pages check, record | unclaimed→in progress | 98a211b8 | `nfl-98a211b8/**`, `COORDINATION.md` (append-only) |
+
+Read-only dependencies: none are edited. Any file in another namespace is quoted by path and by SHA-256 when read.
+
+### 98a211b8 — completion record (2026-11-18, session clock 03:1xZ)
+
+Statuses: X1–X4 **done** (verified by the commands below, not asserted). X5 completes with the PR and merge
+record that follows in the next block.
+
+**What was built (all under `nfl-98a211b8/**`, one `.github/workflows/nfl-98a211b8.yml`, one appended README section, this block).**
+6 static pages: Overview, Repo review, Official availability, Flagged for Review, Executive summary, Sources. The desk index was dropped after PR #102 (session 5c5f4aaf) merged a desk directory to `main` during this session; linking it is cheaper than a second copy.
+Stdlib-only `build.py` (deterministic, no timestamps), `verify.py` (V0–V9, 26 PASS lines), `tests/test_build.py` (9 tests).
+
+**Sources read (dated, reproducible).**
+* https://www.nfl.com/injuries/league/2026/reg10 — chunk 0 of 8, read before 2026-11-18T03:11:29Z. Verbatim excerpt
+  saved at `nfl-98a211b8/captures/nfl_reg10_chunk0_excerpt_2026-11-18.md`, SHA-256
+  `27791393cc324ab6a27fa884b56bf50f00ee346f4539d560ba6e17a1c4cc42f2` (pinned in the CSVs, checked by V1).
+* https://www.nfl.com/injuries/league/2026/reg11 — requested; the tool returned the Week 10 URL and title. Week 11 not served at read time (inference from the redirect).
+* https://www.nfl.com/standings/league/2026/REG — chunk 0 of 2; AZ and LA abbreviations confirmed.
+* GitHub API (Pages configuration) and `gh run list --branch main` (CI state), both 2026-11-18.
+* Corroboration, not reused: session 5c5f4aaf read the same Week 11 endpoint at 2026-11-18T03:12Z (`nfl-desk-5c5f4aaf/data/official_status_2026-11-18.csv`) and recorded the same result (Week 11 not served). Two independent reads agree.
+
+**Verification performed.**
+1. 44 visible official rows (Commanders 9, Giants 11, Patriots 15, Lions 9) compared field by field with `data/decision-desk/official/official_injuries_wk10.csv`: **27 match, 17 differ**. Per-row lines and row-level results are in `availability.html` and `data/injury_row_checks.csv`.
+2. `verify.py`: 26 PASS checks (V0 field counts in every CSV, V1 pinned hash, V2 parse counts, V3 comparison reproduces, V4 every repo-review row linked, V5 unverified rows labelled, V6 every body row sourced or labelled, V7 internal links resolve, V8 no http links, V9 byte-identical rebuild).
+3. `python3 -m unittest discover -s nfl-98a211b8/tests` → 9 tests OK.
+4. Two defects found by V0/V6 and fixed before publishing: unquoted commas in three CSVs (shifted columns), and unlisted tables passing joined strings instead of rows. Recorded because a CSV parse error would silently drop a row.
+
+**Irregularities (all on the Flagged page with links).** Repo review R01–R17. The blocking ones:
+* **R09** results feed uses `ARI`/`LAR` (18 club-game appearances) where the official standings use `AZ`/`LA`.
+* **R11** the claim "no market price exists anywhere in the repo" is false (163 of 272 games have spread, total and moneyline in the nflverse-derived log). The source-class policy is still open.
+* **R12/R13** three Lions players listed Out officially have blank game status in the repo copy; 17 of 44 visible rows differ overall. A single read cannot separate a later revision from a parse defect.
+* **R15** Week 11 injury report not served at read time.
+* **R14** three different Week 10 row counts across desks (276 repo, 254 and 279 on the board); unresolved.
+* **R02** the root index.html still shows 2026-11-02 dates and links one of 25 NFL-related folders.
+
+**Not done, deliberately.** No new decision desk (about 25 already exist). No changes to root `index.html`, `pages/**`, `assets/**`
+(integration-owned). No strategy, leaderboard, correlation or luck value is re-verified here; those belong to the other desks.
+Houston depth, the Week 11 availability, and the full 8-chunk Week 10 read are listed as UNVERIFIED on the Flagged page.
+
+**Requests logged for other sessions (not actioned):** root index listing every desk with capture date (integration session);
+results-feed alias map and club-by-club reconciliation (owners of e46fb855 and ce1f16ff); daily dated captures of the
+injury report on publication days (owners of the injury desks); per-week source URLs for injury rows (owners of data/decision-desk/official/*);
+workflow file-name mismatch, README table split, and nine open PRs (integration session). Root index desk list: partly answered by PR #102.
+
+**Merge with `main` (PR #102, session 5c5f4aaf).** `main` moved during this session. The only conflict was COORDINATION.md (both sessions appended a block at the same position); both blocks are kept in full. The overlap in scope was resolved by dropping this desk's duplicate index, not by editing 5c5f4aaf's files.
+
+## Session 5c5f4aaf — NFL desk directory, official-status check and integration hand-off (claimed 2026-11-18T03:1xZ)
+
+Session ID `5c5f4aaf`, branch `arena/5c5f4aaf-own5`, branched from `92d50179a17a391b436eae650979f7bc192c52ad` (main).
+The branch name is fixed by the session; the `session-<id>/<task>` naming in the header of this file is not used, because
+the session is bound to its branch.
+
+**Why this session exists.** Roughly forty NFL desk folders now sit in the repo, each with its own index, and the root
+`index.html` (generated by `scripts/build.py`) does not link most of them. The root notice already says \"open the NFL
+integration hub\", but no page lists the desks in one place, and CU-F12 (35a1feb2) asked for exactly that index. This
+session publishes it, and nothing else of the analysis.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| K1 | Claim + board entry | in progress | 5c5f4aaf | COORDINATION.md | This block. |
+| K2 | Official-status check of the injury-report endpoints, timestamped | in progress | 5c5f4aaf | `nfl-desk-5c5f4aaf/data/official_status_2026-11-18.csv` | Records what the week-10 and week-11 endpoints return now. No availability value is published from it. |
+| K3 | Desk directory page (every NFL desk folder, counts derived from files, not git) | in progress | 5c5f4aaf | `nfl-desk-5c5f4aaf/**`, `tools/build_desk_directory.py` | Repository-artifact index. It makes no claim about the NFL, so it has no official-source column. |
+| K4 | Root notice link to the directory (generator edit, then regenerated index) | in progress | 5c5f4aaf | `scripts/build.py`, `index.html` | Edits the notice line only. `scripts/seed.py && scripts/build.py` reproduces the file byte-for-byte before and after. |
+| K5 | Verification, PR to main, merge, Pages check | in progress | 5c5f4aaf | COORDINATION.md | Record appended on completion. |
+
+**Cross-session notes.** `index.html` and `pages/**` were CI-locked to arena-cd43258e. That session is done, and this
+change is one notice line produced through the generator, so the `verify.yml` determinism diff still holds.
+
+### 5c5f4aaf — completion record (2026-11-18T03:2xZ)
+
+Statuses above: K1–K4 **done**; K5 (PR, merge, Pages check) recorded below after it runs.
+
+**What was published.**
+* `nfl-desk-5c5f4aaf/index.html`: the NFL desk directory. 25 desk folders listed, 24 with an entry page, 21 with a
+  flagged-items file, 137 flagged CSV rows (summed across files, *not* de-duplicated: the same irregularity can be logged by two desks).
+  Counts come from files on disk; no git, clock or network input.
+* `nfl-desk-5c5f4aaf/data/desks.csv`: the same table as data.
+* `nfl-desk-5c5f4aaf/data/official_status_2026-11-18.csv`: what the two injury-report endpoints served on 2026-11-18 03:12Z.
+* Root `index.html`: one notice sentence that links the directory (generated through `scripts/build.py`; the diff is that one line).
+* `tools/build_desk_directory.py` and `tests/test_desk_directory.py` (4 tests).
+
+**Verification, printed by commands, not asserted.**
+* `python3 tools/build_desk_directory.py --check` → `PASS determinism, 25 desk rows, every link resolves`.
+* `python3 -m unittest tests.test_desk_directory` → 4 tests OK.
+* `python3 scripts/seed.py && python3 scripts/build.py` → the only tracked changes are the one notice line in `index.html` and `scripts/build.py`. `data/research.json` is unchanged, so the `verify.yml` determinism diff is clean.
+* The full root suite (`python3 -m unittest discover -s tests`) passes.
+
+**Official sources read this session (via the fetch tool, which reaches nfl.com; the bash sandbox was not used for nfl.com).**
+* https://www.nfl.com/injuries/ — served **Week 10**, read 2026-11-18T03:12Z.
+* https://www.nfl.com/injuries/league/2026/reg11 — served **Week 10** (title and heading), read 2026-11-18T03:12Z.
+  Consequence: no Week 11 availability value exists yet. The league publishes the report on Wednesday; this read is before that.
+  The Week 11 read is therefore **not** done in this session, and nothing from it is published.
+
+**Irregularities (flagged, not fixed in this session).**
+* **Root landing page is stale.** `index.html` still says `Reviewed 2026-11-02` and lists eight candidates. Only its notice was touched here. A full root rewrite needs the generator's seed data reviewed, and that is a separate decision.
+* **Flag counts are not de-duplicated.** Any total built from the desk CSVs over-counts shared items (for example CU-F03/04/05 in 35a1feb2 are repeated elsewhere).
+* **`nfl_model/` has no entry page.** It is listed in the directory with `none` as its entry point.
+* **Two CI workflows were already failing before this session** (`decision-desk.yml`, `nfl-b34253a1.yml`), per the notes above. Not touched.
+
+**Not done (honest scope).** The brief's open items remain open: the Week 11 availability capture (blocked until the league publishes), the price-data policy decision (CU-F10, user-owned), roster-depth verification for all 32 clubs, the pre-registered backtest corpus, and the demotion gate. Each is already logged by a prior desk; this session added no new analysis and makes no new performance claim.

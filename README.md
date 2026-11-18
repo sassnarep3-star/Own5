@@ -581,3 +581,11 @@ python3 nfl-integration-a620f5a5/build_site.py
 python3 nfl-integration-a620f5a5/verify.py
 python3 scripts/build.py
 ```
+
+---
+
+## NFL review desk · session 98a211b8
+
+**Live page:** https://sassnarep3-star.github.io/Own5/nfl-98a211b8/ · **Flagged for Review:** https://sassnarep3-star.github.io/Own5/nfl-98a211b8/flagged.html
+
+Bounded review, not another decision desk: a repo review register (each check linked), a dated capture log of the official nfl.com injury pages with a line-by-line comparison of 44 visible rows against the repo copy, links the NFL desk directory published by session 5c5f4aaf (PR #102) rather than duplicating it, and a Flagged for Review register. Sources: `nfl-98a211b8/data/sources.csv`. Rebuild and verify: `python3 nfl-98a211b8/build.py && python3 nfl-98a211b8/verify.py`.
