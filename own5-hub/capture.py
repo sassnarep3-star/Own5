@@ -75,8 +75,8 @@ def main():
             p = os.path.join(HERE, raw_rel)
             if os.path.exists(p):
                 raise SystemExit(f"refusing to overwrite immutable capture {p}")
-            with gzip.open(p, "wb", mtime=0) as f:
-                f.write(body)
+            with open(p, "wb") as f:
+                f.write(gzip.compress(body, mtime=0))
         ok, detail = (False, "no body: " + (err or f"http {status}"))
         if body and status == 200:
             ok, detail = pins_for(name, body.decode("utf-8", "replace"))
