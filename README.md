@@ -596,3 +596,17 @@ python3 scripts/build.py
 **Live page:** https://sassnarep3-star.github.io/Own5/nfl-98a211b8/ · **Flagged for Review:** https://sassnarep3-star.github.io/Own5/nfl-98a211b8/flagged.html
 
 Bounded review, not another decision desk: a repo review register (each check linked), a dated capture log of the official nfl.com injury pages with a line-by-line comparison of 44 visible rows against the repo copy, links the NFL desk directory published by session 5c5f4aaf (PR #102) rather than duplicating it, and a Flagged for Review register. Sources: `nfl-98a211b8/data/sources.csv`. Rebuild and verify: `python3 nfl-98a211b8/build.py && python3 nfl-98a211b8/verify.py`.
+
+## NFL Price & Ledger Desk · session 6cbf25fa (2026-11-18)
+
+**Live page (after merge):** https://sassnarep3-star.github.io/Own5/nfl-desk-6cbf25fa/ · **Flagged for Review:** https://sassnarep3-star.github.io/Own5/nfl-desk-6cbf25fa/flagged.html
+
+Owns the price-snapshot store and the injury point-in-time ledger:
+
+- **Price-snapshot store** (`data/nfl-desk-6cbf25fa/price_snapshots.csv`): 39 immutable opening snapshots (13 Week 11 games × side/total/ML) with `opened_utc`, `inputs_sha256`, blank closing columns (filled only post-kickoff from official results) and blank market/residual columns (no verified operator price source — F-P01).
+- **Week 11 origination** (`data/nfl-desk-6cbf25fa/lines_week11.csv`) under a frozen pre-registered spec (`research/nfl-6cbf25fa/model_spec.md`, sha256 recorded in `model_inputs.json`): two-iteration opponent-adjusted ratings + one-pass HFA (−0.29 pts, n=142) + fitted σ (14.92, n=150) + empirical tie rate, over a 150-game verified corpus (nflverse weeks 1–9 sha256-verified + official Week 10 finals read 2026-11-18).
+- **Injury ledger** (`data/nfl-desk-6cbf25fa/injury_reads/`): two clock-stamped reads (2026-11-12T16:52:39Z decision-desk capture; 2026-11-18T03:55:13Z this desk, 347 rows, extracts hashed) and 456 player-level deltas — deltas published, never levels.
+- **Cross-checks:** all 32 clubs' W-L-T/PF/PA/NET on the official standings page verified against game-derived records (0 mismatches); Week 11 slate cross-checked against the official schedule capture; MIN@SF confirmed neutral site (Estadio Banorte, Mexico City) from the official game centre.
+- **CI takeover (handoff in COORDINATION.md):** fixed the pre-existing decision-desk PR failure (F-05) and the B34 rebuild failure — repo-wide point-in-time audit artifacts are no longer regenerated on PR rebuilds; stale derived outputs re-committed.
+
+Rebuild and verify: `python3 nfl-desk-6cbf25fa/build.py && python3 nfl-desk-6cbf25fa/verify.py && python3 -m unittest discover -s nfl-desk-6cbf25fa/tests -v` (543 checks, 11 tests incl. negative controls). CI: `.github/workflows/nfl-6cbf25fa.yml`.
