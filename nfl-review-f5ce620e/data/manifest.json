@@ -1,0 +1,23 @@
+{
+  "scope": "Local review artifacts only. These hashes do not authenticate source-server responses.",
+  "entries": [
+    {
+      "path": "raw/official_reads_2026-11-18.md",
+      "bytes": 10187,
+      "sha256": "cdd15c549a384dedcf7f5b01a91df8713ac17da4fdf6a2886003db31b0f03b8e",
+      "role": "source-response summary; not an HTTP archive"
+    },
+    {
+      "path": "data/venues_week11.csv",
+      "bytes": 2486,
+      "sha256": "c5c4b135b7bfff2d83fa6bf659ad4798974ca911d7e1da902f7fab0fab13dceb",
+      "role": "local transcription of 13 official Game Center venue labels"
+    },
+    {
+      "path": "data/results_increment_week10.csv",
+      "bytes": 501,
+      "sha256": "2edcba16d3035bd9af7908d89156b33af6265460d22093843dcc6afd02889b3d",
+      "role": "one-game official result delta; not a complete feed"
+    }
+  ]
+}

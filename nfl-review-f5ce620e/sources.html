@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Independent, source-linked NFL decision-readiness audit; unresolved claims remain visibly flagged.">
+  <title>Sources &amp; tables · Own5</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brandline"><span class="brand-mark" aria-hidden="true">O5</span><span>NFL REVIEW · F5CE620E</span><span class="tag">AUDIT ONLY</span></div>
+    <h1>Sources &amp; tables</h1>
+    <p>2026-11-18 UTC · 2026-11-18 approximately 03:14–03:21Z; follow-up at approximately 03:27Z</p>
+    <nav class="site-nav" aria-label="Review pages"><a href="index.html">Executive summary</a><a href="audit.html">Audit findings</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions · review first</a><a href="flagged.html">Flagged for Review</a><a href="sources.html" aria-current="page">Sources &amp; tables</a></nav>
+  </div>
+</header>
+<div class="page-shell">
+  <p class="breadcrumb">Own5 / independent review / <span class="mono">f5ce620e</span></p>
+  <main>
+
+<p class="lede">This register distinguishes official league/club pages, official operator pages and third-party datasets. Every source row links to the read route and its local note/reference; a source's presence does not imply that it is complete, licensed for reuse, or a current market quote.</p>
+<div class="note alert"><strong>Capture limitation:</strong> the notes are not full HTTP response archives. The hashes below authenticate only the local note/CSV bytes at the time of manifest generation, not the live pages or source-server responses.</div>
+<h2>Source register (33 records)</h2>
+<div class="table-wrap"><table class="table-wide"><thead><tr><th>ID</th><th>Publisher / source class</th><th>Read route / observed label</th><th>Read window</th><th>Observation and scope limit</th><th>Local reference / status</th></tr></thead><tbody>
+<tr id="source-src-01">
+  <td><strong>SRC-01</strong></td>
+  <td>NFL.com<br><span class="muted">official NFL league page</span></td>
+  <td><a href="https://www.nfl.com/injuries/league/2026/reg11" target="_blank" rel="noopener noreferrer">2026 NFL Injury Report — requested Week 11 URL ↗</a></td>
+  <td>2026-11-18T03:14Z (minute precision)</td>
+  <td>Fetcher returned a response URL ending in /reg10 and a Week 10 title/heading.<br><strong>Limit:</strong> This is the league-level page response only; it does not establish absence of club-level Week 11 reports.</td>
+  <td><a href="raw/official_reads_2026-11-18.md">raw/official_reads_2026-11-18.md</a><br><span class="status info">READ — endpoint response verified</span></td>
+</tr>
+<tr id="source-src-02">
+  <td><strong>SRC-02</strong></td>
+  <td>Houston Texans<br><span class="muted">official NFL club page</span></td>
+  <td><a href="https://www.houstontexans.com/news/week-11-injury-report-texans-vs-colts" target="_blank" rel="noopener noreferrer">Week 11 Injury Report | Texans vs Colts ↗</a></td>
+  <td>2026-11-18T03:14Z (minute precision)</td>
+  <td>Official club article says published Nov. 16, 2026 at 05:48 PM and updated Nov. 17 at 03:46 PM; contains Houston and Indianapolis Monday/Tuesday practice-status tables.<br><strong>Limit:</strong> Two clubs only; table has practice-status columns, not final game-status values. Timezone on the article&#x27;s published/updated display is not stated.</td>
+  <td><a href="raw/official_reads_2026-11-18.md">raw/official_reads_2026-11-18.md</a><br><span class="status info">READ — partial two-club evidence</span></td>
+</tr>
+<tr id="source-src-03">
+  <td><strong>SRC-03</strong></td>
+  <td>NFL.com<br><span class="muted">official NFL league schedule</span></td>
+  <td><a href="https://www.nfl.com/schedules/2026/by-week/week-11" target="_blank" rel="noopener noreferrer">NFL Week 11 Schedule 2026 ↗</a></td>
+  <td>2026-11-18T03:14Z (minute precision)</td>
+  <td>Lists Colts at Texans on Thursday, Nov. 19 at 8:15 PM and provides the Week 11 fixture context.<br><strong>Limit:</strong> Fixture context only; schedule page is not a sportsbook price feed.</td>
+  <td><a href="raw/official_reads_2026-11-18.md">raw/official_reads_2026-11-18.md</a><br><span class="status info">READ — fixture facts</span></td>
+</tr>
+<tr id="source-src-ven-01">
+  <td><strong>SRC-VEN-01</strong></td>
+  <td>NFL.com Game Center<br><span class="muted">official NFL Game Center</span></td>
+  <td><a href="https://www.nfl.com/games/colts-at-texans-2026-reg-11" target="_blank" rel="noopener noreferrer">Indianapolis Colts at Houston Texans — Game Info ↗</a></td>
+  <td>2026-11-18T03:20-03:21Z (minute precision)</td>
+  <td>Location and stadium labels transcribed in the corresponding venue-table row.<br><strong>Limit:</strong> Published venue labels only; roof, surface, weather and actual starters are not inferred.</td>
+  <td><a href="data/venues_week11.csv">data/venues_week11.csv</a><br><span class="status info">READ — venue row</span></td>
+</tr>
+<tr id="source-src-ven-02">
+  <td><strong>SRC-VEN-02</strong></td>
+  <td>NFL.com Game Center<br><span class="muted">official NFL Game Center</span></td>
+  <td><a href="https://www.nfl.com/games/dolphins-at-bills-2026-reg-11" target="_blank" rel="noopener noreferrer">Miami Dolphins at Buffalo Bills — Game Info ↗</a></td>
+  <td>2026-11-18T03:20-03:21Z (minute precision)</td>
+  <td>Location and stadium labels transcribed in the corresponding venue-table row.<br><strong>Limit:</strong> Published venue labels only; roof, surface, weather and actual starters are not inferred.</td>
+  <td><a href="data/venues_week11.csv">data/venues_week11.csv</a><br><span class="status info">READ — venue row</span></td>
+</tr>
+<tr id="source-src-ven-03">
+  <td><strong>SRC-VEN-03</strong></td>
+  <td>NFL.com Game Center<br><span class="muted">official NFL Game Center</span></td>
+  <td><a href="https://www.nfl.com/games/ravens-at-panthers-2026-reg-11" target="_blank" rel="noopener noreferrer">Baltimore Ravens at Carolina Panthers — Game Info ↗</a></td>
+  <td>2026-11-18T03:20-03:21Z (minute precision)</td>
+  <td>Location and stadium labels transcribed in the corresponding venue-table row.<br><strong>Limit:</strong> Published venue labels only; roof, surface, weather and actual starters are not inferred.</td>
+  <td><a href="data/venues_week11.csv">data/venues_week11.csv</a><br><span class="status info">READ — venue row</span></td>
+</tr>
+<tr id="source-src-ven-04">
+  <td><strong>SRC-VEN-04</strong></td>
+  <td>NFL.com Game Center<br><span class="muted">official NFL Game Center</span></td>
+  <td><a href="https://www.nfl.com/games/saints-at-bears-2026-reg-11" target="_blank" rel="noopener noreferrer">New Orleans Saints at Chicago Bears — Game Info ↗</a></td>
+  <td>2026-11-18T03:20-03:21Z (minute precision)</td>
+  <td>Location and stadium labels transcribed in the corresponding venue-table row.<br><strong>Limit:</strong> Published venue labels only; roof, surface, weather and actual starters are not inferred.</td>
+  <td><a href="data/venues_week11.csv">data/venues_week11.csv</a><br><span class="status info">READ — venue row</span></td>
+</tr>
+<tr id="source-src-ven-05">
+  <td><strong>SRC-VEN-05</strong></td>
+  <td>NFL.com Game Center<br><span class="muted">official NFL Game Center</span></td>
+  <td><a href="https://www.nfl.com/games/titans-at-cowboys-2026-reg-11" target="_blank" rel="noopener noreferrer">Tennessee Titans at Dallas Cowboys — Game Info ↗</a></td>
+  <td>2026-11-18T03:20-03:21Z (minute precision)</td>
+  <td>Location and stadium labels transcribed in the corresponding venue-table row.<br><strong>Limit:</strong> Published venue labels only; roof, surface, weather and actual starters are not inferred.</td>
+  <td><a href="data/venues_week11.csv">data/venues_week11.csv</a><br><span class="status info">READ — venue row</span></td>
+</tr>
+<tr id="source-src-ven-06">
+  <td><strong>SRC-VEN-06</strong></td>
+  <td>NFL.com Game Center<br><span class="muted">official NFL Game Center</span></td>
+  <td><a href="https://www.nfl.com/games/buccaneers-at-lions-2026-reg-11" target="_blank" rel="noopener noreferrer">Tampa Bay Buccaneers at Detroit Lions — Game Info ↗</a></td>
+  <td>2026-11-18T03:20-03:21Z (minute precision)</td>
+  <td>Location and stadium labels transcribed in the corresponding venue-table row.<br><strong>Limit:</strong> Published venue labels only; roof, surface, weather and actual starters are not inferred.</td>
+  <td><a href="data/venues_week11.csv">data/venues_week11.csv</a><br><span class="status info">READ — venue row</span></td>
+</tr>
+<tr id="source-src-ven-07">
+  <td><strong>SRC-VEN-07</strong></td>
+  <td>NFL.com Game Center<br><span class="muted">official NFL Game Center</span></td>
+  <td><a href="https://www.nfl.com/games/cardinals-at-chiefs-2026-reg-11" target="_blank" rel="noopener noreferrer">Arizona Cardinals at Kansas City Chiefs — Game Info ↗</a></td>
+  <td>2026-11-18T03:20-03:21Z (minute precision)</td>
+  <td>Location and stadium labels transcribed in the corresponding venue-table row.<br><strong>Limit:</strong> Published venue labels only; roof, surface, weather and actual starters are not inferred.</td>
+  <td><a href="data/venues_week11.csv">data/venues_week11.csv</a><br><span class="status info">READ — venue row</span></td>
+</tr>
+<tr id="source-src-ven-08">
+  <td><strong>SRC-VEN-08</strong></td>
+  <td>NFL.com Game Center<br><span class="muted">official NFL Game Center</span></td>
+  <td><a href="https://www.nfl.com/games/steelers-at-eagles-2026-reg-11" target="_blank" rel="noopener noreferrer">Pittsburgh Steelers at Philadelphia Eagles — Game Info ↗</a></td>
+  <td>2026-11-18T03:20-03:21Z (minute precision)</td>
+  <td>Location and stadium labels transcribed in the corresponding venue-table row.<br><strong>Limit:</strong> Published venue labels only; roof, surface, weather and actual starters are not inferred.</td>
+  <td><a href="data/venues_week11.csv">data/venues_week11.csv</a><br><span class="status info">READ — venue row</span></td>
+</tr>
+<tr id="source-src-ven-09">
+  <td><strong>SRC-VEN-09</strong></td>
+  <td>NFL.com Game Center<br><span class="muted">official NFL Game Center</span></td>
+  <td><a href="https://www.nfl.com/games/jets-at-chargers-2026-reg-11" target="_blank" rel="noopener noreferrer">New York Jets at Los Angeles Chargers — Game Info ↗</a></td>
+  <td>2026-11-18T03:20-03:21Z (minute precision)</td>
+  <td>Location and stadium labels transcribed in the corresponding venue-table row.<br><strong>Limit:</strong> Published venue labels only; roof, surface, weather and actual starters are not inferred.</td>
+  <td><a href="data/venues_week11.csv">data/venues_week11.csv</a><br><span class="status info">READ — venue row</span></td>
+</tr>
+<tr id="source-src-ven-10">
+  <td><strong>SRC-VEN-10</strong></td>
+  <td>NFL.com Game Center<br><span class="muted">official NFL Game Center</span></td>
+  <td><a href="https://www.nfl.com/games/jaguars-at-giants-2026-reg-11" target="_blank" rel="noopener noreferrer">Jacksonville Jaguars at New York Giants — Game Info ↗</a></td>
+  <td>2026-11-18T03:20-03:21Z (minute precision)</td>
+  <td>Location and stadium labels transcribed in the corresponding venue-table row.<br><strong>Limit:</strong> Published venue labels only; roof, surface, weather and actual starters are not inferred.</td>
+  <td><a href="data/venues_week11.csv">data/venues_week11.csv</a><br><span class="status info">READ — venue row</span></td>
+</tr>
+<tr id="source-src-ven-11">
+  <td><strong>SRC-VEN-11</strong></td>
+  <td>NFL.com Game Center<br><span class="muted">official NFL Game Center</span></td>
+  <td><a href="https://www.nfl.com/games/raiders-at-broncos-2026-reg-11" target="_blank" rel="noopener noreferrer">Las Vegas Raiders at Denver Broncos — Game Info ↗</a></td>
+  <td>2026-11-18T03:20-03:21Z (minute precision)</td>
+  <td>Location and stadium labels transcribed in the corresponding venue-table row.<br><strong>Limit:</strong> Published venue labels only; roof, surface, weather and actual starters are not inferred.</td>
+  <td><a href="data/venues_week11.csv">data/venues_week11.csv</a><br><span class="status info">READ — venue row</span></td>
+</tr>
+<tr id="source-src-ven-12">
+  <td><strong>SRC-VEN-12</strong></td>
+  <td>NFL.com Game Center<br><span class="muted">official NFL Game Center</span></td>
+  <td><a href="https://www.nfl.com/games/vikings-at-49ers-2026-reg-11" target="_blank" rel="noopener noreferrer">Minnesota Vikings at San Francisco 49ers — Game Info ↗</a></td>
+  <td>2026-11-18T03:20-03:21Z (minute precision)</td>
+  <td>Location and stadium labels transcribed in the corresponding venue-table row.<br><strong>Limit:</strong> Published venue labels only; roof, surface, weather and actual starters are not inferred.</td>
+  <td><a href="data/venues_week11.csv">data/venues_week11.csv</a><br><span class="status info">READ — venue row</span></td>
+</tr>
+<tr id="source-src-ven-13">
+  <td><strong>SRC-VEN-13</strong></td>
+  <td>NFL.com Game Center<br><span class="muted">official NFL Game Center</span></td>
+  <td><a href="https://www.nfl.com/games/bengals-at-commanders-2026-reg-11" target="_blank" rel="noopener noreferrer">Cincinnati Bengals at Washington Commanders — Game Info ↗</a></td>
+  <td>2026-11-18T03:20-03:21Z (minute precision)</td>
+  <td>Location and stadium labels transcribed in the corresponding venue-table row.<br><strong>Limit:</strong> Published venue labels only; roof, surface, weather and actual starters are not inferred.</td>
+  <td><a href="data/venues_week11.csv">data/venues_week11.csv</a><br><span class="status info">READ — venue row</span></td>
+</tr>
+<tr id="source-src-04">
+  <td><strong>SRC-04</strong></td>
+  <td>NFL.com Game Center<br><span class="muted">official NFL result page</span></td>
+  <td><a href="https://www.nfl.com/games/chargers-at-ravens-2026-reg-10" target="_blank" rel="noopener noreferrer">Los Angeles Chargers at Baltimore Ravens 2026 REG 10 — Game Center ↗</a></td>
+  <td>2026-11-18T03:14Z (minute precision)</td>
+  <td>Shows Chargers 23, Ravens 20, Final on Nov. 16; the Game Center also exposes a Game Book PDF link.<br><strong>Limit:</strong> The result is transcribed in a one-game delta; it has not been merged into or reconciled across the full historical feed in this review.</td>
+  <td><a href="data/results_increment_week10.csv">data/results_increment_week10.csv</a><br><span class="status info">READ — result verified</span></td>
+</tr>
+<tr id="source-src-05">
+  <td><strong>SRC-05</strong></td>
+  <td>NFL.com<br><span class="muted">official NFL schedule/result page</span></td>
+  <td><a href="https://www.nfl.com/schedules/2026/by-week/week-10" target="_blank" rel="noopener noreferrer">NFL Week 10 Schedule 2026 ↗</a></td>
+  <td>2026-11-18T03:14-03:21Z (minute precision)</td>
+  <td>Week 10 page lists Chargers 23, Ravens 20, Final on Monday, Nov. 16.<br><strong>Limit:</strong> Supports the one-game result delta only; no full-feed audit is claimed.</td>
+  <td><a href="data/results_increment_week10.csv">data/results_increment_week10.csv</a><br><span class="status info">READ — independent official result page</span></td>
+</tr>
+<tr id="source-src-06">
+  <td><strong>SRC-06</strong></td>
+  <td>NFL.com / NFL Game Center<br><span class="muted">official NFL Game Book PDF (restricted-use notice observed)</span></td>
+  <td><a href="https://static.www.nfl.com/image/upload/v1794916121/gamecenter/ab78ad5a-4feb-11f1-abca-2c54536568a9.pdf" target="_blank" rel="noopener noreferrer">National Football League Game Summary — Chargers at Ravens, Nov. 16, 2026 ↗</a></td>
+  <td>2026-11-18T03:14Z (minute precision)</td>
+  <td>PDF is linked from the official Game Center. Its own notice limits use to assisting media coverage and prohibits any other use without written permission.<br><strong>Limit:</strong> This review does not reproduce player-level lineups, participation, inactives or other PDF rows, and does not use the document as model input. Obtain written permission or an expressly authorized feed first.</td>
+  <td><a href="raw/official_reads_2026-11-18.md">raw/official_reads_2026-11-18.md</a><br><span class="status info">READ — use blocked pending rights review</span></td>
+</tr>
+<tr id="source-src-07">
+  <td><strong>SRC-07</strong></td>
+  <td>NFL Operations<br><span class="muted">official NFL operations page</span></td>
+  <td><a href="https://operations.nfl.com/gameday/technology/nfl-game-books/" target="_blank" rel="noopener noreferrer">NFL Game Books ↗</a></td>
+  <td>2026-11-18T03:14Z (minute precision)</td>
+  <td>Fetcher exposed only a skip-navigation line from this landing page.<br><strong>Limit:</strong> A sparse parsed response is not proof that Game Books are unavailable; the Game Center PDF link is a separate verified route.</td>
+  <td><a href="raw/official_reads_2026-11-18.md">raw/official_reads_2026-11-18.md</a><br><span class="status info">READ — landing-page parse uninformative</span></td>
+</tr>
+<tr id="source-src-08">
+  <td><strong>SRC-08</strong></td>
+  <td>Houston Texans<br><span class="muted">official NFL club depth-chart page</span></td>
+  <td><a href="https://www.houstontexans.com/team/depth-chart" target="_blank" rel="noopener noreferrer">Depth Chart | Houston Texans ↗</a></td>
+  <td>2026-11-18T03:14Z (minute precision)</td>
+  <td>Page labels the image `Unofficial Depth Chart`; the fetcher exposed no structured chart rows.<br><strong>Limit:</strong> No player depth or starter position transcribed; no image transcription by eye.</td>
+  <td><a href="raw/official_reads_2026-11-18.md">raw/official_reads_2026-11-18.md</a><br><span class="status info">READ — source/format blocks structured use</span></td>
+</tr>
+<tr id="source-src-09">
+  <td><strong>SRC-09</strong></td>
+  <td>Green Bay Packers<br><span class="muted">official NFL club depth-chart page</span></td>
+  <td><a href="https://www.packers.com/team/depth-chart" target="_blank" rel="noopener noreferrer">Green Bay Packers Depth Chart ↗</a></td>
+  <td>2026-11-18T03:14Z (minute precision)</td>
+  <td>Page labels itself `Unofficial, Nov. 10, 2026`; player strings include jersey numbers.<br><strong>Limit:</strong> A club-published unofficial chart is not actual starter confirmation; jersey numbers are not used as rank.</td>
+  <td><a href="raw/official_reads_2026-11-18.md">raw/official_reads_2026-11-18.md</a><br><span class="status info">READ — dated, unofficial club chart</span></td>
+</tr>
+<tr id="source-src-10">
+  <td><strong>SRC-10</strong></td>
+  <td>NFL.com<br><span class="muted">official NFL transactions page</span></td>
+  <td><a href="https://www.nfl.com/transactions/league/reserve-list/2026/11" target="_blank" rel="noopener noreferrer">2026 NFL reserve list — November ↗</a></td>
+  <td>2026-11-18T03:14Z (minute precision)</td>
+  <td>Current page read shows entries dated Nov. 17, 2026.<br><strong>Limit:</strong> The month page is paginated/limited in prior captures; re-read all pages before absence-based claims.</td>
+  <td><a href="raw/official_reads_2026-11-18.md">raw/official_reads_2026-11-18.md</a><br><span class="status info">READ — freshness delta requires re-capture</span></td>
+</tr>
+<tr id="source-src-11">
+  <td><strong>SRC-11</strong></td>
+  <td>Houston Texans<br><span class="muted">official NFL club inactive-list page</span></td>
+  <td><a href="https://www.houstontexans.com/news/texans-inactives-week-10-vs-cleveland-browns" target="_blank" rel="noopener noreferrer">Texans Inactives: Week 10 vs Cleveland Browns ↗</a></td>
+  <td>2026-11-18T03:14Z (minute precision)</td>
+  <td>Dated club article has a Week 10 `Texans Inactives` list.<br><strong>Limit:</strong> Inactive evidence does not establish the complete starting lineup or playing-time share.</td>
+  <td><a href="raw/official_reads_2026-11-18.md">raw/official_reads_2026-11-18.md</a><br><span class="status info">READ — source route available</span></td>
+</tr>
+<tr id="source-src-12">
+  <td><strong>SRC-12</strong></td>
+  <td>DraftKings Sportsbook<br><span class="muted">official sportsbook operator page (not NFL league data)</span></td>
+  <td><a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener noreferrer">NFL Odds, Spreads &amp; Lines | DraftKings Sportsbook ↗</a></td>
+  <td>2026-11-18T03:16Z (minute precision)</td>
+  <td>Page exposed upcoming NFL market categories for spread, total and moneyline. Exact quote values were not copied into this repository.<br><strong>Limit:</strong> No historical opening/closing archive was verified. Terms/redistribution rights and local-market context were not resolved; embedded image request URLs included an US-RI context token, which is not proof of user jurisdiction.</td>
+  <td><a href="raw/official_reads_2026-11-18.md">raw/official_reads_2026-11-18.md</a><br><span class="status info">READ — source exists; market-data policy remains blocked</span></td>
+</tr>
+<tr id="source-src-13">
+  <td><strong>SRC-13</strong></td>
+  <td>FanDuel Sportsbook<br><span class="muted">official sportsbook operator guide</span></td>
+  <td><a href="https://www.fanduel.com/sports-betting-guide/what-is-a-parlay-bet" target="_blank" rel="noopener noreferrer">What Is a Parlay Bet? How Parlays Work ↗</a></td>
+  <td>2026-11-18T03:16Z (minute precision)</td>
+  <td>Two fetched chunks describe parlays, same-game parlays and round robins; the guide says a voided leg is removed and the remaining legs are recalculated.<br><strong>Limit:</strong> Operator-specific settlement guidance; it does not validate a joint-probability model or another operator&#x27;s rules.</td>
+  <td><a href="raw/official_reads_2026-11-18.md">raw/official_reads_2026-11-18.md</a><br><span class="status info">READ — settlement source only</span></td>
+</tr>
+<tr id="source-src-14">
+  <td><strong>SRC-14</strong></td>
+  <td>NFL.com<br><span class="muted">official NFL standings</span></td>
+  <td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener noreferrer">2026 NFL League Standings ↗</a></td>
+  <td>2026-11-18T03:14Z (minute precision)</td>
+  <td>League standings page includes current Week 10 club records after the Monday game; the fetch was partial.<br><strong>Limit:</strong> Official source for standings only; this review did not perform a full post-update club-by-club reconciliation.</td>
+  <td><a href="raw/official_reads_2026-11-18.md">raw/official_reads_2026-11-18.md</a><br><span class="status info">READ — partial official standings context</span></td>
+</tr>
+<tr id="source-src-15">
+  <td><strong>SRC-15</strong></td>
+  <td>Houston Texans<br><span class="muted">official NFL club stadium page</span></td>
+  <td><a href="https://www.houstontexans.com/stadium/" target="_blank" rel="noopener noreferrer">Reliant Stadium (Previously NRG Stadium) | Houston Texans ↗</a></td>
+  <td>2026-11-18T03:27Z (approximate follow-up read)</td>
+  <td>Official club page says Reliant Stadium is the home venue and that the NRG Stadium name ran from 2014 until the Reliant name returned in August 2026.<br><strong>Limit:</strong> Club page corroborates the stadium label for the Week 11 game; it is not a source for the complete fixture list.</td>
+  <td><a href="raw/official_reads_2026-11-18.md">raw/official_reads_2026-11-18.md</a><br><span class="status info">READ — stadium naming cross-check</span></td>
+</tr>
+<tr id="source-src-16">
+  <td><strong>SRC-16</strong></td>
+  <td>NFL.com<br><span class="muted">official NFL transactions page (inherited prior-desk capture)</span></td>
+  <td><a href="https://www.nfl.com/transactions/league/trades/2026/11" target="_blank" rel="noopener noreferrer">2026 NFL trades — November ↗</a></td>
+  <td>2026-11-17T00:43:30Z (prior desk; not re-read in current batch)</td>
+  <td>The inherited transcript records a Nov. 6 Arizona-to-Baltimore trade listing Jacoby Brissett and Nov. 9–10 trade rows.<br><strong>Limit:</strong> The prior capture returned 12 rows and explicitly did not cover earlier November dates or other months. The table has no player-position column; do not infer position from the transaction row.</td>
+  <td><a href="../nfl-desk-35a1feb2/raw/official_reads_2026-11-17.txt">../nfl-desk-35a1feb2/raw/official_reads_2026-11-17.txt</a><br><span class="status info">INHERITED READ — partial transaction window</span></td>
+</tr>
+<tr id="source-src-17">
+  <td><strong>SRC-17</strong></td>
+  <td>NFL.com<br><span class="muted">official NFL transactions page (inherited prior-desk capture)</span></td>
+  <td><a href="https://www.nfl.com/transactions/league/reserve-list/2026/10" target="_blank" rel="noopener noreferrer">2026 NFL reserve list — October ↗</a></td>
+  <td>2026-11-17T00:51Z (prior desk; not re-read in current batch)</td>
+  <td>The inherited transcript records 25 rows dated Oct. 24–31; the local register has one Baltimore row, dated Oct. 24 for Tavius Robinson.<br><strong>Limit:</strong> A capped month-page read is not a complete negative search; the source page and stored register do not publish the player&#x27;s position in this row.</td>
+  <td><a href="../nfl-desk-35a1feb2/raw/official_reads_2026-11-17.txt">../nfl-desk-35a1feb2/raw/official_reads_2026-11-17.txt</a><br><span class="status info">INHERITED READ — partial transaction window</span></td>
+</tr>
+<tr id="source-src-18">
+  <td><strong>SRC-18</strong></td>
+  <td>NFL.com<br><span class="muted">official NFL news article (not a transaction record)</span></td>
+  <td><a href="https://www.nfl.com/news/ravens-lamar-jackson-right-thumb-out-6-9-weeks-expects-to-return-this-season" target="_blank" rel="noopener noreferrer">NFL Network: Ravens&#x27; Lamar Jackson (right thumb) out 6–9 weeks ↗</a></td>
+  <td>2026-11-17T00:52Z (prior desk; not re-read in current batch)</td>
+  <td>The inherited transcript records this news headline in the NFL injury-report page&#x27;s news rail.<br><strong>Limit:</strong> News reporting about a medical timeline is not proof of a reserve-list/IR transaction or a final game designation.</td>
+  <td><a href="../nfl-desk-35a1feb2/raw/official_reads_2026-11-17.txt">../nfl-desk-35a1feb2/raw/official_reads_2026-11-17.txt</a><br><span class="status info">INHERITED READ — news item, not roster transaction</span></td>
+</tr>
+<tr id="source-src-19">
+  <td><strong>SRC-19</strong></td>
+  <td>nflverse<br><span class="muted">third-party release/project (not official NFL data)</span></td>
+  <td><a href="https://github.com/nflverse/nflverse-data" target="_blank" rel="noopener noreferrer">nflverse-data releases ↗</a></td>
+  <td>Repository asset inventory read during the prior desk review; local schema/count recomputed 2026-11-18</td>
+  <td>The in-repository games file is a third-party release asset; its columns provide one game-level line set, without separate opening/closing quote timestamps.<br><strong>Limit:</strong> The observed counts describe the committed third-party file only; they are not official NFL facts, current operator quotes, or a rights determination.</td>
+  <td><a href="../data/decision-desk/raw/games.csv.gz">../data/decision-desk/raw/games.csv.gz</a><br><span class="status info">READ — third-party source class; policy/terms unresolved</span></td>
+</tr>
+<tr id="source-src-20">
+  <td><strong>SRC-20</strong></td>
+  <td>NFL.com<br><span class="muted">official NFL injury report (inherited prior-desk captures)</span></td>
+  <td><a href="https://www.nfl.com/injuries/league/2026/reg10" target="_blank" rel="noopener noreferrer">NFL Week 10 Injury Report ↗</a></td>
+  <td>2026-11-15T23:27Z and 2026-11-17T00:40Z (local read times recorded by prior desk)</td>
+  <td>The prior desk&#x27;s read-delta row uses this Week 10 URL for both saved snapshots; the stored local timestamps span 25 hours 13 minutes.<br><strong>Limit:</strong> The local delta table is a summary row, not two retained HTTP response archives; its timestamps are not source-server timestamps.</td>
+  <td><a href="../nfl-desk-35a1feb2/data/injury_read_delta.csv">../nfl-desk-35a1feb2/data/injury_read_delta.csv</a><br><span class="status info">INHERITED READ — local read interval only</span></td>
+</tr></tbody></table></div>
+<h2>Week 11 venue labels (13 rows)</h2>
+<p>Exact location and stadium labels from each official NFL Game Center. No roof, surface, weather or venue-specific model adjustment is inferred. The official Texans stadium page independently corroborates the `RELIANT STADIUM` Game Center label as of its 2026-11-18 read.</p>
+<div class="table-wrap"><table class="table-narrow"><thead><tr><th>Game</th><th>Fixture</th><th>Location as published</th><th>Stadium as published</th><th>Official source / read window</th></tr></thead><tbody>
+<tr>
+  <td class="mono">2026_11_IND_HOU</td>
+  <td>2026-11-19 · IND at HOU</td>
+  <td>HOUSTON, TX</td>
+  <td>RELIANT STADIUM</td>
+  <td><a href="https://www.nfl.com/games/colts-at-texans-2026-reg-11" target="_blank" rel="noopener noreferrer">Official Game Center ↗</a><br><span class="muted">2026-11-18T03:20-03:21Z</span></td>
+</tr>
+<tr>
+  <td class="mono">2026_11_MIA_BUF</td>
+  <td>2026-11-22 · MIA at BUF</td>
+  <td>ORCHARD PARK, NY</td>
+  <td>HIGHMARK STADIUM</td>
+  <td><a href="https://www.nfl.com/games/dolphins-at-bills-2026-reg-11" target="_blank" rel="noopener noreferrer">Official Game Center ↗</a><br><span class="muted">2026-11-18T03:20-03:21Z</span></td>
+</tr>
+<tr>
+  <td class="mono">2026_11_BAL_CAR</td>
+  <td>2026-11-22 · BAL at CAR</td>
+  <td>CHARLOTTE, NC</td>
+  <td>BANK OF AMERICA STADIUM</td>
+  <td><a href="https://www.nfl.com/games/ravens-at-panthers-2026-reg-11" target="_blank" rel="noopener noreferrer">Official Game Center ↗</a><br><span class="muted">2026-11-18T03:20-03:21Z</span></td>
+</tr>
+<tr>
+  <td class="mono">2026_11_NO_CHI</td>
+  <td>2026-11-22 · NO at CHI</td>
+  <td>CHICAGO, IL</td>
+  <td>SOLDIER FIELD</td>
+  <td><a href="https://www.nfl.com/games/saints-at-bears-2026-reg-11" target="_blank" rel="noopener noreferrer">Official Game Center ↗</a><br><span class="muted">2026-11-18T03:20-03:21Z</span></td>
+</tr>
+<tr>
+  <td class="mono">2026_11_TEN_DAL</td>
+  <td>2026-11-22 · TEN at DAL</td>
+  <td>ARLINGTON, TX</td>
+  <td>AT&amp;T STADIUM</td>
+  <td><a href="https://www.nfl.com/games/titans-at-cowboys-2026-reg-11" target="_blank" rel="noopener noreferrer">Official Game Center ↗</a><br><span class="muted">2026-11-18T03:20-03:21Z</span></td>
+</tr>
+<tr>
+  <td class="mono">2026_11_TB_DET</td>
+  <td>2026-11-22 · TB at DET</td>
+  <td>DETROIT, MI</td>
+  <td>FORD FIELD</td>
+  <td><a href="https://www.nfl.com/games/buccaneers-at-lions-2026-reg-11" target="_blank" rel="noopener noreferrer">Official Game Center ↗</a><br><span class="muted">2026-11-18T03:20-03:21Z</span></td>
+</tr>
+<tr>
+  <td class="mono">2026_11_AZ_KC</td>
+  <td>2026-11-22 · AZ at KC</td>
+  <td>KANSAS CITY, MO</td>
+  <td>ARROWHEAD STADIUM</td>
+  <td><a href="https://www.nfl.com/games/cardinals-at-chiefs-2026-reg-11" target="_blank" rel="noopener noreferrer">Official Game Center ↗</a><br><span class="muted">2026-11-18T03:20-03:21Z</span></td>
+</tr>
+<tr>
+  <td class="mono">2026_11_PIT_PHI</td>
+  <td>2026-11-22 · PIT at PHI</td>
+  <td>PHILADELPHIA, PA</td>
+  <td>LINCOLN FINANCIAL FIELD</td>
+  <td><a href="https://www.nfl.com/games/steelers-at-eagles-2026-reg-11" target="_blank" rel="noopener noreferrer">Official Game Center ↗</a><br><span class="muted">2026-11-18T03:20-03:21Z</span></td>
+</tr>
+<tr>
+  <td class="mono">2026_11_NYJ_LAC</td>
+  <td>2026-11-22 · NYJ at LAC</td>
+  <td>INGLEWOOD, CA</td>
+  <td>SOFI STADIUM</td>
+  <td><a href="https://www.nfl.com/games/jets-at-chargers-2026-reg-11" target="_blank" rel="noopener noreferrer">Official Game Center ↗</a><br><span class="muted">2026-11-18T03:20-03:21Z</span></td>
+</tr>
+<tr>
+  <td class="mono">2026_11_JAX_NYG</td>
+  <td>2026-11-22 · JAX at NYG</td>
+  <td>EAST RUTHERFORD, NJ</td>
+  <td>METLIFE STADIUM</td>
+  <td><a href="https://www.nfl.com/games/jaguars-at-giants-2026-reg-11" target="_blank" rel="noopener noreferrer">Official Game Center ↗</a><br><span class="muted">2026-11-18T03:20-03:21Z</span></td>
+</tr>
+<tr>
+  <td class="mono">2026_11_LV_DEN</td>
+  <td>2026-11-22 · LV at DEN</td>
+  <td>DENVER, CO</td>
+  <td>EMPOWER FIELD AT MILE HIGH</td>
+  <td><a href="https://www.nfl.com/games/raiders-at-broncos-2026-reg-11" target="_blank" rel="noopener noreferrer">Official Game Center ↗</a><br><span class="muted">2026-11-18T03:20-03:21Z</span></td>
+</tr>
+<tr>
+  <td class="mono">2026_11_MIN_SF</td>
+  <td>2026-11-22 · MIN at SF</td>
+  <td>MEXICO CITY</td>
+  <td>ESTADIO BANORTE</td>
+  <td><a href="https://www.nfl.com/games/vikings-at-49ers-2026-reg-11" target="_blank" rel="noopener noreferrer">Official Game Center ↗</a><br><span class="muted">2026-11-18T03:20-03:21Z</span></td>
+</tr>
+<tr>
+  <td class="mono">2026_11_CIN_WAS</td>
+  <td>2026-11-23 · CIN at WAS</td>
+  <td>LANDOVER, MD</td>
+  <td>NORTHWEST STADIUM</td>
+  <td><a href="https://www.nfl.com/games/bengals-at-commanders-2026-reg-11" target="_blank" rel="noopener noreferrer">Official Game Center ↗</a><br><span class="muted">2026-11-18T03:20-03:21Z</span></td>
+</tr></tbody></table></div>
+<p class="small"><a href="data/venues_week11.csv">Download the CSV transcription</a> · <a href="https://www.houstontexans.com/stadium/" target="_blank" rel="noopener noreferrer">Houston Texans stadium-name confirmation ↗</a></p>
+<h2>Week 10 result delta (1 row)</h2>
+<p>This is a single source-linked result update. It does not rebuild the historical feed or certify a 32-club standings reconciliation.</p>
+<div class="table-wrap"><table class="table-narrow"><thead><tr><th>Game</th><th>Week/date</th><th>Result</th><th>Independent official sources</th><th>Read window / scope</th></tr></thead><tbody>
+<tr>
+  <td class="mono">2026_10_LAC_BAL</td>
+  <td>Week 10 · 2026-11-16</td>
+  <td>LAC 23 — BAL 20<br><span class="status resolved">FINAL</span></td>
+  <td><a href="https://www.nfl.com/games/chargers-at-ravens-2026-reg-10" target="_blank" rel="noopener noreferrer">Official Game Center ↗</a><br><a href="https://www.nfl.com/schedules/2026/by-week/week-10" target="_blank" rel="noopener noreferrer">Official Week 10 schedule ↗</a></td>
+  <td>2026-11-18T03:14-03:21Z<br>Official Game Center and Week 10 schedule both show Chargers 23, Ravens 20, Final; added here as a one-game delta only, not a full-feed reconciliation.</td>
+</tr></tbody></table></div>
+<p class="small"><a href="data/results_increment_week10.csv">Download the result-delta CSV</a></p>
+<h2>Local artifact manifest</h2>
+<p>The manifest is deterministic and generated from the three listed local artifacts. It intentionally does not include itself, source JSON, HTML pages or original live responses; it makes no claim that external pages were captured byte-for-byte.</p>
+<div class="table-wrap"><table class="table-narrow"><thead><tr><th>Local artifact</th><th>Bytes</th><th>SHA-256</th><th>Hash scope</th></tr></thead><tbody>
+<tr>
+  <td><a href="raw/official_reads_2026-11-18.md">raw/official_reads_2026-11-18.md</a></td>
+  <td class="mono">10187</td>
+  <td class="mono">cdd15c549a384dedcf7f5b01a91df8713ac17da4fdf6a2886003db31b0f03b8e</td>
+  <td>source-response summary; not an HTTP archive<br><span class="status info">Local content only · not source-server authentication</span></td>
+</tr>
+<tr>
+  <td><a href="data/venues_week11.csv">data/venues_week11.csv</a></td>
+  <td class="mono">2486</td>
+  <td class="mono">c5c4b135b7bfff2d83fa6bf659ad4798974ca911d7e1da902f7fab0fab13dceb</td>
+  <td>local transcription of 13 official Game Center venue labels<br><span class="status info">Local content only · not source-server authentication</span></td>
+</tr>
+<tr>
+  <td><a href="data/results_increment_week10.csv">data/results_increment_week10.csv</a></td>
+  <td class="mono">501</td>
+  <td class="mono">2edcba16d3035bd9af7908d89156b33af6265460d22093843dcc6afd02889b3d</td>
+  <td>one-game official result delta; not a complete feed<br><span class="status info">Local content only · not source-server authentication</span></td>
+</tr></tbody></table></div>
+<p class="small"><a href="data/manifest.json">View manifest.json</a> · <a href="raw/official_reads_2026-11-18.md">Read the source notes</a> · <a href="data/README.md">Data guide</a></p>
+
+  </main>
+  <footer class="site-footer">
+    <strong>Scope:</strong> Review dossier only — not a betting recommendation, certified model, or source of official NFL data. Market and player-level inputs remain gated where terms or evidence are incomplete.
+    <br>Local hashes cover the listed local review files only; they do not authenticate the live source server. Suggestions are proposals and are not implemented.
+  </footer>
+</div>
+</body>
+</html>

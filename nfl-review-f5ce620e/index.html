@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Independent, source-linked NFL decision-readiness audit; unresolved claims remain visibly flagged.">
+  <title>Independent NFL decision-readiness review · Own5</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brandline"><span class="brand-mark" aria-hidden="true">O5</span><span>NFL REVIEW · F5CE620E</span><span class="tag">AUDIT ONLY</span></div>
+    <h1>Independent NFL decision-readiness review</h1>
+    <p>2026-11-18 UTC · 2026-11-18 approximately 03:14–03:21Z; follow-up at approximately 03:27Z</p>
+    <nav class="site-nav" aria-label="Review pages"><a href="index.html" aria-current="page">Executive summary</a><a href="audit.html">Audit findings</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions · review first</a><a href="flagged.html">Flagged for Review</a><a href="sources.html">Sources &amp; tables</a></nav>
+  </div>
+</header>
+<div class="page-shell">
+  <p class="breadcrumb">Own5 / independent review / <span class="mono">f5ce620e</span></p>
+  <main>
+
+<p class="disclaimer"><strong>Decision status: NOT CLEARED.</strong> This is an independent evidence audit, not a betting recommendation or model certification. No model, data policy, capture workflow, shared navigation or prior-desk file was changed.</p>
+<p class="lede">This dossier checks whether high-impact NFL claims are current, source-backed and decision-ready. It separates what an official page says from what an old capture, a model output, or a third-party dataset can establish.</p>
+<div class="cards" aria-label="Review counts">
+  <div class="card"><div class="value">20</div><div class="label">line-level audit findings</div></div>
+  <div class="card"><div class="value">18</div><div class="label">items still flagged or blocked</div></div>
+  <div class="card"><div class="value">33</div><div class="label">registered source reads / routes</div></div>
+  <div class="card"><div class="value">13 + 1</div><div class="label">Week 11 venue rows + Week 10 result delta</div></div>
+</div>
+<div class="two-column">
+  <section>
+    <span class="kicker">Executive readout</span>
+    <h2>What changed the decision-readiness picture</h2>
+    <ul class="callout-list">
+      <li><strong>Availability:</strong> the league Week 11 injury URL still returned Week 10 at capture time, but a Texans club article had Week 11 practice tables for two clubs. The earlier blanket “not published” claim is stale for those clubs; full-league coverage is not verified.</li>
+      <li><strong>Clock conflict:</strong> saved injury reads span 25 hours 13 minutes, while prior prose says 49 hours and 1 hour 13 minutes. The source pair and text need reconciliation.</li>
+      <li><strong>Prices:</strong> “no price data exists in the repo” is too broad. Third-party historical line fields exist, and a first-party operator page is a current source route; neither is an approved timestamped open/close series for this project.</li>
+      <li><strong>Results:</strong> NFL.com shows Chargers 23, Ravens 20, Final. This dossier records a one-game delta only; it does not rebuild the full results feed or post-update standings.</li>
+      <li><strong>Readiness metadata:</strong> the prior model coefficient appears as both -0.52 and -0.46; REQ-04 is marked MET while market fields are blank and the residual is undefined.</li>
+      <li><strong>Competition:</strong> reviewed P-01/P-02/P-03 registrations each have 13 forecasts and zero settlements; no skill claim or leaderboard reward is justified.</li>
+    </ul>
+    <p><a href="flagged.html">Open the Flagged for Review queue →</a> · <a href="questions.html">Decision questions →</a></p>
+  </section>
+  <aside>
+    <div class="note alert">
+      <h3>Do not use as a cleared model</h3>
+      <p>Market terms/location, full injury coverage, reserve pagination, Game Book reuse rights, a full result reconciliation, and consistent model metadata remain unresolved.</p>
+      <p><a href="audit.html">Read all findings →</a></p>
+    </div>
+    <div class="note" style="margin-top:12px">
+      <h3>Review scope boundary</h3>
+      <p>Independent, audit-only review of high-impact NFL claims and their provenance. Existing desks, root navigation and model/policy choices remain unchanged.</p>
+      <p>The root index/README and prior desks are read-only in this session; a portfolio navigation link is deferred to integration.</p>
+    </div>
+  </aside>
+</div>
+<h2>High-impact findings with evidence links</h2>
+<div class="grid-2">
+<article class="card">
+  <div class="kicker">A01 · High</div>
+  <h3><a href="audit.html#finding-a01">Week 11 availability coverage</a></h3>
+  <p>On Nov. 18 the requested /reg11 route returned a /reg10 response/title. The official Texans Week 11 article, published Nov. 16 and updated Nov. 17, contains Monday/Tuesday practice tables for Houston and Indianapolis. The prior desk&#x27;s broad &#x27;Week 11 report does not exist yet&#x27; flag is now stale for those two clubs, although its dated observation of the league endpoint was valid at its earlier read time.</p>
+  <div class="source-links"><a href="https://www.nfl.com/injuries/league/2026/reg11" target="_blank" rel="noopener noreferrer"><strong>SRC-01</strong> · NFL.com<span class="muted"> — official NFL league page</span> ↗</a><a href="https://www.houstontexans.com/news/week-11-injury-report-texans-vs-colts" target="_blank" rel="noopener noreferrer"><strong>SRC-02</strong> · Houston Texans<span class="muted"> — official NFL club page</span> ↗</a><a href="https://www.nfl.com/schedules/2026/by-week/week-11" target="_blank" rel="noopener noreferrer"><strong>SRC-03</strong> · NFL.com<span class="muted"> — official NFL league schedule</span> ↗</a></div>
+</article>
+<article class="card">
+  <div class="kicker">A02 · High</div>
+  <h3><a href="audit.html#finding-a02">Availability snapshot clock</a></h3>
+  <p>The saved reads are 2026-11-15T23:27:00Z and 2026-11-17T00:40:00Z, which differ by 25 hours 13 minutes. The prior questions row and availability page say 49 hours; its executive summary and later coordination addendum say 1 hour 13 minutes. Neither duration matches the saved pair.</p>
+  <div class="source-links"><a href="https://www.nfl.com/injuries/league/2026/reg10" target="_blank" rel="noopener noreferrer"><strong>SRC-20</strong> · NFL.com<span class="muted"> — official NFL injury report (inherited prior-desk captures)</span> ↗</a></div>
+</article>
+<article class="card">
+  <div class="kicker">A03 · High</div>
+  <h3><a href="audit.html#finding-a03">Historical market-data existence</a></h3>
+  <p>A schema/count check of the committed nflverse games file reproduces 7,548 rows; 7,439 have both spread and total fields, 5,458 have both moneyline fields, and 163 of 272 2026 rows have spread and total. This makes an unqualified &#x27;no price data exists in the repo&#x27; claim false. The values are from a third-party asset, not official NFL data.</p>
+  <div class="source-links"><a href="https://github.com/nflverse/nflverse-data" target="_blank" rel="noopener noreferrer"><strong>SRC-19</strong> · nflverse<span class="muted"> — third-party release/project (not official NFL data)</span> ↗</a></div>
+</article>
+<article class="card">
+  <div class="kicker">A04 · High</div>
+  <h3><a href="audit.html#finding-a04">Current operator-price route</a></h3>
+  <p>The official DraftKings Sportsbook NFL page returned upcoming-game Spread, Total and Moneyline market categories. Exact quote values were observed in the fetch response but were intentionally not copied into this review.</p>
+  <div class="source-links"><a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener noreferrer"><strong>SRC-12</strong> · DraftKings Sportsbook<span class="muted"> — official sportsbook operator page (not NFL league data)</span> ↗</a><a href="https://www.nfl.com/schedules/2026/by-week/week-11" target="_blank" rel="noopener noreferrer"><strong>SRC-03</strong> · NFL.com<span class="muted"> — official NFL league schedule</span> ↗</a></div>
+</article>
+<article class="card">
+  <div class="kicker">A06 · High</div>
+  <h3><a href="audit.html#finding-a06">Reserve-list freshness and pagination</a></h3>
+  <p>The stored October/November register contains 50 rows, 25 per month; its newest official date is Nov. 16 and it was read at 2026-11-17T00:46Z. The current official November page read shows entries dated Nov. 17.</p>
+  <div class="source-links"><a href="https://www.nfl.com/transactions/league/reserve-list/2026/11" target="_blank" rel="noopener noreferrer"><strong>SRC-10</strong> · NFL.com<span class="muted"> — official NFL transactions page</span> ↗</a><a href="https://www.nfl.com/transactions/league/reserve-list/2026/10" target="_blank" rel="noopener noreferrer"><strong>SRC-17</strong> · NFL.com<span class="muted"> — official NFL transactions page (inherited prior-desk capture)</span> ↗</a></div>
+</article>
+<article class="card">
+  <div class="kicker">A07 · High</div>
+  <h3><a href="audit.html#finding-a07">Baltimore IR / reserve claim</a></h3>
+  <p>The inherited reserve register has only one Baltimore row in its Oct. 24–31 and Nov. 7–16 windows: Tavius Robinson, dated Oct. 24. The reserve CSV has no position field, so the accompanying &#x27;defensive end&#x27; label is not supported by that row. A separate partial trade read records Jacoby Brissett from Arizona to Baltimore on Nov. 6, but its position field is also blank. The cited Lamar Jackson news headline is medical reporting, not an IR transaction.</p>
+  <div class="source-links"><a href="https://www.nfl.com/transactions/league/reserve-list/2026/11" target="_blank" rel="noopener noreferrer"><strong>SRC-10</strong> · NFL.com<span class="muted"> — official NFL transactions page</span> ↗</a><a href="https://www.nfl.com/transactions/league/trades/2026/11" target="_blank" rel="noopener noreferrer"><strong>SRC-16</strong> · NFL.com<span class="muted"> — official NFL transactions page (inherited prior-desk capture)</span> ↗</a><a href="https://www.nfl.com/transactions/league/reserve-list/2026/10" target="_blank" rel="noopener noreferrer"><strong>SRC-17</strong> · NFL.com<span class="muted"> — official NFL transactions page (inherited prior-desk capture)</span> ↗</a><a href="https://www.nfl.com/news/ravens-lamar-jackson-right-thumb-out-6-9-weeks-expects-to-return-this-season" target="_blank" rel="noopener noreferrer"><strong>SRC-18</strong> · NFL.com<span class="muted"> — official NFL news article (not a transaction record)</span> ↗</a></div>
+</article>
+<article class="card">
+  <div class="kicker">A11 · High</div>
+  <h3><a href="audit.html#finding-a11">Week 10 result freshness</a></h3>
+  <p>The current official Game Center and Week 10 schedule show Chargers 23, Ravens 20, Final. A one-game source-linked delta is present in this review&#x27;s data folder.</p>
+  <div class="source-links"><a href="https://www.nfl.com/games/chargers-at-ravens-2026-reg-10" target="_blank" rel="noopener noreferrer"><strong>SRC-04</strong> · NFL.com Game Center<span class="muted"> — official NFL result page</span> ↗</a><a href="https://www.nfl.com/schedules/2026/by-week/week-10" target="_blank" rel="noopener noreferrer"><strong>SRC-05</strong> · NFL.com<span class="muted"> — official NFL schedule/result page</span> ↗</a><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener noreferrer"><strong>SRC-14</strong> · NFL.com<span class="muted"> — official NFL standings</span> ↗</a></div>
+</article>
+<article class="card">
+  <div class="kicker">A13 · High</div>
+  <h3><a href="audit.html#finding-a13">Home-field model coefficient</a></h3>
+  <p>The prior model card and all 13 Week 11 forecast inputs use -0.52 points. Questions-register Q-05 and the prior executive-summary prose report -0.46 points as the fitted model term. The published raw mean home margin is a different statistic and does not settle which coefficient is canonical.</p>
+  <div class="source-links"><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener noreferrer"><strong>SRC-14</strong> · NFL.com<span class="muted"> — official NFL standings</span> ↗</a><a href="https://www.nfl.com/schedules/2026/by-week/week-10" target="_blank" rel="noopener noreferrer"><strong>SRC-05</strong> · NFL.com<span class="muted"> — official NFL schedule/result page</span> ↗</a></div>
+</article>
+<article class="card">
+  <div class="kicker">A14 · High</div>
+  <h3><a href="audit.html#finding-a14">Fair-line / market residual requirement</a></h3>
+  <p>REQ-04 is marked `MET`, while its gate-blocking text says the difference is undefined because the market column is empty. The 13 origination rows have blank market/open/close fields and the difference text says `undefined`; all 39 price-store rows are `MODEL_RECORD`, not operator quotes.</p>
+  <div class="source-links"><a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener noreferrer"><strong>SRC-12</strong> · DraftKings Sportsbook<span class="muted"> — official sportsbook operator page (not NFL league data)</span> ↗</a><a href="https://www.nfl.com/schedules/2026/by-week/week-11" target="_blank" rel="noopener noreferrer"><strong>SRC-03</strong> · NFL.com<span class="muted"> — official NFL league schedule</span> ↗</a></div>
+</article>
+<article class="card">
+  <div class="kicker">A16 · High</div>
+  <h3><a href="audit.html#finding-a16">Strategy leaderboard readiness</a></h3>
+  <p>P-01/P-02/P-03 each show 13 forecasts and 0 settled games; their proper-score and benchmark columns are blank. The strategy table marks them registered/blocked, and the model card describes a shadow baseline.</p>
+  <div class="source-links"><a href="https://www.nfl.com/schedules/2026/by-week/week-11" target="_blank" rel="noopener noreferrer"><strong>SRC-03</strong> · NFL.com<span class="muted"> — official NFL league schedule</span> ↗</a><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener noreferrer"><strong>SRC-14</strong> · NFL.com<span class="muted"> — official NFL standings</span> ↗</a></div>
+</article>
+<article class="card">
+  <div class="kicker">A20 · High</div>
+  <h3><a href="audit.html#finding-a20">Historical team-code join integrity</a></h3>
+  <p>The read-only `nfl-desk-e46fb855/data/results_feed.csv` has 145 games and uses `LAR` on 9 and `ARI` on 9 team appearances; the official standings table uses `LA` and `AZ`. An exact join to the official code set therefore misses 18 club-game appearances. The newer 35a1feb2 feed uses `LA`/`AZ` and records its own 32/32 check, but this review did not rebuild that full feed after the later Chargers–Ravens final.</p>
+  <div class="source-links"><a href="https://www.nfl.com/schedules/2026/by-week/week-10" target="_blank" rel="noopener noreferrer"><strong>SRC-05</strong> · NFL.com<span class="muted"> — official NFL schedule/result page</span> ↗</a><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener noreferrer"><strong>SRC-14</strong> · NFL.com<span class="muted"> — official NFL standings</span> ↗</a></div>
+</article></div>
+<h2>What this review did not establish</h2>
+<div class="grid-2">
+  <div class="note"><h3>Source and policy limits</h3><p>No 32-club Week 11 injury census, legally approved odds feed, Georgia-specific quote, rights approval for Game Book rows, or permission-compatible full live-page archive was established.</p><p><a href="sources.html">Source register and local artifact hashes →</a></p></div>
+  <div class="note"><h3>Model and performance limits</h3><p>No historical feed rebuild, coefficient refit, settled forecast score, backtest promotion, ROI claim, or validated joint probability was produced. Strategy and combo decisions remain separate, reviewable proposals.</p><p><a href="suggestions.html">Read suggestions before implementation →</a></p></div>
+</div>
+
+  </main>
+  <footer class="site-footer">
+    <strong>Scope:</strong> Review dossier only — not a betting recommendation, certified model, or source of official NFL data. Market and player-level inputs remain gated where terms or evidence are incomplete.
+    <br>Local hashes cover the listed local review files only; they do not authenticate the live source server. Suggestions are proposals and are not implemented.
+  </footer>
+</div>
+</body>
+</html>

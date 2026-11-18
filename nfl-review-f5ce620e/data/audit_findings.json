@@ -1,0 +1,368 @@
+[
+  {
+    "id": "A01",
+    "area": "Week 11 availability coverage",
+    "severity": "High",
+    "status": "FLAGGED — central endpoint stale; club fallback exists",
+    "flagged": true,
+    "claim_checked": "Does the official NFL.com Week 11 injury-report route establish that no Week 11 report exists?",
+    "observed": "On Nov. 18 the requested /reg11 route returned a /reg10 response/title. The official Texans Week 11 article, published Nov. 16 and updated Nov. 17, contains Monday/Tuesday practice tables for Houston and Indianapolis. The prior desk's broad 'Week 11 report does not exist yet' flag is now stale for those two clubs, although its dated observation of the league endpoint was valid at its earlier read time.",
+    "not_verified": "A complete 32-club Week 11 capture, final game-status designations for all listed players, and whether other clubs have published club-level reports.",
+    "decision_effect": "Do not treat the league endpoint response as a complete Week 11 report, or the absence of a row as an all-clear. Keep the endpoint and club sources separate; the Texans tables are practice statuses, not final inactives.",
+    "gate": "Availability remains blocked unless each relevant club is represented by a dated official read or an explicit not-yet-published/bye state.",
+    "clearance_number": "32/32 club states for the defined capture window, each with its own source URL, read time, coverage state and retained local hash.",
+    "source_ids": ["SRC-01", "SRC-02", "SRC-03"],
+    "repo_evidence": [
+      {"label": "This review's source-read notes", "path": "raw/official_reads_2026-11-18.md"},
+      {"label": "Prior desk's dated broad absence flag", "path": "../nfl-desk-35a1feb2/data/flagged.csv"}
+    ]
+  },
+  {
+    "id": "A02",
+    "area": "Availability snapshot clock",
+    "severity": "High",
+    "status": "FLAGGED — timestamp pair and prose disagree",
+    "flagged": true,
+    "claim_checked": "Is the elapsed time between the two Week 10 injury-report reads stated consistently?",
+    "observed": "The saved reads are 2026-11-15T23:27:00Z and 2026-11-17T00:40:00Z, which differ by 25 hours 13 minutes. The prior questions row and availability page say 49 hours; its executive summary and later coordination addendum say 1 hour 13 minutes. Neither duration matches the saved pair.",
+    "not_verified": "Whether either stored timestamp is wrong, whether a different read pair was intended, and the exact server-side fetch time (the NFL page does not publish the local fetch clock).",
+    "decision_effect": "Do not use the claimed interval to set capture cadence or support an injury-surprise claim until the exact source captures and timestamps are reconciled.",
+    "gate": "Reconcile the two immutable captures and derive elapsed time from their timestamps instead of typing a duration into prose.",
+    "clearance_number": "One consistent timestamp pair, two local hashes and a deterministic interval result; all summary strings agree with the computed interval.",
+    "source_ids": ["SRC-20"],
+    "repo_evidence": [
+      {"label": "Read-delta table", "path": "../nfl-desk-35a1feb2/data/injury_read_delta.csv"},
+      {"label": "Availability page", "path": "../nfl-desk-35a1feb2/availability.html"},
+      {"label": "Questions register Q-01", "path": "../nfl-desk-35a1feb2/data/questions_register.csv"},
+      {"label": "Executive-summary text", "path": "../nfl-desk-35a1feb2/executive-summary.html"}
+    ]
+  },
+  {
+    "id": "A03",
+    "area": "Historical market-data existence",
+    "severity": "High",
+    "status": "CORRECTION — market-like values exist, but only in a third-party file",
+    "flagged": true,
+    "claim_checked": "Is it true that no market-price data of any kind exists in the repository?",
+    "observed": "A schema/count check of the committed nflverse games file reproduces 7,548 rows; 7,439 have both spread and total fields, 5,458 have both moneyline fields, and 163 of 272 2026 rows have spread and total. This makes an unqualified 'no price data exists in the repo' claim false. The values are from a third-party asset, not official NFL data.",
+    "not_verified": "Source terms for this project's intended storage/modeling/publication; the historical line's precise bookmaker, jurisdiction and quote time; and an opening/closing pair. The file has one game-level line set and no separate open/close timestamps.",
+    "decision_effect": "Describe the blocker as source-class/terms/time alignment, not absolute data absence. Do not treat these numbers as official, current operator quotes, CLV, or an admitted opening/closing series.",
+    "gate": "No production model, public price comparison or ROI/CLV score until the data class, terms and quote-time semantics are approved.",
+    "clearance_number": "100% of admitted observations have an approved source class, market/event key, line convention, quote time, terms state and raw hash; opening and closing remain distinct.",
+    "source_ids": ["SRC-19"],
+    "repo_evidence": [
+      {"label": "Reproducible third-party inventory", "path": "../nfl-desk-35a1feb2/data/third_party_inventory.csv"},
+      {"label": "Asset register marks games.csv.gz third-party / official=no", "path": "../nfl-desk-35a1feb2/data/third_party_asset_register.csv"},
+      {"label": "Compressed source data", "path": "../data/decision-desk/raw/games.csv.gz"}
+    ]
+  },
+  {
+    "id": "A04",
+    "area": "Current operator-price route",
+    "severity": "High",
+    "status": "SOURCE ROUTE FOUND — admission, history and terms blocked",
+    "flagged": true,
+    "claim_checked": "Does a first-party operator page exist that displays NFL spread, total and moneyline markets?",
+    "observed": "The official DraftKings Sportsbook NFL page returned upcoming-game Spread, Total and Moneyline market categories. Exact quote values were observed in the fetch response but were intentionally not copied into this review.",
+    "not_verified": "A stable historical opening/closing archive, permission to retain or redistribute quotes, quote-time definition, and whether the read context matches the user's jurisdiction.",
+    "decision_effect": "The blanket claim 'no operator price source exists' is too broad; a current source route exists. It is not an opening/closing archive and does not by itself support CLV or backtesting.",
+    "gate": "Keep market fields blank and the market policy blocked until source terms, location, event mapping and time convention are recorded.",
+    "clearance_number": "Every originated market has a rights-cleared opening and closing quote with source, event ID, line, jurisdiction/context, UTC read time and raw hash.",
+    "source_ids": ["SRC-12", "SRC-03"],
+    "repo_evidence": [
+      {"label": "Prior price snapshot store (39 MODEL_RECORD rows)", "path": "../nfl-desk-35a1feb2/data/price_snapshots.csv"},
+      {"label": "Prior Week 11 origination table", "path": "../nfl-desk-35a1feb2/data/originated_wk11.csv"}
+    ]
+  },
+  {
+    "id": "A05",
+    "area": "Market-price jurisdiction",
+    "severity": "Medium",
+    "status": "UNVERIFIED — location context unresolved",
+    "flagged": true,
+    "claim_checked": "Can the sportsbook page response be labelled a Georgia-market quote?",
+    "observed": "Some embedded DraftKings team-image request URLs contained an `x-pe-loc=US-RI` token.",
+    "not_verified": "Whether the token governed the quote, what jurisdiction was used for the displayed market, or whether the user could place a wager in Georgia. An image-request token is not a legal-location determination.",
+    "decision_effect": "Do not label an observed quote as local, executable, or Georgia-specific. Keep location blank/unknown and exclude the read from jurisdiction-dependent decision or ROI analysis.",
+    "gate": "Use an approved feed that explicitly identifies jurisdiction/context, or leave it unknown and outside downstream scoring.",
+    "clearance_number": "Every quote has an explicitly verified jurisdiction/source context, or is visibly marked location-unverified and excluded.",
+    "source_ids": ["SRC-12"],
+    "repo_evidence": [
+      {"label": "Source-read note on the embedded token", "path": "raw/official_reads_2026-11-18.md"}
+    ]
+  },
+  {
+    "id": "A06",
+    "area": "Reserve-list freshness and pagination",
+    "severity": "High",
+    "status": "FLAGGED — old snapshot is stale and absence is not evidence",
+    "flagged": true,
+    "claim_checked": "Does the prior reserve-register capture still represent the newest visible official transaction date?",
+    "observed": "The stored October/November register contains 50 rows, 25 per month; its newest official date is Nov. 16 and it was read at 2026-11-17T00:46Z. The current official November page read shows entries dated Nov. 17.",
+    "not_verified": "A complete month-wide transaction history or the full set of current relevant rows. Prior captures were limited to about 25 rows per month and did not establish complete pagination.",
+    "decision_effect": "Treat the register as a dated snapshot, not current roster truth. Do not infer no transaction from absence on a capped or partial page.",
+    "gate": "Re-read and diff every result page or per-club route; retain pagination state, row counts, source URLs and hashes.",
+    "clearance_number": "All pages in the declared date window accounted for; relevant club transaction searches are complete before making an absence claim.",
+    "source_ids": ["SRC-10", "SRC-17"],
+    "repo_evidence": [
+      {"label": "Prior reserve register (correct field: date_official)", "path": "../nfl-desk-35a1feb2/data/reserve_register_2026_10_11.csv"},
+      {"label": "Prior read transcript", "path": "../nfl-desk-35a1feb2/raw/official_reads_2026-11-17.txt"}
+    ]
+  },
+  {
+    "id": "A07",
+    "area": "Baltimore IR / reserve claim",
+    "severity": "High",
+    "status": "FLAGGED — claim not established; source coverage partial",
+    "flagged": true,
+    "claim_checked": "Do the available official transaction reads establish that both Baltimore quarterbacks were placed on injured reserve?",
+    "observed": "The inherited reserve register has only one Baltimore row in its Oct. 24–31 and Nov. 7–16 windows: Tavius Robinson, dated Oct. 24. The reserve CSV has no position field, so the accompanying 'defensive end' label is not supported by that row. A separate partial trade read records Jacoby Brissett from Arizona to Baltimore on Nov. 6, but its position field is also blank. The cited Lamar Jackson news headline is medical reporting, not an IR transaction.",
+    "not_verified": "A complete paginated reserve history for the relevant period, any transaction outside the captured windows, and official position/roster evidence for names in those transaction rows. These partial reads neither prove nor disprove the full 'both quarterbacks' claim.",
+    "decision_effect": "Do not repeat 'both Baltimore quarterbacks were placed on IR' as verified, and do not encode an IR state from news or a player-name inference. Preserve the claim as unresolved until a complete official transaction trail is captured.",
+    "gate": "Complete date-bounded/paginated official reserve-list search plus a separate source for any position claim.",
+    "clearance_number": "Every asserted IR event has an official dated transaction row; every position field has a separate cited source; the declared search window is complete.",
+    "source_ids": ["SRC-10", "SRC-16", "SRC-17", "SRC-18"],
+    "repo_evidence": [
+      {"label": "Questions register Q-07", "path": "../nfl-desk-35a1feb2/data/questions_register.csv"},
+      {"label": "Reserve register", "path": "../nfl-desk-35a1feb2/data/reserve_register_2026_10_11.csv"},
+      {"label": "Trades register", "path": "../nfl-desk-35a1feb2/data/trades_register_2026_11.csv"}
+    ]
+  },
+  {
+    "id": "A08",
+    "area": "Depth-chart provenance",
+    "severity": "High",
+    "status": "FLAGGED — unofficial charts do not establish actual starters",
+    "flagged": true,
+    "claim_checked": "Do the reviewed club depth pages provide a verified, structured lineup suitable for model input?",
+    "observed": "Houston's official club page labels its chart `Unofficial Depth Chart` and exposes it as an image; the fetcher returned no structured rows. Green Bay's official club page labels its chart `Unofficial, Nov. 10, 2026` and player strings include jersey numbers.",
+    "not_verified": "Machine-readable authorized depth order for all clubs, actual game starters, or playing-time shares. Jersey numbers are not rank.",
+    "decision_effect": "Do not transcribe Houston's image by eye, infer depth from a jersey number, or present an unofficial chart as confirmed starters. Keep unsupported depth inputs blank.",
+    "gate": "Use an authorized structured source with a dated capture, or withhold the feature; actual starts require separate game-specific evidence.",
+    "clearance_number": "All 32 clubs have a dated, source-linked, structured chart with raw strings and slot groups, or unsupported clubs are explicitly withheld.",
+    "source_ids": ["SRC-08", "SRC-09"],
+    "repo_evidence": [
+      {"label": "Source-read notes", "path": "raw/official_reads_2026-11-18.md"},
+      {"label": "Prior depth/source questions", "path": "../nfl-desk-35a1feb2/data/questions_register.csv"}
+    ]
+  },
+  {
+    "id": "A09",
+    "area": "Inactive-list evidence",
+    "severity": "Medium",
+    "status": "SOURCE ROUTE VERIFIED — scope is not a starter census",
+    "flagged": true,
+    "claim_checked": "Do official club pages publish dated inactive lists that can support an active/inactive field?",
+    "observed": "The official Texans Week 10 article has a dated `Texans Inactives` section, confirming a club-level source route.",
+    "not_verified": "A complete 32-club inactive archive, game-specific actual starting roles, or snap share. An inactive list is not a starter list.",
+    "decision_effect": "Use a dated inactive source only for the active/inactive fact it reports; do not infer starter role or playing time.",
+    "gate": "Capture a source per relevant game and keep inactive state distinct from announced/actual starter and participation data.",
+    "clearance_number": "100% of relevant games have a dated official inactive source; starter claims remain separately sourced.",
+    "source_ids": ["SRC-11", "SRC-04"],
+    "repo_evidence": [
+      {"label": "Source-read notes", "path": "raw/official_reads_2026-11-18.md"}
+    ]
+  },
+  {
+    "id": "A10",
+    "area": "NFL Game Book reuse rights",
+    "severity": "Blocking",
+    "status": "FLAGGED — written permission needed for other use",
+    "flagged": true,
+    "claim_checked": "May the linked official Game Book be copied into a public player-level dataset or used as a model input by default?",
+    "observed": "The official Game Center links a Game Book PDF. Its own notice limits use to assisting media coverage and says other use is prohibited without written permission.",
+    "not_verified": "Written permission or a license covering the project's intended extraction, storage, modeling and public display.",
+    "decision_effect": "Do not reproduce or use Game Book player-level rows in models until rights are established; a public official URL does not grant reuse rights.",
+    "gate": "Rights/terms approval or a different expressly authorized official/partner feed.",
+    "clearance_number": "Written authorization covers 100% of intended stored and published fields, or those fields remain withheld.",
+    "source_ids": ["SRC-06", "SRC-04"],
+    "repo_evidence": [
+      {"label": "Source-read note; no player-level rows transcribed", "path": "raw/official_reads_2026-11-18.md"}
+    ]
+  },
+  {
+    "id": "A11",
+    "area": "Week 10 result freshness",
+    "severity": "High",
+    "status": "OFFICIAL UPDATE VERIFIED — full-feed rebuild remains outstanding",
+    "flagged": true,
+    "claim_checked": "Did the Week 10 Monday game become final after the earlier result-feed snapshot?",
+    "observed": "The current official Game Center and Week 10 schedule show Chargers 23, Ravens 20, Final. A one-game source-linked delta is present in this review's data folder.",
+    "not_verified": "A refreshed full historical feed, post-update 32-club standings reconciliation, or additional multi-season official results in this review.",
+    "decision_effect": "Apply this delta before scoring the earlier snapshot; do not claim the full results feed is rebuilt or reconciled from this one row.",
+    "gate": "Rebuild all final games at a declared cutoff and reconcile each club record to same-cut official standings.",
+    "clearance_number": "Every final game at the cutoff appears exactly once; 32/32 club records reconcile to the official standings.",
+    "source_ids": ["SRC-04", "SRC-05", "SRC-14"],
+    "repo_evidence": [
+      {"label": "One-game Week 10 delta", "path": "data/results_increment_week10.csv"},
+      {"label": "Prior pending-game feed row", "path": "../nfl-desk-35a1feb2/data/results_wk10_increment.csv"}
+    ]
+  },
+  {
+    "id": "A12",
+    "area": "Week 11 venue transcription",
+    "severity": "Low",
+    "status": "VERIFIED — 13/13 official Game Center rows",
+    "flagged": false,
+    "claim_checked": "Can each scheduled Week 11 fixture's location and stadium be transcribed from its official NFL Game Center without inference?",
+    "observed": "All 13 scheduled Week 11 fixtures have an individual official NFL Game Center URL; each venue table row records the Game Info location and stadium labels as published.",
+    "not_verified": "Roof state, playing surface, weather, or any venue-specific home-field effect for all 13 games; none is inferred from the name.",
+    "decision_effect": "The Week 11 venue-label transcription is complete for this slate only. Keep roof, surface, weather and model adjustments in separate sourced fields.",
+    "gate": "Repeat the row-level source check for every new slate and preserve the exact published label.",
+    "clearance_number": "13/13 Week 11 venue rows link to an official Game Center; future slates require 100% row-level sources.",
+    "source_ids": ["SRC-03", "SRC-VEN-01", "SRC-VEN-02", "SRC-VEN-03", "SRC-VEN-04", "SRC-VEN-05", "SRC-VEN-06", "SRC-VEN-07", "SRC-VEN-08", "SRC-VEN-09", "SRC-VEN-10", "SRC-VEN-11", "SRC-VEN-12", "SRC-VEN-13"],
+    "repo_evidence": [
+      {"label": "Week 11 venue CSV", "path": "data/venues_week11.csv"},
+      {"label": "Official-source summary", "path": "raw/official_reads_2026-11-18.md"}
+    ]
+  },
+  {
+    "id": "A13",
+    "area": "Home-field model coefficient",
+    "severity": "High",
+    "status": "FLAGGED — two reported coefficients conflict",
+    "flagged": true,
+    "claim_checked": "Is the fitted home-field coefficient reported consistently across the model card, forecasts and executive claims?",
+    "observed": "The prior model card and all 13 Week 11 forecast inputs use -0.52 points. Questions-register Q-05 and the prior executive-summary prose report -0.46 points as the fitted model term. The published raw mean home margin is a different statistic and does not settle which coefficient is canonical.",
+    "not_verified": "A reproducible refit that ties one coefficient to the exact model code, training rows and output hash, or whether the -0.46 text is stale.",
+    "decision_effect": "Do not repeat either number as the sole canonical fitted term until the model is rerun or the stale prose is corrected; preserve the difference between raw mean margin and fitted coefficient.",
+    "gate": "Recompute from the frozen code/data and update all dependent artifacts from one model-card value.",
+    "clearance_number": "One model coefficient is independently reproduced and all model card, forecasts, summary and tests agree exactly.",
+    "source_ids": ["SRC-14", "SRC-05"],
+    "repo_evidence": [
+      {"label": "Model card", "path": "../nfl-desk-35a1feb2/data/model_card.csv"},
+      {"label": "Forecast input rows", "path": "../nfl-desk-35a1feb2/data/originated_wk11.csv"},
+      {"label": "Questions register Q-05", "path": "../nfl-desk-35a1feb2/data/questions_register.csv"},
+      {"label": "Executive summary", "path": "../nfl-desk-35a1feb2/executive-summary.html"}
+    ]
+  },
+  {
+    "id": "A14",
+    "area": "Fair-line / market residual requirement",
+    "severity": "High",
+    "status": "FLAGGED — requirement status conflicts with its own evidence",
+    "flagged": true,
+    "claim_checked": "Does inherited requirement REQ-04 satisfy the requirement to publish a market line and a numeric difference?",
+    "observed": "REQ-04 is marked `MET`, while its gate-blocking text says the difference is undefined because the market column is empty. The 13 origination rows have blank market/open/close fields and the difference text says `undefined`; all 39 price-store rows are `MODEL_RECORD`, not operator quotes.",
+    "not_verified": "An admitted, terms-cleared market snapshot aligned to each forecast's event, line convention and timestamp.",
+    "decision_effect": "Do not present REQ-04 as satisfied or display an undefined difference as zero. Keep fair line, market line and difference separate; unknown market values remain blank.",
+    "gate": "Resolve the price policy and source-time alignment first; then compute the residual from populated market and model values.",
+    "clearance_number": "100% of originated markets have verified fair line, approved market line and a numeric residual, or remain visibly blocked.",
+    "source_ids": ["SRC-12", "SRC-03"],
+    "repo_evidence": [
+      {"label": "REQ-04 row", "path": "../nfl-desk-35a1feb2/data/requirements_master.csv"},
+      {"label": "13 originated Week 11 rows", "path": "../nfl-desk-35a1feb2/data/originated_wk11.csv"},
+      {"label": "39 model-record snapshots", "path": "../nfl-desk-35a1feb2/data/price_snapshots.csv"}
+    ]
+  },
+  {
+    "id": "A15",
+    "area": "Third-party injury / participation / snap inputs",
+    "severity": "High",
+    "status": "FLAGGED — not official NFL data; terms gate remains open",
+    "flagged": true,
+    "claim_checked": "Are the inherited multi-season injury, snap-count and player-stat assets official NFL sources?",
+    "observed": "The prior desk's asset register identifies the nflverse release files as third-party and `official=no`; this review independently read the local file inventory but did not use those player-level rows as official evidence.",
+    "not_verified": "License/terms for intended retention, transformation and publication, row-level completeness, or an official substitute for each historical player-level field.",
+    "decision_effect": "Keep third-party evidence in a separate, visibly labeled class. Do not merge it into official-only injury reliability, starter or leaderboard claims until source policy and rights are settled.",
+    "gate": "Document source class, terms, retention and public/private handling before backtesting or model use.",
+    "clearance_number": "Every input row has an admitted source class and terms state; official-only tables contain only official rows.",
+    "source_ids": ["SRC-19"],
+    "repo_evidence": [
+      {"label": "Third-party asset register", "path": "../nfl-desk-35a1feb2/data/third_party_asset_register.csv"},
+      {"label": "Third-party inventory", "path": "../nfl-desk-35a1feb2/data/third_party_inventory.csv"}
+    ]
+  },
+  {
+    "id": "A16",
+    "area": "Strategy leaderboard readiness",
+    "severity": "High",
+    "status": "SHADOW ONLY — no skill/performance claim justified",
+    "flagged": true,
+    "claim_checked": "Can the current strategy registrations be ranked as validated skill or rewarded as proven performance?",
+    "observed": "P-01/P-02/P-03 each show 13 forecasts and 0 settled games; their proper-score and benchmark columns are blank. The strategy table marks them registered/blocked, and the model card describes a shadow baseline.",
+    "not_verified": "Chronological multi-season holdout results, source-cleared opening/closing prices, complete controls, uncertainty bounds, calibration or a completed demotion run.",
+    "decision_effect": "Publish no ROI or win-rate ranking and no strategy reward now. Keep backtest metrics off the leaderboard; score probability quality separately from staking and require uncertainty-aware proper scores.",
+    "gate": "Freeze registration hashes before evaluation; pass source, calibration, sample-size, benchmark and demotion gates on chronological holdouts.",
+    "clearance_number": "Every displayed strategy has frozen pre-result rules, a defined minimum sample, proper-score benchmark and uncertainty bound; reward only after all gates pass.",
+    "source_ids": ["SRC-03", "SRC-14"],
+    "repo_evidence": [
+      {"label": "Strategy register", "path": "../nfl-desk-35a1feb2/data/strategies_register.csv"},
+      {"label": "Signal leaderboard", "path": "../nfl-desk-35a1feb2/data/leaderboard_signal.csv"},
+      {"label": "Model card", "path": "../nfl-desk-35a1feb2/data/model_card.csv"}
+    ]
+  },
+  {
+    "id": "A17",
+    "area": "Parlay / combo evidence",
+    "severity": "High",
+    "status": "FLAGGED — operator settlement rules are not joint-probability evidence",
+    "flagged": true,
+    "claim_checked": "Does an operator's void-leg rule validate multiplying marginal probabilities or another operator's combo settlement?",
+    "observed": "FanDuel's guide says a voided leg is removed and the remaining parlay legs are recalculated. That is an operator-specific settlement rule; it does not estimate dependence between legs.",
+    "not_verified": "A validated joint-probability model, calibration on joint outcomes, and the applicable operator's exact jurisdiction-specific settlement rules for each proposed combo.",
+    "decision_effect": "Keep parlays and combos withheld unless joint evidence and the relevant operator settlement are separately validated; do not calculate a same-game joint probability by multiplying marginal probabilities without evidence.",
+    "gate": "Validate the joint forecast against a proper scoring rule and document per-operator settlement rules before any combo is eligible.",
+    "clearance_number": "Every admitted combo has a pre-registered joint model, holdout calibration and operator-specific settlement/source record.",
+    "source_ids": ["SRC-13"],
+    "repo_evidence": [
+      {"label": "Prior combo/leaderboard gate", "path": "../nfl-desk-35a1feb2/data/leaderboard_signal.csv"}
+    ]
+  },
+  {
+    "id": "A18",
+    "area": "Houston stadium-name cross-check",
+    "severity": "Low",
+    "status": "CORROBORATED — exact Week 11 label is current per club source",
+    "flagged": false,
+    "claim_checked": "Is the Week 11 Game Center's `RELIANT STADIUM` label an unexplained stale venue name?",
+    "observed": "The official Houston Texans stadium page says the name returned to Reliant Stadium in August 2026 after the NRG Stadium period. It corroborates the NFL Game Center's exact Week 11 label.",
+    "not_verified": "Independent third-party venue naming or any roof/surface facts; neither is needed to transcribe the official label.",
+    "decision_effect": "Keep `RELIANT STADIUM` as the source-reported venue label; do not silently replace it with NRG Stadium or infer a roof/surface field.",
+    "gate": "No further action for the label itself; continue to source venue names from the game-specific Game Center.",
+    "clearance_number": "Week 11 Colts–Texans label matches both the game-specific NFL page and the club stadium page as captured.",
+    "source_ids": ["SRC-15", "SRC-VEN-01"],
+    "repo_evidence": [
+      {"label": "Week 11 venue row", "path": "data/venues_week11.csv"},
+      {"label": "Source-read note", "path": "raw/official_reads_2026-11-18.md"}
+    ]
+  },
+  {
+    "id": "A19",
+    "area": "Source-capture retention / hash meaning",
+    "severity": "Medium",
+    "status": "FLAGGED — notes are not raw response archives",
+    "flagged": true,
+    "claim_checked": "Do the local SHA-256 hashes authenticate the original bytes returned by the live NFL/operator pages?",
+    "observed": "This review stores a summary note and local CSV transcriptions, not full HTTP/HTML responses. The manifest hashes only those local files; the fetcher did not expose exact per-request timestamps or server Date/response headers.",
+    "not_verified": "The precise source bytes, response status/headers for every request, and original sportsbook quote values. A local hash can show the local note did not later change, but not that the source served those exact bytes.",
+    "decision_effect": "Do not describe the local hashes as source-server hashes or an immutable archival capture. Use the report as a transparent, time-bounded review note only.",
+    "gate": "For future captures, retain authorized raw response bytes/headers, request URL, final URL, exact fetch clock, status, terms state and SHA-256; preserve the existing non-archive caveat.",
+    "clearance_number": "Every relied-on source has a permission-compatible raw capture or an explicit summary-only limitation and local-content hash.",
+    "source_ids": ["SRC-01", "SRC-02", "SRC-04"],
+    "repo_evidence": [
+      {"label": "Capture-scope caveat", "path": "raw/official_reads_2026-11-18.md"},
+      {"label": "Local-only manifest", "path": "data/manifest.json"}
+    ]
+  },
+  {
+    "id": "A20",
+    "area": "Historical team-code join integrity",
+    "severity": "High",
+    "status": "FLAGGED — older carried-forward feed has 18 unmatched club appearances",
+    "flagged": true,
+    "claim_checked": "Does the older 2026 results feed use the same club codes as the official standings when joined team by team?",
+    "observed": "The read-only `nfl-desk-e46fb855/data/results_feed.csv` has 145 games and uses `LAR` on 9 and `ARI` on 9 team appearances; the official standings table uses `LA` and `AZ`. An exact join to the official code set therefore misses 18 club-game appearances. The newer 35a1feb2 feed uses `LA`/`AZ` and records its own 32/32 check, but this review did not rebuild that full feed after the later Chargers–Ravens final.",
+    "not_verified": "Whether every other historical team join, alias conversion, game row and post-update standings value is correct across all inherited feeds. League-total balance alone does not prove club-level completeness.",
+    "decision_effect": "Do not use the older feed for per-club rates or training without an explicit alias map and 32-club reconciliation. Keep the newer correction distinct from this audit's one-game result delta.",
+    "gate": "Normalize documented historical aliases before joining, then reconcile every club's game count, wins/losses/ties and points for/against against same-cut official standings.",
+    "clearance_number": "32/32 clubs match the official standings after alias normalization; no unmatched team-code rows and every final game appears exactly once.",
+    "source_ids": ["SRC-05", "SRC-14"],
+    "repo_evidence": [
+      {"label": "Older carried-forward results feed", "path": "../nfl-desk-e46fb855/data/results_feed.csv"},
+      {"label": "Newer 35a1feb2 results feed", "path": "../nfl-desk-35a1feb2/data/results_feed_2026.csv"},
+      {"label": "Official-code standings transcription", "path": "../nfl-desk-35a1feb2/data/standings_2026_read2.csv"},
+      {"label": "Newer desk's integrity checks", "path": "../nfl-desk-35a1feb2/data/standings_integrity_checks.csv"}
+    ]
+  }
+]

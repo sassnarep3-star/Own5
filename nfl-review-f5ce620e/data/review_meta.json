@@ -1,0 +1,16 @@
+{
+  "title": "Independent NFL decision-readiness review",
+  "short_title": "NFL REVIEW · F5CE620E",
+  "as_of": "2026-11-18 UTC",
+  "primary_capture_window": "2026-11-18 approximately 03:14–03:21Z; follow-up at approximately 03:27Z",
+  "scope": "Independent, audit-only review of high-impact NFL claims and their provenance. Existing desks, root navigation and model/policy choices remain unchanged.",
+  "site_notice": "Review dossier only — not a betting recommendation, certified model, or source of official NFL data. Market and player-level inputs remain gated where terms or evidence are incomplete.",
+  "page_nav": [
+    {"label": "Executive summary", "path": "index.html"},
+    {"label": "Audit findings", "path": "audit.html"},
+    {"label": "Questions", "path": "questions.html"},
+    {"label": "Suggestions · review first", "path": "suggestions.html"},
+    {"label": "Flagged for Review", "path": "flagged.html"},
+    {"label": "Sources & tables", "path": "sources.html"}
+  ]
+}
