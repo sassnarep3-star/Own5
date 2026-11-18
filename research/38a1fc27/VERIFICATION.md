@@ -34,7 +34,9 @@ audited. Suggested control: S02 (synthetic fixture + ten known-answer games in C
 
 ## 4. Re-derivation of previously published claims
 
-Eleven numeric claims were recomputed from the pinned inputs using the conventions above.
+Eleven numeric claims were recomputed from the pinned inputs using the conventions above:
+**5 reproduce exactly, 1 differs by 0.5 pp, 5 do not reproduce** (4 of those are inherited from
+earlier sessions and 1 is this session's own sign-convention error, corrected here).
 
 | Claim (published earlier) | Prior | Recomputed | Verdict |
 |---|---|---|---|
