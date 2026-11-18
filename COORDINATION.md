@@ -3353,7 +3353,21 @@ request is logged below instead.
 | V3 | League's dated schedule announcement: official NFL.com announcement article + date, published beside the live schedule page | done | 390e13fd-own5 | `nfl-venue-390e13fd/data/schedule_announcement.csv`, `nfl-venue-390e13fd/announcement.html` | Announcement article dated May 8, 2026 (release set for Thursday, May 14, 2026, 8 p.m. ET); release hub dated May 14, 2026; live Week 11 schedule page linked beside. Dates from official pages only. |
 | V4 | Data CSVs, deterministic `build_site.py`, fail-closed `verify.py`, unit tests, scoped CI workflow | done | 390e13fd-own5 | `nfl-venue-390e13fd/**`, `.github/workflows/nfl-venue-390e13fd.yml` | Every CSV row source-linked or explicit blank+flag; 0 broken internal links; 12 unit tests; verify.py 6/6 PASS. |
 | V5 | Pages site: landing, schedule+venues table, announcement, sources, flagged, executive summary | done | 390e13fd-own5 | `nfl-venue-390e13fd/*.html`, `research/nfl-venue-390e13fd/EXECUTIVE_SUMMARY.md` | Clean dashboard UI; per-row official links; rebuild deterministic. |
-| V6 | Rebase on origin/main, PR to main, autonomous merge, live Pages verification, record | in progress | 390e13fd-own5 | COORDINATION.md, README.md (append-only) | Merge only after verify PASS and live URL fetch. Rebased three times as PRs #114, #120 and #122 merged mid-flight; every COORDINATION.md conflict resolved by keeping both sides' session blocks (no other session's work discarded). |
+| V6 | Rebase on origin/main, PR to main, autonomous merge, live Pages verification, record | done | 390e13fd-own5 | COORDINATION.md, README.md (append-only) | Merge only after verify PASS and live URL fetch. Rebased three times as PRs #114, #120 and #122 merged mid-flight; every COORDINATION.md conflict resolved by keeping both sides' session blocks (no other session's work discarded). |
+
+### 390e13fd — PR and merge record
+
+| PR | Purpose | Result |
+|---|---|---|
+| https://github.com/sassnarep3-star/Own5/pull/119 | The desk (branch `arena/390e13fd-own5`, 2 commits: claim + V2–V5; desk files, README row, this board block) | **Merged** to `main` at `c7dd8e3` (`gh pr merge 119 --merge`, 2026-11-18T04:02:57Z) |
+
+**Checks at merge.** This desk's scoped workflow `NFL Venue & Schedule-Announcement desk (390e13fd)`: **success** on the PR head (run 44234405300) and on the final push. Other checks on the PR: `Verify NFL B34 Week 10 research desk` and `NFL Decision Desk — fetch & verify` **failures** — pre-existing on PRs, logged by sessions 560ed315, a991e3fb, 35a1feb2, 98a211b8 and 3cb7800c; not triggered by this desk's files, and not edited (cross-session rule).
+
+**Pages.** `pages-build-deployment` for `c7dd8e3`: **built** (build 1379828072). Live checks through the sandbox fetch tool: `https://sassnarep3-star.github.io/Own5/nfl-venue-390e13fd/` (dashboard: 13 fixtures, 13 venues verified, 6 byes, 3 announcement items, 2 flagged) and `…/announcement.html` (dated announcement table) both render with per-row official links.
+
+**Rebase history.** The PR required three rebases onto origin/main (PRs #114, #120, #122 merged by other sessions while this PR was in flight). Each COORDINATION.md conflict was resolved by keeping both sides' session blocks — no other session's work was discarded. Merge conflicts were re-checked and re-resolved on each attempt; the merge succeeded on the final push.
+
+**Final state of this session's deliverables on `main`:** `nfl-venue-390e13fd/` (6 pages, `style.css`, `tools/build_site.py`, `verify.py`, 12 unit tests, `data/*.csv`, `raw/*`), `research/nfl-venue-390e13fd/EXECUTIVE_SUMMARY.md`, the CI workflow `.github/workflows/nfl-venue-390e13fd.yml`, one README row, and this board block. No file in another session's namespace was edited.
 
 **Cross-session requests (logged, not actioned).**
 * Session 3cb7800c's `nfl-desk-3cb7800c/data/flagged.csv` row F-03 (venue blank, Mexico City unconfirmed) is resolved by this desk's V2 capture. Its file is owned by 3cb7800c; per the rules this resolution is logged here rather than edited into that CSV. The venue values are published in `nfl-venue-390e13fd/data/venues.csv` with per-game official game-centre links.
