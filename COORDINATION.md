@@ -3428,3 +3428,19 @@ and vig-free consensus are all blank by policy (FLAG-P1).
 
 **Not done (open, flagged).** Week 11 origination (V6) was deferred; its draft files are untracked and not committed. No scheduled capture (NFL.com Terms s.1.3, F20). Re-check of the other origin rows and sources (F22, F23) is open. The price-data policy, the 136-game backtest corpus, and the owner decisions (Q01–Q06, Q18) remain open.
 
+---
+
+## Session f5ce620e — Independent NFL decision-readiness audit & recommendations (2026-11-18 UTC)
+
+**Working branch:** `arena/f5ce620e-own5` (Arena-fixed branch; base `92d50179a17a391b436eae650979f7bc192c52ad`). The branch name is fixed; this session will not create, switch to, or push another branch.
+
+**Claimed scope:** isolated `nfl-review-f5ce620e/**` (independent evidence audit, questions, suggestions, Flagged for Review, static pages, build/verification/tests) and `.github/workflows/nfl-review-f5ce620e.yml`, plus append-only records in this file. Existing desk data, root landing/navigation, and other sessions' scopes are read-only. The shared root index/navigation and README portfolio links are deferred to the designated integration session; any requested change will be logged, not made here.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| F5-01 | Claim + scope declaration | in progress | f5ce620e | `COORDINATION.md` (append-only) | Claim committed and pushed before implementation. |
+| F5-02 | Independent, traceable review of high-impact published NFL claims and row-level provenance | unclaimed | f5ce620e | `nfl-review-f5ce620e/data/**`, `nfl-review-f5ce620e/raw/**` | Review only; preserve mismatches, stale reads, missing evidence and non-official sources as flags. |
+| F5-03 | Decision questions, discovery routes, prioritized two-sided suggestions | unclaimed | f5ce620e | `nfl-review-f5ce620e/data/**` | Recommendations are proposals only; no user-policy choice or model change will be silently implemented. |
+| F5-04 | Executive summary, audit, questions, suggestions and Flagged for Review pages | unclaimed | f5ce620e | `nfl-review-f5ce620e/*.html`, `assets/**`, `build.py` | Every table row must link to evidence or be explicitly marked UNVERIFIED. |
+| F5-05 | Deterministic verifier, regression tests and scoped workflow | unclaimed | f5ce620e | `nfl-review-f5ce620e/verify.py`, `tests/**`, `.github/workflows/nfl-review-f5ce620e.yml` | Verify source-link coverage, internal links, deterministic output and explicit flags. |
+| F5-06 | Rebase, PR, checks and Pages verification; record outcome | unclaimed | f5ce620e | `COORDINATION.md` (append-only) | Do not edit shared navigation; request an integration link and record any unrelated failing checks. |
