@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Irregularities and unverified blanks, with source links.">
+<title>Flagged for review &middot; NFL Origin Desk</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <span class="mark">O5</span>
+      <div>
+        <h1><a href="index.html" style="color:inherit;text-decoration:none">NFL Origin Desk</a></h1>
+        <p>Own lines &middot; validated strategies &middot; injuries &amp; depth intelligence</p>
+      </div>
+    </div>
+    <div class="stamp">
+      <strong>2026 season &middot; Week 9</strong>
+      <span>Snapshot 2026-11-18 UTC</span>
+    </div>
+  </div>
+<nav class="wrap"><a class="" href="index.html">Overview</a><a class="" href="requirements.html">Requirements</a><a class="" href="questions.html">Open questions</a><a class="" href="suggestions.html">Suggestions</a><a class="" href="lines.html">Own lines</a><a class="" href="strategies.html">Strategies</a><a class="" href="gates.html">Gates</a><a class="" href="leaderboard.html">Leaderboard</a><a class="" href="correlations.html">Correlations</a><a class="" href="injuries.html">Injuries & depth</a><a class="" href="sources.html">Sources</a><a class="" href="flagged.html">Flagged for review</a><a class="" href="executive-summary.html">Executive summary</a></nav>
+</header>
+<main class="wrap">
+<section class="pagehead"><h2>Flagged for review</h2><p>Irregularities and unverified blanks, with source links.</p></section>
+<p>Irregularities and unverified blanks. Values that cannot be confirmed from an official source are left blank and published here with source links &mdash; never inferred. These do not block the merge; they are review items for the owner.</p>
+<div class="tablewrap">
+<table class="data"><caption>Flagged for review. 14 items; severity High/Medium/Low.</caption>
+<thead><tr><th scope="col">flag_id</th><th scope="col">item</th><th scope="col">severity</th><th scope="col">description</th><th scope="col">why_unverified</th><th scope="col">disposition</th><th scope="col">source_link</th><th scope="col">related_requirement</th></tr></thead>
+<tbody>
+<tr><td>F01</td><td>No verified operator price snapshot</td><td>High</td><td>Market spread/total/moneyline columns are blank across the lines table. No timestamped operator (DraftKings/FanDuel/BetMGM) price history exists in this namespace.</td><td>nfl.com and operator odds pages are unreachable from the sandbox; no paid odds feed subscribed.</td><td>Blank + flagged; market columns never inferred. Gates G4/G8 cannot pass until S01 (price snapshot) is shipped.</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/nfl-origin-desk/lines.csv" rel="noopener noreferrer" target="_blank">source</a></td><td>R004/R020/R023/R037/R068</td></tr>
+<tr><td>F02</td><td>Prop lines unavailable from an official source</td><td>High</td><td>Player-prop bet legs are modelled at median splits; no official public prop-line history exists.</td><td>No official source publishes NFL player-prop lines.</td><td>Blank + flagged; prop combos held behind the joint-evidence gate (G5/G9).</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/nfl-origin-desk/correlations.csv" rel="noopener noreferrer" target="_blank">source</a></td><td>R007/R006</td></tr>
+<tr><td>F03</td><td>No certified strategies</td><td>High</td><td>All 7 strategy families fail validation gates (G2, G3, G4, G6, G8 fail). Leaderboard is intentionally empty.</td><td>Requires verified closing prices (G4) and a passing chronological holdout (G3).</td><td>Blank + flagged; no strategy ranked until certified.</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/nfl-origin-desk/leaderboard.csv" rel="noopener noreferrer" target="_blank">source</a></td><td>R005/R006/R008/R028</td></tr>
+<tr><td>F04</td><td>Injury report not captured as a timestamped series</td><td>Medium</td><td>Only one injury-report capture exists in the repo; no Wed/Thu/Fri-to-kickoff series.</td><td>nfl.com unreachable from the sandbox; capture lives in another session&#x27;s namespace.</td><td>Blank + flagged; injury signal treated as a change (delta), not a level (R031/R040).</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/nfl-origin-desk/injuries.csv" rel="noopener noreferrer" target="_blank">source</a></td><td>R011/R031/R040</td></tr>
+<tr><td>F05</td><td>Depth is snap-share inference, not an official depth chart</td><td>Medium</td><td>Depth strings 1-4 and starter flags are inferred from snap share, not from an official club depth chart.</td><td>No official machine-readable depth chart exists at nfl.com.</td><td>Blank + flagged; snap share disclosed as the starter proxy (R030).</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/nfl-origin-desk/injuries.csv" rel="noopener noreferrer" target="_blank">source</a></td><td>R012/R013/R029</td></tr>
+<tr><td>F06</td><td>32-team roster/IR sweep not run</td><td>Medium</td><td>No club-by-club roster/IR sweep has been completed in this namespace.</td><td>Club roster/IR pages unreachable from the sandbox.</td><td>Blank + flagged; blocks team-level model trust (R032).</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/nfl-origin-desk/flagged.csv" rel="noopener noreferrer" target="_blank">source</a></td><td>R032/R072</td></tr>
+<tr><td>F07</td><td>Venues not transcribed from official game centre</td><td>Low</td><td>Venue of every fixture not transcribed and published.</td><td>Official game-centre pages unreachable from the sandbox.</td><td>Blank + flagged (R042).</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/nfl-origin-desk/flagged.csv" rel="noopener noreferrer" target="_blank">source</a></td><td>R042</td></tr>
+<tr><td>F08</td><td>Official inactive lists and snap counts not captured</td><td>Medium</td><td>Only 6 of 254 report rows carry a game designation; no active list or snap share captured in this namespace.</td><td>nfl.com unreachable; snap counts exist in another session&#x27;s namespace.</td><td>Blank + flagged; backup replacement of a starter cannot be confirmed (R049).</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/nfl-origin-desk/injuries.csv" rel="noopener noreferrer" target="_blank">source</a></td><td>R049/R025</td></tr>
+<tr><td>F09</td><td>Depth-parsing failures not fixed (Texans image; Packers jersey numbers)</td><td>Medium</td><td>Texans publish depth as an image; Packers prepend jersey numbers.</td><td>Requires an authorized structured source for the Texans image; jersey-number stripping recovers Packers rows.</td><td>Blank + flagged; Texans image needs authorized source, not eye-transcription (R050).</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/nfl-origin-desk/flagged.csv" rel="noopener noreferrer" target="_blank">source</a></td><td>R050</td></tr>
+<tr><td>F10</td><td>Roster turnover not versioned</td><td>Low</td><td>Depth, availability and lineup evidence not versioned against the last official roster event.</td><td>Official transactions/roster pages unreachable.</td><td>Blank + flagged (R052).</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/nfl-origin-desk/flagged.csv" rel="noopener noreferrer" target="_blank">source</a></td><td>R052</td></tr>
+<tr><td>F11</td><td>Immutable availability snapshots not built</td><td>Medium</td><td>No daily injury-report/depth-page/inactive captures with retained hashes, timestamps and conflict flags.</td><td>Requires durable snapshot storage outside the static site plus a capture pipeline.</td><td>Blank + flagged; blocks replay of practice designations (R047/R048/R065).</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/nfl-origin-desk/flagged.csv" rel="noopener noreferrer" target="_blank">source</a></td><td>R047/R048/R065</td></tr>
+<tr><td>F12</td><td>Stadium roof/surface and NWS weather overlay not built</td><td>Low</td><td>No NWS hourly wind/precipitation overlay coupled with official 90-minute stadium roof designations.</td><td>NWS and stadium data not captured.</td><td>Blank + flagged (R066).</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/nfl-origin-desk/flagged.csv" rel="noopener noreferrer" target="_blank">source</a></td><td>R066</td></tr>
+<tr><td>F13</td><td>Two-stage escrow leaderboard not live</td><td>Low</td><td>Proper-score qualification then prospective CLV/ROI escrow not yet operating over a multi-week sample.</td><td>Awaits verified price capture and qualification sample.</td><td>Blank + flagged (R067).</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/nfl-origin-desk/leaderboard.csv" rel="noopener noreferrer" target="_blank">source</a></td><td>R067</td></tr>
+<tr><td>F14</td><td>Reward funding and jurisdiction unset</td><td>High</td><td>Q04 (cash vs points vs nothing) and Q05 (jurisdiction/operator rules) cannot be closed from public data.</td><td>Owner decision required; not resolvable from any source.</td><td>Blocked; competition remains points-only until answered (S16).</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/nfl-origin-desk/questions.csv" rel="noopener noreferrer" target="_blank">source</a></td><td>R006/R004/R015</td></tr>
+</tbody></table>
+</div>
+</main>
+<footer class="wrap">
+<p><strong>Verification policy.</strong> Every table row links to an official page or to the
+script and pinned input that produced it. Values that cannot be confirmed are left blank and
+published on the <a href="flagged.html">Flagged for review</a> page &mdash; never inferred.</p>
+<p>Research only. No bets are placed, no performance is claimed, and nothing here is betting
+advice. If gambling is a problem: 1-800-GAMBLER.</p>
+</footer>
+</body>
+</html>
