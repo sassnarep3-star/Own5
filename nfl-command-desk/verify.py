@@ -90,10 +90,10 @@ def v02_counts():
         "results_corpus.csv": 150, "results_reconciliation.csv": 32,
         "fixtures_wk11.csv": 19, "availability_diff.csv": 44,
         "requirements.csv": 73, "questions.csv": 18, "suggestions.csv": 12,
-        "gates.csv": 12, "sources.csv": 7, "leaderboard.csv": 21,
+        "gates.csv": 12, "sources.csv": 8, "leaderboard.csv": 21,
         "preregistration.csv": 5, "standings.csv": 32, "ratings.csv": 32,
         "origination_wk11.csv": 12, "availability_summary.csv": 4,
-        "flagged.csv": 14, "luck_panel.csv": 3, "schedule_vs_announcement.csv": 6,
+        "flagged.csv": 15, "luck_panel.csv": 3, "schedule_vs_announcement.csv": 6,
     }
     for name, n in expected.items():
         got = len(rows(name))

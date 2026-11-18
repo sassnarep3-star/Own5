@@ -32,6 +32,8 @@ SOURCES = [
      "Dated schedule announcement, 2026-05-14: 18 weeks, 272 games, 17+3, nine international games, venue names", "2026-11-18T03:58:00Z", "official"),
     ("S7", "GitHub", "https://api.github.com/repos/sassnarep3-star/Own5/pages",
      "Publication configuration: Pages served from main at /", "2026-11-18T03:41:00Z", "repository"),
+    ("S8", "NFL", "https://www.nfl.com/games/cardinals-at-chiefs-2026-reg-11",
+     "Official game centre Game Info block: Location and Stadium as printed", "2026-11-18T04:20:00Z", "official"),
 ]
 
 # ----------------------------------------------------------------------------------
@@ -113,13 +115,15 @@ WEEK11 = [
     ("2026-11-22", "13:00", "FOX", "NO", "CHI", "Soldier Field", VENUE_METHOD, "no", ""),
     ("2026-11-22", "13:00", "FOX", "TEN", "DAL", "AT&T Stadium", VENUE_METHOD, "no", ""),
     ("2026-11-22", "13:00", "FOX", "TB", "DET", "Ford Field", VENUE_METHOD, "no", ""),
-    ("2026-11-22", "13:00", "CBS", "AZ", "KC", "GEHA Field at Arrowhead Stadium", VENUE_METHOD, "no", ""),
+    ("2026-11-22", "13:00", "CBS", "AZ", "KC", "GEHA Field at Arrowhead Stadium", VENUE_METHOD, "no",
+     "game centre (S8) prints Stadium: ARROWHEAD STADIUM"),
     ("2026-11-22", "13:00", "CBS", "PIT", "PHI", "Lincoln Financial Field", VENUE_METHOD, "no", ""),
     ("2026-11-22", "16:05", "FOX", "NYJ", "LAC", "SoFi Stadium", VENUE_METHOD, "no", ""),
     ("2026-11-22", "16:25", "CBS", "JAX", "NYG", "MetLife Stadium", VENUE_METHOD, "no", ""),
     ("2026-11-22", "16:25", "CBS", "LV", "DEN", "Empower Field at Mile High", VENUE_METHOD, "no", ""),
     ("2026-11-22", "20:20", "NBC", "MIN", "SF", "Estadio Banorte", "page prints 'Mexico City' event banner; stadium name from the 2026-05-14 announcement (S6)", "yes", "Sunday Night Football, Mexico City"),
-    ("2026-11-23", "20:15", "ESPN", "CIN", "WAS", "FedEx Field", VENUE_METHOD, "no", "Monday Night Football"),
+    ("2026-11-23", "20:15", "ESPN", "CIN", "WAS", "FedEx Field", VENUE_METHOD, "no",
+     "Monday Night Football; game centre (S8) prints Stadium: NORTHWEST STADIUM, a naming discrepancy left as printed"),
 ]
 WEEK11_BYES = ["ATL", "CLE", "GB", "LA", "NE", "SEA"]  # printed as LA / LAR in logo+label; see FLAG-A1
 

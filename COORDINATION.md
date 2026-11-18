@@ -3422,6 +3422,19 @@ Both are owned by other desks and need regenerating. Recorded on PR #120
   `scripts/build.py` must change the generator. FLAG-S2.
 * The two red workflows above.
 
+**Pages incident during this session (resolved; recorded because it looked like a broken site).**
+Between 04:04:04Z and 04:04:43Z three Pages builds reported `status: errored` ("Page build failed").
+They were **cancelled superseded builds**, not content failures: GitHub cancels an in-flight
+`pages-build-deployment` when a newer commit lands (the run list shows `cancelled` for the
+superseded SHA, and the final run for `556a247` completed **success** with build → report-build-status
+→ deploy all green). `gh api .../pages/builds/latest` kept reporting the last *errored* entry at the
+time (it is a legacy-build record), which is why the site appeared stuck. Content was in fact
+advancing: `/nfl-venue-390e13fd/schedule.html` (added at `556a247`) renders on the live origin, which
+proves the deploy moved past the earlier builds. No content fix was needed and none was invented to
+"repair" a deploy that had not failed. The Pages API cannot be dispatched from this sandbox
+(`POST /pages/builds` and `workflow_dispatch` both return HTTP 403 "Resource not accessible by
+integration"), so a fresh commit is the only available way to force a new build.
+
 **Known consequences / limitations.** One read per source on one day; the injury page was read
 to chunk 0 of 8 only, so the full-page row count is unknown and quoted as unknown. The 136
 adopted rows carry an earlier session's venue and kickoff notes, which are not re-verified here —
