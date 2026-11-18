@@ -2833,7 +2833,15 @@ against recorded hashes and against the GitHub API:
 | ID | Task | Status | Owner | Files touched | Notes |
 |----|------|--------|-------|---------------|-------|
 | A1 | Claim + board entry | done | 68bfa568 | COORDINATION.md | Claimed before work. |
-| A2 | Re-hash `data/decision-desk/raw/*` against `provenance.json` (nflverse, GitHub-hosted) | in progress | 68bfa568 | `audit-68bfa568/hash_check.csv` | Local recomputation. |
-| A3 | Re-derive row counts and the "7,548 games / 7,439 priced" claim (CU-F04) from the raw file | in progress | 68bfa568 | `audit-68bfa568/claim_check.csv` | |
-| A4 | CI state on `main` via `gh run list` | in progress | 68bfa568 | `audit-68bfa568/ci_state.csv` | Failing runs listed, not fixed (owned by other sessions). |
-| A5 | Report, executive summary, flagged items | in progress | 68bfa568 | `audit-68bfa568/README.md` | |
+| A2 | Re-hash `data/decision-desk/raw/*` against `provenance.json` (nflverse, GitHub-hosted) | done | 68bfa568 | `audit-68bfa568/hash_check.csv` | Local recomputation. |
+| A3 | Re-derive row counts and the "7,548 games / 7,439 priced" claim (CU-F04) from the raw file | done | 68bfa568 | `audit-68bfa568/claim_check.csv` | |
+| A4 | CI state on `main` via `gh run list` | done | 68bfa568 | `audit-68bfa568/ci_state.csv` | Failing runs listed, not fixed (owned by other sessions). |
+| A5 | Report, executive summary, flagged items | done | 68bfa568 | `audit-68bfa568/README.md` | |
+
+### 68bfa568 — completion record (2026-11-18 UTC)
+
+- **Verified:** 12/12 nflverse raw files match `provenance.json` SHA-256 (`audit-68bfa568/hash_check.csv`); games file recomputed: 7,548 rows, 7,439 with line fields, 163/272 in 2026, 136 with final scores (`claim_check.csv`).
+- **Irregularities (A-F1–A-F6):** nfl.com HTML captures not committed (hashes unverifiable); line fields are third-party and not open/close separated; `pages-smoke` failing on `main` (run 43997969907); B34 determinism check failing on `main` (run 43998367488); root `index.html` still 2026-11-02; "24 sibling desks" not reproduced (25 NFL/own5 dirs).
+- **Not done:** all live official nfl.com reads (sandbox cannot reach nfl.com or github.io); the brief's remaining ~60 items; per-session branch naming (conflicts with fixed branch rule); no merge to `main` (integration conditions not met).
+- **Files:** `audit-68bfa568/**`, this block. Nothing else was edited.
+- **PR:** see below.

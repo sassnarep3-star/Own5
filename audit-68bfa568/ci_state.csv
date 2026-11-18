@@ -1,0 +1,19 @@
+workflow,latest_conclusion,created_utc,head_sha,run_url
+NFL decision review hub — 3bba0722,success,2026-11-17T01:06:14Z,f03b821,https://github.com/sassnarep3-star/Own5/actions/runs/43992946658
+NFL portfolio integration,failure,2026-11-17T01:45:24Z,e8d7d62,https://github.com/sassnarep3-star/Own5/actions/runs/43997969907
+Verify NBA validation desk,success,2026-11-17T01:48:41Z,92d5017,https://github.com/sassnarep3-star/Own5/actions/runs/43998367551
+Verify NFL B34 Week 10 research desk,failure,2026-11-17T01:48:41Z,92d5017,https://github.com/sassnarep3-star/Own5/actions/runs/43998367488
+Verify NFL Line-Origination Desk (d38e90c5),success,2026-11-16T17:05:14Z,90313d5,https://github.com/sassnarep3-star/Own5/actions/runs/43914583346
+Verify NFL Own-Line Lab (864d5668),success,2026-11-16T17:01:43Z,90313d5,https://github.com/sassnarep3-star/Own5/actions/runs/43913944614
+Verify NFL audit (a699fc53),success,2026-11-17T00:46:54Z,6420f52,https://github.com/sassnarep3-star/Own5/actions/runs/43990388901
+Verify NFL decision console (c98c6270),success,2026-11-17T15:59:32Z,92d5017,https://github.com/sassnarep3-star/Own5/actions/runs/44120611151
+Verify NFL decision desk (e1d60f5d),success,2026-11-17T17:04:20Z,92d5017,https://github.com/sassnarep3-star/Own5/actions/runs/44132884502
+Verify NFL decision-readiness desk (560ed315),success,2026-11-17T16:26:40Z,92d5017,https://github.com/sassnarep3-star/Own5/actions/runs/44125829044
+Verify NFL decision-readiness desk (cba42531),success,2026-11-17T16:17:08Z,92d5017,https://github.com/sassnarep3-star/Own5/actions/runs/44123994547
+Verify NFL decision-readiness desk (e46fb855),success,2026-11-17T17:04:16Z,92d5017,https://github.com/sassnarep3-star/Own5/actions/runs/44132873446
+Verify NFL price-snapshot desk (3fb93d11),success,2026-11-17T16:17:34Z,92d5017,https://github.com/sassnarep3-star/Own5/actions/runs/44124081452
+Verify NFL read-and-decide desk (35a1feb2),success,2026-11-17T11:58:43Z,92d5017,https://github.com/sassnarep3-star/Own5/actions/runs/44078838590
+Verify Own5 evidence desk,success,2026-11-17T01:48:41Z,92d5017,https://github.com/sassnarep3-star/Own5/actions/runs/43998367617
+Verify SF Rent Review,success,2026-11-17T01:48:41Z,92d5017,https://github.com/sassnarep3-star/Own5/actions/runs/43998367526
+Verify research dashboard,success,2026-11-17T01:48:41Z,92d5017,https://github.com/sassnarep3-star/Own5/actions/runs/43998367509
+pages-build-deployment,success,2026-11-17T01:48:40Z,92d5017,https://github.com/sassnarep3-star/Own5/actions/runs/43998366505
