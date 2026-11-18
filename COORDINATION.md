@@ -3227,3 +3227,5 @@ echo "appended"; wc -l COORDINATION.md
 ## Cross-session requests
 
 - None. All work is in the additive `nfl-origin-desk/` namespace; no other session's files are touched.
+
+**38430fe3 final record (2026-11-18).** Follow-up PR **#115** merged at `589205d` (merge commit, `--merge`). It carried the F-04 and F-11 corrections. Pages built `589205d` as `built`. This last PR fixes date display (ordinal suffixes now lower-case: "November 15th", not "15Th") on the injury-rows page. Known pre-existing failures on PRs and pushes, not from this desk: `Verify NFL B34 Week 10 research desk` and `NFL Decision Desk — fetch & verify` (CU-F13). The desk's own workflow `Verify NFL injury-report desk (38430fe3)` passed on each head.
