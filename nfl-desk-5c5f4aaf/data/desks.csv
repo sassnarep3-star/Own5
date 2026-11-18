@@ -1,5 +1,6 @@
 desk,entry_point,title,files,flagged_file,flagged_rows
 nfl-560ed315,nfl-560ed315/index.html,Overview · Own5 decision-readiness desk,17,nfl-560ed315/data/flagged.csv,12
+nfl-98a211b8,nfl-98a211b8/index.html,Overview · NFL review desk 98a211b8,15,nfl-98a211b8/flagged.html,
 nfl-audit-a699fc53,nfl-audit-a699fc53/index.html,Week 10 official re-read — overview — Own5 NFL audit (a699fc53),12,nfl-audit-a699fc53/data/flagged.csv,14
 nfl-b34253a1,nfl-b34253a1/index.html,Overview · Week 10 NFL research,45,nfl-b34253a1/flagged.html,
 nfl-c98c6270,nfl-c98c6270/index.html,Overview · Own5 NFL Decision Console,75,nfl-c98c6270/flagged.html,
@@ -9,6 +10,7 @@ nfl-decision-desk-38a1fc27,nfl-decision-desk-38a1fc27/index.html,Decision overvi
 nfl-decision-desk-e413f933,nfl-decision-desk-e413f933/index.html,Dashboard · NFL Decision Desk,35,nfl-decision-desk-e413f933/flagged.html,
 nfl-desk-26d4cafb,nfl-desk-26d4cafb/index.html,Overview · NFL Decision Desk 26d4cafb,60,nfl-desk-26d4cafb/data/flagged.csv,16
 nfl-desk-35a1feb2,nfl-desk-35a1feb2/index.html,NFL line origination — currency & corrections desk · Own5 currency desk,73,nfl-desk-35a1feb2/data/flagged.csv,15
+nfl-desk-3cb7800c,nfl-desk-3cb7800c/index.html,Week 11 official-source desk · NFL official-source desk (3cb7800c),25,nfl-desk-3cb7800c/data/flagged.csv,10
 nfl-desk-3fb93d11,nfl-desk-3fb93d11/index.html,Overview · Own5 price-snapshot desk,51,nfl-desk-3fb93d11/data/flagged.csv,14
 nfl-desk-864d5668,nfl-desk-864d5668/index.html,Overview — Own5 NFL Own-Line Lab,59,nfl-desk-864d5668/flagged.html,
 nfl-desk-d38e90c5,nfl-desk-d38e90c5/index.html,NFL line origination and strategy desk - Own5 NFL desk d38e90c5,55,nfl-desk-d38e90c5/pages/flagged.html,
