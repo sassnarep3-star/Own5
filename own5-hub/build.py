@@ -171,7 +171,25 @@ The three most consequential are S03 (price-data policy), S04 (where raw capture
         ["ID", "Check", "Official value (read 2026-11-18)", "Repo or brief value", "Result", "Source", "How checked"], vc),
         "Each row is a re-check made in this session against the official page, the runner capture, or the repo file it names.")
 
-    # injuries: derived counts (per club) and the capture ledger; delta only when two captures exist
+    # injuries: derived counts (per club), conflict flags between captures, deltas, and the capture ledger
+    content = read(os.path.join(C, "parsed_content_daily.csv")) if os.path.exists(os.path.join(C, "parsed_content_daily.csv")) else []
+    flags_rows = []
+    for a, b in zip(content, content[1:]):
+        raw_changed = a["raw_sha256"] != b["raw_sha256"]
+        parsed_changed = a["parsed_rows_sha256"] != b["parsed_rows_sha256"]
+        if parsed_changed:
+            verdict = "PARSED ROWS CHANGED: delta below"
+        elif raw_changed:
+            verdict = "raw bytes changed, parsed rows identical (non-substantive)"
+        else:
+            verdict = "no change"
+        flags_rows.append("<tr>" + cell(a["capture_stamp_utc"] + " → " + b["capture_stamp_utc"]) + cell(str(raw_changed).lower())
+                          + cell(str(parsed_changed).lower()) + cell(verdict)
+                          + cell(link("https://www.nfl.com/injuries/", "official report ↗"), True) + "</tr>")
+    conflict_html = ("<h2>Conflict flags between captures</h2>"
+                     "<p class=\"sub\">A raw-hash alarm alone over-flags: the page carries a random id. The parsed-row hash decides.</p>"
+                     + (table(["Pair", "Raw bytes changed", "Parsed rows changed", "Verdict", "Source"], flags_rows) if flags_rows
+                        else "<p>Needs two captures to compare.</p>"))
     stamps = sorted({r["capture_stamp_utc"] for r in counts})
     latest = stamps[-1] if stamps else None
     club_rows = []
@@ -180,15 +198,30 @@ The three most consequential are S03 (price-data policy), S04 (where raw capture
             club_rows.append("<tr>" + cell(r["club"]) + cell(r["player_rows"]) + cell(r["rows_with_injury_label"])
                              + cell(r["game_status_out"]) + cell(r["game_status_questionable"]) + cell(r["game_status_doubtful"])
                              + cell(link("https://www.nfl.com/injuries/", "official report ↗"), True) + "</tr>")
-    delta_note = ("<p class=\"sub\">Deltas (changes between two captures) appear once a second daily capture exists. "
-                  f"Captures so far: {len(stamps)}.</p>") if len(stamps) < 2 else "<p class=\"sub\">Deltas are shown against the previous capture.</p>"
+    delta_html = ""
+    if len(stamps) >= 2:
+        prev, last = stamps[-2], stamps[-1]
+        pc = {r["club"]: r for r in counts if r["capture_stamp_utc"] == prev}
+        lc = {r["club"]: r for r in counts if r["capture_stamp_utc"] == last}
+        drows = []
+        for club in sorted(set(pc) | set(lc)):
+            a_, b_ = pc.get(club), lc.get(club)
+            if not a_ or not b_:
+                drows.append("<tr>" + cell(club) + cell("club present in one capture only") + cell("") + cell("") + cell(link("https://www.nfl.com/injuries/", "official report ↗"), True) + "</tr>")
+                continue
+            d = {k: int(b_[k]) - int(a_[k]) for k in ["player_rows", "game_status_out", "game_status_questionable", "game_status_doubtful"]}
+            if any(d.values()):
+                drows.append("<tr>" + cell(club) + cell(f"{d['player_rows']:+d}") + cell(f"Out {d['game_status_out']:+d}, Questionable {d['game_status_questionable']:+d}, Doubtful {d['game_status_doubtful']:+d}") + cell(f"{prev} → {last}") + cell(link("https://www.nfl.com/injuries/", "official report ↗"), True) + "</tr>")
+        delta_html = ("<h2>Delta since the previous capture (changes only)</h2>"
+                      + (table(["Club", "Player rows change", "Designation change", "Captures", "Source"], drows) if drows else "<p>No club changed between the two captures.</p>"))
+    delta_note = (f"<p class=\"sub\">Captures so far: {len(stamps)}. The delta table below appears when two captures differ in parsed content.</p>")
     man_rows = []
     for m in manifest:
         man_rows.append("<tr>" + cell(m["captured_utc"]) + cell(m["name"]) + cell(m["http_status"]) + cell(m["bytes"])
                         + cell(m["sha256_raw"][:16] + "…" if m["sha256_raw"] else "") + cell(m["pins_passed"])
                         + cell(link(m["url"], "source ↗"), True) + "</tr>")
-    inj = (f"<h2>Club counts from the latest capture ({esc(latest or 'none')})</h2>"
-           + delta_note
+    inj = (delta_note + delta_html + conflict_html
+           + f"<h2>Club counts from the latest capture ({esc(latest or 'none')})</h2>"
            + (table(["Club", "Player rows", "Rows with an injury label", "Game status Out", "Questionable", "Doubtful", "Source"], club_rows) if club_rows else "<p>No parsed capture yet.</p>")
            + "<h2>Capture ledger</h2><p class=\"sub\">Hashes are sha256 of the raw bytes. Raw injury HTML is stored gzipped in the repo; standings and reserve pages keep hash and size only.</p>"
            + table(["Captured (UTC)", "Source", "HTTP", "Bytes", "sha256 (first 16)", "Pins passed", "Source"], man_rows))

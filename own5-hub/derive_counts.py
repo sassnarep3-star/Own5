@@ -20,6 +20,30 @@ def stamp_of(path):
     return base.replace(".html.gz", "")  # e.g. 20261118T032838Z
 
 
+CONTENT_OUT = os.path.join(HERE, "captures", "parsed_content_daily.csv")
+CONTENT_FIELDS = ["capture_stamp_utc", "raw_sha256", "parsed_rows_sha256", "tables", "rows"]
+
+
+def build_content():
+    """Raw-byte hash AND parsed-content hash per capture. A raw change with an unchanged parsed hash is a
+    non-substantive change (for example a random page id), not a roster change."""
+    import gzip, hashlib, json
+    out_rows = []
+    for path in sorted(glob.glob(RAW_GLOB)):
+        with gzip.open(path, "rb") as f:
+            raw = f.read()
+        rows, n_tables = parse_file(path)
+        canon = json.dumps(rows, sort_keys=True, separators=(",", ":")).encode("utf-8")
+        out_rows.append({"capture_stamp_utc": stamp_of(path), "raw_sha256": hashlib.sha256(raw).hexdigest(),
+                         "parsed_rows_sha256": hashlib.sha256(canon).hexdigest(),
+                         "tables": n_tables, "rows": len(rows)})
+    with open(CONTENT_OUT, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=CONTENT_FIELDS, lineterminator="\n")
+        w.writeheader()
+        w.writerows(out_rows)
+    return len(out_rows)
+
+
 def build():
     out_rows = []
     for path in sorted(glob.glob(RAW_GLOB)):
@@ -45,4 +69,4 @@ def build():
 
 
 if __name__ == "__main__":
-    print("rows written:", build())
+    print("rows written:", build(), "content rows:", build_content())

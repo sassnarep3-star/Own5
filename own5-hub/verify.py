@@ -154,6 +154,17 @@ def g4_captures():
         derive_counts.OUT = orig
         shutil.rmtree(tmp, ignore_errors=True)
     check("G4 captures: committed club counts re-derive byte-for-byte from raw", same)
+    content_committed = os.path.join(C, "parsed_content_daily.csv")
+    tmp2 = tempfile.mkdtemp()
+    orig_c = derive_counts.CONTENT_OUT
+    derive_counts.CONTENT_OUT = os.path.join(tmp2, "content.csv")
+    try:
+        derive_counts.build_content()
+        same_c = filecmp.cmp(derive_counts.CONTENT_OUT, content_committed, shallow=False) if os.path.exists(content_committed) else False
+    finally:
+        derive_counts.CONTENT_OUT = orig_c
+        shutil.rmtree(tmp2, ignore_errors=True)
+    check("G4 captures: parsed-content hashes re-derive byte-for-byte from raw", same_c)
 
 
 def g5_standings():

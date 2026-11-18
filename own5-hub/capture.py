@@ -103,6 +103,7 @@ def main():
     if inj and inj["pins_passed"] == "yes":
         import derive_counts  # counts are a pure function of the stored raw captures
         derive_counts.build()
+        derive_counts.build_content()
     for r in rows:
         print(f"{r['name']:10s} http={r['http_status']} bytes={r['bytes']} sha256={r['sha256_raw'][:16]} pins={r['pins_passed']} {r['pins_detail']}")
     return 0 if all_ok else 1
