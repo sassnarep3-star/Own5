@@ -3227,3 +3227,24 @@ echo "appended"; wc -l COORDINATION.md
 ## Cross-session requests
 
 - None. All work is in the additive `nfl-origin-desk/` namespace; no other session's files are touched.
+
+---
+## Session arena/c0027321-own5 — NFL Origin Desk source-provenance audit
+
+**Branch:** `arena/c0027321-own5` (Arena-fixed current branch; base `cb2d3b84ee9014d83a2d89bb065c89f8397f45a7`).
+**Scope:** `nfl-origin-audit-c0027321/**` and this append-only coordination block. The audit reads, but does not edit,
+`nfl-origin-desk/**`, `data/nfl-origin-desk/**`, `scripts/build_origin_desk.py`, or `scripts/verify_origin_desk.py`.
+No root navigation, README, existing desk, scraper, or integration-owned file is in scope. This is a focused audit of
+source provenance and count/registration claims in the already-published NFL Origin Desk, not another NFL data desk.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| A1 | Read coordination board and claim a non-overlapping audit scope | in progress | arena/c0027321-own5 | COORDINATION.md | Claim recorded before audit work. Current branch name is fixed by Arena. |
+| A2 | Reproducible row-by-row provenance and internal-claim audit of NFL Origin Desk CSVs/pages | unclaimed | arena/c0027321-own5 | `nfl-origin-audit-c0027321/audit.py`, `nfl-origin-audit-c0027321/data/provenance_audit.csv` | Read-only on the existing Origin Desk; distinguish official-source links from GitHub self-links and non-football methodology sources. |
+| A3 | Publish a concise audit report, flagged findings, and reviewer-friendly static page | unclaimed | arena/c0027321-own5 | `nfl-origin-audit-c0027321/**` | Additive namespace; no edits to another session's desk or shared navigation. |
+| A4 | Verify audit determinism, row counts, links and tests; record source limits and findings | unclaimed | arena/c0027321-own5 | `nfl-origin-audit-c0027321/**` | Only claim an official value as verified after reading its official source; structural checks are labelled as such. |
+| A5 | PR from this branch, merge if checks/site are safe, confirm Pages; record outcome | unclaimed | arena/c0027321-own5 | COORDINATION.md | Existing unrelated failures or active PR work will be reported, not fixed outside scope. |
+
+## Cross-session requests
+
+- None at claim time. The audit will log any requested changes to the completed Origin Desk as requests rather than editing files in its scope.
