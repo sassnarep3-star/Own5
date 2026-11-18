@@ -2885,10 +2885,11 @@ Statuses above: K1–K4 **done**; K5 (PR, merge, Pages check) recorded below aft
   The root page's notice aside is not visible in that text render (asides are dropped by the converter, along with the sidebar); it is confirmed in the merged file on `main`.
 * **CI on the PR, reported as it went:**
   * `Build, evidence integrity and browser smoke tests` (verify.yml, covers the root build and determinism) → **pass**.
-  * `verify` (nfl-desk-35a1feb2, build-and-audit, desk-verify, verify of ce desks) → **pass**.
+  * `verify` (2 runs), `build-and-audit` and `desk-verify` (nfl-desk-35a1feb2 and other desk workflows) → **pass**.
   * `NFL Decision Desk — fetch & verify` (`decision-desk.yml`) → **fail** at *Confirm the committed site matches a clean rebuild*. This is the
-    defect logged as **CU-F13**. It fails on this PR for a reason outside this change: the workflow's `paths` filter does not include
-    this session's files, and the check rebuilds `data/decision-desk`, which this session did not touch.
+    defect logged as **CU-F13**. Correction to the first draft of this record: that workflow's `pull_request` trigger has **no** `paths`
+    filter, so it runs on every PR to `main`, whatever files change. The failing step rebuilds the committed `data/decision-desk`
+    outputs, which this session did not touch, so the failure is pre-existing and not caused by this change.
   * `Verify NFL B34 Week 10 research desk` (`nfl-b34253a1.yml`) → **fail**. Verified on `main` at `92d5017` (runs 2026-11-17T01:43–01:48Z, all failure). Predates this session.
   * Neither failing workflow was edited. Both are owned by their desks and need regenerating, not hand-patching, so they are logged here rather than fixed.
 * Merge decision: the failing checks predate this change and do not cover its files, so the PR was merged under the user's standing
