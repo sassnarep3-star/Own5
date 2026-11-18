@@ -1,28 +1,28 @@
 {
   "as_of": "2026-11-12",
-  "files": 286,
-  "physical_lines": 81718,
+  "files": 360,
+  "physical_lines": 90774,
   "status_counts": {
     "DATED_OFFICIAL_FACT_ROW": 1588,
     "DATED_SNAPSHOT_RECOMPUTED_OR_STALE": 730,
     "DERIVED_OR_LEGACY_LINE_REVIEW": 35,
     "FLAGGED_LEGACY_MARKET_VALUE": 903,
     "FLAGGED_NONOFFICIAL_HISTORICAL_INPUT": 14406,
-    "IMPLEMENTATION_LINE_REVIEW": 9877,
-    "LEGACY_JSON_RECORD_REVIEW": 4624,
-    "LEGACY_RESEARCH_CLAIM_SCOPE": 3094,
+    "IMPLEMENTATION_LINE_REVIEW": 15280,
+    "LEGACY_JSON_RECORD_REVIEW": 5970,
+    "LEGACY_RESEARCH_CLAIM_SCOPE": 3862,
     "LEGACY_SNAPSHOT_SOURCE_REGISTERED": 4389,
-    "LINE_ITEM_SOURCE_LINK_OR_FLAG": 31888,
+    "LINE_ITEM_SOURCE_LINK_OR_FLAG": 32610,
     "OFFICIAL_LINK_PRESENT_NOT_REFETCHED": 30,
-    "PUBLISHED_RENDER_LINE_REVIEW": 8229,
+    "PUBLISHED_RENDER_LINE_REVIEW": 9046,
     "REPOSITORY_METADATA_LINE": 133,
     "REVERIFIED_CURRENT_GAME_LOG": 1792
   },
   "source_basis_counts": {
-    "HTTPS_OFFICIAL_LINK_IN_LINE": 1596,
+    "HTTPS_OFFICIAL_LINK_IN_LINE": 2205,
     "OFFICIAL_COUNTERPART_FOR_FLAGGED_INPUT_NOT_INPUT_PROVENANCE": 15309,
-    "OFFICIAL_SCOPE_REFERENCE_FALLBACK_NOT_ROW_PROVENANCE": 63909,
-    "ROW_SOURCE_FIELD": 904
+    "OFFICIAL_SCOPE_REFERENCE_FALLBACK_NOT_ROW_PROVENANCE": 71842,
+    "ROW_SOURCE_FIELD": 1418
   },
   "scope": "Line-indexed inventory of previous NFL sites, generators, datasets, research references and shared navigation/CI context; this is not a claim that every legacy historical statistic was re-fetched.",
   "critical_findings": [
@@ -54,6 +54,11 @@
       "bytes": 2293
     },
     {
+      "path": ".github/workflows/nfl-desk-26d4cafb.yml",
+      "physical_lines": 96,
+      "bytes": 3326
+    },
+    {
       "path": ".github/workflows/pages.yml",
       "physical_lines": 65,
       "bytes": 1932
@@ -65,13 +70,13 @@
     },
     {
       "path": "COORDINATION.md",
-      "physical_lines": 1157,
-      "bytes": 167007
+      "physical_lines": 1254,
+      "bytes": 178595
     },
     {
       "path": "README.md",
-      "physical_lines": 320,
-      "bytes": 28681
+      "physical_lines": 357,
+      "bytes": 31016
     },
     {
       "path": "assets/app.js",
@@ -799,6 +804,306 @@
       "bytes": 2385
     },
     {
+      "path": "nfl-desk-26d4cafb/.nojekyll",
+      "physical_lines": 0,
+      "bytes": 0
+    },
+    {
+      "path": "nfl-desk-26d4cafb/404.html",
+      "physical_lines": 43,
+      "bytes": 2135
+    },
+    {
+      "path": "nfl-desk-26d4cafb/assets/app.js",
+      "physical_lines": 39,
+      "bytes": 1654
+    },
+    {
+      "path": "nfl-desk-26d4cafb/assets/style.css",
+      "physical_lines": 65,
+      "bytes": 3755
+    },
+    {
+      "path": "nfl-desk-26d4cafb/build.py",
+      "physical_lines": 892,
+      "bytes": 52944
+    },
+    {
+      "path": "nfl-desk-26d4cafb/correlations.html",
+      "physical_lines": 43,
+      "bytes": 23779
+    },
+    {
+      "path": "nfl-desk-26d4cafb/data/backtest_walkforward.csv",
+      "physical_lines": 89,
+      "bytes": 17772
+    },
+    {
+      "path": "nfl-desk-26d4cafb/data/correlations.csv",
+      "physical_lines": 19,
+      "bytes": 5964
+    },
+    {
+      "path": "nfl-desk-26d4cafb/data/discovery.csv",
+      "physical_lines": 11,
+      "bytes": 3122
+    },
+    {
+      "path": "nfl-desk-26d4cafb/data/flagged.csv",
+      "physical_lines": 17,
+      "bytes": 4729
+    },
+    {
+      "path": "nfl-desk-26d4cafb/data/gates.csv",
+      "physical_lines": 11,
+      "bytes": 4545
+    },
+    {
+      "path": "nfl-desk-26d4cafb/data/hfa.csv",
+      "physical_lines": 2,
+      "bytes": 543
+    },
+    {
+      "path": "nfl-desk-26d4cafb/data/injuries.csv",
+      "physical_lines": 47,
+      "bytes": 21524
+    },
+    {
+      "path": "nfl-desk-26d4cafb/data/leaderboard.csv",
+      "physical_lines": 11,
+      "bytes": 2783
+    },
+    {
+      "path": "nfl-desk-26d4cafb/data/ledger.csv",
+      "physical_lines": 137,
+      "bytes": 23506
+    },
+    {
+      "path": "nfl-desk-26d4cafb/data/lines_wk10.csv",
+      "physical_lines": 15,
+      "bytes": 7611
+    },
+    {
+      "path": "nfl-desk-26d4cafb/data/luck_skill.csv",
+      "physical_lines": 7,
+      "bytes": 2885
+    },
+    {
+      "path": "nfl-desk-26d4cafb/data/oos_week9.csv",
+      "physical_lines": 73,
+      "bytes": 26694
+    },
+    {
+      "path": "nfl-desk-26d4cafb/data/oos_week9_matched.csv",
+      "physical_lines": 5,
+      "bytes": 941
+    },
+    {
+      "path": "nfl-desk-26d4cafb/data/oos_week9_summary.csv",
+      "physical_lines": 5,
+      "bytes": 986
+    },
+    {
+      "path": "nfl-desk-26d4cafb/data/parlay_summary.csv",
+      "physical_lines": 2,
+      "bytes": 579
+    },
+    {
+      "path": "nfl-desk-26d4cafb/data/parlays.csv",
+      "physical_lines": 17,
+      "bytes": 2991
+    },
+    {
+      "path": "nfl-desk-26d4cafb/data/paths.csv",
+      "physical_lines": 5,
+      "bytes": 1957
+    },
+    {
+      "path": "nfl-desk-26d4cafb/data/player_logs.csv",
+      "physical_lines": 51,
+      "bytes": 13028
+    },
+    {
+      "path": "nfl-desk-26d4cafb/data/prop_combos.csv",
+      "physical_lines": 14,
+      "bytes": 4104
+    },
+    {
+      "path": "nfl-desk-26d4cafb/data/qb_checksums.csv",
+      "physical_lines": 7,
+      "bytes": 874
+    },
+    {
+      "path": "nfl-desk-26d4cafb/data/questions.csv",
+      "physical_lines": 15,
+      "bytes": 6725
+    },
+    {
+      "path": "nfl-desk-26d4cafb/data/repo_audit.csv",
+      "physical_lines": 13,
+      "bytes": 4688
+    },
+    {
+      "path": "nfl-desk-26d4cafb/data/requirements.csv",
+      "physical_lines": 15,
+      "bytes": 4144
+    },
+    {
+      "path": "nfl-desk-26d4cafb/data/selectivity.csv",
+      "physical_lines": 4,
+      "bytes": 354
+    },
+    {
+      "path": "nfl-desk-26d4cafb/data/shrinkage_sensitivity.csv",
+      "physical_lines": 7,
+      "bytes": 454
+    },
+    {
+      "path": "nfl-desk-26d4cafb/data/signals.csv",
+      "physical_lines": 15,
+      "bytes": 4137
+    },
+    {
+      "path": "nfl-desk-26d4cafb/data/sources.csv",
+      "physical_lines": 51,
+      "bytes": 9076
+    },
+    {
+      "path": "nfl-desk-26d4cafb/data/standings_check.csv",
+      "physical_lines": 33,
+      "bytes": 3805
+    },
+    {
+      "path": "nfl-desk-26d4cafb/data/strategies.csv",
+      "physical_lines": 11,
+      "bytes": 4073
+    },
+    {
+      "path": "nfl-desk-26d4cafb/data/suggestions.csv",
+      "physical_lines": 13,
+      "bytes": 6755
+    },
+    {
+      "path": "nfl-desk-26d4cafb/data/summary.json",
+      "physical_lines": 1346,
+      "bytes": 50754
+    },
+    {
+      "path": "nfl-desk-26d4cafb/engine.py",
+      "physical_lines": 2023,
+      "bytes": 90379
+    },
+    {
+      "path": "nfl-desk-26d4cafb/executive-summary.html",
+      "physical_lines": 43,
+      "bytes": 19836
+    },
+    {
+      "path": "nfl-desk-26d4cafb/export_research.py",
+      "physical_lines": 358,
+      "bytes": 22375
+    },
+    {
+      "path": "nfl-desk-26d4cafb/flagged.html",
+      "physical_lines": 43,
+      "bytes": 11296
+    },
+    {
+      "path": "nfl-desk-26d4cafb/index.html",
+      "physical_lines": 43,
+      "bytes": 13142
+    },
+    {
+      "path": "nfl-desk-26d4cafb/injuries.html",
+      "physical_lines": 43,
+      "bytes": 57701
+    },
+    {
+      "path": "nfl-desk-26d4cafb/leaderboard.html",
+      "physical_lines": 43,
+      "bytes": 22044
+    },
+    {
+      "path": "nfl-desk-26d4cafb/ledger.html",
+      "physical_lines": 43,
+      "bytes": 60422
+    },
+    {
+      "path": "nfl-desk-26d4cafb/lines.html",
+      "physical_lines": 43,
+      "bytes": 24803
+    },
+    {
+      "path": "nfl-desk-26d4cafb/luck-vs-skill.html",
+      "physical_lines": 43,
+      "bytes": 56884
+    },
+    {
+      "path": "nfl-desk-26d4cafb/methodology.html",
+      "physical_lines": 43,
+      "bytes": 6277
+    },
+    {
+      "path": "nfl-desk-26d4cafb/questions.html",
+      "physical_lines": 43,
+      "bytes": 18355
+    },
+    {
+      "path": "nfl-desk-26d4cafb/raw_inputs.py",
+      "physical_lines": 254,
+      "bytes": 70668
+    },
+    {
+      "path": "nfl-desk-26d4cafb/registers.py",
+      "physical_lines": 975,
+      "bytes": 77717
+    },
+    {
+      "path": "nfl-desk-26d4cafb/repo-audit.html",
+      "physical_lines": 43,
+      "bytes": 10177
+    },
+    {
+      "path": "nfl-desk-26d4cafb/signals.html",
+      "physical_lines": 43,
+      "bytes": 9908
+    },
+    {
+      "path": "nfl-desk-26d4cafb/sources.html",
+      "physical_lines": 43,
+      "bytes": 22276
+    },
+    {
+      "path": "nfl-desk-26d4cafb/standings.html",
+      "physical_lines": 43,
+      "bytes": 18782
+    },
+    {
+      "path": "nfl-desk-26d4cafb/strategies.html",
+      "physical_lines": 43,
+      "bytes": 12550
+    },
+    {
+      "path": "nfl-desk-26d4cafb/suggestions.html",
+      "physical_lines": 43,
+      "bytes": 16185
+    },
+    {
+      "path": "nfl-desk-26d4cafb/tests/test_engine.py",
+      "physical_lines": 422,
+      "bytes": 17683
+    },
+    {
+      "path": "nfl-desk-26d4cafb/validation.html",
+      "physical_lines": 43,
+      "bytes": 14596
+    },
+    {
+      "path": "nfl-desk-26d4cafb/verify.py",
+      "physical_lines": 279,
+      "bytes": 12218
+    },
+    {
       "path": "nfl-strategy-lab/.nojekyll",
       "physical_lines": 0,
       "bytes": 0
@@ -1247,6 +1552,71 @@
       "path": "research/league-structure.md",
       "physical_lines": 47,
       "bytes": 4766
+    },
+    {
+      "path": "research/nfl-26d4cafb/01-repo-audit.md",
+      "physical_lines": 28,
+      "bytes": 5184
+    },
+    {
+      "path": "research/nfl-26d4cafb/02-suggestions.md",
+      "physical_lines": 33,
+      "bytes": 8773
+    },
+    {
+      "path": "research/nfl-26d4cafb/03-pre-decision.md",
+      "physical_lines": 39,
+      "bytes": 9615
+    },
+    {
+      "path": "research/nfl-26d4cafb/04-methodology.md",
+      "physical_lines": 52,
+      "bytes": 2733
+    },
+    {
+      "path": "research/nfl-26d4cafb/05-injuries-depth.md",
+      "physical_lines": 58,
+      "bytes": 14091
+    },
+    {
+      "path": "research/nfl-26d4cafb/06-lines.md",
+      "physical_lines": 44,
+      "bytes": 3887
+    },
+    {
+      "path": "research/nfl-26d4cafb/07-signals-strategies.md",
+      "physical_lines": 69,
+      "bytes": 11089
+    },
+    {
+      "path": "research/nfl-26d4cafb/08-correlations.md",
+      "physical_lines": 64,
+      "bytes": 5501
+    },
+    {
+      "path": "research/nfl-26d4cafb/09-luck-vs-skill.md",
+      "physical_lines": 34,
+      "bytes": 2172
+    },
+    {
+      "path": "research/nfl-26d4cafb/10-flagged.md",
+      "physical_lines": 26,
+      "bytes": 4628
+    },
+    {
+      "path": "research/nfl-26d4cafb/11-sources.md",
+      "physical_lines": 60,
+      "bytes": 7317
+    },
+    {
+      "path": "research/nfl-26d4cafb/README.md",
+      "physical_lines": 57,
+      "bytes": 3860
+    },
+    {
+      "path": "research/nfl-26d4cafb/executive-summary.md",
+      "physical_lines": 70,
+      "bytes": 8311
     },
     {
       "path": "research/official_snapshot.json",
