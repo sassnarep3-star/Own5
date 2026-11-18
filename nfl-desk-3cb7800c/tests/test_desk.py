@@ -144,15 +144,34 @@ class PageChecks(unittest.TestCase):
 class DeskCrossCheck(unittest.TestCase):
     def test_committed_cross_check_passes(self):
         repo = verify.load("repo_checks.csv")
-        self.assertEqual(verify.check_desk_crosscheck(repo), [])
+        fails, info = verify.check_desk_crosscheck(repo)
+        self.assertEqual(fails, [])
 
     def test_wrong_recorded_count_is_caught(self):
         repo = copy.deepcopy(verify.load("repo_checks.csv"))
         for r in repo:
             if r["check_id"] == "R-07":
                 r["value_at_read"] = "24 (wrong)"
-        fails = verify.check_desk_crosscheck(repo)
+        fails, _ = verify.check_desk_crosscheck(repo)
         self.assertTrue(any("recorded 24" in f for f in fails))
+
+    def test_added_desk_is_info_not_failure(self):
+        repo = verify.load("repo_checks.csv")
+        fails, info = verify.check_desk_crosscheck(repo)
+        self.assertEqual(fails, [])
+        # A later-added directory must not fail the build: simulate by a repo root with one extra desk.
+        import tempfile
+        with tempfile.TemporaryDirectory() as root:
+            for name in ["nfl-desk-5c5f4aaf", "nfl-desk-3cb7800c"]:
+                os.makedirs(os.path.join(root, name, "data"))
+            with open(os.path.join(root, "nfl-desk-5c5f4aaf", "data", "desks.csv"), "w", encoding="utf-8") as fh:
+                fh.write("desk,entry_point,title,files,flagged_file,flagged_rows\nnfl-a,x,t,1,x,0\n")
+            os.makedirs(os.path.join(root, "nfl-a"))
+            os.makedirs(os.path.join(root, "nfl-new-later"))
+            fails, info = verify.check_desk_crosscheck(
+                [{"check_id": "R-07", "value_at_read": "1 (test)"}], repo_root=root)
+            self.assertEqual(fails, [])
+            self.assertTrue(any("nfl-new-later" in i for i in info))
 
 
 class HashChecks(unittest.TestCase):

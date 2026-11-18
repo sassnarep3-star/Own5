@@ -166,17 +166,18 @@ def check_availability(avail, meta_text):
 # ---------------------------------------------------------------- desk directory cross-check
 
 def check_desk_crosscheck(repo, repo_root=REPO):
+    # Returns (failures, info). Info lines are printed but do not fail the build.
     """The desk count is not kept here. It is cross-checked against the directory built by session 5c5f4aaf.
     This check confirms that the directory still exists, and that the count recorded in R-07 equals the
     number of rows in that directory's desks.csv. Both sides are read from the repository at check time."""
-    fails = []
+    fails, info = [], []
     row = next((r for r in repo if r["check_id"] == "R-07"), None)
     if row is None:
-        return ["R-07 (desk-directory cross-check) is missing"]
+        return ["R-07 (desk-directory cross-check) is missing"], []
     recorded = int(row["value_at_read"].split()[0])
     csv_path = os.path.join(repo_root, "nfl-desk-5c5f4aaf", "data", "desks.csv")
     if not os.path.isfile(csv_path):
-        return ["R-07: nfl-desk-5c5f4aaf/data/desks.csv is missing"]
+        return ["R-07: nfl-desk-5c5f4aaf/data/desks.csv is missing"], []
     with open(csv_path, encoding="utf-8", newline="") as fh:
         rows = list(csv.DictReader(fh))
     # Both session directories are excluded from both sides: the 5c5f4aaf list excludes itself, and this desk
@@ -191,11 +192,15 @@ def check_desk_crosscheck(repo, repo_root=REPO):
                 name.startswith("nfl-") or name.startswith("nfl_") or name == "own5-desk"):
             here.add(name)
     here -= excluded
-    if named != here:
-        only_there = sorted(named - here)
-        only_here = sorted(here - named)
-        fails.append(f"R-07: directory list differs; only in 5c5f4aaf list {only_there}; only in checkout {only_here}")
-    return fails
+    only_there = sorted(named - here)
+    only_here = sorted(here - named)
+    if only_there:
+        # A name the 5c5f4aaf list gives that no longer exists is drift in the list itself: fail.
+        fails.append(f"R-07: 5c5f4aaf lists directories that are not in the checkout: {only_there}")
+    if only_here:
+        # Desks added after the snapshot are reported, never failed: other sessions merge continuously.
+        info.append(f"INFO R-07: {len(only_here)} directories are not in the 5c5f4aaf list (added later): {only_here}")
+    return fails, info
 
 
 # ---------------------------------------------------------------- registers
@@ -330,7 +335,8 @@ def run():
     failures += check_hashes()
     failures += check_availability(avail, meta)
     info = []
-    failures += check_desk_crosscheck(repo)
+    f_dc, info = check_desk_crosscheck(repo)
+    failures += f_dc
     failures += check_registers(flags, sugg, quest, sources, repo)
     f3, stats = check_pages()
     failures += f3
