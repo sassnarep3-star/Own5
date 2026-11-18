@@ -1,0 +1,7 @@
+source_id,publisher,url,used_for,access_utc,access_method,class
+S01,NFL (nfl.com),https://www.nfl.com/injuries/league/2026/reg10,Week 10 injury report rows (chunk 0 of 8),before 2026-11-18T03:11:29Z,fetch_page,official
+S02,NFL (nfl.com),https://www.nfl.com/injuries/league/2026/reg11,Week 11 availability (redirect check),before 2026-11-18T03:11:29Z,fetch_page,official
+S03,NFL (nfl.com),https://www.nfl.com/standings/league/2026/REG,"Team abbreviations (AZ, LA) and standings page status",after 2026-11-18T03:11:29Z,fetch_page,official
+S04,GitHub (API),https://api.github.com/repos/sassnarep3-star/Own5/pages,Pages build configuration,2026-11-18,gh api,repository
+S05,GitHub (Actions),https://github.com/sassnarep3-star/Own5/actions/runs/43998367488,Run status on main for the B34 workflow,2026-11-18,gh run list,repository
+S06,nflverse (third-party),https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz,Provenance of repo copies (named in desk files; not re-downloaded here),2026-11-18,not accessed here,third-party
