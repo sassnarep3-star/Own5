@@ -21,4 +21,4 @@ python3 -m unittest discover -s nfl-command-desk/tests -v
 ```
 
 Registration commit (frozen before any published number):
-`f85bb0b43ad00aa35ab27536ee42da052d8c3af0`.
+`e7282e35dbf9afb0c1b364a152b9431dc71b64af`.

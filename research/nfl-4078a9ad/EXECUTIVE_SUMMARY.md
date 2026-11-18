@@ -29,7 +29,7 @@ error to prove the check catches it.
 
 ## 3. What the pre-registered tests found
 
-Registration commit **`f85bb0b43ad00aa35ab27536ee42da052d8c3af0`**, written before any number
+Registration commit **`e7282e35dbf9afb0c1b364a152b9431dc71b64af`**, written before any number
 was published. Windows: train weeks 1-4, validation weeks 5-8, holdout weeks 9-10.
 
 | Registered strategy | Window | n | Brier skill vs flat 0.5 | 95% CI | Holm p | Certified |

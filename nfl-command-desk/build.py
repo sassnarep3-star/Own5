@@ -10,7 +10,25 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 DATA = HERE / "data"
-REG = "f85bb0b43ad00aa35ab27536ee42da052d8c3af0"  # registration commit hash (published)
+def _registration_hash():
+    """The registration commit is the one whose message starts '4078a9ad: pre-registration'.
+    Read from the local git history at build time so a rebase cannot leave the site quoting a
+    commit that no longer exists. Falls back to the constant when git is unavailable."""
+    try:
+        import subprocess
+        out = subprocess.run(
+            ["git", "log", "--format=%H %s", "--all", "--grep=^4078a9ad: pre-registration"],
+            cwd=HERE, capture_output=True, text=True, timeout=15)
+        for line in out.stdout.splitlines():
+            parts = line.split(" ", 1)
+            if len(parts) == 2 and parts[1].startswith("4078a9ad: pre-registration"):
+                return parts[0]
+    except Exception:  # noqa: BLE001
+        pass
+    return "e7282e35dbf9afb0c1b364a152b9431dc71b64af"
+
+
+REG = _registration_hash()
 READ = "2026-11-18"
 
 NAV = [

@@ -33,7 +33,7 @@ ALLOWED_HOSTS = {
     "www.nfl.com", "media.nfl.com", "operations.nfl.com", "github.com",
     "sassnarep3-star.github.io", "api.github.com",
 }
-REG = "f85bb0b43ad00aa35ab27536ee42da052d8c3af0"
+REG = "e7282e35dbf9afb0c1b364a152b9431dc71b64af"
 
 FAILS = []
 PASSES = []
@@ -198,13 +198,25 @@ def v10_no_forbidden_claims():
 
 
 def v11_registration():
+    """The published hash must exist AND be the pre-registration commit, and the site must be
+    quoting the same hash the verifier checks. This is what catches a rebase that orphans it."""
     try:
-        out = subprocess.run(["git", "cat-file", "-t", REG], cwd=HERE, capture_output=True,
-                             text=True, timeout=20)
-        ok = out.returncode == 0 and out.stdout.strip() == "commit"
-    except Exception as exc:  # noqa: BLE001
-        ok = False
-    check(ok, "V11 the published registration commit exists", REG)
+        typ = subprocess.run(["git", "cat-file", "-t", REG], cwd=HERE, capture_output=True,
+                             text=True, timeout=20).stdout.strip()
+        msg = subprocess.run(["git", "log", "-1", "--format=%s", REG], cwd=HERE,
+                             capture_output=True, text=True, timeout=20).stdout.strip()
+        head_msg = subprocess.run(
+            ["git", "log", "--format=%H %s"], cwd=HERE, capture_output=True, text=True,
+            timeout=20).stdout
+    except Exception:  # noqa: BLE001
+        typ, msg, head_msg = "", "", ""
+    check(typ == "commit", "V11 the published registration commit exists", REG)
+    check(msg.startswith("4078a9ad: pre-registration"),
+          "V11 the published hash is the pre-registration commit", msg)
+    check(REG in head_msg, "V11 the registration commit is on this branch's history", REG)
+    # the built page must quote the same hash the verifier checks
+    page = (HERE / "index.html").read_text() if (HERE / "index.html").exists() else ""
+    check(REG[:7] in page, "V11 the site quotes the same registration hash", REG[:7])
 
 
 def main():
