@@ -3673,3 +3673,15 @@ checks re-run green (543 checks, 0 alarms; 11 unit tests). No data values change
 
 **Merge record (follow-up).** Recorded below after this PR merges.
 
+
+### 6cbf25fa — merge and deployment record (final, 2026-11-18)
+
+| PR | Purpose | Result |
+|---|---|---|
+| https://github.com/sassnarep3-star/Own5/pull/128 | The desk (price-snapshot store, Week 11 origination under frozen spec, injury point-in-time ledger, verified results feed, 10-page site, drift alarms, tests) + CI takeover fixes | **Merged** to main at `b3d3344` (2026-11-18T04:23:04Z, `gh pr merge 128 --merge`). All 9 PR checks green, including the two previously-permanently-failing jobs (decision-desk verify and B34 rebuild). |
+| https://github.com/sassnarep3-star/Own5/pull/135 | Live-defect fix: evidence links emitted as absolute GitHub blob URLs; desk verifier scans both href quote styles | **Merged** to main at `1b7c9bc` (2026-11-18T04:3xZ). `pages build and deployment` for `1b7c9bc`: **success**. |
+
+**Live verification after deploy (sandbox page-fetch tool).** `https://sassnarep3-star.github.io/Own5/nfl-desk-6cbf25fa/` renders (landing page with decision-readiness table; readiness evidence links now resolve as GitHub blob URLs). `.../nfl-desk-6cbf25fa/lines.html` renders all 13 Week 11 games with fair spread/total/ML, probabilities, market/residual columns blank + flagged F-P01, MIN@SF marked neutral site. Sources register, flagged register, suggestions and questions registers render. Conflicts met during the session: two COORDINATION.md append/append conflicts (PRs #121/#127/#131) and a B34-audit-capture conflict, all resolved keeping both sides; B34's line-hash watchlist was tripped by the takeover edit and refreshed per its own protocol (recorded above).
+
+**Status of P1–P7: all done.** Open items deliberately left for future sessions: S-P01 (operator price source decision), S-P03 (scheduled capture job owner), Q-P01…Q-P10 (published on the desk's Questions page with official sourcing paths).
+
