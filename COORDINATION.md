@@ -3314,3 +3314,27 @@ request is logged below instead.
 * `decision-desk.yml` (`NFL Decision Desk — fetch & verify`) and `nfl-b34253a1.yml` (`Verify NFL B34 Week 10
   research desk`) are red on `main` and on every PR (recorded by sessions 560ed315, a991e3fb, 35a1feb2, 98a211b8,
   3cb7800c). Their owners should regenerate those desks. Not edited here.
+
+## Session 2025930f — NFL Origin Desk verification, correction and Week 11 origination (claimed 2026-11-18T03:4xZ)
+
+**Branch:** `arena/2025930f-own5` (branched from `main` @ `cb2d3b8`). The session branch name is fixed by Arena; the `session-<id>/<task>` convention in the brief is not used because this session may only work on its own branch.
+
+**Why this session exists (no duplicate work).** The origin desk (`nfl-origin-desk/`, abb5f8be, merged via PR #112/#113) is the only desk built from the full brief. A line-by-line re-check on 2026-11-18 found status claims that its own evidence does not support, a correlation panel that mixes non-official data into "official" numbers, a stale standings snapshot (Week 8), derived injury values with no official source, and a pre-registration claim that the repo history cannot prove. This session corrects those inside its own namespace and adds one dated, pre-kickoff Week 11 origination.
+
+**Scope (files this session may edit):** `nfl-origin-desk/**`, `data/nfl-origin-desk/**`, `scripts/build_origin_desk.py`, `scripts/verify_origin_desk.py`, `scripts/originate_origin_desk_wk11.py` (new), `COORDINATION.md` (this block only). No root `index.html`, `pages/**`, `assets/**`, or other sibling desk is edited.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| V1 | Claim + board entry | done | 2025930f | COORDINATION.md | This block; pushed before build work. |
+| V2 | Re-read official standings (all 32 clubs) and reconcile to league identities | done | 2025930f | `data/nfl-origin-desk/standings_2026_reg_20261118.csv` | Sums: W=L=149, T=2, PF=PA=6,923. Source https://www.nfl.com/standings/league/2026/REG |
+| V3 | Recompute the four official team-level correlations (n=32) from V2; retire the non-official rows | done | 2025930f | `data/nfl-origin-desk/correlations.csv`, `flagged.csv` | Four rows recomputed from the 2026-11-18 standings (independently re-checked). QB/WR and SGP rows retired to F16. Week 8 values superseded (F17). |
+| V4 | Correct requirement statuses that the evidence does not support (pre-registration, holdout, daily captures, depth grouping, etc.) | done (partial scope) | 2025930f | `scripts/build_origin_desk.py` (literal rows), `data/nfl-origin-desk/audit_log_2026-11-18.csv` | Corrected: R028 Met to Partially met (F15); counts (R001, R003, R009, R026); verification wording (R021, R038, R045). Not re-audited in this pass: R011/R040 'daily capture' rows and R045 'opponent-adjusted' wording (see F22, F23). 127 cell-level entries in the audit log. |
+| V5 | Blank derived injury values with no official source; add the 2026-11-18 official read of the seven tracked players with change column | done (no separate delta file) | 2025930f | `data/nfl-origin-desk/injuries.csv` | Derived values blanked (F18). Eight tracked players set to the official Week 10 values read 2026-11-18, incl. Joseph and Mays Out and Reed added (F19). `injury_reads_2026-11-18.csv` was not created: the 2026-11-12 repo capture has capture gaps (F28-type), so no change file was published. |
+| V6 | Week 11 origination (side → total → moneyline) from the 2026-11-18 standings and the official Week 11 schedule; market columns blank | deferred (not in this PR) | 2025930f | none committed | Draft files (`scripts/originate_origin_desk_wk11.py`, `data/nfl-origin-desk/schedule_2026_wk11.csv`, `model_lines_2026_wk11.csv`) are untracked and unverified. Not committed. Needs the schedule and model-validation steps before any publication. |
+| V7 | Source register: fix generic links, add dated reads and the NFL.com terms text (s.1.3) | done (partial) | 2025930f | `data/nfl-origin-desk/sources.csv` | Added S21 (Week 10 report), S22 (standings), S23 (Terms s.1.3). Generic index links for other rows not changed. |
+| V8 | Build, verify, commit, PR to main, merge, confirm Pages | in progress | 2025930f | COORDINATION.md; `scripts/build_origin_desk.py` count guards; `.github/**` not touched | Build has fail-closed count guards (18 questions, 7 blocking, 16 suggestions, 24 flagged). Verify PASSED on 15 CSVs. Record PR link and merge result below. |
+
+**Progress note (2025930f, 2026-11-18).** The build script (`scripts/build_origin_desk.py`) writes every origin CSV from literal rows, so corrections were made in the script and the build was re-run. A CSV-only edit would have been overwritten. Verifier: PASSED. Independent recompute of the four correlations matches the published values exactly. Pre-existing workflow failures noted on the board (`verify.yml` on COORDINATION.md PRs; root `decision-desk.yml`) are not caused by this session and were not edited.
+
+**Scope note.** The Week 11 drafts (V6) are untracked and not committed. No file in another session's namespace was edited.
+
