@@ -1,27 +1,27 @@
 {
   "as_of": "2026-11-12",
-  "files": 435,
-  "physical_lines": 97135,
+  "files": 438,
+  "physical_lines": 97245,
   "status_counts": {
     "DATED_OFFICIAL_FACT_ROW": 1588,
     "DATED_SNAPSHOT_RECOMPUTED_OR_STALE": 730,
     "DERIVED_OR_LEGACY_LINE_REVIEW": 35,
     "FLAGGED_LEGACY_MARKET_VALUE": 903,
     "FLAGGED_NONOFFICIAL_HISTORICAL_INPUT": 14406,
-    "IMPLEMENTATION_LINE_REVIEW": 12895,
+    "IMPLEMENTATION_LINE_REVIEW": 12931,
     "LEGACY_JSON_RECORD_REVIEW": 4624,
     "LEGACY_RESEARCH_CLAIM_SCOPE": 5164,
     "LEGACY_SNAPSHOT_SOURCE_REGISTERED": 10815,
     "LINE_ITEM_SOURCE_LINK_OR_FLAG": 32105,
     "OFFICIAL_LINK_PRESENT_NOT_REFETCHED": 30,
-    "PUBLISHED_RENDER_LINE_REVIEW": 11915,
+    "PUBLISHED_RENDER_LINE_REVIEW": 11989,
     "REPOSITORY_METADATA_LINE": 133,
     "REVERIFIED_CURRENT_GAME_LOG": 1792
   },
   "source_basis_counts": {
-    "HTTPS_OFFICIAL_LINK_IN_LINE": 2223,
+    "HTTPS_OFFICIAL_LINK_IN_LINE": 2224,
     "OFFICIAL_COUNTERPART_FOR_FLAGGED_INPUT_NOT_INPUT_PROVENANCE": 15309,
-    "OFFICIAL_SCOPE_REFERENCE_FALLBACK_NOT_ROW_PROVENANCE": 78687,
+    "OFFICIAL_SCOPE_REFERENCE_FALLBACK_NOT_ROW_PROVENANCE": 78796,
     "ROW_SOURCE_FIELD": 916
   },
   "scope": "Line-indexed inventory of previous NFL sites, generators, datasets, research references and shared navigation/CI context; this is not a claim that every legacy historical statistic was re-fetched.",
@@ -162,6 +162,11 @@
       "path": ".github/workflows/pages.yml",
       "physical_lines": 65,
       "bytes": 1932
+    },
+    {
+      "path": ".github/workflows/repo-review.yml",
+      "physical_lines": 36,
+      "bytes": 982
     },
     {
       "path": ".github/workflows/verify.yml",
@@ -1662,6 +1667,16 @@
       "path": "pages/validation.html",
       "physical_lines": 1,
       "bytes": 8945
+    },
+    {
+      "path": "repo-review/flagged.html",
+      "physical_lines": 23,
+      "bytes": 17754
+    },
+    {
+      "path": "repo-review/index.html",
+      "physical_lines": 51,
+      "bytes": 7664
     },
     {
       "path": "research/38a1fc27/VERIFICATION.md",
