@@ -38,7 +38,7 @@ def tracked_files():
             or s.startswith(("data/raw/","data/")) and p.suffix.lower() in {".csv",".json"} and not s.startswith(("data/nba","data/own5_desk"))
             or s.startswith(("research/",)) and p.suffix.lower() in {".md",".json"} and any(k in s for k in ("nfl","football","official_snapshot","strategies","correlations","validation-gates","bet-markets","league-structure","executive-summary","verification")) and not any(k in s for k in ("nba","sf-rent","rental"))
             or s.startswith(("pages/","assets/","scripts/","tools/","site/","tests/",".github/workflows/"))
-            or p.name in {"README.md","COORDINATION.md","package.json","index.html","executive-summary.html","flagged.html","signals.html","bet-types.html","data.html","detail-correlations.html","detail-sources.html","detail-strategies.html","detail-validation.html"}
+            or p.name in {"README.md","package.json","index.html","executive-summary.html","flagged.html","signals.html","bet-types.html","data.html","detail-correlations.html","detail-sources.html","detail-strategies.html","detail-validation.html"}
             or p.suffix.lower()==".html" and "/" not in name
         )
         if include and p.is_file():

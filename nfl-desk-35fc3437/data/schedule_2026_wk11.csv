@@ -1,0 +1,14 @@
+game_id,date,week,kickoff_et,network,home_team,home_abbr,away_team,away_abbr,venue,neutral_site,source_url,capture_utc
+2026_REG_11_COLTS_AT_TEXANS,2026-11-19,11,20:15,PRIME,Houston Texans,HOU,Indianapolis Colts,IND,NRG Stadium,0,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-18T00:00Z
+2026_REG_11_DOLPHINS_AT_BILLS,2026-11-22,11,13:00,CBS,Buffalo Bills,BUF,Miami Dolphins,MIA,Highmark Stadium,0,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-18T00:00Z
+2026_REG_11_RAVENS_AT_PANTHERS,2026-11-22,11,13:00,FOX,Carolina Panthers,CAR,Baltimore Ravens,BAL,Bank of America Stadium,0,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-18T00:00Z
+2026_REG_11_SAINTS_AT_BEARS,2026-11-22,11,13:00,FOX,Chicago Bears,CHI,New Orleans Saints,NO,Soldier Field,0,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-18T00:00Z
+2026_REG_11_TITANS_AT_COWBOYS,2026-11-22,11,13:00,FOX,Dallas Cowboys,DAL,Tennessee Titans,TEN,AT&T Stadium,0,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-18T00:00Z
+2026_REG_11_BUCCANEERS_AT_LIONS,2026-11-22,11,13:00,FOX,Detroit Lions,DET,Tampa Bay Buccaneers,TB,Ford Field,0,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-18T00:00Z
+2026_REG_11_CARDINALS_AT_CHIEFS,2026-11-22,11,13:00,CBS,Kansas City Chiefs,KC,Arizona Cardinals,AZ,GEHA Field at Arrowhead Stadium,0,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-18T00:00Z
+2026_REG_11_STEELERS_AT_EAGLES,2026-11-22,11,13:00,CBS,Philadelphia Eagles,PHI,Pittsburgh Steelers,PIT,Lincoln Financial Field,0,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-18T00:00Z
+2026_REG_11_JETS_AT_CHARGERS,2026-11-22,11,16:05,FOX,Los Angeles Chargers,LAC,New York Jets,NYJ,SoFi Stadium,0,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-18T00:00Z
+2026_REG_11_JAGUARS_AT_GIANTS,2026-11-22,11,16:25,CBS,New York Giants,NYG,Jacksonville Jaguars,JAX,MetLife Stadium,0,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-18T00:00Z
+2026_REG_11_RAIDERS_AT_BRONCOS,2026-11-22,11,16:25,CBS,Denver Broncos,DEN,Las Vegas Raiders,LV,Empower Field at Mile High,0,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-18T00:00Z
+2026_REG_11_VIKINGS_AT_49ERS,2026-11-22,11,20:20,NBC,San Francisco 49ers,SF,Minnesota Vikings,MIN,Mexico City,1,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-18T00:00Z
+2026_REG_11_BENGALS_AT_COMMANDERS,2026-11-23,11,20:15,ESPN,Washington Commanders,WAS,Cincinnati Bengals,CIN,FedEx Field,0,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-18T00:00Z

@@ -7,14 +7,12 @@ on:
       - 'nfl-b34253a1/**'
       - 'research/nfl-b34253a1/**'
       - '.github/workflows/nfl-b34253a1.yml'
-      - 'COORDINATION.md'
   pull_request:
     branches: [main]
     paths:
       - 'nfl-b34253a1/**'
       - 'research/nfl-b34253a1/**'
       - '.github/workflows/nfl-b34253a1.yml'
-      - 'COORDINATION.md'
   workflow_dispatch:
 
 permissions:
