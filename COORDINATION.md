@@ -3296,6 +3296,8 @@ executive summary, and a GitHub Pages desk — every table row source-linked or 
 
 **Cross-session requests:** none pending. Note for integration sessions: the pre-existing `Rebuild, audit, and test isolated NFL desk` (b34253a1) failure triggered by COORDINATION.md edits is not caused by this session and is left untouched per board policy.
 
+**Merge-conflict log (2026-11-18):** merging `origin/main` (c40e359) into this branch conflicted in `README.md` and `COORDINATION.md` (both sides appended at the tail). Resolved as union, preserving all rows/blocks from sessions `390e13fd` (venue desk), `4078a9ad` (command desk), `51cf3786` and `35fc3437` verbatim, plus this session's rows. No other session's text was altered.
+
 **PR record:** appended below after the PR is opened and merged.
 ## Session arena-51cf3786 — 2026-11-18 (branch `arena/51cf3786-own5`, base `cb2d3b8`)
 
