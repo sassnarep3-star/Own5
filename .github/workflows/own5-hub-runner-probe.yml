@@ -20,6 +20,7 @@ jobs:
     steps:
       - name: Fetch official pages and report status, size and sha256
         run: |
+          status=0
           for url in "https://www.nfl.com/injuries/" "https://www.nfl.com/standings/league/2026/REG" "https://www.nfl.com/transactions/league/reserve-list/2026/11"; do
             tmp=$(mktemp)
             code=$(curl --silent --show-error --location --max-time 60 -o "$tmp" -w '%{http_code}' "$url" || echo "curl-failed")
@@ -27,7 +28,9 @@ jobs:
             sha=$(sha256sum "$tmp" 2>/dev/null | cut -d' ' -f1)
             fetched=$(date -u +%Y-%m-%dT%H:%M:%SZ)
             echo "PROBE $fetched http=$code bytes=$bytes sha256=$sha url=$url"
+            if [ "$code" != "200" ]; then status=1; fi
             echo "--- first 300 bytes of body ---"
             head -c 300 "$tmp" | tr -cd '[:print:]\n' || true
             echo
           done
+          exit $status
