@@ -36,6 +36,21 @@ def sha256_file(path):
         return hashlib.sha256(f.read()).hexdigest()
 
 
+REPO_BLOB = "https://github.com/sassnarep3-star/Own5/blob/main/"
+
+
+def linkify(url):
+    """Repo-relative paths must become absolute GitHub blob URLs, otherwise
+    they resolve relative to the desk directory on Pages and break (R17-class
+    defect found live after the first deploy)."""
+    u = (url or "").strip()
+    if not u:
+        return u
+    if u.startswith("http://") or u.startswith("https://") or u.startswith("#"):
+        return u
+    return REPO_BLOB + u
+
+
 def blank_td(flag):
     return f'<td class="blank" title="Unverified or intentionally withheld: {e(flag)}">— <span class="flagref">{e(flag)}</span></td>'
 
@@ -113,7 +128,7 @@ def build_index():
             f"<td>{e(r['blocking_gate'])}</td>",
             f"<td>{e(r['number_to_clear'])}</td>",
             f"<td>{e(r['observed_number'])}</td>",
-            f"<td><a href='{e(r['source_url'])}'>source ↗</a></td>",
+            f"<td><a href=\"{e(linkify(r['source_url']))}\">source ↗</a></td>",
         ]))
     model = read_json(os.path.join(D, "model_inputs.json"))
     r = model["ratings"]
@@ -389,7 +404,7 @@ def _register_page(fname, title, h1, lead, headers, key_map, note=""):
         rows.append("".join([
             f"<td><strong>{e(r[key_map[0]])}</strong></td>",
         ] + [f"<td>{e(r[k])}</td>" for k in key_map[1:-1]] + [
-            f"<td><a href='{e(r[key_map[-1]])}'>source ↗</a></td>" if r[key_map[-1]].startswith("http") else f"<td><code>{e(r[key_map[-1]])}</code></td>",
+            f"<td><a href=\"{e(linkify(r[key_map[-1]]))}\">source ↗</a></td>" if not r[key_map[-1]].startswith("http") else f"<td><a href=\"{e(r[key_map[-1]])}\">source ↗</a></td>",
         ]))
     body = f"{note}{table(title, headers, rows)}"
     return page(title.split('(')[0].strip(), h1, lead, body, fname.replace('.csv', '.html'))
@@ -405,7 +420,7 @@ def build_flagged():
             f"<td>{e(f['finding'])}</td>",
             f"<td>{e(f['affected_scope'])}</td>",
             f"<td>{e(f['status'])}</td>",
-            f"<td><a href='{e(f['source_url'])}'>source ↗</a></td>",
+            f"<td><a href=\"{e(linkify(f['source_url']))}\">source ↗</a></td>",
             f"<td>{e(f['notes'])}</td>",
         ]))
     body = f"""
@@ -445,7 +460,7 @@ def build_suggestions():
             f"<td>{e(s['effort'])}</td>",
             f"<td>{e(s['confidence'])}</td>",
             f"<td>{badge(s['decision_status'], 'warn')}</td>",
-            f"<td><a href='{e(s['source_url'])}'>evidence ↗</a></td>",
+            f"<td><a href=\"{e(linkify(s['source_url']))}\">evidence ↗</a></td>",
         ]))
     body = f"""
 <p class="lead-in">Reviewable before implementation: each suggestion names the problem, the change, its expected
@@ -467,7 +482,7 @@ def build_questions():
             f"<td>{e(q['information_needed'])}</td>",
             f"<td>{e(q['where_to_get_it_officially'])}</td>",
             f"<td>{badge(q['status'], 'warn')}</td>",
-            f"<td><a href='{e(q['source_url'])}'>source ↗</a></td>",
+            f"<td><a href=\"{e(linkify(q['source_url']))}\">source ↗</a></td>",
         ]))
     body = f"""
 <p class="lead-in">The clear list of questions, information and answers that must be addressed before a decision can

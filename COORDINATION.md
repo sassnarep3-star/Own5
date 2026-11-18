@@ -3659,3 +3659,17 @@ Session ID `35fc3437`, branch `arena/35fc3437-own5` (base `cb2d3b84` = current `
 - **Pre-merge failing check, not caused by this PR:** `NFL Decision Desk — fetch & verify`, step "Confirm the committed site matches a clean rebuild" (X51-13).
 - **Post-merge correction:** the published review's verifier sweep was captured before the last audit fix. The live page said "2 FAIL"; the true sweep on the merged tree is 29 verifiers, 28 PASS, 1 FAIL (`nba-commission`, X51-05). Corrected in a follow-up PR from the same branch (`arena/51cf3786-own5`), with `nfl-b34253a1` regenerated after the review rebuild and main's new desk `nfl-desk-35fc3437`.
 - **Standing caveat (X51-06):** `nfl-b34253a1/data/repo_audit.csv` covers the review's own files, so the order of rebuilds matters. Run the review sweep and build first, then regenerate the audit, then commit both.
+
+### 6cbf25fa — post-deploy follow-up (2026-11-18, UTC)
+
+**Live defect found after the Pages deploy of b3d3344 (fixed on a follow-up PR).** The landing page's
+decision-readiness table and the suggestions/questions/flagged registers linked evidence with repo-relative
+paths (e.g. `data/nfl-desk-6cbf25fa/price_snapshots.csv`). Served from `/Own5/nfl-desk-6cbf25fa/`, those
+resolved under the desk directory and 404'd — the same defect class as R17 (98a211b8). Root cause of the
+miss: the desk's link checker only scanned double-quoted `href` attributes, and the affected anchors were
+single-quoted. Fix: (a) repo-relative references are now emitted as absolute GitHub blob URLs; (b) the
+checker scans both quote styles and fails on any non-resolvable relative reference; (c) all other desk
+checks re-run green (543 checks, 0 alarms; 11 unit tests). No data values changed; links only.
+
+**Merge record (follow-up).** Recorded below after this PR merges.
+
