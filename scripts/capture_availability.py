@@ -763,11 +763,14 @@ def check_drift(led: Ledger, expectations: dict) -> list[dict]:
         observed = row["rows_parsed"]
         state = "ok"
         detail = ""
-        if row["source_id"] in known_zero:
+        # HTTP failure takes precedence over a documented empty-source
+        # exception: an exception describes a successful publisher response,
+        # never a failed fetch.
+        if row["http_status"] != 200:
+            state, detail = "alarm", "http %s" % row["http_status"]
+        elif row["source_id"] in known_zero:
             state = "known_exception"
             detail = known_zero[row["source_id"]]
-        elif row["http_status"] != 200:
-            state, detail = "alarm", "http %s" % row["http_status"]
         elif observed < lo or observed > hi:
             state = "alarm"
             detail = "rows %s outside pinned range [%s, %s]" % (observed, lo, hi)

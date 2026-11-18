@@ -227,10 +227,17 @@ class DriftTests(unittest.TestCase):
 
     def test_documented_zero_is_a_known_exception_not_a_failure(self):
         led = cap.Ledger.__new__(cap.Ledger)
-        led.rows = [self._ledger_row("depth", "depth_HOU", 404, 0)]
+        led.rows = [self._ledger_row("depth", "depth_HOU", 200, 0)]
         alarms = cap.check_drift(led, {"depth": {"min_rows": 8, "max_rows": 80},
                                        "known_zero": {"depth_HOU": "image only"}})
         self.assertEqual(alarms[0]["state"], "known_exception")
+
+    def test_known_zero_does_not_mask_http_failure(self):
+        led = cap.Ledger.__new__(cap.Ledger)
+        led.rows = [self._ledger_row("depth", "depth_HOU", 404, 0)]
+        alarms = cap.check_drift(led, {"depth": {"min_rows": 8, "max_rows": 80},
+                                       "known_zero": {"depth_HOU": "image only"}})
+        self.assertEqual(alarms[0]["state"], "alarm")
 
     def test_http_failure_always_alarms(self):
         led = cap.Ledger.__new__(cap.Ledger)
