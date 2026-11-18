@@ -2988,6 +2988,25 @@ Statuses above: K1–K4 **done**; K5 (PR, merge, Pages check) recorded below aft
 
 **Not done (honest scope).** The brief's open items remain open: the Week 11 availability capture (blocked until the league publishes), the price-data policy decision (CU-F10, user-owned), roster-depth verification for all 32 clubs, the pre-registered backtest corpus, and the demotion gate. Each is already logged by a prior desk; this session added no new analysis and makes no new performance claim.
 
+**K5 — PR, merge and Pages record (2026-11-18T03:17Z).**
+* **PR #102** (`arena/5c5f4aaf-own5` → `main`) **merged** at `983b0d9` (merge commit, `--merge`, 03:17:01Z).
+* **Pages:** `pages build and deployment` → **success** on `983b0d9`. Live check (fetch tool, 03:2xZ):
+  `https://sassnarep3-star.github.io/Own5/nfl-desk-5c5f4aaf/index.html` renders the 25-row directory with live links.
+  The root page's notice aside is not visible in that text render (asides are dropped by the converter, along with the sidebar); it is confirmed in the merged file on `main`.
+* **CI on the PR, reported as it went:**
+  * `Build, evidence integrity and browser smoke tests` (verify.yml, covers the root build and determinism) → **pass**.
+  * `verify` (2 runs), `build-and-audit` and `desk-verify` (nfl-desk-35a1feb2 and other desk workflows) → **pass**.
+  * `NFL Decision Desk — fetch & verify` (`decision-desk.yml`) → **fail** at *Confirm the committed site matches a clean rebuild*. This is the
+    defect logged as **CU-F13**. Correction to the first draft of this record: that workflow's `pull_request` trigger has **no** `paths`
+    filter, so it runs on every PR to `main`, whatever files change. The failing step rebuilds the committed `data/decision-desk`
+    outputs, which this session did not touch, so the failure is pre-existing and not caused by this change.
+  * `Verify NFL B34 Week 10 research desk` (`nfl-b34253a1.yml`) → **fail**. Verified on `main` at `92d5017` (runs 2026-11-17T01:43–01:48Z, all failure). Predates this session.
+  * Neither failing workflow was edited. Both are owned by their desks and need regenerating, not hand-patching, so they are logged here rather than fixed.
+* Merge decision: the failing checks predate this change and do not cover its files, so the PR was merged under the user's standing
+  instruction. The Pages build for the merge commit succeeded.
+
+**Next session (not started here).** Week 11 availability waits for the league's Wednesday publication; the desk directory should be
+rebuilt then only if a new desk folder appears.
 ### 98a211b8 — PR and deployment record (2026-11-18)
 
 | PR | Purpose | Result |
