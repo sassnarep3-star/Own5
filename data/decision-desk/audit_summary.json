@@ -11,10 +11,51 @@
     "rows": 15
   },
   "internal_links": {
-    "broken_count": 0,
-    "examples": [],
-    "links_checked": 4317,
-    "pages": 255
+    "broken_count": 126,
+    "examples": [
+      {
+        "link": "n/a - deliberately omitted",
+        "page": "nfl-desk-864d5668/flagged.html"
+      },
+      {
+        "link": "n/a",
+        "page": "nfl-desk-864d5668/flagged.html"
+      },
+      {
+        "link": "n/a",
+        "page": "nfl-desk-864d5668/flagged.html"
+      },
+      {
+        "link": "n/a",
+        "page": "nfl-desk-864d5668/flagged.html"
+      },
+      {
+        "link": "n/a - reported, not acted on",
+        "page": "nfl-desk-864d5668/flagged.html"
+      },
+      {
+        "link": "See repo-audit.html for the per-file list and the reason each one was left unchecked",
+        "page": "nfl-desk-864d5668/flagged.html"
+      },
+      {
+        "link": "official NFL abbreviation ARI",
+        "page": "nfl-desk-864d5668/repo-audit.html"
+      },
+      {
+        "link": "2026 measured mean +0.47 pts (95% CI -1.81 to 2.75)",
+        "page": "nfl-desk-864d5668/repo-audit.html"
+      },
+      {
+        "link": "either blank or explicitly flagged",
+        "page": "nfl-desk-864d5668/repo-audit.html"
+      },
+      {
+        "link": "either blank or explicitly flagged",
+        "page": "nfl-desk-864d5668/repo-audit.html"
+      }
+    ],
+    "links_checked": 10975,
+    "pages": 556
   },
   "official_vs_derived_standings": {
     "matches": 32,
@@ -24,8 +65,8 @@
   },
   "provenance": {
     "examples": [],
-    "files": 50,
+    "files": 75,
     "files_needing_review": 0,
-    "rows": 31955
+    "rows": 33161
   }
 }
