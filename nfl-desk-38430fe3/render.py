@@ -111,7 +111,7 @@ def render_all(S, rows, team_rows, drows, cmp_rows):
         trs.append([E(r['row_id']), E(r['game']), E(r['date'].title()), E(r['kickoff']), E(r['team']), E(r['player']), E(r['position']),
                     E(r['injury']), E(r['practice']), E(r['game_status']), link(C.INJ)])
     body = f"""<h2>Official Week 10 injury report — every listed row</h2>
-<p class="note">Transcribed from nfl.com on {E(S['read_date'])}. Blank cells are blank on the page. Every row links to the same official page. The row count is {S['rows']}. A row is a listed player; a blank injury cell with 'Did Not Participate' is shown as printed (see Flagged F-05).</p>
+<p class="note">Transcribed from nfl.com on {E(S['read_date'])}. Blank cells are blank on the page. Every row links to the same official page. The row count is {S['rows']}. A row is a listed player; a blank injury cell with 'Did Not Participate' is shown as printed (see Flagged F-05). <b>Publication of row-level data is pending a user decision on nfl.com terms §1.3 (F-13, Q-13).</b></p>
 <input class="q" id="f" placeholder="Filter rows (club, player, status)…" aria-label="Filter rows">
 {table(hdr, trs, 'inj')}
 <script>(function(){{var f=document.getElementById('f');var t=document.querySelectorAll('table.inj tbody tr');
@@ -188,6 +188,7 @@ f.addEventListener('input',function(){{var q=f.value.toLowerCase();t.forEach(fun
 <ul>
 <li>The live page lists <b>{S['rows']} rows</b>, <b>{S['with_game_status']}</b> with an Out, Doubtful or Questionable game status (Out {S['out']}, Doubtful {S['doubtful']}, Questionable {S['questionable']}).</li>
 <li><b>No club has zero injury entries</b>. The brief's '279 rows and 2 no-injury sections' is contradicted (claim C-01).</li>
+<li>An independent read of the same page by session b8227c47 matches this transcript on all 28 clubs for row count, game status and practice status (C-14). The bye clubs CHI, DEN, PHI and TB are listed under 'Teams on Bye' on the official schedule (C-13).</li>
 <li>The Lions' Joseph, Mays and Reed are <b>Out</b> on the live page. The 2026-11-12 capture had them blank; the 2026-11-17 read already had them Out (C-06).</li>
 <li>Against the pinned 2026-11-12 capture, {d['changed']} of {d['common']} common players changed and {d['added']} rows were added. That is the delta the brief asked for; it is not a level to compare with older tables.</li>
 <li>NFL.com articles report that Willis and Jackson were placed on injured reserve, and that Maye left a game with an ankle injury. The Week 10 injury report does not state IR for any of them, so the report alone cannot show it (C-07, C-08, C-10, F-04, F-06, F-07).</li>
@@ -198,7 +199,7 @@ f.addEventListener('input',function(){{var q=f.value.toLowerCase();t.forEach(fun
 <li>Starters, depth rank, replacements and snap shares: not on the injury report and not captured here (R-23, R-27, R-28).</li>
 <li>Any price: no admitted open-and-close archive is held. The price-data policy is a user decision (Q-08, S-02). Market columns are blank.</li>
 <li>Any model, correlation, ROI or leaderboard result: none is computed here, and no strategy qualifies.</li>
-<li>Terms of use for row-level publication (Q-13).</li>
+<li>Whether row-level publication is permitted: nfl.com terms §1.3 bars compiled retrieval absent written consent. This is a user decision (Q-13, F-13).</li>
 </ul>
 <h2>Decisions still needed</h2>
 <ol>

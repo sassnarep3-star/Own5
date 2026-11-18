@@ -73,6 +73,14 @@ CLAIMS = [
          checked="Fetched the week-11 URL on 2026-11-18 (fetch time not recorded by the tool)",
          result="The week-11 URL returned the Week 10 report (title 'Week 10 of the 2026 Season'). No week-11 designations exist on the page.",
          verdict="CONFIRMED (not yet published)", source=INJ_W11, basis="Fetch log in sources.csv"),
+    dict(id="C-13", claim="CHI, DEN, PHI and TB are absent from the Week 10 report (bye, not yet confirmed)",
+         checked="Official schedule page: 'Teams on Bye' block for Week 10",
+         result="Schedule lists CHI, DEN, PHI and TB under 'Teams on Bye' for Week 10. The four clubs are absent from the injury report.",
+         verdict="CONFIRMED", source="https://www.nfl.com/schedules/2026/by-week/week-10", basis="schedule page, second chunk"),
+    dict(id="C-14", claim="Per-club counts of this transcript match an independent read of the same page",
+         checked="Compared rows, Out/Questionable/Doubtful/blank game status and DNP/Limited/Full practice for all 28 clubs against the independent read in nfl-desk-b8227c47/data/week10_read.csv",
+         result="28 of 28 clubs identical. That read's SHA-256 is 1b54ba18…b5e3 (GitHub Actions probe run). This is a count check, not a byte-level match.",
+         verdict="CONFIRMED (28/28 clubs)", source=REPO + "nfl-desk-b8227c47/data/week10_read.csv", basis="per-club comparison run in this session"),
 ]
 
 # ---------------------------------------------------------------- decision-readiness: one row per brief requirement
@@ -333,7 +341,7 @@ QUESTIONS = [
  ("Q-10","How reliable is each designation (Questionable, Doubtful, Out)?","Not measured. Official text gives no percentages.","Join several seasons of reports to inactive lists (R-18).", M),
  ("Q-11","Does the week-11 URL show a different page after publication?","Unknown until publication. Capture-job logic must check the page title and week selector, not the URL alone.","Check the title on every capture.", INJ_W11),
  ("Q-12","What does 'net injury count' mean?","Not defined in the brief. This desk publishes Out, Doubtful and Questionable counts separately.","Agree a definition (suggestion S-07).", M),
- ("Q-13","Does nfl.com's terms of use allow storing and publishing row-level data?","Not read in this desk.","Read the terms and record the clause and date before publishing row-level data.", "https://www.nfl.com/"),
+ ("Q-13","Does nfl.com's terms of use allow storing and publishing row-level data?","Read 2026-11-18. Section 1.3 says the Services may be used for 'your own individual non-commercial and informational purposes', and that 'Systematic retrieval of data or other content from the Services, whether to create or compile … a collection, compilation, database, or directory, is prohibited absent our express prior written consent.' Whether a published table of this report falls under that clause is a legal judgement this desk does not make. No consent was obtained.","User decision (S-06): obtain written consent, publish aggregates only, or accept the risk and record it. Until then the row-level table is shown but flagged as pending the terms decision.","https://www.nfl.com/legal/terms"),
  ("Q-14","Can a scheduled job reach nfl.com from GitHub Actions?","Not tested. curl from this sandbox fails the TLS handshake; the fetch tool works.","Run a test capture from a runner and record the result.", M),
  ("Q-15","Which Week 10 games are at which venues?","Not captured in this desk.","Read each game centre page and transcribe the venue (R-40).", SCHED_W10),
  ("Q-16","Does the report record in-game injuries?","No. The Patriots QB's ankle injury in the Lions game appears in an official headline, not in the report row.","Capture game-day status separately (Game Book).", NEWS["maye"]),
@@ -365,7 +373,7 @@ FLAGS = [
  ("F-10","medium","Transcription, not raw bytes","The 347 rows were transcribed by hand from the fetch tool's rendered markdown. Raw HTML bytes were not retained. A second person should re-check the file against the URL.","R-16",INJ),
  ("F-11","low","Name vs player-link slug","Kam Curl's link slug reads 'kamren-curl'. Name is taken as displayed.","C-01",INJ),
  ("F-12","high","Price-data policy is an open decision","No admitted price archive with open and close exists in this desk. Market columns stay blank.","R-01",M),
- ("F-13","medium","nfl.com terms not read","Row-level publication is held until the terms are read (Q-13).","R-66","https://www.nfl.com/"),
+ ("F-13","high","nfl.com terms §1.3 bars compiled retrieval absent written consent","Section 1.3 prohibits 'systematic retrieval of data … to create or compile … a database' absent express prior written consent. The row-level table, CSVs and transcript are published from the repo, and Pages serves the repo root. This is a user decision (Q-13, S-06); it does not block merge. Repo precedent: earlier desks also publish row-level official data.","R-66, Q-13, S-06","https://www.nfl.com/legal/terms"),
  ("F-14","low","Sibling desks not re-verified","Figures quoted from sibling desks are marked 'not re-verified here'. They are not this desk's verified values.","R-02",M),
 ]
 
@@ -379,4 +387,7 @@ SOURCES = [
  ("SRC-06","Repo capture of the Week 10 injury page, 2026-11-12 (pinned)",REPO+"data/decision-desk/official/official_injuries_wk10.csv","Repo file; retrieved_utc 2026-11-12T16:52:39Z","Delta baseline only (276 rows, 26 clubs)"),
  ("SRC-07","Sibling desk read of the Week 10 page, 2026-11-17 (partial)",REPO+"nfl-desk-35a1feb2/raw/official_reads_2026-11-17.txt","Repo transcription; not the league's HTTP body","Delta check on overlapping rows only"),
  ("SRC-08","NFL.com Week 9 inactives article (official)",NEWS["inactives_w9"],"Listed in the news rail; not read here","Discovery route for inactive lists (Q-07)"),
+ ("SRC-09","NFL.com 2026 schedule, Week 10 (official; 'Teams on Bye' block)","https://www.nfl.com/schedules/2026/by-week/week-10","Read 2026-11-18, 2 chunks","C-13 (CHI, DEN, PHI, TB on bye)"),
+ ("SRC-10","NFL.com Terms and Conditions §1.3 (official)","https://www.nfl.com/legal/terms","Read 2026-11-18, first chunk","Q-13, F-13 (systematic retrieval clause)"),
+ ("SRC-11","Independent read of the same Week 10 page by session b8227c47 (repo CSV)",REPO+"nfl-desk-b8227c47/data/week10_read.csv","Repo artifact; GitHub Actions probe run, SHA-256 1b54ba18…b5e3","C-14 (per-club count check, 28/28)"),
 ]
