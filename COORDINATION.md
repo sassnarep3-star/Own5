@@ -3070,3 +3070,15 @@ external link is https on an allowed host).
 **Known consequence of the merge.** The desk's read stamps (2026-11-18T03:13Z) are the times the official pages were read. The open-PR card (10) is the count at that read; the merge of #104 and later PRs changes the live count. The stamp, not the live count, is the value to cite.
 
 A record-only follow-up (this block) is delivered on its own PR so that the record reaches `main`.
+
+### 98a211b8 — follow-up merge record (2026-11-18, UTC)
+
+| PR | Purpose | Result |
+|----|---------|--------|
+| https://github.com/sassnarep3-star/Own5/pull/106 | Fixes R17 (a stale `desks.html` reference found on the live Flagged page); adds verifier check V10 (visible text may only name pages the desk publishes); records PR #103 | **Merged** to `main` at 2026-11-18T03:26:04Z, merge commit `f159b2a` (`gh pr merge 106 --merge`). Own check `verify` **success**. Pages build for `f159b2a` **built** at 03:26:38Z. |
+
+**Live verification after the fix:** `https://sassnarep3-star.github.io/Own5/nfl-98a211b8/flagged.html` now shows "See the desk directory by session 5c5f4aaf". The first fetch returned the pre-fix HTML from the Pages cache; a cache-busted fetch returned the corrected text.
+
+**Final state of this session's deliverables on `main`:** `nfl-98a211b8/` (6 pages, `build.py`, `verify.py` with 27 PASS lines, 9 unit tests), `nfl-98a211b8/data/*.csv`, `nfl-98a211b8/captures/*`, the CI workflow `.github/workflows/nfl-98a211b8.yml`, one README section, and this board block. No file in another session's namespace was edited.
+
+**Status of the board tasks.** X1–X5 **done**. The X4 desk index was not built; session 5c5f4aaf's directory (PR #102) is linked instead.
