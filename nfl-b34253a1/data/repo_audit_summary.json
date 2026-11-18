@@ -1,27 +1,27 @@
 {
   "as_of": "2026-11-12",
-  "files": 458,
-  "physical_lines": 99200,
+  "files": 462,
+  "physical_lines": 99420,
   "status_counts": {
     "DATED_OFFICIAL_FACT_ROW": 1588,
     "DATED_SNAPSHOT_RECOMPUTED_OR_STALE": 730,
     "DERIVED_OR_LEGACY_LINE_REVIEW": 35,
     "FLAGGED_LEGACY_MARKET_VALUE": 903,
     "FLAGGED_NONOFFICIAL_HISTORICAL_INPUT": 14406,
-    "IMPLEMENTATION_LINE_REVIEW": 13136,
+    "IMPLEMENTATION_LINE_REVIEW": 13177,
     "LEGACY_JSON_RECORD_REVIEW": 4624,
-    "LEGACY_RESEARCH_CLAIM_SCOPE": 5731,
+    "LEGACY_RESEARCH_CLAIM_SCOPE": 5804,
     "LEGACY_SNAPSHOT_SOURCE_REGISTERED": 10815,
     "LINE_ITEM_SOURCE_LINK_OR_FLAG": 32278,
     "OFFICIAL_LINK_PRESENT_NOT_REFETCHED": 30,
-    "PUBLISHED_RENDER_LINE_REVIEW": 12999,
+    "PUBLISHED_RENDER_LINE_REVIEW": 13105,
     "REPOSITORY_METADATA_LINE": 133,
     "REVERIFIED_CURRENT_GAME_LOG": 1792
   },
   "source_basis_counts": {
-    "HTTPS_OFFICIAL_LINK_IN_LINE": 2389,
+    "HTTPS_OFFICIAL_LINK_IN_LINE": 2404,
     "OFFICIAL_COUNTERPART_FOR_FLAGGED_INPUT_NOT_INPUT_PROVENANCE": 15309,
-    "OFFICIAL_SCOPE_REFERENCE_FALLBACK_NOT_ROW_PROVENANCE": 80553,
+    "OFFICIAL_SCOPE_REFERENCE_FALLBACK_NOT_ROW_PROVENANCE": 80758,
     "ROW_SOURCE_FIELD": 949
   },
   "scope": "Line-indexed inventory of previous NFL sites, generators, datasets, research references and shared navigation/CI context; this is not a claim that every legacy historical statistic was re-fetched.",
@@ -164,6 +164,11 @@
       "bytes": 977
     },
     {
+      "path": ".github/workflows/nfl-venue-390e13fd.yml",
+      "physical_lines": 41,
+      "bytes": 1254
+    },
+    {
       "path": ".github/workflows/own5-hub-capture.yml",
       "physical_lines": 74,
       "bytes": 3145
@@ -195,8 +200,8 @@
     },
     {
       "path": "README.md",
-      "physical_lines": 600,
-      "bytes": 52565
+      "physical_lines": 601,
+      "bytes": 53320
     },
     {
       "path": "assets/app.js",
@@ -581,7 +586,7 @@
     {
       "path": "data/nfl-origin-desk/requirements.csv",
       "physical_lines": 81,
-      "bytes": 26217
+      "bytes": 26400
     },
     {
       "path": "data/nfl-origin-desk/sources.csv",
@@ -1296,7 +1301,7 @@
     {
       "path": "nfl-origin-desk/index.html",
       "physical_lines": 144,
-      "bytes": 29953
+      "bytes": 30093
     },
     {
       "path": "nfl-price-results-853c0074/README.md",
@@ -1407,6 +1412,16 @@
       "path": "nfl-strategy-lab/validation-gates.html",
       "physical_lines": 55,
       "bytes": 7438
+    },
+    {
+      "path": "nfl-venue-390e13fd/flagged.html",
+      "physical_lines": 41,
+      "bytes": 2578
+    },
+    {
+      "path": "nfl-venue-390e13fd/index.html",
+      "physical_lines": 65,
+      "bytes": 5761
     },
     {
       "path": "nfl_model/__init__.py",
@@ -2089,6 +2104,11 @@
       "bytes": 5491
     },
     {
+      "path": "research/nfl-venue-390e13fd/EXECUTIVE_SUMMARY.md",
+      "physical_lines": 72,
+      "bytes": 4530
+    },
+    {
       "path": "research/official_snapshot.json",
       "physical_lines": 1759,
       "bytes": 69854
@@ -2126,7 +2146,7 @@
     {
       "path": "scripts/build_origin_desk.py",
       "physical_lines": 757,
-      "bytes": 118038
+      "bytes": 118221
     },
     {
       "path": "scripts/build_site.py",
