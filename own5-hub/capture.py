@@ -55,6 +55,7 @@ def main():
         ("standings", "https://www.nfl.com/standings/league/2026/REG"),
         ("reserve", f"https://www.nfl.com/transactions/league/reserve-list/{month}"),
     ]
+    os.makedirs(os.path.dirname(MANIFEST), exist_ok=True)
     new_manifest = not os.path.exists(MANIFEST)
     rows, all_ok = [], True
     for name, url in targets:

@@ -35,6 +35,7 @@ jobs:
         id: capture
         run: |
           set +e
+          mkdir -p own5-hub/captures/raw
           python3 own5-hub/capture.py > own5-hub/captures/last_run.txt 2>&1
           rc=$?
           echo "exit_code=$rc" >> own5-hub/captures/last_run.txt
