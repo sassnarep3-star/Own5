@@ -8,7 +8,6 @@ two builds of the same inputs are byte-identical.
 Modes:
   python3 nfl-98a211b8/build.py                 render pages
   python3 nfl-98a211b8/build.py --check-rows    regenerate data/injury_row_checks.csv
-  python3 nfl-98a211b8/build.py --scan          regenerate data/desk_index.csv
 """
 import csv
 import hashlib
@@ -23,6 +22,7 @@ ROOT = os.path.dirname(HERE)
 DATA = os.path.join(HERE, "data")
 CAPTURES = os.path.join(HERE, "captures")
 LIVE = "https://sassnarep3-star.github.io/Own5"
+DIRECTORY = LIVE + "/nfl-desk-5c5f4aaf/"
 BLOB = "https://github.com/sassnarep3-star/Own5/blob/main/"
 EXCERPT = "captures/nfl_reg10_chunk0_excerpt_2026-11-18.md"
 REG10 = "https://www.nfl.com/injuries/league/2026/reg10"
@@ -33,7 +33,6 @@ PAGES = [
     ("index.html", "Overview"),
     ("repo-review.html", "Repo review"),
     ("availability.html", "Official availability"),
-    ("desks.html", "Desk index"),
     ("flagged.html", "Flagged for Review"),
     ("executive-summary.html", "Executive summary"),
     ("sources.html", "Sources"),
@@ -143,44 +142,6 @@ def write_row_checks():
     return rows
 
 
-def scan_desks():
-    desks = []
-    for name in sorted(os.listdir(ROOT)):
-        path = os.path.join(ROOT, name)
-        if not os.path.isdir(path) or name.startswith("."):
-            continue
-        if not (name.startswith("nfl") or name.startswith("own5")):
-            continue
-        idx = os.path.join(path, "index.html")
-        has_index = os.path.isfile(idx)
-        title = ""
-        if has_index:
-            with open(idx, encoding="utf-8", errors="replace") as fh:
-                m = re.search(r"<title>(.*?)</title>", fh.read(), re.S | re.I)
-                title = html.unescape(m.group(1)).strip() if m else ""
-        n_files = sum(len(f) for _, _, f in os.walk(path))
-        desks.append({
-            "directory": name,
-            "title": title,
-            "has_index_html": "yes" if has_index else "no",
-            "live_url": f"{LIVE}/{name}/" if has_index else "",
-            "files": str(n_files),
-            "github_link": f"https://github.com/sassnarep3-star/Own5/tree/main/{name}",
-        })
-    return desks
-
-
-def write_desk_index():
-    desks = scan_desks()
-    cols = ["directory", "title", "has_index_html", "live_url", "files", "github_link"]
-    with open(os.path.join(DATA, "desk_index.csv"), "w", encoding="utf-8", newline="") as fh:
-        w = csv.DictWriter(fh, fieldnames=cols, lineterminator="\n", extrasaction="ignore")
-        w.writeheader()
-        for d in desks:
-            w.writerow(d)
-    return desks
-
-
 # ----------------------------------------------------------------- rendering
 def read_table(name):
     with open(os.path.join(DATA, name), encoding="utf-8", newline="") as fh:
@@ -257,7 +218,6 @@ def build_pages(out_dir):
     repo = read_table("repo_review.csv")
     caps = read_table("official_status_captures.csv")
     checks = read_table("injury_row_checks.csv")
-    desks = read_table("desk_index.csv")
     unv = read_table("unverified.csv")
     sources = read_table("sources.csv")
     excerpt_sha = sha256_file(os.path.join(HERE, EXCERPT))
@@ -267,8 +227,6 @@ def build_pages(out_dir):
     n_block = sum(1 for r in repo if r["result"] == "FLAG" and r["severity"] == "blocking")
     n_match = sum(1 for r in checks if r["match"] == "MATCH")
     n_diff = sum(1 for r in checks if r["match"] != "MATCH")
-    n_desks = len(desks)
-    n_index = sum(1 for d in desks if d["has_index_html"] == "yes")
     pinned = {c["excerpt_sha256"] for c in caps if c["excerpt_sha256"]}
     sha_ok = pinned == {excerpt_sha}
 
@@ -283,15 +241,14 @@ def build_pages(out_dir):
             ("Official rows checked (WAS, NYG, NE, DET)", len(checks)),
             ("Rows matching the repo copy", n_match),
             ("Rows that differ from the repo copy", n_diff),
-            ("NFL-related desk folders on main", n_desks),
-            ("Desks with an index.html", n_index),
         ])
     links = "".join(
         f'<li><a href="{fn}">{e(lab)}</a></li>' for fn, lab in PAGES[1:])
+    links += f'<li><a href="{DIRECTORY}">NFL desk directory (session 5c5f4aaf, PR #102) ↗</a></li>'
     pages["index.html"] = ("Overview", f"""
 <h2>Where things stand</h2>
 <div class="cards">{cards}</div>
-<p class="note">This page reports verified checks only. It does not publish a market line, an edge, a strategy result, or a bet. It is not a decision desk. The brief's other items (strategies, leaderboards, correlations, luck panel) are answered by the desks listed on <a href="desks.html">Desk index</a>; this session did not re-verify them.</p>
+<p class="note">This page reports verified checks only. It does not publish a market line, an edge, a strategy result, or a bet. It is not a decision desk. The brief's other items (strategies, leaderboards, correlations, luck panel) are answered by the desks listed in the <a href="{DIRECTORY}">NFL desk directory</a>; this session did not re-verify them.</p>
 <h2>Sections</h2>
 <ul>{links}</ul>
 <h2>Most important finding</h2>
@@ -351,23 +308,6 @@ def build_pages(out_dir):
 {table(["ID","Item","Status","Why","Official source"], unv_rows)}
 """)
 
-    # ---- Desk index
-    d_rows = []
-    for d in desks:
-        d_rows.append("".join([
-            td(f'<code>{e(d["directory"])}</code>'),
-            td(e(d["title"]) or '<span class="muted">no index.html</span>'),
-            td(badge("PASS" if d["has_index_html"] == "yes" else "UNVERIFIED")),
-            td(link(d["live_url"], "live page") if d["live_url"] else '<span class="muted">none</span>'),
-            td(e(d["files"])),
-            td(link(d["github_link"], "repo folder")),
-        ]))
-    pages["desks.html"] = ("Desk index", f"""
-<h2>NFL-related desks on main</h2>
-<p class="note">Generated by <code>build.py --scan</code> from the folders in the checkout. The index does not rank the desks and does not say which is current. The root index.html links only one of them (repo-review R02). Its build date is not shown here because a git-derived date would differ between a CI clone and a full clone.</p>
-{table(["Folder","Title","index.html","Live page","Files","Repo"], d_rows)}
-""")
-
     # ---- Flagged
     fl = [r for r in repo if r["result"] == "FLAG"]
     fl_rows = ["".join([
@@ -389,7 +329,7 @@ def build_pages(out_dir):
 {table(["ID","Item","Status","Why unverified","Official source"], unv_flag)}
 <h2>Requests logged for other sessions (not actioned)</h2>
 <ul>
-<li>Integration session: root <code>index.html</code> should list every NFL desk with its capture date (R02).</li>
+<li>Integration session: root <code>index.html</code> should list every NFL desk with its capture date (R02). Partly answered by PR #102 (session 5c5f4aaf), which links the desk directory from the root notice.</li>
 <li>Owners of the results feed (e46fb855, ce1f16ff): apply the alias map <code>{{LAR:LA, ARI:AZ}}</code> and reconcile club by club before any team-level join (R09). Desk 35a1feb2 gives the full map.</li>
 <li>Owners of the injury captures: capture the official report on each publication day with a fetch time and keep the raw hash. A single read cannot settle the 17 differences (R13).</li>
 <li>Owners of the injury CSVs: point each row's source link at the week's page (R16).</li>
@@ -404,7 +344,7 @@ def build_pages(out_dir):
 <li>Reviewed the repo's shared board, live site, workflows and open PRs, and recorded {len(repo)} checks ({n_pass} PASS, {n_flag} FLAG).</li>
 <li>Read the official Week 10 injury report from nfl.com (chunk 0 of 8, 44 rows across four clubs) and compared each row with the repo's copy: <b>{n_match} match, {n_diff} differ</b>.</li>
 <li>Requested the official Week 11 injury page: at read time the request resolved to the Week 10 URL, so the Week 11 report was not served. No Week 11 availability is published here.</li>
-<li>Built a desk index of {n_desks} NFL-related folders and this Flagged for Review register.</li>
+<li>Did not build a second desk index: session 5c5f4aaf published one on main (PR #102), linked from this desk's navigation. Built this Flagged for Review register.</li>
 </ul>
 <h2>Verified findings (each with a link)</h2>
 <ul>
@@ -422,7 +362,7 @@ def build_pages(out_dir):
 </ul>
 <h2>Decisions needed from you</h2>
 <ol>
-<li><b>Canonical desk.</b> {n_desks - 1} other NFL-related folders answer the same brief. Choose one to keep as the entry point, and say which others to archive.</li>
+<li><b>Canonical desk.</b> Several NFL-related folders answer the same brief (see the <a href="{DIRECTORY}">desk directory</a>). Choose one to keep as the entry point, and say which others to archive.</li>
 <li><b>Price-source policy.</b> Decide whether third-party prices (for example the nflverse-derived log) may be used for origination, or whether only official prices qualify. Until decided, prices stay blank.</li>
 <li><b>Capture schedule.</b> Approve a daily official capture from Wednesday to kickoff with stored hashes, so the 17 differences can be explained.</li>
 </ol>
@@ -452,9 +392,6 @@ def main(argv):
         rows = write_row_checks()
         print(f"injury_row_checks.csv: {len(rows)} rows, "
               f"{sum(1 for r in rows if r['match'] == 'MATCH')} match")
-    if "--scan" in argv:
-        desks = write_desk_index()
-        print(f"desk_index.csv: {len(desks)} folders")
     if "--no-render" not in argv:
         names = build_pages(HERE)
         print("rendered:", ", ".join(names))

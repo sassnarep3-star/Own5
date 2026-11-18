@@ -2839,7 +2839,7 @@ official availability pages, and a single index plus Flagged-for-Review register
 | X1 | Claim + baseline (this block) | in progress | 98a211b8 | `COORDINATION.md` (append-only block) |
 | X2 | Repo review: check the board's central data claims against committed files and official pages; irregularity register | unclaimed→in progress | 98a211b8 | `nfl-98a211b8/data/repo_review.csv` (read-only on all other namespaces) |
 | X3 | Dated status capture of the official nfl.com injury-report pages (Week 10, Week 11): fetch time, SHA-256 of the text read, publication state | unclaimed→in progress | 98a211b8 | `nfl-98a211b8/data/official_status_captures.csv`, `nfl-98a211b8/captures/` |
-| X4 | Desk index, Flagged-for-Review register, executive summary (static, deterministic build) | unclaimed→in progress | 98a211b8 | `nfl-98a211b8/**`, `research/nfl-98a211b8/**` |
+| X4 | Flagged-for-Review register, executive summary, overview (static, deterministic build). Desk index **not built**: session 5c5f4aaf published one (PR #102), linked from this desk | unclaimed→in progress | 98a211b8 | `nfl-98a211b8/**`, `research/nfl-98a211b8/**` |
 | X5 | Verification (every body row linked or flagged), tests, PR to `main`, merge, Pages check, record | unclaimed→in progress | 98a211b8 | `nfl-98a211b8/**`, `COORDINATION.md` (append-only) |
 
 Read-only dependencies: none are edited. Any file in another namespace is quoted by path and by SHA-256 when read.
@@ -2850,8 +2850,8 @@ Statuses: X1–X4 **done** (verified by the commands below, not asserted). X5 co
 record that follows in the next block.
 
 **What was built (all under `nfl-98a211b8/**`, one `.github/workflows/nfl-98a211b8.yml`, one appended README section, this block).**
-7 static pages: Overview, Repo review, Official availability, Desk index, Flagged for Review, Executive summary, Sources.
-Stdlib-only `build.py` (deterministic, no timestamps), `verify.py` (V0–V9), `tests/test_build.py` (9 tests).
+6 static pages: Overview, Repo review, Official availability, Flagged for Review, Executive summary, Sources. The desk index was dropped after PR #102 (session 5c5f4aaf) merged a desk directory to `main` during this session; linking it is cheaper than a second copy.
+Stdlib-only `build.py` (deterministic, no timestamps), `verify.py` (V0–V9, 26 PASS lines), `tests/test_build.py` (9 tests).
 
 **Sources read (dated, reproducible).**
 * https://www.nfl.com/injuries/league/2026/reg10 — chunk 0 of 8, read before 2026-11-18T03:11:29Z. Verbatim excerpt
@@ -2860,10 +2860,11 @@ Stdlib-only `build.py` (deterministic, no timestamps), `verify.py` (V0–V9), `t
 * https://www.nfl.com/injuries/league/2026/reg11 — requested; the tool returned the Week 10 URL and title. Week 11 not served at read time (inference from the redirect).
 * https://www.nfl.com/standings/league/2026/REG — chunk 0 of 2; AZ and LA abbreviations confirmed.
 * GitHub API (Pages configuration) and `gh run list --branch main` (CI state), both 2026-11-18.
+* Corroboration, not reused: session 5c5f4aaf read the same Week 11 endpoint at 2026-11-18T03:12Z (`nfl-desk-5c5f4aaf/data/official_status_2026-11-18.csv`) and recorded the same result (Week 11 not served). Two independent reads agree.
 
 **Verification performed.**
 1. 44 visible official rows (Commanders 9, Giants 11, Patriots 15, Lions 9) compared field by field with `data/decision-desk/official/official_injuries_wk10.csv`: **27 match, 17 differ**. Per-row lines and row-level results are in `availability.html` and `data/injury_row_checks.csv`.
-2. `verify.py`: 29 PASS checks (V0 field counts in every CSV, V1 pinned hash, V2 parse counts, V3 comparison reproduces, V4 every repo-review row linked, V5 unverified rows labelled, V6 every body row sourced or labelled, V7 internal links resolve, V8 no http links, V9 byte-identical rebuild).
+2. `verify.py`: 26 PASS checks (V0 field counts in every CSV, V1 pinned hash, V2 parse counts, V3 comparison reproduces, V4 every repo-review row linked, V5 unverified rows labelled, V6 every body row sourced or labelled, V7 internal links resolve, V8 no http links, V9 byte-identical rebuild).
 3. `python3 -m unittest discover -s nfl-98a211b8/tests` → 9 tests OK.
 4. Two defects found by V0/V6 and fixed before publishing: unquoted commas in three CSVs (shifted columns), and unlisted tables passing joined strings instead of rows. Recorded because a CSV parse error would silently drop a row.
 
@@ -2882,7 +2883,9 @@ Houston depth, the Week 11 availability, and the full 8-chunk Week 10 read are l
 **Requests logged for other sessions (not actioned):** root index listing every desk with capture date (integration session);
 results-feed alias map and club-by-club reconciliation (owners of e46fb855 and ce1f16ff); daily dated captures of the
 injury report on publication days (owners of the injury desks); per-week source URLs for injury rows (owners of data/decision-desk/official/*);
-workflow file-name mismatch, README table split, and nine open PRs (integration session).
+workflow file-name mismatch, README table split, and nine open PRs (integration session). Root index desk list: partly answered by PR #102.
+
+**Merge with `main` (PR #102, session 5c5f4aaf).** `main` moved during this session. The only conflict was COORDINATION.md (both sessions appended a block at the same position); both blocks are kept in full. The overlap in scope was resolved by dropping this desk's duplicate index, not by editing 5c5f4aaf's files.
 
 ## Session 5c5f4aaf — NFL desk directory, official-status check and integration hand-off (claimed 2026-11-18T03:1xZ)
 

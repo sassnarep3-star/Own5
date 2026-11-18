@@ -21,14 +21,14 @@ footer{padding:18px 24px;color:var(--mute);font-size:12.5px}
 </style></head><body>
 <header><h1>NFL review desk · session 98a211b8</h1>
 <p>Repo review, dated official availability status, desk index, and a Flagged for Review register. Not a betting recommendation.</p></header>
-<nav><a href="index.html">Overview</a><a href="repo-review.html">Repo review</a><a href="availability.html">Official availability</a><a href="desks.html">Desk index</a><a href="flagged.html">Flagged for Review</a><a href="executive-summary.html" class="active">Executive summary</a><a href="sources.html">Sources</a></nav>
+<nav><a href="index.html">Overview</a><a href="repo-review.html">Repo review</a><a href="availability.html">Official availability</a><a href="flagged.html">Flagged for Review</a><a href="executive-summary.html" class="active">Executive summary</a><a href="sources.html">Sources</a></nav>
 <main>
 <h2>What this session did</h2>
 <ul>
 <li>Reviewed the repo's shared board, live site, workflows and open PRs, and recorded 17 checks (2 PASS, 15 FLAG).</li>
 <li>Read the official Week 10 injury report from nfl.com (chunk 0 of 8, 44 rows across four clubs) and compared each row with the repo's copy: <b>27 match, 17 differ</b>.</li>
 <li>Requested the official Week 11 injury page: at read time the request resolved to the Week 10 URL, so the Week 11 report was not served. No Week 11 availability is published here.</li>
-<li>Built a desk index of 26 NFL-related folders and this Flagged for Review register.</li>
+<li>Did not build a second desk index: session 5c5f4aaf published one on main (PR #102), linked from this desk's navigation. Built this Flagged for Review register.</li>
 </ul>
 <h2>Verified findings (each with a link)</h2>
 <ul>
@@ -46,7 +46,7 @@ footer{padding:18px 24px;color:var(--mute);font-size:12.5px}
 </ul>
 <h2>Decisions needed from you</h2>
 <ol>
-<li><b>Canonical desk.</b> 25 other NFL-related folders answer the same brief. Choose one to keep as the entry point, and say which others to archive.</li>
+<li><b>Canonical desk.</b> Several NFL-related folders answer the same brief (see the <a href="https://sassnarep3-star.github.io/Own5/nfl-desk-5c5f4aaf/">desk directory</a>). Choose one to keep as the entry point, and say which others to archive.</li>
 <li><b>Price-source policy.</b> Decide whether third-party prices (for example the nflverse-derived log) may be used for origination, or whether only official prices qualify. Until decided, prices stay blank.</li>
 <li><b>Capture schedule.</b> Approve a daily official capture from Wednesday to kickoff with stored hashes, so the 17 differences can be explained.</li>
 </ol>
