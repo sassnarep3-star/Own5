@@ -3314,3 +3314,22 @@ request is logged below instead.
 * `decision-desk.yml` (`NFL Decision Desk — fetch & verify`) and `nfl-b34253a1.yml` (`Verify NFL B34 Week 10
   research desk`) are red on `main` and on every PR (recorded by sessions 560ed315, a991e3fb, 35a1feb2, 98a211b8,
   3cb7800c). Their owners should regenerate those desks. Not edited here.
+
+## Session 2025930f — NFL Origin Desk verification, correction and Week 11 origination (claimed 2026-11-18T03:4xZ)
+
+**Branch:** `arena/2025930f-own5` (branched from `main` @ `cb2d3b8`). The session branch name is fixed by Arena; the `session-<id>/<task>` convention in the brief is not used because this session may only work on its own branch.
+
+**Why this session exists (no duplicate work).** The origin desk (`nfl-origin-desk/`, abb5f8be, merged via PR #112/#113) is the only desk built from the full brief. A line-by-line re-check on 2026-11-18 found status claims that its own evidence does not support, a correlation panel that mixes non-official data into "official" numbers, a stale standings snapshot (Week 8), derived injury values with no official source, and a pre-registration claim that the repo history cannot prove. This session corrects those inside its own namespace and adds one dated, pre-kickoff Week 11 origination.
+
+**Scope (files this session may edit):** `nfl-origin-desk/**`, `data/nfl-origin-desk/**`, `scripts/build_origin_desk.py`, `scripts/verify_origin_desk.py`, `scripts/originate_origin_desk_wk11.py` (new), `COORDINATION.md` (this block only). No root `index.html`, `pages/**`, `assets/**`, or other sibling desk is edited.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| V1 | Claim + board entry | done | 2025930f | COORDINATION.md | This block; pushed before build work. |
+| V2 | Re-read official standings (all 32 clubs) and reconcile to league identities | done | 2025930f | `data/nfl-origin-desk/standings_2026_reg_20261118.csv` | Sums: W=L=149, T=2, PF=PA=6,923. Source https://www.nfl.com/standings/league/2026/REG |
+| V3 | Recompute the four official team-level correlations (n=32) from V2; retire the non-official rows | in progress | 2025930f | `data/nfl-origin-desk/correlations.csv`, `flagged.csv` | QB/WR and SGP rows rest on third-party data; excluded and flagged. |
+| V4 | Correct requirement statuses that the evidence does not support (pre-registration, holdout, daily captures, depth grouping, etc.) | in progress | 2025930f | `scripts/build_origin_desk.py` (literal rows), `data/nfl-origin-desk/audit_log_2026-11-18.csv` | Every change logged with before/after and evidence. |
+| V5 | Blank derived injury values with no official source; add the 2026-11-18 official read of the seven tracked players with change column | in progress | 2025930f | `data/nfl-origin-desk/injuries.csv`, `injury_reads_2026-11-18.csv` | Publishes change, not level. |
+| V6 | Week 11 origination (side → total → moneyline) from the 2026-11-18 standings and the official Week 11 schedule; market columns blank | in progress | 2025930f | `scripts/originate_origin_desk_wk11.py`, `data/nfl-origin-desk/lines.csv` | Reproduces the stored Week 9 model output before use (validation step). |
+| V7 | Source register: fix generic links, add dated reads and the NFL.com terms text (s.1.3) | in progress | 2025930f | `data/nfl-origin-desk/sources.csv` | |
+| V8 | Build, verify (add checks for the new rules), commit, PR to main, merge, confirm Pages | unclaimed | 2025930f | COORDINATION.md, `.github/**` not touched | Record PR link and merge result below. |
