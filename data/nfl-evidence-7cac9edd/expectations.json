@@ -1,0 +1,12 @@
+{
+  "_comment": "Drift pins for scripts/capture_availability.py. A source whose observed shape leaves the pinned range raises an alarm and fails the build (override with ALLOW_DRIFT=1, which is recorded in the ledger). Ranges are set from the first verified capture on 2026-11-18 and must be reviewed, not widened silently.",
+  "injuries": {"min_rows": 140, "max_rows": 420},
+  "schedule": {"min_rows": 8, "max_rows": 18},
+  "game_center": {"min_rows": 1, "max_rows": 1},
+  "game_book": {"min_rows": 20, "max_rows": 220},
+  "roster": {"min_rows": 35, "max_rows": 95},
+  "depth": {"min_rows": 8, "max_rows": 80},
+  "known_zero": {
+    "depth_HOU": "Houston publishes the depth chart as an image (houstontexans.com/team/depth-chart, read 2026-11-18: 'Unofficial Depth Chart' image, no machine-readable rows). Documented property of the publisher; flagged F-DEPTH-HOU, not a parser regression."
+  }
+}

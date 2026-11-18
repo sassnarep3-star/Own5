@@ -1,0 +1,110 @@
+name: NFL evidence desk (7cac9edd) — capture & verify
+
+# Session 7cac9edd.  Two jobs:
+#   capture - fetches official NFL / club pages, writes an immutable dated
+#             capture with SHA-256 pins and a point-in-time ledger, and fails
+#             loudly when a source changes shape (drift alarm).
+#   verify  - fail-closed checks on the committed data and the built pages.
+#
+# The capture job never writes outside data/nfl-evidence-7cac9edd/ and
+# nfl-evidence-7cac9edd/.
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'capture mode'
+        required: true
+        default: 'injuries'
+        type: choice
+        options: [injuries, schedule, gamecenter, gamebook, roster, depth]
+      season:
+        description: 'season'
+        required: true
+        default: '2026'
+        type: string
+      weeks:
+        description: 'weeks (comma separated) or game slugs for gamecenter/gamebook'
+        required: true
+        default: '10'
+        type: string
+      capture_date:
+        description: 'capture date (YYYY-MM-DD); defaults to today UTC'
+        required: false
+        type: string
+  schedule:
+    # Twice a day: before the league publishes (12:17 UTC) and after it does
+    # (21:37 UTC).  Every run is a separate immutable dated capture.
+    - cron: '17 12 * * *'
+    - cron: '37 21 * * *'
+  push:
+    branches: [main, arena/7cac9edd-own5]
+    paths:
+      - 'data/nfl-evidence-7cac9edd/TRIGGER'
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nfl-evidence-7cac9edd-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  capture:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install PDF text extraction (official game books)
+        run: python3 -m pip install --quiet pypdf
+      - name: Capture official availability evidence
+        env:
+          MODE: ${{ inputs.mode || 'injuries' }}
+          SEASON: ${{ inputs.season || '2026' }}
+          WEEKS: ${{ inputs.weeks || '10' }}
+          CAPTURE_DATE: ${{ inputs.capture_date }}
+        run: |
+          python3 scripts/capture_availability.py \
+            --mode "$MODE" --season "$SEASON" --weeks "$WEEKS" \
+            ${CAPTURE_DATE:+--capture-date "$CAPTURE_DATE"}
+      - name: Commit the dated capture (append-only ledger)
+        run: |
+          git config user.name "nfl-evidence-bot"
+          git config user.email "nfl-evidence-bot@users.noreply.github.com"
+          git add data/nfl-evidence-7cac9edd nfl-evidence-7cac9edd
+          if git diff --cached --quiet; then
+            echo "no capture change"
+          else
+            git commit -m "data(nfl-evidence): official capture $(date -u +%Y-%m-%dT%H:%M:%SZ) [skip ci]"
+            git pull --rebase origin "${GITHUB_REF_NAME}" || true
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
+      - name: Upload the capture text for inspection
+        uses: actions/upload-artifact@v4
+        with:
+          name: nfl-evidence-capture
+          path: data/nfl-evidence-7cac9edd/captures/
+          if-no-files-found: warn
+
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Unit tests for the capture engine
+        run: python3 -m unittest tests.test_capture_availability -v
+      - name: Build the desk pages from the committed data
+        run: python3 scripts/build_evidence_desk.py
+      - name: Fail-closed verification
+        run: python3 scripts/verify_evidence_desk.py
+      - name: Confirm the committed pages match a clean rebuild
+        run: git diff --exit-code -- nfl-evidence-7cac9edd/
