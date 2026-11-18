@@ -25,7 +25,7 @@ data/decision-desk/official/official_injuries_wk10.csv,276,276,0,ok,https://gith
 data/decision-desk/official/official_standings_2026.csv,32,32,0,ok,https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/audit_repo.py
 data/decision-desk/parlay_correlations.csv,3,3,0,ok,https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/audit_repo.py
 data/decision-desk/prop_correlations.csv,6,6,0,ok,https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/audit_repo.py
-data/decision-desk/provenance_audit.csv,50,50,0,ok,https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/audit_repo.py
+data/decision-desk/provenance_audit.csv,75,75,0,ok,https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/audit_repo.py
 data/decision-desk/questions.csv,18,18,0,ok,https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/audit_repo.py
 data/decision-desk/requirements.csv,19,19,0,ok,https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/audit_repo.py
 data/decision-desk/sgp_pricing_table.csv,7,7,0,ok,https://github.com/sassnarep3-star/Own5/blob/main/tools/decision_desk/audit_repo.py
