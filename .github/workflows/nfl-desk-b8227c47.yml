@@ -1,0 +1,28 @@
+name: NFL desk b8227c47 — probe (temporary)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Fetch official injury report pages (raw)
+        run: |
+          mkdir -p probe
+          for w in 10 11; do
+            curl -sS -L -A "Mozilla/5.0 (compatible; own5-desk-capture/1.0)" \
+              -D probe/headers_reg$w.txt -o probe/reg$w.html \
+              -w "reg$w http=%{http_code} effective=%{url_effective} bytes=%{size_download}\n" \
+              "https://www.nfl.com/injuries/league/2026/reg$w" || echo "reg$w FAILED"
+          done
+          date -u
+          sha256sum probe/*.html
+      - uses: actions/upload-artifact@v4
+        with:
+          name: probe-injury-html
+          path: probe/
