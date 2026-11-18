@@ -1,5 +1,8 @@
 # Own5 — Sports Line-Origination Research (multi-session)
 
+> **Repository review (2026-11-18, branch `arena/51cf3786-own5`):** every desk verifier was run from the repo root ([`repo-review/verifiers.html`](repo-review/verifiers.html)); two failing verifiers were fixed; official NFL pages were spot-checked ([`repo-review/spot-checks.html`](repo-review/spot-checks.html)); 16 irregularities are listed on the [Flagged for Review page](repo-review/flagged.html). Start from the [NFL integration hub](nfl-integration-a620f5a5/index.html) and the [repo review](repo-review/index.html). Rebuild the review with `python3 repo-review/run_verifiers.py && python3 repo-review/build.py && python3 repo-review/verify.py`.
+
+
 This repository hosts work from **three parallel agent sessions** (see `COORDINATION.md`): an **NBA Line-Origination Lab** (session `9c3a0a69`, served at `/docs/`) and an **NFL Research Desk** with detail pages (sessions `cd43258e` and `0f468a47`, served at the site root).
 
 | Dashboard | Scope | Live URL | Session |
