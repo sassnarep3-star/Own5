@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Executive summary · NFL official-source desk (3cb7800c)</title>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="brand">NFL official-source desk <span>3cb7800c</span></div>
+  <nav aria-label="Pages"><a href="index.html">Home</a><a href="schedule.html">Week 11 schedule</a><a href="availability.html">Availability</a><a href="https://sassnarep3-star.github.io/Own5/nfl-desk-5c5f4aaf/">Desks index (5c5f4aaf)</a><a href="repo.html">Repo state</a><a href="sources.html">Sources</a><a href="summary.html" class="current" aria-current="page">Executive summary</a><a href="suggestions.html">Suggestions (review)</a><a href="questions.html">Questions</a><a href="flagged.html">Flagged for review</a></nav>
+</header>
+<main id="main">
+<h1>Executive summary</h1>
+<p class="lead">The short version: the official Week 11 slate is readable; Week 11 availability is not published yet; several repo facts block safe merges.</p>
+
+<section class="panel">
+<h2>What is verified today</h2>
+<ul>
+<li>The Week 11 official schedule lists <strong>13 games</strong> and <strong>6 teams on bye</strong>. Together these cover 32 clubs (S-01).</li>
+<li>The Week 11 injury report is <strong>not published</strong> at the stamp. The Week 11 URL serves the Week 10 report (A-01, F-01).</li>
+<li>The official standings use the club codes <strong>AZ</strong> and <strong>LA</strong>. The schedule bye block prints <strong>LAR</strong> for the Rams (S-04, F-02).</li>
+</ul>
+</section>
+<section class="panel">
+<h2>What is not verified, and why</h2>
+<ul>
+<li><strong>Venues</strong> are blank. The printed game lines carry none, and one Sunday Night game has an unexplained Mexico City logo (F-03).</li>
+<li><strong>Availability and designations</strong> for Week 11 are blank. The report is not served (F-01).</li>
+<li><strong>Inactives, snap counts, depth charts and game books</strong> are not captured in this desk. They are open questions (Q-08).</li>
+<li><strong>Prices, odds, backtests and model outputs</strong> are not produced here. The price-data policy has not been decided (S-06, Q-07).</li>
+</ul>
+</section>
+<section class="panel">
+<h2>Repo state that affects decisions</h2>
+<ul>
+<li>10 PRs are open against main. Nine of them were opened between 2026-11-02 and 2026-11-14 (F-06).</li>
+<li>The decision-desk PR check failed on 11 of 12 recent PR runs (F-05). Merges that rely on that check are not safe until it is fixed or retired (S-04).</li>
+<li>The root banner still reads AS OF 2026-11-02. Its notice now links the desk directory (PR #102). The banner is generated, so it needs the generator, not a hand edit (F-07, S-01).</li>
+<li>There are 25 NFL desk directories, cross-checked against the directory page (R-07). Several answer the same brief. Choosing one canonical desk is a decision for the owner (S-05).</li>
+</ul>
+</section>
+<section class="panel">
+<h2>Decisions needed from the owner</h2>
+<ol>
+<li>Whether to keep the desk directory (5c5f4aaf) as the single index, and which desks to retire (S-01, S-05).</li>
+<li>Which club-code set the project uses as its join key (S-03). The official standings set is recommended.</li>
+<li>Whether the decision-desk check is required (S-04, Q-05).</li>
+<li>Which open PRs to close or consolidate (S-05, Q-06).</li>
+<li>The price-data policy, before any price or backtest page is published (S-06, Q-07).</li>
+</ol>
+<p>Each suggestion lists its options and what would change the call. Nothing has been implemented.</p>
+</section>
+<section class="panel">
+<h2>Scope of this session</h2>
+<p>This session did not build the injury, depth, pricing, backtest or leaderboard work in the brief. Those live in
+the sibling desks listed on the Desks index, and this desk has not re-verified their numbers.
+Its job is to fix what can be read today, with timestamps, and to list what is missing.</p>
+</section>
+
+</main>
+<footer>
+  <p>Not a betting feed. No prices, odds, picks or model outputs are published here.
+  Every value comes from a CSV in <code>data/</code>; each row carries a source link or an explicit
+  badge. Blank cells are unverified and are not inferred.</p>
+  <p>Rebuild: <code>python3 nfl-desk-3cb7800c/tools/build_site.py</code> · Checks:
+  <code>python3 nfl-desk-3cb7800c/verify.py</code> · Pages are generated; do not hand-edit.</p>
+</footer>
+</body>
+</html>

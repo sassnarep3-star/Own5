@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repo state · NFL official-source desk (3cb7800c)</title>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="brand">NFL official-source desk <span>3cb7800c</span></div>
+  <nav aria-label="Pages"><a href="index.html">Home</a><a href="schedule.html">Week 11 schedule</a><a href="availability.html">Availability</a><a href="https://sassnarep3-star.github.io/Own5/nfl-desk-5c5f4aaf/">Desks index (5c5f4aaf)</a><a href="repo.html" class="current" aria-current="page">Repo state</a><a href="sources.html">Sources</a><a href="summary.html">Executive summary</a><a href="suggestions.html">Suggestions (review)</a><a href="questions.html">Questions</a><a href="flagged.html">Flagged for review</a></nav>
+</header>
+<main id="main">
+<h1>Repo state</h1>
+<p class="lead">Pull requests, CI runs and the root landing page, as read at the stamp shown.</p>
+<section class="notice"><strong>Repo facts are not league facts.</strong> They come from GitHub and this checkout. They are labelled REPO and carry no league claim.</section><div class="table-wrap"><table>
+<caption>Repository state</caption>
+<thead><tr><th>ID</th><th>Check</th><th>Value at read</th><th>Read (UTC)</th><th>Class</th><th>Source</th><th>Note</th></tr></thead>
+<tbody>
+<tr><td>R-01</td><td>Open pull requests against main</td><td>10 (#8 #34 #43 #51 #59 #62 #69 #78 #80 #101)</td><td>2026-11-18T03:13:59Z</td><td><span class="badge b-repo">REPO</span></td><td><a href="https://github.com/sassnarep3-star/Own5/pulls" rel="noopener" target="_blank">GitHub</a></td><td>Read with gh pr list --state open. Mergeability was UNKNOWN for the older PRs when queried.</td></tr>
+<tr><td>R-02</td><td>decision-desk.yml runs on pull_request (12 most recent)</td><td>11 failure; 1 in progress (PR #101 head)</td><td>2026-11-18T03:13:59Z</td><td><span class="badge b-repo">REPO</span></td><td><a href="https://github.com/sassnarep3-star/Own5/actions/workflows/decision-desk.yml" rel="noopener" target="_blank">GitHub</a></td><td>Failing step per earlier logs: clean-rebuild diff. Not re-diagnosed here.</td></tr>
+<tr><td>R-03</td><td>Root index.html banner date</td><td>&#x27;AS OF 2026-11-02&#x27; appears 3 times; 2026-11-17 appears once in the notice</td><td>2026-11-18T03:13:59Z</td><td><span class="badge b-repo">REPO</span></td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/index.html" rel="noopener" target="_blank">GitHub</a></td><td>Counted with grep on the main checkout.</td></tr>
+<tr><td>R-04</td><td>Root index.html is generated and diff-checked in CI</td><td>verify.yml line 30: git diff --exit-code -- data/research.json index.html pages/</td><td>2026-11-18T03:13:59Z</td><td><span class="badge b-repo">REPO</span></td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/.github/workflows/verify.yml" rel="noopener" target="_blank">GitHub</a></td><td>A hand edit to root index.html fails this job. This desk therefore links to root from nowhere.</td></tr>
+<tr><td>R-05</td><td>Pages workflow on main (last push run)</td><td>success (2026-11-17T01:48:41Z)</td><td>2026-11-18T03:13:59Z</td><td><span class="badge b-repo">REPO</span></td><td><a href="https://github.com/sassnarep3-star/Own5/actions/workflows/pages.yml" rel="noopener" target="_blank">GitHub</a></td><td>Successful run on main. Says nothing about PR-level checks.</td></tr>
+<tr><td>R-06</td><td>Concurrent session on the board</td><td>PR #101 (arena/68bfa568-own5) opened 2026-11-18T03:13:25Z; scope audit-68bfa568/** and COORDINATION.md</td><td>2026-11-18T03:13:59Z</td><td><span class="badge b-repo">REPO</span></td><td><a href="https://github.com/sassnarep3-star/Own5/pull/101" rel="noopener" target="_blank">GitHub</a></td><td>Scope does not overlap this desk (nfl-desk-3cb7800c/**). Its PR body reports the 24-desk count is not reproduced.</td></tr>
+<tr><td>R-07</td><td>NFL desk directories (rule: nfl-*, nfl_*, own5-desk; excludes nfl-desk-5c5f4aaf and nfl-desk-3cb7800c)</td><td>25 (27 directories in the checkout including both excluded ones)</td><td>2026-11-18T03:14:00Z</td><td><span class="badge b-repo">REPO</span></td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-5c5f4aaf/data/desks.csv" rel="noopener" target="_blank">GitHub</a></td><td>The 5c5f4aaf directory (merged PR #102) lists the same 25 names under the same rule. verify.py compares the two lists at check time.</td></tr>
+</tbody></table></div>
+</main>
+<footer>
+  <p>Not a betting feed. No prices, odds, picks or model outputs are published here.
+  Every value comes from a CSV in <code>data/</code>; each row carries a source link or an explicit
+  badge. Blank cells are unverified and are not inferred.</p>
+  <p>Rebuild: <code>python3 nfl-desk-3cb7800c/tools/build_site.py</code> · Checks:
+  <code>python3 nfl-desk-3cb7800c/verify.py</code> · Pages are generated; do not hand-edit.</p>
+</footer>
+</body>
+</html>
