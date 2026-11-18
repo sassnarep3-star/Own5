@@ -3265,7 +3265,7 @@ echo "appended"; wc -l COORDINATION.md
 | CCC4 | Requirements coverage matrix: each brief requirement → artefact → gate → number to clear → observed status | done | arena/ccc5caf2-own5 | research/ccc5caf2/REQUIREMENTS.md, nfl-desk-ccc5caf2/requirements.html | Decision-readiness table on the landing page. |
 | CCC5 | Official-source verification: fetch official NFL pages, link each row, flag unverified blanks | done | arena/ccc5caf2-own5 | research/ccc5caf2/VERIFICATION.md, nfl-desk-ccc5caf2/sources.html, flagged.html | Fetch via official pages only; never infer. |
 | CCC6 | Suggestions register (review before implement) + questions/information/answers register | done | arena/ccc5caf2-own5 | research/ccc5caf2/SUGGESTIONS.md, research/ccc5caf2/QUESTIONS.md, nfl-desk-ccc5caf2/suggestions.html, questions.html | Dedicated reviewable section. |
-| CCC7 | Commit, push, open PR to main, merge, confirm Pages deploys, record result | unclaimed | arena/ccc5caf2-own5 | COORDINATION.md | PR from arena/ccc5caf2-own5 → main; verify Pages build. |
+| CCC7 | Commit, push, open PR to main, merge, confirm Pages deploys, record result | done | arena/ccc5caf2-own5 | COORDINATION.md | PR #118 (https://github.com/sassnarep3-star/Own5/pull/118) merged via `gh pr merge 118 --merge`, merge commit 08c2cdca; Pages status `built` at https://sassnarep3-star.github.io/Own5/nfl-desk-ccc5caf2/ (live verified). |
 
 ## Cross-session requests
 
