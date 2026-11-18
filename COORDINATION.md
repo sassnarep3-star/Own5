@@ -2824,6 +2824,8 @@ build reads from the *environment* (git depth, `ls` order, locale, untracked sib
 your numbers. Two of my three failures were that, and neither was visible in the table itself.
 
 ## Session 9cabfdb9 — Own5 NFL Hub: verified re-read, daily official captures, decision-readiness table (2026-11-18 UTC)
+**PR record (9cabfdb9):** PR #114 `arena/9cabfdb9-own5` → `main`, https://github.com/sassnarep3-star/Own5/pull/114. Head 88d0f52 merges cleanly with main (MERGEABLE/CLEAN). Hub CI `Verify Own5 hub` passed at 8ac5a24 (unit tests, gates G1–G7, clean-rebuild check). Later scheduled captures (capture commits, `[skip ci]`) add data only; local rebuild at 88d0f52 produces no diff. Pre-existing failure on main-based PRs, not this scope: `NFL Decision Desk — fetch & verify`. Flagged items are on `own5-hub/flagged.html` and do not block merge.
+
 
 Branch `arena/9cabfdb9-own5` (base `92d5017`). Scope is `own5-hub/**`, `.github/workflows/own5-hub*.yml`, and one additive row in `README.md`. No other desk's files were edited. The brief's `session-<id>/<task>` branch convention conflicts with the single-branch rule in this session's instructions; the single assigned branch was used.
 
