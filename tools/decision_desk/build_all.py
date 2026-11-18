@@ -31,7 +31,11 @@ def main() -> int:
         # allowed to overwrite the committed parsed tables with an empty file.
         steps.remove("parse_official.py")
         print("note: .work/official HTML absent - reusing committed parsed tables")
-    steps.insert(steps.index("audit_repo.py"), "export_registers.py")
+    if "audit_repo.py" in steps:
+        steps.insert(steps.index("audit_repo.py"), "export_registers.py")
+    else:
+        # audit skipped (DECISION_DESK_SKIP_AUDIT=1): registers still run last
+        steps.append("export_registers.py")
     for step in steps:
         print(f"== {step}")
         rc = subprocess.call([sys.executable, os.path.join(HERE, step)])
