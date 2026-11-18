@@ -3332,7 +3332,7 @@ request is logged below instead.
 | V5 | Blank derived injury values with no official source; add the 2026-11-18 official read of the seven tracked players with change column | done (no separate delta file) | 2025930f | `data/nfl-origin-desk/injuries.csv` | Derived values blanked (F18). Eight tracked players set to the official Week 10 values read 2026-11-18, incl. Joseph and Mays Out and Reed added (F19). `injury_reads_2026-11-18.csv` was not created: the 2026-11-12 repo capture has capture gaps (F28-type), so no change file was published. |
 | V6 | Week 11 origination (side → total → moneyline) from the 2026-11-18 standings and the official Week 11 schedule; market columns blank | deferred (not in this PR) | 2025930f | none committed | Draft files (`scripts/originate_origin_desk_wk11.py`, `data/nfl-origin-desk/schedule_2026_wk11.csv`, `model_lines_2026_wk11.csv`) are untracked and unverified. Not committed. Needs the schedule and model-validation steps before any publication. |
 | V7 | Source register: fix generic links, add dated reads and the NFL.com terms text (s.1.3) | done (partial) | 2025930f | `data/nfl-origin-desk/sources.csv` | Added S21 (Week 10 report), S22 (standings), S23 (Terms s.1.3). Generic index links for other rows not changed. |
-| V8 | Build, verify, commit, PR to main, merge, confirm Pages | in progress | 2025930f | COORDINATION.md; `scripts/build_origin_desk.py` count guards; `.github/**` not touched | Build has fail-closed count guards (18 questions, 7 blocking, 16 suggestions, 24 flagged). Verify PASSED on 15 CSVs. Record PR link and merge result below. |
+| V8 | Build, verify, commit, PR to main, merge, confirm Pages | done | 2025930f | COORDINATION.md; `scripts/build_origin_desk.py` count guards; `.github/**` not touched | Build has fail-closed count guards (18 questions, 7 blocking, 16 suggestions, 24 flagged). Verify PASSED on 15 CSVs. Record PR link and merge result below. |
 
 **Progress note (2025930f, 2026-11-18).** The build script (`scripts/build_origin_desk.py`) writes every origin CSV from literal rows, so corrections were made in the script and the build was re-run. A CSV-only edit would have been overwritten. Verifier: PASSED. Independent recompute of the four correlations matches the published values exactly. Pre-existing workflow failures noted on the board (`verify.yml` on COORDINATION.md PRs; root `decision-desk.yml`) are not caused by this session and were not edited.
 
@@ -3357,3 +3357,74 @@ request is logged below instead.
 
 **Cross-session requests (logged, not actioned).**
 * Session 3cb7800c's `nfl-desk-3cb7800c/data/flagged.csv` row F-03 (venue blank, Mexico City unconfirmed) is resolved by this desk's V2 capture. Its file is owned by 3cb7800c; per the rules this resolution is logged here rather than edited into that CSV. The venue values are published in `nfl-venue-390e13fd/data/venues.csv` with per-game official game-centre links.
+
+**Pages.** `gh api repos/sassnarep3-star/Own5/pages/builds/latest` for `850fead` → `built` at
+03:56:47Z. Live checks through the sandbox fetch tool (curl cannot reach github.io):
+`/nfl-command-desk/` (8 status cards, the 73-row readiness table, findings panel) and
+`/nfl-command-desk/availability.html` (the three Lions rows, the 44-row diff) both render with
+their official source links intact.
+
+**Verification performed (printed, not asserted).**
+1. `verify.py` → **50 PASS, 0 FAIL**: per-row official source for 13 CSVs; 18 pinned row counts
+   (drift alarm); corpus reconciliation 32/32; corpus PF/PA additivity; 13 games + 6 byes = 32
+   clubs once each; no certified strategy and no staking figure; the three Lions cells OUT vs
+   blank; internal links; external host allowlist; no forbidden claim; registration hash exists,
+   is the pre-registration commit, is on the branch, and is the hash the site quotes; no escaped
+   markup or raw tuple in any page.
+2. `unittest` → **26 tests OK**, including negative controls: a one-point score error and a
+   flipped result must break the reconciliation; adding holdout games must change the ratings; a
+   forecast inverted away from the outcome must score worse; Holm must be monotone; escaped
+   markup must fail.
+3. Corpus: 150 FINAL games (136 adopted from `nfl-b34253a1` + 14 read this session). Adopted only
+   after all 32 clubs matched the official standings on W-L-T, PF and PA. Source of the rule:
+   PF/PA additivity makes 32 clubs 32 constraints.
+4. Week 11: 13 fixtures + 6 byes, 32 clubs exactly once; 6/6 comparable facts agree with the
+   dated 2026-05-14 announcement.
+5. Availability: 44 rows re-read from chunk 0 of 8 of the Week 10 report; 27 MATCH, **17 STALE**.
+
+**Defects found and fixed in this session (not shipped).**
+* The total estimator first used the *mean* of the two clubs' scoring rates (≈23 points) instead
+  of the sum (≈46). Fixed before any number was published.
+* The renderer escaped any cell containing markup, so the source column on every table rendered
+  `&lt;a href=...`. Fixed; V12 and two tests now fail the build if it recurs.
+* The published registration hash `f85bb0b` was orphaned when the COORDINATION.md rebase rewrote
+  history. Republished as **`e7282e35dbf9afb0c1b364a152b9431dc71b64af`**; `build.py` now reads it
+  from git and V11 asserts the site quotes the hash the verifier checks. **A rebase after this
+  point will again require republishing — the check is designed to catch it, not to prevent it.**
+
+**Checks red on the PR, proven pre-existing (not this desk's files).** Both were reproduced on a
+clean detached worktree of `origin/main` (`875029a`) with none of this branch's changes:
+* `Verify NFL B34 Week 10 research desk` — its own rebuild leaves 4 modified files
+  (`audit.html`, `data/repo_audit.csv`, `data/repo_audit_summary.json`, `index.html`), so the
+  diff check fails. It is triggered by `COORDINATION.md`, which every claiming session edits.
+* `NFL Decision Desk — fetch & verify` — its rebuild leaves 4 modified files under
+  `data/decision-desk/`.
+Both are owned by other desks and need regenerating. Recorded on PR #120
+(comment 6968551904) and not edited.
+
+**Cross-session requests (still open).**
+* Root `index.html` is stamped `Reviewed 2026-11-02` and does not list any desk newer than
+  `nfl-integration-a620f5a5`. It is diff-checked by `verify.yml`; the owner of
+  `scripts/build.py` must change the generator. FLAG-S2.
+* The two red workflows above.
+
+**Known consequences / limitations.** One read per source on one day; the injury page was read
+to chunk 0 of 8 only, so the full-page row count is unknown and quoted as unknown. The 136
+adopted rows carry an earlier session's venue and kickoff notes, which are not re-verified here —
+only their scores are. No market price exists anywhere in the repository, so ROI, CLV, residual
+and vig-free consensus are all blank by policy (FLAG-P1).
+
+### 2025930f — PR and deployment record (2026-11-18 UTC)
+
+| PR | Purpose | Result |
+|----|---------|--------|
+| https://github.com/sassnarep3-star/Own5/pull/122 | Origin desk re-check corrections (V3, V4, V5, V7): correlations on the 2026-11-18 official standings; derived injury values blanked; official Week 10 designations (Joseph, Mays Out; Reed added); S2 figure disputed; pre-registration limitation (F15); verification wording (58 nfl.com + 62 PFR of 120 finals); 7 blocking questions; fail-closed count guards; audit log (127 entries) | **Merged** to `main` at 2026-11-18T03:59:27Z, merge commit `74d497e` (`gh pr merge 122 --merge`). Pages deploy **success** for `74d497e`. Landing and Flagged pages re-fetched live and show the corrected content. |
+
+**Checks at merge.** The desk's own checks passed: `Build, evidence integrity and browser smoke tests`, `desk-verify`, and two `verify` jobs. `scripts/verify_origin_desk.py` PASSED (15 CSVs, 13 HTML pages). Two checks failed and were not caused by this PR:
+* `Rebuild, audit, and test isolated NFL desk` (B34 Week 10 desk). It also fails on the `main` push at 08c2cdc, so it predates this PR.
+* `NFL Decision Desk — fetch & verify`. It fails on 12 of 12 recent PR runs across unrelated branches. Not edited (other sessions' pipeline).
+
+**Conflicts logged.** Rebasing on `main` (08c2cdc, then 850fead) conflicted in COORDINATION.md. Both times, all session blocks were kept (main's first, then this session's). No other session's file was edited. The branch was force-pushed with a lease to its own branch after the rebase (history rewrite on `arena/2025930f-own5` only).
+
+**Not done (open, flagged).** Week 11 origination (V6) was deferred; its draft files are untracked and not committed. No scheduled capture (NFL.com Terms s.1.3, F20). Re-check of the other origin rows and sources (F22, F23) is open. The price-data policy, the 136-game backtest corpus, and the owner decisions (Q01–Q06, Q18) remain open.
+
