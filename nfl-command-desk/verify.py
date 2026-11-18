@@ -185,6 +185,19 @@ def v09_external():
     check(not bad, "V09 external links are https on approved hosts", "; ".join(sorted(set(bad))[:5]))
 
 
+def v12_no_escaped_markup():
+    """A cell containing escaped markup means the renderer lost a link. That happened once and
+    shipped broken source links onto the page; this check is what stops it recurring."""
+    bad = []
+    for p in sorted(HERE.glob("*.html")):
+        text = p.read_text()
+        for marker in ("&lt;a href", "&#x27;num&#x27;", "&#x27;badge&#x27;"):
+            if marker in text:
+                bad.append(f"{p.name}: {marker}")
+    check(not bad, "V12 no page renders escaped markup or a raw tuple",
+          "; ".join(bad[:5]))
+
+
 def v10_no_forbidden_claims():
     forbidden = re.compile(
         r"(certified strategy|staking return|ROI of|profit of|guaranteed|closing line value =)",
@@ -222,7 +235,7 @@ def v11_registration():
 def main():
     for fn in (v01_sources_per_row, v02_counts, v03_reconcile, v04_arithmetic, v05_fixtures,
                v06_no_certified, v07_lions, v08_internal_links, v09_external,
-               v10_no_forbidden_claims, v11_registration):
+               v10_no_forbidden_claims, v11_registration, v12_no_escaped_markup):
         fn()
     print(f"\n{len(PASSES)} passed, {len(FAILS)} failed")
     if FAILS:

@@ -107,7 +107,17 @@ nav{display:flex;flex-wrap:wrap;gap:4px}main{padding:18px}.grid2{grid-template-c
 """
 
 
+class Html(str):
+    """A string that is already valid markup and must not be escaped again."""
+
+
+def h(fragment):
+    return Html(fragment)
+
+
 def esc(v):
+    if isinstance(v, Html):
+        return v
     return html.escape("" if v is None else str(v), quote=True)
 
 
@@ -118,8 +128,15 @@ def read(name):
 
 def link(url, label="source"):
     if not url:
-        return '<span class="badge b-UNVERIFIED">no source</span>'
-    return f'<a href="{esc(url)}" target="_blank" rel="noopener noreferrer">{esc(label)} &#8599;</a>'
+        return h('<span class="badge b-UNVERIFIED">no source</span>')
+    return h(f'<a href="{html.escape(url, quote=True)}" target="_blank" '
+             f'rel="noopener noreferrer">{html.escape(str(label))} &#8599;</a>')
+
+
+def link_item(tup):
+    """tup = (url, label) rendered as a real anchor (the plain-string path escapes)."""
+    url, label = tup
+    return link(url, label)
 
 
 def badge(value, kind=None):
@@ -136,6 +153,10 @@ def table(headers, rows, cls=""):
     for r in rows:
         cells = []
         for c in r:
+            if isinstance(c, list) and len(c) == 1 and isinstance(c[0], tuple):
+                c = c[0]
+            if isinstance(c, (tuple, list)) and len(c) == 2 and isinstance(c[1], str):
+                c = (c[0], c[1])
             if isinstance(c, tuple):
                 val, kind = c
                 if kind == "num":
@@ -146,6 +167,10 @@ def table(headers, rows, cls=""):
                     cells.append(f"<td>{badge(val)}</td>")
                 elif kind == "raw":
                     cells.append(f"<td>{val}</td>")
+                elif kind == "html":
+                    cells.append(f"<td>{val}</td>")
+                elif kind == "link":
+                    cells.append(f"<td>{link_item(val)}</td>")
                 else:
                     cells.append(f"<td>{esc(val)}</td>")
             else:
@@ -181,6 +206,36 @@ Blank cells are unverified, never zero. Registration commit {REG[:12]}.
 
 
 # ---------------------------------------------------------------------------------
+
+def _findings_table():
+    def where(page, label):
+        return f'<a href="{page}">{label}</a>'
+    rows = [
+        ["Home-field assumption vs this season", "2.0 assumed; -0.98 observed",
+         "The registered 2.0-point edge is not supported by 2026 so far, and the interval includes it",
+         (where("origination.html", "Origination"), "html")],
+        ["Total estimator A vs B", "MAE 11.63 vs 10.68",
+         "B is closer by 0.95 points but the paired interval includes zero, so both stay published",
+         (where("leaderboard.html", "Leaderboard"), "html")],
+        ["Moneyline baseline skill", "BSS -0.157 (-0.405..+0.089)",
+         "Worse than a coin over 85 out-of-sample games; the holdout alone looks better, which is why it is not claimed",
+         (where("leaderboard.html", "Leaderboard"), "html")],
+        ["Frozen-line exposure", "29 of 86 home covers (33.7%)",
+         "One directional exposure, not per-game skill; published as a flag, not a strategy",
+         (where("flagged.html", "FLAG-R1"), "html")],
+        ["Bets needed to prove 55%", "617",
+         "At 80% power, one-sided 5%; a 5-1 week proves nothing",
+         (where("leaderboard.html", "Leaderboard"), "html")],
+        ["Decay of a single capture", "17 of 44 rows stale",
+         "A point-in-time injury capture moved within six days",
+         (where("availability.html", "Availability"), "html")],
+        ["Requirements needing data that does not exist yet", "33 of 73",
+         "They collapse into six missing datasets, not 33 separate failures",
+         (where("requirements.html", "Requirements"), "html")],
+    ]
+    return table(["Finding", "Number", "What it means", "Where"], rows)
+
+
 def page_index():
     reqs = read("requirements.csv")
     flags = read("flagged.csv")
@@ -254,6 +309,12 @@ Full ledger with filters on <a href="requirements.html">Requirements &amp; gates
 ])}
 </section>
 </div>
+
+<section class="panel"><h2>Analysis findings</h2>
+<p class="desc">Computations over the reconciled corpus. Each is reproducible from the
+registration commit; the model pages carry the uncertainty.</p>
+{_findings_table()}
+</section>
 
 <section class="panel"><h2>Open questions before any decision</h2>
 <p class="desc">Eighteen questions, each with the information that is missing and the cheapest
@@ -470,14 +531,14 @@ separates them.</p>
        [[o["fixture_id"], (o["fair_home_margin"], "num"), o["fair_favourite"],
          (o["fair_spread"], "num"), (o["fair_total_a"], "num"), (o["fair_total_b"], "num"),
          (o["total_gap"], "num"), (o["p_home_ml"], "num"), (o["p_away_ml"], "num"),
-         ("", "blank"), ("", "blank"), ("", "blank"), link(o["source_url"])] for o in og])}
+         ("", "blank"), ("", "blank"), ("", "blank"), (("link", (o["source_url"], "official")))] for o in og])}
 </section>
 <section class="panel"><h2>Inputs: ratings from weeks 1-4 only</h2>
 <p class="desc">Net points per game, opponent-aware by construction because every margin
 contains the opponent. Nothing after week 4 is used for any Week 11 number.</p>
 {table(["Club", "Games in train window", "Net points / game", "Points scored / game", "Source"],
        [[r["team"], (r["games_train"], "num"), (r["net_points_pg"], "num"),
-         (r["points_scored_pg"], "num"), link(r["input_url"])] for r in rat])}
+         (r["points_scored_pg"], "num"), (("link", (r["input_url"], "official")))] for r in rat])}
 </section>
 """
     return page("origination.html", "Line origination",
@@ -511,7 +572,7 @@ mismatch here fails the build (drift alarm, R61).</p>
        [[r["team"], f'{r["corpus_w"]}-{r["corpus_l"]}-{r["corpus_t"]}',
          f'{r["official_w"]}-{r["official_l"]}-{r["official_t"]}',
          (r["corpus_pf"], "num"), (r["official_pf"], "num"), (r["corpus_pa"], "num"),
-         (r["official_pa"], "num"), (r["match"], "badge"), link(r["source_url"])]
+         (r["official_pa"], "num"), (r["match"], "badge"), (("link", (r["source_url"], "official")))]
         for r in recon])}
 </section>
 <section class="panel"><h2>Week by week</h2>
@@ -522,7 +583,7 @@ on 2026-11-18.</p>
         f"""<h3 style="font-size:13px;margin:14px 0 4px">Week {w}</h3>"""
         + table(["Date", "Away", "Score", "Home", "Score", "Total", "Source"],
                 [[r["date"], r["away"], (r["away_score"], "num"), r["home"],
-                  (r["home_score"], "num"), (r["total"], "num"), link(r["source_url"])]
+                  (r["home_score"], "num"), (r["total"], "num"), (("link", (r["source_url"], "official")))]
                  for r in sorted(wk[w], key=lambda x: x["date"])])
         for w in sorted(wk, key=int)) + """
 </section>
@@ -559,7 +620,7 @@ a diagnostic and is never the ranking.</p>
          (r["bets"], "num"), (r["brier"], "num"), (r["bss_vs_flat"], "num"),
          f'{r["ci_low"]}..{r["ci_high"]}' if r["ci_low"] else ("", "blank"),
          (r["p_exact"], "num"), (r["p_holm"], "num"), (r["certified"] or "", "badge"),
-         (r["mae"], "num"), (r["mean_bias"], "num"), link(r["source_url"])] for r in lb])}
+         (r["mae"], "num"), (r["mean_bias"], "num"), (("link", (r["source_url"], "official")))] for r in lb])}
 </section>
 <section class="panel"><h2>Staking — deliberately separate and blank</h2>
 <p class="desc">A lucky staking run must never be able to mask a bad signal, so staking lives
@@ -622,7 +683,7 @@ publishes all three as <b>Out</b> with an injury and a did-not-participate statu
         "Result", "Source"],
        [[r["player"], r["repo_injury"] or ("", "blank"), r["repo_practice"] or ("", "blank"),
          r["repo_game"] or ("", "blank"), r["official_injury"], r["official_practice"],
-         r["official_game"], (r["result"], "badge"), link(r["source_url"])]
+         r["official_game"], (r["result"], "badge"), (("link", (r["source_url"], "official")))]
         for r in lions])}
 </section>
 <section class="panel"><h2>Full re-read diff</h2>
@@ -636,7 +697,7 @@ in the official column means the official page printed no value there.</p>
          r["official_injury"] or ("", "blank"), r["official_practice"] or ("", "blank"),
          r["official_game"] or ("", "blank"),
          r["differing_fields"] or ("none", "blank"), (r["result"], "badge"),
-         link(r["source_url"])] for r in d])}
+         (("link", (r["source_url"], "official")))] for r in d])}
 </section>
 <section class="panel"><h2>Per-club counts (only what was read)</h2>
 <p class="desc">Starters out and replacements named are blank for every club: no official
@@ -645,7 +706,7 @@ source names a replacement, and an inferred one would be a fabrication.</p>
         "Starters out", "Replacement named", "Source"],
        [[r["club"], (r["rows_read"], "num"), (r["game_status_out"], "num"),
          (r["game_status_questionable"], "num"), (r["game_status_blank"], "num"),
-         ("", "blank"), ("", "blank"), link(r["source_url"])] for r in s])}
+         ("", "blank"), ("", "blank"), (("link", (r["source_url"], "official")))] for r in s])}
 </section>
 <div class="note warn"><b>What the Week 11 report says</b>
 The request for <code>reg11</code> resolved to the Week 10 page and the title string said
@@ -673,7 +734,7 @@ prose by the dated league announcement, so it carries both citations. The announ
 17 regular-season games plus three preseason per club, nine international games.</p>
 {table(["Fact", "As published on the live schedule page", "Announcement value", "Result", "Source"],
        [[r["fact"], r["as_announced"], r["announcement_value"], (r["result"], "badge"),
-         link(r["announcement_url"], "announcement")] for r in ann])}
+         (("link", (r["announcement_url"], "announcement")))] for r in ann])}
 </section>
 <section class="panel"><h2>Week 11 fixtures</h2>
 <p class="desc">{len(games)} games and {len(byes)} byes, each with the page it was read from.
@@ -682,11 +743,11 @@ Venue method is stated per row rather than assumed.</p>
         "Fixture facts", "Venue method", "Source"],
        [[r["fixture_id"], r["date"], r["kickoff_et"], r["network"], r["away"], r["home"],
          r["venue"], r["neutral_site"], r["fixture_facts"], r["venue_method"],
-         link(r["source_url"])] for r in games])}
+         (("link", (r["source_url"], "official")))] for r in games])}
 </section>
 <section class="panel"><h2>Byes</h2>
 {table(["Club", "Week", "Source"],
-       [[r["fixture_id"].split("-")[-1], "11", link(r["source_url"])] for r in byes])}
+       [[r["fixture_id"].split("-")[-1], "11", (("link", (r["source_url"], "official")))] for r in byes])}
 </section>
 """
     return page("fixtures.html", "Fixtures & context",
@@ -734,7 +795,7 @@ Each item states what was found, what would resolve it, and the official page in
 {sum(1 for f in fl if f['severity']=='REVIEW')} for review.</p>
 {table(["ID", "Severity", "Area", "Finding", "What would resolve it", "Source"],
        [[f["flag_id"], (f["severity"], "badge"), f["area"], f["finding"],
-         f["what_would_resolve"], link(f["source_url"])] for f in fl])}
+         f["what_would_resolve"], (("link", (f["source_url"], "official")))] for f in fl])}
 </section>
 <div class="note"><b>How to request a change</b>
 Open an issue on the repository naming the flag ID. A later session re-reads the linked

@@ -184,6 +184,20 @@ class TestSite(unittest.TestCase):
         for href, _, _ in build.NAV:
             self.assertTrue((HERE / href).exists(), href)
 
+    def test_no_page_renders_escaped_markup(self):
+        """Regression: source links once rendered as &lt;a href=... on every table row."""
+        for page in sorted(HERE.glob("*.html")):
+            text = page.read_text()
+            self.assertNotIn("&lt;a href", text, page.name)
+            self.assertNotIn("&#x27;num&#x27;", text, page.name)
+
+    def test_source_columns_contain_real_anchors(self):
+        import build
+        build.main()
+        text = (HERE / "requirements.html").read_text()
+        self.assertGreaterEqual(text.count('<a href="https://'), 70,
+                                "every requirement row must link to an official page")
+
     def test_no_blank_cell_is_rendered_as_zero(self):
         text = (HERE / "leaderboard.html").read_text()
         self.assertIn('class="blank"', text)
