@@ -1,0 +1,11 @@
+# Raw extract — venue-bearing "Game Info" block of the official NFL game centre page
+# URL: https://www.nfl.com/games/jets-at-chargers-2026-reg-11
+# Retrieved (UTC): 2026-11-18T03:43:57Z
+# Method: fetch_page tool, chunk 0 of the official game centre overview page; block copied verbatim.
+# Source class: OFFICIAL (NFL.com)
+
+## Game Info
+
+LocationLOCATIONINGLEWOOD, CA
+
+StadiumSTADIUMSOFI STADIUM

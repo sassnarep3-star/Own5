@@ -1,0 +1,24 @@
+# Raw extract — official NFL announcement article: "2026 NFL schedule powered by AWS to be released Thursday, May 14"
+# URL: https://www.nfl.com/news/2026-nfl-schedule-powered-by-aws-to-be-released-thursday-may-14
+# Announcement date (as published): May 8, 2026
+# Retrieved (UTC): 2026-11-18T03:43:57Z
+# Method: fetch_page tool; opening paragraphs copied verbatim.
+# Source class: OFFICIAL (NFL.com)
+
+The National Football League announced that the 2026 NFL Schedule powered by AWS will be released on Thursday, May 14 at 8 p.m. ET.
+
+Full live reveal and analysis of the 2026 NFL Schedule can be seen on NFL Network, ESPN2, the ESPN App and NFL+. Additional live coverage of the schedule release will also be available on the NFL Channel on FAST platforms.
+
+Ahead of the release of the full 2026 schedule on May 14, the league\u2019s broadcast partners will announce select games next week.
+
+The NFL will announce its remaining 2026 International Games on Wednesday, May 13 at 9 a.m. ET on Good Morning Football on NFL Network. This season, a record nine international contests will be played across four continents, seven countries and eight stadiums.
+
+* 2026 International Markets (designates a new market/city for 2026):
+
+- London, U.K. (Two games in Tottenham Hotspur Stadium, One in Wembley Stadium)
+- Madrid, Spain (Bernab\u00E9u Stadium \u2013 home to Real Madrid C.F.)
+- Melbourne, Australia* (Melbourne Cricket Ground; San Francisco 49ers versus Los Angeles Rams)
+- Mexico City, Mexico (Estadio Banorte)
+- Munich, Germany (FC Bayern Munich Stadium)
+- Paris, France* (Stade de France Stadium)
+- Rio De Janeiro, Brazil* (Maracan\u00E3 Stadium; Baltimore Ravens versus Dallas Cowboys)

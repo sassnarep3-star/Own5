@@ -1,0 +1,41 @@
+name: NFL Venue & Schedule-Announcement desk (390e13fd)
+
+# Scoped to this desk's paths only. Does not touch the root site or other desks.
+on:
+  push:
+    branches: [arena/390e13fd-own5]
+    paths:
+      - 'nfl-venue-390e13fd/**'
+      - '.github/workflows/nfl-venue-390e13fd.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'nfl-venue-390e13fd/**'
+      - '.github/workflows/nfl-venue-390e13fd.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nfl-venue-390e13fd-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Unit tests
+        run: cd nfl-venue-390e13fd && python3 -m unittest discover -s tests -v
+      - name: Verify committed data (venues, announcement, raw extracts, links)
+        run: python3 nfl-venue-390e13fd/verify.py
+      - name: Committed pages match a clean rebuild from the committed data
+        run: |
+          python3 nfl-venue-390e13fd/tools/build_site.py
+          git diff --exit-code -- nfl-venue-390e13fd/
+          test -z "$(git status --porcelain -- nfl-venue-390e13fd/)"
