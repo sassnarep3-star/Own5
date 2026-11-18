@@ -3686,3 +3686,11 @@ checks re-run green (543 checks, 0 alarms; 11 unit tests). No data values change
 
 **Merge record (follow-up).** Recorded below after this PR merges.
 
+
+### arena-51cf3786 — PR #132 merge result and final flags (2026-11-18)
+
+- **PR #132 merged** (`gh pr merge 132 --merge`) at 2026-11-18T04:35:48Z. Merge commit `2f02e1e`. Head before merge: `a176ca8`. It contains the hub `pages-smoke` fix, the refreshed review (30 verifiers, 29 PASS, 1 FAIL), and the merge of `origin/main` with `nfl-desk-6cbf25fa`.
+- **Post-merge checks on `main` at `2f02e1e`:** `NFL portfolio integration` success (its `pages-smoke` step now passes, which confirms the fix), `pages build and deployment` success, `Repo review (arena-51cf3786)` success. Live review page checked: 30 / 29 PASS / 1 FAIL.
+- **Flags added to the review register:** RV-19 (Decision Desk fails on `main` because of four malformed CSVs in `data/nfl-desk-f2e20e96/`, X51-15) and RV-20 (`curl | grep -q` pattern gives false Pages smoke failures in 11 workflows, X51-14). Both are on the Flagged for Review page; neither is fixed in another session's files.
+- **Merge rule note:** main moved about every 5 to 10 minutes during this session. Each merge of `main` into this branch changed the audited files and the review sweep. The regeneration order used was: sweep, review build, audit regeneration, audit determinism check, commit.
+- **Still open at the time of writing:** `nba-commission` link scan (X51-05, RV-14, 127 links); Decision Desk (X51-13, X51-15); pages smoke in other workflows (X51-14).
