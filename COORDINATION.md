@@ -2843,3 +2843,43 @@ official availability pages, and a single index plus Flagged-for-Review register
 | X5 | Verification (every body row linked or flagged), tests, PR to `main`, merge, Pages check, record | unclaimed→in progress | 98a211b8 | `nfl-98a211b8/**`, `COORDINATION.md` (append-only) |
 
 Read-only dependencies: none are edited. Any file in another namespace is quoted by path and by SHA-256 when read.
+
+### 98a211b8 — completion record (2026-11-18, session clock 03:1xZ)
+
+Statuses: X1–X4 **done** (verified by the commands below, not asserted). X5 completes with the PR and merge
+record that follows in the next block.
+
+**What was built (all under `nfl-98a211b8/**`, one `.github/workflows/nfl-98a211b8.yml`, one appended README section, this block).**
+7 static pages: Overview, Repo review, Official availability, Desk index, Flagged for Review, Executive summary, Sources.
+Stdlib-only `build.py` (deterministic, no timestamps), `verify.py` (V0–V9), `tests/test_build.py` (9 tests).
+
+**Sources read (dated, reproducible).**
+* https://www.nfl.com/injuries/league/2026/reg10 — chunk 0 of 8, read before 2026-11-18T03:11:29Z. Verbatim excerpt
+  saved at `nfl-98a211b8/captures/nfl_reg10_chunk0_excerpt_2026-11-18.md`, SHA-256
+  `27791393cc324ab6a27fa884b56bf50f00ee346f4539d560ba6e17a1c4cc42f2` (pinned in the CSVs, checked by V1).
+* https://www.nfl.com/injuries/league/2026/reg11 — requested; the tool returned the Week 10 URL and title. Week 11 not served at read time (inference from the redirect).
+* https://www.nfl.com/standings/league/2026/REG — chunk 0 of 2; AZ and LA abbreviations confirmed.
+* GitHub API (Pages configuration) and `gh run list --branch main` (CI state), both 2026-11-18.
+
+**Verification performed.**
+1. 44 visible official rows (Commanders 9, Giants 11, Patriots 15, Lions 9) compared field by field with `data/decision-desk/official/official_injuries_wk10.csv`: **27 match, 17 differ**. Per-row lines and row-level results are in `availability.html` and `data/injury_row_checks.csv`.
+2. `verify.py`: 29 PASS checks (V0 field counts in every CSV, V1 pinned hash, V2 parse counts, V3 comparison reproduces, V4 every repo-review row linked, V5 unverified rows labelled, V6 every body row sourced or labelled, V7 internal links resolve, V8 no http links, V9 byte-identical rebuild).
+3. `python3 -m unittest discover -s nfl-98a211b8/tests` → 9 tests OK.
+4. Two defects found by V0/V6 and fixed before publishing: unquoted commas in three CSVs (shifted columns), and unlisted tables passing joined strings instead of rows. Recorded because a CSV parse error would silently drop a row.
+
+**Irregularities (all on the Flagged page with links).** Repo review R01–R17. The blocking ones:
+* **R09** results feed uses `ARI`/`LAR` (18 club-game appearances) where the official standings use `AZ`/`LA`.
+* **R11** the claim "no market price exists anywhere in the repo" is false (163 of 272 games have spread, total and moneyline in the nflverse-derived log). The source-class policy is still open.
+* **R12/R13** three Lions players listed Out officially have blank game status in the repo copy; 17 of 44 visible rows differ overall. A single read cannot separate a later revision from a parse defect.
+* **R15** Week 11 injury report not served at read time.
+* **R14** three different Week 10 row counts across desks (276 repo, 254 and 279 on the board); unresolved.
+* **R02** the root index.html still shows 2026-11-02 dates and links one of 25 NFL-related folders.
+
+**Not done, deliberately.** No new decision desk (about 25 already exist). No changes to root `index.html`, `pages/**`, `assets/**`
+(integration-owned). No strategy, leaderboard, correlation or luck value is re-verified here; those belong to the other desks.
+Houston depth, the Week 11 availability, and the full 8-chunk Week 10 read are listed as UNVERIFIED on the Flagged page.
+
+**Requests logged for other sessions (not actioned):** root index listing every desk with capture date (integration session);
+results-feed alias map and club-by-club reconciliation (owners of e46fb855 and ce1f16ff); daily dated captures of the
+injury report on publication days (owners of the injury desks); per-week source URLs for injury rows (owners of data/decision-desk/official/*);
+workflow file-name mismatch, README table split, and nine open PRs (integration session).
