@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Executive summary — NFL Line-Originator Decision Desk (f2e20e96)</title>
+<link rel="stylesheet" href="style.css"></head>
+<body><header><h1>NFL Line-Originator Decision Desk</h1>
+<p class="sub">Session f2e20e96 · official-source reads 2026-11-18T03:44–04:02Z (session clock) ·
+every row source-linked or explicitly unverified · no values inferred · nothing on this site is a betting recommendation</p>
+<nav><a href="index.html">Decision readiness</a><a href="executive-summary.html" class="active">Executive summary</a><a href="schedule.html">Week 11 schedule</a><a href="results.html">Verified results feed</a><a href="lines.html">Originated lines</a><a href="prices.html">Price snapshots</a><a href="leaderboard.html">Leaderboard &amp; luck panel</a><a href="injuries.html">Injury report capture</a><a href="availability.html">Starters, depth &amp; replacements</a><a href="correlations.html">Correlations</a><a href="gates.html">Validation gates</a><a href="questions.html">Questions register</a><a href="suggestions.html">Suggestions register</a><a href="claim-checks.html">Brief claim checks</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for review</a></nav></header>
+<main>
+<h2>Executive summary (2026-11-18)</h2>
+<p><b>What this is.</b> A decision desk for originating NFL lines (side → total → moneyline) with every
+number traceable to an official source read on 2026-11-18, plus the gates, questions and suggestions that
+must be resolved before any decision is reasonably made. No strategy is certified, no bet is placed,
+and no ROI is claimed.</p>
+<h3>Verified first-hand on 2026-11-18 (official nfl.com / NFL Game Books)</h3>
+<ul>
+<li><b>Week 10 results feed: 14/14 finals</b> with venue from each game centre (Game Info) and Game Book links —
+the JAX 40–23 TEN final (rendered “Hidden Score” on its game centre) was read from the official Game Book,
+which also supplied actual starters (44 rows) and the Not Active lists (12 rows).</li>
+<li><b>Week 10 injury report: 347 rows / 28 club tables</b>, per-row read clock 03:47–03:52Z. The brief's
+counts (254/279) do not reproduce; the Lions' three Out designations are confirmed on the live page (CC-01).</li>
+<li><b>Week 11 slate: 13 games + 6 byes</b>, kickoffs/networks as printed; game-centre venues captured for
+IND–HOU (Reliant Stadium) and MIN–SF (Estadio Banorte, Mexico City).</li>
+<li><b>32-club standings</b> (PF/PA/W-L-T) powering the model inputs and the n=32 correlations.</li>
+<li><b>Transaction / announced-starter evidence</b> from official news: Willis→IR (McCord reported),
+Henderson→IR, Lawrence→IR, Miller waived, Hooker/Henley trades, Lock and Watson/Beck named starters.</li>
+</ul>
+<h3>Computed in-repo (labelled, with inputs and n)</h3>
+<ul>
+<li>39 originated markets for Week 11 (13 sides, 13 totals, 13 moneylines) as <b>fair line · market line · difference</b>
+columns. Market line and difference are blank by policy P-01 — no licensed price source is held (F-06).</li>
+<li>Every model output stores <b>a probability plus its inputs</b> (regressed net/gp strengths, HFA prior 2.0,
+Week-10 margin SD σ=15.29 n=14).</li>
+<li><b>Correlations</b> from official standings only, n=32 published with each value.</li>
+<li><b>Removal-of-luck panel</b>: control baselines (random; favorites-only) registered for every evaluation
+window + a binomial power table (formulas published) — skill must clear variance before any ranking.</li>
+</ul>
+<h3>Blocked, and what clears it</h3>
+<ul>
+<li><b>ROI / CLV / backtests</b> — blocked at the price-data policy (G-10/F-06). The brief's own condition
+(“decide the price-data policy before any backtest is published”) is honoured: nothing has been backtested.</li>
+<li><b>Depth & matchup-deficiency features</b> — blocked at G-07 (depth must come from playing time or official
+depth charts; jersey-number derivation is explicitly rejected).</li>
+<li><b>Combos (parlays / SGP / prop combos)</b> — held behind the joint-evidence gate (G-06): no validated
+joint probability and no void/push rules, so no combo may be ranked.</li>
+<li><b>Injury designation as a feature</b> — blocked at G-08 until designation-to-play-rate is calibrated
+empirically with confidence intervals over multiple seasons.</li>
+</ul>
+<h3>Readiness snapshot</h3>
+<p>70 requirements tracked: 15 MET ·
+17 PARTIAL ·
+16 BLOCKED ·
+9 PENDING.
+The full table with the clearing number for each row is on the <a href="index.html">landing page</a>.</p>
+<p class="note">Frozen model registration: m1-2026-11-18-margin-shrinkage, constants k=11, HFA=2.0
+committed with this desk on branch arena/f2e20e96-own5 before the Week 11 kickoffs.</p>
+</main>
+<footer><p>Built deterministically from <code>data/nfl-desk-f2e20e96/</code> by
+<code>scripts/build_f2e20e96.py</code>. Blank cells mean “not verified from an official source”.
+Model outputs are computed in-repo from the linked official inputs and are labelled as computed.</p></footer>
+</body></html>

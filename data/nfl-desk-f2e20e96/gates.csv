@@ -1,0 +1,17 @@
+gate_id,requirement,metric,threshold,observed,status,evidence
+G-01,Every table row source-linked or explicitly unverified,rows lacking source_url or UNVERIFIED flag,0,"0 in this desk (verify_f2e20e96.py enforces)",PASS,scripts/verify_f2e20e96.py
+G-02,Pre-registration before results are seen,registered strategies with frozen definition + window + gates in git,all strategies that ever reach the leaderboard,3 singles variants registered in this desk's ledger (S-S01..S-S03) - none scored,PENDING,leaderboard.csv
+G-03,Benchmark-relative proper scoring (Brier skill) with game-cluster lower bound,computed skill + lower bound per strategy,n/a until scored,"No scored games yet (window opens with the first prospectively priced game)",BLOCKED-BY-Q-01,leaderboard.csv
+G-04,Multiplicity adjustment across trials,adjusted significance threshold for k trials,threshold shrinks with k (Bonferroni-style alpha/k),Method registered; k=0 scored trials so far,PENDING,leaderboard.csv
+G-05,Minimum sample per division before certification,n scored games,"singles >= 200; parlays >= 500 legs; prop combos >= 300",0 scored,PENDING,leaderboard.csv
+G-06,Joint-evidence gate for combos,validated joint probability + operator void/push rules available,both required before a combo is ranked,Not available - combos stay unranked,BLOCKED,questions.csv Q-09
+G-07,Depth modelled from playing time only (never jersey number / experience / salary),verified snap-count or official depth source coverage,32 of 32 clubs,0 of 32 clubs verified this session,BLOCKED,flagged.csv F-12
+G-08,Injury designation calibrated empirically before use as a feature,designation-to-play-rate with confidence intervals per designation,multi-season joins completed,0 seasons joined,BLOCKED,questions.csv Q-05
+G-09,Correlations only from officially sourced numbers with n published,correlation values without n or official source,0,0 (4 of 4 published with n=32 and the standings source),PASS,correlations.csv
+G-10,Price-data policy decided before any backtest is published,documented policy P-01 signed off,1 policy,no policy yet; market columns blank by design,BLOCKED,flagged.csv F-06
+G-11,Availability captured as a timestamped series (deltas not levels),same-page captures with clock times >= 2 before any delta claim,2 captures of one page,1 capture (2026-11-18) - deltas not yet computable,PENDING,questions.csv Q-12
+G-12,Venue transcribed from the official game centre for every fixture,fixtures with game-centre venue rows,all fixtures in scope,16 of 27 in scope (14 Week-10 + 2 Week-11); 11 Week-11 rows pending,PENDING,flagged.csv F-03
+G-13,Signal and staking evaluated separately; staking cannot mask signal,leaderboard columns separating the two,required layout,layout implemented (see leaderboard.html),PASS,leaderboard.csv
+G-14,Control baselines run alongside every strategy evaluation,baseline rows (random / favorites-only) in every evaluation window,always on,registered as required baselines (rows CTRL-01..CTRL-02); not yet run,PENDING,leaderboard.csv
+G-15,Demotion gate defined for live strategies,documented trigger sending live -> paper,before any strategy goes live,defined in leaderboard.csv (S-DG01); no strategy is live,PASS,leaderboard.csv
+G-16,Backtest numbers forbidden on the leaderboard,leaderboard rows carrying backtest metrics,0,0 (backtest page separate and labelled),PASS,leaderboard.csv
