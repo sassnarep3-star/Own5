@@ -15,7 +15,7 @@ NAV = [
     ("index.html", "Home"),
     ("schedule.html", "Week 11 schedule"),
     ("availability.html", "Availability"),
-    ("desks.html", "Desks index"),
+    ("https://sassnarep3-star.github.io/Own5/nfl-desk-5c5f4aaf/", "Desks index (5c5f4aaf)"),
     ("repo.html", "Repo state"),
     ("sources.html", "Sources"),
     ("summary.html", "Executive summary"),
@@ -109,6 +109,12 @@ def page(filename, title, body, lead=None):
         fh.write(doc)
 
 
+def repo_count(repo_rows):
+    """Desk-directory count as cross-checked in repo_checks.csv (row R-07)."""
+    row = next(r for r in repo_rows if r["check_id"] == "R-07")
+    return int(row["value_at_read"].split()[0])
+
+
 def kpi(value, label, href=None, note=""):
     inner = f'<strong>{e(value)}</strong><span>{e(label)}</span>'
     if note:
@@ -122,7 +128,6 @@ def build():
     sched = read_csv("week11_schedule.csv")
     byes = read_csv("week11_byes.csv")
     avail = read_csv("availability_status.csv")
-    desks = read_csv("desks_index.csv")
     repo = read_csv("repo_checks.csv")
     sources = read_csv("sources.csv")
     flags = read_csv("flagged.csv")
@@ -133,7 +138,7 @@ def build():
     blocking = [f for f in open_flags if f["severity"].upper() == "BLOCKING"]
     open_pr_value = next(r["value_at_read"] for r in repo if r["check_id"] == "R-01")
     read_stamp = sched[0]["read_utc"] if sched else ""
-    sibling_count = len(desks)
+    sibling_count = repo_count(repo)
 
     # ---------- index.html ----------
     cards = [
@@ -143,8 +148,8 @@ def build():
             "13 games x 2 + 6 bye = 32 clubs"),
         kpi("NOT PUBLISHED", "Week 11 injury report at read time", "availability.html",
             "The Week 11 URL serves the Week 10 report"),
-        kpi(str(sibling_count), "NFL desk directories in this repo (snapshot)", "desks.html",
-            "Pinned snapshot; counting rule on the page"),
+        kpi(str(sibling_count), "NFL desk directories in this repo", "repo.html",
+            "Cross-checked against the 5c5f4aaf directory (R-07)"),
         kpi(open_pr_value.split(" (")[0], "Open pull requests against main", "repo.html",
             "Read from GitHub"),
         kpi(f"{len(open_flags)}", f"Open flags ({len(blocking)} blocking)", "flagged.html",
@@ -153,7 +158,7 @@ def build():
     nav_cards = [
         ("schedule.html", "Week 11 schedule", "13 games and 6 byes from the official schedule, with each game's official page link. Venue not verified."),
         ("availability.html", "Availability", "Status of the Week 11 injury report and the evidence used. No availability values are published."),
-        ("desks.html", "Desks index", "Every NFL desk directory in the repo, pinned as a snapshot, with its entry page."),
+        ("https://sassnarep3-star.github.io/Own5/nfl-desk-5c5f4aaf/", "Desks index", "Every NFL desk directory in the repo, with its entry page. Maintained by session 5c5f4aaf (PR #102)."),
         ("repo.html", "Repo state", "Pull requests, CI runs, root-page status. GitHub facts, labelled as such."),
         ("sources.html", "Sources", "Official pages read, with time, extract file and hash."),
         ("summary.html", "Executive summary", "What is verified, what is blocked, and what decision is needed."),
@@ -243,33 +248,6 @@ def build():
          lead="Only the status of the official injury report, read today, is recorded. "
               "A page that serves last week's report is not treated as this week's report.")
 
-    # ---------- desks.html ----------
-    drows = []
-    for d in desks:
-        url = d["live_url"]
-        drows.append([
-            link(url, d["desk_dir"]) if url else e(d["desk_dir"]),
-            e(d["has_index_html"]),
-            e(d["html_pages"]),
-            e(d["data_files"]),
-            e(d["title"]),
-            e(d["scoped_workflow"]),
-            badge("INTERNAL — navigation only", "INTERNAL"),
-        ])
-    body = (
-        '<section class="notice"><strong>Counting rule.</strong> A top-level directory whose name starts with '
-        '<code>nfl-</code> or <code>nfl_</code>, or equals <code>own5-desk</code>. This desk (<code>nfl-desk-3cb7800c</code>) '
-        'is excluded. The list is a pinned snapshot taken '
-        f'{e(desks[0]["snapshot_read_utc"] if desks else "")}; directories added later are not listed here.</section>'
-        '<p>These rows are repository facts, not league facts. None carries a verified NFL value, '
-        'so the source class is INTERNAL and no official link applies.</p>'
-        + table(["Directory", "Index page", "HTML pages", "Files under data/", "Page title", "Scoped workflow", "Source class"],
-                drows, caption=f"NFL desk directories ({len(desks)})")
-    )
-    page("desks.html", "Desks index", body,
-         lead="Every NFL desk directory in this checkout, with its entry page. Use it to choose a canonical desk; "
-              "suggestion S-05 covers consolidation.")
-
     # ---------- repo.html ----------
     rrows = []
     for r in repo:
@@ -340,14 +318,14 @@ def build():
 <ul>
 <li>{e(open_pr_value.split(" (")[0])} PRs are open against main. Nine of them were opened between 2026-11-02 and 2026-11-14 (F-06).</li>
 <li>The decision-desk PR check failed on 11 of 12 recent PR runs (F-05). Merges that rely on that check are not safe until it is fixed or retired (S-04).</li>
-<li>The root landing page still reads AS OF 2026-11-02. A CI diff check regenerates it, so it cannot be edited by hand (F-07, S-01).</li>
-<li>There are {sibling_count} NFL desk directories (snapshot). Several answer the same brief. Choosing one canonical desk is a decision for the owner (S-05).</li>
+<li>The root banner still reads AS OF 2026-11-02. Its notice now links the desk directory (PR #102). The banner is generated, so it needs the generator, not a hand edit (F-07, S-01).</li>
+<li>There are {sibling_count} NFL desk directories, cross-checked against the directory page (R-07). Several answer the same brief. Choosing one canonical desk is a decision for the owner (S-05).</li>
 </ul>
 </section>
 <section class="panel">
 <h2>Decisions needed from the owner</h2>
 <ol>
-<li>Whether to publish a root-level desk index (S-01). This needs a change to the pipeline that owns the root page.</li>
+<li>Whether to keep the desk directory (5c5f4aaf) as the single index, and which desks to retire (S-01, S-05).</li>
 <li>Which club-code set the project uses as its join key (S-03). The official standings set is recommended.</li>
 <li>Whether the decision-desk check is required (S-04, Q-05).</li>
 <li>Which open PRs to close or consolidate (S-05, Q-06).</li>

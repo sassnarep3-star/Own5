@@ -9,7 +9,6 @@ DESK = os.path.abspath(os.path.join(HERE, ".."))
 sys.path.insert(0, DESK)
 
 import verify  # noqa: E402
-import tools.index_desks as index_desks  # noqa: E402
 
 
 def committed():
@@ -139,29 +138,21 @@ class PageChecks(unittest.TestCase):
     def test_committed_pages_pass(self):
         fails, stats = verify.check_pages()
         self.assertEqual(fails, [])
-        self.assertEqual(stats["pages"], 10)
+        self.assertEqual(stats["pages"], 9)
 
 
-class DeskSnapshotChecks(unittest.TestCase):
-    def test_counting_rule(self):
-        self.assertTrue(index_desks.is_desk_name("nfl-560ed315"))
-        self.assertTrue(index_desks.is_desk_name("nfl_model"))
-        self.assertTrue(index_desks.is_desk_name("own5-desk"))
-        self.assertFalse(index_desks.is_desk_name("nfl-desk-3cb7800c"))
-        self.assertFalse(index_desks.is_desk_name("README.md"))
-        self.assertFalse(index_desks.is_desk_name("research"))
+class DeskCrossCheck(unittest.TestCase):
+    def test_committed_cross_check_passes(self):
+        repo = verify.load("repo_checks.csv")
+        self.assertEqual(verify.check_desk_crosscheck(repo), [])
 
-    def test_committed_snapshot_passes_and_pins_25(self):
-        desks = verify.load("desks_index.csv")
-        fails, info = verify.check_desks(desks)
-        self.assertEqual(fails, [])
-        self.assertEqual(len(desks), 25)
-
-    def test_missing_pinned_directory_is_caught(self):
-        desks = copy.deepcopy(verify.load("desks_index.csv"))
-        desks[0]["desk_dir"] = "nfl-does-not-exist"
-        fails, _ = verify.check_desks(desks)
-        self.assertTrue(any("no longer exists" in f for f in fails))
+    def test_wrong_recorded_count_is_caught(self):
+        repo = copy.deepcopy(verify.load("repo_checks.csv"))
+        for r in repo:
+            if r["check_id"] == "R-07":
+                r["value_at_read"] = "24 (wrong)"
+        fails = verify.check_desk_crosscheck(repo)
+        self.assertTrue(any("recorded 24" in f for f in fails))
 
 
 class HashChecks(unittest.TestCase):

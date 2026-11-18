@@ -36,8 +36,6 @@ REQUIRED_COLUMNS = {
     "week11_byes.csv": ["team_name", "code_as_printed", "standings_logo_code", "raw_line", "source_url", "read_utc"],
     "availability_status.csv": ["check_id", "item", "url_requested", "final_url_reported_by_fetch_tool",
                                 "page_title_seen", "status", "read_utc", "source_url", "raw_file", "note"],
-    "desks_index.csv": ["desk_dir", "has_index_html", "html_pages", "data_files", "title",
-                        "scoped_workflow", "live_url", "source_class", "snapshot_read_utc"],
     "repo_checks.csv": ["check_id", "check", "value_at_read", "read_utc", "source_class", "source_url", "note"],
     "sources.csv": ["source_id", "title", "url", "source_class", "supports", "read_utc", "raw_file", "caveat"],
     "flagged.csv": ["flag_id", "severity", "title", "detail", "evidence_url", "source_class",
@@ -165,33 +163,39 @@ def check_availability(avail, meta_text):
     return fails
 
 
-# ---------------------------------------------------------------- desks snapshot
+# ---------------------------------------------------------------- desk directory cross-check
 
-def check_desks(desks, repo_root=REPO):
-    fails, info = [], []
-    pinned = set()
-    for d in desks:
-        name = d["desk_dir"]
-        pinned.add(name)
-        full = os.path.join(repo_root, name)
-        if not os.path.isdir(full):
-            fails.append(f"desk snapshot names a directory that no longer exists: {name}")
-            continue
-        has_index = os.path.isfile(os.path.join(full, "index.html"))
-        if (d["has_index_html"] == "yes") != has_index:
-            fails.append(f"{name}: has_index_html in snapshot does not match the directory")
-        if d["live_url"] and not is_https_allowed(d["live_url"]):
-            fails.append(f"{name}: live URL host not allowed")
-    current = set()
+def check_desk_crosscheck(repo, repo_root=REPO):
+    """The desk count is not kept here. It is cross-checked against the directory built by session 5c5f4aaf.
+    This check confirms that the directory still exists, and that the count recorded in R-07 equals the
+    number of rows in that directory's desks.csv. Both sides are read from the repository at check time."""
+    fails = []
+    row = next((r for r in repo if r["check_id"] == "R-07"), None)
+    if row is None:
+        return ["R-07 (desk-directory cross-check) is missing"]
+    recorded = int(row["value_at_read"].split()[0])
+    csv_path = os.path.join(repo_root, "nfl-desk-5c5f4aaf", "data", "desks.csv")
+    if not os.path.isfile(csv_path):
+        return ["R-07: nfl-desk-5c5f4aaf/data/desks.csv is missing"]
+    with open(csv_path, encoding="utf-8", newline="") as fh:
+        rows = list(csv.DictReader(fh))
+    # Both session directories are excluded from both sides: the 5c5f4aaf list excludes itself, and this desk
+    # excludes itself. Comparing the two lists without that rule would fail for a reason that is not a data error.
+    excluded = {"nfl-desk-5c5f4aaf", "nfl-desk-3cb7800c"}
+    named = {r["desk"] for r in rows} - excluded
+    if len(named) != recorded:
+        fails.append(f"R-07: recorded {recorded} desks, but the 5c5f4aaf list has {len(named)} after the stated exclusions")
+    here = set()
     for name in os.listdir(repo_root):
         if os.path.isdir(os.path.join(repo_root, name)) and (
-                (name.startswith("nfl-") or name.startswith("nfl_") or name == "own5-desk")
-                and name != "nfl-desk-3cb7800c"):
-            current.add(name)
-    added = sorted(current - pinned)
-    if added:
-        info.append(f"INFO {len(added)} desk directories added since the snapshot (not a failure): {', '.join(added)}")
-    return fails, info
+                name.startswith("nfl-") or name.startswith("nfl_") or name == "own5-desk"):
+            here.add(name)
+    here -= excluded
+    if named != here:
+        only_there = sorted(named - here)
+        only_here = sorted(here - named)
+        fails.append(f"R-07: directory list differs; only in 5c5f4aaf list {only_there}; only in checkout {only_here}")
+    return fails
 
 
 # ---------------------------------------------------------------- registers
@@ -268,7 +272,7 @@ class PageParser(HTMLParser):
             self._row_has_link = None
 
 
-PAGES = ["index.html", "schedule.html", "availability.html", "desks.html", "repo.html", "sources.html",
+PAGES = ["index.html", "schedule.html", "availability.html", "repo.html", "sources.html",
          "summary.html", "suggestions.html", "questions.html", "flagged.html"]
 
 
@@ -315,7 +319,6 @@ def run():
     games = load("week11_schedule.csv")
     byes = load("week11_byes.csv")
     avail = load("availability_status.csv")
-    desks = load("desks_index.csv")
     repo = load("repo_checks.csv")
     sources = load("sources.csv")
     flags = load("flagged.csv")
@@ -326,13 +329,13 @@ def run():
     failures += check_schedule(games, byes, extract)
     failures += check_hashes()
     failures += check_availability(avail, meta)
-    f2, info = check_desks(desks)
-    failures += f2
+    info = []
+    failures += check_desk_crosscheck(repo)
     failures += check_registers(flags, sugg, quest, sources, repo)
     f3, stats = check_pages()
     failures += f3
     counts = {
-        "games": len(games), "byes": len(byes), "desks": len(desks), "flags": len(flags),
+        "games": len(games), "byes": len(byes), "flags": len(flags),
         "open_flags": sum(1 for f in flags if f["status"] == "OPEN"),
         "blocking": sum(1 for f in flags if f["severity"] == "BLOCKING"),
         **stats,

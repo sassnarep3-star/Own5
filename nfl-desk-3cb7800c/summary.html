@@ -10,7 +10,7 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="top">
   <div class="brand">NFL official-source desk <span>3cb7800c</span></div>
-  <nav aria-label="Pages"><a href="index.html">Home</a><a href="schedule.html">Week 11 schedule</a><a href="availability.html">Availability</a><a href="desks.html">Desks index</a><a href="repo.html">Repo state</a><a href="sources.html">Sources</a><a href="summary.html" class="current" aria-current="page">Executive summary</a><a href="suggestions.html">Suggestions (review)</a><a href="questions.html">Questions</a><a href="flagged.html">Flagged for review</a></nav>
+  <nav aria-label="Pages"><a href="index.html">Home</a><a href="schedule.html">Week 11 schedule</a><a href="availability.html">Availability</a><a href="https://sassnarep3-star.github.io/Own5/nfl-desk-5c5f4aaf/">Desks index (5c5f4aaf)</a><a href="repo.html">Repo state</a><a href="sources.html">Sources</a><a href="summary.html" class="current" aria-current="page">Executive summary</a><a href="suggestions.html">Suggestions (review)</a><a href="questions.html">Questions</a><a href="flagged.html">Flagged for review</a></nav>
 </header>
 <main id="main">
 <h1>Executive summary</h1>
@@ -38,14 +38,14 @@
 <ul>
 <li>10 PRs are open against main. Nine of them were opened between 2026-11-02 and 2026-11-14 (F-06).</li>
 <li>The decision-desk PR check failed on 11 of 12 recent PR runs (F-05). Merges that rely on that check are not safe until it is fixed or retired (S-04).</li>
-<li>The root landing page still reads AS OF 2026-11-02. A CI diff check regenerates it, so it cannot be edited by hand (F-07, S-01).</li>
-<li>There are 25 NFL desk directories (snapshot). Several answer the same brief. Choosing one canonical desk is a decision for the owner (S-05).</li>
+<li>The root banner still reads AS OF 2026-11-02. Its notice now links the desk directory (PR #102). The banner is generated, so it needs the generator, not a hand edit (F-07, S-01).</li>
+<li>There are 25 NFL desk directories, cross-checked against the directory page (R-07). Several answer the same brief. Choosing one canonical desk is a decision for the owner (S-05).</li>
 </ul>
 </section>
 <section class="panel">
 <h2>Decisions needed from the owner</h2>
 <ol>
-<li>Whether to publish a root-level desk index (S-01). This needs a change to the pipeline that owns the root page.</li>
+<li>Whether to keep the desk directory (5c5f4aaf) as the single index, and which desks to retire (S-01, S-05).</li>
 <li>Which club-code set the project uses as its join key (S-03). The official standings set is recommended.</li>
 <li>Whether the decision-desk check is required (S-04, Q-05).</li>
 <li>Which open PRs to close or consolidate (S-05, Q-06).</li>
