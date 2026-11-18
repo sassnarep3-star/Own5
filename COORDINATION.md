@@ -3255,3 +3255,20 @@ executive summary, and a GitHub Pages desk — every table row source-linked or 
 ## Cross-session requests
 
 - None yet. All work is in the additive `nfl-desk-f2e20e96/` namespace.
+
+## Session f2e20e96 — completion record (2026-11-18)
+
+**Scope delivered (all files within the claimed scope; no other session's files touched):**
+`data/nfl-desk-f2e20e96/` (18 data CSVs + `computed/` build outputs), `nfl-desk-f2e20e96/` (16 pages + `style.css` + `tests/`), `scripts/build_f2e20e96.py`, `scripts/verify_f2e20e96.py`, `.github/workflows/nfl-desk-f2e20e96.yml`, one README row.
+
+**Sources (register S01–S22 in `data/nfl-desk-f2e20e96/sources.csv`, all read 2026-11-18T03:44–04:02Z session clock):** nfl.com standings/league/2026/REG; scores/2026/REG10 list; schedules/2026/by-week/week-11; 14 Week-10 game centres; JAX-TEN official Game Book PDF (starters 44 rows + Not Active 12 rows + final 40-23 from the scoring table); injuries/league/2026/reg10 in full (347 rows / 28 club tables / 0 empty, per-row read clocks); MIN-SF + IND-HOU Week-11 game centres (venues ESTADIO BANORTE / RELIANT STADIUM); official news headlines for E-01–E-18 transaction/announced-starter events. Method: fetch_page processed-text extracts (F-09); every row re-verified line by line before storage.
+
+**Verification:** `scripts/verify_f2e20e96.py` fail-closed (V1 row source discipline, V2 provenance in every rendered row, V3 link resolution, V4 no plain-http, V5 pinned counts 347/14/13/32/39/70/44/12, V6 deterministic rebuild, V7 model identities recomputed per game). 10 unit tests incl. 6 negative controls (stripped source URL, filled price, deleted row, provenance-less row, broken link, tampered model output — each must fail the verifier). All green locally.
+
+**Flagged irregularities (published on the Flagged for Review page, F-01–F-12):** F-01 BLOCKING reg11 URL serves Week-10 report (W11 unpublished at read); F-02 game centre prints "RELIANT STADIUM" vs schedule "NRG Stadium" (IND-HOU) — schedule-page strings are hotel-URL field context, kept separate from game-centre venues; F-03 11/13 W11 game-centre venues pending (deliberate); F-04 JAX-TEN "Hidden Score" resolved via official Game Book; F-05 club-code aliasing (LA/LAR, AZ); F-06 BLOCKING no licensed price source — 39 snapshot rows blank + UNVERIFIED (policy P-01; backtests gated); F-07 BAL QB IR claims unverified (news timeline disagreement 6-9 vs 6-10 weeks); F-08 brief's injury counts 254/279 do not reproduce (observed 347/28); F-09 processed-text extracts = transcription hashes only; F-10 W11 practice snippets partial (4/club); F-11 COORDINATION.md contains leaked shell text + a duplicated abb5f8be block (flagged, not edited — this record touches nothing above it); F-12 snap counts / depth not captured (G-07 gate). Brief claim checks CC-01–CC-10 published (3 Lions Out CONFIRMED; "136-game log" = earlier snapshot vs 150 via standings arithmetic through W10).
+
+**Pre-registration (git hash = registration):** S-S01 shadow baseline (singles-only), S-S02 home-favorite filter, S-S03 totals overlay, CTRL-01/CTRL-02 control baselines, S-DG01 demotion gate — frozen in `data/nfl-desk-f2e20e96/leaderboard.csv` on branch `arena/f2e20e96-own5` before Week 11 kickoffs; nothing scored; backtest numbers forbidden on the leaderboard (G-16). Model registration: m1-2026-11-18-margin-shrinkage (strength = (PF/G−PA/G) shrunk by gp/(gp+11); HFA prior 2.0; σ=15.29 from Week-10 margins n=14).
+
+**Cross-session requests:** none pending. Note for integration sessions: the pre-existing `Rebuild, audit, and test isolated NFL desk` (b34253a1) failure triggered by COORDINATION.md edits is not caused by this session and is left untouched per board policy.
+
+**PR record:** appended below after the PR is opened and merged.
