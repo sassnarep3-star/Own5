@@ -1,4 +1,4 @@
-injuries   http=200 bytes=402299 sha256=8175fd62d85782bb pins=yes ok
+injuries   http=200 bytes=402299 sha256=0021cc02e2c1056f pins=yes ok
 standings  http=200 bytes=246461 sha256=0402df9d712e5205 pins=yes ok
 reserve    http=200 bytes=247967 sha256=8070069cc1af5844 pins=yes ok
 exit_code=0
