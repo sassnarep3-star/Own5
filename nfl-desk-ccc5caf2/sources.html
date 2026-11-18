@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="OWN5 NFL Line Originator — source registry. OFFICIAL vs AGGREGATOR tiers; every table row carries a source link.">
+<title>Sources · OWN5 NFL Line Originator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <div class="mark">O5</div>
+      <div>
+        <h1><a href="index.html">OWN5 NFL Line Originator</a></h1>
+        <p>Session ccc5caf2 &middot; Source registry</p>
+      </div>
+    </div>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Overview</a>
+      <a href="requirements.html">Requirements &amp; readiness</a>
+      <a href="lines.html">Own lines (Week 11)</a>
+      <a href="strategies.html">Strategies</a>
+      <a href="gates.html">Validation gates</a>
+      <a href="correlations.html">Correlations</a>
+      <a href="injuries.html">Injuries &amp; depth</a>
+      <a href="suggestions.html">Suggestions</a>
+      <a href="questions.html">Questions &amp; answers</a>
+      <a class="active" href="sources.html">Sources</a>
+      <a href="flagged.html">Flagged for review</a>
+      <a href="verification.html">Verification</a>
+      <a href="summary.html">Executive summary</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap" id="main">
+  <section class="pagehead">
+    <h2>Source registry</h2>
+    <p>Two tiers are used everywhere and are never conflated: <strong>OFFICIAL</strong> (league pages) and <strong>AGGREGATOR</strong> (third-party mirrors of official data, pinned by SHA-256). Every table row on this desk links to a source or is left blank and flagged &mdash; never inferred.</p>
+  </div>
+
+  <table class="data">
+    <thead>
+      <tr><th>ID</th><th>Name</th><th>Tier</th><th>URL</th><th>Used for</th><th>Retrieval / provenance</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="record-id">S-01</span></td>
+        <td>NFL official injury report</td>
+        <td><span class="tag official">OFFICIAL</span></td>
+        <td><a href="https://www.nfl.com/injuries/" rel="noopener">https://www.nfl.com/injuries/</a></td>
+        <td>Player injuries, practice status, game status (Week 10, 276 rows)</td>
+        <td>Fetched 2026-11-18; SHA-256 + timestamp in provenance file</td>
+      </tr>
+      <tr>
+        <td><span class="record-id">S-02</span></td>
+        <td>NFL official schedule</td>
+        <td><span class="tag official">OFFICIAL</span></td>
+        <td><a href="https://www.nfl.com/schedules/2026/by-week/week-11" rel="noopener">https://www.nfl.com/schedules/2026/by-week/week-11</a></td>
+        <td>Week 11 matchups, kickoff times, networks, venues</td>
+        <td>Fetched 2026-11-18</td>
+      </tr>
+      <tr>
+        <td><span class="record-id">S-03</span></td>
+        <td>NFL official standings (2026 REG)</td>
+        <td><span class="tag official">OFFICIAL</span></td>
+        <td><a href="https://www.nfl.com/standings/league/2026/REG" rel="noopener">https://www.nfl.com/standings/league/2026/REG</a></td>
+        <td>W-L-T, PF, PA for all 32 clubs; 32/32 reproduced exactly from independent game log</td>
+        <td>Fetched 2026-11-18; 32/32 reproduced</td>
+      </tr>
+      <tr>
+        <td><span class="record-id">S-04</span></td>
+        <td>nflverse injuries release</td>
+        <td><span class="tag aggregator">AGGREGATOR</span></td>
+        <td><a href="https://github.com/nflverse/nflverse-data/releases/tag/injuries" rel="noopener">nflverse-data injuries</a></td>
+        <td>Weekly injury mirror 2023&ndash;2026 for calibration</td>
+        <td>Pinned files (SHA-256) in data/decision-desk/raw/</td>
+      </tr>
+      <tr>
+        <td><span class="record-id">S-05</span></td>
+        <td>nflverse snap counts release</td>
+        <td><span class="tag aggregator">AGGREGATOR</span></td>
+        <td><a href="https://github.com/nflverse/nflverse-data/releases/tag/snap_counts" rel="noopener">nflverse-data snap_counts</a></td>
+        <td>Official gamebook snap counts 2023&ndash;2026; basis for depth strings</td>
+        <td>Pinned files (SHA-256)</td>
+      </tr>
+      <tr>
+        <td><span class="record-id">S-06</span></td>
+        <td>nflverse player weekly stats release</td>
+        <td><span class="tag aggregator">AGGREGATOR</span></td>
+        <td><a href="https://github.com/nflverse/nflverse-data/releases/tag/stats_player" rel="noopener">nflverse-data stats_player</a></td>
+        <td>2024&ndash;2026 weekly passing/receiving/rushing yards for prop correlations</td>
+        <td>Pinned files (SHA-256)</td>
+      </tr>
+      <tr>
+        <td><span class="record-id">S-07</span></td>
+        <td>nflverse schedules and results release</td>
+        <td><span class="tag aggregator">AGGREGATOR</span></td>
+        <td><a href="https://github.com/nflverse/nflverse-data/releases/tag/schedules" rel="noopener">nflverse-data schedules</a></td>
+        <td>Game results, rest days, roof; model backtest</td>
+        <td>Pinned file (SHA-256)</td>
+      </tr>
+      <tr>
+        <td><span class="record-id">S-08</span></td>
+        <td>spreadspoke historical scores (pinned in-repo)</td>
+        <td><span class="tag aggregator">AGGREGATOR</span></td>
+        <td><a href="https://github.com/tobycrabtree/spreadspoke" rel="noopener">tobycrabtree/spreadspoke</a></td>
+        <td>1966&ndash;2025 results and closing spreads for base rates and singles</td>
+        <td>Pre-existing; commit 1d309cb</td>
+      </tr>
+      <tr>
+        <td><span class="record-id">S-09</span></td>
+        <td>NFL club directory</td>
+        <td><span class="tag official">OFFICIAL</span></td>
+        <td><a href="https://www.nfl.com/teams/" rel="noopener">https://www.nfl.com/teams/</a></td>
+        <td>Club names, abbreviations, divisions (32 clubs)</td>
+        <td>Pre-existing; verified row count 32</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="section">
+    <h3>Tier rules</h3>
+    <ul>
+      <li><strong>OFFICIAL:</strong> published directly by the NFL (nfl.com, operations.nfl.com). Treated as authoritative.</li>
+      <li><strong>AGGREGATOR:</strong> a third-party mirror of official data (nflverse, spreadspoke). Used only when no official page exists; pinned by SHA-256 and labelled AGGREGATOR in every table.</li>
+      <li>No value is ever inferred. If a value cannot be confirmed from an official/primary source, it is left blank and flagged.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>Missing sources (gaps)</h3>
+    <table class="data">
+      <thead><tr><th>Gap</th><th>Why it matters</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Official closing-line price history (operator)</td><td>Required for CLV (G4) and market integrity (G8)</td><td><span class="badge blank">None exists publicly</span> (F01/F02)</td></tr>
+        <tr><td>Official player-prop line history</td><td>Required to price prop strategies economically</td><td><span class="badge blank">None exists publicly</span> (F03)</td></tr>
+        <tr><td>Official machine-readable depth chart</td><td>Required for availability graph and replacement depth</td><td><span class="badge blank">Not published by the league</span> (F16)</td></tr>
+        <tr><td>Official inactive lists &amp; snap counts</td><td>Required to confirm a backup replaced a starter</td><td><span class="badge blank">Not captured</span></td></tr>
+        <tr><td>Official Game Books (starters &amp; game-day status)</td><td>Required for actual starters; no inferred depth rank or snaps</td><td><span class="badge blank">Not yet ingested</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="footer">
+    All official-source links retrieved 2026-11-18 via nfl.com. Aggregator releases pinned by SHA-256. 1-800-GAMBLER.
+  </div>
+</main>
+</body>
+</html>

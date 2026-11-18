@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="OWN5 NFL Line Originator — full decision-readiness matrix. Every brief requirement mapped to its blocking gate and clearing number.">
+<title>Requirements &amp; readiness · OWN5 NFL Line Originator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <div class="mark">O5</div>
+      <div>
+        <h1><a href="index.html">OWN5 NFL Line Originator</a></h1>
+        <p>Session ccc5caf2 &middot; Decision-readiness matrix</p>
+      </div>
+    </div>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Overview</a>
+      <a class="active" href="requirements.html">Requirements &amp; readiness</a>
+      <a href="lines.html">Own lines (Week 11)</a>
+      <a href="strategies.html">Strategies</a>
+      <a href="gates.html">Validation gates</a>
+      <a href="correlations.html">Correlations</a>
+      <a href="injuries.html">Injuries &amp; depth</a>
+      <a href="suggestions.html">Suggestions</a>
+      <a href="questions.html">Questions &amp; answers</a>
+      <a href="sources.html">Sources</a>
+      <a href="flagged.html">Flagged for review</a>
+      <a href="verification.html">Verification</a>
+      <a href="summary.html">Executive summary</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap" id="main">
+  <section class="pagehead">
+    <h2>Decision-readiness matrix &mdash; all brief requirements</h2>
+    <p>One row per requirement: the blocking gate, the number that would clear it, and the observed status. This table is also summarized on the <a href="index.html">landing page</a>. Blanks are unverified, never inferred.</p>
+  </div>
+
+  <div class="kpis">
+    <div class="kpi warn"><div class="kpi-value">~39%</div><div class="kpi-label">requirements met/defined</div><div class="kpi-note">of ~50 brief requirements</div></div>
+    <div class="kpi bad"><div class="kpi-value">4</div><div class="kpi-label">blocking questions</div><div class="kpi-note">cannot be closed from public data</div></div>
+    <div class="kpi ok"><div class="kpi-value">0</div><div class="kpi-label">certified strategies</div><div class="kpi-note">leaderboard intentionally empty</div></div>
+    <div class="kpi warn"><div class="kpi-value">18</div><div class="kpi-label">flagged irregularities</div><div class="kpi-note">F01&ndash;F18 published for review</div></div>
+  </div>
+
+  <table class="data">
+    <thead>
+      <tr>
+        <th style="width:30%">Requirement (from brief)</th>
+        <th style="width:16%">Blocking gate</th>
+        <th style="width:20%">Number that clears it</th>
+        <th style="width:18%">Observed status</th>
+        <th style="width:16%">Flag</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Price-snapshot store: opening &amp; closing per market</td><td>Price-data policy before backtests</td><td>Timestamped operator snapshot per market/week</td><td><span class="badge blank">Not met</span></td><td>F01, Q01</td></tr>
+      <tr><td>Verified results feed (backtests &amp; ROI computable)</td><td>Verified closing price + matched outcome</td><td>136-game pre-registered backtest corpus</td><td><span class="badge blank">Partial</span></td><td>F02</td></tr>
+      <tr><td>Originate side &rarr; total &rarr; moneyline</td><td>Fair-line model + residual vs market</td><td>All 13 Week 11 games priced in order</td><td><span class="badge ok">Met (model)</span></td><td>&mdash;</td></tr>
+      <tr><td>Fair line / market line / difference as separate columns</td><td>Market line with timestamp</td><td>fair &middot; market &middot; residual columns</td><td><span class="badge blank">Not met</span></td><td>F01</td></tr>
+      <tr><td>Separate signal from staking on the leaderboard</td><td>Proper-score ranking (Brier skill), not win rate/ROI</td><td>Brier skill + cluster lower bound + multiplicity</td><td><span class="badge blank">Not met</span></td><td>&mdash;</td></tr>
+      <tr><td>Track depth of the replacement</td><td>Verified depth-slot group per player</td><td>Depth string + snap share per player/week</td><td><span class="badge blank">Partial</span></td><td>F05, F16</td></tr>
+      <tr><td>Correlations only from official sources, publish n</td><td>n recorded with each coefficient</td><td>Pearson r / phi with n and CI</td><td><span class="badge ok">Met</span></td><td>F09</td></tr>
+      <tr><td>Demotion gate: live strategy back to paper</td><td>Any hard gate failure demotes</td><td>All hard gates pass before live</td><td><span class="badge ok">Defined</span></td><td>&mdash;</td></tr>
+      <tr><td>Pre-register every strategy; no backtest numbers on leaderboard</td><td>Commit hash = registration</td><td>Frozen rule text per variant</td><td><span class="badge ok">Defined</span></td><td>&mdash;</td></tr>
+      <tr><td>Availability graph: expected vs actual starters</td><td>Depth-chart register + inactive/snap evidence</td><td>Date + source per roster row</td><td><span class="badge blank">Not met</span></td><td>F16</td></tr>
+      <tr><td>Model depth from playing time, not jersey order</td><td>Snap-count starter proxy</td><td>Snap share within team/position group</td><td><span class="badge ok">Met (inference)</span></td><td>F05</td></tr>
+      <tr><td>Injury signal = surprise, never a level</td><td>Designation reliability (play rate + CI)</td><td>Delta, not level</td><td><span class="badge partial">Partial</span></td><td>F14</td></tr>
+      <tr><td>32-team roster/IR sweep before team model trusted</td><td>Reserve list captured</td><td>All 32 clubs checked</td><td><span class="badge blank">Not met</span></td><td>&mdash;</td></tr>
+      <tr><td>Fixture-context feature set from published schedule facts</td><td>Venue, roof, neutral-site, primetime</td><td>Venue transcribed per fixture</td><td><span class="badge ok">Met (partial)</span></td><td>&mdash;</td></tr>
+      <tr><td>Model output = probability + inputs</td><td>Stored forecast with inputs</td><td>Win probability + inputs per game</td><td><span class="badge blank">Not met</span></td><td>&mdash;</td></tr>
+      <tr><td>Removal-of-luck panel on dashboard</td><td>Exact binomial + permutation null + CI</td><td>Break-even rate; bets for 80% power</td><td><span class="badge ok">Defined</span></td><td>F10</td></tr>
+      <tr><td>Two-sided 'what would change our mind' per strategy</td><td>Falsification criterion pre-registered</td><td>One field per strategy entry</td><td><span class="badge blank">Not met</span></td><td>&mdash;</td></tr>
+      <tr><td>Price a line ourselves; publish residual vs market</td><td>Weekly scheduled pricing run</td><td>fair · market · residual per game</td><td><span class="badge partial">Partial</span></td><td>F01</td></tr>
+      <tr><td>136-game log as pre-registered backtest corpus</td><td>Train / validation / holdout split frozen in git</td><td>Commit hash + sample window + gates</td><td><span class="badge blank">Not met</span></td><td>&mdash;</td></tr>
+      <tr><td>Decide price-data policy before backtest published</td><td>Policy document committed</td><td>Operator vs aggregator rule</td><td><span class="badge blank">Not met</span></td><td>Q01, Q02</td></tr>
+      <tr><td>Timestamped injury-hub reads; delta not level</td><td>Wed/Thu/Fri capture + hash + timestamp</td><td>Dated history of designation deltas</td><td><span class="badge partial">Partial</span></td><td>&mdash;</td></tr>
+      <tr><td>Decision-readiness table on landing page</td><td>One row per requirement</td><td>All requirements represented</td><td><span class="badge ok">Met</span></td><td>&mdash;</td></tr>
+      <tr><td>Transcribe venue of every fixture from Game Centre</td><td>Official venue per fixture</td><td>Venue column for all Week 11 games</td><td><span class="badge ok">Met</span></td><td>&mdash;</td></tr>
+      <tr><td>Publish dated schedule announcement beside live schedule</td><td>League's dated schedule announcement linked</td><td>Announcement URL beside schedule page</td><td><span class="badge blank">Not met</span></td><td>&mdash;</td></tr>
+      <tr><td>Official Game Books for starters &amp; game-day status</td><td>No inferred depth rank or snaps</td><td>Starters/status from Game Book only</td><td><span class="badge blank">Not met</span></td><td>&mdash;</td></tr>
+      <tr><td>Ingest game-level results for opponent-aware ratings</td><td>Completed-game results with scores</td><td>Opponent-adjusted ratings per team</td><td><span class="badge ok">Met (model input)</span></td><td>&mdash;</td></tr>
+      <tr><td>Injury &amp; personnel ablations, not fixed penalties</td><td>Identical model with/without availability</td><td>Difference with uncertainty</td><td><span class="badge blank">Not met</span></td><td>&mdash;</td></tr>
+      <tr><td>Immutable multi-day availability snapshots with hashes</td><td>Daily capture of injury report + depth pages</td><td>Hash + timestamp + conflict flags</td><td><span class="badge blank">Not met</span></td><td>&mdash;</td></tr>
+      <tr><td>Official inactive lists &amp; snap counts</td><td>Active list + snap share captured</td><td>Backup replacement of starter confirmable</td><td><span class="badge partial">Partial</span></td><td>F05</td></tr>
+      <tr><td>Fix depth-parsing failures (images, jersey prefixes)</td><td>Authorized structured source; raw string + strip</td><td>All 32 clubs parseable</td><td><span class="badge blank">Not met</span></td><td>F16</td></tr>
+      <tr><td>Depth slots as groups, not a single starter</td><td>Rank-1 groups allowed</td><td>All rank-1 groups listed per unit</td><td><span class="badge blank">Not met</span></td><td>&mdash;</td></tr>
+      <tr><td>Roster turnover as first-class data event</td><td>Versioned against last official roster event</td><td>Dated roster-event register</td><td><span class="badge blank">Not met</span></td><td>&mdash;</td></tr>
+      <tr><td>Singles-only shadow baseline pre-registered, frozen</td><td>Simple model frozen before forecasts</td><td>Version frozen; forecasts pre-kickoff</td><td><span class="badge partial">Partial</span></td><td>&mdash;</td></tr>
+      <tr><td>Joint-evidence gate for parlays / prop combos</td><td>Joint probability + void/push rules</td><td>Joint probability per combo</td><td><span class="badge blank">Not met</span></td><td>F03</td></tr>
+      <tr><td>Proper-score leaderboard divisions</td><td>Singles / game parlays / SGP / prop combos</td><td>Divisions + Brier skill + CI</td><td><span class="badge blank">Not met</span></td><td>&mdash;</td></tr>
+      <tr><td>Rank by proper score + uncertainty, not win rate</td><td>Multiplicity adjustment for trials</td><td>Brier skill + cluster lower bound</td><td><span class="badge ok">Defined</span></td><td>&mdash;</td></tr>
+      <tr><td>Durable snapshot storage &amp; alerts outside static site</td><td>Freshness monitoring + schema-change alerts</td><td>Alerts firing on change</td><td><span class="badge blank">Not met</span></td><td>&mdash;</td></tr>
+      <tr><td>Public analysis layer / private data-layer split</td><td>Raw row-level data private until terms read</td><td>Public derived analysis only</td><td><span class="badge blank">Not met</span></td><td>&mdash;</td></tr>
+      <tr><td>Per-team view: starters out, replacements, net injury count</td><td>Team-level decision view</td><td>One row per team</td><td><span class="badge blank">Not met</span></td><td>&mdash;</td></tr>
+      <tr><td>Announced-starter evidence field (not inferred)</td><td>Dated starter changes from NFL</td><td>Field populated where NFL publishes</td><td><span class="badge blank">Not met</span></td><td>&mdash;</td></tr>
+      <tr><td>Official depth-chart register with date + source per row</td><td>Register entry per row</td><td>Date + source on every depth row</td><td><span class="badge blank">Not met</span></td><td>F16</td></tr>
+      <tr><td>Calibrate 'Questionable' empirically</td><td>Play rate per designation + CI</td><td>Calibrated activation probability</td><td><span class="badge blank">Not met</span></td><td>F14</td></tr>
+      <tr><td>Offense vs defense matchup-deficiency matrix (1st&ndash;4th)</td><td>Verified replacement depth per unit</td><td>Matrix of pairings</td><td><span class="badge blank">Not met</span></td><td>&mdash;</td></tr>
+      <tr><td>Flag stale depth rows vs transactions log</td><td>Depth row vs official transactions</td><td>Stale rows flagged</td><td><span class="badge blank">Not met</span></td><td>&mdash;</td></tr>
+      <tr><td>Point-in-time snapshot ledger (injuries, depth, inactives)</td><td>Pre-kickoff replacement certainty</td><td>Dated ledger with hashes</td><td><span class="badge blank">Not met</span></td><td>&mdash;</td></tr>
+      <tr><td>Reject depth from jersey number / experience / salary</td><td>Shortcut explicitly rejected</td><td>Rejection documented</td><td><span class="badge ok">Met</span></td><td>&mdash;</td></tr>
+      <tr><td>Represent shared &amp; empty depth slots faithfully</td><td>Multi-player and empty slots distinguishable</td><td>Slot cardinality captured</td><td><span class="badge blank">Not met</span></td><td>&mdash;</td></tr>
+      <tr><td>Resolve depth-order source before backup-deficiency feature</td><td>Official depth charts or official snap counts for all 32</td><td>One verified route for all 32 clubs</td><td><span class="badge blank">Not met</span></td><td>F16</td></tr>
+      <tr><td>Score injury-designation reliability (play rate + CI)</td><td>Designations joined to inactive lists</td><td>Play rate + CI per designation</td><td><span class="badge blank">Not met</span></td><td>&mdash;</td></tr>
+      <tr><td>Wed/Thu/Fri nfl.com injury snapshots with dated history</td><td>Daily capture Wednesday to kickoff</td><td>Dated history</td><td><span class="badge blank">Not met</span></td><td>&mdash;</td></tr>
+      <tr><td>Injury report as timestamped series, not weekly snapshot</td><td>Fetch timestamp stored; deltas measured</td><td>Designation evolution published</td><td><span class="badge blank">Not met</span></td><td>&mdash;</td></tr>
+      <tr><td>Snap-count starter proxy when depth chart unavailable</td><td>Snap share defines starter/backup split</td><td>Starter/backup split measurable</td><td><span class="badge ok">Met (inference)</span></td><td>F05</td></tr>
+      <tr><td>Control baseline (random picks; favorites only) on leaderboard</td><td>Baseline computed each run</td><td>Baseline rows beside strategies</td><td><span class="badge blank">Not met</span></td><td>&mdash;</td></tr>
+      <tr><td>Stadium roof/surface + NWS hourly wind/precipitation overlay</td><td>NWS grids + official 90-min roof designation</td><td>Weather overlay on totals/props</td><td><span class="badge blank">Not met</span></td><td>&mdash;</td></tr>
+      <tr><td>Two-stage skill leaderboard (proper-score &rarr; CLV/ROI escrow)</td><td>Brier skill qualification before CLV/ROI</td><td>Stage 1 + Stage 2 gates</td><td><span class="badge blank">Not met</span></td><td>&mdash;</td></tr>
+      <tr><td>Vig-free market consensus vs fair-line decomposition</td><td>Vig removed from market price</td><td>Decomposition view published</td><td><span class="badge blank">Not met</span></td><td>F01</td></tr>
+      <tr><td>Weekly 'what changed' diff (rank, rating, availability)</td><td>Stored weekly snapshots rendered as diff</td><td>Diff column published</td><td><span class="badge blank">Not met</span></td><td>&mdash;</td></tr>
+      <tr><td>Publish every model total twice until one wins</td><td>Walk-forward comparison before collapse</td><td>Both estimators + gap column</td><td><span class="badge blank">Not met</span></td><td>&mdash;</td></tr>
+      <tr><td>Drift alarm on every scraper</td><td>Row counts + required fields pinned</td><td>Build fails on missing field</td><td><span class="badge blank">Not met</span></td><td>&mdash;</td></tr>
+      <tr><td>Capture reserve list so 'not listed' never means available</td><td>Reserve/IR read alongside injury report</td><td>Reserve register</td><td><span class="badge blank">Not met</span></td><td>&mdash;</td></tr>
+      <tr><td>Reject ranking by season-long ROI</td><td>ROI ranking explicitly rejected</td><td>Rejection documented</td><td><span class="badge ok">Met</span></td><td>&mdash;</td></tr>
+      <tr><td>Archive injury reports for past seasons</td><td>Past-season reports stored</td><td>Multi-season designation history</td><td><span class="badge blank">Not met</span></td><td>&mdash;</td></tr>
+      <tr><td>Pre-register: rule text + sample window + gates in git</td><td>Commit hash is the registration</td><td>Commit hash per rule</td><td><span class="badge ok">Defined</span></td><td>&mdash;</td></tr>
+      <tr><td>Train / validation / final holdout seasons split</td><td>Split defined before evaluation window</td><td>Three season sets</td><td><span class="badge blank">Not met</span></td><td>&mdash;</td></tr>
+      <tr><td>2026 kickoff &amp; declared onside-kick regime priors</td><td>Rule priors committed</td><td>Prior document</td><td><span class="badge blank">Not met</span></td><td>&mdash;</td></tr>
+      <tr><td>Suggestions register (review before implement)</td><td>Decision state + review test</td><td>Reviewable suggestions section</td><td><span class="badge ok">Met</span></td><td>&mdash;</td></tr>
+      <tr><td>Questions / information / answers register</td><td>Have / missing / resolve</td><td>All blocking questions named</td><td><span class="badge ok">Met</span></td><td>&mdash;</td></tr>
+      <tr><td>Executive summary</td><td>Verified vs computed vs missing</td><td>One-page summary</td><td><span class="badge ok">Met</span></td><td>&mdash;</td></tr>
+      <tr><td>GitHub Pages live site (landing + category subpages)</td><td>Site builds with no broken links</td><td>Live Pages deployment</td><td><span class="badge partial">In progress</span></td><td>&mdash;</td></tr>
+    </tbody>
+  </table>
+
+  <div class="footer">
+    Statuses: Met · Defined · Partial · Not met. Blank values are unverified, never inferred. Flags link to the Flagged for review page. 1-800-GAMBLER.
+  </div>
+</main>
+</body>
+</html>

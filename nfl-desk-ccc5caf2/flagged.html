@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="OWN5 NFL Line Originator — flagged for review. Irregularities and unverified blanks, each with source links.">
+<title>Flagged for review · OWN5 NFL Line Originator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <div class="mark">O5</div>
+      <div>
+        <h1><a href="index.html">OWN5 NFL Line Originator</a></h1>
+        <p>Session ccc5caf2 &middot; Flagged for review</p>
+      </div>
+    </div>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Overview</a>
+      <a href="requirements.html">Requirements &amp; readiness</a>
+      <a href="lines.html">Own lines (Week 11)</a>
+      <a href="strategies.html">Strategies</a>
+      <a href="gates.html">Validation gates</a>
+      <a href="correlations.html">Correlations</a>
+      <a href="injuries.html">Injuries &amp; depth</a>
+      <a href="suggestions.html">Suggestions</a>
+      <a href="questions.html">Questions &amp; answers</a>
+      <a href="sources.html">Sources</a>
+      <a class="active" href="flagged.html">Flagged for review</a>
+      <a href="verification.html">Verification</a>
+      <a href="summary.html">Executive summary</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap" id="main">
+  <section class="pagehead">
+    <h2>Flagged for review</h2>
+    <p>Irregularities and unverified blanks. These are <strong>non-blocking</strong> and are published here so they can be reviewed after the site is live. Values are left blank &mdash; never inferred. Each item carries source links for manual review.</p>
+  </div>
+
+  <table class="data">
+    <thead>
+      <tr><th>ID</th><th>Severity</th><th>Item</th><th>Detail</th><th>Action</th><th>Source</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="record-id">F01</span></td>
+        <td><span class="badge bad">Blocks</span></td>
+        <td>Market line provenance and timestamp</td>
+        <td>Every market value comes from an aggregator line whose timestamp is unknown; comparison cannot distinguish opening from closing line</td>
+        <td>Published as AGGREGATOR; gates G4/G8 recorded as failed; suggestion S01 addresses it</td>
+        <td><a href="https://github.com/nflverse/nflverse-data/releases/tag/schedules" rel="noopener">nflverse schedules</a></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">F02</span></td>
+        <td><span class="badge bad">Blocks</span></td>
+        <td>No official closing-line history</td>
+        <td>No official NFL or operator source publishes historical closing lines with timestamps; CLV cannot be computed from official data</td>
+        <td>G4 marked failed for every strategy; no strategy certified</td>
+        <td><a href="https://www.nfl.com/" rel="noopener">nfl.com</a></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">F03</span></td>
+        <td><span class="badge bad">Blocks</span></td>
+        <td>No official player-prop line history</td>
+        <td>Prop legs evaluated at median splits and by correlation, not against real prices</td>
+        <td>Correlation coefficients published; economic evaluation withheld</td>
+        <td><a href="https://github.com/nflverse/nflverse-data/releases/tag/stats_player" rel="noopener">nflverse stats_player</a></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">F04</span></td>
+        <td><span class="badge warn">Review</span></td>
+        <td>Incomplete game statuses at retrieval</td>
+        <td>The Week 10 snapshot lists 276 players but only 6 carry a game status (Out/Doubtful/Questionable); the rest are practice-only</td>
+        <td>Practice-status weights applied and labelled provisional; page refreshed later in the week</td>
+        <td><a href="https://www.nfl.com/injuries/" rel="noopener">nfl.com injuries</a></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">F05</span></td>
+        <td><span class="badge warn">Review</span></td>
+        <td>Depth strings inferred, not official</td>
+        <td>The NFL does not publish machine-readable depth charts; depth strings (1st&ndash;4th) computed from season-to-date snap share</td>
+        <td>Method and thresholds published; role unknown for players without a snap profile</td>
+        <td><a href="https://www.nfl.com/injuries/" rel="noopener">nfl.com injuries</a></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">F06</span></td>
+        <td><span class="badge info">Note</span></td>
+        <td>Six clubs report no injuries on the snapshot</td>
+        <td>The official page lists 26 clubs; the remaining six show no reported injuries rather than missing data</td>
+        <td>Teams with zero listed rows shown as zero, not missing, and flagged here</td>
+        <td><a href="https://www.nfl.com/injuries/" rel="noopener">nfl.com injuries</a></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">F07</span></td>
+        <td><span class="badge info">Note</span></td>
+        <td>Club code mismatch: LA vs LAR</td>
+        <td>nflverse uses LA for the Rams and teams.csv uses LAR; joins would silently drop the Rams without an alias</td>
+        <td>Alias applied in the audit; documented in the crosscheck table</td>
+        <td><a href="https://www.nfl.com/teams/los-angeles-rams/" rel="noopener">nfl.com Rams</a></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">F08</span></td>
+        <td><span class="badge warn">Review</span></td>
+        <td>Prior session's home-underdog claims do not reproduce</td>
+        <td>Recomputing gives home underdogs 49.7% ATS (prior 52.6%) and +7 dogs 54.0% over 730 bets (prior 56.4% over 793)</td>
+        <td>Prior figures flagged; new figures used on the site; discrepancy left for human review</td>
+        <td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/backtest_results.csv" rel="noopener">backtest_results.csv</a></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">F09</span></td>
+        <td><span class="badge warn">Review</span></td>
+        <td>Prior QB/WR correlation of 0.76 does not reproduce</td>
+        <td>On 2024&ndash;2026 weekly stats the correlation is 0.50 (n=1,255); the prior 0.76 came from a play-by-play extract through 2020</td>
+        <td>Both figures published; the newer, larger-sample figure used for SGP pricing</td>
+        <td><a href="https://github.com/nflverse/nflverse-data/releases/tag/stats_player" rel="noopener">nflverse stats_player</a></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">F10</span></td>
+        <td><span class="badge warn">Review</span></td>
+        <td>Prior luck figure of 20.8% does not reproduce</td>
+        <td>Exact binomial probability of 110+ wins in 200 bets at 52.38% is 25.1%, not 20.8%</td>
+        <td>Exact calculation published with the formula; prior figure flagged</td>
+        <td><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/arena-f1d30421/luck-vs-skill.md" rel="noopener">luck-vs-skill.md</a></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">F11</span></td>
+        <td><span class="badge info">Note</span></td>
+        <td>Sign-convention error caught in this session</td>
+        <td>First injury backtest used the wrong spread sign and reported 57.4% ATS edge; after correction 51.4% (p=1.0)</td>
+        <td>Erroneous run retained in the audit trail as a methodology lesson; sign-convention regression test suggested (S02)</td>
+        <td><a href="https://github.com/nflverse/nflverse-data/releases/tag/schedules" rel="noopener">nflverse schedules</a></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">F12</span></td>
+        <td><span class="badge warn">Review</span></td>
+        <td>Single aggregator dependency</td>
+        <td>Snap counts, weekly stats, injury mirrors and lines all come from one mirror project; a drift there propagates into every number</td>
+        <td>Dual-source assertions proposed (S09); official pages parsed where possible</td>
+        <td><a href="https://github.com/nflverse/nflverse-data" rel="noopener">nflverse-data</a></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">F13</span></td>
+        <td><span class="badge warn">Review</span></td>
+        <td>Week 11 market lines not verified against an operator page</td>
+        <td>Current-week market cells are aggregator values; no operator page snapshot captured</td>
+        <td>Market cells labelled AGGREGATOR; model-versus-market edge described as provisional</td>
+        <td><a href="https://github.com/nflverse/nflverse-data/releases/tag/schedules" rel="noopener">nflverse schedules</a></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">F14</span></td>
+        <td><span class="badge warn">Review</span></td>
+        <td>Availability weights are judgement calls</td>
+        <td>Out/Doubtful/Questionable = 1.0/0.75/0.5 and DNP/Limited/Full = 0.5/0.25/0.0 are assumptions, not published probabilities</td>
+        <td>Assumptions listed in the methodology; empirical fitting proposed (S07)</td>
+        <td><a href="https://www.nfl.com/injuries/" rel="noopener">nfl.com injuries</a></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">F15</span></td>
+        <td><span class="badge warn">Review</span></td>
+        <td>Small 2026 calibration sample</td>
+        <td>2026 contributes 136 completed games to a 950-game calibration sample; per-season slopes range &minus;0.035 to &minus;0.131 points per percentage point</td>
+        <td>Per-season results published rather than a single pooled number</td>
+        <td><a href="https://www.nfl.com/standings/league/2026/REG" rel="noopener">nfl.com standings</a></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">F16</span></td>
+        <td><span class="badge warn">Review</span></td>
+        <td>No machine-readable official depth chart exists</td>
+        <td>Club websites publish depth charts in inconsistent formats; the league does not publish a structured feed</td>
+        <td>Snap-share inference used; documented as an inference</td>
+        <td><a href="https://www.nfl.com/teams/" rel="noopener">nfl.com teams</a></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">F17</span></td>
+        <td><span class="badge info">Note</span></td>
+        <td>Neutral-site home-field assumption</td>
+        <td>The Mexico City game is a Detroit home game; the model sets home-field advantage to zero for it; the size of that assumption is not measured</td>
+        <td>Published in the line table; Q14 tracks it</td>
+        <td><a href="https://www.nfl.com/schedules/2026/by-week/week-11" rel="noopener">nfl.com schedule</a></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">F18</span></td>
+        <td><span class="badge info">Note</span></td>
+        <td>Mirror freshness for the current week</td>
+        <td>The mirror's Week 10 injury rows matched the official page 276/276 at retrieval, but the mirror can lag later updates</td>
+        <td>Retrieval timestamp published; weekly re-run required</td>
+        <td><a href="https://www.nfl.com/injuries/" rel="noopener">nfl.com injuries</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="section">
+    <h3>How to review</h3>
+    <ul>
+      <li><strong>Blocks</strong> items (F01&ndash;F03) prevent certification and any claim of skill; they need a new data source or owner decision.</li>
+      <li><strong>Review</strong> items (F04, F05, F08, F09, F10, F12, F13, F14, F15, F16) should be examined before relying on the affected numbers.</li>
+      <li><strong>Note</strong> items (F06, F07, F11, F17, F18) are documented for transparency.</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    Flagged items are irregularities and unverified blanks &mdash; they do not block the merge but are published here for review. 1-800-GAMBLER.
+  </div>
+</main>
+</body>
+</html>

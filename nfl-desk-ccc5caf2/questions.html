@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="OWN5 NFL Line Originator — questions/information/answers register. What must be answered before a decision is reasonable.">
+<title>Questions &amp; answers · OWN5 NFL Line Originator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <div class="mark">O5</div>
+      <div>
+        <h1><a href="index.html">OWN5 NFL Line Originator</a></h1>
+        <p>Session ccc5caf2 &middot; Questions &amp; answers</p>
+      </div>
+    </div>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Overview</a>
+      <a href="requirements.html">Requirements &amp; readiness</a>
+      <a href="lines.html">Own lines (Week 11)</a>
+      <a href="strategies.html">Strategies</a>
+      <a href="gates.html">Validation gates</a>
+      <a href="correlations.html">Correlations</a>
+      <a href="injuries.html">Injuries &amp; depth</a>
+      <a href="suggestions.html">Suggestions</a>
+      <a class="active" href="questions.html">Questions &amp; answers</a>
+      <a href="sources.html">Sources</a>
+      <a href="flagged.html">Flagged for review</a>
+      <a href="verification.html">Verification</a>
+      <a href="summary.html">Executive summary</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap" id="main">
+  <section class="pagehead">
+    <h2>Questions, information and answers</h2>
+    <p>A clear list of what must be addressed before any decision can reasonably be made &mdash; and suggestions for discovering the missing information. Blocking questions cannot be closed from public data; they need an owner decision or a new data source.</p>
+  </div>
+
+  <div class="notice bad">
+    <strong>4 questions block a decision and cannot be closed from public data:</strong> Q01 (benchmark price), Q02 (aggregator line provenance), Q04 (reward type), Q05 (jurisdiction). Q03 (bankroll/staking) also blocks certification.
+  </div>
+
+  <table class="data">
+    <thead>
+      <tr><th>ID</th><th>Question</th><th>Why it matters</th><th>What we have</th><th>What is missing</th><th>How to resolve</th><th>Blocks</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="record-id">Q01</span></td>
+        <td><strong>Which price is the benchmark for 'beating the market': our line at post, the operator's current price, or the closing price?</strong></td>
+        <td>Every CLV, edge and certification statement depends on which price it is measured against</td>
+        <td>A single aggregator line per game with unknown timestamp</td>
+        <td>A timestamped operator price history</td>
+        <td>Capture the operator page twice weekly and store the raw snapshot (S01)</td>
+        <td>Gate G4, leaderboard certification, any skill claim</td>
+        <td><span class="badge bad">Blocking</span></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">Q02</span></td>
+        <td><strong>Are the aggregator line values closing lines, and for which operator?</strong></td>
+        <td>If closing, any measured ATS edge is implausible; if early lines, part of the edge is stale-line alpha</td>
+        <td>nflverse games.csv spread_line/total_line; no documented source or snapshot time</td>
+        <td>Provenance and timestamp from the publisher</td>
+        <td>Ask the mirror maintainer, or replace with an archived operator snapshot</td>
+        <td>Interpretation of every market comparison in the repo</td>
+        <td><span class="badge bad">Blocking</span></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">Q03</span></td>
+        <td><strong>What bankroll, staking rule and maximum drawdown are acceptable?</strong></td>
+        <td>Kelly fractions, stop rules and the drawdown gate are undefined without a bankroll</td>
+        <td>A 100-unit reference bankroll and quarter-Kelly cap used for illustration only</td>
+        <td>The owner's actual risk tolerance and capital</td>
+        <td>Owner decision; not resolvable from any source</td>
+        <td>G6/G7 evaluation, reward sizing</td>
+        <td><span class="badge bad">Blocking</span></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">Q04</span></td>
+        <td><strong>Are rewards cash, points, or nothing?</strong></td>
+        <td>Cash rewards change legal, tax and eligibility requirements</td>
+        <td>Reward tiers proposed; no funding decision</td>
+        <td>Owner decision plus a jurisdiction review</td>
+        <td>Owner states the jurisdiction; treat as points-only until answered (S16)</td>
+        <td>Competition launch</td>
+        <td><span class="badge bad">Blocking</span></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">Q05</span></td>
+        <td><strong>Which jurisdiction and operator rules govern the bets?</strong></td>
+        <td>Same-game parlay restrictions, minimum age, void/push rules differ by state and operator</td>
+        <td>Operator house-rule pages cited by earlier sessions</td>
+        <td>A confirmed jurisdiction and that operator's current terms</td>
+        <td>Owner states the jurisdiction; then re-read that operator's house rules for that state</td>
+        <td>G9&ndash;G12, any live betting</td>
+        <td><span class="badge bad">Blocking</span></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">Q06</span></td>
+        <td><strong>Can we obtain historical player-prop lines to backtest prop strategies?</strong></td>
+        <td>Without a prop line there is no breakeven price, so a prop strategy cannot be evaluated economically</td>
+        <td>Median-split proxies and correlation coefficients from official-derived stats</td>
+        <td>Any official public prop-line history (none exists)</td>
+        <td>Commercial odds archive, or forward-collect prop lines from today onward</td>
+        <td>Economically meaningful prop backtests</td>
+        <td><span class="badge bad">Blocking</span></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">Q07</span></td>
+        <td><strong>What defines a 'starter' &mdash; the club depth chart, or snap share?</strong></td>
+        <td>Depth charts are not published by the league; snap share is measurable but lags role changes</td>
+        <td>Snap-share role inference with thresholds and depth strings 1&ndash;4</td>
+        <td>An official, machine-readable depth chart (none exists)</td>
+        <td>Keep snap share as primary, publish the threshold; cross-check against club-published depth charts</td>
+        <td>Precision of injury/depth deficiencies</td>
+        <td><span class="badge warn">Partially answered</span></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">Q08</span></td>
+        <td><strong>How many points is a missing player worth?</strong></td>
+        <td>The injury adjustment needs a value per player, not just a count</td>
+        <td>Estimated &minus;0.039 pts per percentage point of relative deficiency (p = 6e-5)</td>
+        <td>Position-specific values (QB vs guard vs safety) and interaction effects</td>
+        <td>Fit per-position-group coefficients with enough sample; validate out of season</td>
+        <td>Precision of the injury adjustment</td>
+        <td><span class="badge warn">Partially answered</span></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">Q09</span></td>
+        <td><strong>Should practice status be used as a probability weight?</strong></td>
+        <td>Game status publishes late; ignoring practice participation discards the only early signal</td>
+        <td>Documented judgement weights (Out 1.0 / Doubtful 0.75 / Questionable 0.5; DNP 0.5 / Limited 0.25 / Full 0.0)</td>
+        <td>Empirically fitted activation probabilities by practice sequence</td>
+        <td>Fit on 2023&ndash;2026 reports and replace the judgement weights (S07)</td>
+        <td>Nothing blocking; improves accuracy</td>
+        <td><span class="badge warn">Partially answered</span></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">Q10</span></td>
+        <td><strong>Do Questionable players belong in the deficiency score?</strong></td>
+        <td>A Questionable starter often plays; counting him at 0.5 could double-count with his backup</td>
+        <td>A 0.5 weight applied consistently</td>
+        <td>Evidence on actual activation rates by position and practice level</td>
+        <td>Same fit as Q09; until then keep the weight and disclose it</td>
+        <td>Nothing blocking</td>
+        <td><span class="badge warn">Partially answered</span></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">Q11</span></td>
+        <td><strong>What sample size is required before a strategy may appear on the leaderboard?</strong></td>
+        <td>Appearing on a board is a claim; small samples make that claim false</td>
+        <td>A 300-bet minimum; ~2,241 bets to distinguish 55% from 52.38% at 80% power</td>
+        <td>An owner-agreed rule for provisional vs certified listing</td>
+        <td>Adopt the 300-bet minimum for provisional listing</td>
+        <td>Reward allocation, not analysis</td>
+        <td><span class="badge ok">Answered</span></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">Q12</span></td>
+        <td><strong>What false-discovery rate is acceptable when certifying a strategy?</strong></td>
+        <td>Bonferroni over 7 variants at alpha=0.05 is conservative; a different error budget changes who qualifies</td>
+        <td>Bonferroni 0.05/k with k published, plus permutation nulls</td>
+        <td>An explicit owner preference (strict vs exploratory)</td>
+        <td>Keep strict for anything that would attract money; allow exploratory labels at 0.10 with disclosure</td>
+        <td>Nothing blocking; policy choice</td>
+        <td><span class="badge ok">Answered</span></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">Q13</span></td>
+        <td><strong>How often may the model be updated in-season?</strong></td>
+        <td>Frequent refits invite overfitting and make the published line unreproducible</td>
+        <td>A fixed weekly refit, parameters estimated only from prior weeks</td>
+        <td>A rule for mid-week injury-driven recalculation</td>
+        <td>Freeze the model after the Wednesday report; publish the frozen line and the injury adjustment separately</td>
+        <td>Auditability of the line history</td>
+        <td><span class="badge ok">Answered</span></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">Q14</span></td>
+        <td><strong>Is home-field advantage really zero at a neutral site?</strong></td>
+        <td>The Mexico City game is a designated home game; treating it as neutral is an assumption</td>
+        <td>HFA = +1.22 points estimated; neutral games set to zero</td>
+        <td>Measured margin in international/neutral games</td>
+        <td>Estimate the neutral-site effect from historical neutral games</td>
+        <td>Precision of one line, not the framework</td>
+        <td><span class="badge warn">Partially answered</span></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">Q15</span></td>
+        <td><strong>Do we include postseason games in ratings and backtests?</strong></td>
+        <td>Including playoffs mixes different rest patterns and opponent quality</td>
+        <td>Regular season only, explicitly filtered</td>
+        <td>A decision on whether postseason props/futures are in scope</td>
+        <td>Keep regular season for ratings; treat postseason as a separate labelled sample</td>
+        <td>Nothing blocking</td>
+        <td><span class="badge ok">Answered</span></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">Q16</span></td>
+        <td><strong>Which lineage wins when the official page and the mirror disagree?</strong></td>
+        <td>A silent drift would change every downstream number</td>
+        <td>A row-for-row cross-check: 276/276 injury rows and 32/32 standings rows agree</td>
+        <td>An automated fail-closed policy in CI</td>
+        <td>Fail the build and flag the mismatch rather than choosing silently</td>
+        <td>Trust in the whole pipeline</td>
+        <td><span class="badge ok">Answered</span></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">Q17</span></td>
+        <td><strong>How are source changes versioned?</strong></td>
+        <td>An official page changes weekly; a value without a timestamp cannot be audited later</td>
+        <td>A provenance file with URL, HTTP status, SHA-256, byte count and UTC timestamp per fetch</td>
+        <td>Long-term retention beyond repository history</td>
+        <td>Keep the weekly snapshot commit; tag releases per season</td>
+        <td>Long-run reproducibility</td>
+        <td><span class="badge ok">Answered</span></td>
+      </tr>
+      <tr>
+        <td><span class="record-id">Q18</span></td>
+        <td><strong>Is there budget for a paid odds feed?</strong></td>
+        <td>A verified price feed closes Q01, Q02 and Q06 at once; the free route is slow and partial</td>
+        <td>No paid feed; aggregator lines only</td>
+        <td>Owner budget decision</td>
+        <td>Owner decision; document the cost of the gap either way</td>
+        <td>Certification of skill (G4), prop backtests</td>
+        <td><span class="badge bad">Blocking</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="section">
+    <h3>Suggestions to discover missing information</h3>
+    <ul>
+      <li><strong>Q01/Q02:</strong> capture the operator's NFL page twice weekly (S01) or accept that certification stays blocked.</li>
+      <li><strong>Q04/Q05:</strong> the owner states the jurisdiction and reward preference; publish reward terms only after (S16).</li>
+      <li><strong>Q06:</strong> commercial odds archive, or forward-collect prop lines from today onward and accept a late start date.</li>
+      <li><strong>Q07:</strong> cross-check snap-share inference against club-published depth charts where available.</li>
+      <li><strong>Q08/Q09/Q10:</strong> fit per-position coefficients and activation probabilities on 2023&ndash;2026 reports.</li>
+      <li><strong>Q18:</strong> document the cost of the paid-odds-feed gap either way.</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    Blocking = cannot be closed from public data; needs an owner decision or new source. Partially answered = has a working value but not yet confirmed. Answered = policy decision recorded. 1-800-GAMBLER.
+  </div>
+</main>
+</body>
+</html>

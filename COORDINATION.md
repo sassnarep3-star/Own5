@@ -3234,12 +3234,12 @@ echo "appended"; wc -l COORDINATION.md
 
 | ID | Task | Status | Owner | Files touched | Notes |
 |----|------|--------|-------|---------------|-------|
-| CCC1 | Claim scope in COORDINATION.md + push claim | in progress | arena/ccc5caf2-own5 | COORDINATION.md | This block. Claim pushed before build work. |
-| CCC2 | Executive summary covering every brief requirement (verified vs computed vs missing) | in progress | arena/ccc5caf2-own5 | research/ccc5caf2/EXECUTIVE_SUMMARY.md | Rolls up verified, computed, missing; every row sourced or blank+flagged. |
-| CCC3 | GitHub Pages site: clean landing page + category subpages, all tables sourced or flagged | in progress | arena/ccc5caf2-own5 | nfl-desk-ccc5caf2/** | Landing page + subpages per category; no manual input; every row official-source linked or blank+flagged. |
-| CCC4 | Requirements coverage matrix: each brief requirement → artefact → gate → number to clear → observed status | in progress | arena/ccc5caf2-own5 | research/ccc5caf2/REQUIREMENTS.md, nfl-desk-ccc5caf2/requirements.html | Decision-readiness table on the landing page. |
-| CCC5 | Official-source verification: fetch official NFL pages, link each row, flag unverified blanks | in progress | arena/ccc5caf2-own5 | research/ccc5caf2/VERIFICATION.md, nfl-desk-ccc5caf2/sources.html, flagged.html | Fetch via official pages only; never infer. |
-| CCC6 | Suggestions register (review before implement) + questions/information/answers register | in progress | arena/ccc5caf2-own5 | research/ccc5caf2/SUGGESTIONS.md, research/ccc5caf2/QUESTIONS.md, nfl-desk-ccc5caf2/suggestions.html, questions.html | Dedicated reviewable section. |
+| CCC1 | Suggestions register in COORDINATION.md + push claim | done | arena/ccc5caf2-own5 | COORDINATION.md | This block. Claim pushed before build work. |
+| CCC2 | Executive summary covering every brief requirement (verified vs computed vs missing) | done | arena/ccc5caf2-own5 | research/ccc5caf2/EXECUTIVE_SUMMARY.md | Rolls up verified, computed, missing; every row sourced or blank+flagged. |
+| CCC3 | GitHub Pages site: clean landing page + category subpages, all tables sourced or flagged | done | arena/ccc5caf2-own5 | nfl-desk-ccc5caf2/** | Landing page + subpages per category; no manual input; every row official-source linked or blank+flagged. |
+| CCC4 | Requirements coverage matrix: each brief requirement → artefact → gate → number to clear → observed status | done | arena/ccc5caf2-own5 | research/ccc5caf2/REQUIREMENTS.md, nfl-desk-ccc5caf2/requirements.html | Decision-readiness table on the landing page. |
+| CCC5 | Official-source verification: fetch official NFL pages, link each row, flag unverified blanks | done | arena/ccc5caf2-own5 | research/ccc5caf2/VERIFICATION.md, nfl-desk-ccc5caf2/sources.html, flagged.html | Fetch via official pages only; never infer. |
+| CCC6 | Suggestions register (review before implement) + questions/information/answers register | done | arena/ccc5caf2-own5 | research/ccc5caf2/SUGGESTIONS.md, research/ccc5caf2/QUESTIONS.md, nfl-desk-ccc5caf2/suggestions.html, questions.html | Dedicated reviewable section. |
 | CCC7 | Commit, push, open PR to main, merge, confirm Pages deploys, record result | unclaimed | arena/ccc5caf2-own5 | COORDINATION.md | PR from arena/ccc5caf2-own5 → main; verify Pages build. |
 
 ## Cross-session requests
