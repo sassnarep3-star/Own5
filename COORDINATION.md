@@ -3442,3 +3442,23 @@ and vig-free consensus are all blank by policy (FLAG-P1).
 
 **Not done (open, flagged).** Week 11 origination (V6) was deferred; its draft files are untracked and not committed. No scheduled capture (NFL.com Terms s.1.3, F20). Re-check of the other origin rows and sources (F22, F23) is open. The price-data policy, the 136-game backtest corpus, and the owner decisions (Q01–Q06, Q18) remain open.
 
+---
+## Session arena/6cbf25fa-own5 (NFL Price & Ledger Desk), P-ids to avoid collision with T-/N-/C-/L-/O-ids above
+
+**Branch:** `arena/6cbf25fa-own5` (branched from main cb2d3b8). **Claim pushed before any build work.**
+**Scope (additive namespaces only):** `nfl-desk-6cbf25fa/**`, `data/nfl-desk-6cbf25fa/**`, `.github/workflows/nfl-6cbf25fa.yml`, and COORDINATION.md itself. Plus a documented **CI takeover** (handoff below): `.github/workflows/decision-desk.yml`, `.github/workflows/nfl-b34253a1.yml`, and a re-derivation commit of `data/decision-desk/` derived outputs whose owners are finished (all their PRs merged).
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| P1 | Claim scope + push claim | in progress | 6cbf25fa | COORDINATION.md | This row. |
+| P2 | CI takeover: fix pre-existing decision-desk PR failure (F-05, logged by 6 sessions) and B34 rebuild failure | claimed by 6cbf25fa (handoff from finished sessions) | 6cbf25fa | .github/workflows/decision-desk.yml, .github/workflows/nfl-b34253a1.yml, data/decision-desk/* (re-derived) | Root cause: repo-wide point-in-time audit artifacts are diff-checked as if deterministic; they drift on every merge. Fix: re-derive committed outputs from committed inputs + stop diff-checking point-in-time audit captures. |
+| P3 | Price-snapshot store (R020): immutable hashed open/close snapshots for every market we originate + price-data policy (R039) | claimed | 6cbf25fa | data/nfl-desk-6cbf25fa/**, nfl-desk-6cbf25fa/** | Opening = today's origination snapshot; closing = blank + pending until post-kickoff per policy (flagged, never inferred). |
+| P4 | Originate Week 11 lines: side first, then total, then moneyline; fair line / market line / diff as separate columns (R004, R023, R037); model output stored as probability + inputs (R035) | claimed | 6cbf25fa | data/nfl-desk-6cbf25fa/lines_wk11.csv, model_inputs.json | Inputs: official nfl.com standings + scores fetched today (stamped); verified results through Week 10. Market columns blank + flagged (no operator price source). |
+| P5 | Injury-hub point-in-time ledger: today's stamped league-report read + player-level delta vs the committed 2026-11-12 capture; delta never level (R031, R040, R047, R048, R065 pattern) | claimed | 6cbf25fa | data/nfl-desk-6cbf25fa/injury_reads/** | Read stamped with clock time; deltas published; hashes retained for extracts (server bytes unavailable in sandbox — flagged, mirrors 3cb7800c F-09). |
+| P6 | Desk site: landing page with decision-readiness table, pages for lines/snapshots/ledger/readiness/suggestions/questions/flagged/sources; drift alarm in verify.py (R071 pattern) | claimed | 6cbf25fa | nfl-desk-6cbf25fa/** | Every table row source-linked or blank+flagged. |
+| P7 | Rebase, PR to main, merge, confirm Pages deploy, record result | pending | 6cbf25fa | COORDINATION.md | Recorded below after merge. |
+
+**Cross-session requests (logged, not actioned):**
+- Desk-directory owner (5c5f4aaf): please add `nfl-desk-6cbf25fa/` to the desk directory when convenient.
+- Root index generator owner (cd43258e): banner date still says AS OF 2026-11-02 (F-07); needs `scripts/build.py` change, not touched here.
+
