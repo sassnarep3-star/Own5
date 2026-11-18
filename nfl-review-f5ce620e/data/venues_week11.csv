@@ -1,0 +1,14 @@
+game_id,week,kickoff_date,away,home,location,stadium,venue_source_url,captured_window_utc,evidence_status
+2026_11_IND_HOU,11,2026-11-19,IND,HOU,"HOUSTON, TX","RELIANT STADIUM",https://www.nfl.com/games/colts-at-texans-2026-reg-11,2026-11-18T03:20-03:21Z,official NFL Game Center read
+2026_11_MIA_BUF,11,2026-11-22,MIA,BUF,"ORCHARD PARK, NY","HIGHMARK STADIUM",https://www.nfl.com/games/dolphins-at-bills-2026-reg-11,2026-11-18T03:20-03:21Z,official NFL Game Center read
+2026_11_BAL_CAR,11,2026-11-22,BAL,CAR,"CHARLOTTE, NC","BANK OF AMERICA STADIUM",https://www.nfl.com/games/ravens-at-panthers-2026-reg-11,2026-11-18T03:20-03:21Z,official NFL Game Center read
+2026_11_NO_CHI,11,2026-11-22,NO,CHI,"CHICAGO, IL","SOLDIER FIELD",https://www.nfl.com/games/saints-at-bears-2026-reg-11,2026-11-18T03:20-03:21Z,official NFL Game Center read
+2026_11_TEN_DAL,11,2026-11-22,TEN,DAL,"ARLINGTON, TX","AT&T STADIUM",https://www.nfl.com/games/titans-at-cowboys-2026-reg-11,2026-11-18T03:20-03:21Z,official NFL Game Center read
+2026_11_TB_DET,11,2026-11-22,TB,DET,"DETROIT, MI","FORD FIELD",https://www.nfl.com/games/buccaneers-at-lions-2026-reg-11,2026-11-18T03:20-03:21Z,official NFL Game Center read
+2026_11_AZ_KC,11,2026-11-22,AZ,KC,"KANSAS CITY, MO","ARROWHEAD STADIUM",https://www.nfl.com/games/cardinals-at-chiefs-2026-reg-11,2026-11-18T03:20-03:21Z,official NFL Game Center read
+2026_11_PIT_PHI,11,2026-11-22,PIT,PHI,"PHILADELPHIA, PA","LINCOLN FINANCIAL FIELD",https://www.nfl.com/games/steelers-at-eagles-2026-reg-11,2026-11-18T03:20-03:21Z,official NFL Game Center read
+2026_11_NYJ_LAC,11,2026-11-22,NYJ,LAC,"INGLEWOOD, CA","SOFI STADIUM",https://www.nfl.com/games/jets-at-chargers-2026-reg-11,2026-11-18T03:20-03:21Z,official NFL Game Center read
+2026_11_JAX_NYG,11,2026-11-22,JAX,NYG,"EAST RUTHERFORD, NJ","METLIFE STADIUM",https://www.nfl.com/games/jaguars-at-giants-2026-reg-11,2026-11-18T03:20-03:21Z,official NFL Game Center read
+2026_11_LV_DEN,11,2026-11-22,LV,DEN,"DENVER, CO","EMPOWER FIELD AT MILE HIGH",https://www.nfl.com/games/raiders-at-broncos-2026-reg-11,2026-11-18T03:20-03:21Z,official NFL Game Center read
+2026_11_MIN_SF,11,2026-11-22,MIN,SF,"MEXICO CITY","ESTADIO BANORTE",https://www.nfl.com/games/vikings-at-49ers-2026-reg-11,2026-11-18T03:20-03:21Z,official NFL Game Center read
+2026_11_CIN_WAS,11,2026-11-23,CIN,WAS,"LANDOVER, MD","NORTHWEST STADIUM",https://www.nfl.com/games/bengals-at-commanders-2026-reg-11,2026-11-18T03:20-03:21Z,official NFL Game Center read

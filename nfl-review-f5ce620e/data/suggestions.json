@@ -1,0 +1,205 @@
+[
+  {
+    "id": "S01",
+    "priority": "P0",
+    "title": "Separate market-data admission from market-data discovery",
+    "options": [
+      {"label": "Official-only production lane", "upside": "Keeps the operational evidence set tightly controlled and avoids unreviewed third-party terms.", "downside": "The official historical record may not contain the market fields or open/close history needed for price-residual gates."},
+      {"label": "Licensed odds archive/feed", "upside": "Could provide quote timestamps, event identifiers, terms clarity and open/close history in one approved source.", "downside": "Procurement cost and the feed's exact market/jurisdiction coverage still need checking."},
+      {"label": "Isolated third-party research lane", "upside": "The repository already contains historical line fields that may support exploratory comparisons if terms and lineage permit.", "downside": "The existing game log is not official NFL data, has no separate open/close pair, and does not establish a legal/redistribution right."}
+    ],
+    "recommendation": "Do not change the current production gate. Prepare a source/terms decision; if third-party data is later approved, keep it quarantined and labeled research-only until separate validation and rights checks pass.",
+    "what_supports_recommendation": "Both a third-party historical file and a live first-party operator page were found, but neither establishes an approved, timestamped open/close series for this project.",
+    "what_would_change_our_mind_if": {
+      "toward_admission": "Written terms allow the intended storage/transformation/use; quote time, line convention, event mapping and jurisdiction are explicit; hashes and row counts reconcile.",
+      "toward_continued_block": "Terms are unavailable or restrictive, quote timestamps/location are missing, opening and closing are conflated, or independent row checks fail."
+    },
+    "implementation_state": "PROPOSAL ONLY — no market policy, data source or model input changed.",
+    "source_ids": ["SRC-12", "SRC-19", "SRC-03"],
+    "related_findings": ["A03", "A04", "A05", "A14", "A15"]
+  },
+  {
+    "id": "S02",
+    "priority": "P0",
+    "title": "Represent injury coverage per club and per status type",
+    "options": [
+      {"label": "League endpoint only", "upside": "Simple and consistent source path.", "downside": "The requested Week 11 endpoint currently returns Week 10, so it cannot establish league-wide current coverage."},
+      {"label": "League endpoint plus explicit club fallback", "upside": "Can preserve useful club-level evidence such as the Texans/Colts Week 11 practice report.", "downside": "Requires 32-club coverage accounting and strict separation of practice, game-status and inactive fields."},
+      {"label": "Wait for a complete league report", "upside": "Avoids stitching partial pages into a misleading complete report.", "downside": "Leaves decision readiness blocked while some official club pages publish sooner."}
+    ],
+    "recommendation": "Use explicit per-club states and a dated club fallback only as a partial source; keep unknown clubs blank and do not publish an all-clear until the coverage gate is met.",
+    "what_supports_recommendation": "The official league route served Week 10 while an official club page had Week 11 practice tables for two clubs; the fields are not interchangeable.",
+    "what_would_change_our_mind_if": {
+      "toward_fallback": "A complete official club-by-club read can preserve each source date, practice/game/inactive status type and explicit not-published state.",
+      "toward_waiting": "If club pages cannot be captured reliably or coverage cannot be audited, keep the feature blocked rather than blending incomplete reads."
+    },
+    "implementation_state": "PROPOSAL ONLY — no existing availability data or capture workflow changed.",
+    "source_ids": ["SRC-01", "SRC-02", "SRC-03", "SRC-11"],
+    "related_findings": ["A01", "A08", "A09"]
+  },
+  {
+    "id": "S03",
+    "priority": "P0",
+    "title": "Make capture intervals derived facts, not hand-written durations",
+    "options": [
+      {"label": "Correct the prose manually", "upside": "Fast if one known typo is confirmed.", "downside": "Does not prevent future timestamp/duration drift across pages and coordination notes."},
+      {"label": "Compute interval from two timestamped captures", "upside": "One reproducible result can drive tables and prose; tests can reject conflicting text.", "downside": "Requires establishing which saved captures/timestamps are canonical first."}
+    ],
+    "recommendation": "Reconcile the source pair first, then generate the duration from machine-readable UTC timestamps and test the result; do not guess which of 49 hours or 1 hour 13 minutes was intended.",
+    "what_supports_recommendation": "The stored pair spans 25 hours 13 minutes, while the prior pages and coordination prose state two other intervals.",
+    "what_would_change_our_mind_if": {
+      "toward_automatic_calculation": "The original immutable captures confirm both stored timestamps and a deterministic calculation yields 25 hours 13 minutes.",
+      "toward_different_duration": "A raw source log proves one timestamp belongs to another read or was mistyped; then replace the pair and recompute, not just the prose."
+    },
+    "implementation_state": "PROPOSAL ONLY — the prior desk timestamps and copy were not edited.",
+    "source_ids": ["SRC-20"],
+    "related_findings": ["A02", "A19"]
+  },
+  {
+    "id": "S04",
+    "priority": "P1",
+    "title": "Require complete transaction coverage before absence-based roster claims",
+    "options": [
+      {"label": "Use monthly result-page captures as-is", "upside": "Low effort and preserves what the page visibly returned.", "downside": "A 25-row cap can create false negatives; an absent row is not evidence no move occurred."},
+      {"label": "Paginate or query per club with a declared date window", "upside": "Supports defensible positive and negative searches with row counts and boundaries.", "downside": "Requires more reads and careful deduplication/source logging."}
+    ],
+    "recommendation": "Use the paginated/per-club route for future absence claims; label the existing Baltimore IR claim unresolved and leave player position blank unless separately sourced.",
+    "what_supports_recommendation": "The prior reserve capture contains only 25 rows per month, has a date gap, and does not publish player position in its stored schema.",
+    "what_would_change_our_mind_if": {
+      "toward_a_negative_conclusion": "All pages for the declared window are accounted for, the official results provide a complete matching search, and every claimed position is separately sourced.",
+      "toward_remaining_unresolved": "Any pagination gap, source truncation or ambiguous player-position mapping remains."
+    },
+    "implementation_state": "PROPOSAL ONLY — no roster register or existing claim was rewritten.",
+    "source_ids": ["SRC-10", "SRC-16", "SRC-17", "SRC-18"],
+    "related_findings": ["A06", "A07"]
+  },
+  {
+    "id": "S05",
+    "priority": "P1",
+    "title": "Treat the Chargers–Ravens final as a delta, then re-run full feed reconciliation",
+    "options": [
+      {"label": "Apply the one-game delta only", "upside": "Corrects the one known pending fixture quickly.", "downside": "Does not prove the rest of the historical feed is complete or club-code joins are sound."},
+      {"label": "Rebuild the declared cutoff feed and reconcile 32 clubs", "upside": "Tests the full data set after the new final and can expose duplicates, dropped games and alias defects.", "downside": "More work than a one-row patch and must preserve the exact cutoff/source set."}
+    ],
+    "recommendation": "Keep the current one-row delta as evidence, but do not call the season record current until the entire feed is rebuilt and reconciled club by club against same-cut official standings.",
+    "what_supports_recommendation": "Two official NFL pages now show Chargers 23, Ravens 20 Final; the earlier desk snapshot predated that final, and this dossier does not rebuild the complete feed.",
+    "what_would_change_our_mind_if": {
+      "toward_current_record_claim": "A deterministic full-feed rebuild contains each final exactly once and every club record matches official standings at the same cutoff.",
+      "toward_remaining_partial": "Any unresolved game alias, duplicate/missing fixture or standings mismatch keeps the full-feed status blocked."
+    },
+    "implementation_state": "PROPOSAL ONLY — this dossier records a delta but does not mutate the prior result feed.",
+    "source_ids": ["SRC-04", "SRC-05", "SRC-14"],
+    "related_findings": ["A11"]
+  },
+  {
+    "id": "S06",
+    "priority": "P1",
+    "title": "Keep Game Book rows out of the data pipeline until rights are explicit",
+    "options": [
+      {"label": "Request written permission", "upside": "Could preserve a high-value official game-level source if the intended uses are authorized.", "downside": "Permission may be unavailable, narrow or costly to administer."},
+      {"label": "Use a separately licensed/authorized feed", "upside": "May provide a clear data-use scope for structured fields.", "downside": "Requires finding and verifying a suitable source and its coverage."},
+      {"label": "Do not use Game Book player-level rows", "upside": "Avoids unauthorized copying/modeling while preserving official score/Game Center use where allowed.", "downside": "Starter/participation features remain blocked without another source."}
+    ],
+    "recommendation": "Do not copy or model from the PDF unless written permission specifically covers the intended fields, retention, training and display; otherwise choose an expressly authorized alternative or keep those features blank.",
+    "what_supports_recommendation": "The PDF itself says other use beyond assisting media coverage is prohibited without written permission.",
+    "what_would_change_our_mind_if": {
+      "toward_use": "Written permission or a license explicitly covers every planned use and field.",
+      "toward_exclusion": "Permission is absent, ambiguous, or excludes persistent storage, derivative modeling or public display."
+    },
+    "implementation_state": "PROPOSAL ONLY — no Game Book player-level data is copied or used by this review.",
+    "source_ids": ["SRC-06", "SRC-04", "SRC-07"],
+    "related_findings": ["A10", "A19"]
+  },
+  {
+    "id": "S07",
+    "priority": "P1",
+    "title": "Add a semantic consistency gate for model metadata and readiness statuses",
+    "options": [
+      {"label": "Manual review before each publication", "upside": "Fast to start and can catch obvious prose/table drift.", "downside": "A manual pass can miss stale copies across the card, forecasts and summary."},
+      {"label": "Derive narrative values/status from canonical data and test invariants", "upside": "Prevents mismatched model coefficients and a MET requirement with an undefined residual from silently shipping.", "downside": "Requires identifying the true canonical source and expressing status logic explicitly."}
+    ],
+    "recommendation": "Resolve the -0.52/-0.46 model coefficient from a frozen refit, and keep REQ-04 blocked until approved market values populate the residual. Generate or test all dependent summaries against those canonical outputs.",
+    "what_supports_recommendation": "The prior model card/forecasts disagree with Q-05/executive prose, and REQ-04 is marked MET while its own evidence says undefined and market columns are blank.",
+    "what_would_change_our_mind_if": {
+      "toward_close": "A deterministic refit establishes one coefficient and every dependent output matches; an admitted price then yields a numeric residual.",
+      "toward_block": "Any remaining mismatch, blank market quote or undefined residual keeps the readiness status partial/blocked."
+    },
+    "implementation_state": "PROPOSAL ONLY — model coefficients, statuses and prior artifacts were not changed.",
+    "source_ids": ["SRC-14", "SRC-03", "SRC-12"],
+    "related_findings": ["A13", "A14"]
+  },
+  {
+    "id": "S08",
+    "priority": "P0",
+    "title": "Keep strategy standings shadow-only until uncertainty-aware gates pass",
+    "options": [
+      {"label": "Rank by win rate or ROI now", "upside": "Easy to explain and immediately populated.", "downside": "Zero settled observations for the reviewed registrations cannot support a performance claim; small-sample variance and staking can dominate."},
+      {"label": "Use proper scores, uncertainty and chronological holdouts", "upside": "Measures probability quality against baselines and exposes uncertainty and leakage risk.", "downside": "Requires more prospective/chronological data and disciplined pre-registration."}
+    ],
+    "recommendation": "Keep the current entries in shadow; do not put backtest results on the leaderboard. Before promotion, freeze rule hashes and use proper probability scores, baselines, uncertainty bounds, calibration and demotion gates; report staking separately.",
+    "what_supports_recommendation": "P-01/P-02/P-03 each have 13 forecasts and zero settlements, with blank score fields; the model card calls the model a shadow baseline.",
+    "what_would_change_our_mind_if": {
+      "toward_promotion": "A pre-registered strategy clears the required chronological sample, proper-score benchmark, calibration/uncertainty bounds, source gates and demotion test.",
+      "toward_remaining_shadow": "Any gate is missing, the sample is too small, the source class is unresolved, or performance fails its pre-registered falsifier."
+    },
+    "implementation_state": "PROPOSAL ONLY — no strategy is promoted and no leaderboard score is fabricated.",
+    "source_ids": ["SRC-03", "SRC-14"],
+    "related_findings": ["A16"]
+  },
+  {
+    "id": "S09",
+    "priority": "P1",
+    "title": "Retain a hard joint-evidence gate for parlays and same-game combos",
+    "options": [
+      {"label": "Multiply marginal probabilities", "upside": "Simple calculation and easy to implement.", "downside": "Assumes independence or otherwise ignores dependence; it is not validated joint evidence."},
+      {"label": "Build and validate a joint model; preserve operator rules separately", "upside": "Can measure dependence and settlement outcomes on holdouts with the correct operator context.", "downside": "Requires a sufficiently large joint sample and operator/jurisdiction-specific rule capture."},
+      {"label": "Continue to withhold combos", "upside": "Avoids presenting unsupported joint probabilities or settlement claims.", "downside": "Leaves combo strategies unavailable pending evidence."}
+    ],
+    "recommendation": "Continue to withhold combos until both the joint-probability model and the applicable operator settlement rules are validated. Do not infer joint quality from a parlay guide's void-leg rule.",
+    "what_supports_recommendation": "FanDuel's void rule is operator-specific settlement guidance, not a dependence model; the inherited leaderboard already records combo entries as withheld.",
+    "what_would_change_our_mind_if": {
+      "toward_admission": "The joint model is pre-registered, calibrated on chronological holdouts under a proper score, and matched to the actual operator's rules.",
+      "toward_withholding": "No joint evidence, insufficient sample, or ambiguous operator/jurisdiction settlement keeps the combo blocked."
+    },
+    "implementation_state": "PROPOSAL ONLY — combo policy and leaderboard remain unchanged.",
+    "source_ids": ["SRC-13"],
+    "related_findings": ["A17"]
+  },
+  {
+    "id": "S10",
+    "priority": "P2",
+    "title": "Label local hashes as transcription integrity, not source-server authentication",
+    "options": [
+      {"label": "Continue summary-only reads with a visible limitation", "upside": "Works where raw retention is not available or permitted.", "downside": "Limits independent reproduction to the recorded summary and source link."},
+      {"label": "Capture permission-compatible raw responses and metadata", "upside": "Improves reproducibility with exact final URL, response status, headers, capture time and bytes hash.", "downside": "Retention/redistribution rights and storage overhead need review."}
+    ],
+    "recommendation": "Keep the current explicit summary-only caveat; for future reads, use a rights-reviewed capture template and never claim a local note hash proves source-server bytes.",
+    "what_supports_recommendation": "The current source note records approximate minute windows but no full HTTP responses, headers or exact request times.",
+    "what_would_change_our_mind_if": {
+      "toward_raw_archives": "Terms permit raw retention and a capture process stores exact request/response metadata plus a deterministic hash.",
+      "toward_summary_only": "Terms prohibit retaining source bytes or no reliable capture channel is available; retain the visible limitation and do not overstate verification."
+    },
+    "implementation_state": "PROPOSAL ONLY — this review preserves its summary-only limitation and does not archive restricted source material.",
+    "source_ids": ["SRC-01", "SRC-02", "SRC-06"],
+    "related_findings": ["A19"]
+  },
+  {
+    "id": "S11",
+    "priority": "P0",
+    "title": "Normalize historical club aliases before any per-team result join",
+    "options": [
+      {"label": "Exact code join only", "upside": "Avoids silently changing a source code when the mapping is unclear.", "downside": "Leaves known legacy aliases unmatched and can drop club appearances from team-level calculations."},
+      {"label": "Versioned, source-backed alias map", "upside": "Preserves the raw source code while mapping documented historical names to the official standings identity; tests can require 32/32 reconciliation.", "downside": "Requires an explicit map, source for each mapping and a policy for ambiguous or retired codes."},
+      {"label": "Manual one-off replacement", "upside": "Quick to patch a known case.", "downside": "Hard to audit, easy to forget in a new desk, and can conceal future aliases."}
+    ],
+    "recommendation": "Keep raw codes immutable; apply a versioned, cited alias map in a separate normalization field; fail closed on unknown codes and require club-by-club reconciliation before team-level features are published.",
+    "what_supports_recommendation": "The older e46 feed has 9 `LAR` and 9 `ARI` appearances while the official standings codes are `LA` and `AZ`; an exact join misses 18 club appearances. The newer prior desk's corrected feed demonstrates a separate code set but was not rebuilt here after the latest result delta.",
+    "what_would_change_our_mind_if": {
+      "toward_normalization": "Each legacy-to-current mapping is documented, row counts reconcile, and every team-level result matches same-cut official standings after normalization.",
+      "toward_no_mapping": "A code is ambiguous, unsupported by an official identity source, or causes any club-level count/record mismatch; preserve it as unmatched and block downstream per-team use."
+    },
+    "implementation_state": "PROPOSAL ONLY — no results feed, alias map or other session's data was modified.",
+    "source_ids": ["SRC-05", "SRC-14"],
+    "related_findings": ["A20", "A11"]
+  }
+]

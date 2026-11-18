@@ -1,0 +1,2 @@
+game_id,season,week,kickoff_date,away,home,away_score,home_score,status,result_source_url,independent_schedule_source_url,captured_window_utc,verification_note
+2026_10_LAC_BAL,2026,10,2026-11-16,LAC,BAL,23,20,FINAL,https://www.nfl.com/games/chargers-at-ravens-2026-reg-10,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-18T03:14-03:21Z,"Official Game Center and Week 10 schedule both show Chargers 23, Ravens 20, Final; added here as a one-game delta only, not a full-feed reconciliation."
