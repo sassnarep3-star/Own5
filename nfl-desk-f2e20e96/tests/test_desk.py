@@ -140,6 +140,17 @@ class TestNegativeControls(unittest.TestCase):
         self.assertEqual(p.returncode, 1)
         self.assertIn("V3", p.stdout)
 
+    def test_unquoted_comma_row_shift_fails(self):
+        # an unquoted comma inside a field silently shifts all later columns;
+        # the verifier must reject the row (strict field count + schema pin)
+        path = os.path.join(self.data, "readiness.csv")
+        rows = open(path, encoding="utf-8").read().splitlines()
+        rows[1] = rows[1].replace("market we originate", "market we originate, and one more clause", 1)
+        open(path, "w", encoding="utf-8").write("\n".join(rows) + "\n")
+        p = run_verify(self.tmp)
+        self.assertEqual(p.returncode, 1, "verifier must fail on a column-shifted row")
+        self.assertTrue("V5b" in p.stdout or "V5c" in p.stdout, p.stdout)
+
     def test_planted_model_value_without_inputs_fails(self):
         # a model row must publish probability + inputs; tamper with computed output
         path = os.path.join(self.data, "computed", "model_lines_wk11.csv")

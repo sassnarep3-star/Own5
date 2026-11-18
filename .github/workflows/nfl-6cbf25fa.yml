@@ -1,0 +1,44 @@
+name: NFL Price & Ledger Desk (6cbf25fa)
+
+on:
+  push:
+    branches: [main, arena/6cbf25fa-own5]
+    paths:
+      - 'nfl-desk-6cbf25fa/**'
+      - 'data/nfl-desk-6cbf25fa/**'
+      - 'research/nfl-6cbf25fa/**'
+      - '.github/workflows/nfl-6cbf25fa.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'nfl-desk-6cbf25fa/**'
+      - 'data/nfl-desk-6cbf25fa/**'
+      - 'research/nfl-6cbf25fa/**'
+      - '.github/workflows/nfl-6cbf25fa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nfl-6cbf25fa-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    name: Build, drift alarms, and tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Build pages deterministically
+        run: python3 nfl-desk-6cbf25fa/build.py
+      - name: Confirm the committed pages match a clean rebuild
+        run: git diff --exit-code -- nfl-desk-6cbf25fa
+      - name: Drift alarms + line-by-line verification
+        run: python3 nfl-desk-6cbf25fa/verify.py
+      - name: Unit tests with negative controls
+        run: python3 -m unittest discover -s nfl-desk-6cbf25fa/tests -v

@@ -1,0 +1,5 @@
+check,value,source_url,read_utc
+official_slate_rows,13,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-18T03:13:31Z
+nflverse_fixture_rows,13,https://github.com/nflverse/nflverse-data/releases/tag/games,2026-11-18T03:55:13Z
+matchups_identical,yes,https://github.com/nflverse/nflverse-data/releases/tag/games,2026-11-18T03:55:13Z
+week11_byes,"ATL, CLE, GB, LAR, NE, SEA",https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-18T03:55:13Z

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Model &amp; ratings · NFL Price &amp; Ledger Desk (6cbf25fa)</title>
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="top">
+  <div class="brand">NFL PRICE &amp; LEDGER DESK <span class="sid">session 6cbf25fa</span></div>
+  <div class="stamp">Reads stamped 2026-11-18 · repository <a href="https://github.com/sassnarep3-star/Own5">sassnarep3-star/Own5</a></div>
+</header>
+<nav class="nav"><a href="index.html" class="">Home &amp; decision readiness</a><a href="lines.html" class="">Week 11 originated lines</a><a href="snapshots.html" class="">Price-snapshot store</a><a href="ratings.html" class="active">Model, inputs &amp; ratings</a><a href="results.html" class="">Verified results &amp; standings</a><a href="ledger.html" class="">Injury point-in-time ledger</a><a href="suggestions.html" class="">Suggestions (for review)</a><a href="questions.html" class="">Questions &amp; missing information</a><a href="flagged.html" class="">Flagged for Review</a><a href="sources.html" class="">Sources</a></nav>
+<main>
+  <h1>Model, inputs &amp; ratings — probability plus inputs</h1>
+  <p class="lead">Everything the model used is stored and hashed; nothing is asserted that the corpus cannot support.</p>
+  
+<section>
+<h2>Pre-registered specification (v1, frozen)</h2>
+<ul>
+<li>Corpus: 150 verified finals — weeks 1-9 from the pinned, sha256-verified nflverse snapshot; week 10 from the official NFL.com scores page read 2026-11-18.</li>
+<li>Two opponent-adjustment iterations (recentered); one-pass HFA on location=Home games only (n=142); HFA = 0 at neutral sites (MIN@SF Mexico City confirmed via the official game centre).</li>
+<li>σ = residual std of margins over all 150 games; p(home) = Φ(m/σ) scaled by (1 − empirical tie rate).</li>
+<li>Week 11 availability is NOT a feature (F-P02). Injury/depth ablation is future work once the report publishes (S-P04/Q-P04).</li>
+</ul>
+<p class="note">Full spec: <a href="https://github.com/sassnarep3-star/Own5/blob/main/research/nfl-6cbf25fa/model_spec.md">model_spec.md</a> — frozen before any Week 11 result exists. Changing it requires a new version and a new snapshot.</p>
+</section>
+<section>
+<h2>Team ratings (opponent-adjusted deviations, points per game vs league mean)</h2>
+<div class="tablewrap"><table class="data"><caption>Ratings stored in model_inputs.json (sha256 recorded on every originated row)</caption><thead><tr><th scope='col'>Team</th><th scope='col'>Offensive deviation o</th><th scope='col'>Defensive effectiveness e</th><th scope='col'>Net strength o−e</th><th scope='col'>Games (n)</th></tr></thead><tbody><tr><td><strong>DAL</strong></td><td>+4.74</td><td>-5.97</td><td>+10.71</td><td>10</td></tr><tr><td><strong>BUF</strong></td><td>+8.96</td><td>+0.11</td><td>+8.85</td><td>9</td></tr><tr><td><strong>LV</strong></td><td>+2.51</td><td>-5.99</td><td>+8.50</td><td>10</td></tr><tr><td><strong>CIN</strong></td><td>+8.73</td><td>+0.44</td><td>+8.29</td><td>9</td></tr><tr><td><strong>SF</strong></td><td>+7.42</td><td>+0.56</td><td>+6.86</td><td>9</td></tr><tr><td><strong>CAR</strong></td><td>+1.78</td><td>-3.47</td><td>+5.25</td><td>9</td></tr><tr><td><strong>DET</strong></td><td>+5.16</td><td>+0.29</td><td>+4.87</td><td>9</td></tr><tr><td><strong>CHI</strong></td><td>+5.19</td><td>+0.91</td><td>+4.28</td><td>9</td></tr><tr><td><strong>NO</strong></td><td>-0.56</td><td>-4.08</td><td>+3.52</td><td>9</td></tr><tr><td><strong>IND</strong></td><td>-1.54</td><td>-4.57</td><td>+3.03</td><td>10</td></tr><tr><td><strong>HOU</strong></td><td>+1.85</td><td>-0.48</td><td>+2.33</td><td>9</td></tr><tr><td><strong>ARI</strong></td><td>-3.33</td><td>-5.51</td><td>+2.18</td><td>10</td></tr><tr><td><strong>WAS</strong></td><td>-1.39</td><td>-2.92</td><td>+1.53</td><td>9</td></tr><tr><td><strong>JAX</strong></td><td>+6.23</td><td>+6.07</td><td>+0.16</td><td>9</td></tr><tr><td><strong>NE</strong></td><td>-0.18</td><td>+0.22</td><td>-0.40</td><td>10</td></tr><tr><td><strong>TEN</strong></td><td>-4.65</td><td>-4.14</td><td>-0.51</td><td>9</td></tr><tr><td><strong>GB</strong></td><td>+0.67</td><td>+1.26</td><td>-0.59</td><td>10</td></tr><tr><td><strong>KC</strong></td><td>+3.01</td><td>+3.75</td><td>-0.74</td><td>9</td></tr><tr><td><strong>BAL</strong></td><td>-3.54</td><td>-2.12</td><td>-1.41</td><td>10</td></tr><tr><td><strong>ATL</strong></td><td>-2.76</td><td>-0.84</td><td>-1.91</td><td>10</td></tr><tr><td><strong>NYJ</strong></td><td>-4.05</td><td>-1.52</td><td>-2.53</td><td>10</td></tr><tr><td><strong>NYG</strong></td><td>-2.62</td><td>+0.12</td><td>-2.74</td><td>9</td></tr><tr><td><strong>DEN</strong></td><td>+0.05</td><td>+3.15</td><td>-3.11</td><td>9</td></tr><tr><td><strong>LAR</strong></td><td>+0.23</td><td>+3.93</td><td>-3.70</td><td>10</td></tr><tr><td><strong>LAC</strong></td><td>-6.70</td><td>-2.61</td><td>-4.09</td><td>9</td></tr><tr><td><strong>TB</strong></td><td>-0.13</td><td>+4.20</td><td>-4.33</td><td>9</td></tr><tr><td><strong>PIT</strong></td><td>-1.31</td><td>+3.28</td><td>-4.59</td><td>9</td></tr><tr><td><strong>CLE</strong></td><td>-4.32</td><td>+0.55</td><td>-4.87</td><td>10</td></tr><tr><td><strong>MIA</strong></td><td>-6.38</td><td>-0.04</td><td>-6.35</td><td>9</td></tr><tr><td><strong>PHI</strong></td><td>-7.46</td><td>-0.75</td><td>-6.71</td><td>9</td></tr><tr><td><strong>SEA</strong></td><td>-1.92</td><td>+5.89</td><td>-7.81</td><td>10</td></tr><tr><td><strong>MIN</strong></td><td>-3.69</td><td>+10.28</td><td>-13.97</td><td>9</td></tr></tbody></table></div>
+<p class="note">L (league mean points per team-game) = 23.08. Net strength figures are model inputs, not predictions.</p>
+</section>
+</main>
+<footer>
+  <p>Blank cells are unverified or intentionally withheld — they are never filled in. Every row links to an official source or carries a flag id published on the <a href="flagged.html">Flagged for Review</a> page.</p>
+  <p>Research only. Nothing here is a recommendation to bet; no rewards, staking or ROI claims are made from this desk.</p>
+</footer>
+</body></html>

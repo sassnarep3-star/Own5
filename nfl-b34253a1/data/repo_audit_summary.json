@@ -1,28 +1,28 @@
 {
   "as_of": "2026-11-12",
-  "files": 494,
-  "physical_lines": 101637,
+  "files": 513,
+  "physical_lines": 103113,
   "status_counts": {
     "DATED_OFFICIAL_FACT_ROW": 1588,
     "DATED_SNAPSHOT_RECOMPUTED_OR_STALE": 730,
     "DERIVED_OR_LEGACY_LINE_REVIEW": 35,
     "FLAGGED_LEGACY_MARKET_VALUE": 903,
     "FLAGGED_NONOFFICIAL_HISTORICAL_INPUT": 14406,
-    "IMPLEMENTATION_LINE_REVIEW": 14202,
-    "LEGACY_JSON_RECORD_REVIEW": 4624,
-    "LEGACY_RESEARCH_CLAIM_SCOPE": 5805,
+    "IMPLEMENTATION_LINE_REVIEW": 14299,
+    "LEGACY_JSON_RECORD_REVIEW": 4794,
+    "LEGACY_RESEARCH_CLAIM_SCOPE": 5914,
     "LEGACY_SNAPSHOT_SOURCE_REGISTERED": 10815,
-    "LINE_ITEM_SOURCE_LINK_OR_FLAG": 33091,
+    "LINE_ITEM_SOURCE_LINK_OR_FLAG": 34130,
     "OFFICIAL_LINK_PRESENT_NOT_REFETCHED": 30,
-    "PUBLISHED_RENDER_LINE_REVIEW": 13483,
+    "PUBLISHED_RENDER_LINE_REVIEW": 13544,
     "REPOSITORY_METADATA_LINE": 133,
     "REVERIFIED_CURRENT_GAME_LOG": 1792
   },
   "source_basis_counts": {
-    "HTTPS_OFFICIAL_LINK_IN_LINE": 2455,
+    "HTTPS_OFFICIAL_LINK_IN_LINE": 2467,
     "OFFICIAL_COUNTERPART_FOR_FLAGGED_INPUT_NOT_INPUT_PROVENANCE": 15309,
-    "OFFICIAL_SCOPE_REFERENCE_FALLBACK_NOT_ROW_PROVENANCE": 82284,
-    "ROW_SOURCE_FIELD": 1589
+    "OFFICIAL_SCOPE_REFERENCE_FALLBACK_NOT_ROW_PROVENANCE": 82795,
+    "ROW_SOURCE_FIELD": 2542
   },
   "scope": "Line-indexed inventory of previous NFL sites, generators, datasets, research references and shared navigation/CI context; this is not a claim that every legacy historical statistic was re-fetched.",
   "critical_findings": [
@@ -50,13 +50,18 @@
   "files_inventory": [
     {
       "path": ".github/workflows/decision-desk.yml",
-      "physical_lines": 67,
-      "bytes": 2293
+      "physical_lines": 73,
+      "bytes": 2657
     },
     {
       "path": ".github/workflows/nfl-560ed315.yml",
       "physical_lines": 101,
       "bytes": 3096
+    },
+    {
+      "path": ".github/workflows/nfl-6cbf25fa.yml",
+      "physical_lines": 44,
+      "bytes": 1257
     },
     {
       "path": ".github/workflows/nfl-98a211b8.yml",
@@ -210,8 +215,8 @@
     },
     {
       "path": "README.md",
-      "physical_lines": 602,
-      "bytes": 54241
+      "physical_lines": 616,
+      "bytes": 56361
     },
     {
       "path": "assets/app.js",
@@ -320,8 +325,8 @@
     },
     {
       "path": "data/decision-desk/audit_summary.json",
-      "physical_lines": 31,
-      "bytes": 764
+      "physical_lines": 72,
+      "bytes": 1938
     },
     {
       "path": "data/decision-desk/claim_checks.csv",
@@ -430,8 +435,8 @@
     },
     {
       "path": "data/decision-desk/provenance_audit.csv",
-      "physical_lines": 51,
-      "bytes": 6499
+      "physical_lines": 76,
+      "bytes": 9925
     },
     {
       "path": "data/decision-desk/questions.csv",
@@ -554,6 +559,81 @@
       "bytes": 8292
     },
     {
+      "path": "data/nfl-desk-6cbf25fa/flagged.csv",
+      "physical_lines": 14,
+      "bytes": 4994
+    },
+    {
+      "path": "data/nfl-desk-6cbf25fa/game_centre_min_sf_2026-11-18.csv",
+      "physical_lines": 6,
+      "bytes": 761
+    },
+    {
+      "path": "data/nfl-desk-6cbf25fa/injury_reads/capture_injuries_2026-11-18.csv",
+      "physical_lines": 348,
+      "bytes": 61665
+    },
+    {
+      "path": "data/nfl-desk-6cbf25fa/injury_reads/deltas_2026-11-12_to_2026-11-18.csv",
+      "physical_lines": 457,
+      "bytes": 74506
+    },
+    {
+      "path": "data/nfl-desk-6cbf25fa/injury_reads/reads.csv",
+      "physical_lines": 3,
+      "bytes": 492
+    },
+    {
+      "path": "data/nfl-desk-6cbf25fa/lines_week11.csv",
+      "physical_lines": 40,
+      "bytes": 18500
+    },
+    {
+      "path": "data/nfl-desk-6cbf25fa/model_inputs.json",
+      "physical_lines": 129,
+      "bytes": 3367
+    },
+    {
+      "path": "data/nfl-desk-6cbf25fa/price_snapshots.csv",
+      "physical_lines": 40,
+      "bytes": 14068
+    },
+    {
+      "path": "data/nfl-desk-6cbf25fa/questions.csv",
+      "physical_lines": 11,
+      "bytes": 6391
+    },
+    {
+      "path": "data/nfl-desk-6cbf25fa/readiness.csv",
+      "physical_lines": 21,
+      "bytes": 7622
+    },
+    {
+      "path": "data/nfl-desk-6cbf25fa/results_week10.csv",
+      "physical_lines": 15,
+      "bytes": 2260
+    },
+    {
+      "path": "data/nfl-desk-6cbf25fa/sources.csv",
+      "physical_lines": 12,
+      "bytes": 2702
+    },
+    {
+      "path": "data/nfl-desk-6cbf25fa/standings_2026-11-18.csv",
+      "physical_lines": 33,
+      "bytes": 7000
+    },
+    {
+      "path": "data/nfl-desk-6cbf25fa/suggestions.csv",
+      "physical_lines": 9,
+      "bytes": 4453
+    },
+    {
+      "path": "data/nfl-desk-6cbf25fa/week11_fixtures_crosscheck.csv",
+      "physical_lines": 5,
+      "bytes": 452
+    },
+    {
       "path": "data/nfl-desk-f2e20e96/availability_wk11_preview.csv",
       "physical_lines": 11,
       "bytes": 2048
@@ -621,17 +701,17 @@
     {
       "path": "data/nfl-desk-f2e20e96/questions.csv",
       "physical_lines": 15,
-      "bytes": 5268
+      "bytes": 5263
     },
     {
       "path": "data/nfl-desk-f2e20e96/readiness.csv",
       "physical_lines": 71,
-      "bytes": 15733
+      "bytes": 15750
     },
     {
       "path": "data/nfl-desk-f2e20e96/sources.csv",
       "physical_lines": 23,
-      "bytes": 4984
+      "bytes": 5009
     },
     {
       "path": "data/nfl-desk-f2e20e96/standings_2026_reg.csv",
@@ -646,7 +726,7 @@
     {
       "path": "data/nfl-desk-f2e20e96/suggestions.csv",
       "physical_lines": 13,
-      "bytes": 5170
+      "bytes": 5141
     },
     {
       "path": "data/nfl-desk-f2e20e96/transactions_news.csv",
@@ -1031,7 +1111,7 @@
     {
       "path": "nfl-decision-desk-38a1fc27/audit.html",
       "physical_lines": 43,
-      "bytes": 13665
+      "bytes": 13670
     },
     {
       "path": "nfl-decision-desk-38a1fc27/correlations.html",
@@ -1046,7 +1126,7 @@
     {
       "path": "nfl-decision-desk-38a1fc27/index.html",
       "physical_lines": 43,
-      "bytes": 10281
+      "bytes": 10283
     },
     {
       "path": "nfl-decision-desk-38a1fc27/injuries.html",
@@ -1101,7 +1181,7 @@
     {
       "path": "nfl-decision-desk-38a1fc27/verification.html",
       "physical_lines": 86,
-      "bytes": 4816
+      "bytes": 4819
     },
     {
       "path": "nfl-decision-desk-e413f933/executive-summary.html",
@@ -1304,6 +1384,16 @@
       "bytes": 10995
     },
     {
+      "path": "nfl-desk-6cbf25fa/flagged.html",
+      "physical_lines": 24,
+      "bytes": 8939
+    },
+    {
+      "path": "nfl-desk-6cbf25fa/index.html",
+      "physical_lines": 37,
+      "bytes": 12450
+    },
+    {
       "path": "nfl-desk-864d5668/executive-summary.html",
       "physical_lines": 46,
       "bytes": 5849
@@ -1386,7 +1476,7 @@
     {
       "path": "nfl-desk-f2e20e96/executive-summary.html",
       "physical_lines": 62,
-      "bytes": 5139
+      "bytes": 5140
     },
     {
       "path": "nfl-desk-f2e20e96/flagged.html",
@@ -1396,7 +1486,7 @@
     {
       "path": "nfl-desk-f2e20e96/index.html",
       "physical_lines": 37,
-      "bytes": 28010
+      "bytes": 28159
     },
     {
       "path": "nfl-engine-39086ec8/flagged.html",
@@ -2204,6 +2294,11 @@
       "bytes": 3264
     },
     {
+      "path": "research/nfl-6cbf25fa/model_spec.md",
+      "physical_lines": 95,
+      "bytes": 5082
+    },
+    {
       "path": "research/nfl-83a7d6a8/EXECUTIVE_SUMMARY.md",
       "physical_lines": 144,
       "bytes": 12157
@@ -2350,8 +2445,8 @@
     },
     {
       "path": "scripts/verify_f2e20e96.py",
-      "physical_lines": 193,
-      "bytes": 8679
+      "physical_lines": 225,
+      "bytes": 10514
     },
     {
       "path": "scripts/verify_origin_desk.py",
@@ -2445,8 +2540,8 @@
     },
     {
       "path": "tools/decision_desk/build_all.py",
-      "physical_lines": 34,
-      "bytes": 1244
+      "physical_lines": 49,
+      "bytes": 2252
     },
     {
       "path": "tools/decision_desk/build_site.py",
