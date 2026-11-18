@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="OWN5 NFL Line Originator — suggestions register. Reviewable recommendations; pick a path before implementing.">
+<title>Suggestions · OWN5 NFL Line Originator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <div class="mark">O5</div>
+      <div>
+        <h1><a href="index.html">OWN5 NFL Line Originator</a></h1>
+        <p>Session ccc5caf2 &middot; Suggestions register</p>
+      </div>
+    </div>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Overview</a>
+      <a href="requirements.html">Requirements &amp; readiness</a>
+      <a href="lines.html">Own lines (Week 11)</a>
+      <a href="strategies.html">Strategies</a>
+      <a href="gates.html">Validation gates</a>
+      <a href="correlations.html">Correlations</a>
+      <a href="injuries.html">Injuries &amp; depth</a>
+      <a class="active" href="suggestions.html">Suggestions</a>
+      <a href="questions.html">Questions &amp; answers</a>
+      <a href="sources.html">Sources</a>
+      <a href="flagged.html">Flagged for review</a>
+      <a href="verification.html">Verification</a>
+      <a href="summary.html">Executive summary</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap" id="main">
+  <section class="pagehead">
+    <h2>Suggestions register</h2>
+    <p>Recommendations for improving the site and the decision process. Each suggestion carries a <strong>decision state</strong> and a <strong>review test</strong> so someone can review and choose the best path before anything is implemented. Nothing here is implemented unless explicitly accepted.</p>
+  </div>
+
+  <table class="data">
+    <thead>
+      <tr><th>ID</th><th>Suggestion</th><th>Problem it solves</th><th>Impact</th><th>Effort</th><th>Confidence</th><th>Decision state</th><th>Review test (what would change the call)</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="record-id">S01</span></td>
+        <td><strong>Archive a timestamped operator price snapshot every week</strong></td>
+        <td>Every CLV and 'market vs model' statement rests on an aggregator line whose timestamp is unknown</td>
+        <td>High</td><td>Medium</td><td>High</td>
+        <td><span class="badge ok">Recommended now</span></td>
+        <td>If the operator page blocks capture or terms forbid it, fall back to manual capture of 5 games/week and mark the sample partial.</td>
+      </tr>
+      <tr>
+        <td><span class="record-id">S02</span></td>
+        <td><strong>Ship a sign-convention regression test with every backtest</strong></td>
+        <td>A wrong spread sign manufactured a 57.4% ATS 'edge' that became 51.4% after correction</td>
+        <td>High</td><td>Low</td><td>High</td>
+        <td><span class="badge ok">Recommended now</span></td>
+        <td>If a future feed documents a different convention, update the fixture and record the change.</td>
+      </tr>
+      <tr>
+        <td><span class="record-id">S03</span></td>
+        <td><strong>Pre-register the variant count before looking at results</strong></td>
+        <td>Bonferroni only means something if the number of tested variants is honest</td>
+        <td>High</td><td>Low</td><td>High</td>
+        <td><span class="badge ok">Recommended now</span></td>
+        <td>If a strategy must be added after the fact, it starts a new pre-registration round with its own alpha budget.</td>
+      </tr>
+      <tr>
+        <td><span class="record-id">S04</span></td>
+        <td><strong>Publish a market-efficiency scorecard per signal</strong></td>
+        <td>A signal can predict results while the market has already priced it</td>
+        <td>High</td><td>Medium</td><td>High</td>
+        <td><span class="badge ok">Recommended now</span></td>
+        <td>If a signal shows residual edge with a verified closing price, promote it to full gate evaluation.</td>
+      </tr>
+      <tr>
+        <td><span class="record-id">S05</span></td>
+        <td><strong>Use lineup deficiency as a pricing input, not a bet trigger</strong></td>
+        <td>The residual ATS edge is 51.4% (p=1.0) &mdash; no betting edge</td>
+        <td>Medium</td><td>Low</td><td>High</td>
+        <td><span class="badge ok">Recommended now</span></td>
+        <td>If a future season shows residual edge with verified prices, revisit.</td>
+      </tr>
+      <tr>
+        <td><span class="record-id">S06</span></td>
+        <td><strong>Extend depth tracking to offensive-line continuity</strong></td>
+        <td>Snap share cannot see five linemen who never practised together</td>
+        <td>Medium</td><td>Medium</td><td>Medium</td>
+        <td><span class="badge warn">Pilot</span></td>
+        <td>If continuity shows no relationship to pressure or margin after a season, drop it.</td>
+      </tr>
+      <tr>
+        <td><span class="record-id">S07</span></td>
+        <td><strong>Treat practice-status transitions as a probability, not a label</strong></td>
+        <td>Fixed weights (DNP/LP/FP) throw away the strongest weekly information</td>
+        <td>Medium</td><td>Medium</td><td>Medium</td>
+        <td><span class="badge warn">Pilot</span></td>
+        <td>If fitted probabilities differ from assumed weights by &lt;5 pp, keep the simple weights.</td>
+      </tr>
+      <tr>
+        <td><span class="record-id">S08</span></td>
+        <td><strong>Score the leaderboard on CLV and calibration, never win rate</strong></td>
+        <td>Win-rate leaderboards reward luck and variance</td>
+        <td>High</td><td>Medium</td><td>High</td>
+        <td><span class="badge ok">Recommended now</span></td>
+        <td>If CLV data cannot be captured (S01 fails), the board stays provisional and unranked.</td>
+      </tr>
+      <tr>
+        <td><span class="record-id">S09</span></td>
+        <td><strong>Dual-source data layer with automatic disagreement alerts</strong></td>
+        <td>One aggregator mirror; silent drift propagates into every number</td>
+        <td>High</td><td>Low</td><td>High</td>
+        <td><span class="badge ok">Recommended now</span></td>
+        <td>If the official page layout changes and parsing fails, fail closed (blank + flag) rather than fall back silently.</td>
+      </tr>
+      <tr>
+        <td><span class="record-id">S10</span></td>
+        <td><strong>Model opponent-adjusted efficiency (EPA), not raw points</strong></td>
+        <td>Raw margins cannot distinguish a good offence beating bad defences</td>
+        <td>Medium</td><td>High</td><td>Medium</td>
+        <td><span class="badge warn">Defer</span></td>
+        <td>Promote when play-by-play ingestion is in place and the blend beats the margin model on holdout log-loss.</td>
+      </tr>
+      <tr>
+        <td><span class="record-id">S11</span></td>
+        <td><strong>Price correlated legs with an empirical copula; refuse independent pricing</strong></td>
+        <td>Same-team QB+WR legs correlate (r=0.50); independent pricing changes the fair price materially</td>
+        <td>High</td><td>Medium</td><td>High</td>
+        <td><span class="badge ok">Recommended now</span></td>
+        <td>If the operator's SGP price already reflects the correlation, document it; no action needed.</td>
+      </tr>
+      <tr>
+        <td><span class="record-id">S12</span></td>
+        <td><strong>Keep a decision log (one line per accepted suggestion)</strong></td>
+        <td>Accepted suggestions without rationale get re-litigated</td>
+        <td>Medium</td><td>Low</td><td>High</td>
+        <td><span class="badge ok">Recommended now</span></td>
+        <td>If the log has fewer than one entry per accepted suggestion, the process is not being followed.</td>
+      </tr>
+      <tr>
+        <td><span class="record-id">S13</span></td>
+        <td><strong>Separate OFFICIAL and AGGREGATOR tiers in every table, mechanically</strong></td>
+        <td>Mixing official and mirror-derived rows invites over-claiming</td>
+        <td>High</td><td>Low</td><td>High</td>
+        <td><span class="badge ok">Recommended now</span></td>
+        <td>If a dataset has no official publisher, label it AGGREGATOR and keep claim language narrow.</td>
+      </tr>
+      <tr>
+        <td><span class="record-id">S14</span></td>
+        <td><strong>Cap and retire strategies on a schedule</strong></td>
+        <td>Unlimited proliferation guarantees a false discovery</td>
+        <td>Medium</td><td>Low</td><td>Medium</td>
+        <td><span class="badge warn">Pilot</span></td>
+        <td>If the family budget blocks a genuine new mechanism, allow an exception with doubled alpha.</td>
+      </tr>
+      <tr>
+        <td><span class="record-id">S15</span></td>
+        <td><strong>Add a weather and venue adjustment to the total model</strong></td>
+        <td>The totals model ignores wind, temperature and roof</td>
+        <td>Low</td><td>Medium</td><td>Medium</td>
+        <td><span class="badge warn">Defer</span></td>
+        <td>Promote if more than 80% of games have non-null weather in the pinned source.</td>
+      </tr>
+      <tr>
+        <td><span class="record-id">S16</span></td>
+        <td><strong>Publish the reward structure only after the jurisdiction question is closed</strong></td>
+        <td>Cash prizes raise licensing, tax and eligibility questions no public source answers</td>
+        <td>Medium</td><td>Low</td><td>High</td>
+        <td><span class="badge ok">Recommended now</span></td>
+        <td>Close Q04/Q05 first; then publish reward terms with eligibility rules.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="section">
+    <h3>Review workflow</h3>
+    <ol>
+      <li>Read each suggestion's problem, impact, effort and confidence.</li>
+      <li>Check the decision state (Recommended now / Pilot / Defer).</li>
+      <li>Apply the review test to decide whether to accept, reject, or defer.</li>
+      <li>Record the decision in a decision log (one line per accepted suggestion; date, evidence, owner, revisit date).</li>
+      <li>Only implement accepted suggestions; rejected ones are archived here with rationale.</li>
+    </ol>
+  </div>
+
+  <div class="footer">
+    Suggestion states: Recommended now · Pilot · Defer · Rejected · Accepted · Implemented. No suggestion is implemented without a recorded decision. 1-800-GAMBLER.
+  </div>
+</main>
+</body>
+</html>
