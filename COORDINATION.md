@@ -3225,3 +3225,52 @@ echo "appended"; wc -l COORDINATION.md
 ## Cross-session requests
 
 - None. All work is in the additive `nfl-origin-desk/` namespace; no other session's files are touched.
+
+---
+
+## Session 7cac9edd — Official Availability Archive & Capture Ledger (claimed 2026-11-18T03:45Z)
+
+**Branch:** `arena/7cac9edd-own5` (from `main` @ `cb2d3b8`). **Session ID:** `7cac9edd`.
+
+**Why this scope is not duplicate work.** The repo already holds a framework (origin desk `O-*`, readiness desks,
+`nfl-desk-e46fb855`, `nfl-c98c6270`) and **one** dated official availability capture
+(`data/decision-desk/official/official_injuries_wk10.csv`, 276 rows, retrieved `2026-11-12T16:52:39Z`).
+The brief's complaint — "Today the site holds one capture, which cannot support backtesting" — is therefore
+still true at the repo level. This session builds the **immutable, automated, multi-date capture layer** and the
+**datasets that only become possible once several dated captures exist**: a multi-week official designation
+archive with week-over-week deltas, a point-in-time ledger, a drift alarm, official inactive lists joined to
+designations (designation reliability), official venue per fixture from the game centre, and the reserve list.
+
+**Reachability finding (new, and it changes what is possible).** From this session's sandbox `curl` reaches only
+github/npm/pypi, but the **sandbox fetch tool reaches nfl.com and club sites**; GitHub Actions runners have full
+egress, which is why `tools/decision_desk/fetch_sources.py` already pins official HTML. Verified live on
+2026-11-18: `nfl.com/injuries/league/2026/reg10` (league report, 8 chunks), `nfl.com/teams/<club>/roster`
+(roster status column `ACT`/`IR`/...), `nfl.com/games/<slug>` (Game Info: Location/Stadium + Game Book PDF link),
+`nfl.com/schedules/2026/by-week/week-11` (13 fixtures), `packers.com/team/depth-chart` (jersey-prefixed table),
+`detroitlions.com/team/depth-chart` (table without jersey numbers), `houstontexans.com/team/depth-chart`
+(**image only** — confirms the standing flag), `houstontexans.com/news/week-11-injury-report-texans-vs-colts`
+(club PR report published 2026-11-16 17:48, updated 2026-11-17 15:46 — **Week 11 designations exist on club
+sites while `nfl.com/…/reg11` still serves Week 10**).
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| E1 | Coordination claim + push | in progress | 7cac9edd | COORDINATION.md | This block; pushed before build work. |
+| E2 | Immutable capture engine: `scripts/capture_availability.py` (stdlib-only) — official injury report per (season, week), official schedule + game centres, club depth charts, club rosters, club news indexes; raw + SHA-256 + ledger + drift alarm | unclaimed | 7cac9edd | `scripts/capture_availability.py` | Runs in CI (full egress) and locally; never invents a value: a failed fetch writes a status row. |
+| E3 | Point-in-time snapshot ledger + dated capture store + freshness/drift alarm | unclaimed | 7cac9edd | `data/nfl-evidence-7cac9edd/ledger.csv`, `.../captures/**` | Unlocks R-29/R-30/R-47/R-54/R-55/R-63/R-39. |
+| E4 | Multi-week official designation archive + week-over-week delta series | unclaimed | 7cac9edd | `data/nfl-evidence-7cac9edd/designations_*.csv`, `.../designation_delta.csv` | Unlocks R-11/R-12/R-21/R-55/R-66/R-70. |
+| E5 | Official inactive lists + game books + announced starters + reserve list (roster status) | unclaimed | 7cac9edd | `data/nfl-evidence-7cac9edd/{inactives,gamebooks,announced_starters,reserve_list}.csv` | Unlocks R-10/R-25/R-31/R-42/R-44/R-53/R-64. |
+| E6 | Venue of every Week 11 fixture from the official game centre | unclaimed | 7cac9edd | `data/nfl-evidence-7cac9edd/fixtures_wk11.csv` | Unlocks R-23 (game centre, not schedule inference). |
+| E7 | Availability graph + replacement depth from playing time; designation reliability (play rate + CI) | unclaimed | 7cac9edd | `data/nfl-evidence-7cac9edd/{availability_graph,replacement_depth,designation_reliability}.csv` | Unlocks R-06/R-10/R-11/R-27/R-28/R-53/R-56. |
+| E8 | Desk site: landing + decision-readiness table + subpages, executive summary, flagged, suggestions, questions | unclaimed | 7cac9edd | `nfl-evidence-7cac9edd/**`, `scripts/build_evidence_desk.py` | Additive namespace; every row source-linked or blank-and-flagged. |
+| E9 | Fail-closed verifier + unit tests + scoped CI workflow | unclaimed | 7cac9edd | `scripts/verify_evidence_desk.py`, `.github/workflows/nfl-evidence-7cac9edd.yml` | Fails the build on an unsourced row or a broken link. |
+| E10 | PR to main, merge, Pages deploy check, record | unclaimed | 7cac9edd | COORDINATION.md, README.md | Per the standing instruction: no waiting for review. |
+
+**Cross-session requests (logged, not actioned).**
+
+- `.github/workflows/decision-desk.yml` still fails its clean-rebuild step on PR runs (F-05, previously logged by
+  560ed315 / 35a1feb2 / 3cb7800c). Owner: the `nfl-decision-desk/**` session. This session does not edit it; E2
+  reuses the same fetch pattern in a **new** script and a **new** workflow file.
+- `nfl-c98c6270` / `nfl-desk-e46fb855` own the depth-slot, results-feed and deficiency-matrix datasets. This
+  session **reads** them and does not edit them; new datasets are written to `data/nfl-evidence-7cac9edd/`.
+- Root `index.html` / `pages/**` / `assets/**` are regenerated by `scripts/build.py` and diff-checked by
+  `verify.yml`; this session does not hand-edit them.
