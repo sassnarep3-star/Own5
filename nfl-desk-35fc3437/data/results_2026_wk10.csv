@@ -1,0 +1,15 @@
+game_id,date,week,kickoff_et,network,home_team,home_abbr,away_team,away_abbr,home_score,away_score,winner,winner_abbr,margin,status,source_url,capture_utc
+2026_REG_10_COMMANDERS_AT_GIANTS,2026-11-12,10,20:15,PRIME,New York Giants,NYG,Washington Commanders,WAS,21,24,Washington Commanders,WAS,3,FINAL,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-18T00:00Z
+2026_REG_10_PATRIOTS_AT_LIONS,2026-11-15,10,9:30,FOX/FOX DEPORTES DET,Detroit Lions,DET,New England Patriots,NE,35,10,Detroit Lions,DET,25,FINAL,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-18T00:00Z
+2026_REG_10_CHIEFS_AT_FALCONS,2026-11-15,10,13:00,FOX,Atlanta Falcons,ATL,Kansas City Chiefs,KC,13,35,Kansas City Chiefs,KC,22,FINAL,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-18T00:00Z
+2026_REG_10_TEXANS_AT_BROWNS,2026-11-15,10,13:00,FOX,Cleveland Browns,CLE,Houston Texans,HOU,27,24,Cleveland Browns,CLE,3,FINAL,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-18T00:00Z
+2026_REG_10_VIKINGS_AT_PACKERS,2026-11-15,10,13:00,FOX,Green Bay Packers,GB,Minnesota Vikings,MIN,10,30,Minnesota Vikings,MIN,20,FINAL,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-18T00:00Z
+2026_REG_10_DOLPHINS_AT_COLTS,2026-11-15,10,13:00,FOX,Indianapolis Colts,IND,Miami Dolphins,MIA,24,22,Indianapolis Colts,IND,2,FINAL,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-18T00:00Z
+2026_REG_10_PANTHERS_AT_SAINTS,2026-11-15,10,13:00,FOX,New Orleans Saints,NO,Carolina Panthers,CAR,17,20,Carolina Panthers,CAR,3,FINAL,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-18T00:00Z
+2026_REG_10_BILLS_AT_JETS,2026-11-15,10,13:00,CBS,New York Jets,NYJ,Buffalo Bills,BUF,12,31,Buffalo Bills,BUF,19,FINAL,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-18T00:00Z
+2026_REG_10_JAGUARS_AT_TITANS,2026-11-15,10,13:00,CBS,Tennessee Titans,TEN,Jacksonville Jaguars,JAX,23,40,Jacksonville Jaguars,JAX,17,FINAL,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-18T00:00Z
+2026_REG_10_RAMS_AT_CARDINALS,2026-11-15,10,13:00,FOX,Arizona Cardinals,AZ,Los Angeles Rams,LAR,6,34,Los Angeles Rams,LAR,28,FINAL,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-18T00:00Z
+2026_REG_10_SEAHAWKS_AT_RAIDERS,2026-11-15,10,13:00,CBS,Las Vegas Raiders,LV,Seattle Seahawks,SEA,13,21,Seattle Seahawks,SEA,8,FINAL,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-18T00:00Z
+2026_REG_10_49ERS_AT_COWBOYS,2026-11-15,10,13:00,FOX,Dallas Cowboys,DAL,San Francisco 49ers,SF,40,46,San Francisco 49ers,SF,6,FINAL,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-18T00:00Z
+2026_REG_10_STEELERS_AT_BENGALS,2026-11-15,10,20:20,NBC,Cincinnati Bengals,CIN,Pittsburgh Steelers,PIT,38,18,Cincinnati Bengals,CIN,20,FINAL,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-18T00:00Z
+2026_REG_10_CHARGERS_AT_RAVENS,2026-11-16,10,20:15,ESPN,Baltimore Ravens,BAL,Los Angeles Chargers,LAC,20,23,Los Angeles Chargers,LAC,3,FINAL,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-18T00:00Z

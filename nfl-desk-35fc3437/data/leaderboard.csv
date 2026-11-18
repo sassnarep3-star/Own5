@@ -1,0 +1,5 @@
+rank,strategy_id,strategy_name,division,status,signal_score,signal_uncertainty,staking_score,staking_uncertainty,combined_score,brier_skill,brier_uncertainty,n_bets,certified,demotion_trigger,last_reviewed,source_url,notes
+1,PENDING,— Signal division (proper-score qualification) —,signal,PENDING,,,,,,,,,No,—,2026-11-18,https://www.nfl.com/standings/league/2026/REG,No strategy has passed gates G01–G12; leaderboard intentionally empty.
+2,PENDING,— Staking division (prospective CLV/ROI escrow) —,staking,PENDING,,,,,,,,,No,—,2026-11-18,https://www.nfl.com/standings/league/2026/REG,No live strategy exists; staking performance blank until a strategy is promoted.
+3,C001,"Random-pick control (coin flip, −110)",control,NOT CERTIFIED,,,,,,,,,No,G10 (never live),2026-11-18,https://www.nfl.com/standings/league/2026/REG,Control baseline; break-even win rate 52.38% at −110.
+4,C002,Favorites-only control (lay the chalk every game),control,NOT CERTIFIED,,,,,,,,,No,G10 (never live),2026-11-18,https://www.nfl.com/standings/league/2026/REG,Control baseline; no skill claim.

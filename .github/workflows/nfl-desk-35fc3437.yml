@@ -1,0 +1,24 @@
+name: NFL desk 35fc3437 — verify
+on:
+  push:
+    branches: [ main, "arena/35fc3437-own5" ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Build deterministic site
+        run: python3 nfl-desk-35fc3437/build_desk.py
+      - name: Run verification harness
+        run: python3 nfl-desk-35fc3437/verify_desk.py
+      - name: Run unit tests
+        run: python3 -m unittest nfl-desk-35fc3437/tests/test_desk.py -v
+      - name: Confirm committed artefacts match clean rebuild
+        run: git diff --exit-code -- nfl-desk-35fc3437/pages/ nfl-desk-35fc3437/index.html
