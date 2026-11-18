@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Reviewable suggestions: problem, recommendation, impact, effort, confidence, decision state and review test.">
+<title>Suggestions &middot; NFL Origin Desk</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <span class="mark">O5</span>
+      <div>
+        <h1><a href="index.html" style="color:inherit;text-decoration:none">NFL Origin Desk</a></h1>
+        <p>Own lines &middot; validated strategies &middot; injuries &amp; depth intelligence</p>
+      </div>
+    </div>
+    <div class="stamp">
+      <strong>2026 season &middot; Week 9</strong>
+      <span>Snapshot 2026-11-18 UTC</span>
+    </div>
+  </div>
+<nav class="wrap"><a class="" href="index.html">Overview</a><a class="" href="requirements.html">Requirements</a><a class="" href="questions.html">Open questions</a><a class="" href="suggestions.html">Suggestions</a><a class="" href="lines.html">Own lines</a><a class="" href="strategies.html">Strategies</a><a class="" href="gates.html">Gates</a><a class="" href="leaderboard.html">Leaderboard</a><a class="" href="correlations.html">Correlations</a><a class="" href="injuries.html">Injuries & depth</a><a class="" href="sources.html">Sources</a><a class="" href="flagged.html">Flagged for review</a><a class="" href="executive-summary.html">Executive summary</a></nav>
+</header>
+<main class="wrap">
+<section class="pagehead"><h2>Suggestions</h2><p>Reviewable suggestions: problem, recommendation, impact, effort, confidence, decision state and review test.</p></section>
+<p>Suggestions for improving the site and decision-making. Each has a decision state, an owner and a review test &mdash; someone reviews and chooses the best path before any change is implemented.</p>
+
+<details class="sug"><summary><span class="sid">S01</span>Archive a timestamped operator price snapshot every week</summary>
+<div class="sugbody">
+<dl>
+<dt>Problem</dt><dd>Every CLV and &quot;market vs model&quot; statement rests on an aggregator line whose timestamp is unknown. Without a price history, gate G4 can never be evaluated and no strategy can be certified as skill.</dd>
+<dt>Recommendation</dt><dd>Capture the operator&#x27;s own NFL page (spread, total, moneyline) at two fixed times per week (Wednesday post-injury-report and Sunday pre-kickoff) and store the raw snapshot with HTTP headers and hash.</dd>
+<dt>Impact</dt><dd>High</dd>
+<dt>Effort</dt><dd>Medium</dd>
+<dt>Confidence</dt><dd>High</dd>
+<dt>Decision</dt><dd>Recommended now</dd>
+<dt>Owner</dt><dd>Data engineering</dd>
+<dt>Review test</dt><dd>If the operator page blocks automated capture or terms forbid it, fall back to manual capture of 5 games per week and mark the sample as partial.</dd>
+<dt>Evidence</dt><dd><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/suggestions.csv" rel="noopener noreferrer" target="_blank">https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/suggestions.csv</a></dd>
+</dl>
+</div>
+</details>
+
+<details class="sug"><summary><span class="sid">S02</span>Ship a sign-convention regression test with every backtest</summary>
+<div class="sugbody">
+<dl>
+<dt>Problem</dt><dd>The first injury backtest reported a 57.4% ATS edge that vanished once the spread sign convention was corrected. A single sign error is enough to invent an edge.</dd>
+<dt>Recommendation</dt><dd>Add a unit test that asserts the ATS sign on a synthetic fixture, plus a known-answer test on 10 historical games with published results, and fail the build if either drifts.</dd>
+<dt>Impact</dt><dd>High</dd>
+<dt>Effort</dt><dd>Low</dd>
+<dt>Confidence</dt><dd>High</dd>
+<dt>Decision</dt><dd>Recommended now</dd>
+<dt>Owner</dt><dd>Quant</dd>
+<dt>Review test</dt><dd>If a future data feed documents a different convention, update the fixture rather than the assertion, and record the change.</dd>
+<dt>Evidence</dt><dd><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/suggestions.csv" rel="noopener noreferrer" target="_blank">https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/suggestions.csv</a></dd>
+</dl>
+</div>
+</details>
+
+<details class="sug"><summary><span class="sid">S03</span>Pre-register the variant count before looking at results</summary>
+<div class="sugbody">
+<dl>
+<dt>Problem</dt><dd>Bonferroni only means something if the number of tested variants is honest. Buckets found after inspection inflate the true false-discovery rate.</dd>
+<dt>Recommendation</dt><dd>Write the strategy list and thresholds into the strategies register, commit it, and require the commit hash in the results table. Count every variant, including abandoned ones.</dd>
+<dt>Impact</dt><dd>High</dd>
+<dt>Effort</dt><dd>Low</dd>
+<dt>Confidence</dt><dd>High</dd>
+<dt>Decision</dt><dd>Recommended now</dd>
+<dt>Owner</dt><dd>Research</dd>
+<dt>Review test</dt><dd>If a strategy must be added after the fact, it starts in a new pre-registration round with its own alpha budget.</dd>
+<dt>Evidence</dt><dd><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/suggestions.csv" rel="noopener noreferrer" target="_blank">https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/suggestions.csv</a></dd>
+</dl>
+</div>
+</details>
+
+<details class="sug"><summary><span class="sid">S04</span>Publish a market-efficiency scorecard per signal</summary>
+<div class="sugbody">
+<dl>
+<dt>Problem</dt><dd>We can measure whether a signal predicts results, but the useful question is whether the market has already priced it.</dd>
+<dt>Recommendation</dt><dd>For each signal, report (a) regression of the market line on the signal, (b) regression of the ATS residual on the signal, (c) the implied &#x27;priced share&#x27;. Rank ideas by residual edge, not by raw predictive power.</dd>
+<dt>Impact</dt><dd>High</dd>
+<dt>Effort</dt><dd>Medium</dd>
+<dt>Confidence</dt><dd>High</dd>
+<dt>Decision</dt><dd>Recommended now</dd>
+<dt>Owner</dt><dd>Quant</dd>
+<dt>Review test</dt><dd>If a signal shows residual edge with a verified closing price, promote it to a full gate evaluation.</dd>
+<dt>Evidence</dt><dd><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/suggestions.csv" rel="noopener noreferrer" target="_blank">https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/suggestions.csv</a></dd>
+</dl>
+</div>
+</details>
+
+<details class="sug"><summary><span class="sid">S05</span>Use lineup deficiency as a pricing input for our own lines, not as a bet trigger</summary>
+<div class="sugbody">
+<dl>
+<dt>Problem</dt><dd>The measured relationship is real for predicting margin, but the market already moves about half of it and the residual ATS record is 51.4% (p=1.0).</dd>
+<dt>Recommendation</dt><dd>Feed deficiency into the line model (already implemented) and stop advertising it as a betting signal. Show the model line both with and without the adjustment so the size of the adjustment is auditable.</dd>
+<dt>Impact</dt><dd>Medium</dd>
+<dt>Effort</dt><dd>Low</dd>
+<dt>Confidence</dt><dd>High</dd>
+<dt>Decision</dt><dd>Recommended now</dd>
+<dt>Owner</dt><dd>Model owner</dd>
+<dt>Review test</dt><dd>If a future season shows a residual edge with verified prices, revisit.</dd>
+<dt>Evidence</dt><dd><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/suggestions.csv" rel="noopener noreferrer" target="_blank">https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/suggestions.csv</a></dd>
+</dl>
+</div>
+</details>
+
+<details class="sug"><summary><span class="sid">S06</span>Extend depth tracking to offensive-line continuity</summary>
+<div class="sugbody">
+<dl>
+<dt>Problem</dt><dd>Offensive line injuries are the classic source of hidden lineup decay: five players who never practised together still count as &#x27;starters available&#x27;. Snap share alone cannot see that.</dd>
+<dt>Recommendation</dt><dd>Build a weekly starting-five continuity metric (same five linemen starting together, consecutive weeks) from snap counts and measure its relationship to sacks allowed, pressure rate and ATS residual.</dd>
+<dt>Impact</dt><dd>Medium</dd>
+<dt>Effort</dt><dd>Medium</dd>
+<dt>Confidence</dt><dd>Medium</dd>
+<dt>Decision</dt><dd>Pilot</dd>
+<dt>Owner</dt><dd>Research</dd>
+<dt>Review test</dt><dd>If continuity shows no relationship to pressure or margin after a season of data, drop it.</dd>
+<dt>Evidence</dt><dd><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/suggestions.csv" rel="noopener noreferrer" target="_blank">https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/suggestions.csv</a></dd>
+</dl>
+</div>
+</details>
+
+<details class="sug"><summary><span class="sid">S07</span>Treat practice-status transitions as a probability, not a label</summary>
+<div class="sugbody">
+<dl>
+<dt>Problem</dt><dd>The official report gives three practice levels and a game status. Collapsing them to fixed weights throws away the strongest information: a player moving DNP -&gt; LP -&gt; FP across the week.</dd>
+<dt>Recommendation</dt><dd>Fit the mapping empirically: P(active) by (practice sequence, game status) from multiple seasons of reports, and publish the fitted table with sample sizes.</dd>
+<dt>Impact</dt><dd>Medium</dd>
+<dt>Effort</dt><dd>Medium</dd>
+<dt>Confidence</dt><dd>Medium</dd>
+<dt>Decision</dt><dd>Pilot</dd>
+<dt>Owner</dt><dd>Quant</dd>
+<dt>Review test</dt><dd>If the fitted probabilities differ from the assumed weights by less than 5 percentage points, keep the simple weights.</dd>
+<dt>Evidence</dt><dd><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/suggestions.csv" rel="noopener noreferrer" target="_blank">https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/suggestions.csv</a></dd>
+</dl>
+</div>
+</details>
+
+<details class="sug"><summary><span class="sid">S08</span>Score the leaderboard on CLV and calibration, never on win rate</summary>
+<div class="sugbody">
+<dl>
+<dt>Problem</dt><dd>A win-rate leaderboard rewards luck and variance; over 300 bets a 52% and a 56% record are statistically indistinguishable.</dd>
+<dt>Recommendation</dt><dd>Rank by de-vigged CLV first, calibration second, flat-stake yield third; require a 300-bet minimum and publish confidence intervals next to every rank.</dd>
+<dt>Impact</dt><dd>High</dd>
+<dt>Effort</dt><dd>Medium</dd>
+<dt>Confidence</dt><dd>High</dd>
+<dt>Decision</dt><dd>Recommended now</dd>
+<dt>Owner</dt><dd>Competition design</dd>
+<dt>Review test</dt><dd>If CLV data cannot be captured (S01 fails), the board stays provisional and unranked.</dd>
+<dt>Evidence</dt><dd><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/suggestions.csv" rel="noopener noreferrer" target="_blank">https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/suggestions.csv</a></dd>
+</dl>
+</div>
+</details>
+
+<details class="sug"><summary><span class="sid">S09</span>Make the data layer dual-source with automatic disagreement alerts</summary>
+<div class="sugbody">
+<dl>
+<dt>Problem</dt><dd>The pipeline depends on one aggregator mirror. If it drifts from the official page, every downstream number drifts silently.</dd>
+<dt>Recommendation</dt><dd>Every build fetches the official page and the mirror; add a hard assertion that the two agree row-for-row on the injury report and standings, and fail the build on any mismatch.</dd>
+<dt>Impact</dt><dd>High</dd>
+<dt>Effort</dt><dd>Low</dd>
+<dt>Confidence</dt><dd>High</dd>
+<dt>Decision</dt><dd>Recommended now</dd>
+<dt>Owner</dt><dd>Data engineering</dd>
+<dt>Review test</dt><dd>If the official page layout changes and parsing fails, fail closed (blank + flag) rather than falling back silently.</dd>
+<dt>Evidence</dt><dd><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/suggestions.csv" rel="noopener noreferrer" target="_blank">https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/suggestions.csv</a></dd>
+</dl>
+</div>
+</details>
+
+<details class="sug"><summary><span class="sid">S10</span>Model opponent-adjusted efficiency, not raw points</summary>
+<div class="sugbody">
+<dl>
+<dt>Problem</dt><dd>The current ratings use final margins with a two-way fit; they cannot distinguish a good offence beating bad defences from a mediocre one.</dd>
+<dt>Recommendation</dt><dd>Add EPA per play (offence and defence) from the same pinned source, blend with the margin model, and evaluate whether it reduces out-of-sample log-loss.</dd>
+<dt>Impact</dt><dd>Medium</dd>
+<dt>Effort</dt><dd>High</dd>
+<dt>Confidence</dt><dd>Medium</dd>
+<dt>Decision</dt><dd>Defer</dd>
+<dt>Owner</dt><dd>Model owner</dd>
+<dt>Review test</dt><dd>Promote when play-by-play ingestion is in place and the blend beats the margin model on holdout log-loss.</dd>
+<dt>Evidence</dt><dd><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/suggestions.csv" rel="noopener noreferrer" target="_blank">https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/suggestions.csv</a></dd>
+</dl>
+</div>
+</details>
+
+<details class="sug"><summary><span class="sid">S11</span>Price correlated legs with an empirical copula, and refuse independent pricing</summary>
+<div class="sugbody">
+<dl>
+<dt>Problem</dt><dd>Same-team QB + WR1 legs are correlated (r = 0.50 on 2024-2026); at median lines the joint hit rate is 32.5% versus 24.8% if treated as independent, a +7.7 pp gap that changes the fair price materially.</dd>
+<dt>Recommendation</dt><dd>Require an empirical joint estimate for any same-game combination; publish the implied fair price next to the offered price and reject the bet when the offered price assumes independence.</dd>
+<dt>Impact</dt><dd>High</dd>
+<dt>Effort</dt><dd>Medium</dd>
+<dt>Confidence</dt><dd>High</dd>
+<dt>Decision</dt><dd>Recommended now</dd>
+<dt>Owner</dt><dd>Quant</dd>
+<dt>Review test</dt><dd>If the operator&#x27;s SGP price already reflects the correlation (compare implied joint to empirical), no action is needed beyond documentation.</dd>
+<dt>Evidence</dt><dd><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/suggestions.csv" rel="noopener noreferrer" target="_blank">https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/suggestions.csv</a></dd>
+</dl>
+</div>
+</details>
+
+<details class="sug"><summary><span class="sid">S12</span>Keep a decision log (one line per accepted suggestion)</summary>
+<div class="sugbody">
+<dl>
+<dt>Problem</dt><dd>Suggestions accepted without a recorded rationale get re-litigated, and rejected ones get re-proposed.</dd>
+<dt>Recommendation</dt><dd>Append an ADR row when a suggestion moves to Accepted/Rejected: date, decision, evidence, owner, revisit date.</dd>
+<dt>Impact</dt><dd>Medium</dd>
+<dt>Effort</dt><dd>Low</dd>
+<dt>Confidence</dt><dd>High</dd>
+<dt>Decision</dt><dd>Recommended now</dd>
+<dt>Owner</dt><dd>Project owner</dd>
+<dt>Review test</dt><dd>If the log has fewer than one entry per accepted suggestion, the process is not being followed.</dd>
+<dt>Evidence</dt><dd><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/suggestions.csv" rel="noopener noreferrer" target="_blank">https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/suggestions.csv</a></dd>
+</dl>
+</div>
+</details>
+
+<details class="sug"><summary><span class="sid">S13</span>Separate OFFICIAL and AGGREGATOR tiers in every table, mechanically</summary>
+<div class="sugbody">
+<dl>
+<dt>Problem</dt><dd>Mixing an official injury row and a mirror-derived snap profile in one &#x27;verified&#x27; column invites over-claiming.</dd>
+<dt>Recommendation</dt><dd>Every table carries a tier column; a build check fails if an OFFICIAL-labelled row&#x27;s source URL is not an official domain.</dd>
+<dt>Impact</dt><dd>High</dd>
+<dt>Effort</dt><dd>Medium</dd>
+<dt>Confidence</dt><dd>High</dd>
+<dt>Decision</dt><dd>Recommended now</dd>
+<dt>Owner</dt><dd>Data engineering</dd>
+<dt>Review test</dt><dd>Define the official domain list (nfl.com, operations.nfl.com, media.nfl.com, club sites) and enforce it in verify.</dd>
+<dt>Evidence</dt><dd><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/suggestions.csv" rel="noopener noreferrer" target="_blank">https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/suggestions.csv</a></dd>
+</dl>
+</div>
+</details>
+
+<details class="sug"><summary><span class="sid">S14</span>Run the competition as points-only until the reward questions are answered</summary>
+<div class="sugbody">
+<dl>
+<dt>Problem</dt><dd>Cash rewards change the legal, tax and eligibility profile; no jurisdiction or funding decision exists yet.</dd>
+<dt>Recommendation</dt><dd>Publish the intended cash structure as a proposal, not a commitment; keep the board points-only until Q04/Q05 are answered.</dd>
+<dt>Impact</dt><dd>Medium</dd>
+<dt>Effort</dt><dd>Low</dd>
+<dt>Confidence</dt><dd>High</dd>
+<dt>Decision</dt><dd>Recommended now</dd>
+<dt>Owner</dt><dd>Project owner</dd>
+<dt>Review test</dt><dd>Close Q04/Q05 first; then publish reward terms with eligibility rules.</dd>
+<dt>Evidence</dt><dd><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/suggestions.csv" rel="noopener noreferrer" target="_blank">https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/suggestions.csv</a></dd>
+</dl>
+</div>
+</details>
+
+<details class="sug"><summary><span class="sid">S15</span>Publish a weekly &quot;what changed&quot; diff instead of a static snapshot</summary>
+<div class="sugbody">
+<dl>
+<dt>Problem</dt><dd>A static snapshot hides whether a rating, ranking or availability call moved and why.</dd>
+<dt>Recommendation</dt><dd>Store each weekly snapshot and render a diff column (rank change, rating change, availability change).</dd>
+<dt>Impact</dt><dd>Medium</dd>
+<dt>Effort</dt><dd>Medium</dd>
+<dt>Confidence</dt><dd>Medium</dd>
+<dt>Decision</dt><dd>Defer</dd>
+<dt>Owner</dt><dd>Data engineering</dd>
+<dt>Review test</dt><dd>Store weekly snapshots; diff rendered client-side from committed snapshots.</dd>
+<dt>Evidence</dt><dd><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/suggestions.csv" rel="noopener noreferrer" target="_blank">https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/suggestions.csv</a></dd>
+</dl>
+</div>
+</details>
+
+<details class="sug"><summary><span class="sid">S16</span>Capture the reserve list so &quot;not listed&quot; never means &quot;available&quot;</summary>
+<div class="sugbody">
+<dl>
+<dt>Problem</dt><dd>A player absent from the weekly injury report may be on injured reserve, not healthy.</dd>
+<dt>Recommendation</dt><dd>Capture the reserve list (IR, PUP, etc.) weekly and join it to the availability graph; treat reserve-list players as unavailable.</dd>
+<dt>Impact</dt><dd>High</dd>
+<dt>Effort</dt><dd>Medium</dd>
+<dt>Confidence</dt><dd>High</dd>
+<dt>Decision</dt><dd>Recommended now</dd>
+<dt>Owner</dt><dd>Data engineering</dd>
+<dt>Review test</dt><dd>If a player on the reserve list appears in a game, treat it as a data error and alert.</dd>
+<dt>Evidence</dt><dd><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/suggestions.csv" rel="noopener noreferrer" target="_blank">https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/suggestions.csv</a></dd>
+</dl>
+</div>
+</details>
+
+</main>
+<footer class="wrap">
+<p><strong>Verification policy.</strong> Every table row links to an official page or to the
+script and pinned input that produced it. Values that cannot be confirmed are left blank and
+published on the <a href="flagged.html">Flagged for review</a> page &mdash; never inferred.</p>
+<p>Research only. No bets are placed, no performance is claimed, and nothing here is betting
+advice. If gambling is a problem: 1-800-GAMBLER.</p>
+</footer>
+</body>
+</html>

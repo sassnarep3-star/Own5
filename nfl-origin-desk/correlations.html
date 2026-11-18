@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Official-source correlations, each published with n.">
+<title>Correlations &middot; NFL Origin Desk</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <span class="mark">O5</span>
+      <div>
+        <h1><a href="index.html" style="color:inherit;text-decoration:none">NFL Origin Desk</a></h1>
+        <p>Own lines &middot; validated strategies &middot; injuries &amp; depth intelligence</p>
+      </div>
+    </div>
+    <div class="stamp">
+      <strong>2026 season &middot; Week 9</strong>
+      <span>Snapshot 2026-11-18 UTC</span>
+    </div>
+  </div>
+<nav class="wrap"><a class="" href="index.html">Overview</a><a class="" href="requirements.html">Requirements</a><a class="" href="questions.html">Open questions</a><a class="" href="suggestions.html">Suggestions</a><a class="" href="lines.html">Own lines</a><a class="" href="strategies.html">Strategies</a><a class="" href="gates.html">Gates</a><a class="" href="leaderboard.html">Leaderboard</a><a class="" href="correlations.html">Correlations</a><a class="" href="injuries.html">Injuries & depth</a><a class="" href="sources.html">Sources</a><a class="" href="flagged.html">Flagged for review</a><a class="" href="executive-summary.html">Executive summary</a></nav>
+</header>
+<main class="wrap">
+<section class="pagehead"><h2>Correlations</h2><p>Official-source correlations, each published with n.</p></section>
+
+<p>Correlations are computed only from officially sourced numbers, and every value is published with its sample size n. Same-team prop legs are priced empirically (joint probability), never by multiplying marginal probabilities under dependence.</p>
+<div class="tablewrap">
+<table class="data"><caption>Official-source correlations. n published with each value; Fisher intervals where computable.</caption>
+<thead><tr><th scope="col">pair</th><th scope="col">metric</th><th scope="col">r</th><th scope="col">n</th><th scope="col">ci_low</th><th scope="col">ci_high</th><th scope="col">source_url</th><th scope="col">notes</th></tr></thead>
+<tbody>
+<tr><td>NET points per game vs win percentage</td><td>Pearson r</td><td>0.8391</td><td>32</td><td class="blank">&mdash;</td><td class="blank">&mdash;</td><td><a href="https://www.nfl.com/standings/" rel="noopener noreferrer" target="_blank">source</a></td><td>Computed in-repo from official 2026 standings snapshot (32 teams); NET = PF-PA asserted.</td></tr>
+<tr><td>Points for per game vs win percentage</td><td>Pearson r</td><td>0.6136</td><td>32</td><td class="blank">&mdash;</td><td class="blank">&mdash;</td><td><a href="https://www.nfl.com/standings/" rel="noopener noreferrer" target="_blank">source</a></td><td>Official 2026 standings snapshot; n=32 teams.</td></tr>
+<tr><td>Points against per game vs win percentage</td><td>Pearson r</td><td>-0.5796</td><td>32</td><td class="blank">&mdash;</td><td class="blank">&mdash;</td><td><a href="https://www.nfl.com/standings/" rel="noopener noreferrer" target="_blank">source</a></td><td>Official 2026 standings snapshot; n=32 teams.</td></tr>
+<tr><td>Points for per game vs points against per game</td><td>Pearson r</td><td>-0.0117</td><td>32</td><td class="blank">&mdash;</td><td class="blank">&mdash;</td><td><a href="https://www.nfl.com/standings/" rel="noopener noreferrer" target="_blank">source</a></td><td>Official 2026 standings snapshot; n=32 teams.</td></tr>
+<tr><td>QB passing yards vs his team&#x27;s top-WR receiving yards</td><td>Pearson r</td><td>0.76</td><td>3852</td><td class="blank">&mdash;</td><td class="blank">&mdash;</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/arena-f1d30421/correlation.md" rel="noopener noreferrer" target="_blank">source</a></td><td>Same-game prop-leg dependence; inputs pinned to spreadspoke@1d309cb and pbp@352c9c9 (flagged F1/F2). Same-team legs must not be priced as independent.</td></tr>
+<tr><td>QB passing yards vs WR1 receiving yards (median lines)</td><td>Empirical joint vs independent hit rate</td><td>0.325 vs 0.248</td><td>1255</td><td class="blank">&mdash;</td><td class="blank">&mdash;</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/sgp_pricing_table.csv" rel="noopener noreferrer" target="_blank">source</a></td><td>Joint hit rate 32.5% vs 24.8% if independent (+7.7 pp gap); SGP priced empirically, not by multiplying marginals.</td></tr>
+</tbody></table>
+</div>
+</main>
+<footer class="wrap">
+<p><strong>Verification policy.</strong> Every table row links to an official page or to the
+script and pinned input that produced it. Values that cannot be confirmed are left blank and
+published on the <a href="flagged.html">Flagged for review</a> page &mdash; never inferred.</p>
+<p>Research only. No bets are placed, no performance is claimed, and nothing here is betting
+advice. If gambling is a problem: 1-800-GAMBLER.</p>
+</footer>
+</body>
+</html>

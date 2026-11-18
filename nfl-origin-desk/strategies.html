@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Pre-registered strategy catalog with signal/staking separation and gate results.">
+<title>Strategies &middot; NFL Origin Desk</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <span class="mark">O5</span>
+      <div>
+        <h1><a href="index.html" style="color:inherit;text-decoration:none">NFL Origin Desk</a></h1>
+        <p>Own lines &middot; validated strategies &middot; injuries &amp; depth intelligence</p>
+      </div>
+    </div>
+    <div class="stamp">
+      <strong>2026 season &middot; Week 9</strong>
+      <span>Snapshot 2026-11-18 UTC</span>
+    </div>
+  </div>
+<nav class="wrap"><a class="" href="index.html">Overview</a><a class="" href="requirements.html">Requirements</a><a class="" href="questions.html">Open questions</a><a class="" href="suggestions.html">Suggestions</a><a class="" href="lines.html">Own lines</a><a class="" href="strategies.html">Strategies</a><a class="" href="gates.html">Gates</a><a class="" href="leaderboard.html">Leaderboard</a><a class="" href="correlations.html">Correlations</a><a class="" href="injuries.html">Injuries & depth</a><a class="" href="sources.html">Sources</a><a class="" href="flagged.html">Flagged for review</a><a class="" href="executive-summary.html">Executive summary</a></nav>
+</header>
+<main class="wrap">
+<section class="pagehead"><h2>Strategies</h2><p>Pre-registered strategy catalog with signal/staking separation and gate results.</p></section>
+<p>Seven pre-registered strategy families, tested on historical data with exact binomial tests, Bonferroni correction, chronological holdouts and permutation nulls. Signal is separated from staking (flat unit stakes) so a lucky staking run cannot mask a bad signal. None pass all validation gates; the leaderboard stays empty until a strategy is certified.</p>
+<div class="tablewrap">
+<table class="data"><caption>Strategy catalog. Gate results show pass/fail/n/a across G0-G12. Backtest numbers are kept off the leaderboard until certified.</caption>
+<thead><tr><th scope="col">id</th><th scope="col">name</th><th scope="col">market_type</th><th scope="col">pre_reg_commit</th><th scope="col">status</th><th scope="col">gates_passed</th><th scope="col">gates_failed</th><th scope="col">signal_component</th><th scope="col">staking_component</th><th scope="col">signal_vs_staking_note</th><th scope="col">what_would_change_our_mind</th><th scope="col">source_url</th></tr></thead>
+<tbody>
+<tr><td>S1</td><td>Home underdog ATS</td><td>Single</td><td>tools/decision_desk/compute_strategies.py</td><td>not certified - fails validation gates</td><td>5</td><td>7</td><td>Model predicts home underdog covers the spread; edge = model margin minus market line</td><td>Flat stake per bet</td><td>Signal (cover probability) is separated from staking (flat unit); a lucky staking run cannot lift a negative-signal strategy</td><td>A verified closing price history that shows the model beat the market line (G4) and a chronological holdout win rate clearly above break-even with a game-cluster lower bound (G3)</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/strategy_ledger.csv" rel="noopener noreferrer" target="_blank">source</a></td></tr>
+<tr><td>S2</td><td>Home dog +7 or more</td><td>Single</td><td>tools/decision_desk/compute_strategies.py</td><td>not certified - fails validation gates</td><td>7</td><td>5</td><td>Large home-underdog spread (&gt;=7 pts) as a value signal</td><td>Flat stake per bet</td><td>Signal (spread gap) separated from staking; staking is flat so performance reflects signal only</td><td>A verified market price history + holdout pass; without it the 56.37%/n=793 result cannot be certified (Bonferroni p=0.0134 &gt; alpha 0.00625)</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/strategy_ledger.csv" rel="noopener noreferrer" target="_blank">source</a></td></tr>
+<tr><td>S3</td><td>Divisional home dog</td><td>Single</td><td>tools/decision_desk/compute_strategies.py</td><td>not certified - fails validation gates</td><td>7</td><td>5</td><td>Divisional home underdog as a value signal</td><td>Flat stake per bet</td><td>Signal separated from staking; flat unit stakes</td><td>A verified market price history + significant holdout result</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/strategy_ledger.csv" rel="noopener noreferrer" target="_blank">source</a></td></tr>
+<tr><td>S4</td><td>Fade 10+ favourites</td><td>Single</td><td>tools/decision_desk/compute_strategies.py</td><td>not certified - fails validation gates</td><td>7</td><td>5</td><td>Fading heavy favourites (&gt;10 pts) as a value signal</td><td>Flat stake per bet</td><td>Signal separated from staking; flat unit stakes</td><td>A verified market price history + significant holdout result</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/strategy_ledger.csv" rel="noopener noreferrer" target="_blank">source</a></td></tr>
+<tr><td>S5</td><td>Over the closing total</td><td>Single</td><td>tools/decision_desk/compute_strategies.py</td><td>not certified - fails validation gates</td><td>7</td><td>5</td><td>Betting the over at the closing total as a signal</td><td>Flat stake per bet</td><td>Signal separated from staking; flat unit stakes</td><td>A verified closing-total price history + holdout pass</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/strategy_ledger.csv" rel="noopener noreferrer" target="_blank">source</a></td></tr>
+<tr><td>S6</td><td>Home team off a bye ATS</td><td>Single</td><td>tools/decision_desk/compute_strategies.py</td><td>not certified - fails validation gates</td><td>7</td><td>5</td><td>Home team coming off a bye as a signal</td><td>Flat stake per bet</td><td>Signal separated from staking; flat unit stakes</td><td>A verified market price history + significant holdout result</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/strategy_ledger.csv" rel="noopener noreferrer" target="_blank">source</a></td></tr>
+<tr><td>S7</td><td>Fade the more-injured team</td><td>Single</td><td>tools/decision_desk/compute_strategies.py</td><td>not certified - fails validation gates</td><td>7</td><td>5</td><td>Relative lineup deficiency (injury/availability) as a margin signal</td><td>Flat stake per bet</td><td>Signal (deficiency-driven margin edge) separated from staking; flat unit stakes; the measured residual ATS edge is 51.4% (p=1.0) so signal is effectively zero</td><td>A verified closing price history and a residual edge that survives Bonferroni + holdout</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/strategy_ledger.csv" rel="noopener noreferrer" target="_blank">source</a></td></tr>
+</tbody></table>
+</div>
+<div class="callout"><p><strong>What would change our mind.</strong> Each strategy carries a two-sided falsification field: the specific evidence (verified closing prices, a passing holdout, a residual edge surviving Bonferroni) that would promote it from "not certified" to certified. Until then, backtest numbers are not published as performance.</p></div>
+
+</main>
+<footer class="wrap">
+<p><strong>Verification policy.</strong> Every table row links to an official page or to the
+script and pinned input that produced it. Values that cannot be confirmed are left blank and
+published on the <a href="flagged.html">Flagged for review</a> page &mdash; never inferred.</p>
+<p>Research only. No bets are placed, no performance is claimed, and nothing here is betting
+advice. If gambling is a problem: 1-800-GAMBLER.</p>
+</footer>
+</body>
+</html>

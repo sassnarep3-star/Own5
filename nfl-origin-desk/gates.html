@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The 12 gates (G0-G12) every strategy must pass.">
+<title>Validation gates &middot; NFL Origin Desk</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <span class="mark">O5</span>
+      <div>
+        <h1><a href="index.html" style="color:inherit;text-decoration:none">NFL Origin Desk</a></h1>
+        <p>Own lines &middot; validated strategies &middot; injuries &amp; depth intelligence</p>
+      </div>
+    </div>
+    <div class="stamp">
+      <strong>2026 season &middot; Week 9</strong>
+      <span>Snapshot 2026-11-18 UTC</span>
+    </div>
+  </div>
+<nav class="wrap"><a class="" href="index.html">Overview</a><a class="" href="requirements.html">Requirements</a><a class="" href="questions.html">Open questions</a><a class="" href="suggestions.html">Suggestions</a><a class="" href="lines.html">Own lines</a><a class="" href="strategies.html">Strategies</a><a class="" href="gates.html">Gates</a><a class="" href="leaderboard.html">Leaderboard</a><a class="" href="correlations.html">Correlations</a><a class="" href="injuries.html">Injuries & depth</a><a class="" href="sources.html">Sources</a><a class="" href="flagged.html">Flagged for review</a><a class="" href="executive-summary.html">Executive summary</a></nav>
+</header>
+<main class="wrap">
+<section class="pagehead"><h2>Validation gates</h2><p>The 12 gates (G0-G12) every strategy must pass.</p></section>
+<p>Twelve validation gates (G0-G12). Every hard gate must pass for a strategy to be certified; G8 (market integrity) failure sends a live strategy back to paper (demotion gate). Backtest numbers are forbidden on the leaderboard until pre-registration and gate clearance.</p>
+<div class="tablewrap">
+<table class="data"><caption>Validation gates. G0 pre-registration (commit hash is the registration); G4 closing line value; G8 market integrity.</caption>
+<thead><tr><th scope="col">gate</th><th scope="col">gate_name</th><th scope="col">definition</th><th scope="col">pass_criteria</th><th scope="col">hard_gate</th><th scope="col">demotion_trigger</th><th scope="col">source_url</th></tr></thead>
+<tbody>
+<tr><td>G0</td><td>Pre-registration</td><td>Strategy definition, sample window and gates frozen before results are seen; commit hash is the registration</td><td>Commit hash recorded before evaluation window opens; variant count counted including abandoned variants</td><td>Yes</td><td>Fails if any variant added after seeing results</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/strategy_ledger.csv" rel="noopener noreferrer" target="_blank">source</a></td></tr>
+<tr><td>G1</td><td>Minimum sample</td><td>Enough bets to separate skill from variance</td><td>300-bet minimum for provisional listing; ~2,243 bets to prove 55% skill at 80% power</td><td>Yes</td><td>Sample falls below minimum</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/strategy_ledger.csv" rel="noopener noreferrer" target="_blank">source</a></td></tr>
+<tr><td>G2</td><td>Significance (Bonferroni)</td><td>Result survives multiple-testing correction over the number of variants tested</td><td>p &lt; alpha/k (Bonferroni) with k published</td><td>Yes</td><td>p-value exceeds corrected alpha</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/strategy_ledger.csv" rel="noopener noreferrer" target="_blank">source</a></td></tr>
+<tr><td>G3</td><td>Chronological holdout</td><td>Out-of-sample test on held-out seasons (train/validation/final holdout split)</td><td>Holdout win rate with game-cluster lower bound above break-even</td><td>Yes</td><td>Holdout fails</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/strategy_ledger.csv" rel="noopener noreferrer" target="_blank">source</a></td></tr>
+<tr><td>G4</td><td>Closing line value</td><td>Measured against a verified timestamped closing/operator price</td><td>De-vigged CLV positive with confidence interval</td><td>Yes</td><td>No verified price history (market columns blank)</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/strategy_ledger.csv" rel="noopener noreferrer" target="_blank">source</a></td></tr>
+<tr><td>G5</td><td>Correlation cap</td><td>Multi-leg combos use empirically validated joint probability, not independent multiplication</td><td>Joint probability validated; void/push rules documented</td><td>Yes</td><td>Legs priced as independent under dependence</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/strategy_ledger.csv" rel="noopener noreferrer" target="_blank">source</a></td></tr>
+<tr><td>G6</td><td>Drawdown</td><td>Maximum drawdown and fractional-Kelly staking within limits</td><td>Max drawdown within bankroll tolerance; Kelly fraction capped</td><td>Yes</td><td>Drawdown breaches limit</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/strategy_ledger.csv" rel="noopener noreferrer" target="_blank">source</a></td></tr>
+<tr><td>G7</td><td>Fractional Kelly</td><td>Staking sized by fractional Kelly, not flat ROI chasing</td><td>Staking rule documented and applied consistently</td><td>Yes</td><td>Staking not rule-based</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/strategy_ledger.csv" rel="noopener noreferrer" target="_blank">source</a></td></tr>
+<tr><td>G8</td><td>Market integrity</td><td>Price source is a verified operator snapshot with timestamp</td><td>Closing line from an operator snapshot, not an aggregator</td><td>Yes</td><td>Market price unverified/aggregator</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/strategy_ledger.csv" rel="noopener noreferrer" target="_blank">source</a></td></tr>
+<tr><td>G9</td><td>Parlay correlation rule</td><td>Parlays/prop combos only behind joint-evidence gate</td><td>Validated joint probability + void/push rules both available</td><td>Yes</td><td>Combo ranked on multiplied marginals</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/strategy_ledger.csv" rel="noopener noreferrer" target="_blank">source</a></td></tr>
+<tr><td>G10</td><td>Grading integrity</td><td>Bet settlement follows operator house rules (OT counts, push refund, postponed void)</td><td>Grading matches documented house rules</td><td>Yes</td><td>Grading deviates from house rules</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/strategy_ledger.csv" rel="noopener noreferrer" target="_blank">source</a></td></tr>
+<tr><td>G11</td><td>Liquidity</td><td>Market can absorb the proposed stake at the quoted price</td><td>Liquidity check documented</td><td>Yes</td><td>No liquidity evidence</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/strategy_ledger.csv" rel="noopener noreferrer" target="_blank">source</a></td></tr>
+<tr><td>G12</td><td>Responsible gambling</td><td>No cash payouts; competition is points-only until jurisdiction/funding decided</td><td>1-800-GAMBLER disclosure; no real-money service</td><td>Yes</td><td>Real money introduced without jurisdiction review</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/strategy_ledger.csv" rel="noopener noreferrer" target="_blank">source</a></td></tr>
+</tbody></table>
+</div>
+</main>
+<footer class="wrap">
+<p><strong>Verification policy.</strong> Every table row links to an official page or to the
+script and pinned input that produced it. Values that cannot be confirmed are left blank and
+published on the <a href="flagged.html">Flagged for review</a> page &mdash; never inferred.</p>
+<p>Research only. No bets are placed, no performance is claimed, and nothing here is betting
+advice. If gambling is a problem: 1-800-GAMBLER.</p>
+</footer>
+</body>
+</html>

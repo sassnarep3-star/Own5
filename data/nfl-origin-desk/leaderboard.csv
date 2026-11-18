@@ -1,0 +1,11 @@
+division,strategy,metric,metric_value,ci_low,ci_high,n_trials,game_clusters,multiplicity_adjusted,certification_status,signal_score,staking_score,source_url
+Singles,S1 Home underdog ATS,Brier skill score (benchmark-relative),,,,,,,Not certified,,,https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/strategy_ledger.csv
+Singles,S2 Home dog +7 or more,Brier skill score (benchmark-relative),,,,,,,Not certified,,,https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/strategy_ledger.csv
+Singles,S3 Divisional home dog,Brier skill score (benchmark-relative),,,,,,,Not certified,,,https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/strategy_ledger.csv
+Singles,S4 Fade 10+ favourites,Brier skill score (benchmark-relative),,,,,,,Not certified,,,https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/strategy_ledger.csv
+Singles,S5 Over the closing total,Brier skill score (benchmark-relative),,,,,,,Not certified,,,https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/strategy_ledger.csv
+Singles,S6 Home team off a bye ATS,Brier skill score (benchmark-relative),,,,,,,Not certified,,,https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/strategy_ledger.csv
+Singles,S7 Fade the more-injured team,Brier skill score (benchmark-relative),,,,,,,Not certified,,,https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/strategy_ledger.csv
+Game parlays,(none certified),Brier skill score (benchmark-relative),,,,,,,Not certified,,,https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/strategy_ledger.csv
+Same-game parlays,(none certified),Brier skill score (benchmark-relative),,,,,,,Not certified,,,https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/strategy_ledger.csv
+Prop combos,(none certified),Brier skill score (benchmark-relative),,,,,,,Not certified,,,https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/strategy_ledger.csv
