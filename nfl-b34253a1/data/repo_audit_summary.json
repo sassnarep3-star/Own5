@@ -1,27 +1,27 @@
 {
   "as_of": "2026-11-12",
-  "files": 462,
-  "physical_lines": 99420,
+  "files": 466,
+  "physical_lines": 99703,
   "status_counts": {
     "DATED_OFFICIAL_FACT_ROW": 1588,
     "DATED_SNAPSHOT_RECOMPUTED_OR_STALE": 730,
     "DERIVED_OR_LEGACY_LINE_REVIEW": 35,
     "FLAGGED_LEGACY_MARKET_VALUE": 903,
     "FLAGGED_NONOFFICIAL_HISTORICAL_INPUT": 14406,
-    "IMPLEMENTATION_LINE_REVIEW": 13177,
+    "IMPLEMENTATION_LINE_REVIEW": 13201,
     "LEGACY_JSON_RECORD_REVIEW": 4624,
     "LEGACY_RESEARCH_CLAIM_SCOPE": 5804,
     "LEGACY_SNAPSHOT_SOURCE_REGISTERED": 10815,
     "LINE_ITEM_SOURCE_LINK_OR_FLAG": 32278,
     "OFFICIAL_LINK_PRESENT_NOT_REFETCHED": 30,
-    "PUBLISHED_RENDER_LINE_REVIEW": 13105,
+    "PUBLISHED_RENDER_LINE_REVIEW": 13364,
     "REPOSITORY_METADATA_LINE": 133,
     "REVERIFIED_CURRENT_GAME_LOG": 1792
   },
   "source_basis_counts": {
-    "HTTPS_OFFICIAL_LINK_IN_LINE": 2404,
+    "HTTPS_OFFICIAL_LINK_IN_LINE": 2412,
     "OFFICIAL_COUNTERPART_FOR_FLAGGED_INPUT_NOT_INPUT_PROVENANCE": 15309,
-    "OFFICIAL_SCOPE_REFERENCE_FALLBACK_NOT_ROW_PROVENANCE": 80758,
+    "OFFICIAL_SCOPE_REFERENCE_FALLBACK_NOT_ROW_PROVENANCE": 81033,
     "ROW_SOURCE_FIELD": 949
   },
   "scope": "Line-indexed inventory of previous NFL sites, generators, datasets, research references and shared navigation/CI context; this is not a claim that every legacy historical statistic was re-fetched.",
@@ -82,6 +82,11 @@
       "path": ".github/workflows/nfl-desk-35a1feb2.yml",
       "physical_lines": 160,
       "bytes": 6912
+    },
+    {
+      "path": ".github/workflows/nfl-desk-35fc3437.yml",
+      "physical_lines": 24,
+      "bytes": 774
     },
     {
       "path": ".github/workflows/nfl-desk-38430fe3.yml",
@@ -1122,6 +1127,21 @@
       "path": "nfl-desk-35a1feb2/raw/README.md",
       "physical_lines": 17,
       "bytes": 1129
+    },
+    {
+      "path": "nfl-desk-35fc3437/index.html",
+      "physical_lines": 60,
+      "bytes": 15658
+    },
+    {
+      "path": "nfl-desk-35fc3437/pages/executive-summary.html",
+      "physical_lines": 60,
+      "bytes": 6978
+    },
+    {
+      "path": "nfl-desk-35fc3437/pages/flagged.html",
+      "physical_lines": 139,
+      "bytes": 8162
     },
     {
       "path": "nfl-desk-38430fe3/executive-summary.html",
