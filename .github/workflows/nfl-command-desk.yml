@@ -1,0 +1,43 @@
+name: NFL Command Desk (4078a9ad)
+
+on:
+  push:
+    branches: [main, arena/4078a9ad-own5]
+    paths:
+      - 'nfl-command-desk/**'
+      - '.github/workflows/nfl-command-desk.yml'
+  pull_request:
+    paths:
+      - 'nfl-command-desk/**'
+      - '.github/workflows/nfl-command-desk.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nfl-command-desk-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Regenerate, verify and test the command desk
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # V11 checks that the published registration commit exists
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Regenerate every CSV and page from committed inputs
+        run: |
+          python3 nfl-command-desk/generate.py
+          python3 nfl-command-desk/build.py
+      - name: The committed outputs must match a clean rebuild (no drift)
+        run: git diff --exit-code -- nfl-command-desk/
+      - name: Fail-closed verifier (provenance, pinned counts, reconciliation, links)
+        run: python3 nfl-command-desk/verify.py
+      - name: Unit tests including negative controls
+        run: python3 -m unittest discover -s nfl-command-desk/tests -v

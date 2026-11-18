@@ -1,0 +1,8 @@
+source_id,publisher,url,used_for,read_utc,class_
+S1,NFL,https://www.nfl.com/standings/league/2026/REG,"League standings 2026 REG: W-L-T, PCT, PF, PA, NET, records, streak",2026-11-18T03:52:00Z,official
+S2,NFL,https://www.nfl.com/schedules/2026/by-week/week-10,Week 10 finals (14 played games + 4 byes),2026-11-18T03:50:00Z,official
+S3,NFL,https://www.nfl.com/schedules/2026/by-week/week-11,"Week 11 slate (13 games + 6 byes), networks, dates, venues via hotel link destination",2026-11-18T03:47:00Z,official
+S4,NFL,https://www.nfl.com/injuries/league/2026/reg11,"Availability: requested reg11, served Week 10 report (no Week 11 report published at read time)",2026-11-18T03:45:00Z,official
+S5,NFL,https://www.nfl.com/games/patriots-at-seahawks-2026-reg-1,"Spot check of corpus row 1: final score, venue (Lumen Field, Seattle WA), Game Book PDF link",2026-11-18T03:55:00Z,official
+S6,NFL Football Communications,https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced,"Dated schedule announcement, 2026-05-14: 18 weeks, 272 games, 17+3, nine international games, venue names",2026-11-18T03:58:00Z,official
+S7,GitHub,https://api.github.com/repos/sassnarep3-star/Own5/pages,Publication configuration: Pages served from main at /,2026-11-18T03:41:00Z,repository

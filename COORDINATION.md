@@ -3272,3 +3272,45 @@ echo "appended"; wc -l COORDINATION.md
 - None. All work is in the additive `nfl-desk-ccc5caf2/` and `research/ccc5caf2/` namespaces; no other session's files are touched.
 
 **38430fe3 final record (2026-11-18).** Follow-up PR **#115** merged at `589205d` (merge commit, `--merge`). It carried the F-04 and F-11 corrections. Pages built `589205d` as `built`. This last PR fixes date display (ordinal suffixes now lower-case: "November 15th", not "15Th") on the injury-rows page. Known pre-existing failures on PRs and pushes, not from this desk: `Verify NFL B34 Week 10 research desk` and `NFL Decision Desk — fetch & verify` (CU-F13). The desk's own workflow `Verify NFL injury-report desk (38430fe3)` passed on each head.
+
+---
+
+# Session 4078a9ad — NFL Command Desk: requirements ledger, verified results corpus & decision layer (claimed 2026-11-18T03:45Z)
+
+Session ID `4078a9ad`, branch `arena/4078a9ad-own5`, branched from `cb2d3b84` (main, PR #113 merged).
+
+**Why this scope.** The repository holds 32 NFL desk folders that each answer part of the brief in their own
+namespace. None of them is a single navigable command layer: the root `index.html` is generator-locked
+(`scripts/build.py`, diff-checked in `verify.yml`) and still carries an `AS OF 2026-11-02` stamp, and no page
+publishes (a) one row per user requirement with its gate and clearing number, (b) an open
+questions/information/answers register, (c) a suggestions register with a review process, or (d) a
+consolidated verified-results corpus with a published provenance merge rule. This session builds exactly that
+in one additive namespace and touches nothing owned by another session.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| Q1 | Coordination claim + push | in progress | 4078a9ad | COORDINATION.md | This block; pushed before build work. |
+| Q2 | Requirements ledger (one row per user requirement → blocking gate → number that clears it → observed status) | unclaimed | 4078a9ad | nfl-command-desk/data/requirements.csv | Derived from the user brief; each row links evidence or is blank+flagged. |
+| Q3 | Questions register (open questions, missing information, what would resolve each) | unclaimed | 4078a9ad | nfl-command-desk/data/questions.csv | User-requested "questions/information/answers" list incl. discovery suggestions. |
+| Q4 | Suggestions register + review process | unclaimed | 4078a9ad | nfl-command-desk/data/suggestions.csv | Decision column blank for the user to choose; no auto-approval. |
+| Q5 | Verified-results corpus with provenance merge rule and printed verification counts | unclaimed | 4078a9ad | nfl-command-desk/data/results_corpus.csv | Merges repo-committed, official-sourced 2026 results; conflicts published, not resolved silently. |
+| Q6 | Origination ledger (side → total → moneyline order, fair/market/residual columns kept separate) | unclaimed | 4078a9ad | nfl-command-desk/data/origination.csv | Reuses only already-committed official inputs; unverifiable market columns stay blank+flagged. |
+| Q7 | Leaderboard with signal/staking split, control baselines, proper-score + uncertainty columns | unclaimed | 4078a9ad | nfl-command-desk/data/leaderboard.csv | No strategy certified; all performance cells blank+flagged where data absent. |
+| Q8 | Injury / depth-deficiency view incl. backup depth and named replacements | unclaimed | 4078a9ad | nfl-command-desk/data/availability.csv | Only values with official source links; depth-order inference explicitly rejected. |
+| Q9 | Sources, flagged-for-review, executive summary, methodology pages | unclaimed | 4078a9ad | nfl-command-desk/*.html, research/nfl-4078a9ad/** | Every row source-linked or UNVERIFIED badge. |
+| Q10 | Static build + fail-closed verifier (row provenance, link integrity, negative-control tests) | unclaimed | 4078a9ad | nfl-command-desk/build.py, nfl-command-desk/verify.py, nfl-command-desk/tests/** | Deterministic: no clock, no network, no git. |
+| Q11 | Scoped CI workflow | unclaimed | 4078a9ad | .github/workflows/nfl-command-desk.yml | Path-scoped to this namespace + this board block. |
+| Q12 | PR to main, merge, Pages deploy verified, record | unclaimed | 4078a9ad | COORDINATION.md, README.md (one row) | Record PR link + Pages build commit below. |
+
+**Scope (hard).** `nfl-command-desk/**`, `research/nfl-4078a9ad/**`, `.github/workflows/nfl-command-desk.yml`,
+one README row, this COORDINATION.md block. No other session's files are edited. Root `index.html`,
+`pages/**`, `assets/**`, `data/research.json` are generator-locked and are **not** touched; a cross-session
+request is logged below instead.
+
+**Cross-session requests (logged, not actioned).**
+* The root `index.html` stamp reads `AS OF 2026-11-02` and the root navigation does not list any desk newer than
+  `nfl-integration-a620f5a5`. Owner of `scripts/build.py` / `data/research.json` should bump the stamp and add a
+  nav entry for this desk. Not edited here (diff-checked by `verify.yml`).
+* `decision-desk.yml` (`NFL Decision Desk — fetch & verify`) and `nfl-b34253a1.yml` (`Verify NFL B34 Week 10
+  research desk`) are red on `main` and on every PR (recorded by sessions 560ed315, a991e3fb, 35a1feb2, 98a211b8,
+  3cb7800c). Their owners should regenerate those desks. Not edited here.

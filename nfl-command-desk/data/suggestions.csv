@@ -1,0 +1,13 @@
+suggestion_id,suggestion,why,effort,evidence_needed,decision
+S01,Make this desk the repo root landing page,32 desk folders exist; the root page is generator-locked and stamped 2026-11-02,medium,Owner of scripts/build.py must edit the generator,
+S02,Adopt one canonical docs register and delete the 31 superseded desks,The same requirement is answered differently in several desks; a reader cannot tell which is current,medium,Merge decision,
+S03,Replace the COORDINATION.md append-only log with a per-session index,"The board is 3,200+ lines; a new session cannot find an active claim",low,None,
+S04,"Fix or retire the two red workflows (decision-desk clean rebuild, B34 desk)",They fail on every PR and train readers to ignore red,low,Owner of each workflow,
+S05,Capture the injury report three times a week into a hashed store,One capture cannot support a delta or an ablation,medium,A storage location outside the static site,
+S06,Publish a weekly diff page for the whole site,Everything else is a snapshot; the diff is what changes a decision,medium,A second dated capture,
+S07,Keep both total estimators until one wins on a paired CI,The gap is 0.95 points with a CI that includes 0,low,More weeks,
+S08,Run the frozen-line exposure on a second season before believing it,One direction over 86 games is exactly what luck looks like,medium,A second season of results,
+S09,Add a machine-readable requirements JSON next to this CSV,Lets a reviewer diff requirements between sessions,low,None,
+S10,Show the model's inputs on the same row as the probability,Already done here; extend it to every desk,low,None,
+S11,"State the home-field size as an assumption with an interval, not a point",2026 home margin is -0.98 with a wide CI; 2.0 is a convention,low,None,
+S12,Do not add any more NFL desks until one of them passes G01-G07,31 desks and zero certified strategies is the headline finding,none,None,
