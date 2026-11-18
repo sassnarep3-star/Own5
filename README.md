@@ -23,6 +23,8 @@ This repository hosts work from **three parallel agent sessions** (see `COORDINA
 
 | **NFL Week 11 Official-Source Desk** | NFL 2026 — official Week 11 slate (13 games, 6 byes; read 2026-11-18 03:13Z); Week 11 injury report **not published** at read time (URL serves Week 10); 25 NFL desk directories cross-checked against the 5c5f4aaf directory; 2 blocking and 8 review flags; 6 suggestions and 8 questions, all pending review; venues left blank | https://sassnarep3-star.github.io/Own5/nfl-desk-3cb7800c/ | `3cb7800c` (`nfl-desk-3cb7800c/`, `research/nfl-3cb7800c/`, `.github/workflows/nfl-desk-3cb7800c.yml`) |
 
+| **NFL Command Desk (4078a9ad)** | NFL 2026 — decision layer over the whole repo: 73-requirement ledger (27 met / 10 partial / 33 blocked / 2 rejected) with gate and clearing number per row; verified results corpus **150 games reconciled 32/32** to official standings (recomputed every build, with planted-defect tests); Week 11 13 fixtures + 6 byes with venue method stated, dated 2026-05-14 announcement beside it; 44 injury rows re-read, **17 stale** vs the 2026-11-12 capture incl. the three named Lions players now OUT; 5 pre-registered strategies, signal/staking separated, **0 certified**; 18 questions with discovery routes; 12 reviewable suggestions; 14 flags | https://sassnarep3-star.github.io/Own5/nfl-command-desk/ | `4078a9ad` (`nfl-command-desk/`, `research/nfl-4078a9ad/`, `.github/workflows/nfl-command-desk.yml`) |
+
 Shared policy: **every table row carries a source link; values that cannot be confirmed from an official/primary source are left blank and published on a Flagged-for-Review page — never inferred. No performance claims; no bets placed; leaderboards empty until strategies pass validation gates.**
 
 ---
