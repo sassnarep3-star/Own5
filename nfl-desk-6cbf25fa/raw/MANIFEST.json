@@ -1,0 +1,35 @@
+{
+  "claim_commit": "a3624df88a671dd91f1d64c92e8cba16d64bdafb",
+  "claim_commit_utc": "2026-11-18T03:45:53Z",
+  "extracts": {
+    "game_min_sf": {
+      "chunks": 1,
+      "file": "raw/game_vikings_at_49ers_2026-11-18.txt",
+      "url": "https://www.nfl.com/games/vikings-at-49ers-2026-reg-11"
+    },
+    "injuries": {
+      "chunks": 8,
+      "file": "raw/injuries_reg11_request_2026-11-18.txt",
+      "rows": 347,
+      "served_url": "https://www.nfl.com/injuries/league/2026/reg10",
+      "url": "https://www.nfl.com/injuries/league/2026/reg11"
+    },
+    "scores_wk10": {
+      "chunks": 2,
+      "file": "raw/scores_wk10_2026-11-18.txt",
+      "rows": 14,
+      "url": "https://www.nfl.com/scores/2026/reg10"
+    },
+    "standings": {
+      "chunks": 2,
+      "file": "raw/standings_2026-11-18.txt",
+      "rows": 32,
+      "url": "https://www.nfl.com/standings/league/2026/REG"
+    }
+  },
+  "fetch_bound": "all fetches occurred after the claim commit timestamp and before this file's write time",
+  "hash_scope_flag": "SHA256SUMS covers the extract files written by this capture, not the NFL.com server bytes (see flagged.csv F-P09).",
+  "read_utc_file_written": "2026-11-18T03:55:13Z",
+  "session": "6cbf25fa",
+  "tool": "sandbox page-fetch tool (processed page text; server bytes not retained)"
+}

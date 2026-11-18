@@ -1,0 +1,21 @@
+# extract: https://www.nfl.com/scores/2026/reg10
+# page_title: NFL 2026 Week 10 Scores and Highlights: Live Updates, Results & Recaps
+# chunks_fetched: 2
+# read_utc: 2026-11-18T03:55:13Z
+
+commanders-at-giants-2026-reg-10 | WAS | NYG | 24 | 21 | Thursday Night Football, November 12th | no
+patriots-at-lions-2026-reg-10 | NE | DET | 10 | 35 | Sunday, November 15th, International Game (Munich 2026 logo) | yes
+chiefs-at-falcons-2026-reg-10 | KC | ATL | 35 | 13 | Sunday, November 15th | no
+texans-at-browns-2026-reg-10 | HOU | CLE | 24 | 27 | Sunday, November 15th | no
+vikings-at-packers-2026-reg-10 | MIN | GB | 30 | 10 | Sunday, November 15th | no
+dolphins-at-colts-2026-reg-10 | MIA | IND | 22 | 24 | Sunday, November 15th | no
+panthers-at-saints-2026-reg-10 | CAR | NO | 20 | 17 | Sunday, November 15th | no
+bills-at-jets-2026-reg-10 | BUF | NYJ | 31 | 12 | Sunday, November 15th | no
+jaguars-at-titans-2026-reg-10 | JAX | TEN | 40 | 23 | Sunday, November 15th | no
+rams-at-cardinals-2026-reg-10 | LAR | AZ | 34 | 6 | Sunday, November 15th | no
+seahawks-at-raiders-2026-reg-10 | SEA | LV | 21 | 13 | Sunday, November 15th | no
+49ers-at-cowboys-2026-reg-10 | SF | DAL | 46 | 40 | Sunday, November 15th | no
+steelers-at-bengals-2026-reg-10 | PIT | CIN | 18 | 38 | Sunday Night Football, November 15th | no
+chargers-at-ravens-2026-reg-10 | LAC | BAL | 23 | 20 | Monday Night Football, November 16th | no
+
+TEAMS_ON_BYE_PRINTED | CHI, DEN, PHI, TB
