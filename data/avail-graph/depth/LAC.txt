@@ -1,0 +1,33 @@
+# club: Los Angeles Chargers
+# url: https://www.chargers.com/team/depth-chart
+# page_dated: (not printed on the page)
+# shape: markdown_table
+# captured_utc: 2026-11-18T03:51:06Z
+# note: special teams rows are not transcribed here. The same page carries an official "Latest Transactions" block (IR placements and activations); those events are recorded separately in data/avail-graph/availability_events.csv and are used to flag stale rows here.
+# format: POSITION|slot1|slot2|slot3|slot4   (';' = two players in one slot)
+
+OFFENSE
+WR|Ladd McConkey|Tre' Harris|Derius Davis;Theo Wease Jr.|
+LT|Travis Burke|Branson Taylor|
+LG|Kayode Awosika|Logan Taylor|
+C|Jake Slaughter|Jacob Spomer|
+RG|Cole Strange|Logan Taylor|
+RT|Joe Alt|Alex Harkey|
+TE|Charlie Kolar|Oronde Gadsden|
+WR|Quentin Johnston|Brenen Thompson|
+QB|Justin Herbert|DJ Uiagalelei|
+FB|Alec Ingold|Scott Matlock|
+RB|Omarion Hampton|Keaton Mitchell|Kimani Vidal|
+
+DEFENSE
+EDGE|Khalil Mack|Akheem Mesidor|
+DL|Jamaree Caldwell|Nick Barrett|
+DL|Dalvin Tomlinson|Justin Eboigbe|
+DL|Teair Tart||
+EDGE|Tuli Tuipulotu|Bud Dupree|
+LB|Daiyan Henley|Troy Dye|
+LB|Del'Shawn Phillips|Marlowe Wax|
+CB|Tarheeb Still|Cam Hart|Deane Leonard|
+S|Derwin James Jr.|Tony Jefferson|RJ Mickens|
+S|Elijah Molden|Genesis Smith|Kendall Williamson|
+CB|Donte Jackson|Cam Hart|Rodney Shelley|

@@ -1,0 +1,34 @@
+# club: New England Patriots
+# url: https://www.patriots.com/team/depth-chart
+# page_dated: (not printed on the page)
+# shape: markdown_table
+# captured_utc: 2026-11-18T03:50:43Z
+# note: the page states "The 2026 depth chart is unofficial and is published by the writers of Patriots.com. The depth chart reflects the opinions of the Patriots.com writers and don't necessarily reflect those of the organization." Special teams rows are not transcribed here.
+# format: POSITION|slot1|slot2|slot3|slot4   (';' = two players in one slot)
+
+OFFENSE
+WR|A.J. Brown;Efton Chism III||
+LT|Will Campbell|Demetrious Crownover|Marcus Bryant|
+LG|Ben Brown|Walter Rouse|
+C|Jared Wilson|Ben Brown|
+RG|Matt Pryor|Walter Rouse|
+RT|Morgan Moses|Caleb Lomu|
+TE|Hunter Henry|Eli Raridon|Cameron Latu|
+WR|DeMario Douglas|Kyle Williams|
+WR|Efton Chism III;Kyle Williams|
+RB|Rhamondre Stevenson|TreVeyon Henderson|Corey Kiner|Lan Larison
+QB|Drake Maye|Tommy DeVito|Behren Morton|
+
+DEFENSE
+OLB|Dre'Mont Jones|Gabe Jacas|
+DT|Christian Barmore|Leonard Taylor III|
+DT|Cory Durden|DaQuan Jones|
+DT|Milton Williams|Joshua Farmer|
+OLB|Elijah Ponder|Gabe Jacas|
+LB|Robert Spillane|Darius Muasau|Erick Hunter|
+LB|Christian Elliss|Namdi Obiazor|
+CB|Carlton Davis III|Channing Canada|
+S|Craig Woodson|Mike Brown|
+S|Kevin Byard III|Jaylen Reed|Brenden Schooler|
+CB|Marcus Jones|Charles Woods|
+CB|Christian Gonzalez|Karon Prunty|

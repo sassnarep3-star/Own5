@@ -1,0 +1,34 @@
+# club: Arizona Cardinals
+# url: https://www.azcardinals.com/team/depth-chart
+# page_dated: (not printed on the page)
+# shape: markdown_table
+# captured_utc: 2026-11-18T03:51:07Z
+# note: special teams rows are not transcribed here.
+# format: POSITION|slot1|slot2|slot3|slot4   (';' = two players in one slot)
+
+OFFENSE
+WR|Reggie Virgil|Harrison Wallace III|
+LT|Jayden Williams|Jedrick Wills|
+LG|Isaac Seumalo|Hayden Conner|
+C|Hjalte Froholdt|Kingsley Eguakun|
+RG|Isaiah Adams|Jon Gaines II|
+RT|Elijah Wilkinson|Josh Fryar|
+TE|Trey McBride|Hunter Long|
+TE|Elijah Higgins|Teagan Quitoriano|
+WR|Simi Fehoko|Devin Duvernay|
+QB|Carson Beck|Josh Johnson|Joey Aguilar|
+RB|Tyler Allgeier|Bam Knight|Evan Hull|
+
+DEFENSE
+DT|Dante Stills|Darius Robinson|Jared Harrison-Hunter|
+NT|Roy Lopez|Andrew Billings|
+DT|Walter Nolen III|L.J. Collier|
+OLB|Josh Sweat|Eku Leota|
+ILB|Jack Gibbens|Karson Sharar|
+ILB|Mack Wilson Sr.|Cody Simon|
+OLB|Zaven Collins;Baron Browning|
+CB|Denzel Burke|Starling Thomas V|
+CB|Kei'Trel Clark|Max Melton|
+CB|Kalen King|Garrett Williams|
+S|Wydett Williams Jr.|Kitan Crawford|
+S|Budda Baker|Dadrion Taylor-Demerson|

@@ -1,0 +1,35 @@
+# club: Pittsburgh Steelers
+# url: https://www.steelers.com/team/depth-chart/
+# page_dated: (not printed on the page)
+# shape: markdown_table
+# captured_utc: 2026-11-18T03:55:56Z
+# note: special teams rows are not transcribed here.
+# format: POSITION|slot1|slot2|slot3|slot4   (';' = two players in one slot)
+
+OFFENSE
+WR|DK Metcalf|Kaden Wetjen|
+LT|Troy Fautanu|
+LG|Mason McCormick|
+C|Zach Frazier|Ryan McCollum|
+RG|Brock Hoffman|Spencer Anderson|
+RT|Max Iheanachor|Dylan Cook|
+TE|Pat Freiermuth;Darnell Washington|Robert Tonyan|
+WR|Ben Skowronek|Brandon Smith|
+WR|Germie Bernard|
+QB|Aaron Rodgers|Mason Rudolph|Will Howard|Drew Allar|
+RB|Jaylen Warren|Rico Dowdle|Eli Heidenreich|Travis Homer;Lew Nichols|
+FB|Riley Nowakowski|
+
+DEFENSE
+DE|Derrick Harmon|Gabriel Rubio|Kevin Jobity Jr.|
+NT|Keeanu Benton|Yahya Black|
+DT|Cameron Heyward|
+LOLB|T.J. Watt|
+LILB|Patrick Queen|Carson Bruener|
+RILB|Payton Wilson|Cole Holcomb|
+ROLB|Alex Highsmith|Jack Sawyer|
+OLB|Nick Herbig|
+CB|Asante Samuel Jr.|Sean Murphy-Bunting|Doneiko Slaughter|
+NCB|Jalen Ramsey|Brandin Echols|
+CB|Jamel Dean|Daylen Everette|
+S|Jaquan Brisker|DeShon Elliott|Robert Spears-Jennings|

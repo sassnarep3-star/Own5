@@ -1,0 +1,35 @@
+# club: Dallas Cowboys
+# url: https://www.dallascowboys.com/team/depth-chart
+# page_dated: Unofficial 2026 Dallas Cowboys Depth Chart
+# shape: markdown_table
+# captured_utc: 2026-11-18T03:50:48Z
+# note: special teams rows are not transcribed here.
+# format: POSITION|slot1|slot2|slot3|slot4   (';' = two players in one slot)
+
+OFFENSE
+WR|George Pickens|Camden Brown|
+LT|Tyler Guyton|Drew Shelton|
+LG|Tyler Smith|T.J. Bass|
+C|Cooper Beebe|Nick Leverett|
+RG|Tyler Booker|T.J. Bass|
+RT|Terence Steele|Broderick Jones|
+TE|Jake Ferguson;Brevyn Spann-Ford|Luke Schoonmaker|James Mitchell|
+WR|Ryan Flournoy|KaVontae Turpin|
+WR|CeeDee Lamb|Jonathan Mingo|
+QB|Dak Prescott|Sam Howell|
+RB|Javonte Williams||
+FB|Hunter Luepke||
+
+DEFENSE
+DT|Otito Ogbonnia|Elijah Garcia|
+DT|Kenny Clark|Jonathan Bullard|
+DT|Quinnen Williams|LT Overton|
+OLB|Donovan Ezeiruaku|James Houston|
+LB|DeMarvion Overshown|Dee Winters|Justin Barron|
+LB|Shemar James;Jaishawn Barham||
+OLB|Rashan Gary|Von Miller|Marist Liufau|
+CB|Joey Porter Jr.|Shavon Revel Jr.|Ameer Speed|
+DB|Caleb Downs||
+CB|DaRon Bland|Cobie Durant|
+S|P.J. Locke;Markquese Bell|Juanyeh Thomas|
+S|Malik Hooker|Alijah Clark|

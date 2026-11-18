@@ -1,0 +1,34 @@
+# club: New Orleans Saints
+# url: https://www.neworleanssaints.com/team/depth-chart
+# page_dated: (not printed on the page)
+# shape: markdown_table
+# captured_utc: 2026-11-18T03:50:50Z
+# note: special teams rows are not transcribed here.
+# format: POSITION|slot1|slot2|slot3|slot4   (';' = two players in one slot)
+
+OFFENSE
+WR|Chris Olave|Barion Brown|
+LT|Kelvin Banks Jr.|Asim Richards|
+LG|David Edwards|Jeremiah Wright|
+C|Erik McCoy|William Sherman|
+RG|Cesar Ruiz|Jeremiah Wright|
+RT|Taliese Fuaga|Mason Murphy|Easton Kilty|
+TE|Juwan Johnson|Noah Fant|Oscar Delp|
+WR|Devaughn Vele|Bryce Lance|
+WR|Jordyn Tyson|Barion Brown|
+QB|Tyler Shough|Spencer Rattler|Zach Wilson|
+RB|Travis Etienne Jr.;Alvin Kamara|Audric Estimé|CJ Donaldson|
+
+DEFENSE
+EDGE|Chase Young;Carl Granderson|Anfernee Jennings|
+DL|Vernon Broughton|John Ridgeway III|
+DL|Khristian Boyd|Colby Wooden|
+DL|Nathan Shepherd|John Ridgeway III|
+EDGE|Cameron Jordan|Tyree Wilson|
+LB|Pete Werner|Chris Rumph II|Isaiah Stalbird|
+LB|Kaden Elliss|Danny Stutsman|Jaylan Ford|
+CB|Martin Emerson Jr.|Quincy Riley|
+S|Julian Blackmon|Jordan Howden|
+S|Justin Reid|Mike Reid|
+CB|Kool-Aid McKinstry|Decamerion Richardson|
+S|Jonas Sanker|Lorenzo Styles|

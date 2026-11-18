@@ -1,0 +1,33 @@
+# club: Carolina Panthers
+# url: https://www.panthers.com/team/depth-chart
+# page_dated: 2026 Depth Chart
+# shape: markdown_table
+# captured_utc: 2026-11-18T03:51:33Z
+# note: special teams rows are not transcribed here.
+# format: POSITION|slot1|slot2|slot3|slot4   (';' = two players in one slot)
+
+OFFENSE
+WR|Tetairoa McMillan|Brycen Tremayne|
+WR|Jalen Coker|
+LT|Rasheed Walker|Stone Forsythe|
+LG|Damien Lewis|Corey Bullock|
+C|Luke Fortner|Sam Hecht|
+RG|Robert Hunt|Torricelli Simpkins III|
+RT|Monroe Freeling|Stone Forsythe|
+TE|Tommy Tremble|Mitchell Evans|Darren Waller|Ja'Tavion Sanders|Feleipe Franks|
+WR|John Metchie III|Xavier Legette|
+QB|Bryce Young|Kenny Pickett|Haynes King|
+RB|Chuba Hubbard|Trevor Etienne|AJ Dillon|Anthony Tyus III|
+
+DEFENSE
+DL|Bobby Brown III|TeRah Edwards|
+DL|Tershawn Wharton|Lee Hunter|
+DL|Derrick Brown|Aaron Hall|
+OLB|Patrick Jones II|Trevis Gipson|
+LB|Devin Lloyd|Jackson Kuwatch|Bam Martin-Scott|
+LB|Bobby Okereke|Tyrel Dodson|
+OLB|Jaelan Phillips|Princely Umanmielen|
+CB|Marco Wilson|Chau Smith-Wade|
+CB|Will Lee III|Malcolm DeWalt IV|
+S|Tre'von Moehrig|Zakee Wheatley|
+S|Nick Scott|Lathan Ransom|Isaiah Simmons|

@@ -1,0 +1,33 @@
+# club: Chicago Bears
+# url: https://www.chicagobears.com/team/depth-chart
+# page_dated: Depth Chart (As of 11/17/2026)
+# shape: markdown_table
+# captured_utc: 2026-11-18T03:55:49Z
+# note: special teams rows are not transcribed here.
+# format: POSITION|slot1|slot2|slot3|slot4   (';' = two players in one slot)
+
+OFFENSE
+WR|Rome Odunze|Zavion Thomas|
+LT|Theo Benedet|Ozzy Trapilo|
+LG|Joe Thuney|Jordan McFadden|
+C|Garrett Bradbury|Logan Jones|
+RG|Jonah Jackson|Luke Newman|
+RT|Darnell Wright|Ozzy Trapilo|
+TE|Colston Loveland|Sam Roush|
+WR|Kalif Raymond|
+WR|Luther Burden III|Jahdae Walker|
+QB|Caleb Williams|Tyson Bagent|Case Keenum|
+RB|D'Andre Swift|Kyle Monangai|Roschon Johnson|
+
+DEFENSE
+DL|Austin Booker|Shemar Turner|James Lynch|
+DL|Grady Jarrett|Neville Gallimore|Jayden Loving|
+DL|Jeffery Simmons||Jordan van den Berg|
+DL|Montez Sweat|Daniel Hardy|
+LB|T.J. Edwards|D'Marco Jackson|Keyshaun Elliott|
+LB|Devin Bush|Noah Sewell|Jack Sanborn|
+S|Dillon Thieneman|Elijah Hicks|
+S|Cam Lewis|Skyler Thomas|
+DB|Kyler Gordon|Malik Muhammad II|
+CB|Tyrique Stevenson Sr.|Clark Phillips III|
+CB|Jaylon Johnson|Josh Blackwell|

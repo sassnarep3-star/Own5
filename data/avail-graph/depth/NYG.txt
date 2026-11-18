@@ -1,0 +1,34 @@
+# club: New York Giants
+# url: https://www.giants.com/team/depth-chart
+# page_dated: (not printed on the page)
+# shape: markdown_table
+# captured_utc: 2026-11-18T04:14:00Z
+# note: special teams rows are not transcribed here.
+# format: POSITION|slot1|slot2|slot3|slot4   (';' = two players in one slot)
+
+OFFENSE
+WR|Malik Nabers|Malachi Fields|Jalin Hyatt|
+WR|Darnell Mooney|
+LT|Andrew Thomas|J.C. Davis|
+LG|Jon Runyan Jr.|Aaron Stinnie|Josh Sills|
+C|Bryan Hudson|John Michael Schmitz Jr.|
+RG|Francis "Sisi" Mauigoa|Aaron Stinnie|
+RT|Jermaine Eluemunor|Marcus Mbow|
+TE|Isaiah Likely|Theo Johnson|Chris Manhertz|Thomas Fidone II|
+QB|J.J. McCarthy|Jameis Winston|
+FB|Patrick Ricard|
+RB|Cam Skattebo|Devin Singletary|Gregory Desrosiers|
+
+DEFENSE
+DT|Shelby Harris|Darius Alexander|Bobby Jamison-Travis|
+NT|DJ Reader|C.J. Okoye|
+DE|Darius Alexander|
+RUSH|Kayvon Thibodeaux|Trace Ford|
+MLB|Micah McFadden|Zaire Barnes|
+WLB|Arvell Reese|Jack Kelly|
+SAM|Abdul Carter|Kayvon Thibodeaux|
+CB|Deonte Banks|Paulson Adebo|
+SS|Tyler Nubin|Jason Pinnock|
+FS|Jevón Holland|Ar'Darius Washington|Elijah Campbell|
+CB|Greg Newsome II|Colton Hood|
+NB|Dru Phillips|Nic Jones|

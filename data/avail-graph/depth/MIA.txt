@@ -1,0 +1,34 @@
+# club: Miami Dolphins
+# url: https://www.miamidolphins.com/team/depth-chart
+# page_dated: (not printed on the page)
+# shape: markdown_table
+# captured_utc: 2026-11-18T03:51:19Z
+# note: special teams rows are not transcribed here, except the observation that the K row is printed with an empty slot (no kicker named) - an empty slot is preserved as an empty slot and is not filled in.
+# format: POSITION|slot1|slot2|slot3|slot4   (';' = two players in one slot)
+
+OFFENSE
+WR|Caleb Douglas|Jared Wayne|
+LT|Patrick Paul|Chukwuebuka Godrick|
+LG|Kadyn Proctor|Jarrett Kingston|
+C|Aaron Brewer|Andrew Meyer|
+RG|Jonah Savaiinaea|Caedan Wallace|Christian Haynes|
+RT|Austin Jackson|Caedan Wallace|
+TE|Greg Dulcich|Will Kacmarek|Seydou Traore|Justin Joly|
+FB|DJ Herman|
+RB|Ollie Gordon II|Jaylen Wright|Kaytron Allen|
+QB|Kyle McCord||
+WR|Malik Washington|Kevin Coleman Jr.|
+WR|Chris Bell|Jalen Tolbert|
+
+DEFENSE
+DT|Jordan Phillips|Kenneth Grant|
+DT|Zeek Biggers|Keith Cooper Jr.|
+EDGE|Chop Robinson|Malik Herring|
+EDGE|Josh Uche|Rodney McGraw|
+ILB|Jordyn Brooks|Jackson Woodard|Shaka Heyward|
+ILB|Jacob Rodriguez|Willie Gay Jr.|
+NB|Chris Johnson|
+CB|JuJu Brents|Marcellas Dial Jr.|
+CB|Jason Marshall Jr.|Jaylin Simpson|
+S|Michael Taaffe|Zayne Anderson|
+S|Dante Trader Jr.|Kyle Louis|Julius Wood|

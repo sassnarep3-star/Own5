@@ -1,0 +1,35 @@
+# club: Denver Broncos
+# url: https://www.denverbroncos.com/team/depth-chart/
+# page_dated: (not printed on the page)
+# shape: markdown_table
+# captured_utc: 2026-11-18T03:55:51Z
+# note: special teams rows are not transcribed here.
+# format: POSITION|slot1|slot2|slot3|slot4   (';' = two players in one slot)
+
+OFFENSE
+WR|Marvin Mims Jr.|Troy Franklin|
+WR|Jaylen Waddle|Lil'Jordan Humphrey|
+LT|Garett Bolles|Matt Peart|
+LG|Ben Powers|Kage Casey|
+C|Luke Wattenberg|Alex Forsyth|
+RG|Quinn Meinerz|Kage Casey|
+RT|Mike McGlinchey|Alex Palczewski|
+TE|Evan Engram|Adam Trautman|Nate Adkins|Dallen Bentley|
+WR|Courtland Sutton|
+RB|J.K. Dobbins|Jonah Coleman|
+FB|Adam Prentice|
+QB|Bo Nix|Jarrett Stidham|Sam Ehlinger|
+
+DEFENSE
+DE|Zach Allen|Jordan Jackson|Tyler Onyedim|
+NT|D.J. Jones|Sai'vion Jones|
+DE|Malcolm Roach|Eyioma Uwazurike|
+SLB|Nik Bonitto|Que Robinson|
+WLB|Jonathon Cooper|Dondrea Tillman|
+ILB|Alex Singleton|Jordan Turner|
+ILB|Justin Strnad|Karene Reid|
+LCB|Pat Surtain II|Jahdae Barron|
+RCB|Riley Moss|Kris Abrams-Draine|
+NCB|Ja'Quan McMillian|Jahdae Barron|
+S|Talanoa Hufanga|JL Skinner|Tycen Anderson|
+S|Brandon Jones|Devon Key|Taylor Rapp|

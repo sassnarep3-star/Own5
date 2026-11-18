@@ -1,0 +1,33 @@
+# club: Tampa Bay Buccaneers
+# url: https://www.buccaneers.com/team/depth-chart
+# page_dated: (not printed on the page)
+# shape: markdown_table
+# captured_utc: 2026-11-18T03:56:12Z
+# note: special teams rows are not transcribed here.
+# format: POSITION|slot1|slot2|slot3|slot4   (';' = two players in one slot)
+
+OFFENSE
+WR|Ted Hurst III|
+WR|Chris Godwin Jr.|Kameron Johnson|
+LT|Tristan Wirfs|Justin Skule|
+LG|Ben Bredeson|Trevor Keegan|
+C|Graham Barton|Dan Feeney|
+RG|Cody Mauch|Billy Schrauth|
+RT|Luke Goedeke|Benjamin Chukwuma|
+WR|Emeka Egbuka|Tez Johnson|
+TE|Cade Otton|Payne Durham|Ko Kieft|Bauer Sharp|
+QB|Baker Mayfield|Jalon Daniels|Easton Stick|
+RB|Bucky Irving|Kenny Gainwell|Sean Tucker|
+
+DEFENSE
+DL|Calijah Kancey|Elijah Roberts|
+NT|Vita Vea|Rakeem Nuñez-Roches|Elijah Simmons|
+DL|A'Shawn Robinson|DeMonte Capehart|
+OLB|Yaya Diaby|Anthony Nelson|David Walker|
+ILB|Josiah Trotter|SirVocea Dennis|
+ILB|Alex Anzalone|
+OLB|Rueben Bain Jr.|Al-Quadin Muhammad|
+CB|Zyon McCollum|Benjamin Morrison|Ayden Garnes|
+CB|Jacob Parrish|Keionte Scott|Kevin Knowles|
+S|Antoine Winfield Jr.|Ifeatu Melifonwu|
+S|Tykee Smith|Miles Killebrew|

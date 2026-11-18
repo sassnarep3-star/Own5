@@ -1,0 +1,34 @@
+# club: Minnesota Vikings
+# url: https://www.vikings.com/team/depth-chart
+# page_dated: 2026 Unofficial Depth Chart
+# shape: markdown_table
+# captured_utc: 2026-11-18T03:50:44Z
+# note: special teams rows are not transcribed here.
+# format: POSITION|slot1|slot2|slot3|slot4   (';' = two players in one slot)
+
+OFFENSE
+QB|Kirk Cousins|Kyler Murray|Carson Wentz|Max Brosmer|
+RB|Aaron Jones Sr.;Jordan Mason|Demond Claiborne|DeeJay Dallas|
+FB|Max Bredeson||
+WR|Justin Jefferson|Tai Felton||
+WR|Jordan Addison||
+WR|Jauan Jennings|Myles Price||
+TE|T.J. Hockenson|Gavin Bartholomew|Ben Yurosek|
+LT|Christian Darrisaw|Ryan Van Demark|
+LG|Joe Huber||
+C|Blake Brandel|Michael Jurgens|Nick Samac|
+RG|Will Fries||
+RT|Brian O'Neill|Caleb Tiernan|
+
+DEFENSE
+OLB|Dallas Turner|Kyle Van Noy|Chaz Chambliss|
+DL|Jalen Redmond|Caleb Banks|
+DL|Levi Drake Rodriguez|Domonique Orange|
+DL|Tyrion Ingram-Dawkins|Elijah Williams|
+OLB|Andrew Van Ginkel|Bo Richter|
+LB|Blake Cashman|Ivan Pace Jr.|
+LB|Eric Wilson|Jake Golday|
+CB|Isaiah Rodgers|James Pierre|Zemaiah Vaughn|
+CB|Byron Murphy Jr.|Charles Demmings|
+S|Harrison Smith|Theo Jackson|Jacob Thomas|
+S|Joshua Metellus|Jay Ward|Jakobe Thomas|

@@ -1,0 +1,34 @@
+# club: Tennessee Titans
+# url: https://www.tennesseetitans.com/team/depth-chart
+# page_dated: UNOFFICIAL DEPTH CHART (as of 11/10/26)
+# shape: markdown_table
+# captured_utc: 2026-11-18T04:02:00Z
+# note: special teams rows are not transcribed here. The club's own former domain titansfootball.com is a parked sale page; the live official route is tennesseetitans.com.
+# format: POSITION|slot1|slot2|slot3|slot4   (';' = two players in one slot)
+
+OFFENSE
+WR|Calvin Ridley|Chimere Dike|
+TE|Gunnar Helm|Daniel Bellinger|David Martin-Robinson;Kylen Granson|
+LT|Dan Moore Jr.|James Hudson III|
+LG|Peter Skoronski|
+C|Austin Schlottmann|Pat Coogan|
+RG|Atonio Mafi|Garrett Dellinger|
+RT|JC Latham|Brandon Crenshaw-Dickson|
+WR|Wan'Dale Robinson|
+WR|Carnell Tate|Elic Ayomanor|
+QB|Cam Ward|Mitchell Trubisky|
+RB|Tony Pollard|Tyjae Spears;Nick Singleton|Julius Chestnut;Michael Carter|
+
+DEFENSE
+DE|Jermaine Johnson II|Oluwafemi Oladejo|
+DT|Solomon Thomas|Jonah Laulu|Jackie Marshall|
+DL|John Franklin-Myers|Nazir Stackhouse|Timmy Horne|
+DE|Jacob Martin|Keldric Faulk|Truman Jones|
+LB|Cody Barton|
+LB|Cedric Gray|
+LB|Anthony Hill Jr.|Dorian Mausi|
+CB|Joshua Williams|Alontae Taylor|
+NCB|Marcus Harris|Alontae Taylor|Micah Robinson|
+S|Tony Adams|
+S|Kevin Winston Jr.|Terrell Burgess|
+CB|Cor'Dale Flott|Jaylon Jones|

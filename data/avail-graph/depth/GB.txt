@@ -1,0 +1,33 @@
+# club: Green Bay Packers
+# url: https://www.packers.com/team/depth-chart
+# page_dated: Unofficial, Nov. 10, 2026
+# shape: markdown_table_with_jersey_numbers
+# captured_utc: 2026-11-18T04:10:00Z
+# note: the club prints jersey numbers in its own cells; they are stripped here because a jersey number is not a depth signal. The RB group is printed on two rows - a first row with three names and a continuation row carrying only 'Kaleb Johnson' in the fourth column - and the fourth name is kept in slot 4 of the RB group. Kitan Oladapo is printed in both S groups on the club's own page and is kept in both. Special teams rows are not transcribed here.
+# format: POSITION|slot1|slot2|slot3|slot4   (';' = two players in one slot)
+
+OFFENSE
+WR|Christian Watson|Bo Melton|
+WR|Matthew Golden|J. Michael Sturdivant|
+LT|Jordan Morgan|John Williams|
+LG|Aaron Banks|Travis Glover|Donovan Jennings|
+C|Sean Rhyan|Jager Burton|
+RG|Laken Tomlinson|Kevin Zeitler|
+RT|Anthony Belton|Mekhi Becton Sr.|
+TE|Tucker Kraft|Jonnu Smith|Mark Redman|
+WR|Savion Williams|
+QB|Jordan Love|Tyrod Taylor|
+RB|Josh Jacobs|MarShawn Lloyd|Pierre Strong Jr.|Kaleb Johnson|
+
+DEFENSE
+DT|Karl Brooks|Jordon Riley|Anthony Campbell|
+DT|Devonte Wyatt|Chris McClellan|
+EDGE|Lukas Van Ness|Brenton Cox Jr.|
+LB|Zaire Franklin|Ty'Ron Hopper|Kristian Welch|
+LB|Isaiah McDuffie|Nick Niemann|
+EDGE|Barryn Sorrell|Dani Dennis-Sutton|
+CB|Keisean Nixon|Carrington Valentine|
+CB|Brandon Cisse|Benjamin St-Juste|
+S|Xavier McKinney|Kitan Oladapo|
+S|Evan Williams|Kitan Oladapo|
+NB|Javon Bullard|Kamal Hadden|

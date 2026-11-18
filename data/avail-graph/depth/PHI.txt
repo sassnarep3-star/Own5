@@ -1,0 +1,33 @@
+# club: Philadelphia Eagles
+# url: https://www.philadelphiaeagles.com/team/depth-chart
+# page_dated: (not printed on the page)
+# shape: markdown_table
+# captured_utc: 2026-11-18T04:14:00Z
+# note: the page states "The unofficial depth chart is compiled by the Eagles' communications department." Special teams rows are not transcribed here. The TE slot 4 and the two EDGE slot 1 cells each print more than one name on the club's own page; they are kept in the order printed.
+# format: POSITION|slot1|slot2|slot3|slot4   (';' = two players in one slot)
+
+OFFENSE
+WR|DeVonta Smith|
+LT|Jordan Mailata|
+LG|Landon Dickerson|Willie Lampkin|
+C|Drew Kendall|Jake Majors|
+RG|Tyler Steen|Micah Morris|
+RT|Markel Bell|John Ojukwu|
+TE|Dallas Goedert|Zach Ertz|Johnny Mundt;Eli Stowers;Grant Calcaterra|
+WR|Makai Lemon|Elijah Moore|Britain Covey|
+WR|Dontayvion Wicks|Darius Cooper|
+RB|Saquon Barkley|
+QB|Joe Milton|Tanner McKee|Cole Payton|
+
+DEFENSE
+EDGE|Jalyx Hunt;Jonathan Greenard|Arnold Ebiketie|
+DT|Jalen Carter|Byron Young|
+DT|Moro Ojomo|Ty Robinson|
+EDGE|Nolan Smith Jr.;Jonathan Greenard|A.J. Epenesa|
+LB|Zack Baun|Smael Mondon Jr.|
+LB|Jihaad Campbell|Jeremiah Trotter Jr.|
+CB|Riq Woolen|Jonathan Jones|
+CB|Quinyon Mitchell|Kelee Ringo|
+NCB|Cooper DeJean|Mac McWilliams|
+S|Michael Carter II|Marcus Epps|
+S|Andrew Mukuba|Kenny Moore II|

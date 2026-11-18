@@ -1,0 +1,33 @@
+# club: Los Angeles Rams
+# url: https://www.therams.com/team/depth-chart
+# page_dated: (not printed on the page)
+# shape: markdown_table
+# captured_utc: 2026-11-18T03:52:14Z
+# note: special teams rows are not transcribed here.
+# format: POSITION|slot1|slot2|slot3|slot4   (';' = two players in one slot)
+
+OFFENSE
+WR|Konata Mumpfield|CJ Daniels|
+TE|Davis Allen;Tyler Higbee|
+LT|Alaric Jackson|David Quessenberry|
+LG|Steve Avila|Bill Murray|
+C|Coleman Shelton|Dylan McMahon|
+RG|Kevin Dotson|Beaux Limmer|
+RT|Warren McClendon Jr.|Keagen Trost|
+TE|Colby Parkinson|Max Klare|
+WR|Puka Nacua|Jordan Whittington|Tutu Atwell|
+QB|Matthew Stafford|Stetson Bennett IV|Ty Simpson|
+RB|Kyren Williams|Blake Corum|Ronnie Rivers|
+
+DEFENSE
+OLB|Byron Young|Wesley Bailey|
+DE|Braden Fiske|
+NT|Tyler Davis|Ty Hamilton|
+DE|Aaron Donald|Larrell Murchison|
+OLB|Myles Garrett|Josaiah Stewart|Desjuan Johnson|
+ILB|Omar Speights|Grant Stuard|
+ILB|Nate Landman|Shaun Dolac|
+CB|Trent McDuffie|Cam Lampkin|
+S|Quentin Lake|Kamren Kinchens|Maximus Pulley|
+S|Kam Curl|Jaylen McCollough|
+CB|Emmanuel Forbes Jr.;Josh Wallace|

@@ -1,0 +1,33 @@
+# club: Cincinnati Bengals
+# url: https://www.bengals.com/team/depth-chart
+# page_dated: 2026 Bengals Depth Chart
+# shape: markdown_table
+# captured_utc: 2026-11-18T03:52:16Z
+# note: special teams rows are not transcribed here.
+# format: POSITION|slot1|slot2|slot3|slot4   (';' = two players in one slot)
+
+OFFENSE
+WR|Ja'Marr Chase|Mitch Tinsley|
+LOT|Orlando Brown Jr.|Javon Foster|
+LG|Dylan Fairchild|Jalen Rivers|
+C|Ted Karras|Connor Lew|
+RG|Dalton Risner|Jacob Bayer|
+ROT|Amarius Mims|Myles Hinton|
+TE|Drew Sample|Mike Gesicki|Jack Endries;Cam Grandy|
+WR|Dohnte Meyers|
+WR|Tee Higgins|Colbie Young|
+QB|Joe Burrow|Joe Flacco|
+HB|Chase Brown|Samaje Perine|Tahj Brooks|
+
+DEFENSE
+LDE|Myles Murphy|Shemar Stewart|Cedric Johnson|
+NT|Dexter Lawrence II|T.J. Slaton Jr.|
+DT|Jonathan Allen|B.J. Hill|Kris Jenkins Jr.;Landon Robinson|
+RDE|Boye Mafe|
+LB|Barrett Carter|Jack Kiser|Joe Giles-Harris|
+LB|Demetrius Knight Jr.|Oren Burks|
+NCB|Dax Hill|Josh Newton|
+CB|DJ Ivey|Tacario Davis|
+CB|DJ Turner II|Tacario Davis|
+S|Bryan Cook|PJ Jules|
+S|Jordan Battle|Kyle Dugger|Russ Yeast|

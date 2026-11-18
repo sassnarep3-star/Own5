@@ -1,0 +1,11 @@
+# club: Houston Texans
+# url: https://www.houstontexans.com/team/depth-chart
+# page_dated: Unofficial Depth Chart
+# shape: image_only
+# captured_utc: 2026-11-18T04:20:00Z
+# note: The page body reads '## Unofficial Depth Chart' followed by a single rendered image (static.clubs.nfl.com/image/upload/texans/a5or0zowuo36y1txf4ly). There is no table, no list and no machine-readable player row. The chart is NOT transcribed by eye: a hand-typed chart would be an inferred depth order with no source text behind it. This club therefore has no depth rows in this desk, and its replacement-depth cells stay blank and flagged (AG-04). The same image URL was already observed on 2026-11-15 by the market desk, so the structural failure is confirmed on two independent dates.
+# format: POSITION|slot1|slot2|slot3|slot4   (';' = two players in one slot)
+
+OFFENSE
+
+DEFENSE
