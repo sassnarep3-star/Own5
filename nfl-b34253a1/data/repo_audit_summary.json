@@ -1,14 +1,14 @@
 {
   "as_of": "2026-11-12",
   "files": 513,
-  "physical_lines": 103079,
+  "physical_lines": 103113,
   "status_counts": {
     "DATED_OFFICIAL_FACT_ROW": 1588,
     "DATED_SNAPSHOT_RECOMPUTED_OR_STALE": 730,
     "DERIVED_OR_LEGACY_LINE_REVIEW": 35,
     "FLAGGED_LEGACY_MARKET_VALUE": 903,
     "FLAGGED_NONOFFICIAL_HISTORICAL_INPUT": 14406,
-    "IMPLEMENTATION_LINE_REVIEW": 14265,
+    "IMPLEMENTATION_LINE_REVIEW": 14299,
     "LEGACY_JSON_RECORD_REVIEW": 4794,
     "LEGACY_RESEARCH_CLAIM_SCOPE": 5914,
     "LEGACY_SNAPSHOT_SOURCE_REGISTERED": 10815,
@@ -21,7 +21,7 @@
   "source_basis_counts": {
     "HTTPS_OFFICIAL_LINK_IN_LINE": 2467,
     "OFFICIAL_COUNTERPART_FOR_FLAGGED_INPUT_NOT_INPUT_PROVENANCE": 15309,
-    "OFFICIAL_SCOPE_REFERENCE_FALLBACK_NOT_ROW_PROVENANCE": 82761,
+    "OFFICIAL_SCOPE_REFERENCE_FALLBACK_NOT_ROW_PROVENANCE": 82795,
     "ROW_SOURCE_FIELD": 2542
   },
   "scope": "Line-indexed inventory of previous NFL sites, generators, datasets, research references and shared navigation/CI context; this is not a claim that every legacy historical statistic was re-fetched.",
@@ -155,8 +155,8 @@
     },
     {
       "path": ".github/workflows/nfl-integration-a620f5a5.yml",
-      "physical_lines": 95,
-      "bytes": 3471
+      "physical_lines": 97,
+      "bytes": 3671
     },
     {
       "path": ".github/workflows/nfl-market-desk.yml",
@@ -701,17 +701,17 @@
     {
       "path": "data/nfl-desk-f2e20e96/questions.csv",
       "physical_lines": 15,
-      "bytes": 5268
+      "bytes": 5263
     },
     {
       "path": "data/nfl-desk-f2e20e96/readiness.csv",
       "physical_lines": 71,
-      "bytes": 15733
+      "bytes": 15750
     },
     {
       "path": "data/nfl-desk-f2e20e96/sources.csv",
       "physical_lines": 23,
-      "bytes": 4984
+      "bytes": 5009
     },
     {
       "path": "data/nfl-desk-f2e20e96/standings_2026_reg.csv",
@@ -726,7 +726,7 @@
     {
       "path": "data/nfl-desk-f2e20e96/suggestions.csv",
       "physical_lines": 13,
-      "bytes": 5170
+      "bytes": 5141
     },
     {
       "path": "data/nfl-desk-f2e20e96/transactions_news.csv",
@@ -1386,12 +1386,12 @@
     {
       "path": "nfl-desk-6cbf25fa/flagged.html",
       "physical_lines": 24,
-      "bytes": 8939
+      "bytes": 9139
     },
     {
       "path": "nfl-desk-6cbf25fa/index.html",
       "physical_lines": 37,
-      "bytes": 12450
+      "bytes": 13450
     },
     {
       "path": "nfl-desk-864d5668/executive-summary.html",
@@ -1476,7 +1476,7 @@
     {
       "path": "nfl-desk-f2e20e96/executive-summary.html",
       "physical_lines": 62,
-      "bytes": 5139
+      "bytes": 5140
     },
     {
       "path": "nfl-desk-f2e20e96/flagged.html",
@@ -1486,7 +1486,7 @@
     {
       "path": "nfl-desk-f2e20e96/index.html",
       "physical_lines": 37,
-      "bytes": 28010
+      "bytes": 28159
     },
     {
       "path": "nfl-engine-39086ec8/flagged.html",
@@ -2445,8 +2445,8 @@
     },
     {
       "path": "scripts/verify_f2e20e96.py",
-      "physical_lines": 193,
-      "bytes": 8679
+      "physical_lines": 225,
+      "bytes": 10514
     },
     {
       "path": "scripts/verify_origin_desk.py",
