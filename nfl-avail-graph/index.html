@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Overview &mdash; Official Availability Graph &amp; Game-Day Ledger</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>Official Availability Graph &amp; Game-Day Ledger</h1>
+<p class="sub">Week 10 (2026) official capture, depth coverage and availability ledger</p>
+<p class="stamp">Capture stamp: 2026-11-18 &middot; every value below is read from an official source and linked</p>
+</header>
+<nav><ul><li class="current"><a href="index.html">Overview</a></li><li><a href="results.html">Results</a></li><li><a href="venues.html">Venues</a></li><li><a href="availability.html">Availability</a></li><li><a href="depth.html">Depth</a></li><li><a href="replacements.html">Replacements</a></li><li><a href="gamebooks.html">Game Books</a></li><li><a href="inactives.html">Inactives</a></li><li><a href="week11.html">Week 11</a></li><li><a href="injuries.html">Injuries</a></li><li><a href="events.html">Events</a></li><li><a href="flags.html">Flagged</a></li><li><a href="questions.html">Questions</a></li><li><a href="suggestions.html">Suggestions</a></li><li><a href="sources.html">Sources</a></li><li><a href="executive-summary.html">Executive summary</a></li></ul></nav>
+<main>
+
+<h2>What this desk is</h2>
+<p>This desk publishes the official, point-in-time record of who was available and who was expected to start for the
+2026 NFL Week 10 slate, together with the official results and venues for the same 14 fixtures. Every row on every page
+carries a link to the official page it was read from. Where an official source does not print a value the cell is
+<strong>left blank and flagged</strong> &mdash; nothing on this site is inferred, and no depth order is modelled from
+jersey number, salary, experience or snap count.</p>
+
+<h2>Headline counts</h2>
+<table><thead><tr><th>Measure</th><th>Value</th><th>Page</th></tr></thead><tbody><tr><td>Week 10 fixtures captured from the official game centres</td><td>14</td><td><a href="results.html" rel="noopener">results.html</a></td></tr><tr><td>Official club depth charts captured (all 32 clubs)</td><td>32</td><td><a href="depth.html" rel="noopener">depth.html</a></td></tr><tr><td>Depth charts that parse into rows</td><td>31 of 32</td><td><a href="depth.html" rel="noopener">depth.html</a></td></tr><tr><td>Depth-chart slots transcribed</td><td>704 groups</td><td><a href="depth.html" rel="noopener">depth.html</a></td></tr><tr><td>Official injury-report rows captured (all players)</td><td>347</td><td><a href="injuries.html" rel="noopener">injuries.html</a></td></tr><tr><td>Players with an official designation (Out / Doubtful / Questionable)</td><td>171</td><td><a href="injuries.html" rel="noopener">injuries.html</a></td></tr><tr><td>Changes between the 2026-11-15 read and the 2026-11-18 read</td><td>6</td><td><a href="injuries.html" rel="noopener">injuries.html</a></td></tr><tr><td>Official inactive players captured (all 14 fixtures)</td><td>172</td><td><a href="inactives.html" rel="noopener">inactives.html</a></td></tr><tr><td>Official availability events with a dated official source</td><td>64</td><td><a href="events.html" rel="noopener">events.html</a></td></tr><tr><td>Availability-graph rows (one per official depth-chart group)</td><td>704</td><td><a href="availability.html" rel="noopener">availability.html</a></td></tr><tr><td>Groups whose first slot has no available name (Out or officially inactive)</td><td>43</td><td><a href="availability.html" rel="noopener">availability.html</a></td></tr><tr><td>Out-designation replacements published</td><td>55</td><td><a href="replacements.html" rel="noopener">replacements.html</a></td></tr><tr><td>Open flags</td><td>20</td><td><a href="flags.html" rel="noopener">flags.html</a></td></tr><tr><td>Official Week 11 fixtures with a game-centre venue</td><td>13</td><td><a href="week11.html" rel="noopener">week11.html</a></td></tr></tbody></table>
+
+<h2>What is deliberately blank</h2>
+<p>Three things this desk could not obtain, each published with the reason and the official link that would close it:</p>
+<ul>
+<li><strong>Actual starters.</strong> The official NFL Game Book PDF could not be read in this environment
+(<code>static.www.nfl.com</code> refuses a TLS handshake). Every availability row therefore shows an empty actual-starter
+cell, the reason in words, and the official PDF link. <a href="flags.html">Flagged &rarr;</a></li>
+<li><strong>Houston Texans depth.</strong> The club publishes its depth chart as a single image. Transcribing it by eye
+would create an inferred depth order, so the Texans have no depth rows and their replacement cells are blank and flagged.</li>
+<li><strong>The Week 11 league injury report.</strong> The league's own Week 11 URL still serves the Week 10 report, so
+no Week 11 designation is published here.</li>
+</ul>
+
+<h2>How to read a depth group</h2>
+<p>A depth chart row is a <em>group</em>, not a single starter. The club prints slots in order; a slot may hold more than
+one name (a shared slot, printed with a semicolon) and may be empty. Both are preserved exactly as printed, and the
+position family is only ever used as a join key between two official records &mdash; never as a depth model.</p>
+<table><thead><tr><th>Slot</th><th>Meaning as printed by the club</th><th>Example official chart</th></tr></thead><tbody><tr><td>1st</td><td>the first name the club prints in the group</td><td><a href="https://www.jaguars.com/team/depth-chart" rel="noopener">Jaguars chart</a></td></tr><tr><td>2nd</td><td>the next name the club prints in the group</td><td><a href="https://www.jaguars.com/team/depth-chart" rel="noopener">Jaguars chart</a></td></tr><tr><td><em>empty slot</em></td><td>the club prints a slot with no name; it is preserved, not closed up with a guess</td><td><a href="https://www.chicagobears.com/team/depth-chart" rel="noopener">Bears chart</a></td></tr><tr><td><em>shared slot</em></td><td>the club prints more than one name in the same slot; all of them are kept</td><td><a href="https://www.49ers.com/team/depth-chart" rel="noopener">49ers chart</a></td></tr></tbody></table>
+
+</main>
+<footer>
+<p>Session <code>arena/47e3185b-own5</code>. Data namespace <code>data/avail-graph/</code>; site namespace <code>nfl-avail-graph/</code>.
+Built by <code>scripts/build_avail_graph_site.py</code> from committed CSVs only &mdash; no clock, no network, no git at build time.
+Where an official source does not publish a value the cell is left blank and flagged; nothing is inferred.</p>
+</footer>
+</body>
+</html>

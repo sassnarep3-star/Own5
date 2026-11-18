@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Executive summary &mdash; Official Availability Graph &amp; Game-Day Ledger</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>Official Availability Graph &amp; Game-Day Ledger</h1>
+<p class="sub">Week 10 (2026) official capture, depth coverage and availability ledger</p>
+<p class="stamp">Capture stamp: 2026-11-18 &middot; every value below is read from an official source and linked</p>
+</header>
+<nav><ul><li><a href="index.html">Overview</a></li><li><a href="results.html">Results</a></li><li><a href="venues.html">Venues</a></li><li><a href="availability.html">Availability</a></li><li><a href="depth.html">Depth</a></li><li><a href="replacements.html">Replacements</a></li><li><a href="gamebooks.html">Game Books</a></li><li><a href="inactives.html">Inactives</a></li><li><a href="week11.html">Week 11</a></li><li><a href="injuries.html">Injuries</a></li><li><a href="events.html">Events</a></li><li><a href="flags.html">Flagged</a></li><li><a href="questions.html">Questions</a></li><li><a href="suggestions.html">Suggestions</a></li><li><a href="sources.html">Sources</a></li><li class="current"><a href="executive-summary.html">Executive summary</a></li></ul></nav>
+<main>
+
+<h2>Executive summary</h2>
+
+<h3>What was delivered</h3>
+<p>An official-source availability ledger for the 2026 Week 10 slate, published with every value linked to the page it was
+read from, and every unverifiable value left blank and flagged rather than filled.</p>
+<ul>
+<li><strong>Results and venues for all 14 fixtures</strong> from the official game centres, including the official
+<code>Location</code> and <code>Stadium</code> fields and the official Game Book link for each game.</li>
+<li><strong>Official depth coverage for all 32 clubs</strong> &mdash; every club's own depth page read in one namespace,
+31 of them parsing into rows. The Texans publish an image and
+are deliberately not transcribed by eye.</li>
+<li><strong>An availability graph of 704 groups</strong> joining the official charts, the official injury report
+and the league's official announcements, with the expected starter stated and the actual starter left blank.</li>
+<li><strong>55 replacement rows</strong> for every <em>Out</em> designation that appears in a chart, each naming
+the next available name in the same official group and its depth string.</li>
+<li><strong>An injury capture of 347 official rows</strong> with
+171 designations, plus the 6-field delta against the committed 2026-11-15 read and an explicit
+audit of the 198 rows that the comparison normalises away.</li>
+<li><strong>The official inactive list for all 14 fixtures</strong> (172 players). A player
+on it did not play, so every chart name on it is excluded from the expected-starter calculation.</li>
+<li><strong>64 official availability events</strong> with a publication date, an official
+source URL and an evidence note on every row.</li>
+<li><strong>The official Week 11 slate</strong> &mdash; 13 fixtures with the game
+centre's own location and stadium fields, and 6 official byes.</li>
+<li><strong>24 flags</strong>, of which 2 are blocking.</li>
+</ul>
+
+<h3>The two decisions that mattered</h3>
+<ol>
+<li><strong>Depth is a group, never a single starter.</strong> Several clubs print shared slots (more than one name in
+the same slot) and several print empty slots. Both are preserved exactly as printed. Presenting a shared slot as one
+starter would fabricate a starter the club never named.</li>
+<li><strong>An unconfirmable value stays blank.</strong> Two official game centres hide their scores and the official
+Game Books could not be opened. The scores were taken from the official by-week schedule page instead, and every
+actual-starter cell is blank with the reason and the PDF link. No cell anywhere on this site was filled by inference.</li>
+<li><strong>A diff that normalises is not a complete diff.</strong> Comparing two dated reads of the official injury page
+requires two normalisations: an empty cell and the literal token <em>BLANK</em> mean the same thing, and the comma
+separating two injury names is canonicalised. Both are published row by row in the normalisation audit, so a reader can
+see exactly which rows the six-row delta is silent about and why.</li>
+</ol>
+
+<h3>What is still blocked</h3>
+<table><caption>Blocking flags</caption><thead><tr><th>Flag</th><th>Area</th><th>What is blocked</th><th>What would clear it</th><th>Evidence</th></tr></thead><tbody><tr><td>AG-01</td><td>actual starters</td><td>The official NFL Game Book PDF - the starting-lineup sheet - could not be read in this environment: static.www.nfl.com refuses a TLS handshake from the sandbox and the fetch tool returns &#x27;Failed to fetch page&#x27; for every Game Book URL.</td><td>Fetch the 14 Game Book PDFs from a network that can reach static.www.nfl.com and fill the actual-starter column. The inactive half of the gap is already closed by AG-23.</td><td><a href="https://www.nfl.com/games/patriots-at-lions-2026-reg-10" rel="noopener">official source</a></td></tr><tr><td>AG-10</td><td>report currency</td><td>The official Week 11 injury report is not published at read time: https://www.nfl.com/injuries/league/2026/reg11 resolved to the Week 10 report (page title &#x27;Official Latest NFL Injury Report for Players - Week 10 of the 2026 Season&#x27;).</td><td>Re-read the reg11 URL once the league publishes it (the request must return a Week 11 title rather than a redirect to reg10). A single official club Week 11 injury report has been published (Texans) and is recorded in availability_events.csv as an event, not as a league-wide report.</td><td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">official source</a></td></tr></tbody></table>
+
+<h3>How the desk should be used</h3>
+<p>Read it as a dated snapshot, not as a live board: the capture stamp is 2026-11-18 and the injury report on it
+is the Week 10 report. The delta table is the part that carries information &mdash; what changed between two dated reads
+of the same official page &mdash; because the absolute designation level is already public. Nothing here is a model
+output, a price or a backtest number, and nothing on this site has been used to select a bet.</p>
+
+</main>
+<footer>
+<p>Session <code>arena/47e3185b-own5</code>. Data namespace <code>data/avail-graph/</code>; site namespace <code>nfl-avail-graph/</code>.
+Built by <code>scripts/build_avail_graph_site.py</code> from committed CSVs only &mdash; no clock, no network, no git at build time.
+Where an official source does not publish a value the cell is left blank and flagged; nothing is inferred.</p>
+</footer>
+</body>
+</html>

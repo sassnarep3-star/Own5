@@ -1,0 +1,98 @@
+name: Verify NFL availability graph desk
+
+# Rebuilds the availability graph, the injury ledgers and the static desk from
+# the pinned official captures under data/avail-graph/, then runs the
+# fail-closed verifier.  Every published table row links to a source or carries
+# an explicit blank-and-flag badge; nothing is inferred.
+#
+# The desk is served by this repository's existing GitHub Pages source (repo
+# root) at /Own5/nfl-avail-graph/.  Nothing here calls deploy-pages, which
+# would fight with that source.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'nfl-avail-graph/**'
+      - 'data/avail-graph/**'
+      - 'scripts/build_avail_graph.py'
+      - 'scripts/build_avail_graph_site.py'
+      - 'scripts/build_depth_and_availability.py'
+      - 'scripts/verify_avail_graph.py'
+      - '.github/workflows/nfl-avail-graph.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'nfl-avail-graph/**'
+      - 'data/avail-graph/**'
+      - 'scripts/build_avail_graph.py'
+      - 'scripts/build_avail_graph_site.py'
+      - 'scripts/build_depth_and_availability.py'
+      - 'scripts/verify_avail_graph.py'
+      - '.github/workflows/nfl-avail-graph.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nfl-avail-graph-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Rebuild the injury, depth and availability ledgers from the pinned captures
+        run: |
+          python3 scripts/build_avail_graph.py
+          python3 scripts/build_depth_and_availability.py
+
+      - name: Rebuild the static desk
+        run: python3 scripts/build_avail_graph_site.py
+
+      - name: Committed artefacts match the deterministic build
+        run: |
+          git diff --exit-code -- data/avail-graph nfl-avail-graph
+
+      - name: Fail-closed verification of every published value
+        run: python3 scripts/verify_avail_graph.py
+
+      - name: Upload the built desk for review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nfl-avail-graph
+          path: nfl-avail-graph
+
+  pages-smoke:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: verify
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check the published desk is live
+        run: |
+          base="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/nfl-avail-graph"
+          for path in "/" "/availability.html" "/inactives.html" "/events.html" "/flags.html" "/week11.html"; do
+            url="$base$path"
+            ok=0
+            for attempt in $(seq 1 24); do
+              if curl --fail --silent --show-error --location "$url" | grep -q 'Availability Graph'; then
+                echo "OK $url"
+                ok=1
+                break
+              fi
+              sleep 10
+            done
+            if [ "$ok" -ne 1 ]; then
+              echo "Published page did not become ready: $url" >&2
+              exit 1
+            fi
+          done
