@@ -1,0 +1,41 @@
+name: NFL Week 11 official-source desk (3cb7800c)
+
+# Scoped to this desk's paths only. Does not touch the root site or other desks.
+on:
+  push:
+    branches: [arena/3cb7800c-own5]
+    paths:
+      - 'nfl-desk-3cb7800c/**'
+      - '.github/workflows/nfl-desk-3cb7800c.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'nfl-desk-3cb7800c/**'
+      - '.github/workflows/nfl-desk-3cb7800c.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nfl-desk-3cb7800c-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Unit and negative-control tests
+        run: cd nfl-desk-3cb7800c && python3 -m unittest discover -s tests -v
+      - name: Verify committed data (schedule, hashes, registers, row sources, links)
+        run: python3 nfl-desk-3cb7800c/verify.py
+      - name: Committed pages match a clean rebuild from the committed data
+        run: |
+          python3 nfl-desk-3cb7800c/tools/build_site.py
+          git diff --exit-code -- nfl-desk-3cb7800c/
+          test -z "$(git status --porcelain -- nfl-desk-3cb7800c/)"
