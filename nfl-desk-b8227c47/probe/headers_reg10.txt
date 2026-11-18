@@ -1,0 +1,24 @@
+HTTP/2 200 
+x-content-type-options: nosniff
+server: istio-envoy
+access-control-allow-origin: *
+x-xss-protection: 1; mode=block
+x-envoy-upstream-service-time: 38
+x-html-minification-powered-by: WebMarkupMin
+service-worker-allowed: /
+via: 1.1 varnish, 1.1 varnish, 1.1 varnish
+content-type: text/html
+cache-control: public, max-age=5
+accept-ranges: bytes
+date: Wed, 18 Nov 2026 03:15:03 GMT
+age: 19
+x-nfl-geo: country_code=US
+x-nfl-dma: 679
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+x-served-by: cache-iad-kcgs7200179-IAD, cache-iad-kcgs7200179-IAD, cache-iad-kiad7000113-IAD, cache-chi-kmdw8640034-CHI
+x-cache: MISS, HIT, HIT
+x-cache-hits: 0, 7, 1
+x-timer: S1794971703.151241,VS0,VE3
+vary: Accept-Encoding,X-NFL-Geo,Origin
+content-length: 402343
+
