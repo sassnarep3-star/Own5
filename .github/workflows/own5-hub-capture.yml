@@ -41,13 +41,17 @@ jobs:
           cat own5-hub/captures/last_run.txt
           exit $rc
         continue-on-error: true
+      - name: Rebuild the hub pages from the captures (the site never lags the ledger)
+        run: |
+          python3 own5-hub/build.py
+          python3 own5-hub/verify.py
       - name: Stage and commit immutable captures
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name "own5-hub-capture"
           git config user.email "own5-hub-capture@users.noreply.github.com"
-          a=0; git add own5-hub/captures > /tmp/add.txt 2>&1 || a=$?
+          a=0; git add own5-hub/captures own5-hub/*.html own5-hub/assets > /tmp/add.txt 2>&1 || a=$?
           if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
           true
           c=0; git commit -m "own5-hub: capture official NFL pages $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]" > /tmp/commit.txt 2>&1 || c=$?
