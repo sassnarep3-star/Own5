@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methodology — Own5 NFL evidence desk</title>
+<link rel="stylesheet" href="style.css">
+</head><body>
+<header><div class="wrap">
+<h1><a href="index.html">Own5 — NFL official availability evidence desk</a></h1>
+<p class="sub">Every row below is captured from an official league or club page and carries its source link.
+Values that could not be confirmed are left blank and listed on
+<a href="flagged.html">Flagged for review</a>. Nothing here is inferred.</p>
+</div></header>
+<nav><div class="wrap"><a class="" href="index.html">Home</a><a class="" href="availability.html">Availability</a><a class="" href="ledger.html">Snapshot ledger</a><a class="" href="depth.html">Depth charts</a><a class="" href="graph.html">Availability graph</a><a class="" href="matrix.html">Matchup matrix</a><a class="" href="teams.html">Team view</a><a class="" href="venues.html">Fixtures & venues</a><a class="" href="requirements.html">Requirements</a><a class="" href="flagged.html">Flagged for review</a><a class="" href="questions.html">Questions</a><a class="" href="suggestions.html">Suggestions</a><a class="" href="sources.html">Sources</a><a class="active" href="methodology.html">Methodology</a><a class="" href="executive-summary.html">Executive summary</a></div></nav>
+<main class="wrap">
+<h2>How this desk is built</h2>
+<ol>
+<li><strong>Capture.</strong> <code>scripts/capture_availability.py</code> fetches the official
+league injury report for each (season, week), the official weekly schedules, the official game
+centres, the official NFL Game Book PDF of each completed game, the official nfl.com club rosters and
+the official club depth charts. Every fetch records the URL, the HTTP status, the byte count, the
+SHA-256 of the bytes and the UTC clock time.</li>
+<li><strong>Drift alarm.</strong> Each source kind is pinned to a row-count range. A source that
+leaves its range fails the build instead of publishing a blank table. Documented publisher quirks
+(such as a club that publishes its depth chart as an image) are listed as a known exception and are
+published on the flagged page.</li>
+<li><strong>Derive.</strong> Week-over-week designation deltas, the availability graph (published
+rank-1 player against the official Game Book starting line-up), the designation reliability table
+(designation joined to the official inactive and starting lists), the per-team view and the fixture
+venue table are computed from the captures. A value that cannot be computed stays blank.</li>
+<li><strong>Publish.</strong> The pages are rebuilt from the committed data by
+<code>scripts/build_evidence_desk.py</code>, which is offline and deterministic, and checked by
+<code>scripts/verify_evidence_desk.py</code>, which fails on an unsourced row, a broken internal link
+or a missing value that is not flagged.</li>
+</ol>
+<h2>What is deliberately not done</h2>
+<ul>
+<li>No injury is converted into a fixed number of points. The ablations the brief asks for need
+several dated captures; the machinery is in place, the sample is not yet long enough.</li>
+<li>No depth order is inferred from a jersey number, an experience count or a salary. The published
+column order is the only depth order used.</li>
+<li>No market price is published, because no operator price has been captured under a stated
+policy. The price columns stay blank rather than filled with an aggregator's number.</li>
+<li>No value is transcribed from an image by eye.</li>
+</ul>
+</main>
+<footer><div class="wrap">
+<p>Session 7cac9edd · branch <code>arena/7cac9edd-own5</code> · sources: <a href="sources.html">register</a> ·
+readiness: <a href="requirements.html">requirement table</a> ·
+flags: <a href="flagged.html">flagged for review</a>.</p>
+<p>Official evidence only. No wagering advice is published on this page. Responsible gambling:
+see the operator pages linked in the sources register.</p>
+</div></footer>
+</body></html>

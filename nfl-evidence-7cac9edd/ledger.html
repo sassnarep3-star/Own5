@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Snapshot ledger — Own5 NFL evidence desk</title>
+<link rel="stylesheet" href="style.css">
+</head><body>
+<header><div class="wrap">
+<h1><a href="index.html">Own5 — NFL official availability evidence desk</a></h1>
+<p class="sub">Every row below is captured from an official league or club page and carries its source link.
+Values that could not be confirmed are left blank and listed on
+<a href="flagged.html">Flagged for review</a>. Nothing here is inferred.</p>
+</div></header>
+<nav><div class="wrap"><a class="" href="index.html">Home</a><a class="" href="availability.html">Availability</a><a class="active" href="ledger.html">Snapshot ledger</a><a class="" href="depth.html">Depth charts</a><a class="" href="graph.html">Availability graph</a><a class="" href="matrix.html">Matchup matrix</a><a class="" href="teams.html">Team view</a><a class="" href="venues.html">Fixtures & venues</a><a class="" href="requirements.html">Requirements</a><a class="" href="flagged.html">Flagged for review</a><a class="" href="questions.html">Questions</a><a class="" href="suggestions.html">Suggestions</a><a class="" href="sources.html">Sources</a><a class="" href="methodology.html">Methodology</a><a class="" href="executive-summary.html">Executive summary</a></div></nav>
+<main class="wrap">
+<h2>Point-in-time snapshot ledger</h2>
+<p class="lead">Append-only. Each row is one fetch: what was asked for, when, the HTTP status, the
+size, the SHA-256 of the bytes returned and the number of rows parsed. A later capture can never
+rewrite an earlier one.</p>
+<p class="empty">No captures recorded yet.</p>
+<h2>Drift alarm</h2>
+<p class="lead">Each source kind is pinned to a row-count range in
+<code>data/nfl-evidence-7cac9edd/expectations.json</code>. A source that leaves its range fails the
+build instead of publishing a blank table.</p>
+<p class="empty">No drift observations yet.</p>
+</main>
+<footer><div class="wrap">
+<p>Session 7cac9edd · branch <code>arena/7cac9edd-own5</code> · sources: <a href="sources.html">register</a> ·
+readiness: <a href="requirements.html">requirement table</a> ·
+flags: <a href="flagged.html">flagged for review</a>.</p>
+<p>Official evidence only. No wagering advice is published on this page. Responsible gambling:
+see the operator pages linked in the sources register.</p>
+</div></footer>
+</body></html>

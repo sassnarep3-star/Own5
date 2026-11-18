@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suggestions — Own5 NFL evidence desk</title>
+<link rel="stylesheet" href="style.css">
+</head><body>
+<header><div class="wrap">
+<h1><a href="index.html">Own5 — NFL official availability evidence desk</a></h1>
+<p class="sub">Every row below is captured from an official league or club page and carries its source link.
+Values that could not be confirmed are left blank and listed on
+<a href="flagged.html">Flagged for review</a>. Nothing here is inferred.</p>
+</div></header>
+<nav><div class="wrap"><a class="" href="index.html">Home</a><a class="" href="availability.html">Availability</a><a class="" href="ledger.html">Snapshot ledger</a><a class="" href="depth.html">Depth charts</a><a class="" href="graph.html">Availability graph</a><a class="" href="matrix.html">Matchup matrix</a><a class="" href="teams.html">Team view</a><a class="" href="venues.html">Fixtures & venues</a><a class="" href="requirements.html">Requirements</a><a class="" href="flagged.html">Flagged for review</a><a class="" href="questions.html">Questions</a><a class="active" href="suggestions.html">Suggestions</a><a class="" href="sources.html">Sources</a><a class="" href="methodology.html">Methodology</a><a class="" href="executive-summary.html">Executive summary</a></div></nav>
+<main class="wrap">
+<h2>Suggestions for review</h2>
+<p class="lead">Each suggestion states the problem, the recommended change, the expected impact and
+the evidence behind it. The decision column is deliberately left at <em>Proposed</em> — a reviewer
+chooses the path before anything is implemented.</p>
+<table><thead><tr>
+<th>ID</th>
+<th>Title</th>
+<th>Problem</th>
+<th>Recommendation</th>
+<th>Impact</th>
+<th>Effort</th>
+<th>Confidence</th>
+<th>Decision</th>
+<th>Evidence</th>
+</tr></thead><tbody>
+<tr><td>S-E01</td><td>Publish the capture as a public, dated feed with a stable URL per snapshot</td><td>Every reader of the site has to trust the capture time printed on each row, and there is no single place that says 'this is the state of the league at 21:37 UTC on 18 November'.</td><td>Serve each capture directory as a dated, hashed snapshot and publish an index of them next to the live pages.</td><td>High</td><td>Low</td><td>High</td><td>Proposed</td><td><a href="ledger.html" rel="noopener">source</a></td></tr>
+<tr><td>S-E02</td><td>Fail the whole build, not just the source, when the drift alarm fires</td><td>A drift alarm that only marks a row leaves a half-true page live.</td><td>Make the drift alarm a hard failure of the Pages build and publish the alarm page from the previous good capture.</td><td>High</td><td>Low</td><td>High</td><td>Proposed</td><td><a href="ledger.html" rel="noopener">source</a></td></tr>
+<tr><td>S-E03</td><td>Add a second official venue source to every fixture row</td><td>The game centre and the Game Book are both official; when they disagree the current page shows both but does not say which one the model used.</td><td>Add an explicit 'venue used' column with the rule stated in the methodology.</td><td>Medium</td><td>Low</td><td>High</td><td>Proposed</td><td><a href="venues.html" rel="noopener">source</a></td></tr>
+<tr><td>S-E04</td><td>Capture the club-published inactive lists as a cross-check</td><td>Only the Game Book inactive list is captured, so a disagreement between the league document and the club document would be invisible.</td><td>Add the club inactive-list articles to the capture and publish the row-level difference.</td><td>Medium</td><td>Medium</td><td>Medium</td><td>Proposed</td><td><a href="graph.html" rel="noopener">source</a></td></tr>
+<tr><td>S-E05</td><td>Pre-register the availability-sample rule before the season's captures accumulate</td><td>Deciding after the fact how much history is enough is how a backtest gets manufactured from a lucky window.</td><td>Freeze the minimum number of dated captures and the minimum number of designation-to-outcome observations before any availability feature may be used, and commit it.</td><td>High</td><td>Low</td><td>High</td><td>Proposed</td><td><a href="requirements.html" rel="noopener">source</a></td></tr>
+</tbody></table>
+</main>
+<footer><div class="wrap">
+<p>Session 7cac9edd · branch <code>arena/7cac9edd-own5</code> · sources: <a href="sources.html">register</a> ·
+readiness: <a href="requirements.html">requirement table</a> ·
+flags: <a href="flagged.html">flagged for review</a>.</p>
+<p>Official evidence only. No wagering advice is published on this page. Responsible gambling:
+see the operator pages linked in the sources register.</p>
+</div></footer>
+</body></html>

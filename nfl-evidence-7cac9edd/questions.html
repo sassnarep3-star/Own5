@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Questions — Own5 NFL evidence desk</title>
+<link rel="stylesheet" href="style.css">
+</head><body>
+<header><div class="wrap">
+<h1><a href="index.html">Own5 — NFL official availability evidence desk</a></h1>
+<p class="sub">Every row below is captured from an official league or club page and carries its source link.
+Values that could not be confirmed are left blank and listed on
+<a href="flagged.html">Flagged for review</a>. Nothing here is inferred.</p>
+</div></header>
+<nav><div class="wrap"><a class="" href="index.html">Home</a><a class="" href="availability.html">Availability</a><a class="" href="ledger.html">Snapshot ledger</a><a class="" href="depth.html">Depth charts</a><a class="" href="graph.html">Availability graph</a><a class="" href="matrix.html">Matchup matrix</a><a class="" href="teams.html">Team view</a><a class="" href="venues.html">Fixtures & venues</a><a class="" href="requirements.html">Requirements</a><a class="" href="flagged.html">Flagged for review</a><a class="active" href="questions.html">Questions</a><a class="" href="suggestions.html">Suggestions</a><a class="" href="sources.html">Sources</a><a class="" href="methodology.html">Methodology</a><a class="" href="executive-summary.html">Executive summary</a></div></nav>
+<main class="wrap">
+<h2>Open questions</h2>
+<p class="lead">What must be answered before a decision can reasonably be made on this evidence.</p>
+<table><thead><tr>
+<th>ID</th>
+<th>Question</th>
+<th>Why it matters</th>
+<th>What we have</th>
+<th>What is missing</th>
+<th>How to resolve</th>
+<th>Status</th>
+<th>Source</th>
+</tr></thead><tbody>
+<tr><td>Q-E01</td><td>When does the league publish the next weekly injury report, and can the capture run inside that window every week?</td><td>A delta needs two dated reads of the same week. Without a fixed publication time the capture may always read the same state and never see a change.</td><td>A scheduled capture that runs twice a day and writes a dated, hashed snapshot every time it reads.</td><td>A measured publication time per week and the league's own retention policy.</td><td>Record the first moment each week's report changes on nfl.com across a full season and publish the distribution.</td><td>Open</td><td><a href="https://www.nfl.com/injuries/" rel="noopener">source</a></td></tr>
+<tr><td>Q-E02</td><td>Which club is the source of truth for depth when the chart is a month old?</td><td>Depth decides the replacement string. A stale chart silently changes the deficiency the model sees.</td><td>Each captured depth row carries the club's own source URL, the capture time and the chart's own as-of text when the club prints one.</td><td>The clubs' publication cadence for depth charts and whether they revise them without changing the as-of text.</td><td>Capture the depth charts daily for a month and publish how often the content actually changes.</td><td>Open</td><td><a href="https://www.nfl.com/teams/" rel="noopener">source</a></td></tr>
+<tr><td>Q-E03</td><td>Do the clubs publish their own inactive lists, and are they identical to the Game Book's Not Active list?</td><td>Two official lists for the same fact either agree or one is wrong; the difference is a data-quality signal.</td><td>The official Game Book Not Active list, captured.</td><td>The club-published inactive lists for the same games.</td><td>Capture both for one week and publish the row-level difference.</td><td>Open</td><td><a href="https://www.nfl.com/games/" rel="noopener">source</a></td></tr>
+<tr><td>Q-E04</td><td>How many weeks of dated captures are needed before a designation may be used as a model feature?</td><td>The brief requires the reliability of a designation to be measured before it is used; that needs a sample, not an opinion.</td><td>The machinery, and the first dated captures.</td><td>A sample size rule agreed in advance (the analogue of the 300-bet rule already used for betting samples).</td><td>Freeze the rule before the season's captures accumulate, in the same way a strategy is pre-registered.</td><td>Open</td><td><a href="requirements.html" rel="noopener">source</a></td></tr>
+<tr><td>Q-E05</td><td>Should the depth-chart route be the club pages only, or should official playing time take precedence where both exist?</td><td>Route (a) is club depth charts; route (b) is snap counts. The brief requires the route to be resolved before the deficiency feature is built.</td><td>Route (a) captured for the clubs whose charts are machine-readable.</td><td>An official playing-time source that can be joined to the chart without using an unattributed mirror.</td><td>Compare the chart order with the official Game Book starting line-up for the same games and publish the disagreement rate.</td><td>Open</td><td><a href="depth.html" rel="noopener">source</a></td></tr>
+</tbody></table>
+</main>
+<footer><div class="wrap">
+<p>Session 7cac9edd · branch <code>arena/7cac9edd-own5</code> · sources: <a href="sources.html">register</a> ·
+readiness: <a href="requirements.html">requirement table</a> ·
+flags: <a href="flagged.html">flagged for review</a>.</p>
+<p>Official evidence only. No wagering advice is published on this page. Responsible gambling:
+see the operator pages linked in the sources register.</p>
+</div></footer>
+</body></html>

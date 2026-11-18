@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Executive summary — Own5 NFL evidence desk</title>
+<link rel="stylesheet" href="style.css">
+</head><body>
+<header><div class="wrap">
+<h1><a href="index.html">Own5 — NFL official availability evidence desk</a></h1>
+<p class="sub">Every row below is captured from an official league or club page and carries its source link.
+Values that could not be confirmed are left blank and listed on
+<a href="flagged.html">Flagged for review</a>. Nothing here is inferred.</p>
+</div></header>
+<nav><div class="wrap"><a class="" href="index.html">Home</a><a class="" href="availability.html">Availability</a><a class="" href="ledger.html">Snapshot ledger</a><a class="" href="depth.html">Depth charts</a><a class="" href="graph.html">Availability graph</a><a class="" href="matrix.html">Matchup matrix</a><a class="" href="teams.html">Team view</a><a class="" href="venues.html">Fixtures & venues</a><a class="" href="requirements.html">Requirements</a><a class="" href="flagged.html">Flagged for review</a><a class="" href="questions.html">Questions</a><a class="" href="suggestions.html">Suggestions</a><a class="" href="sources.html">Sources</a><a class="" href="methodology.html">Methodology</a><a class="active" href="executive-summary.html">Executive summary</a></div></nav>
+<main class="wrap">
+<h2>Executive summary</h2>
+<p class="lead">Session 7cac9edd built the missing <strong>capture layer</strong> of the NFL line
+origination project: the repo previously held exactly one dated official availability capture, which
+is why none of the availability-dependent requirements could be met.</p>
+<h3>What is now verified</h3>
+<ul>
+<li>0 dated capture(s), each pinned by SHA-256 and recorded in an append-only ledger
+(<a href="ledger.html">ledger</a>).</li>
+<li>0 official designation rows from the nfl.com league injury report across 0 (season, week) sets
+(<a href="availability.html">availability</a>).</li>
+<li>0 week-over-week designation deltas — the signal is the change, never the level.</li>
+<li>0 official fixture rows and 0 game-centre venues; 0 official NFL Game Book rows giving actual
+starters and the official inactive lists (<a href="venues.html">fixtures</a>, <a href="graph.html">graph</a>).</li>
+<li>0 club depth-chart rows with the published column order, with shared and empty slots preserved.</li>
+</ul>
+<h3>What is computed</h3>
+<ul>
+<li>Requirement readiness: <strong>43 Met, 10 Partially met, 31 Unmet</strong> of 86 rows. The rows
+this desk owns are computed from the captures on every build; the remaining rows carry the status of
+the desk that owns them and are labelled as carried (<a href="requirements.html">requirements</a>).</li>
+<li>Designation reliability joined to the official inactive and starting lists.</li>
+</ul>
+<h3>What is missing and why</h3>
+<ul>
+<li>The <strong>market price</strong> is still absent: no operator price history has been captured
+under a stated policy, so every market column stays blank rather than being filled from an
+unattributed aggregator feed. This blocks the closing-line-value gate and therefore all certification.</li>
+<li>The <strong>sample length</strong> is the binding constraint on every availability-dependent
+model: the capture machinery now runs on a schedule, but the ablations the brief asks for need
+weeks of history, not hours.</li>
+<li>One club (Houston) publishes its depth chart as an <strong>image</strong>. It is reported as
+uncovered; it is not transcribed by eye.</li>
+<li>The <strong>Week 11 league injury report</strong> was not published on nfl.com at the time of the
+capture; the capture records that fact and continues to serve the last published report, flagged.</li>
+</ul>
+</main>
+<footer><div class="wrap">
+<p>Session 7cac9edd · branch <code>arena/7cac9edd-own5</code> · sources: <a href="sources.html">register</a> ·
+readiness: <a href="requirements.html">requirement table</a> ·
+flags: <a href="flagged.html">flagged for review</a>.</p>
+<p>Official evidence only. No wagering advice is published on this page. Responsible gambling:
+see the operator pages linked in the sources register.</p>
+</div></footer>
+</body></html>
