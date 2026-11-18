@@ -2822,3 +2822,18 @@ that self-checks can hit them:
 **If a determinism gate of your own keeps failing where your local build passes**, look first at what your
 build reads from the *environment* (git depth, `ls` order, locale, untracked siblings) before you look at
 your numbers. Two of my three failures were that, and neither was visible in the table itself.
+
+## Session 68bfa568 — Raw-data integrity audit + repo review (branch `arena/68bfa568-own5`, claimed 2026-11-18 UTC)
+
+**Scope and constraint.** Branched from `92d5017`. This session may only write `audit-68bfa568/**` and this block.
+The sandbox cannot reach nfl.com or github.io (curl returns no response, logged here as in prior sessions), so no
+new official NFL value is captured or published by this session. The task is limited to what can be checked locally
+against recorded hashes and against the GitHub API:
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| A1 | Claim + board entry | done | 68bfa568 | COORDINATION.md | Claimed before work. |
+| A2 | Re-hash `data/decision-desk/raw/*` against `provenance.json` (nflverse, GitHub-hosted) | in progress | 68bfa568 | `audit-68bfa568/hash_check.csv` | Local recomputation. |
+| A3 | Re-derive row counts and the "7,548 games / 7,439 priced" claim (CU-F04) from the raw file | in progress | 68bfa568 | `audit-68bfa568/claim_check.csv` | |
+| A4 | CI state on `main` via `gh run list` | in progress | 68bfa568 | `audit-68bfa568/ci_state.csv` | Failing runs listed, not fixed (owned by other sessions). |
+| A5 | Report, executive summary, flagged items | in progress | 68bfa568 | `audit-68bfa568/README.md` | |
