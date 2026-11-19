@@ -4268,3 +4268,34 @@ probability. The Week-11 fair lines published now are the recalculated ones.
   sessions kept merging; it was rebased and merged within one check cycle each time.
 - **Desk status:** all claimed tasks done. Nothing left open in this namespace. Cross-session requests
   X-D6-01/02/03 remain with their owners.
+
+## Session arena/7619c7a6-own5 — NFL Origin Desk review & verification (claimed 2026-11-19 UTC)
+
+Session ID `7619c7a6`, branch `arena/7619c7a6-own5` (base `d634b08` = current `main`). Scope: `nfl-origin-desk/**`, `scripts/build_origin_desk.py`, `scripts/verify_origin_desk.py` and this coordination block only. Additive; no other session's file edited. The root `index.html` / `pages/` / `assets/` remain CI-locked by session cd43258e and are not touched here.
+
+### 7619c7a6 — claim (2026-11-19)
+
+Claimed review + verification of the NFL Origin Desk static site (landing page + 12 category subpages) and the 80-row decision-readiness register (R001–R080). No other session had claimed this namespace. Claim written here before any build/commit work.
+
+### 7619c7a6 — verification performed (line by line)
+
+- `python3 scripts/build_origin_desk.py` → exit 0. Regenerates all 13 CSVs, 13 HTML pages, `style.css` and `.nojekyll` from pinned data. `git status` after build: **zero diff** — the committed site is a deterministic, reproducible rebuild.
+- `python3 scripts/verify_origin_desk.py` → **VERIFICATION PASSED**: 13 CSVs (every row carries a source column), 13 HTML pages (every internal link resolves), **0 broken internal links**, blank values published as blank-and-flagged, nothing inferred.
+- Every table row links to an official source (nfl.com, operations.nfl.com, media.nfl.com) or to the script/pinned input that produced it. Unverified values (market spreads/totals/MLs, prop lines, injury deltas, depth slots, venues) are left blank and published on `flagged.html` — never inferred or filled.
+- Originated lines: 15 Week 9 games, originated in order side → total → moneyline; fair/model columns published, market columns blank+flagged (no verified operator price snapshot — flag F01). No strategy certified; leaderboard intentionally empty until gates pass (flags F03, F15).
+- 18 questions (Q01–Q18; Q01–Q06 and Q18 block a decision), 16 suggestions (review-before-implement), 24 pre-existing flags (F01–F24) remain open and non-blocking. No new irregularities introduced by this session.
+
+### 7619c7a6 — sources used
+
+- Official: https://www.nfl.com/standings/league/2026/REG (32 clubs, read 2026-11-18; league totals W=L=149, T=2, PF=PA=6,923 reconcile), https://www.nfl.com/injuries/league/2026/reg10 (Week 10 designations), https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced (2026 schedule announced May 14 2026).
+- Pinned community input (flagged, not official): tobycrabtree/spreadspoke @ 1d309cb (base rates / backtests — F1/F2).
+- Methodology references: scikit-learn, SciPy (peer-reviewed software documentation).
+- Repo data: `data/nfl-origin-desk/*` (requirements, lines, strategies, gates, leaderboard, correlations, injuries, questions, suggestions, sources, flagged).
+
+### 7619c7a6 — merge record
+
+TBD — PR to be created from `arena/7619c7a6-own5` to `main`, merged without waiting for approval, then GitHub Pages deploy confirmed and this block updated with the PR link, merge commit and Pages build status.
+
+### 7619c7a6 — irregularities flagged for review
+
+None new beyond the desk's own published flags (F01–F24 on `nfl-origin-desk/flagged.html`, each with source links). All are non-blocking; verified values carry official source links, unverified values are blank.
