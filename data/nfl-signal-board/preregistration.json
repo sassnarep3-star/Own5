@@ -1,0 +1,53 @@
+{
+  "artifact_sha256": "d7ae3b32235f85dd81f0c2c7ed247714b49932b5d7eef02880b2ddffca1d9d83",
+  "bet_selection": {
+    "exclude_push": true,
+    "min_prob_edge": 0.03,
+    "side_min_edge_points": 1.5
+  },
+  "frozen_utc": "2026-11-19T11:15:00Z",
+  "gates": [
+    "G1 registration hash published before kickoff",
+    "G2 forecast commit precedes kickoff",
+    "G3 week-cluster bootstrap CI",
+    "G4 Holm across 8 registered families",
+    "G5 300 settled bets before any certification",
+    "G6 two-window demotion",
+    "G7 total estimators within 10%",
+    "G8 golden-rule check",
+    "G9 joint-evidence gate for combos"
+  ],
+  "model": {
+    "a_intercept": -1.0201528325597269,
+    "b_points_per_elo": 0.056241209150948955,
+    "holdout_window": "2025-2026",
+    "sd_elo": 13.26256160280154,
+    "sd_total": 13.695630830590456,
+    "sigma_buckets": [
+      [
+        50,
+        12.915078786302775
+      ],
+      [
+        100,
+        13.252314605113252
+      ],
+      [
+        175,
+        13.670118732350113
+      ],
+      [
+        10000,
+        13.303594534676883
+      ]
+    ],
+    "sigma_chosen_on_train": "p_model_cover_fixed",
+    "total_correction": -0.17125409089168733,
+    "train_window": "2015-2024",
+    "type": "walk-forward Elo margin + rolling shrinkage scoring rates"
+  },
+  "note": "Nothing in this file may be changed after kickoff without a new registration id.",
+  "policy": "P-01: aggregates on the public site, row-level official data stays private, operator prices attributed",
+  "registration_id": "REG-1FAB8A48-V1",
+  "seed": 20261119
+}

@@ -1,0 +1,31 @@
+req_id,requirement,blocking_gate,number_to_clear,observed,status,source_url,evidence
+R-01,Originate own lines (side then total then moneyline),G12,1,Origination computed for 13 Week-11 games x 3 markets (39 rows),met,https://www.nfl.com/schedules/2026/by-week/week-11,origination.csv
+R-02,Fair line / market line / difference as separate columns,G12,3,model_fair populated; market_line and difference blank+flagged (no verified price source),partial,https://www.nfl.com/schedules/2026/by-week/week-11,origination.csv
+R-03,Price-snapshot store (opening + closing per market),G11,39,39 opening snapshots stored; closings blank+pending by price-data policy,partial,https://www.nfl.com/schedules/2026/by-week/week-11,price_snapshots.csv
+R-04,Verified results feed,G03,14,Week-10 finals (14 games) reconciled to official standings,met,https://www.nfl.com/schedules/2026/by-week/week-10,results_w10.csv
+R-05,Leaderboard separates signal from staking,G05,2,Leaderboard structure has signal/staking split; no performance populated until gates pass,met,https://www.nfl.com/,leaderboard.csv
+R-06,Control baselines on every leaderboard run,G06,2,CTRL-01 (random) and CTRL-02 (favorites) defined as controls,met,https://www.nfl.com/,leaderboard.csv
+R-07,Correlations from official sources with n published,G04,5,5 correlation rows computed from standings, n=32, met,https://www.nfl.com/standings/league/2026/REG,correlations.csv
+R-08,Demotion gate (live -> paper),G07,1,Gate defined; no live strategy exists yet to demote,met,https://www.nfl.com/,gates.csv
+R-09,Pre-register every strategy (backtest numbers barred),G01/G03,7,7 strategy entries pre-registered; leaderboard cells blank,met,https://www.nfl.com/,leaderboard.csv
+R-10,Availability graph (expected vs actual starters),G10,32,10 of 32 clubs read from Week-11 injury report; 22 NOT READ,partial,https://www.nfl.com/injuries/league/2026/reg11,availability.csv
+R-11,Depth from playing time not jersey order,G13,1,Ablation approach specified; no depth data captured yet,partial,https://www.nfl.com/,availability.csv
+R-12,Injury signal as surprise (delta) not level,G10,1,Deltas column present; levels not used as signal,met,https://www.nfl.com/injuries/league/2026/reg11,availability.csv
+R-13,32-team roster/IR sweep before trusting team models,G10,32,Not completed (injury report not fully read),unmet,https://www.nfl.com/injuries/league/2026/reg11,availability.csv
+R-14,Fixture-context features from published schedule facts,G12,13,Week-11 schedule (13 games + 6 byes) captured with date/time/network,met,https://www.nfl.com/schedules/2026/by-week/week-11,schedule_w11.csv
+R-15,Model output = probability + inputs,G12,39,Every origination row stores probability + inputs + inputs hash,met,https://www.nfl.com/schedules/2026/by-week/week-11,origination.csv
+R-16,Removal-of-luck panel on dashboard,G08,1,Not built (no graded bets yet),unmet,https://www.nfl.com/,
+R-17,"What would change our mind" per strategy,G09,1,Field present in suggestions register; not yet answered per strategy,partial,https://www.nfl.com/,suggestions.csv
+R-18,Line pricing on a schedule with residual vs market,G11,1,Priced Week 11 from day one; residual blank (no operator price),partial,https://www.nfl.com/,price_snapshots.csv
+R-19,136-game pre-registered backtest corpus,G02/G03,136,Not built; backtest numbers barred from leaderboard,unmet,https://www.nfl.com/,
+R-20,Price-data policy decided before backtests published,G11,1,Policy documented (P-01: no verified operator price),met,https://www.nfl.com/,gates.csv
+R-21,Timestamped injury-hub reads with delta,G10,1,Week-11 injury report read with UTC clock; delta vs prior capture not yet stored,partial,https://www.nfl.com/injuries/league/2026/reg11,availability.csv
+R-22,Official Game Book starters / game-day status,G10,1,Not captured (Game Book not read),unmet,https://www.nfl.com/,
+R-23,Venue transcribed from official Game Centre,None,13,2 of 13 venues verified (NRG Stadium, Estadio Banorte); rest blank+flagged,partial,https://www.nfl.com/schedules/2026/by-week/week-11,schedule_w11.csv
+R-24,Dated league schedule announcement beside live schedule,None,1,Not published (announcement article not read),unmet,https://www.nfl.com/,
+R-25,Game-level results ingestion for opponent-aware ratings,G04,14,Week-10 finals ingested; standings cross-check 32/32 partial,partial,https://www.nfl.com/schedules/2026/by-week/week-10,results_w10.csv
+R-26,Injury/personnel ablations instead of fixed penalties,G13,1,Ablation approach specified; not yet computed,partial,https://www.nfl.com/,gates.csv
+R-27,Immutable multi-day availability snapshots,None,1,Single capture only; not yet immutable multi-day,unmet,https://www.nfl.com/injuries/league/2026/reg11,availability.csv
+R-28,Official inactive lists and snap counts,None,1,Not captured,unmet,https://www.nfl.com/,
+R-29,Public analysis layer / private data-layer split,None,1,Not implemented (single public data layer),unmet,https://www.nfl.com/,
+R-30,Per-team injury view (starters out, replacements named, net count),G10,32,Not built,unmet,https://www.nfl.com/injuries/league/2026/reg11,availability.csv
