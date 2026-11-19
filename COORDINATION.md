@@ -4452,7 +4452,7 @@ whose nav is scoped to this desk only.
 |----|--------|----------|
 | B1 | done | claim commit `081c718`, pushed before any build work |
 | B2 | done | 4 raw captures in `data/nfl-signal-board/raw/` (standings 32 clubs, 13 fixtures, 78 operator prices, 14 Week 10 finals), all sha256-pinned in `derive_summary.json` |
-| B3 | done | 1,500-of-1,500 style reconciliation: 2026-11-19 read reconciles **32/32 clubs** on W-L-T, PF and PA; the build asserts it and the verifier fails on drift |
+| B3 | done | 2026-11-19 read reconciles **32/32 clubs** on W-L-T, PF and PA; the build asserts it and the verifier fails on drift |
 | B4 | done | 78 rows, side→total→moneyline, fair/market/difference separate, `inputs_sha256` on 100%, closes PENDING by rule |
 | B5 | done | 8 registrations hashed (`REG-1FAB8A48-V1`, artifact sha256 `d7ae3b32…`); walk-forward train 2015–2024 / holdout 2025–2026, tuning reads train only |
 | B6 | done | side skill −0.0354 [−0.0508, −0.0202] n=2,951; ML −0.0579 [−0.0773, −0.0387] n=3,030; control A exactly 0.0000; calibration slope 0.110 |
