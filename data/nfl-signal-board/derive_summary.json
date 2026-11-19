@@ -1,0 +1,172 @@
+{
+  "built_utc": "2026-11-19T11:20:00Z",
+  "counts": {
+    "captures": 2,
+    "designated": 16,
+    "fixtures": 13,
+    "flagged": 15,
+    "injury_clubs": 24,
+    "injury_rows": 253,
+    "log_absent": 3,
+    "log_agree": 117,
+    "log_blank": 16,
+    "log_disagree": 0,
+    "log_rows": 136,
+    "luck_rows": 13,
+    "odds_rows": 78,
+    "operator_prices": 78,
+    "operators": 1,
+    "origination_rows": 78,
+    "pages": 9,
+    "questions": 18,
+    "registered": 8,
+    "snapshots": 78,
+    "suggestions": 12,
+    "venue_done": 13
+  },
+  "frozen_inputs": {
+    "corpus": "ddc8b9dc71fe893eaf1c9a890b851fc22d5b3f5ec2c93e58695e7d0d9d1812ae",
+    "fixtures": "0c5db63905f061d95c01670aef9630d2929ab999c80ced1c66a7d658f4514040",
+    "games2026": "55ed15de6a10bb03d41891c803269f7bf8241a207967eb132d0677c731fb5279",
+    "injury_capture": "70a67a9235f637d58a907ddd0ea9b34c4419f0ff327430c078ceca0671a1d43b",
+    "odds": "b04898f7fa63395b86bc217eaa8aecaad994d91f3f50c405ec0394bd2f84c7b7",
+    "standings": "5504f6e4a498f2369746671f94e63ab563477c003b348b5f31edd13a5e4677f4",
+    "week10": "7863d883dd1a239ab808506d767c8a991522be8fae98338df8a281a1fc3f013b"
+  },
+  "headline": {
+    "calibration_slope": 0.10994724790085353,
+    "captured_injury_rows": 253,
+    "certified_strategies": 0,
+    "control_base_rate_skill": 0.0008612372453407069,
+    "control_half_skill": 0.0,
+    "designated_rows": 16,
+    "injury_clubs": 24,
+    "ml_brier_skill_all": -0.05791945885624172,
+    "ml_brier_skill_ci": [
+      -0.07734292806854337,
+      -0.038731647450998
+    ],
+    "operator_prices": 78,
+    "originated_markets": 78,
+    "priced_fixtures": 13,
+    "rows_with_raw_ev_over_2pct": 38,
+    "side_brier_skill_all": -0.03541398009205343,
+    "side_brier_skill_ci": [
+      -0.050816533848880185,
+      -0.020231997927819156
+    ],
+    "side_brier_skill_holdout": -0.06166706297311264,
+    "stakeable_rows": 0,
+    "totals_bias_ci": [
+      -0.03316912972085386,
+      0.8437294812869337
+    ],
+    "totals_bias_points": 0.4161992741669416
+  },
+  "log136": {
+    "absent": 3,
+    "agree": 117,
+    "blank": 16,
+    "disagree": 0,
+    "rows": 136
+  },
+  "model": {
+    "a_elo": -1.0201528325597269,
+    "b_elo": 0.056241209150948955,
+    "calibration": {
+      "intercept": -0.05241118734038598,
+      "n": 2550,
+      "slope": 0.10994724790085353
+    },
+    "calibration_note": "fitted on train only (n=2550): slope 0.110, intercept -0.052. A slope well below 1 means the raw probabilities are over-confident, so raw edges overstate EV.",
+    "chosen_side_variant": "p_model_cover_fixed",
+    "corpus_all": 7117,
+    "corpus_games": 3045,
+    "holdout_n": 422,
+    "recon_clubs": 32,
+    "row_count_evaluated": 3045,
+    "sd_elo": 13.26256160280154,
+    "sd_fixed": 13.86,
+    "sd_points_mix": 13.450576334715914,
+    "sd_total": 13.695630830590456,
+    "sigma_buckets": [
+      [
+        50,
+        12.915078786302775
+      ],
+      [
+        100,
+        13.252314605113252
+      ],
+      [
+        175,
+        13.670118732350113
+      ],
+      [
+        10000,
+        13.303594534676883
+      ]
+    ],
+    "spread_mae_neg": 14.617063212727016,
+    "spread_mae_pos": 10.248627340560327,
+    "spread_sign": "home-favoured-positive",
+    "tot_bias": 0.4161992741669416,
+    "tot_bias_ci": [
+      -0.03316912972085386,
+      0.8437294812869337
+    ],
+    "tot_bias_clusters": 201,
+    "tot_corr": -0.17125409089168733,
+    "train_n": 2623,
+    "variant_table": [
+      {
+        "brier_train": 0.25782138852935566,
+        "variant": "fixed 13.86"
+      },
+      {
+        "brier_train": 0.25858377241914354,
+        "variant": "elo-sd"
+      },
+      {
+        "brier_train": 0.25858884752991307,
+        "variant": "elo-bucketed"
+      },
+      {
+        "brier_train": 0.2657961787036286,
+        "variant": "points"
+      }
+    ]
+  },
+  "reconciliation": {
+    "clubs": 32,
+    "clubs_reconciled": 32,
+    "games": 150,
+    "weeks": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  "session": "1fab8a48",
+  "source_hashes": {
+    "corpus": "ddc8b9dc71fe893eaf1c9a890b851fc22d5b3f5ec2c93e58695e7d0d9d1812ae",
+    "fixtures": "0c5db63905f061d95c01670aef9630d2929ab999c80ced1c66a7d658f4514040",
+    "games2026": "55ed15de6a10bb03d41891c803269f7bf8241a207967eb132d0677c731fb5279",
+    "injury_capture": "70a67a9235f637d58a907ddd0ea9b34c4419f0ff327430c078ceca0671a1d43b",
+    "odds": "b04898f7fa63395b86bc217eaa8aecaad994d91f3f50c405ec0394bd2f84c7b7",
+    "standings": "5504f6e4a498f2369746671f94e63ab563477c003b348b5f31edd13a5e4677f4",
+    "week10": "7863d883dd1a239ab808506d767c8a991522be8fae98338df8a281a1fc3f013b"
+  },
+  "spread_mae": {
+    "negative_convention": 14.617063212727016,
+    "positive_convention": 10.248627340560327
+  },
+  "spread_sign": "home-favoured-positive"
+}
