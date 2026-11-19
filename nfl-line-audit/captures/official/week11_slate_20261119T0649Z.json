@@ -1,0 +1,15 @@
+{"capture_id":"SLATE-2026W11-20261119T0649Z","url":"https://www.nfl.com/schedules/2026/by-week/week-11","read_utc":"2026-11-19T06:49:00Z","read_method":"sandbox page-fetch tool, 3 chunks (0-2)","byes":["ATL","CLE","GB","LA","NE","SEA"],
+"rows":[
+{"away":"IND","home":"HOU","weekday":"Thursday","date":"2026-11-19","kickoff":"8:15 PM","network":"PRIME","neutral":"","note":"Thursday Night Football"},
+{"away":"MIA","home":"BUF","weekday":"Sunday","date":"2026-11-22","kickoff":"1:00 PM","network":"CBS","neutral":"","note":""},
+{"away":"BAL","home":"CAR","weekday":"Sunday","date":"2026-11-22","kickoff":"1:00 PM","network":"FOX","neutral":"","note":""},
+{"away":"NO","home":"CHI","weekday":"Sunday","date":"2026-11-22","kickoff":"1:00 PM","network":"FOX","neutral":"","note":""},
+{"away":"TEN","home":"DAL","weekday":"Sunday","date":"2026-11-22","kickoff":"1:00 PM","network":"FOX","neutral":"","note":""},
+{"away":"TB","home":"DET","weekday":"Sunday","date":"2026-11-22","kickoff":"1:00 PM","network":"FOX","neutral":"","note":""},
+{"away":"ARI","home":"KC","weekday":"Sunday","date":"2026-11-22","kickoff":"1:00 PM","network":"CBS","neutral":"","note":""},
+{"away":"PIT","home":"PHI","weekday":"Sunday","date":"2026-11-22","kickoff":"1:00 PM","network":"CBS","neutral":"","note":""},
+{"away":"NYJ","home":"LAC","weekday":"Sunday","date":"2026-11-22","kickoff":"4:05 PM","network":"FOX","neutral":"","note":""},
+{"away":"JAX","home":"NYG","weekday":"Sunday","date":"2026-11-22","kickoff":"4:25 PM","network":"CBS","neutral":"","note":""},
+{"away":"LV","home":"DEN","weekday":"Sunday","date":"2026-11-22","kickoff":"4:25 PM","network":"CBS","neutral":"","note":""},
+{"away":"MIN","home":"SF","weekday":"Sunday","date":"2026-11-22","kickoff":"8:20 PM","network":"NBC","neutral":"yes","note":"International Game, Mexico City"},
+{"away":"CIN","home":"WAS","weekday":"Monday","date":"2026-11-23","kickoff":"8:15 PM","network":"ESPN","neutral":"","note":"Monday Night Football"}]}
