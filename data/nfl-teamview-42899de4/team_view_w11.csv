@@ -1,0 +1,33 @@
+club,club_name,week,status,opponent,kickoff_printed,network,report_state,players_listed,qb_on_report,dnp_count,lp_count,fp_count,out_count,questionable_count,doubtful_count,net_injury_count,designations_printed,starters_out,replacement_named,flags,source_url,read_utc
+ATL,Atlanta Falcons,11,BYE,,,,absent,,,,,,,,,,,,,F-TV-06,,
+AZ,Arizona Cardinals,11,PLAYING,KC,1:00 PM,CBS,listed,12,,5,5,2,,,,,NO_NOT_PRINTED,,,F-TV-03,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T11:46Z-11:52Z
+BAL,Baltimore Ravens,11,PLAYING,CAR,1:00 PM,FOX,listed,6,,1,2,3,,,,,NO_NOT_PRINTED,,,F-TV-03,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T11:46Z-11:52Z
+BUF,Buffalo Bills,11,PLAYING,MIA,1:00 PM,CBS,listed,15,,5,5,5,,,,,NO_NOT_PRINTED,,,F-TV-03,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T11:46Z-11:52Z
+CAR,Carolina Panthers,11,PLAYING,BAL,1:00 PM,FOX,listed,13,Bryce Young (Full Participation in Practice),5,1,7,,,,,NO_NOT_PRINTED,,,F-TV-03,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T11:46Z-11:52Z
+CHI,Chicago Bears,11,PLAYING,NO,1:00 PM,FOX,listed,5,,1,1,3,,,,,NO_NOT_PRINTED,,,F-TV-03,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T11:46Z-11:52Z
+CIN,Cincinnati Bengals,11,PLAYING,WAS,8:15 PM,ESPN,no_injuries_reported,0,,0,0,0,0,0,0,0,YES_EXPLICIT,,,F-TV-06,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T11:46Z-11:52Z
+CLE,Cleveland Browns,11,BYE,,,,absent,,,,,,,,,,,,,F-TV-06,,
+DAL,Dallas Cowboys,11,PLAYING,TEN,1:00 PM,FOX,listed,14,,8,2,4,,,,,NO_NOT_PRINTED,,,F-TV-03,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T11:46Z-11:52Z
+DEN,Denver Broncos,11,PLAYING,LV,4:25 PM,CBS,listed,9,,0,5,4,,,,,NO_NOT_PRINTED,,,F-TV-03,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T11:46Z-11:52Z
+DET,Detroit Lions,11,PLAYING,TB,1:00 PM,FOX,listed,8,,1,6,1,,,,,NO_NOT_PRINTED,,,F-TV-03,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T11:46Z-11:52Z
+GB,Green Bay Packers,11,BYE,,,,absent,,,,,,,,,,,,,F-TV-06,,
+HOU,Houston Texans,11,PLAYING,IND,8:15 PM,PRIME,listed,15,,5,0,10,4,3,0,7,YES,,,,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T11:46Z-11:52Z
+IND,Indianapolis Colts,11,PLAYING,HOU,8:15 PM,PRIME,listed,11,,8,1,2,5,4,0,9,YES,,,,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T11:46Z-11:52Z
+JAX,Jacksonville Jaguars,11,PLAYING,NYG,4:25 PM,CBS,listed,13,,2,10,1,,,,,NO_NOT_PRINTED,,,F-TV-03,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T11:46Z-11:52Z
+KC,Kansas City Chiefs,11,PLAYING,AZ,1:00 PM,CBS,listed,15,Justin Fields (Full Participation in Practice); Patrick Mahomes (Full Participation in Practice),3,2,10,,,,,NO_NOT_PRINTED,,,F-TV-03,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T11:46Z-11:52Z
+LAC,Los Angeles Chargers,11,PLAYING,NYJ,4:05 PM,FOX,listed,11,,6,5,0,,,,,NO_NOT_PRINTED,,,F-TV-03,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T11:46Z-11:52Z
+LAR,Los Angeles Rams,11,BYE,,,,absent,,,,,,,,,,,,,F-TV-06,,
+LV,Las Vegas Raiders,11,PLAYING,DEN,4:25 PM,CBS,listed,6,,2,2,2,,,,,NO_NOT_PRINTED,,,F-TV-03,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T11:46Z-11:52Z
+MIA,Miami Dolphins,11,PLAYING,BUF,1:00 PM,CBS,listed,11,,5,5,1,,,,,NO_NOT_PRINTED,,,F-TV-03,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T11:46Z-11:52Z
+MIN,Minnesota Vikings,11,PLAYING,SF,8:20 PM,NBC,listed,10,Kyler Murray (Did Not Participate In Practice),2,5,3,,,,,NO_NOT_PRINTED,,,F-TV-03,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T11:46Z-11:52Z
+NE,New England Patriots,11,BYE,,,,absent,,,,,,,,,,,,,F-TV-06,,
+NO,New Orleans Saints,11,PLAYING,CHI,1:00 PM,FOX,listed,10,,7,2,1,,,,,NO_NOT_PRINTED,,,F-TV-03,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T11:46Z-11:52Z
+NYG,New York Giants,11,PLAYING,JAX,4:25 PM,CBS,listed,6,,1,2,3,,,,,NO_NOT_PRINTED,,,F-TV-03,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T11:46Z-11:52Z
+NYJ,New York Jets,11,PLAYING,LAC,4:05 PM,FOX,listed,8,Geno Smith (Limited Participation in Practice),3,5,0,,,,,NO_NOT_PRINTED,,,F-TV-03,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T11:46Z-11:52Z
+PHI,Philadelphia Eagles,11,PLAYING,PIT,1:00 PM,CBS,listed,15,Tanner McKee (Full Participation in Practice),1,7,7,,,,,NO_NOT_PRINTED,,,F-TV-03,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T11:46Z-11:52Z
+PIT,Pittsburgh Steelers,11,PLAYING,PHI,1:00 PM,CBS,listed,10,,5,3,2,,,,,NO_NOT_PRINTED,,,F-TV-03,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T11:46Z-11:52Z
+SEA,Seattle Seahawks,11,BYE,,,,absent,,,,,,,,,,,,,F-TV-06,,
+SF,San Francisco 49ers,11,PLAYING,MIN,8:20 PM,NBC,listed,15,Mac Jones (Limited Participation in Practice),4,7,4,,,,,NO_NOT_PRINTED,,,F-TV-03,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T11:46Z-11:52Z
+TB,Tampa Bay Buccaneers,11,PLAYING,DET,1:00 PM,FOX,listed,6,Baker Mayfield (Did Not Participate In Practice),2,1,3,,,,,NO_NOT_PRINTED,,,F-TV-03,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T11:46Z-11:52Z
+TEN,Tennessee Titans,11,PLAYING,DAL,1:00 PM,FOX,listed,9,,2,4,3,,,,,NO_NOT_PRINTED,,,F-TV-03,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T11:46Z-11:52Z
+WAS,Washington Commanders,11,PLAYING,CIN,8:15 PM,ESPN,no_injuries_reported,0,,0,0,0,0,0,0,0,YES_EXPLICIT,,,F-TV-06,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T11:46Z-11:52Z

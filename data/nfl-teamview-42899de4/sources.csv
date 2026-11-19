@@ -1,0 +1,10 @@
+source_id,url,description,read_utc,access,used_for
+S-01,https://www.nfl.com/injuries/league/2026/reg11,Official NFL Week-11 injury report (practice + game status by club),2026-11-19T11:46Z-11:52Z,fetch_page first-hand,team_view_w11; report-w11; delta baseline
+S-02,https://www.nfl.com/injuries/league/2026/reg10,Official NFL Week-10 injury report (final designations),2026-11-19T11:55Z-12:03Z,fetch_page first-hand,team_view_w10; delta baseline
+S-03,https://www.nfl.com/schedules/2026/REG11,Official NFL 2026 Week-11 schedule with kickoff times networks and bye list,2026-11-19T11:53Z,fetch_page first-hand,fixtures_w11; byes week 11
+S-04,https://www.nfl.com/schedules/2026/by-week/week-10,Official NFL 2026 Week-10 by-week schedule with finals and bye list,2026-11-19T12:06Z,fetch_page first-hand,fixtures_w10; byes week 10
+S-05,https://www.nfl.com/injuries/league/2026/reg11,Same page re-verified during transcription check,2026-11-19T11:46Z-11:52Z,fetch_page first-hand,row-count reconciliation
+X-01,https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-715e2cd4/data/availability_week11.csv,Read-only cross-capture: 253 rows 24 clubs read 2026-11-19T06:55Z,2026-11-19T06:55Z,repo read-only,cross-check only - not a data source
+X-02,https://github.com/sassnarep3-star/Own5/blob/main/nfl-line-audit/data/availability_week11.csv,Read-only cross-capture: 255 rows 26 clubs read 2026-11-19T06:53Z,2026-11-19T06:53Z,repo read-only,cross-check only - not a data source
+X-03,https://github.com/sassnarep3-star/Own5/blob/main/data/nfl-desk-f2e20e96/injury_wk10_players.csv,Read-only cross-capture: 347 rows matches this session transcription exactly,2026-11-19,repo read-only,cross-check only - not a data source
+X-04,https://github.com/sassnarep3-star/Own5/blob/main/data/decision-desk/injuries_wk10_players.csv,Read-only cross-capture: 276 rows differs from official page - see F-TV-10,2026-11-19,repo read-only,cross-check only - not a data source
