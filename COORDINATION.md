@@ -4268,3 +4268,34 @@ probability. The Week-11 fair lines published now are the recalculated ones.
   sessions kept merging; it was rebased and merged within one check cycle each time.
 - **Desk status:** all claimed tasks done. Nothing left open in this namespace. Cross-session requests
   X-D6-01/02/03 remain with their owners.
+
+---
+
+## Session 8ad92a0e — NFL Decision & Origination Desk (claimed 2026-11-19 UTC)
+
+Session ID `8ad92a0e`, branch `arena/8ad92a0e-own5` (base `d634b08` = current `main`, PR #167 merge).
+
+**Claimed namespace (strictly additive, zero overlap with any other session):**
+- `nfl-desk-8ad92a0e/**` (GitHub Pages desk: landing page with decision-readiness table + category subpages, deterministic stdlib-only build, fail-closed verify harness, unit tests, CSS)
+- `data/nfl-desk-8ad92a0e/**` (CSV/JSON data layer: fresh official verification, originated lines, price snapshots, results feed, leaderboard/gates, correlations, availability, requirements, questions, suggestions, flagged, sources)
+- `research/nfl-8ad92a0e/**` (executive summary, methodology, verification log)
+- `.github/workflows/nfl-desk-8ad92a0e.yml` (new file only; existing workflows never edited)
+- Append-only block in `COORDINATION.md` and one additive row in `README.md`
+
+**Read-only (never edited):** root `index.html`, `pages/**`, `assets/**`, `scripts/**`, `tools/**`, `tests/**`, `docs/**`, `data/**` outside `data/nfl-desk-8ad92a0e/`, every existing workflow, every other `nfl-*` / `nba-*` / `sf-*` / `rental-*` / `own5-*` / `repo-review` namespace, all existing CSV/JSON.
+
+**Mandate (user brief):** repo review line by line with irregularities flagged; originate own NFL lines side → total → moneyline with model fair line / market line / difference as separate columns; price-snapshot store (open/close; blank+flagged where no operator price exists); verified results feed reconciled to official standings; leaderboard separating signal from staking with control baselines, validation gates and a demotion gate (backtest numbers forbidden on the leaderboard); correlations computed only from officially sourced numbers with n published per value; injury/availability view (starters out, replacement depth, deltas not levels); decision-readiness table on the landing page (one row per requirement → blocking gate → number that would clear it → observed); questions/information/answers register; reviewable suggestions register (nothing implemented without a decision); executive summary; Flagged for Review page — every table row source-linked or explicitly blank-and-flagged, never inferred.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| AD-01 | Claim scope + push claim before any build work | in progress | 8ad92a0e | COORDINATION.md | This block. |
+| AD-02 | Fresh official reads (2026-11-19): standings, Week 11 schedule, Week 10 finals, league injury report | unclaimed | 8ad92a0e | `data/nfl-desk-8ad92a0e/sources.csv`, `nfl-desk-8ad92a0e/raw/**` | Every read timestamped; unconfirmed values blank + flagged. |
+| AD-03 | Repo review: enumerate desks/verifiers, run scoped checks, flag irregularities | unclaimed | 8ad92a0e | `research/nfl-8ad92a0e/repo-review.md`, `data/nfl-desk-8ad92a0e/flagged.csv` | Read-only; other sessions' defects are cross-session requests, never edited. |
+| AD-04 | Data layer: standings/results reconciliation, lines (side→total→ML), price snapshots, leaderboard+gates, correlations with n, availability, requirements, questions, suggestions | unclaimed | 8ad92a0e | `data/nfl-desk-8ad92a0e/*.csv` | Every row official source_url or blank + UNVERIFIED flag; market columns blank by policy. |
+| AD-05 | Deterministic build: landing (decision-readiness) + category subpages | unclaimed | 8ad92a0e | `nfl-desk-8ad92a0e/build.py` | No clock/git/network in the builder. |
+| AD-06 | Fail-closed verify + unit tests incl. negative controls | unclaimed | 8ad92a0e | `nfl-desk-8ad92a0e/verify.py`, `nfl-desk-8ad92a0e/tests/**` | Row provenance, pinned counts, link integrity, determinism. |
+| AD-07 | Executive summary + Flagged for Review + research notes | unclaimed | 8ad92a0e | `research/nfl-8ad92a0e/**`, `nfl-desk-8ad92a0e/*.html` | Restates only computed/officially-sourced values. |
+| AD-08 | Scoped CI workflow | unclaimed | 8ad92a0e | `.github/workflows/nfl-desk-8ad92a0e.yml` | Rebuild + diff + verify + tests, path-scoped. |
+| AD-09 | Commit, push, PR to main, autonomous merge, live Pages check, record | unclaimed | 8ad92a0e | COORDINATION.md, README.md (one row) | Merge only after verify PASS + live URL check. |
+
+**Cross-session requests:** none at claim time. All work is additive inside the claimed namespace.
