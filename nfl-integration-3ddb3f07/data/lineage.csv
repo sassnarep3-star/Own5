@@ -1,5 +1,5 @@
 path,rows,bytes,sha256
-nfl-integration-3ddb3f07/data/verifier_runs.csv,31,4280,499d522915cced187e9ffff01490e8e7617af6389b1681919b59365296f43a20
+nfl-integration-3ddb3f07/data/verifier_runs.csv,31,4187,61ece1499410ec772732227d2d67ea423b181d5eb71866512e9382a8182ebce1
 nfl-integration-a620f5a5/data/audit.csv,13,11393,59a39a00492bcc42ccb7c3575e9c13558dedf68008fafed265ce05c3a22daf93
 nfl-integration-a620f5a5/data/questions.csv,10,8225,d26359d29cfe4376cd3cdcb6908d90f1f6acf0f24710e1185e9d40f786a40a01
 nfl-integration-a620f5a5/data/sources.csv,18,5866,e2daaa0958709e62368a946325894ac4ce83c44872b604c82b20b7555dcd7ea2

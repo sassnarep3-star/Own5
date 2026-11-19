@@ -1,27 +1,27 @@
 {
   "as_of": "2026-11-12",
-  "files": 513,
-  "physical_lines": 103113,
+  "files": 520,
+  "physical_lines": 103755,
   "status_counts": {
     "DATED_OFFICIAL_FACT_ROW": 1588,
     "DATED_SNAPSHOT_RECOMPUTED_OR_STALE": 730,
     "DERIVED_OR_LEGACY_LINE_REVIEW": 35,
     "FLAGGED_LEGACY_MARKET_VALUE": 903,
     "FLAGGED_NONOFFICIAL_HISTORICAL_INPUT": 14406,
-    "IMPLEMENTATION_LINE_REVIEW": 14299,
+    "IMPLEMENTATION_LINE_REVIEW": 14423,
     "LEGACY_JSON_RECORD_REVIEW": 4794,
-    "LEGACY_RESEARCH_CLAIM_SCOPE": 5914,
+    "LEGACY_RESEARCH_CLAIM_SCOPE": 6239,
     "LEGACY_SNAPSHOT_SOURCE_REGISTERED": 10815,
     "LINE_ITEM_SOURCE_LINK_OR_FLAG": 34130,
     "OFFICIAL_LINK_PRESENT_NOT_REFETCHED": 30,
-    "PUBLISHED_RENDER_LINE_REVIEW": 13544,
+    "PUBLISHED_RENDER_LINE_REVIEW": 13737,
     "REPOSITORY_METADATA_LINE": 133,
     "REVERIFIED_CURRENT_GAME_LOG": 1792
   },
   "source_basis_counts": {
-    "HTTPS_OFFICIAL_LINK_IN_LINE": 2467,
+    "HTTPS_OFFICIAL_LINK_IN_LINE": 2468,
     "OFFICIAL_COUNTERPART_FOR_FLAGGED_INPUT_NOT_INPUT_PROVENANCE": 15309,
-    "OFFICIAL_SCOPE_REFERENCE_FALLBACK_NOT_ROW_PROVENANCE": 82795,
+    "OFFICIAL_SCOPE_REFERENCE_FALLBACK_NOT_ROW_PROVENANCE": 83436,
     "ROW_SOURCE_FIELD": 2542
   },
   "scope": "Line-indexed inventory of previous NFL sites, generators, datasets, research references and shared navigation/CI context; this is not a claim that every legacy historical statistic was re-fetched.",
@@ -154,6 +154,11 @@
       "bytes": 1326
     },
     {
+      "path": ".github/workflows/nfl-integration-3ddb3f07.yml",
+      "physical_lines": 104,
+      "bytes": 3665
+    },
+    {
       "path": ".github/workflows/nfl-integration-a620f5a5.yml",
       "physical_lines": 97,
       "bytes": 3671
@@ -185,8 +190,8 @@
     },
     {
       "path": ".github/workflows/own5-hub-capture.yml",
-      "physical_lines": 74,
-      "bytes": 3145
+      "physical_lines": 91,
+      "bytes": 4398
     },
     {
       "path": ".github/workflows/own5-hub-runner-probe.yml",
@@ -215,8 +220,8 @@
     },
     {
       "path": "README.md",
-      "physical_lines": 616,
-      "bytes": 56361
+      "physical_lines": 662,
+      "bytes": 59293
     },
     {
       "path": "assets/app.js",
@@ -976,7 +981,7 @@
     {
       "path": "index.html",
       "physical_lines": 7,
-      "bytes": 14632
+      "bytes": 15026
     },
     {
       "path": "line-lab/analysis.html",
@@ -1095,13 +1100,13 @@
     },
     {
       "path": "nfl-command-desk/flagged.html",
-      "physical_lines": 32,
-      "bytes": 7199
+      "physical_lines": 34,
+      "bytes": 8176
     },
     {
       "path": "nfl-command-desk/index.html",
-      "physical_lines": 75,
-      "bytes": 26145
+      "physical_lines": 77,
+      "bytes": 26341
     },
     {
       "path": "nfl-decision-desk-38a1fc27/.nojekyll",
@@ -1316,7 +1321,7 @@
     {
       "path": "nfl-desk-35a1feb2/index.html",
       "physical_lines": 20,
-      "bytes": 22703
+      "bytes": 26722
     },
     {
       "path": "nfl-desk-35a1feb2/raw/README.md",
@@ -1401,7 +1406,7 @@
     {
       "path": "nfl-desk-864d5668/flagged.html",
       "physical_lines": 46,
-      "bytes": 10621
+      "bytes": 10992
     },
     {
       "path": "nfl-desk-864d5668/index.html",
@@ -1451,12 +1456,12 @@
     {
       "path": "nfl-desk-e1d60f5d/index.html",
       "physical_lines": 70,
-      "bytes": 7472
+      "bytes": 7443
     },
     {
       "path": "nfl-desk-e1d60f5d/pages/flagged.html",
       "physical_lines": 54,
-      "bytes": 7882
+      "bytes": 7896
     },
     {
       "path": "nfl-desk-e46fb855/executive-summary.html",
@@ -1507,6 +1512,21 @@
       "path": "nfl-hub-28431d9c/index.html",
       "physical_lines": 38,
       "bytes": 4815
+    },
+    {
+      "path": "nfl-integration-3ddb3f07/executive-summary.html",
+      "physical_lines": 89,
+      "bytes": 6270
+    },
+    {
+      "path": "nfl-integration-3ddb3f07/flagged.html",
+      "physical_lines": 31,
+      "bytes": 45087
+    },
+    {
+      "path": "nfl-integration-3ddb3f07/index.html",
+      "physical_lines": 69,
+      "bytes": 40806
     },
     {
       "path": "nfl-integration-a620f5a5/executive-summary.html",
@@ -1951,7 +1971,7 @@
     {
       "path": "own5-hub/index.html",
       "physical_lines": 28,
-      "bytes": 33466
+      "bytes": 33469
     },
     {
       "path": "package.json",
@@ -1961,37 +1981,37 @@
     {
       "path": "pages/correlations.html",
       "physical_lines": 1,
-      "bytes": 10967
+      "bytes": 11042
     },
     {
       "path": "pages/leaderboard.html",
       "physical_lines": 1,
-      "bytes": 16541
+      "bytes": 16616
     },
     {
       "path": "pages/markets.html",
       "physical_lines": 1,
-      "bytes": 9278
+      "bytes": 9353
     },
     {
       "path": "pages/review.html",
       "physical_lines": 1,
-      "bytes": 11745
+      "bytes": 11820
     },
     {
       "path": "pages/sources.html",
       "physical_lines": 1,
-      "bytes": 17883
+      "bytes": 17958
     },
     {
       "path": "pages/strategies.html",
       "physical_lines": 1,
-      "bytes": 12172
+      "bytes": 12247
     },
     {
       "path": "pages/validation.html",
       "physical_lines": 1,
-      "bytes": 8945
+      "bytes": 9020
     },
     {
       "path": "repo-review/flagged.html",
@@ -2244,6 +2264,21 @@
       "bytes": 1085
     },
     {
+      "path": "research/nfl-3ddb3f07/EXECUTIVE_SUMMARY.md",
+      "physical_lines": 94,
+      "bytes": 7149
+    },
+    {
+      "path": "research/nfl-3ddb3f07/FLAGGED.md",
+      "physical_lines": 108,
+      "bytes": 6325
+    },
+    {
+      "path": "research/nfl-3ddb3f07/VERIFICATION.md",
+      "physical_lines": 77,
+      "bytes": 6117
+    },
+    {
       "path": "research/nfl-3fb93d11/EXECUTIVE_SUMMARY.md",
       "physical_lines": 299,
       "bytes": 17308
@@ -2380,8 +2415,8 @@
     },
     {
       "path": "scripts/build.py",
-      "physical_lines": 60,
-      "bytes": 17670
+      "physical_lines": 63,
+      "bytes": 18257
     },
     {
       "path": "scripts/build_data.py",
