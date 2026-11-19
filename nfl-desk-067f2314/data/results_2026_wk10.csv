@@ -1,0 +1,15 @@
+game_id,date,away_team,away_abbr,away_score,home_team,home_abbr,home_score,winner,margin,status,neutral_site,source_url
+G10-01,2026-11-12,Washington Commanders,WAS,24,New York Giants,NYG,21,Washington Commanders,3,Final,no,https://www.nfl.com/scores/2026/reg10
+G10-02,2026-11-15,New England Patriots,NE,10,Detroit Lions,DET,35,Detroit Lions,25,Final,yes,https://www.nfl.com/scores/2026/reg10
+G10-03,2026-11-15,Kansas City Chiefs,KC,35,Atlanta Falcons,ATL,13,Kansas City Chiefs,22,Final,no,https://www.nfl.com/scores/2026/reg10
+G10-04,2026-11-15,Houston Texans,HOU,24,Cleveland Browns,CLE,27,Cleveland Browns,3,Final,no,https://www.nfl.com/scores/2026/reg10
+G10-05,2026-11-15,Minnesota Vikings,MIN,30,Green Bay Packers,GB,10,Minnesota Vikings,20,Final,no,https://www.nfl.com/scores/2026/reg10
+G10-06,2026-11-15,Miami Dolphins,MIA,22,Indianapolis Colts,IND,24,Indianapolis Colts,2,Final,no,https://www.nfl.com/scores/2026/reg10
+G10-07,2026-11-15,Carolina Panthers,CAR,20,New Orleans Saints,NO,17,Carolina Panthers,3,Final,no,https://www.nfl.com/scores/2026/reg10
+G10-08,2026-11-15,Buffalo Bills,BUF,31,New York Jets,NYJ,12,Buffalo Bills,19,Final,no,https://www.nfl.com/scores/2026/reg10
+G10-09,2026-11-15,Jacksonville Jaguars,JAX,40,Tennessee Titans,TEN,23,Jacksonville Jaguars,17,Final,no,https://www.nfl.com/scores/2026/reg10
+G10-10,2026-11-15,Los Angeles Rams,LAR,34,Arizona Cardinals,AZ,6,Los Angeles Rams,28,Final,no,https://www.nfl.com/scores/2026/reg10
+G10-11,2026-11-15,Seattle Seahawks,SEA,21,Las Vegas Raiders,LV,13,Seattle Seahawks,8,Final,no,https://www.nfl.com/scores/2026/reg10
+G10-12,2026-11-15,San Francisco 49ers,SF,46,Dallas Cowboys,DAL,40,San Francisco 49ers,6,Final,no,https://www.nfl.com/scores/2026/reg10
+G10-13,2026-11-15,Pittsburgh Steelers,PIT,18,Cincinnati Bengals,CIN,38,Cincinnati Bengals,20,Final,no,https://www.nfl.com/scores/2026/reg10
+G10-14,2026-11-16,Los Angeles Chargers,LAC,23,Baltimore Ravens,BAL,20,Los Angeles Chargers,3,Final,no,https://www.nfl.com/scores/2026/reg10

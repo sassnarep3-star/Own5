@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sources — Own5 NFL Line-Origination Dashboard</title>
+<style>
+:root{--bg:#f7f8fa;--card:#ffffff;--ink:#111827;--muted:#6b7280;--line:#e5e7eb;
+  --blue:#1f6feb;--blue-dark:#155ccb;--green:#15803d;--red:#b91c1c;--amber:#b45309;
+  --flag-bg:#fef3c7;--flag-text:#92400e;}
+* {box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.5}
+header{background:#0b2545;color:#fff;padding:1rem 1.5rem}
+header h1{margin:0;font-size:1.25rem;letter-spacing:0.04em}
+header p{margin:.25rem 0 0;font-size:.9rem;opacity:.85}
+nav{display:flex;gap:.5rem;flex-wrap:wrap;padding:.6rem 1.5rem;background:#fff;
+  border-bottom:1px solid var(--line)}
+nav a{padding:.35rem .7rem;border-radius:.4rem;text-decoration:none;color:var(--blue);
+  font-size:.88rem;border:1px solid transparent}
+nav a:hover{background:#eef3fb;border-color:var(--blue)}
+.container{max-width:1200px;margin:0 auto;padding:1rem 1.5rem}
+.badge{display:inline-block;padding:.05rem .5rem;border-radius:.9rem;font-size:.76rem;
+  font-weight:600;margin-left:.35rem;vertical-align:middle}
+.badge-src{background:#e7f0fd;color:#1d4ed8}
+.badge-flag{background:var(--flag-bg);color:var(--flag-text)}
+.badge-unverified{background:#fee2e2;color:#991b1b}
+.badge-met{background:#dcfce7;color:#166534}
+.badge-partial{background:#fef3c7;color:#92400e}
+.badge-blocked{background:#fee2e2;color:#991b1b}
+.badge-notstarted{background:#e5e7eb;color:#4b5563}
+.badge-policy{background:#ede9fe;color:#5b21b6}
+h2{font-size:1.2rem;margin:1.5rem 0 .75rem;border-bottom:2px solid var(--line);padding-bottom:.35rem}
+h3{font-size:1.05rem;margin:1rem 0 .5rem}
+p{margin:.5rem 0}
+table{width:100%;border-collapse:collapse;margin:.75rem 0;background:var(--card);font-size:.86rem}
+th,td{border:1px solid var(--line);padding:.45rem .6rem;text-align:left;vertical-align:top}
+th{background:#f1f5f9;font-weight:700;color:#334155;position:sticky;top:0}
+tr:nth-child(even)td{background:#fbfdff}
+td.blank{color:var(--muted);font-style:italic}
+td.num{text-align:right}
+a{color:var(--blue-dark)}
+a:hover{text-decoration:underline}
+.src{color:var(--muted);font-size:.78rem}
+.src a{color:#1d4ed8}
+.flagstrip{padding:.5rem 1rem;margin:.75rem 0;border-radius:.4rem;border-left:4px solid;font-size:.9rem}
+.flagstrip.red{background:#fef2f2;border-color:var(--red);color:#7f1d1d}
+.flagstrip.amber{background:#fffbeb;border-color:var(--amber);color:#78350f}
+.flagstrip.green{background:#f0fdf4;border-color:var(--green);color:#14532d}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1rem 0}
+.stat{border:1px solid var(--line);background:var(--card);border-radius:.6rem;padding:1rem}
+.stat .v{font-size:1.75rem;font-weight:700;color:var(--blue-dark)}
+.stat .k{font-size:.8rem;color:var(--muted)}
+.note{background:#eef6ff;border:1px solid #cfe3fb;border-radius:.5rem;padding:.75rem 1rem;font-size:.9rem;margin:1rem 0}
+
+nav a.active{background:#eef3fb;border-color:var(--blue);font-weight:700}
+</style>
+</head>
+<body>
+<header>
+  <h1>Own5 · NFL Line-Origination Dashboard</h1>
+  <p>Session 067f2314 · official-source verification 2026-11-19 UTC · every row source-linked or explicitly blank+flagged</p>
+</header>
+<nav>
+<a href="index.html">Overview</a>
+<a href="pages/executive-summary.html">Executive summary</a>
+<a href="pages/verification-log.html">Verification log</a>
+<a href="pages/standings.html">Standings</a>
+<a href="pages/schedule.html">Schedule (Wk 11)</a>
+<a href="pages/results.html">Results feed (Wk 10)</a>
+<a href="pages/lines.html">Originated lines</a>
+<a href="pages/snapshots.html">Price snapshots</a>
+<a href="pages/injuries.html">Injuries / Availability</a>
+<a href="pages/leaderboard.html">Leaderboard</a>
+<a href="pages/gates.html">Validation gates</a>
+<a href="pages/correlations.html">Correlations</a>
+<a href="pages/questions.html">Questions &amp; answers</a>
+<a href="pages/suggestions.html">Suggestions (review)</a>
+<a href="pages/sources.html" class="active">Sources</a>
+<a href="pages/flagged.html">Flagged for Review</a>
+</nav>
+<div class="container">
+
+<h2>Source registry</h2>
+<p>Every official read used by this desk, with its capture timestamp and use. Page text was retrieved through
+the sandbox page-fetch tool (rendered text, not raw server bytes).</p>
+<table>
+<thead><tr>
+<th>ID</th>
+<th>Source</th>
+<th>URL</th>
+<th>Captured (UTC)</th>
+<th>Used for</th>
+<th>Notes</th>
+</tr></thead><tbody>
+<tr><td><strong>SRC-01</strong></td><td>Official 2026 NFL league standings</td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">https://www.nfl.com/standings/league/2026/REG</a></td><td>2026-11-19</td><td>32-club standings; per-game rates; correlation inputs; model inputs</td><td>Read via sandbox page-fetch tool (rendered text); NET == PF-PA verified for all 32 clubs</td></tr>
+<tr><td><strong>SRC-02</strong></td><td>Official 2026 Week 11 schedule</td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-11" target="_blank" rel="noopener">https://www.nfl.com/schedules/2026/by-week/week-11</a></td><td>2026-11-19</td><td>13 fixtures, kickoff times, networks, venues, byes, fixture context</td><td>Read via sandbox page-fetch tool; Mexico City neutral site for MIN@SF</td></tr>
+<tr><td><strong>SRC-03</strong></td><td>Official 2026 Week 10 scores</td><td><a href="https://www.nfl.com/scores/2026/reg10" target="_blank" rel="noopener">https://www.nfl.com/scores/2026/reg10</a></td><td>2026-11-19</td><td>14 Week-10 finals; results feed; HFA and sigma constants</td><td>Read via sandbox page-fetch tool; Munich international game (NE@DET) marked neutral</td></tr>
+<tr><td><strong>SRC-04</strong></td><td>Official 2026 Week 11 injury report</td><td><a href="https://www.nfl.com/injuries/league/2026/reg11" target="_blank" rel="noopener">https://www.nfl.com/injuries/league/2026/reg11</a></td><td>2026-11-19</td><td>255-row availability capture (26 teams; CIN/WAS report no injuries)</td><td>Read via sandbox page-fetch tool; early-week (Wed) report - 16 game designations, all on IND/HOU</td></tr>
+<tr><td><strong>SRC-05</strong></td><td>Official 2026 Week 11 scores page</td><td><a href="https://www.nfl.com/scores/2026/reg11" target="_blank" rel="noopener">https://www.nfl.com/scores/2026/reg11</a></td><td>2026-11-19</td><td>Week-11 status check (TNF Colts@Texans not final at read time)</td><td>Read via sandbox page-fetch tool</td></tr>
+<tr><td><strong>SRC-06</strong></td><td>Live GitHub Pages site (prior sessions)</td><td><a href="https://sassnarep3-star.github.io/Own5/nfl-desk-35fc3437/" target="_blank" rel="noopener">https://sassnarep3-star.github.io/Own5/nfl-desk-35fc3437/</a></td><td>2026-11-19</td><td>Repo review: prior desk renders correctly with decision-readiness table</td><td>Fetched live; prior-session desk confirmed operational</td></tr>
+<tr><td><strong>SRC-07</strong></td><td>Own5 repository COORDINATION.md</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/arena/067f2314-own5/COORDINATION.md" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/arena/067f2314-own5/COORDINATION.md</a></td><td>2026-11-19</td><td>Session claim, handoff record, cross-session requests</td><td>Shared task board (append-only blocks per session)</td></tr>
+<tr><td><strong>SRC-08</strong></td><td>Desk verification harness</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/arena/067f2314-own5/nfl-desk-067f2314/verify_desk.py" target="_blank" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/arena/067f2314-own5/nfl-desk-067f2314/verify_desk.py</a></td><td>2026-11-19</td><td>Fail-closed row-provenance and reconciliation checks</td><td>Drift alarm: pinned row counts and required fields</td></tr>
+</tbody></table>
+
+</div>
+</body>
+</html>
