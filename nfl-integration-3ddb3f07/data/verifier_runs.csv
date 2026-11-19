@@ -12,6 +12,7 @@ nfl-desk-38430fe3,python3 nfl-desk-38430fe3/verify.py,0,PASS,"verify: 347 injury
 nfl-desk-3cb7800c,python3 nfl-desk-3cb7800c/verify.py,0,PASS,"verify: PASS games=13, byes=6, flags=10, open_flags=9, blocking=2, pages=9, rows=62, links=197"
 nfl-desk-3fb93d11,python3 nfl-desk-3fb93d11/verify.py,0,PASS,OK: every row on every page is either source-linked or explicitly UNVERIFIED.
 nfl-desk-6cbf25fa,python3 nfl-desk-6cbf25fa/verify.py,0,PASS,verify: PASS checks=543 failures=0
+nfl-desk-715e2cd4,python3 nfl-desk-715e2cd4/verify.py,0,PASS,"verify PASSED: 3014 checks, 0 problems"
 nfl-desk-864d5668,python3 nfl-desk-864d5668/verify.py,0,PASS,"37 checks, 0 failures"
 nfl-desk-b8227c47,python3 nfl-desk-b8227c47/verify.py,0,PASS,"verify: PASS - 6 pages, 28 club rows, 4 byes, 14 games, 347 listed rows reconcile; every body row linked or UNVERIFIED; links resolve; rebuild byte-identical"
 nfl-desk-d38e90c5,python3 nfl-desk-d38e90c5/verify.py,0,PASS,"VERIFICATION PASSED: 115 checks, 0 failures"

@@ -51,10 +51,12 @@ The three failing verifiers were diagnosed individually:
 
 * Broken internal links: **0** across every published HTML file (the front door's own pages
   are checked by its own gate; the repository scan covers the other 500+ pages).
-* Every desk's own verifier re-run: **31 verifiers, 30 PASS, 1 FAIL** — the failure is the
-  `nfl-b34253a1` line-hash audit, which is regenerated as the last step of this session
-  because this session changed files in its scope (`.github/workflows/`,
-  `scripts/build.py`, `research/nfl-3ddb3f07/**`, `data/**`).
+* Every desk's own verifier re-run: **32 verifiers, 32 PASS, 0 FAIL**. The
+  `nfl-b34253a1` line-hash audit is regenerated as the last step of this session, because
+  this session changed files in its scope (`.github/workflows/`, `scripts/build.py`,
+  `research/nfl-3ddb3f07/**`, `data/**`, `repo-review/index.html`). The sweep is
+  re-run after the audit is regenerated, so the published table records the audit
+  passing rather than failing.
 * `nba-commission`, which had been failing on the 127 broken links, now passes: **ALL
   CHECKS PASSED (6 groups, 0 failures)**.
 

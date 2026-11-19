@@ -3945,12 +3945,13 @@ a planted certification claim are each caught).
 
 ### Verification performed (printed, not asserted)
 
-1. `python3 nfl-integration-3ddb3f07/run_verifiers.py` → **31 verifiers, 31 PASS, 0 FAIL**
-   (every desk's own verifier, re-run from the merged tree).
-2. `python3 repo-review/run_verifiers.py` → 30 verifiers, 30 PASS, 0 FAIL;
+1. `python3 nfl-integration-3ddb3f07/run_verifiers.py` → **32 verifiers, 32 PASS, 0 FAIL**
+   (every desk's own verifier, re-run from the merged tree; the count grows as desks are
+   merged — it was 31 before session `715e2cd4`'s desk landed on `main`).
+2. `python3 repo-review/run_verifiers.py` → 31 verifiers, 31 PASS, 0 FAIL;
    `python3 repo-review/build.py` → the published sweep and inventory regenerated;
    `python3 repo-review/verify.py` → **877 checks, 0 failures**.
-3. `python3 nfl-b34253a1/verify.py` → **PASS** (103,709 audited lines re-hashed) after the
+3. `python3 nfl-b34253a1/verify.py` → **PASS** (104,168 audited lines re-hashed) after the
    repository audit was regenerated — see the tripwire note below.
 4. `python3 scripts/seed.py && python3 scripts/build.py` → 8 root pages regenerated with no
    drift; `python3 -m unittest discover -s tests` → **95 tests OK**.

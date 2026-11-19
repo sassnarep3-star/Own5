@@ -67,9 +67,9 @@ nothing here is inferred. Where a value could not be confirmed, it is blank and 
   certification claim, and the repository-wide link check).
 * 9 unit tests, including negative controls: a row stripped of its source, a link pointed
   at a missing file and a planted certification claim are each caught.
-* Every desk's own verifier re-run from the merged tree: 31 verifiers, 30 pass, and the
-  one failure is the repository-wide line-hash audit that is regenerated after every merge
-  that touches an audited file (a known fragility, recorded below).
+* Every desk's own verifier re-run from the merged tree: **32 verifiers, 32 pass**. The
+  repository-wide line-hash audit is regenerated after every merge that touches an audited
+  file (a known fragility, recorded below), and it passes against the merged tree.
 * Repository-wide link check: 0 broken internal links across every published HTML file.
 
 ## 6. Flagged, not blocking
