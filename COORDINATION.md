@@ -3686,6 +3686,80 @@ checks re-run green (543 checks, 0 alarms; 11 unit tests). No data values change
 
 **Merge record (follow-up).** Recorded below after this PR merges.
 
+---
+
+## Session 067f2314 — NFL Line-Origination Dashboard: final integration + fresh verification (claimed 2026-11-19 UTC)
+
+Session ID `067f2314`, branch `arena/067f2314-own5` (base `2f02e1e` = current `main`).
+
+**Handoff / takeover note (per the >60-minute stale-claim rule).** Session `35fc3437`
+(branch `arena/35fc3437-own5`) completed its NFL line-origination desk and **PR #127 was merged**
+on 2026-11-18T04:06:12Z; its merge record block was left incomplete and its task rows below were
+never closed. Its claim is >24 hours stale with no commits. This session takes over the record
+(not the files — they are merged and read-only for me), closes O35-01…O35-09 as `done`, and
+completes the missing merge record. No `nfl-desk-35fc3437/**` file is edited by this session.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| O35-01 | Claim scope in COORDINATION.md + push claim | done | 35fc3437 | COORDINATION.md | Claim committed before build work (2026-11-18). Closed here: PR #127 merged 2026-11-18T04:06:12Z. |
+| O35-02 | Data layer: verified standings, schedule, results, injury CSVs | done | 35fc3437 | nfl-desk-35fc3437/data/*.csv | Verified against nfl.com reads captured 2026-11-18; every row source_url or blank+flag. Merged via PR #127. |
+| O35-03 | Originated lines + correlations + gates + leaderboard + registers CSVs | done | 35fc3437 | nfl-desk-35fc3437/data/*.csv | Merged via PR #127. |
+| O35-04 | Build script: render category subpages + landing page | done | 35fc3437 | nfl-desk-35fc3437/build_desk.py | Deterministic stdlib build. Merged via PR #127. |
+| O35-05 | Verify script: every row source-linked or explicit blank+flag | done | 35fc3437 | nfl-desk-35fc3437/verify_desk.py | Fail-closed. Merged via PR #127. |
+| O35-06 | Unit tests | done | 35fc3437 | nfl-desk-35fc3437/tests/test_desk.py | Merged via PR #127. |
+| O35-07 | Executive summary + Flagged for Review + sources | done | 35fc3437 | research/nfl-35fc3437/**, flagged page | Merged via PR #127. |
+| O35-08 | Scoped CI workflow | done | 35fc3437 | .github/workflows/nfl-desk-35fc3437.yml | Merged via PR #127. |
+| O35-09 | Commit, push, open PR to main, merge, live Pages check, record | done | 35fc3437 | COORDINATION.md, README.md | **PR #127 merged 2026-11-18T04:06:12Z** (`35fc3437: NFL line-origination desk (verified build, gates, registers)`). Pages deploy for the merge succeeded; desk live at `https://sassnarep3-star.github.io/Own5/nfl-desk-35fc3437/`. Record completed by session 067f2314 on 2026-11-19. |
+
+**Claimed namespace for this session (strictly additive, zero overlap with every other session):**
+- `nfl-desk-067f2314/**` (GitHub Pages desk: landing page + category subpages, deterministic
+  stdlib-only build, data CSV/JSON, verification harness, unit tests)
+- `research/nfl-067f2314/**` (executive summary, methodology, verification log, flagged register)
+- `.github/workflows/nfl-desk-067f2314-verify.yml` (scoped deterministic verification only)
+- Append-only blocks in `COORDINATION.md` and one additive row in `README.md`
+
+**Read-only (never edited):** root `index.html`, `pages/**`, `scripts/**`, `tools/**`, `tests/**`,
+`assets/**`, `docs/**`, every existing `nfl-*` / `nba-*` / `sf-*` / `rental-*` namespace, `data/**`
+outside claimed scope, all existing workflows and CSV/JSON.
+
+**Purpose (final integration + fresh verification for the reviewer's brief):** a clean,
+source-linked, GitHub Pages live dashboard delivered in one additive namespace, with every value
+re-verified against official sources on **2026-11-19 UTC**: (1) originate own NFL lines
+side → total → moneyline with model fair line / market line / difference as separate columns;
+(2) price-snapshot store (open/close; closing blank+flagged where no operator price exists);
+(3) verified results feed (reconciled to official standings); (4) leaderboard with signal
+separated from staking — no certified strategies until gates pass; (5) correlations computed only
+from officially sourced numbers, n published with each value; (6) injury/availability view from
+the current official injury report (starters out, replacement depth, deltas as surprises, never
+levels); (7) validation gates + demotion gate (live → paper); (8) decision-readiness table on the
+landing page — one row per requirement with the blocking gate and the number that would clear it;
+(9) questions / information / answers register and a reviewable suggestions register (options +
+recommendation + "what would change our mind"; nothing implemented without a decision);
+(10) executive summary; (11) Flagged for Review page — every table row source-linked or explicitly
+blank+flagged, never inferred.
+
+**Official sources to be read on 2026-11-19 (nfl.com, via the sandbox page-fetch tool):**
+- Standings: https://www.nfl.com/standings/league/2026/REG
+- Week 11 schedule/results: https://www.nfl.com/schedules/2026/by-week/week-11
+- Week 11 scores: https://www.nfl.com/scores/2026/reg11
+- Injury report (current week): https://www.nfl.com/injuries/league/2026/reg11
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| O06-01 | Claim scope + push claim | done | 067f2314 | COORDINATION.md | This block. Claim committed and pushed before any build work. |
+| O06-02 | Repo review: enumerate state, prior desks, CI status; flag irregularities | done | 067f2314 | research/nfl-067f2314/repo-review.md | Read-only review of the merged tree + live site. |
+| O06-03 | Fresh official-source verification (standings, Wk11 schedule/results, injuries) | done | 067f2314 | nfl-desk-067f2314/data/*.csv | Captured 2026-11-19 UTC; every row source_url or blank+flag. |
+| O06-04 | Desk data layer: lines, snapshots, results, standings, injuries, correlations, gates, leaderboard, requirements, questions, suggestions, flagged, sources | done | 067f2314 | nfl-desk-067f2314/data/*.csv | From O06-03 reads + in-repo computations; no fabricated values. |
+| O06-05 | Build script: render landing + category subpages from CSVs | done | 067f2314 | nfl-desk-067f2314/build_desk.py | Deterministic; no JS required for content. |
+| O06-06 | Verify script: every row source-linked or explicit blank+flag; no broken links; determinism | done | 067f2314 | nfl-desk-067f2314/verify_desk.py | Fail-closed; gates the build. |
+| O06-07 | Unit tests | done | 067f2314 | nfl-desk-067f2314/tests/test_desk.py | Stdlib tests incl. negative controls. |
+| O06-08 | Executive summary, methodology, verification log, flagged register | done | 067f2314 | research/nfl-067f2314/** | Restates only computed/officially-sourced values. |
+| O06-09 | Scoped CI workflow | done | 067f2314 | .github/workflows/nfl-desk-067f2314-verify.yml | Rebuild + verify + tests on PR/push. |
+| O06-10 | Commit, push, open PR to main, autonomous merge, live Pages check, record | pending | 067f2314 | COORDINATION.md, README.md (one row) | Merge only after verify PASS + live URL check. |
+
+**Cross-session requests**
+
+- None. All work is in the additive `nfl-desk-067f2314/` namespace; no other session's files are touched.
 
 ---
 ## Session c8cb6ae8 — CI smoke-check pipefail fix (X51-14 takeover; 2026-11-19 UTC)

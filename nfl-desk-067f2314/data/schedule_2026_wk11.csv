@@ -1,0 +1,20 @@
+game_id,date,time_et,away_team,away_abbr,home_team,home_abbr,venue,neutral_site,network,bye,source_url
+G11-01,2026-11-19,8:15 PM,Indianapolis Colts,IND,Houston Texans,HOU,NRG Stadium,no,PRIME,,https://www.nfl.com/schedules/2026/by-week/week-11
+G11-02,2026-11-22,1:00 PM,Miami Dolphins,MIA,Buffalo Bills,BUF,Highmark Stadium,no,CBS,,https://www.nfl.com/schedules/2026/by-week/week-11
+G11-03,2026-11-22,1:00 PM,Baltimore Ravens,BAL,Carolina Panthers,CAR,Bank of America Stadium,no,FOX,,https://www.nfl.com/schedules/2026/by-week/week-11
+G11-04,2026-11-22,1:00 PM,New Orleans Saints,NO,Chicago Bears,CHI,Soldier Field,no,FOX,,https://www.nfl.com/schedules/2026/by-week/week-11
+G11-05,2026-11-22,1:00 PM,Tennessee Titans,TEN,Dallas Cowboys,DAL,AT&T Stadium,no,FOX,,https://www.nfl.com/schedules/2026/by-week/week-11
+G11-06,2026-11-22,1:00 PM,Tampa Bay Buccaneers,TB,Detroit Lions,DET,Ford Field,no,FOX,,https://www.nfl.com/schedules/2026/by-week/week-11
+G11-07,2026-11-22,1:00 PM,Arizona Cardinals,AZ,Kansas City Chiefs,KC,GEHA Field at Arrowhead Stadium,no,CBS,,https://www.nfl.com/schedules/2026/by-week/week-11
+G11-08,2026-11-22,1:00 PM,Pittsburgh Steelers,PIT,Philadelphia Eagles,PHI,Lincoln Financial Field,no,CBS,,https://www.nfl.com/schedules/2026/by-week/week-11
+G11-09,2026-11-22,4:05 PM,New York Jets,NYJ,Los Angeles Chargers,LAC,SoFi Stadium,no,FOX,,https://www.nfl.com/schedules/2026/by-week/week-11
+G11-10,2026-11-22,4:25 PM,Jacksonville Jaguars,JAX,New York Giants,NYG,MetLife Stadium,no,CBS,,https://www.nfl.com/schedules/2026/by-week/week-11
+G11-11,2026-11-22,4:25 PM,Las Vegas Raiders,LV,Denver Broncos,DEN,Empower Field at Mile High,no,CBS,,https://www.nfl.com/schedules/2026/by-week/week-11
+G11-12,2026-11-22,8:20 PM,Minnesota Vikings,MIN,San Francisco 49ers,SF,Estadio Banorte (Mexico City),yes,NBC,,https://www.nfl.com/schedules/2026/by-week/week-11
+G11-13,2026-11-23,8:15 PM,Cincinnati Bengals,CIN,Washington Commanders,WAS,FedEx Field,no,ESPN,,https://www.nfl.com/schedules/2026/by-week/week-11
+,,,Atlanta Falcons,ATL,,,,,,yes,https://www.nfl.com/schedules/2026/by-week/week-11
+,,,Cleveland Browns,CLE,,,,,,yes,https://www.nfl.com/schedules/2026/by-week/week-11
+,,,Green Bay Packers,GB,,,,,,yes,https://www.nfl.com/schedules/2026/by-week/week-11
+,,,Los Angeles Rams,LAR,,,,,,yes,https://www.nfl.com/schedules/2026/by-week/week-11
+,,,New England Patriots,NE,,,,,,yes,https://www.nfl.com/schedules/2026/by-week/week-11
+,,,Seattle Seahawks,SEA,,,,,,yes,https://www.nfl.com/schedules/2026/by-week/week-11
