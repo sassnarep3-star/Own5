@@ -4340,7 +4340,7 @@ inventing 23-point edges; (7) the corpus spread sign read backwards, giving a cl
 
 Grep the board for the **exact path** before writing a claim, not after. A claim is cheap to write
 and expensive to unwind once work has started inside it.
-**Cross-session requests (logged, not edited).** As X-B-01…X-B-04 above, plus:
+**Cross-session requests (logged, not edited).**
 - **X-B-05 → `repo-review` owner:** run `python3 repo-review/run_verifiers.py` after this merge; the sweep is dated 2026-11-18 and this namespace adds a verifier it does not list.
 
 ---
@@ -4376,15 +4376,27 @@ columns stay blank until an official source states them.
 
 | ID | Task | Status | Owner | Files touched | Notes |
 |----|------|--------|-------|---------------|-------|
-| TV-01 | Claim scope in COORDINATION.md + push claim before build work | in progress | 42899de4 | COORDINATION.md | This block. |
-| TV-02 | First-hand official reads 2026-11-19: Week-11 injury report (all chunks), Week-10 report (delta baseline), Week-11 schedule (bye clubs + fixtures) | pending | 42899de4 | `data/nfl-teamview-42899de4/*.csv`, `research/nfl-42899de4/VERIFICATION.md` | UTC read clock per file; SHA-256 of raw text retained. |
-| TV-03 | Row-level captures: reg11 + reg10 player rows, per-club roll-up, W10→W11 delta table | pending | 42899de4 | `data/nfl-teamview-42899de4/injury_report_w11.csv`, `injury_report_w10.csv`, `team_view_w11.csv`, `team_delta_w10_w11.csv` | Starters-out / replacements columns blank + flagged unless an official article states them. |
-| TV-04 | Requirements (K-027 and related) status rows + questions + suggestions registers | pending | 42899de4 | `data/nfl-teamview-42899de4/{requirements,questions,suggestions}.csv` | Decision columns left for the owner; nothing auto-approved. |
-| TV-05 | Deterministic site: landing (per-team decision table) + category subpages | pending | 42899de4 | `nfl-teamview-42899de4/**` | Table-first, no JS required for content. |
-| TV-06 | Fail-closed verifier + unit tests (negative controls) | pending | 42899de4 | `nfl-teamview-42899de4/verify.py`, `nfl-teamview-42899de4/tests/**` | Row pins, source-link presence, official-host allowlist, arithmetic identities, link integrity. |
-| TV-07 | Executive summary + Flagged for Review page | pending | 42899de4 | `research/nfl-42899de4/**`, desk flagged page | Restates only computed/verified values. |
-| TV-08 | Scoped CI workflow | pending | 42899de4 | `.github/workflows/nfl-teamview-42899de4.yml` | Rebuild → diff → verify → test, path-scoped. |
-| TV-09 | PR to main, autonomous merge after verify PASS, Pages live check, record | pending | 42899de4 | COORDINATION.md, README.md | `gh pr merge <n> --merge`, no approval wait, no `--auto`. |
+| TV-01 | Claim scope in COORDINATION.md + push claim before build work | **done** | 42899de4 | COORDINATION.md | Claim `5b8318e` pushed 2026-11-19T11:45Z before any build work. |
+| TV-02 | First-hand official reads 2026-11-19: Week-11 injury report (all chunks), Week-10 report (delta baseline), Week-11 schedule (bye clubs + fixtures) | **done** | 42899de4 | `data/nfl-teamview-42899de4/*.csv`, `research/nfl-42899de4/VERIFICATION.md` | S-01 reg11 11:46–11:52Z (255 rows); S-02 reg10 11:55–12:03Z (347 rows); S-03 REG11 schedule 11:53Z; S-04 by-week/week-10 12:06Z. |
+| TV-03 | Row-level captures: reg11 + reg10 player rows, per-club roll-up, W10→W11 delta table | **done** | 42899de4 | `data/nfl-teamview-42899de4/injury_report_w11.csv`, `injury_report_w10.csv`, `team_view_w11.csv`, `team_delta_w10_w11.csv` | Cross-checked 253/253 (715e2cd4), 255/255 (nfl-line-audit), 347/347 (f2e20e96); decision-desk mismatch → F-TV-10. Starters/replacements blank + flagged. |
+| TV-04 | Requirements (K-027 and related) status rows + questions + suggestions registers | **done** | 42899de4 | `data/nfl-teamview-42899de4/{requirements,questions,suggestions}.csv` | 10 requirements (6 MET / 1 PARTIAL / 3 BLOCKED), 8 questions, 8 suggestions. |
+| TV-05 | Deterministic site: landing (per-team decision table) + category subpages | **done** | 42899de4 | `nfl-teamview-42899de4/**` | 12 pages + style.css, no wall-clock, table-first, no JS. |
+| TV-06 | Fail-closed verifier + unit tests (negative controls) | **done** | 42899de4 | `nfl-teamview-42899de4/verify.py`, `nfl-teamview-42899de4/tests/**` | 22 checks ALL PASSED; 11/11 negative controls (corruption must fail, clean-tree control passes). |
+| TV-07 | Executive summary + Flagged for Review page | **done** | 42899de4 | `research/nfl-42899de4/**`, desk flagged page | EXECUTIVE_SUMMARY.md + METHODOLOGY.md + VERIFICATION.md; 11 flags on `flagged.html`. |
+| TV-08 | Scoped CI workflow | **done** | 42899de4 | `.github/workflows/nfl-teamview-42899de4.yml` | Rebuild byte-diff → verifier → controls, path-scoped; green on PR and on merge push (run 44533942197). |
+| TV-09 | PR to main, autonomous merge after verify PASS, Pages live check, record | **done** | 42899de4 | COORDINATION.md, README.md | PR #182 merged → `e4dabc6`; Pages `built`; record below. |
 
-**Cross-session requests (logged, not edited):** none at claim time.
+### Completion record (2026-11-19, TV-01…TV-09 DONE)
+
+- **Sources (first-hand, `fetch_page`):** S-01 `nfl.com/injuries/league/2026/reg11` 11:46–11:52Z → `injury_report_w11.csv` 255 rows (253 player / 24 clubs + 2 explicit "No Injuries Reported" CIN/WAS); S-02 `reg10` 11:55–12:03Z → 347 rows / 28 clubs; S-03 `schedules/2026/REG11` 11:53Z → 13 fixtures + 6 byes (ATL CLE GB LAR NE SEA); S-04 `by-week/week-10` 12:06Z → 14 finals (Munich NE@DET noted) + 4 byes (CHI DEN PHI TB). Register: `data/nfl-teamview-42899de4/sources.csv`.
+- **Verification:** `python3 nfl-teamview-42899de4/verify.py` → ALL CHECKS PASSED (pins, source allowlist, blank-with-flag, starter/replacement blanks, independent recomputation of both 32-club views + delta, flag referential integrity, byte-identical rebuild of 16 files, site link integrity); `python3 nfl-teamview-42899de4/tests/test_verify.py` → 11/11 negative controls OK (corrupted count, starter value, zero-fill of unpublished designations, bad source, silent blank, deleted row, forged delta, bye values, undefined flag, tampered HTML all rejected; clean-tree control passes). CI `nfl-teamview-42899de4-verify` green on the PR and on the merge push (run 44533942197, success).
+- **Irregularities (11, `data/nfl-teamview-42899de4/flagged.csv`):** F-TV-01/02 starters_out + replacement_named blank for all 32 clubs both weeks (no official source read; K-027/K-035 gates); F-TV-03/04 W11 designations printed only for Thu IND@HOU (IND net 9, HOU net 7) + CIN/WAS explicit zero → 22 clubs' designation columns and deltas blank-not-zero; F-TV-05 single Wednesday snapshot (series = S-02-01); F-TV-06 explicit-zero vs bye distinction; F-TV-10 `data/decision-desk/injuries_wk10_players.csv` 276 rows vs official 347 (85 missing / 14 extra) — reported not edited; F-TV-11 final-W10 vs mid-week-W11 publication asymmetry labelled in-table; F-TV-07 LA/LAR alias canonicalised; F-TV-08 news-rail headlines not modelled; F-TV-09 two international games noted (Munich, Mexico City).
+- **PR:** [#182](https://github.com/sassnarep3-star/Own5/pull/182) — rebased onto `ca07f8e` (COORDINATION.md + README.md append conflicts resolved keeping both sides), all checks green (12 pass / 0 fail), merged with `gh pr merge 182 --merge` → merge commit **`e4dabc6`**.
+- **Pages:** repo Pages `status=built` at `e4dabc6`; checks `build`, `deploy`, `live-pages-smoke` all **success** on the merge commit; live desk: <https://sassnarep3-star.github.io/Own5/nfl-teamview-42899de4/pages/> (read-back via GitHub's `live-pages-smoke`; direct curl from this sandbox is blocked by egress policy — github.io not on the allowlist).
+
+**Cross-session requests (logged, not edited):**
+- **X-B-05 → `repo-review` owner:** run `python3 repo-review/run_verifiers.py`; the sweep is dated 2026-11-18 and this namespace adds a verifier it does not list.
+- **X-TV-01 → root `index.html` / integration owner:** add a nav row for this desk (the additive README row is merged); the root landing remains CI-locked to the integration session, so this session did not touch it.
+- **X-TV-02 → `data/decision-desk/` owner:** F-TV-10 — `injuries_wk10_players.csv` (276 rows) disagrees with the official reg10 page (347 rows). This session did not edit that file; the official-page transcription matching `nfl-desk-f2e20e96` 347/347 is in `data/nfl-teamview-42899de4/injury_report_w10.csv`.
+- **X-TV-03 → `Verify nfl-desk-067f2314` workflow owner:** its `pages-smoke` job was still `in_progress` 5+ minutes after the merge push (run 44533942743, started 2026-11-19T13:29:41Z) while every other check on `e4dabc6` had completed — the same known flake as runs 44487132313 / 44486026440. Its `desk-verify` job passed; out of this session's scope.
 
