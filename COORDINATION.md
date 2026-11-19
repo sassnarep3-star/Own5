@@ -4340,3 +4340,51 @@ inventing 23-point edges; (7) the corpus spread sign read backwards, giving a cl
 
 Grep the board for the **exact path** before writing a claim, not after. A claim is cheap to write
 and expensive to unwind once work has started inside it.
+**Cross-session requests (logged, not edited).** As X-B-01…X-B-04 above, plus:
+- **X-B-05 → `repo-review` owner:** run `python3 repo-review/run_verifiers.py` after this merge; the sweep is dated 2026-11-18 and this namespace adds a verifier it does not list.
+
+---
+
+## Session 42899de4 — NFL Week-11 Per-Team Availability Decision View (claimed 2026-11-19T11:45Z)
+
+Session ID `42899de4`, branch `arena/42899de4-own5` (rebased onto `6e78cc5` = current `main`).
+Claim committed and pushed **before any build work**.
+
+**Why this session exists (gap, not duplication).** Brief line: *"Add a per-team view: starters out,
+replacements named, net injury count — Quick team-level decision view."* The traceability desk
+(6e13b9ff) scores this **K-027 PARTIAL** because the only per-team table is locked to Week 10
+(`data/decision-desk/team_deficiency_wk10.csv`). No published desk carries a **Week-11** per-club
+decision view built from a first-hand read of the official report. This session builds exactly that,
+additively, with every cell source-linked or blank-and-flagged.
+
+**Claimed namespace (strictly additive, zero overlap):**
+- `nfl-teamview-42899de4/**` (static Pages desk: deterministic stdlib build, fail-closed verifier, unit tests, CSS)
+- `data/nfl-teamview-42899de4/**` (CSV data layer: row-level Week-11 and Week-10 official report captures, per-club team view, delta table, sources, flagged, questions, suggestions)
+- `research/nfl-42899de4/**` (executive summary, methodology, verification log)
+- `.github/workflows/nfl-teamview-42899de4.yml` (scoped rebuild + verify + tests)
+- Append-only block in `COORDINATION.md`; one additive row in `README.md`
+
+**Read-only (never edited):** root `index.html`, `pages/**`, `assets/**`, `scripts/**`, `tools/**`,
+`tests/**`, `docs/**`, `data/**` outside `data/nfl-teamview-42899de4/`, all existing workflows, and
+every other `nfl-*` / `nba-*` / `sf-*` / `rental-*` / `own5-*` namespace. Existing defects owned by
+other sessions are reported here, not edited.
+
+**Verification rule (hard):** every factual cell links to its official source (nfl.com report/schedule
+pages) with a UTC read clock. A value that cannot be confirmed from an official source is left
+**blank** and flagged. No depth rank, no starter status and no replacement name is inferred — those
+columns stay blank until an official source states them.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| TV-01 | Claim scope in COORDINATION.md + push claim before build work | in progress | 42899de4 | COORDINATION.md | This block. |
+| TV-02 | First-hand official reads 2026-11-19: Week-11 injury report (all chunks), Week-10 report (delta baseline), Week-11 schedule (bye clubs + fixtures) | pending | 42899de4 | `data/nfl-teamview-42899de4/*.csv`, `research/nfl-42899de4/VERIFICATION.md` | UTC read clock per file; SHA-256 of raw text retained. |
+| TV-03 | Row-level captures: reg11 + reg10 player rows, per-club roll-up, W10→W11 delta table | pending | 42899de4 | `data/nfl-teamview-42899de4/injury_report_w11.csv`, `injury_report_w10.csv`, `team_view_w11.csv`, `team_delta_w10_w11.csv` | Starters-out / replacements columns blank + flagged unless an official article states them. |
+| TV-04 | Requirements (K-027 and related) status rows + questions + suggestions registers | pending | 42899de4 | `data/nfl-teamview-42899de4/{requirements,questions,suggestions}.csv` | Decision columns left for the owner; nothing auto-approved. |
+| TV-05 | Deterministic site: landing (per-team decision table) + category subpages | pending | 42899de4 | `nfl-teamview-42899de4/**` | Table-first, no JS required for content. |
+| TV-06 | Fail-closed verifier + unit tests (negative controls) | pending | 42899de4 | `nfl-teamview-42899de4/verify.py`, `nfl-teamview-42899de4/tests/**` | Row pins, source-link presence, official-host allowlist, arithmetic identities, link integrity. |
+| TV-07 | Executive summary + Flagged for Review page | pending | 42899de4 | `research/nfl-42899de4/**`, desk flagged page | Restates only computed/verified values. |
+| TV-08 | Scoped CI workflow | pending | 42899de4 | `.github/workflows/nfl-teamview-42899de4.yml` | Rebuild → diff → verify → test, path-scoped. |
+| TV-09 | PR to main, autonomous merge after verify PASS, Pages live check, record | pending | 42899de4 | COORDINATION.md, README.md | `gh pr merge <n> --merge`, no approval wait, no `--auto`. |
+
+**Cross-session requests (logged, not edited):** none at claim time.
+
