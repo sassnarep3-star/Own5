@@ -1,0 +1,223 @@
+{
+  "registration_id": "REG-D6C404D4-V1",
+  "registered_by_session": "d6c404d4",
+  "registered_utc": "2026-11-19T06:57:53Z",
+  "registered_before": "Any evaluation code for this session existed. The commit that first contains this file is the registration; its hash is published on the site and checked by the verifier against the file content hash below.",
+  "content_sha256_note": "The verifier recomputes SHA-256 of this file with the 'self_sha256' field left as an empty string and records the result in data/preregistration_commit.json together with the git commit that introduced it. If they disagree, the site shows REGISTRATION BROKEN.",
+  "inputs_frozen": {
+    "pinned_datasets": [
+      {
+        "id": "G1",
+        "path": "data/decision-desk/raw/games.csv.gz",
+        "sha256": "3d6394dd86427a158d8b22c8f8c5cdfdac13460e2a2c76935180b56dab108532",
+        "role": "game results, kickoff times, rest, closing spread/total/moneylines, roof/surface (2023-2026)"
+      },
+      {
+        "id": "G2",
+        "path": "data/decision-desk/raw/snap_counts_2023.csv.gz",
+        "sha256": "11fbfcfaaf3e0eeef4cbf159821a0e48d9824e84fccbab26b8e50c6f67ad8830",
+        "role": "playing time (not jersey order) for 2023"
+      },
+      {
+        "id": "G3",
+        "path": "data/decision-desk/raw/snap_counts_2024.csv.gz",
+        "sha256": "fe1d819db55d6e333057a8efcec52e8506ef111c7961b0e0411310393bb912bb",
+        "role": "playing time for 2024"
+      },
+      {
+        "id": "G4",
+        "path": "data/decision-desk/raw/snap_counts_2025.csv.gz",
+        "sha256": "66e3e0ff4c61856101718c770a6378112ad0788b10587d25cb574a6bfa17d6a8",
+        "role": "playing time for 2025"
+      },
+      {
+        "id": "G5",
+        "path": "data/decision-desk/raw/snap_counts_2026.csv.gz",
+        "sha256": "4551d3cdf6e9b2d22678f381d70f141c4d927ea0d3aff2c37dfd29b13151e1d5",
+        "role": "playing time for 2026 weeks 1-9"
+      },
+      {
+        "id": "G6",
+        "path": "data/decision-desk/raw/injuries_2026.csv.gz",
+        "sha256": "36c933c378dd06eca5f4d43b1891412ba2d0e632ff0df85ddaddaf32e40ca0d8",
+        "role": "2026 designations (weeks 1-10) for the designation-reliability study"
+      },
+      {
+        "id": "G7",
+        "path": "data/decision-desk/raw/injuries_2023.csv.gz",
+        "sha256": "fc8468eeeaff24151ee94d5d718116cee2baceee07b3ee151c4d42a6aec763e2",
+        "role": "2023 designations"
+      },
+      {
+        "id": "G8",
+        "path": "data/decision-desk/raw/injuries_2024.csv.gz",
+        "sha256": "7fe70c7b1ec165e2fcdf57f29034f8ec104875071600e30eafdb1849591e2a45",
+        "role": "2024 designations"
+      },
+      {
+        "id": "G9",
+        "path": "data/decision-desk/raw/injuries_2025.csv.gz",
+        "sha256": "6f1a882aa738b685dac09f15f67bc1f891c9bc258148c98138f8589c9b08300b",
+        "role": "2025 designations"
+      },
+      {
+        "id": "G10",
+        "path": "data/decision-desk/raw/stats_player_week_2024.csv.gz",
+        "sha256": "61fc9a44706522218a4448001706e3fec65ebbb97c1d9c5746ceef364989125d",
+        "role": "player box scores 2024"
+      },
+      {
+        "id": "G11",
+        "path": "data/decision-desk/raw/stats_player_week_2025.csv.gz",
+        "sha256": "c7401e321bdb369443f3280b9acd74ba6e16d82e710383bf1c01acabfebeac0b",
+        "role": "player box scores 2025"
+      },
+      {
+        "id": "G12",
+        "path": "data/decision-desk/raw/stats_player_week_2026.csv.gz",
+        "sha256": "bc02fda86575e80f801aea87dcb91560dfd4b24c020bc75aee030ba8b8db11c3",
+        "role": "player box scores 2026 weeks 1-9"
+      }
+    ],
+    "hashes_are_recomputed": "Every sha256 above is recomputed by verify.py from the file on disk before any number is published. A mismatch is a hard failure; the value is never carried on trust.",
+    "official_reads": [
+      {
+        "id": "O1",
+        "url": "https://www.nfl.com/standings/league/2026/REG",
+        "read_utc": "2026-11-19T06:50:00Z",
+        "what": "32-club standings (W-L-T, PCT, PF, PA, NET), read in two chunks"
+      },
+      {
+        "id": "O2",
+        "url": "https://www.nfl.com/schedules/2026/by-week/week-10",
+        "read_utc": "2026-11-19T06:52:00Z",
+        "what": "14 finals + 4 byes (CHI, DEN, PHI, TB)"
+      },
+      {
+        "id": "O3",
+        "url": "https://www.nfl.com/schedules/2026/by-week/week-11",
+        "read_utc": "2026-11-19T06:49:00Z",
+        "what": "13 fixtures, kickoff, network, 6 byes (ATL, CLE, GB, LA, NE, SEA), Mexico City game"
+      },
+      {
+        "id": "O4",
+        "url": "https://www.nfl.com/injuries/league/2026/reg11",
+        "read_utc": "2026-11-19T06:53:00Z",
+        "what": "Week 11 injury report: 26 club tables transcribed; CIN and WAS print 'No Injuries Reported'"
+      },
+      {
+        "id": "O5",
+        "url": "https://www.nfl.com/games/vikings-at-49ers-2026-reg-11",
+        "read_utc": "2026-11-18T03:55:13Z",
+        "what": "venue MEXICO CITY / ESTADIO BANORTE (read by desk 6cbf25fa, re-used as its own row with its own stamp)"
+      },
+      {
+        "id": "O6",
+        "url": "https://www.nfl.com/legal/terms/",
+        "read_utc": "2026-11-19T06:58:00Z",
+        "what": "s.1.3 permitted uses: individual non-commercial; systematic retrieval prohibited without written consent -> DATA POLICY"
+      },
+      {
+        "id": "O7",
+        "url": "https://sportsbook.draftkings.com/leagues/football/nfl",
+        "read_utc": "2026-11-19T06:57:00Z",
+        "what": "Week 11 spreads/totals/moneylines, operator DraftKings (US-VA geolocation token in page)"
+      },
+      {
+        "id": "O8",
+        "url": "https://sportsbook.fanduel.com/navigation/nfl",
+        "read_utc": "2026-11-19T06:59:00Z",
+        "what": "Week 11 spreads/totals/moneylines, operator FanDuel"
+      }
+    ]
+  },
+  "data_policy": {
+    "id": "P-01",
+    "rule": "No row-level official NFL data is republished on the site. The site publishes derived aggregates only (ratings, probabilities, fair lines, residuals, correlations, scores) plus links to the official page. Raw capture bytes are not committed for nfl.com pages in this namespace; only sha256 + byte count + UTC stamp are stored. Market quotes are stored with the operator name, the printed price, the read UTC, and the page URL, and are attributed to that operator.",
+    "basis": "https://www.nfl.com/legal/terms/ section 1.3 (read 2026-11-19).",
+    "consequence": "Backtests publish aggregated results computed locally from pinned datasets whose hashes are published; the datasets themselves stay in the repo's existing pinned snapshot and are not re-hosted here.",
+    "decided_before_any_backtest_was_published": true
+  },
+  "model": {
+    "name": "D6C-WEIGHTED-EFFICIENCY-v1",
+    "corpus": "Every REG game in G1 with both scores present, seasons 2023-2026, week-by-week (a game may only use ratings built from games strictly before its week). 2026 data is the pinned snapshot: weeks 1-9, plus week 10 finals read officially on 2026-11-19 (O2) which are appended as results only after their kickoff.",
+    "ratings": "For each team and each side of the ball, a recency-weighted, opponent-adjusted offensive points-per-drive rate and defensive points-allowed-per-drive rate are estimated by iterative fitting on drive counts. Drives are estimated from official play counts in the player box scores (G10-G12) \u2014 no proprietary drive file is used.",
+    "inputs_published": "For every originated market the site stores: the rating set used, the games each rating is based on (n), the home-field term, the fitted dispersion (sigma) for totals, the tie probability, and a sha256 over the exact input JSON.",
+    "markets_in_order": [
+      "side",
+      "total",
+      "moneyline"
+    ],
+    "market_columns": "fair line, operator consensus line, difference (fair minus market) are three separate columns on every row; when a market line is missing the cell is blank and badged, never filled.",
+    "consensus_rule": "Model-vs-market uses the median of the named operators' main lines, after de-vigging both sides. Single-operator rows are published with n_books=1 and are not used for consensus claims."
+  },
+  "strategies": [
+    {
+      "id": "S1",
+      "division": "single",
+      "definition": "Originated side: bet the side whose model probability minus de-vigged consensus probability is at least +3.0 percentage points, at the operator price with the best available number.",
+      "frozen": true
+    },
+    {
+      "id": "S2",
+      "division": "single",
+      "definition": "Originated total: bet over/under when the model total differs from the consensus total by at least 2.0 points AND the model probability edge is at least +2.5 pp.",
+      "frozen": true
+    },
+    {
+      "id": "S3",
+      "division": "single",
+      "definition": "Originated moneyline: bet the underdog only when its model win probability exceeds its de-vigged implied probability by at least +4.0 pp.",
+      "frozen": true
+    },
+    {
+      "id": "S4",
+      "division": "single",
+      "definition": "Control baseline: always bet the home team on the spread; always bet the favourite on the moneyline; always bet the over on the total (three separate control rows, no skill claimed).",
+      "frozen": true
+    },
+    {
+      "id": "S5",
+      "division": "same-game parlay",
+      "definition": "Two legs only when a directly validated joint probability is available (bivariate-normal or empirical joint). Marginal multiplication is forbidden. Frozen and BLOCKED until joint evidence exists \u2014 the site publishes the joint-vs-marginal gap as evidence, not as a bet.",
+      "frozen": true
+    },
+    {
+      "id": "S6",
+      "division": "cross-game parlay",
+      "definition": "Two independent game lines. Only admissible when the measured cross-game correlation is indistinguishable from zero on the published sample (|r| confidence interval contains 0). Payout uses the operator's published fixed-odds multiplication.",
+      "frozen": true
+    },
+    {
+      "id": "S7",
+      "division": "prop combo",
+      "definition": "Player-yardage legs. Only admissible when the empirical correlation matrix for the exact leg pair is published with n and the joint probability is computed from a fitted bivariate distribution, not by multiplication.",
+      "frozen": true
+    }
+  ],
+  "evaluation": {
+    "primary_metric": "Benchmark-relative Brier skill score against the de-vigged market probability (market is the benchmark). A strategy's skill is (Brier_market - Brier_strategy) / Brier_market over eligible games.",
+    "secondary_metrics": [
+      "log loss vs market",
+      "closing-line value proxy = average (model price minus consensus price) on bets taken at consensus (never used alone)",
+      "unit ROI at the operator price (staking, shown separately and never merged into the skill column)"
+    ],
+    "uncertainty": "Cluster bootstrap over games (1,000 resamples, fixed seed 20261119) for every skill and ROI number; the site publishes the 5th and 95th percentile.",
+    "multiplicity": "All S1-S7 p-values get a Holm correction over the number of strategies evaluated in this registration (7). A strategy is certified only if the corrected p < 0.05 AND the cluster-bootstrap lower bound on Brier skill is > 0.",
+    "min_sample": "A strategy cannot be certified on fewer than 100 eligible bets.",
+    "selection_pressure": "Only 7 strategies are registered. No strategy may be added after results are seen; adding one requires a new registration block with its own commit.",
+    "demotion_gate": "A live strategy is demoted to paper when EITHER (a) its rolling 30-bet cluster-bootstrap lower bound on Brier skill falls below 0, or (b) its realized unit ROI at or below -10% over the trailing 50 bets, or (c) its inputs change (new data shape, new source) without a new registration. Demotion is automatic and visible on the leaderboard the same week.",
+    "backtest_numbers_on_leaderboard": "FORBIDDEN. The leaderboard has a 'prospective' section with zero rows until real pre-kickoff forecasts settle. Backtest cells are a separate page and are labelled BACKTEST."
+  },
+  "what_would_change_our_mind": {
+    "S1": "A cluster-bootstrap lower bound on Brier skill above 0 over 300+ prospective bets would confirm it; a lower bound below 0 over the same sample, or a demotion-gate trigger, retires it. A second operator's prices flipping the sign of the residual on more than 40% of games would also retire it.",
+    "S2": "Same rule; additionally the sigma estimate must be stable (rolling 8-week sigma within +/- 10% of the full-sample value), otherwise the total model is not deployable.",
+    "S3": "A published joint distribution of moneylines that shows the 'underdog edge' is fully explained by the vig would retire it.",
+    "S5": "A directly validated joint probability whose gap to the product of marginals is under 1 pp would unblock S5; a gap above 1 pp keeps it blocked."
+  },
+  "honesty": {
+    "what_this_registration_does_not_claim": "It does not claim edge, profitability, or that any signal exists. It freezes definitions before evaluation so the numbers published afterwards can be audited against them.",
+    "retractions_are_published": "Every correction made to a prior desk's claim is listed on the Flagged for Review page with the evidence link."
+  },
+  "self_sha256": ""
+}

@@ -1,0 +1,393 @@
+{
+ "ablations": [
+  {
+   "ablation": "base model, no personnel features",
+   "brier_model": "0.22436",
+   "brier_skill_vs_market": "-0.07815",
+   "change_vs_base": "0",
+   "ci_high": "",
+   "ci_low": "",
+   "games": 744,
+   "note": "personnel-feature variant is NOT ADDED until the join between designations and playing time is complete enough to be point-in-time safe (join rate published on the Designation page)",
+   "seasons": "2023-2026",
+   "source_url": "https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz",
+   "verdict": "the base model is worse than the closing line on every holdout season; no personnel feature can rescue it in this sample"
+  }
+ ],
+ "availability_rows": 255,
+ "built_utc": "2026-11-19T07:05:00Z",
+ "corpus_games": 7117,
+ "corpus_official_week10_rows_added": 14,
+ "corpus_pinned_week10_rows": 0,
+ "corpus_usable_games": 952,
+ "correlations": [
+  {
+   "ci_high": "0.8632",
+   "ci_low": "0.5049",
+   "correlation": "PF/G vs win pct",
+   "n": 32,
+   "note": "recomputed in-repo from the official standings read on 2026-11-19; CI is a 1,000-draw bootstrap over clubs",
+   "sample": "2026 league standings, all 32 clubs",
+   "source_class": "OFFICIAL",
+   "source_url": "https://www.nfl.com/standings/league/2026/REG",
+   "value": "0.7156"
+  },
+  {
+   "ci_high": "",
+   "ci_low": "",
+   "correlation": "PA/G vs win pct",
+   "n": 32,
+   "note": "recomputed in-repo from the official standings read on 2026-11-19",
+   "sample": "2026 league standings, all 32 clubs",
+   "source_class": "OFFICIAL",
+   "source_url": "https://www.nfl.com/standings/league/2026/REG",
+   "value": "-0.7053"
+  },
+  {
+   "ci_high": "",
+   "ci_low": "",
+   "correlation": "PF/G vs PA/G",
+   "n": 32,
+   "note": "recomputed in-repo from the official standings read on 2026-11-19",
+   "sample": "2026 league standings, all 32 clubs",
+   "source_class": "OFFICIAL",
+   "source_url": "https://www.nfl.com/standings/league/2026/REG",
+   "value": "-0.2911"
+  },
+  {
+   "ci_high": "",
+   "ci_low": "",
+   "correlation": "home margin vs game total",
+   "n": 952,
+   "note": "used to justify modelling side and total with a bivariate normal rather than independence",
+   "sample": "every REG game with scores and playing time, 2023-2026",
+   "source_class": "PINNED-DATASET",
+   "source_url": "https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz",
+   "value": "0.0193"
+  },
+  {
+   "ci_high": "",
+   "ci_low": "",
+   "correlation": "QB passing yards vs team top-WR receiving yards (same game)",
+   "n": 1523,
+   "note": "same-game prop legs are strongly dependent; multiplying marginal probabilities would overstate the joint",
+   "sample": "2024-2026 REG team-games with a QB passing line and a WR reception",
+   "source_class": "PINNED-DATASET",
+   "source_url": "https://github.com/nflverse/nflverse-data/releases/tag/player_stats",
+   "value": "0.5130"
+  },
+  {
+   "ci_high": "",
+   "ci_low": "",
+   "correlation": "estimated drives (snaps/6.2) vs points scored",
+   "n": 952,
+   "note": "a weak relation is expected; the drive proxy is a pace control, not a scoring model",
+   "sample": "every REG game with playing time, 2023-2026",
+   "source_class": "PINNED-DATASET",
+   "source_url": "https://github.com/nflverse/nflverse-data/releases/download/snap_counts/snap_counts_2026.csv.gz",
+   "value": "0.1665"
+  }
+ ],
+ "designation": [
+  {
+   "designation_as_printed": "Questionable",
+   "join_rate": "0.600",
+   "matched_to_playing_time": 2982,
+   "note": "played = recorded an offensive snap share above 5% in that club-week; a missing join is not counted as 'did not play'",
+   "played_share": "0.2501",
+   "played_share_ci_high": "0.2623",
+   "played_share_ci_low": "0.2383",
+   "rows_in_reports": 4970,
+   "seasons_pooled": "2023, 2024, 2025, 2026",
+   "source_url": "https://github.com/nflverse/nflverse-data/releases/tag/injuries"
+  },
+  {
+   "designation_as_printed": "Out",
+   "join_rate": "0.000",
+   "matched_to_playing_time": 1,
+   "note": "played = recorded an offensive snap share above 5% in that club-week; a missing join is not counted as 'did not play'",
+   "played_share": "0.0000",
+   "played_share_ci_high": "0.0009",
+   "played_share_ci_low": "0.0000",
+   "rows_in_reports": 4087,
+   "seasons_pooled": "2024",
+   "source_url": "https://github.com/nflverse/nflverse-data/releases/tag/injuries"
+  },
+  {
+   "designation_as_printed": "Doubtful",
+   "join_rate": "0.006",
+   "matched_to_playing_time": 3,
+   "note": "played = recorded an offensive snap share above 5% in that club-week; a missing join is not counted as 'did not play'",
+   "played_share": "0.0020",
+   "played_share_ci_high": "0.0113",
+   "played_share_ci_low": "0.0004",
+   "rows_in_reports": 499,
+   "seasons_pooled": "2023",
+   "source_url": "https://github.com/nflverse/nflverse-data/releases/tag/injuries"
+  },
+  {
+   "designation_as_printed": "Note",
+   "join_rate": "0.833",
+   "matched_to_playing_time": 5,
+   "note": "played = recorded an offensive snap share above 5% in that club-week; a missing join is not counted as 'did not play'",
+   "played_share": "0.3333",
+   "played_share_ci_high": "0.7000",
+   "played_share_ci_low": "0.0968",
+   "rows_in_reports": 6,
+   "seasons_pooled": "2024",
+   "source_url": "https://github.com/nflverse/nflverse-data/releases/tag/injuries"
+  }
+ ],
+ "holdout_screen": 7,
+ "injury_delta": {
+  "changed_rows": 225,
+  "dropped_from_report": 213,
+  "now_rows": 253,
+  "prior_rows": 347
+ },
+ "leaderboard_rows": 6,
+ "line_bias": {
+  "ci": [
+   0.40161725067385445,
+   2.048037889039242
+  ],
+  "closing_total_bias": 1.2553763440860215,
+  "clusters": 49,
+  "corr_close": 0.31800281789061313,
+  "corr_model": 0.18674892468983556,
+  "n": 741,
+  "over_rate": 0.5276653171390013,
+  "roi": 0.5350263771316404,
+  "sd_close_total": 4.313267661539869,
+  "sd_model_total": 5.956545991119359
+ },
+ "log136": {
+  "agree": 117,
+  "blank": 16,
+  "missing": 3,
+  "rows": 136
+ },
+ "luck": {
+  "bets_needed": 358.52818,
+  "brier_model": 0.22436,
+  "brier_skill": -0.07815,
+  "home_cover_rate": 0.48522,
+  "n": 744,
+  "n_brier": 744
+ },
+ "origination": {
+  "games": 7117,
+  "p_tie": 0.002248138260503021,
+  "sigma_n": 952,
+  "sigma_total": 13.069419522211145,
+  "ties": 16
+ },
+ "origination_rows": 52,
+ "prediction_error": [
+  {
+   "closing_side_bias": "2.867",
+   "closing_total_bias": "1.820",
+   "closing_total_bias_sd": "13.404",
+   "games": 64,
+   "model_closer_than_line_side": "0.4688",
+   "note": "walk-forward, model refit each week on prior weeks only; bias = mean(actual - forecast), sd = dispersion of that residual. MAE is decomposed in the note on the Model page: the model's error is bias plus less dispersion than the closing line, and the closing line is itself biased low.",
+   "season": 2023,
+   "side_bias_model": "2.292",
+   "side_mae_closing_line": "10.586",
+   "side_mae_model": "11.332",
+   "source_url": "https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz",
+   "total_bias_model": "0.087",
+   "total_bias_model_sd": "15.923",
+   "total_mae_closing_line": "10.305",
+   "total_mae_model": "12.645"
+  },
+  {
+   "closing_side_bias": "0.375",
+   "closing_total_bias": "1.476",
+   "closing_total_bias_sd": "12.487",
+   "games": 272,
+   "model_closer_than_line_side": "0.4743",
+   "note": "walk-forward, model refit each week on prior weeks only; bias = mean(actual - forecast), sd = dispersion of that residual. MAE is decomposed in the note on the Model page: the model's error is bias plus less dispersion than the closing line, and the closing line is itself biased low.",
+   "season": 2024,
+   "side_bias_model": "-0.281",
+   "side_mae_closing_line": "9.610",
+   "side_mae_model": "10.304",
+   "source_url": "https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz",
+   "total_bias_model": "1.230",
+   "total_bias_model_sd": "13.230",
+   "total_mae_closing_line": "9.730",
+   "total_mae_model": "10.327"
+  },
+  {
+   "closing_side_bias": "0.572",
+   "closing_total_bias": "1.151",
+   "closing_total_bias_sd": "13.160",
+   "games": 272,
+   "model_closer_than_line_side": "0.4596",
+   "note": "walk-forward, model refit each week on prior weeks only; bias = mean(actual - forecast), sd = dispersion of that residual. MAE is decomposed in the note on the Model page: the model's error is bias plus less dispersion than the closing line, and the closing line is itself biased low.",
+   "season": 2025,
+   "side_bias_model": "-0.149",
+   "side_mae_closing_line": "9.722",
+   "side_mae_model": "10.431",
+   "source_url": "https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz",
+   "total_bias_model": "-0.186",
+   "total_bias_model_sd": "13.627",
+   "total_mae_closing_line": "10.393",
+   "total_mae_model": "10.802"
+  },
+  {
+   "closing_side_bias": "-1.684",
+   "closing_total_bias": "0.757",
+   "closing_total_bias_sd": "13.283",
+   "games": 136,
+   "model_closer_than_line_side": "0.4485",
+   "note": "walk-forward, model refit each week on prior weeks only; bias = mean(actual - forecast), sd = dispersion of that residual. MAE is decomposed in the note on the Model page: the model's error is bias plus less dispersion than the closing line, and the closing line is itself biased low.",
+   "season": 2026,
+   "side_bias_model": "-1.907",
+   "side_mae_closing_line": "9.485",
+   "side_mae_model": "10.184",
+   "source_url": "https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz",
+   "total_bias_model": "0.088",
+   "total_bias_model_sd": "14.447",
+   "total_mae_closing_line": "10.596",
+   "total_mae_model": "11.401"
+  }
+ ],
+ "price_snapshot_rows": 247,
+ "ratings": {
+  "hfa": 0.31,
+  "league_points_per_drive": 2.1795
+ },
+ "reconciliation": {
+  "clubs": 32,
+  "matches": 32
+ },
+ "returns_rows": 25,
+ "slots": 16,
+ "strategies": [
+  {
+   "bets": 569,
+   "brier_skill_vs_market": "-0.04327",
+   "certified": "NO \u2014 not separated from the market",
+   "ci_high": "-0.00859",
+   "ci_low": "-0.07927",
+   "note": "BACKTEST. Scored on walk-forward games only; skill is benchmark-relative Brier skill on this strategy's own bets; p_holm is Holm-adjusted across the registered families.",
+   "p_holm": "0.08801",
+   "p_raw": "0.04401",
+   "roi": "-0.0572",
+   "source_url": "https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz",
+   "staking_grade": "negative unit ROI (staking only; never merged into skill)",
+   "strategy": "S1_side",
+   "units": "-32.545",
+   "win_rate": "0.4938",
+   "wins": 281
+  },
+  {
+   "bets": 470,
+   "brier_skill_vs_market": "-0.11800",
+   "certified": "NO \u2014 significantly WORSE than the market",
+   "ci_high": "-0.06902",
+   "ci_low": "-0.17062",
+   "note": "BACKTEST. Scored on walk-forward games only; skill is benchmark-relative Brier skill on this strategy's own bets; p_holm is Holm-adjusted across the registered families.",
+   "p_holm": "0.00080",
+   "p_raw": "0.00013",
+   "roi": "-0.0536",
+   "source_url": "https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz",
+   "staking_grade": "negative unit ROI (staking only; never merged into skill)",
+   "strategy": "S2_total",
+   "units": "-25.182",
+   "win_rate": "0.4957",
+   "wins": 233
+  },
+  {
+   "bets": 302,
+   "brier_skill_vs_market": "-0.17090",
+   "certified": "NO \u2014 significantly WORSE than the market",
+   "ci_high": "-0.10176",
+   "ci_low": "-0.24935",
+   "note": "BACKTEST. Scored on walk-forward games only; skill is benchmark-relative Brier skill on this strategy's own bets; p_holm is Holm-adjusted across the registered families.",
+   "p_holm": "0.00080",
+   "p_raw": "0.00014",
+   "roi": "-0.1000",
+   "source_url": "https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz",
+   "staking_grade": "negative unit ROI (staking only; never merged into skill)",
+   "strategy": "S3_ml_dog",
+   "units": "-30.204",
+   "win_rate": "0.3245",
+   "wins": 98
+  },
+  {
+   "bets": 744,
+   "brier_skill_vs_market": "-0.07868",
+   "certified": "CONTROL \u2014 benchmark only, never certified",
+   "ci_high": "-0.04461",
+   "ci_low": "-0.11275",
+   "note": "BACKTEST. Scored on walk-forward games only; skill is benchmark-relative Brier skill on this strategy's own bets; p_holm is Holm-adjusted across the registered families.",
+   "p_holm": "0.00080",
+   "p_raw": "0.00015",
+   "roi": "-0.0015",
+   "source_url": "https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz",
+   "staking_grade": "negative unit ROI (staking only; never merged into skill)",
+   "strategy": "S4_control_fav",
+   "units": "-1.131",
+   "win_rate": "0.6855",
+   "wins": 510
+  },
+  {
+   "bets": 744,
+   "brier_skill_vs_market": "-0.02934",
+   "certified": "CONTROL \u2014 benchmark only, never certified",
+   "ci_high": "-0.00264",
+   "ci_low": "-0.05702",
+   "note": "BACKTEST. Scored on walk-forward games only; skill is benchmark-relative Brier skill on this strategy's own bets; p_holm is Holm-adjusted across the registered families.",
+   "p_holm": "0.08801",
+   "p_raw": "0.07591",
+   "roi": "-0.0737",
+   "source_url": "https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz",
+   "staking_grade": "negative unit ROI (staking only; never merged into skill)",
+   "strategy": "S4_control_home",
+   "units": "-54.818",
+   "win_rate": "0.4852",
+   "wins": 361
+  },
+  {
+   "bets": 744,
+   "brier_skill_vs_market": "-0.07641",
+   "certified": "CONTROL \u2014 benchmark only, never certified",
+   "ci_high": "-0.04450",
+   "ci_low": "-0.11056",
+   "note": "BACKTEST. Scored on walk-forward games only; skill is benchmark-relative Brier skill on this strategy's own bets; p_holm is Holm-adjusted across the registered families.",
+   "p_holm": "0.00080",
+   "p_raw": "0.00014",
+   "roi": "0.0033",
+   "source_url": "https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz",
+   "staking_grade": "positive unit ROI (staking only; never merged into skill)",
+   "strategy": "S4_control_over",
+   "units": "2.455",
+   "win_rate": "0.5255",
+   "wins": 391
+  }
+ ],
+ "time_split": [
+  {
+   "brier_skill_vs_market": "-0.10644",
+   "games": 336,
+   "model_brier": "0.22338",
+   "reads": "the model is behind the closing line in both windows",
+   "seasons": "2023, 2024",
+   "source_url": "https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz",
+   "split": "train"
+  },
+  {
+   "brier_skill_vs_market": "-0.05609",
+   "games": 408,
+   "model_brier": "0.22516",
+   "reads": "the model is behind the closing line in both windows",
+   "seasons": "2025, 2026",
+   "source_url": "https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz",
+   "split": "validation + holdout"
+  }
+ ],
+ "walkforward_predictions": 744,
+ "week10_finals": 14
+}

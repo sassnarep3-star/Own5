@@ -1,0 +1,8 @@
+cell,n,over_rate,roi_flat,mean_residual,reads,source_url
+season 2023,64,0.5312,0.5455,1.820,same sign in every season; the size falls each year,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz
+season 2024,269,0.5390,0.5681,1.476,same sign in every season; the size falls each year,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz
+season 2025,272,0.5221,0.5187,1.151,same sign in every season; the size falls each year,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz
+season 2026,136,0.5147,0.4973,0.757,"smallest of the four seasons, same sign",https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz
+closing total < 47,522,0.5287,0.5381,1.255,"no concentration: the rate matches the other bucket, so this is a league-wide level shift in where the closing total sits, not a subset effect",https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz
+closing total >= 47,219,0.5251,0.5276,1.256,"no concentration: the rate matches the other bucket, so this is a league-wide level shift in where the closing total sits, not a subset effect",https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz
+RULE,,,,,"This screen looked at the holdout to find the cells above. Under the registration's own rule that invalidates the holdout for this hypothesis: the next test is a pre-registered trigger on 2026 games only, written before kickoff, with the threshold frozen. No threshold is proposed here.",https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz

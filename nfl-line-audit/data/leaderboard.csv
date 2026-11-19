@@ -1,0 +1,7 @@
+division,strategy_id,strategy,settled_bets,brier_skill_vs_market,ci_low,ci_high,p_holm,signal_grade,staking_units,staking_roi,demotion_status,what_would_change_our_mind,source_url
+single · side,S1,Originated side vs consensus,0,,,,,UNCERTIFIED (0 settled),,,paper,lower bound on Brier skill above 0 over 300+ settled bets,nfl-line-audit/data/preregistration.json
+single · total,S2,Originated total vs consensus,0,,,,,UNCERTIFIED (0 settled),,,paper,"same, plus sigma stability within ±10%",nfl-line-audit/data/preregistration.json
+single · moneyline,S3,Originated moneyline underdog,0,,,,,UNCERTIFIED (0 settled),,,paper,"a joint distribution showing the edge is vig, not signal",nfl-line-audit/data/preregistration.json
+same-game parlay,S5,Two-leg SGP (BLOCKED),0,,,,,UNCERTIFIED (0 settled),,,paper,joint probability whose gap to the product of marginals is under 1 pp,nfl-line-audit/data/preregistration.json
+cross-game parlay,S6,Two-leg cross-game (conditionally admissible),0,,,,,UNCERTIFIED (0 settled),,,paper,measured cross-game correlation CI must contain 0,nfl-line-audit/data/preregistration.json
+prop combo,S7,Two-leg player-yardage combo (BLOCKED),0,,,,,UNCERTIFIED (0 settled),,,paper,a fitted bivariate joint with n published,nfl-line-audit/data/preregistration.json

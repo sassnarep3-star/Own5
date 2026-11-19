@@ -1,0 +1,3 @@
+split,seasons,games,brier_skill_vs_market,model_brier,reads,source_url
+train,"2023, 2024",336,-0.10644,0.22338,the model is behind the closing line in both windows,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz
+validation + holdout,"2025, 2026",408,-0.05609,0.22516,the model is behind the closing line in both windows,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz

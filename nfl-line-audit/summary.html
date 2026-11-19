@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Executive summary · NFL verified line desk</title>
+<link rel="stylesheet" href="style.css">
+</head><body>
+<header class="top">
+  <a class="brand" href="index.html"><span class="mark">O5</span> NFL verified line desk</a>
+  <nav><a href="index.html">Dashboard</a><a href="origination.html">Originated lines</a><a href="prices.html">Price snapshots</a><a href="results.html">Verified results</a><a href="availability.html">Availability</a><a href="model.html">Model &amp; backtest</a><a href="leaderboard.html">Leaderboard</a><a href="correlations.html">Correlations</a><a href="readiness.html">Decision readiness</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="research.html">Research register</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources</a><a href="summary.html" class="active">Executive summary</a></nav>
+</header>
+<main>
+<h1>Executive summary</h1>
+<p class="sub">One page. The finding, the numbers, and what to decide next.</p>
+<section><h2>Executive summary</h2>
+<p class="lede">The desk does what the brief asks: it originates its own NFL lines, records them against named operator prices,
+tracks official availability with clocks, ranks strategies on proper scores and publishes a decision-ready register. It also
+reports the outcome honestly: <b>the line beats the model</b>.</p>
+</section>
+<section class="cols">
+<article><h3>Origination</h3><ul>
+<li>13 Week 11 fixtures, three markets in the required order, 52 market rows.</li>
+<li>Fair, market and difference in separate columns; market cells carry the median of DraftKings and FanDuel, de-vigged where needed.</li>
+<li>Every row stores a hash of the exact input object; the verifier recomputes it.</li>
+<li>Model: opponent-aware points per drive, recency-weighted, home field +0.31 points (indistinguishable from zero).</li>
+</ul></article>
+<article><h3>Results and corpus</h3><ul>
+<li>952 usable games, 32/32 clubs reconciling to the official standings on W-L-T, PF and PA.</li>
+<li>14 Week 10 finals appended from the official page because the pinned snapshot stops at week 9.</li>
+<li>The repo's 136-game log: 117 agree, 16 are blank table rows, 3 fixtures are absent. It cannot be a corpus for 19 rows.</li>
+</ul></article>
+<article><h3>Skill</h3><ul>
+<li>Model Brier skill against the closing line: -7.8% over 744 walk-forward games.</li>
+<li>No pre-registered family certifies; two are significantly worse than the market after correction.</li>
+<li>Bets needed to separate a 55% bettor from break-even at -110: 359.</li>
+<li>Zero strategies on the leaderboard because zero bets have settled.</li>
+</ul></article>
+<article><h3>Availability</h3><ul>
+<li>Official Week 11 report read today: 253 rows, 24 clubs; CIN and WAS print no injuries.</li>
+<li>225 player-level changes against the 18 Nov read, both clocks on every row.</li>
+<li>Questionable plays 25.0% of the time (n=4,970). It is not a probability and is never a points penalty.</li>
+<li>Depth comes from playing time: 12 position/rank rows with intervals, no jersey numbers anywhere.</li>
+</ul></article>
+<article><h3>Governance</h3><ul>
+<li>Pre-registration committed before evaluation; the commit hash is the registration and the verifier recomputes it.</li>
+<li>Backtest numbers are forbidden on the leaderboard by rule and by build.</li>
+<li>Demotion gate: three automatic triggers, published before use.</li>
+<li>15 flagged items with evidence links, including corrections to other desks' published numbers.</li>
+</ul></article>
+<article><h3>What to decide next</h3><ul>
+<li>Whether to keep chasing the closing line with public data, or to reposition the model as a residual generator (S03).</li>
+<li>Whether to seek written consent for automated capture, which unlocks the whole availability series (Q02, S01).</li>
+<li>Whether official inactives are the next data purchase (Q03, S02).</li>
+<li>Whether usage rank replaces the depth-chart idea permanently (S06).</li>
+</ul></article>
+</section>
+<section><h2>Numbers restated with their sample</h2></section><div class="tw"><table><thead><tr><th>metric</th><th>value</th><th>n</th><th>source</th></tr></thead><tbody><tr><td>Brier skill vs closing line</td><td class="num neg">-0.0781</td><td>744</td><td>nfl-line-audit/data/backtest_strategies.csv</td></tr><tr><td>Clubs reconciling to official standings</td><td>32/32</td><td>32</td><td>nfl-line-audit/data/corpus_reconciliation.csv</td></tr><tr><td>Questionable play rate</td><td class="num pos">0.2501</td><td>4970</td><td>nfl-line-audit/data/designation_reliability.csv</td></tr><tr><td>Same-game prop correlation (QB yards vs top-WR yards)</td><td class="num pos">0.5130</td><td>1523</td><td>nfl-line-audit/data/correlations.csv</td></tr><tr><td>Bets to separate 55% from break-even at -110</td><td class="num pos">359</td><td class="blank"><span class="b b-blank">—</span></td><td>nfl-line-audit/data/luck_panel.csv</td></tr><tr><td>Originated market rows</td><td class="num pos">52</td><td>13</td><td>nfl-line-audit/data/origination_week11.csv</td></tr><tr><td>Injury-report changes vs 18 Nov read</td><td class="num pos">225</td><td>253</td><td>nfl-line-audit/data/injury_delta.csv</td></tr></tbody></table></div><p class="note">Every number on this page is recomputed by the build from the files in the repository.</p>
+</main>
+<footer>
+  <p>Built 2026-11-19T07:05:00Z from <code>nfl-line-audit/data/</code>. Official facts link to nfl.com; operator prices link to the operator page.
+  Empty cells are unverified and badged, never filled. No betting advice, no performance claim.</p>
+  <p>Independence: this desk is not affiliated with the NFL. Data policy P-01 keeps row-level official data off this site.</p>
+</footer>
+</body></html>
