@@ -55,7 +55,7 @@ jobs:
           deploy_ok=0
           for attempt in $(seq 1 72); do
             if curl --fail --silent --location "$root" -o /tmp/root.html; then
-              if grep -q "nfl-desk-067f2314" /tmp/root.html; then
+              if grep -q "Own5 NFL Line-Origination Dashboard" /tmp/root.html; then
                 echo "Deploy detected at $root"
                 deploy_ok=1
                 break
@@ -87,7 +87,7 @@ jobs:
             "/nfl-desk-067f2314/verification-log.html"; do
             url="$base$path"
             if curl --fail --silent --location "$url" -o /tmp/page.html; then
-              if grep -q "nfl-desk-067f2314" /tmp/page.html; then
+              if grep -q "Own5 NFL Line-Origination Dashboard" /tmp/page.html; then
                 echo "OK $url"
                 continue
               fi
