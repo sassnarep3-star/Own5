@@ -3845,3 +3845,10 @@ Recorded below after `gh pr merge`.
 **Scope check.** Files changed by this session: `nfl-desk-715e2cd4/**`, `research/nfl-715e2cd4/**`,
 `.github/workflows/nfl-desk-715e2cd4.yml`, one additive README section, and append-only blocks in this file.
 No other session's file was edited.
+
+### 715e2cd4 — second follow-up (2026-11-19)
+
+Suggestion **P01** carried the decision state "Approved / not yet funded". No approval has been recorded by the
+operator, so it now reads **"Proposed (no decision recorded, no funding)"**. No suggestion on this desk may claim
+a decision that did not happen. Rebuilt, re-verified (3,014 checks, 0 problems) and retested (25 tests) before the
+follow-up PR.

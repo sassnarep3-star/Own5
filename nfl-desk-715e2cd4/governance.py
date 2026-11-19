@@ -429,7 +429,7 @@ SUG = [
  ("P01","Replace blank market columns with a licensed feed instead of scraping", 
   "Purchase one licensed odds feed (opening + closing) and store both with hashes.",
   "Feed cost and redistribution limits; if redistribution is barred, publish only derived residuals.",
-  "Do it: it unblocks G4, all residuals, all CLV and the entire staking layer.","Approved / not yet funded",REPO+"data/price_policy.csv"),
+  "Do it: it unblocks G4, all residuals, all CLV and the entire staking layer.","Proposed (no decision recorded, no funding)",REPO+"data/price_policy.csv"),
  ("P02","Derive depth from snap counts, not club pages, once a source exists",
   "One parser for a league-wide snap-count page instead of 32 club-specific parsers.",
   "The page may not exist publicly; snap data may lag by a day.",
