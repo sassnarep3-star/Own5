@@ -3855,7 +3855,15 @@ Session ID `7e228db8`, branch `arena/7e228db8-own5` (base `fe9ed18` = current `m
 
 - None yet.
 
-**Merge record.** Recorded below after the PR merges.
+**Merge record.**
+
+- **PR #162** merged to main at **2026-11-19T07:45:30Z** as merge commit **`63bf8be`** (merge of `a8c2a68`).
+  All PR checks passed (12 checks pass, 2 skipped smoke jobs); scoped workflow "Verify NFL verification desk (7e228db8)" success on main at `63bf8be` (run 44482078191).
+- **Pages deploy confirmed live:** workflow `pages.yml` run 44482078307 success for `63bf8be`;
+  https://sassnarep3-star.github.io/Own5/nfl-desk-7e228db8/ fetched and verified (150 finals · 32/32 · 255 injury rows · 39 snapshots · readiness 39/18/22 · decision-readiness table + flagged/questions/suggestions pages reachable).
+- **Follow-up fix PR (post-merge):** the index page's verifier-sweep count was hardcoded ("37 scripts") while the sweep CSV had been refreshed to 43 — caught by comparing the live page against the committed CSV. Fixed by deriving the count from `verifier_sweep.csv`; two new verifier checks (sweep count and open-flags count must match the live CSVs) added so this class cannot recur. Verify: 1645 checks, 0 failures; unittest 19 OK.
+- **Pre-existing on main, not caused by this merge:** "Verify nfl-desk-067f2314" failed on main both before (`60fc5ae`) and after (`63bf8be`) the merge — recorded for its owner, not actioned.
+
 
 
 ### 7e228db8 — completion record (2026-11-19, UTC)
