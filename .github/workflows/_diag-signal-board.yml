@@ -1,0 +1,32 @@
+name: diagnose signal board build in CI
+on:
+  push:
+    paths:
+      - '.github/workflows/_diag-signal-board.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python3 -VV
+      - name: run build and show the diff inline
+        run: |
+          python3 data/nfl-signal-board/build_data.py
+          echo "=== STATUS ==="
+          git status --porcelain -- data/nfl-signal-board/ || true
+          echo "=== STAT ==="
+          git diff --stat -- data/nfl-signal-board/ || true
+          echo "=== FULL DIFF (first 200 lines) ==="
+          git diff -- data/nfl-signal-board/ | head -200 || true
+          echo "=== FILE LINE ENDINGS ==="
+          file data/nfl-signal-board/*.csv | head -20
+          echo "=== GIT CONFIG ==="
+          git config --list --show-origin | head -20
