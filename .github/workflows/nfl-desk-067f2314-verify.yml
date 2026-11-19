@@ -45,10 +45,29 @@ jobs:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     needs: desk-verify
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
-      - name: "Check published desk URLs (robust: page body to file before grep)"
+      - name: "Wait for GitHub Pages deploy, then check all desk URLs"
         run: |
           base="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
+          root="$base/nfl-desk-067f2314/"
+          # 1) Wait for the deployment to serve the root desk page (deploy runs after push).
+          deploy_ok=0
+          for attempt in $(seq 1 72); do
+            if curl --fail --silent --location "$root" -o /tmp/root.html; then
+              if grep -q "nfl-desk-067f2314" /tmp/root.html; then
+                echo "Deploy detected at $root"
+                deploy_ok=1
+                break
+              fi
+            fi
+            sleep 10
+          done
+          if [ "$deploy_ok" -ne 1 ]; then
+            echo "GitHub Pages deploy for nfl-desk-067f2314 never became ready" >&2
+            exit 1
+          fi
+          # 2) Once deployed, every desk page must serve the marker.
           for path in \
             "/nfl-desk-067f2314/" \
             "/nfl-desk-067f2314/schedule.html" \
@@ -68,19 +87,13 @@ jobs:
             "/nfl-desk-067f2314/executive-summary.html" \
             "/nfl-desk-067f2314/verification-log.html"; do
             url="$base$path"
-            success=0
-            for attempt in $(seq 1 30); do
-              if curl --fail --silent --show-error --location "$url" -o /tmp/page.html; then
-                if grep -q "nfl-desk-067f2314" /tmp/page.html; then
-                  echo "OK $url"
-                  success=1
-                  break
-                fi
+            if curl --fail --silent --location "$url" -o /tmp/page.html; then
+              if grep -q "nfl-desk-067f2314" /tmp/page.html; then
+                echo "OK $url"
+                continue
               fi
-              sleep 10
-            done
-            if [ "$success" -ne 1 ]; then
-              echo "Published page did not become ready: $url" >&2
-              exit 1
             fi
+            echo "Not ready: $url" >&2
+            exit 1
           done
+          echo "All desk pages verified live."
