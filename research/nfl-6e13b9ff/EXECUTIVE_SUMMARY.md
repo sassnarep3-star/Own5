@@ -47,6 +47,16 @@ Highlights: three circulating corpus counts (F6-01); two red scheduled checks on
 
 `build_desk.py` (deterministic, stdlib) → `verify_desk.py` (fail-closed; runs after build) → `python -m unittest` (negative controls: a dropped row, a filled price cell, a broken link or a missing evidence file must fail). CI workflow `.github/workflows/nfl-desk-6e13b9ff.yml` runs build + verify + tests on every change to this scope.
 
+## Publication record
+
+PR #146 (https://github.com/sassnarep3-star/Own5/pull/146) merged 2026-11-19T07:17:27Z as `bfa7b3d8` after
+12 green checks (8 pass, 4 designed skips, 0 failures) and three rebases onto a fast-moving main (append-only
+conflicts in `COORDINATION.md`/`README.md` resolved keeping both sides). GitHub Pages build run 44478471703
+succeeded; the live desk was verified at
+https://sassnarep3-star.github.io/Own5/nfl-desk-6e13b9ff/ (landing decision-readiness table, flagged and
+suggestions pages read back live). Local gate on the merged tree: `verify_desk.py` 2,293 checks / 0 failures;
+11 unit tests OK.
+
 ## Sources
 
 All external reads this session were first-hand from official nfl.com pages (register: `data/nfl-desk-6e13b9ff/sources.csv`). In-repo evidence links point to committed files; where a value could not be confirmed from an official source it is left blank and flagged — nothing is inferred.

@@ -3888,7 +3888,7 @@ Session ID `6e13b9ff`, branch `arena/6e13b9ff-own5` (base `2f02e1e` = current `m
 | E6-07 | Unit tests incl. negative controls | done | 6e13b9ff | nfl-desk-6e13b9ff/tests/test_desk.py | 11 tests OK including 10 negative controls (dropped row, bad source, MISMATCH row, unknown flag, corrupt PCT, implemented suggestion, broken href, missing evidence root, readiness row removed, plus determinism). |
 | E6-08 | Executive summary + Flagged for Review | done | 6e13b9ff | research/nfl-6e13b9ff/**, flagged page | research/nfl-6e13b9ff/EXECUTIVE_SUMMARY.md + flagged page (20 items). |
 | E6-09 | Scoped CI workflow | done | 6e13b9ff | .github/workflows/nfl-desk-6e13b9ff.yml | .github/workflows/nfl-desk-6e13b9ff.yml: re-author + rebuild + diff + verify + tests, scoped to this namespace. |
-| E6-10 | Rebase on main, PR, autonomous merge, live Pages check, record | in progress | 6e13b9ff | COORDINATION.md, README.md (one row) | PR opened from arena/6e13b9ff-own5; merge + Pages live check + final record follow in this block. |
+| E6-10 | Rebase on main, PR, autonomous merge, live Pages check, record | done | 6e13b9ff | COORDINATION.md, README.md (one row) | PR #146 merged bfa7b3d8 (2026-11-19T07:17:27Z) after 12 green checks; Pages run 44478471703 success; live desk verified; full record below. |
 
 **Merge conflict log.** On 2026-11-19, opening PR #146 hit `CONFLICTING` with main (sessions `c8cb6ae8`
 and `715e2cd4` had merged in the meantime). Resolved by rebasing onto `ff6fc6f`; conflicts were confined to the
@@ -3898,3 +3898,52 @@ blocks first, this session's block after). No other session's work was discarded
 **Cross-session requests**
 
 - None. All work is additive inside the claimed namespace; no other session's files are edited.
+
+### 6e13b9ff — completion record (2026-11-19, UTC)
+
+**Pull request.** [#146](https://github.com/sassnarep3-star/Own5/pull/146) "6e13b9ff: NFL Brief Traceability &
+Decision Desk" merged with `gh pr merge 146 --merge` at **2026-11-19T07:17:27Z**, merge commit **`bfa7b3d8`**
+(head `43b8ebf`). Pre-merge checks: **12 total — 8 pass, 4 designed skips, 0 failures** (scoped
+`nfl-desk-6e13b9ff` verify, 5 other desk verifies, decision-desk build-and-audit, repo evidence/browser smoke
+suite; page smokes skip on PR by design). Merge only attempted after 0 fail / 0 pending.
+
+**Rebase log (3 rounds, all conflicts kept both sides).** Main moved three times mid-session (PRs #143/#145 from
+`715e2cd4`, then #147; plus `c8cb6ae8` blocks). Each rebase conflicted only in the append-only tails of
+`COORDINATION.md` and `README.md`; resolved by keeping main's new blocks first, this session's block after,
+with a `---` separator. No other session's content was discarded; force-pushes used `--force-with-lease` and
+stayed on `arena/6e13b9ff-own5` only. Both resolutions are logged in the conflict-log paragraph above.
+
+**Pages.** `pages build and deployment` run **44478471703 → success** for `bfa7b3d8`. Live read-backs through
+the page reader: [landing](https://sassnarep3-star.github.io/Own5/nfl-desk-6e13b9ff/) (84-row decision-readiness
+table with gates/numbers/observed + evidence blob links), [Flagged for Review](https://sassnarep3-star.github.io/Own5/nfl-desk-6e13b9ff/flagged.html)
+(all 20 items), [Suggestions](https://sassnarep3-star.github.io/Own5/nfl-desk-6e13b9ff/suggestions.html)
+(all 14 PROPOSED rows).
+
+**Verification on the merged tree.** `author_data.py` → `build_desk.py` → `verify_desk.py`: **2,293 checks, 0
+failures**; `python3 -m unittest discover -s nfl-desk-6e13b9ff/tests`: **11 tests OK** (10 negative controls);
+committed tree matches a clean rebuild byte-for-byte (re-run after each rebase).
+
+**First-hand sources read this session (all official, 2026-11-19):**
+| Source | URL | Read (UTC) | Used for |
+|---|---|---|---|
+| 2026 league standings | https://www.nfl.com/standings/league/2026/REG | 06:51:41Z | 32-row capture, tie-half PCT arithmetic, diff vs 2026-11-18 capture (32/32 agree) |
+| Week 11 schedule | https://www.nfl.com/schedules/2026/by-week/week-11 | 06:51:41Z | 13 fixtures + 6 byes (as printed) diffed vs prior capture (all agree) |
+| Week 11 injury report | https://www.nfl.com/injuries/league/2026/reg11 | 06:57:28Z | publication status (F6-11 resolved) + 26-row TNF designation capture |
+| Week 12 schedule | https://www.nfl.com/schedules/2026/by-week/week-12 | 06:57:28Z | 6 spot fixtures; heading/date mismatches recorded verbatim (F6-05) |
+| IND@HOU game centre | https://www.nfl.com/games/colts-at-texans-2026-reg-11 | 06:57:28Z | venue Game Info (F6-04), injury-card corroboration, records cross-check |
+
+**Irregularities published by this session (20, non-blocking, all with source links):** F6-01 corpus counts
+136/148/150 · F6-02 daily capture red at rebuild step (run 44401842347) · F6-03 35a1feb2 verifier red (run
+44298365799) · F6-04 NRG vs Reliant across official pages · F6-05 Week-12 heading/date mismatches · F6-06
+Brevin Jordan wording differs across official surfaces · F6-07 14 open PRs · F6-08 root banner 2026-11-02 ·
+F6-09 14+ parallel requirement registers · F6-10 non-reproducing base-rate claim · F6-11 reg11 resolved ·
+F6-12 PR #136 unmerged · F6-13 stale board rows after merged PRs · F6-15 no price source · F6-16 depth route
+unresolved · F6-17 capture misses club depth · F6-18 snap counts aggregator-derived · F6-19 past-season archive
+aggregator-only · F6-20 reward pool blank · F6-21 resolved (this record).
+
+**Two verification catches worth recording (anti-hallucination worked):** the first arithmetic pass flagged
+NYG/WAS PCT because it used W/G — the official page counts ties as half-wins; the bye capture was normalised to
+"LA" while the schedule page prints "LAR". Both were corrected to the official conventions and re-verified
+(0 MISMATCH rows) rather than explained away.
+
+**Follow-up:** one record-only PR from this branch records this block's own merge (its number is appended below).
