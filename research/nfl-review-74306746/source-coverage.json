@@ -1,0 +1,170 @@
+[
+  {
+    "id": "SRC-01",
+    "area": "2026 regular-season standings",
+    "publisher": "NFL.com",
+    "source_class": "NFL official — historical reference",
+    "official_url": "https://www.nfl.com/standings/league/2026/REG",
+    "official_label": "NFL 2026 regular-season standings",
+    "recorded_capture": "Repository registers show reads on 2026-11-14, 2026-11-15 and 2026-11-18 UTC.",
+    "repository_coverage": "Three separate 32-club tables are present. Values and derived correlations are tied to different capture windows; later rows are not a same-snapshot recheck of earlier ones.",
+    "review_limit": "Not fetched in this review. Use one dated 32-club snapshot and identical fields before comparing correlations or results across desks.",
+    "evidence": [
+      {"path": "nfl-engine-39086ec8/official.py", "label": "Engine desk official-source transcription"},
+      {"path": "nfl-market-desk/data/standings_official.csv", "label": "Market desk capture"},
+      {"path": "nfl-command-desk/data/standings.csv", "label": "Command desk capture"},
+      {"path": "data/nfl-desk-f2e20e96/standings_2026_reg.csv", "label": "Week 10 decision desk capture"}
+    ]
+  },
+  {
+    "id": "SRC-02",
+    "area": "Week 10 results and Game Books",
+    "publisher": "NFL.com / NFL Game Center",
+    "source_class": "NFL official — historical references",
+    "official_url": "https://www.nfl.com/schedules/2026/by-week/week-10",
+    "official_label": "NFL 2026 Week 10 schedule and results",
+    "recorded_capture": "The Week 10 decision desk source manifest records reads on 2026-11-18 UTC.",
+    "repository_coverage": "The Week 10 results CSV has 14 fixture rows and a Game Book PDF URL for each. Separate starters/inactives extractions cover JAX–TEN only (44 starter rows and 12 inactive rows).",
+    "review_limit": "No schedule, game-centre page or PDF was fetched in this review; presence of a URL is not proof of complete transcription.",
+    "evidence": [
+      {"path": "data/nfl-desk-f2e20e96/week10_results.csv", "label": "14 Week 10 result / Game Book references"},
+      {"path": "data/nfl-desk-f2e20e96/starters_jax_ten.csv", "label": "JAX–TEN starter extraction"},
+      {"path": "data/nfl-desk-f2e20e96/inactives_jax_ten.csv", "label": "JAX–TEN inactive extraction"}
+    ]
+  },
+  {
+    "id": "SRC-03",
+    "area": "Week 11 schedule and game centres",
+    "publisher": "NFL.com / NFL Game Center",
+    "source_class": "NFL official — historical reference",
+    "official_url": "https://www.nfl.com/schedules/2026/by-week/week-11",
+    "official_label": "NFL 2026 Week 11 schedule",
+    "recorded_capture": "Venue and command desk source registers record reads on 2026-11-18 UTC.",
+    "repository_coverage": "A 13-row venue register and 13-row 35fc3437 origination table are present. The command desk's fixture register has 13 games plus bye rows; its origination table has 12 games and omits Arizona at Kansas City.",
+    "review_limit": "Not re-fetched. The cited source link is fixture context; it does not supply a sportsbook price.",
+    "evidence": [
+      {"path": "nfl-venue-390e13fd/data/venues.csv", "label": "Week 11 venue/game-centre register"},
+      {"path": "nfl-command-desk/data/fixtures_wk11.csv", "label": "Command desk Week 11 fixtures"},
+      {"path": "nfl-command-desk/data/origination_wk11.csv", "label": "Command desk Week 11 origination"},
+      {"path": "nfl-desk-35fc3437/data/lines_originated_wk11.csv", "label": "35fc3437 Week 11 origination"}
+    ]
+  },
+  {
+    "id": "SRC-04",
+    "area": "Week 10 injury report",
+    "publisher": "NFL.com",
+    "source_class": "NFL official — historical reference",
+    "official_url": "https://www.nfl.com/injuries/league/2026/reg10",
+    "official_label": "NFL 2026 Week 10 injury report",
+    "recorded_capture": "Prior desk manifests show 2026-11-15 and 2026-11-18 UTC captures.",
+    "repository_coverage": "Multiple separate captures contain 347 player rows. The 38430fe3 capture records a date but explicitly has no precise read clock; other namespaces store their own read/hash metadata.",
+    "review_limit": "No line-by-line page reread was made in this review. Do not treat this Week 10 report as a current-week availability feed.",
+    "evidence": [
+      {"path": "nfl-desk-38430fe3/data/injury_report_wk10_2026-11-18.csv", "label": "347-row 38430fe3 capture"},
+      {"path": "data/nfl-desk-6cbf25fa/injury_reads/capture_injuries_2026-11-18.csv", "label": "6cbf25fa Week 10 capture"},
+      {"path": "nfl-market-desk/data/injuries_wk10.csv", "label": "Market desk Week 10 capture"}
+    ]
+  },
+  {
+    "id": "SRC-05",
+    "area": "Requested Week 11 injury-report endpoint",
+    "publisher": "NFL.com",
+    "source_class": "NFL official — requested URL; response not rechecked",
+    "official_url": "https://www.nfl.com/injuries/league/2026/reg11",
+    "official_label": "Requested NFL 2026 Week 11 injury-report URL",
+    "recorded_capture": "The Week 11 endpoint is recorded as read on 2026-11-18 UTC by prior desks.",
+    "repository_coverage": "Prior logs say the response/page heading identified the report as Week 10, not Week 11.",
+    "review_limit": "That is a historical report of one response, not a claim about what the URL serves on 2026-11-19. Re-fetch and check the page's own week identity before use.",
+    "evidence": [
+      {"path": "data/nfl-desk-f2e20e96/sources.csv", "label": "Week 11 decision desk source log"},
+      {"path": "nfl-market-desk/data/raw/sources_captured.csv", "label": "Market desk source capture notes"},
+      {"path": "nfl-command-desk/data/sources.csv", "label": "Command desk source register"}
+    ]
+  },
+  {
+    "id": "SRC-06",
+    "area": "Club rosters and depth charts",
+    "publisher": "NFL clubs",
+    "source_class": "Club official — historical references",
+    "official_url": "https://www.nfl.com/teams/new-england-patriots/roster",
+    "official_label": "Example roster page cited for the sole captured roster row",
+    "recorded_capture": "The market desk roster sweep has one populated roster count and URL; several depth-chart captures are dated 2026-11-15 UTC.",
+    "repository_coverage": "The 32-team sweep has one roster capture (NE, 59 rows). Its depth-chart status separately lists 11 parsed, 1 image-only and 20 not captured this session.",
+    "review_limit": "This single official roster URL does not substantiate a 32-team sweep. Club pages were not fetched in this review. Never infer depth order from jersey number, experience or salary.",
+    "evidence": [
+      {"path": "nfl-market-desk/data/roster_sweep_32.csv", "label": "32-team roster sweep register"},
+      {"path": "nfl-market-desk/data/depth_coverage.csv", "label": "Market desk depth-chart coverage register"},
+      {"path": "nfl-market-desk/data/decision_readiness.csv", "label": "Roster readiness assertion R-13"}
+    ]
+  },
+  {
+    "id": "SRC-07",
+    "area": "NFL terms / automated capture policy",
+    "publisher": "NFL.com",
+    "source_class": "NFL official — terms URL cited by a prior desk",
+    "official_url": "https://www.nfl.com/legal/terms",
+    "official_label": "NFL legal terms URL (not read in this review)",
+    "recorded_capture": "A prior desk cites a 2026-11-18 terms review and an interpretation of section 1.3.",
+    "repository_coverage": "The repository records a consent/capture concern in the b8227c47 desk.",
+    "review_limit": "This review did not read the terms page or assess legal rights. The prior desk's interpretation is not legal advice or fresh verification.",
+    "evidence": [
+      {"path": "nfl-desk-b8227c47/", "label": "Prior terms/capture policy desk"},
+      {"path": "nfl-desk-38430fe3/data/sources.csv", "label": "Source register citing the terms URL"}
+    ]
+  },
+  {
+    "id": "SRC-08",
+    "area": "FanDuel event-page price claims",
+    "publisher": "FanDuel (operator; not an NFL source)",
+    "source_class": "Operator primary-source claim — unresolved",
+    "official_url": "https://www.nfl.com/schedules/2026/by-week/week-10",
+    "official_label": "NFL Week 10 schedule (game identity only; not an odds source)",
+    "primary_url": "https://sportsbook.fanduel.com/football/nfl/new-england-patriots-@-detroit-lions-35605986",
+    "primary_label": "FanDuel event URL recorded in a snapshot row (not fetched here)",
+    "recorded_capture": "All 78 engine rows state 2026-11-14T12:00:00Z and event `close`.",
+    "repository_coverage": "Thirteen game text summaries match the committed per-game SHA-256 values; the summaries are transcribed text, not archived page-response bytes. A separate market-desk store marks all 39 operator open and 39 operator close rows empty.",
+    "review_limit": "An internal hash proves byte integrity of the committed summaries only. No operator page, time, jurisdiction, terms or actual close was independently confirmed.",
+    "evidence": [
+      {"path": "nfl-engine-39086ec8/data/price_snapshots.csv", "label": "78 FanDuel-labelled snapshot rows"},
+      {"path": "nfl-engine-39086ec8/data/archive/NE-DET.txt", "label": "Example text summary (not raw response bytes)"},
+      {"path": "nfl-market-desk/data/price_snapshots.csv", "label": "Separate market-desk snapshot store"},
+      {"path": "nfl-market-desk/data/flags.csv", "label": "Market desk price-availability flags"}
+    ]
+  },
+  {
+    "id": "SRC-09",
+    "area": "Third-party market reference lines",
+    "publisher": "nflverse (third-party aggregator)",
+    "source_class": "Aggregator — not official NFL data",
+    "official_url": "https://www.nfl.com/schedules/2026/by-week/week-11",
+    "official_label": "NFL Week 11 schedule (fixture context only)",
+    "primary_url": "https://github.com/nflverse/nflverse-data/releases/tag/schedules",
+    "primary_label": "nflverse schedules release page (third-party reference)",
+    "recorded_capture": "Market desk records a 2026-11-15 asset timestamp and labels its market references AGGREGATOR.",
+    "repository_coverage": "The market desk has a separate `MARKET_REFERENCE` tier and explicitly says that the line fields lack a book, jurisdiction, quote timestamp and close time.",
+    "review_limit": "Not fetched in this review. An aggregator reference is not an opening/closing operator quote and must not be presented as one.",
+    "evidence": [
+      {"path": "nfl-market-desk/data/price_policy.csv", "label": "Market source policy"},
+      {"path": "nfl-market-desk/data/price_snapshots.csv", "label": "Market reference rows"},
+      {"path": "nfl-market-desk/data/raw/sources_captured.csv", "label": "Source-capture notes"}
+    ]
+  },
+  {
+    "id": "SRC-10",
+    "area": "Third-party snap-count snapshot",
+    "publisher": "nflverse (third-party aggregator)",
+    "source_class": "Aggregator — not official NFL data; per-game upstream source not independently checked",
+    "official_url": "https://www.nfl.com/schedules/2026/by-week/week-9",
+    "official_label": "NFL Week 9 schedule (game-identity context only; not a snap-count source)",
+    "primary_url": "https://github.com/nflverse/nflverse-data/releases/download/snap_counts/snap_counts_2026.csv.gz",
+    "primary_label": "nflverse 2026 snap-count CSV (recorded URL; not fetched in this review)",
+    "recorded_capture": "The decision desk provenance manifest records a 2026-11-12T16:52:39Z retrieval, status 200, compressed-byte count and SHA-256 for this asset.",
+    "repository_coverage": "The local 2026 file has 12,693 records across 136 games and 32 clubs, regular-season weeks 1–9 only. It has no Week 10 or Week 11 rows and is separate from the 14 Week 10 Game Book URLs and JAX–TEN-only starter/inactive extraction.",
+    "review_limit": "The repository classifies nflverse as AGGREGATOR. This is not a direct per-game NFL Game Book transcription by this review, is not independently confirmed against NFL pages, and does not supply Week 10/11 snap coverage.",
+    "evidence": [
+      {"path": "data/decision-desk/raw/snap_counts_2026.csv.gz", "label": "2026 nflverse snap-count snapshot"},
+      {"path": "data/decision-desk/raw/provenance.json", "label": "Recorded asset URL, timestamp and hash"},
+      {"path": "data/decision-desk/sources.csv", "label": "Decision-desk source tier (S-05)"}
+    ]
+  }
+]

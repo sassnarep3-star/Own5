@@ -1,0 +1,88 @@
+{
+  "title": "NFL line-originator cross-desk review",
+  "session": "74306746",
+  "review_as_of": "2026-11-19 UTC",
+  "evidence_snapshot": "2f02e1e7975ee61780b39e1ef9bc83591ccb55e2",
+  "lead": "An additive, read-only audit of the NFL line-originator desks at the pinned evidence snapshot. The repository has useful source-linked research structures, but its price, roster and coverage records contain unresolved scope conflicts; this review made no new NFL data capture.",
+  "decision": "Keep all strategies in PAPER / shadow status. Do not use the disputed operator-price rows for a market residual, CLV or ROI; do not treat the recorded Week 11 injury response as current; leave unverified starter, inactive, snap and joint-outcome values blank and flagged.",
+  "freshness_notice": "No official or operator webpage was fetched in this review. Findings are pinned to evidence snapshot 2f02e1e7975ee61780b39e1ef9bc83591ccb55e2; commits after that snapshot are outside scope and may change the broader repository. Source URLs are historical references recorded by prior desks, not fresh confirmations.",
+  "categories": [
+    {
+      "title": "Lines & prices",
+      "status": "CONFLICTED / BLOCKED",
+      "description": "Line schemas exist, but market-price evidence conflicts: the engine stores close-labelled FanDuel rows, while the market desk stores empty operator open/close rows. Resolve provenance before using market comparisons.",
+      "page": "readiness.html",
+      "official_url": "https://www.nfl.com/schedules/2026/by-week/week-10",
+      "official_label": "NFL Week 10 schedule (fixture context only)",
+      "evidence": ["nfl-engine-39086ec8/data/price_snapshots.csv", "nfl-market-desk/data/price_snapshots.csv"]
+    },
+    {
+      "title": "Results & fixtures",
+      "status": "REPOSITORY CHECKS PASS / SNAPSHOT-SKEWED",
+      "description": "Existing verifiers reconcile their own results; counts differ across dated captures, and one Week 11 command-desk origination row is absent.",
+      "page": "readiness.html",
+      "official_url": "https://www.nfl.com/schedules/2026/by-week/week-11",
+      "official_label": "NFL Week 11 schedule",
+      "evidence": ["nfl-command-desk/data/origination_wk11.csv", "nfl-command-desk/data/fixtures_wk11.csv", "nfl-desk-35fc3437/data/lines_originated_wk11.csv"]
+    },
+    {
+      "title": "Injuries, starters & depth",
+      "status": "PARTIAL / FRESHNESS UNKNOWN",
+      "description": "Week 10 report captures and a single-game Game Book extraction exist. A separate nflverse snap-count aggregate is third-party and covers weeks 1–9 only; neither it nor the Game Book URL inventory establishes current Week 10/11 starters, inactives or snaps.",
+      "page": "readiness.html",
+      "official_url": "https://www.nfl.com/injuries/league/2026/reg11",
+      "official_label": "Requested NFL Week 11 injury-report endpoint (not re-fetched)",
+      "evidence": ["nfl-desk-38430fe3/data/injury_report_wk10_2026-11-18.csv", "data/nfl-desk-f2e20e96/starters_jax_ten.csv", "data/nfl-desk-f2e20e96/inactives_jax_ten.csv", "data/decision-desk/raw/snap_counts_2026.csv.gz"]
+    },
+    {
+      "title": "Model validation & strategy gates",
+      "status": "PAPER ONLY",
+      "description": "Pre-registration, controls, proper scores, uncertainty and gates are represented in separate desks. The inspected leaderboards show zero certified strategies; this review does not establish wagering readiness.",
+      "page": "readiness.html",
+      "official_url": "https://www.nfl.com/standings/league/2026/REG",
+      "official_label": "NFL standings (recorded model-input source; not re-fetched)",
+      "evidence": ["nfl-command-desk/data/leaderboard.csv", "nfl-market-desk/data/leaderboard.csv"]
+    },
+    {
+      "title": "Correlations & combinations",
+      "status": "PARTIAL / JOINT EVIDENCE BLOCKED",
+      "description": "Team-level correlation registers cite standings snapshots from different dates. Prop prices and directly validated joint probabilities are not established by this review.",
+      "page": "readiness.html",
+      "official_url": "https://www.nfl.com/standings/league/2026/REG",
+      "official_label": "NFL standings (correlation-input source; not re-fetched)",
+      "evidence": ["nfl-market-desk/data/correlations_official.csv", "nfl-desk-35fc3437/data/correlations.csv", "nfl-engine-39086ec8/data/correlations_official.csv"]
+    },
+    {
+      "title": "Questions & source limits",
+      "status": "OPEN ITEMS",
+      "description": "The review separates questions answered by repository evidence from questions that require fresh source review, an owner decision or terms/legal review.",
+      "page": "questions.html",
+      "official_url": "https://www.nfl.com/legal/terms",
+      "official_label": "NFL terms page cited by a prior desk; not read in this review",
+      "evidence": ["nfl-desk-b8227c47/data/"]
+    },
+    {
+      "title": "Reviewable suggestions & flags",
+      "status": "NOT IMPLEMENTED",
+      "description": "Actions are handed to their owning sessions; no changes were made to another desk, shared navigation, raw data or model.",
+      "page": "suggestions.html",
+      "official_url": "https://www.nfl.com/schedules/2026/by-week/week-11",
+      "official_label": "NFL schedule (fixture context only)",
+      "evidence": ["COORDINATION.md"]
+    }
+  ],
+  "canonical_registers": [
+    {
+      "name": "NFL Command Desk — 73-row requirements ledger",
+      "url": "../nfl-command-desk/requirements.html",
+      "evidence": "nfl-command-desk/data/requirements.csv",
+      "note": "Full owner register; do not merge with the separate 78-row market-desk register without a reviewed crosswalk."
+    },
+    {
+      "name": "NFL Market Desk — 78-row requirements register",
+      "url": "../nfl-market-desk/readiness.html",
+      "evidence": "nfl-market-desk/data/requirements.csv",
+      "note": "Separate owner register and schema; linked for comparison, not substituted for the command-desk ledger."
+    }
+  ]
+}
