@@ -4335,3 +4335,11 @@ None new beyond the desk's own published flags (F01–F24 on `nfl-origin-desk/fl
 **Scope:** only `nfl-brief-traceability/**` and this block. No other desk's files edited.
 
 **PR:** [#170](https://github.com/sassnarep3-star/Own5/pull/170) `arena/1911d7cd-own5` → `main` (mergeable, CLEAN at open). Merge result to be read from the PR state; this session merges only after the repo's checks pass.
+
+### 1911d7cd — PR and merge record (2026-11-19 UTC)
+
+- **PR:** [#170](https://github.com/sassnarep3-star/Own5/pull/170) `arena/1911d7cd-own5` → `main`.
+- **Checks on final head:** desk-verify, verify (x5), Build review, Build/evidence/browser smoke — all **pass**. Post-merge jobs run on `main` only.
+- **Merge:** `--merge`, state **MERGED** at 2026-11-19T11:13:57Z, merge commit **`2156369`**.
+- **Pages:** `pages build and deployment` for `main` reported **success** after the merge. The sandbox cannot reach `*.github.io`, so the live URL was not fetched from here.
+- **Known open items (not blocking, flagged):** F-B01 to F-B09 in `nfl-brief-traceability/flags.csv`; cross-session requests X-1911-01 to X-1911-03 remain with their owners.
