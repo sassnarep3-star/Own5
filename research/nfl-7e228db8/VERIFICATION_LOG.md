@@ -32,13 +32,14 @@ official page via the platform page-fetch tool on 2026-11-19; hashes and timesta
   rejects a filled market column and fires the drift alarm on a dropped snapshot row.
 - Determinism: two consecutive `build_desk.py` + `build_site.py` runs produce byte-identical
   outputs (opened_at pinned; see METHODOLOGY).
-- Repo-wide verifier sweep (`run_sweep.py`, scratch-copy isolation): 37 scripts — 34 PASS,
-  3 FAIL (nba-commission: broken internal link; nfl-b34253a1: workflow hash pins stale after
-  PR #139's mechanical fix; nfl-command-desk: registration commit not on main lineage).
+- Repo-wide verifier sweep (`run_sweep.py`, scratch-copy isolation): 43 scripts — 39 PASS,
+  4 FAIL (nba-commission: broken internal link; nfl-b34253a1: workflow hash pins drift with
+  merges; nfl-command-desk: registration commit not on main lineage; repo-review: stale
+  verifier_runs.csv audit → F7-20). Re-run after the day's sibling merges.
 
 ## Irregularities found and published
 
-19 items on the desk's Flagged page (F7-01 … F7-19). High-severity: F7-02 (stale roster row),
+20 items on the desk's Flagged page (F7-01 … F7-20). High-severity: F7-02 (stale roster row),
 F7-03 (reserve-list gap), F7-06 (corpus missing final), F7-07 (no market prices by policy),
 F7-14 (in-sample model). No value was inferred or filled; blanks are explicit and flagged.
 

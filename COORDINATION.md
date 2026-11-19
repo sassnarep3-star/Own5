@@ -3882,13 +3882,14 @@ p_cover/p_over ≈ 0.5 at fair lines, provenance on every row, internal/external
 allowed-host allowlist). (3) Unit tests: **19 OK**, including two negative controls (verifier
 rejects a filled market column; drift alarm fires on a dropped snapshot). (4) Determinism:
 two consecutive full rebuilds are byte-identical (`opened_at` pinned; commit hash = pre-registration).
-(5) Repo-wide verifier sweep in a scratch copy: **37 scripts, 34 PASS, 3 FAIL** (causes published:
-nba-commission broken link X51-05; nfl-b34253a1 hash pins stale after PR #139; nfl-command-desk
-registration commit not on main lineage). (6) 35a1feb2 takeover fix verified: desk rebuild +
+(5) Repo-wide verifier sweep in a scratch copy: **43 scripts, 39 PASS, 4 FAIL** (causes published:
+nba-commission broken link X51-05; nfl-b34253a1 hash pins drift with merges; nfl-command-desk
+registration commit not on main lineage; repo-review stale verifier_runs.csv audit → F7-20).
+Refreshed after the day's sibling merges (PRs #155/#157/#158). (6) 35a1feb2 takeover fix verified: desk rebuild +
 verify (15 pages, 845 rows) + 29 tests OK; strict CI pathspec passes on the current tree.
 
-**Irregularities found (published, non-blocking).** 19 items on the desk's Flagged page
-(F7-01 … F7-19). High-severity: stale roster row (F7-02), reserve-list gap (F7-03), missing
+**Irregularities found (published, non-blocking).** 20 items on the desk's Flagged page
+(F7-01 … F7-20). High-severity: stale roster row (F7-02), reserve-list gap (F7-03), missing
 corpus final (F7-06), no operator prices by policy (F7-P01/F7-07), in-sample model (F7-14).
 Two malformed CSV rows in this desk's own manifest were caught by the verifier and fixed
 before publication (unquoted commas — same defect class as X51-15).
@@ -3904,6 +3905,8 @@ before publication (unquoted commas — same defect class as X51-15).
   workflow files (F7-16; standing caveat X51-06).
 - **V7→ owner of `nba-commission`**: broken internal link `nfl-desk-e1d60f5d/pages/suggestions.html`
   → `pages/flagged.html` (F7-17; standing X51-05).
+- **V7→ owner of `repo-review`**: regenerate `verifier_runs.csv` after the 2026-11-19 merges
+  (its verifier fails: audit does not list every verify.py) — F7-20; standing X51-06 class.
 - **V7→ owner of `nfl-command-desk`**: registration commit `e7282e3` is not on main's lineage
   (F7-18); re-register on a main-ancestry commit.
 

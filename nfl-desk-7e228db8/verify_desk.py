@@ -6,8 +6,8 @@ Checks (any failure exits non-zero):
   2. external links are https and point to official or repo hosts;
   3. pinned data counts (drift alarm): standings 32, results feed 150, schedule 13,
      injuries 255 (incl. 2 'No Injuries Reported' markers), lines 13, snapshots 39,
-     correlations 4 (n=32 each), readiness 80, flagged 19, questions 10, suggestions 12,
-     leaderboard 6, sweep 37;
+     correlations 4 (n=32 each), readiness 80, flagged 20, questions 10, suggestions 12,
+     leaderboard 6, sweep 43;
   4. model invariants: fair-cover/fair-over probabilities near 0.5, decimal odds = 1/p,
      inputs hash present on every row, snapshot ids match line markets;
   5. every data row of the desk's CSVs carries a source_url, or the row is a policy
@@ -58,11 +58,11 @@ PINNED = {
     "price_snapshots.csv": 39,
     "correlations.csv": 4,
     "readiness.csv": 80,
-    "flagged.csv": 19,
+    "flagged.csv": 20,
     "questions.csv": 10,
     "suggestions.csv": 12,
     "leaderboard.csv": 6,
-    "verifier_sweep.csv": 37,
+    "verifier_sweep.csv": 43,
 }
 for name, n in PINNED.items():
     r = rows(name)

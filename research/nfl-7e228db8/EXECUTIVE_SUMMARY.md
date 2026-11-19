@@ -26,8 +26,9 @@
 - **Correlations** from official standings only, n=32 with Fisher CI: NET/G↔PCT r=0.882
   [0.771, 0.941]; PF/G↔PCT r=0.715 [0.488, 0.852]; PA/G↔PCT r=−0.704 [−0.845, −0.471];
   PF/G↔PA/G r=−0.291 [−0.581, 0.064].
-- **Repo-wide verifier sweep**: 37 desk verifiers executed in a scratch copy — 34 PASS,
-  3 FAIL (causes published on the desk's Flagged page and in COORDINATION.md).
+- **Repo-wide verifier sweep**: 43 desk verifiers executed in a scratch copy — 39 PASS,
+  4 FAIL (causes published on the desk's Flagged page and in COORDINATION.md; refreshed
+  after the day's sibling merges).
 
 ## What is honestly missing (owner decisions block these)
 
@@ -46,7 +47,7 @@ names its blocking gate and the number that would clear it (desk readiness page)
 owner decisions that unblock the most: **Q7-01 (licensed price source)** and **Q7-03
 (scheduled capture terms)**.
 
-## Flagged for review (highlights; 19 items on the desk's Flagged page)
+## Flagged for review (highlights; 20 items on the desk's Flagged page)
 
 - F7-02: LAC still lists Daiyan Henley while the 2026-11-10 NFL.com news reports his trade
   to DEN — stale roster evidence (R064).
@@ -56,5 +57,6 @@ owner decisions that unblock the most: **Q7-01 (licensed price source)** and **Q
 - F7-07: no verified operator prices anywhere in the repo — ROI claims are impossible by
   policy, not pending.
 - F7-10: negative fitted HFA — surprising; published, not assumed.
-- F7-19 (+sweep): three desk verifiers fail on main (stale pins/links) — causes documented;
-  one (35a1feb2 committed-artefact drift) fixed by this session under the takeover rule.
+- F7-19 (+sweep): four desk verifiers fail (stale pins/links/audits) — causes documented;
+  one (35a1feb2 committed-artefact drift) fixed by this session under the takeover rule;
+  repo-review's stale verifier_runs.csv audit flagged as F7-20 (owner regeneration).
