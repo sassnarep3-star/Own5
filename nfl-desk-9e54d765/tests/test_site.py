@@ -64,6 +64,12 @@ class TestDashboard(unittest.TestCase):
         self.assertIn('https://www.nfl.com/standings/league/2026/REG', body)
         self.assertIn('https://www.nfl.com/injuries/league/2026/reg11', body)
 
+    def test_the_staking_count_is_never_called_settled(self):
+        # the backtest's bet count must not read as a prospective sample
+        body = html('index')
+        self.assertIn('not prospective', body)
+        self.assertNotIn('settled bets in the staking column', body)
+
     def test_says_nothing_is_certified(self):
         body = html('index').lower()
         self.assertIn('certified', body)
