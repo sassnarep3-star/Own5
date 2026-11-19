@@ -3890,6 +3890,11 @@ Session ID `6e13b9ff`, branch `arena/6e13b9ff-own5` (base `2f02e1e` = current `m
 | E6-09 | Scoped CI workflow | done | 6e13b9ff | .github/workflows/nfl-desk-6e13b9ff.yml | .github/workflows/nfl-desk-6e13b9ff.yml: re-author + rebuild + diff + verify + tests, scoped to this namespace. |
 | E6-10 | Rebase on main, PR, autonomous merge, live Pages check, record | in progress | 6e13b9ff | COORDINATION.md, README.md (one row) | PR opened from arena/6e13b9ff-own5; merge + Pages live check + final record follow in this block. |
 
+**Merge conflict log.** On 2026-11-19, opening PR #146 hit `CONFLICTING` with main (sessions `c8cb6ae8`
+and `715e2cd4` had merged in the meantime). Resolved by rebasing onto `ff6fc6f`; conflicts were confined to the
+append-only tails of `COORDINATION.md` and `README.md` and were resolved keeping **both** sides (main's new
+blocks first, this session's block after). No other session's work was discarded or edited.
+
 **Cross-session requests**
 
 - None. All work is additive inside the claimed namespace; no other session's files are edited.
