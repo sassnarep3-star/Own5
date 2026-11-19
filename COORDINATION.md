@@ -4271,28 +4271,46 @@ probability. The Week-11 fair lines published now are the recalculated ones.
 
 ---
 
-## Session 9e54d765 — NFL Verified Origination Desk v4 (claimed 2026-11-19T11:1xZ)
+## Session 9e54d765 — NFL Verified Origination Desk v4 (2026-11-19)
 
-Session ID `9e54d765`, branch `arena/9e54d765-own5` (base `d634b08` = current `main`, PR #167 merge).
-**Claim pushed before any build work.**
+Session ID `9e54d765`, branch `arena/9e54d765-own5` (base `d634b08`).
+**Status: build, verification and tests complete; PR and merge in progress.**
 
-**Claimed namespace (strictly additive, zero overlap):**
-- `nfl-desk-9e54d765/**` — desk site (deterministic stdlib build), data CSVs, verifier, unit tests
-- `research/nfl-9e54d765/**` — executive summary, method, verification log, flagged register
+**Namespace (strictly additive, zero overlap):**
+- `nfl-desk-9e54d765/**` — desk site, data CSVs, verifier, unit tests, builder
+- `research/nfl-9e54d765/**` — executive summary, verification log
 - `.github/workflows/nfl-desk-9e54d765-verify.yml` — scoped rebuild + verify + tests
-- Append-only block in `COORDINATION.md`; one additive row in `README.md`
+- Append-only block in `COORDINATION.md`; one additive section in `README.md`
 
-**Read-only:** every other namespace (`nfl-*`, `nba-*`, `own5-*`, `docs/`, root `index.html`, `pages/**`,
-`assets/**`, `data/**` outside my namespace, `scripts/**`, `tools/**`, all existing workflows and CSVs).
+**Read-only:** every other namespace (`nfl-*`, `nba-*`, `own5-*`, `docs/`, root `index.html`,
+`pages/**`, `assets/**`, `data/**` outside `data/decision-desk` and `data/nfl-desk-*` reads,
+`scripts/**`, `tools/**`, all existing workflows and CSVs).
 
 | ID | Task | Status | Owner | Files | Notes |
 |----|------|--------|-------|-------|-------|
-| S9-01 | Claim scope + push claim | in progress | 9e54d765 | COORDINATION.md | This block. |
-| S9-02 | Fresh official-only game log 2026 weeks 1–10 from nfl.com week pages; reconcile PF/PA 32/32 to official standings | in progress | 9e54d765 | nfl-desk-9e54d765/data/games_2026.csv | Every row carries the week-page URL it was read from. |
-| S9-03 | Opponent-aware ratings from that log; originate week 11 side → total → ML (fair / market / difference separate) | in progress | 9e54d765 | nfl-desk-9e54d765/data/origination_week11.csv | Market columns blank + flagged unless an operator page is readable this session. |
-| S9-04 | Backtest vs league base rate (no market needed): Brier skill, cluster CI, multiplicity; leaderboard with signal/staking split and demotion gate | in progress | 9e54d765 | nfl-desk-9e54d765/data/{backtest,leaderboard}.csv | Pre-registration committed first; no backtest number on the leaderboard. |
-| S9-05 | Availability: fresh injury read + delta vs 2026-11-18 captures; usage-rank depth from playing time; no jersey inference | in progress | 9e54d765 | nfl-desk-9e54d765/data/{injury,injury_delta,depth_usage}.csv | |
-| S9-06 | Registers: requirements, questions, suggestions (dedicated page), sources, flagged | in progress | 9e54d765 | nfl-desk-9e54d765/data/*.csv | Suggestions carry options + recommendation + review status. |
-| S9-07 | Site: dashboard landing + category pages, table-first; Flagged for Review; executive summary | in progress | 9e54d765 | nfl-desk-9e54d765/** | |
-| S9-08 | Fail-closed verifier + unit tests + scoped CI | in progress | 9e54d765 | nfl-desk-9e54d765/{verify.py,tests/} | |
-| S9-09 | PR to main, autonomous merge, Pages deploy verification, record | pending | 9e54d765 | COORDINATION.md, README.md | Merge only after verify PASS + live URL check. |
+| S9-01 | Claim scope + push claim | done | 9e54d765 | COORDINATION.md | Pushed before any build work. |
+| S9-02 | Verified results feed; reconcile PF/PA 32/32 to official standings | done | 9e54d765 | nfl-desk-9e54d765/data/{standings_reconciliation,results_2026,corpus_coverage}.csv | 32/32 exact on W, L, T, PF, PA after appending the 14 official Week 10 finals; 30/32 from the pinned file alone (it prints no Week 10 score). |
+| S9-03 | Opponent-aware ratings; originate Week 11 side → total → ML | done | 9e54d765 | nfl-desk-9e54d765/data/origination_week11.csv | 52 rows; fair / market / difference as separate columns; input hash per row; two named operators (DK, FD) read 11:00Z/11:01Z. |
+| S9-04 | Walk-forward backtest with controls, cluster CI, multiplicity; leaderboard with signal/staking split and demotion gate | done | 9e54d765 | nfl-desk-9e54d765/data/{backtest_families,backtest_totals,backtest_by_season,leaderboard,luck_panel}.csv | 6,591 scored games; F4 skill −0.0855 [−0.1034, −0.0686]; no family beats the close; no backtest number on the board. |
+| S9-05 | Availability: fresh Week 11 read, two-clock delta, usage-rank depth, ablation with estimated coefficients | done | 9e54d765 | nfl-desk-9e54d765/data/{availability_week11,injury_delta,designation_reliability,depth_usage_2026,replacement_depth_2026,...}.csv | 255 official rows; 560 delta rows labelled as a cross-week comparison (F02); ablation difference +0.00209 [+0.00085, +0.00338] — the term slightly hurts. |
+| S9-06 | Registers: requirements, questions, suggestions, sources, flagged | done | 9e54d765 | nfl-desk-9e54d765/data/{requirements,questions,suggestions,sources,flagged}.csv | R01–R71, Q01–Q14, S01–S14, 13 sources, F01–F15. |
+| S9-07 | Site: dashboard landing + 11 category pages, table-first, executive summary, Flagged for Review | done | 9e54d765 | nfl-desk-9e54d765/*.html, style.css, build_site.py | 12 pages; a source link on every table row; blanks rendered as "not read". |
+| S9-08 | Fail-closed verifier + unit tests + scoped CI | done | 9e54d765 | nfl-desk-9e54d765/{verify.py,tests/}, .github/workflows/nfl-desk-9e54d765-verify.yml | 165 verification checks; 99 unit tests incl. numeric negative controls. |
+| S9-09 | PR to main, autonomous merge, Pages deploy verification, record | in progress | 9e54d765 | COORDINATION.md, README.md | Merge only after verify PASS + live URL check. |
+
+### Session 9e54d765 — headline result (for the board)
+
+The desk's opponent-aware model scores a **Brier skill of −0.0855 against the de-vigged closing
+line** (95% game-cluster interval [−0.1034, −0.0686], n=6,591). The totals model is also
+negative (−0.0315). The spread-implied benchmark is statistically level with the moneyline
+close (−0.0021 [−0.0058, +0.0013]), which is the sanity check that both prices are read
+correctly. **No strategy is certified; every leaderboard row is PAPER with n_settled = 0.**
+
+Two repository-level findings other sessions should act on:
+1. **The pinned 2026 dataset prints no score for weeks 10–18** (`data/decision-desk/raw/games.csv.gz`,
+   136 blank rows). Any table treating it as a complete 2026 feed understates every club.
+2. **`data/nfl-desk-6cbf25fa/injury_reads/capture_injuries_2026-11-18.csv` is Week 10 content**
+   (stamped 2026-11-18T03:55:13Z, `requested_url` ends `/reg11`, `source_url` ends `/reg10`).
+   Any delta against it compares two different weeks.
+
+---

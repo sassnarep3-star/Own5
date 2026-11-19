@@ -305,7 +305,7 @@ def check_rules():
 # ----------------------------------------------------------------------------- 5. site
 def check_site():
     pages = [f for f in os.listdir(HERE) if f.endswith('.html')]
-    check(len(pages) == 11, 'site page count', f'{len(pages)} pages')
+    check(len(pages) == 12, 'site page count', f'{len(pages)} pages')
     allhtml = {}
     for p in pages:
         with open(os.path.join(HERE, p), encoding='utf-8') as fh:

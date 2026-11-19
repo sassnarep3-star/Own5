@@ -19,6 +19,7 @@ DASH = '—'
 
 NAV = [
     ('index.html', 'Dashboard'),
+    ('executive-summary.html', 'Executive summary'),
     ('readiness.html', 'Decision readiness'),
     ('origination.html', 'Our lines'),
     ('backtest.html', 'Backtest &amp; luck'),
@@ -344,6 +345,144 @@ options, a recommendation, a review status and a falsifier.</td></tr>
     return layout('index.html', 'Dashboard', body,
                   'A table-first decision surface: what we can price, what we measured, what '
                   'blocked it.')
+
+
+def page_exec_summary(d):
+    f4 = fam_by(d, 'F4_OPPONENT_AWARE')
+    f5 = fam_by(d, 'F5_MARKET_LINE_BENCHMARK')
+    f2 = fam_by(d, 'F2_RANDOM')
+    tot = d['backtest_totals.csv'][0]
+    ab = next(r for r in d['availability_ablation.csv'] if r['variant'].startswith('DIFF'))
+    luck = {r['panel']: r for r in d['luck_panel.csv']}
+    reqs = d['requirements.csv']
+    body = f"""
+<p class="small">Written for someone who will read one page and then decide whether to
+continue. It states what was built, what it measured, what it did not measure, and what the
+next decision is. Every number links to the page that shows its working.</p>
+
+<h2>1. What was built</h2>
+<p>A complete origination and evaluation pipeline, reproducible with three stdlib commands:</p>
+<table>
+<thead><tr><th style="width:26%">Piece</th><th>What it is</th><th>Where</th></tr></thead>
+<tbody>
+<tr><td>Inputs</td><td>Five official pages transcribed verbatim with read clocks and hashes:
+the Week 11 schedule, the Week 10 finals, the Week 11 injury report, both operators' price
+pages, and the 2026 standings.</td>
+<td><code>inputs/</code></td></tr>
+<tr><td>Origination</td><td>52 rows: 13 fixtures × side, total and moneyline, with fair line,
+market line and difference in separate columns, plus the model's own probability and a hash
+over the exact input object.</td><td><a href="origination.html">Our lines</a></td></tr>
+<tr><td>Backtest</td><td>Five families scored walk-forward on 6,591 games, two controls, Holm
+correction, cluster intervals, and a totals model.</td>
+<td><a href="backtest.html">Backtest</a></td></tr>
+<tr><td>Pre-registration</td><td>A frozen registration with a demotion gate and a combo gate,
+whose sha256 is recorded in the build manifest and re-checked by the verifier.</td>
+<td><code>preregistration.json</code></td></tr>
+<tr><td>Availability</td><td>The official Week 11 designation set, a two-clock delta, an
+empirical study of what each designation means, and an ablation with estimated coefficients
+instead of fixed penalties.</td><td><a href="availability.html">Availability</a></td></tr>
+<tr><td>Registers</td><td>{len(reqs)} requirement rows, 14 questions with routes, 14
+suggestions with falsifiers, 15 flags, 13 sources.</td>
+<td><a href="readiness.html">Readiness</a></td></tr>
+<tr><td>Verification</td><td>162 fail-closed checks and 72 unit tests, run in CI on every
+change; the build fails rather than publishes if any rule breaks.</td>
+<td><code>verify.py</code></td></tr>
+</tbody></table>
+
+<h2>2. What it measured</h2>
+<table>
+<thead><tr><th style="width:34%">Result</th><th>Number</th><th>Reading</th></tr></thead>
+<tbody>
+<tr><td>Model Brier skill vs the de-vigged close</td>
+<td><strong>{f4['brier_skill_vs_close']}</strong> [{f4['skill_lo95']}, {f4['skill_hi95']}],
+n={f4['n_games']}</td>
+<td>The model is worse than the market, and the interval excludes zero. This is the single most
+important number on the site.</td></tr>
+<tr><td>Random control</td><td>{f2['brier_skill_vs_close']}</td>
+<td>A coin flip scores far worse still, so the model does carry information — just less than
+the market already carries.</td></tr>
+<tr><td>Spread-implied benchmark</td><td>{f5['brier_skill_vs_close']}
+[{f5['skill_lo95']}, {f5['skill_hi95']}]</td>
+<td>Statistically level with the close: the two market prices agree with each other, which is
+the sanity check that both are being read correctly.</td></tr>
+<tr><td>Totals model</td><td>{tot['brier_skill_vs_close']}
+[{tot['skill_lo95']}, {tot['skill_hi95']}]</td>
+<td>Also negative, on the same basis.</td></tr>
+<tr><td>Availability ablation</td><td>+{ab['difference_vs_without']}
+[{ab['diff_lo95']}, {ab['diff_hi95']}], n={ab['n_games']}</td>
+<td>The availability features slightly <em>hurt</em> squared error. A finding, published as
+one.</td></tr>
+<tr><td>Standings reconciliation</td><td>32/32 exact</td>
+<td>The results feed is sound once the 14 official Week 10 finals are appended to a pinned
+dataset that omits them.</td></tr>
+</tbody></table>
+
+<h2>3. What it did not measure</h2>
+<ul>
+<li><strong>No closing prices.</strong> All 13 fixtures kick off after this build. The
+price store holds opens only, and the closing columns are empty by policy — not estimated.
+Clearing condition on <a href="readiness.html">R01</a>.</li>
+<li><strong>No prospective results.</strong> Every leaderboard row shows
+<code>n_settled = 0</code>. Nothing can be ranked until games settle.</li>
+<li><strong>No combo pricing.</strong> Three divisions are BLOCKED, with the clearing
+condition published on each row and the reason in
+<a href="correlations.html">Correlations</a>.</li>
+<li><strong>No single venue read.</strong> Only one of thirteen venues' game pages was read
+(<a href="flagged.html">F07</a>), so venue-level detail is thin.</li>
+<li><strong>No third-party price confirmation.</strong> Two operators are read, but no
+independent third source — <a href="flagged.html">F15</a>.</li>
+</ul>
+
+<h2>4. What the "removal of luck" panel says</h2>
+<p>The desk reports home-rate {luck['A_home_win_base_rate']['value']} over
+{luck['A_home_win_base_rate']['n']} games, against a break-even of 0.5. Separating a genuine 55%
+from a coin flip needs {luck['C_bets_to_prove_55pct']['value']} settled bets; 54% needs
+{luck['D_bets_to_prove_54pct']['value']}. With zero prospective bets settled, no ranking on
+this site can yet distinguish skill from luck — which is why the leaderboard is deliberately
+empty of results rather than filled with backtest numbers.</p>
+<p>Two independent scores are reported for every strategy — Brier skill for the signal, flat
+ROI for the staking — and never merged. The 2026 tail already shows them disagreeing, which is
+exactly the case the split exists to expose.</p>
+
+<h2>5. The next decision, and who makes it</h2>
+<div class="note"><strong>The desk recommends one thing:</strong> run the paper period, do not
+promote anything to live, and treat the origination residuals as a research series rather
+than as picks. The gate that would change that is written on every leaderboard row. The
+questions that would unblock the missing pieces are
+<a href="questions.html">Q01 (closing prices), Q02 (operator terms), Q03 (official inactive
+lists)</a>. The suggestions that would change the desk most are
+<a href="suggestions.html">S05 and S13</a>, both deliberately left as drafts for the owner.</div>
+<p>Nothing on this site is a betting recommendation, and no strategy has been certified.</p>
+
+<h2>6. Where each claim above can be checked</h2>
+<table>
+<thead><tr><th>Claim</th><th>Check it here</th><th>Underlying source</th></tr></thead>
+<tbody>
+<tr><td>52 originated rows, side then total then moneyline</td>
+<td><code>data/origination_week11.csv</code></td>
+<td>{link('https://www.nfl.com/schedules/2026/by-week/week-11', 'Week 11 schedule')}</td></tr>
+<tr><td>The market line on each row</td><td><code>data/market_snapshots.csv</code></td>
+<td>{link('https://sportsbook.draftkings.com/leagues/football/nfl', 'DraftKings')} ·
+{link('https://sportsbook.fanduel.com/navigation/nfl', 'FanDuel')}</td></tr>
+<tr><td>Skill intervals and the controls</td><td><code>data/backtest_families.csv</code></td>
+<td>{link('https://github.com/nflverse/nflverse-data/releases/tag/schedules',
+          'pinned games dataset (GPL-3.0)')}</td></tr>
+<tr><td>Availability counts and the delta</td>
+<td><code>data/availability_summary.csv</code></td>
+<td>{link('https://www.nfl.com/injuries/league/2026/reg11', 'official Week 11 report')}</td></tr>
+<tr><td>The 32/32 reconciliation</td>
+<td><code>data/standings_reconciliation.csv</code></td>
+<td>{link('https://www.nfl.com/standings/league/2026/REG', 'official standings')}</td></tr>
+<tr><td>Designation play rates</td><td><code>data/designation_reliability.csv</code></td>
+<td>{link('https://github.com/nflverse/nflverse-data/releases/tag/injuries',
+          'pinned injury reports')}</td></tr>
+<tr><td>Anything marked unread</td><td><a href="flagged.html">Flagged for review</a></td>
+<td>{link('https://www.nfl.com/injuries/league/2026/reg11', 'official report')}</td></tr>
+</tbody></table>
+"""
+    return layout('executive-summary.html', 'Executive summary', body,
+                  'One page: what was built, what it measured, what it did not measure, and '
+                  'the next decision.')
 
 
 def page_readiness(d):
@@ -961,6 +1100,7 @@ def main():
     d = load_all()
     pages = {
         'index.html': page_index(d),
+        'executive-summary.html': page_exec_summary(d),
         'readiness.html': page_readiness(d),
         'origination.html': page_origination(d),
         'backtest.html': page_backtest(d),

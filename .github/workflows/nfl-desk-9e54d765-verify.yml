@@ -1,0 +1,102 @@
+name: NFL desk 9e54d765 — build, verify, test
+
+# Fail-closed CI for the session-9e54d765 line-origination desk only.
+# Three things must hold before this desk can publish:
+#   1. the committed CSVs and pages are exactly what the deterministic scripts produce
+#   2. verify.py passes every structural, provenance, hash and rule check
+#   3. the unit tests pass, including the numeric negative controls
+# Then, on main only, the published URL is smoke-checked.
+
+on:
+  pull_request:
+    paths:
+      - 'nfl-desk-9e54d765/**'
+      - '.github/workflows/nfl-desk-9e54d765-verify.yml'
+  push:
+    branches: ['arena/9e54d765-own5', main]
+    paths:
+      - 'nfl-desk-9e54d765/**'
+      - '.github/workflows/nfl-desk-9e54d765-verify.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nfl-desk-9e54d765-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Rebuild, verify, test
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Rebuild the data layer from the committed inputs (deterministic)
+        run: python3 nfl-desk-9e54d765/build_data.py
+
+      - name: Rebuild the site from the rebuilt CSVs
+        run: python3 nfl-desk-9e54d765/build_site.py
+
+      - name: Confirm the committed desk matches a clean rebuild
+        run: |
+          if ! git diff --exit-code --stat -- nfl-desk-9e54d765; then
+            echo '::error title=Non-deterministic build::The committed CSVs or pages differ from a clean rebuild.'
+            git diff --stat -- nfl-desk-9e54d765
+            exit 1
+          fi
+          echo 'Committed desk is byte-identical to a clean rebuild.'
+
+      - name: Fail-closed verification (structure, provenance, hashes, rules, links)
+        run: python3 nfl-desk-9e54d765/verify.py
+
+      - name: Unit tests, including numeric negative controls
+        run: python3 -m unittest discover -s nfl-desk-9e54d765/tests -v
+
+      - name: Upload the verified desk for review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nfl-desk-9e54d765
+          path: |
+            nfl-desk-9e54d765/*.html
+            nfl-desk-9e54d765/*.css
+            nfl-desk-9e54d765/data/
+          if-no-files-found: warn
+
+  pages-smoke:
+    name: Published URL smoke check
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    needs: verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check every page of the published desk
+        run: |
+          base="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
+          fail=0
+          for page in index readiness origination backtest leaderboard availability \
+                      correlations questions suggestions flagged sources; do
+            url="$base/nfl-desk-9e54d765/$page.html"
+            ok=0
+            for attempt in $(seq 1 24); do
+              if body="$(curl --fail --silent --show-error --location "$url")" \
+                 && grep -q 'Line-Origination Desk' <<< "$body"; then
+                echo "OK   $url"
+                ok=1
+                break
+              fi
+              sleep 10
+            done
+            if [ "$ok" -ne 1 ]; then
+              echo "::error title=Pages not ready::$url did not serve the desk."
+              fail=1
+            fi
+          done
+          exit "$fail"
