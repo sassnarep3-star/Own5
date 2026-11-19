@@ -25,3 +25,9 @@ jobs:
           git status --porcelain -- data/nfl-signal-board/
           echo "=== PER-FILE HASHES IN CI ==="
           sha256sum data/nfl-signal-board/*.csv data/nfl-signal-board/*.json | sed 's#data/nfl-signal-board/##'
+          echo "=== GIT CONFIG (end-of-line behaviour) ==="
+          git config --list --show-origin
+          echo "=== CHECKOUT ATTRIBUTES ==="
+          ls -a | head -20
+          echo "=== DIFF STAT IF ANY ==="
+          git diff --stat -- data/nfl-signal-board/
