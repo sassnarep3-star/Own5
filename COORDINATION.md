@@ -3898,3 +3898,37 @@ blocks first, this session's block after). No other session's work was discarded
 **Cross-session requests**
 
 - None. All work is additive inside the claimed namespace; no other session's files are edited.
+
+---
+
+
+## Session a59c762a — NFL Decision Console & Master Requirements Register (claimed 2026-11-19 UTC)
+
+**Branch:** `arena/a59c762a-own5` (base `2f02e1e` = current `main`).
+**Session ID:** `a59c762a`.
+
+**Claimed namespace (strictly additive, zero overlap with any other session):**
+- `nfl-desk-a59c762a/**` (GitHub Pages desk: landing page + category subpages, data CSVs, deterministic stdlib-only build, fail-closed verifier, unit tests)
+- `research/nfl-a59c762a/**` (executive summary, methodology, verification log, flagged register)
+- `.github/workflows/nfl-desk-a59c762a.yml` (scoped deterministic verification only)
+- Append-only blocks in `COORDINATION.md` and one additive row in `README.md`
+
+**Read-only (never edited by this session):** root `index.html`, `pages/**`, `data/**` outside the claimed scope, `scripts/**`, `tools/**`, `tests/**`, `assets/**`, `docs/**`, `research/**` outside `research/nfl-a59c762a/**`, every other `nfl-*` / `nba-*` / `sf-*` / `rental-*` namespace, all existing workflows, all existing CSV/JSON.
+
+**Purpose (from the user's brief):** one decision console that (1) carries a **single master requirements register** — one row per brief requirement line, with the gate that blocks it, the number that would clear it, the observed value and an official source link (closing the gap logged as SG-A62-01 in `nfl-integration-a620f5a5/data/suggestions.csv`); (2) publishes a **fresh dated official Week 11 capture** (injury report read with its clock time, standings, schedule, results) and the **delta** against the repository's existing capture rather than a new "level"; (3) originates **side → total → moneyline** with model line, market line and difference as three separate columns; (4) keeps a **price-snapshot store**, a **verified results feed**, a **leaderboard that separates signal from staking**, **correlations with n published**, **pre-registration**, a **demotion gate**, and a **control baseline**; (5) publishes **questions / information / answers** and a **suggestions register** (options + recommendation + two-sided "what would change our mind") for review before any change is implemented; (6) publishes an **executive summary** and a **Flagged for Review** page. Every table row is source-linked, or left blank and explicitly flagged as unverified — never inferred.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| A59-01 | Coordination claim + task board | in progress | a59c762a | COORDINATION.md | This block. Claim pushed before any build work. |
+| A59-02 | First-hand dated official reads (Week 11 injury report, Week 11 schedule, Week 10 results, league standings, Week 12 schedule, schedule release) with read clock + content hash of each extract | in progress | a59c762a | `nfl-desk-a59c762a/raw/**`, `data/captures.csv` | Read 2026-11-19 via the sandbox fetcher (nfl.com is not reachable over TLS from this sandbox; recorded as a limitation). |
+| A59-03 | Master requirements register: one row per brief requirement line → status, blocking gate, clearing number, observed value, official source, repository evidence | in progress | a59c762a | `nfl-desk-a59c762a/data/requirements.csv` | Crosswalks the four existing per-desk registers; drops nothing. |
+| A59-04 | Origination, price store, results feed, leaderboard (signal/staking split), correlations, gates, pre-registration, demotion gate, control baselines | in progress | a59c762a | `nfl-desk-a59c762a/data/*.csv` | Model lines computed in-repo from official standings; market-price cells blank + flagged by policy P-01. |
+| A59-05 | Availability: Week 11 official injury rows + delta vs the repository's existing capture + per-team starters-out view | in progress | a59c762a | `nfl-desk-a59c762a/data/availability*.csv` | Publishes the delta, never the level. Replacement names stay blank until an official depth source is verified. |
+| A59-06 | Questions / suggestions registers + executive summary + Flagged for Review | in progress | a59c762a | `nfl-desk-a59c762a/data/questions.csv`, `suggestions.csv`, `research/nfl-a59c762a/**` | Nothing implemented on a suggestion; each carries a two-sided "what would change our mind". |
+| A59-07 | Deterministic build script → landing page + category subpages | in progress | a59c762a | `nfl-desk-a59c762a/build_desk.py` | Stdlib only; no clock, git or network inside the builder. |
+| A59-08 | Fail-closed verifier + unit tests (negative controls) + scoped CI workflow | in progress | a59c762a | `nfl-desk-a59c762a/verify_desk.py`, `nfl-desk-a59c762a/tests/**`, `.github/workflows/nfl-desk-a59c762a.yml` | Row/link/source integrity; deterministic rebuild check. |
+| A59-09 | Repo-wide link + build verification, final integration, PR to main, autonomous merge, Pages live check, record | in progress | a59c762a | COORDINATION.md, README.md (one additive row) | Integration only after A59-03…A59-08 verify PASS. |
+
+**Cross-session requests:** none yet. Any change needed in another session's files is logged here instead of edited.
+
+
