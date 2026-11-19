@@ -1,0 +1,34 @@
+name: nfl-teamview-42899de4-verify
+
+on:
+  pull_request:
+    paths:
+      - "nfl-teamview-42899de4/**"
+      - "data/nfl-teamview-42899de4/**"
+      - "research/nfl-42899de4/**"
+      - ".github/workflows/nfl-teamview-42899de4.yml"
+  push:
+    branches: [main, "arena/42899de4-own5"]
+    paths:
+      - "nfl-teamview-42899de4/**"
+      - "data/nfl-teamview-42899de4/**"
+      - "research/nfl-42899de4/**"
+      - ".github/workflows/nfl-teamview-42899de4.yml"
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deterministic rebuild (must be byte-identical)
+        run: |
+          python3 nfl-teamview-42899de4/compute_views.py
+          python3 nfl-teamview-42899de4/build_site.py
+          git diff --exit-code -- data/nfl-teamview-42899de4 nfl-teamview-42899de4/pages nfl-teamview-42899de4/assets
+
+      - name: Fail-closed verifier
+        run: python3 nfl-teamview-42899de4/verify.py
+
+      - name: Negative controls (verifier must reject corruption)
+        run: python3 nfl-teamview-42899de4/tests/test_verify.py

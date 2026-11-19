@@ -1,0 +1,33 @@
+club,club_name,week,status,opponent,kickoff_printed,network,report_state,players_listed,qb_on_report,dnp_count,lp_count,fp_count,out_count,questionable_count,doubtful_count,net_injury_count,designations_printed,starters_out,replacement_named,flags,source_url,read_utc
+ATL,Atlanta Falcons,10,PLAYING,KC,,Sunday,listed,11,,1,6,4,1,3,1,5,YES,,,,https://www.nfl.com/injuries/league/2026/reg10,2026-11-19T11:55Z-12:03Z
+AZ,Arizona Cardinals,10,PLAYING,LAR,,Sunday,listed,15,,0,10,5,3,7,0,10,YES,,,,https://www.nfl.com/injuries/league/2026/reg10,2026-11-19T11:55Z-12:03Z
+BAL,Baltimore Ravens,10,PLAYING,LAC,,Monday Night Football,listed,10,,0,2,8,1,1,0,2,YES,,,,https://www.nfl.com/injuries/league/2026/reg10,2026-11-19T11:55Z-12:03Z
+BUF,Buffalo Bills,10,PLAYING,NYJ,,Sunday,listed,14,,1,6,7,0,4,1,5,YES,,,,https://www.nfl.com/injuries/league/2026/reg10,2026-11-19T11:55Z-12:03Z
+CAR,Carolina Panthers,10,PLAYING,NO,,Sunday,listed,12,,1,8,3,1,4,2,7,YES,,,,https://www.nfl.com/injuries/league/2026/reg10,2026-11-19T11:55Z-12:03Z
+CHI,Chicago Bears,10,BYE,,,,absent,,,,,,,,,,,,,F-TV-06,,
+CIN,Cincinnati Bengals,10,PLAYING,PIT,,Sunday Night Football,listed,9,,3,4,2,1,0,3,4,YES,,,,https://www.nfl.com/injuries/league/2026/reg10,2026-11-19T11:55Z-12:03Z
+CLE,Cleveland Browns,10,PLAYING,HOU,,Sunday,listed,12,,0,2,10,2,0,0,2,YES,,,,https://www.nfl.com/injuries/league/2026/reg10,2026-11-19T11:55Z-12:03Z
+DAL,Dallas Cowboys,10,PLAYING,SF,,Sunday,listed,19,,3,10,6,5,5,1,11,YES,,,,https://www.nfl.com/injuries/league/2026/reg10,2026-11-19T11:55Z-12:03Z
+DEN,Denver Broncos,10,BYE,,,,absent,,,,,,,,,,,,,F-TV-06,,
+DET,Detroit Lions,10,PLAYING,NE,,Sunday,listed,9,Jared Goff (Full Participation in Practice),2,5,2,3,2,0,5,YES,,,,https://www.nfl.com/injuries/league/2026/reg10,2026-11-19T11:55Z-12:03Z
+GB,Green Bay Packers,10,PLAYING,MIN,,Sunday,listed,17,,4,12,1,4,7,1,12,YES,,,,https://www.nfl.com/injuries/league/2026/reg10,2026-11-19T11:55Z-12:03Z
+HOU,Houston Texans,10,PLAYING,CLE,,Sunday,listed,16,,0,10,6,5,6,0,11,YES,,,,https://www.nfl.com/injuries/league/2026/reg10,2026-11-19T11:55Z-12:03Z
+IND,Indianapolis Colts,10,PLAYING,MIA,,Sunday,listed,14,,2,11,1,6,1,0,7,YES,,,,https://www.nfl.com/injuries/league/2026/reg10,2026-11-19T11:55Z-12:03Z
+JAX,Jacksonville Jaguars,10,PLAYING,TEN,,Sunday,listed,11,,3,5,3,3,1,0,4,YES,,,,https://www.nfl.com/injuries/league/2026/reg10,2026-11-19T11:55Z-12:03Z
+KC,Kansas City Chiefs,10,PLAYING,ATL,,Sunday,listed,13,Justin Fields (Full Participation in Practice); Patrick Mahomes (Full Participation in Practice),0,2,11,,,,,NO_NOT_PRINTED,,,F-TV-03,https://www.nfl.com/injuries/league/2026/reg10,2026-11-19T11:55Z-12:03Z
+LAC,Los Angeles Chargers,10,PLAYING,BAL,,Monday Night Football,listed,19,,5,9,5,3,6,1,10,YES,,,,https://www.nfl.com/injuries/league/2026/reg10,2026-11-19T11:55Z-12:03Z
+LAR,Los Angeles Rams,10,PLAYING,AZ,,Sunday,listed,14,Matthew Stafford (Full Participation in Practice),1,6,7,2,5,0,7,YES,,,,https://www.nfl.com/injuries/league/2026/reg10,2026-11-19T11:55Z-12:03Z
+LV,Las Vegas Raiders,10,PLAYING,SEA,,Sunday,listed,5,,0,4,1,0,2,0,2,YES,,,,https://www.nfl.com/injuries/league/2026/reg10,2026-11-19T11:55Z-12:03Z
+MIA,Miami Dolphins,10,PLAYING,IND,,Sunday,listed,11,,1,5,5,2,1,1,4,YES,,,,https://www.nfl.com/injuries/league/2026/reg10,2026-11-19T11:55Z-12:03Z
+MIN,Minnesota Vikings,10,PLAYING,GB,,Sunday,listed,13,Kyler Murray (Did Not Participate In Practice); Carson Wentz (Limited Participation in Practice),1,6,6,4,3,0,7,YES,,,,https://www.nfl.com/injuries/league/2026/reg10,2026-11-19T11:55Z-12:03Z
+NE,New England Patriots,10,PLAYING,DET,,Sunday,listed,15,Drake Maye (Full Participation in Practice),3,11,1,3,9,0,12,YES,,,,https://www.nfl.com/injuries/league/2026/reg10,2026-11-19T11:55Z-12:03Z
+NO,New Orleans Saints,10,PLAYING,CAR,,Sunday,listed,12,,0,4,8,4,2,0,6,YES,,,,https://www.nfl.com/injuries/league/2026/reg10,2026-11-19T11:55Z-12:03Z
+NYG,New York Giants,10,PLAYING,WAS,,TNF,listed,11,J.J. McCarthy (Full Participation in Practice),0,3,8,0,1,0,1,YES,,,,https://www.nfl.com/injuries/league/2026/reg10,2026-11-19T11:55Z-12:03Z
+NYJ,New York Jets,10,PLAYING,BUF,,Sunday,listed,9,,0,6,3,1,8,0,9,YES,,,,https://www.nfl.com/injuries/league/2026/reg10,2026-11-19T11:55Z-12:03Z
+PHI,Philadelphia Eagles,10,BYE,,,,absent,,,,,,,,,,,,,F-TV-06,,
+PIT,Pittsburgh Steelers,10,PLAYING,CIN,,Sunday Night Football,listed,8,,0,5,3,0,1,0,1,YES,,,,https://www.nfl.com/injuries/league/2026/reg10,2026-11-19T11:55Z-12:03Z
+SEA,Seattle Seahawks,10,PLAYING,LV,,Sunday,listed,15,Sam Darnold (Did Not Participate In Practice); Drew Lock (Full Participation in Practice),4,0,11,4,0,0,4,YES,,,,https://www.nfl.com/injuries/league/2026/reg10,2026-11-19T11:55Z-12:03Z
+SF,San Francisco 49ers,10,PLAYING,DAL,,Sunday,listed,12,,1,7,4,1,7,0,8,YES,,,,https://www.nfl.com/injuries/league/2026/reg10,2026-11-19T11:55Z-12:03Z
+TB,Tampa Bay Buccaneers,10,BYE,,,,absent,,,,,,,,,,,,,F-TV-06,,
+TEN,Tennessee Titans,10,PLAYING,JAX,,Sunday,listed,12,,2,6,4,5,1,0,6,YES,,,,https://www.nfl.com/injuries/league/2026/reg10,2026-11-19T11:55Z-12:03Z
+WAS,Washington Commanders,10,PLAYING,NYG,,TNF,listed,9,Jayden Daniels (Full Participation in Practice),3,2,4,2,0,0,2,YES,,,,https://www.nfl.com/injuries/league/2026/reg10,2026-11-19T11:55Z-12:03Z

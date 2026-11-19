@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Executive summary</title>
+<meta name="description" content="Executive summary of the Week-11 team-view desk">
+<link rel="stylesheet" href="../assets/style.css">
+</head><body>
+<header><h1>NFL Team View &middot; Week 11 Decision Desk</h1>
+<div class="sub">Session 42899de4 &middot; branch arena/42899de4-own5 &middot; all values from official nfl.com reads on 2026-11-19 &middot; blanks are flagged, never inferred</div>
+<nav><a href="index.html">Dashboard</a><a href="teams.html">Per-team view</a><a href="delta.html">W10 → W11 delta</a><a href="report-w11.html">Report W11</a><a href="report-w10.html">Report W10</a><a href="fixtures.html">Fixtures & byes</a><a href="requirements.html">Decision readiness</a><a href="flagged.html">Flagged</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="sources.html">Sources</a><a href="exec-summary.html" class="on">Exec summary</a></nav></header>
+<main>
+
+<div class="note"><strong>Executive summary &mdash; Week-11 per-team injury desk (session 42899de4, 2026-11-19).</strong>
+This desk read the official NFL Week-11 and Week-10 injury reports and both schedules first-hand, transcribed
+255 and 347 row-level entries, and published a 32-club per-team decision view, a
+W10&rarr;W11 delta table, fixtures/byes, and five registers. The Week-11 report is a Wednesday snapshot:
+designations are printed only for Thursday's IND at HOU game plus the explicit &ldquo;No Injuries Reported&rdquo;
+entries for CIN and WAS &mdash; all other designation cells are blank because they are not yet printed, and are
+published as blank with flag F-TV-03, never as zero.</div>
+
+<div class="tiles">
+  <div class="tile"><div class="n">255 / 347</div><div class="l">row-level entries transcribed (W11 / W10)</div><div class="x">100% carry official nfl.com source links</div></div>
+  <div class="tile"><div class="n">4 MET / 1 PARTIAL / 3 BLOCKED</div><div class="l">brief-line status (10 lines in scope)</div><div class="x">blocked gates: starter evidence, depth source, reserve list</div></div>
+  <div class="tile"><div class="n">11</div><div class="l">flagged irregularities</div><div class="x">incl. cross-desk W10 capture mismatch (F-TV-10)</div></div>
+</div>
+
+<h2>What is decision-ready</h2>
+<ul>
+<li><strong>Per-club report state:</strong> listed players, practice-status counts, QB rows on report, explicit
+zero vs bye vs not-yet-designated &mdash; all 32 clubs, both weeks, source-linked.</li>
+<li><strong>Fixtures and byes:</strong> 13 Week-11 games with printed kickoff/network, 14 Week-10 finals, 10 bye
+rows &mdash; official schedules only.</li>
+<li><strong>Deltas:</strong> listed-count and DNP deltas for the 22 clubs that played both weeks; designation
+deltas for the 4 clubs whose W11 designations are printed.</li>
+</ul>
+
+<h2>What is not decision-ready (and why)</h2>
+<ul>
+<li><strong>Starters out / replacements named:</strong> blank for all 32 clubs &mdash; no official
+announced-starter or depth source was read this session; gates K-027 and K-035 (F-TV-01, F-TV-02).</li>
+<li><strong>Net injury count for Sunday clubs:</strong> blank until the report prints designations (F-TV-03);
+re-read later in the week (suggestion S-02-01).</li>
+<li><strong>Availability:</strong> no reserve/IR list read, so &ldquo;not on report&rdquo; is never read as
+&ldquo;available&rdquo; (R-TV-06).</li>
+</ul>
+
+<h2>Trust chain</h2>
+<p>First-hand reads S-01..S-04 &rarr; row-level CSVs &rarr; deterministic roll-up
+(<code>compute_views.py</code>) &rarr; fail-closed verifier (<code>verify.py</code>: row pins, source allowlist,
+blank-not-zero rules, independent recomputation, byte-identical rebuild) &rarr; CI on PR &rarr; Pages.
+Cross-checks: W11 253/253 and 255/255 against two independent same-day captures; W10 347/347 against a third;
+one mismatching capture flagged (F-TV-10). See <code>research/nfl-42899de4/VERIFICATION.md</code>.</p>
+
+</main>
+<footer>Verification: every row carries an official source link or is blank with a flag reference &middot; fail-closed verifier in <code>nfl-teamview-42899de4/verify.py</code> &middot; cross-checks recorded in <code>research/nfl-42899de4/VERIFICATION.md</code></footer>
+</body></html>
