@@ -10,26 +10,42 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 DATA = HERE / "data"
-def _registration_hash():
-    """The registration commit is the one whose message starts '4078a9ad: pre-registration'.
-    Read from the local git history at build time so a rebase cannot leave the site quoting a
-    commit that no longer exists. Falls back to the constant when git is unavailable."""
+ORIGINAL_REGISTRATION = "4078a9ad"
+"""The pre-registration commit published by the original session.
+
+It is NOT in this repository's history any more: a rebase on 2026-11-18 rewrote the
+branch and orphaned it (the same happened to its 2026-11-18 republish, e7282e35).
+A hash that cannot be produced from the repository cannot prove anything, so the
+site states that the pre-registration chain is broken and that no strategy may be
+certified on the basis of a pre-registration hash. What can still be proved, and is
+proved by V11, is that the rule text has not changed since the freeze commit below.
+"""
+
+
+def _rule_freeze_commit():
+    """The newest commit in this history whose data/preregistration.csv is byte-identical
+    to the committed file. Read from the local git history at build time, so the published
+    hash cannot drift away from the repository the way the orphaned one did."""
+    import subprocess
+    rel = "nfl-command-desk/data/preregistration.csv"
     try:
-        import subprocess
-        out = subprocess.run(
-            ["git", "log", "--format=%H %s", "--all", "--grep=^4078a9ad: pre-registration"],
-            cwd=HERE, capture_output=True, text=True, timeout=15)
-        for line in out.stdout.splitlines():
-            parts = line.split(" ", 1)
-            if len(parts) == 2 and parts[1].startswith("4078a9ad: pre-registration"):
-                return parts[0]
+        want = (HERE / "data" / "preregistration.csv").read_bytes()
+        # the pathspec is relative to the working directory, so it is the desk-local path
+        commits = subprocess.run(
+            ["git", "log", "--format=%H", "--full-history", "--", "data/preregistration.csv"],
+            cwd=HERE, capture_output=True, text=True, timeout=20).stdout.split()
+        for c in commits:
+            blob = subprocess.run(["git", "show", f"{c}:{rel}"], cwd=HERE,
+                                  capture_output=True, timeout=20).stdout
+            if blob == want:
+                return c
     except Exception:  # noqa: BLE001
         pass
-    return "e7282e35dbf9afb0c1b364a152b9431dc71b64af"
+    return ""
 
 
-REG = _registration_hash()
-READ = "2026-11-18"
+REG = _rule_freeze_commit()
+READ = "2026-11-18"   # the date the official pages behind these tables were read; unchanged by this repair
 
 NAV = [
     ("index.html", "Overview", "01"),
@@ -195,10 +211,12 @@ def page(fname, title, subtitle, body, active):
 or blank and flagged. Nothing is inferred.</p></aside>
 <main><header class="top"><div><span class="eyebrow">NFL / DECISION DESK</span>
 <h1>{esc(title)}</h1><p class="sub">{esc(subtitle)}</p></div>
-<div class="stamp">Read {READ}<br>Registration <code>{REG[:7]}</code></div></header>
+<div class="stamp">Read {READ}<br>Rule freeze <code>{REG[:7] if REG else "n/a"}</code></div></header>
 {body}
 <footer>OWN5 NFL Command Desk · session 4078a9ad · not affiliated with the NFL.
-Blank cells are unverified, never zero. Registration commit {REG[:12]}.
+Blank cells are unverified, never zero. Rule text frozen at commit {(REG[:12] if REG else "unknown")};
+the original pre-registration commit {ORIGINAL_REGISTRATION} was orphaned by a history rewrite and is no
+longer in this repository, so no strategy may be certified on the basis of a pre-registration hash.
 <a href="https://github.com/sassnarep3-star/Own5">Repository</a> ·
 <a href="https://sassnarep3-star.github.io/Own5/">Root site</a></footer>
 </main></div></body></html>

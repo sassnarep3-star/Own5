@@ -70,10 +70,11 @@ def _c02():
                     assert URL_RE.match(v), "%s row %d bad url %r" % (f, n, v)
 
 
-@check("Every page shows a source link for every data row it renders")
+@check("Every page shows a source link (or an explicit no-source marker) for every data row it renders")
 def _c02b():
     import re
     link = re.compile(r'class="src"')
+    marker = re.compile(r'class="nosrc"')
     for f in sorted(os.listdir(HERE)):
         if not f.endswith(".html") or f in ("index.html", "glossary.html",
                                             "executive-summary.html"):
@@ -84,9 +85,27 @@ def _c02b():
         assert tables, f + " has no table"
         biggest = max(tables, key=lambda t: t.count("<tr>"))
         rows = biggest.count("<tr>") - 1
-        links = len(link.findall(biggest))
+        links = len(link.findall(biggest)) + len(marker.findall(biggest))
         assert links >= rows, "%s: %d data rows but only %d source links" % (
             f, rows, links)
+
+
+@check("No anchor uses a prose value as its href (broken-link guard)")
+def _c02c():
+    # Regression guard for the integration repair of 2026-11-19: source columns
+    # that hold prose were linkified, producing <a href="n/a - deliberately
+    # omitted">. Every relative href must look like a path, and every absolute
+    # one must be a URL.
+    import re
+    path_re = re.compile(r'^[A-Za-z0-9._\-/][A-Za-z0-9._\-/#?&=%]*$')
+    for f in sorted(os.listdir(HERE)):
+        if not f.endswith(".html"):
+            continue
+        body = open(os.path.join(HERE, f), encoding="utf-8").read()
+        for href in re.findall(r'href="([^"]+)"', body):
+            if href.startswith(("http://", "https://", "#", "mailto:", "data:")):
+                continue
+            assert path_re.match(href), "%s: href is not a path or URL: %r" % (f, href)
 
 
 @check("Ledger has 150 games: 137 with finals and 13 scheduled")

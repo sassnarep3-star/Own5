@@ -34,6 +34,16 @@ ALLOWED_HOSTS = {
     "sassnarep3-star.github.io", "api.github.com",
 }
 REG = "e7282e35dbf9afb0c1b364a152b9431dc71b64af"
+"""The published registration hash the original session froze the rules in.
+
+It is no longer in this repository's history: a rebase on 2026-11-18 orphaned it.
+V11 therefore proves the two things that can still be proved from the repository —
+that the rule text has not changed since the freeze commit the site publishes, and
+that the site discloses the broken chain — instead of checking a hash that the
+repository can no longer produce.
+"""
+ORIGINAL_REGISTRATION = "4078a9ad"
+PREREG_REL = "nfl-command-desk/data/preregistration.csv"
 
 FAILS = []
 PASSES = []
@@ -93,7 +103,7 @@ def v02_counts():
         "gates.csv": 12, "sources.csv": 7, "leaderboard.csv": 21,
         "preregistration.csv": 5, "standings.csv": 32, "ratings.csv": 32,
         "origination_wk11.csv": 12, "availability_summary.csv": 4,
-        "flagged.csv": 14, "luck_panel.csv": 3, "schedule_vs_announcement.csv": 6,
+        "flagged.csv": 15, "luck_panel.csv": 3, "schedule_vs_announcement.csv": 6,
     }
     for name, n in expected.items():
         got = len(rows(name))
@@ -211,25 +221,49 @@ def v10_no_forbidden_claims():
 
 
 def v11_registration():
-    """The published hash must exist AND be the pre-registration commit, and the site must be
-    quoting the same hash the verifier checks. This is what catches a rebase that orphans it."""
-    try:
-        typ = subprocess.run(["git", "cat-file", "-t", REG], cwd=HERE, capture_output=True,
-                             text=True, timeout=20).stdout.strip()
-        msg = subprocess.run(["git", "log", "-1", "--format=%s", REG], cwd=HERE,
-                             capture_output=True, text=True, timeout=20).stdout.strip()
-        head_msg = subprocess.run(
-            ["git", "log", "--format=%H %s"], cwd=HERE, capture_output=True, text=True,
-            timeout=20).stdout
-    except Exception:  # noqa: BLE001
-        typ, msg, head_msg = "", "", ""
-    check(typ == "commit", "V11 the published registration commit exists", REG)
-    check(msg.startswith("4078a9ad: pre-registration"),
-          "V11 the published hash is the pre-registration commit", msg)
-    check(REG in head_msg, "V11 the registration commit is on this branch's history", REG)
-    # the built page must quote the same hash the verifier checks
+    """The rule-freeze chain.
+
+    The original pre-registration commit (4078a9ad) and its 2026-11-18 republish
+    (e7282e35) were orphaned by a rebase and are no longer in this repository's
+    history, so they can no longer prove that the rules were frozen before the
+    prospective window opened. V11 now proves what is still provable and requires
+    the broken chain to be disclosed:
+
+      1. the freeze commit the site publishes exists in the current history;
+      2. the rule text at that commit is byte-identical to the committed file,
+         i.e. the rules have not been edited since the freeze;
+      3. the site quotes that same hash;
+      4. the site states that the original pre-registration hash is orphaned and
+         that no strategy may be certified on the basis of a pre-registration hash.
+    """
+    def git(*args):
+        return subprocess.run(["git", *args], cwd=HERE, capture_output=True, text=True,
+                              timeout=30).stdout
+
     page = (HERE / "index.html").read_text() if (HERE / "index.html").exists() else ""
-    check(REG[:7] in page, "V11 the site quotes the same registration hash", REG[:7])
+    m = re.search(r"Rule text frozen at commit ([0-9a-f]{7,40})", page)
+    freeze = m.group(1) if m else ""
+    check(bool(freeze), "V11 the site publishes a rule-freeze commit hash")
+    if not freeze:
+        return
+    typ = git("cat-file", "-t", freeze).strip()
+    check(typ == "commit", "V11 the published freeze commit exists in this repository", freeze)
+    head = git("log", "--format=%H")
+    check(any(h.startswith(freeze) for h in head.split()),
+          "V11 the freeze commit is on this branch's history", freeze)
+    blob = subprocess.run(["git", "show", f"{freeze}:{PREREG_REL}"], cwd=HERE,
+                          capture_output=True, timeout=30).stdout
+    want = (HERE / "data" / "preregistration.csv").read_bytes()
+    check(blob == want,
+          "V11 the rule text at the freeze commit is byte-identical to the committed file")
+    check(ORIGINAL_REGISTRATION in page,
+          "V11 the site discloses the orphaned original pre-registration commit",
+          ORIGINAL_REGISTRATION)
+    check("no strategy may be certified on the basis of a pre-registration hash" in page,
+          "V11 the site states that no strategy may be certified on a pre-registration hash")
+    flags = rows("flagged.csv")
+    check(any(f["flag_id"] == "FLAG-V11" for f in flags),
+          "V11 the broken registration chain is on the flagged register")
 
 
 def main():
