@@ -1,0 +1,5 @@
+ridge_lambda,week10_mae_spread_pts,week10_mae_total_A_pts,week10_mae_total_B_pts,sigma_points,role,source_url
+1.0,9.529,10.311,8.896,10.347,sensitivity,https://www.nfl.com/schedules/2026/by-week/week-10
+5.0,9.811,9.199,8.896,10.766,pre-registered,https://www.nfl.com/schedules/2026/by-week/week-10
+10.0,10.51,8.696,8.896,11.24,sensitivity,https://www.nfl.com/schedules/2026/by-week/week-10
+25.0,11.412,8.441,8.896,12.012,sensitivity,https://www.nfl.com/schedules/2026/by-week/week-10

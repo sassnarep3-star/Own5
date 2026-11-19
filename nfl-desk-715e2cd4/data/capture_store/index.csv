@@ -1,0 +1,6 @@
+capture_id,slug,url,fetched_utc,http_status,bytes,sha256,file,status,note
+A0001,injury-report-reg11,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T07:01:49Z,ERR,0,,,FAILED,URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>
+A0002,injury-report-reg10,https://www.nfl.com/injuries/league/2026/reg10,2026-11-19T07:01:49Z,ERR,0,,,FAILED,URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>
+A0003,standings-2026-reg,https://www.nfl.com/standings/league/2026/REG,2026-11-19T07:01:49Z,ERR,0,,,FAILED,URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>
+A0004,schedule-week-11,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-19T07:01:49Z,ERR,0,,,FAILED,URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>
+A0005,transactions,https://www.nfl.com/transactions/,2026-11-19T07:01:49Z,ERR,0,,,FAILED,URLError: <urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>

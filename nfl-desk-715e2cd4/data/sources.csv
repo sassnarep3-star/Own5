@@ -1,0 +1,13 @@
+source_id,title,url,read_utc,what_it_supports
+S01,2026 NFL league standings (regular season),https://www.nfl.com/standings/league/2026/REG,2026-11-19T06:55Z,"32 clubs W-L-T-PCT-PF-PA; drives ratings, correlations, Pythagorean panel"
+S02,2026 Week 11 schedule and byes,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-19T06:55Z,13 fixtures + 6 byes; drives origination and fixture context
+S03,2026 Week 10 schedule and finals,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-19T06:55Z,14 finals; the chronological holdout
+S04,2026 Week 11 official injury report,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T06:55Z,"253 player rows, 24 clubs, 2 clubs no injuries"
+S05,2026 Week 10 official injury report,https://www.nfl.com/injuries/league/2026/reg10,not read this session,pointer only; no values taken from it here
+S06,NFL transactions hub,https://www.nfl.com/transactions/,not read this session,pointer only; roster turnover remains unpinned (F-13)
+S07,Dolphins place QB Malik Willis on IR; McCord in line for first start,https://www.nfl.com/news/dolphins-place-qb-malik-willis-groin-on-injured-reserve-kyle-mccord-in-line-for-first-start,2026-11-19T06:55Z,"announced starter + IR move, dated article"
+S08,"NFL news roundup, Friday Nov 13",https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-nov-13,2026-11-19T06:55Z,Lamar Jackson 6-10 weeks; per-club Friday practice/injury detail
+S09,"NFL news roundup, Wednesday Nov 11",https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-wednesday-nov-11,2026-11-19T06:55Z,headline only: Watson and Beck announced as starters
+S10,"Drew Lock has no injury designation, will start",https://www.nfl.com/news/drew-lock-no-injury-designation-seahawks-raiders,2026-11-19T06:55Z,announced starter
+S11,Game centre: Bengals at Commanders,https://www.nfl.com/games/bengals-at-commanders-2026-reg-11,2026-11-19T06:55Z,"Game Info: LANDOVER, MD / NORTHWEST STADIUM"
+S12,Game centre: Colts at Texans,https://www.nfl.com/games/colts-at-texans-2026-reg-11,2026-11-19T06:55Z,"Game Info: HOUSTON, TX / RELIANT STADIUM"

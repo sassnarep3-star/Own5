@@ -1,0 +1,16 @@
+# Source: https://www.nfl.com/schedules/2026/by-week/week-11 (read 2026-11-19)
+# away|home|date|time_et|network|venue_label|note
+IND|HOU|2026-11-19|8:15 PM|PRIME|NRG Stadium|
+MIA|BUF|2026-11-22|1:00 PM|CBS|Highmark Stadium|
+BAL|CAR|2026-11-22|1:00 PM|FOX|Bank of America Stadium|
+NO|CHI|2026-11-22|1:00 PM|FOX|Soldier Field|
+TEN|DAL|2026-11-22|1:00 PM|FOX|AT&T Stadium|
+TB|DET|2026-11-22|1:00 PM|FOX|Ford Field|
+AZ|KC|2026-11-22|1:00 PM|CBS|GEHA Field at Arrowhead Stadium|
+PIT|PHI|2026-11-22|1:00 PM|CBS|Lincoln Financial Field|
+NYJ|LAC|2026-11-22|4:05 PM|FOX|SoFi Stadium|
+JAX|NYG|2026-11-22|4:25 PM|CBS|MetLife Stadium|
+LV|DEN|2026-11-22|4:25 PM|CBS|Empower Field at Mile High|
+MIN|SF|2026-11-22|8:20 PM|NBC|Mexico City (international game)|
+CIN|WAS|2026-11-23|8:15 PM|ESPN|FedEx Field|
+# Byes (page: "Teams on Bye"): ATL CLE GB LAR NE SEA

@@ -1,0 +1,3 @@
+capture_id,dataset,url,retrieved_utc,file,sha256,bytes
+P001,2026 REG standings,https://www.nfl.com/standings/league/2026/REG,2026-11-19T06:55:00Z,raw/standings_2026_reg.txt,152e0cf8be414fa95ad1e5a4e8118752ebc2a102ed4dc527ce677beac6165c75,567
+P002,Week 11 injury report,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T06:55:00Z,raw/injuries_2026_reg11.txt,dd4cd14e7ff10d0efcfe7bba12a8df8a6cc49d4dee78941b2f319f05bdb3c1e8,15353

@@ -51,7 +51,7 @@ jobs:
             url="$base$path"
             success=0
             for attempt in $(seq 1 24); do
-              if curl --fail --silent --show-error --location "$url" | grep -q 'Own5'; then
+              if body="$(curl --fail --silent --show-error --location "$url")" && grep -q 'Own5' <<< "$body"; then
                 echo "OK $url"
                 success=1
                 break

@@ -1,0 +1,7 @@
+item,value,n,ci_low,ci_high,reading,source_url
+"Home win share, weeks 1-9",0.4706,136,0.3887,0.5541,interval covers 0.50; no detectable home edge in this window,https://www.nfl.com/schedules/2026/by-week/week-10
+"Mean home margin, weeks 1-9",-0.5,136,,,used as HFA plug-in (h) in the frozen model,https://www.nfl.com/schedules/2026/by-week/week-10
+"Mean game total, weeks 1-9",45.926,136,,,league level for the total baselines,https://www.nfl.com/schedules/2026/by-week/week-10
+One-score games (margin <= 8) share,0.5662,136,,,share of results decided inside a single score,https://www.nfl.com/schedules/2026/by-week/week-10
+Bets needed to tell 55% from the 52.4% break-even,5773,,,,"80% power, two-sided 5%; below this a win rate is noise",https://www.nfl.com/schedules/2026/by-week/week-10
+Certified strategies in this namespace,0,,,,no strategy has passed G0-G7; see leaderboard.csv,https://www.nfl.com/schedules/2026/by-week/week-10

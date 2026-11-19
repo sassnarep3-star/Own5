@@ -1,0 +1,5 @@
+metric,value,n,ci_low,ci_high,baseline,baseline_value,skill_vs_baseline,verdict,source_url
+Week 10 side (spread) MAE,9.811,14,5.443,14.178,constant home-margin baseline (no club information),12.571,0.2196,Informational only: FAILS minimum-sample gate G1 (needs 300 scored bets),https://www.nfl.com/schedules/2026/by-week/week-10
+Week 10 total MAE (estimator A),9.199,14,4.408,13.989,constant league-mean total (no club information),8.204,-0.1213,Informational only: FAILS gate G1; A vs B compared in lambda_sensitivity.csv,https://www.nfl.com/schedules/2026/by-week/week-10
+Week 10 total MAE (estimator B),8.896,14,3.963,13.828,constant league-mean total (no club information),8.204,-0.0843,Informational only: FAILS gate G1; B is club-average so it is weaker out of sample,https://www.nfl.com/schedules/2026/by-week/week-10
+Week 10 moneyline Brier skill vs base rate,0.2223,14,,,Brier of the training-corpus home-win rate,0.2383,0.2223,Informational only: FAILS gate G1 and gate G3 (no calibration sample),https://www.nfl.com/schedules/2026/by-week/week-10

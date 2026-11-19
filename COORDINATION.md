@@ -3688,6 +3688,269 @@ checks re-run green (543 checks, 0 alarms; 11 unit tests). No data values change
 
 
 ---
+## Session c8cb6ae8 — CI smoke-check pipefail fix (X51-14 takeover; 2026-11-19 UTC)
+
+Session ID `c8cb6ae8`, branch `arena/c8cb6ae8-own5` (base `2f02e1e` = current `main`).
+
+**Takeover.** Cross-session request **X51-14** (logged 2026-11-18 by session `arena-51cf3786`)
+requested the capture-then-grep fix for the `curl … | grep -q` pattern under `set -o pipefail`
+in 10 workflows. The owning sessions' claims are stale (>60 minutes with no commits as of
+2026-11-19), so this session takes over X51-14 per the takeover rule. The handoff is recorded
+here.
+
+**Root cause (confirmed).** Under `set -o pipefail`, `curl … | grep -q 'X'` fails whenever `grep`
+matches early and exits, because `curl` then receives SIGPIPE and the pipeline's exit status is
+non-zero — a false "Published page did not become ready" failure on large pages, even though the
+page contains the expected text. The page content is correct; only the check is wrong.
+
+**Fix applied (mechanical, one line per file).** In each affected workflow the smoke check now
+captures the body first, then greps the captured string:
+`if body="$(curl --fail --silent --show-error --location "$url")" && grep -q 'X' <<< "$body"; then`
+This is the same pattern already validated in `nfl-integration-a620f5a5.yml`.
+
+**Files changed (scope: CI smoke checks only; no data, no site content):**
+- `.github/workflows/nfl-560ed315.yml` (pattern `OWN5`)
+- `.github/workflows/nfl-desk-35a1feb2.yml` (`OWN5`)
+- `.github/workflows/nfl-desk-3fb93d11.yml` (`OWN5`)
+- `.github/workflows/nfl-desk-864d5668.yml` (`Own5`)
+- `.github/workflows/nfl-desk-c98c6270.yml` (`Own5`)
+- `.github/workflows/nfl-desk-d38e90c5.yml` (`Own5`)
+- `.github/workflows/nfl-desk-e1d60f5d.yml` (`OWN5`)
+- `.github/workflows/nfl-desk-e46fb855.yml` (`OWN5`)
+- `.github/workflows/nfl-readiness-cba42531.yml` (`OWN5`)
+- `.github/workflows/pages.yml` (`Own5`)
+
+**Verification performed.**
+- After the edit, `grep -rn "curl.*| grep -q" .github/workflows/*.yml` returns no live code match
+  (the only remaining hit is the explanatory comment inside the already-fixed `nfl-integration-a620f5a5.yml`).
+- Each replacement preserves the original grep pattern and indentation; `git diff` reviewed line-by-line.
+- No data values or rendered site content changed.
+
+**X51-15 status (re-checked, resolved).** The four previously malformed CSVs under
+`data/nfl-desk-f2e20e96/` (`questions.csv`, `readiness.csv`, `sources.csv`, `suggestions.csv`) now
+parse with header-matched row lengths (Python `csv` check: 0 mismatched lines in all four). The
+decision-desk audit (`tools/decision_desk/audit_repo.py`) now exits 0, so the prior blocking failure
+at `audit_repo.py` line 162 is gone. No action required.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| C8-01 | Take over X51-14 and fix `curl \| grep -q` pipefail in 10 workflows | done | c8cb6ae8 | .github/workflows/{nfl-560ed315,nfl-desk-35a1feb2,nfl-desk-3fb93d11,nfl-desk-864d5668,nfl-desk-c98c6270,nfl-desk-d38e90c5,nfl-desk-e1d60f5d,nfl-desk-e46fb855,nfl-readiness-cba42531,pages}.yml | Capture-then-grep; verified no live pipefail match remains. |
+| C8-02 | Confirm X51-15 resolved (f2e20e96 CSVs parse; decision-desk audit exits 0) | done | c8cb6ae8 | (read-only) data/nfl-desk-f2e20e96/*.csv, tools/decision_desk/audit_repo.py | 0 mismatched rows; audit exit 0. No edits. |
+| C8-03 | Commit, push, PR to main, autonomous merge, confirm Pages, record result | in progress | c8cb6ae8 | COORDINATION.md, README.md (append row) | Merge only after checks/deploy green. |
+
+**Cross-session requests**
+
+- None opened by this session. X51-14 is closed by this takeover.
+
+**Merge record.** Recorded below after the PR merges.
+
+---
+## Session arena/188c3719-own5 — NFL Origin Desk final integration and publication (2026-11-19)
+
+**Branch:** `arena/188c3719-own5` (branched from main `2f02e1e7975ee61780b39e1ef9bc83591ccb55e2`, rebased onto `fe9ed18`). **Scope:** `COORDINATION.md` (this block only). **No other file is touched.** The NFL Origin Desk (`nfl-origin-desk/**`, `data/nfl-origin-desk/**`, `scripts/build_origin_desk.py`, `scripts/verify_origin_desk.py`) is owned by sessions `arena/abb5f8be-own5` (O1–O7 done, PR #112) and `arena/2025930f-own5` (V1–V8 done); this session does not edit it and does not duplicate its work.
+
+**Why this session exists.** The origin desk already implements the user brief in full (own lines side→total→moneyline, fair/market/difference columns, signal/staking-separated leaderboard, gates G0–G12, correlations with n, decision-readiness table, questions register, suggestions register, executive summary, flagged register). Every row is source-linked or blank-and-flagged; nothing is inferred. This session's contribution is the independent re-verification and the final PR→merge→Pages→record loop.
+
+**Mandate (user brief):** originate own NFL lines; run a leaderboard competition with validation gates; compute correlations only from official sources with n published; separate signal from staking; maintain decision-readiness table (one row per requirement → blocking gate → number to clear → observed status); questions/information/answers register; reviewable suggestions register; executive summary; GitHub Pages live site — every table row source-linked or blank-and-flagged, never inferred.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| I1 | Claim scope in COORDINATION.md + push claim | done | arena/188c3719-own5 | COORDINATION.md | Claim block pushed 2026-11-19 (commit d27e216), then merged with origin/main (fe9ed18) preserving session c8cb6ae8's block. |
+| I2 | Independent line-by-line review of the origin desk (13 CSVs + build/verify scripts) | done | arena/188c3719-own5 | `data/nfl-origin-desk/*.csv`, `scripts/build_origin_desk.py`, `scripts/verify_origin_desk.py` | Reviewed: requirements R001–R080, questions Q01–Q18, lines W09-01–W09-15 (market columns blank+flagged), strategies S1–S7 (0 certified; pre_reg_commit NOT RECORDED per F15), gates G0–G12, leaderboard (4 divisions, not certified), correlations (4 official-source rows, n=32, from standings read 2026-11-18), injuries (derived values blanked per F18), suggestions (16), sources (23, tiered OFFICIAL/INDUSTRY/METHODOLOGY), flagged (24 items F01–F24). No value inferred; unverifiable values left blank and flagged. |
+| I3 | Re-run build and fail-closed verify | done | arena/188c3719-own5 | `scripts/build_origin_desk.py`, `scripts/verify_origin_desk.py`, `nfl-origin-desk/*` | Build deterministic: 13 HTML pages + style.css + .nojekyll, byte-identical to HEAD (no git diff). Verify PASSED: 13 CSVs, 13 HTML pages, every row source-linked or explicit blank+flag, 0 broken internal links, 0 failures. |
+| I4 | Open PR arena/188c3719-own5 → main, autonomous merge | in progress | arena/188c3719-own5 | COORDINATION.md | PR #140 opened; `gh pr merge <N> --merge`, no approval wait, no --auto. |
+| I5 | Confirm GitHub Pages builds for the merge commit | pending | arena/188c3719-own5 | COORDINATION.md | Pages API: source = main branch root; confirm build status `built` with no error. |
+| I6 | Record PR link, merge commit and Pages result in COORDINATION.md | pending | arena/188c3719-own5 | COORDINATION.md | Follow-up block after I4–I5 complete. |
+
+## Cross-session requests
+
+- None. All work is in this session's COORDINATION.md block only; no file owned by another session is edited. The origin desk remains owned by sessions `arena/abb5f8be-own5` and `arena/2025930f-own5`.
+
+### arena/188c3719-own5 — merge record (2026-11-19)
+
+| Item | Value |
+|------|-------|
+| I4 | PR #140 `arena/188c3719-own5 → main` opened and merged autonomously via `gh pr merge 140 --merge` (no approval wait, no `--auto`). State: MERGED. Merge commit `7387cd000d527a134428037f0d9b17a4b35be930`. PR: https://github.com/sassnarep3-star/Own5/pull/140 |
+| I5 | GitHub Pages confirmed `built` with no error for merge commit `7387cd000d527a134428037f0d9b17a4b35be930` via the Pages API (source = `main` branch root, `path: /`). Previous status `building` → `built` after the merge triggered a redeploy. |
+| I6 | PR link, merge commit and Pages result recorded here. I4/I5/I6 marked done. |
+
+**Result:** PR #140 merged to `main`; Pages `built`; this session's COORDINATION.md block (I1–I6) is now on `main`. No file owned by another session was edited; the NFL Origin Desk remains owned by sessions `arena/abb5f8be-own5` (O1–O7, PR #112) and `arena/2025930f-own5` (V1–V8).
+
+
+
+---
+
+## Session 715e2cd4 — NFL Line-Origination Desk: completion record (2026-11-19)
+
+All work is in the additive namespace claimed at the top of this block. PR: https://github.com/sassnarep3-star/Own5/pull/143
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| W1 | Claim scope + push | done | 715e2cd4 | COORDINATION.md | Claim pushed before any build work (72f9407). |
+| W2 | Official reads with UTC clocks + hashed raw extracts | done | 715e2cd4 | `nfl-desk-715e2cd4/raw/**`, `data/captures.csv`, `data/capture_log.csv` | Standings (32 clubs), Week 11 schedule (13 + 6 byes), Week 10 finals (14), Week 11 injury report (253 rows / 24 clubs), 2 game-centre venue blocks, 7 dated announced-starter articles. |
+| W3 | Data layer | done | 715e2cd4 | `nfl-desk-715e2cd4/data/**` | 39 originated markets; 136-game corpus; scorecard; correlations with n; availability; gates; strategies; leaderboard; questions; suggestions; flags; price policy. |
+| W4 | Deterministic builder + fail-closed verifier + tests | done | 715e2cd4 | `build.py`, `pipeline.py`, `governance.py`, `verify.py`, `tests/**` | verify.py: **3,014 checks, 0 problems**. 25 tests incl. 9 negative controls. Builder is clock/network/git free. |
+| W5 | Research documents | done | 715e2cd4 | `research/nfl-715e2cd4/{EXECUTIVE_SUMMARY,MODEL,VERIFICATION}.md` | Executive summary, model/gates/governance, 25-check line-by-line verification log. |
+| W6 | Scoped CI workflow | done | 715e2cd4 | `.github/workflows/nfl-desk-715e2cd4.yml` | Rebuild → verify → test → `git diff --exit-code`; check run `verify` **passed** on PR #143 (12s). |
+| W7 | PR, rebase, merge, Pages live check | in progress | 715e2cd4 | COORDINATION.md, README.md | Rebased onto `f895e17`; COORDINATION.md append-conflict resolved **keeping both sides** (c8cb6ae8, 188c3719 blocks intact). Merge + Pages results recorded below. |
+
+### Verification performed (line by line)
+
+25 checks in `research/nfl-715e2cd4/VERIFICATION.md`. The load-bearing one: **every one of the 32 clubs' official
+2026 REG (W, L, T, PF, PA) equals that club's totals across the 136-game corpus plus its official Week 10 line —
+32/32 MATCH, 0 mismatches.** League-wide sums agree independently (W=L=149, T=2, PF=PA=6,923). Injury report
+counts cross-check between `availability_week11.csv` and `availability_summary.csv` (9 Out, 7 Questionable,
+83 DNP / 87 LP / 83 FP). Estimator A's MAE and the constant-mean baseline MAE both reproduce from the per-game
+table.
+
+### Findings published against interest
+
+- **Both total estimators lose to a constant league-mean total** on the Week 10 holdout (skill −0.121 and −0.084).
+- Side beats a constant home-margin baseline by 21.96% MAE on n=14 — uninformative.
+- The 2026 home-field term is **negative (−0.50 pts, n=136)**; published as-is and raised as Q04.
+- **5,773** settled bets are needed to separate 55% from 52.4% at 80% power; one week gives 14.
+- **0 certified strategies**; the leaderboard carries no performance figure at all (LB-01 enforced by the verifier).
+
+### Irregularities flagged for review (published on `flagged.html`, non-blocking)
+
+F-01 no operator price (0/39) · F-03 venue conflict (game centre **NORTHWEST STADIUM** vs schedule link "FedEx Field") ·
+F-06 negative HFA · F-07 no depth source (depth/starter/replacement/snap/inactive blank on all 253 rows; 1st-4th
+string matrix deliberately not built) · F-08 no inactive list or game book · F-10 Questionable uncalibratable ·
+F-11 no publisher timestamp on the report · F-12 **Lions designations do not match the brief** (Joseph/Reed show
+practice status with blank game status; Mays DNP/blank) · F-13 "not listed ≠ available" (Lamar Jackson on IR) ·
+F-17 corpus carried not re-scraped (reconciliation is the evidence) · F-21 totals lose to a constant mean ·
+F-22 designations cover 2 of 13 fixtures · F-23 scheduled byte-level capture blocked by sandbox egress (all five
+official URLs failed TLS; the failure is left in `data/capture_store/index.csv` as evidence).
+
+### Cross-session requests
+
+- **None filed.** Nothing outside the claimed namespace was edited. The earlier open items X51-13/X51-14/X51-15 are
+  recorded as closed by sessions c8cb6ae8 and 51cf3786 above; this session did not touch them.
+
+### Merge record
+
+Recorded below after `gh pr merge`.
+
+### 715e2cd4 — merge record and post-deploy follow-up (2026-11-19)
+
+| Item | Value |
+|---|---|
+| PR | [#143](https://github.com/sassnarep3-star/Own5/pull/143) — merged autonomously with `gh pr merge 143 --merge` (no approval wait, no `--auto`) |
+| Merged at / commit | 2026-11-19T07:04:49Z · merge commit `09baaccc001b2b726e9f101b5c99c2d02527cc85` |
+| Checks before merge | **all passing**: `verify` (desk), `desk-verify`, `build-and-audit`, `Build, evidence integrity and browser smoke tests`. Path-scoped jobs skipped by design. |
+| Rebase | Rebased onto main `f895e17` (PR #140/#142 from sessions 188c3719 and others). COORDINATION.md append conflict resolved **keeping both sides**: the c8cb6ae8 and 188c3719 blocks are intact and unmodified. |
+| Pages | `pages/builds/latest` → **built** for `09baaccc`. Live pages re-read through the page reader: `/nfl-desk-715e2cd4/` and `/flagged.html` both render. |
+| Post-deploy fix | F-12's evidence link pointed at the desk's own flagged page; corrected to the official Week 11 report page (`nfl.com/injuries/league/2026/reg11`) in a follow-up PR from the same branch. |
+
+**Scope check.** Files changed by this session: `nfl-desk-715e2cd4/**`, `research/nfl-715e2cd4/**`,
+`.github/workflows/nfl-desk-715e2cd4.yml`, one additive README section, and append-only blocks in this file.
+No other session's file was edited.
+
+### 715e2cd4 — second follow-up (2026-11-19)
+
+Suggestion **P01** carried the decision state "Approved / not yet funded". No approval has been recorded by the
+operator, so it now reads **"Proposed (no decision recorded, no funding)"**. No suggestion on this desk may claim
+a decision that did not happen. Rebuilt, re-verified (3,014 checks, 0 problems) and retested (25 tests) before the
+follow-up PR.
+| Follow-up | [#145](https://github.com/sassnarep3-star/Own5/pull/145) merged 2026-11-19, merge commit `ff6fc6f3`; Pages built for it. Corrections: F-12 evidence link, merge record. |
+| Follow-up 2 | [#147](https://github.com/sassnarep3-star/Own5/pull/147) merged 2026-11-19, merge commit `016e7ee`; Pages **built** for `016e7ee`. Correction: P01 decision state. |
+
+---
+
+
+---
+
+---
+
+## Session 6e13b9ff — NFL Brief Traceability & Decision Desk (claimed 2026-11-19 UTC)
+
+Session ID `6e13b9ff`, branch `arena/6e13b9ff-own5` (base `2f02e1e` = current `main` tip).
+
+**Claimed namespace (strictly additive, zero overlap with any other session):**
+- `nfl-desk-6e13b9ff/**` (GitHub Pages desk: landing page with decision-readiness table + category subpages, deterministic stdlib-only build, fail-closed verify, unit tests, CSS)
+- `data/nfl-desk-6e13b9ff/**` (CSV/JSON data layer: full-brief requirements coverage, gates/readiness, questions register, suggestions register, fresh official verification, flagged, sources)
+- `research/nfl-6e13b9ff/**` (executive summary, methodology/verification log)
+- `.github/workflows/nfl-desk-6e13b9ff.yml` (scoped build+verify+tests on PR/push)
+- Append-only block in `COORDINATION.md` and one additive row in `README.md`
+
+**Read-only (never edited):** root `index.html`, `pages/**`, `assets/**`, `scripts/**`, `tools/**`, `tests/**`, `docs/**`, `data/**` outside `data/nfl-desk-6e13b9ff/`, all existing workflows, every other `nfl-*` / `nba-*` / `sf-*` / `rental-*` / `own5-*` namespace.
+
+**Purpose (this session's brief):** (1) repo review line by line with irregularities flagged; (2) a landing-page decision-readiness table with one row per requirement of this session's brief, each showing the blocking gate, the number that would clear it, and the observed value where one exists; (3) a complete requirements-coverage matrix (every line of the brief → status → in-repo evidence → official source or blank+flagged); (4) a questions/information/answers register (what must be answered before any decision) and a reviewable suggestions register (options + recommendation + what-would-change-our-mind; nothing implemented without an owner decision); (5) first-hand official-source verification performed this session on 2026-11-19 (standings, Week 11 slate, Week 11 injury-report availability, Week 12 schedule), every row linked to its official URL with read timestamps; (6) executive summary; (7) Flagged for Review page — no inferred values, blanks are explicit and flagged; (8) PR to `main`, autonomous merge after verify PASS, GitHub Pages live check, record here.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| E6-01 | Claim scope in COORDINATION.md + push claim before build work | done | 6e13b9ff | COORDINATION.md | This block; claim commit pushed before any build work. |
+| E6-02 | Fresh official reads (2026-11-19): standings, W11 slate, W11 injury report, W12 schedule + line-by-line verification rows | done | 6e13b9ff | data/nfl-desk-6e13b9ff/verification.csv, data/nfl-desk-6e13b9ff/standings_fresh_2026-11-19.csv, data/nfl-desk-6e13b9ff/sources.csv | 61 verification rows, 0 MISMATCH after fixing two transcription/convention bugs caught by the checks (tie-half PCT; bye code LAR as printed). Reads 2026-11-19T06:51:41Z / 06:57:28Z. |
+| E6-03 | Full-brief requirements coverage + decision-readiness (gate / number-to-clear / observed) | done | 6e13b9ff | data/nfl-desk-6e13b9ff/requirements_coverage.csv (gate/number/observed columns) | 84 rows: 38 MET / 33 PARTIAL / 5 BLOCKED / 5 OPEN / 3 RULE-ADOPTED; every evidence path existence-checked by verify_desk.py. |
+| E6-04 | Questions register + suggestions register (site improvements; nothing implemented without decision) | done | 6e13b9ff | data/nfl-desk-6e13b9ff/questions.csv, suggestions.csv | 18 questions (BLOCKING/PARTIAL/OPEN), 14 suggestions all PROPOSED (none implemented). |
+| E6-05 | Build: landing (decision-readiness table) + category subpages, deterministic stdlib | done | 6e13b9ff | nfl-desk-6e13b9ff/build_desk.py | 9 pages; landing carries the full 84-row decision-readiness table. |
+| E6-06 | Fail-closed verify (row source links exist, official-domain allowlist for official claims, no broken internal links, pinned counts) | done | 6e13b9ff | nfl-desk-6e13b9ff/verify_desk.py | PASS: 2293 checks, 0 failures (headers, pinned counts, vocab, evidence existence, official-host allowlist, arithmetic, zero MISMATCH, link integrity in both quote styles). |
+| E6-07 | Unit tests incl. negative controls | done | 6e13b9ff | nfl-desk-6e13b9ff/tests/test_desk.py | 11 tests OK including 10 negative controls (dropped row, bad source, MISMATCH row, unknown flag, corrupt PCT, implemented suggestion, broken href, missing evidence root, readiness row removed, plus determinism). |
+| E6-08 | Executive summary + Flagged for Review | done | 6e13b9ff | research/nfl-6e13b9ff/**, flagged page | research/nfl-6e13b9ff/EXECUTIVE_SUMMARY.md + flagged page (20 items). |
+| E6-09 | Scoped CI workflow | done | 6e13b9ff | .github/workflows/nfl-desk-6e13b9ff.yml | .github/workflows/nfl-desk-6e13b9ff.yml: re-author + rebuild + diff + verify + tests, scoped to this namespace. |
+| E6-10 | Rebase on main, PR, autonomous merge, live Pages check, record | done | 6e13b9ff | COORDINATION.md, README.md (one row) | PR #146 merged bfa7b3d8 (2026-11-19T07:17:27Z) after 12 green checks; Pages run 44478471703 success; live desk verified; full record below. |
+
+**Merge conflict log.** On 2026-11-19, opening PR #146 hit `CONFLICTING` with main (sessions `c8cb6ae8`
+and `715e2cd4` had merged in the meantime). Resolved by rebasing onto `ff6fc6f`; conflicts were confined to the
+append-only tails of `COORDINATION.md` and `README.md` and were resolved keeping **both** sides (main's new
+blocks first, this session's block after). No other session's work was discarded or edited.
+
+**Cross-session requests**
+
+- None. All work is additive inside the claimed namespace; no other session's files are edited.
+
+### 6e13b9ff — completion record (2026-11-19, UTC)
+
+**Pull request.** [#146](https://github.com/sassnarep3-star/Own5/pull/146) "6e13b9ff: NFL Brief Traceability &
+Decision Desk" merged with `gh pr merge 146 --merge` at **2026-11-19T07:17:27Z**, merge commit **`bfa7b3d8`**
+(head `43b8ebf`). Pre-merge checks: **12 total — 8 pass, 4 designed skips, 0 failures** (scoped
+`nfl-desk-6e13b9ff` verify, 5 other desk verifies, decision-desk build-and-audit, repo evidence/browser smoke
+suite; page smokes skip on PR by design). Merge only attempted after 0 fail / 0 pending.
+
+**Rebase log (3 rounds, all conflicts kept both sides).** Main moved three times mid-session (PRs #143/#145 from
+`715e2cd4`, then #147; plus `c8cb6ae8` blocks). Each rebase conflicted only in the append-only tails of
+`COORDINATION.md` and `README.md`; resolved by keeping main's new blocks first, this session's block after,
+with a `---` separator. No other session's content was discarded; force-pushes used `--force-with-lease` and
+stayed on `arena/6e13b9ff-own5` only. Both resolutions are logged in the conflict-log paragraph above.
+
+**Pages.** `pages build and deployment` run **44478471703 → success** for `bfa7b3d8`. Live read-backs through
+the page reader: [landing](https://sassnarep3-star.github.io/Own5/nfl-desk-6e13b9ff/) (84-row decision-readiness
+table with gates/numbers/observed + evidence blob links), [Flagged for Review](https://sassnarep3-star.github.io/Own5/nfl-desk-6e13b9ff/flagged.html)
+(all 20 items), [Suggestions](https://sassnarep3-star.github.io/Own5/nfl-desk-6e13b9ff/suggestions.html)
+(all 14 PROPOSED rows).
+
+**Verification on the merged tree.** `author_data.py` → `build_desk.py` → `verify_desk.py`: **2,293 checks, 0
+failures**; `python3 -m unittest discover -s nfl-desk-6e13b9ff/tests`: **11 tests OK** (10 negative controls);
+committed tree matches a clean rebuild byte-for-byte (re-run after each rebase).
+
+**First-hand sources read this session (all official, 2026-11-19):**
+| Source | URL | Read (UTC) | Used for |
+|---|---|---|---|
+| 2026 league standings | https://www.nfl.com/standings/league/2026/REG | 06:51:41Z | 32-row capture, tie-half PCT arithmetic, diff vs 2026-11-18 capture (32/32 agree) |
+| Week 11 schedule | https://www.nfl.com/schedules/2026/by-week/week-11 | 06:51:41Z | 13 fixtures + 6 byes (as printed) diffed vs prior capture (all agree) |
+| Week 11 injury report | https://www.nfl.com/injuries/league/2026/reg11 | 06:57:28Z | publication status (F6-11 resolved) + 26-row TNF designation capture |
+| Week 12 schedule | https://www.nfl.com/schedules/2026/by-week/week-12 | 06:57:28Z | 6 spot fixtures; heading/date mismatches recorded verbatim (F6-05) |
+| IND@HOU game centre | https://www.nfl.com/games/colts-at-texans-2026-reg-11 | 06:57:28Z | venue Game Info (F6-04), injury-card corroboration, records cross-check |
+
+**Irregularities published by this session (20, non-blocking, all with source links):** F6-01 corpus counts
+136/148/150 · F6-02 daily capture red at rebuild step (run 44401842347) · F6-03 35a1feb2 verifier red (run
+44298365799) · F6-04 NRG vs Reliant across official pages · F6-05 Week-12 heading/date mismatches · F6-06
+Brevin Jordan wording differs across official surfaces · F6-07 14 open PRs · F6-08 root banner 2026-11-02 ·
+F6-09 14+ parallel requirement registers · F6-10 non-reproducing base-rate claim · F6-11 reg11 resolved ·
+F6-12 PR #136 unmerged · F6-13 stale board rows after merged PRs · F6-15 no price source · F6-16 depth route
+unresolved · F6-17 capture misses club depth · F6-18 snap counts aggregator-derived · F6-19 past-season archive
+aggregator-only · F6-20 reward pool blank · F6-21 resolved (this record).
+
+**Two verification catches worth recording (anti-hallucination worked):** the first arithmetic pass flagged
+NYG/WAS PCT because it used W/G — the official page counts ties as half-wins; the bye capture was normalised to
+"LA" while the schedule page prints "LAR". Both were corrected to the official conventions and re-verified
+(0 MISMATCH rows) rather than explained away.
+
+**Follow-up:** record-only PR #150 carries this completion record (K-082 -> MET, F6-21 -> resolved, honest source-link labels).
+| Follow-up 3 | [#149](https://github.com/sassnarep3-star/Own5/pull/149) merged 2026-11-19, merge commit `f039d08`; Pages **built**. Venue cell now shows both official labels. Rebased onto `bfa7b3d` (PR #146, session 6e13b9ff) and later onto `21beb57` (PR #150); COORDINATION.md append conflicts resolved **keeping both sides** — sessions 6e13b9ff and 188c3719 blocks are intact. |
+
+---
+
 ## Session 74306746 — NFL repository verification & decision-desk integration review (claimed 2026-11-19 UTC)
 
 Session ID `74306746`, current branch `arena/74306746-own5`, based on `2f02e1e7975ee61780b39e1ef9bc83591ccb55e2` (`main`). This is an additive, independent review of the already-published NFL decision desks; it does not re-enter or alter another session's data/site scope.

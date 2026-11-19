@@ -1,0 +1,8 @@
+param,value,definition
+spec_id,M1-ridge-offdef,frozen model identifier
+mu,22.9632,"mean team points per game, weeks 1-9"
+hfa,-0.5,"mean home margin, weeks 1-9 (points)"
+sigma,10.7658,"sd of margin residuals, weeks 1-9 (ML mapping)"
+ridge_lambda,5.0,pre-registered shrinkage
+training_games,136,official finals used
+source_url,https://www.nfl.com/schedules/2026/by-week/week-10,results provenance

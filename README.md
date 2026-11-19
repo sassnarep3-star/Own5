@@ -615,3 +615,30 @@ Owns the price-snapshot store and the injury point-in-time ledger:
 - **CI takeover (handoff in COORDINATION.md):** fixed the pre-existing decision-desk PR failure (F-05) and the B34 rebuild failure — repo-wide point-in-time audit artifacts are no longer regenerated on PR rebuilds; stale derived outputs re-committed.
 
 Rebuild and verify: `python3 nfl-desk-6cbf25fa/build.py && python3 nfl-desk-6cbf25fa/verify.py && python3 -m unittest discover -s nfl-desk-6cbf25fa/tests -v` (543 checks, 11 tests incl. negative controls). CI: `.github/workflows/nfl-6cbf25fa.yml`.
+
+## NFL line-origination desk · session 715e2cd4 (2026-11-19)
+
+**Live page (after merge):** https://sassnarep3-star.github.io/Own5/nfl-desk-715e2cd4/ · **Flagged for Review:** https://sassnarep3-star.github.io/Own5/nfl-desk-715e2cd4/flagged.html
+
+An independent, additive desk that originates its own NFL lines and then tries to disprove them:
+
+- **Origination:** 13 Week 11 fixtures × 3 markets = **39 originated markets**, in the required order side → total → moneyline, with fair line, market line and residual as **separate columns**. Market columns are blank because no licensed feed exists (F-01); policy P-01 forbids scraping operator odds before their terms are read.
+- **Verified results:** a **136-game pre-registered corpus** (weeks 1-9) that **reconciles 32/32 clubs exactly** to the official 2026 REG standings on W-L-T-PF-PA, plus a **14-game chronological holdout** (Week 10). Every result carries an official game-centre URL.
+- **Honest scorecard:** the side beats a constant home-margin baseline by 21.96% MAE but on n=14; **both total estimators lose to a constant league-mean total** (skill −0.121 and −0.084). Both failures are on the landing page.
+- **Governance:** 6 pre-registered strategies with two-sided "what would change our mind" fields, signal and staking scored in **separate columns**, **0 certified**, no backtest figure anywhere on the leaderboard (LB-01), 10 gates (G0-G9), 4 frozen demotion triggers, 3 control baselines.
+- **Availability, without invention:** 253 official Week 11 report rows published with practice and game status; depth rank, starter flag, snap share, replacement and inactive columns are **blank for all 253 rows** because no official depth source was captured. The 1st-4th string matrix is deliberately **not built** (F-07).
+- **Registers:** 66 requirements with blocking gate and clearing number, 15 questions (8 blocking), 16 reviewable suggestions, 22 flags, 12 dated sources.
+
+Rebuild and verify: `python3 nfl-desk-715e2cd4/pipeline.py && python3 nfl-desk-715e2cd4/build.py && python3 nfl-desk-715e2cd4/verify.py && python3 -m unittest discover -s nfl-desk-715e2cd4/tests -v` (3,011 checks, 25 tests including 9 negative controls). CI: `.github/workflows/nfl-desk-715e2cd4.yml`.
+## NFL Brief Traceability & Decision Desk · session 6e13b9ff (2026-11-19)
+
+**Live page (after merge):** https://sassnarep3-star.github.io/Own5/nfl-desk-6e13b9ff/ · **Flagged for Review:** https://sassnarep3-star.github.io/Own5/nfl-desk-6e13b9ff/flagged.html
+
+Traces every line of this session's brief to a status, blocking gate, clearing number and observed value, on top of a first-hand official re-read of 2026-11-19:
+
+- **Decision-readiness on the landing page** (`data/nfl-desk-6e13b9ff/requirements_coverage.csv`): 84 requirement rows — 38 MET / 33 PARTIAL / 5 BLOCKED / 5 OPEN / 3 RULE-ADOPTED — each with gate, number-to-clear, observed value and existence-checked evidence paths (rendered as absolute GitHub links so nothing 404s from the Pages subdirectory).
+- **First-hand official verification** (`data/nfl-desk-6e13b9ff/verification.csv`, 61 rows, reads 2026-11-19T06:51:41Z and 06:57:28Z): all 32 standings rows transcribed and recomputed (PCT uses the official ties-as-half-win convention — caught by the arithmetic check) and diffed against the committed 2026-11-18 capture (32/32 agree); the 13-game Week-11 slate and 6 byes (codes as printed, "LAR") diffed against the prior capture; the newly published Week-11 injury report captured in full for tonight's IND@HOU (Out 5+4, Questionable 5+4); six Week-12 spot fixtures; forecast freeze confirmed (all 39 Week-11 markets opened 2026-11-18T03:55:13Z before kickoff).
+- **Registers:** 18 questions, 14 suggestions (all PROPOSED — nothing implemented without an owner decision), 20 flagged items (two red scheduled checks, 14 open PRs, the 136/148/150 corpus-count split, venue NRG vs Reliant across official pages, Week-12 heading/date mismatches), 6 official sources.
+- **Fail-closed gate:** `verify_desk.py` (2,293 checks: headers, pinned counts, vocabularies, evidence existence, official-host allowlists, arithmetic, zero MISMATCH rows, link integrity both quote styles) + 11 unit tests with negative controls.
+
+Rebuild and verify: `python3 nfl-desk-6e13b9ff/author_data.py && python3 nfl-desk-6e13b9ff/build_desk.py && python3 nfl-desk-6e13b9ff/verify_desk.py && python3 -m unittest discover -s nfl-desk-6e13b9ff/tests -v`. CI: `.github/workflows/nfl-desk-6e13b9ff.yml`.

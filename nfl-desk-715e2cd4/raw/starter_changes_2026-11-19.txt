@@ -1,0 +1,9 @@
+# Dated official nfl.com articles that name a starter. Read 2026-11-19.
+# team|player|role_as_printed|evidence_quote|article_date|url
+MIA|Kyle McCord|QB|"second-year quarterback Kyle McCord will fill in ... poised to make his first NFL start"|2026-11-10|https://www.nfl.com/news/dolphins-place-qb-malik-willis-groin-on-injured-reserve-kyle-mccord-in-line-for-first-start
+MIA|Malik Willis|QB|"Willis was placed on injured reserve Tuesday due to a groin injury"|2026-11-10|https://www.nfl.com/news/dolphins-place-qb-malik-willis-groin-on-injured-reserve-kyle-mccord-in-line-for-first-start
+SEA|Drew Lock|QB|"Drew Lock (elbow/oblique) has no injury designation, will start for Seahawks vs. Raiders"|2026-11-14|https://www.nfl.com/news/drew-lock-no-injury-designation-seahawks-raiders
+BAL|Lamar Jackson|QB|"expected to miss 6-10 weeks after undergoing surgery to repair his broken and dislocated thumb"|2026-11-13|https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-nov-13
+CLE|Deshaun Watson|QB|"Browns to start QB Deshaun Watson vs. Texans"|2026-11-11|https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-wednesday-nov-11
+AZ|Carson Beck|QB|"Cardinals' Carson Beck to start vs. Rams"|2026-11-11|https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-wednesday-nov-11
+HOU|David Montgomery|RB|"RB David Montgomery (groin) was ruled out for Sunday's game against the Browns"|2026-11-13|https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-nov-13

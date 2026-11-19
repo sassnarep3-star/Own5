@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sources - NFL Brief Traceability Desk</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <h1>NFL Brief Traceability &amp; Decision Desk</h1>
+    <p class="sub">Session 6e13b9ff &middot; every row source-linked or blank+flagged &middot; official reads 2026-11-19T06:51:41Z / 2026-11-19T06:57:28Z</p>
+    <nav class="top"><a href="index.html">Dashboard</a><a href="requirements.html">Requirements</a><a href="captures.html">Official captures</a><a href="verification.html">Verification</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged</a><a href="sources.html" class="here">Sources</a><a href="executive-summary.html">Executive summary</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<h2>Source registry</h2>
+<p class="lede">Every external source read first-hand by this session, with access stamps and what each one
+verified. All are official nfl.com pages; in-repo evidence is listed on the
+<a href="requirements.html">requirements</a> and <a href="verification.html">verification</a> pages.</p>
+<div class="tablewrap"><table><thead><tr><th>ID</th><th>Source</th><th>Official</th><th>URL</th>
+<th>Accessed (UTC)</th><th>Used for</th></tr></thead><tbody><tr id="SRC-01"><td class="id">SRC-01</td><td class="req">2026 NFL League Standings (official)</td><td><span class="badge b-met">OFFICIAL</span></td><td><a href='https://www.nfl.com/standings/league/2026/REG'>https://www.nfl.com/standings/league/2026/REG</a></td><td class='small'>2026-11-19T06:51:41Z</td><td>32 standings rows (fresh capture + arithmetic + prior-capture diff)</td></tr><tr id="SRC-02"><td class="id">SRC-02</td><td class="req">NFL Week 11 Schedule 2026 (official)</td><td><span class="badge b-met">OFFICIAL</span></td><td><a href='https://www.nfl.com/schedules/2026/by-week/week-11'>https://www.nfl.com/schedules/2026/by-week/week-11</a></td><td class='small'>2026-11-19T06:51:41Z</td><td>13 fixtures, kickoff/network, 6 bye teams, record cross-checks</td></tr><tr id="SRC-03"><td class="id">SRC-03</td><td class="req">Official NFL Injury Report - Week 11 (official)</td><td><span class="badge b-met">OFFICIAL</span></td><td><a href='https://www.nfl.com/injuries/league/2026/reg11'>https://www.nfl.com/injuries/league/2026/reg11</a></td><td class='small'>2026-11-19T06:57:28Z</td><td>26 TNF designation rows (IND/HOU); publication status vs 2026-11-18</td></tr><tr id="SRC-04"><td class="id">SRC-04</td><td class="req">NFL Week 12 Schedule 2026 (official)</td><td><span class="badge b-met">OFFICIAL</span></td><td><a href='https://www.nfl.com/schedules/2026/by-week/week-12'>https://www.nfl.com/schedules/2026/by-week/week-12</a></td><td class='small'>2026-11-19T06:57:28Z</td><td>6 spot fixtures (partial read, chunk 0 of 3); heading quirks F6-05</td></tr><tr id="SRC-05"><td class="id">SRC-05</td><td class="req">Colts at Texans 2026 REG 11 game centre (official)</td><td><span class="badge b-met">OFFICIAL</span></td><td><a href='https://www.nfl.com/games/colts-at-texans-2026-reg-11'>https://www.nfl.com/games/colts-at-texans-2026-reg-11</a></td><td class='small'>2026-11-19T06:57:28Z</td><td>venue Game Info (F6-04), injury-card corroboration, records cross-check</td></tr><tr id="SRC-06"><td class="id">SRC-06</td><td class="req">Week 11 schedule (bye/record capture for cross-check)</td><td><span class="badge b-met">OFFICIAL</span></td><td><a href='https://www.nfl.com/schedules/2026/by-week/week-11'>https://www.nfl.com/schedules/2026/by-week/week-11</a></td><td class='small'>2026-11-19T06:51:41Z</td><td>diff inputs for slate and byes vs committed prior capture</td></tr></tbody></table></div>
+
+<footer class="site">
+  <p>Data layer: <code>data/nfl-desk-6e13b9ff/</code> &middot; built by <code>nfl-desk-6e13b9ff/build_desk.py</code> &middot;
+  gated by <code>verify_desk.py</code> (fail-closed) &middot; no value on this site is inferred: blanks are flagged, never filled.</p>
+</footer>
+</main>
+</body>
+</html>

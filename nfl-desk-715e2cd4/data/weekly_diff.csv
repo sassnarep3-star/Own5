@@ -1,0 +1,4 @@
+file,column,row_key,previous_value,current_value,compared_with,note,source_url
+team_ratings.csv,offence_rating_pts,no previous snapshot,,,n/a,first capture; a diff needs a second dated snapshot (F-11),https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-715e2cd4/data/weekly_diff.csv
+team_ratings.csv,defence_rating_pts,no previous snapshot,,,n/a,first capture; a diff needs a second dated snapshot (F-11),https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-715e2cd4/data/weekly_diff.csv
+availability_summary.csv,designated_out,no previous snapshot,,,n/a,first capture; a diff needs a second dated snapshot (F-11),https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-715e2cd4/data/weekly_diff.csv
