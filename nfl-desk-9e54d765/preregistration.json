@@ -1,0 +1,64 @@
+{
+  "registration_id": "REG-9E54D765-V1",
+  "frozen_utc": "2026-11-19T11:05:00Z",
+  "frozen_before": "any evaluation code was run in this namespace; the file's sha256 is recorded in data/registration.json and recomputed by verify.py",
+  "owner_session": "9e54d765",
+  "corpus": {
+    "source": "data/decision-desk/raw/games.csv.gz (in-repo pinned dataset, 1999-2026), reconciled to https://www.nfl.com/standings/league/2026/REG",
+    "reconciliation_rule": "the 2026 subset must reproduce W, L, T, PF and PA for all 32 clubs exactly; any mismatch is a hard failure, not a warning",
+    "season_types": ["REG"],
+    "seasons_used": "1999-2025 for fitting and evaluation (2026 rows are scored only as an out-of-sample tail)"
+  },
+  "target": {
+    "definition": "side: P(home win). total: P(total above the market line). moneyline: P(home win) priced against the market moneyline.",
+    "push_handling": "pushes are dropped from total scoring and reported with their count"
+  },
+  "families": {
+    "F1_LEAGUE_BASE": "no game information; P(home win) = the prior-season home win rate of the training window, shrunk to 0.5. Control.",
+    "F2_RANDOM": "P = 0.5 for every game. Control.",
+    "F3_FAVOURITE_ONLY": "P = 0.75 when the home club is the market favourite by 3 or more, 0.25 when it is the underdog by 3 or more, 0.5 otherwise. Control.",
+    "F4_OPPONENT_AWARE": "opponent-aware point ratings fitted on prior weeks only (ridge on margin, home-field term), converted to a win probability with the measured residual sd of the margin.",
+    "F5_OPPONENT_AWARE_PLUS_AVAILABILITY": "F4 plus the availability ablation term (see ablations). Runs only if the availability join is point-in-time safe; otherwise it is published as NOT RUN with the gate that blocks it.",
+    "F6_TOTAL_LINE_ANCHOR": "total estimate = the market closing total plus the measured mean closing-vs-realised bias from strictly prior weeks. Published at week level only."
+  },
+  "walk_forward_protocol": {
+    "fit_window": "expanding, starting from the first season in the corpus",
+    "evaluation": "every game is scored with parameters fitted only on games strictly before its kickoff week within the same season, plus all prior seasons",
+    "holdout": "the last two seasons present in the corpus are the final holdout and are reported separately; no threshold may be tuned on them",
+    "clustering": "the bootstrap resamples whole game clusters (season+week), never individual games"
+  },
+  "metrics": {
+    "signal": "Brier skill score against the de-vigged closing line (primary) and against the league base rate (secondary), with a game-cluster bootstrap 95% interval",
+    "staking": "flat 1-unit ROI at the captured market price, reported separately and never blended into the signal score",
+    "calibration": "reliability table by decile of forecast probability, with counts",
+    "multiplicity": "Holm correction over the number of families tested in the same table"
+  },
+  "leaderboard_rules": {
+    "eligibility": "a strategy enters the ranked board only with a settled, pre-kickoff-stamped prospective sample; backtest rows never appear on the ranked board (a separate backtest table exists for them)",
+    "ranking": "benchmark-relative Brier skill, lower bound of the game-cluster bootstrap, then multiplicity adjustment",
+    "reward_tiers": ["A: lower bound > 0 and n >= 300", "B: point estimate > 0 and lower bound <= 0", "C: point estimate <= 0"],
+    "no_staking_in_signal_score": true
+  },
+  "demotion_gate": {
+    "triggers": [
+      "clustered 90% lower bound of benchmark-relative Brier skill below 0 over the live sample",
+      "flat ROI at or below -10% over the last 50 settled bets",
+      "any input file hash changes without a new registration id"
+    ],
+    "action": "the strategy returns to paper status; the demotion is published with its trigger and date",
+    "review_level": "90% lower bound until 300 settled bets, then 95% (frozen now, before results)"
+  },
+  "combo_gate": {
+    "rule": "no parlay, same-game parlay or prop combo may be ranked until (a) a directly validated joint probability exists for the exact leg set and (b) the operator's void/push rules are quoted from the operator's own rules page",
+    "current_state": "joint probabilities are not validated; combos are therefore published as BLOCKED with the dependence measured, never as a multiplied marginal"
+  },
+  "price_policy": "P-9E54D765-01: market prices are named-operator quotes with a read stamp and the operator's page URL; no price is inferred, averaged silently, or back-filled. A market with one operator quote is labelled as such. Derived aggregates only; no row-level official data is republished.",
+  "availability_policy": "A-9E54D765-01: the injury signal is a delta between two stamped reads, never a level. Depth is taken from playing time (snap share), never from jersey order, experience or salary. A club/player with no official reading is published as NOT READ.",
+  "ablations": {
+    "rule": "availability is tested by running the identical model with and without the availability features and reporting the difference with uncertainty; no fixed point penalty is ever applied",
+    "features_considered": ["count of official OUT designations on the club for the week", "count of DOUBTFUL", "count of QUESTIONABLE"],
+    "point_in_time_requirement": "the designation set must come from a read stamped before that game's kickoff; the repo holds stamped reads for 2026 week 10 and week 11 only, so the ablation can run on 2026 games from week 10 onward, and the result is published with that n"
+  },
+  "questionable_calibration": "reported as an empirical play rate with a Wilson interval and n; the definition is never assumed",
+  "reproducibility": "build.py is deterministic, stdlib-only, and reads only committed inputs; verify.py fails closed on any missing source link, any blank cell without a flag, any backtest value on the ranked board, and any row-count drift"
+}

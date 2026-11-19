@@ -1,0 +1,17 @@
+# SOURCE: https://www.nfl.com/schedules/2026/by-week/week-11
+# READ (UTC): 2026-11-19T10:55:00Z
+# layout: away,home,kickoff_as_printed,network,neutral_site_as_printed
+IND,HOU,Nov 19 8:15 PM,PRIME,no
+MIA,BUF,Nov 22 1:00 PM,CBS,no
+BAL,CAR,Nov 22 1:00 PM,FOX,no
+NO,CHI,Nov 22 1:00 PM,FOX,no
+TEN,DAL,Nov 22 1:00 PM,FOX,no
+TB,DET,Nov 22 1:00 PM,FOX,no
+AZ,KC,Nov 22 1:00 PM,CBS,no
+PIT,PHI,Nov 22 1:00 PM,CBS,no
+NYJ,LAC,Nov 22 4:05 PM,FOX,no
+JAX,NYG,Nov 22 4:25 PM,CBS,no
+LV,DEN,Nov 22 4:25 PM,CBS,no
+MIN,SF,Nov 22 8:20 PM,NBC,yes
+CIN,WAS,Nov 23 8:15 PM,ESPN,no
+# BYES AS PRINTED: ATL CLE GB LAR NE SEA
