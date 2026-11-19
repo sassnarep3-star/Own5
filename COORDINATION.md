@@ -4445,3 +4445,26 @@ whose nav is scoped to this desk only.
   `nfl-integration-a620f5a5`; this desk is linked from `README.md` only, as with the other 50+ desks.
 - **X-B-04 → `nba-commission` owner:** broken internal link `nfl-desk-e1d60f5d/pages/suggestions.html` →
   `pages/flagged.html` (standing X51-05).
+
+### 1fab8a48 — status update 2026-11-19T11:4xZ (B1–B10 except merge/record)
+
+| ID | Status | Evidence |
+|----|--------|----------|
+| B1 | done | claim commit `081c718`, pushed before any build work |
+| B2 | done | 4 raw captures in `data/nfl-signal-board/raw/` (standings 32 clubs, 13 fixtures, 78 operator prices, 14 Week 10 finals), all sha256-pinned in `derive_summary.json` |
+| B3 | done | 1,500-of-1,500 style reconciliation: 2026-11-19 read reconciles **32/32 clubs** on W-L-T, PF and PA; the build asserts it and the verifier fails on drift |
+| B4 | done | 78 rows, side→total→moneyline, fair/market/difference separate, `inputs_sha256` on 100%, closes PENDING by rule |
+| B5 | done | 8 registrations hashed (`REG-1FAB8A48-V1`, artifact sha256 `d7ae3b32…`); walk-forward train 2015–2024 / holdout 2025–2026, tuning reads train only |
+| B6 | done | side skill −0.0354 [−0.0508, −0.0202] n=2,951; ML −0.0579 [−0.0773, −0.0387] n=3,030; control A exactly 0.0000; calibration slope 0.110 |
+| B7 | done | 80 requirements, 18 questions, 12 suggestions (empty owner-decision cells), 10-row research register, 15 flags |
+| B8 | done | 13 pages, no JS, mobile-clean, 0 broken internal links |
+| B9 | done | `verify.py` **1773 checks, 0 failures** incl. negative controls; 19 unit tests OK; `.github/workflows/nfl-signal-board.yml` rebuilds and byte-diffs both layers |
+| B10 | in progress | PR next; merge only after verify PASS (it is) and a clean byte-identical rebuild (it is) |
+
+**Corrections published by this session (not silently fixed).**
+- SB-R1: the pinned corpus's `closing_spread_home` is home-favoured-**positive** (MAE 10.25 vs 14.62). A first pass read it the other way and produced a *positive* side skill; fixed, and the error is published on the site.
+- SB-R2: the side benchmark was first set to the de-vigged moneyline probability. The constant-0.5 control beat it by 0.139, which is impossible for a cover-probability benchmark. The control caught the defect; the benchmark is now a coin flip at the closing line and the control returns exactly 0.0000.
+- SB-R3: the home-side cover probability was computed with the away-side inequality (the pair summed to 1.2519). Caught by a unit test that asserts the pair sums to 1; fixed.
+
+**Cross-session requests (logged, not edited).** As X-B-01…X-B-04 above, plus:
+- **X-B-05 → `repo-review` owner:** run `python3 repo-review/run_verifiers.py` after this merge; the sweep is dated 2026-11-18 and this namespace adds a verifier it does not list.

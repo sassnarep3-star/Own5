@@ -913,10 +913,10 @@ def stake_signal(ev: float | None) -> str:
     if ev is None:
         return ""
     if ev < 0.02:
-        return "NO BET (edge under the 2% gate)"
+        return "NO EDGE at the 2% gate"
     if ev < 0.05:
-        return "SHADOW ONLY (2-5% edge)"
-    return "QUALIFIES for paper stake (>5%)"
+        return "2-5% RAW edge (not stakeable: calibration gate)"
+    return "RAW edge >5% (not stakeable: calibration slope 0.11)"
 
 
 def stake_frac(ev: float | None) -> float | None:
@@ -1256,11 +1256,13 @@ def main() -> int:
             p_home = float(o["fair_prob"])
             o["fair_prob_calibrated"] = fmt(1.0 / (1.0 + math.exp(-(_b0 + _b1 * _logit(p_home))))) if o["selection"] == o["home"] else fmt(1 - 1.0 / (1.0 + math.exp(-(_b0 + _b1 * _logit(p_home)))))
         if o["ev_per_unit"]:
-            raw_ev = float(o["ev_per_unit"])
             o["stake_signal"] = (o["stake_signal"] + f" | calibration slope {meta['calibration']['slope']:.3f}: "
                                  "this EV uses uncalibrated probabilities and is NOT stakeable")
-            o["stake"] = ""
-            o["note"] = o["note"] + f" | calibration slope {meta['calibration']['slope']:.3f} (train n={meta['calibration']['n']})"
+        else:
+            o["stake_signal"] = "NO EDGE at the 2% gate"
+        o["stake"] = ""   # the calibration gate is closed for every row; no stake is ever published
+        o["note"] = o["note"] + (f" | calibration slope {meta['calibration']['slope']:.3f} "
+                                 f"(train n={meta['calibration']['n']})")
     luck = build_luck(rows, fam, meta)
 
     inj = json.loads(INJ_CAPTURE.read_text())
@@ -1517,10 +1519,10 @@ def main() -> int:
          "This desk did not reuse another desk's certification. Every strategy on this site starts at 0 settled bets, because a backtest number on a leaderboard is exactly what the brief forbids.",
          GH + "nfl-line-audit/data/leaderboard.csv", "medium", "OPEN — carried by design"),
         ("SBF-02", "irregularity", "The Week 11 injury page prints 16 game-status cells across 253 rows",
-         "9 Out and 7 Questionable cells; the remaining cells are blank on the official print. Blank is the print, not a missing value, and no cell was filled from news copy.",
+         "9 Out and 7 Questionable cells; the remaining cells are blank on the official print. The three named Lions players still print blank game-status cells today. Blank is the print, not a missing value, and no cell was filled from news copy.",
          INJ11_URL, "medium", "OPEN — publication fact"),
         ("SBF-03", "irregularity", "Two clubs read 'No Injuries Reported' while their opponents list 20 combined rows",
-         "CIN and WAS read No Injuries Reported on the Week 11 page. This is the official print and is reproduced as such; it is not evidence that the clubs are healthy.",
+         "CIN and WAS read No Injuries Reported on the Week 11 page, the same page that lists rows for every other club. This is the official print and is reproduced as such; it is not evidence that the clubs are healthy.",
          INJ11_URL, "medium", "OPEN"),
         ("SBF-04", "irregularity", "Two official pages disagree on the IND@HOU venue",
          "The game centre prints Stadium RELIANT STADIUM; the Week 11 schedule page links hotels near NRG Stadium. Both prints are stored verbatim and the venue feature is blocked (Q12).",
