@@ -1,0 +1,5 @@
+fit_window,season,coef_out,coef_doubtful,coef_questionable,note,source_url
+all seasons before 2023,2023,0.0,0.0,0.0,"points per official designation, shrinkage ridge of 10 pseudo-observations; the sign and size are estimated, never assumed",https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz
+all seasons before 2024,2024,0.2408,-0.1905,0.2274,"points per official designation, shrinkage ridge of 10 pseudo-observations; the sign and size are estimated, never assumed",https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz
+all seasons before 2025,2025,0.11,0.4132,0.1146,"points per official designation, shrinkage ridge of 10 pseudo-observations; the sign and size are estimated, never assumed",https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz
+all seasons before 2026,2026,-0.0239,0.1644,0.2028,"points per official designation, shrinkage ridge of 10 pseudo-observations; the sign and size are estimated, never assumed",https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz

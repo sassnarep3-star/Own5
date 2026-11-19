@@ -1,0 +1,48 @@
+# SOURCES (both read 2026-11-19)
+#   DK = https://sportsbook.draftkings.com/leagues/football/nfl            read 2026-11-19T11:00Z
+#   FD = https://sportsbook.fanduel.com/navigation/nfl                    read 2026-11-19T11:01Z
+# Columns exactly as printed. DK moneyline is printed in the order away,home for every row.
+# FanDuel prints away column first, home column second (the second spread carries the home sign).
+# layout: game | market | dk_away | dk_home | fd_away | fd_home
+#   spread rows  -> signed spread for that club
+#   total rows   -> "O <line> <price>" / "U <line> <price>"
+#   ml rows      -> American moneyline for that club
+IND_HOU|spread|+12.5 -112|-12.5 -108|+12.5 -110|-12.5 -110
+IND_HOU|total|O43.5 -118|U43.5 -102|O 43.5 -115|U 43.5 -105
+IND_HOU|ml|+525|-750|+570|-800
+MIA_BUF|spread|+16.5 -112|-16.5 -108|+16.5 -110|-16.5 -110
+MIA_BUF|total|O45.5 -105|U45.5 -115|O 45.5 -105|U 45.5 -115
+MIA_BUF|ml|+850|-1450|+870|-1500
+BAL_CAR|spread|+2.5 -105|-2.5 -115|+2.5 -110|-2.5 -110
+BAL_CAR|total|O43.5 -105|U43.5 -115|O 43.5 -110|U 43.5 -110
+BAL_CAR|ml|+114|-135|+116|-136
+NO_CHI|spread|+11.5 -108|-11.5 -112|+11.5 -110|-11.5 -110
+NO_CHI|total|O48.5 -115|U48.5 -105|O 48.5 -115|U 48.5 -105
+NO_CHI|ml|+455|-625|+520|-720
+TEN_DAL|spread|+8.5 -115|-8.5 -105|+7.5 -105|-7.5 -115
+TEN_DAL|total|O54.5 -120|U54.5 +100|O 54.5 -120|U 54.5 +100
+TEN_DAL|ml|+300|-380|+330|-420
+TB_DET|spread|+7 -110|-7 -110|+7 -110|-7 -110
+TB_DET|total|O43.5 -118|U43.5 -102|O 44.5 +100|U 44.5 -120
+TB_DET|ml|+270|-340|+290|-360
+AZ_KC|spread|+15.5 -105|-15.5 -115|+15.5 -105|-15.5 -115
+AZ_KC|total|O40.5 -118|U40.5 -102|O 41.5 +100|U 41.5 -120
+AZ_KC|ml|+800|-1350|+870|-1500
+PIT_PHI|spread|-4.5 -112|+4.5 -108|-4.5 -110|+4.5 -110
+PIT_PHI|total|O37.5 -112|U37.5 -108|O 37.5 -115|U 37.5 -105
+PIT_PHI|ml|-218|+180|-230|+190
+NYJ_LAC|spread|+3 -112|-3 -108|+3 -110|-3 -110
+NYJ_LAC|total|O41.5 -112|U41.5 -108|O 41.5 -110|U 41.5 -110
+NYJ_LAC|ml|+136|-162|+136|-162
+JAX_NYG|spread|-6 -110|+6 -110|-5.5 -120|+5.5 +100
+JAX_NYG|total|O46.5 -110|U46.5 -110|O 46.5 -110|U 46.5 -110
+JAX_NYG|ml|-265|+215|-260|+215
+LV_DEN|spread|+10 -108|-10 -112|+9.5 +100|-9.5 -120
+LV_DEN|total|O40.5 -112|U40.5 -108|O 40.5 -110|U 40.5 -110
+LV_DEN|ml|+455|-625|+460|-620
+MIN_SF|spread|+3 -110|-3 -110|+3 +100|-3 -120
+MIN_SF|total|O46.5 -115|U46.5 -105|O 46.5 -105|U 46.5 -115
+MIN_SF|ml|+136|-162|+142|-168
+CIN_WAS|spread|-6.5 -102|+6.5 -118|-5.5 -115|+5.5 -105
+CIN_WAS|total|O54.5 -105|U54.5 -115|O 53.5 -115|U 53.5 -105
+CIN_WAS|ml|-310|+250|-270|+220

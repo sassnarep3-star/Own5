@@ -1,0 +1,13 @@
+{
+  "path": "data/decision-desk/raw/games.csv.gz",
+  "read_utc": "2026-11-19T11:22:00Z",
+  "sha256": "recomputed by build.py at every run and recorded in data/build_manifest.json",
+  "source_class": "PINNED-DATASET",
+  "publisher": "nflverse-data (github.com/nflverse/nflverse-data), as committed in this repository by an earlier desk",
+  "backing_url": "https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz",
+  "is_official_nfl_feed": false,
+  "why_used": "no official NFL machine-readable game-level results feed is reachable from this sandbox; the official nfl.com week pages are read by hand for the current season and used as the reconciliation target",
+  "reconciliation_target": "https://www.nfl.com/standings/league/2026/REG",
+  "official_week_page_template": "https://www.nfl.com/schedules/2026/by-week/week-{week}",
+  "columns_used": ["season", "game_type", "week", "gameday", "away_team", "away_score", "home_team", "home_score"]
+}

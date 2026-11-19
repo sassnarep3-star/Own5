@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leaderboard — Own5 NFL desk 9e54d765</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--ink:#111827;--muted:#6b7280;--line:#e5e7eb;--blue:#1d4ed8;
+--green:#15803d;--red:#b91c1c;--amber:#b45309;--purple:#6d28d9}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,
+sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;font-size:15px}
+header{background:#0b2545;color:#fff;padding:1.1rem 1.4rem}
+header .wrap{max-width:1180px;margin:0 auto}
+header h1{margin:0;font-size:1.22rem;letter-spacing:.02em}
+header p{margin:.35rem 0 0;font-size:.85rem;opacity:.88}
+nav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+nav .wrap{max-width:1180px;margin:0 auto;display:flex;gap:.15rem;flex-wrap:wrap;padding:.35rem .7rem}
+nav a{padding:.4rem .62rem;border-radius:.4rem;text-decoration:none;color:var(--blue);
+font-size:.85rem;border:1px solid transparent;white-space:nowrap}
+nav a:hover{background:#eef3fb;border-color:#c7d7f5}
+nav a.active{background:#e7eefc;border-color:var(--blue);font-weight:700}
+main{max-width:1180px;margin:0 auto;padding:1.1rem 1.4rem 3rem}
+h2{font-size:1.12rem;margin:1.7rem 0 .6rem;padding-bottom:.3rem;border-bottom:2px solid var(--line)}
+h3{font-size:.98rem;margin:1.2rem 0 .4rem;color:#1f2937}
+p{margin:.5rem 0}
+small,.small{font-size:.82rem;color:var(--muted)}
+table{width:100%;border-collapse:collapse;margin:.6rem 0 1.1rem;background:var(--card);
+font-size:.83rem}
+th,td{border:1px solid var(--line);padding:.4rem .5rem;text-align:left;vertical-align:top}
+th{background:#f1f5f9;font-weight:700;color:#334155;font-size:.79rem;text-transform:none}
+tr:nth-child(even) td{background:#fcfdff}
+td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.unread{color:var(--muted);font-style:italic}
+a{color:var(--blue)}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.badge{display:inline-block;padding:.05rem .45rem;border-radius:.8rem;font-size:.72rem;
+font-weight:700;border:1px solid transparent}
+.b-met{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-part{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-not{background:#fee2e2;color:#991b1b;border-color:#fecaca}
+.b-na{background:#e5e7eb;color:#374151;border-color:#d1d5db}
+.b-high{background:#fee2e2;color:#991b1b}
+.b-med{background:#fef3c7;color:#92400e}
+.b-low{background:#e0e7ff;color:#3730a3}
+.b-off{background:#e7f0fd;color:#1d4ed8}
+.b-pin{background:#ede9fe;color:#5b21b6}
+.b-op{background:#dcfce7;color:#166534}
+.b-eq{background:#e5e7eb;color:#374151}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:.8rem;
+margin:1rem 0}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.8rem .9rem}
+.kpi .v{font-size:1.45rem;font-weight:700;color:#0b2545;font-variant-numeric:tabular-nums}
+.kpi .k{font-size:.76rem;color:var(--muted);margin-top:.1rem}
+.kpi .s{font-size:.72rem;color:var(--muted);margin-top:.25rem}
+.note{background:#eef6ff;border:1px solid #cfe3fb;border-radius:.5rem;padding:.7rem .9rem;
+font-size:.88rem;margin:.8rem 0}
+.warn{background:#fffbeb;border:1px solid #fde68a;border-radius:.5rem;padding:.7rem .9rem;
+font-size:.88rem;margin:.8rem 0}
+.stop{background:#fef2f2;border:1px solid #fecaca;border-radius:.5rem;padding:.7rem .9rem;
+font-size:.88rem;margin:.8rem 0}
+.good{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:.5rem;padding:.7rem .9rem;
+font-size:.88rem;margin:.8rem 0}
+footer{border-top:1px solid var(--line);margin-top:2rem;padding:1rem 1.4rem;color:var(--muted);
+font-size:.8rem;background:#fff}
+footer .wrap{max-width:1180px;margin:0 auto}
+.src{font-size:.75rem}
+@media(max-width:640px){
+  main{padding:.8rem .7rem 2rem}
+  header{padding:.9rem .8rem}
+  th,td{padding:.32rem .38rem;font-size:.76rem}
+  nav a{font-size:.79rem;padding:.32rem .48rem}
+}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<h1>NFL Line-Origination Desk · session 9e54d765</h1>
+<p>Own lines, verified results, pre-registered strategies, measured availability. Read
+2026-11-19T11:10:00Z. Every row links to its source; a value that could not be read from an official
+source is marked <em>not read</em> and appears on the Flagged for Review page.</p>
+</div></header>
+<nav><div class="wrap"><a href="index.html">Dashboard</a><a href="executive-summary.html">Executive summary</a><a href="readiness.html">Decision readiness</a><a href="origination.html">Our lines</a><a href="backtest.html">Backtest &amp; luck</a><a href="leaderboard.html" class="active">Leaderboard</a><a href="availability.html">Injuries &amp; depth</a><a href="correlations.html">Correlations</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources &amp; method</a></div></nav>
+<main>
+<h2>Leaderboard</h2>
+<p class="small">Signal and staking in separate columns, a demotion gate on every row, and no backtest number anywhere on the board.</p>
+
+<div class="warn"><strong>Read the two score columns as different things.</strong> Signal is
+Brier skill against the close. Staking is a flat-unit return at the market price. They are
+published side by side and never combined, because a lucky staking run must not be able to
+mask a bad signal — and on this desk the 2026 tail already shows a strategy whose staking ROI
+interval covers zero while its signal interval sits below zero.</div>
+
+<div class="stop"><strong>No strategy carries a backtest number on this board.</strong>
+<code>n_settled</code> is 0 on every ranked row because nothing has been settled prospectively.
+The backtest lives in a separate table (<a href="backtest.html">Backtest &amp; luck</a>) and the
+verifier fails the build if any backtest column appears here. That is the pre-registration
+rule, enforced mechanically rather than by good intentions.</div>
+
+<div class="scroll"><table class=""><thead><tr><th>Division</th><th>Strategy</th><th>Status</th><th>Signal metric</th><th>Signal</th><th>95% interval</th><th>Settled n</th><th>Staking metric</th><th>Staking ROI</th><th>Staking n</th><th>Tier</th><th>Reward</th><th>Benchmark source</th></tr></thead><tbody><tr><td><strong>singles · side</strong></td><td>F4_OPPONENT_AWARE</td><td><span class="badge b-na">PAPER</span></td><td>Brier skill vs de-vigged close</td><td class="num ">-0.0855</td><td class="num">['-0.103409', '-0.068589']</td><td class="num ">0</td><td>flat 1u ROI at the de-vigged closing price</td><td class="num ">-0.0119</td><td class="num ">4576</td><td>C</td><td>none — no strategy certified</td><td class="src"><a href="https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz" rel="noopener">https://github.com/nflverse/nflverse-data/rel…</a></td></tr><tr><td><strong>singles · total</strong></td><td>F6_TOTAL_OPPONENT_AWARE</td><td><span class="badge b-na">PAPER</span></td><td>Brier skill vs de-vigged close</td><td class="num ">-0.0021</td><td class="num">['-0.00576', '0.001302']</td><td class="num ">0</td><td>flat 1u ROI at the de-vigged closing price</td><td class="unread" title="no value could be read from an official source">not read</td><td class="unread" title="no value could be read from an official source">not read</td><td>C</td><td>none — no strategy certified</td><td class="src"><a href="https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz" rel="noopener">https://github.com/nflverse/nflverse-data/rel…</a></td></tr><tr><td><strong>singles · moneyline</strong></td><td>F5_MARKET_LINE_BENCHMARK</td><td><span class="badge b-na">PAPER</span></td><td>Brier skill vs de-vigged close</td><td class="num ">-0.0021</td><td class="num">['-0.00576', '0.001302']</td><td class="num ">0</td><td>flat 1u ROI at the de-vigged closing price</td><td class="unread" title="no value could be read from an official source">not read</td><td class="unread" title="no value could be read from an official source">not read</td><td>C</td><td>none — no strategy certified</td><td class="src"><a href="https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz" rel="noopener">https://github.com/nflverse/nflverse-data/rel…</a></td></tr><tr><td><strong>game parlay</strong></td><td>none eligible</td><td><span class="badge b-na">BLOCKED</span></td><td>joint probability validated directly</td><td class="unread" title="no value could be read from an official source">not read</td><td class="num">—</td><td class="num ">0</td><td><span class="unread">no staking rule exists while the division is blocked</span></td><td class="unread" title="no value could be read from an official source">not read</td><td class="unread" title="no value could be read from an official source">not read</td><td>—</td><td>none</td><td class="src"><a href="https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz" rel="noopener">https://github.com/nflverse/nflverse-data/rel…</a></td></tr><tr><td><strong>same-game parlay</strong></td><td>none eligible</td><td><span class="badge b-na">BLOCKED</span></td><td>joint probability validated directly</td><td class="unread" title="no value could be read from an official source">not read</td><td class="num">—</td><td class="num ">0</td><td><span class="unread">no staking rule exists while the division is blocked</span></td><td class="unread" title="no value could be read from an official source">not read</td><td class="unread" title="no value could be read from an official source">not read</td><td>—</td><td>none</td><td class="src"><a href="https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz" rel="noopener">https://github.com/nflverse/nflverse-data/rel…</a></td></tr><tr><td><strong>prop combo</strong></td><td>none eligible</td><td><span class="badge b-na">BLOCKED</span></td><td>joint probability validated directly</td><td class="unread" title="no value could be read from an official source">not read</td><td class="num">—</td><td class="num ">0</td><td><span class="unread">no staking rule exists while the division is blocked</span></td><td class="unread" title="no value could be read from an official source">not read</td><td class="unread" title="no value could be read from an official source">not read</td><td>—</td><td>none</td><td class="src"><a href="https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz" rel="noopener">https://github.com/nflverse/nflverse-data/rel…</a></td></tr></tbody></table></div>
+
+<h2>Demotion gate</h2>
+<p>Frozen in the registration before any result was seen. A strategy returns to paper when any
+one trigger fires.</p>
+<div class="scroll"><table class=""><thead><tr><th>Division</th><th>Trigger</th><th>What would change our mind (both directions)</th><th>Where the backtest lives, not here</th></tr></thead><tbody><tr><td>singles · side</td><td>a 90% lower bound of signal_value below 0, or ROI &lt;= -10% over 50 settled bets, or an input hash change without a new registration</td><td>a positive lower bound after Holm correction on a prospective sample, or (in the other direction) the same result on 300 settled bets</td><td class="small">NOT ON THIS BOARD — the backtest lives in data/backtest_families.csv</td></tr><tr><td>singles · total</td><td>a 90% lower bound of signal_value below 0, or ROI &lt;= -10% over 50 settled bets, or an input hash change without a new registration</td><td>a positive lower bound after Holm correction on a prospective sample, or (in the other direction) the same result on 300 settled bets</td><td class="small">NOT ON THIS BOARD — the backtest lives in data/backtest_families.csv</td></tr><tr><td>singles · moneyline</td><td>a 90% lower bound of signal_value below 0, or ROI &lt;= -10% over 50 settled bets, or an input hash change without a new registration</td><td>a positive lower bound after Holm correction on a prospective sample, or (in the other direction) the same result on 300 settled bets</td><td class="small">NOT ON THIS BOARD — the backtest lives in data/backtest_families.csv</td></tr><tr><td>game parlay</td><td>not applicable — nothing is live</td><td>a fitted joint distribution that beats the independent product by more than 1 pp on held-out games, plus the operator&#x27;s void and push rules quoted from its own rules page</td><td class="small">n/a</td></tr><tr><td>same-game parlay</td><td>not applicable — nothing is live</td><td>a fitted joint distribution that beats the independent product by more than 1 pp on held-out games, plus the operator&#x27;s void and push rules quoted from its own rules page</td><td class="small">n/a</td></tr><tr><td>prop combo</td><td>not applicable — nothing is live</td><td>a fitted joint distribution that beats the independent product by more than 1 pp on held-out games, plus the operator&#x27;s void and push rules quoted from its own rules page</td><td class="small">n/a</td></tr></tbody></table></div>
+
+<h2>Why the combo divisions are blocked</h2>
+<p>A parlay or combo probability built by multiplying marginal probabilities is only correct
+when the legs are independent. They are not: same-game margin and total correlate
+0.02 [-0.0308, 0.0706] at n=1495. Until a joint distribution is fitted and validated for the exact
+leg set, and until the operator's void and push rules are quoted from its own rules page, no
+combo can be ranked. The clearing condition is on every blocked row above.</p>
+
+</main>
+<footer><div class="wrap">
+Desk 9e54d765 · built from committed inputs by <code>build_data.py</code> and rendered by
+<code>build_site.py</code> · every figure re-derivable with <code>python3 build_data.py</code>
+· no bets are placed and no strategy is certified · <a href="flagged.html">Flagged for
+review</a> · <a href="sources.html">Sources and method</a>
+</div></footer>
+</body></html>

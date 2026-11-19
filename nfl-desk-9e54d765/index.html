@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard — Own5 NFL desk 9e54d765</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--ink:#111827;--muted:#6b7280;--line:#e5e7eb;--blue:#1d4ed8;
+--green:#15803d;--red:#b91c1c;--amber:#b45309;--purple:#6d28d9}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,
+sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;font-size:15px}
+header{background:#0b2545;color:#fff;padding:1.1rem 1.4rem}
+header .wrap{max-width:1180px;margin:0 auto}
+header h1{margin:0;font-size:1.22rem;letter-spacing:.02em}
+header p{margin:.35rem 0 0;font-size:.85rem;opacity:.88}
+nav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+nav .wrap{max-width:1180px;margin:0 auto;display:flex;gap:.15rem;flex-wrap:wrap;padding:.35rem .7rem}
+nav a{padding:.4rem .62rem;border-radius:.4rem;text-decoration:none;color:var(--blue);
+font-size:.85rem;border:1px solid transparent;white-space:nowrap}
+nav a:hover{background:#eef3fb;border-color:#c7d7f5}
+nav a.active{background:#e7eefc;border-color:var(--blue);font-weight:700}
+main{max-width:1180px;margin:0 auto;padding:1.1rem 1.4rem 3rem}
+h2{font-size:1.12rem;margin:1.7rem 0 .6rem;padding-bottom:.3rem;border-bottom:2px solid var(--line)}
+h3{font-size:.98rem;margin:1.2rem 0 .4rem;color:#1f2937}
+p{margin:.5rem 0}
+small,.small{font-size:.82rem;color:var(--muted)}
+table{width:100%;border-collapse:collapse;margin:.6rem 0 1.1rem;background:var(--card);
+font-size:.83rem}
+th,td{border:1px solid var(--line);padding:.4rem .5rem;text-align:left;vertical-align:top}
+th{background:#f1f5f9;font-weight:700;color:#334155;font-size:.79rem;text-transform:none}
+tr:nth-child(even) td{background:#fcfdff}
+td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.unread{color:var(--muted);font-style:italic}
+a{color:var(--blue)}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.badge{display:inline-block;padding:.05rem .45rem;border-radius:.8rem;font-size:.72rem;
+font-weight:700;border:1px solid transparent}
+.b-met{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-part{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-not{background:#fee2e2;color:#991b1b;border-color:#fecaca}
+.b-na{background:#e5e7eb;color:#374151;border-color:#d1d5db}
+.b-high{background:#fee2e2;color:#991b1b}
+.b-med{background:#fef3c7;color:#92400e}
+.b-low{background:#e0e7ff;color:#3730a3}
+.b-off{background:#e7f0fd;color:#1d4ed8}
+.b-pin{background:#ede9fe;color:#5b21b6}
+.b-op{background:#dcfce7;color:#166534}
+.b-eq{background:#e5e7eb;color:#374151}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:.8rem;
+margin:1rem 0}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.8rem .9rem}
+.kpi .v{font-size:1.45rem;font-weight:700;color:#0b2545;font-variant-numeric:tabular-nums}
+.kpi .k{font-size:.76rem;color:var(--muted);margin-top:.1rem}
+.kpi .s{font-size:.72rem;color:var(--muted);margin-top:.25rem}
+.note{background:#eef6ff;border:1px solid #cfe3fb;border-radius:.5rem;padding:.7rem .9rem;
+font-size:.88rem;margin:.8rem 0}
+.warn{background:#fffbeb;border:1px solid #fde68a;border-radius:.5rem;padding:.7rem .9rem;
+font-size:.88rem;margin:.8rem 0}
+.stop{background:#fef2f2;border:1px solid #fecaca;border-radius:.5rem;padding:.7rem .9rem;
+font-size:.88rem;margin:.8rem 0}
+.good{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:.5rem;padding:.7rem .9rem;
+font-size:.88rem;margin:.8rem 0}
+footer{border-top:1px solid var(--line);margin-top:2rem;padding:1rem 1.4rem;color:var(--muted);
+font-size:.8rem;background:#fff}
+footer .wrap{max-width:1180px;margin:0 auto}
+.src{font-size:.75rem}
+@media(max-width:640px){
+  main{padding:.8rem .7rem 2rem}
+  header{padding:.9rem .8rem}
+  th,td{padding:.32rem .38rem;font-size:.76rem}
+  nav a{font-size:.79rem;padding:.32rem .48rem}
+}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<h1>NFL Line-Origination Desk · session 9e54d765</h1>
+<p>Own lines, verified results, pre-registered strategies, measured availability. Read
+2026-11-19T11:10:00Z. Every row links to its source; a value that could not be read from an official
+source is marked <em>not read</em> and appears on the Flagged for Review page.</p>
+</div></header>
+<nav><div class="wrap"><a href="index.html" class="active">Dashboard</a><a href="executive-summary.html">Executive summary</a><a href="readiness.html">Decision readiness</a><a href="origination.html">Our lines</a><a href="backtest.html">Backtest &amp; luck</a><a href="leaderboard.html">Leaderboard</a><a href="availability.html">Injuries &amp; depth</a><a href="correlations.html">Correlations</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources &amp; method</a></div></nav>
+<main>
+<h2>Dashboard</h2>
+<p class="small">A table-first decision surface: what we can price, what we measured, what blocked it.</p>
+
+
+<div class="stop"><strong>The headline is a negative result.</strong> The opponent-aware model
+scores a Brier skill of <strong>-0.085545</strong> against the de-vigged
+closing line — an interval of [-0.103409, -0.068589] over 5186
+walk-forward games, entirely below zero. It is worse than the closing line, not merely
+unlucky. The totals model is also negative (-0.03146). No strategy on this
+desk is certified, every leaderboard row is PAPER, and the two controls (random 0.5 and
+favourites-only) are published beside the model so a reader can see what "no skill" scores.</div>
+
+<div class="kpis">
+  <div class="kpi"><div class="v">52</div><div class="k">originated market rows</div>
+    <div class="s">13 fixtures × side, total, moneyline (home and away)</div></div>
+  <div class="kpi"><div class="v">32/32</div><div class="k">clubs reconciled to the official standings</div>
+    <div class="s">W, L, T, PF and PA, all five columns</div></div>
+  <div class="kpi"><div class="v">-0.085545</div>
+    <div class="k">model Brier skill vs the de-vigged close</div>
+    <div class="s">95% game-cluster interval [-0.103409, -0.068589], n=5186</div></div>
+  <div class="kpi"><div class="v">4576</div><div class="k">settled bets in the staking column</div>
+    <div class="s">ROI -0.011888 [-0.054245, 0.031529] — signal and staking disagree</div></div>
+  <div class="kpi"><div class="v">0</div><div class="k">certified strategies</div>
+    <div class="s">nothing has cleared the pre-registered gate</div></div>
+  <div class="kpi"><div class="v">40<span style="font-size:.9rem">/71</span></div>
+    <div class="k">brief lines fully met (13 partial, 16 not met)</div></div>
+</div>
+<h2>What this desk can and cannot tell you today</h2>
+<table>
+<thead><tr><th style="width:32%">Question</th><th>Answer with the measured number</th></tr></thead>
+<tbody>
+<tr><td>Can our model price a game better than the market?</td>
+<td><strong>No.</strong> Side skill -0.085545
+[-0.103409, -0.068589], total skill -0.03146
+[-0.043728, -0.02008], both against de-vigged closes.
+<a href="backtest.html">Backtest &amp; luck</a></td></tr>
+<tr><td>Is the market line itself a fair benchmark?</td>
+<td>The spread-to-probability benchmark scores -0.002087
+[-0.00576, 0.001302], i.e. statistically level with the moneyline close.
+The close is the right ceiling. <a href="backtest.html">detail</a></td></tr>
+<tr><td>Does the availability term help?</td>
+<td><strong>No, slightly the opposite.</strong> Squared error is 0.002095
+higher with availability features on, interval [0.000852, 0.003384] over
+950 paired games. <a href="availability.html">detail</a></td></tr>
+<tr><td>What does the official "Questionable" mean?</td>
+<td>0.6165 of Questionable rows have a snap record
+[0.6029, 0.6299], n=4970.
+Out: 0.0002, n=4087.
+<a href="availability.html">detail</a></td></tr>
+<tr><td>How much settled data is needed to rank strategies?</td>
+<td>783 bets to separate 55% from break-even,
+1224 for 54%. <a href="backtest.html">luck panel</a></td></tr>
+<tr><td>Can parlay or prop-combo strategies be ranked?</td>
+<td><strong>No.</strong> Multiplying marginal probabilities is invalid under dependence; the
+measured same-game margin/total correlation is small but not zero. The three combo divisions
+are published as BLOCKED. <a href="leaderboard.html">leaderboard</a></td></tr>
+<tr><td>Are the prices we compare against named and stamped?</td>
+<td>Yes: DraftKings and FanDuel, read at 11:00Z and 11:01Z today, transcribed verbatim in
+<code>inputs/</code>. Closings do not exist yet because the games have not kicked off.
+<a href="origination.html">our lines</a></td></tr>
+</tbody></table>
+
+<div class="warn"><strong>What is flagged and blocking.</strong> 3 HIGH-severity items are
+on the <a href="flagged.html">Flagged for review</a> page. The two that matter most: the pinned
+2026 dataset prints <em>no</em> score for weeks 10–18 (only weeks 1–9 are usable), and one
+published capture asked for the Week 11 injury page and received Week 10 — so the "prior read"
+used across the repository is a different week.</div>
+
+<h2>The primary sources read for this build</h2>
+<p>Every number on this site traces to one of the eleven inputs below. Each was transcribed
+verbatim into <code>inputs/</code> and hashed; the class tells you how far to trust it.</p>
+<table>
+<thead><tr><th>Source</th><th>Class</th><th>Read (UTC)</th><th>What it settled</th></tr></thead>
+<tbody><tr><td><a href="https://www.nfl.com/standings/league/2026/REG" rel="noopener">NFL official league standings, 2026 regular s…</a></td><td><span class="badge b-off">OFFICIAL</span></td><td class="src">2026-11-19T11:10:00Z</td><td>32-club W/L/T and PF/PA reconciliation of the results log</td></tr><tr><td><a href="https://www.nfl.com/schedules/2026/by-week/week-11" rel="noopener">NFL official Week 11 schedule page</a></td><td><span class="badge b-off">OFFICIAL</span></td><td class="src">2026-11-19T11:10:00Z</td><td>13 fixtures, kickoff as printed, network, neutral-site flag, bye clubs</td></tr><tr><td><a href="https://www.nfl.com/schedules/2026/by-week/week-10" rel="noopener">NFL official Week 10 schedule and results page</a></td><td><span class="badge b-off">OFFICIAL</span></td><td class="src">2026-11-19T11:10:00Z</td><td>14 Week 10 final scores, read today and appended to the log</td></tr><tr><td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">NFL official Week 11 injury report</a></td><td><span class="badge b-off">OFFICIAL</span></td><td class="src">2026-11-19T11:10:00Z</td><td>253 designation rows, 24 clubs, 2 clubs printed &quot;No Injuries Reported&quot;</td></tr><tr><td><a href="https://sportsbook.draftkings.com/leagues/football/nfl" rel="noopener">DraftKings Sportsbook NFL game lines</a></td><td><span class="badge b-op">NAMED-OPERATOR</span></td><td class="src">2026-11-19T11:00:00Z</td><td>spread, total and moneyline for the 13 Week 11 fixtures</td></tr><tr><td><a href="https://sportsbook.fanduel.com/navigation/nfl" rel="noopener">FanDuel Sportsbook NFL odds</a></td><td><span class="badge b-op">NAMED-OPERATOR</span></td><td class="src">2026-11-19T11:01:00Z</td><td>second named-operator quote for the same 13 fixtures</td></tr><tr><td><a href="https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz" rel="noopener">nflverse-data games.csv.gz (pinned in-repo da…</a></td><td><span class="badge b-pin">PINNED-DATASET</span></td><td class="src">2026-11-19T11:22:00Z</td><td>7,103 scored REG games 1999-2026 for fitting and walk-forward evaluation; reconciled to S01 for 2026</td></tr><tr><td><a href="https://github.com/nflverse/nflverse-data/releases/download/snap_counts/snap_counts.csv.gz" rel="noopener">nflverse-data snap counts 2026 (pinned in-rep…</a></td><td><span class="badge b-pin">PINNED-DATASET</span></td><td class="src">2026-11-19T11:22:00Z</td><td>playing-time share as the depth/starter proxy and the join that tests designation reliability</td></tr><tr><td><a href="https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_{season}.csv.gz" rel="noopener">nflverse-data injury reports 2023-2026 (pinne…</a></td><td><span class="badge b-pin">PINNED-DATASET</span></td><td class="src">2026-11-19T11:22:00Z</td><td>multi-season designation rows for the reliability study and the availability counts</td></tr><tr><td><a href="https://www.nfl.com/games/colts-at-texans-2026-reg-11" rel="noopener">NFL Game Center, Colts at Texans, Week 11</a></td><td><span class="badge b-off">OFFICIAL</span></td><td class="src">2026-11-19T11:10:00Z</td><td>venue and stadium as printed (HOUSTON, TX / RELIANT STADIUM) and the club injury blocks printed on the game page</td></tr><tr><td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">desk 6cbf25fa stamped capture (2026-11-18T03:…</a></td><td><span class="badge b-eq">PRIOR-CAPTURE</span></td><td class="src">2026-11-18T03:55:13Z</td><td>the prior read for the two-clock delta; the file records that it asked for reg11 and received reg10 content</td></tr><tr><td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">desk 6e13b9ff stamped capture (2026-11-19T06:…</a></td><td><span class="badge b-eq">PRIOR-CAPTURE</span></td><td class="src">2026-11-19T06:57:28Z</td><td>the earlier read of the same day, used to measure intra-day drift</td></tr><tr><td><a href="https://www.nfl.com/injuries/league/2026/reg10" rel="noopener">decision-desk stamped Week 10 capture (2026-1…</a></td><td><span class="badge b-eq">PRIOR-CAPTURE</span></td><td class="src">2026-11-12T16:52:39Z</td><td>the Week 10 designation set stamped before that week&#x27;s first kickoff</td></tr>
+</tbody></table>
+
+<h2>Where to go next</h2>
+<table>
+<thead><tr><th>Page</th><th>What it holds</th></tr></thead>
+<tbody>
+<tr><td><a href="readiness.html">Decision readiness</a></td>
+<td>71 rows, one per line of the brief: status, the gate that blocks it, and the
+number that would clear it.</td></tr>
+<tr><td><a href="origination.html">Our lines</a></td>
+<td>13 fixtures, side then total then moneyline, with fair line, market line and the
+difference as separate columns, and a probability plus input hash on every row.</td></tr>
+<tr><td><a href="backtest.html">Backtest &amp; luck</a></td>
+<td>Walk-forward scoring against the close and against controls, a per-season view and the
+removal-of-luck panel.</td></tr>
+<tr><td><a href="leaderboard.html">Leaderboard</a></td>
+<td>Six divisions: signal and staking in separate columns, a demotion gate on every row, a
+two-sided "what would change our mind", and no backtest number anywhere on the board.</td></tr>
+<tr><td><a href="availability.html">Injuries &amp; depth</a></td>
+<td>The official Week 11 designation set, the two-clock delta, usage-rank depth from playing
+time, replacement gaps and the ablation.</td></tr>
+<tr><td><a href="correlations.html">Correlations</a></td>
+<td>Five coefficients, each with n and a source class, plus the arithmetic reason the combo
+gate is closed.</td></tr>
+<tr><td><a href="questions.html">Questions</a> · <a href="suggestions.html">Suggestions</a></td>
+<td>14 questions with what is known, what is missing and the route; 14 suggestions with
+options, a recommendation, a review status and a falsifier.</td></tr>
+<tr><td><a href="flagged.html">Flagged for review</a> · <a href="sources.html">Sources</a></td>
+<td>15 irregularities and every source with its read clock and class.</td></tr>
+</tbody></table>
+
+</main>
+<footer><div class="wrap">
+Desk 9e54d765 · built from committed inputs by <code>build_data.py</code> and rendered by
+<code>build_site.py</code> · every figure re-derivable with <code>python3 build_data.py</code>
+· no bets are placed and no strategy is certified · <a href="flagged.html">Flagged for
+review</a> · <a href="sources.html">Sources and method</a>
+</div></footer>
+</body></html>

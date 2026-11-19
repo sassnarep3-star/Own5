@@ -1,0 +1,21 @@
+{
+  "builder_sha256": "3ac43079159de363e9a810c946df2012037e471c5262c9fc935c5afc2f1b7188",
+  "built_utc": "2026-11-19T11:10:00Z",
+  "engine_sha256": "9d590d7a9badd351339dc33bc6bb001a5b33ccd64137299601f0b823bf7b8e9c",
+  "input_hashes": {
+    "corpus_source.json": "9650a6eb33ab884100e8e55285ee90ed20b45daf0f2821abc41a21603f20582d",
+    "injuries_week11_2026-11-19.txt": "653b0bfb1d60e58bcaa14b17bb372db7fb1ee9ffb5cf6b11cf8049ff40e605c0",
+    "markets_week11_2026-11-19.txt": "2375238da95c98f61c6e7119e4550205a5b38103cce6063414499588a4250c0d",
+    "results_week10_2026-11-19.txt": "7cff2c886978516f3d72e4232a07916b33b64aaca1f4fc4cd9bc3cb1c3aaa43a",
+    "slate_week11_2026-11-19.txt": "7621d927d3c2e34c4ca9e884ffc2958b75c6d23522d0488341f88c942c752683",
+    "standings_2026-11-19.txt": "386e22fef4150a8660477ba7cf8d73451f3304f2f32b34edc978ffca73408c4f"
+  },
+  "registration_sha256": "62cc993ef1147faa0d13e536fa7ed73131d8e195a3f705caee2f4e019fecea56",
+  "repository_inputs": {
+    "capture_1118.csv": "70d26e5dc96efe0463b3cb18ad2b75b7e1f5d17692011386323df0ab714a0bf4",
+    "capture_1119_0657.csv": "16b33ec8226f157d377632be9947828ec620a68b45a105ba894c0f94003ccc7a",
+    "capture_wk10_1112.csv": "5aa8ef0f8aba15fe298ebf66dd55bb4b3bb4204af64a277587dad457ea6ce55d",
+    "games.csv.gz": "3d6394dd86427a158d8b22c8f8c5cdfdac13460e2a2c76935180b56dab108532",
+    "snap_counts_2026.csv.gz": "4551d3cdf6e9b2d22678f381d70f141c4d927ea0d3aff2c37dfd29b13151e1d5"
+  }
+}
