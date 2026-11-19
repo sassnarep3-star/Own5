@@ -1,0 +1,11 @@
+flag_id,description,severity,source_url,resolution
+FZ-01,Standings read 2026-11-19 may reflect a partial Week-10 update: BUF shows 8-1 despite beating NYJ 31-12 on Nov 15. PF/PA values used as-is; treat W-L as potentially stale.,warning,https://www.nfl.com/standings/league/2026/REG,Re-read standings and cross-check against game-derived records before live use.
+FZ-02,Home-field advantage HFA=2.0 is a prior assumption, not fitted from data (W-10 home margin is a noisy +12.1 over 14 games).,warning,https://www.nfl.com/scores/2026/reg10,Replace with multi-season fitted HFA or keep as labeled prior.
+FZ-03,Logistic scale=13.7 is an NFL convention, not derived in-repo.,info,https://www.nfl.com/,Document as assumption; sensitivity test.
+FZ-04,No verified operator price source: market_line and difference columns are blank+flagged for all 39 markets (price-data policy P-01).,blocking,https://www.nfl.com/,Obtain licensed price feed or leave blank; never fabricate market prices.
+FZ-05,Mexico City neutral site (MIN@SF): HFA prior still applied though a neutral-site game may not carry a home team.,warning,https://www.nfl.com/scores/2026/week-11,Flag neutral sites and consider HFA=0 for international games.
+FZ-06,Reserve/IR list not captured: ""not listed"" on the injury report is not yet proven to mean unavailable.,warning,https://www.nfl.com/injuries/league/2026/reg11,Read official reserve and inactive lists.
+FZ-07,Only 10 of 32 club injury tables read (IND,HOU,PIT,PHI,AZ,KC,BAL,CAR,TB,DET); 22 clubs NOT READ.,warning,https://www.nfl.com/injuries/league/2026/reg11,Read remaining club tables.
+FZ-08,Only 2 of 13 Week-11 venues verified (NRG Stadium, Estadio Banorte); 11 blank+flagged.,warning,https://www.nfl.com/schedules/2026/by-week/week-11,Read game-centre venue for each fixture.
+FZ-09,Single injury-hub capture only; no immutable multi-day snapshot with retained hash yet.,warning,https://www.nfl.com/injuries/league/2026/reg11,Schedule Wed/Thu/Fri + kickoff captures with hashes.
+FZ-10,No pre-registered backtest corpus and no removal-of-luck panel yet (pre-season; backtest numbers barred from leaderboard).,info,https://www.nfl.com/,Build 136-game corpus and panel before any backtest publish.

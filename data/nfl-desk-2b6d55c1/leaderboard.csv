@@ -1,0 +1,7 @@
+strategy_id,name,market_type,status,registration_hash,pre_reg_commit,gates_passed,brier_skill,ci_low,ci_high,n_trials,control_baseline,signal_staking_split,notes,verification_status
+S-S01,Shadow baseline (singles only),Single,PENDING,,,0,,,,,,,Pre-registered singles-only shadow baseline. No performance recorded until gates pass.,blank+flagged (register)
+S-S02,Home-favorite filter,Single,PENDING,,,0,,,,,,,Pre-registered. No performance recorded until gates pass.,blank+flagged (register)
+S-T01,Totals overlay,Total,PENDING,,,0,,,,,,,Pre-registered. No performance recorded until gates pass.,blank+flagged (register)
+S-M01,Moneyline derivation,Moneyline,PENDING,,,0,,,,,,,Pre-registered. No performance recorded until gates pass.,blank+flagged (register)
+CTRL-01,Random picks control,Single,CONTROL,,,0,,,,,,,Control baseline: random picks. Not ranked for skill.,blank+flagged (register)
+CTRL-02,Favorites-only control,Single,CONTROL,,,0,,,,,,,Control baseline: favorites only. Not ranked for skill.,blank+flagged (register)

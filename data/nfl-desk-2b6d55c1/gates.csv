@@ -1,0 +1,14 @@
+gate_id,name,description,threshold,status,source_url
+G01,Pre-registration,Strategy definition frozen in git before results are seen; commit hash is the registration.,Commit hash recorded before evaluation window,not_applicable,https://www.nfl.com/
+G02,Train/validation/holdout split,Data split into train, validation and final holdout seasons to protect out-of-sample testing.,Three sequential seasons,not_applicable,https://www.nfl.com/
+G03,No backtest numbers on leaderboard,Backtest numbers forbidden from ever appearing on the leaderboard.,Zero backtest cells populated,not_applicable,https://www.nfl.com/
+G04,Official-source correlations,Correlations computed only from officially sourced numbers with n published.,n published on every row,not_applicable,https://www.nfl.com/standings/league/2026/REG
+G05,Signal vs staking separation,Leaderboard separates signal from staking; lucky staking run cannot mask bad signal.,Two independent columns,not_applicable,https://www.nfl.com/
+G06,Control baselines,Every leaderboard run includes random-picks and favorites-only controls.,Both controls present,not_applicable,https://www.nfl.com/
+G07,Demotion gate,Live strategy sent back to paper when gate fails.,Defined failure threshold,not_applicable,https://www.nfl.com/
+G08,Proper-score ranking,Rank by benchmark-relative Brier skill with game-cluster lower bound and multiplicity adjustment.,Brier skill with uncertainty,not_applicable,https://www.nfl.com/
+G09,Joint-evidence gate (parlays/props),Combo ranked only with a directly validated joint probability and operator void/push rules.,Joint probability + void rules both present,not_applicable,https://sportsbook.draftkings.com/help/general-betting-rules/general-rules
+G10,Injury delta never level,Injury signal is a surprise (change), never a level; deltas published.,Delta column populated,https://www.nfl.com/injuries/league/2026/reg11
+G11,Price-data policy before backtests,Price-data policy decided before any backtest is published.,Policy documented,not_applicable,https://www.nfl.com/
+G12,Probability + inputs stored,Every model output stored as probability plus its inputs, not just a pick.,inputs + probability on every row,https://www.nfl.com/
+G13,Ablations not fixed penalties,Injury/personnel ablations compare identical models with and without availability features.,Chronological holdout difference reported,not_applicable,https://www.nfl.com/

@@ -4268,3 +4268,41 @@ probability. The Week-11 fair lines published now are the recalculated ones.
   sessions kept merging; it was rebased and merged within one check cycle each time.
 - **Desk status:** all claimed tasks done. Nothing left open in this namespace. Cross-session requests
   X-D6-01/02/03 remain with their owners.
+
+## Session arena/2b6d55c1-own5 (NFL Origin Desk — full brief implementation), Z-ids
+
+**Branch:** `arena/2b6d55c1-own5` (branched from main `d634b08`, current == origin/main). **Scope (additive namespace only):**
+`nfl-desk-2b6d55c1/**`, `data/nfl-desk-2b6d55c1/**`, `research/nfl-2b6d55c1/**`,
+`.github/workflows/nfl-desk-2b6d55c1.yml`, one additive row in `README.md`, and this append-only block
+in `COORDINATION.md`. No file owned by another session is edited.
+
+**Mandate (user brief):** implement the full NFL line-origination brief in one additive desk:
+originate own lines (side → total → moneyline) with model fair line / market line / difference as
+separate columns; a price-snapshot store (opening + closing per market); a verified results feed;
+a leaderboard that separates signal from staking with validation gates, control baselines (random
+picks; favorites only) and a demotion gate (live → paper); correlations computed only from
+officially sourced numbers with n published with each value; injury/availability tracking with
+replacement depth (1st–4th string), deltas never levels, snapshot ledger; pre-registration of every
+strategy frozen in git (backtest numbers barred from the leaderboard); a decision-readiness table
+(one row per requirement → blocking gate → number that clears it → observed status); an open
+questions / information / answers register; a reviewable suggestions register (review before
+implement); an executive summary; and a GitHub Pages live site — every table row source-linked to
+an official source or explicitly blank-and-flagged; never inferred.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| Z1 | Claim scope in COORDINATION.md + push claim | in progress | 2b6d55c1 | COORDINATION.md | This block. Claim pushed before any build work. |
+| Z2 | Fresh official reads (standings, schedule, results, injury report), dated + hashed | unclaimed→in progress | 2b6d55c1 | data/nfl-desk-2b6d55c1/raw/**, sources.csv | nfl.com via fetch_page; every read timestamped. |
+| Z3 | Verified results feed reconciled 32/32 to official standings | unclaimed→in progress | 2b6d55c1 | data/nfl-desk-2b6d55c1/results.csv | Opponent-aware inputs for origination. |
+| Z4 | Origination: side → total → moneyline; fair/market/diff separate; probability + inputs per row | unclaimed→in progress | 2b6d55c1 | data/nfl-desk-2b6d55c1/origination.csv | Market columns blank+flagged (no verified operator price). |
+| Z5 | Price-snapshot store (open/close per market) + price-data policy | unclaimed→in progress | 2b6d55c1 | data/nfl-desk-2b6d55c1/price_snapshots.csv | Immutable; closings blank+pending by policy. |
+| Z6 | Correlations from official sources only, n published per row | unclaimed→in progress | 2b6d55c1 | data/nfl-desk-2b6d55c1/correlations.csv | In-repo computation with assertions. |
+| Z7 | Availability/injury/depth: stamped reads, deltas, replacement depth, no jersey-order inference | unclaimed→in progress | 2b6d55c1 | data/nfl-desk-2b6d55c1/availability.csv | Deltas never levels; blank+flagged where unverified. |
+| Z8 | Leaderboard: signal vs staking, gates, control baselines, demotion gate, pre-registration | unclaimed→in progress | 2b6d55c1 | data/nfl-desk-2b6d55c1/leaderboard.csv, gates.csv | Board empty until gates pass; no backtest numbers. |
+| Z9 | Requirements ledger / decision-readiness table + questions + suggestions registers | unclaimed→in progress | 2b6d55c1 | data/nfl-desk-2b6d55c1/readiness.csv, questions.csv, suggestions.csv | Reviewable before implement. |
+| Z10 | Deterministic static site build (landing + category subpages) | unclaimed→in progress | 2b6d55c1 | nfl-desk-2b6d55c1/build_desk.py, *.html, style.css | No JS required for content. |
+| Z11 | Fail-closed verify + unit tests (negative controls) + scoped CI | unclaimed→in progress | 2b6d55c1 | nfl-desk-2b6d55c1/verify_desk.py, tests/**, workflow | Every row sourced or blank+flag. |
+| Z12 | Executive summary + Flagged for Review page | unclaimed→in progress | 2b6d55c1 | research/nfl-2b6d55c1/**, executive-summary.html, flagged.html | Computed/official values only. |
+| Z13 | PR → main, autonomous merge, Pages live check, record result | unclaimed→in progress | 2b6d55c1 | COORDINATION.md, README.md | Merge only after verify PASS + live URL check. |
+
+**Cross-session requests:** none. All work is additive inside `nfl-desk-2b6d55c1/**`; no other session's files are touched.
