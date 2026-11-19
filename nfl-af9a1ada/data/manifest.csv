@@ -1,0 +1,11 @@
+input,rows,sha256,read_utc,path,source_url
+injuries_reg11_2026-11-19.csv,255,ad29bed899cee8599a97008f5445196386cfdca36cb8e77cc06648c08dc9920f,2026-11-19T11:38:10Z,nfl-af9a1ada/inputs/injuries_reg11_2026-11-19.csv,https://www.nfl.com/injuries/league/2026/reg11
+prices_2026-11-19.csv,26,8422eef2c9dca0d9c9f24c82cf70093934b3e03eb04301af4a32b06c13123559,2026-11-19T11:42:16Z,nfl-af9a1ada/inputs/prices_2026-11-19.csv,https://sportsbook.draftkings.com/leagues/football/nfl
+standings_2026.csv,32,ce0454c047b5b9c1bd102d1d7c571f2210f9338ac0f5fdba2dfc0d1cd05b65f1,2026-11-19T11:31:44Z,nfl-af9a1ada/inputs/standings_2026.csv,https://www.nfl.com/standings/league/2026/REG
+venues_source_register_2026-11-18.csv,13,fdd8bcd2817578263527932a44f9bfdcdbf3322e5c49034facb2ee5ba8ccbdd8,2026-11-18T03:43:57Z,nfl-af9a1ada/inputs/venues_source_register_2026-11-18.csv,https://www.nfl.com/games/colts-at-texans-2026-reg-11
+week10_finals.csv,14,9d68d37d387be3b0cb23f7f8b77d90253644b874917e59a89c5823fa6fe28898,2026-11-19T11:09:28Z,nfl-af9a1ada/inputs/week10_finals.csv,https://www.nfl.com/games/commanders-at-giants-2026-reg-10
+week11_slate.csv,13,b0a79cfddda4d4a6c638f50f604ebd399b585d7e73720ad497324c511cb54c3f,2026-11-19T11:07:12Z,nfl-af9a1ada/inputs/week11_slate.csv,https://www.nfl.com/schedules/2026/by-week/week-11
+injuries_reg11_2026-11-19.raw,280,db682962998821db9bde8cdd77520be71fd8815b55a4237b510eeabe610c2148,2026-11-19T11:38:10Z,nfl-af9a1ada/captures/official/injuries_reg11_2026-11-19.raw,https://www.nfl.com/injuries/league/2026/reg11
+dk_2026-11-19T1142Z.raw,13,4646102a103768a41e340b7ee8ccaf58536fc461c6b28bb2b4f0a2face708db5,2026-11-19T11:42:16Z,nfl-af9a1ada/captures/price/dk_2026-11-19T1142Z.raw,https://sportsbook.draftkings.com/leagues/football/nfl
+fd_2026-11-19T1142Z.raw,13,0696e5723e95fc6e4736f64871cf186ae2984d7eaaa254b7f770e35e87ef6d4d,2026-11-19T11:42:16Z,nfl-af9a1ada/captures/price/fd_2026-11-19T1142Z.raw,https://sportsbook.fanduel.com/navigation/nfl
+corpus_games.csv,7117,ddc8b9dc71fe893eaf1c9a890b851fc22d5b3f5ec2c93e58695e7d0d9d1812ae,,nfl-line-audit/data/corpus_games.csv,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz

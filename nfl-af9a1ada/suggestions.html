@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NFL Line-Gate Desk &middot; Suggestions</title>
+<style>
+:root{--bg:#0f1319;--card:#171d26;--line:#25303d;--ink:#e8eef6;--dim:#8ea0b6;
+--acc:#5ad2a4;--warn:#e6b455;--bad:#e8735f;--mono:ui-monospace,SFMono-Regular,Menlo,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+header{border-bottom:1px solid var(--line);background:#0b0f14;padding:14px 22px;position:sticky;top:0;z-index:9}
+header h1{margin:0;font-size:17px;letter-spacing:.3px}
+header .sub{color:var(--dim);font-size:12px;margin-top:3px}
+nav{display:flex;flex-wrap:wrap;gap:2px;padding:8px 22px;background:#0b0f14;border-bottom:1px solid var(--line);position:sticky;top:60px;z-index:8}
+nav a{color:var(--dim);text-decoration:none;font-size:12.5px;padding:5px 9px;border-radius:5px}
+nav a:hover{background:#1d2530;color:var(--ink)}
+nav a.on{background:var(--acc);color:#08110c;font-weight:600}
+main{padding:22px;max-width:1500px;margin:0 auto}
+h2{font-size:20px;margin:26px 0 6px}h2:first-child{margin-top:0}
+h3{font-size:14.5px;margin:22px 0 8px;color:var(--acc);text-transform:uppercase;letter-spacing:.7px}
+p.lede{color:var(--dim);max-width:80ch;margin:0 0 16px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:12px;margin:16px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:13px}
+.card .k{color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:.6px}
+.card .v{font:600 22px/1.2 var(--mono);margin-top:5px}
+.card .n{color:var(--dim);font-size:11.5px;margin-top:4px}
+.v.good{color:var(--acc)}.v.warn{color:var(--warn)}.v.bad{color:var(--bad)}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);
+border-radius:9px;overflow:hidden;margin:10px 0 22px;font-size:13px}
+th{background:#131a23;text-align:left;padding:9px 10px;font-size:11px;text-transform:uppercase;
+letter-spacing:.6px;color:var(--dim);border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:8px 10px;border-bottom:1px solid #1e2833;vertical-align:top}
+tr:last-child td{border-bottom:none}
+tbody tr:hover{background:#1b2431}
+td.n,th.n{text-align:right;font-family:var(--mono);white-space:nowrap}
+.blank{color:var(--warn);font-family:var(--mono);font-size:11.5px;border:1px dashed #4a3c1e;
+background:#241e10;border-radius:3px;padding:1px 5px;cursor:help}
+a{color:#7fd4ff;text-decoration:none;border-bottom:1px dotted #2c4a5c}
+a:hover{color:#b9e9ff}
+.pill{display:inline-block;padding:2px 7px;border-radius:99px;font-size:10.5px;font-weight:700;
+letter-spacing:.5px;text-transform:uppercase}
+.p-met{background:#153a2b;color:#6ee7b0}.p-partial{background:#3a3115;color:#e6b455}
+.p-blocked{background:#3a1b18;color:#f0937f}.p-rejected{background:#2a2f38;color:var(--dim)}
+.pos{color:var(--acc)}.neg{color:var(--bad)}
+.note{background:#131a23;border-left:3px solid var(--acc);padding:11px 14px;border-radius:0 7px 7px 0;
+margin:14px 0;font-size:13.5px;color:#cfe0f0}
+.note.warn{border-left-color:var(--warn)}
+.note.bad{border-left-color:var(--bad)}
+footer{border-top:1px solid var(--line);padding:18px 22px;color:var(--dim);font-size:11.5px;margin-top:30px}
+code{font-family:var(--mono);font-size:12px;background:#101720;padding:1px 5px;border-radius:3px}
+</style></head><body>
+<header><h1>NFL Line-Gate Desk</h1>
+<div class="sub">Own lines, prices, ratings and a pre-registered competition &middot;
+session af9a1ada &middot; every number dated and sourced &middot; every blank labelled</div></header>
+<nav><a href="index.html">Dashboard</a><a href="origination.html">Origination</a><a href="prices.html">Prices</a><a href="ratings.html">Ratings</a><a href="results.html">Benchmark</a><a href="leaderboard.html">Leaderboard</a><a href="availability.html">Availability</a><a href="deficiency.html">Deficiency</a><a href="requirements.html">Requirements</a><a href="questions.html">Questions</a><a href="suggestions.html" class="on">Suggestions</a><a href="flagged.html">Flagged for Review</a><a href="research.html">Method</a><a href="sources.html">Sources</a></nav><main>
+
+<h2>Suggestions for the owner</h2>
+<p class="lede">Nothing on this page has been implemented. Each suggestion states what it costs,
+what it risks, and what it unblocks, so it can be accepted or rejected without reading the code.</p>
+<table class=""><thead><tr>
+<th class="">ID</th>
+<th class="">Suggestion</th>
+<th class="">Why</th>
+<th class="">Effort</th>
+<th class="">Risk</th>
+<th class="">Unblocks</th>
+<th class="">Decision</th>
+</tr></thead><tbody>
+<tr>
+<td>SG01</td>
+<td>Read the 31 unread club depth charts, one page each</td>
+<td>This single task unblocks the deficiency matrix, the injury ablation, the per-team replacement view and the depth-of-replacement column at the same time. Today the desk can name a replacement for one club.</td>
+<td>31 page reads, then a rebuild</td>
+<td>Low. The schema already stores the club string verbatim and marks a club NOT READ, so nothing has to be redesigned.</td>
+<td>blocks R06, R27, R42, R48</td>
+<td>Approve &amp;middot; Defer &amp;middot; Reject</td>
+</tr>
+<tr>
+<td>SG02</td>
+<td>Capture the inactive list inside each game&#x27;s own pre-kickoff window</td>
+<td>Turns Questionable from a word into a measured play rate, and confirms whether a named replacement actually played.</td>
+<td>13 reads per week, timed</td>
+<td>Medium. The window is narrow and a missed read cannot be recreated; the desk would have to log the miss as a miss.</td>
+<td>blocks R21, R29, R41, R49</td>
+<td>Approve &amp;middot; Defer &amp;middot; Reject</td>
+</tr>
+<tr>
+<td>SG03</td>
+<td>Settle Week 11 and start the leaderboard clock</td>
+<td>Every competition question here is unanswerable without settled bets, and the sample needed is 4,721 bets, so the clock should start as soon as possible if the competition is real.</td>
+<td>One graded results pass per week</td>
+<td>Low, provided every bet carries the pre-kickoff capture id it was priced from.</td>
+<td>blocks R05, R12, R50</td>
+<td>Approve &amp;middot; Defer &amp;middot; Reject</td>
+</tr>
+<tr>
+<td>SG04</td>
+<td>Ask the operators in writing whether a scheduled read is permitted</td>
+<td>The whole price store is a manual read because the terms of the two operator boards were not verifiable from this sandbox. A written answer converts a manual chore into a monitor, or confirms it stays manual.</td>
+<td>One email each</td>
+<td>None to the site; the answer may be no, in which case nothing changes.</td>
+<td>blocks R20, R29, R36</td>
+<td>Approve &amp;middot; Defer &amp;middot; Reject</td>
+</tr>
+<tr>
+<td>SG05</td>
+<td>Publish a season-by-season home-edge series</td>
+<td>The solved home edge is +1.17 on the two-season window against roughly 2.2 historically, and -0.56 on a 2026-only fit. One table settles whether that is a real shift or an artefact of the window.</td>
+<td>Small script change</td>
+<td>Low. It changes no price; it stops a small home edge being explained away.</td>
+<td>answers Q07</td>
+<td>Approve &amp;middot; Defer &amp;middot; Reject</td>
+</tr>
+<tr>
+<td>SG06</td>
+<td>Show the fair line as a price, not only as a number</td>
+<td>A line of -6.5 is not tradeable; the price that would make it worth taking is. The desk already converts to American prices on the moneyline rows and could do the same for side and total.</td>
+<td>Small template change</td>
+<td>Low, but it must not become a bet recommendation. The site should show what price would be needed, never tell anyone to take one.</td>
+<td>improves Origination</td>
+<td>Approve &amp;middot; Defer &amp;middot; Reject</td>
+</tr>
+<tr>
+<td>SG07</td>
+<td>Add a market-favourite control column to the leaderboard</td>
+<td>A favourites-only control is already registered (C2); showing it beside each strategy makes it obvious when a strategy is just following the market.</td>
+<td>Small</td>
+<td>None. It can only make a weak strategy look weaker.</td>
+<td>improves Leaderboard</td>
+<td>Approve &amp;middot; Defer &amp;middot; Reject</td>
+</tr>
+<tr>
+<td>SG08</td>
+<td>Consolidate the duplicate desks in this repository</td>
+<td>More than forty NFL desks publish overlapping Week 11 numbers with different market columns. A reader cannot tell which is current. This desk should either absorb them or be archived alongside them.</td>
+<td>An owner decision, then one integration pass</td>
+<td>Medium. Removing a desk that holds the only verified copy of something would lose it, so it should be archived, not deleted.</td>
+<td>affects the whole repository</td>
+<td>Approve &amp;middot; Defer &amp;middot; Reject</td>
+</tr>
+<tr>
+<td>SG09</td>
+<td>Freeze this registration in a signed tag before Week 12</td>
+<td>A sha256 inside a file can be recomputed by anyone who edits the file. A git tag is harder to rewrite and is the registration the brief asks for.</td>
+<td>One command</td>
+<td>None.</td>
+<td>strengthens R08, R61</td>
+<td>Approve &amp;middot; Defer &amp;middot; Reject</td>
+</tr>
+<tr>
+<td>SG10</td>
+<td>Add a liveness badge to every captured number</td>
+<td>A price read eight hours ago and a price read eight days ago look identical on the page. A badge that says how old the read is stops a stale number being mistaken for a current one.</td>
+<td>Small</td>
+<td>None.</td>
+<td>improves honesty of Prices</td>
+<td>Approve &amp;middot; Defer &amp;middot; Reject</td>
+</tr>
+</tbody></table>
+<div class="note">The decision column is owned by the reader, not by this desk. No suggestion here
+has been acted on.</div>
+
+</main>
+<footer>Built from committed inputs only, by a deterministic stdlib generator.
+A blank cell is a value that was <strong>not read</strong>, never a zero. Read the
+<a href="flagged.html">Flagged for Review</a> page before quoting any number here.</footer>
+</body></html>

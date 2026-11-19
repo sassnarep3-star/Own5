@@ -1,0 +1,41 @@
+{
+  "corpus_games": 7117,
+  "counts": {
+    "availability": 26,
+    "deficiency": 253,
+    "injuries": 255,
+    "inputs": 10,
+    "leaderboard": 7,
+    "origination": 39,
+    "prices": 156,
+    "requirements": 62
+  },
+  "desk": "nfl-af9a1ada",
+  "forecast_error": {
+    "margin_mae_close": 10.253,
+    "margin_mae_model": 10.974,
+    "n": 6899,
+    "total_mae_close": 10.612,
+    "total_mae_model": 11.13,
+    "total_n": 6899
+  },
+  "generated_utc": "2026-11-19T11:45:00Z",
+  "preregistration_id": "REG-AF9A1ADA-V1",
+  "preregistration_sha256": "634d8f12d7d49a4da741009e50833c70cee5097a2861e65aa9fc6c1181f14705",
+  "sd_margin": 13.9516,
+  "sd_total": 14.0433,
+  "session": "af9a1ada",
+  "side_skill": -0.0658,
+  "spread_sign": 1.0,
+  "spread_sign_evidence": "r=+0.431 n=7103 MAE(+)= 10.25 MAE(-)=14.62",
+  "total_skill": -0.0509,
+  "verdict": "the market wins: no market on this desk shows positive skill against the closing line",
+  "walkforward_games": 6913,
+  "week11": {
+    "games": 13,
+    "hfa": 1.1706,
+    "mu": 22.4394,
+    "n_fit": 7117,
+    "sum_offence": 0.0
+  }
+}

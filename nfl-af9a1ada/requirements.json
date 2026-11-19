@@ -1,0 +1,622 @@
+[
+  {
+    "id": "R01",
+    "requirement": "Every originated row separates fair, market and difference into their own columns",
+    "status": "MET",
+    "gate": "G1",
+    "clears": "39/39 rows filled",
+    "observed": "fair, market, difference all present on 39 rows",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R02",
+    "requirement": "Price snapshot store with a UTC clock and a hash per capture",
+    "status": "MET",
+    "gate": "G1",
+    "clears": "157 printed numbers",
+    "observed": "2 books x 13 games, one read, sha256 in manifest",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R03",
+    "requirement": "Verified results feed for settled weeks",
+    "status": "PARTIAL",
+    "gate": "G2",
+    "clears": "14/14",
+    "observed": "Week 10 official finals verified 14/14; no Week 11 result exists yet",
+    "source": "https://www.nfl.com/schedules/2026/by-week/week-10",
+    "note": ""
+  },
+  {
+    "id": "R04",
+    "requirement": "Signal and staking published as separate columns",
+    "status": "MET",
+    "gate": "G3",
+    "clears": "2 columns",
+    "observed": "leaderboard has signal_score and staking_units columns, both blank with 0 bets",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R05",
+    "requirement": "Leaderboard competition with divisions",
+    "status": "MET",
+    "gate": "G5",
+    "clears": "7 rows",
+    "observed": "7 registrations in 5 divisions",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R06",
+    "requirement": "Replacement depth for unavailable starters",
+    "status": "BLOCKED",
+    "gate": "G6",
+    "clears": "DET only",
+    "observed": "1 of 32 club charts read",
+    "source": "https://www.detroitlions.com/team/depth-chart",
+    "note": ""
+  },
+  {
+    "id": "R07",
+    "requirement": "Demotion gate that retires a failing strategy",
+    "status": "MET",
+    "gate": "G8",
+    "clears": "0 demotions",
+    "observed": "G8 defined; no strategy scored yet",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R08",
+    "requirement": "Pre-registration by git commit, before the first bet",
+    "status": "PARTIAL",
+    "gate": "G1",
+    "clears": "sha256 on every row",
+    "observed": "file committed and hashed; a signed tag is recommended but not yet made",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R09",
+    "requirement": "Availability graph per club",
+    "status": "MET",
+    "gate": "G6",
+    "clears": "26 clubs",
+    "observed": "26 clubs charted from the official report",
+    "source": "https://www.nfl.com/injuries/league/2026/reg11",
+    "note": ""
+  },
+  {
+    "id": "R10",
+    "requirement": "No jersey-order, experience or salary inference for depth",
+    "status": "MET",
+    "gate": "G6",
+    "clears": "0 inferred",
+    "observed": "depth evidence is read verbatim only; rank column blank for 31 clubs",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R11",
+    "requirement": "Injury modelled as a surprise, not a level",
+    "status": "BLOCKED",
+    "gate": "G6",
+    "clears": "0 deltas usable",
+    "observed": "needs a prior injury read per club to compute a surprise",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R12",
+    "requirement": "32-club roster and reserve sweep",
+    "status": "BLOCKED",
+    "gate": "G6",
+    "clears": "0 of 32",
+    "observed": "the reserve list is a separate official page per club and was not read",
+    "source": "https://www.nfl.com/injuries/league/2026/reg11",
+    "note": ""
+  },
+  {
+    "id": "R13",
+    "requirement": "Fixture-context features (rest, travel, short week)",
+    "status": "PARTIAL",
+    "gate": "G2",
+    "clears": "13 games tagged",
+    "observed": "rest buckets present on the slate, not yet in the fit",
+    "source": "https://www.nfl.com/schedules/2026/by-week/week-11",
+    "note": ""
+  },
+  {
+    "id": "R14",
+    "requirement": "Every output states its probability AND its inputs",
+    "status": "MET",
+    "gate": "G1",
+    "clears": "39/39",
+    "observed": "inputs_json + sha256 on all 39 rows",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R15",
+    "requirement": "Luck-removal panel",
+    "status": "MET",
+    "gate": "G3",
+    "clears": "5 rows",
+    "observed": "5 panels published",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R16",
+    "requirement": "Two-sided 'what would change our mind' per strategy",
+    "status": "MET",
+    "gate": "G1",
+    "clears": "7 rows",
+    "observed": "every registration carries a control and a falsifier",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R17",
+    "requirement": "Price residual shown on the schedule",
+    "status": "PARTIAL",
+    "gate": "G1",
+    "clears": "13 games",
+    "observed": "difference column joins to the slate; a per-game residual chart is not built",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R18",
+    "requirement": "136-game log as a pre-registered corpus",
+    "status": "MET",
+    "gate": "G2",
+    "clears": "6913",
+    "observed": "6913 scored games, walk-forward, declared before scoring",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R19",
+    "requirement": "Price-data policy written first",
+    "status": "MET",
+    "gate": "G1",
+    "clears": "1 policy",
+    "observed": "policy section in the registration, terms cited",
+    "source": "https://www.nfl.com/legal/terms",
+    "note": ""
+  },
+  {
+    "id": "R20",
+    "requirement": "Automated multi-day price capture",
+    "status": "BLOCKED",
+    "gate": "G1",
+    "clears": "1 manual read",
+    "observed": "nfl.com terms s.1.3 restricts systematic retrieval; operator terms unreadable",
+    "source": "https://www.nfl.com/legal/terms",
+    "note": ""
+  },
+  {
+    "id": "R21",
+    "requirement": "Injury read clock-time deltas",
+    "status": "PARTIAL",
+    "gate": "G6",
+    "clears": "0 deltas",
+    "observed": "one read only, so no delta can be computed",
+    "source": "https://www.nfl.com/injuries/league/2026/reg11",
+    "note": ""
+  },
+  {
+    "id": "R22",
+    "requirement": "Decision-readiness table on the landing page",
+    "status": "MET",
+    "gate": "G1",
+    "clears": "54 rows",
+    "observed": "one row per requirement with gate and clearing number",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R23",
+    "requirement": "Venue transcription",
+    "status": "MET",
+    "gate": "G6",
+    "clears": "13 rows",
+    "observed": "13 venues carried with the official game centre",
+    "source": "inputs/venues_source_register_2026-11-18.csv",
+    "note": ""
+  },
+  {
+    "id": "R24",
+    "requirement": "Dated schedule announcement beside the schedule",
+    "status": "MET",
+    "gate": "G1",
+    "clears": "13 rows",
+    "observed": "slate carries the official schedule URL and read clock",
+    "source": "https://www.nfl.com/schedules/2026/by-week/week-11",
+    "note": ""
+  },
+  {
+    "id": "R25",
+    "requirement": "Game Books for starters",
+    "status": "BLOCKED",
+    "gate": "G6",
+    "clears": "0",
+    "observed": "no official machine-readable game book exists on this desk",
+    "source": "https://www.nfl.com/schedules/2026/by-week/week-11",
+    "note": ""
+  },
+  {
+    "id": "R26",
+    "requirement": "Opponent-aware ratings",
+    "status": "MET",
+    "gate": "G2",
+    "clears": "32 clubs",
+    "observed": "offence and defence are fitted jointly against opponents",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R27",
+    "requirement": "Injury and depth ablations, not fixed penalties",
+    "status": "BLOCKED",
+    "gate": "G6",
+    "clears": "0",
+    "observed": "an ablation needs the adjustment to be estimable",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R28",
+    "requirement": "Immutable daily availability snapshots",
+    "status": "PARTIAL",
+    "gate": "G6",
+    "clears": "1 snapshot",
+    "observed": "one dated snapshot, hashed; not daily",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R29",
+    "requirement": "Inactive lists and snap counts",
+    "status": "BLOCKED",
+    "gate": "G6",
+    "clears": "0",
+    "observed": "inactive lists publish 90 minutes pre-kickoff; not read",
+    "source": "https://www.nfl.com/injuries/league/2026/reg11",
+    "note": ""
+  },
+  {
+    "id": "R30",
+    "requirement": "Depth slots stored as groups, not a starter list",
+    "status": "MET",
+    "gate": "G6",
+    "clears": "12 rows",
+    "observed": "position_group + rank_in_group",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R31",
+    "requirement": "Roster turnover as a versioned event",
+    "status": "BLOCKED",
+    "gate": "G6",
+    "clears": "0",
+    "observed": "no transaction feed stored",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R32",
+    "requirement": "Singles-only shadow baseline",
+    "status": "MET",
+    "gate": "G5",
+    "clears": "1 control",
+    "observed": "C4 control defined",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R33",
+    "requirement": "Parlays behind a joint-evidence gate",
+    "status": "MET",
+    "gate": "G5",
+    "clears": "1 blocked",
+    "observed": "S6 BLOCKED until dependence is measured",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R34",
+    "requirement": "Proper-score leaderboard divisions",
+    "status": "MET",
+    "gate": "G5",
+    "clears": "5 divisions",
+    "observed": "SIDE/TOTAL/MONEYLINE/PARLAY/PROP",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R35",
+    "requirement": "Brier skill with a clustered interval and a multiplicity correction",
+    "status": "MET",
+    "gate": "G3",
+    "clears": "2 scores",
+    "observed": "skill, week-clustered CI, Holm ready",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R36",
+    "requirement": "Durable snapshot storage and drift alarms",
+    "status": "BLOCKED",
+    "gate": "G1",
+    "clears": "0",
+    "observed": "no permitted unattended feed, so no alarm can fire",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R37",
+    "requirement": "Public and private layer split",
+    "status": "PARTIAL",
+    "gate": "G1",
+    "clears": "1 layer",
+    "observed": "everything here is public; no private layer exists",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R38",
+    "requirement": "Per-team view",
+    "status": "MET",
+    "gate": "G6",
+    "clears": "32 clubs",
+    "observed": "ratings page has one row per club",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R39",
+    "requirement": "Announced-starter field",
+    "status": "BLOCKED",
+    "gate": "G6",
+    "clears": "0",
+    "observed": "no official announced-starter field",
+    "source": "https://www.nfl.com/injuries/league/2026/reg11",
+    "note": ""
+  },
+  {
+    "id": "R40",
+    "requirement": "Depth-chart register with a read clock",
+    "status": "MET",
+    "gate": "G6",
+    "clears": "12 rows",
+    "observed": "depth_evidence has read_utc per row",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R41",
+    "requirement": "Calibrate 'Questionable'",
+    "status": "BLOCKED",
+    "gate": "G6",
+    "clears": "0",
+    "observed": "needs inactive lists joined across a season",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R42",
+    "requirement": "Interactive Offense-vs-Defence deficiency matrix",
+    "status": "PARTIAL",
+    "gate": "G6",
+    "clears": "26 clubs",
+    "observed": "static matrix built; it is one club deep",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R43",
+    "requirement": "Flag stale depth against transactions",
+    "status": "BLOCKED",
+    "gate": "G6",
+    "clears": "0",
+    "observed": "needs a transaction feed",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R44",
+    "requirement": "Point-in-time snapshot ledger",
+    "status": "MET",
+    "gate": "G1",
+    "clears": "13 inputs",
+    "observed": "manifest hashes every input with its clock",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R45",
+    "requirement": "Fix blank designations",
+    "status": "MET",
+    "gate": "G6",
+    "clears": "253 rows",
+    "observed": "a blank game status stays blank and says why",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R46",
+    "requirement": "Re-capture Week 10 tables",
+    "status": "MET",
+    "gate": "G2",
+    "clears": "14/14",
+    "observed": "14 finals re-read today and reconciled",
+    "source": "https://www.nfl.com/schedules/2026/by-week/week-10",
+    "note": ""
+  },
+  {
+    "id": "R47",
+    "requirement": "Represent shared and empty depth slots",
+    "status": "MET",
+    "gate": "G6",
+    "clears": "12 rows",
+    "observed": "rows stored as printed, including multi-name rows",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R48",
+    "requirement": "Resolve the depth-order source before building the feature",
+    "status": "PARTIAL",
+    "gate": "G6",
+    "clears": "1 of 32",
+    "observed": "source resolved for DET only",
+    "source": "https://www.detroitlions.com/team/depth-chart",
+    "note": ""
+  },
+  {
+    "id": "R49",
+    "requirement": "Score designation reliability",
+    "status": "BLOCKED",
+    "gate": "G6",
+    "clears": "0",
+    "observed": "needs settled designations vs actives",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R50",
+    "requirement": "Wed/Thu/Fri and daily injury snapshots",
+    "status": "BLOCKED",
+    "gate": "G6",
+    "clears": "1",
+    "observed": "one read only",
+    "source": "https://www.nfl.com/injuries/league/2026/reg11",
+    "note": ""
+  },
+  {
+    "id": "R51",
+    "requirement": "Snap counts as a starter proxy",
+    "status": "BLOCKED",
+    "gate": "G6",
+    "clears": "0",
+    "observed": "no official snap feed stored on this desk",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R52",
+    "requirement": "Control baselines on the leaderboard",
+    "status": "MET",
+    "gate": "G5",
+    "clears": "4 controls",
+    "observed": "C1..C4 defined and attached",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R53",
+    "requirement": "Roof, surface and weather overlay",
+    "status": "BLOCKED",
+    "gate": "G6",
+    "clears": "0",
+    "observed": "no official weather file; roof and surface come from the pinned corpus only",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R54",
+    "requirement": "Two-stage skill leaderboard with a CLV escrow",
+    "status": "PARTIAL",
+    "gate": "G5",
+    "clears": "0",
+    "observed": "stage 1 is skill; the escrow needs settled prices",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R55",
+    "requirement": "Vig-free consensus versus fair-line decomposition",
+    "status": "MET",
+    "gate": "G3",
+    "clears": "26 rows",
+    "observed": "de-vigged per book, median published, overround printed",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R56",
+    "requirement": "Weekly 'what changed' diff",
+    "status": "BLOCKED",
+    "gate": "G1",
+    "clears": "0",
+    "observed": "needs a previous week's snapshot",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R57",
+    "requirement": "Publish two total estimators until one wins",
+    "status": "MET",
+    "gate": "G2",
+    "clears": "2 estimators",
+    "observed": "model total and consensus total both published",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R58",
+    "requirement": "Reject season-long ROI ranking",
+    "status": "MET",
+    "gate": "G3",
+    "clears": "0 columns",
+    "observed": "no ROI column exists anywhere",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R59",
+    "requirement": "Archive past-season injury reports",
+    "status": "BLOCKED",
+    "gate": "G6",
+    "clears": "0",
+    "observed": "historical reports not stored",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R60",
+    "requirement": "2026 onside-kick regime priors",
+    "status": "BLOCKED",
+    "gate": "G6",
+    "clears": "0",
+    "observed": "no onside-kick data read",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R61",
+    "requirement": "Freeze rule in git",
+    "status": "PARTIAL",
+    "gate": "G1",
+    "clears": "sha256",
+    "observed": "hash stamped; tag recommended",
+    "source": "preregistration.json",
+    "note": ""
+  },
+  {
+    "id": "R62",
+    "requirement": "No line may be published without an inputs hash",
+    "status": "MET",
+    "gate": "G1",
+    "clears": "39/39",
+    "observed": "39/39 rows carry inputs_sha256",
+    "source": "preregistration.json",
+    "note": ""
+  }
+]

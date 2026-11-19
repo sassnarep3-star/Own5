@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NFL Line-Gate Desk &middot; Flagged</title>
+<style>
+:root{--bg:#0f1319;--card:#171d26;--line:#25303d;--ink:#e8eef6;--dim:#8ea0b6;
+--acc:#5ad2a4;--warn:#e6b455;--bad:#e8735f;--mono:ui-monospace,SFMono-Regular,Menlo,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+header{border-bottom:1px solid var(--line);background:#0b0f14;padding:14px 22px;position:sticky;top:0;z-index:9}
+header h1{margin:0;font-size:17px;letter-spacing:.3px}
+header .sub{color:var(--dim);font-size:12px;margin-top:3px}
+nav{display:flex;flex-wrap:wrap;gap:2px;padding:8px 22px;background:#0b0f14;border-bottom:1px solid var(--line);position:sticky;top:60px;z-index:8}
+nav a{color:var(--dim);text-decoration:none;font-size:12.5px;padding:5px 9px;border-radius:5px}
+nav a:hover{background:#1d2530;color:var(--ink)}
+nav a.on{background:var(--acc);color:#08110c;font-weight:600}
+main{padding:22px;max-width:1500px;margin:0 auto}
+h2{font-size:20px;margin:26px 0 6px}h2:first-child{margin-top:0}
+h3{font-size:14.5px;margin:22px 0 8px;color:var(--acc);text-transform:uppercase;letter-spacing:.7px}
+p.lede{color:var(--dim);max-width:80ch;margin:0 0 16px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:12px;margin:16px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:13px}
+.card .k{color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:.6px}
+.card .v{font:600 22px/1.2 var(--mono);margin-top:5px}
+.card .n{color:var(--dim);font-size:11.5px;margin-top:4px}
+.v.good{color:var(--acc)}.v.warn{color:var(--warn)}.v.bad{color:var(--bad)}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);
+border-radius:9px;overflow:hidden;margin:10px 0 22px;font-size:13px}
+th{background:#131a23;text-align:left;padding:9px 10px;font-size:11px;text-transform:uppercase;
+letter-spacing:.6px;color:var(--dim);border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:8px 10px;border-bottom:1px solid #1e2833;vertical-align:top}
+tr:last-child td{border-bottom:none}
+tbody tr:hover{background:#1b2431}
+td.n,th.n{text-align:right;font-family:var(--mono);white-space:nowrap}
+.blank{color:var(--warn);font-family:var(--mono);font-size:11.5px;border:1px dashed #4a3c1e;
+background:#241e10;border-radius:3px;padding:1px 5px;cursor:help}
+a{color:#7fd4ff;text-decoration:none;border-bottom:1px dotted #2c4a5c}
+a:hover{color:#b9e9ff}
+.pill{display:inline-block;padding:2px 7px;border-radius:99px;font-size:10.5px;font-weight:700;
+letter-spacing:.5px;text-transform:uppercase}
+.p-met{background:#153a2b;color:#6ee7b0}.p-partial{background:#3a3115;color:#e6b455}
+.p-blocked{background:#3a1b18;color:#f0937f}.p-rejected{background:#2a2f38;color:var(--dim)}
+.pos{color:var(--acc)}.neg{color:var(--bad)}
+.note{background:#131a23;border-left:3px solid var(--acc);padding:11px 14px;border-radius:0 7px 7px 0;
+margin:14px 0;font-size:13.5px;color:#cfe0f0}
+.note.warn{border-left-color:var(--warn)}
+.note.bad{border-left-color:var(--bad)}
+footer{border-top:1px solid var(--line);padding:18px 22px;color:var(--dim);font-size:11.5px;margin-top:30px}
+code{font-family:var(--mono);font-size:12px;background:#101720;padding:1px 5px;border-radius:3px}
+</style></head><body>
+<header><h1>NFL Line-Gate Desk</h1>
+<div class="sub">Own lines, prices, ratings and a pre-registered competition &middot;
+session af9a1ada &middot; every number dated and sourced &middot; every blank labelled</div></header>
+<nav><a href="index.html">Dashboard</a><a href="origination.html">Origination</a><a href="prices.html">Prices</a><a href="ratings.html">Ratings</a><a href="results.html">Benchmark</a><a href="leaderboard.html">Leaderboard</a><a href="availability.html">Availability</a><a href="deficiency.html">Deficiency</a><a href="requirements.html">Requirements</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html" class="on">Flagged for Review</a><a href="research.html">Method</a><a href="sources.html">Sources</a></nav><main>
+
+<h2>Flagged for Review</h2>
+<p class="lede">Every item on this page is something a reader should know before quoting a number
+from this desk. Nothing here blocks publication, and nothing here has been quietly fixed.</p>
+
+<div class="cards">
+  <div class="card"><div class="k">Blocking</div>
+    <div class="v bad">3</div>
+    <div class="n">prevents a published number</div></div>
+  <div class="card"><div class="k">Review</div>
+    <div class="v warn">7</div>
+    <div class="n">needs a human decision</div></div>
+  <div class="card"><div class="k">Info</div>
+    <div class="v">6</div>
+    <div class="n">context that changes a reading</div></div>
+</div>
+
+<h3>Index</h3>
+<table class=""><thead><tr>
+<th class="">ID</th>
+<th class="">Severity</th>
+<th class="">Item</th>
+<th class="">What it leaves blank</th>
+</tr></thead><tbody>
+<tr>
+<td>F03</td>
+<td>BLOCKING</td>
+<td>nfl.com terms prohibit systematic retrieval without written consent</td>
+<td>every multi-day automated capture requirement (R20, R29, R35, R36, R50) is recorded as BLOCKED rather than attempted</td>
+</tr>
+<tr>
+<td>F05</td>
+<td>BLOCKING</td>
+<td>Depth coverage is 1 of 32 clubs</td>
+<td>depth rank and replacement columns for 31 clubs</td>
+</tr>
+<tr>
+<td>F13</td>
+<td>BLOCKING</td>
+<td>Seven defects were found in this desk&#x27;s own build, fixed, and are recorded</td>
+<td>nothing</td>
+</tr>
+<tr>
+<td>F01</td>
+<td>REVIEW</td>
+<td>No opening or closing market number can exist yet for Week 11</td>
+<td>the opening and closing columns on the Prices page</td>
+</tr>
+<tr>
+<td>F02</td>
+<td>REVIEW</td>
+<td>The two operators disagree by a full point on four games</td>
+<td>nothing; both books are shown</td>
+</tr>
+<tr>
+<td>F04</td>
+<td>REVIEW</td>
+<td>Operator terms pages could not be read from this environment</td>
+<td>the price-data permission column in the registration is left as unresolved</td>
+</tr>
+<tr>
+<td>F06</td>
+<td>REVIEW</td>
+<td>The solved home-field edge depends heavily on the window</td>
+<td>nothing</td>
+</tr>
+<tr>
+<td>F08</td>
+<td>REVIEW</td>
+<td>The pinned historical corpus is not an official NFL source</td>
+<td>nothing; the source class is stated on every page that quotes it</td>
+</tr>
+<tr>
+<td>F10</td>
+<td>REVIEW</td>
+<td>A rank-one player can be reported injured in a news item with no designation</td>
+<td>Hutchinson&#x27;s game status stays blank because no designation was printed</td>
+</tr>
+<tr>
+<td>F11</td>
+<td>REVIEW</td>
+<td>The repository carries many overlapping desks that disagree</td>
+<td>nothing</td>
+</tr>
+<tr>
+<td>F07</td>
+<td>INFO</td>
+<td>Two clubs print no injuries at all, which is not the same as being healthy</td>
+<td>all per-player counts for CIN and WAS are blank rather than zero</td>
+</tr>
+<tr>
+<td>F09</td>
+<td>INFO</td>
+<td>A club depth chart prints position groups, not one starter</td>
+<td>nothing</td>
+</tr>
+<tr>
+<td>F12</td>
+<td>INFO</td>
+<td>League average points per club is higher this season</td>
+<td>nothing</td>
+</tr>
+<tr>
+<td>F14</td>
+<td>INFO</td>
+<td>Thursday kickoff falls inside this session</td>
+<td>nothing</td>
+</tr>
+<tr>
+<td>F15</td>
+<td>INFO</td>
+<td>Two official pages give the Houston venue different names</td>
+<td>nothing</td>
+</tr>
+<tr>
+<td>F16</td>
+<td>INFO</td>
+<td>The operator boards print kickoff minutes that differ from the official schedule</td>
+<td>nothing</td>
+</tr>
+</tbody></table>
+
+<h3>F03 &middot; nfl.com terms prohibit systematic retrieval without written consent
+<span class="pill p-blocked">BLOCKING</span></h3>
+<p class="lede">Section 1.3 of the NFL.com terms permits personal, non-commercial, informational use and prohibits systematic retrieval of data to compile a collection or database absent express prior written consent. The desk therefore stores hashed, dated manual reads and does not run an unattended scraper against nfl.com.</p>
+<p class="lede"><b>What it leaves blank:</b> every multi-day automated capture requirement (R20, R29, R35, R36, R50) is recorded as BLOCKED rather than attempted</p>
+<p class="lede"><a href="https://www.nfl.com/legal/terms" rel="noopener">source 1</a></p>
+
+<h3>F05 &middot; Depth coverage is 1 of 32 clubs
+<span class="pill p-blocked">BLOCKING</span></h3>
+<p class="lede">Only the Detroit Lions depth chart was read in full for this build. Every other club chart is recorded as NOT READ, and every depth rank, replacement name and ablation difference that would depend on it is blank. The deficiency matrix is therefore one worked example, not a matrix.</p>
+<p class="lede"><b>What it leaves blank:</b> depth rank and replacement columns for 31 clubs</p>
+<p class="lede"><a href="https://www.detroitlions.com/team/depth-chart" rel="noopener">source 1</a></p>
+
+<h3>F13 &middot; Seven defects were found in this desk&#x27;s own build, fixed, and are recorded
+<span class="pill p-blocked">BLOCKING</span></h3>
+<p class="lede">(1) A league average left inside a margin expression inflated every predicted margin by about 22 points. (2) A plus-signed defence produced a defence column that correlated positively with points allowed. (3) Sum-to-zero by elimination parked the invariant on the last club alphabetically at -18.8. (4) Fitting on all 28 seasons produced ratings unrelated to this season&#x27;s scoring. (5) A benchmark probability centred on the closing line produced an impossible +0.30 skill. (6) The fair line and the market line were in opposite sign conventions, inventing 23-point edges. (7) The corpus spread sign was read the wrong way round, giving a closing-line error no real line produces. All seven are now covered by tests.</p>
+<p class="lede"><b>What it leaves blank:</b> nothing</p>
+<p class="lede"><a href="https://www.nfl.com/schedules/2026/by-week/week-10" rel="noopener">source 1</a></p>
+
+<h3>F01 &middot; No opening or closing market number can exist yet for Week 11
+<span class="pill p-review">REVIEW</span></h3>
+<p class="lede">The first capture of this desk is 2026-11-19T11:42:16Z, about eight hours before the Thursday kickoff. Anything posted before that is unrecoverable read-only, and a close is by definition after the last pre-kickoff capture. Both phases are recorded as absent in data/price_store_phases.csv rather than estimated.</p>
+<p class="lede"><b>What it leaves blank:</b> the opening and closing columns on the Prices page</p>
+<p class="lede"><a href="https://sportsbook.draftkings.com/leagues/football/nfl" rel="noopener">source 1</a> <a href="https://sportsbook.fanduel.com/navigation/nfl" rel="noopener">source 2</a></p>
+
+<h3>F02 &middot; The two operators disagree by a full point on four games
+<span class="pill p-review">REVIEW</span></h3>
+<p class="lede">BAL@CAR is -2.5 at DraftKings and -3.5 at FanDuel; PIT@PHI is -4.5 and -5.5; LV@DEN is -10 and -9.5; TEN@DAL is -8.5 and -7.5. The desk publishes the median and both books. Which book should anchor the market column is an owner decision, and it moves the difference column by up to a point on those games.</p>
+<p class="lede"><b>What it leaves blank:</b> nothing; both books are shown</p>
+<p class="lede"><a href="https://sportsbook.draftkings.com/leagues/football/nfl" rel="noopener">source 1</a> <a href="https://sportsbook.fanduel.com/navigation/nfl" rel="noopener">source 2</a></p>
+
+<h3>F04 &middot; Operator terms pages could not be read from this environment
+<span class="pill p-review">REVIEW</span></h3>
+<p class="lede">Two candidate operator terms URLs returned 404 today. The desk therefore cannot state what the operators permit, and says so rather than quoting a policy it did not read.</p>
+<p class="lede"><b>What it leaves blank:</b> the price-data permission column in the registration is left as unresolved</p>
+<p class="lede"><a href="https://www.fanduel.com/responsible-gaming" rel="noopener">source 1</a> <a href="https://www.draftkings.com/draftkings-legal" rel="noopener">source 2</a></p>
+
+<h3>F06 &middot; The solved home-field edge depends heavily on the window
+<span class="pill p-review">REVIEW</span></h3>
+<p class="lede">On the two-season window the home edge is +1.17 points. Fitted on all 28 seasons it is +2.18, and on the 2026 season alone it is -0.56. The shipped model uses the two-season window because that is the window whose ratings actually track scoring, but the home edge is clearly sensitive to the choice and is reported rather than smoothed.</p>
+<p class="lede"><b>What it leaves blank:</b> nothing</p>
+<p class="lede"><a href="https://www.nfl.com/schedules/2026/by-week/week-10" rel="noopener">source 1</a></p>
+
+<h3>F08 &middot; The pinned historical corpus is not an official NFL source
+<span class="pill p-review">REVIEW</span></h3>
+<p class="lede">The walk-forward and the closing-line benchmark use the committed nflverse corpus, a third-party dataset. It is used because no official machine-readable closing-line history exists. Its Week 10 2026 rows were reconciled 14 of 14 against today&#x27;s official finals, which is the only cross-check available and is not a guarantee.</p>
+<p class="lede"><b>What it leaves blank:</b> nothing; the source class is stated on every page that quotes it</p>
+<p class="lede"><a href="https://www.nfl.com/schedules/2026/by-week/week-10" rel="noopener">source 1</a></p>
+
+<h3>F10 &middot; A rank-one player can be reported injured in a news item with no designation
+<span class="pill p-review">REVIEW</span></h3>
+<p class="lede">Today&#x27;s official news feed carries a report that Detroit EDGE Aidan Hutchinson is feared to have suffered a significant knee injury, while the Week 11 injury report does not list him at all and the club chart still prints him first string. The desk records all three facts and does not convert a news item into a game status.</p>
+<p class="lede"><b>What it leaves blank:</b> Hutchinson&#x27;s game status stays blank because no designation was printed</p>
+<p class="lede"><a href="https://www.detroitlions.com/team/depth-chart" rel="noopener">source 1</a> <a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source 2</a></p>
+
+<h3>F11 &middot; The repository carries many overlapping desks that disagree
+<span class="pill p-review">REVIEW</span></h3>
+<p class="lede">More than forty NFL desks in this repository publish Week 11 numbers. Several print market columns this desk can now fill, and several print none. This desk does not edit any of them; it publishes its own numbers and records the duplication as a suggestion (SG08).</p>
+<p class="lede"><b>What it leaves blank:</b> nothing</p>
+<p class="lede"><a href="https://www.nfl.com/schedules/2026/by-week/week-11" rel="noopener">source 1</a></p>
+
+<h3>F07 &middot; Two clubs print no injuries at all, which is not the same as being healthy
+<span class="pill p-info">INFO</span></h3>
+<p class="lede">Cincinnati and Washington are printed by the official page as No Injuries Reported for Week 11. That is a statement about the report, not about the roster: a player on reserve appears on neither the report nor this desk&#x27;s tables. Both clubs are shown with the official string rather than as zeroes.</p>
+<p class="lede"><b>What it leaves blank:</b> all per-player counts for CIN and WAS are blank rather than zero</p>
+<p class="lede"><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source 1</a></p>
+
+<h3>F09 &middot; A club depth chart prints position groups, not one starter
+<span class="pill p-info">INFO</span></h3>
+<p class="lede">The Detroit chart prints receiver twice as separate rows and several defensive positions with three or four names in one row. Treating the first column as the starter would invent a starter the club never named. The desk stores rows as printed and records the rank position within the group.</p>
+<p class="lede"><b>What it leaves blank:</b> nothing</p>
+<p class="lede"><a href="https://www.detroitlions.com/team/depth-chart" rel="noopener">source 1</a></p>
+
+<h3>F12 &middot; League average points per club is higher this season
+<span class="pill p-info">INFO</span></h3>
+<p class="lede">The shipped two-season fit puts mu at 22.44 points per club per game, while a 2026-only fit puts it at 23.35 and the 1999-2025 corpus averages about 21. Combined with a small home edge this makes the model&#x27;s totals run above the market on several Week 11 games, which is visible in the difference column and is not corrected by hand.</p>
+<p class="lede"><b>What it leaves blank:</b> nothing</p>
+<p class="lede"><a href="https://www.nfl.com/standings/league/2026/REG" rel="noopener">source 1</a></p>
+
+<h3>F14 &middot; Thursday kickoff falls inside this session
+<span class="pill p-info">INFO</span></h3>
+<p class="lede">Indianapolis at Houston kicks off at 20:15 ET on 2026-11-19, after this build. Any number published for it is a pre-kickoff opinion, not a result, and every price row carries the capture clock so that distinction cannot be lost later.</p>
+<p class="lede"><b>What it leaves blank:</b> nothing</p>
+<p class="lede"><a href="https://www.nfl.com/schedules/2026/by-week/week-11" rel="noopener">source 1</a></p>
+
+<h3>F15 &middot; Two official pages give the Houston venue different names
+<span class="pill p-info">INFO</span></h3>
+<p class="lede">The game centre page prints RELIANT STADIUM, while the ticket links on the same site print NRG Stadium. Both strings are recorded against the fixture and the disagreement is published rather than resolved by preference.</p>
+<p class="lede"><b>What it leaves blank:</b> nothing</p>
+<p class="lede"><a href="https://www.nfl.com/games/colts-at-texans-2026-reg-11" rel="noopener">source 1</a></p>
+
+<h3>F16 &middot; The operator boards print kickoff minutes that differ from the official schedule
+<span class="pill p-info">INFO</span></h3>
+<p class="lede">FanDuel prints 1:01pm and 4:06pm for games the official schedule lists at 1:00pm and 4:05pm, and DraftKings prints 8:15 PM for the Thursday game while the official schedule prints 8:15 PM Eastern. The desk keeps the official schedule as the fixture truth and stores the board&#x27;s own string beside the price so the difference is visible.</p>
+<p class="lede"><b>What it leaves blank:</b> nothing</p>
+<p class="lede"><a href="https://www.nfl.com/schedules/2026/by-week/week-11" rel="noopener">source 1</a> <a href="https://sportsbook.fanduel.com/navigation/nfl" rel="noopener">source 2</a></p>
+
+</main>
+<footer>Built from committed inputs only, by a deterministic stdlib generator.
+A blank cell is a value that was <strong>not read</strong>, never a zero. Read the
+<a href="flagged.html">Flagged for Review</a> page before quoting any number here.</footer>
+</body></html>

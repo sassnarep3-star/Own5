@@ -1,0 +1,10 @@
+{
+  "alpha": 0.1,
+  "delta": 0.02,
+  "derivation": "n = 2(z_alpha + z_beta)^2 * p(1-p) / delta^2, two-sided",
+  "generated_utc": "2026-11-19T11:45:00Z",
+  "n_required": 5635,
+  "p_assumed": 0.5,
+  "power": 0.8,
+  "variance": 0.25
+}

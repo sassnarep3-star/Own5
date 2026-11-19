@@ -1,0 +1,195 @@
+{
+  "registration_id": "REG-AF9A1ADA-V1",
+  "frozen_utc": "2026-11-19T11:45:00Z",
+  "rule": "this file is never edited in place. changing a definition means writing a new file with a new registration_id and a new frozen_utc. the hash of this file is stamped on every leaderboard row, so a score can always be traced to the definition that produced it.",
+  "corpus": {
+    "games": 7117,
+    "seasons": "1999-2026",
+    "scored_games": 6913,
+    "source": "nflverse pinned dataset via nfl-line-audit/data/corpus_games.csv, third-party, reconciled 14/14 for Week 10 2026 against the official finals",
+    "protocol": "walk-forward only: the ratings used for a game are fitted on every game strictly before that game's week, including earlier weeks of the same season. no game is ever scored by a model that saw it."
+  },
+  "markets_in_order": [
+    {
+      "order": 1,
+      "market": "side",
+      "benchmark": "0.5 at the closing line (Brier 0.25)",
+      "why": "the line is the market's own point prediction; take the line and you are 50/50 by construction"
+    },
+    {
+      "order": 2,
+      "market": "total",
+      "benchmark": "0.5 at the closing total (Brier 0.25)",
+      "why": "same logic as the side"
+    },
+    {
+      "order": 3,
+      "market": "moneyline",
+      "benchmark": "the de-vigged two-way closing price",
+      "why": "the moneyline is a two-way price, so its benchmark is the price without the book's margin"
+    }
+  ],
+  "gates": [
+    {
+      "id": "G1",
+      "name": "pre-registration",
+      "rule": "a strategy may not be scored unless its definition was committed before the first settled bet",
+      "passes": "fixed id + hash on the row"
+    },
+    {
+      "id": "G2",
+      "name": "walk-forward",
+      "rule": "no bet may be priced from a fit that saw its own game",
+      "passes": "cutoff strictly before the game"
+    },
+    {
+      "id": "G3",
+      "name": "proper score",
+      "rule": "rank on Brier skill against the stated benchmark, never on return",
+      "passes": "skill > 0 with a clustered interval excluding 0"
+    },
+    {
+      "id": "G4",
+      "name": "clustered interval",
+      "rule": "the interval resamples whole game weeks",
+      "passes": "lower bound > 0"
+    },
+    {
+      "id": "G5",
+      "name": "multiplicity",
+      "rule": "two or more scored strategies get a familywise correction",
+      "passes": "Holm-adjusted p < 0.05"
+    },
+    {
+      "id": "G6",
+      "name": "control",
+      "rule": "a market-following control must be beaten on the same games",
+      "passes": "skill vs control > 0"
+    },
+    {
+      "id": "G7",
+      "name": "volume",
+      "rule": "no score is published below the pre-registered sample",
+      "passes": "n >= 4,721"
+    },
+    {
+      "id": "G8",
+      "name": "demotion",
+      "rule": "a strategy that fails G3 in two consecutive settled windows is demoted and its score is retired, not quietly reset",
+      "passes": "demotion logged with the window ids"
+    }
+  ],
+  "strategies": [
+    {
+      "id": "S1",
+      "name": "Model fair line vs consensus close",
+      "division": "SIDE",
+      "gate": "G2 G3 G4 G7",
+      "control": "take the close",
+      "status": "PAPER",
+      "blocked_reason": "",
+      "definition": "bet the side whenever the model's fair margin differs from the de-vigged consensus by more than one point, at the price actually printed"
+    },
+    {
+      "id": "S2",
+      "name": "Model fair total vs consensus close",
+      "division": "TOTAL",
+      "gate": "G2 G3 G7",
+      "control": "take the close",
+      "status": "PAPER",
+      "blocked_reason": "",
+      "definition": "bet the total when the model's fair total differs from the consensus by more than one point"
+    },
+    {
+      "id": "S3",
+      "name": "De-vigged consensus reversion",
+      "division": "MONEYLINE",
+      "gate": "G2 G3 G4 G7",
+      "control": "de-vigged close",
+      "status": "PAPER",
+      "blocked_reason": "",
+      "definition": "bet a book whose de-vigged price is further from the two-book median than the median's own dispersion"
+    },
+    {
+      "id": "S4",
+      "name": "Availability-adjusted re-price",
+      "division": "SIDE",
+      "gate": "G1 G2 G3 G6",
+      "control": "unadjusted model",
+      "status": "BLOCKED",
+      "blocked_reason": "depth readings exist for 1 of 32 clubs, so the adjustment cannot be estimated. A fixed penalty per starter is explicitly rejected by the brief and by this desk.",
+      "definition": "re-price the model only by a coefficient measured from settled games, never by a hand-set number"
+    },
+    {
+      "id": "S5",
+      "name": "Rest and travel",
+      "division": "SIDE",
+      "gate": "G2 G3 G7",
+      "control": "take the close",
+      "status": "PAPER",
+      "blocked_reason": "",
+      "definition": "use only the published schedule: short week, back-to-back road games, and the international trip"
+    },
+    {
+      "id": "S6",
+      "name": "Same-game parlay",
+      "division": "PARLAY",
+      "gate": "G1..G8 + joint evidence",
+      "control": "product of marginals",
+      "status": "BLOCKED",
+      "blocked_reason": "joint evidence gate: the dependence between legs must be measured on settled same-game data before any combo is priced",
+      "definition": "price a two-leg combo only from a measured joint distribution, never from the product of marginals"
+    },
+    {
+      "id": "S7",
+      "name": "Player-prop combo",
+      "division": "PROP",
+      "gate": "G1..G8 + market data",
+      "control": "single prop",
+      "status": "BLOCKED",
+      "blocked_reason": "no licensed prop feed exists on this desk; the boards print props but the desk cannot store them under its own data policy",
+      "definition": "player-level pricing requires a feed the desk is permitted to store"
+    }
+  ],
+  "control_baselines": [
+    {
+      "id": "C1",
+      "name": "take the close",
+      "rule": "price every game at the closing line",
+      "why": "a strategy that cannot beat this is the market with extra steps"
+    },
+    {
+      "id": "C2",
+      "name": "market favourite",
+      "rule": "always take the favourite at the printed price",
+      "why": "catches a strategy that is just following strength"
+    },
+    {
+      "id": "C3",
+      "name": "home club",
+      "rule": "always take the home club",
+      "why": "catches a strategy that is just a home-field tilt"
+    },
+    {
+      "id": "C4",
+      "name": "singles only, shadow",
+      "rule": "the same strategy priced as singles even when the family is combos",
+      "why": "removes correlation and staking from the comparison"
+    }
+  ],
+  "data_policy": {
+    "price_source": "two operator boards, read manually, hashed, with a UTC clock per capture",
+    "nfl_data": "manual reads of official pages, hashed, stored as dated snapshots, never a feed. nfl.com terms section 1.3 restricts systematic retrieval to compile a database.",
+    "no_inference": "a value that was not read stays blank and is flagged. a blank is never a zero.",
+    "clock": "every capture carries its own UTC read time, and every page states the age of the number it shows"
+  },
+  "luck_removal": [
+    "proper score not return",
+    "clustered interval by game week",
+    "familywise correction across the registered family",
+    "pre-registered sample size",
+    "control baseline on every row",
+    "demotion gate"
+  ],
+  "stake_split": "the signal column (skill vs benchmark) and the staking column (units risked) are published separately and never combined into one headline number, because a good signal can be staked badly and a bad signal staked luckily"
+}

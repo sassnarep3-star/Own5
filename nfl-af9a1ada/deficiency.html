@@ -1,0 +1,2884 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NFL Line-Gate Desk &middot; Deficiency</title>
+<style>
+:root{--bg:#0f1319;--card:#171d26;--line:#25303d;--ink:#e8eef6;--dim:#8ea0b6;
+--acc:#5ad2a4;--warn:#e6b455;--bad:#e8735f;--mono:ui-monospace,SFMono-Regular,Menlo,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+header{border-bottom:1px solid var(--line);background:#0b0f14;padding:14px 22px;position:sticky;top:0;z-index:9}
+header h1{margin:0;font-size:17px;letter-spacing:.3px}
+header .sub{color:var(--dim);font-size:12px;margin-top:3px}
+nav{display:flex;flex-wrap:wrap;gap:2px;padding:8px 22px;background:#0b0f14;border-bottom:1px solid var(--line);position:sticky;top:60px;z-index:8}
+nav a{color:var(--dim);text-decoration:none;font-size:12.5px;padding:5px 9px;border-radius:5px}
+nav a:hover{background:#1d2530;color:var(--ink)}
+nav a.on{background:var(--acc);color:#08110c;font-weight:600}
+main{padding:22px;max-width:1500px;margin:0 auto}
+h2{font-size:20px;margin:26px 0 6px}h2:first-child{margin-top:0}
+h3{font-size:14.5px;margin:22px 0 8px;color:var(--acc);text-transform:uppercase;letter-spacing:.7px}
+p.lede{color:var(--dim);max-width:80ch;margin:0 0 16px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:12px;margin:16px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:13px}
+.card .k{color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:.6px}
+.card .v{font:600 22px/1.2 var(--mono);margin-top:5px}
+.card .n{color:var(--dim);font-size:11.5px;margin-top:4px}
+.v.good{color:var(--acc)}.v.warn{color:var(--warn)}.v.bad{color:var(--bad)}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);
+border-radius:9px;overflow:hidden;margin:10px 0 22px;font-size:13px}
+th{background:#131a23;text-align:left;padding:9px 10px;font-size:11px;text-transform:uppercase;
+letter-spacing:.6px;color:var(--dim);border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:8px 10px;border-bottom:1px solid #1e2833;vertical-align:top}
+tr:last-child td{border-bottom:none}
+tbody tr:hover{background:#1b2431}
+td.n,th.n{text-align:right;font-family:var(--mono);white-space:nowrap}
+.blank{color:var(--warn);font-family:var(--mono);font-size:11.5px;border:1px dashed #4a3c1e;
+background:#241e10;border-radius:3px;padding:1px 5px;cursor:help}
+a{color:#7fd4ff;text-decoration:none;border-bottom:1px dotted #2c4a5c}
+a:hover{color:#b9e9ff}
+.pill{display:inline-block;padding:2px 7px;border-radius:99px;font-size:10.5px;font-weight:700;
+letter-spacing:.5px;text-transform:uppercase}
+.p-met{background:#153a2b;color:#6ee7b0}.p-partial{background:#3a3115;color:#e6b455}
+.p-blocked{background:#3a1b18;color:#f0937f}.p-rejected{background:#2a2f38;color:var(--dim)}
+.pos{color:var(--acc)}.neg{color:var(--bad)}
+.note{background:#131a23;border-left:3px solid var(--acc);padding:11px 14px;border-radius:0 7px 7px 0;
+margin:14px 0;font-size:13.5px;color:#cfe0f0}
+.note.warn{border-left-color:var(--warn)}
+.note.bad{border-left-color:var(--bad)}
+footer{border-top:1px solid var(--line);padding:18px 22px;color:var(--dim);font-size:11.5px;margin-top:30px}
+code{font-family:var(--mono);font-size:12px;background:#101720;padding:1px 5px;border-radius:3px}
+</style></head><body>
+<header><h1>NFL Line-Gate Desk</h1>
+<div class="sub">Own lines, prices, ratings and a pre-registered competition &middot;
+session af9a1ada &middot; every number dated and sourced &middot; every blank labelled</div></header>
+<nav><a href="index.html">Dashboard</a><a href="origination.html">Origination</a><a href="prices.html">Prices</a><a href="ratings.html">Ratings</a><a href="results.html">Benchmark</a><a href="leaderboard.html">Leaderboard</a><a href="availability.html">Availability</a><a href="deficiency.html" class="on">Deficiency</a><a href="requirements.html">Requirements</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged for Review</a><a href="research.html">Method</a><a href="sources.html">Sources</a></nav><main>
+
+<h2>Deficiency: who is missing, and how good the replacement is</h2>
+<p class="lede">This is the page the brief cares most about and the one this desk can least
+support. One club's depth chart has been read. The other thirty-one are marked NOT READ, and
+their rank and replacement columns are blank rather than guessed.</p>
+
+<div class="cards">
+  <div class="card"><div class="k">Clubs charted</div><div class="v bad">1/32</div>
+    <div class="n">DET</div></div>
+  <div class="card"><div class="k">Ranked players</div><div class="v">12</div>
+    <div class="n">read verbatim from a club page</div></div>
+  <div class="card"><div class="k">Injured players</div><div class="v">253</div>
+    <div class="n">from the official report</div></div>
+  <div class="card"><div class="k">Inferred ranks</div><div class="v good">0</div>
+    <div class="n">no jersey number, salary or experience used, ever</div></div>
+</div>
+
+<div class="note bad"><strong>The one substitution this desk can evidence.</strong> Detroit's centre
+Cade Mays is listed by the official injury report as not practising, and the club's own depth chart
+prints Juice Scruggs directly behind him. That is a replacement, read twice from two official-ish
+sources. Thirty-one clubs have no equivalent row here, and the blank is a statement about this
+desk's coverage rather than about the roster.</div>
+
+<h3>Depth coverage</h3>
+<table class=""><thead><tr>
+<th class="">Club</th>
+<th class="">Chart read</th>
+<th class="n">Rows</th>
+<th class="">Note</th>
+</tr></thead><tbody>
+<tr>
+<td>AZ</td>
+<td>NOT READ</td>
+<td class="n"><span class="">0.00</span></td>
+<td><span class="blank" title="not read">BLANK</span></td>
+</tr>
+<tr>
+<td>BAL</td>
+<td>NOT READ</td>
+<td class="n"><span class="">0.00</span></td>
+<td><span class="blank" title="not read">BLANK</span></td>
+</tr>
+<tr>
+<td>BUF</td>
+<td>NOT READ</td>
+<td class="n"><span class="">0.00</span></td>
+<td><span class="blank" title="not read">BLANK</span></td>
+</tr>
+<tr>
+<td>CAR</td>
+<td>NOT READ</td>
+<td class="n"><span class="">0.00</span></td>
+<td><span class="blank" title="not read">BLANK</span></td>
+</tr>
+<tr>
+<td>CHI</td>
+<td>NOT READ</td>
+<td class="n"><span class="">0.00</span></td>
+<td><span class="blank" title="not read">BLANK</span></td>
+</tr>
+<tr>
+<td>CIN</td>
+<td>NOT READ</td>
+<td class="n"><span class="">0.00</span></td>
+<td><span class="blank" title="not read">BLANK</span></td>
+</tr>
+<tr>
+<td>DAL</td>
+<td>NOT READ</td>
+<td class="n"><span class="">0.00</span></td>
+<td><span class="blank" title="not read">BLANK</span></td>
+</tr>
+<tr>
+<td>DEN</td>
+<td>NOT READ</td>
+<td class="n"><span class="">0.00</span></td>
+<td><span class="blank" title="not read">BLANK</span></td>
+</tr>
+<tr>
+<td>DET</td>
+<td>yes</td>
+<td class="n"><span class="">12.00</span></td>
+<td><span class="blank" title="not read">BLANK</span></td>
+</tr>
+<tr>
+<td>HOU</td>
+<td>NOT READ</td>
+<td class="n"><span class="">0.00</span></td>
+<td><span class="blank" title="not read">BLANK</span></td>
+</tr>
+<tr>
+<td>IND</td>
+<td>NOT READ</td>
+<td class="n"><span class="">0.00</span></td>
+<td><span class="blank" title="not read">BLANK</span></td>
+</tr>
+<tr>
+<td>JAX</td>
+<td>NOT READ</td>
+<td class="n"><span class="">0.00</span></td>
+<td><span class="blank" title="not read">BLANK</span></td>
+</tr>
+<tr>
+<td>KC</td>
+<td>NOT READ</td>
+<td class="n"><span class="">0.00</span></td>
+<td><span class="blank" title="not read">BLANK</span></td>
+</tr>
+<tr>
+<td>LAC</td>
+<td>NOT READ</td>
+<td class="n"><span class="">0.00</span></td>
+<td><span class="blank" title="not read">BLANK</span></td>
+</tr>
+<tr>
+<td>LV</td>
+<td>NOT READ</td>
+<td class="n"><span class="">0.00</span></td>
+<td><span class="blank" title="not read">BLANK</span></td>
+</tr>
+<tr>
+<td>MIA</td>
+<td>NOT READ</td>
+<td class="n"><span class="">0.00</span></td>
+<td><span class="blank" title="not read">BLANK</span></td>
+</tr>
+<tr>
+<td>MIN</td>
+<td>NOT READ</td>
+<td class="n"><span class="">0.00</span></td>
+<td><span class="blank" title="not read">BLANK</span></td>
+</tr>
+<tr>
+<td>NO</td>
+<td>NOT READ</td>
+<td class="n"><span class="">0.00</span></td>
+<td><span class="blank" title="not read">BLANK</span></td>
+</tr>
+<tr>
+<td>NYG</td>
+<td>NOT READ</td>
+<td class="n"><span class="">0.00</span></td>
+<td><span class="blank" title="not read">BLANK</span></td>
+</tr>
+<tr>
+<td>NYJ</td>
+<td>NOT READ</td>
+<td class="n"><span class="">0.00</span></td>
+<td><span class="blank" title="not read">BLANK</span></td>
+</tr>
+<tr>
+<td>PHI</td>
+<td>NOT READ</td>
+<td class="n"><span class="">0.00</span></td>
+<td><span class="blank" title="not read">BLANK</span></td>
+</tr>
+<tr>
+<td>PIT</td>
+<td>NOT READ</td>
+<td class="n"><span class="">0.00</span></td>
+<td><span class="blank" title="not read">BLANK</span></td>
+</tr>
+<tr>
+<td>SF</td>
+<td>NOT READ</td>
+<td class="n"><span class="">0.00</span></td>
+<td><span class="blank" title="not read">BLANK</span></td>
+</tr>
+<tr>
+<td>TB</td>
+<td>NOT READ</td>
+<td class="n"><span class="">0.00</span></td>
+<td><span class="blank" title="not read">BLANK</span></td>
+</tr>
+<tr>
+<td>TEN</td>
+<td>NOT READ</td>
+<td class="n"><span class="">0.00</span></td>
+<td><span class="blank" title="not read">BLANK</span></td>
+</tr>
+<tr>
+<td>WAS</td>
+<td>NOT READ</td>
+<td class="n"><span class="">0.00</span></td>
+<td><span class="blank" title="not read">BLANK</span></td>
+</tr>
+</tbody></table>
+
+<h3>What was actually read</h3>
+<table class=""><thead><tr>
+<th class="">Club</th>
+<th class="">Group</th>
+<th class="">Rank</th>
+<th class="">Player</th>
+<th class="">Source</th>
+</tr></thead><tbody>
+<tr>
+<td>DET</td>
+<td>QB</td>
+<td>1</td>
+<td>Jared Goff</td>
+<td><a href="https://www.detroitlions.com/team/depth-chart" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DET</td>
+<td>QB</td>
+<td>2</td>
+<td>Joshua Dobbs</td>
+<td><a href="https://www.detroitlions.com/team/depth-chart" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DET</td>
+<td>RB</td>
+<td>1</td>
+<td>Jahmyr Gibbs</td>
+<td><a href="https://www.detroitlions.com/team/depth-chart" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DET</td>
+<td>RB</td>
+<td>2</td>
+<td>Sione Vaki</td>
+<td><a href="https://www.detroitlions.com/team/depth-chart" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DET</td>
+<td>RB</td>
+<td>3</td>
+<td>Jacob Saylors</td>
+<td><a href="https://www.detroitlions.com/team/depth-chart" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DET</td>
+<td>C</td>
+<td>1</td>
+<td>Cade Mays</td>
+<td><a href="https://www.detroitlions.com/team/depth-chart" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DET</td>
+<td>C</td>
+<td>2</td>
+<td>Juice Scruggs</td>
+<td><a href="https://www.detroitlions.com/team/depth-chart" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DET</td>
+<td>CB</td>
+<td>1</td>
+<td>D.J. Reed</td>
+<td><a href="https://www.detroitlions.com/team/depth-chart" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DET</td>
+<td>CB</td>
+<td>2</td>
+<td>Rock Ya-Sin</td>
+<td><a href="https://www.detroitlions.com/team/depth-chart" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DET</td>
+<td>CB</td>
+<td>3</td>
+<td>Khalil Dorsey</td>
+<td><a href="https://www.detroitlions.com/team/depth-chart" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DET</td>
+<td>EDGE</td>
+<td>1</td>
+<td>Aidan Hutchinson</td>
+<td><a href="https://www.detroitlions.com/team/depth-chart" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DET</td>
+<td>EDGE</td>
+<td>2</td>
+<td>Derrick Moore</td>
+<td><a href="https://www.detroitlions.com/team/depth-chart" rel="noopener">source</a></td>
+</tr>
+</tbody></table>
+
+<h3>Injured players against their depth slot</h3>
+<table class=""><thead><tr>
+<th class="">Club</th>
+<th class="">Player</th>
+<th class="">Pos</th>
+<th class="">Injury</th>
+<th class="">Practice</th>
+<th class="">Game status</th>
+<th class="">Depth rank</th>
+<th class="">Report</th>
+</tr></thead><tbody>
+<tr>
+<td>AZ</td>
+<td>Budda Baker</td>
+<td>S</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>AZ</td>
+<td>Zachary Carter</td>
+<td>DT</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>AZ</td>
+<td>Hjalte Froholdt</td>
+<td>C</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>AZ</td>
+<td>Jon Gaines II</td>
+<td>G</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>AZ</td>
+<td>Roy Lopez</td>
+<td>DT</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>AZ</td>
+<td>Max Melton</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>AZ</td>
+<td>Walter Nolen</td>
+<td>DT</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>AZ</td>
+<td>Darius Robinson</td>
+<td>DT</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>AZ</td>
+<td>Isaac Seumalo</td>
+<td>G</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>AZ</td>
+<td>Josh Sweat</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>AZ</td>
+<td>Jayden Williams</td>
+<td>T</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>AZ</td>
+<td>Mack Wilson</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>BAL</td>
+<td>Mike Green</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>BAL</td>
+<td>Jaylinn Hawkins</td>
+<td>S</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>BAL</td>
+<td>Matthew Hibner</td>
+<td>TE</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>BAL</td>
+<td>Olaivavega Ioane</td>
+<td>G</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>BAL</td>
+<td>Nnamdi Madubuike</td>
+<td>DT</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>BAL</td>
+<td>Adam Randall</td>
+<td>RB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>BUF</td>
+<td>Christian Benford</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>BUF</td>
+<td>Cole Bishop</td>
+<td>S</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>BUF</td>
+<td>Keon Coleman</td>
+<td>WR</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>BUF</td>
+<td>Ray Davis</td>
+<td>RB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>BUF</td>
+<td>Dee Alford</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>BUF</td>
+<td>Damar Hamlin</td>
+<td>S</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>BUF</td>
+<td>Jackson Hawes</td>
+<td>TE</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>BUF</td>
+<td>Amani Hooker</td>
+<td>S</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>BUF</td>
+<td>Ty Johnson</td>
+<td>RB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>BUF</td>
+<td>Dalton Kincaid</td>
+<td>TE</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>BUF</td>
+<td>Connor McGovern</td>
+<td>C</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>BUF</td>
+<td>T.J. Sanders</td>
+<td>DE</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>BUF</td>
+<td>Tyrell Shavers</td>
+<td>WR</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>BUF</td>
+<td>O&#x27;Cyrus Torrence</td>
+<td>G</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>BUF</td>
+<td>Dorian Williams</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>CAR</td>
+<td>Jonathon Brooks</td>
+<td>RB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>CAR</td>
+<td>Brady Christensen</td>
+<td>G</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>CAR</td>
+<td>Feleipe Franks</td>
+<td>TE</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>CAR</td>
+<td>Trevis Gipson</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>CAR</td>
+<td>Chuba Hubbard</td>
+<td>RB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>CAR</td>
+<td>Mike Jackson</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>CAR</td>
+<td>Jackson Kuwatch</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>CAR</td>
+<td>Will Lee III</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>CAR</td>
+<td>Bobby Okereke</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>CAR</td>
+<td>Isaiah Simmons</td>
+<td>S</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>CAR</td>
+<td>Tommy Tremble</td>
+<td>TE</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>CAR</td>
+<td>Darren Waller</td>
+<td>TE</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>CAR</td>
+<td>Bryce Young</td>
+<td>QB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>CHI</td>
+<td>Luther Burden III</td>
+<td>WR</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>CHI</td>
+<td>Kyler Gordon</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>CHI</td>
+<td>Kyle Monangai</td>
+<td>RB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>CHI</td>
+<td>Malik Muhammad</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>CHI</td>
+<td>Jeffery Simmons</td>
+<td>DT</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DAL</td>
+<td>DaRon Bland</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DAL</td>
+<td>Tyler Booker</td>
+<td>G</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DAL</td>
+<td>Donovan Ezeiruaku</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DAL</td>
+<td>Jake Ferguson</td>
+<td>TE</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DAL</td>
+<td>Malik Hooker</td>
+<td>S</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DAL</td>
+<td>James Houston</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DAL</td>
+<td>P.J. Locke</td>
+<td>S</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DAL</td>
+<td>Von Miller</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DAL</td>
+<td>Jonathan Mingo</td>
+<td>WR</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DAL</td>
+<td>Devin Moore</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DAL</td>
+<td>Otito Ogbonnia</td>
+<td>DE</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DAL</td>
+<td>Joey Porter Jr.</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DAL</td>
+<td>Juanyeh Thomas</td>
+<td>S</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DAL</td>
+<td>Jalen Thompson</td>
+<td>S</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DEN</td>
+<td>Kris Abrams-Draine</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DEN</td>
+<td>Zach Allen</td>
+<td>DE</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DEN</td>
+<td>Talanoa Hufanga</td>
+<td>S</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DEN</td>
+<td>Brandon Jones</td>
+<td>S</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DEN</td>
+<td>Caleb Lohner</td>
+<td>TE</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DEN</td>
+<td>Riley Moss</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DEN</td>
+<td>Adam Prentice</td>
+<td>FB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DEN</td>
+<td>Courtland Sutton</td>
+<td>WR</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DEN</td>
+<td>Jaylen Waddle</td>
+<td>WR</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DET</td>
+<td>Joe Bachie</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DET</td>
+<td>Khalil Dorsey</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td>3</td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DET</td>
+<td>Kerby Joseph</td>
+<td>S</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DET</td>
+<td>Tyler Lacy</td>
+<td>DE</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DET</td>
+<td>Cade Mays</td>
+<td>C</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td>1</td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DET</td>
+<td>Ennis Rakestraw Jr.</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DET</td>
+<td>D.J. Reed</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td>1</td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>DET</td>
+<td>Sione Vaki</td>
+<td>RB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td>2</td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>HOU</td>
+<td>Azeez Al-Shaair</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>HOU</td>
+<td>Reed Blankenship</td>
+<td>S</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>HOU</td>
+<td>Tank Dell</td>
+<td>WR</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>HOU</td>
+<td>Blake Fisher</td>
+<td>T</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>HOU</td>
+<td>Marvin Harrison Jr.</td>
+<td>WR</td>
+<td>Hamstring</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>HOU</td>
+<td>Jacob Hummel</td>
+<td>LB</td>
+<td>Groin</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>HOU</td>
+<td>Danielle Hunter</td>
+<td>DE</td>
+<td>Hamstring</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>HOU</td>
+<td>Brevin Jordan</td>
+<td>TE</td>
+<td>Foot, Illness</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>HOU</td>
+<td>Kamari Lassiter</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>HOU</td>
+<td>Woody Marks</td>
+<td>RB</td>
+<td>Concussion</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>HOU</td>
+<td>David Montgomery</td>
+<td>RB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>HOU</td>
+<td>Febechi Nwaiwu</td>
+<td>G</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>HOU</td>
+<td>Keylan Rutledge</td>
+<td>G</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>HOU</td>
+<td>Jaylin Smith</td>
+<td>CB</td>
+<td>Hamstring</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>HOU</td>
+<td>Wyatt Teller</td>
+<td>G</td>
+<td>Back</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>IND</td>
+<td>Jaylon Carlies</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>IND</td>
+<td>Sauce Gardner</td>
+<td>CB</td>
+<td>Calf</td>
+<td>Did Not Participate In Practice</td>
+<td>Questionable</td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>IND</td>
+<td>Anthony Gould</td>
+<td>WR</td>
+<td>Toe</td>
+<td>Full Participation in Practice</td>
+<td>Questionable</td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>IND</td>
+<td>Charlie Heck</td>
+<td>T</td>
+<td>Not injury related - personal matter</td>
+<td>Did Not Participate In Practice</td>
+<td>Questionable</td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>IND</td>
+<td>Will Mallory</td>
+<td>TE</td>
+<td>Hamstring</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>IND</td>
+<td>Bernhard Raimann</td>
+<td>T</td>
+<td>Concussion</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>IND</td>
+<td>Luke Rhodes</td>
+<td>LS</td>
+<td>Hamstring</td>
+<td>Limited Participation in Practice</td>
+<td>Questionable</td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>IND</td>
+<td>Jerry Tillery</td>
+<td>DT</td>
+<td>Calf</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>IND</td>
+<td>Jalen Travis</td>
+<td>T</td>
+<td>Knee</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>IND</td>
+<td>Dalton Tucker</td>
+<td>G</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>IND</td>
+<td>Charvarius Ward</td>
+<td>CB</td>
+<td>Knee</td>
+<td>Did Not Participate In Practice</td>
+<td>Out</td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>JAX</td>
+<td>LeQuint Allen Jr.</td>
+<td>RB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>JAX</td>
+<td>Arik Armstead</td>
+<td>DT</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>JAX</td>
+<td>Matt Dickerson</td>
+<td>DT</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>JAX</td>
+<td>BJ Green II</td>
+<td>DE</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>JAX</td>
+<td>Robert Hainsey</td>
+<td>C</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>JAX</td>
+<td>Antonio Johnson</td>
+<td>S</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>JAX</td>
+<td>Jalen McLeod</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>JAX</td>
+<td>Jakobi Meyers</td>
+<td>WR</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>JAX</td>
+<td>Jonah Monheim</td>
+<td>C</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>JAX</td>
+<td>Chris Rodriguez Jr.</td>
+<td>RB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>JAX</td>
+<td>Danny Striggow</td>
+<td>DE</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>JAX</td>
+<td>Bhayshul Tuten</td>
+<td>RB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>JAX</td>
+<td>Travon Walker</td>
+<td>DE</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>KC</td>
+<td>Jeffrey Bassa</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>KC</td>
+<td>Nick Bolton</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>KC</td>
+<td>Jadon Canady</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>KC</td>
+<td>Mansoor Delane</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>KC</td>
+<td>Justin Fields</td>
+<td>QB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>KC</td>
+<td>Alohi Gilman</td>
+<td>S</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>KC</td>
+<td>Travis Kelce</td>
+<td>TE</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>KC</td>
+<td>Patrick Mahomes</td>
+<td>QB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>KC</td>
+<td>Jaylon Moore</td>
+<td>T</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>KC</td>
+<td>Omarr Norman-Lott</td>
+<td>DT</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>KC</td>
+<td>Jaydn Ott</td>
+<td>RB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>KC</td>
+<td>Rashee Rice</td>
+<td>WR</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>KC</td>
+<td>Trey Smith</td>
+<td>G</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>KC</td>
+<td>Kenneth Walker III</td>
+<td>RB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>KC</td>
+<td>Peter Woods</td>
+<td>DT</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>LAC</td>
+<td>Justin Eboigbe</td>
+<td>DE</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>LAC</td>
+<td>Daiyan Henley</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>LAC</td>
+<td>Donte Jackson</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>LAC</td>
+<td>Charlie Kolar</td>
+<td>TE</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>LAC</td>
+<td>Khalil Mack</td>
+<td>DE</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>LAC</td>
+<td>Ladd McConkey</td>
+<td>WR</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>LAC</td>
+<td>Trey Pipkins</td>
+<td>T</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>LAC</td>
+<td>Rodney Shelley</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>LAC</td>
+<td>Brenen Thompson</td>
+<td>WR</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>LAC</td>
+<td>Isas Waxter</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>LAC</td>
+<td>Kendall Williamson</td>
+<td>S</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>LV</td>
+<td>Thomas Booker</td>
+<td>DT</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>LV</td>
+<td>Brock Bowers</td>
+<td>TE</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>LV</td>
+<td>Foley Fatukasi</td>
+<td>DT</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>LV</td>
+<td>Matt Gay</td>
+<td>K</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>LV</td>
+<td>Tonka Hemingway</td>
+<td>DT</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>LV</td>
+<td>Ian Thomas</td>
+<td>TE</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>MIA</td>
+<td>Tucker Addington</td>
+<td>LS</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>MIA</td>
+<td>Darrell Baker Jr.</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>MIA</td>
+<td>Chris Bell</td>
+<td>WR</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>MIA</td>
+<td>Julius Brents</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>MIA</td>
+<td>Aaron Brewer</td>
+<td>C</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>MIA</td>
+<td>Caleb Douglas</td>
+<td>WR</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>MIA</td>
+<td>Andrew Meyer</td>
+<td>C</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>MIA</td>
+<td>Bradley Pinion</td>
+<td>P</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>MIA</td>
+<td>Jaylin Simpson</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>MIA</td>
+<td>Dante Trader Jr.</td>
+<td>S</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>MIA</td>
+<td>Jared Wayne</td>
+<td>WR</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>MIN</td>
+<td>Jordan Addison</td>
+<td>WR</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>MIN</td>
+<td>Blake Cashman</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>MIN</td>
+<td>T.J. Hockenson</td>
+<td>TE</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>MIN</td>
+<td>Tyrion Ingram-Dawkins</td>
+<td>DT</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>MIN</td>
+<td>Jauan Jennings</td>
+<td>WR</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>MIN</td>
+<td>Jeshaun Jones</td>
+<td>WR</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>MIN</td>
+<td>Kyler Murray</td>
+<td>QB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>MIN</td>
+<td>Andrew Van Ginkel</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>MIN</td>
+<td>Kyle Van Noy</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>MIN</td>
+<td>Jay Ward</td>
+<td>S</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>NO</td>
+<td>CJ Donaldson</td>
+<td>RB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>NO</td>
+<td>Martin Emerson</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>NO</td>
+<td>Taliese Fuaga</td>
+<td>T</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>NO</td>
+<td>Alvin Kamara</td>
+<td>RB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>NO</td>
+<td>Erik McCoy</td>
+<td>C</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>NO</td>
+<td>Justin Reid</td>
+<td>S</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>NO</td>
+<td>Asim Richards</td>
+<td>T</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>NO</td>
+<td>Decamerion Richardson</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>NO</td>
+<td>Jordyn Tyson</td>
+<td>WR</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>NO</td>
+<td>Pete Werner</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>NYG</td>
+<td>Deonte Banks</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>NYG</td>
+<td>Malik Harrison</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>NYG</td>
+<td>Nic Jones</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>NYG</td>
+<td>Ben Mann</td>
+<td>LS</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>NYG</td>
+<td>Jason Pinnock</td>
+<td>S</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>NYG</td>
+<td>Cam Skattebo</td>
+<td>RB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>NYJ</td>
+<td>Omar Cooper Jr.</td>
+<td>WR</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>NYJ</td>
+<td>David Onyemata</td>
+<td>DT</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>NYJ</td>
+<td>Joseph Ossai</td>
+<td>DE</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>NYJ</td>
+<td>Dylan Parham</td>
+<td>G</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>NYJ</td>
+<td>Harrison Phillips</td>
+<td>DT</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>NYJ</td>
+<td>Geno Smith</td>
+<td>QB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>NYJ</td>
+<td>Trevin Wallace</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>NYJ</td>
+<td>Isaiah Williams</td>
+<td>WR</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>PHI</td>
+<td>Saquon Barkley</td>
+<td>RB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>PHI</td>
+<td>Zack Baun</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>PHI</td>
+<td>Jihaad Campbell</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>PHI</td>
+<td>Michael Carter II</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>PHI</td>
+<td>Britain Covey</td>
+<td>WR</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>PHI</td>
+<td>Jonathan Greenard</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>PHI</td>
+<td>Jalyx Hunt</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>PHI</td>
+<td>Jonathan Jones</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>PHI</td>
+<td>Tanner McKee</td>
+<td>QB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>PHI</td>
+<td>Smael Mondon Jr.</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>PHI</td>
+<td>Andrew Mukuba</td>
+<td>S</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>PHI</td>
+<td>Will Shipley</td>
+<td>RB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>PHI</td>
+<td>DeVonta Smith</td>
+<td>WR</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>PHI</td>
+<td>Nolan Smith</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>PHI</td>
+<td>Dontayvion Wicks</td>
+<td>WR</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>PIT</td>
+<td>Gennings Dunker</td>
+<td>G</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>PIT</td>
+<td>DeShon Elliott</td>
+<td>S</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>PIT</td>
+<td>Nick Herbig</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>PIT</td>
+<td>Cameron Heyward</td>
+<td>DT</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>PIT</td>
+<td>Michael Pittman</td>
+<td>WR</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>PIT</td>
+<td>Patrick Queen</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>PIT</td>
+<td>Jalen Ramsey</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>PIT</td>
+<td>Darnell Washington</td>
+<td>TE</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>PIT</td>
+<td>T.J. Watt</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>PIT</td>
+<td>Roman Wilson</td>
+<td>WR</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>SF</td>
+<td>Ji&#x27;Ayir Brown</td>
+<td>S</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>SF</td>
+<td>Mike Evans</td>
+<td>WR</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>SF</td>
+<td>Luke Gifford</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>SF</td>
+<td>Renardo Green</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>SF</td>
+<td>Dre Greenlaw</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>SF</td>
+<td>Nate Hobbs</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>SF</td>
+<td>Mac Jones</td>
+<td>QB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>SF</td>
+<td>Khalid Kareem</td>
+<td>DE</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>SF</td>
+<td>Christian McCaffrey</td>
+<td>RB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>SF</td>
+<td>Siran Neal</td>
+<td>S</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>SF</td>
+<td>Upton Stout</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>SF</td>
+<td>Jon Weeks</td>
+<td>LS</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>SF</td>
+<td>C.J. West</td>
+<td>DT</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>SF</td>
+<td>Mykel Williams</td>
+<td>DE</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>SF</td>
+<td>Trent Williams</td>
+<td>T</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>TB</td>
+<td>Yaya Diaby</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>TB</td>
+<td>Josh Hayes</td>
+<td>CB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>TB</td>
+<td>Baker Mayfield</td>
+<td>QB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>TB</td>
+<td>Cade Otton</td>
+<td>TE</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>TB</td>
+<td>Antoine Winfield Jr.</td>
+<td>S</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>TB</td>
+<td>Tristan Wirfs</td>
+<td>T</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>TEN</td>
+<td>Tony Adams</td>
+<td>S</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>TEN</td>
+<td>Cody Barton</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>TEN</td>
+<td>Fernando Carmona</td>
+<td>G</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>TEN</td>
+<td>John Franklin-Myers</td>
+<td>DE</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>TEN</td>
+<td>Kylen Granson</td>
+<td>TE</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>TEN</td>
+<td>Anthony Hill Jr.</td>
+<td>LB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>TEN</td>
+<td>Tyjae Spears</td>
+<td>RB</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Did Not Participate In Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>TEN</td>
+<td>Carnell Tate</td>
+<td>WR</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Limited Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>TEN</td>
+<td>Kevin Winston Jr.</td>
+<td>S</td>
+<td><span class="blank" title="the report leaves this blank">BLANK</span></td>
+<td>Full Participation in Practice</td>
+<td><span class="blank" title="no game status printed">BLANK</span></td>
+<td><span class="blank" title="no club depth chart was read for this club, so no rank is published; blank is not &#x27;no replacement&#x27;">BLANK</span></td>
+<td><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">source</a></td>
+</tr>
+</tbody></table>
+
+</main>
+<footer>Built from committed inputs only, by a deterministic stdlib generator.
+A blank cell is a value that was <strong>not read</strong>, never a zero. Read the
+<a href="flagged.html">Flagged for Review</a> page before quoting any number here.</footer>
+</body></html>
