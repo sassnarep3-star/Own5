@@ -4294,7 +4294,9 @@ Claimed review + verification of the NFL Origin Desk static site (landing page +
 
 ### 7619c7a6 — merge record
 
-TBD — PR to be created from `arena/7619c7a6-own5` to `main`, merged without waiting for approval, then GitHub Pages deploy confirmed and this block updated with the PR link, merge commit and Pages build status.
+- PR: [#168](https://github.com/sassnarep3-star/Own5/pull/168) — `arena/7619c7a6-own5` → `main`, merged without approval wait (`gh pr merge 168 --merge`).
+- Merge commit: `97ac72ffbd5cf0d5acc6bbfe6c68433239f9971a`.
+- Pages: build `built` for commit `97ac72f`, no error; live desk at https://sassnarep3-star.github.io/Own5/nfl-origin-desk/ (landing page + 12 category subpages; `nfl-origin-desk/flagged.html` for irregularities).
 
 ### 7619c7a6 — irregularities flagged for review
 
