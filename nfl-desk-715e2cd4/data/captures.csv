@@ -1,0 +1,7 @@
+capture_id,dataset,source_url,retrieved_utc,extract_file,sha256,extract_rows,note
+C01,2026 REG standings (32 clubs),https://www.nfl.com/standings/league/2026/REG,2026-11-19T06:55:00Z,raw/standings_2026_reg.txt,152e0cf8be414fa95ad1e5a4e8118752ebc2a102ed4dc527ce677beac6165c75,32,team|W|L|T|PF|PA rows transcribed from the standings table
+C02,Week 11 schedule + byes,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-19T06:55:00Z,raw/schedule_2026_wk11.txt,816afdb1cdb316658304f3263842362c8cef2b79c0a5af8d1ffda400d749d5fa,13,fixture rows; venue label taken from the schedule page's stadium link text
+C03,Week 10 finals,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-19T06:55:00Z,raw/results_2026_wk10.txt,89aba9de86d3c71a7919d95c35fc9a6ccdf4a253fda884ba9716a28241616495,14,14 finals with scores
+C04,Week 11 injury report,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T06:55:00Z,raw/injuries_2026_reg11.txt,dd4cd14e7ff10d0efcfe7bba12a8df8a6cc49d4dee78941b2f319f05bdb3c1e8,253,253 player rows across 24 clubs; 2 clubs report no injuries
+C05,Game-centre venue checks (2 fixtures),https://www.nfl.com/games/bengals-at-commanders-2026-reg-11,2026-11-19T06:55:00Z,raw/venues_spotcheck.txt,79a0a258e95ab5be412c61026e23a49b40cf4508cd399a3863ce7b59cd24fc2b,2,Game Info block: location + stadium
+C06,Announced-starter evidence (news),https://www.nfl.com/news/,2026-11-19T06:55:00Z,raw/starter_changes_2026-11-19.txt,a36aef231fc55d27aa33a6f04f5c56b17e510902b2fb8993a0b403c9e141afc1,7,dated league articles naming starters
