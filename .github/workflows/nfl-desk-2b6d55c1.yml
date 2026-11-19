@@ -1,0 +1,38 @@
+name: Verify NFL Origin Desk (2b6d55c1)
+
+on:
+  push:
+    paths:
+      - 'nfl-desk-2b6d55c1/**'
+      - 'data/nfl-desk-2b6d55c1/**'
+      - 'research/nfl-2b6d55c1/**'
+      - 'scripts/compute_origination_2b6d55c1.py'
+      - 'scripts/compute_correlations_2b6d55c1.py'
+      - '.github/workflows/nfl-desk-2b6d55c1.yml'
+      - 'COORDINATION.md'
+  pull_request:
+    paths:
+      - 'nfl-desk-2b6d55c1/**'
+      - 'data/nfl-desk-2b6d55c1/**'
+      - 'research/nfl-2b6d55c1/**'
+      - 'scripts/compute_origination_2b6d55c1.py'
+      - 'scripts/compute_correlations_2b6d55c1.py'
+      - '.github/workflows/nfl-desk-2b6d55c1.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Rebuild desk (deterministic, no clock/network/git)
+        run: python3 nfl-desk-2b6d55c1/build_desk.py
+      - name: Confirm committed pages match a clean rebuild
+        run: git diff --exit-code -- nfl-desk-2b6d55c1/pages/
+      - name: Fail-closed verify
+        run: python3 nfl-desk-2b6d55c1/verify_desk.py
+      - name: Unit tests (incl. negative controls)
+        run: python3 -m unittest nfl-desk-2b6d55c1.tests.test_desk -v

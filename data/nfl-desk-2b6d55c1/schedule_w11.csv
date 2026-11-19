@@ -1,0 +1,20 @@
+game_id,week,date,time_et,network,away,abbr_away,home,abbr_home,venue,source_url,game_url,verification_status
+W11-01,11,2026-11-19,8:15 PM,PRIME,Indianapolis Colts,IND,Houston Texans,HOU,NRG Stadium,https://www.nfl.com/schedules/2026/by-week/week-11,https://www.nfl.com/games/colts-at-texans-2026-reg-11,official
+W11-02,11,2026-11-22,1:00 PM,CBS,Miami Dolphins,MIA,Buffalo Bills,BUF,,https://www.nfl.com/schedules/2026/by-week/week-11,https://www.nfl.com/games/dolphins-at-bills-2026-reg-11,official
+W11-03,11,2026-11-22,1:00 PM,FOX,Baltimore Ravens,BAL,Carolina Panthers,CAR,,https://www.nfl.com/schedules/2026/by-week/week-11,https://www.nfl.com/games/ravens-at-panthers-2026-reg-11,official
+W11-04,11,2026-11-22,1:00 PM,FOX,New Orleans Saints,NO,Chicago Bears,CHI,,https://www.nfl.com/schedules/2026/by-week/week-11,https://www.nfl.com/games/saints-at-bears-2026-reg-11,official
+W11-05,11,2026-11-22,1:00 PM,FOX,Tennessee Titans,TEN,Dallas Cowboys,DAL,,https://www.nfl.com/schedules/2026/by-week/week-11,https://www.nfl.com/games/titans-at-cowboys-2026-reg-11,official
+W11-06,11,2026-11-22,1:00 PM,FOX,Tampa Bay Buccaneers,TB,Detroit Lions,DET,,https://www.nfl.com/schedules/2026/by-week/week-11,https://www.nfl.com/games/buccaneers-at-lions-2026-reg-11,official
+W11-07,11,2026-11-22,,,Arizona Cardinals,AZ,Kansas City Chiefs,KC,,https://www.nfl.com/scores/2026/week-11,https://www.nfl.com/games/cardinals-at-chiefs-2026-reg-11,official
+W11-08,11,2026-11-22,,,Pittsburgh Steelers,PIT,Philadelphia Eagles,PHI,,https://www.nfl.com/scores/2026/week-11,https://www.nfl.com/games/steelers-at-eagles-2026-reg-11,official
+W11-09,11,2026-11-22,,,New York Jets,NYJ,Los Angeles Chargers,LAC,,https://www.nfl.com/scores/2026/week-11,https://www.nfl.com/games/jets-at-chargers-2026-reg-11,official
+W11-10,11,2026-11-22,,,Jacksonville Jaguars,JAX,New York Giants,NYG,,https://www.nfl.com/scores/2026/week-11,https://www.nfl.com/games/jaguars-at-giants-2026-reg-11,official
+W11-11,11,2026-11-22,,,Las Vegas Raiders,LV,Denver Broncos,DEN,,https://www.nfl.com/scores/2026/week-11,https://www.nfl.com/games/raiders-at-broncos-2026-reg-11,official
+W11-12,11,2026-11-22,,,Minnesota Vikings,MIN,San Francisco 49ers,SF,Estadio Banorte (Mexico City),https://www.nfl.com/scores/2026/week-11,https://www.nfl.com/games/vikings-at-49ers-2026-reg-11,official
+W11-13,11,2026-11-23,8:15 PM,ESPN,Cincinnati Bengals,CIN,Washington Commanders,WAS,,https://www.nfl.com/schedules/2026/by-week/week-11,https://www.nfl.com/games/bengals-at-commanders-2026-reg-11,official
+BYE-ATL,11,2026-11-22,,,Atlanta Falcons,ATL,,,,https://www.nfl.com/schedules/2026/by-week/week-11,,official
+BYE-CLE,11,2026-11-22,,,Cleveland Browns,CLE,,,,https://www.nfl.com/schedules/2026/by-week/week-11,,official
+BYE-GB,11,2026-11-22,,,Green Bay Packers,GB,,,,https://www.nfl.com/schedules/2026/by-week/week-11,,official
+BYE-LAR,11,2026-11-22,,,Los Angeles Rams,LA,,,,https://www.nfl.com/schedules/2026/by-week/week-11,,official
+BYE-NE,11,2026-11-22,,,New England Patriots,NE,,,,https://www.nfl.com/schedules/2026/by-week/week-11,,official
+BYE-SEA,11,2026-11-22,,,Seattle Seahawks,SEA,,,,https://www.nfl.com/schedules/2026/by-week/week-11,,official

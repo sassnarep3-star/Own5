@@ -1,0 +1,6 @@
+corr_id,variable_x,variable_y,r,n,ci_low,ci_high,source_url,method,verification_status,notes
+CZ-01,PF/G,PCT,0.7152,32,0.4882,0.8515,https://www.nfl.com/standings/league/2026/REG,Pearson product-moment (official standings),computed_from_official,Computed in-repo from officially sourced standings. n published per row.
+CZ-02,PA/G,PCT,-0.7043,32,-0.8454,-0.4713,https://www.nfl.com/standings/league/2026/REG,Pearson product-moment (official standings),computed_from_official,Computed in-repo from officially sourced standings. n published per row.
+CZ-03,NET/G,PCT,0.8824,32,0.771,0.9415,https://www.nfl.com/standings/league/2026/REG,Pearson product-moment (official standings),computed_from_official,Computed in-repo from officially sourced standings. n published per row.
+CZ-04,PF/G,PA/G,-0.2911,32,-0.5808,0.0641,https://www.nfl.com/standings/league/2026/REG,Pearson product-moment (official standings),computed_from_official,Computed in-repo from officially sourced standings. n published per row.
+CZ-05,W,PCT,0.9916,32,0.9828,0.996,https://www.nfl.com/standings/league/2026/REG,Pearson product-moment (official standings),computed_from_official,Computed in-repo from officially sourced standings. n published per row.
