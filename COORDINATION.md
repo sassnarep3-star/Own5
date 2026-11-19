@@ -3743,3 +3743,16 @@ at `audit_repo.py` line 162 is gone. No action required.
 - None opened by this session. X51-14 is closed by this takeover.
 
 **Merge record.** Recorded below after the PR merges.
+
+## Session fb21a068 — NFL decision brief and prioritized information-gap review (claimed 2026-11-19 UTC)
+
+**Branch:** `arena/fb21a068-own5` (base `2f02e1e7975ee61780b39e1ef9bc83591ccb55e2`).
+**Scope:** additive `nfl-decision-brief-fb21a068/**` plus this append-only coordination record. Existing desks, shared landing/navigation, shared datasets, generated pages, and other sessions' paths are read-only.
+**Task:** create a compact reviewable decision brief that links existing evidence pages, separates verified facts from unknowns, prioritizes questions/gates, and proposes discoverable next steps. No fabricated market, roster, injury, backtest, correlation, or betting-performance values; unknowns remain explicitly blank/unverified. This is an additive companion, not the final cross-desk integration or a claim that unresolved requirements are complete.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| FB21-01 | Claim scope and publish claim | in progress | fb21a068 | COORDINATION.md | Claim pushed before implementation. |
+| FB21-02 | Review existing decision/question/suggestion materials and build focused decision brief | in progress | fb21a068 | nfl-decision-brief-fb21a068/** | Distinct path; no edits to other owners' pages or shared datasets. |
+| FB21-03 | Verify source links, accessibility, deterministic build and local links | in progress | fb21a068 | nfl-decision-brief-fb21a068/** | Official NFL / league / source-owner material only for factual claims; unknown data left blank. |
+
