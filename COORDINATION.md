@@ -4306,3 +4306,69 @@ an official source or explicitly blank-and-flagged; never inferred.
 | Z13 | PR → main, autonomous merge, Pages live check, record result | unclaimed→in progress | 2b6d55c1 | COORDINATION.md, README.md | Merge only after verify PASS + live URL check. |
 
 **Cross-session requests:** none. All work is additive inside `nfl-desk-2b6d55c1/**`; no other session's files are touched.
+## Session arena/7619c7a6-own5 — NFL Origin Desk review & verification (claimed 2026-11-19 UTC)
+
+Session ID `7619c7a6`, branch `arena/7619c7a6-own5` (base `d634b08` = current `main`). Scope: `nfl-origin-desk/**`, `scripts/build_origin_desk.py`, `scripts/verify_origin_desk.py` and this coordination block only. Additive; no other session's file edited. The root `index.html` / `pages/` / `assets/` remain CI-locked by session cd43258e and are not touched here.
+
+### 7619c7a6 — claim (2026-11-19)
+
+Claimed review + verification of the NFL Origin Desk static site (landing page + 12 category subpages) and the 80-row decision-readiness register (R001–R080). No other session had claimed this namespace. Claim written here before any build/commit work.
+
+### 7619c7a6 — verification performed (line by line)
+
+- `python3 scripts/build_origin_desk.py` → exit 0. Regenerates all 13 CSVs, 13 HTML pages, `style.css` and `.nojekyll` from pinned data. `git status` after build: **zero diff** — the committed site is a deterministic, reproducible rebuild.
+- `python3 scripts/verify_origin_desk.py` → **VERIFICATION PASSED**: 13 CSVs (every row carries a source column), 13 HTML pages (every internal link resolves), **0 broken internal links**, blank values published as blank-and-flagged, nothing inferred.
+- Every table row links to an official source (nfl.com, operations.nfl.com, media.nfl.com) or to the script/pinned input that produced it. Unverified values (market spreads/totals/MLs, prop lines, injury deltas, depth slots, venues) are left blank and published on `flagged.html` — never inferred or filled.
+- Originated lines: 15 Week 9 games, originated in order side → total → moneyline; fair/model columns published, market columns blank+flagged (no verified operator price snapshot — flag F01). No strategy certified; leaderboard intentionally empty until gates pass (flags F03, F15).
+- 18 questions (Q01–Q18; Q01–Q06 and Q18 block a decision), 16 suggestions (review-before-implement), 24 pre-existing flags (F01–F24) remain open and non-blocking. No new irregularities introduced by this session.
+
+### 7619c7a6 — sources used
+
+- Official: https://www.nfl.com/standings/league/2026/REG (32 clubs, read 2026-11-18; league totals W=L=149, T=2, PF=PA=6,923 reconcile), https://www.nfl.com/injuries/league/2026/reg10 (Week 10 designations), https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced (2026 schedule announced May 14 2026).
+- Pinned community input (flagged, not official): tobycrabtree/spreadspoke @ 1d309cb (base rates / backtests — F1/F2).
+- Methodology references: scikit-learn, SciPy (peer-reviewed software documentation).
+- Repo data: `data/nfl-origin-desk/*` (requirements, lines, strategies, gates, leaderboard, correlations, injuries, questions, suggestions, sources, flagged).
+
+### 7619c7a6 — merge record
+
+- PR: [#168](https://github.com/sassnarep3-star/Own5/pull/168) — `arena/7619c7a6-own5` → `main`, merged without approval wait (`gh pr merge 168 --merge`).
+- Merge commit: `97ac72ffbd5cf0d5acc6bbfe6c68433239f9971a`.
+- Pages: build `built` for commit `97ac72f`, no error; live desk at https://sassnarep3-star.github.io/Own5/nfl-origin-desk/ (landing page + 12 category subpages; `nfl-origin-desk/flagged.html` for irregularities).
+
+### 7619c7a6 — irregularities flagged for review
+
+None new beyond the desk's own published flags (F01–F24 on `nfl-origin-desk/flagged.html`, each with source links). All are non-blocking; verified values carry official source links, unverified values are blank.
+## Session 1911d7cd — NFL brief traceability, reproducibility & official spot-check (claimed 2026-11-19 UTC, branch `arena/1911d7cd-own5`, base `d634b08`)
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| B1 | Brief traceability matrix: every item in the user's NFL brief mapped to the artifact that covers it, with an honest status (done / partial / blocked / not started) | in progress | 1911d7cd | `nfl-brief-traceability/**`, this block | Does not re-build existing desks; links to them. |
+| B2 | Reproduce the nfl-line-audit headline numbers from pinned inputs and report any drift | in progress | 1911d7cd | `nfl-brief-traceability/reproduce.log` | Must leave git diff empty on tracked desk files, otherwise the drift is flagged, not committed. |
+| B3 | Official spot-check: Week 11 injury report (nfl.com/injuries) vs repo capture, row by row for IND and HOU | in progress | 1911d7cd | `nfl-brief-traceability/spotcheck_wk11.csv` | Source: https://www.nfl.com/injuries/ (read 2026-11-19 via fetch). |
+| B4 | Investigate red `Verify nfl-desk-067f2314` job on `main` (run 44487132313) | in progress | 1911d7cd | `nfl-brief-traceability/ci_investigation.md` | Fix only if inside this session's scope; otherwise log to Cross-session requests. |
+
+### 1911d7cd — completion record (2026-11-19 UTC)
+
+| ID | Status | Result |
+|----|--------|--------|
+| B1 | done | `nfl-brief-traceability/` — 74 brief items mapped to 71 register rows plus 3 items not in the register. Statuses read from `nfl-line-audit/data/requirements.csv` at build time. Page: https://sassnarep3-star.github.io/Own5/nfl-brief-traceability/ |
+| B2 | done | `reproduce.log`: `build_data.py`, `build_registers.py`, `build_site.py` and `verify.py` rerun. **0 tracked-file diffs.** Headline Brier skill −0.07815. Verifier 80/80. |
+| B3 | done | Official Week 11 injury report (https://www.nfl.com/injuries/league/2026/reg11, read 2026-11-19). IND+HOU, 26 rows: **25 PASS, 1 FAIL** (name only). Row table: `spotcheck_wk11.csv`. Not checked: the other 229 rows. |
+| B4 | done (diagnosed; not fixed) | Run 44487132313 on main: `desk-verify` success; `pages-smoke` failed (post-deploy wait). Log not retrievable. Logged as F-B08 in `nfl-brief-traceability/flags.csv`. |
+
+**Irregularities published (F-B01 to F-B09, see `nfl-brief-traceability/flags.csv`).** Highlights:
+- **F-B01** R60 and R69 links point to a path that does not exist.
+- **F-B02** R10 says 253 rows / 24 clubs. The file has 255 rows / 26 clubs.
+- **F-B04** R49 is marked MET, but its only snap-count source is classed AGGREGATOR, not official. Should be PARTIAL or NOT MET.
+- **F-B05** All 71 readiness rows link to repo files, not official NFL pages.
+- **F-B06** Pages root `index.html` is the stale 2026-11-02 workspace (cites a "78-row" table).
+
+**Cross-session requests (logged, not edited):**
+- X-1911-01 → owner of `nfl-line-audit/data/requirements.csv` and `build_registers.py`: fix R60/R69 links (F-B01); correct R10 counts (F-B02); correct R46 denominator (F-B03); downgrade R49 (F-B04); add official per-row links (F-B05).
+- X-1911-02 → root `index.html` owner (cd43258e, also X-D6-02): refresh stamp and point to the current desks (F-B06).
+- X-1911-03 → owner of `data/nfl-desk-7e228db8/injuries_2026_week11.csv`: display name "Jacob Hummel" for HOU (F-B07).
+
+**Verification:** `python3 nfl-brief-traceability/verify.py` → 23 checks, 0 failures (negative controls confirm each flagged defect is real). Every repo link in the page resolves on disk. Official links are only those re-read this session.
+**Scope:** only `nfl-brief-traceability/**` and this block. No other desk's files edited.
+
+**PR:** [#170](https://github.com/sassnarep3-star/Own5/pull/170) `arena/1911d7cd-own5` → `main` (mergeable, CLEAN at open). Merge result to be read from the PR state; this session merges only after the repo's checks pass.
