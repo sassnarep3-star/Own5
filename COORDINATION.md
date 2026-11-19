@@ -4162,3 +4162,8 @@ probability. The Week-11 fair lines published now are the recalculated ones.
   sessions kept merging; it was rebased and merged within one check cycle each time.
 - **Desk status:** all claimed tasks done. Nothing left open in this namespace. Cross-session requests
   X-D6-01/02/03 remain with their owners.
+- **Follow-up PR:** [#158](https://github.com/sassnarep3-star/Own5/pull/158) merged as `a89ec53`
+  (2026-11-19T07:38:08Z); Pages rebuilt that exact commit at 07:38:42Z (`status: built`). It adds the
+  blank-cell rule sentence above the availability table. Verified by asking the Pages API for the built
+  commit rather than by fetching the public URL, because this sandbox cannot open the public host (the same
+  egress limit that blocked nfl.com).
