@@ -74,7 +74,7 @@ PINNED = {
     "availability_wk11.csv": 253,
     "originated_lines.csv": 39,
     "price_snapshots.csv": 39,
-    "requirements.csv": 81,
+    "requirements.csv": 84,
     "gates.csv": 14,
     "leaderboard.csv": 6,
     "questions.csv": 12,

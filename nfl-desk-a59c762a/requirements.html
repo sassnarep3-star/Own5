@@ -29,15 +29,15 @@
         <span class="date-label"><span class="live-dot"></span> Official reads 2026-11-19</span>
       </div>
 <div class="stats">
-<article><span>Requirements</span><strong>81</strong><small>one row per brief line</small></article>
+<article><span>Requirements</span><strong>84</strong><small>one row per brief line</small></article>
 <article><span>Met</span><strong>27</strong><small></small></article>
 <article><span>Partial</span><strong>29</strong><small></small></article>
 <article><span>Blocked</span><strong>7</strong><small></small></article>
 <article><span>Open</span><strong>14</strong><small></small></article>
 <article><span>Open Decision</span><strong>1</strong><small></small></article>
-<article><span>Rejected As Designed</span><strong>2</strong><small></small></article>
+<article><span>Rejected As Designed</span><strong>5</strong><small></small></article>
 </div>
-<div class="section-title"><h2>Requirements by category</h2><span class="eyebrow">Availability 26 · Model 9 · Pricing 6 · Rejected 2 · Results 5 · Site 18 · Strategy 15</span></div>
+<div class="section-title"><h2>Requirements by category</h2><span class="eyebrow">Availability 26 · Model 9 · Pricing 6 · Rejected 5 · Results 5 · Site 18 · Strategy 15</span></div>
 <div class="section-title"><h3>Pricing</h3><span class="eyebrow">6 rows</span></div>
 <div class="tw"><table class="data">
 <thead><tr>
@@ -201,7 +201,7 @@
 <tr><td><span class="rid">R-78</span></td><td>Create a pull request, merge it without waiting for approval, and confirm that GitHub Pages deploys</td><td><span class="badge warn">IN_PROGRESS</span></td><td>The merge and the Pages check happen after the desk verifies green</td><td>1 merged pull request with a green check run and a confirmed live page fetch</td><td>The branch is pushed and the verification runs locally green. The merge record is written on the coordination board after the merge</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/COORDINATION.md" target="_blank" rel="noopener noreferrer">REPO</a></td><td><span class="blank">—</span></td><td><span class="blank">—</span></td></tr>
 <tr><td><span class="rid">R-79</span></td><td>No manual input required; work autonomously to completion</td><td><span class="badge ok">MET</span></td><td><span class="blank">—</span></td><td>n/a - process requirement</td><td>Every artefact in this desk was produced by the scripts in this folder from the dated raw captures, with no interactive input and no manual value entry</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/build_data.py" target="_blank" rel="noopener noreferrer">REPO</a></td><td><span class="blank">—</span></td><td><span class="blank">—</span></td></tr>
 </tbody></table></div>
-<div class="section-title"><h3>Rejected</h3><span class="eyebrow">2 rows</span></div>
+<div class="section-title"><h3>Rejected</h3><span class="eyebrow">5 rows</span></div>
 <div class="tw"><table class="data">
 <thead><tr>
 <th scope="col">ID</th>
@@ -216,6 +216,9 @@
 </tr></thead><tbody>
 <tr><td><span class="rid">R-80</span></td><td>Reject deriving depth order from jersey number, experience or salary</td><td><span class="badge muted">REJECTED_AS_DESIGNED</span></td><td><span class="blank">—</span></td><td>n/a - a rejection, not a task</td><td>No depth feature in this desk uses jersey number, experience or salary. The Packers jersey-number prefix is recorded as a parsing defect to be stripped, not as a ranking signal</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/data/depth_coverage.csv" target="_blank" rel="noopener noreferrer">REPO</a></td><td><span class="blank">—</span></td><td><span class="blank">—</span></td></tr>
 <tr><td><span class="rid">R-81</span></td><td>Reject ranking strategies by season-long realised ROI as the ranking metric</td><td><span class="badge muted">REJECTED_AS_DESIGNED</span></td><td><span class="blank">—</span></td><td>n/a - a rejection, not a task</td><td>The leaderboard ranks by benchmark-relative Brier skill with an uncertainty and a multiplicity adjustment. Realised ROI is published separately and only when a price source exists</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/data/leaderboard.csv" target="_blank" rel="noopener noreferrer">REPO</a></td><td><span class="blank">—</span></td><td><span class="blank">—</span></td></tr>
+<tr><td><span class="rid">R-82</span></td><td>Reject forming a parlay or prop-combo probability by multiplying marginal probabilities as if the legs were independent</td><td><span class="badge muted">REJECTED_AS_DESIGNED</span></td><td><span class="blank">—</span></td><td>n/a - a rejection, not a task</td><td>No parlay or prop-combination probability is formed in this desk at all. The joint-evidence gate G-A59-10 requires a directly validated joint probability and the operator&#x27;s void and push rules before any combination may be ranked</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/data/gates.csv" target="_blank" rel="noopener noreferrer">REPO</a></td><td><span class="blank">—</span></td><td><span class="blank">—</span></td></tr>
+<tr><td><span class="rid">R-83</span></td><td>Reject a fixed injury penalty applied to every player who carries a designation</td><td><span class="badge muted">REJECTED_AS_DESIGNED</span></td><td><span class="blank">—</span></td><td>n/a - a rejection, not a task</td><td>No fixed penalty is applied anywhere. The model carries no availability feature, so the injury ablation is a no-op rather than a measurement, and that is recorded as open rather than faked</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/data/shadow_backtest.csv" target="_blank" rel="noopener noreferrer">REPO</a></td><td><span class="blank">—</span></td><td><span class="blank">—</span></td></tr>
+<tr><td><span class="rid">R-84</span></td><td>Reject treating a Questionable designation as a historical fixed percentage</td><td><span class="badge muted">REJECTED_AS_DESIGNED</span></td><td><span class="blank">—</span></td><td>n/a - a rejection, not a task</td><td>No designation percentage is used. The measured designation reliability is not yet available from an official record, so the requirement to calibrate it first stands as open</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/data/requirements.csv" target="_blank" rel="noopener noreferrer">REPO</a></td><td><span class="blank">—</span></td><td><span class="blank">—</span></td></tr>
 </tbody></table></div>
       <footer><span>DECISION CONSOLE <span class="footer-divider">/</span> Session a59c762a &middot; evidence first</span>
       <span>Blank cells = unverified. <a href="flagged.html">Flagged for review &rarr;</a> &middot; <a href="sources.html">Sources &rarr;</a></span></footer>

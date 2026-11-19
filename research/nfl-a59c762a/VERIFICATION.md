@@ -74,7 +74,7 @@ each one, and does:
 
 ## 5. Regularity of the committed tree
 
-`verify_desk.py` runs 14 check families (1 371 checks) and re-runs the three build
+`verify_desk.py` runs 14 check families (1 374 checks) and re-runs the three build
 scripts to prove the committed pages and CSVs reproduce byte for byte. The unit test
 suite runs 23 tests. All green.
 

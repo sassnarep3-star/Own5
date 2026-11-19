@@ -12,8 +12,8 @@ published the answer as a decision console with one row per requirement.
 
 It did three things that no other desk in this repository had done:
 
-1. **Built the master requirement register** — one row per line of the brief, with the
-   gate that blocks it, the number that would clear it, what is observed now, and a
+1. **Built the master requirement register** — 84 rows, one per line of the brief, with
+   the gate that blocks it, the number that would clear it, what is observed now, and a
    link to the evidence and to the official page. The repository previously held four
    partial registers in four different formats; the integration hub had already logged
    this as the gap to close (`nfl-integration-a620f5a5/data/suggestions.csv`, SG-A62-01).
@@ -148,7 +148,7 @@ did not participate) and **15 San Francisco rows**.
 originated lines, leaderboard, gates, backtest and removal of luck, correlations,
 questions, suggestions, flagged for review, sources, executive summary.
 
-The verifier is fail-closed and runs **14 check families** (1 371 checks) plus **23 unit
+The verifier is fail-closed and runs **14 check families** (1 374 checks) plus **23 unit
 tests**, eight of which are **negative controls**: each injects one deliberate defect
 into a throwaway copy of the desk — a stripped source link, a filled blank without a
 flag, a deleted flag, a backtest score on the leaderboard, a broken internal link, a
