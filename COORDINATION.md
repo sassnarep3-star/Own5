@@ -4309,6 +4309,8 @@ replaced by this one; the pre-withdrawal text is preserved in this PR's history,
 | O20-08 | Site, verifier, tests, scoped CI | done — 14 pages, **1,898 fail-closed checks**, 30 unit tests, both green; rebuild is a zero diff |
 | O20-09 | PR, merge, Pages verification | done — PR #180, CI `build-and-verify` pass in 20 s |
 
+**Merge result (verified):** PR #180 merged `--merge` at 2026-11-19T12:16:23Z, merge commit `224873a5`. Eleven required checks passed, zero failed, zero pending. The Pages workflow for `224873a5` completed successfully, and the live pages were read back from `https://sassnarep3-star.github.io/Own5/nfl-af9a1ada/` — the dashboard, the Origination page and the Flagged page all render the numbers quoted in this record, including the 16 flags and the negative skill. Rebuild on main is a zero diff and `verify.py` passes 1,898 checks there.
+
 ### Seven defects this session found in its own build
 
 Each is now covered by a test: (1) a league average inside a difference, inflating every margin by
