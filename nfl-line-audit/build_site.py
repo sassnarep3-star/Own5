@@ -369,6 +369,9 @@ def main():
                   note="Both clocks on every row. No level is published as a signal; this is the delta and nothing else.")
     body += "</section>"
     body += '<section><h2>Week 11 designation table, verbatim</h2>'
+    body += ('<p class="note">How to read an empty cell: <span class="b b-blank">—</span> means the official source printed '
+             'nothing there, or the value could not be verified. It is never a zero, never a guess, and never carried '
+             'forward from another week. 1,475 cells on this table are blank by that rule.</p>')
     body += table(avail, ["club", "player_as_printed", "position_as_printed", "injury_as_printed",
                           "practice_status_as_printed", "game_status_as_printed", "last_2026_week_with_snaps",
                           "last_2026_offensive_share", "usage_rank_note", "source_url"],
