@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NFL Line-Gate Desk &middot; Index</title>
+<style>
+:root{--bg:#0f1319;--card:#171d26;--line:#25303d;--ink:#e8eef6;--dim:#8ea0b6;
+--acc:#5ad2a4;--warn:#e6b455;--bad:#e8735f;--mono:ui-monospace,SFMono-Regular,Menlo,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+header{border-bottom:1px solid var(--line);background:#0b0f14;padding:14px 22px;position:sticky;top:0;z-index:9}
+header h1{margin:0;font-size:17px;letter-spacing:.3px}
+header .sub{color:var(--dim);font-size:12px;margin-top:3px}
+nav{display:flex;flex-wrap:wrap;gap:2px;padding:8px 22px;background:#0b0f14;border-bottom:1px solid var(--line);position:sticky;top:60px;z-index:8}
+nav a{color:var(--dim);text-decoration:none;font-size:12.5px;padding:5px 9px;border-radius:5px}
+nav a:hover{background:#1d2530;color:var(--ink)}
+nav a.on{background:var(--acc);color:#08110c;font-weight:600}
+main{padding:22px;max-width:1500px;margin:0 auto}
+h2{font-size:20px;margin:26px 0 6px}h2:first-child{margin-top:0}
+h3{font-size:14.5px;margin:22px 0 8px;color:var(--acc);text-transform:uppercase;letter-spacing:.7px}
+p.lede{color:var(--dim);max-width:80ch;margin:0 0 16px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:12px;margin:16px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:13px}
+.card .k{color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:.6px}
+.card .v{font:600 22px/1.2 var(--mono);margin-top:5px}
+.card .n{color:var(--dim);font-size:11.5px;margin-top:4px}
+.v.good{color:var(--acc)}.v.warn{color:var(--warn)}.v.bad{color:var(--bad)}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);
+border-radius:9px;overflow:hidden;margin:10px 0 22px;font-size:13px}
+th{background:#131a23;text-align:left;padding:9px 10px;font-size:11px;text-transform:uppercase;
+letter-spacing:.6px;color:var(--dim);border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:8px 10px;border-bottom:1px solid #1e2833;vertical-align:top}
+tr:last-child td{border-bottom:none}
+tbody tr:hover{background:#1b2431}
+td.n,th.n{text-align:right;font-family:var(--mono);white-space:nowrap}
+.blank{color:var(--warn);font-family:var(--mono);font-size:11.5px;border:1px dashed #4a3c1e;
+background:#241e10;border-radius:3px;padding:1px 5px;cursor:help}
+a{color:#7fd4ff;text-decoration:none;border-bottom:1px dotted #2c4a5c}
+a:hover{color:#b9e9ff}
+.pill{display:inline-block;padding:2px 7px;border-radius:99px;font-size:10.5px;font-weight:700;
+letter-spacing:.5px;text-transform:uppercase}
+.p-met{background:#153a2b;color:#6ee7b0}.p-partial{background:#3a3115;color:#e6b455}
+.p-blocked{background:#3a1b18;color:#f0937f}.p-rejected{background:#2a2f38;color:var(--dim)}
+.pos{color:var(--acc)}.neg{color:var(--bad)}
+.note{background:#131a23;border-left:3px solid var(--acc);padding:11px 14px;border-radius:0 7px 7px 0;
+margin:14px 0;font-size:13.5px;color:#cfe0f0}
+.note.warn{border-left-color:var(--warn)}
+.note.bad{border-left-color:var(--bad)}
+footer{border-top:1px solid var(--line);padding:18px 22px;color:var(--dim);font-size:11.5px;margin-top:30px}
+code{font-family:var(--mono);font-size:12px;background:#101720;padding:1px 5px;border-radius:3px}
+</style></head><body>
+<header><h1>NFL Line-Gate Desk</h1>
+<div class="sub">Own lines, prices, ratings and a pre-registered competition &middot;
+session af9a1ada &middot; every number dated and sourced &middot; every blank labelled</div></header>
+<nav><a href="index.html" class="on">Dashboard</a><a href="origination.html">Origination</a><a href="prices.html">Prices</a><a href="ratings.html">Ratings</a><a href="results.html">Benchmark</a><a href="leaderboard.html">Leaderboard</a><a href="availability.html">Availability</a><a href="deficiency.html">Deficiency</a><a href="requirements.html">Requirements</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged for Review</a><a href="research.html">Method</a><a href="sources.html">Sources</a></nav><main>
+
+<h2>Decision dashboard</h2>
+<p class="lede">Thirteen Week 11 games, three markets each, priced from a two-season
+opponent-adjusted rating. The first thing on this page is the honest verdict, not the
+line that looks best.</p>
+
+<div class="cards">
+  <div class="card"><div class="k">Games priced</div><div class="v">13</div>
+    <div class="n">side, total, moneyline</div></div>
+  <div class="card"><div class="k">Side skill vs close</div>
+    <div class="v bad"><span class="">-0.066</span></div>
+    <div class="n">Brier <span class="">0.266</span> vs 0.250</div></div>
+  <div class="card"><div class="k">Total skill vs close</div>
+    <div class="v bad"><span class="">-0.051</span></div>
+    <div class="n">Brier <span class="">0.263</span> vs 0.250</div></div>
+  <div class="card"><div class="k">Margin error</div>
+    <div class="v warn"><span class="">10.97</span></div>
+    <div class="n">the close: <span class="">10.25</span></div></div>
+  <div class="card"><div class="k">Settled bets</div><div class="v">0</div>
+    <div class="n">no strategy can be certified yet</div></div>
+  <div class="card"><div class="k">Agrees on favourite</div><div class="v warn">11/13</div>
+    <div class="n">where the model and the market agree</div></div>
+</div>
+
+<div class="note bad"><strong>Verdict: the market wins.</strong> The model's Brier skill against the
+closing line is <span class="">-0.066</span> on the side and <span class="">-0.051</span> on the total, both
+negative, over 6711 walk-forward games. Its margin error is
+<span class="">10.97</span> points against the closing line's <span class="">10.25</span>.
+Nothing here is an edge. The fair lines are published because the brief asks for origination,
+not because they are better than the price.</div>
+
+<h3>How to read this desk</h3>
+<table><thead><tr><th>Column</th><th>Means</th><th>Does not mean</th></tr></thead><tbody>
+<tr><td><b>fair line</b></td><td>one model's opinion, with its inputs hashed on the row</td>
+<td>a prediction of the result</td></tr>
+<tr><td><b>market line</b></td><td>the median of two operators, read at one clock time</td><td>the closing line</td></tr>
+<tr><td><b>difference</b></td><td>fair minus market, in the same units, same sign convention</td>
+<td>a recommendation to bet</td></tr>
+<tr><td><b>signal score</b></td><td>Brier skill, and nothing else</td><td>a return, or a staking plan</td></tr>
+<tr><td><b>BLANK</b></td><td>the value was not read, so it is not published</td><td>zero</td></tr>
+</tbody></table>
+
+<h3>Largest disagreements this week</h3>
+<p class="lede">These are the rows where the model and the market are furthest apart. A large
+gap is evidence the model is probably wrong, not evidence of value: the walk-forward says the
+market is the better forecaster.</p>
+<table class=""><thead><tr>
+<th class="">Game</th>
+<th class="n">Fair</th>
+<th class="n">Market</th>
+<th class="n">Difference</th>
+<th class="">Read (UTC)</th>
+</tr></thead><tbody>
+<tr>
+<td>IND@HOU</td>
+<td class="n"><span class="">-6.16</span></td>
+<td class="n"><span class="">-12.50</span></td>
+<td class="n"><span class="neg">6.337</span></td>
+<td>2026-11-19T11:42:16Z</td>
+</tr>
+<tr>
+<td>NYJ@LAC</td>
+<td class="n"><span class="">-8.95</span></td>
+<td class="n"><span class="">-3.00</span></td>
+<td class="n"><span class="neg">-5.950</span></td>
+<td>2026-11-19T11:42:16Z</td>
+</tr>
+<tr>
+<td>AZ@KC</td>
+<td class="n"><span class="">-10.37</span></td>
+<td class="n"><span class="">-15.50</span></td>
+<td class="n"><span class="neg">5.133</span></td>
+<td>2026-11-19T11:42:16Z</td>
+</tr>
+<tr>
+<td>JAX@NYG</td>
+<td class="n"><span class="">10.79</span></td>
+<td class="n"><span class="">5.75</span></td>
+<td class="n"><span class="neg">5.036</span></td>
+<td>2026-11-19T11:42:16Z</td>
+</tr>
+</tbody></table>
+
+<h3>Readiness in one line each</h3>
+<p class="lede">The full table is on <a href="requirements.html">Requirements</a>. Counts below
+are computed from that register, not typed in.</p>
+<div class="cards"><div class="card"><div class="k">met</div><div class="v good">32</div><div class="n">of 62 requirements</div></div><div class="card"><div class="k">partial</div><div class="v warn">11</div><div class="n">of 62 requirements</div></div><div class="card"><div class="k">blocked</div><div class="v bad">19</div><div class="n">of 62 requirements</div></div></div><table class=""><thead><tr>
+<th class="">ID</th>
+<th class="">Blocked requirement</th>
+<th class="">Gate</th>
+<th class="">Clears at</th>
+</tr></thead><tbody>
+<tr>
+<td>R06</td>
+<td>Replacement depth for unavailable starters</td>
+<td>G6</td>
+<td>DET only</td>
+</tr>
+<tr>
+<td>R11</td>
+<td>Injury modelled as a surprise, not a level</td>
+<td>G6</td>
+<td>0 deltas usable</td>
+</tr>
+<tr>
+<td>R12</td>
+<td>32-club roster and reserve sweep</td>
+<td>G6</td>
+<td>0 of 32</td>
+</tr>
+<tr>
+<td>R20</td>
+<td>Automated multi-day price capture</td>
+<td>G1</td>
+<td>1 manual read</td>
+</tr>
+<tr>
+<td>R25</td>
+<td>Game Books for starters</td>
+<td>G6</td>
+<td>0</td>
+</tr>
+<tr>
+<td>R27</td>
+<td>Injury and depth ablations, not fixed penalties</td>
+<td>G6</td>
+<td>0</td>
+</tr>
+<tr>
+<td>R29</td>
+<td>Inactive lists and snap counts</td>
+<td>G6</td>
+<td>0</td>
+</tr>
+<tr>
+<td>R31</td>
+<td>Roster turnover as a versioned event</td>
+<td>G6</td>
+<td>0</td>
+</tr>
+</tbody></table>
+<div class="note">The single most useful thing to fix is depth coverage: <b>1 of 32</b> club
+charts has been read, which blocks the replacement columns, the injury ablation and the
+per-team deficiency view at once. It is one page read per club.</div>
+
+</main>
+<footer>Built from committed inputs only, by a deterministic stdlib generator.
+A blank cell is a value that was <strong>not read</strong>, never a zero. Read the
+<a href="flagged.html">Flagged for Review</a> page before quoting any number here.</footer>
+</body></html>

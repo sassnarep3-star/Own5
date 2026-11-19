@@ -1,0 +1,16 @@
+# FanDuel NFL board, read 2026-11-19T11:42:16Z, source https://sportsbook.fanduel.com/navigation/nfl
+# FanDuel prints the away club first with the away line, then the home club with the home line.
+# fields: away|home|away_spread|away_spread_juice|home_spread|home_spread_juice|over|over_juice|under|under_juice|away_ml|home_ml|printed_start
+IND|HOU|+12.5|-110|-12.5|-110|O 43.5|-115|U 43.5|-105|+570|-800|8:16pm ET
+NO|CHI|+11.5|-110|-11.5|-110|O 48.5|-115|U 48.5|-105|+520|-720|Sun 1:01pm ET
+BAL|CAR|+2.5|-110|-2.5|-110|O 43.5|-110|U 43.5|-110|+116|-136|Sun 1:01pm ET
+MIA|BUF|+16.5|-110|-16.5|-110|O 45.5|-105|U 45.5|-115|+870|-1500|Sun 1:01pm ET
+TEN|DAL|+7.5|-105|-7.5|-115|O 54.5|-120|U 54.5|+100|+330|-420|Sun 1:01pm ET
+AZ|KC|+15.5|-105|-15.5|-115|O 41.5|+100|U 41.5|-120|+870|-1500|Sun 1:01pm ET
+TB|DET|+7|-110|-7|-110|O 44.5|+100|U 44.5|-120|+290|-360|Sun 1:01pm ET
+PIT|PHI|-4.5|-110|+4.5|-110|O 37.5|-115|U 37.5|-105|-230|+190|Sun 1:01pm ET
+NYJ|LAC|+3|-110|-3|-110|O 41.5|-110|U 41.5|-110|+136|-162|Sun 4:06pm ET
+LV|DEN|+9.5|+100|-9.5|-120|O 40.5|-110|U 40.5|-110|+460|-620|Sun 4:26pm ET
+JAX|NYG|-5.5|-120|+5.5|+100|O 46.5|-110|U 46.5|-110|-260|+215|Sun 4:26pm ET
+MIN|SF|+3|+100|-3|-120|O 46.5|-105|U 46.5|-115|+142|-168|Sun 8:20pm ET
+CIN|WAS|-5.5|-115|+5.5|-105|O 53.5|-115|U 53.5|-105|-270|+220|Mon 8:16pm ET

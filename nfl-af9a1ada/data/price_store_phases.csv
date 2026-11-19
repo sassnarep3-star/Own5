@@ -1,0 +1,5 @@
+phase,available,n,why
+open,no,0,no capture exists before the first read of 2026-11-19T11:42:16Z; nothing read-only recovers a past price
+pre-kickoff,yes,156,"one two-book read on 2026-11-19, before the Thursday kickoff"
+close,no,0,"a close is by definition after the last pre-kickoff read; no pre-kickoff capture exists for the 12 Sunday/Monday games, so no closing number can be claimed"
+post-game,no,0,the Thursday game has not kicked off; no Week 11 game has been played

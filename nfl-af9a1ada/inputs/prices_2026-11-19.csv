@@ -1,0 +1,27 @@
+book,away,home,away_spread,home_spread,away_spread_juice,home_spread_juice,over,under,over_juice,under_juice,away_ml,home_ml,printed_start,source_url,read_utc
+DraftKings,IND,HOU,12.5,-12.5,-112,-108,43.5,43.5,-118,-102,+525,-750,Today 8:15 PM,https://sportsbook.draftkings.com/leagues/football/nfl,2026-11-19T11:42:16Z
+DraftKings,NO,CHI,11.5,-11.5,-108,-112,48.5,48.5,-115,-105,+455,-625,Sun Nov 22nd 1:00 PM,https://sportsbook.draftkings.com/leagues/football/nfl,2026-11-19T11:42:16Z
+DraftKings,MIA,BUF,16.5,-16.5,-112,-108,45.5,45.5,-105,-115,+850,-1450,Sun Nov 22nd 1:00 PM,https://sportsbook.draftkings.com/leagues/football/nfl,2026-11-19T11:42:16Z
+DraftKings,TB,DET,7,-7,-110,-110,43.5,43.5,-118,-102,+270,-340,Sun Nov 22nd 1:00 PM,https://sportsbook.draftkings.com/leagues/football/nfl,2026-11-19T11:42:16Z
+DraftKings,AZ,KC,15.5,-15.5,-105,-115,40.5,40.5,-118,-102,+800,-1350,Sun Nov 22nd 1:00 PM,https://sportsbook.draftkings.com/leagues/football/nfl,2026-11-19T11:42:16Z
+DraftKings,TEN,DAL,8.5,-8.5,-115,-105,54.5,54.5,-120,+100,+300,-380,Sun Nov 22nd 1:00 PM,https://sportsbook.draftkings.com/leagues/football/nfl,2026-11-19T11:42:16Z
+DraftKings,PIT,PHI,-4.5,+4.5,-112,-108,37.5,37.5,-112,-108,-218,+180,Sun Nov 22nd 1:00 PM,https://sportsbook.draftkings.com/leagues/football/nfl,2026-11-19T11:42:16Z
+DraftKings,BAL,CAR,2.5,-2.5,-105,-115,43.5,43.5,-105,-115,+114,-135,Sun Nov 22nd 1:00 PM,https://sportsbook.draftkings.com/leagues/football/nfl,2026-11-19T11:42:16Z
+DraftKings,NYJ,LAC,3,-3,-112,-108,41.5,41.5,-112,-108,+136,-162,Sun Nov 22nd 4:05 PM,https://sportsbook.draftkings.com/leagues/football/nfl,2026-11-19T11:42:16Z
+DraftKings,JAX,NYG,-6,+6,-110,-110,46.5,46.5,-110,-110,-265,+215,Sun Nov 22nd 4:25 PM,https://sportsbook.draftkings.com/leagues/football/nfl,2026-11-19T11:42:16Z
+DraftKings,LV,DEN,10,-10,-108,-112,40.5,40.5,-112,-108,+455,-625,Sun Nov 22nd 4:25 PM,https://sportsbook.draftkings.com/leagues/football/nfl,2026-11-19T11:42:16Z
+DraftKings,MIN,SF,3,-3,-110,-110,46.5,46.5,-115,-105,+136,-162,Sun Nov 22nd 8:20 PM,https://sportsbook.draftkings.com/leagues/football/nfl,2026-11-19T11:42:16Z
+DraftKings,CIN,WAS,-6.5,+6.5,-102,-118,54.5,54.5,-105,-115,-310,+250,Mon Nov 23rd 8:15 PM,https://sportsbook.draftkings.com/leagues/football/nfl,2026-11-19T11:42:16Z
+FanDuel,IND,HOU,12.5,-12.5,-110,-110,43.5,43.5,-115,-105,+570,-800,8:16pm ET,https://sportsbook.fanduel.com/navigation/nfl,2026-11-19T11:42:16Z
+FanDuel,NO,CHI,11.5,-11.5,-110,-110,48.5,48.5,-115,-105,+520,-720,Sun 1:01pm ET,https://sportsbook.fanduel.com/navigation/nfl,2026-11-19T11:42:16Z
+FanDuel,BAL,CAR,2.5,-2.5,-110,-110,43.5,43.5,-110,-110,+116,-136,Sun 1:01pm ET,https://sportsbook.fanduel.com/navigation/nfl,2026-11-19T11:42:16Z
+FanDuel,MIA,BUF,16.5,-16.5,-110,-110,45.5,45.5,-105,-115,+870,-1500,Sun 1:01pm ET,https://sportsbook.fanduel.com/navigation/nfl,2026-11-19T11:42:16Z
+FanDuel,TEN,DAL,7.5,-7.5,-105,-115,54.5,54.5,-120,+100,+330,-420,Sun 1:01pm ET,https://sportsbook.fanduel.com/navigation/nfl,2026-11-19T11:42:16Z
+FanDuel,AZ,KC,15.5,-15.5,-105,-115,41.5,41.5,+100,-120,+870,-1500,Sun 1:01pm ET,https://sportsbook.fanduel.com/navigation/nfl,2026-11-19T11:42:16Z
+FanDuel,TB,DET,7,-7,-110,-110,44.5,44.5,+100,-120,+290,-360,Sun 1:01pm ET,https://sportsbook.fanduel.com/navigation/nfl,2026-11-19T11:42:16Z
+FanDuel,PIT,PHI,-4.5,+4.5,-110,-110,37.5,37.5,-115,-105,-230,+190,Sun 1:01pm ET,https://sportsbook.fanduel.com/navigation/nfl,2026-11-19T11:42:16Z
+FanDuel,NYJ,LAC,3,-3,-110,-110,41.5,41.5,-110,-110,+136,-162,Sun 4:06pm ET,https://sportsbook.fanduel.com/navigation/nfl,2026-11-19T11:42:16Z
+FanDuel,LV,DEN,9.5,-9.5,+100,-120,40.5,40.5,-110,-110,+460,-620,Sun 4:26pm ET,https://sportsbook.fanduel.com/navigation/nfl,2026-11-19T11:42:16Z
+FanDuel,JAX,NYG,-5.5,+5.5,-120,+100,46.5,46.5,-110,-110,-260,+215,Sun 4:26pm ET,https://sportsbook.fanduel.com/navigation/nfl,2026-11-19T11:42:16Z
+FanDuel,MIN,SF,3,-3,+100,-120,46.5,46.5,-105,-115,+142,-168,Sun 8:20pm ET,https://sportsbook.fanduel.com/navigation/nfl,2026-11-19T11:42:16Z
+FanDuel,CIN,WAS,-5.5,+5.5,-115,-105,53.5,53.5,-115,-105,-270,+220,Mon 8:16pm ET,https://sportsbook.fanduel.com/navigation/nfl,2026-11-19T11:42:16Z

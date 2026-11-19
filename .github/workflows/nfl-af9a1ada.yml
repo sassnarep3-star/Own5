@@ -1,0 +1,45 @@
+name: nfl-af9a1ada desk
+
+on:
+  push:
+    paths:
+      - "nfl-af9a1ada/**"
+      - ".github/workflows/nfl-af9a1ada.yml"
+  pull_request:
+    paths:
+      - "nfl-af9a1ada/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Deterministic data build
+        run: python3 nfl-af9a1ada/tools/build_data.py
+
+      - name: The build must not change any committed data file
+        run: |
+          if ! git diff --quiet -- nfl-af9a1ada/data nfl-af9a1ada/*.html nfl-af9a1ada/style.css; then
+            echo "::error::the committed data or site does not match a clean rebuild"
+            git --no-pager diff --stat -- nfl-af9a1ada/data nfl-af9a1ada/*.html nfl-af9a1ada/style.css
+            exit 1
+          fi
+
+      - name: Regenerate the site
+        run: python3 nfl-af9a1ada/tools/build_site.py
+
+      - name: Unit tests
+        run: python3 -m unittest discover -s nfl-af9a1ada/tests -t nfl-af9a1ada -v
+
+      - name: Fail-closed verification
+        run: python3 nfl-af9a1ada/verify.py

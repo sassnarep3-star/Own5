@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NFL Line-Gate Desk &middot; Leaderboard</title>
+<style>
+:root{--bg:#0f1319;--card:#171d26;--line:#25303d;--ink:#e8eef6;--dim:#8ea0b6;
+--acc:#5ad2a4;--warn:#e6b455;--bad:#e8735f;--mono:ui-monospace,SFMono-Regular,Menlo,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+header{border-bottom:1px solid var(--line);background:#0b0f14;padding:14px 22px;position:sticky;top:0;z-index:9}
+header h1{margin:0;font-size:17px;letter-spacing:.3px}
+header .sub{color:var(--dim);font-size:12px;margin-top:3px}
+nav{display:flex;flex-wrap:wrap;gap:2px;padding:8px 22px;background:#0b0f14;border-bottom:1px solid var(--line);position:sticky;top:60px;z-index:8}
+nav a{color:var(--dim);text-decoration:none;font-size:12.5px;padding:5px 9px;border-radius:5px}
+nav a:hover{background:#1d2530;color:var(--ink)}
+nav a.on{background:var(--acc);color:#08110c;font-weight:600}
+main{padding:22px;max-width:1500px;margin:0 auto}
+h2{font-size:20px;margin:26px 0 6px}h2:first-child{margin-top:0}
+h3{font-size:14.5px;margin:22px 0 8px;color:var(--acc);text-transform:uppercase;letter-spacing:.7px}
+p.lede{color:var(--dim);max-width:80ch;margin:0 0 16px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:12px;margin:16px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:13px}
+.card .k{color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:.6px}
+.card .v{font:600 22px/1.2 var(--mono);margin-top:5px}
+.card .n{color:var(--dim);font-size:11.5px;margin-top:4px}
+.v.good{color:var(--acc)}.v.warn{color:var(--warn)}.v.bad{color:var(--bad)}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);
+border-radius:9px;overflow:hidden;margin:10px 0 22px;font-size:13px}
+th{background:#131a23;text-align:left;padding:9px 10px;font-size:11px;text-transform:uppercase;
+letter-spacing:.6px;color:var(--dim);border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:8px 10px;border-bottom:1px solid #1e2833;vertical-align:top}
+tr:last-child td{border-bottom:none}
+tbody tr:hover{background:#1b2431}
+td.n,th.n{text-align:right;font-family:var(--mono);white-space:nowrap}
+.blank{color:var(--warn);font-family:var(--mono);font-size:11.5px;border:1px dashed #4a3c1e;
+background:#241e10;border-radius:3px;padding:1px 5px;cursor:help}
+a{color:#7fd4ff;text-decoration:none;border-bottom:1px dotted #2c4a5c}
+a:hover{color:#b9e9ff}
+.pill{display:inline-block;padding:2px 7px;border-radius:99px;font-size:10.5px;font-weight:700;
+letter-spacing:.5px;text-transform:uppercase}
+.p-met{background:#153a2b;color:#6ee7b0}.p-partial{background:#3a3115;color:#e6b455}
+.p-blocked{background:#3a1b18;color:#f0937f}.p-rejected{background:#2a2f38;color:var(--dim)}
+.pos{color:var(--acc)}.neg{color:var(--bad)}
+.note{background:#131a23;border-left:3px solid var(--acc);padding:11px 14px;border-radius:0 7px 7px 0;
+margin:14px 0;font-size:13.5px;color:#cfe0f0}
+.note.warn{border-left-color:var(--warn)}
+.note.bad{border-left-color:var(--bad)}
+footer{border-top:1px solid var(--line);padding:18px 22px;color:var(--dim);font-size:11.5px;margin-top:30px}
+code{font-family:var(--mono);font-size:12px;background:#101720;padding:1px 5px;border-radius:3px}
+</style></head><body>
+<header><h1>NFL Line-Gate Desk</h1>
+<div class="sub">Own lines, prices, ratings and a pre-registered competition &middot;
+session af9a1ada &middot; every number dated and sourced &middot; every blank labelled</div></header>
+<nav><a href="index.html">Dashboard</a><a href="origination.html">Origination</a><a href="prices.html">Prices</a><a href="ratings.html">Ratings</a><a href="results.html">Benchmark</a><a href="leaderboard.html" class="on">Leaderboard</a><a href="availability.html">Availability</a><a href="deficiency.html">Deficiency</a><a href="requirements.html">Requirements</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged for Review</a><a href="research.html">Method</a><a href="sources.html">Sources</a></nav><main>
+
+<h2>Leaderboard: pre-registered, unscored, and honest about it</h2>
+<p class="lede">Seven strategies were registered before a single bet was settled. None can be
+scored yet, and the table says so with BLANK rather than a zero that would read like a result.</p>
+
+<div class="note">A registration is a promise about how a strategy will be judged. Editing one
+means writing a new registration with a new id; the id and a hash of the registration file are
+stamped on every row below, so a future score can always be traced to the definition that
+produced it. Registration: <code>REG-AF9A1ADA-V1</code>,
+hash <code>634d8f12d7d49a4da741009e&hellip;</code></div>
+
+<h3>Registered strategies</h3>
+<table class=""><thead><tr>
+<th class="">ID</th>
+<th class="">Strategy</th>
+<th class="">Division</th>
+<th class="">Status</th>
+<th class="n">Settled</th>
+<th class="n">Signal</th>
+<th class="n">Staking</th>
+<th class="">Control</th>
+<th class="">Gates</th>
+<th class="">Why blank</th>
+</tr></thead><tbody>
+<tr>
+<td>S1</td>
+<td>Model fair line vs consensus close</td>
+<td>SIDE</td>
+<td><span class="pill p-paper">PAPER</span></td>
+<td class="n"><span class="">0.00</span></td>
+<td class="n"><span class="blank" title="no value was read for this cell">BLANK</span></td>
+<td class="n"><span class="blank" title="no value was read for this cell">BLANK</span></td>
+<td>take the close</td>
+<td>G2 G3 G4 G7</td>
+<td>no settled bet exists, so no score is published; the cell is blank, not zero</td>
+</tr>
+<tr>
+<td>S2</td>
+<td>Model fair total vs consensus close</td>
+<td>TOTAL</td>
+<td><span class="pill p-paper">PAPER</span></td>
+<td class="n"><span class="">0.00</span></td>
+<td class="n"><span class="blank" title="no value was read for this cell">BLANK</span></td>
+<td class="n"><span class="blank" title="no value was read for this cell">BLANK</span></td>
+<td>take the close</td>
+<td>G2 G3 G7</td>
+<td>no settled bet exists, so no score is published; the cell is blank, not zero</td>
+</tr>
+<tr>
+<td>S3</td>
+<td>De-vigged consensus reversion</td>
+<td>MONEYLINE</td>
+<td><span class="pill p-paper">PAPER</span></td>
+<td class="n"><span class="">0.00</span></td>
+<td class="n"><span class="blank" title="no value was read for this cell">BLANK</span></td>
+<td class="n"><span class="blank" title="no value was read for this cell">BLANK</span></td>
+<td>de-vigged close</td>
+<td>G2 G3 G4 G7</td>
+<td>no settled bet exists, so no score is published; the cell is blank, not zero</td>
+</tr>
+<tr>
+<td>S4</td>
+<td>Availability-adjusted re-price</td>
+<td>SIDE</td>
+<td><span class="pill p-blocked">BLOCKED</span></td>
+<td class="n"><span class="">0.00</span></td>
+<td class="n"><span class="blank" title="no value was read for this cell">BLANK</span></td>
+<td class="n"><span class="blank" title="no value was read for this cell">BLANK</span></td>
+<td>unadjusted model</td>
+<td>G1 G2 G3 G6</td>
+<td>depth readings exist for 1 of 32 clubs, so the adjustment cannot be estimated. A fixed penalty per starter is explicitly rejected by the brief and by this desk.</td>
+</tr>
+<tr>
+<td>S5</td>
+<td>Rest and travel</td>
+<td>SIDE</td>
+<td><span class="pill p-paper">PAPER</span></td>
+<td class="n"><span class="">0.00</span></td>
+<td class="n"><span class="blank" title="no value was read for this cell">BLANK</span></td>
+<td class="n"><span class="blank" title="no value was read for this cell">BLANK</span></td>
+<td>take the close</td>
+<td>G2 G3 G7</td>
+<td>no settled bet exists, so no score is published; the cell is blank, not zero</td>
+</tr>
+<tr>
+<td>S6</td>
+<td>Same-game parlay</td>
+<td>PARLAY</td>
+<td><span class="pill p-blocked">BLOCKED</span></td>
+<td class="n"><span class="">0.00</span></td>
+<td class="n"><span class="blank" title="no value was read for this cell">BLANK</span></td>
+<td class="n"><span class="blank" title="no value was read for this cell">BLANK</span></td>
+<td>product of marginals</td>
+<td>G1..G8 + joint evidence</td>
+<td>joint evidence gate: the dependence between legs must be measured on settled same-game data before any combo is priced</td>
+</tr>
+<tr>
+<td>S7</td>
+<td>Player-prop combo</td>
+<td>PROP</td>
+<td><span class="pill p-blocked">BLOCKED</span></td>
+<td class="n"><span class="">0.00</span></td>
+<td class="n"><span class="blank" title="no value was read for this cell">BLANK</span></td>
+<td class="n"><span class="blank" title="no value was read for this cell">BLANK</span></td>
+<td>single prop</td>
+<td>G1..G8 + market data</td>
+<td>no licensed prop feed exists on this desk; the boards print props but the desk cannot store them under its own data policy</td>
+</tr>
+</tbody></table>
+
+<h3>How luck is removed</h3>
+<p class="lede">Each panel is a specific defence against a specific way of fooling yourself.</p>
+<table class=""><thead><tr>
+<th class="">Panel</th>
+<th class="">What it does</th>
+<th class="">n</th>
+<th class="">Detail</th>
+</tr></thead><tbody>
+<tr>
+<td>clustered interval</td>
+<td>every score carries an interval resampled by game week</td>
+<td>456</td>
+<td>a bet is not independent of the other bets in its game, so the interval resamples whole weeks</td>
+</tr>
+<tr>
+<td>multiplicity</td>
+<td>the family of strategies is finite and declared before scoring</td>
+<td>7</td>
+<td>seven registrations; a familywise correction is applied the moment two or more are scored</td>
+</tr>
+<tr>
+<td>control baseline</td>
+<td>a market-following control sits on every row</td>
+<td>7</td>
+<td>a strategy that cannot beat taking the close is not skill, it is the market</td>
+</tr>
+<tr>
+<td>proper score only</td>
+<td>Brier against the de-vigged close; no ROI ranking</td>
+<td>6711</td>
+<td>a return on a small sample is noise with a sign; the desk does not rank on it</td>
+</tr>
+<tr>
+<td>sample needed</td>
+<td>4,721 bets to separate a 52% bet from a 50% one at 80% power</td>
+<td>4721</td>
+<td>computed from the observed variance of the de-vigged close, not a rule of thumb</td>
+</tr>
+</tbody></table>
+
+<h3>How many bets before a result means anything</h3>
+<div class="cards">
+  <div class="card"><div class="k">Bets required</div><div class="v">5635</div>
+    <div class="n">at &delta; = 0.02, power 0.8</div></div>
+  <div class="card"><div class="k">Assumed p</div><div class="v"><span class="">0.500</span></div>
+    <div class="n">from the observed de-vigged close</div></div>
+  <div class="card"><div class="k">Variance</div><div class="v"><span class="">0.2500</span></div>
+    <div class="n">p(1&minus;p)</div></div>
+</div>
+<div class="note warn">A strategy that looks good over 200 bets has not been validated, it has
+been sampled. The desk will not score below 5635 bets, and
+that number is derived above rather than chosen to suit a narrative.</div>
+
+<h3>Blocked divisions</h3>
+<table><thead><tr><th>Division</th><th>Why it cannot be priced yet</th></tr></thead><tbody>
+<tr><td>Parlay</td><td>the dependence between two legs of one game must be measured on settled
+same-game data; the product of two marginals is not a price.</td></tr>
+<tr><td>Player props</td><td>no feed the desk is permitted to store. The boards print props; the
+policy section of the registration forbids storing them without a licence.</td></tr>
+</tbody></table>
+
+</main>
+<footer>Built from committed inputs only, by a deterministic stdlib generator.
+A blank cell is a value that was <strong>not read</strong>, never a zero. Read the
+<a href="flagged.html">Flagged for Review</a> page before quoting any number here.</footer>
+</body></html>

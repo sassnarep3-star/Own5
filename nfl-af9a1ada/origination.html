@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NFL Line-Gate Desk &middot; Origination</title>
+<style>
+:root{--bg:#0f1319;--card:#171d26;--line:#25303d;--ink:#e8eef6;--dim:#8ea0b6;
+--acc:#5ad2a4;--warn:#e6b455;--bad:#e8735f;--mono:ui-monospace,SFMono-Regular,Menlo,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+header{border-bottom:1px solid var(--line);background:#0b0f14;padding:14px 22px;position:sticky;top:0;z-index:9}
+header h1{margin:0;font-size:17px;letter-spacing:.3px}
+header .sub{color:var(--dim);font-size:12px;margin-top:3px}
+nav{display:flex;flex-wrap:wrap;gap:2px;padding:8px 22px;background:#0b0f14;border-bottom:1px solid var(--line);position:sticky;top:60px;z-index:8}
+nav a{color:var(--dim);text-decoration:none;font-size:12.5px;padding:5px 9px;border-radius:5px}
+nav a:hover{background:#1d2530;color:var(--ink)}
+nav a.on{background:var(--acc);color:#08110c;font-weight:600}
+main{padding:22px;max-width:1500px;margin:0 auto}
+h2{font-size:20px;margin:26px 0 6px}h2:first-child{margin-top:0}
+h3{font-size:14.5px;margin:22px 0 8px;color:var(--acc);text-transform:uppercase;letter-spacing:.7px}
+p.lede{color:var(--dim);max-width:80ch;margin:0 0 16px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:12px;margin:16px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:13px}
+.card .k{color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:.6px}
+.card .v{font:600 22px/1.2 var(--mono);margin-top:5px}
+.card .n{color:var(--dim);font-size:11.5px;margin-top:4px}
+.v.good{color:var(--acc)}.v.warn{color:var(--warn)}.v.bad{color:var(--bad)}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);
+border-radius:9px;overflow:hidden;margin:10px 0 22px;font-size:13px}
+th{background:#131a23;text-align:left;padding:9px 10px;font-size:11px;text-transform:uppercase;
+letter-spacing:.6px;color:var(--dim);border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:8px 10px;border-bottom:1px solid #1e2833;vertical-align:top}
+tr:last-child td{border-bottom:none}
+tbody tr:hover{background:#1b2431}
+td.n,th.n{text-align:right;font-family:var(--mono);white-space:nowrap}
+.blank{color:var(--warn);font-family:var(--mono);font-size:11.5px;border:1px dashed #4a3c1e;
+background:#241e10;border-radius:3px;padding:1px 5px;cursor:help}
+a{color:#7fd4ff;text-decoration:none;border-bottom:1px dotted #2c4a5c}
+a:hover{color:#b9e9ff}
+.pill{display:inline-block;padding:2px 7px;border-radius:99px;font-size:10.5px;font-weight:700;
+letter-spacing:.5px;text-transform:uppercase}
+.p-met{background:#153a2b;color:#6ee7b0}.p-partial{background:#3a3115;color:#e6b455}
+.p-blocked{background:#3a1b18;color:#f0937f}.p-rejected{background:#2a2f38;color:var(--dim)}
+.pos{color:var(--acc)}.neg{color:var(--bad)}
+.note{background:#131a23;border-left:3px solid var(--acc);padding:11px 14px;border-radius:0 7px 7px 0;
+margin:14px 0;font-size:13.5px;color:#cfe0f0}
+.note.warn{border-left-color:var(--warn)}
+.note.bad{border-left-color:var(--bad)}
+footer{border-top:1px solid var(--line);padding:18px 22px;color:var(--dim);font-size:11.5px;margin-top:30px}
+code{font-family:var(--mono);font-size:12px;background:#101720;padding:1px 5px;border-radius:3px}
+</style></head><body>
+<header><h1>NFL Line-Gate Desk</h1>
+<div class="sub">Own lines, prices, ratings and a pre-registered competition &middot;
+session af9a1ada &middot; every number dated and sourced &middot; every blank labelled</div></header>
+<nav><a href="index.html">Dashboard</a><a href="origination.html" class="on">Origination</a><a href="prices.html">Prices</a><a href="ratings.html">Ratings</a><a href="results.html">Benchmark</a><a href="leaderboard.html">Leaderboard</a><a href="availability.html">Availability</a><a href="deficiency.html">Deficiency</a><a href="requirements.html">Requirements</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged for Review</a><a href="research.html">Method</a><a href="sources.html">Sources</a></nav><main>
+
+<h2>Origination: side, then total, then moneyline</h2>
+<p class="lede">Numbers are computed in that order because that is the order in which a line is
+built: the side sets the game's balance, the total sets its size, the moneyline is the price of
+the side. Every row carries the hash of the exact inputs that produced it.</p>
+
+<div class="note warn"><strong>Units matter, so they are in the table.</strong> A <em>side</em> is a
+printed home line, where a negative number means the home club is favoured. A <em>total</em> is a
+points line. A <em>moneyline</em> is the probability the home club wins, between 0 and 1.
+An earlier version of this desk published the side fair line as a home margin while the market
+column was a printed line; every sign inverted and it manufactured 23-point edges on games the
+model and the market agreed about. Both columns now share one convention, and
+<code>tests/test_model.py</code> fails if they ever stop.</div>
+
+<h3>Week 11, all thirteen games</h3>
+<table class=""><thead><tr>
+<th class="">Game</th>
+<th class="">Kickoff ET</th>
+<th class="n">Side fair</th>
+<th class="n">Side market</th>
+<th class="n">Diff</th>
+<th class="n">Total fair</th>
+<th class="n">Total market</th>
+<th class="n">Diff</th>
+<th class="n">Home win p</th>
+<th class="n">Market p</th>
+<th class="">Books</th>
+<th class="">Game</th>
+</tr></thead><tbody>
+<tr>
+<td>AZ@KC</td>
+<td>1:00 PM</td>
+<td class="n"><span class="">-10.37</span></td>
+<td class="n"><span class="">-15.50</span></td>
+<td class="n"><span class="neg">5.133</span></td>
+<td class="n"><span class="">43.34</span></td>
+<td class="n"><span class="">41.00</span></td>
+<td class="n"><span class="neg">2.344</span></td>
+<td class="n"><span class="">0.77</span></td>
+<td class="n"><span class="">0.90</span></td>
+<td>DraftKings + FanDuel</td>
+<td><a href="https://www.nfl.com/games/cardinals-at-chiefs-2026-reg-11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>BAL@CAR</td>
+<td>1:00 PM</td>
+<td class="n"><span class="">1.22</span></td>
+<td class="n"><span class="">-2.50</span></td>
+<td class="n"><span class="neg">3.719</span></td>
+<td class="n"><span class="">45.36</span></td>
+<td class="n"><span class="">43.50</span></td>
+<td class="n"><span class="neg">1.863</span></td>
+<td class="n"><span class="">0.47</span></td>
+<td class="n"><span class="">0.55</span></td>
+<td>DraftKings + FanDuel</td>
+<td><a href="https://www.nfl.com/games/ravens-at-panthers-2026-reg-11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>CIN@WAS</td>
+<td>8:15 PM</td>
+<td class="n"><span class="">3.03</span></td>
+<td class="n"><span class="">6.00</span></td>
+<td class="n"><span class="neg">-2.972</span></td>
+<td class="n"><span class="">54.46</span></td>
+<td class="n"><span class="">54.00</span></td>
+<td class="n"><span class="neg">0.460</span></td>
+<td class="n"><span class="">0.41</span></td>
+<td class="n"><span class="">0.29</span></td>
+<td>DraftKings + FanDuel</td>
+<td><a href="https://www.nfl.com/games/bengals-at-commanders-2026-reg-11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>IND@HOU</td>
+<td>8:15 PM</td>
+<td class="n"><span class="">-6.16</span></td>
+<td class="n"><span class="">-12.50</span></td>
+<td class="n"><span class="neg">6.337</span></td>
+<td class="n"><span class="">48.09</span></td>
+<td class="n"><span class="">43.50</span></td>
+<td class="n"><span class="neg">4.587</span></td>
+<td class="n"><span class="">0.67</span></td>
+<td class="n"><span class="">0.85</span></td>
+<td>DraftKings + FanDuel</td>
+<td><a href="https://www.nfl.com/games/colts-at-texans-2026-reg-11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>JAX@NYG</td>
+<td>4:25 PM</td>
+<td class="n"><span class="">10.79</span></td>
+<td class="n"><span class="">5.75</span></td>
+<td class="n"><span class="neg">5.036</span></td>
+<td class="n"><span class="">47.68</span></td>
+<td class="n"><span class="">46.50</span></td>
+<td class="n"><span class="neg">1.180</span></td>
+<td class="n"><span class="">0.22</span></td>
+<td class="n"><span class="">0.30</span></td>
+<td>DraftKings + FanDuel</td>
+<td><a href="https://www.nfl.com/games/jaguars-at-giants-2026-reg-11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>LV@DEN</td>
+<td>4:25 PM</td>
+<td class="n"><span class="">-12.58</span></td>
+<td class="n"><span class="">-9.75</span></td>
+<td class="n"><span class="neg">-2.830</span></td>
+<td class="n"><span class="">42.13</span></td>
+<td class="n"><span class="">40.50</span></td>
+<td class="n"><span class="neg">1.628</span></td>
+<td class="n"><span class="">0.82</span></td>
+<td class="n"><span class="">0.83</span></td>
+<td>DraftKings + FanDuel</td>
+<td><a href="https://www.nfl.com/games/raiders-at-broncos-2026-reg-11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>MIA@BUF</td>
+<td>1:00 PM</td>
+<td class="n"><span class="">-14.01</span></td>
+<td class="n"><span class="">-16.50</span></td>
+<td class="n"><span class="neg">2.494</span></td>
+<td class="n"><span class="">49.38</span></td>
+<td class="n"><span class="">45.50</span></td>
+<td class="n"><span class="neg">3.878</span></td>
+<td class="n"><span class="">0.84</span></td>
+<td class="n"><span class="">0.90</span></td>
+<td>DraftKings + FanDuel</td>
+<td><a href="https://www.nfl.com/games/dolphins-at-bills-2026-reg-11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>MIN@SF</td>
+<td>8:20 PM</td>
+<td class="n"><span class="">-4.21</span></td>
+<td class="n"><span class="">-3.00</span></td>
+<td class="n"><span class="neg">-1.205</span></td>
+<td class="n"><span class="">40.05</span></td>
+<td class="n"><span class="">46.50</span></td>
+<td class="n"><span class="neg">-6.448</span></td>
+<td class="n"><span class="">0.62</span></td>
+<td class="n"><span class="">0.60</span></td>
+<td>DraftKings + FanDuel</td>
+<td><a href="https://www.nfl.com/games/vikings-at-49ers-2026-reg-11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>NO@CHI</td>
+<td>1:00 PM</td>
+<td class="n"><span class="">-9.23</span></td>
+<td class="n"><span class="">-11.50</span></td>
+<td class="n"><span class="neg">2.271</span></td>
+<td class="n"><span class="">47.76</span></td>
+<td class="n"><span class="">48.50</span></td>
+<td class="n"><span class="neg">-0.743</span></td>
+<td class="n"><span class="">0.75</span></td>
+<td class="n"><span class="">0.84</span></td>
+<td>DraftKings + FanDuel</td>
+<td><a href="https://www.nfl.com/games/saints-at-bears-2026-reg-11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>NYJ@LAC</td>
+<td>4:05 PM</td>
+<td class="n"><span class="">-8.95</span></td>
+<td class="n"><span class="">-3.00</span></td>
+<td class="n"><span class="neg">-5.950</span></td>
+<td class="n"><span class="">42.79</span></td>
+<td class="n"><span class="">41.50</span></td>
+<td class="n"><span class="neg">1.288</span></td>
+<td class="n"><span class="">0.74</span></td>
+<td class="n"><span class="">0.59</span></td>
+<td>DraftKings + FanDuel</td>
+<td><a href="https://www.nfl.com/games/jets-at-chargers-2026-reg-11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>PIT@PHI</td>
+<td>1:00 PM</td>
+<td class="n"><span class="">-0.19</span></td>
+<td class="n"><span class="">4.50</span></td>
+<td class="n"><span class="neg">-4.692</span></td>
+<td class="n"><span class="">38.37</span></td>
+<td class="n"><span class="">37.50</span></td>
+<td class="n"><span class="neg">0.870</span></td>
+<td class="n"><span class="">0.51</span></td>
+<td class="n"><span class="">0.34</span></td>
+<td>DraftKings + FanDuel</td>
+<td><a href="https://www.nfl.com/games/steelers-at-eagles-2026-reg-11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>TB@DET</td>
+<td>1:00 PM</td>
+<td class="n"><span class="">-6.30</span></td>
+<td class="n"><span class="">-7.00</span></td>
+<td class="n"><span class="neg">0.696</span></td>
+<td class="n"><span class="">51.60</span></td>
+<td class="n"><span class="">44.00</span></td>
+<td class="n"><span class="neg">7.605</span></td>
+<td class="n"><span class="">0.67</span></td>
+<td class="n"><span class="">0.75</span></td>
+<td>DraftKings + FanDuel</td>
+<td><a href="https://www.nfl.com/games/buccaneers-at-lions-2026-reg-11" rel="noopener">source</a></td>
+</tr>
+<tr>
+<td>TEN@DAL</td>
+<td>1:00 PM</td>
+<td class="n"><span class="">-7.68</span></td>
+<td class="n"><span class="">-8.00</span></td>
+<td class="n"><span class="neg">0.321</span></td>
+<td class="n"><span class="">57.03</span></td>
+<td class="n"><span class="">54.50</span></td>
+<td class="n"><span class="neg">2.530</span></td>
+<td class="n"><span class="">0.71</span></td>
+<td class="n"><span class="">0.77</span></td>
+<td>DraftKings + FanDuel</td>
+<td><a href="https://www.nfl.com/games/titans-at-cowboys-2026-reg-11" rel="noopener">source</a></td>
+</tr>
+</tbody></table>
+
+<h3>How the fair line is produced</h3>
+<table><thead><tr><th>Step</th><th>What happens</th><th>Where it is asserted</th></tr></thead><tbody>
+<tr><td>1 ratings</td><td>offence and defence per club, ridge-fitted on the two most recent seasons,
+walk-forward, so a game is only ever priced by a fit that predates it</td>
+<td><code>tests/test_model.py::TestRatings</code></td></tr>
+<tr><td>2 margin</td><td>hfa + net(home) − net(away), with net = offence + defence and a defence
+that is positive when good</td><td>sign of the defence parameter is tested</td></tr>
+<tr><td>3 total</td><td>2&middot;mu + hfa + (off−def) for each club</td>
+<td>the mean predicted total equals the mean actual total</td></tr>
+<tr><td>4 probability</td><td>home win probability from a normal margin with the measured residual spread</td>
+<td>the side skill is bounded, because an unbounded one means leakage</td></tr>
+<tr><td>5 de-vig</td><td>each book's two-way moneyline removed of its margin, then averaged</td>
+<td><code>devig_two_way</code> sums to one</td></tr>
+</tbody></table>
+<div class="note"><strong>What would change my mind:</strong> a walk-forward Brier skill above zero
+with a clustered interval that excludes zero, on at least 4,721 bets. Nothing on this page comes
+close, and the size of the gap is published rather than hidden.</div>
+
+</main>
+<footer>Built from committed inputs only, by a deterministic stdlib generator.
+A blank cell is a value that was <strong>not read</strong>, never a zero. Read the
+<a href="flagged.html">Flagged for Review</a> page before quoting any number here.</footer>
+</body></html>

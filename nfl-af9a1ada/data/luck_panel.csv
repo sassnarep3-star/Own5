@@ -1,0 +1,6 @@
+panel,headline,n,detail,source
+clustered interval,every score carries an interval resampled by game week,456,"a bet is not independent of the other bets in its game, so the interval resamples whole weeks",data/backtest.json
+multiplicity,the family of strategies is finite and declared before scoring,7,seven registrations; a familywise correction is applied the moment two or more are scored,preregistration.json
+control baseline,a market-following control sits on every row,7,"a strategy that cannot beat taking the close is not skill, it is the market",data/leaderboard.csv
+proper score only,Brier against the de-vigged close; no ROI ranking,6711,a return on a small sample is noise with a sign; the desk does not rank on it,data/backtest.json
+sample needed,"4,721 bets to separate a 52% bet from a 50% one at 80% power",4721,"computed from the observed variance of the de-vigged close, not a rule of thumb",data/sample_size.json

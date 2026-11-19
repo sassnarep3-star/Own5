@@ -1,0 +1,24 @@
+{
+  "benchmark": "side: 0.5 at the closing line (Brier 0.25); total: 0.5 at the closing total",
+  "generated_utc": "2026-11-19T11:45:00Z",
+  "scores": {
+    "side": {
+      "brier_bench": 0.25,
+      "brier_model": 0.26643864854441446,
+      "ci_high": -0.052922867084373104,
+      "ci_low": -0.0780933240773296,
+      "n": 6711,
+      "skill": -0.06575459417765783
+    },
+    "total": {
+      "brier_bench": 0.25,
+      "brier_model": 0.26271424768747254,
+      "n": 6616,
+      "skill": -0.05085699074989014
+    }
+  },
+  "sd_margin": 13.952,
+  "sd_total": 14.043,
+  "spread_sign": 1.0,
+  "spread_sign_evidence": "r=+0.431 n=7103 MAE(+sign)=10.25 MAE(-sign)=14.62; consistent in every season"
+}
