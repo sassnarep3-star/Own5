@@ -3742,4 +3742,13 @@ at `audit_repo.py` line 162 is gone. No action required.
 
 - None opened by this session. X51-14 is closed by this takeover.
 
-**Merge record.** Recorded below after the PR merges.
+**Merge record.**
+- **PR #139 merged** (`gh pr merge 139 --merge`) at 2026-11-19T06:52:46Z. Merge commit
+  `fe9ed18d685af4b0def7da666c390b34d6630a41`. Head before merge: `ed7d92b`.
+- **Pages:** `pages.yml` run **#299** (event `push`, head `main`) — **success**, updated
+  2026-11-19T06:53:14Z; run **#298** (event `pull_request`, head `arena/c8cb6ae8-own5`) — **success**.
+  GitHub Pages repo status: **built** (source `main`, path `/`).
+- **Live check:** `https://sassnarep3-star.github.io/Own5/` loads and renders the NFL research
+  landing page (Overview / executive brief / research queue). This change touched CI smoke checks
+  only, so rendered content is unchanged; the rebuild confirms the deploy is healthy.
+- **Result:** merged to `main`, Pages deployed, no blocking checks. X51-14 closed.
