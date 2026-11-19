@@ -39,14 +39,24 @@ def esc(x):
     return html.escape(str(x))
 
 
+NOSOURCE = ('<span class="nosrc" title="Not a link: this cell records that no '
+            'official source published the item, or states the action to take">')
+
+
 def cell(h, v):
     v = "" if v is None else str(v)
     if v == "":
         return BLANK
     if h in ("source", "url", "source_or_action") or h.endswith("_source") or \
        h in ("injury_source", "depth_chart_source", "evidence_source"):
-        return '<a class="src" href="%s" target="_blank" rel="noopener">%s</a>' % (
-            esc(v), esc(_short(v)))
+        # A source cell only becomes a link when it really is a URL. Several
+        # columns legitimately hold prose ("n/a - deliberately omitted",
+        # "official NFL abbreviation ARI"); linkifying those produced
+        # <a href="a sentence">, i.e. broken links on the live site.
+        if v.startswith("http://") or v.startswith("https://"):
+            return '<a class="src" href="%s" target="_blank" rel="noopener">%s</a>' % (
+                esc(v), esc(_short(v)))
+        return NOSOURCE + esc(v) + "</span>"
     return esc(v)
 
 
@@ -607,6 +617,7 @@ white-space:nowrap;font-size:12px;letter-spacing:.02em;color:var(--dim)}
 tbody tr:hover{background:var(--panel2)}
 td{color:var(--fg)}
 .src{font-size:11px;word-break:break-all}
+.nosrc{font-size:11px;color:var(--blank);font-style:italic}
 .blank{color:var(--blank);font-weight:700}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
 gap:12px;margin:18px 0}

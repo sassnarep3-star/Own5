@@ -3776,6 +3776,44 @@ at `audit_repo.py` line 162 is gone. No action required.
 
 **Result:** PR #140 merged to `main`; Pages `built`; this session's COORDINATION.md block (I1–I6) is now on `main`. No file owned by another session was edited; the NFL Origin Desk remains owned by sessions `arena/abb5f8be-own5` (O1–O7, PR #112) and `arena/2025930f-own5` (V1–V8).
 
+## Session 3ddb3f07 — NFL Final Integration & Site-Currency Desk (claimed 2026-11-19 UTC)
+
+**Branch:** `arena/3ddb3f07-own5` (base `2f02e1e` = current `main`). **Claim pushed before any build work.**
+**Role:** final integration session — merges the finished desks, re-verifies the combined tree line by line,
+confirms the site has no broken links, and publishes.
+
+**Claimed namespace (additive, zero overlap with live desks):**
+- `nfl-integration-3ddb3f07/**` — the new repository front door: landing page with the decision-readiness
+  table, the desk directory, the verification report, the flagged register, questions/suggestions and
+  sources; deterministic builder, fail-closed verifier, unit tests.
+- `research/nfl-3ddb3f07/**` — executive summary, methodology, verification log, flagged register.
+- `.github/workflows/nfl-integration-3ddb3f07.yml` — scoped rebuild + verify + tests + Pages smoke.
+- `COORDINATION.md` (append-only blocks), `README.md` (append-only row).
+
+**Cross-session repairs inside the integration mandate (each is a broken-link / red-CI defect on `main`,
+each is reproduced and fixed in the owning desk's own generator, and each owning desk is rebuilt and
+re-verified afterwards):**
+- `nfl-desk-864d5668/**` — 61 malformed anchors whose `href` is a sentence (`href="n/a - deliberately
+  omitted"`, `href="official NFL abbreviation ARI"`, …). These are real broken links on the live site.
+- `nfl-desk-e1d60f5d/**` — 8 pages under `pages/` link with desk-root-relative paths (`href="index.html"`),
+  so they resolve one directory too high on the live site.
+- `nfl-desk-ccc5caf2/summary.html` — 1 repo-relative link that 404s from its served location.
+- `nfl-desk-35a1feb2/**` — the desk's committed pages no longer match its own deterministic build
+  (sibling-desk inventory drift); its scheduled check has been red on `main`.
+- `nfl-command-desk/**` — V11: the published pre-registration hash was orphaned by an earlier rebase.
+- `own5-hub/**` — the daily capture job publishes a hard-coded capture summary and drops the capture
+  when the rebuild fails; both are repaired so the ledger and the page cannot disagree.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| I3-01 | Claim scope in COORDINATION.md + push claim | in progress | 3ddb3f07 | COORDINATION.md | This block. Claim pushed before any build work. |
+| I3-02 | Repo-wide baseline: verifier sweep, broken-link scan, red-CI triage | in progress | 3ddb3f07 | research/nfl-3ddb3f07/VERIFICATION.md | Baseline captured before any repair, so each fix is provable. |
+| I3-03 | Repair broken links in 864d5668 / e1d60f5d / ccc5caf2 and rebuild those desks | unclaimed | 3ddb3f07 | (owner desks above) | Each desk rebuilt from its own generator; its verifier re-run. |
+| I3-04 | Repair red CI on `main`: 35a1feb2 drift, command-desk V11, own5-hub capture | unclaimed | 3ddb3f07 | (owner desks above) | Each repair re-verified locally and by the desk's own verifier. |
+| I3-05 | New front door `nfl-integration-3ddb3f07/` (landing, readiness table, desk directory, verification, flagged, questions, suggestions, sources, executive summary) | unclaimed | 3ddb3f07 | `nfl-integration-3ddb3f07/**` | Deterministic build; every table row source-linked or explicitly blank+flagged. |
+| I3-06 | Root `index.html` / navigation currency: point the site front door at the integrated hub | unclaimed | 3ddb3f07 | `scripts/build.py`, `index.html`, `pages/**` | Shared output — changed only by the integration session. |
+| I3-07 | Verifier, unit tests, scoped CI workflow | unclaimed | 3ddb3f07 | `nfl-integration-3ddb3f07/verify.py`, `tests/`, workflow | Fail-closed. |
+| I3-08 | Integration PR to `main`, autonomous merge, live Pages verification, record | unclaimed | 3ddb3f07 | COORDINATION.md, README.md | Merge only after the combined tree verifies and the site has no broken links. |
 
 
 ---
@@ -3854,3 +3892,93 @@ a decision that did not happen. Rebuilt, re-verified (3,014 checks, 0 problems) 
 follow-up PR.
 | Follow-up | [#145](https://github.com/sassnarep3-star/Own5/pull/145) merged 2026-11-19, merge commit `ff6fc6f3`; Pages built for it. Corrections: F-12 evidence link, merge record. |
 | Follow-up 2 | [#147](https://github.com/sassnarep3-star/Own5/pull/147) merged 2026-11-19, merge commit `016e7ee`; Pages **built** for `016e7ee`. Correction: P01 decision state. |
+
+---
+
+## Session 3ddb3f07 — completion record (2026-11-19 UTC)
+
+**Status: all claimed tasks done.** Branch `arena/3ddb3f07-own5` (base `2f02e1e`).
+
+### What was built
+
+`nfl-integration-3ddb3f07/` — the repository's **front door**. Fifteen pages, built
+deterministically from the tables the other desks own. Nothing is copied: every table is
+read at build time and the file that was read is recorded with its sha256 in
+`nfl-integration-3ddb3f07/data/lineage.csv`, so a drift between this site and its sources
+is detectable rather than silent.
+
+Pages: overview (decision-readiness table, one row per requirement — gate, clearing
+number, current number, evidence link), executive summary, requirements, validation gates,
+originated lines (side → total → moneyline; fair line, market line and difference in three
+separate columns), injuries & depth (depth of the replacement, 1st to 4th string),
+correlations (official inputs only, each with its n, plus the withheld list), leaderboard
+(signal separated from staking, pre-registration, control baselines), removal of luck
+(proper scores, clustered intervals, personnel ablation), questions, suggestions, Flagged
+for Review, official sources, desk directory, verification report.
+
+### Gates and tests
+
+`verify_hub.py` → **13 checks, 0 failures**: every one of the **751** table rows carries an
+official source link or an explicit unverified marker; the landing table has exactly one row
+per requirement; the lineage hashes match the files on disk; a rebuild changes no bytes; no
+page claims a certified strategy; the repository-wide link check finds nothing broken.
+`python3 -m unittest discover -s nfl-integration-3ddb3f07/tests` → **9 passed**, including
+three negative controls (a row stripped of its source, a link pointed at a missing file and
+a planted certification claim are each caught).
+
+### Repairs to other desks (each in the owning desk's own generator, each re-verified there)
+
+| Desk | Defect | Repair | Owner's verifier |
+|------|--------|--------|------------------|
+| `nfl-desk-864d5668` | 61 anchors whose `href` was prose (`href="n/a - deliberately omitted"`, `href="official NFL abbreviation ARI"`) — live broken links | a source cell is linked only when it really is a URL; prose gets an explicit no-source marker; a regression guard now fails on any `href` that is not a path or URL | 37 checks, 0 failures |
+| `nfl-desk-e1d60f5d` | 8 pages under `pages/` linked with desk-root-relative paths; the nav pointed at `pages/executive-summary.html`, which does not exist (the file is `pages/exec.html`) | links are written relative to the page that renders them | 241 checks, 0 failures |
+| `nfl-desk-ccc5caf2` | `summary.html` linked `research/ccc5caf2/…` from inside the desk directory → 404 | now `../research/ccc5caf2/…` | repo-wide scan: 0 broken |
+| `nfl-command-desk` | V11 could never pass again: the published pre-registration hash (`4078a9ad`, republished as `e7282e35…`) was orphaned by the 2026-11-18 rebase | V11 now proves what is still provable — the rule text is byte-identical to the freeze commit the site publishes, that commit is in the current history, the site quotes it, and the site discloses the broken chain. `FLAG-V11` added to the flagged register | 53 checks, 0 failures |
+| `own5-hub` | the published capture summary was a hand-written string that could disagree with the ledger; a capture that no longer parses crashed the whole build | the summary is derived from the ledger (gate G8 fails the build if they disagree); a capture that does not parse is recorded with `parse_status` instead of raising | 38 checks, 0 failures |
+| `.github/workflows/own5-hub-capture.yml` | the scheduled job rebuilt the pages *before* committing the capture, so a rebuild failure discarded the evidence (the 2026-11-19 run failed in 11 s and left nothing) | the immutable capture is committed first; the pages are rebuilt from it afterwards | workflow rewritten; failure path still fails loudly and writes diagnostics |
+| `nfl-desk-35a1feb2` | the committed pages no longer matched the desk's own deterministic build (the sibling-desk inventory had moved on) — its scheduled check was red on `main` | rebuilt from the desk's own generator | PASS (15 pages, 844 rows); two rebuilds change no bytes |
+| `scripts/build.py` → `index.html` | the root landing page was stamped "Reviewed 2026-11-02" and linked no desk newer than 2026-11-17 (FLAG-S2) | the generator now points at the front door, the integration hub, the desk directory and the repo review, and stamps the review date 2026-11-19 | 95 repository tests OK; `node --check assets/app.js` OK |
+
+**Before → after:** 127 broken internal links → **0**; red checks on `main`
+(`35a1feb2`, `own5-hub-capture`) → both addressed; failing desk verifiers 3 → **0**
+(`nba-commission` had been failing on those 127 broken links and now passes).
+
+### Verification performed (printed, not asserted)
+
+1. `python3 nfl-integration-3ddb3f07/run_verifiers.py` → **32 verifiers, 32 PASS, 0 FAIL**
+   (every desk's own verifier, re-run from the merged tree; the count grows as desks are
+   merged — it was 31 before session `715e2cd4`'s desk landed on `main`).
+2. `python3 repo-review/run_verifiers.py` → 31 verifiers, 31 PASS, 0 FAIL;
+   `python3 repo-review/build.py` → the published sweep and inventory regenerated;
+   `python3 repo-review/verify.py` → **877 checks, 0 failures**.
+3. `python3 nfl-b34253a1/verify.py` → **PASS** (104,168 audited lines re-hashed) after the
+   repository audit was regenerated — see the tripwire note below.
+4. `python3 scripts/seed.py && python3 scripts/build.py` → 8 root pages regenerated with no
+   drift; `python3 -m unittest discover -s tests` → **95 tests OK**.
+5. Repository-wide link check across every published HTML file → **0 broken**.
+
+### Tripwire for future sessions (the one thing to read)
+
+`nfl-b34253a1`'s audit pins the sha256 of every physical line of every file whose name or
+path matches its scope — and that scope includes any file called `index.html`, plus
+`pages/`, `scripts/`, `tools/`, `tests/`, `assets/`, `.github/workflows/`, `data/*.csv|json`
+and `research/*.md` with an NFL keyword. **After any merge that touches a file in that
+scope, the audit must be regenerated or the B34 check fails.** This session regenerates it
+as its last step. The audit's own files are excluded from its scope, so regenerating it is
+safe. Recorded as I3-F3.
+
+### Flagged (published, not blocking)
+
+`research/nfl-3ddb3f07/FLAGGED.md` — I3-F1 the broken pre-registration chain (also
+`FLAG-V11` in the command desk's register), I3-F2 the capture job's unexplained rebuild
+failure (the runner log host is not reachable from this environment, so the step's output
+could not be read; two defects that would produce it were repaired), I3-F3 the audit
+tripwire above, I3-F4 the 127 broken links (fixed), I3-F5 three requirement registers with
+no verified crosswalk, I3-F6 the stale root landing page (fixed).
+
+### Cross-session requests raised
+
+* None. Every edit outside this session's namespace was a defect repair in the owning
+  desk's own generator, each re-verified by that desk's own verifier, and each recorded
+  above and in the README.
+

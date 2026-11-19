@@ -436,4 +436,8 @@ FLAGGED = [
      "For 28 of 32 clubs only one Week 10 capture exists, so a delta cannot be published for them",
      "A second dated capture",
      "https://www.nfl.com/injuries/league/2026/reg10"),
+    ("FLAG-V11", "BLOCKING", "Pre-registration",
+     "The pre-registration commit 4078a9ad (and its 2026-11-18 republish e7282e35) were orphaned by a rebase of the branch and are no longer in this repository's history, so no published pre-registration hash can be produced from the repository. What remains provable is that the rule text in data/preregistration.csv is byte-identical to the freeze commit the site publishes; the fact that it was frozen before the prospective window opened can no longer be demonstrated from the repository alone",
+     "Re-freeze the rules in a fresh prospective window whose registration commit is never rewritten, and record that commit as the registration of record",
+     "https://github.com/sassnarep3-star/Own5/blob/main/nfl-command-desk/data/preregistration.csv"),
 ]

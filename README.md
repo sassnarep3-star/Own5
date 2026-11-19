@@ -629,3 +629,50 @@ An independent, additive desk that originates its own NFL lines and then tries t
 - **Registers:** 66 requirements with blocking gate and clearing number, 15 questions (8 blocking), 16 reviewable suggestions, 22 flags, 12 dated sources.
 
 Rebuild and verify: `python3 nfl-desk-715e2cd4/pipeline.py && python3 nfl-desk-715e2cd4/build.py && python3 nfl-desk-715e2cd4/verify.py && python3 -m unittest discover -s nfl-desk-715e2cd4/tests -v` (3,011 checks, 25 tests including 9 negative controls). CI: `.github/workflows/nfl-desk-715e2cd4.yml`.
+
+---
+
+## NFL front door · integration session 3ddb3f07 (2026-11-19)
+
+**Live page (after merge):** https://sassnarep3-star.github.io/Own5/nfl-integration-3ddb3f07/ · **Flagged for Review:** https://sassnarep3-star.github.io/Own5/nfl-integration-3ddb3f07/flagged.html
+
+The repository's front door, and the final integration pass. Fifteen pages, built
+deterministically from the tables the other desks own — nothing is copied, and every file
+that was read is recorded with its sha256 on the verification page.
+
+- **Landing page with the decision-readiness table**: one row per requirement (78), each
+  with the gate that blocks it, the number that would clear it, the current number and a
+  link to the evidence file. Two other registers exist (80 rows in the Own5 hub, 73 in the
+  command desk); they are published separately, and no combined count is published because
+  the crosswalk has not been verified row by row.
+- **Category pages**: executive summary, requirements, validation gates, originated lines
+  (side → total → moneyline, with the fair line, the market line and the difference in
+  three separate columns), injuries and depth (depth of the replacement, 1st to 4th
+  string), correlations with their n, leaderboard with signal separated from staking, the
+  removal-of-luck panel with the personnel ablation, questions, suggestions, Flagged for
+  Review, official sources, the desk directory and the verification report.
+- **Gates (13, fail-closed)**: every one of the 751 table rows carries an official source
+  link or an explicit unverified marker; the landing table has exactly one row per
+  requirement; the lineage hashes match the files on disk; a rebuild changes no bytes; no
+  page claims a certified strategy; the repository-wide link check finds nothing broken.
+  Nine unit tests, including negative controls.
+- **Repairs made in this session** (each reproduced, fixed in the owning desk's own
+  generator, and re-verified with that desk's verifier): 127 broken links across
+  `nfl-desk-864d5668`, `nfl-desk-e1d60f5d` and `nfl-desk-ccc5caf2`; the orphaned
+  pre-registration chain in `nfl-command-desk` (now proved from the freeze commit and
+  disclosed, FLAG-V11); the hand-written capture summary and the crashing capture path in
+  `own5-hub`; the capture job that discarded its evidence; the stale `nfl-desk-35a1feb2`
+  build that had its scheduled check red on `main`; and the stale root landing page.
+
+Rebuild and verify:
+
+```sh
+python3 nfl-integration-3ddb3f07/run_verifiers.py     # re-run every desk's verifier
+python3 nfl-integration-3ddb3f07/build_hub.py          # rebuild the 15 pages
+python3 nfl-integration-3ddb3f07/verify_hub.py         # 13 gates, fail-closed
+python3 -m unittest discover -s nfl-integration-3ddb3f07/tests -v
+```
+
+CI: `.github/workflows/nfl-integration-3ddb3f07.yml`. Research record:
+`research/nfl-3ddb3f07/` (executive summary, verification log, flagged register).
+

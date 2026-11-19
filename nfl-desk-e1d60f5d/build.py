@@ -56,6 +56,18 @@ def table_body(rows, cols, render_row):
     return "\n".join(out)
 
 
+# Pages live at two depths: the desk root (index.html) and the pages/ sub-directory.
+# Every internal link is written through _u() so it resolves from the page it is
+# rendered on. Before this was fixed the eight pages/ pages linked with
+# desk-root-relative paths ("index.html", "pages/questions.html"), which resolved
+# one directory too high on the live site.
+DEPTH = 0
+
+
+def _u(path):
+    return ("../" * DEPTH) + path
+
+
 def page(title, body, active=None):
     return f"""<!doctype html>
 <html lang="en">
@@ -63,24 +75,24 @@ def page(title, body, active=None):
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{esc(title)} — OWN5 NFL decision desk. Source-linked, verified or blank-and-flagged.">
 <title>{esc(title)} · OWN5 NFL Decision Desk</title>
-<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="{_u('assets/style.css')}">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <div class="layout">
 <aside class="sidebar">
-<a class="brand" href="index.html"><span class="brand-icon">O<span>5</span></span><span>OWN5<small>NFL DECISION DESK</small></span></a>
+<a class="brand" href="{_u('index.html')}"><span class="brand-icon">O<span>5</span></span><span>OWN5<small>NFL DECISION DESK</small></span></a>
 <div class="workspace"><span class="live-dot"></span> Research workspace <span class="workspace-arrow">⌄</span></div>
 <span class="nav-caption">DESK</span>
 <nav aria-label="Main navigation">
-<a href="index.html" class="nav-item{' active' if active == 'index' else ''}" aria-current="{'true' if active == 'index' else 'false'}"><span class="nav-number">01</span>Overview</a>
-<a href="pages/executive-summary.html" class="nav-item{' active' if active == 'exec' else ''}"><span class="nav-number">02</span>Executive summary</a>
-<a href="pages/standings.html" class="nav-item{' active' if active == 'standings' else ''}"><span class="nav-number">03</span>2026 standings</a>
-<a href="pages/schedule.html" class="nav-item{' active' if active == 'schedule' else ''}"><span class="nav-number">04</span>Week 11 schedule</a>
-<a href="pages/questions.html" class="nav-item{' active' if active == 'questions' else ''}"><span class="nav-number">05</span>Questions register</a>
-<a href="pages/suggestions.html" class="nav-item{' active' if active == 'suggestions' else ''}"><span class="nav-number">06</span>Suggestions register</a>
-<a href="pages/sources.html" class="nav-item{' active' if active == 'sources' else ''}"><span class="nav-number">07</span>Sources</a>
-<a href="pages/flagged.html" class="nav-item{' active' if active == 'flagged' else ''}"><span class="nav-number">08</span>Flagged for Review</a>
+<a href="{_u('index.html')}" class="nav-item{' active' if active == 'index' else ''}" aria-current="{'true' if active == 'index' else 'false'}"><span class="nav-number">01</span>Overview</a>
+<a href="{_u('pages/exec.html')}" class="nav-item{' active' if active == 'exec' else ''}"><span class="nav-number">02</span>Executive summary</a>
+<a href="{_u('pages/standings.html')}" class="nav-item{' active' if active == 'standings' else ''}"><span class="nav-number">03</span>2026 standings</a>
+<a href="{_u('pages/schedule.html')}" class="nav-item{' active' if active == 'schedule' else ''}"><span class="nav-number">04</span>Week 11 schedule</a>
+<a href="{_u('pages/questions.html')}" class="nav-item{' active' if active == 'questions' else ''}"><span class="nav-number">05</span>Questions register</a>
+<a href="{_u('pages/suggestions.html')}" class="nav-item{' active' if active == 'suggestions' else ''}"><span class="nav-number">06</span>Suggestions register</a>
+<a href="{_u('pages/sources.html')}" class="nav-item{' active' if active == 'sources' else ''}"><span class="nav-number">07</span>Sources</a>
+<a href="{_u('pages/flagged.html')}" class="nav-item{' active' if active == 'flagged' else ''}"><span class="nav-number">08</span>Flagged for Review</a>
 </nav>
 <div class="side-bottom"><div class="mode"><span class="live-dot"></span> Paper research only</div>
 <p>No bets. No fabricated results.<br>Evidence before exposure.</p>
@@ -338,7 +350,7 @@ def overview_page():
         '<section class="panel hero"><div class="hero-copy"><span class="eyebrow">OWN5 · NFL DECISION DESK</span>',
         '<h2>Overview</h2>',
         '<p>Your evidence-first NFL decision desk. Originate your own lines, test strategies, and separate signal from luck. All data is verified from official NFL sources or left blank and flagged.</p>',
-        '<a class="primary" href="pages/executive-summary.html">Read executive summary <span>↗</span></a>',
+        '<a class="primary" href="pages/exec.html">Read executive summary <span>↗</span></a>',
         '<a class="text-link" href="pages/questions.html">Open questions <span>↗</span></a>',
         '</div></section>',
         '<div class="stats">',
@@ -387,13 +399,17 @@ PAGES_MAP = {
 
 
 def main():
+    global DEPTH
     os.makedirs(PAGES, exist_ok=True)
     # Root index.html lives at the desk root.
+    DEPTH = 0
     with open(os.path.join(ROOT, "index.html"), "w", encoding="utf-8") as f:
         f.write(PAGES_MAP["index"]())
     for name in ["exec", "standings", "schedule", "questions", "suggestions", "sources", "flagged"]:
+        DEPTH = 1
         with open(os.path.join(PAGES, name + ".html"), "w", encoding="utf-8") as f:
             f.write(PAGES_MAP[name]())
+    DEPTH = 0
     print(f"Built {len(PAGES_MAP)} pages for {ROOT}")
 
 

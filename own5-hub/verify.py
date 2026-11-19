@@ -9,6 +9,7 @@ Gates
   G5 standings  the 32-club read sums to the same PF and PA totals; club codes are unique
   G6 html       every generated table row carries an official link or a badge; no broken internal links
   G7 determinism rebuilding the site changes no bytes
+  G8 summary      the published capture line is the one the capture ledger implies
 """
 import csv, gzip, hashlib, os, re, sys, tempfile, filecmp, shutil, subprocess
 from html.parser import HTMLParser
@@ -251,8 +252,50 @@ def g7_determinism():
     check("G7 determinism: a rebuild changes no bytes", before == after)
 
 
+def g8_summary_matches_ledger():
+    """The published capture line must be the one the ledger implies.
+
+    The summary used to be a hand-written string, so after a new capture the page
+    could describe a capture the ledger did not contain. It is now derived, and this
+    gate proves the page and the ledger still agree."""
+    content_p = os.path.join(C, "parsed_content_daily.csv")
+    counts_p = os.path.join(C, "injury_counts_daily.csv")
+    if not (os.path.exists(content_p) and os.path.exists(counts_p)):
+        check("G8 the capture ledger is present", False, "no parsed_content_daily.csv")
+        return
+    content = list(csv.DictReader(open(content_p, newline="", encoding="utf-8")))
+    counts = list(csv.DictReader(open(counts_p, newline="", encoding="utf-8")))
+    bad = [r["capture_stamp_utc"] for r in content
+           if r.get("parse_status") != "ok" and not str(r.get("parse_status", "")).startswith("failed:")]
+    check("G8 every capture is either parsed or recorded as a failed capture", not bad,
+          ",".join(bad))
+    parsed = [r for r in content if r.get("parse_status") == "ok"]
+    if not parsed:
+        check("G8 at least one capture parses", False, "no parsed capture")
+        return
+    latest = max(r["capture_stamp_utc"] for r in parsed)
+    row = next(r for r in parsed if r["capture_stamp_utc"] == latest)
+    per = [r for r in counts if r["capture_stamp_utc"] == latest]
+    iso = (latest[:4] + "-" + latest[4:6] + "-" + latest[6:8] + "T" + latest[9:11] + ":" +
+           latest[11:13] + ":" + latest[13:15] + "Z")
+    gs = sum(int(r["rows_with_game_status"]) for r in per)
+    out = sum(int(r["game_status_out"]) for r in per)
+    q = sum(int(r["game_status_questionable"]) for r in per)
+    d = sum(int(r["game_status_doubtful"]) for r in per)
+    expected = (f"Official injury report (captured {iso}):</strong> {row['tables']} club tables, "
+                f"{row['rows']} player rows, {gs} rows with a game status "
+                f"(Out {out}, Questionable {q}, Doubtful {d}).")
+    body = open(os.path.join(HERE, "executive-summary.html"), encoding="utf-8").read()
+    check("G8 the published capture line matches the ledger", expected in body, expected)
+    idx = open(os.path.join(HERE, "index.html"), encoding="utf-8").read()
+    check("G8 the build date is the latest capture date",
+          f"Built {iso[:10]}" in body or f"Built {iso[:10]}" in idx, iso[:10])
+
+
+
 def main():
-    for gate in (g1_schema, g2_sources, g3_no_claims, g4_captures, g5_standings, g6_html, g7_determinism):
+    for gate in (g1_schema, g2_sources, g3_no_claims, g4_captures, g5_standings, g6_html, g7_determinism,
+                 g8_summary_matches_ledger):
         try:
             gate()
         except Exception as e:  # a crashing gate is a failure, never a pass

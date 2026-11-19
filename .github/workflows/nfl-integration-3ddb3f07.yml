@@ -1,0 +1,104 @@
+name: NFL front door (integration 3ddb3f07)
+
+# Rebuilds the repository's front door from the tables the other desks own, proves that
+# every row carries an official source (or an explicit unverified marker), proves the
+# build is deterministic, proves the repository has no broken internal link, and re-runs
+# every desk's own verifier so the published sweep cannot go stale.
+
+on:
+  push:
+    branches: [main, arena/3ddb3f07-own5]
+    paths:
+      - 'nfl-integration-3ddb3f07/**'
+      - 'research/nfl-3ddb3f07/**'
+      - '.github/workflows/nfl-integration-3ddb3f07.yml'
+      - 'nfl-market-desk/**'
+      - 'nfl-integration-a620f5a5/**'
+      - 'own5-hub/**'
+  pull_request:
+    paths:
+      - 'nfl-integration-3ddb3f07/**'
+      - 'research/nfl-3ddb3f07/**'
+      - '.github/workflows/nfl-integration-3ddb3f07.yml'
+      - 'nfl-market-desk/**'
+      - 'nfl-integration-a620f5a5/**'
+      - 'own5-hub/**'
+  workflow_dispatch:
+  schedule:
+    - cron: '41 4 * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nfl-integration-3ddb3f07-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    name: Rebuild, verify and test the front door
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Re-run every desk's own verifier and record the result
+        run: python3 nfl-integration-3ddb3f07/run_verifiers.py
+
+      - name: Rebuild the front door from the desks that own the tables
+        run: python3 nfl-integration-3ddb3f07/build_hub.py
+
+      - name: The committed pages match the deterministic build (no drift)
+        run: |
+          git status --porcelain -- nfl-integration-3ddb3f07
+          git diff --exit-code -- nfl-integration-3ddb3f07
+
+      - name: Fail-closed verifier (provenance, readiness, lineage, determinism, claims, links)
+        run: python3 nfl-integration-3ddb3f07/verify_hub.py
+
+      - name: Unit tests, including negative controls
+        run: python3 -m unittest discover -s nfl-integration-3ddb3f07/tests -v
+
+      - name: Upload the built front door for review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nfl-front-door
+          path: nfl-integration-3ddb3f07
+          if-no-files-found: warn
+
+  pages-smoke:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check the published front door is live
+        run: |
+          base="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/nfl-integration-3ddb3f07"
+          for path in "/" "/executive-summary.html" "/requirements.html" "/gates.html" \
+                      "/lines.html" "/availability.html" "/correlations.html" \
+                      "/leaderboard.html" "/luck.html" "/questions.html" \
+                      "/suggestions.html" "/flagged.html" "/sources.html" \
+                      "/desks.html" "/verification.html"; do
+            url="$base$path"
+            ok=0
+            for attempt in $(seq 1 24); do
+              body="$(curl --fail --silent --show-error --location "$url" || true)"
+              if printf '%s' "$body" | grep -q 'Own5 NFL front door'; then
+                echo "OK $url"
+                ok=1
+                break
+              fi
+              sleep 10
+            done
+            if [ "$ok" -ne 1 ]; then
+              echo "Published page did not become ready: $url" >&2
+              exit 1
+            fi
+          done

@@ -70,6 +70,43 @@ def cell(x, raw=False):
     return f"<td>{x if raw else esc(x)}</td>"
 
 
+def _capture_summary():
+    """The published capture line is derived from the capture ledger, never written by hand.
+
+    A capture whose page no longer parses is reported as a failed capture; the ledger
+    keeps it as evidence. Integration repair, 2026-11-19: the summary used to be a
+    hard-coded string, so the page could not describe a capture it did not have.
+    """
+    content_path = os.path.join(C, "parsed_content_daily.csv")
+    counts_path = os.path.join(C, "injury_counts_daily.csv")
+    content = read(content_path) if os.path.exists(content_path) else []
+    counts = read(counts_path) if os.path.exists(counts_path) else []
+    if not content:
+        return None
+    latest = max(r["capture_stamp_utc"] for r in content)
+    row = next(r for r in content if r["capture_stamp_utc"] == latest)
+    per = [r for r in counts if r["capture_stamp_utc"] == latest]
+    s = {
+        "stamp": latest,
+        "iso": latest[:4] + "-" + latest[4:6] + "-" + latest[6:8] + "T" +
+               latest[9:11] + ":" + latest[11:13] + ":" + latest[13:15] + "Z",
+        "tables": row["tables"],
+        "rows": row["rows"],
+        "parse_status": row.get("parse_status", "ok"),
+        "clubs": len(per),
+        "gs": sum(int(r["rows_with_game_status"]) for r in per),
+        "out": sum(int(r["game_status_out"]) for r in per),
+        "q": sum(int(r["game_status_questionable"]) for r in per),
+        "d": sum(int(r["game_status_doubtful"]) for r in per),
+    }
+    return s
+
+
+def _stamp_iso(stamp):
+    return stamp[:4] + "-" + stamp[4:6] + "-" + stamp[6:8] + "T" + stamp[9:11] + ":" + \
+        stamp[11:13] + ":" + stamp[13:15] + "Z"
+
+
 def build():
     req = read(os.path.join(D, "requirements.csv"))
     checks = read(os.path.join(D, "verified_checks.csv"))
@@ -80,6 +117,23 @@ def build():
     manifest = read(os.path.join(C, "manifest.csv")) if os.path.exists(os.path.join(C, "manifest.csv")) else []
     counts = read(os.path.join(C, "injury_counts_daily.csv")) if os.path.exists(os.path.join(C, "injury_counts_daily.csv")) else []
     out = {}
+
+    cap = _capture_summary()
+    if cap is None:
+        cap = {"stamp": "", "iso": "no capture", "tables": 0, "rows": 0, "gs": 0, "out": 0,
+               "q": 0, "d": 0, "clubs": 0, "parse_status": "no capture"}
+    CAPTURE_ISO = cap["iso"]
+    CAPTURE_DATE = cap["iso"][:10] if len(cap["iso"]) >= 10 else cap["iso"]
+    CAPTURE_TABLES = cap["tables"]
+    CAPTURE_ROWS = cap["rows"]
+    CAPTURE_GS = cap["gs"]
+    CAPTURE_OUT = cap["out"]
+    CAPTURE_Q = cap["q"]
+    CAPTURE_D = cap["d"]
+    CAPTURE_NOTE = ("" if cap["parse_status"] == "ok"
+                    else " The latest capture did not parse against the pinned structure and is "
+                         "recorded as a failed capture; the numbers below are the last capture "
+                         "that did parse. ")
 
     from collections import Counter
     st = Counter(r["status"] for r in req)
@@ -112,9 +166,9 @@ def build():
     idx = f"""
 <div class="cards">{cards}</div>
 <section class="callout">
-<strong>Start here.</strong> Official data was re-read on 2026-11-18 and the daily capture of the official injury report has started.
+<strong>Start here.</strong> Official data was re-read on {CAPTURE_DATE} and the daily capture of the official injury report has started.
 Three things changed the picture: (1) GitHub runners can reach the official NFL pages, so the "unreachable" blocker applies only to this sandbox;
-(2) the brief's Week 10 counts (254 and 279 rows, 6 designations) are contradicted by today's official report (347 rows, 171 designations);
+(2) the brief's Week 10 counts (254 and 279 rows, 6 designations) are contradicted by the latest official report ({CAPTURE_ROWS} rows, {CAPTURE_GS} designations);
 (3) the three Lions designations are now Out on the official page. Read <a href="executive-summary.html">the executive summary</a>,
 then <a href="flagged.html">Flagged for Review</a>.
 </section>
@@ -128,7 +182,7 @@ then <a href="flagged.html">Flagged for Review</a>.
 <section class="prose">
 <h2>What is true today</h2>
 <ul>
-<li><strong>Official injury report (captured 2026-11-18T03:28:38Z):</strong> 28 club tables, 347 player rows, 171 rows with a game status (Out 70, Questionable 90, Doubtful 11). Source: <a href="https://www.nfl.com/injuries/">nfl.com/injuries</a>. See <a href="injuries.html">injury captures</a>.</li>
+<li><strong>Official injury report (captured {CAPTURE_ISO}):</strong> {CAPTURE_TABLES} club tables, {CAPTURE_ROWS} player rows, {CAPTURE_GS} rows with a game status (Out {CAPTURE_OUT}, Questionable {CAPTURE_Q}, Doubtful {CAPTURE_D}).{CAPTURE_NOTE} Source: <a href="https://www.nfl.com/injuries/">nfl.com/injuries</a>. See <a href="injuries.html">injury captures</a>.</li>
 <li><strong>Lions:</strong> Kerby Joseph, Cade Mays and D.J. Reed are Out on the official page (resolves a long-standing blank). <a href="https://www.nfl.com/injuries/">Source</a>.</li>
 <li><strong>Malik Willis</strong> is listed as Reserve/Injured (MIA, 11/10) on the official November reserve list, which is why he is absent from the report. <a href="https://www.nfl.com/transactions/league/reserve-list/2026/11">Source</a>.</li>
 <li><strong>Standings:</strong> 30 of 32 clubs match the repo's stored standings exactly. BAL and LAC are one game further on at the official page. The repo's totals are stale by that game. <a href="https://www.nfl.com/standings/league/2026/REG">Source</a>.</li>

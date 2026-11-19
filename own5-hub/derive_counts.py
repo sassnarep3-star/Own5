@@ -21,22 +21,33 @@ def stamp_of(path):
 
 
 CONTENT_OUT = os.path.join(HERE, "captures", "parsed_content_daily.csv")
-CONTENT_FIELDS = ["capture_stamp_utc", "raw_sha256", "parsed_rows_sha256", "tables", "rows"]
+CONTENT_FIELDS = ["capture_stamp_utc", "raw_sha256", "parsed_rows_sha256", "tables", "rows", "parse_status"]
 
 
 def build_content():
     """Raw-byte hash AND parsed-content hash per capture. A raw change with an unchanged parsed hash is a
-    non-substantive change (for example a random page id), not a roster change."""
+    non-substantive change (for example a random page id), not a roster change.
+
+    A capture whose page no longer parses is recorded with parse_status "failed: <reason>"
+    instead of raising: the capture is evidence, and an unparsable page must stay in the
+    ledger rather than breaking the whole build (integration repair, 2026-11-19)."""
     import gzip, hashlib, json
     out_rows = []
     for path in sorted(glob.glob(RAW_GLOB)):
         with gzip.open(path, "rb") as f:
             raw = f.read()
-        rows, n_tables = parse_file(path)
+        try:
+            rows, n_tables = parse_file(path)
+        except Exception as e:  # noqa: BLE001 - the failure is recorded, not swallowed
+            out_rows.append({"capture_stamp_utc": stamp_of(path),
+                             "raw_sha256": hashlib.sha256(raw).hexdigest(),
+                             "parsed_rows_sha256": "", "tables": 0, "rows": 0,
+                             "parse_status": "failed: " + str(e)[:120]})
+            continue
         canon = json.dumps(rows, sort_keys=True, separators=(",", ":")).encode("utf-8")
         out_rows.append({"capture_stamp_utc": stamp_of(path), "raw_sha256": hashlib.sha256(raw).hexdigest(),
                          "parsed_rows_sha256": hashlib.sha256(canon).hexdigest(),
-                         "tables": n_tables, "rows": len(rows)})
+                         "tables": n_tables, "rows": len(rows), "parse_status": "ok"})
     with open(CONTENT_OUT, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=CONTENT_FIELDS, lineterminator="\n")
         w.writeheader()
@@ -47,7 +58,10 @@ def build_content():
 def build():
     out_rows = []
     for path in sorted(glob.glob(RAW_GLOB)):
-        rows, _ = parse_file(path)
+        try:
+            rows, _ = parse_file(path)
+        except Exception:  # noqa: BLE001 - a capture that does not parse contributes no club counts
+            continue
         by = {}
         for r in rows:
             c = by.setdefault(r["team"], dict.fromkeys(FIELDS[2:], 0))
