@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Validation gates — Own5 NFL Line-Origination Dashboard</title>
+<style>
+:root{--bg:#f7f8fa;--card:#ffffff;--ink:#111827;--muted:#6b7280;--line:#e5e7eb;
+  --blue:#1f6feb;--blue-dark:#155ccb;--green:#15803d;--red:#b91c1c;--amber:#b45309;
+  --flag-bg:#fef3c7;--flag-text:#92400e;}
+* {box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.5}
+header{background:#0b2545;color:#fff;padding:1rem 1.5rem}
+header h1{margin:0;font-size:1.25rem;letter-spacing:0.04em}
+header p{margin:.25rem 0 0;font-size:.9rem;opacity:.85}
+nav{display:flex;gap:.5rem;flex-wrap:wrap;padding:.6rem 1.5rem;background:#fff;
+  border-bottom:1px solid var(--line)}
+nav a{padding:.35rem .7rem;border-radius:.4rem;text-decoration:none;color:var(--blue);
+  font-size:.88rem;border:1px solid transparent}
+nav a:hover{background:#eef3fb;border-color:var(--blue)}
+.container{max-width:1200px;margin:0 auto;padding:1rem 1.5rem}
+.badge{display:inline-block;padding:.05rem .5rem;border-radius:.9rem;font-size:.76rem;
+  font-weight:600;margin-left:.35rem;vertical-align:middle}
+.badge-src{background:#e7f0fd;color:#1d4ed8}
+.badge-flag{background:var(--flag-bg);color:var(--flag-text)}
+.badge-unverified{background:#fee2e2;color:#991b1b}
+.badge-met{background:#dcfce7;color:#166534}
+.badge-partial{background:#fef3c7;color:#92400e}
+.badge-blocked{background:#fee2e2;color:#991b1b}
+.badge-notstarted{background:#e5e7eb;color:#4b5563}
+.badge-policy{background:#ede9fe;color:#5b21b6}
+h2{font-size:1.2rem;margin:1.5rem 0 .75rem;border-bottom:2px solid var(--line);padding-bottom:.35rem}
+h3{font-size:1.05rem;margin:1rem 0 .5rem}
+p{margin:.5rem 0}
+table{width:100%;border-collapse:collapse;margin:.75rem 0;background:var(--card);font-size:.86rem}
+th,td{border:1px solid var(--line);padding:.45rem .6rem;text-align:left;vertical-align:top}
+th{background:#f1f5f9;font-weight:700;color:#334155;position:sticky;top:0}
+tr:nth-child(even)td{background:#fbfdff}
+td.blank{color:var(--muted);font-style:italic}
+td.num{text-align:right}
+a{color:var(--blue-dark)}
+a:hover{text-decoration:underline}
+.src{color:var(--muted);font-size:.78rem}
+.src a{color:#1d4ed8}
+.flagstrip{padding:.5rem 1rem;margin:.75rem 0;border-radius:.4rem;border-left:4px solid;font-size:.9rem}
+.flagstrip.red{background:#fef2f2;border-color:var(--red);color:#7f1d1d}
+.flagstrip.amber{background:#fffbeb;border-color:var(--amber);color:#78350f}
+.flagstrip.green{background:#f0fdf4;border-color:var(--green);color:#14532d}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1rem 0}
+.stat{border:1px solid var(--line);background:var(--card);border-radius:.6rem;padding:1rem}
+.stat .v{font-size:1.75rem;font-weight:700;color:var(--blue-dark)}
+.stat .k{font-size:.8rem;color:var(--muted)}
+.note{background:#eef6ff;border:1px solid #cfe3fb;border-radius:.5rem;padding:.75rem 1rem;font-size:.9rem;margin:1rem 0}
+
+nav a.active{background:#eef3fb;border-color:var(--blue);font-weight:700}
+</style>
+</head>
+<body>
+<header>
+  <h1>Own5 · NFL Line-Origination Dashboard</h1>
+  <p>Session 067f2314 · official-source verification 2026-11-19 UTC · every row source-linked or explicitly blank+flagged</p>
+</header>
+<nav>
+<a href="index.html">Overview</a>
+<a href="pages/executive-summary.html">Executive summary</a>
+<a href="pages/verification-log.html">Verification log</a>
+<a href="pages/standings.html">Standings</a>
+<a href="pages/schedule.html">Schedule (Wk 11)</a>
+<a href="pages/results.html">Results feed (Wk 10)</a>
+<a href="pages/lines.html">Originated lines</a>
+<a href="pages/snapshots.html">Price snapshots</a>
+<a href="pages/injuries.html">Injuries / Availability</a>
+<a href="pages/leaderboard.html">Leaderboard</a>
+<a href="pages/gates.html" class="active">Validation gates</a>
+<a href="pages/correlations.html">Correlations</a>
+<a href="pages/questions.html">Questions &amp; answers</a>
+<a href="pages/suggestions.html">Suggestions (review)</a>
+<a href="pages/sources.html">Sources</a>
+<a href="pages/flagged.html">Flagged for Review</a>
+</nav>
+<div class="container">
+
+<h2>Validation gates</h2>
+<p>Every strategy must pass the gates below before it can leave paper. The demotion gate (G10) sends a live
+strategy back to paper on a defined trigger; nothing is demoted today because nothing is live.</p>
+<table>
+<thead><tr>
+<th>Gate</th>
+<th>Name</th>
+<th>Purpose</th>
+<th>Status</th>
+<th>Clearing number</th>
+<th>Observed today</th>
+<th>Source</th>
+</tr></thead><tbody>
+<tr><td><strong>G01</strong></td><td>Pre-registration gate</td><td>Rule text + sample window committed before results are seen</td><td><span class="badge badge-met">MET</span></td><td>Committed spec (model_spec.md + this CSV) in git before kickoff</td><td>Model spec frozen 2026-11-19 before Week 11 origination</td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/arena/067f2314-own5/research/nfl-067f2314/methodology.md" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>G02</strong></td><td>Market-price gate</td><td>Verified open and close per originated market</td><td><span class="badge badge-blocked">BLOCKED</span></td><td>&gt;=1 verified open and &gt;=1 verified close per market</td><td>0 markets priced; market columns blank+flagged (no official operator price source; price-data policy undecided)</td><td class="src"><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>G03</strong></td><td>Results-feed gate</td><td>Verified finals reconciled to official standings</td><td><span class="badge badge-met">MET</span></td><td>14 Week-10 finals reconciled 32/32 to official standings</td><td>14 finals ingested; verify script reconciles all 32 clubs</td><td class="src"><a href="https://www.nfl.com/scores/2026/reg10" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>G04</strong></td><td>Luck-removal gate</td><td>Brier skill vs control baseline with uncertainty</td><td><span class="badge badge-blocked">BLOCKED</span></td><td>Brier skill &gt; control baseline with game-cluster CI excluding 0</td><td>No settled bets; control baselines defined, n=0</td><td class="src"><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>G05</strong></td><td>Sample-size gate</td><td>Minimum trials before any skill claim</td><td><span class="badge badge-blocked">BLOCKED</span></td><td>n &gt;= 200 settled bets per strategy (pre-registered)</td><td>0 bets settled</td><td class="src"><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>G06</strong></td><td>Availability-evidence gate</td><td>Official depth/snap/inactives evidence per team</td><td><span class="badge badge-blocked">BLOCKED</span></td><td>Official depth chart + snap counts + inactive list per team</td><td>Injury report captured (255 rows); depth/snaps/inactives not captured this session (blank+flagged)</td><td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg11" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>G07</strong></td><td>Calibration gate</td><td>Brier/DSR vs benchmark with uncertainty</td><td><span class="badge badge-blocked">BLOCKED</span></td><td>DSR &gt; 0 with game-cluster lower bound</td><td>n=0; no calibration computable</td><td class="src"><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>G08</strong></td><td>Input-provenance gate</td><td>Correlations/features only from official sources, n published</td><td><span class="badge badge-met">MET</span></td><td>Every value from official source; n published with each correlation</td><td>4 correlations computed in-repo from official standings, n=32 each</td><td class="src"><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>G09</strong></td><td>Signal/staking separation gate</td><td>Two separate scorecards on the leaderboard</td><td><span class="badge badge-met">MET</span></td><td>Signal scorecard and staking scorecard are separate columns</td><td>Leaderboard built with separated scorecards; all cells blank+flagged until gates pass</td><td class="src"><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>G10</strong></td><td>Demotion gate</td><td>Trigger that sends a live strategy back to paper</td><td><span class="badge badge-met">MET</span></td><td>Trigger defined and published</td><td>Trigger: DSR &lt; 0 or calibration CI excludes 0 for 2 consecutive windows -&gt; paper; 0 live strategies</td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/arena/067f2314-own5/research/nfl-067f2314/methodology.md" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>G11</strong></td><td>No-backtest-on-leaderboard gate</td><td>Backtest numbers forbidden on the leaderboard</td><td><span class="badge badge-met">MET</span></td><td>0 backtest ROI cells on the leaderboard</td><td>Leaderboard shows prospective scorecards only; all performance cells blank</td><td class="src"><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>G12</strong></td><td>Joint-evidence gate</td><td>Parlays/props need validated joint probability + void/push rules</td><td><span class="badge badge-blocked">BLOCKED</span></td><td>Directly validated joint probability and operator void/push rules</td><td>No joint probabilities validated; no parlay/prop strategy ranked</td><td class="src"><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">source ↗</a></td></tr>
+</tbody></table>
+
+</div>
+</body>
+</html>

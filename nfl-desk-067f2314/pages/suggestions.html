@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suggestions (review) — Own5 NFL Line-Origination Dashboard</title>
+<style>
+:root{--bg:#f7f8fa;--card:#ffffff;--ink:#111827;--muted:#6b7280;--line:#e5e7eb;
+  --blue:#1f6feb;--blue-dark:#155ccb;--green:#15803d;--red:#b91c1c;--amber:#b45309;
+  --flag-bg:#fef3c7;--flag-text:#92400e;}
+* {box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.5}
+header{background:#0b2545;color:#fff;padding:1rem 1.5rem}
+header h1{margin:0;font-size:1.25rem;letter-spacing:0.04em}
+header p{margin:.25rem 0 0;font-size:.9rem;opacity:.85}
+nav{display:flex;gap:.5rem;flex-wrap:wrap;padding:.6rem 1.5rem;background:#fff;
+  border-bottom:1px solid var(--line)}
+nav a{padding:.35rem .7rem;border-radius:.4rem;text-decoration:none;color:var(--blue);
+  font-size:.88rem;border:1px solid transparent}
+nav a:hover{background:#eef3fb;border-color:var(--blue)}
+.container{max-width:1200px;margin:0 auto;padding:1rem 1.5rem}
+.badge{display:inline-block;padding:.05rem .5rem;border-radius:.9rem;font-size:.76rem;
+  font-weight:600;margin-left:.35rem;vertical-align:middle}
+.badge-src{background:#e7f0fd;color:#1d4ed8}
+.badge-flag{background:var(--flag-bg);color:var(--flag-text)}
+.badge-unverified{background:#fee2e2;color:#991b1b}
+.badge-met{background:#dcfce7;color:#166534}
+.badge-partial{background:#fef3c7;color:#92400e}
+.badge-blocked{background:#fee2e2;color:#991b1b}
+.badge-notstarted{background:#e5e7eb;color:#4b5563}
+.badge-policy{background:#ede9fe;color:#5b21b6}
+h2{font-size:1.2rem;margin:1.5rem 0 .75rem;border-bottom:2px solid var(--line);padding-bottom:.35rem}
+h3{font-size:1.05rem;margin:1rem 0 .5rem}
+p{margin:.5rem 0}
+table{width:100%;border-collapse:collapse;margin:.75rem 0;background:var(--card);font-size:.86rem}
+th,td{border:1px solid var(--line);padding:.45rem .6rem;text-align:left;vertical-align:top}
+th{background:#f1f5f9;font-weight:700;color:#334155;position:sticky;top:0}
+tr:nth-child(even)td{background:#fbfdff}
+td.blank{color:var(--muted);font-style:italic}
+td.num{text-align:right}
+a{color:var(--blue-dark)}
+a:hover{text-decoration:underline}
+.src{color:var(--muted);font-size:.78rem}
+.src a{color:#1d4ed8}
+.flagstrip{padding:.5rem 1rem;margin:.75rem 0;border-radius:.4rem;border-left:4px solid;font-size:.9rem}
+.flagstrip.red{background:#fef2f2;border-color:var(--red);color:#7f1d1d}
+.flagstrip.amber{background:#fffbeb;border-color:var(--amber);color:#78350f}
+.flagstrip.green{background:#f0fdf4;border-color:var(--green);color:#14532d}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1rem 0}
+.stat{border:1px solid var(--line);background:var(--card);border-radius:.6rem;padding:1rem}
+.stat .v{font-size:1.75rem;font-weight:700;color:var(--blue-dark)}
+.stat .k{font-size:.8rem;color:var(--muted)}
+.note{background:#eef6ff;border:1px solid #cfe3fb;border-radius:.5rem;padding:.75rem 1rem;font-size:.9rem;margin:1rem 0}
+
+nav a.active{background:#eef3fb;border-color:var(--blue);font-weight:700}
+</style>
+</head>
+<body>
+<header>
+  <h1>Own5 · NFL Line-Origination Dashboard</h1>
+  <p>Session 067f2314 · official-source verification 2026-11-19 UTC · every row source-linked or explicitly blank+flagged</p>
+</header>
+<nav>
+<a href="index.html">Overview</a>
+<a href="pages/executive-summary.html">Executive summary</a>
+<a href="pages/verification-log.html">Verification log</a>
+<a href="pages/standings.html">Standings</a>
+<a href="pages/schedule.html">Schedule (Wk 11)</a>
+<a href="pages/results.html">Results feed (Wk 10)</a>
+<a href="pages/lines.html">Originated lines</a>
+<a href="pages/snapshots.html">Price snapshots</a>
+<a href="pages/injuries.html">Injuries / Availability</a>
+<a href="pages/leaderboard.html">Leaderboard</a>
+<a href="pages/gates.html">Validation gates</a>
+<a href="pages/correlations.html">Correlations</a>
+<a href="pages/questions.html">Questions &amp; answers</a>
+<a href="pages/suggestions.html" class="active">Suggestions (review)</a>
+<a href="pages/sources.html">Sources</a>
+<a href="pages/flagged.html">Flagged for Review</a>
+</nav>
+<div class="container">
+
+<h2>Suggestions register — for review before implementation</h2>
+<p>Every suggestion carries options, a recommendation, and a two-sided "what would change our mind" falsifier.
+Nothing is implemented without a decision: entries marked <em>PENDING-USER-DECISION</em> wait for review;
+entries marked <em>APPROVED</em> are ready to implement in a following session.</p>
+<table>
+<thead><tr>
+<th>ID</th>
+<th>Suggestion</th>
+<th>Category</th>
+<th>Options</th>
+<th>Recommendation</th>
+<th>What would change our mind</th>
+<th>Decision status</th>
+<th>Source</th>
+</tr></thead><tbody>
+<tr><td><strong>S01</strong></td><td>Adopt a licensed-operator price feed as the single market-price source</td><td>Market</td><td>A: licensed operator API with terms; B: operator public odds page captured on schedule; C: no market prices until terms are read</td><td><strong>Option A if terms permit automated capture; otherwise B with a dated capture schedule</strong></td><td>A terms review showing automated capture is permitted and the schema is stable</td><td><span class="badge badge-policy">PENDING-USER-DECISION</span></td><td class="src"><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>S02</strong></td><td>Pre-register the 136-game backtest corpus in git before use</td><td>Process</td><td>A: freeze full-season log now; B: freeze only after price policy is decided</td><td><strong>Option A - the corpus is official results and does not depend on the price policy</strong></td><td>A reviewer finding a defect in the frozen corpus (corrected by a new pre-registered commit, never silently)</td><td><span class="badge badge-met">APPROVED-IMPLEMENTED-NEXT-SESSION</span></td><td class="src"><a href="https://www.nfl.com/scores/2026/reg10" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>S03</strong></td><td>Build the depth-chart register club-by-club with a verified route</td><td>Availability</td><td>A: per-club official depth pages verified club-by-club; B: official snap counts; C: both with conflict flags</td><td><strong>Option A first, then B as a cross-check; do not build the deficiency feature until one route verifies for all 32 clubs</strong></td><td>A club page that cannot be parsed by the chosen route after two attempts (then switch routes and re-register)</td><td><span class="badge badge-policy">PENDING-USER-DECISION</span></td><td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg11" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>S04</strong></td><td>Schedule immutable Wed/Thu/Fri injury captures with hashes</td><td>Availability</td><td>A: cron-style GitHub Action on Wed/Thu/Fri; B: manual dated captures; C: daily capture Wed-to-kickoff</td><td><strong>Option A - automation is the only way to build the timestamped series the brief requires</strong></td><td>A source change (schema/URL) that breaks the capture - the drift alarm should catch it and alert</td><td><span class="badge badge-met">APPROVED-IMPLEMENTED-NEXT-SESSION</span></td><td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg11" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>S05</strong></td><td>Compute designation reliability (play-rate per designation) before use as a feature</td><td>Availability</td><td>A: multi-season designation-to-inactive join; B: single-season pilot first</td><td><strong>Option B as a pilot, then A once the pilot shows the join is complete</strong></td><td>A pilot showing designations do not separate play rates (then the label is dropped as a feature)</td><td><span class="badge badge-policy">PENDING-USER-DECISION</span></td><td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg11" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>S06</strong></td><td>Split the repo into a public analysis layer and a private raw-data layer</td><td>Site</td><td>A: private store with derived public exports; B: keep public but label raw rows clearly</td><td><strong>Option A once raw row-level data grows; until then keep the current fully-public desk with provenance links</strong></td><td>A data-volume or sensitivity review finding raw rows must not be public</td><td><span class="badge badge-policy">PENDING-USER-DECISION</span></td><td class="src"><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>S07</strong></td><td>Publish the removal-of-luck panel as soon as the first 200 bets settle</td><td>Leaderboard</td><td>A: panel on the landing page; B: panel on the leaderboard page only</td><td><strong>Option A - the brief asks for it on the site dashboard</strong></td><td>A the gate analysis showing no skill after 200 bets (panel then reports that honestly)</td><td><span class="badge badge-met">APPROVED-IMPLEMENTED-NEXT-SESSION</span></td><td class="src"><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>S08</strong></td><td>Add a drift alarm to every scraper (row counts + required fields)</td><td>Data store</td><td>A: fail-closed verify in CI; B: alert-only</td><td><strong>Option A - the desk verify script already fails closed; extend the pattern to every scraper</strong></td><td>A source legitimately changing its schema (then update the pinned expectations with a reviewed commit)</td><td><span class="badge badge-met">APPROVED-IMPLEMENTED-IN-THIS-DESK</span></td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/arena/067f2314-own5/nfl-desk-067f2314/verify_desk.py" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>S09</strong></td><td>Run injury/depth ablations instead of fixed penalties</td><td>Modeling</td><td>A: with/without availability features on chronological holdouts; B: fixed penalties as a fallback</td><td><strong>Option A - the brief explicitly rejects fixed penalties</strong></td><td>A an ablation showing the availability features add no signal (then they are removed, not penalized)</td><td><span class="badge badge-policy">PENDING-USER-DECISION</span></td><td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg11" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>S10</strong></td><td>Publish every model total twice until one wins</td><td>Modeling</td><td>A: two independent estimators with a gap column; B: single estimator</td><td><strong>Option A once a second estimator is pre-registered</strong></td><td>A a walk-forward comparison showing one estimator dominates (then collapse to it with a recorded decision)</td><td><span class="badge badge-policy">PENDING-USER-DECISION</span></td><td class="src"><a href="https://www.nfl.com/schedules/2026/by-week/week-11" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>S11</strong></td><td>Add a weekly &#x27;what changed&#x27; diff page</td><td>Site</td><td>A: dated snapshots + diff columns; B: static snapshot only</td><td><strong>Option A - required for the timestamped-series requirement</strong></td><td>A two consecutive weeks with no diff (then the page reports &#x27;no change&#x27; explicitly)</td><td><span class="badge badge-policy">PENDING-USER-DECISION</span></td><td class="src"><a href="https://www.nfl.com/scores/2026/reg10" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>S12</strong></td><td>Use proper-score qualification before any prospective CLV/ROI escrow</td><td>Leaderboard</td><td>A: two-stage leaderboard; B: single-stage</td><td><strong>Option A - aligns incentives with calibrated probabilistic skill</strong></td><td>A a qualified strategy failing the prospective stage (then it is demoted to paper per gate G10)</td><td><span class="badge badge-met">APPROVED-IMPLEMENTED-IN-THIS-DESK</span></td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/arena/067f2314-own5/research/nfl-067f2314/methodology.md" target="_blank" rel="noopener">source ↗</a></td></tr>
+</tbody></table>
+
+</div>
+</body>
+</html>
