@@ -1,0 +1,62 @@
+name: Verify NFL verification desk (7e228db8)
+
+# Scoped, deterministic verification for the nfl-desk-7e228db8 namespace only.
+# No network fetches: the desk is a pure function of committed, hash-pinned captures.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'nfl-desk-7e228db8/**'
+      - 'data/nfl-desk-7e228db8/**'
+      - '.github/workflows/nfl-7e228db8.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'nfl-desk-7e228db8/**'
+      - 'data/nfl-desk-7e228db8/**'
+      - '.github/workflows/nfl-7e228db8.yml'
+  workflow_dispatch:
+  schedule:
+    # Re-proves the committed outputs still regenerate byte-identically; no network.
+    - cron: '41 4 * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nfl-desk-7e228db8-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Rebuild the data layer from the committed captures
+        run: python3 nfl-desk-7e228db8/build_desk.py
+
+      - name: Rebuild the pages
+        run: python3 nfl-desk-7e228db8/build_site.py
+
+      - name: Determinism — a further rebuild must change no bytes
+        run: |
+          python3 nfl-desk-7e228db8/build_desk.py > /dev/null
+          python3 nfl-desk-7e228db8/build_site.py > /dev/null
+          if [ -n "$(git status --porcelain -- nfl-desk-7e228db8/ data/nfl-desk-7e228db8/)" ]; then
+            git status --porcelain -- nfl-desk-7e228db8/ data/nfl-desk-7e228db8/
+            echo 'rebuild changed committed outputs' >&2
+            exit 1
+          fi
+
+      - name: Fail-closed verification (links, pinned counts, invariants, provenance)
+        run: python3 nfl-desk-7e228db8/verify_desk.py
+
+      - name: Unit tests (including negative controls)
+        run: python3 -m unittest discover -s nfl-desk-7e228db8/tests -t nfl-desk-7e228db8 -v

@@ -1,0 +1,5 @@
+pair,pearson_r,n,ci95_low,ci95_high,source_url,method
+NET/G vs WIN_PCT,0.8824,32,0.771,0.941,https://www.nfl.com/standings/league/2026/REG,computed in-repo from official standings capture 2026-11-19; Fisher z 95% CI
+PF/G vs WIN_PCT,0.7152,32,0.488,0.852,https://www.nfl.com/standings/league/2026/REG,computed in-repo from official standings capture 2026-11-19; Fisher z 95% CI
+PA/G vs WIN_PCT,-0.7043,32,-0.845,-0.471,https://www.nfl.com/standings/league/2026/REG,computed in-repo from official standings capture 2026-11-19; Fisher z 95% CI
+PF/G vs PA/G,-0.2911,32,-0.581,0.064,https://www.nfl.com/standings/league/2026/REG,computed in-repo from official standings capture 2026-11-19; Fisher z 95% CI

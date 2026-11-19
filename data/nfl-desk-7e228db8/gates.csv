@@ -1,0 +1,11 @@
+gate_id,name,definition,blocks,status
+G0,pre-registration,strategy/spec text + sample window committed before results are seen; commit hash is the registration,leaderboard entry; any certification,active
+G1,minimum sample,prospective sample >= 50 rated decisions before a strategy is ranked,ranking,active
+G2,significance (Bonferroni),p < 0.05 / number of pre-registered variants,certification,active
+G3,chronological holdout,evaluation on data strictly after training window,certification,active
+G4,closing-line value,CLV computable only with verified operator closing prices,ROI claims,blocked: no operator price source (F7-P01)
+G5,correlation cap,correlations from official sources only; n published per value,combo ranking,active
+G6,drawdown + uncertainty,proper-score ranking with game-cluster lower bound; win rate/short ROI excluded,ranking,active
+G7,demotion gate,a live strategy that fails G5/G8 over a 4-week window returns to paper,live status,active
+G8,market integrity,no wagering where not lawful; no unlicensed data terms accepted silently,publication of ROI,active
+G9,parlay joint-evidence,combo ranked only with validated joint probability + operator void/push rules,parlay/SGP/prop combos,active

@@ -617,6 +617,21 @@ Owns the price-snapshot store and the injury point-in-time ledger:
 
 Rebuild and verify: `python3 nfl-desk-6cbf25fa/build.py && python3 nfl-desk-6cbf25fa/verify.py && python3 -m unittest discover -s nfl-desk-6cbf25fa/tests -v` (543 checks, 11 tests incl. negative controls). CI: `.github/workflows/nfl-6cbf25fa.yml`.
 
+## NFL Verification & Decision Desk · session 7e228db8 (2026-11-19)
+
+**Live page (after merge):** https://sassnarep3-star.github.io/Own5/nfl-desk-7e228db8/ · **Flagged for Review:** https://sassnarep3-star.github.io/Own5/nfl-desk-7e228db8/flagged.html
+
+Owns the 2026-11-19 verification pass and the Week 11 origination from officially sourced numbers:
+
+- **Verified results feed** (`data/nfl-desk-7e228db8/results_feed_2026_through_wk10.csv`): 150 finals through Week 10 — W1–8 corpus + one recovered Week 8 MNF (CHI 34 @ SEA 17, missing from the shared corpus; proved by reconciliation, F7-06) + Week 9 (15) + Week 10 (14) read 2026-11-19. Derived W-L-T/PF/PA reconciles to the official standings for **32/32 clubs exactly** (hard gate, fail-closed).
+- **Week 11 origination** (`data/nfl-desk-7e228db8/lines_week11.csv`): 13 games × side/total/ML under frozen spec `v1-frozen-2026-11-19` — opponent-aware SRS ratings + fitted HFA (−0.93 pts, n=150) + σ (10.37), totals from official points-involved pace; fair/market/diff as separate columns (market blank+flagged, no operator price); probabilities + inputs SHA-256 on every row.
+- **Price-snapshot store** (`data/nfl-desk-7e228db8/price_snapshots.csv`): 39 immutable opens with inputs hashes; closings/residual/CLV blank by policy until a licensed price source (Q7-01).
+- **Injury capture** (`data/nfl-desk-7e228db8/injuries_2026_week11.csv` + `raw/`): 255-row Wednesday read (2026-11-19T07:03Z) with blanks preserved; dated news evidence for reserve-list (Hutchinson, F7-03) and stale-roster (Henley, F7-02) irregularities.
+- **Registers**: decision-readiness (80 rows, gate + number to clear per row), suggestions (12, each with "what would change our mind"), questions (10, owner decisions named), flagged (20), correlations from official standings only (n=32, Fisher CI).
+- **Repo-wide verifier sweep** (`data/nfl-desk-7e228db8/verifier_sweep.csv`): 43 desk verifiers run in a scratch copy — 39 PASS, 4 FAIL with causes published (refreshed after the 2026-11-19 merges).
+- **Takeover (handoff in COORDINATION.md):** fixed `nfl-desk-35a1feb2`'s committed-artefact CI drift (sibling inventory is regenerated from the live tree by design; strict check now excludes exactly those two inventory-bearing outputs).
+
+Rebuild and verify: `python3 nfl-desk-7e228db8/build_desk.py && python3 nfl-desk-7e228db8/build_site.py && python3 nfl-desk-7e228db8/verify_desk.py` (1640 checks, 0 failures) and `python3 -m unittest discover -s nfl-desk-7e228db8/tests -t nfl-desk-7e228db8` (19 tests incl. negative controls). CI: `.github/workflows/nfl-7e228db8.yml`.
 ## NFL line-origination desk · session 715e2cd4 (2026-11-19)
 
 **Live page (after merge):** https://sassnarep3-star.github.io/Own5/nfl-desk-715e2cd4/ · **Flagged for Review:** https://sassnarep3-star.github.io/Own5/nfl-desk-715e2cd4/flagged.html

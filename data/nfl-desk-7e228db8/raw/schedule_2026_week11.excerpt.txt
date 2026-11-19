@@ -1,0 +1,40 @@
+# Verbatim excerpt capture — official Week 11 schedule (all 13 games + byes)
+# URL: https://www.nfl.com/schedules/2026/by-week/week-11
+# Fetched (UTC): 2026-11-19T06:57:30Z (chunks 0-2 of 3) via platform page-fetch tool (processed markdown text, not server bytes).
+# Venue strings below are the location values embedded in the page's own venue/hotel links (published schedule facts).
+
+### Thursday Night Football, November 19th
+- [Colts at Texans, Thursday, November 19th, 8:15 PM, PRIME](https://www.nfl.com/games/colts-at-texans-2026-reg-11)
+  (record pair shown on page: COLTS 3-7, TEXANS 3-6)
+
+### Sunday, November 22nd (1:00 PM block)
+- [Dolphins at Bills, Sunday, November 22nd, 1:00 PM, CBS](https://www.nfl.com/games/dolphins-at-bills-2026-reg-11)   DOLPHINS 1-8, BILLS 8-1
+- [Ravens at Panthers, Sunday, November 22nd, 1:00 PM, FOX](https://www.nfl.com/games/ravens-at-panthers-2026-reg-11)   RAVENS 4-6, PANTHERS 4-5
+- [Saints at Bears, Sunday, November 22nd, 1:00 PM, FOX](https://www.nfl.com/games/saints-at-bears-2026-reg-11)   SAINTS 3-6, BEARS 7-2
+- [Titans at Cowboys, Sunday, November 22nd, 1:00 PM, FOX](https://www.nfl.com/games/titans-at-cowboys-2026-reg-11)   TITANS 1-8, COWBOYS 4-6
+- [Buccaneers at Lions, Sunday, November 22nd, 1:00 PM, FOX](https://www.nfl.com/games/buccaneers-at-lions-2026-reg-11)   BUCCANEERS 3-6, LIONS 7-2
+- [Cardinals at Chiefs, Sunday, November 22nd, 1:00 PM, CBS](https://www.nfl.com/games/cardinals-at-chiefs-2026-reg-11)   CARDINALS 3-7, CHIEFS 7-2
+- [Steelers at Eagles, Sunday, November 22nd, 1:00 PM, CBS](https://www.nfl.com/games/steelers-at-eagles-2026-reg-11)   STEELERS 6-3, EAGLES 2-7
+
+### Sunday, November 22nd (afternoon blocks)
+- [Jets at Chargers, Sunday, November 22nd, 4:05 PM, FOX](https://www.nfl.com/games/jets-at-chargers-2026-reg-11)   JETS 2-8, CHARGERS 1-8
+- [Jaguars at Giants, Sunday, November 22nd, 4:25 PM, CBS](https://www.nfl.com/games/jaguars-at-giants-2026-reg-11)   JAGUARS 7-2, GIANTS 5-3-1
+- [Raiders at Broncos, Sunday, November 22nd, 4:25 PM, CBS](https://www.nfl.com/games/raiders-at-broncos-2026-reg-11)   RAIDERS 4-6, BRONCOS 7-2
+
+### International Game, November 22nd (page header: "Mexico City")
+- [Vikings at 49ers, Sunday, November 22nd, 8:20 PM, NBC](https://www.nfl.com/games/vikings-at-49ers-2026-reg-11)   VIKINGS 7-2, 49ERS 8-1
+
+### Monday Night Football, November 23rd
+- [Bengals at Commanders, Monday, November 23rd, 8:15 PM, ESPN](https://www.nfl.com/games/bengals-at-commanders-2026-reg-11)   BENGALS 7-2, COMMANDERS 3-5-1
+
+### Teams on Bye (verbatim from page)
+ATL Atlanta Falcons 3-7; CLE Cleveland Browns 6-4; GB Green Bay Packers 6-4; LA Los Angeles Rams 6-4; NE New England Patriots 5-5; SEA Seattle Seahawks 6-4
+
+### Venue strings embedded in the page's own hotel links (marriott.com destinationAddress.location, verbatim)
+IND@HOU -> NRG+Stadium ; MIA@BUF -> Highmark+Stadium ; BAL@CAR -> Bank+of+America+Stadium ; NO@CHI -> Soldier+Field ;
+TEN@DAL -> AT+T+Stadium ; TB@DET -> Ford+Field ; AZ@KC -> GEHA+Field+at+Arrowhead+Stadium ; PIT@PHI -> Lincoln+Financial+Field ;
+NYJ@LAC -> SoFi+Stadium ; JAX@NYG -> MetLife+Stadium ; LV@DEN -> Empower+Field+at+Mile+High ; CIN@WAS -> FedEx+Field
+(MIN@SF has no hotel link on the page; venue for that fixture is taken from its official game centre: ESTADIO BANORTE, MEXICO CITY — see game_centre_min_sf.excerpt.txt)
+
+# Weather widget shown on page for MNF: "Weather Clearnight" (published schedule fact).
+# Page note (verbatim): "In Week 16, two of the four designated matchups will be played on Saturday ... no later than immediately after Week 14." (dated schedule-announcement facts; full text stored in build inputs)

@@ -1,0 +1,35 @@
+# Verbatim excerpt capture — official game centre (venue evidence, international fixture)
+# URL: https://www.nfl.com/games/vikings-at-49ers-2026-reg-11
+# Fetched (UTC): 2026-11-19T07:06:00Z (chunk 0 of 3) via platform page-fetch tool (processed markdown text, not server bytes).
+
+### Game Info (verbatim)
+Location: LOCATION MEXICO CITY
+Stadium: STADIUM ESTADIO BANORTE
+Network: NBC
+
+### Regular season at a glance (verbatim)
+Minnesota Vikings, POINTS PER GAME, 19.6, ranked 25th.
+San Francisco 49ers, POINTS PER GAME, 31.2, ranked 2nd.
+Minnesota Vikings, YARDS PER GAME, 271.8, ranked 31st.
+San Francisco 49ers, YARDS PER GAME, 399.8, ranked 1st.
+Minnesota Vikings, TIME OF POSSESSION PER GAME, 30:22, ranked 14th.
+San Francisco 49ers, TIME OF POSSESSION PER GAME, 30:13, ranked 15th.
+Minnesota Vikings, TOTAL DEF SACKS, 37, ranked 1st.
+San Francisco 49ers, TOTAL DEF SACKS, 16, ranked 28th.
+Minnesota Vikings, TOTAL DEF INTS, 10, ranked 4th.
+San Francisco 49ers, TOTAL DEF INTS, 7, ranked 11th.
+Minnesota Vikings, TOTAL TURNOVER DIFFERENTIAL, +8, ranked 2nd.
+San Francisco 49ers, TOTAL TURNOVER DIFFERENTIAL, +3, ranked 10th.
+
+### Team leaders (verbatim labels only)
+PASSING: K. Murray 1022 YDS 64.9%CMP 5TD 3INT (MIN) ; B. Purdy 2369 YDS 70.1%CMP 20TD 5INT (SF)
+RUSHING: A. Jones 521 YDS 126ATT 3TD 4.1AVG (MIN) ; C. McCaffrey 519 YDS 115ATT 10TD 4.5AVG (SF)
+RECEIVING: J. Jefferson 467 YDS 40REC 4TD (MIN) ; G. Kittle 557 YDS 44REC 5TD (SF)
+
+### Injury strip (verbatim labels)
+VIKINGS: J. Addison WR #3 A Did not participate ; B. Cashman LB #51 A Full participation ; T. Hockenson TE #87 A Did participate ; T. Ingram-Dawkins DL #90 A Full participation
+49ERS: J. Brown DB #27 A Did participate ; M. Evans WR #5 A Did not participate ; L. Gifford LB #51 A Did participate ; R. Green DB #0 A Did participate
+
+# NOTE (F7-13): the game-centre injury strip shows a single letter "A" where the league report carries a game status (e.g., "O" for Out on the IND@HOU strip). The abbreviation is not defined on the page at read time; it is NOT used as a game designation anywhere in this desk — the league injury report is the authoritative designation source.
+
+# CROSS-CHECK (recorded): standings-derived PPG for SF = 281/9 = 31.2 (2nd) and MIN = 176/9 = 19.6 (25th) match the game centre's published POINTS PER GAME exactly, confirming the standings PF/PA column mapping used by build_desk.py.

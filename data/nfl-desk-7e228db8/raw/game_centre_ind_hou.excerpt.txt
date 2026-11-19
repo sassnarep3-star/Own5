@@ -1,0 +1,33 @@
+# Verbatim excerpt capture — official game centre (venue evidence)
+# URL: https://www.nfl.com/games/colts-at-texans-2026-reg-11
+# Fetched (UTC): 2026-11-19T07:06:00Z (chunk 0 of 3) via platform page-fetch tool (processed markdown text, not server bytes).
+
+### Game Info (verbatim)
+Location: LOCATION HOUSTON, TX
+Stadium: STADIUM RELIANT STADIUM
+Network: PRIME
+
+### Regular season at a glance (verbatim, published per-game stats used as fixture-context features with this source link)
+Indianapolis Colts, POINTS PER GAME, 20.8, ranked 23rd.
+Houston Texans, POINTS PER GAME, 25.9, ranked 9th.
+Indianapolis Colts, YARDS PER GAME, 287.6, ranked 27th.
+Houston Texans, YARDS PER GAME, 349.1, ranked 11th.
+Indianapolis Colts, TIME OF POSSESSION PER GAME, 31:07, ranked 8th.
+Houston Texans, TIME OF POSSESSION PER GAME, 29:33, ranked 23rd.
+Indianapolis Colts, TOTAL DEF SACKS, 22, ranked 14th.
+Houston Texans, TOTAL DEF SACKS, 33, ranked 2nd.
+Indianapolis Colts, TOTAL DEF INTS, 2, ranked 31st.
+Houston Texans, TOTAL DEF INTS, 5, ranked 23rd.
+Indianapolis Colts, TOTAL TURNOVER DIFFERENTIAL, -12, ranked 32nd.
+Houston Texans, TOTAL TURNOVER DIFFERENTIAL, +4, ranked 9th.
+
+### Team leaders (verbatim labels only; used for roster identity, NOT for depth ordering)
+PASSING: D. Jones 1830 YDS 59.6%CMP 7TD 12INT (IND) ; C. Stroud 2462 YDS 62.8%CMP 19TD 3INT (HOU)
+RUSHING: J. Taylor 739 YDS 177ATT 8TD 4.2AVG (IND) ; J. Marks 391 YDS 107ATT 2TD 3.7AVG (HOU)
+RECEIVING: T. Warren 276 YDS 40REC 2TD (IND) ; N. Collins 478 YDS 37REC 5TD (HOU)
+
+### Injury strip (verbatim labels; jersey numbers shown by the game centre — recorded for identity only, never for depth order)
+COLTS: W. Mallory TE #86 O Hamstring Did not participate ; B. Raimann OL #79 O Concussion Did not participate ; J. Tillery DL #94 O Calf Did not participate ; J. Travis OL #75 O Knee Did not participate
+TEXANS: M. Harrison WR O Hamstring Did not participate ; D. Hunter DL #55 O Hamstring Did not participate ; B. Jordan TE #9 O Illness Did not participate ; W. Marks RB #4 O Concussion Did not participate
+
+# IRREGULARITY FLAGGED (F7-01): this game centre names the stadium "RELIANT STADIUM" while the Week 11 schedule page's own venue link names it "NRG Stadium" for the same fixture (IND@HOU, Nov 19). Both official pages, same venue, different published names. Both recorded; canonical name left to the owner (see FLAGGED page).

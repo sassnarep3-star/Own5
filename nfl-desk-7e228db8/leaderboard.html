@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Leaderboard &amp; gates — Own5 NFL Verification &amp; Decision Desk (7e228db8)</title>
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<header><div class="wrap">
+<p class="crumb"><a href="index.html">Own5 NFL Verification &amp; Decision Desk</a> · session <code>7e228db8</code> · official reads 2026-11-19 UTC</p>
+<h1>Leaderboard &amp; gates</h1>
+<nav><a href="index.html">Overview</a><a href="lines.html">Week 11 lines</a><a href="price-store.html">Price snapshots</a><a href="results.html">Verified results</a><a href="ratings.html">Ratings</a><a href="correlations.html">Correlations</a><a href="injuries.html">Injury report</a><a href="schedule.html">Schedule &amp; venues</a><a href="leaderboard.html" class="active">Leaderboard &amp; gates</a><a href="readiness.html">Decision readiness</a><a href="suggestions.html">Suggestions</a><a href="questions.html">Questions</a><a href="flagged.html">Flagged for Review</a><a href="sources.html">Sources</a><a href="executive-summary.html">Executive summary</a></nav>
+</div></header>
+<main class="wrap">
+
+<section>
+<h2>Leaderboard — signal separated from staking (R024), pre-registered (R029)</h2>
+<p class="note">The board is <strong>intentionally empty of results</strong>: certification requires gates G0–G9 including a prospective sample (G1) and Bonferroni-corrected significance (G2). Backtest numbers never appear here (R029). The pre-registered backtest corpus is the 150-final verified feed (frozen in the spec); its evaluation protocol is registered, not run — the prospective shadow baseline starts with IND@HOU at <code>2026-11-20T01:15:00Z</code>. Control baselines (random, favourites) are registered beside the strategies so luck is always measurable.</p>
+<div class="tscroll"><table class=""><thead><tr><th>Strategy</th><th>Division</th><th>Signal</th><th>Staking</th><th>Certification</th><th>Brier skill</th><th>Prospective n</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><code>BASE-RANDOM</code></td><td>singles</td><td><span class="badge warn">control</span></td><td><span class="badge warn">control</span></td><td><span class="badge warn">not_certified</span></td><td><span class="blank">blank</span> <span class="badge warn">no backtest numbers</span></td><td><span class="blank">blank</span> <span class="badge warn">needs n≥50</span></td><td>control baseline: uniform random picks recorded prospectively from Week 11</td></tr>
+<tr><td><code>BASE-FAV</code></td><td>singles</td><td><span class="badge warn">control</span></td><td><span class="badge warn">control</span></td><td><span class="badge warn">not_certified</span></td><td><span class="blank">blank</span> <span class="badge warn">no backtest numbers</span></td><td><span class="blank">blank</span> <span class="badge warn">needs n≥50</span></td><td>control baseline: favourites only (model p_home max), recorded prospectively from Week 11</td></tr>
+<tr><td><code>S1-PPG-DIFF</code></td><td>singles</td><td><span class="badge warn">pre_registered</span></td><td><span class="badge warn">pre_registered</span></td><td><span class="badge warn">not_certified</span></td><td><span class="blank">blank</span> <span class="badge warn">no backtest numbers</span></td><td><span class="blank">blank</span> <span class="badge warn">needs n≥50</span></td><td>signal = SRS margin residual; staking = flat, signal-separated; prospective from Week 11</td></tr>
+<tr><td><code>S2-HOME-DOG</code></td><td>singles</td><td><span class="badge warn">pre_registered</span></td><td><span class="badge warn">pre_registered</span></td><td><span class="badge warn">not_certified</span></td><td><span class="blank">blank</span> <span class="badge warn">no backtest numbers</span></td><td><span class="blank">blank</span> <span class="badge warn">needs n≥50</span></td><td>pre-registered only; no backtest numbers on the board (R029)</td></tr>
+<tr><td><code>S3-TOTAL-BIAS</code></td><td>singles</td><td><span class="badge warn">pre_registered</span></td><td><span class="badge warn">pre_registered</span></td><td><span class="badge warn">not_certified</span></td><td><span class="blank">blank</span> <span class="badge warn">no backtest numbers</span></td><td><span class="blank">blank</span> <span class="badge warn">needs n≥50</span></td><td>pre-registered only</td></tr>
+<tr><td><code>S4-ML-SHORT</code></td><td>singles</td><td><span class="badge warn">pre_registered</span></td><td><span class="badge warn">pre_registered</span></td><td><span class="badge warn">not_certified</span></td><td><span class="blank">blank</span> <span class="badge warn">no backtest numbers</span></td><td><span class="blank">blank</span> <span class="badge warn">needs n≥50</span></td><td>pre-registered only</td></tr>
+</tbody></table></div>
+<h3>Demotion gate</h3>
+<p><code>G7</code> — a live strategy that fails G5/G8 over a 4-week window returns to paper. A live strategy that trips G7 returns to paper automatically.</p>
+<h3>Validation gates</h3>
+<div class="tscroll"><table class=""><thead><tr><th>Gate</th><th>Name</th><th>Definition</th><th>Blocks</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td><code>G0</code></td><td><strong>pre-registration</strong></td><td>strategy/spec text + sample window committed before results are seen; commit hash is the registration</td><td>leaderboard entry; any certification</td><td><span class="badge neutral">active</span></td></tr>
+<tr><td><code>G1</code></td><td><strong>minimum sample</strong></td><td>prospective sample &gt;= 50 rated decisions before a strategy is ranked</td><td>ranking</td><td><span class="badge neutral">active</span></td></tr>
+<tr><td><code>G2</code></td><td><strong>significance (Bonferroni)</strong></td><td>p &lt; 0.05 / number of pre-registered variants</td><td>certification</td><td><span class="badge neutral">active</span></td></tr>
+<tr><td><code>G3</code></td><td><strong>chronological holdout</strong></td><td>evaluation on data strictly after training window</td><td>certification</td><td><span class="badge neutral">active</span></td></tr>
+<tr><td><code>G4</code></td><td><strong>closing-line value</strong></td><td>CLV computable only with verified operator closing prices</td><td>ROI claims</td><td><span class="badge neutral">blocked: no operator price source (F7-P01)</span></td></tr>
+<tr><td><code>G5</code></td><td><strong>correlation cap</strong></td><td>correlations from official sources only; n published per value</td><td>combo ranking</td><td><span class="badge neutral">active</span></td></tr>
+<tr><td><code>G6</code></td><td><strong>drawdown + uncertainty</strong></td><td>proper-score ranking with game-cluster lower bound; win rate/short ROI excluded</td><td>ranking</td><td><span class="badge neutral">active</span></td></tr>
+<tr><td><code>G7</code></td><td><strong>demotion gate</strong></td><td>a live strategy that fails G5/G8 over a 4-week window returns to paper</td><td>live status</td><td><span class="badge neutral">active</span></td></tr>
+<tr><td><code>G8</code></td><td><strong>market integrity</strong></td><td>no wagering where not lawful; no unlicensed data terms accepted silently</td><td>publication of ROI</td><td><span class="badge neutral">active</span></td></tr>
+<tr><td><code>G9</code></td><td><strong>parlay joint-evidence</strong></td><td>combo ranked only with validated joint probability + operator void/push rules</td><td>parlay/SGP/prop combos</td><td><span class="badge neutral">active</span></td></tr>
+</tbody></table></div>
+</section>
+</main>
+<footer class="wrap"><p>Every value links to an official source or is an explicit blank+flag. Raw excerpts with SHA-256: <a href="https://github.com/sassnarep3-star/Own5/tree/main/data/nfl-desk-7e228db8/raw" target="_blank" rel="noopener noreferrer">data/nfl-desk-7e228db8/raw/</a>. Unverified values are never filled in.</p></footer>
+</body></html>

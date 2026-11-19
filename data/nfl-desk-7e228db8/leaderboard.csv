@@ -1,0 +1,7 @@
+strategy_id,division,signal_status,staking_status,certification,brier_skill,lower_bound_95,n_prospective,stake_record,notes
+BASE-RANDOM,singles,control,control,not_certified,,,,,control baseline: uniform random picks recorded prospectively from Week 11
+BASE-FAV,singles,control,control,not_certified,,,,,"control baseline: favourites only (model p_home max), recorded prospectively from Week 11"
+S1-PPG-DIFF,singles,pre_registered,pre_registered,not_certified,,,,,"signal = SRS margin residual; staking = flat, signal-separated; prospective from Week 11"
+S2-HOME-DOG,singles,pre_registered,pre_registered,not_certified,,,,,pre-registered only; no backtest numbers on the board (R029)
+S3-TOTAL-BIAS,singles,pre_registered,pre_registered,not_certified,,,,,pre-registered only
+S4-ML-SHORT,singles,pre_registered,pre_registered,not_certified,,,,,pre-registered only

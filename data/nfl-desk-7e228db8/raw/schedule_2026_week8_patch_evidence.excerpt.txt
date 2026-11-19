@@ -1,0 +1,30 @@
+# Verbatim excerpt capture — official Week 8 schedule (evidence for the corpus patch)
+# URL: https://www.nfl.com/schedules/2026/by-week/week-8
+# Fetched (UTC): 2026-11-19T07:24:00Z (chunks 0-1 of 2) via platform page-fetch tool (processed markdown text, not server bytes).
+# PURPOSE: the shared corpus data/games_2026.json (W1-8) is missing the Week 8 Monday-night final.
+# Standings reconciliation in build_desk.py proved a single missing game (CHI win PF+34/PA+17; SEA loss PF+17... resolved exactly by this row). Flagged as F7-16; patched in this desk's namespace only.
+
+### Week 8 finals (all 14, verbatim from the page)
+- [Panthers 19, Packers 27, FINAL, Thursday, October 29th](https://www.nfl.com/games/panthers-at-packers-2026-reg-8)   CAR 3-4 (away), GB 5-3 (home)
+- [Ravens 10, Bills 36, FINAL, Sunday, November 1st](https://www.nfl.com/games/ravens-at-bills-2026-reg-8)   BAL 4-4 (away), BUF 6-1 (home)
+- [Titans 36, Bengals 43, FINAL, Sunday, November 1st](https://www.nfl.com/games/titans-at-bengals-2026-reg-8)   TEN 1-7 (away), CIN 5-2 (home)
+- [Cardinals 33, Cowboys 30, FINAL, Sunday, November 1st](https://www.nfl.com/games/cardinals-at-cowboys-2026-reg-8)   AZ 3-5 (away), DAL 3-5 (home)
+- [Vikings 15, Lions 19, FINAL, Sunday, November 1st](https://www.nfl.com/games/vikings-at-lions-2026-reg-8)   MIN 6-1 (away), DET 5-2 (home)
+- [Colts 7, Jaguars 42, FINAL, Sunday, November 1st](https://www.nfl.com/games/colts-at-jaguars-2026-reg-8)   IND 2-6 (away), JAX 5-2 (home)
+- [Raiders 38, Jets 33, FINAL, Sunday, November 1st](https://www.nfl.com/games/raiders-at-jets-2026-reg-8)   LV 4-4 (away), NYJ 2-6 (home)
+- [Browns 6, Steelers 27, FINAL, Sunday, November 1st](https://www.nfl.com/games/browns-at-steelers-2026-reg-8)   CLE 5-3 (away), PIT 6-2 (home)
+- [Falcons 0, Buccaneers 16, FINAL, Sunday, November 1st](https://www.nfl.com/games/falcons-at-buccaneers-2026-reg-8)   ATL 3-5 (away), TB 3-5 (home)
+- [Chargers 9, Rams 24, FINAL, Sunday, November 1st](https://www.nfl.com/games/chargers-at-rams-2026-reg-8)   LAC 0-7 (away), LA 4-4 (home)
+- [Chiefs 24, Broncos 28, FINAL, Sunday, November 1st](https://www.nfl.com/games/chiefs-at-broncos-2026-reg-8)   KC 5-2 (away), DEN 6-2 (home)
+- [Patriots 24, Dolphins 19, FINAL, Sunday, November 1st](https://www.nfl.com/games/patriots-at-dolphins-2026-reg-8)   NE 5-3 (away), MIA 1-6 (home)
+
+### Sunday Night Football, November 1st
+- [Eagles 10, Commanders 27, FINAL, Sunday, November 1st](https://www.nfl.com/games/eagles-at-commanders-2026-reg-8)   PHI 2-6 (away), WAS 2-4-1 (home)
+
+### Monday Night Football, November 2nd  <<< THE GAME MISSING FROM data/games_2026.json
+- [Bears 34, Seahawks 17, FINAL, Monday, November 2nd](https://www.nfl.com/games/bears-at-seahawks-2026-reg-8)   CHI 6-2 (away), SEA 4-4 (home)
+
+### Teams on Bye (verbatim from page)
+HOU Houston Texans 3-6; NO New Orleans Saints 3-6; NYG New York Giants 5-3-1; SF San Francisco 49ers 8-1
+
+# Arithmetic proof recorded by build_desk.py: adding CHI 34 @ SEA 17 reconciles ALL 32 clubs' W-L-T-PF-PA to the official standings capture of 2026-11-19 exactly.

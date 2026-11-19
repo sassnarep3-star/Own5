@@ -1,0 +1,17 @@
+{
+ "corpus_finals": 150,
+ "corpus_w10": 14,
+ "corpus_w18": 121,
+ "corpus_w9": 15,
+ "hfa_pts": -0.932,
+ "in_sample_caveat": "HFA/sigma estimated in-sample on the 149-final corpus; prospective shadow baseline starts with IND@HOU 2026-11-20T01:15Z",
+ "market_policy": "no verified operator prices; market/residual/CLV blank+flagged F7-P01",
+ "model_spec_version": "v1-frozen-2026-11-19",
+ "order": "side first, then total, then moneyline",
+ "residual_count_margin": 150,
+ "residual_count_total": 150,
+ "sigma_margin_pts": 10.369,
+ "sigma_total_pts": 12.86,
+ "standings_reconciled_32": true,
+ "week11_kickoff_utc": "2026-11-20T01:15:00Z"
+}
