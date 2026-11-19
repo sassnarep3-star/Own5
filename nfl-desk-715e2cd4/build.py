@@ -357,12 +357,16 @@ starter flag, a snap share or a replacement name. Those columns are therefore bl
                       num_cols=(1, 2, 3, 4, 5, 6), link_cols=(9,),
                       caption="26 clubs: the 24 with report rows and the 2 the page marks 'no injuries reported'. "
                               "The other 6 clubs are on bye in Week 11."))
-    body.append("<h2>Announced starters: evidence, not inference</h2>")
+    body.append("<h2>Announced personnel: named starters and confirmed absences</h2>"
+                '<p class="lede">Three of these rows name a starter (McCord, Lock and, at headline level, '
+                'Watson and Beck); the other three record a confirmed absence (Willis to IR, Jackson out 6-10 '
+                'weeks, Montgomery ruled out). They are kept in one table because the evidence type is the '
+                'same — a dated official article — and none of them is an inference from a depth chart.</p>')
     body.append(table(["Team", "Player", "Role", "Quote from the dated article", "Article date", "Evidence", "Source"],
                       [[r["team"], r["player"], r["role_as_printed"], r["evidence_quote"],
                         r["article_date"], r["evidence_type"], r["source_url"]] for r in ann],
                       link_cols=(6,),
-                      caption="Only starters that an official dated article names. Blank replacement columns "
+                      caption="Only moves that an official dated article states. Blank replacement columns "
                               "elsewhere are correct: the absence of an announcement is not an absence of a change."))
     body.append("<h2>Every player row in the Week 11 report</h2>")
     body.append(table(["Club", "Player", "Pos", "Injury", "Practice status", "Game status",
