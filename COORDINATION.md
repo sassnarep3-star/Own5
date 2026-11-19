@@ -3743,3 +3743,53 @@ at `audit_repo.py` line 162 is gone. No action required.
 - None opened by this session. X51-14 is closed by this takeover.
 
 **Merge record.** Recorded below after the PR merges.
+
+## Session fb21a068 — NFL decision brief and prioritized information-gap review (claimed 2026-11-19 UTC)
+
+**Branch:** `arena/fb21a068-own5` (base `2f02e1e7975ee61780b39e1ef9bc83591ccb55e2`).
+**Scope:** additive `nfl-decision-brief-fb21a068/**` plus this append-only coordination record. Existing desks, shared landing/navigation, shared datasets, generated pages, and other sessions' paths are read-only.
+**Task:** create a compact reviewable decision brief that links existing evidence pages, separates verified facts from unknowns, prioritizes questions/gates, and proposes discoverable next steps. No fabricated market, roster, injury, backtest, correlation, or betting-performance values; unknowns remain explicitly blank/unverified. This is an additive companion, not the final cross-desk integration or a claim that unresolved requirements are complete.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| FB21-01 | Claim scope and publish claim | in progress | fb21a068 | COORDINATION.md | Claim pushed before implementation. |
+| FB21-02 | Review existing decision/question/suggestion materials and build focused decision brief | in progress | fb21a068 | nfl-decision-brief-fb21a068/** | Distinct path; no edits to other owners' pages or shared datasets. |
+| FB21-03 | Verify source links, accessibility, deterministic build and local links | in progress | fb21a068 | nfl-decision-brief-fb21a068/** | Official NFL / league / source-owner material only for factual claims; unknown data left blank. |
+
+### Session fb21a068 — completion record (2026-11-19 UTC)
+
+**Deliverable:** `nfl-decision-brief-fb21a068/` — standalone static decision brief with executive summary, seven prioritized questions, five proposed site/model improvements, official source links on every register row, corresponding repository evidence links, and two-sided "what would change our mind" conditions. The page is additive; it deliberately did not edit the root landing/navigation, shared data, or any other session's files. Local URL in the published project: `/Own5/nfl-decision-brief-fb21a068/`.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| FB21-01 | Claim scope and publish claim | done | fb21a068 | COORDINATION.md | Claim committed and pushed before implementation. |
+| FB21-02 | Review existing decision/question/suggestion materials and build focused decision brief | done | fb21a068 | nfl-decision-brief-fb21a068/** | Added static page, summary, CSV register, deterministic renderer, styling and tests. |
+| FB21-03 | Verify source links, accessibility, deterministic build and local links | done | fb21a068 | nfl-decision-brief-fb21a068/** | Scoped verifier: 12 rows each with an allow-listed official HTTPS URL and repository evidence path; 3 unit tests pass; root suite passes. |
+
+**Official primary sources fetched/read in this session (2026-11-19 UTC; the page-fetch tool did not expose an exact fetch time or raw-byte hashes):**
+- NFL Week 11 injury report, all seven returned chunks: https://www.nfl.com/injuries/league/2026/reg11 — now titled the 2026 Week 11 report. This supersedes only the current-state question; the 2026-11-18 read (Week 10 served at the requested URL) remains the historical point-in-time observation and still needs to be retained in an immutable archive.
+- NFL Week 11 schedule: https://www.nfl.com/schedules/2026/by-week/week-11 — read for fixture date/context.
+- NFL Colts at Texans Game Center: https://www.nfl.com/games/colts-at-texans-2026-reg-11 — read for fixture/location/published stadium label; did not claim starters or postgame Game Book evidence before kickoff.
+- Houston Texans official stadium page: https://www.houstontexans.com/stadium/ — page says Reliant Stadium name returned in August 2026 after NRG Stadium; used only for current venue naming context.
+- NFL Football Communications dated schedule announcement (May 14, 2026): https://media.nfl.com/football-information/2026/news/2026-nfl-schedule-announced
+- NFL 2026 regular-season standings: https://www.nfl.com/standings/league/2026/REG
+- DraftKings official NFL markets page: https://sportsbook.draftkings.com/leagues/football/nfl — confirmed a public market board is displayed; no quote values copied or stored, and no data-retention/republication permission inferred.
+- FanDuel Ontario house rules: https://www.fanduel.com/fanduel-sportsbook-house-rules-on — page read; scope is Ontario-specific and does not establish other jurisdictions or permission to store odds.
+- FanDuel parlay guide: https://www.fanduel.com/sports-betting-guide/what-is-a-parlay-bet — read for operator product description only; not treated as joint model evidence.
+- iGaming Ontario player support: https://www.igamingontario.ca/en/player/player-support — read for Ontario complaint/dispute context only; no legal conclusion for this project.
+
+**Irregularity flagged for integration review (not repaired in this scope).** Running `python3 nfl-command-desk/verify.py` on this checkout returned **47 PASS / 3 FAIL**. All three failures were V11 checks for registration SHA `e7282e35dbf9afb0c1b364a152b9431dc71b64af`; `git cat-file` confirmed that object is absent from this checkout, and the verifier's pre-registration hash field is empty. The affected strategies' pre-registration claim cannot be independently confirmed until the hash is repaired and the verifier passes. This result is published on the companion brief and must not be mistaken for a league-source fact.
+
+**Cross-session requests (not edited):**
+- To the final integration owner / NFL Command Desk owner: update the dated NFL injury-report source register with the 2026-11-19 Week 11 re-read while preserving the 2026-11-18 capture as historical evidence. Do not rewrite the prior read as if it never occurred.
+- To the final integration owner / NFL Command Desk owner: repair the missing registration SHA / empty verifier input and rerun V11 before claiming the listed strategies are commit-hash pre-registered.
+- To the final integration owner: add a navigation link to `nfl-decision-brief-fb21a068/` only during shared landing-page integration; the root index and all shared navigation remained untouched in this session.
+
+**Verification performed:** `python3 nfl-decision-brief-fb21a068/build.py`; `python3 nfl-decision-brief-fb21a068/verify.py` → PASS (12 rows, official-source allowlist, internal evidence links); `python3 -m unittest discover -s nfl-decision-brief-fb21a068/tests -v` → 3 tests OK; `python3 -m unittest discover -s tests -v` → 95 tests OK; `python3 nfl-command-desk/verify.py` → 47 pass / 3 fail, exact failures recorded above. The brief's claim that prices are not stored is scoped to the existing desk's persisted ledger, not a claim that no public operator market page exists.
+
+
+### Session fb21a068 — PR/checks status (2026-11-19 UTC)
+
+- **PR:** https://github.com/sassnarep3-star/Own5/pull/141 — `arena/fb21a068-own5` → `main`.
+- **Checks:** `Build, evidence integrity and browser smoke tests` PASS; `desk-verify` PASS; all returned `verify` checks PASS. PR workflows that only run after a main deployment are skipped on this PR. Local scoped build/verifier/tests and the 95-test repository suite also pass.
+- **Merge / deploy:** not performed by this scoped session. Other NFL integration and availability PRs are open, and the coordination board reserves shared navigation and cross-desk publication for final integration. The subpage is available in the session preview but is not yet asserted live on GitHub Pages. Final integration should add its root-navigation link, verify it on the combined tree, then deploy.
