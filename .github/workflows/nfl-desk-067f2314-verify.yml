@@ -67,7 +67,7 @@ jobs:
             echo "GitHub Pages deploy for nfl-desk-067f2314 never became ready" >&2
             exit 1
           fi
-          # 2) Once deployed, every desk page must serve the marker.
+          # 2) Once deployed, every desk page must serve the marker (with retries for mid-rebuild 404s).
           for path in \
             "/nfl-desk-067f2314/" \
             "/nfl-desk-067f2314/schedule.html" \
@@ -86,13 +86,20 @@ jobs:
             "/nfl-desk-067f2314/executive-summary.html" \
             "/nfl-desk-067f2314/verification-log.html"; do
             url="$base$path"
-            if curl --fail --silent --location "$url" -o /tmp/page.html; then
-              if grep -q "Own5 NFL Line-Origination Dashboard" /tmp/page.html; then
-                echo "OK $url"
-                continue
+            ok=0
+            for attempt in $(seq 1 12); do
+              if curl --fail --silent --location "$url" -o /tmp/page.html; then
+                if grep -q "Own5 NFL Line-Origination Dashboard" /tmp/page.html; then
+                  echo "OK $url"
+                  ok=1
+                  break
+                fi
               fi
+              sleep 5
+            done
+            if [ "$ok" -ne 1 ]; then
+              echo "Not ready after retries: $url" >&2
+              exit 1
             fi
-            echo "Not ready: $url" >&2
-            exit 1
           done
           echo "All desk pages verified live."
