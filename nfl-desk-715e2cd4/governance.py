@@ -545,7 +545,7 @@ FLAG = [
   "The page prints no timestamp.","Read clock published; deltas deferred until >= 2 hashed captures exist.","R23,R24,R53",REPO+"data/captures.csv"),
  ("F-12","Lions designations do not match the brief","High",
   "At the Week 11 read, Kerby Joseph and D.J. Reed carry practice status with a blank game status, and Cade Mays is DNP with a blank status. The brief states all three are Out.",
-  "The page read here does not print Out for them; the brief cites a different article.","Neither value is asserted; the row is flagged for review with both claims quoted.","R35",REPO+"flagged.html"),
+  "The page read here does not print Out for them; the brief cites a different article.","Neither value is asserted here; both claims are quoted and the official report page is the source of record.","R35",NFL["inj11"]),
  ("F-13","'Not listed' does not mean available","Critical",
   "Lamar Jackson does not appear on the Week 11 injury report because he is on injured reserve (2026-11-13 article), not because he is healthy. No reserve list is captured.",
   "The report lists only active-roster players.","Flagged; a reserve/IR capture is the top availability request.","R36,R58",NFL["nov13"]),
