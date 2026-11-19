@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Computed only from officially sourced numbers, with n published next to every value.">
+<title>Correlations · NFL Decision Console</title>
+<link rel="stylesheet" href="style.css">
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="layout">
+  <aside class="sidebar">
+    <a class="brand" href="index.html"><span class="brand-icon">D<span>C</span></span><span>DECISION<small>NFL DESK · a59c762a</small></span></a>
+    <span class="nav-caption">DECISION CONSOLE</span>
+    <nav aria-label="Main navigation"><a class="nav-item" href="index.html">Dashboard</a><a class="nav-item" href="requirements.html">Requirements</a><a class="nav-item" href="availability.html">Availability</a><a class="nav-item" href="lines.html">Originated lines</a><a class="nav-item" href="leaderboard.html">Leaderboard</a><a class="nav-item" href="gates.html">Gates</a><a class="nav-item" href="backtest.html">Backtest &amp; luck</a><a class="nav-item active" href="correlations.html">Correlations</a><a class="nav-item" href="questions.html">Questions</a><a class="nav-item" href="suggestions.html">Suggestions</a><a class="nav-item" href="flagged.html">Flagged for review</a><a class="nav-item" href="sources.html">Sources</a><a class="nav-item" href="executive-summary.html">Executive summary</a></nav>
+    <div class="side-bottom">
+      <div class="mode"><span class="live-dot"></span> Paper research only</div>
+      <p>No bets. No fabricated results.<br>Every row sourced or flagged.</p>
+      <a href="https://github.com/sassnarep3-star/Own5" target="_blank" rel="noopener noreferrer">View repository &rarr;</a>
+    </div>
+  </aside>
+  <div class="main-shell">
+    <header class="topbar">
+      <div><span class="breadcrumb">NFL Decision Console <span>/</span> correlations.html</span></div>
+      <div class="topbar-right"><span class="desktop-only">WEEK 11 · 2026</span><span class="avatar">DC</span></div>
+    </header>
+    <main id="main">
+      <div class="page-heading">
+        <div><span class="eyebrow">OWN5 · NFL LINE ORIGINATION</span><h1>Correlations</h1><p>Computed only from officially sourced numbers, with n published next to every value.</p></div>
+        <span class="date-label"><span class="live-dot"></span> Official reads 2026-11-19</span>
+      </div>
+<div class="stats">
+<article><span>Correlations published</span><strong>8</strong><small>each with n</small></article>
+<article><span>Official sources used</span><strong>2</strong><small></small></article>
+</div>
+<aside class="notice"><span class="notice-icon" aria-hidden="true">i</span><div><strong>info</strong><p><strong>Every correlation is computed from officially sourced numbers only</strong> and every one publishes n, a 95% interval and a two-sided p-value. Nothing is computed from a third-party price or an unofficial dataset.</p></div></aside>
+<div class="section-title"><h2>Correlations</h2><span class="eyebrow">n PUBLISHED WITH EVERY VALUE</span></div>
+<div class="tw"><table class="data">
+<caption>Every value is computed from officially sourced numbers, and every value carries the number of observations behind it.</caption>
+<thead><tr>
+<th scope="col">ID</th>
+<th scope="col">What is correlated</th>
+<th scope="col">Statistic</th>
+<th scope="col">Value</th>
+<th scope="col">n</th>
+<th scope="col">95% low</th>
+<th scope="col">95% high</th>
+<th scope="col">Two-sided p</th>
+<th scope="col">Unit</th>
+<th scope="col">Method</th>
+<th scope="col">Source</th>
+</tr></thead><tbody>
+<tr><td>CO-A59-01</td><td>Net points per game vs winning percentage</td><td>Pearson r</td><td><strong>0.8837</strong></td><td>32</td><td>0.7732</td><td>0.9421</td><td>0.0</td><td>points per game and win pct</td><td>Pearson product-moment; Fisher z interval</td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener noreferrer">NFL</a></td></tr>
+<tr><td>CO-A59-02</td><td>Points for per game vs winning percentage</td><td>Pearson r</td><td><strong>0.7172</strong></td><td>32</td><td>0.4914</td><td>0.8527</td><td>1e-06</td><td>points per game and win pct</td><td>Pearson product-moment; Fisher z interval</td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener noreferrer">NFL</a></td></tr>
+<tr><td>CO-A59-03</td><td>Points against per game vs winning percentage</td><td>Pearson r</td><td><strong>-0.7041</strong></td><td>32</td><td>-0.8453</td><td>-0.471</td><td>2e-06</td><td>points per game and win pct</td><td>Pearson product-moment; Fisher z interval</td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener noreferrer">NFL</a></td></tr>
+<tr><td>CO-A59-04</td><td>Points for per game vs points against per game</td><td>Pearson r</td><td><strong>-0.2911</strong></td><td>32</td><td>-0.5808</td><td>0.0641</td><td>0.106461</td><td>points per game</td><td>Pearson product-moment; Fisher z interval</td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener noreferrer">NFL</a></td></tr>
+<tr><td>CO-A59-05</td><td>A game&#x27;s home team season net per game vs the away team&#x27;s season net per game</td><td>Pearson r</td><td><strong>-0.174</strong></td><td>150</td><td>-0.3252</td><td>-0.0141</td><td>0.033073</td><td>points per game</td><td>Pearson product-moment; Fisher z interval</td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener noreferrer">NFL</a></td></tr>
+<tr><td>CO-A59-06</td><td>Fitted opponent-adjusted rating difference vs actual home margin (training window)</td><td>Pearson r</td><td><strong>0.4633</strong></td><td>121</td><td>0.3104</td><td>0.5927</td><td>0.0</td><td>points</td><td>Pearson product-moment; Fisher z interval</td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener noreferrer">NFL</a></td></tr>
+<tr><td>CO-A59-07</td><td>Out-of-sample predicted margin vs actual home margin (weeks 9-10)</td><td>Pearson r</td><td><strong>0.4219</strong></td><td>29</td><td>0.0655</td><td>0.6828</td><td>0.021759</td><td>points</td><td>Pearson product-moment; Fisher z interval</td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-9" target="_blank" rel="noopener noreferrer">NFL</a></td></tr>
+<tr><td>CO-A59-08</td><td>Model probability vs outcome (weeks 9-10, point-biserial)</td><td>Pearson r</td><td><strong>0.4497</strong></td><td>29</td><td>0.0996</td><td>0.7007</td><td>0.013521</td><td>probability</td><td>Pearson product-moment; Fisher z interval</td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-9" target="_blank" rel="noopener noreferrer">NFL</a></td></tr>
+</tbody></table></div>
+      <footer><span>DECISION CONSOLE <span class="footer-divider">/</span> Session a59c762a &middot; evidence first</span>
+      <span>Blank cells = unverified. <a href="flagged.html">Flagged for review &rarr;</a> &middot; <a href="sources.html">Sources &rarr;</a></span></footer>
+    </main>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="What is verified, what is computed, what is blocked, and the three findings that change a decision.">
+<title>Executive summary · NFL Decision Console</title>
+<link rel="stylesheet" href="style.css">
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="layout">
+  <aside class="sidebar">
+    <a class="brand" href="index.html"><span class="brand-icon">D<span>C</span></span><span>DECISION<small>NFL DESK · a59c762a</small></span></a>
+    <span class="nav-caption">DECISION CONSOLE</span>
+    <nav aria-label="Main navigation"><a class="nav-item" href="index.html">Dashboard</a><a class="nav-item" href="requirements.html">Requirements</a><a class="nav-item" href="availability.html">Availability</a><a class="nav-item" href="lines.html">Originated lines</a><a class="nav-item" href="leaderboard.html">Leaderboard</a><a class="nav-item" href="gates.html">Gates</a><a class="nav-item" href="backtest.html">Backtest &amp; luck</a><a class="nav-item" href="correlations.html">Correlations</a><a class="nav-item" href="questions.html">Questions</a><a class="nav-item" href="suggestions.html">Suggestions</a><a class="nav-item" href="flagged.html">Flagged for review</a><a class="nav-item" href="sources.html">Sources</a><a class="nav-item active" href="executive-summary.html">Executive summary</a></nav>
+    <div class="side-bottom">
+      <div class="mode"><span class="live-dot"></span> Paper research only</div>
+      <p>No bets. No fabricated results.<br>Every row sourced or flagged.</p>
+      <a href="https://github.com/sassnarep3-star/Own5" target="_blank" rel="noopener noreferrer">View repository &rarr;</a>
+    </div>
+  </aside>
+  <div class="main-shell">
+    <header class="topbar">
+      <div><span class="breadcrumb">NFL Decision Console <span>/</span> executive-summary.html</span></div>
+      <div class="topbar-right"><span class="desktop-only">WEEK 11 · 2026</span><span class="avatar">DC</span></div>
+    </header>
+    <main id="main">
+      <div class="page-heading">
+        <div><span class="eyebrow">OWN5 · NFL LINE ORIGINATION</span><h1>Executive summary</h1><p>What is verified, what is computed, what is blocked, and the three findings that change a decision.</p></div>
+        <span class="date-label"><span class="live-dot"></span> Official reads 2026-11-19</span>
+      </div>
+<div class="stats">
+<article><span>Requirements</span><strong>81</strong><small>one row each</small></article>
+<article><span>Met</span><strong>27</strong><small></small></article>
+<article><span>Partial</span><strong>29</strong><small></small></article>
+<article><span>Blocked</span><strong>7</strong><small></small></article>
+<article><span>Flagged</span><strong>11</strong><small></small></article>
+</div>
+<div class="section-title"><h2>The short version</h2><span class="eyebrow">WHAT IS TRUE, WHAT IS COMPUTED, WHAT IS MISSING</span></div>
+<div class="brief-grid">
+<article class="panel brief"><span class="step">VERIFIED</span><h3>What was read first-hand</h3><p>The 2026 league standings (32 clubs), the Week-11 official injury report (253 rows across 24 clubs), the Week-11 schedule (13 games), all 14 Week-10 finals, the 2026 Schedule Release page, the Colts at Texans game centre, and the complete official Game Book for Washington at New York, which publishes the actual starters, the Not Active list and the game-day weather.</p></article>
+<article class="panel brief"><span class="step">COMPUTED</span><h3>What was derived</h3><p>An opponent-adjusted rating model fitted on weeks 1-8 only, a fitted home field of 1.488 points, a residual sigma of 14.079 points, 39 originated lines across 13 games, 8 correlations with n and intervals, a 150-game corpus reconciled to the standings with 0 mismatches, and a two-split shadow backtest.</p></article>
+<article class="panel brief"><span class="step">MISSING</span><h3>What is blocked and why</h3><p>No admitted price source, so no market residual, no closing-line value and no return. No verified depth order for the Houston Texans and no verified official snap-count source, so no replacement depth and no matchup matrix. No prospective game played, so the leaderboard carries no score.</p></article>
+</div>
+<div class="section-title"><h2>The finding that matters most</h2><span class="eyebrow">REMOVAL OF LUCK</span></div>
+<div class="tw"><table class="data">
+<caption>The same model, the same controls, two chronological splits. The validation week would have looked like skill. The untouched holdout did not.</caption>
+<thead><tr>
+<th scope="col">Split</th>
+<th scope="col">n</th>
+<th scope="col">Model accuracy</th>
+<th scope="col">Model Brier</th>
+<th scope="col">Climatology Brier</th>
+<th scope="col">Brier skill</th>
+<th scope="col">MAE (points)</th>
+<th scope="col">Favourites-only win rate</th>
+</tr></thead><tbody>
+<tr><td>validation_week_9</td><td>15</td><td>0.8667</td><td>0.14349</td><td>0.25429</td><td><strong>0.4357</strong></td><td>9.649</td><td>0.7931</td></tr>
+<tr><td>final_holdout_week_10</td><td>14</td><td>0.7143</td><td>0.25067</td><td>0.25547</td><td><strong>0.0188</strong></td><td>12.124</td><td>0.7931</td></tr>
+</tbody></table></div>
+<div class="section-title"><h2>Decisions waiting on the reviewer</h2><span class="eyebrow">FROM THE SUGGESTIONS REGISTER</span></div>
+<div class="tw"><table class="data">
+<thead><tr>
+<th scope="col">ID</th>
+<th scope="col">Priority</th>
+<th scope="col">Topic</th>
+<th scope="col">Recommended path</th>
+<th scope="col">What would change our mind</th>
+<th scope="col">Status</th>
+</tr></thead><tbody>
+<tr><td>SG-A59-01</td><td>high</td><td>Price-data policy, the single gate that blocks most of the plan</td><td>C for now, with B as the target. The empty store is honest and already implemented, and the model can be judged on forecast quality alone until a feed is licensed. Choose B before any backtest with a money outcome is published.</td><td>What would change this: a written, signed permission for a named feed with a quote timestamp, a jurisdiction and a push and void rule set. What would keep it: the model still cannot be scored on money without that document.</td><td><span class="badge warn">PROPOSED_NOT_IMPLEMENTED</span></td></tr>
+<tr><td>SG-A59-02</td><td>high</td><td>Depth-order source for the Houston Texans</td><td>B plus C now, A as the goal. The Game Book route is already proven on one game and it is the only official source that publishes who actually started, which is the quantity the feature actually needs.</td><td>What would change this: an official structured Texans source would remove the exception entirely. What would keep it: no such source appears on the club site, and the brief forbids transcription by eye.</td><td><span class="badge warn">PROPOSED_NOT_IMPLEMENTED</span></td></tr>
+<tr><td>SG-A59-03</td><td>high</td><td>Whether the pre-registered shadow baseline should stay published</td><td>A now, C before any strategy is staked. The published numbers show exactly why the label matters: the validation week gave a Brier skill of 0.44 and the final holdout gave 0.02. Removing the numbers would hide that lesson.</td><td>What would change this: a second holdout season that the model has never seen would let the number stand on its own. What would keep it: nothing in the numbers themselves changes; the label and the split do the work.</td><td><span class="badge warn">PROPOSED_NOT_IMPLEMENTED</span></td></tr>
+<tr><td>SG-A59-04</td><td>medium</td><td>Scoring the injury designation empirically</td><td>A, with C as the interim. The archive of past weekly reports is a public, dated source, so the join is achievable; until then the designation is a filter and never a number in a model.</td><td>What would change this: a season of joins that produces a tight interval on the Questionable play rate. What would keep it: wide intervals or a designation that predicts nothing.</td><td><span class="badge warn">PROPOSED_NOT_IMPLEMENTED</span></td></tr>
+<tr><td>SG-A59-05</td><td>medium</td><td>Two estimators for the model total, and when one may be retired</td><td>B with A until then. The walk-forward rule must be written before the comparison is run, so that the retirement is not chosen after seeing which one wins.</td><td>What would change this: a pre-written walk-forward rule that names the estimator, the window and the decision threshold before the run. What would keep it: the gap column stays until that rule has fired.</td><td><span class="badge warn">PROPOSED_NOT_IMPLEMENTED</span></td></tr>
+<tr><td>SG-A59-06</td><td>medium</td><td>Public analysis layer versus private data layer</td><td>B. It is already the posture of this desk: derived analysis in public, and a link to the official page for every fact. It also removes the terms question from the critical path.</td><td>What would change this: a written terms review that permits raw row-level republication. What would keep it: the review is not complete, so the conservative layer stays.</td><td><span class="badge warn">PROPOSED_NOT_IMPLEMENTED</span></td></tr>
+<tr><td>SG-A59-07</td><td>low</td><td>The price store, the results feed and the standings: one canonical file or many</td><td>C for the corpus, because a carried-forward row is only as good as the capture that produced it, and one stale row has already been found. Until the scheduled rebuild exists, B keeps the reconciliation visible.</td><td>What would change this: a scheduled rebuild that reproduces the corpus from the official pages with 0 mismatches against the standings. What would keep it: the reconciliation report is the only thing that currently catches a stale row.</td><td><span class="badge warn">PROPOSED_NOT_IMPLEMENTED</span></td></tr>
+<tr><td>SG-A59-08</td><td>low</td><td>What counts as a fair comparison for the removal-of-luck panel</td><td>B. With three trials the Bonferroni-adjusted significance level is 0.0167, and a panel that shows only the model can hide a lucky run.</td><td>What would change this: a second independently specified model whose forecasts are registered before the window opens. What would keep it: the controls are free, reproducible and already published.</td><td><span class="badge warn">PROPOSED_NOT_IMPLEMENTED</span></td></tr>
+</tbody></table></div>
+      <footer><span>DECISION CONSOLE <span class="footer-divider">/</span> Session a59c762a &middot; evidence first</span>
+      <span>Blank cells = unverified. <a href="flagged.html">Flagged for review &rarr;</a> &middot; <a href="sources.html">Sources &rarr;</a></span></footer>
+    </main>
+  </div>
+</div>
+</body></html>

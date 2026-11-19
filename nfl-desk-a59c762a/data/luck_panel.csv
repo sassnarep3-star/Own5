@@ -1,0 +1,6 @@
+panel_id,metric,strategy,value,n,uncertainty,comparator,skill_metric,skill_value,adjusted_alpha_bonferroni,trial_count,status,source_url
+LP-A59-01,Brier score (lower is better),Pre-registered singles-only team-strength model (S-SHADOW-01),0.19523,29,,,Brier skill score vs climatology,0.2339,0.01667,3,OUT_OF_SAMPLE_SHADOW_NOT_ON_LEADERBOARD,https://www.nfl.com/standings/league/2026/REG
+LP-A59-02,Brier score (lower is better),Control baseline: climatology (always predict the training home-win rate),0.25486,29,,reference forecast for the skill score,,,0.01667,3,CONTROL,https://www.nfl.com/standings/league/2026/REG
+LP-A59-03,Brier score (lower is better),"Control baseline: random pick (fair coin, analytic expectation)",0.25,29,,,,,0.01667,3,CONTROL,https://www.nfl.com/standings/league/2026/REG
+LP-A59-04,Win rate of the model favourite,Control baseline: favourites only (the higher-rated team),0.7931,29,,climatology home-win rate,,,0.01667,3,CONTROL,https://www.nfl.com/standings/league/2026/REG
+LP-A59-05,Realised ROI,Every strategy (no admitted price source exists in this repository),,0,,,,,,,UNDEFINED_NO_ADMITTED_PRICE_SOURCE,https://www.nfl.com/standings/league/2026/REG

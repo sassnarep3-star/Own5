@@ -1,0 +1,33 @@
+club,rows_captured,route,verified_for_all_32,status,source_url,evidence_class
+ARI,23,per-club official depth chart page,yes,verified,https://www.azcardinals.com/team/depth-chart,REPOSITORY_SOURCE_LINKED
+ATL,23,per-club official depth chart page,yes,verified,https://www.atlantafalcons.com/team/depth-chart,REPOSITORY_SOURCE_LINKED
+BAL,23,per-club official depth chart page,yes,verified,https://www.baltimoreravens.com/team/depth-chart,REPOSITORY_SOURCE_LINKED
+BUF,23,per-club official depth chart page,yes,verified,https://www.buffalobills.com/team/depth-chart,REPOSITORY_SOURCE_LINKED
+CAR,22,per-club official depth chart page,yes,verified,https://www.panthers.com/team/depth-chart,REPOSITORY_SOURCE_LINKED
+CHI,22,per-club official depth chart page,yes,verified,https://www.chicagobears.com/team/depth-chart,REPOSITORY_SOURCE_LINKED
+CIN,22,per-club official depth chart page,yes,verified,https://www.bengals.com/team/depth-chart,REPOSITORY_SOURCE_LINKED
+CLE,22,per-club official depth chart page,yes,verified,https://www.clevelandbrowns.com/team/depth-chart,REPOSITORY_SOURCE_LINKED
+DAL,24,per-club official depth chart page,yes,verified,https://www.dallascowboys.com/team/depth-chart,REPOSITORY_SOURCE_LINKED
+DEN,24,per-club official depth chart page,yes,verified,https://www.denverbroncos.com/team/depth-chart,REPOSITORY_SOURCE_LINKED
+DET,22,per-club official depth chart page,yes,verified,https://www.detroitlions.com/team/depth-chart,REPOSITORY_SOURCE_LINKED
+GB,22,per-club official depth chart page,yes,verified,https://www.packers.com/team/depth-chart,REPOSITORY_SOURCE_LINKED
+HOU,1,per-club official depth chart page,no,"NOT PARSED - The Texans publish the depth chart as an image with no accompanying text table; no rows can be transcribed without reading the image, which this session will not do (the brief forbids transcription by eye).",https://www.houstontexans.com/team/depth-chart,REPOSITORY_SOURCE_LINKED
+IND,22,per-club official depth chart page,yes,verified,https://www.colts.com/team/depth-chart,REPOSITORY_SOURCE_LINKED
+JAX,23,per-club official depth chart page,yes,verified,https://www.jaguars.com/team/depth-chart,REPOSITORY_SOURCE_LINKED
+KC,22,per-club official depth chart page,yes,verified,https://www.chiefs.com/team/depth-chart,REPOSITORY_SOURCE_LINKED
+LAC,22,per-club official depth chart page,yes,verified,https://www.chargers.com/team/depth-chart,REPOSITORY_SOURCE_LINKED
+LAR,22,per-club official depth chart page,yes,verified,https://www.therams.com/team/depth-chart,REPOSITORY_SOURCE_LINKED
+LV,22,per-club official depth chart page,yes,verified,https://www.raiders.com/team/depth-chart,REPOSITORY_SOURCE_LINKED
+MIA,23,per-club official depth chart page,yes,verified,https://www.miamidolphins.com/team/depth-chart,REPOSITORY_SOURCE_LINKED
+MIN,23,per-club official depth chart page,yes,verified,https://www.vikings.com/team/depth-chart,REPOSITORY_SOURCE_LINKED
+NE,19,per-club official depth chart page,no,"PARTIAL CAPTURE - Page 1 of 3; the defence table was cut off after the Christian Elliss row. Defence rows beyond that point are NOT captured (left blank, flagged). parsed parsed (PARTIAL - Page 1 of 3; the defence table was cut off after the Christian Elliss row. Defence rows beyond that point are NOT captured (left blank, flagged).)",https://www.patriots.com/team/depth-chart,REPOSITORY_SOURCE_LINKED
+NO,23,per-club official depth chart page,yes,verified,https://www.neworleanssaints.com/team/depth-chart,REPOSITORY_SOURCE_LINKED
+NYG,23,per-club official depth chart page,yes,verified,https://www.giants.com/team/depth-chart,REPOSITORY_SOURCE_LINKED
+NYJ,24,per-club official depth chart page,yes,verified,https://www.newyorkjets.com/team/depth-chart,REPOSITORY_SOURCE_LINKED
+PHI,23,per-club official depth chart page,yes,verified,https://www.philadelphiaeagles.com/team/depth-chart,REPOSITORY_SOURCE_LINKED
+PIT,24,per-club official depth chart page,yes,verified,https://www.steelers.com/team/depth-chart,REPOSITORY_SOURCE_LINKED
+SEA,23,per-club official depth chart page,yes,verified,https://www.seahawks.com/team/depth-chart,REPOSITORY_SOURCE_LINKED
+SF,23,per-club official depth chart page,yes,verified,https://www.49ers.com/team/depth-chart,REPOSITORY_SOURCE_LINKED
+TB,22,per-club official depth chart page,yes,verified,https://www.buccaneers.com/team/depth-chart,REPOSITORY_SOURCE_LINKED
+TEN,23,per-club official depth chart page,yes,verified,https://www.tennesseetitans.com/team/depth-chart,REPOSITORY_SOURCE_LINKED
+WAS,23,per-club official depth chart page,yes,verified,https://www.commanders.com/team/depth-chart,REPOSITORY_SOURCE_LINKED

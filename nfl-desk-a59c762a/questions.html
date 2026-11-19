@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="What is known, what is missing and what must be answered before a decision can reasonably be made.">
+<title>Questions · NFL Decision Console</title>
+<link rel="stylesheet" href="style.css">
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="layout">
+  <aside class="sidebar">
+    <a class="brand" href="index.html"><span class="brand-icon">D<span>C</span></span><span>DECISION<small>NFL DESK · a59c762a</small></span></a>
+    <span class="nav-caption">DECISION CONSOLE</span>
+    <nav aria-label="Main navigation"><a class="nav-item" href="index.html">Dashboard</a><a class="nav-item" href="requirements.html">Requirements</a><a class="nav-item" href="availability.html">Availability</a><a class="nav-item" href="lines.html">Originated lines</a><a class="nav-item" href="leaderboard.html">Leaderboard</a><a class="nav-item" href="gates.html">Gates</a><a class="nav-item" href="backtest.html">Backtest &amp; luck</a><a class="nav-item" href="correlations.html">Correlations</a><a class="nav-item active" href="questions.html">Questions</a><a class="nav-item" href="suggestions.html">Suggestions</a><a class="nav-item" href="flagged.html">Flagged for review</a><a class="nav-item" href="sources.html">Sources</a><a class="nav-item" href="executive-summary.html">Executive summary</a></nav>
+    <div class="side-bottom">
+      <div class="mode"><span class="live-dot"></span> Paper research only</div>
+      <p>No bets. No fabricated results.<br>Every row sourced or flagged.</p>
+      <a href="https://github.com/sassnarep3-star/Own5" target="_blank" rel="noopener noreferrer">View repository &rarr;</a>
+    </div>
+  </aside>
+  <div class="main-shell">
+    <header class="topbar">
+      <div><span class="breadcrumb">NFL Decision Console <span>/</span> questions.html</span></div>
+      <div class="topbar-right"><span class="desktop-only">WEEK 11 · 2026</span><span class="avatar">DC</span></div>
+    </header>
+    <main id="main">
+      <div class="page-heading">
+        <div><span class="eyebrow">OWN5 · NFL LINE ORIGINATION</span><h1>Questions</h1><p>What is known, what is missing and what must be answered before a decision can reasonably be made.</p></div>
+        <span class="date-label"><span class="live-dot"></span> Official reads 2026-11-19</span>
+      </div>
+<div class="stats">
+<article><span>Open questions</span><strong>12</strong><small></small></article>
+<article><span>Answered</span><strong>2</strong><small></small></article>
+<article><span>Raised to another session</span><strong>1</strong><small></small></article>
+</div>
+<div class="section-title"><h2>Questions, information and answers</h2><span class="eyebrow">WHAT IS KNOWN, WHAT IS MISSING, WHAT IS NEEDED BEFORE A DECISION</span></div>
+<article class="qa">
+<h3><span class="rid">Q-A59-01</span> Which book and which quote is the market line we are trying to beat, and at what time? <span class="badge warn">OPEN</span></h3>
+<dl>
+<dt>Known from verified sources</dt><dd>Nothing in this repository holds an operator price. The Week-11 price store holds 39 model-record rows with every opening and closing cell blank</dd>
+<dt>Missing information</dt><dd>Provider, jurisdiction, permission, quote timestamp, opening and closing number, and the push and void rule set</dd>
+<dt>Answer needed before a decision</dt><dd>Without an admitted price there is no market residual, no closing-line value and no real-price return, so no strategy can be staked or ranked on money</dd>
+<dt>Clearing evidence</dt><dd>One named permitted source with immutable timestamped open and close observations and a documented rule set</dd>
+<dt>Sources</dt><dd><span class="blank">—</span> <a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/data/price_snapshots.csv" target="_blank" rel="noopener noreferrer">REPO</a></dd>
+</dl></article>
+<article class="qa">
+<h3><span class="rid">Q-A59-02</span> How do we treat a player who is absent from the weekly report because he is on injured reserve rather than because he is healthy? <span class="badge warn">OPEN</span></h3>
+<dl>
+<dt>Known from verified sources</dt><dd>The official report lists only players with an injury. A club statement on a game page can say a club has no active injuries while a player is on reserve</dd>
+<dt>Missing information</dt><dd>A reserve-list capture and a join key that links the injury report to the reserve list</dd>
+<dt>Answer needed before a decision</dt><dd>Until the join exists, absence from the report cannot be read as availability, and any availability feature built on the report alone will overstate availability</dd>
+<dt>Clearing evidence</dt><dd>A dated reserve-list capture with pagination for the whole window, joined to the report</dd>
+<dt>Sources</dt><dd><span class="blank">—</span> <a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-35a1feb2/data/reserve_list_register.csv" target="_blank" rel="noopener noreferrer">REPO</a></dd>
+</dl></article>
+<article class="qa">
+<h3><span class="rid">Q-A59-03</span> What does Questionable actually mean for a game&#x27;s scoring margin? <span class="badge warn">OPEN</span></h3>
+<dl>
+<dt>Known from verified sources</dt><dd>The official report publishes the word and no percentage. In the Week-11 read there are 7 Questionable rows and 9 Out rows out of 253</dd>
+<dt>Missing information</dt><dd>Several seasons of designations joined to the official inactive lists, so that the play rate of each designation can be estimated</dd>
+<dt>Answer needed before a decision</dt><dd>Whether Questionable belongs in a personnel feature at all, and with what weight</dd>
+<dt>Clearing evidence</dt><dd>A per-designation play rate with a confidence interval over at least three seasons</dd>
+<dt>Sources</dt><dd><a href="https://www.nfl.com/injuries/league/2026/reg11" target="_blank" rel="noopener noreferrer">NFL</a> <a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/data/availability_wk11.csv" target="_blank" rel="noopener noreferrer">REPO</a></dd>
+</dl></article>
+<article class="qa">
+<h3><span class="rid">Q-A59-04</span> Who is the replacement for each starter who is out, and at what string? <span class="badge warn">OPEN</span></h3>
+<dl>
+<dt>Known from verified sources</dt><dd>The repository holds 890 depth rows across 32 clubs. Houston is a single image-only row. The Patriots rows are marked partial</dd>
+<dt>Missing information</dt><dd>A verified depth order for Houston, a complete Patriots capture, and an official play-time source</dd>
+<dt>Answer needed before a decision</dt><dd>Any backup-deficiency feature, any off-versus-defence matchup matrix, and any starter-out count</dd>
+<dt>Clearing evidence</dt><dd>One depth route verified for all 32 clubs, and an authorised structured source for the Houston page</dd>
+<dt>Sources</dt><dd><span class="blank">—</span> <a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/data/depth_coverage.csv" target="_blank" rel="noopener noreferrer">REPO</a></dd>
+</dl></article>
+<article class="qa">
+<h3><span class="rid">Q-A59-05</span> Which official source publishes per-player play counts? <span class="badge warn">OPEN</span></h3>
+<dl>
+<dt>Known from verified sources</dt><dd>The official Game Book for Washington at New York was read in full. It publishes the lineups, the substitutions, the players who did not play, the Not Active list and the weather, and no snap counts. The Next Gen Stats glossary publishes tracking metrics and does not document a public snap series</dd>
+<dt>Missing information</dt><dd>A named official endpoint or document that publishes per-player play counts for the season</dd>
+<dt>Answer needed before a decision</dt><dd>Whether route (b) for depth exists at all, which decides whether the backup-deficiency feature can be built for Houston</dd>
+<dt>Clearing evidence</dt><dd>An official source read first-hand that publishes play counts</dd>
+<dt>Sources</dt><dd><a href="https://nextgenstats.nfl.com/glossary" target="_blank" rel="noopener noreferrer">NFL</a> <a href="https://static.www.nfl.com/image/upload/v1794570519/gamecenter/ab5828d9-4feb-11f1-abca-2c54536568a9.pdf" target="_blank" rel="noopener noreferrer">NFL</a> <a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/raw/gamebook_was_nyg_reg10_2026-11-19.md" target="_blank" rel="noopener noreferrer">REPO</a></dd>
+</dl></article>
+<article class="qa">
+<h3><span class="rid">Q-A59-06</span> Was the Sunday game-status column published for the Lions on the official Week-11 report? <span class="badge ok">ANSWERED_IN_REGISTRY</span></h3>
+<dl>
+<dt>Known from verified sources</dt><dd>No. Kerby Joseph, Cade Mays and D.J. Reed appear on the official Week-11 report with a blank game-status cell, read at 2026-11-19T06:45Z. The Lions play Sunday 22 November. The Week-10 record in the repository lists all three as Out</dd>
+<dt>Missing information</dt><dd>Nothing: this is a publication-timing fact, not a missing measurement</dd>
+<dt>Answer needed before a decision</dt><dd>Nothing. The cells are correct as published and must stay blank until the publisher fills them</dd>
+<dt>Clearing evidence</dt><dd>A later dated read of the same Week-11 report, published after the Sunday designation deadline</dd>
+<dt>Sources</dt><dd><a href="https://www.nfl.com/injuries/league/2026/reg11" target="_blank" rel="noopener noreferrer">NFL</a> <a href="https://www.nfl.com/injuries/league/2026/reg10" target="_blank" rel="noopener noreferrer">NFL</a> <a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/data/availability_wk11.csv" target="_blank" rel="noopener noreferrer">REPO</a></dd>
+</dl></article>
+<article class="qa">
+<h3><span class="rid">Q-A59-07</span> Did the earlier club statements that no club had active injuries survive the full league report? <span class="badge ok">ANSWERED_IN_REGISTRY</span></h3>
+<dl>
+<dt>Known from verified sources</dt><dd>No. The 2026-11-18T03:46Z game-page read carried a club statement for Minnesota and for San Francisco saying there were no active injuries. The 2026-11-19T06:45Z league report names 10 Minnesota rows and 15 San Francisco rows, including Jordan Addison who did not participate</dd>
+<dt>Missing information</dt><dd>Nothing further for this pair; the delta is published</dd>
+<dt>Answer needed before a decision</dt><dd>Nothing. It establishes that a game page is not an availability source and that only the league report carries the full row set</dd>
+<dt>Clearing evidence</dt><dd>The published delta table with both read clocks</dd>
+<dt>Sources</dt><dd><a href="https://www.nfl.com/injuries/league/2026/reg11" target="_blank" rel="noopener noreferrer">NFL</a> <a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/data/availability_delta.csv" target="_blank" rel="noopener noreferrer">REPO</a></dd>
+</dl></article>
+<article class="qa">
+<h3><span class="rid">Q-A59-08</span> Is the model&#x27;s Week-10 holdout performance skill or luck? <span class="badge warn">OPEN</span></h3>
+<dl>
+<dt>Known from verified sources</dt><dd>On 29 out-of-sample games in weeks 9 and 10 the model has a Brier skill score of 0.0188 against a climatology baseline on the final holdout week, while the validation week alone gave 0.4357. The favourites-only control won 79.3% of the same 29 games while the model itself won 71.4%</dd>
+<dt>Missing information</dt><dd>A longer prospective window, and a price source so that the return can be separated from the forecast</dd>
+<dt>Answer needed before a decision</dt><dd>Any claim of skill, any staking decision and any reward</dd>
+<dt>Clearing evidence</dt><dd>A prospective window large enough to separate the two, with an interval on the skill score</dd>
+<dt>Sources</dt><dd><a href="https://www.nfl.com/schedules/2026/by-week/week-10" target="_blank" rel="noopener noreferrer">NFL</a> <a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/data/shadow_backtest.csv" target="_blank" rel="noopener noreferrer">REPO</a></dd>
+</dl></article>
+<article class="qa">
+<h3><span class="rid">Q-A59-09</span> Is the home-field estimate of 1.49 points stable? <span class="badge warn">OPEN</span></h3>
+<dl>
+<dt>Known from verified sources</dt><dd>The opponent-adjusted fit on weeks 1 to 8 estimates home field at 1.488 points with a residual standard deviation of 14.079 points</dd>
+<dt>Missing information</dt><dd>A longer season and a proper interval on the home-field term</dd>
+<dt>Answer needed before a decision</dt><dd>Whether the spread model is precise enough to price a half point</dd>
+<dt>Clearing evidence</dt><dd>An interval on the home-field coefficient from a full-season fit</dd>
+<dt>Sources</dt><dd><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener noreferrer">NFL</a> <a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/data/model_ratings.csv" target="_blank" rel="noopener noreferrer">REPO</a></dd>
+</dl></article>
+<article class="qa">
+<h3><span class="rid">Q-A59-10</span> What is the correct venue string for the Colts at Texans game? <span class="badge warn">OPEN</span></h3>
+<dl>
+<dt>Known from verified sources</dt><dd>The official game centre prints HOUSTON, TX and RELIANT STADIUM. The schedule page hotel link for the same fixture says NRG Stadium. The official Schedule Release page lists the Week-11 international game at Estadio Banorte, Mexico City</dd>
+<dt>Missing information</dt><dd>A ruling on which official string is canonical, so that the venue field is not inconsistent across rows</dd>
+<dt>Answer needed before a decision</dt><dd>The venue field, and any stadium roof or surface feature that keys off it</dd>
+<dt>Clearing evidence</dt><dd>A documented convention agreed once and applied to every venue cell</dd>
+<dt>Sources</dt><dd><a href="https://www.nfl.com/games/colts-at-texans-2026-reg-11" target="_blank" rel="noopener noreferrer">NFL</a> <a href="https://www.nfl.com/schedules/2026/by-week/week-11" target="_blank" rel="noopener noreferrer">NFL</a> <a href="https://www.nfl.com/nfl-schedule-release/" target="_blank" rel="noopener noreferrer">NFL</a> <a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/raw/schedule_wk11_2026-11-19.csv" target="_blank" rel="noopener noreferrer">REPO</a></dd>
+</dl></article>
+<article class="qa">
+<h3><span class="rid">Q-A59-11</span> On what date was the 2026 schedule announced? <span class="badge warn">OPEN</span></h3>
+<dl>
+<dt>Known from verified sources</dt><dd>The official Schedule Release landing page was read on 2026-11-19. It publishes the 2026 schedule, the nine international games and the flexible-scheduling notice, and it prints no publication date</dd>
+<dt>Missing information</dt><dd>A dated official announcement, for example a dated league article or a dated league media release</dd>
+<dt>Answer needed before a decision</dt><dd>The dated announcement requirement, which asks for the announcement beside the live schedule</dd>
+<dt>Clearing evidence</dt><dd>An official dated page that states the announcement date</dd>
+<dt>Sources</dt><dd><a href="https://www.nfl.com/nfl-schedule-release/" target="_blank" rel="noopener noreferrer">NFL</a> <a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/data/sources.csv" target="_blank" rel="noopener noreferrer">REPO</a></dd>
+</dl></article>
+<article class="qa">
+<h3><span class="rid">Q-A59-12</span> Can the primary repository results feed be used for a backtest as it stands? <span class="badge warn">CROSS_SESSION_REQUEST_RAISED</span></h3>
+<dl>
+<dt>Known from verified sources</dt><dd>No. The 150-row feed in nfl-desk-35a1feb2 leaves the Week-10 Los Angeles Chargers at Baltimore Ravens row blank and marked as not kicked off. The official week-10 page, read on 2026-11-19, shows the game finished, Chargers 23, Ravens 20, on Monday 16 November. The official standings include the game, which is why a per-club reconciliation fails for exactly two clubs</dd>
+<dt>Missing information</dt><dd>A corrected row in the owning session&#x27;s feed</dd>
+<dt>Answer needed before a decision</dt><dd>Any backtest that uses the stale feed will mis-state the Week-10 result for two clubs and therefore mis-state the ratings</dd>
+<dt>Clearing evidence</dt><dd>The owning session updates the row, and the reconciliation against the standings returns 0 mismatches for all 32 clubs</dd>
+<dt>Sources</dt><dd><a href="https://www.nfl.com/schedules/2026/by-week/week-10" target="_blank" rel="noopener noreferrer">NFL</a> <a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener noreferrer">NFL</a> <a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-35a1feb2/data/results_feed_2026.csv" target="_blank" rel="noopener noreferrer">REPO</a></dd>
+</dl></article>
+      <footer><span>DECISION CONSOLE <span class="footer-divider">/</span> Session a59c762a &middot; evidence first</span>
+      <span>Blank cells = unverified. <a href="flagged.html">Flagged for review &rarr;</a> &middot; <a href="sources.html">Sources &rarr;</a></span></footer>
+    </main>
+  </div>
+</div>
+</body></html>

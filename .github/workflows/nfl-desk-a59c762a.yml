@@ -1,0 +1,54 @@
+name: NFL desk a59c762a — build, verify and test
+
+on:
+  push:
+    branches: [main, 'arena/a59c762a-own5']
+    paths:
+      - 'nfl-desk-a59c762a/**'
+      - '.github/workflows/nfl-desk-a59c762a.yml'
+  pull_request:
+    paths:
+      - 'nfl-desk-a59c762a/**'
+      - '.github/workflows/nfl-desk-a59c762a.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Rebuild the desk from the raw captures
+        run: |
+          python3 nfl-desk-a59c762a/build_registers.py
+          python3 nfl-desk-a59c762a/build_data.py
+          python3 nfl-desk-a59c762a/build_desk.py
+
+      - name: Confirm the committed site matches a clean rebuild
+        run: |
+          git diff --exit-code -- nfl-desk-a59c762a/
+
+      - name: Run the fail-closed verifier
+        run: python3 nfl-desk-a59c762a/verify_desk.py
+
+      - name: Run the unit tests and the negative controls
+        run: python3 -m unittest discover -s nfl-desk-a59c762a/tests -v
+
+      - name: Confirm every page and asset is present
+        run: |
+          python3 - <<'PY'
+          import os, sys
+          d = "nfl-desk-a59c762a"
+          pages = sorted(f for f in os.listdir(d) if f.endswith(".html"))
+          assert len(pages) == 13, "expected 13 pages, found %d" % len(pages)
+          for p in pages:
+              assert os.path.exists(os.path.join(d, "style.css")), "style.css missing"
+          print("pages:", len(pages))
+          PY

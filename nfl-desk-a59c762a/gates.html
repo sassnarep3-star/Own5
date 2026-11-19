@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The validation, joint-evidence, price, depth and demotion gates, each with its result and its evidence.">
+<title>Gates · NFL Decision Console</title>
+<link rel="stylesheet" href="style.css">
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="layout">
+  <aside class="sidebar">
+    <a class="brand" href="index.html"><span class="brand-icon">D<span>C</span></span><span>DECISION<small>NFL DESK · a59c762a</small></span></a>
+    <span class="nav-caption">DECISION CONSOLE</span>
+    <nav aria-label="Main navigation"><a class="nav-item" href="index.html">Dashboard</a><a class="nav-item" href="requirements.html">Requirements</a><a class="nav-item" href="availability.html">Availability</a><a class="nav-item" href="lines.html">Originated lines</a><a class="nav-item" href="leaderboard.html">Leaderboard</a><a class="nav-item active" href="gates.html">Gates</a><a class="nav-item" href="backtest.html">Backtest &amp; luck</a><a class="nav-item" href="correlations.html">Correlations</a><a class="nav-item" href="questions.html">Questions</a><a class="nav-item" href="suggestions.html">Suggestions</a><a class="nav-item" href="flagged.html">Flagged for review</a><a class="nav-item" href="sources.html">Sources</a><a class="nav-item" href="executive-summary.html">Executive summary</a></nav>
+    <div class="side-bottom">
+      <div class="mode"><span class="live-dot"></span> Paper research only</div>
+      <p>No bets. No fabricated results.<br>Every row sourced or flagged.</p>
+      <a href="https://github.com/sassnarep3-star/Own5" target="_blank" rel="noopener noreferrer">View repository &rarr;</a>
+    </div>
+  </aside>
+  <div class="main-shell">
+    <header class="topbar">
+      <div><span class="breadcrumb">NFL Decision Console <span>/</span> gates.html</span></div>
+      <div class="topbar-right"><span class="desktop-only">WEEK 11 · 2026</span><span class="avatar">DC</span></div>
+    </header>
+    <main id="main">
+      <div class="page-heading">
+        <div><span class="eyebrow">OWN5 · NFL LINE ORIGINATION</span><h1>Gates</h1><p>The validation, joint-evidence, price, depth and demotion gates, each with its result and its evidence.</p></div>
+        <span class="date-label"><span class="live-dot"></span> Official reads 2026-11-19</span>
+      </div>
+<div class="stats">
+<article><span>Gates</span><strong>14</strong><small></small></article>
+<article><span>Passed</span><strong>9</strong><small></small></article>
+<article><span>Partial</span><strong>1</strong><small></small></article>
+<article><span>Blocked</span><strong>3</strong><small></small></article>
+</div>
+<div class="section-title"><h2>Validation gates</h2><span class="eyebrow">A BLOCKED GATE NAMES ITS PREREQUISITE; IT IS NOT A FAILED STRATEGY</span></div>
+<div class="tw"><table class="data">
+<thead><tr>
+<th scope="col">Gate</th>
+<th scope="col">Name</th>
+<th scope="col">Rule</th>
+<th scope="col">Threshold</th>
+<th scope="col">Result</th>
+<th scope="col">Evidence</th>
+<th scope="col">Source</th>
+<th scope="col">Flag</th>
+</tr></thead><tbody>
+<tr><td>G-A59-01</td><td>Provenance</td><td>Every published factual row carries a link to an official source, or is blank and explicitly flagged</td><td>0 rows with a value and no source link</td><td><span class="badge ok">PASS</span></td><td>Enforced by nfl-desk-a59c762a/verify_desk.py; negative-control tests cover a stripped link, a filled blank and a deleted flag</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/verify_desk.py" target="_blank" rel="noopener noreferrer">REPO</a></td><td><span class="blank">—</span></td></tr>
+<tr><td>G-A59-02</td><td>Leakage</td><td>No model input may carry information dated after the kickoff of the game it predicts</td><td>0 inputs dated after the predicted game&#x27;s kickoff</td><td><span class="badge ok">PASS</span></td><td>Every Week-11 line row records recorded_at_utc 2026-11-19T07:05:00Z, before the first Week-11 kickoff at 8:15 PM ET on 2026-11-19</td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-11" target="_blank" rel="noopener noreferrer">NFL</a></td><td><span class="blank">—</span></td></tr>
+<tr><td>G-A59-03</td><td>Holdout</td><td>Train, validation and final holdout windows are chronological and disjoint</td><td>3 disjoint chronological windows, final holdout never touched during fitting</td><td><span class="badge ok">PASS</span></td><td>Train weeks 1-8 (121 games), validation week 9 (15), final holdout week 10 (14). The model is fitted on the train window only</td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-10" target="_blank" rel="noopener noreferrer">NFL</a></td><td><span class="blank">—</span></td></tr>
+<tr><td>G-A59-04</td><td>Pre-registration</td><td>Every strategy and every rule is frozen before the evaluation window opens</td><td>1 registered rule per strategy with a commit hash</td><td><span class="badge ok">PASS</span></td><td>3 strategies and 2 controls registered in data/pre_registration.csv before the first Week-11 kickoff</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/data/pre_registration.csv" target="_blank" rel="noopener noreferrer">REPO</a></td><td><span class="blank">—</span></td></tr>
+<tr><td>G-A59-05</td><td>No backtest on the leaderboard</td><td>No leaderboard cell may contain a backtest-derived number</td><td>0 leaderboard cells with a backtest-derived value</td><td><span class="badge ok">PASS</span></td><td>The leaderboard holds prospective columns only. The verifier fails if any of them is filled from the shadow backtest</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/data/leaderboard.csv" target="_blank" rel="noopener noreferrer">REPO</a></td><td><span class="blank">—</span></td></tr>
+<tr><td>G-A59-06</td><td>Signal separated from staking</td><td>Signal and staking are separate columns and a staking return may never be shown without a signal score</td><td>2 separate column groups on every leaderboard row</td><td><span class="badge ok">PASS</span></td><td>leaderboard.csv carries signal_score and staking_return as distinct columns</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/data/leaderboard.csv" target="_blank" rel="noopener noreferrer">REPO</a></td><td><span class="blank">—</span></td></tr>
+<tr><td>G-A59-07</td><td>Control baselines</td><td>Every scoring run includes a random control and a favourites-only control</td><td>2 controls scored on every run</td><td><span class="badge ok">PASS</span></td><td>Both controls appear on the removal-of-luck panel with their own n</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/data/luck_panel.csv" target="_blank" rel="noopener noreferrer">REPO</a></td><td><span class="blank">—</span></td></tr>
+<tr><td>G-A59-08</td><td>Multiplicity</td><td>The number of trials is declared and the significance threshold is adjusted</td><td>adjusted alpha = 0.05 / trials</td><td><span class="badge ok">PASS</span></td><td>3 trials are declared on the removal-of-luck panel, so the adjusted alpha is 0.01667</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/data/luck_panel.csv" target="_blank" rel="noopener noreferrer">REPO</a></td><td><span class="blank">—</span></td></tr>
+<tr><td>G-A59-09</td><td>Proper score</td><td>Ranking uses a benchmark-relative proper score with an uncertainty, never win rate</td><td>a benchmark-relative Brier skill score with n and an interval</td><td><span class="badge warn">PARTIAL</span></td><td>The shadow backtest reports Brier skill against climatology with n and a Fisher interval. The leaderboard is unscored because no prospective game has been played</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/data/shadow_backtest.csv" target="_blank" rel="noopener noreferrer">REPO</a></td><td>F-A59-12 no prospective sample yet</td></tr>
+<tr><td>G-A59-10</td><td>Joint evidence</td><td>A parlay or a prop combo may be ranked only when a directly validated joint probability and the operator&#x27;s void and push rules are both available</td><td>2 prerequisites per combo</td><td><span class="badge bad">BLOCKED</span></td><td>No combo is registered. Both prerequisites are absent: no validated joint probability and no admitted operator rule set</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/data/gates.csv" target="_blank" rel="noopener noreferrer">REPO</a></td><td>F-A59-02</td></tr>
+<tr><td>G-A59-11</td><td>Price source</td><td>A market residual, a closing-line value or a realised return requires an admitted, timestamped price source</td><td>1 admitted source with a quote timestamp per market</td><td><span class="badge bad">BLOCKED</span></td><td>No admitted source exists. All 39 price-snapshot rows are blank and flagged</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/data/price_snapshots.csv" target="_blank" rel="noopener noreferrer">REPO</a></td><td>F-A59-02</td></tr>
+<tr><td>G-A59-12</td><td>Depth source</td><td>A depth-based feature requires a verified depth order for all 32 clubs or a verified official play-time source</td><td>32 of 32 clubs verified on one route</td><td><span class="badge bad">BLOCKED</span></td><td>Route (a) is verified for 31 clubs. Route (b) has no verified official source. The backup-deficiency feature is therefore not built</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/data/depth_coverage.csv" target="_blank" rel="noopener noreferrer">REPO</a></td><td>F-A59-05</td></tr>
+<tr><td>G-A59-13</td><td>Demotion</td><td>A live strategy that loses its skill evidence is returned to paper</td><td>a demotion rule with a trigger, a window and a review action</td><td><span class="badge warn">REGISTERED_NOT_EXERCISED</span></td><td>The rule is registered. It has not been exercised because no strategy has been live and no prospective score exists</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/data/gates.csv" target="_blank" rel="noopener noreferrer">REPO</a></td><td>F-A59-12</td></tr>
+<tr><td>G-A59-14</td><td>Availability timing</td><td>An availability read may only be used if its clock time precedes the kickoff it informs</td><td>read_at_utc earlier than the kickoff of every game it informs</td><td><span class="badge ok">PASS</span></td><td>The Week-11 injury report was read at 2026-11-19T06:45Z, before the 8:15 PM ET kickoff</td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-11" target="_blank" rel="noopener noreferrer">NFL</a></td><td><span class="blank">—</span></td></tr>
+</tbody></table></div>
+      <footer><span>DECISION CONSOLE <span class="footer-divider">/</span> Session a59c762a &middot; evidence first</span>
+      <span>Blank cells = unverified. <a href="flagged.html">Flagged for review &rarr;</a> &middot; <a href="sources.html">Sources &rarr;</a></span></footer>
+    </main>
+  </div>
+</div>
+</body></html>

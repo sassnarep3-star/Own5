@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Options, a recommended path and both sides of the what-would-change-our-mind field, for review before any change is implemented.">
+<title>Suggestions · NFL Decision Console</title>
+<link rel="stylesheet" href="style.css">
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="layout">
+  <aside class="sidebar">
+    <a class="brand" href="index.html"><span class="brand-icon">D<span>C</span></span><span>DECISION<small>NFL DESK · a59c762a</small></span></a>
+    <span class="nav-caption">DECISION CONSOLE</span>
+    <nav aria-label="Main navigation"><a class="nav-item" href="index.html">Dashboard</a><a class="nav-item" href="requirements.html">Requirements</a><a class="nav-item" href="availability.html">Availability</a><a class="nav-item" href="lines.html">Originated lines</a><a class="nav-item" href="leaderboard.html">Leaderboard</a><a class="nav-item" href="gates.html">Gates</a><a class="nav-item" href="backtest.html">Backtest &amp; luck</a><a class="nav-item" href="correlations.html">Correlations</a><a class="nav-item" href="questions.html">Questions</a><a class="nav-item active" href="suggestions.html">Suggestions</a><a class="nav-item" href="flagged.html">Flagged for review</a><a class="nav-item" href="sources.html">Sources</a><a class="nav-item" href="executive-summary.html">Executive summary</a></nav>
+    <div class="side-bottom">
+      <div class="mode"><span class="live-dot"></span> Paper research only</div>
+      <p>No bets. No fabricated results.<br>Every row sourced or flagged.</p>
+      <a href="https://github.com/sassnarep3-star/Own5" target="_blank" rel="noopener noreferrer">View repository &rarr;</a>
+    </div>
+  </aside>
+  <div class="main-shell">
+    <header class="topbar">
+      <div><span class="breadcrumb">NFL Decision Console <span>/</span> suggestions.html</span></div>
+      <div class="topbar-right"><span class="desktop-only">WEEK 11 · 2026</span><span class="avatar">DC</span></div>
+    </header>
+    <main id="main">
+      <div class="page-heading">
+        <div><span class="eyebrow">OWN5 · NFL LINE ORIGINATION</span><h1>Suggestions</h1><p>Options, a recommended path and both sides of the what-would-change-our-mind field, for review before any change is implemented.</p></div>
+        <span class="date-label"><span class="live-dot"></span> Official reads 2026-11-19</span>
+      </div>
+<div class="stats">
+<article><span>Suggestions</span><strong>8</strong><small>none implemented</small></article>
+<article><span>High priority</span><strong>3</strong><small></small></article>
+<article><span>Suggestions implemented</span><strong>0</strong><small>each awaits a decision</small></article>
+</div>
+<aside class="notice"><span class="notice-icon" aria-hidden="true">i</span><div><strong>info</strong><p><strong>Nothing here has been implemented.</strong> Each suggestion lists the options, a recommended path, and both sides of the what-would-change-our-mind field: what would make the recommendation change, and what would keep it. A decision is the reviewer's to make.</p></div></aside>
+<article class="qa">
+<h3><span class="rid">SG-A59-01</span> Price-data policy, the single gate that blocks most of the plan <span class="badge bad">high</span></h3>
+<dl>
+<dt>Options</dt><dd>A: adopt an official operator feed that the NFL publishes for partners; B: adopt a licensed commercial feed and store only derived, non-redistributable features; C: keep the price store empty and run the project as a pure forecasting desk with no staking or ROI claim.</dd>
+<dt>Recommended path</dt><dd><strong>C for now, with B as the target. The empty store is honest and already implemented, and the model can be judged on forecast quality alone until a feed is licensed. Choose B before any backtest with a money outcome is published.</strong></dd>
+<dt>What would change our mind</dt><dd>What would change this: a written, signed permission for a named feed with a quote timestamp, a jurisdiction and a push and void rule set. What would keep it: the model still cannot be scored on money without that document.</dd>
+<dt>Decision status</dt><dd><span class="badge warn">PROPOSED_NOT_IMPLEMENTED</span></dd>
+<dt>Sources</dt><dd><span class="blank">—</span> <a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/data/price_snapshots.csv" target="_blank" rel="noopener noreferrer">REPO</a></dd>
+</dl></article>
+<article class="qa">
+<h3><span class="rid">SG-A59-02</span> Depth-order source for the Houston Texans <span class="badge bad">high</span></h3>
+<dl>
+<dt>Options</dt><dd>A: find an official structured source for the Texans depth page, for example a feed or a printable page rather than the image; B: use the official Game Book across a season to build actual-starter history and treat it as the depth proxy; C: keep Houston out of every depth-based feature and label it as missing.</dd>
+<dt>Recommended path</dt><dd><strong>B plus C now, A as the goal. The Game Book route is already proven on one game and it is the only official source that publishes who actually started, which is the quantity the feature actually needs.</strong></dd>
+<dt>What would change our mind</dt><dd>What would change this: an official structured Texans source would remove the exception entirely. What would keep it: no such source appears on the club site, and the brief forbids transcription by eye.</dd>
+<dt>Decision status</dt><dd><span class="badge warn">PROPOSED_NOT_IMPLEMENTED</span></dd>
+<dt>Sources</dt><dd><span class="blank">—</span> <a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/data/depth_coverage.csv" target="_blank" rel="noopener noreferrer">REPO</a></dd>
+</dl></article>
+<article class="qa">
+<h3><span class="rid">SG-A59-03</span> Whether the pre-registered shadow baseline should stay published <span class="badge bad">high</span></h3>
+<dl>
+<dt>Options</dt><dd>A: keep publishing it with the shadow label and the train, validation and holdout split visible on every row; B: withdraw all backtest numbers and publish only prospective scores; C: keep publishing it but add a second untouched holdout.</dd>
+<dt>Recommended path</dt><dd><strong>A now, C before any strategy is staked. The published numbers show exactly why the label matters: the validation week gave a Brier skill of 0.44 and the final holdout gave 0.02. Removing the numbers would hide that lesson.</strong></dd>
+<dt>What would change our mind</dt><dd>What would change this: a second holdout season that the model has never seen would let the number stand on its own. What would keep it: nothing in the numbers themselves changes; the label and the split do the work.</dd>
+<dt>Decision status</dt><dd><span class="badge warn">PROPOSED_NOT_IMPLEMENTED</span></dd>
+<dt>Sources</dt><dd><a href="https://www.nfl.com/schedules/2026/by-week/week-10" target="_blank" rel="noopener noreferrer">NFL</a> <a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/data/shadow_backtest.csv" target="_blank" rel="noopener noreferrer">REPO</a></dd>
+</dl></article>
+<article class="qa">
+<h3><span class="rid">SG-A59-04</span> Scoring the injury designation empirically <span class="badge warn">medium</span></h3>
+<dl>
+<dt>Options</dt><dd>A: join designations to official inactive lists across three past seasons and estimate a play rate per designation; B: use the designation only as a filter, never as a weight; C: do not use designations at all until the archive exists.</dd>
+<dt>Recommended path</dt><dd><strong>A, with C as the interim. The archive of past weekly reports is a public, dated source, so the join is achievable; until then the designation is a filter and never a number in a model.</strong></dd>
+<dt>What would change our mind</dt><dd>What would change this: a season of joins that produces a tight interval on the Questionable play rate. What would keep it: wide intervals or a designation that predicts nothing.</dd>
+<dt>Decision status</dt><dd><span class="badge warn">PROPOSED_NOT_IMPLEMENTED</span></dd>
+<dt>Sources</dt><dd><a href="https://www.nfl.com/injuries/league/2026/reg11" target="_blank" rel="noopener noreferrer">NFL</a> <a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/data/suggestions.csv" target="_blank" rel="noopener noreferrer">REPO</a></dd>
+</dl></article>
+<article class="qa">
+<h3><span class="rid">SG-A59-05</span> Two estimators for the model total, and when one may be retired <span class="badge warn">medium</span></h3>
+<dl>
+<dt>Options</dt><dd>A: publish both estimators and their gap indefinitely; B: retire the weaker estimator after a chronological walk-forward comparison; C: replace both with a single point estimate and publish the interval instead.</dd>
+<dt>Recommended path</dt><dd><strong>B with A until then. The walk-forward rule must be written before the comparison is run, so that the retirement is not chosen after seeing which one wins.</strong></dd>
+<dt>What would change our mind</dt><dd>What would change this: a pre-written walk-forward rule that names the estimator, the window and the decision threshold before the run. What would keep it: the gap column stays until that rule has fired.</dd>
+<dt>Decision status</dt><dd><span class="badge warn">PROPOSED_NOT_IMPLEMENTED</span></dd>
+<dt>Sources</dt><dd><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener noreferrer">NFL</a> <a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/data/originated_lines.csv" target="_blank" rel="noopener noreferrer">REPO</a></dd>
+</dl></article>
+<article class="qa">
+<h3><span class="rid">SG-A59-06</span> Public analysis layer versus private data layer <span class="badge warn">medium</span></h3>
+<dl>
+<dt>Options</dt><dd>A: publish everything including raw rows; B: publish only derived indices, ratios and model output, and link to the official page; C: publish nothing but links.</dd>
+<dt>Recommended path</dt><dd><strong>B. It is already the posture of this desk: derived analysis in public, and a link to the official page for every fact. It also removes the terms question from the critical path.</strong></dd>
+<dt>What would change our mind</dt><dd>What would change this: a written terms review that permits raw row-level republication. What would keep it: the review is not complete, so the conservative layer stays.</dd>
+<dt>Decision status</dt><dd><span class="badge warn">PROPOSED_NOT_IMPLEMENTED</span></dd>
+<dt>Sources</dt><dd><span class="blank">—</span> <a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/data/suggestions.csv" target="_blank" rel="noopener noreferrer">REPO</a></dd>
+</dl></article>
+<article class="qa">
+<h3><span class="rid">SG-A59-07</span> The price store, the results feed and the standings: one canonical file or many <span class="badge warn">low</span></h3>
+<dl>
+<dt>Options</dt><dd>A: one canonical results feed with every desk reading it; B: keep the per-desk feeds and publish a reconciliation report; C: rebuild the feeds from the official pages on a schedule and drop the carried-forward rows.</dd>
+<dt>Recommended path</dt><dd><strong>C for the corpus, because a carried-forward row is only as good as the capture that produced it, and one stale row has already been found. Until the scheduled rebuild exists, B keeps the reconciliation visible.</strong></dd>
+<dt>What would change our mind</dt><dd>What would change this: a scheduled rebuild that reproduces the corpus from the official pages with 0 mismatches against the standings. What would keep it: the reconciliation report is the only thing that currently catches a stale row.</dd>
+<dt>Decision status</dt><dd><span class="badge warn">PROPOSED_NOT_IMPLEMENTED</span></dd>
+<dt>Sources</dt><dd><a href="https://www.nfl.com/schedules/2026/by-week/week-10" target="_blank" rel="noopener noreferrer">NFL</a> <a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/data/results_2026.csv" target="_blank" rel="noopener noreferrer">REPO</a></dd>
+</dl></article>
+<article class="qa">
+<h3><span class="rid">SG-A59-08</span> What counts as a fair comparison for the removal-of-luck panel <span class="badge warn">low</span></h3>
+<dl>
+<dt>Options</dt><dd>A: compare against the climatology baseline only; B: compare against the climatology baseline and both controls, as this desk does; C: compare against a second independent model.</dd>
+<dt>Recommended path</dt><dd><strong>B. With three trials the Bonferroni-adjusted significance level is 0.0167, and a panel that shows only the model can hide a lucky run.</strong></dd>
+<dt>What would change our mind</dt><dd>What would change this: a second independently specified model whose forecasts are registered before the window opens. What would keep it: the controls are free, reproducible and already published.</dd>
+<dt>Decision status</dt><dd><span class="badge warn">PROPOSED_NOT_IMPLEMENTED</span></dd>
+<dt>Sources</dt><dd><span class="blank">—</span> <a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-a59c762a/data/luck_panel.csv" target="_blank" rel="noopener noreferrer">REPO</a></dd>
+</dl></article>
+      <footer><span>DECISION CONSOLE <span class="footer-divider">/</span> Session a59c762a &middot; evidence first</span>
+      <span>Blank cells = unverified. <a href="flagged.html">Flagged for review &rarr;</a> &middot; <a href="sources.html">Sources &rarr;</a></span></footer>
+    </main>
+  </div>
+</div>
+</body></html>
