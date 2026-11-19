@@ -3946,4 +3946,4 @@ NYG/WAS PCT because it used W/G — the official page counts ties as half-wins; 
 "LA" while the schedule page prints "LAR". Both were corrected to the official conventions and re-verified
 (0 MISMATCH rows) rather than explained away.
 
-**Follow-up:** one record-only PR from this branch records this block's own merge (its number is appended below).
+**Follow-up:** record-only PR #150 carries this completion record (K-082 -> MET, F6-21 -> resolved, honest source-link labels).
