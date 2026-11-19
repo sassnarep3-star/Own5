@@ -26,6 +26,7 @@ PAGES = [
     ("questions.html", "Questions &amp; information", "What must be answered before any decision is reasonable, and how to discover the missing facts."),
     ("suggestions.html", "Suggestions", "Proposed improvements with cost, recommendation and decision state. Nothing is implemented without a decision."),
     ("flagged.html", "Flagged for review", "Unverified values, irregularities and the source links for each."),
+    ("diff.html", "What changed", "The weekly diff: what moved since the previous dated snapshot, and what could not be diffed."),
     ("sources.html", "Sources", "Every official source read, with the clock time of the read."),
 ]
 
@@ -205,7 +206,7 @@ def page_index():
 <div class="s">80%% power, two-sided 5%%</div></div>
 <div class="card bad"><div class="k">Flagged items for review</div><div class="v">%d</div>
 <div class="s">every blank traces to one</div></div>
-</div>""" % (len(req), met, part, notmet, rej, passed, len(gates), need["value"], len(flags))
+</div>""" % (len(req), met, part, notmet, rej, passed, len(gates), "{:,}".format(int(need["value"])), len(flags))
 
     headline = """<div class="note bad"><b>The single most decision-relevant fact on this site:</b>
 on the only chronological holdout that exists (Week 10, 14 official finals), both pre-registered total
@@ -590,6 +591,28 @@ publication honest. Each row states what is unverified, why, what was done inste
                  "Unverified values and irregularities, with the source link for each.")
 
 
+def page_diff():
+    d = read("weekly_diff.csv")
+    body = ["""<div class="note warn"><b>A diff needs two dated snapshots, and there is one.</b> The desk keeps
+every snapshot under <code>data/snapshots/&lt;date&gt;/</code> and renders the change instead of a static table.
+On the first capture there is nothing to compare, and this page says so rather than inventing a change
+(F-11). The capture log below is append-only and hash-checked: a re-read with identical bytes is refused as a
+no-op, and a second change to the same URL on the same day must be logged as a revision, never overwritten.</div>"""]
+    body.append(table(["File", "Column", "Row", "Previous", "Current", "Compared with", "Note"],
+                      [[r["file"], r["column"], r["row_key"], r["previous_value"],
+                        r["current_value"], r["compared_with"], r["note"]] for r in d],
+                      caption="One row per watched field, per changed club."))
+    body.append("<h2>Capture log: append-only, hash-checked</h2>")
+    body.append(table(["ID", "Dataset", "Read at (UTC)", "Bytes", "SHA-256", "Extract"],
+                      [[r["capture_id"], r["dataset"], r["retrieved_utc"], r["bytes"],
+                        r["sha256"][:24] + "…", r["file"]] for r in read("capture_log.csv")],
+                      num_cols=(3,),
+                      caption="Identical bytes re-read on the same day are refused, so this log cannot grow "
+                              "without a real change."))
+    return shell("diff.html", "What changed", "".join(body),
+                 "Snapshot diff first, then the capture log that makes the diff trustworthy.")
+
+
 def page_sources():
     s = read("sources.csv")
     body = ["""<div class="note"><b>Every row here was read in this session unless the read clock says
@@ -598,6 +621,13 @@ of a number.</div>"""]
     body.append(table(["ID", "Source", "Read at (UTC)", "What it supports", "Link"],
                       [[r["source_id"], r["title"], r["read_utc"], r["what_it_supports"], r["url"]] for r in s],
                       link_cols=(4,)))
+    body.append("""<h2>Supporting documents in this namespace</h2>
+<ul class="tight">
+<li><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/nfl-715e2cd4/EXECUTIVE_SUMMARY.md">Executive summary</a></li>
+<li><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/nfl-715e2cd4/MODEL.md">Model, gates and governance</a></li>
+<li><a href="https://github.com/sassnarep3-star/Own5/blob/main/research/nfl-715e2cd4/VERIFICATION.md">Verification log (25 checks, line by line)</a></li>
+<li><a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-715e2cd4/PREREGISTRATION.md">Pre-registration (frozen rule set)</a></li>
+</ul>""")
     return shell("sources.html", "Sources", "".join(body),
                  "Official sources only. The clock time of each read is part of the evidence.")
 
@@ -608,7 +638,7 @@ BUILDERS = {
     "correlations.html": page_correlations, "luck.html": page_luck, "gates.html": page_gates,
     "strategies.html": page_strategies, "prices.html": page_prices,
     "questions.html": page_questions, "suggestions.html": page_suggestions,
-    "flagged.html": page_flagged, "sources.html": page_sources,
+    "flagged.html": page_flagged, "diff.html": page_diff, "sources.html": page_sources,
 }
 
 

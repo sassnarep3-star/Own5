@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What changed · Own5 NFL line desk</title>
+<link rel="stylesheet" href="style.css">
+</head><body>
+<header class="top"><div class="wrap">
+<div class="brand"><b>Own5 · NFL line origination desk</b>
+<span>session 715e2cd4 · data read 2026-11-19 · no certified strategy</span></div>
+<nav class="tabs"><a href="index.html">Overview</a><a href="lines.html">Originated lines</a><a href="results.html">Verified results</a><a href="availability.html">Injuries &amp; depth</a><a href="leaderboard.html">Leaderboard</a><a href="correlations.html">Correlations</a><a href="luck.html">Removal of luck</a><a href="gates.html">Validation gates</a><a href="strategies.html">Strategies</a><a href="prices.html">Price data</a><a href="questions.html">Questions &amp; information</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged for review</a><a href="diff.html" class="on">What changed</a><a href="sources.html">Sources</a></nav>
+</div></header>
+<main><div class="wrap">
+<h1>What changed</h1>
+<p class="lede">Snapshot diff first, then the capture log that makes the diff trustworthy.</p>
+<div class="note warn"><b>A diff needs two dated snapshots, and there is one.</b> The desk keeps
+every snapshot under <code>data/snapshots/&lt;date&gt;/</code> and renders the change instead of a static table.
+On the first capture there is nothing to compare, and this page says so rather than inventing a change
+(F-11). The capture log below is append-only and hash-checked: a re-read with identical bytes is refused as a
+no-op, and a second change to the same URL on the same day must be logged as a revision, never overwritten.</div><div class="tw"><table class=""><caption>One row per watched field, per changed club.</caption><thead><tr><th>File</th><th>Column</th><th>Row</th><th>Previous</th><th>Current</th><th>Compared with</th><th>Note</th></tr></thead><tbody><tr><td>team_ratings.csv</td><td>offence_rating_pts</td><td>no previous snapshot</td><td><span class="blank">blank</span></td><td><span class="blank">blank</span></td><td>n/a</td><td>first capture; a diff needs a second dated snapshot (F-11)</td></tr><tr><td>team_ratings.csv</td><td>defence_rating_pts</td><td>no previous snapshot</td><td><span class="blank">blank</span></td><td><span class="blank">blank</span></td><td>n/a</td><td>first capture; a diff needs a second dated snapshot (F-11)</td></tr><tr><td>availability_summary.csv</td><td>designated_out</td><td>no previous snapshot</td><td><span class="blank">blank</span></td><td><span class="blank">blank</span></td><td>n/a</td><td>first capture; a diff needs a second dated snapshot (F-11)</td></tr></tbody></table></div><h2>Capture log: append-only, hash-checked</h2><div class="tw"><table class=""><caption>Identical bytes re-read on the same day are refused, so this log cannot grow without a real change.</caption><thead><tr><th>ID</th><th>Dataset</th><th>Read at (UTC)</th><th>Bytes</th><th>SHA-256</th><th>Extract</th></tr></thead><tbody><tr><td>P001</td><td>2026 REG standings</td><td>2026-11-19T06:55:00Z</td><td class="num">567</td><td>152e0cf8be414fa95ad1e5a4…</td><td>raw/standings_2026_reg.txt</td></tr><tr><td>P002</td><td>Week 11 injury report</td><td>2026-11-19T06:55:00Z</td><td class="num">15353</td><td>dd4cd14e7ff10d0efcfe7bba…</td><td>raw/injuries_2026_reg11.txt</td></tr></tbody></table></div>
+</div></main>
+<footer><div class="wrap">
+Every numeric value on this site is either computed in-repo from an official nfl.com page or left blank and
+flagged. Market prices are blank by policy P-01. No backtest figure appears on the leaderboard.
+&nbsp;·&nbsp; <a href="https://github.com/sassnarep3-star/Own5/tree/main/nfl-desk-715e2cd4">source</a>
+</div></footer></body></html>

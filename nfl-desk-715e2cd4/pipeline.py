@@ -689,6 +689,60 @@ def main():
                "starters_out_note", "named_replacements", "replacements_note", "source_url"],
               arows)
 
+    # ---- 9b. capture ledger (append-only in practice; rebuilt deterministically here)
+    log = []
+    for i, (ds, url, fn) in enumerate([
+        ("2026 REG standings", SOURCES["standings"], "standings_2026_reg.txt"),
+        ("Week 11 injury report", SOURCES["injuries_reg11"], "injuries_2026_reg11.txt"),
+    ], 1):
+        path = os.path.join(RAW, fn)
+        log.append(["P%03d" % i, ds, url, CAPTURE_UTC, "raw/" + fn, sha256_file(path),
+                    os.path.getsize(path)])
+    write_csv("capture_log.csv",
+              ["capture_id", "dataset", "url", "retrieved_utc", "file", "sha256", "bytes"], log)
+
+    # ---- 9c. weekly diff against the previous dated snapshot
+    snapdir = os.path.join(DATA, "snapshots")
+    dirs = sorted(os.listdir(snapdir)) if os.path.isdir(snapdir) else []
+    # the newest snapshot IS the current data, so the comparison target is the
+    # one before it; with a single snapshot there is nothing to compare against.
+    prev = dirs[:-1]
+    watch = [("team_ratings.csv", "team", "offence_rating_pts"),
+             ("team_ratings.csv", "team", "defence_rating_pts"),
+             ("availability_summary.csv", "team", "designated_out")]
+    diff = []
+    if not prev:
+        for fn, key, col in watch:
+            diff.append([fn, col, "no previous snapshot", "", "", "n/a",
+                         "first capture; a diff needs a second dated snapshot (F-11)",
+                         REPO_DATA + "weekly_diff.csv"])
+    else:
+        snap = os.path.join(snapdir, prev[-1])
+        for fn, key, col in watch:
+            cur = {}
+            p_cur = os.path.join(DATA, fn)
+            if os.path.exists(p_cur):
+                with open(p_cur, encoding="utf-8") as fh:
+                    cur = {r[key]: r.get(col, "") for r in csv.DictReader(fh)}
+            oldd = {}
+            p_old = os.path.join(snap, fn)
+            if os.path.exists(p_old):
+                with open(p_old, encoding="utf-8") as fh:
+                    oldd = {r[key]: r.get(col, "") for r in csv.DictReader(fh)}
+            for k in sorted(set(cur) | set(oldd)):
+                a, b = oldd.get(k, ""), cur.get(k, "")
+                if a == b:
+                    continue
+                diff.append([fn, col, k, a, b, prev[-1],
+                             "changed since the previous snapshot" if a else "new row",
+                             SOURCES["standings"]])
+        if not diff:
+            diff.append(["all watched fields", "-", "-", "-", "-", prev[-1],
+                         "no change detected against %s" % prev[-1], SOURCES["standings"]])
+    write_csv("weekly_diff.csv",
+              ["file", "column", "row_key", "previous_value", "current_value",
+               "compared_with", "note", "source_url"], diff)
+
     # ---- 10. venues (spot check only; the full set is another session's desk)
     venues = []
     for r in read_pipe("venues_spotcheck.txt", 6):
