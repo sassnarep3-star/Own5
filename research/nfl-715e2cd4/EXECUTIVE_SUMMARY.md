@@ -13,10 +13,10 @@ left blank and flagged. Nothing is estimated from memory. The site is at
 | Verified results corpus | **136 official finals** (weeks 1-9), plus **14** in the Week 10 holdout |
 | Corpus integrity | **32 of 32 clubs reconcile exactly** to the official standings on W-L-T-PF-PA |
 | Certifiable strategies | **0** |
-| Validation gates | 1 passed (G0), 2 partial, 4 failed, 2 blocked |
+| Validation gates | 1 passed (G0) · 1 partial (G2) · 4 failed (G1, G3, G4, G5) · 3 blocked (G6, G8, G9) · 1 not triggered (G7) |
 | Requirements tracked against the brief | **66**, each with its blocking gate and the number that would clear it |
 | Official sources read with clock times | **12** |
-| Flags for review | **22**, of which 8 are critical |
+| Flags for review | **23**, of which 5 are critical (F-01, F-07, F-13, F-16, F-18) |
 
 ## 2. The three findings that matter
 
@@ -64,6 +64,7 @@ the reward pool is blank.
 | **F-13** | Absence from the injury report is being read as health by every desk that does not hold a reserve list. |
 | **F-21** | The totals estimators lose to a constant mean on the only holdout that exists. |
 | **F-22** | Game designations cover only 2 of the 13 fixtures at this point in the week. |
+| **F-23** | The scheduled byte-level capture cannot run from the build sandbox (all five official URLs failed TLS); the failure is left in the ledger as evidence rather than hidden. |
 
 ## 5. What would change the picture fastest
 
