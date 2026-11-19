@@ -3715,7 +3715,7 @@ completes the missing merge record. No `nfl-desk-35fc3437/**` file is edited by 
 - `nfl-desk-067f2314/**` (GitHub Pages desk: landing page + category subpages, deterministic
   stdlib-only build, data CSV/JSON, verification harness, unit tests)
 - `research/nfl-067f2314/**` (executive summary, methodology, verification log, flagged register)
-- `.github/workflows/nfl-desk-067f2314.yml` (scoped deterministic verification only)
+- `.github/workflows/nfl-desk-067f2314-verify.yml` (scoped deterministic verification only)
 - Append-only blocks in `COORDINATION.md` and one additive row in `README.md`
 
 **Read-only (never edited):** root `index.html`, `pages/**`, `scripts/**`, `tools/**`, `tests/**`,
@@ -3746,15 +3746,15 @@ blank+flagged, never inferred.
 
 | ID | Task | Status | Owner | Files touched | Notes |
 |----|------|--------|-------|---------------|-------|
-| O06-01 | Claim scope + push claim | in progress | 067f2314 | COORDINATION.md | This block. Claim committed and pushed before any build work. |
-| O06-02 | Repo review: enumerate state, prior desks, CI status; flag irregularities | in progress | 067f2314 | research/nfl-067f2314/repo-review.md | Read-only review of the merged tree + live site. |
-| O06-03 | Fresh official-source verification (standings, Wk11 schedule/results, injuries) | in progress | 067f2314 | nfl-desk-067f2314/data/*.csv | Captured 2026-11-19 UTC; every row source_url or blank+flag. |
-| O06-04 | Desk data layer: lines, snapshots, results, standings, injuries, correlations, gates, leaderboard, requirements, questions, suggestions, flagged, sources | in progress | 067f2314 | nfl-desk-067f2314/data/*.csv | From O06-03 reads + in-repo computations; no fabricated values. |
-| O06-05 | Build script: render landing + category subpages from CSVs | in progress | 067f2314 | nfl-desk-067f2314/build_desk.py | Deterministic; no JS required for content. |
-| O06-06 | Verify script: every row source-linked or explicit blank+flag; no broken links; determinism | in progress | 067f2314 | nfl-desk-067f2314/verify_desk.py | Fail-closed; gates the build. |
-| O06-07 | Unit tests | in progress | 067f2314 | nfl-desk-067f2314/tests/test_desk.py | Stdlib tests incl. negative controls. |
-| O06-08 | Executive summary, methodology, verification log, flagged register | in progress | 067f2314 | research/nfl-067f2314/** | Restates only computed/officially-sourced values. |
-| O06-09 | Scoped CI workflow | in progress | 067f2314 | .github/workflows/nfl-desk-067f2314.yml | Rebuild + verify + tests on PR/push. |
+| O06-01 | Claim scope + push claim | done | 067f2314 | COORDINATION.md | This block. Claim committed and pushed before any build work. |
+| O06-02 | Repo review: enumerate state, prior desks, CI status; flag irregularities | done | 067f2314 | research/nfl-067f2314/repo-review.md | Read-only review of the merged tree + live site. |
+| O06-03 | Fresh official-source verification (standings, Wk11 schedule/results, injuries) | done | 067f2314 | nfl-desk-067f2314/data/*.csv | Captured 2026-11-19 UTC; every row source_url or blank+flag. |
+| O06-04 | Desk data layer: lines, snapshots, results, standings, injuries, correlations, gates, leaderboard, requirements, questions, suggestions, flagged, sources | done | 067f2314 | nfl-desk-067f2314/data/*.csv | From O06-03 reads + in-repo computations; no fabricated values. |
+| O06-05 | Build script: render landing + category subpages from CSVs | done | 067f2314 | nfl-desk-067f2314/build_desk.py | Deterministic; no JS required for content. |
+| O06-06 | Verify script: every row source-linked or explicit blank+flag; no broken links; determinism | done | 067f2314 | nfl-desk-067f2314/verify_desk.py | Fail-closed; gates the build. |
+| O06-07 | Unit tests | done | 067f2314 | nfl-desk-067f2314/tests/test_desk.py | Stdlib tests incl. negative controls. |
+| O06-08 | Executive summary, methodology, verification log, flagged register | done | 067f2314 | research/nfl-067f2314/** | Restates only computed/officially-sourced values. |
+| O06-09 | Scoped CI workflow | done | 067f2314 | .github/workflows/nfl-desk-067f2314-verify.yml | Rebuild + verify + tests on PR/push. |
 | O06-10 | Commit, push, open PR to main, autonomous merge, live Pages check, record | pending | 067f2314 | COORDINATION.md, README.md (one row) | Merge only after verify PASS + live URL check. |
 
 **Cross-session requests**
