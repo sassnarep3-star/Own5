@@ -3787,3 +3787,9 @@ at `audit_repo.py` line 162 is gone. No action required.
 
 **Verification performed:** `python3 nfl-decision-brief-fb21a068/build.py`; `python3 nfl-decision-brief-fb21a068/verify.py` → PASS (12 rows, official-source allowlist, internal evidence links); `python3 -m unittest discover -s nfl-decision-brief-fb21a068/tests -v` → 3 tests OK; `python3 -m unittest discover -s tests -v` → 95 tests OK; `python3 nfl-command-desk/verify.py` → 47 pass / 3 fail, exact failures recorded above. The brief's claim that prices are not stored is scoped to the existing desk's persisted ledger, not a claim that no public operator market page exists.
 
+
+### Session fb21a068 — PR/checks status (2026-11-19 UTC)
+
+- **PR:** https://github.com/sassnarep3-star/Own5/pull/141 — `arena/fb21a068-own5` → `main`.
+- **Checks:** `Build, evidence integrity and browser smoke tests` PASS; `desk-verify` PASS; all returned `verify` checks PASS. PR workflows that only run after a main deployment are skipped on this PR. Local scoped build/verifier/tests and the 95-test repository suite also pass.
+- **Merge / deploy:** not performed by this scoped session. Other NFL integration and availability PRs are open, and the coordination board reserves shared navigation and cross-desk publication for final integration. The subpage is available in the session preview but is not yet asserted live on GitHub Pages. Final integration should add its root-navigation link, verify it on the combined tree, then deploy.
