@@ -1,0 +1,41 @@
+name: NFL brief-traceability desk (6e13b9ff)
+
+# Build + fail-closed verify + unit tests for the session-6e13b9ff desk only.
+# The rebuild-diff step proves the committed pages/CSVs are exactly what the
+# deterministic scripts produce (drift alarm).
+
+on:
+  pull_request:
+    paths:
+      - 'nfl-desk-6e13b9ff/**'
+      - 'data/nfl-desk-6e13b9ff/**'
+      - 'research/nfl-6e13b9ff/**'
+      - '.github/workflows/nfl-desk-6e13b9ff.yml'
+  push:
+    branches: ['arena/6e13b9ff-own5']
+    paths:
+      - 'nfl-desk-6e13b9ff/**'
+      - 'data/nfl-desk-6e13b9ff/**'
+      - 'research/nfl-6e13b9ff/**'
+      - '.github/workflows/nfl-desk-6e13b9ff.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Re-author data layer (deterministic)
+        run: python3 nfl-desk-6e13b9ff/author_data.py
+      - name: Rebuild pages (deterministic)
+        run: python3 nfl-desk-6e13b9ff/build_desk.py
+      - name: Confirm the committed desk matches a clean rebuild
+        run: git diff --exit-code -- nfl-desk-6e13b9ff data/nfl-desk-6e13b9ff
+      - name: Fail-closed verification
+        run: python3 nfl-desk-6e13b9ff/verify_desk.py
+      - name: Unit tests (incl. negative controls)
+        run: python3 -m unittest discover -s nfl-desk-6e13b9ff/tests -v

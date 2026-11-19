@@ -3854,3 +3854,47 @@ a decision that did not happen. Rebuilt, re-verified (3,014 checks, 0 problems) 
 follow-up PR.
 | Follow-up | [#145](https://github.com/sassnarep3-star/Own5/pull/145) merged 2026-11-19, merge commit `ff6fc6f3`; Pages built for it. Corrections: F-12 evidence link, merge record. |
 | Follow-up 2 | [#147](https://github.com/sassnarep3-star/Own5/pull/147) merged 2026-11-19, merge commit `016e7ee`; Pages **built** for `016e7ee`. Correction: P01 decision state. |
+
+---
+
+
+---
+
+---
+
+## Session 6e13b9ff — NFL Brief Traceability & Decision Desk (claimed 2026-11-19 UTC)
+
+Session ID `6e13b9ff`, branch `arena/6e13b9ff-own5` (base `2f02e1e` = current `main` tip).
+
+**Claimed namespace (strictly additive, zero overlap with any other session):**
+- `nfl-desk-6e13b9ff/**` (GitHub Pages desk: landing page with decision-readiness table + category subpages, deterministic stdlib-only build, fail-closed verify, unit tests, CSS)
+- `data/nfl-desk-6e13b9ff/**` (CSV/JSON data layer: full-brief requirements coverage, gates/readiness, questions register, suggestions register, fresh official verification, flagged, sources)
+- `research/nfl-6e13b9ff/**` (executive summary, methodology/verification log)
+- `.github/workflows/nfl-desk-6e13b9ff.yml` (scoped build+verify+tests on PR/push)
+- Append-only block in `COORDINATION.md` and one additive row in `README.md`
+
+**Read-only (never edited):** root `index.html`, `pages/**`, `assets/**`, `scripts/**`, `tools/**`, `tests/**`, `docs/**`, `data/**` outside `data/nfl-desk-6e13b9ff/`, all existing workflows, every other `nfl-*` / `nba-*` / `sf-*` / `rental-*` / `own5-*` namespace.
+
+**Purpose (this session's brief):** (1) repo review line by line with irregularities flagged; (2) a landing-page decision-readiness table with one row per requirement of this session's brief, each showing the blocking gate, the number that would clear it, and the observed value where one exists; (3) a complete requirements-coverage matrix (every line of the brief → status → in-repo evidence → official source or blank+flagged); (4) a questions/information/answers register (what must be answered before any decision) and a reviewable suggestions register (options + recommendation + what-would-change-our-mind; nothing implemented without an owner decision); (5) first-hand official-source verification performed this session on 2026-11-19 (standings, Week 11 slate, Week 11 injury-report availability, Week 12 schedule), every row linked to its official URL with read timestamps; (6) executive summary; (7) Flagged for Review page — no inferred values, blanks are explicit and flagged; (8) PR to `main`, autonomous merge after verify PASS, GitHub Pages live check, record here.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| E6-01 | Claim scope in COORDINATION.md + push claim before build work | done | 6e13b9ff | COORDINATION.md | This block; claim commit pushed before any build work. |
+| E6-02 | Fresh official reads (2026-11-19): standings, W11 slate, W11 injury report, W12 schedule + line-by-line verification rows | done | 6e13b9ff | data/nfl-desk-6e13b9ff/verification.csv, data/nfl-desk-6e13b9ff/standings_fresh_2026-11-19.csv, data/nfl-desk-6e13b9ff/sources.csv | 61 verification rows, 0 MISMATCH after fixing two transcription/convention bugs caught by the checks (tie-half PCT; bye code LAR as printed). Reads 2026-11-19T06:51:41Z / 06:57:28Z. |
+| E6-03 | Full-brief requirements coverage + decision-readiness (gate / number-to-clear / observed) | done | 6e13b9ff | data/nfl-desk-6e13b9ff/requirements_coverage.csv (gate/number/observed columns) | 84 rows: 38 MET / 33 PARTIAL / 5 BLOCKED / 5 OPEN / 3 RULE-ADOPTED; every evidence path existence-checked by verify_desk.py. |
+| E6-04 | Questions register + suggestions register (site improvements; nothing implemented without decision) | done | 6e13b9ff | data/nfl-desk-6e13b9ff/questions.csv, suggestions.csv | 18 questions (BLOCKING/PARTIAL/OPEN), 14 suggestions all PROPOSED (none implemented). |
+| E6-05 | Build: landing (decision-readiness table) + category subpages, deterministic stdlib | done | 6e13b9ff | nfl-desk-6e13b9ff/build_desk.py | 9 pages; landing carries the full 84-row decision-readiness table. |
+| E6-06 | Fail-closed verify (row source links exist, official-domain allowlist for official claims, no broken internal links, pinned counts) | done | 6e13b9ff | nfl-desk-6e13b9ff/verify_desk.py | PASS: 2293 checks, 0 failures (headers, pinned counts, vocab, evidence existence, official-host allowlist, arithmetic, zero MISMATCH, link integrity in both quote styles). |
+| E6-07 | Unit tests incl. negative controls | done | 6e13b9ff | nfl-desk-6e13b9ff/tests/test_desk.py | 11 tests OK including 10 negative controls (dropped row, bad source, MISMATCH row, unknown flag, corrupt PCT, implemented suggestion, broken href, missing evidence root, readiness row removed, plus determinism). |
+| E6-08 | Executive summary + Flagged for Review | done | 6e13b9ff | research/nfl-6e13b9ff/**, flagged page | research/nfl-6e13b9ff/EXECUTIVE_SUMMARY.md + flagged page (20 items). |
+| E6-09 | Scoped CI workflow | done | 6e13b9ff | .github/workflows/nfl-desk-6e13b9ff.yml | .github/workflows/nfl-desk-6e13b9ff.yml: re-author + rebuild + diff + verify + tests, scoped to this namespace. |
+| E6-10 | Rebase on main, PR, autonomous merge, live Pages check, record | in progress | 6e13b9ff | COORDINATION.md, README.md (one row) | PR opened from arena/6e13b9ff-own5; merge + Pages live check + final record follow in this block. |
+
+**Merge conflict log.** On 2026-11-19, opening PR #146 hit `CONFLICTING` with main (sessions `c8cb6ae8`
+and `715e2cd4` had merged in the meantime). Resolved by rebasing onto `ff6fc6f`; conflicts were confined to the
+append-only tails of `COORDINATION.md` and `README.md` and were resolved keeping **both** sides (main's new
+blocks first, this session's block after). No other session's work was discarded or edited.
+
+**Cross-session requests**
+
+- None. All work is additive inside the claimed namespace; no other session's files are edited.

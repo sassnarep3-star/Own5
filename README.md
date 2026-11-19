@@ -629,3 +629,15 @@ An independent, additive desk that originates its own NFL lines and then tries t
 - **Registers:** 66 requirements with blocking gate and clearing number, 15 questions (8 blocking), 16 reviewable suggestions, 22 flags, 12 dated sources.
 
 Rebuild and verify: `python3 nfl-desk-715e2cd4/pipeline.py && python3 nfl-desk-715e2cd4/build.py && python3 nfl-desk-715e2cd4/verify.py && python3 -m unittest discover -s nfl-desk-715e2cd4/tests -v` (3,011 checks, 25 tests including 9 negative controls). CI: `.github/workflows/nfl-desk-715e2cd4.yml`.
+## NFL Brief Traceability & Decision Desk · session 6e13b9ff (2026-11-19)
+
+**Live page (after merge):** https://sassnarep3-star.github.io/Own5/nfl-desk-6e13b9ff/ · **Flagged for Review:** https://sassnarep3-star.github.io/Own5/nfl-desk-6e13b9ff/flagged.html
+
+Traces every line of this session's brief to a status, blocking gate, clearing number and observed value, on top of a first-hand official re-read of 2026-11-19:
+
+- **Decision-readiness on the landing page** (`data/nfl-desk-6e13b9ff/requirements_coverage.csv`): 84 requirement rows — 38 MET / 33 PARTIAL / 5 BLOCKED / 5 OPEN / 3 RULE-ADOPTED — each with gate, number-to-clear, observed value and existence-checked evidence paths (rendered as absolute GitHub links so nothing 404s from the Pages subdirectory).
+- **First-hand official verification** (`data/nfl-desk-6e13b9ff/verification.csv`, 61 rows, reads 2026-11-19T06:51:41Z and 06:57:28Z): all 32 standings rows transcribed and recomputed (PCT uses the official ties-as-half-win convention — caught by the arithmetic check) and diffed against the committed 2026-11-18 capture (32/32 agree); the 13-game Week-11 slate and 6 byes (codes as printed, "LAR") diffed against the prior capture; the newly published Week-11 injury report captured in full for tonight's IND@HOU (Out 5+4, Questionable 5+4); six Week-12 spot fixtures; forecast freeze confirmed (all 39 Week-11 markets opened 2026-11-18T03:55:13Z before kickoff).
+- **Registers:** 18 questions, 14 suggestions (all PROPOSED — nothing implemented without an owner decision), 20 flagged items (two red scheduled checks, 14 open PRs, the 136/148/150 corpus-count split, venue NRG vs Reliant across official pages, Week-12 heading/date mismatches), 6 official sources.
+- **Fail-closed gate:** `verify_desk.py` (2,293 checks: headers, pinned counts, vocabularies, evidence existence, official-host allowlists, arithmetic, zero MISMATCH rows, link integrity both quote styles) + 11 unit tests with negative controls.
+
+Rebuild and verify: `python3 nfl-desk-6e13b9ff/author_data.py && python3 nfl-desk-6e13b9ff/build_desk.py && python3 nfl-desk-6e13b9ff/verify_desk.py && python3 -m unittest discover -s nfl-desk-6e13b9ff/tests -v`. CI: `.github/workflows/nfl-desk-6e13b9ff.yml`.
