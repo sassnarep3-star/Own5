@@ -46,7 +46,7 @@ jobs:
     needs: desk-verify
     runs-on: ubuntu-latest
     steps:
-      - name: Check published desk URLs (robust: page body to file before grep)
+      - name: "Check published desk URLs (robust: page body to file before grep)"
         run: |
           base="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
           for path in \
