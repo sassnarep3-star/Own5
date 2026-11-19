@@ -4268,3 +4268,31 @@ probability. The Week-11 fair lines published now are the recalculated ones.
   sessions kept merging; it was rebased and merged within one check cycle each time.
 - **Desk status:** all claimed tasks done. Nothing left open in this namespace. Cross-session requests
   X-D6-01/02/03 remain with their owners.
+
+---
+
+## Session 9e54d765 — NFL Verified Origination Desk v4 (claimed 2026-11-19T11:1xZ)
+
+Session ID `9e54d765`, branch `arena/9e54d765-own5` (base `d634b08` = current `main`, PR #167 merge).
+**Claim pushed before any build work.**
+
+**Claimed namespace (strictly additive, zero overlap):**
+- `nfl-desk-9e54d765/**` — desk site (deterministic stdlib build), data CSVs, verifier, unit tests
+- `research/nfl-9e54d765/**` — executive summary, method, verification log, flagged register
+- `.github/workflows/nfl-desk-9e54d765-verify.yml` — scoped rebuild + verify + tests
+- Append-only block in `COORDINATION.md`; one additive row in `README.md`
+
+**Read-only:** every other namespace (`nfl-*`, `nba-*`, `own5-*`, `docs/`, root `index.html`, `pages/**`,
+`assets/**`, `data/**` outside my namespace, `scripts/**`, `tools/**`, all existing workflows and CSVs).
+
+| ID | Task | Status | Owner | Files | Notes |
+|----|------|--------|-------|-------|-------|
+| S9-01 | Claim scope + push claim | in progress | 9e54d765 | COORDINATION.md | This block. |
+| S9-02 | Fresh official-only game log 2026 weeks 1–10 from nfl.com week pages; reconcile PF/PA 32/32 to official standings | in progress | 9e54d765 | nfl-desk-9e54d765/data/games_2026.csv | Every row carries the week-page URL it was read from. |
+| S9-03 | Opponent-aware ratings from that log; originate week 11 side → total → ML (fair / market / difference separate) | in progress | 9e54d765 | nfl-desk-9e54d765/data/origination_week11.csv | Market columns blank + flagged unless an operator page is readable this session. |
+| S9-04 | Backtest vs league base rate (no market needed): Brier skill, cluster CI, multiplicity; leaderboard with signal/staking split and demotion gate | in progress | 9e54d765 | nfl-desk-9e54d765/data/{backtest,leaderboard}.csv | Pre-registration committed first; no backtest number on the leaderboard. |
+| S9-05 | Availability: fresh injury read + delta vs 2026-11-18 captures; usage-rank depth from playing time; no jersey inference | in progress | 9e54d765 | nfl-desk-9e54d765/data/{injury,injury_delta,depth_usage}.csv | |
+| S9-06 | Registers: requirements, questions, suggestions (dedicated page), sources, flagged | in progress | 9e54d765 | nfl-desk-9e54d765/data/*.csv | Suggestions carry options + recommendation + review status. |
+| S9-07 | Site: dashboard landing + category pages, table-first; Flagged for Review; executive summary | in progress | 9e54d765 | nfl-desk-9e54d765/** | |
+| S9-08 | Fail-closed verifier + unit tests + scoped CI | in progress | 9e54d765 | nfl-desk-9e54d765/{verify.py,tests/} | |
+| S9-09 | PR to main, autonomous merge, Pages deploy verification, record | pending | 9e54d765 | COORDINATION.md, README.md | Merge only after verify PASS + live URL check. |
