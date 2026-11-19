@@ -1,0 +1,7 @@
+strategy_id,division,name,kind,entry_status,gates_status,signal_score,signal_n,staking_return,grading_note,source_url
+S8-B01,SINGLES,Shadow baseline,STRATEGY,PENDING,G8-01 PASS; G8-02/03/06 FAIL,,,,NOT GRADED - gates not passed; backtest numbers forbidden on this board (G8-11),https://www.nfl.com/standings/league/2026/REG
+S8-B02,SINGLES,Home-favourite filter,STRATEGY,PENDING,G8-01 PASS; G8-02/03/06 FAIL,,,,NOT GRADED - gates not passed; backtest numbers forbidden on this board (G8-11),https://www.nfl.com/standings/league/2026/REG
+S8-B03,SINGLES,Totals overlay,STRATEGY,PENDING,G8-01 PASS; G8-06 FAIL (no price),,,,NOT GRADED - gates not passed; backtest numbers forbidden on this board (G8-11),https://www.nfl.com/standings/league/2026/REG
+S8-B04,SINGLES,Control: random,CONTROL,CONTROL,G8-09 PASS,,,,NOT GRADED - gates not passed; backtest numbers forbidden on this board (G8-11),https://www.nfl.com/standings/league/2026/REG
+S8-B05,SINGLES,Control: favourites only,CONTROL,CONTROL,G8-09 PASS,,,,NOT GRADED - gates not passed; backtest numbers forbidden on this board (G8-11),https://www.nfl.com/standings/league/2026/REG
+S8-B06,GAME PARLAY,Cross-game 2-leg,STRATEGY,BLOCKED,G8-08 FAIL,,,,NOT GRADED - gates not passed; backtest numbers forbidden on this board (G8-11),https://www.nfl.com/standings/league/2026/REG

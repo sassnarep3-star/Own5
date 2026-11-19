@@ -1,0 +1,37 @@
+name: NFL desk 8ad92a0e — verify
+
+on:
+  push:
+    branches: ['arena/8ad92a0e-own5', 'main']
+    paths:
+      - 'nfl-desk-8ad92a0e/**'
+      - 'data/nfl-desk-8ad92a0e/**'
+      - 'research/nfl-8ad92a0e/**'
+      - '.github/workflows/nfl-desk-8ad92a0e.yml'
+  pull_request:
+    paths:
+      - 'nfl-desk-8ad92a0e/**'
+      - 'data/nfl-desk-8ad92a0e/**'
+      - 'research/nfl-8ad92a0e/**'
+      - '.github/workflows/nfl-desk-8ad92a0e.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Recompute derived data (must be byte-identical)
+        run: |
+          python3 nfl-desk-8ad92a0e/compute.py
+          git diff --exit-code -- data/nfl-desk-8ad92a0e/
+      - name: Rebuild site (must be byte-identical)
+        run: |
+          python3 nfl-desk-8ad92a0e/build.py
+          git diff --exit-code -- nfl-desk-8ad92a0e/
+      - name: Fail-closed verifier
+        run: python3 nfl-desk-8ad92a0e/verify.py
+      - name: Unit tests incl. negative controls
+        run: python3 -m unittest discover -s nfl-desk-8ad92a0e/tests -v
