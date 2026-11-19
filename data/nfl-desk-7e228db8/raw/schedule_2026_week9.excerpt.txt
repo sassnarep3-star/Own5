@@ -1,0 +1,33 @@
+# Verbatim excerpt capture — official Week 9 schedule (all 15 finals + byes)
+# URL: https://www.nfl.com/schedules/2026/by-week/week-9
+# Fetched (UTC): 2026-11-19T07:01:30Z (chunks 0-1 of 2) via platform page-fetch tool (processed markdown text, not server bytes).
+
+### Thursday Night Football, November 5th
+- [Jaguars 33, Ravens 10, FINAL, Thursday, November 5th](https://www.nfl.com/games/jaguars-at-ravens-2026-reg-9)   JAX 6-2 (away), BAL 4-5 (home)
+
+### International Game, November 8th (page header: "Madrid")
+- [Bengals 34, Falcons 17, FINAL, Sunday, November 8th](https://www.nfl.com/games/bengals-at-falcons-2026-reg-9)   CIN 6-2 (away), ATL 3-6 (home)
+
+### Sunday, November 8th
+- [Broncos 26, Panthers 21, FINAL, Sunday, November 8th](https://www.nfl.com/games/broncos-at-panthers-2026-reg-9)   DEN 7-2 (away), CAR 3-5 (home)
+- [Cowboys 27, Colts 23, FINAL, Sunday, November 8th](https://www.nfl.com/games/cowboys-at-colts-2026-reg-9)   DAL 4-5 (away), IND 2-7 (home)
+- [Jets 12, Chiefs 35, FINAL, Sunday, November 8th](https://www.nfl.com/games/jets-at-chiefs-2026-reg-9)   NYJ 2-7 (away), KC 6-2 (home)
+- [Lions 19, Dolphins 9, FINAL, Sunday, November 8th](https://www.nfl.com/games/lions-at-dolphins-2026-reg-9)   DET 6-2 (away), MIA 1-7 (home)
+- [Browns 22, Saints 23, FINAL, Sunday, November 8th](https://www.nfl.com/games/browns-at-saints-2026-reg-9)   CLE 5-4 (away), NO 3-5 (home)
+- [Giants 19, Eagles 11, FINAL, Sunday, November 8th](https://www.nfl.com/games/giants-at-eagles-2026-reg-9)   NYG 5-2-1 (away), PHI 2-7 (home)
+- [Rams 20, Commanders 13, FINAL, Sunday, November 8th](https://www.nfl.com/games/rams-at-commanders-2026-reg-9)   LA 5-4 (away), WAS 2-5-1 (home)
+- [Texans 44, Chargers 22, FINAL, Sunday, November 8th](https://www.nfl.com/games/texans-at-chargers-2026-reg-9)   HOU 3-5 (away), LAC 0-8 (home)
+- [Raiders 17, 49ers 38, FINAL, Sunday, November 8th](https://www.nfl.com/games/raiders-at-49ers-2026-reg-9)   LV 4-5 (away), SF 7-1 (home)
+- [Packers 45, Patriots 27, FINAL, Sunday, November 8th](https://www.nfl.com/games/packers-at-patriots-2026-reg-9)   GB 6-3 (away), NE 5-4 (home)
+- [Cardinals 3, Seahawks 17, FINAL, Sunday, November 8th](https://www.nfl.com/games/cardinals-at-seahawks-2026-reg-9)   AZ 3-6 (away), SEA 5-4 (home)
+
+### Sunday Night Football, November 8th
+- [Buccaneers 24, Bears 27, FINAL, Sunday, November 8th](https://www.nfl.com/games/buccaneers-at-bears-2026-reg-9)   TB 3-6 (away), CHI 7-2 (home)
+
+### Monday Night Football, November 9th
+- [Bills 23, Vikings 6, FINAL, Monday, November 9th](https://www.nfl.com/games/bills-at-vikings-2026-reg-9)   BUF 7-1 (away), MIN 6-2 (home)
+
+### Teams on Bye (verbatim from page)
+PIT Pittsburgh Steelers 6-3; TEN Tennessee Titans 1-8
+
+# Count check performed by build_desk.py: 15 finals; PIT and TEN on bye (consistent with their 9 games played through Week 10 standings: 6-3 = 9 games; 1-8 = 9 games).

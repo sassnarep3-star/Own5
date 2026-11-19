@@ -1,0 +1,38 @@
+desk_directory,script,exit_code,duration,verdict,last_output_line
+nba-commission,nba-commission/verify.py,1,1.1s,FAIL,  - repo link broken: nfl-desk-e1d60f5d/pages/suggestions.html -> pages/flagged.html
+nfl-b34253a1,nfl-b34253a1/verify.py,1,2.1s,FAIL,AssertionError: line hash mismatch: .github/workflows/nfl-560ed315.yml:92
+nfl-command-desk,nfl-command-desk/verify.py,1,0.1s,FAIL, - V11 the registration commit is on this branch's history: e7282e35dbf9afb0c1b364a152b9431dc71b64af
+nfl-560ed315,nfl-560ed315/verify.py,0,0.0s,PASS,verify.py: PASS - every body row is source-linked or explicitly flagged; 0 broken internal links; landing table present
+nfl-98a211b8,nfl-98a211b8/verify.py,0,0.1s,PASS,verify: PASS
+nfl-c98c6270,nfl-c98c6270/verify.py,0,0.1s,PASS,"56 checks, 56 passed, 0 failed"
+nfl-decision-desk,nfl-decision-desk/verify.py,0,0.1s,PASS,OK
+nfl-decision-desk-e413f933,nfl-decision-desk-e413f933/verify_nfl_desk.py,0,0.0s,PASS,"PASS — 12 pages: source links, internal links, CSV sources, market-blank policy all verified"
+nfl-desk-26d4cafb,nfl-desk-26d4cafb/verify.py,0,0.1s,PASS,"VERIFICATION PASSED -- 25 checks, 0 failures"
+nfl-desk-35a1feb2,nfl-desk-35a1feb2/verify.py,0,0.9s,PASS,"PASS  determinism, capture hashes, transcript containment, row provenance, internal links"
+nfl-desk-35fc3437,nfl-desk-35fc3437/verify_desk.py,0,0.1s,PASS,VERIFY PASSED — all checks OK
+nfl-desk-38430fe3,nfl-desk-38430fe3/verify.py,0,0.2s,PASS,"verify: 347 injury rows · 28 clubs · 14 games · 76 requirements · 14 claims · 14 flags · 11 pages · PASS (counts, provenance, evidence paths, links, determinism)"
+nfl-desk-3cb7800c,nfl-desk-3cb7800c/verify.py,0,0.0s,PASS,"verify: PASS games=13, byes=6, flags=10, open_flags=9, blocking=2, pages=9, rows=62, links=197"
+nfl-desk-3fb93d11,nfl-desk-3fb93d11/verify.py,0,0.1s,PASS,OK: every row on every page is either source-linked or explicitly UNVERIFIED.
+nfl-desk-6cbf25fa,nfl-desk-6cbf25fa/verify.py,0,0.0s,PASS,verify: PASS checks=543 failures=0
+nfl-desk-864d5668,nfl-desk-864d5668/verify.py,0,0.7s,PASS,"36 checks, 0 failures"
+nfl-desk-b8227c47,nfl-desk-b8227c47/verify.py,0,0.1s,PASS,"verify: PASS - 6 pages, 28 club rows, 4 byes, 14 games, 347 listed rows reconcile; every body row linked or UNVERIFIED; links resolve; rebuild byte-identical"
+nfl-desk-d38e90c5,nfl-desk-d38e90c5/verify.py,0,0.1s,PASS,"VERIFICATION PASSED: 115 checks, 0 failures"
+nfl-desk-e1d60f5d,nfl-desk-e1d60f5d/verify.py,0,0.1s,PASS,ALL CHECKS PASSED
+nfl-desk-e46fb855,nfl-desk-e46fb855/verify.py,0,0.4s,PASS,"OK: every body row is sourced or explicitly flagged, links resolve, captures match their hashes, and the build is deterministic."
+nfl-engine-39086ec8,nfl-engine-39086ec8/verify.py,0,0.1s,PASS,"1215 checks run, 0 failed"
+nfl-hub-28431d9c,nfl-hub-28431d9c/verify.py,0,0.1s,PASS,"PASS: NFL cross-desk hub verified (official arithmetic, row links/blanks, internal links, desk-file citations, deterministic rebuild)"
+nfl-integration-a620f5a5,nfl-integration-a620f5a5/verify.py,0,0.1s,PASS,PASS: 767 checks; 18 official-source records; 13 audit findings; 10 questions; 10 suggestions; 8 generated pages; no unflagged source gaps or broken local links.
+nfl-market-desk,nfl-market-desk/verify.py,0,0.2s,PASS,VERIFY: PASS (10 checks)
+nfl-price-results-853c0074,nfl-price-results-853c0074/verify.py,0,0.1s,PASS,PASS: 136 source-linked official result rows; 28 blank/unclassified quote rows; 0 timestamped snapshots; 0 sourced settlements; 0 graded bets; 9 pages
+nfl-readiness-cba42531,nfl-readiness-cba42531/verify.py,0,0.0s,PASS,PASS: every body-table row is source-linked or explicitly UNVERIFIED; no broken internal links; consolidation report is clean.
+nfl-review-3bba0722,nfl-review-3bba0722/verify.py,0,0.1s,PASS,PASS: 17 official-source records; 54 register rows; 81 table rows source-linked/flagged; 129 local links; deterministic rebuild; 0 failures.
+nfl-venue-390e13fd,nfl-venue-390e13fd/verify.py,0,0.0s,PASS,All checks passed.
+own5-hub,own5-hub/verify.py,0,0.4s,PASS,"verify: 35 passed, 0 failed"
+rental-sf,rental-sf/verify.py,0,0.0s,PASS,"12 pages, 164 table rows checked; FAIL=0, WARN=0"
+repo-review,repo-review/verify.py,0,0.0s,PASS,"PASS: repo-review registers, source links, row counts and internal links are consistent"
+repo-review,repo-review/run_verifiers.py,0,8.0s,PASS,"verifier_runs.csv: 30 verifiers, 27 PASS, 3 FAIL"
+scripts,scripts/verify_f2e20e96.py,0,0.1s,PASS,"verify_f2e20e96: PASS (pages=16, csv_files=18, failures=0)"
+scripts,scripts/verify_origin_desk.py,0,0.0s,PASS,"VERIFICATION PASSED: 13 CSVs, 13 HTML pages, all rows source-linked, no broken internal links."
+scripts,scripts/verify_site.py,0,0.0s,PASS,PASS: all internal links resolve; all table rows carry source links or explicit flags; no null leaks
+sf-rent-94122,sf-rent-94122/verify.py,0,0.0s,PASS,"VERIFY PASS: 8 HTML pages, 20 sources, 54 data rows, 12 flags; all rows source-linked or explicitly flagged; 0 broken links; no personal identifiers published."
+sf-rent-e446435e,sf-rent-e446435e/verify.py,0,0.1s,PASS,pages=11 tbody_rows=179 tokens=15 scanned=27 FAIL=0 WARN=0

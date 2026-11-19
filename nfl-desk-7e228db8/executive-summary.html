@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Executive summary — Own5 NFL Verification &amp; Decision Desk (7e228db8)</title>
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<header><div class="wrap">
+<p class="crumb"><a href="index.html">Own5 NFL Verification &amp; Decision Desk</a> · session <code>7e228db8</code> · official reads 2026-11-19 UTC</p>
+<h1>Executive summary</h1>
+<nav><a href="index.html">Overview</a><a href="lines.html">Week 11 lines</a><a href="price-store.html">Price snapshots</a><a href="results.html">Verified results</a><a href="ratings.html">Ratings</a><a href="correlations.html">Correlations</a><a href="injuries.html">Injury report</a><a href="schedule.html">Schedule &amp; venues</a><a href="leaderboard.html">Leaderboard &amp; gates</a><a href="readiness.html">Decision readiness</a><a href="suggestions.html">Suggestions</a><a href="questions.html">Questions</a><a href="flagged.html">Flagged for Review</a><a href="sources.html">Sources</a><a href="executive-summary.html" class="active">Executive summary</a></nav>
+</div></header>
+<main class="wrap">
+
+<section>
+<h2>Executive summary — 2026-11-19 (session 7e228db8)</h2>
+<h3>Verified today (official nfl.com reads, timestamped + hashed)</h3>
+<ul>
+<li><strong>Standings through Week 10</strong>: all 32 clubs (W-L-T, PCT, PF, PA, NET) — column mapping
+cross-confirmed against two official game centres' published points-per-game.</li>
+<li><strong>Results feed: 150 finals</strong> (W1–8 corpus 120 + one recovered Week 8 final +
+W9 15 + W10 14). Reconciliation to standings: <strong>32/32 exact</strong>. The recovered game —
+CHI 34 @ SEA 17 (Week 8 MNF) — was missing from the shared corpus (F7-06).</li>
+<li><strong>Week 11 schedule</strong>: 13 games + 6 byes (ATL, CLE, GB, LA, NE, SEA), venues, networks, and the league's
+dated Week 16–18 announcement text; MIN@SF is Mexico City (Estadio Banorte).</li>
+<li><strong>Injury report (Wednesday read)</strong>: 255 rows, 26 clubs; blanks preserved and
+marked; reserve-list and stale-roster irregularities flagged (F7-02, F7-03).</li>
+</ul>
+<h3>Computed (in-repo, deterministic, spec frozen pre-window)</h3>
+<ul>
+<li>Opponent-aware SRS ratings; fitted HFA <strong>-0.932 pts</strong> (negative — F7-10),
+margin σ 10.369, total σ 12.86 on 150 finals.</li>
+<li><strong>39 originated markets</strong> (13 games × side/total/moneyline): fair lines + no-vig
+probabilities + inputs SHA-256 stored per row; market columns blank by policy (F7-P01).</li>
+<li>Correlations from official standings only (n=32 each, Fisher CI): NET/G↔PCT r=0.882; PF/G↔PCT r=0.715;
+PA/G↔PCT r=−0.704; PF/G↔PA/G r=−0.291.</li>
+<li>Repo-wide verifier sweep: <strong>37 scripts, 34 PASS, 3 FAIL</strong> (causes published).</li>
+</ul>
+<h3>What is honestly missing</h3>
+<ul>
+<li>No operator prices → residual, CLV, ROI, vig-free decomposition are blank (Q7-01 is the blocking decision).</li>
+<li>No automated multi-day capture → the timestamped injury series has one read this week (Q7-03).</li>
+<li>Model is in-sample → the leaderboard stays empty until the prospective shadow (starting with tonight's
+IND@HOU) accumulates (F7-14).</li>
+<li>Depth/snap/reserve sources unresolved → deficiency matrix parked (Q7-04–Q7-06).</li>
+</ul>
+<h3>Next decisions for the owner</h3>
+<ol>
+<li>Q7-01 price source · 2. Q7-03 capture automation terms · 3. Q7-08 reward funding/jurisdiction ·
+4. adopt the corpus patch (Q7-09) · 5. review the high-severity flags on the Flagged page.</li>
+</ol>
+<p class="note">Full detail: <a href='https://github.com/sassnarep3-star/Own5/blob/main/research/nfl-7e228db8/EXECUTIVE_SUMMARY.md' target='_blank' rel='noopener noreferrer'>research/nfl-7e228db8/EXECUTIVE_SUMMARY.md</a>, <a href='https://github.com/sassnarep3-star/Own5/blob/main/research/nfl-7e228db8/METHODOLOGY.md' target='_blank' rel='noopener noreferrer'>METHODOLOGY.md</a>, <a href='https://github.com/sassnarep3-star/Own5/blob/main/research/nfl-7e228db8/VERIFICATION_LOG.md' target='_blank' rel='noopener noreferrer'>VERIFICATION_LOG.md</a>.</p>
+</section>
+</main>
+<footer class="wrap"><p>Every value links to an official source or is an explicit blank+flag. Raw excerpts with SHA-256: <a href="https://github.com/sassnarep3-star/Own5/tree/main/data/nfl-desk-7e228db8/raw" target="_blank" rel="noopener noreferrer">data/nfl-desk-7e228db8/raw/</a>. Unverified values are never filled in.</p></footer>
+</body></html>

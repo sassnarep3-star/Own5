@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sources — Own5 NFL Verification &amp; Decision Desk (7e228db8)</title>
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<header><div class="wrap">
+<p class="crumb"><a href="index.html">Own5 NFL Verification &amp; Decision Desk</a> · session <code>7e228db8</code> · official reads 2026-11-19 UTC</p>
+<h1>Sources</h1>
+<nav><a href="index.html">Overview</a><a href="lines.html">Week 11 lines</a><a href="price-store.html">Price snapshots</a><a href="results.html">Verified results</a><a href="ratings.html">Ratings</a><a href="correlations.html">Correlations</a><a href="injuries.html">Injury report</a><a href="schedule.html">Schedule &amp; venues</a><a href="leaderboard.html">Leaderboard &amp; gates</a><a href="readiness.html">Decision readiness</a><a href="suggestions.html">Suggestions</a><a href="questions.html">Questions</a><a href="flagged.html">Flagged for Review</a><a href="sources.html" class="active">Sources</a><a href="executive-summary.html">Executive summary</a></nav>
+</div></header>
+<main class="wrap">
+
+<section>
+<h2>Source registry — every official read of 2026-11-19</h2>
+<p class="note">All reads used the platform page-fetch tool (processed text; hashed excerpts, not raw server bytes — F7-15). The 150-final results feed additionally consumes the repo corpus (data/games_2026.json) whose verification levels are declared in that file's meta.</p>
+<div class="tscroll"><table class=""><thead><tr><th>Source</th><th>URL</th><th>Fetched (UTC)</th><th>Chunks</th><th>Excerpt SHA-256</th><th>Used for</th></tr></thead>
+<tbody>
+<tr><td>NFL league standings</td><td><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener noreferrer">https://www.nfl.com/standings/league/2026/REG</a></td><td>2026-11-19T06:56:00Z</td><td>0-1 of 2</td><td><code>b913d61a3a1a5ca07352…</code></td><td>standings_2026_wk10.csv (W-L-T-PCT-PF-PA-NET per club; cross-checked PF/G vs game-centre PPG)</td></tr>
+<tr><td>NFL Week 9 schedule</td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-9" target="_blank" rel="noopener noreferrer">https://www.nfl.com/schedules/2026/by-week/week-9</a></td><td>2026-11-19T07:01:30Z</td><td>0-1 of 2</td><td><code>064e1b01b7afdbce73c1…</code></td><td>results_2026_week9_10.csv (15 finals; byes PIT/TEN)</td></tr>
+<tr><td>NFL Week 10 schedule</td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-10" target="_blank" rel="noopener noreferrer">https://www.nfl.com/schedules/2026/by-week/week-10</a></td><td>2026-11-19T06:59:00Z</td><td>0-1 of 2</td><td><code>3f44a8ca977f2d5f9c90…</code></td><td>results_2026_week9_10.csv (14 finals; byes CHI/DEN/PHI/TB)</td></tr>
+<tr><td>NFL Week 11 schedule</td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-11" target="_blank" rel="noopener noreferrer">https://www.nfl.com/schedules/2026/by-week/week-11</a></td><td>2026-11-19T06:57:30Z</td><td>0-2 of 3</td><td><code>1ebe1bc9a19ca07993aa…</code></td><td>schedule_2026_week11.csv (13 games incl. Mexico City; 6 byes; venue strings)</td></tr>
+<tr><td>NFL Week 8 schedule (corpus-patch evidence)</td><td><a href="https://www.nfl.com/schedules/2026/by-week/week-8" target="_blank" rel="noopener noreferrer">https://www.nfl.com/schedules/2026/by-week/week-8</a></td><td>2026-11-19T07:24:00Z</td><td>0-1 of 2</td><td><code>dbf44cf2ab637f5f979e…</code></td><td>results_2026_corpus_patch.csv (Week 8 MNF CHI@SEA missing from shared corpus; F7-16)</td></tr>
+<tr><td>NFL league injury report (reg11)</td><td><a href="https://www.nfl.com/injuries/league/2026/reg11" target="_blank" rel="noopener noreferrer">https://www.nfl.com/injuries/league/2026/reg11</a></td><td>2026-11-19T07:03:00Z</td><td>0-6 of 7</td><td><code>7a87454362fe700da84a…</code></td><td>injuries_2026_week11.csv (253 rows incl. 2 &#x27;No Injuries Reported&#x27;); dated news evidence for reserve/roster events</td></tr>
+<tr><td>Game centre IND@HOU reg11</td><td><a href="https://www.nfl.com/games/colts-at-texans-2026-reg-11" target="_blank" rel="noopener noreferrer">https://www.nfl.com/games/colts-at-texans-2026-reg-11</a></td><td>2026-11-19T07:06:00Z</td><td>0 of 3</td><td><code>40f8ff63e37e665ac8dd…</code></td><td>venue evidence (RELIANT STADIUM naming conflict F7-01); fixture-context stats; standings PF/G cross-check</td></tr>
+<tr><td>Game centre MIN@SF reg11</td><td><a href="https://www.nfl.com/games/vikings-at-49ers-2026-reg-11" target="_blank" rel="noopener noreferrer">https://www.nfl.com/games/vikings-at-49ers-2026-reg-11</a></td><td>2026-11-19T07:06:00Z</td><td>0 of 3</td><td><code>6f7677a55c9f2d7e6161…</code></td><td>venue evidence (ESTADIO BANORTE, MEXICO CITY); fixture-context stats; standings PF/G cross-check</td></tr>
+<tr><td>NFL.com results corpus W1-8 (repo file, prior session verification)</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/games_2026.json" target="_blank" rel="noopener noreferrer">https://github.com/sassnarep3-star/Own5/blob/main/data/games_2026.json</a></td><td>(committed; as_of 2026-11-02 in file)</td><td>n/a</td><td><code>n/a…</code></td><td>backtest/results corpus 120 finals (verification levels nfl=58+62 recon per file meta; inherited limitation F7-09)</td></tr>
+</tbody></table></div>
+<h3>Shared repo inputs consumed (read-only)</h3>
+<div class="tscroll"><table class=""><thead><tr><th>Input</th><th>Location</th><th>Verification</th></tr></thead>
+<tbody>
+<tr><td>Results corpus W1–8 (120 finals)</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/games_2026.json" target="_blank" rel="noopener noreferrer">data/games_2026.json</a></td><td>levels 'nfl' (direct official read) and 'recon' (PFR reconciled to standings) — declared in file meta; F7-09</td></tr>
+<tr><td>Requirements registry (80 rows)</td><td><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/nfl-origin-desk/requirements.csv" target="_blank" rel="noopener noreferrer">data/nfl-origin-desk/requirements.csv</a></td><td>owner-desk registry; carried into readiness with this desk's updates marked</td></tr>
+</tbody></table></div>
+</section>
+</main>
+<footer class="wrap"><p>Every value links to an official source or is an explicit blank+flag. Raw excerpts with SHA-256: <a href="https://github.com/sassnarep3-star/Own5/tree/main/data/nfl-desk-7e228db8/raw" target="_blank" rel="noopener noreferrer">data/nfl-desk-7e228db8/raw/</a>. Unverified values are never filled in.</p></footer>
+</body></html>
