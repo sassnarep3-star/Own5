@@ -59,7 +59,7 @@ ARI,2026,6,3,0,4,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releas
 ARI,2026,7,4,0,4,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 ARI,2026,8,2,0,3,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 ARI,2026,9,3,0,3,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
-ARI,2026,10,0,0,0,OFFICIAL,/home/user/Own5/data/decision-desk/official/official_injuries_wk10.csv
+ARI,2026,10,0,0,0,OFFICIAL,https://www.nfl.com/injuries/
 ATL,2023,1,1,0,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
 ATL,2023,2,1,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
 ATL,2023,3,0,0,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
@@ -119,8 +119,8 @@ ATL,2026,6,1,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releas
 ATL,2026,7,6,0,8,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 ATL,2026,8,1,0,8,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 ATL,2026,9,3,0,4,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
-ATL,2026,10,0,0,0,OFFICIAL,/home/user/Own5/data/decision-desk/official/official_injuries_wk10.csv
-AZ,2026,10,0,0,0,OFFICIAL,/home/user/Own5/data/decision-desk/official/official_injuries_wk10.csv
+ATL,2026,10,0,0,0,OFFICIAL,https://www.nfl.com/injuries/
+AZ,2026,10,0,0,0,OFFICIAL,https://www.nfl.com/injuries/
 AZ,2026,11,0,0,0,OFFICIAL,https://www.nfl.com/injuries/league/2026/reg11
 BAL,2023,1,1,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
 BAL,2023,2,4,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
@@ -242,7 +242,7 @@ BUF,2026,5,2,0,3,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releas
 BUF,2026,6,0,0,5,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 BUF,2026,8,1,0,6,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 BUF,2026,9,1,0,5,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
-BUF,2026,10,0,0,0,OFFICIAL,/home/user/Own5/data/decision-desk/official/official_injuries_wk10.csv
+BUF,2026,10,0,0,0,OFFICIAL,https://www.nfl.com/injuries/
 BUF,2026,11,0,0,0,OFFICIAL,https://www.nfl.com/injuries/league/2026/reg11
 CAR,2023,1,1,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
 CAR,2023,2,0,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
@@ -303,7 +303,7 @@ CAR,2026,6,1,1,5,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releas
 CAR,2026,7,2,0,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 CAR,2026,8,4,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 CAR,2026,9,4,0,3,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
-CAR,2026,10,0,0,0,OFFICIAL,/home/user/Own5/data/decision-desk/official/official_injuries_wk10.csv
+CAR,2026,10,0,0,0,OFFICIAL,https://www.nfl.com/injuries/
 CAR,2026,11,0,0,0,OFFICIAL,https://www.nfl.com/injuries/league/2026/reg11
 CHI,2023,1,0,0,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
 CHI,2023,2,0,2,0,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
@@ -425,7 +425,7 @@ CIN,2026,5,1,0,5,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releas
 CIN,2026,7,0,0,0,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 CIN,2026,8,1,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 CIN,2026,9,1,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
-CIN,2026,10,0,0,0,OFFICIAL,/home/user/Own5/data/decision-desk/official/official_injuries_wk10.csv
+CIN,2026,10,0,0,0,OFFICIAL,https://www.nfl.com/injuries/
 CIN,2026,11,0,0,0,OFFICIAL,https://www.nfl.com/injuries/league/2026/reg11
 CLE,2023,1,0,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
 CLE,2023,2,0,0,3,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
@@ -487,7 +487,7 @@ CLE,2026,6,5,0,4,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releas
 CLE,2026,7,4,0,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 CLE,2026,8,0,0,3,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 CLE,2026,9,1,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
-CLE,2026,10,0,0,0,OFFICIAL,/home/user/Own5/data/decision-desk/official/official_injuries_wk10.csv
+CLE,2026,10,0,0,0,OFFICIAL,https://www.nfl.com/injuries/
 DAL,2023,1,0,2,3,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
 DAL,2023,2,0,2,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
 DAL,2023,3,1,0,3,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
@@ -548,7 +548,7 @@ DAL,2026,6,2,0,4,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releas
 DAL,2026,7,3,0,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 DAL,2026,8,2,0,6,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 DAL,2026,9,2,0,7,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
-DAL,2026,10,0,0,0,OFFICIAL,/home/user/Own5/data/decision-desk/official/official_injuries_wk10.csv
+DAL,2026,10,0,0,0,OFFICIAL,https://www.nfl.com/injuries/
 DAL,2026,11,0,0,0,OFFICIAL,https://www.nfl.com/injuries/league/2026/reg11
 DEN,2023,1,0,0,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
 DEN,2023,2,2,0,0,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
@@ -669,7 +669,7 @@ DET,2026,5,4,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releas
 DET,2026,7,0,0,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 DET,2026,8,1,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 DET,2026,9,5,0,3,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
-DET,2026,10,0,0,0,OFFICIAL,/home/user/Own5/data/decision-desk/official/official_injuries_wk10.csv
+DET,2026,10,0,0,0,OFFICIAL,https://www.nfl.com/injuries/
 DET,2026,11,0,0,0,OFFICIAL,https://www.nfl.com/injuries/league/2026/reg11
 GB,2023,1,1,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
 GB,2023,2,0,0,4,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
@@ -731,7 +731,7 @@ GB,2026,6,4,1,5,PINNED-DATASET,https://github.com/nflverse/nflverse-data/release
 GB,2026,7,1,0,4,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 GB,2026,8,3,0,4,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 GB,2026,9,5,0,3,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
-GB,2026,10,0,0,0,OFFICIAL,/home/user/Own5/data/decision-desk/official/official_injuries_wk10.csv
+GB,2026,10,0,0,0,OFFICIAL,https://www.nfl.com/injuries/
 HOU,2023,1,3,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
 HOU,2023,2,2,0,3,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
 HOU,2023,3,4,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
@@ -791,7 +791,7 @@ HOU,2026,5,1,0,6,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releas
 HOU,2026,6,3,0,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 HOU,2026,7,4,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 HOU,2026,9,2,0,0,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
-HOU,2026,10,0,0,0,OFFICIAL,/home/user/Own5/data/decision-desk/official/official_injuries_wk10.csv
+HOU,2026,10,0,0,0,OFFICIAL,https://www.nfl.com/injuries/
 HOU,2026,11,4,0,3,OFFICIAL,https://www.nfl.com/injuries/league/2026/reg11
 IND,2023,1,0,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
 IND,2023,2,0,0,3,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
@@ -853,7 +853,7 @@ IND,2026,6,2,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releas
 IND,2026,7,4,0,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 IND,2026,8,2,0,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 IND,2026,9,3,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
-IND,2026,10,0,0,0,OFFICIAL,/home/user/Own5/data/decision-desk/official/official_injuries_wk10.csv
+IND,2026,10,0,0,0,OFFICIAL,https://www.nfl.com/injuries/
 IND,2026,11,5,0,4,OFFICIAL,https://www.nfl.com/injuries/league/2026/reg11
 JAX,2023,1,2,0,0,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
 JAX,2023,2,2,0,3,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
@@ -914,7 +914,7 @@ JAX,2026,5,1,1,0,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releas
 JAX,2026,6,2,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 JAX,2026,8,1,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 JAX,2026,9,0,0,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
-JAX,2026,10,0,0,0,OFFICIAL,/home/user/Own5/data/decision-desk/official/official_injuries_wk10.csv
+JAX,2026,10,0,0,0,OFFICIAL,https://www.nfl.com/injuries/
 JAX,2026,11,0,0,0,OFFICIAL,https://www.nfl.com/injuries/league/2026/reg11
 KC,2023,1,0,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
 KC,2023,2,0,0,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
@@ -975,7 +975,7 @@ KC,2026,6,2,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/release
 KC,2026,7,3,0,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 KC,2026,8,1,0,3,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 KC,2026,9,3,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
-KC,2026,10,0,0,0,OFFICIAL,/home/user/Own5/data/decision-desk/official/official_injuries_wk10.csv
+KC,2026,10,0,0,0,OFFICIAL,https://www.nfl.com/injuries/
 KC,2026,11,0,0,0,OFFICIAL,https://www.nfl.com/injuries/league/2026/reg11
 LA,2023,1,0,0,3,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
 LA,2023,2,0,0,4,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
@@ -1037,7 +1037,7 @@ LA,2026,6,0,0,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/release
 LA,2026,7,1,0,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 LA,2026,8,0,1,4,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 LA,2026,9,2,1,5,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
-LA,2026,10,0,0,0,OFFICIAL,/home/user/Own5/data/decision-desk/official/official_injuries_wk10.csv
+LA,2026,10,0,0,0,OFFICIAL,https://www.nfl.com/injuries/
 LAC,2023,1,0,2,0,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
 LAC,2023,2,0,4,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
 LAC,2023,3,2,0,4,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
@@ -1158,7 +1158,7 @@ LV,2026,6,3,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/release
 LV,2026,7,2,0,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 LV,2026,8,2,0,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 LV,2026,9,1,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
-LV,2026,10,0,0,0,OFFICIAL,/home/user/Own5/data/decision-desk/official/official_injuries_wk10.csv
+LV,2026,10,0,0,0,OFFICIAL,https://www.nfl.com/injuries/
 LV,2026,11,0,0,0,OFFICIAL,https://www.nfl.com/injuries/league/2026/reg11
 MIA,2023,1,2,0,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
 MIA,2023,2,1,0,4,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
@@ -1219,7 +1219,7 @@ MIA,2026,5,4,0,4,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releas
 MIA,2026,7,1,1,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 MIA,2026,8,1,0,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 MIA,2026,9,0,0,3,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
-MIA,2026,10,0,0,0,OFFICIAL,/home/user/Own5/data/decision-desk/official/official_injuries_wk10.csv
+MIA,2026,10,0,0,0,OFFICIAL,https://www.nfl.com/injuries/
 MIA,2026,11,0,0,0,OFFICIAL,https://www.nfl.com/injuries/league/2026/reg11
 MIN,2023,1,0,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
 MIN,2023,2,1,0,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
@@ -1280,7 +1280,7 @@ MIN,2026,5,2,0,5,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releas
 MIN,2026,7,0,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 MIN,2026,8,0,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 MIN,2026,9,3,0,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
-MIN,2026,10,0,0,0,OFFICIAL,/home/user/Own5/data/decision-desk/official/official_injuries_wk10.csv
+MIN,2026,10,0,0,0,OFFICIAL,https://www.nfl.com/injuries/
 MIN,2026,11,0,0,0,OFFICIAL,https://www.nfl.com/injuries/league/2026/reg11
 NE,2023,1,1,0,5,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
 NE,2023,2,0,0,6,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
@@ -1342,7 +1342,7 @@ NE,2026,6,2,0,7,PINNED-DATASET,https://github.com/nflverse/nflverse-data/release
 NE,2026,7,5,0,5,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 NE,2026,8,0,0,4,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 NE,2026,9,3,0,6,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
-NE,2026,10,3,0,0,OFFICIAL,/home/user/Own5/data/decision-desk/official/official_injuries_wk10.csv
+NE,2026,10,3,0,0,OFFICIAL,https://www.nfl.com/injuries/
 NO,2023,1,2,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
 NO,2023,2,0,0,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
 NO,2023,3,1,1,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
@@ -1402,7 +1402,7 @@ NO,2026,5,3,0,6,PINNED-DATASET,https://github.com/nflverse/nflverse-data/release
 NO,2026,6,2,0,5,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 NO,2026,7,0,0,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 NO,2026,9,1,0,4,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
-NO,2026,10,0,0,0,OFFICIAL,/home/user/Own5/data/decision-desk/official/official_injuries_wk10.csv
+NO,2026,10,0,0,0,OFFICIAL,https://www.nfl.com/injuries/
 NO,2026,11,0,0,0,OFFICIAL,https://www.nfl.com/injuries/league/2026/reg11
 NYG,2023,1,0,3,3,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
 NYG,2023,2,0,2,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
@@ -1463,7 +1463,7 @@ NYG,2026,5,2,0,0,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releas
 NYG,2026,6,3,0,3,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 NYG,2026,7,3,1,4,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 NYG,2026,9,0,1,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
-NYG,2026,10,0,0,1,OFFICIAL,/home/user/Own5/data/decision-desk/official/official_injuries_wk10.csv
+NYG,2026,10,0,0,1,OFFICIAL,https://www.nfl.com/injuries/
 NYG,2026,11,0,0,0,OFFICIAL,https://www.nfl.com/injuries/league/2026/reg11
 NYJ,2023,1,0,0,3,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
 NYJ,2023,2,0,0,4,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
@@ -1525,7 +1525,7 @@ NYJ,2026,6,4,0,3,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releas
 NYJ,2026,7,3,0,3,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 NYJ,2026,8,3,1,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 NYJ,2026,9,5,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
-NYJ,2026,10,0,0,0,OFFICIAL,/home/user/Own5/data/decision-desk/official/official_injuries_wk10.csv
+NYJ,2026,10,0,0,0,OFFICIAL,https://www.nfl.com/injuries/
 NYJ,2026,11,0,0,0,OFFICIAL,https://www.nfl.com/injuries/league/2026/reg11
 PHI,2023,1,0,0,0,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
 PHI,2023,2,3,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
@@ -1647,7 +1647,7 @@ PIT,2026,5,3,0,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releas
 PIT,2026,6,3,0,5,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 PIT,2026,7,2,0,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 PIT,2026,8,2,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
-PIT,2026,10,0,0,0,OFFICIAL,/home/user/Own5/data/decision-desk/official/official_injuries_wk10.csv
+PIT,2026,10,0,0,0,OFFICIAL,https://www.nfl.com/injuries/
 PIT,2026,11,0,0,0,OFFICIAL,https://www.nfl.com/injuries/league/2026/reg11
 SEA,2023,1,2,0,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
 SEA,2023,2,3,0,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
@@ -1709,7 +1709,7 @@ SEA,2026,6,3,0,0,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releas
 SEA,2026,7,3,0,5,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 SEA,2026,8,3,1,4,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 SEA,2026,9,7,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
-SEA,2026,10,0,0,0,OFFICIAL,/home/user/Own5/data/decision-desk/official/official_injuries_wk10.csv
+SEA,2026,10,0,0,0,OFFICIAL,https://www.nfl.com/injuries/
 SF,2023,1,0,0,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
 SF,2023,2,1,0,0,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
 SF,2023,3,0,0,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
@@ -1769,7 +1769,7 @@ SF,2026,5,4,0,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/release
 SF,2026,6,4,0,6,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 SF,2026,7,6,0,3,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 SF,2026,9,3,0,4,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
-SF,2026,10,0,0,0,OFFICIAL,/home/user/Own5/data/decision-desk/official/official_injuries_wk10.csv
+SF,2026,10,0,0,0,OFFICIAL,https://www.nfl.com/injuries/
 SF,2026,11,0,0,0,OFFICIAL,https://www.nfl.com/injuries/league/2026/reg11
 TB,2023,1,0,0,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
 TB,2023,2,3,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
@@ -1891,7 +1891,7 @@ TEN,2026,5,1,0,3,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releas
 TEN,2026,6,2,0,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 TEN,2026,7,0,0,5,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 TEN,2026,8,3,0,4,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
-TEN,2026,10,0,0,0,OFFICIAL,/home/user/Own5/data/decision-desk/official/official_injuries_wk10.csv
+TEN,2026,10,0,0,0,OFFICIAL,https://www.nfl.com/injuries/
 TEN,2026,11,0,0,0,OFFICIAL,https://www.nfl.com/injuries/league/2026/reg11
 WAS,2023,1,0,0,2,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
 WAS,2023,2,1,0,0,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2023.csv.gz
@@ -1952,5 +1952,5 @@ WAS,2026,5,6,0,4,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releas
 WAS,2026,6,4,0,9,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 WAS,2026,8,2,0,3,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
 WAS,2026,9,2,0,1,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv.gz
-WAS,2026,10,2,0,0,OFFICIAL,/home/user/Own5/data/decision-desk/official/official_injuries_wk10.csv
+WAS,2026,10,2,0,0,OFFICIAL,https://www.nfl.com/injuries/
 WAS,2026,11,0,0,0,OFFICIAL,https://www.nfl.com/injuries/league/2026/reg11

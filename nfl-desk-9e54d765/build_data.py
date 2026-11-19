@@ -40,6 +40,8 @@ CAP_1118 = os.path.join(REPO, 'data/nfl-desk-6cbf25fa/injury_reads/'
                               'capture_injuries_2026-11-18.csv')
 CAP_1119_06 = os.path.join(REPO, 'data/nfl-desk-6e13b9ff/wk11_tnf_injury_2026-11-19.csv')
 CAP_WK10_1112 = os.path.join(REPO, 'data/decision-desk/official/official_injuries_wk10.csv')
+# The captured Week 10 file's own source_url column, verbatim — never a local path.
+CAP_WK10_URL = 'https://www.nfl.com/injuries/'
 CORPUS_URL = ('https://github.com/nflverse/nflverse-data/releases/download/schedules/'
               'games.csv.gz')
 
@@ -1214,7 +1216,7 @@ def build_availability_counts(official_week10):
         rows.append(dict(club=club, season=season, week=week, out=d[0], doubtful=d[1],
                          questionable=d[2],
                          source_class='OFFICIAL' if official else 'PINNED-DATASET',
-                         source_url=CAP_WK10_1112 if (season == 2026 and week == 10) else
+                         source_url=CAP_WK10_URL if (season == 2026 and week == 10) else
                          (INJURY_URL if (season == 2026 and week == 11) else
                           'https://github.com/nflverse/nflverse-data/releases/download/'
                           'injuries/injuries_%d.csv.gz' % season)))

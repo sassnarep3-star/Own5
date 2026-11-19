@@ -165,6 +165,14 @@ def check_provenance():
     bad = [r for r in rq if r['status'] not in allowed]
     check(not bad, 'every requirement status is from the published vocabulary',
           f'{len(bad)} bad')
+    # no published value may contain a machine-local path
+    for name in ('availability_counts.csv', 'availability_week11.csv', 'injury_delta.csv',
+                 'designation_reliability.csv', 'corpus_coverage.csv', 'sources.csv',
+                 'flagged.csv', 'origination_week11.csv', 'market_snapshots.csv'):
+        rows = read(name)
+        bad = [r for r in rows for k, v in r.items()
+               if '/home/' in str(v) or '/tmp/' in str(v)]
+        check(not bad, f'no machine-local path in {name}', f'{len(bad)} bad')
     # every source row carries a URL and a class
     src = read('sources.csv')
     bad = [r for r in src if not r['url'].startswith('http') or not r['source_class']]
