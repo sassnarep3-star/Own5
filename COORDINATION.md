@@ -3830,3 +3830,18 @@ official URLs failed TLS; the failure is left in `data/capture_store/index.csv` 
 ### Merge record
 
 Recorded below after `gh pr merge`.
+
+### 715e2cd4 — merge record and post-deploy follow-up (2026-11-19)
+
+| Item | Value |
+|---|---|
+| PR | [#143](https://github.com/sassnarep3-star/Own5/pull/143) — merged autonomously with `gh pr merge 143 --merge` (no approval wait, no `--auto`) |
+| Merged at / commit | 2026-11-19T07:04:49Z · merge commit `09baaccc001b2b726e9f101b5c99c2d02527cc85` |
+| Checks before merge | **all passing**: `verify` (desk), `desk-verify`, `build-and-audit`, `Build, evidence integrity and browser smoke tests`. Path-scoped jobs skipped by design. |
+| Rebase | Rebased onto main `f895e17` (PR #140/#142 from sessions 188c3719 and others). COORDINATION.md append conflict resolved **keeping both sides**: the c8cb6ae8 and 188c3719 blocks are intact and unmodified. |
+| Pages | `pages/builds/latest` → **built** for `09baaccc`. Live pages re-read through the page reader: `/nfl-desk-715e2cd4/` and `/flagged.html` both render. |
+| Post-deploy fix | F-12's evidence link pointed at the desk's own flagged page; corrected to the official Week 11 report page (`nfl.com/injuries/league/2026/reg11`) in a follow-up PR from the same branch. |
+
+**Scope check.** Files changed by this session: `nfl-desk-715e2cd4/**`, `research/nfl-715e2cd4/**`,
+`.github/workflows/nfl-desk-715e2cd4.yml`, one additive README section, and append-only blocks in this file.
+No other session's file was edited.
