@@ -1,0 +1,9 @@
+source_id,source_name,url,captured_utc,used_for,notes
+SRC-01,Official 2026 NFL league standings,https://www.nfl.com/standings/league/2026/REG,2026-11-19,"32-club standings; per-game rates; correlation inputs; model inputs","Read via sandbox page-fetch tool (rendered text); NET == PF-PA verified for all 32 clubs"
+SRC-02,Official 2026 Week 11 schedule,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-19,"13 fixtures, kickoff times, networks, venues, byes, fixture context","Read via sandbox page-fetch tool; Mexico City neutral site for MIN@SF"
+SRC-03,Official 2026 Week 10 scores,https://www.nfl.com/scores/2026/reg10,2026-11-19,"14 Week-10 finals; results feed; HFA and sigma constants","Read via sandbox page-fetch tool; Munich international game (NE@DET) marked neutral"
+SRC-04,Official 2026 Week 11 injury report,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19,"255-row availability capture (26 teams; CIN/WAS report no injuries)","Read via sandbox page-fetch tool; early-week (Wed) report - 16 game designations, all on IND/HOU"
+SRC-05,Official 2026 Week 11 scores page,https://www.nfl.com/scores/2026/reg11,2026-11-19,Week-11 status check (TNF Colts@Texans not final at read time),Read via sandbox page-fetch tool
+SRC-06,Live GitHub Pages site (prior sessions),https://sassnarep3-star.github.io/Own5/nfl-desk-35fc3437/,2026-11-19,"Repo review: prior desk renders correctly with decision-readiness table",Fetched live; prior-session desk confirmed operational
+SRC-07,Own5 repository COORDINATION.md,https://github.com/sassnarep3-star/Own5/blob/arena/067f2314-own5/COORDINATION.md,2026-11-19,"Session claim, handoff record, cross-session requests",Shared task board (append-only blocks per session)
+SRC-08,Desk verification harness,https://github.com/sassnarep3-star/Own5/blob/arena/067f2314-own5/nfl-desk-067f2314/verify_desk.py,2026-11-19,Fail-closed row-provenance and reconciliation checks,Drift alarm: pinned row counts and required fields

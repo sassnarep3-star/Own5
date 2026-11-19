@@ -1,0 +1,2 @@
+ablation,seasons,games,brier_skill_vs_market,brier_model,change_vs_base,ci_low,ci_high,verdict,source_url,note
+"base model, no personnel features",2023-2026,744,-0.07815,0.22436,0,,,the base model is worse than the closing line on every holdout season; no personnel feature can rescue it in this sample,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,personnel-feature variant is NOT ADDED until the join between designations and playing time is complete enough to be point-in-time safe (join rate published on the Designation page)

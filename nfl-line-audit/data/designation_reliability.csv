@@ -1,0 +1,5 @@
+designation_as_printed,rows_in_reports,matched_to_playing_time,played_share,played_share_ci_low,played_share_ci_high,join_rate,seasons_pooled,source_url,note
+Questionable,4970,2982,0.2501,0.2383,0.2623,0.600,"2023, 2024, 2025, 2026",https://github.com/nflverse/nflverse-data/releases/tag/injuries,played = recorded an offensive snap share above 5% in that club-week; a missing join is not counted as 'did not play'
+Out,4087,1,0.0000,0.0000,0.0009,0.000,2024,https://github.com/nflverse/nflverse-data/releases/tag/injuries,played = recorded an offensive snap share above 5% in that club-week; a missing join is not counted as 'did not play'
+Doubtful,499,3,0.0020,0.0004,0.0113,0.006,2023,https://github.com/nflverse/nflverse-data/releases/tag/injuries,played = recorded an offensive snap share above 5% in that club-week; a missing join is not counted as 'did not play'
+Note,6,5,0.3333,0.0968,0.7000,0.833,2024,https://github.com/nflverse/nflverse-data/releases/tag/injuries,played = recorded an offensive snap share above 5% in that club-week; a missing join is not counted as 'did not play'

@@ -1,0 +1,16 @@
+{"capture_id":"RES-2026W10-20261119T0652Z","url":"https://www.nfl.com/schedules/2026/by-week/week-10","read_utc":"2026-11-19T06:52:00Z","read_method":"sandbox page-fetch tool, 2 chunks; FINAL score labels parsed from printed 'Away S, Home S, FINAL' links and cross-checked against the team cards' W-L-T","byes":["CHI","DEN","PHI","TB"],
+"rows":[
+{"away":"WAS","home":"NYG","away_score":24,"home_score":21,"section":"Thursday Night Football, November 12th"},
+{"away":"NE","home":"DET","away_score":10,"home_score":35,"section":"International Game, November 15th (Munich)"},
+{"away":"KC","home":"ATL","away_score":35,"home_score":13,"section":"Sunday, November 15th"},
+{"away":"HOU","home":"CLE","away_score":24,"home_score":27,"section":"Sunday, November 15th"},
+{"away":"MIN","home":"GB","away_score":30,"home_score":10,"section":"Sunday, November 15th"},
+{"away":"MIA","home":"IND","away_score":22,"home_score":24,"section":"Sunday, November 15th"},
+{"away":"CAR","home":"NO","away_score":20,"home_score":17,"section":"Sunday, November 15th"},
+{"away":"BUF","home":"NYJ","away_score":31,"home_score":12,"section":"Sunday, November 15th"},
+{"away":"JAX","home":"TEN","away_score":40,"home_score":23,"section":"Sunday, November 15th"},
+{"away":"LA","home":"AZ","away_score":34,"home_score":6,"section":"Sunday, November 15th"},
+{"away":"SEA","home":"LV","away_score":21,"home_score":13,"section":"Sunday, November 15th"},
+{"away":"SF","home":"DAL","away_score":46,"home_score":40,"section":"Sunday, November 15th"},
+{"away":"PIT","home":"CIN","away_score":18,"home_score":38,"section":"Sunday Night Football, November 15th"},
+{"away":"LAC","home":"BAL","away_score":23,"home_score":20,"section":"Monday Night Football, November 16th"}]}

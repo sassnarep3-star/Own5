@@ -1,0 +1,6 @@
+item,value,note,source_url
+markets originated,"39 (13 games x side, total, moneyline)",counted from the 13 official fixtures,https://www.nfl.com/schedules/2026/by-week/week-11
+official price captures held,0,no licensed operator price feed in this namespace,https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-715e2cd4/data/price_snapshots.csv
+opening-number captures,0,BLANK + FLAGGED F-01,https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-715e2cd4/data/flagged.csv
+closing-number captures,0,BLANK + FLAGGED F-01,https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-715e2cd4/data/flagged.csv
+policy,P-01 no unlicensed operator scraping,written before any scorecard row existed,https://github.com/sassnarep3-star/Own5/blob/main/nfl-desk-715e2cd4/data/price_policy.csv

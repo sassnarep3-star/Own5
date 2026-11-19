@@ -1,0 +1,181 @@
+[
+  {
+    "id": "RD-01",
+    "area": "Own line origination and fixture coverage",
+    "status": "PARTIAL — DESK VIEWS DIFFER",
+    "blocking_gate": "Fixture coverage / source provenance",
+    "requirement": "Cover every target fixture in side → total → moneyline order; keep fair, market and difference separate; blank and flag unsupported market fields.",
+    "clearing_number": "13/13 Week 11 games represented in each published origination view, with all three markets and source/inputs; unsupported market values remain blank.",
+    "observed": "The command desk has 12 Week 11 origination game rows against a 13-game slate and omits AZ–KC. The 35fc3437 and market-desk registers contain 13 games / 39 market rows. No current market quote is established by this review.",
+    "official_url": "https://www.nfl.com/games/cardinals-at-chiefs-2026-reg-11",
+    "official_label": "NFL Cardinals at Chiefs Game Center (fixture reference; not re-fetched)",
+    "evidence": [
+      {"path": "nfl-command-desk/data/origination_wk11.csv", "label": "12-row command-desk origination"},
+      {"path": "nfl-command-desk/data/fixtures_wk11.csv", "label": "Command-desk fixtures / bye rows"},
+      {"path": "nfl-desk-35fc3437/data/lines_originated_wk11.csv", "label": "13-row 35fc3437 origination"},
+      {"path": "nfl-market-desk/data/originated_markets.csv", "label": "39-row market origination"}
+    ],
+    "source_note": "The official game-centre link supports fixture identity only. It is not an odds source."
+  },
+  {
+    "id": "RD-02",
+    "area": "Opening and closing price evidence",
+    "status": "BLOCKED — PRICE REGISTERS CONFLICT",
+    "blocking_gate": "G2 / price source, timing and rights",
+    "requirement": "Preserve verified, named-source opening and closing quotes with operator, market, side, jurisdiction, capture UTC, archived response and documented rights.",
+    "clearing_number": "39/39 originated Week 11 markets with both an admissible opening and closing quote; all required two-sided price fields and provenance present.",
+    "observed": "The market desk has 39 blank MARKET_OPEN and 39 blank MARKET_CLOSE rows (0/78 populated). The engine has 78 rows labelled VERIFIED for 13 Week 10 games, but all 78 are close-labelled at one recorded time, with US-UNSPECIFIED region; its 13 hashes match committed text summaries. The sources conflict; opens are absent and no page was fetched here.",
+    "official_url": "https://www.nfl.com/schedules/2026/by-week/week-10",
+    "official_label": "NFL Week 10 schedule (game identity only; not a price source)",
+    "evidence": [
+      {"path": "nfl-market-desk/data/price_store_summary.json", "label": "Market desk open/close population summary"},
+      {"path": "nfl-market-desk/data/price_snapshots.csv", "label": "Market desk snapshot register"},
+      {"path": "nfl-engine-39086ec8/data/price_snapshots.csv", "label": "Engine desk price rows"},
+      {"path": "nfl-engine-39086ec8/data/archive/NE-DET.txt", "label": "Example committed text summary"},
+      {"path": "nfl-market-desk/data/price_policy.csv", "label": "Market source policy"}
+    ],
+    "source_note": "The NFL schedule cannot validate a FanDuel quote. The FanDuel URL is shown in the source-coverage register as an un-fetched operator claim, not as a verified official NFL fact."
+  },
+  {
+    "id": "RD-03",
+    "area": "Results and standings reconciliation",
+    "status": "REPOSITORY CHECKS PASS — CAPTURE WINDOWS DIFFER",
+    "blocking_gate": "Same-time result/standings reconciliation",
+    "requirement": "Grade only final results and reconcile the game corpus to the matching official standings snapshot.",
+    "clearing_number": "All included games final; all 32 clubs reconcile on the same dated snapshot (32/32), with a source link per result.",
+    "observed": "The command desk's 150-row corpus and the market desk's 145-row capture cover different update windows. A separate Week 10 dataset has 14 result rows. Their local verifiers pass their own checks; this review did not re-fetch the NFL schedule or standings.",
+    "official_url": "https://www.nfl.com/schedules/2026/by-week/week-10",
+    "official_label": "NFL Week 10 schedule/results (not re-fetched)",
+    "evidence": [
+      {"path": "nfl-command-desk/data/results_corpus.csv", "label": "Command desk result corpus"},
+      {"path": "nfl-market-desk/data/results_feed.csv", "label": "Market desk result feed"},
+      {"path": "data/nfl-desk-f2e20e96/week10_results.csv", "label": "Week 10 result register"},
+      {"path": "nfl-command-desk/data/standings.csv", "label": "Command desk standings snapshot"}
+    ],
+    "source_note": "Different counts are time-stamped repository observations, not proof that either desk is wrong."
+  },
+  {
+    "id": "RD-04",
+    "area": "Current-week injury state and injury change",
+    "status": "NOT CURRENTLY VERIFIED",
+    "blocking_gate": "Availability source identity / freshness",
+    "requirement": "Use the injury report for the intended week, preserve blank fields, timestamp and source bytes, and compare dated changes rather than injury levels.",
+    "clearing_number": "A fresh capture whose page title identifies Week 11, with all published rows source-linked and timestamped; retain a prior read for deltas.",
+    "observed": "Prior desk logs say the requested Week 11 URL served a Week 10 page on 2026-11-18. Week 10 registers contain 347 rows. No Week 11 page was checked in this review.",
+    "official_url": "https://www.nfl.com/injuries/league/2026/reg11",
+    "official_label": "Requested NFL Week 11 injury report (not re-fetched)",
+    "evidence": [
+      {"path": "data/nfl-desk-f2e20e96/sources.csv", "label": "Week 11 endpoint capture note"},
+      {"path": "nfl-market-desk/data/raw/sources_captured.csv", "label": "Market desk capture note"},
+      {"path": "nfl-desk-38430fe3/data/injury_report_wk10_2026-11-18.csv", "label": "Week 10 capture"},
+      {"path": "data/nfl-desk-6cbf25fa/injury_reads/", "label": "Dated injury-read records"}
+    ],
+    "source_note": "Historical capture note only. It does not establish what the live URL serves on the review date."
+  },
+  {
+    "id": "RD-05",
+    "area": "Actual starters, inactives and playing time",
+    "status": "PARTIAL — ONE GAME EXTRACTED",
+    "blocking_gate": "Official Game Book / inactive / snap coverage",
+    "requirement": "Use official Game Books for starters and game-day status; use verified snaps where applicable. Do not infer depth from jersey number, experience or salary.",
+    "clearing_number": "Game Book and actual starters/inactives/snap evidence for every game being modelled; publish blanks until each game's record is complete.",
+    "observed": "The Week 10 results manifest has 14 Game Book PDF URLs. Only JAX–TEN has a separate extracted starter table (44 rows) and inactive table (12 rows) in the inspected namespace. Separately, an nflverse (AGGREGATOR) 2026 snap-count file has 12,693 rows for 136 games / 32 clubs, regular-season weeks 1–9 only (provenance date 2026-11-12); it is not a direct NFL Game Book transcription and has no Week 10/11 rows. The market desk's own readiness record says 0 inactive and 0 snap rows; that count is limited to its namespace.",
+    "official_url": "https://static.www.nfl.com/image/upload/v1794829722/gamecenter/ab789e15-4feb-11f1-abca-2c54536568a9.pdf",
+    "official_label": "NFL JAX–TEN Week 10 Game Book URL recorded in the repository (not fetched)",
+    "evidence": [
+      {"path": "data/nfl-desk-f2e20e96/week10_results.csv", "label": "All 14 Week 10 Game Book references"},
+      {"path": "data/nfl-desk-f2e20e96/starters_jax_ten.csv", "label": "44 JAX–TEN starter rows"},
+      {"path": "data/nfl-desk-f2e20e96/inactives_jax_ten.csv", "label": "12 JAX–TEN inactive rows"},
+      {"path": "nfl-market-desk/data/decision_readiness.csv", "label": "Market-desk R-25 scope statement"},
+      {"path": "data/decision-desk/raw/snap_counts_2026.csv.gz", "label": "Third-party weeks 1–9 snap-count snapshot"},
+      {"path": "data/decision-desk/raw/provenance.json", "label": "Aggregator asset provenance record"}
+    ],
+    "source_note": "The linked Game Book is a historical reference, not a newly parsed or independently checked PDF. The separate nflverse file is a stale third-party aggregate, not Week 10/11 official per-game coverage."
+  },
+  {
+    "id": "RD-06",
+    "area": "32-team roster and depth coverage",
+    "status": "CONFLICTED — OWNER REVIEW REQUIRED",
+    "blocking_gate": "Roster/IR coverage and status integrity",
+    "requirement": "Capture the official roster/reserve evidence for each club and a dated depth source; never use an uncaptured row as available or infer rank from player metadata.",
+    "clearing_number": "32/32 roster records, each with a URL, capture time and explicit row count/status; all unavailable or unknown inputs stay flagged.",
+    "observed": "Market desk R-13 says 32/32 rosters were captured. Its cited roster_sweep_32.csv has one populated roster count/URL (NE, 59 rows) and 31 blank roster counts/URLs. Its separate depth status has 11 parsed, 1 image-only and 20 not captured this session.",
+    "official_url": "https://www.nfl.com/teams/new-england-patriots/roster",
+    "official_label": "Patriots roster page cited by the sole populated roster row (not re-fetched)",
+    "evidence": [
+      {"path": "nfl-market-desk/data/decision_readiness.csv", "label": "R-13 readiness statement"},
+      {"path": "nfl-market-desk/data/roster_sweep_32.csv", "label": "Roster sweep rows"},
+      {"path": "nfl-market-desk/data/depth_coverage.csv", "label": "Depth-chart capture status"}
+    ],
+    "source_note": "The official URL supports only the cited Patriots row; it does not establish coverage of the other clubs."
+  },
+  {
+    "id": "RD-07",
+    "area": "Official-input correlations",
+    "status": "PARTIAL — SNAPSHOTS NOT NORMALIZED",
+    "blocking_gate": "Correlation input snapshot / definition",
+    "requirement": "Use official inputs only, publish n and the unit of analysis, and preserve uncertainty; do not infer prop or parlay dependence from a team-level correlation.",
+    "clearing_number": "One immutable dated input snapshot; identical field definitions and club/game set; publish n, method and uncertainty for every value.",
+    "observed": "Standings-derived correlation registers carry different captures (2026-11-14, 2026-11-15 and 2026-11-18) and different published values. The dates make them non-comparable without a same-snapshot recomputation; no current standings values were independently checked.",
+    "official_url": "https://www.nfl.com/standings/league/2026/REG",
+    "official_label": "NFL 2026 standings (recorded input source; not re-fetched)",
+    "evidence": [
+      {"path": "nfl-engine-39086ec8/data/correlations_official.csv", "label": "Engine correlations"},
+      {"path": "nfl-market-desk/data/correlations_official.csv", "label": "Market desk correlations"},
+      {"path": "nfl-desk-35fc3437/data/correlations.csv", "label": "35fc3437 correlations"}
+    ],
+    "source_note": "A single standings URL can serve different snapshots on different dates; dates and exact columns must be aligned."
+  },
+  {
+    "id": "RD-08",
+    "area": "Strategy validation and staking separation",
+    "status": "PAPER — NO CERTIFICATION",
+    "blocking_gate": "Pre-registration, proper score, uncertainty, multiplicity, source and price gates",
+    "requirement": "Keep signal separate from staking; preregister, compare controls, use proper scores and uncertainty/multiplicity adjustment, and enforce demotion gates.",
+    "clearing_number": "Every predeclared gate must pass on the designated prospective/holdout sample with sourced outcomes and prices; no rank or ROI alone clears the gate.",
+    "observed": "The inspected command and market leaderboards both mark zero strategies certified. Existing structures include preregistration, controls, proper scores and gates, but the price-source conflict and small samples block promotion.",
+    "official_url": "https://www.nfl.com/standings/league/2026/REG",
+    "official_label": "NFL standings (recorded model-input source; not proof of forecast skill)",
+    "evidence": [
+      {"path": "nfl-command-desk/data/leaderboard.csv", "label": "Command desk leaderboard"},
+      {"path": "nfl-command-desk/data/preregistration.csv", "label": "Command desk registrations"},
+      {"path": "nfl-market-desk/data/leaderboard.csv", "label": "Market desk leaderboard"},
+      {"path": "nfl-market-desk/data/gates.csv", "label": "Market desk gates"}
+    ],
+    "source_note": "The official source is a recorded input source only; forecast performance is a repository-derived statistical claim."
+  },
+  {
+    "id": "RD-09",
+    "area": "Parlays, props and joint evidence",
+    "status": "BLOCKED — JOINT-EVIDENCE GATE",
+    "blocking_gate": "Joint probability / operator settlement rules",
+    "requirement": "Do not rank or recommend parlays/prop combinations without measured joint probabilities, paired outcomes, price data, and the operator's push/void rules.",
+    "clearing_number": "For each proposed combination: directly measured joint evidence, sourced prices/outcomes, and the governing operator settlement rules; otherwise keep it out of the eligible board.",
+    "observed": "The market desk records zero prop prices and zero evaluable prop combinations; its parlay/prop families remain behind the joint-evidence gate. No combination was independently verified here.",
+    "official_url": "https://www.nfl.com/stats/player-stats/",
+    "official_label": "NFL player statistics page (performance context only; not a prop-price source)",
+    "evidence": [
+      {"path": "nfl-market-desk/data/decision_readiness.csv", "label": "R-72 joint-correlation requirement"},
+      {"path": "nfl-market-desk/data/strategy_registration.csv", "label": "Registered SGP/prop families"},
+      {"path": "nfl-market-desk/data/questions.csv", "label": "Operator-rule questions"}
+    ],
+    "source_note": "Official player statistics do not establish sportsbook prop lines or joint settlement rules."
+  },
+  {
+    "id": "RD-10",
+    "area": "Terms, jurisdictions and rewards",
+    "status": "OWNER / TERMS REVIEW — UNRESOLVED",
+    "blocking_gate": "Documented source rights and explicit owner decisions",
+    "requirement": "Establish rights to collect/store/display source material and decide eligible jurisdictions, bankroll/risk limits and funded rewards before any live competition or staking claim.",
+    "clearing_number": "No official-source numeric threshold. Written owner decisions and an appropriate terms/legal review are required; unknown values remain blank.",
+    "observed": "A prior desk records an interpretation of NFL Terms §1.3; this review did not read the page. No funded reward charter or jurisdiction decision was established by the reviewed registers.",
+    "official_url": "https://www.nfl.com/legal/terms",
+    "official_label": "NFL terms URL cited by a prior desk (not read in this review)",
+    "evidence": [
+      {"path": "nfl-desk-b8227c47/", "label": "Prior capture/terms policy"},
+      {"path": "nfl-readiness-cba42531/data/questions.csv", "label": "Owner/legal questions"},
+      {"path": "nfl-market-desk/data/questions.csv", "label": "Reward/price questions"}
+    ],
+    "source_note": "The cited terms URL is a reference, not legal advice or a fresh interpretation. The owner-specific values are not answerable from an NFL source."
+  }
+]

@@ -1,0 +1,34 @@
+flag_id,severity,item,detail,status,source_url
+F06-01,medium,Leaderboard performance cells blank,"No market prices and no settled bets; signal/staking scorecards intentionally blank until gates G02/G04/G05/G07 pass",OPEN,https://www.nfl.com/standings/league/2026/REG
+F06-02,high,"Joint-evidence gate blocks parlay/prop ranking","No directly validated joint probabilities or operator void/push rules; STR-08/09/10 held",OPEN,https://www.nfl.com/standings/league/2026/REG
+F06-03,high,No market prices anywhere in this desk,"No official operator price source exists on nfl.com; market/difference/residual columns blank by policy pending the price-data decision",OPEN,https://www.nfl.com/standings/league/2026/REG
+F06-04,high,Replacement depth blank,"No verified official depth-chart source read this session; replacement_depth/replacement_name blank on all Out designations",OPEN,https://www.nfl.com/injuries/league/2026/reg11
+F06-05,medium,"Availability graph and snap-based depth not built","Expected-vs-actual starter graph and playing-time depth require depth/snap sources not captured this session",OPEN,https://www.nfl.com/injuries/league/2026/reg11
+F06-06,medium,Injury series has a single capture,"One stamped read (2026-11-19); no prior capture to publish a delta against - the 'surprise, never a level' requirement is structurally blocked until a series exists",OPEN,https://www.nfl.com/injuries/league/2026/reg11
+F06-07,medium,32-team roster/IR sweep not run,"Only the 26 playing teams appear on the Week 11 injury report; the full 32-club reserve-list sweep is not run",OPEN,https://www.nfl.com/injuries/league/2026/reg11
+F06-08,high,Removal-of-luck panel blocked,Requires settled bets and a control baseline (n=0 today),OPEN,https://www.nfl.com/standings/league/2026/REG
+F06-09,medium,136-game backtest corpus not assembled,Only Week 10 finals (14 games) verified this session,OPEN,https://www.nfl.com/scores/2026/reg10
+F06-10,high,Price-data policy undecided,User-owned decision blocks gate G02 and every ROI/CLV/backtest publication,OPEN,https://www.nfl.com/standings/league/2026/REG
+F06-11,low,Venues transcribed from the schedule page,Game-centre venue cross-check per fixture not yet performed,OPEN,https://www.nfl.com/schedules/2026/by-week/week-11
+F06-12,low,Dated schedule announcement not fetched,The live schedule page is linked; a separate dated league announcement is not yet captured,OPEN,https://www.nfl.com/schedules/2026/by-week/week-11
+F06-13,medium,Opponent-adjusted ratings not built,Game-level results are ingested; opponent-aware ratings are a next step,OPEN,https://www.nfl.com/scores/2026/reg10
+F06-14,medium,Injury/depth ablations not run,With/without availability features on chronological holdouts not yet executed,OPEN,https://www.nfl.com/injuries/league/2026/reg11
+F06-15,medium,Availability snapshot automation not scheduled,No scheduled Wed/Thu/Fri captures with retained hashes yet,OPEN,https://www.nfl.com/injuries/league/2026/reg11
+F06-16,high,Inactive lists and snap counts not captured,Only the injury report was read; inactives and snap shares are missing,OPEN,https://www.nfl.com/injuries/league/2026/reg11
+F06-17,high,Depth-chart register not built,"No verified depth source for all 32 clubs; known parsing failures (Texans image, Packers jersey prefixes) unresolved",OPEN,https://www.nfl.com/injuries/league/2026/reg11
+F06-18,medium,Roster turnover not versioned,Depth/availability evidence is not versioned against official roster events,OPEN,https://www.nfl.com/injuries/league/2026/reg11
+F06-19,medium,Public/private data split not implemented,The site is fully public; raw row-level data has no private store yet,OPEN,https://www.nfl.com/standings/league/2026/REG
+F06-20,medium,Announced-starter evidence not captured,No dated official starter-change evidence captured this session,OPEN,https://www.nfl.com/injuries/league/2026/reg11
+F06-21,medium,"'Questionable' not yet calibrated empirically",Play-rate-per-designation CIs require a multi-season designation-to-inactive join,OPEN,https://www.nfl.com/injuries/league/2026/reg11
+F06-22,high,Deficiency matrix not built,The 1st-4th string Offense-vs-Defense matrix requires a verified depth source,OPEN,https://www.nfl.com/injuries/league/2026/reg11
+F06-23,low,Lions designations blank in early-week report,"Kerby Joseph, Cade Mays and D.J. Reed appear on the Week 11 report with blank game-status cells (consistent with the pre-Week-10 finding); designations typically arrive later in the week",OPEN,https://www.nfl.com/injuries/league/2026/reg11
+F06-24,low,Weather overlay not built,NWS hourly grids and stadium roof designations not yet coupled to totals/props,OPEN,https://www.nfl.com/schedules/2026/by-week/week-11
+F06-25,low,Single model estimator published,The 'publish every total twice' requirement needs a second pre-registered estimator,OPEN,https://www.nfl.com/schedules/2026/by-week/week-11
+F06-26,medium,Reserve list not captured,"'Not listed' on the injury report cannot be distinguished from 'available on reserve' without the reserve list",OPEN,https://www.nfl.com/injuries/league/2026/reg11
+F06-27,medium,Historical injury archive not built,Past-season weekly injury reports are not archived,OPEN,https://www.nfl.com/injuries/league/2026/reg11
+F06-28,low,Onside-kick regime priors not applied,2026 kickoff/onside-kick regime priors not yet used in totals/win-prob,OPEN,https://www.nfl.com/schedules/2026/by-week/week-11
+F06-29,medium,Season split not applied,Train/validation/final-holdout season split not yet defined,OPEN,https://www.nfl.com/scores/2026/reg10
+F06-30,medium,"Pre-existing CI failure on main (other sessions' files)","'NFL Decision Desk - fetch & verify' failed on main and unrelated PRs (logged by prior sessions as X51-13/X51-15); caused by files outside this session's scope",OPEN-FOR-OWNER-REVIEW,https://github.com/sassnarep3-star/Own5/blob/arena/067f2314-own5/COORDINATION.md
+F06-31,medium,"False-negative smoke checks in 10 workflows (other sessions' files)","The 'curl | grep -q' pattern under pipefail can report 'not ready' on large pages (logged as X51-14); not edited here per coordination rules",OPEN-FOR-OWNER-REVIEW,https://github.com/sassnarep3-star/Own5/blob/arena/067f2314-own5/COORDINATION.md
+F06-32,low,Stale claim rows closed by this session,"Session 35fc3437's task rows were left 'in progress' after its PR #127 merge; closed as done with the merge record completed here",RESOLVED,https://github.com/sassnarep3-star/Own5/blob/arena/067f2314-own5/COORDINATION.md
+F06-33,low,Small-sample model constants,"HFA (-5.64) and sigma (15.29) are computed in-repo from the 14 official Week-10 finals (n=14); frozen at spec v1 and supersedable only by a pre-registered change with a larger official sample",OPEN,https://www.nfl.com/scores/2026/reg10

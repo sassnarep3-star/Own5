@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flagged for Review — Own5 NFL Line-Origination Dashboard</title>
+<style>
+:root{--bg:#f7f8fa;--card:#ffffff;--ink:#111827;--muted:#6b7280;--line:#e5e7eb;
+  --blue:#1f6feb;--blue-dark:#155ccb;--green:#15803d;--red:#b91c1c;--amber:#b45309;
+  --flag-bg:#fef3c7;--flag-text:#92400e;}
+* {box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.5}
+header{background:#0b2545;color:#fff;padding:1rem 1.5rem}
+header h1{margin:0;font-size:1.25rem;letter-spacing:0.04em}
+header p{margin:.25rem 0 0;font-size:.9rem;opacity:.85}
+nav{display:flex;gap:.5rem;flex-wrap:wrap;padding:.6rem 1.5rem;background:#fff;
+  border-bottom:1px solid var(--line)}
+nav a{padding:.35rem .7rem;border-radius:.4rem;text-decoration:none;color:var(--blue);
+  font-size:.88rem;border:1px solid transparent}
+nav a:hover{background:#eef3fb;border-color:var(--blue)}
+.container{max-width:1200px;margin:0 auto;padding:1rem 1.5rem}
+.badge{display:inline-block;padding:.05rem .5rem;border-radius:.9rem;font-size:.76rem;
+  font-weight:600;margin-left:.35rem;vertical-align:middle}
+.badge-src{background:#e7f0fd;color:#1d4ed8}
+.badge-flag{background:var(--flag-bg);color:var(--flag-text)}
+.badge-unverified{background:#fee2e2;color:#991b1b}
+.badge-met{background:#dcfce7;color:#166534}
+.badge-partial{background:#fef3c7;color:#92400e}
+.badge-blocked{background:#fee2e2;color:#991b1b}
+.badge-notstarted{background:#e5e7eb;color:#4b5563}
+.badge-policy{background:#ede9fe;color:#5b21b6}
+h2{font-size:1.2rem;margin:1.5rem 0 .75rem;border-bottom:2px solid var(--line);padding-bottom:.35rem}
+h3{font-size:1.05rem;margin:1rem 0 .5rem}
+p{margin:.5rem 0}
+table{width:100%;border-collapse:collapse;margin:.75rem 0;background:var(--card);font-size:.86rem}
+th,td{border:1px solid var(--line);padding:.45rem .6rem;text-align:left;vertical-align:top}
+th{background:#f1f5f9;font-weight:700;color:#334155;position:sticky;top:0}
+tr:nth-child(even)td{background:#fbfdff}
+td.blank{color:var(--muted);font-style:italic}
+td.num{text-align:right}
+a{color:var(--blue-dark)}
+a:hover{text-decoration:underline}
+.src{color:var(--muted);font-size:.78rem}
+.src a{color:#1d4ed8}
+.flagstrip{padding:.5rem 1rem;margin:.75rem 0;border-radius:.4rem;border-left:4px solid;font-size:.9rem}
+.flagstrip.red{background:#fef2f2;border-color:var(--red);color:#7f1d1d}
+.flagstrip.amber{background:#fffbeb;border-color:var(--amber);color:#78350f}
+.flagstrip.green{background:#f0fdf4;border-color:var(--green);color:#14532d}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1rem 0}
+.stat{border:1px solid var(--line);background:var(--card);border-radius:.6rem;padding:1rem}
+.stat .v{font-size:1.75rem;font-weight:700;color:var(--blue-dark)}
+.stat .k{font-size:.8rem;color:var(--muted)}
+.note{background:#eef6ff;border:1px solid #cfe3fb;border-radius:.5rem;padding:.75rem 1rem;font-size:.9rem;margin:1rem 0}
+
+nav a.active{background:#eef3fb;border-color:var(--blue);font-weight:700}
+</style>
+</head>
+<body>
+<header>
+  <h1>Own5 · NFL Line-Origination Dashboard</h1>
+  <p>Session 067f2314 · official-source verification 2026-11-19 UTC · every row source-linked or explicitly blank+flagged</p>
+</header>
+<nav>
+<a href="index.html">Overview</a>
+<a href="pages/executive-summary.html">Executive summary</a>
+<a href="pages/verification-log.html">Verification log</a>
+<a href="pages/standings.html">Standings</a>
+<a href="pages/schedule.html">Schedule (Wk 11)</a>
+<a href="pages/results.html">Results feed (Wk 10)</a>
+<a href="pages/lines.html">Originated lines</a>
+<a href="pages/snapshots.html">Price snapshots</a>
+<a href="pages/injuries.html">Injuries / Availability</a>
+<a href="pages/leaderboard.html">Leaderboard</a>
+<a href="pages/gates.html">Validation gates</a>
+<a href="pages/correlations.html">Correlations</a>
+<a href="pages/questions.html">Questions &amp; answers</a>
+<a href="pages/suggestions.html">Suggestions (review)</a>
+<a href="pages/sources.html">Sources</a>
+<a href="pages/flagged.html" class="active">Flagged for Review</a>
+</nav>
+<div class="container">
+
+<h2>Flagged for Review</h2>
+<p>Every irregularity, unverified blank and blocked item is published here with its source link. Flagged items
+do not block the site; they block the decisions they attach to until they are resolved from an official source.</p>
+<table>
+<thead><tr>
+<th>Flag</th>
+<th>Severity</th>
+<th>Item</th>
+<th>Detail</th>
+<th>Status</th>
+<th>Source</th>
+</tr></thead><tbody>
+<tr><td><strong>F06-01</strong></td><td><span class="badge badge-partial">medium</span></td><td>Leaderboard performance cells blank</td><td>No market prices and no settled bets; signal/staking scorecards intentionally blank until gates G02/G04/G05/G07 pass</td><td>OPEN</td><td class="src"><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>F06-02</strong></td><td><span class="badge badge-blocked">high</span></td><td>Joint-evidence gate blocks parlay/prop ranking</td><td>No directly validated joint probabilities or operator void/push rules; STR-08/09/10 held</td><td>OPEN</td><td class="src"><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>F06-03</strong></td><td><span class="badge badge-blocked">high</span></td><td>No market prices anywhere in this desk</td><td>No official operator price source exists on nfl.com; market/difference/residual columns blank by policy pending the price-data decision</td><td>OPEN</td><td class="src"><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>F06-04</strong></td><td><span class="badge badge-blocked">high</span></td><td>Replacement depth blank</td><td>No verified official depth-chart source read this session; replacement_depth/replacement_name blank on all Out designations</td><td>OPEN</td><td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg11" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>F06-05</strong></td><td><span class="badge badge-partial">medium</span></td><td>Availability graph and snap-based depth not built</td><td>Expected-vs-actual starter graph and playing-time depth require depth/snap sources not captured this session</td><td>OPEN</td><td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg11" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>F06-06</strong></td><td><span class="badge badge-partial">medium</span></td><td>Injury series has a single capture</td><td>One stamped read (2026-11-19); no prior capture to publish a delta against - the &#x27;surprise, never a level&#x27; requirement is structurally blocked until a series exists</td><td>OPEN</td><td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg11" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>F06-07</strong></td><td><span class="badge badge-partial">medium</span></td><td>32-team roster/IR sweep not run</td><td>Only the 26 playing teams appear on the Week 11 injury report; the full 32-club reserve-list sweep is not run</td><td>OPEN</td><td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg11" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>F06-08</strong></td><td><span class="badge badge-blocked">high</span></td><td>Removal-of-luck panel blocked</td><td>Requires settled bets and a control baseline (n=0 today)</td><td>OPEN</td><td class="src"><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>F06-09</strong></td><td><span class="badge badge-partial">medium</span></td><td>136-game backtest corpus not assembled</td><td>Only Week 10 finals (14 games) verified this session</td><td>OPEN</td><td class="src"><a href="https://www.nfl.com/scores/2026/reg10" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>F06-10</strong></td><td><span class="badge badge-blocked">high</span></td><td>Price-data policy undecided</td><td>User-owned decision blocks gate G02 and every ROI/CLV/backtest publication</td><td>OPEN</td><td class="src"><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>F06-11</strong></td><td><span class="badge badge-notstarted">low</span></td><td>Venues transcribed from the schedule page</td><td>Game-centre venue cross-check per fixture not yet performed</td><td>OPEN</td><td class="src"><a href="https://www.nfl.com/schedules/2026/by-week/week-11" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>F06-12</strong></td><td><span class="badge badge-notstarted">low</span></td><td>Dated schedule announcement not fetched</td><td>The live schedule page is linked; a separate dated league announcement is not yet captured</td><td>OPEN</td><td class="src"><a href="https://www.nfl.com/schedules/2026/by-week/week-11" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>F06-13</strong></td><td><span class="badge badge-partial">medium</span></td><td>Opponent-adjusted ratings not built</td><td>Game-level results are ingested; opponent-aware ratings are a next step</td><td>OPEN</td><td class="src"><a href="https://www.nfl.com/scores/2026/reg10" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>F06-14</strong></td><td><span class="badge badge-partial">medium</span></td><td>Injury/depth ablations not run</td><td>With/without availability features on chronological holdouts not yet executed</td><td>OPEN</td><td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg11" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>F06-15</strong></td><td><span class="badge badge-partial">medium</span></td><td>Availability snapshot automation not scheduled</td><td>No scheduled Wed/Thu/Fri captures with retained hashes yet</td><td>OPEN</td><td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg11" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>F06-16</strong></td><td><span class="badge badge-blocked">high</span></td><td>Inactive lists and snap counts not captured</td><td>Only the injury report was read; inactives and snap shares are missing</td><td>OPEN</td><td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg11" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>F06-17</strong></td><td><span class="badge badge-blocked">high</span></td><td>Depth-chart register not built</td><td>No verified depth source for all 32 clubs; known parsing failures (Texans image, Packers jersey prefixes) unresolved</td><td>OPEN</td><td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg11" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>F06-18</strong></td><td><span class="badge badge-partial">medium</span></td><td>Roster turnover not versioned</td><td>Depth/availability evidence is not versioned against official roster events</td><td>OPEN</td><td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg11" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>F06-19</strong></td><td><span class="badge badge-partial">medium</span></td><td>Public/private data split not implemented</td><td>The site is fully public; raw row-level data has no private store yet</td><td>OPEN</td><td class="src"><a href="https://www.nfl.com/standings/league/2026/REG" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>F06-20</strong></td><td><span class="badge badge-partial">medium</span></td><td>Announced-starter evidence not captured</td><td>No dated official starter-change evidence captured this session</td><td>OPEN</td><td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg11" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>F06-21</strong></td><td><span class="badge badge-partial">medium</span></td><td>&#x27;Questionable&#x27; not yet calibrated empirically</td><td>Play-rate-per-designation CIs require a multi-season designation-to-inactive join</td><td>OPEN</td><td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg11" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>F06-22</strong></td><td><span class="badge badge-blocked">high</span></td><td>Deficiency matrix not built</td><td>The 1st-4th string Offense-vs-Defense matrix requires a verified depth source</td><td>OPEN</td><td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg11" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>F06-23</strong></td><td><span class="badge badge-notstarted">low</span></td><td>Lions designations blank in early-week report</td><td>Kerby Joseph, Cade Mays and D.J. Reed appear on the Week 11 report with blank game-status cells (consistent with the pre-Week-10 finding); designations typically arrive later in the week</td><td>OPEN</td><td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg11" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>F06-24</strong></td><td><span class="badge badge-notstarted">low</span></td><td>Weather overlay not built</td><td>NWS hourly grids and stadium roof designations not yet coupled to totals/props</td><td>OPEN</td><td class="src"><a href="https://www.nfl.com/schedules/2026/by-week/week-11" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>F06-25</strong></td><td><span class="badge badge-notstarted">low</span></td><td>Single model estimator published</td><td>The &#x27;publish every total twice&#x27; requirement needs a second pre-registered estimator</td><td>OPEN</td><td class="src"><a href="https://www.nfl.com/schedules/2026/by-week/week-11" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>F06-26</strong></td><td><span class="badge badge-partial">medium</span></td><td>Reserve list not captured</td><td>&#x27;Not listed&#x27; on the injury report cannot be distinguished from &#x27;available on reserve&#x27; without the reserve list</td><td>OPEN</td><td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg11" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>F06-27</strong></td><td><span class="badge badge-partial">medium</span></td><td>Historical injury archive not built</td><td>Past-season weekly injury reports are not archived</td><td>OPEN</td><td class="src"><a href="https://www.nfl.com/injuries/league/2026/reg11" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>F06-28</strong></td><td><span class="badge badge-notstarted">low</span></td><td>Onside-kick regime priors not applied</td><td>2026 kickoff/onside-kick regime priors not yet used in totals/win-prob</td><td>OPEN</td><td class="src"><a href="https://www.nfl.com/schedules/2026/by-week/week-11" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>F06-29</strong></td><td><span class="badge badge-partial">medium</span></td><td>Season split not applied</td><td>Train/validation/final-holdout season split not yet defined</td><td>OPEN</td><td class="src"><a href="https://www.nfl.com/scores/2026/reg10" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>F06-30</strong></td><td><span class="badge badge-partial">medium</span></td><td>Pre-existing CI failure on main (other sessions&#x27; files)</td><td>&#x27;NFL Decision Desk - fetch &amp; verify&#x27; failed on main and unrelated PRs (logged by prior sessions as X51-13/X51-15); caused by files outside this session&#x27;s scope</td><td>OPEN-FOR-OWNER-REVIEW</td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/arena/067f2314-own5/COORDINATION.md" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>F06-31</strong></td><td><span class="badge badge-partial">medium</span></td><td>False-negative smoke checks in 10 workflows (other sessions&#x27; files)</td><td>The &#x27;curl | grep -q&#x27; pattern under pipefail can report &#x27;not ready&#x27; on large pages (logged as X51-14); not edited here per coordination rules</td><td>OPEN-FOR-OWNER-REVIEW</td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/arena/067f2314-own5/COORDINATION.md" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>F06-32</strong></td><td><span class="badge badge-notstarted">low</span></td><td>Stale claim rows closed by this session</td><td>Session 35fc3437&#x27;s task rows were left &#x27;in progress&#x27; after its PR #127 merge; closed as done with the merge record completed here</td><td>RESOLVED</td><td class="src"><a href="https://github.com/sassnarep3-star/Own5/blob/arena/067f2314-own5/COORDINATION.md" target="_blank" rel="noopener">source ↗</a></td></tr>
+<tr><td><strong>F06-33</strong></td><td><span class="badge badge-notstarted">low</span></td><td>Small-sample model constants</td><td>HFA (-5.64) and sigma (15.29) are computed in-repo from the 14 official Week-10 finals (n=14); frozen at spec v1 and supersedable only by a pre-registered change with a larger official sample</td><td>OPEN</td><td class="src"><a href="https://www.nfl.com/scores/2026/reg10" target="_blank" rel="noopener">source ↗</a></td></tr>
+</tbody></table>
+
+</div>
+</body>
+</html>

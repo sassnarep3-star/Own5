@@ -1,0 +1,76 @@
+name: NFL cross-desk evidence review (74306746)
+
+on:
+  push:
+    branches: [main, arena/74306746-own5]
+    paths:
+      - 'nfl-review-74306746/**'
+      - 'research/nfl-review-74306746/**'
+      - '.github/workflows/nfl-review-74306746.yml'
+      - 'COORDINATION.md'
+      - 'README.md'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'nfl-review-74306746/**'
+      - 'research/nfl-review-74306746/**'
+      - '.github/workflows/nfl-review-74306746.yml'
+      - 'COORDINATION.md'
+      - 'README.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nfl-review-74306746-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  review:
+    name: Build review, verify evidence, rerun selected desks
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Command desk checks the pre-registration commit in repository history.
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Build the isolated review dashboard
+        run: python3 nfl-review-74306746/build_site.py
+      - name: Committed review pages match a clean deterministic build
+        run: git diff --exit-code -- nfl-review-74306746/
+      - name: Fail-closed review checks (sources, table citations, cross-desk findings and links)
+        run: python3 nfl-review-74306746/verify.py
+      - name: Review-package unit tests
+        run: python3 -m unittest discover -s nfl-review-74306746/tests -v
+      - name: Command desk verifier and tests
+        run: |
+          python3 nfl-command-desk/verify.py
+          python3 -m unittest discover -s nfl-command-desk/tests -v
+      - name: Market desk verifier and tests
+        run: |
+          python3 nfl-market-desk/verify.py
+          python3 -m unittest discover -s nfl-market-desk/tests -v
+      - name: Engine desk verifier and tests
+        run: |
+          python3 nfl-engine-39086ec8/verify.py
+          python3 -m unittest discover -s nfl-engine-39086ec8/tests -v
+      - name: Week 11 35fc3437 desk verifier and tests
+        run: |
+          python3 nfl-desk-35fc3437/verify_desk.py
+          python3 -m unittest discover -s nfl-desk-35fc3437/tests -v
+      - name: Venue desk verifier and tests
+        run: |
+          python3 nfl-venue-390e13fd/verify.py
+          python3 -m unittest discover -s nfl-venue-390e13fd/tests -v
+      - name: Week 10 injury desk verifier and tests
+        run: |
+          python3 nfl-desk-38430fe3/verify.py
+          python3 -m unittest discover -s nfl-desk-38430fe3/tests -v
+      - name: Week 11 market/injury desk verifier and tests
+        run: |
+          python3 nfl-desk-6cbf25fa/verify.py
+          python3 -m unittest discover -s nfl-desk-6cbf25fa/tests -v

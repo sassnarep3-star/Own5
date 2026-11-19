@@ -1,0 +1,10 @@
+clause,text,effective
+P-01,No operator odds page is fetched or scraped until that operator's terms of use have been read and recorded.,2026-11-19
+P-02,Only licensed or terms-permitted price data may populate a market column.,2026-11-19
+P-03,A price without a capture timestamp and a content hash is not a price; it is excluded.,2026-11-19
+P-04,"Opening and closing are separate rows, never one 'current' number.",2026-11-19
+P-05,A residual may never be published without the market value it was subtracted from.,2026-11-19
+LB-01,"No backtest performance figure may appear on the leaderboard, in any column, ever.",2026-11-19
+LB-02,Leaderboard ranking uses benchmark-relative Brier skill with a game-cluster lower bound and a multiplicity adjustment; win rate and ROI are not ranking metrics.,2026-11-19
+LB-03,Signal and staking are scored in separate columns and neither may be inferred from the other.,2026-11-19
+D-01,A live strategy returns to paper when any demotion trigger in demotion.csv fires.,2026-11-19

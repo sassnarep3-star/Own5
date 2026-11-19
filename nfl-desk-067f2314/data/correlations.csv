@@ -1,0 +1,5 @@
+correlation_id,pair,n,r,source_url
+COR-01,NET/G vs win pct,32,0.8824,https://www.nfl.com/standings/league/2026/REG
+COR-02,PF/G vs win pct,32,0.7153,https://www.nfl.com/standings/league/2026/REG
+COR-03,PA/G vs win pct,32,-0.7045,https://www.nfl.com/standings/league/2026/REG
+COR-04,PF/G vs PA/G,32,-0.2914,https://www.nfl.com/standings/league/2026/REG

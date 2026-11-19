@@ -1,0 +1,4 @@
+# Source: nfl.com game centre "Game Info" block, read 2026-11-19
+# slug|away|home|location_as_printed|stadium_as_printed|read_utc
+colts-at-texans-2026-reg-11|IND|HOU|HOUSTON, TX|RELIANT STADIUM|2026-11-19T06:55:00Z
+bengals-at-commanders-2026-reg-11|CIN|WAS|LANDOVER, MD|NORTHWEST STADIUM|2026-11-19T06:55:00Z

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Correlations · Own5 NFL line desk</title>
+<link rel="stylesheet" href="style.css">
+</head><body>
+<header class="top"><div class="wrap">
+<div class="brand"><b>Own5 · NFL line origination desk</b>
+<span>session 715e2cd4 · data read 2026-11-19 · no certified strategy</span></div>
+<nav class="tabs"><a href="index.html">Overview</a><a href="lines.html">Originated lines</a><a href="results.html">Verified results</a><a href="availability.html">Injuries &amp; depth</a><a href="leaderboard.html">Leaderboard</a><a href="correlations.html" class="on">Correlations</a><a href="luck.html">Removal of luck</a><a href="gates.html">Validation gates</a><a href="strategies.html">Strategies</a><a href="prices.html">Price data</a><a href="questions.html">Questions &amp; information</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged for review</a><a href="diff.html">What changed</a><a href="sources.html">Sources</a></nav>
+</div></header>
+<main><div class="wrap">
+<h1>Correlations</h1>
+<p class="lede">Official numbers only, n printed with every value.</p>
+<div class="note"><b>Every value here is computed in-repo from official numbers, and every value
+carries its n and a Fisher 95% interval.</b> Two families exist: club-level (n=32 clubs, official standings) and
+game-level (n=136 games, official finals). Nothing here is borrowed from a third-party model.</div><div class="tw"><table class=""><caption>Reading n correctly matters: n=32 means 32 clubs, not 32 games or 32 bets.</caption><thead><tr><th>Pair</th><th>Metric</th><th>Value</th><th>n</th><th>95% interval</th><th>Unit of analysis</th><th>Note</th><th>Source</th></tr></thead><tbody><tr><td>Points for per game vs win percentage</td><td>Pearson r</td><td class="num">0.7153</td><td class="num">32</td><td>0.4884 – 0.8516</td><td>club level (n=32 clubs)</td><td>computed in-repo from the official 2026 REG standings read 2026-11-19</td><td><a class="src" href="https://www.nfl.com/standings/league/2026/REG" rel="noopener" target="_blank">nfl.com</a></td></tr><tr><td>Points against per game vs win percentage</td><td>Pearson r</td><td class="num">-0.7043</td><td class="num">32</td><td>-0.8454 – -0.4713</td><td>club level (n=32 clubs)</td><td>computed in-repo from the official 2026 REG standings read 2026-11-19</td><td><a class="src" href="https://www.nfl.com/standings/league/2026/REG" rel="noopener" target="_blank">nfl.com</a></td></tr><tr><td>Net points per game vs win percentage</td><td>Pearson r</td><td class="num">0.8825</td><td class="num">32</td><td>0.7711 – 0.9415</td><td>club level (n=32 clubs)</td><td>computed in-repo from the official 2026 REG standings read 2026-11-19</td><td><a class="src" href="https://www.nfl.com/standings/league/2026/REG" rel="noopener" target="_blank">nfl.com</a></td></tr><tr><td>Points for per game vs points against per game</td><td>Pearson r</td><td class="num">-0.2911</td><td class="num">32</td><td>-0.5808 – 0.0641</td><td>club level (n=32 clubs)</td><td>computed in-repo from the official 2026 REG standings read 2026-11-19</td><td><a class="src" href="https://www.nfl.com/standings/league/2026/REG" rel="noopener" target="_blank">nfl.com</a></td></tr><tr><td>Game margin vs game total (136-game corpus)</td><td>Pearson r</td><td class="num">-0.1222</td><td class="num">136</td><td>-0.2847 – 0.0471</td><td>game level (n=136 games)</td><td>computed in-repo from the pre-registered 136-game official corpus</td><td><a class="src" href="https://www.nfl.com/schedules/2026/by-week/week-10" rel="noopener" target="_blank">nfl.com</a></td></tr><tr><td>Absolute margin vs game total (136-game corpus)</td><td>Pearson r</td><td class="num">-0.0162</td><td class="num">136</td><td>-0.1841 – 0.1525</td><td>game level (n=136 games)</td><td>computed in-repo from the pre-registered 136-game official corpus</td><td><a class="src" href="https://www.nfl.com/schedules/2026/by-week/week-10" rel="noopener" target="_blank">nfl.com</a></td></tr><tr><td>Home points vs away points (136-game corpus)</td><td>Pearson r</td><td class="num">0.0763</td><td class="num">136</td><td>-0.0932 – 0.2416</td><td>game level (n=136 games)</td><td>computed in-repo from the pre-registered 136-game official corpus</td><td><a class="src" href="https://www.nfl.com/schedules/2026/by-week/week-10" rel="noopener" target="_blank">nfl.com</a></td></tr></tbody></table></div><h2>What is not computable, and why</h2>
+<p class="lede">A parlay needs the correlation between its legs. Cross-game legs and margin/total pairs can be
+estimated from official finals, and are. Player-prop pairs, same-team pairs and same-game-parlay legs cannot be
+estimated at all without a prop market or a play-by-play source, so no such number appears anywhere on this site
+(F-02). That absence is the binding constraint on S4, S5 and S6.</p>
+</div></main>
+<footer><div class="wrap">
+Every numeric value on this site is either computed in-repo from an official nfl.com page or left blank and
+flagged. Market prices are blank by policy P-01. No backtest figure appears on the leaderboard.
+&nbsp;·&nbsp; <a href="https://github.com/sassnarep3-star/Own5/tree/main/nfl-desk-715e2cd4">source</a>
+</div></footer></body></html>
