@@ -94,7 +94,7 @@ def write_csv(name: str, rows: list[dict]) -> None:
     path = HERE / f"{name}.csv"
     cols = FIELDS[name]
     with path.open("w", newline="", encoding="utf-8") as fh:
-        w = csv.DictWriter(fh, fieldnames=cols, extrasaction="ignore")
+        w = csv.DictWriter(fh, fieldnames=cols, extrasaction="ignore", lineterminator="\n")
         w.writeheader()
         for r in rows:
             w.writerow({c: r.get(c, "") for c in cols})
