@@ -3777,3 +3777,56 @@ at `audit_repo.py` line 162 is gone. No action required.
 **Result:** PR #140 merged to `main`; Pages `built`; this session's COORDINATION.md block (I1–I6) is now on `main`. No file owned by another session was edited; the NFL Origin Desk remains owned by sessions `arena/abb5f8be-own5` (O1–O7, PR #112) and `arena/2025930f-own5` (V1–V8).
 
 
+
+---
+
+## Session 715e2cd4 — NFL Line-Origination Desk: completion record (2026-11-19)
+
+All work is in the additive namespace claimed at the top of this block. PR: https://github.com/sassnarep3-star/Own5/pull/143
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| W1 | Claim scope + push | done | 715e2cd4 | COORDINATION.md | Claim pushed before any build work (72f9407). |
+| W2 | Official reads with UTC clocks + hashed raw extracts | done | 715e2cd4 | `nfl-desk-715e2cd4/raw/**`, `data/captures.csv`, `data/capture_log.csv` | Standings (32 clubs), Week 11 schedule (13 + 6 byes), Week 10 finals (14), Week 11 injury report (253 rows / 24 clubs), 2 game-centre venue blocks, 7 dated announced-starter articles. |
+| W3 | Data layer | done | 715e2cd4 | `nfl-desk-715e2cd4/data/**` | 39 originated markets; 136-game corpus; scorecard; correlations with n; availability; gates; strategies; leaderboard; questions; suggestions; flags; price policy. |
+| W4 | Deterministic builder + fail-closed verifier + tests | done | 715e2cd4 | `build.py`, `pipeline.py`, `governance.py`, `verify.py`, `tests/**` | verify.py: **3,014 checks, 0 problems**. 25 tests incl. 9 negative controls. Builder is clock/network/git free. |
+| W5 | Research documents | done | 715e2cd4 | `research/nfl-715e2cd4/{EXECUTIVE_SUMMARY,MODEL,VERIFICATION}.md` | Executive summary, model/gates/governance, 25-check line-by-line verification log. |
+| W6 | Scoped CI workflow | done | 715e2cd4 | `.github/workflows/nfl-desk-715e2cd4.yml` | Rebuild → verify → test → `git diff --exit-code`; check run `verify` **passed** on PR #143 (12s). |
+| W7 | PR, rebase, merge, Pages live check | in progress | 715e2cd4 | COORDINATION.md, README.md | Rebased onto `f895e17`; COORDINATION.md append-conflict resolved **keeping both sides** (c8cb6ae8, 188c3719 blocks intact). Merge + Pages results recorded below. |
+
+### Verification performed (line by line)
+
+25 checks in `research/nfl-715e2cd4/VERIFICATION.md`. The load-bearing one: **every one of the 32 clubs' official
+2026 REG (W, L, T, PF, PA) equals that club's totals across the 136-game corpus plus its official Week 10 line —
+32/32 MATCH, 0 mismatches.** League-wide sums agree independently (W=L=149, T=2, PF=PA=6,923). Injury report
+counts cross-check between `availability_week11.csv` and `availability_summary.csv` (9 Out, 7 Questionable,
+83 DNP / 87 LP / 83 FP). Estimator A's MAE and the constant-mean baseline MAE both reproduce from the per-game
+table.
+
+### Findings published against interest
+
+- **Both total estimators lose to a constant league-mean total** on the Week 10 holdout (skill −0.121 and −0.084).
+- Side beats a constant home-margin baseline by 21.96% MAE on n=14 — uninformative.
+- The 2026 home-field term is **negative (−0.50 pts, n=136)**; published as-is and raised as Q04.
+- **5,773** settled bets are needed to separate 55% from 52.4% at 80% power; one week gives 14.
+- **0 certified strategies**; the leaderboard carries no performance figure at all (LB-01 enforced by the verifier).
+
+### Irregularities flagged for review (published on `flagged.html`, non-blocking)
+
+F-01 no operator price (0/39) · F-03 venue conflict (game centre **NORTHWEST STADIUM** vs schedule link "FedEx Field") ·
+F-06 negative HFA · F-07 no depth source (depth/starter/replacement/snap/inactive blank on all 253 rows; 1st-4th
+string matrix deliberately not built) · F-08 no inactive list or game book · F-10 Questionable uncalibratable ·
+F-11 no publisher timestamp on the report · F-12 **Lions designations do not match the brief** (Joseph/Reed show
+practice status with blank game status; Mays DNP/blank) · F-13 "not listed ≠ available" (Lamar Jackson on IR) ·
+F-17 corpus carried not re-scraped (reconciliation is the evidence) · F-21 totals lose to a constant mean ·
+F-22 designations cover 2 of 13 fixtures · F-23 scheduled byte-level capture blocked by sandbox egress (all five
+official URLs failed TLS; the failure is left in `data/capture_store/index.csv` as evidence).
+
+### Cross-session requests
+
+- **None filed.** Nothing outside the claimed namespace was edited. The earlier open items X51-13/X51-14/X51-15 are
+  recorded as closed by sessions c8cb6ae8 and 51cf3786 above; this session did not touch them.
+
+### Merge record
+
+Recorded below after `gh pr merge`.
