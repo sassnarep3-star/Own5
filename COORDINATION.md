@@ -3686,3 +3686,29 @@ checks re-run green (543 checks, 0 alarms; 11 unit tests). No data values change
 
 **Merge record (follow-up).** Recorded below after this PR merges.
 
+
+---
+## Session 74306746 — NFL repository verification & decision-desk integration review (claimed 2026-11-19 UTC)
+
+Session ID `74306746`, current branch `arena/74306746-own5`, based on `2f02e1e7975ee61780b39e1ef9bc83591ccb55e2` (`main`). This is an additive, independent review of the already-published NFL decision desks; it does not re-enter or alter another session's data/site scope.
+
+**Claimed scope (only these files):**
+- `nfl-review-74306746/**` — compact GitHub Pages review/entry page; cross-links to the existing canonical desk(s), reports only reproducible repository checks, and flags anything not freshly verifiable.
+- `research/nfl-review-74306746/**` — executive summary, verification log, question/suggestion handoff and source limitations.
+- `.github/workflows/nfl-review-74306746.yml` — scoped deterministic build, verification and tests.
+- `COORDINATION.md` — append-only claim and completion records.
+- `README.md` — one additive row to expose this integration review after its checks pass.
+
+**Read-only:** all existing `nfl-*`, `own5-hub/`, `repo-review/`, root, `data/`, `scripts/`, `tools/`, `tests/`, existing workflows, and all other session namespaces. Any defect in those files will be logged as a cross-session request; no other owner's files will be changed.
+
+**Purpose:** do a current-checkout audit of the existing NFL line-originator experience instead of creating another competing model/data desk. Re-run its verifiers/tests, inventory the exact official-source coverage and blockers already in the repository, provide one simple navigation/review page, and distinguish verified source facts from repo-derived checks, historical captures, and unknowns. No new NFL value will be filled from inference or an unverified source.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| A743-01 | Claim scope in this shared board | in progress | 74306746 | `COORDINATION.md` | Claim commit is pushed before review work. |
+| A743-02 | Re-run canonical desk checks; audit provenance, requirements, questions, suggestions and known gaps without editing their data | unclaimed | 74306746 | `research/nfl-review-74306746/**` | Report exact commands/results; distinguish shallow-history/environment failures from data failures. |
+| A743-03 | Publish a compact review/entry page with categories, official-source links, and Flagged for Review | unclaimed | 74306746 | `nfl-review-74306746/**` | Existing desks remain canonical; do not duplicate raw tables. |
+| A743-04 | Deterministic build, fail-closed verifier, unit tests, scoped CI | unclaimed | 74306746 | `nfl-review-74306746/**`, `.github/workflows/nfl-review-74306746.yml` | Verify only claims this review can reproduce. |
+| A743-05 | Final integration, README entry, PR, merge and Pages verification | unclaimed | 74306746 | `COORDINATION.md`, `README.md` | Only after local checks pass; no changes to shared page generators/navigation. |
+
+**Cross-session requests:** none at claim time. Findings that require edits outside this scope will be logged here for the owning session.
