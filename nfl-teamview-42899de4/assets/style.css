@@ -1,0 +1,38 @@
+/* NFL team-view desk - session 42899de4 */
+:root{--bg:#0d1117;--panel:#161b22;--panel2:#1c2129;--border:#30363d;--text:#e6edf3;
+--muted:#9198a1;--accent:#58a6ff;--good:#3fb950;--warn:#d29922;--bad:#f85149;--blank:#6e7681}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--panel);border-bottom:1px solid var(--border);padding:14px 24px 0;position:sticky;top:0;z-index:10}
+header h1{margin:0 0 4px;font-size:18px}header .sub{color:var(--muted);font-size:12px;margin-bottom:10px}
+nav{display:flex;flex-wrap:wrap;gap:2px;margin-top:6px}
+nav a{padding:7px 12px;border-radius:6px 6px 0 0;color:var(--muted);font-size:13px;border:1px solid transparent;border-bottom:none}
+nav a:hover{color:var(--text);text-decoration:none;background:var(--panel2)}
+nav a.on{color:var(--text);background:var(--bg);border-color:var(--border);font-weight:600}
+main{padding:20px 24px 60px;max-width:1500px;margin:0 auto}
+h2{font-size:16px;margin:26px 0 10px;border-bottom:1px solid var(--border);padding-bottom:6px}
+h3{font-size:14px;margin:18px 0 8px;color:var(--muted)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px;margin:14px 0}
+.tile{background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:12px 14px}
+.tile .n{font-size:24px;font-weight:700}.tile .l{color:var(--muted);font-size:12px;margin-top:2px}
+.tile .x{color:var(--muted);font-size:11px;margin-top:6px}
+.badge{display:inline-block;padding:2px 9px;border-radius:20px;font-size:11px;font-weight:600;border:1px solid var(--border)}
+.b-ok{color:var(--good);border-color:var(--good)}.b-warn{color:var(--warn);border-color:var(--warn)}
+.b-bad{color:var(--bad);border-color:var(--bad)}.b-mute{color:var(--muted)}
+.b-part{color:var(--warn);border-color:var(--warn)}
+table{border-collapse:collapse;width:100%;background:var(--panel);border:1px solid var(--border);border-radius:8px;overflow:hidden;font-size:13px}
+th,td{padding:7px 10px;text-align:left;border-bottom:1px solid var(--border);vertical-align:top}
+th{background:var(--panel2);color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.4px;position:sticky;top:0}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#1a2029}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+.blank{color:var(--blank)}td.blank{letter-spacing:1px}
+.club{font-weight:600}
+.wrap{overflow-x:auto}
+.note{background:var(--panel);border:1px solid var(--border);border-left:3px solid var(--accent);padding:10px 14px;border-radius:6px;margin:12px 0;font-size:13px}
+.note.warn{border-left-color:var(--warn)}.note.bad{border-left-color:var(--bad)}
+footer{color:var(--muted);font-size:12px;padding:18px 24px;border-top:1px solid var(--border);margin-top:30px}
+code{background:var(--panel2);padding:1px 5px;border-radius:4px;font-size:12px}
+.flag{color:var(--warn);font-size:11px}
+a.src{font-size:11px}
