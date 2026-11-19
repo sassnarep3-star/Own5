@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Method &amp; sources — Own5 NFL Signal Board</title>
+<meta name="description" content="Official-source NFL line origination, decision readiness, luck-removal panel and pre-registered strategy register. Every row is source-linked or blank-and-flagged.">
+<style>
+:root{--bg:#0b0f14;--panel:#121922;--ink:#e8eef6;--dim:#93a4b8;--line:#243040;--ok:#3fb950;--warn:#d29922;--bad:#f85149;--accent:#58a6ff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+header{background:linear-gradient(180deg,#101823,#0b0f14);border-bottom:1px solid var(--line);padding:18px 20px}
+header .wrap{max-width:1180px;margin:0 auto}
+h1{font-size:21px;margin:0 0 4px;letter-spacing:-.2px}
+.sub{color:var(--dim);font-size:13px}
+nav{max-width:1180px;margin:0 auto;padding:10px 20px;display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--line)}
+nav a{padding:5px 10px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--dim);background:#0f151d}
+nav a.on{color:#0b0f14;background:var(--accent);border-color:var(--accent);font-weight:600}
+main{max-width:1180px;margin:0 auto;padding:22px 20px 60px}
+h2{font-size:17px;margin:30px 0 6px;padding-top:8px;border-top:1px solid var(--line)}
+h2:first-child{border-top:0;margin-top:6px}
+h3{font-size:14px;margin:18px 0 6px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em}
+p{color:#c9d6e5;max-width:76ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:10px;margin:12px 0 6px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.card .v{font-size:22px;font-weight:700;letter-spacing:-.4px}
+.card .k{font-size:11.5px;color:var(--dim);text-transform:uppercase;letter-spacing:.05em;margin-top:2px}
+.card.ok .v{color:var(--ok)}.card.warn .v{color:var(--warn)}.card.bad .v{color:var(--bad)}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:10px;margin:10px 0 4px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;font-size:13.2px}
+th,td{padding:7px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#16202b;color:var(--dim);font-weight:600;font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;position:sticky;top:0}
+tbody tr:hover{background:#161f2a}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+td.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}
+tr.blank td{color:#6d7e91;font-style:italic}
+.tag{display:inline-block;padding:1px 7px;border-radius:999px;font-size:11px;font-weight:600;white-space:nowrap}
+.t-met{background:#0d2f16;color:var(--ok);border:1px solid #1d5c2b}
+.t-part{background:#332508;color:var(--warn);border:1px solid #6b4e12}
+.t-block{background:#3a1114;color:var(--bad);border:1px solid #7d1f24}
+.t-info{background:#0d2137;color:var(--accent);border:1px solid #1d4a7d}
+.t-gray{background:#1a2330;color:var(--dim);border:1px solid var(--line)}
+.hero{background:linear-gradient(135deg,#12202f,#0e1621);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:10px 0 4px}
+.hero .big{font-size:30px;font-weight:800;letter-spacing:-.8px}
+.hero .neg{color:var(--bad)}
+.note{font-size:12.5px;color:var(--dim);margin:6px 0 0}
+.callout{border-left:3px solid var(--warn);background:#191307;padding:10px 14px;border-radius:0 8px 8px 0;margin:12px 0}
+.callout.bad{border-color:var(--bad);background:#1b0d0e}
+.callout.ok{border-color:var(--ok);background:#0c1a10}
+footer{max-width:1180px;margin:0 auto;padding:24px 20px;color:var(--dim);font-size:12px;border-top:1px solid var(--line)}
+.skip{position:absolute;left:-9999px}
+@media(max-width:700px){.cards{grid-template-columns:repeat(2,1fr)}th,td{padding:6px 7px;font-size:12.4px}main{padding:16px 12px 50px}nav{padding:8px 12px}header{padding:14px 12px}}
+</style></head>
+<body>
+<header><div class="wrap">
+<h1>Own5 · NFL Signal Board</h1>
+<div class="sub">Session <code>1fab8a48</code> · official-source verification 2026-11-19 UTC · every table row is source-linked, and any value that could not be confirmed is
+<strong>left blank and flagged</strong>, never inferred. What was read, when, and how every number was produced.</div>
+</div></header>
+<nav><a href="index.html">Overview</a><a href="readiness.html">Decision readiness</a><a href="origination.html">Origination &amp; prices</a><a href="model.html">Model &amp; luck panel</a><a href="leaderboard.html">Leaderboard &amp; pre-registration</a><a href="availability.html">Availability &amp; depth</a><a href="correlations.html">Correlations</a><a href="results.html">Results &amp; corpus</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="research.html">Research register</a><a href="flagged.html">Flagged for review</a><a href="method.html" class=on>Method &amp; sources</a></nav>
+<main>
+<h2>Method &amp; sources</h2>
+
+<p>This page is the audit trail: what was read, when, from where, and the hash of every artifact the build depends on.
+Read timestamps are UTC. Where a source was not re-read in this session, the row says so instead of borrowing an earlier read.</p>
+
+<h2>1. Sources</h2>
+<div class="tw"><table class=""><thead><tr><th class="">ID</th><th class="">Source</th><th class="">URL</th><th class="">Tier</th><th class="">Read (UTC)</th><th class="mono">sha256</th><th class="">Used for</th></tr></thead><tbody><tr><td class="">SRC01</td><td class="">NFL official league standings, 2026 regular season</td><td class=""><a href="https://www.nfl.com/standings/league/2026/REG" rel="noopener">https://www.nfl.com/standings/league/2026/REG</a></td><td class=""><span class="tag t-met">OFFICIAL</span></td><td class="">2026-11-19T11:06:00Z</td><td class="mono"><code>5504f6e4a498f236…</code></td><td class="">all 32 club records, PF/PA, and the correlation inputs (n=32)</td></tr><tr><td class="">SRC02</td><td class="">NFL official Week 11 schedule page</td><td class=""><a href="https://www.nfl.com/schedules/2026/by-week/week-11" rel="noopener">https://www.nfl.com/schedules/2026/by-week/week-11</a></td><td class=""><span class="tag t-met">OFFICIAL</span></td><td class="">2026-11-19T11:09:00Z</td><td class="mono"><code>0c5db63905f061d9…</code></td><td class="">13 fixtures, kickoff times, networks, venues, six byes</td></tr><tr><td class="">SRC03</td><td class="">NFL official Week 10 schedule page (finals)</td><td class=""><a href="https://www.nfl.com/schedules/2026/by-week/week-10" rel="noopener">https://www.nfl.com/schedules/2026/by-week/week-10</a></td><td class=""><span class="tag t-met">OFFICIAL</span></td><td class="">2026-11-19T11:07:00Z</td><td class="mono"><code>7863d883dd1a239a…</code></td><td class="">14 Week 10 finals used to update the ratings and the corpus reconciliation</td></tr><tr><td class="">SRC04</td><td class="">NFL official injury report, Week 11</td><td class=""><a href="https://www.nfl.com/injuries/league/2026/reg11" rel="noopener">https://www.nfl.com/injuries/league/2026/reg11</a></td><td class=""><span class="tag t-met">OFFICIAL</span></td><td class="">2026-11-19T11:03:00Z</td><td class="mono"><code>70a67a9235f637d5…</code></td><td class="">per-club designation counts and the three named-player checks; publisher of record is the club</td></tr><tr><td class="">SRC05</td><td class="">DraftKings Sportsbook NFL game lines</td><td class=""><a href="https://sportsbook.draftkings.com/leagues/football/nfl" rel="noopener">https://sportsbook.draftkings.com/leagues/football/nfl</a></td><td class=""><span class="tag t-info">OPERATOR</span></td><td class="">2026-11-19T11:10:00Z</td><td class="mono"><code>b04898f7fa63395b…</code></td><td class="">the only market prices on this site, attributed to the operator, read clock on every row</td></tr><tr><td class="">SRC06</td><td class="">nflverse-data schedules release (pinned game corpus)</td><td class=""><a href="https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz" rel="noopener">https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz</a></td><td class=""><span class="tag t-gray">PINNED-DATASET</span></td><td class="">pinned at first commit by session d6c404d4</td><td class="mono"><code>ddc8b9dc71fe893e…</code></td><td class="">walk-forward evaluation inputs (results + closing prices) 1999-2026; not an official NFL source</td></tr><tr><td class="">SRC07</td><td class="">Prior session&#x27;s hashed Week 11 injury capture (2026-11-19T06:53Z)</td><td class=""><a href="https://github.com/sassnarep3-star/Own5/blob/main/nfl-line-audit/captures/official/injury_reg11_20261119T0653Z.json" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/nfl-line-audit/captures/official/injury_reg11_20261119T0653Z.json</a></td><td class=""><span class="tag t-gray">INHERITED-CAPTURE</span></td><td class="">2026-11-19T06:53:00Z</td><td class="mono"><code>70a67a9235f637d5…</code></td><td class="">row-level designation counts (253 rows, 24 clubs); re-verified against today&#x27;s live read</td></tr><tr><td class="">SRC08</td><td class="">The 136-row 2026 game log named in the brief (data/games_2026.json)</td><td class=""><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/games_2026.json" rel="noopener">https://github.com/sassnarep3-star/Own5/blob/main/data/games_2026.json</a></td><td class=""><span class="tag t-gray">INHERITED-LOG</span></td><td class="">2026-11-19T11:12:00Z</td><td class="mono"><code>55ed15de6a10bb03…</code></td><td class="">the log audit on the results page</td></tr><tr><td class="">SRC09</td><td class="">NFL Terms of Service (row-level republication basis)</td><td class=""><a href="https://www.nfl.com/legal/terms/" rel="noopener">https://www.nfl.com/legal/terms/</a></td><td class=""><span class="tag t-met">OFFICIAL</span></td><td class="">2026-11-19 (policy inherited, not re-read this session)</td><td class="mono">—</td><td class="">basis for policy P-01: aggregates on site, raw rows in the private store</td></tr><tr><td class="">SRC10</td><td class="">NFL official schedule announcement, 2026 (May 14, 2026 release)</td><td class=""><a href="https://www.nfl.com/schedules/2026/" rel="noopener">https://www.nfl.com/schedules/2026/</a></td><td class=""><span class="tag t-met">OFFICIAL</span></td><td class="">not re-read this session</td><td class="mono">—</td><td class="">the dated announcement is published beside the live schedule; date flagged SBF-06</td></tr></tbody></table></div>
+<h2>2. Frozen inputs</h2>
+<p>These hashes are the fingerprint of the build. Any change to an input changes them, and the verifier fails if a pinned row count moves.</p>
+<div class="tw"><table><thead><tr><th>Artifact</th><th>sha256</th></tr></thead><tbody>
+<tr><td>corpus</td><td class="mono">ddc8b9dc71fe893eaf1c9a890b851fc22d5b3f5ec2c93e58695e7d0d9d1812ae</td></tr><tr><td>fixtures</td><td class="mono">0c5db63905f061d95c01670aef9630d2929ab999c80ced1c66a7d658f4514040</td></tr><tr><td>games2026</td><td class="mono">55ed15de6a10bb03d41891c803269f7bf8241a207967eb132d0677c731fb5279</td></tr><tr><td>injury_capture</td><td class="mono">70a67a9235f637d58a907ddd0ea9b34c4419f0ff327430c078ceca0671a1d43b</td></tr><tr><td>odds</td><td class="mono">b04898f7fa63395b86bc217eaa8aecaad994d91f3f50c405ec0394bd2f84c7b7</td></tr><tr><td>standings</td><td class="mono">5504f6e4a498f2369746671f94e63ab563477c003b348b5f31edd13a5e4677f4</td></tr><tr><td>week10</td><td class="mono">7863d883dd1a239ab808506d767c8a991522be8fae98338df8a281a1fc3f013b</td></tr></tbody></table></div>
+
+<h2>3. How every number was produced</h2>
+<div class="tw"><table><thead><tr><th>Number</th><th>Method</th><th>Failure mode it is guarded against</th></tr></thead><tbody>
+<tr><td>The ratings</td><td>a walk-forward Elo updated game by game with a season regression and a home-field term</td><td>lookahead: a game can only move a rating after it is played</td></tr>
+<tr><td>The projected margin</td><td>a linear map from the rating difference, fitted on 2015–2024 only</td><td>tuning on the holdout</td></tr>
+<tr><td>The projected total</td><td>rolling offence and defence scoring rates with shrinkage toward the league mean</td><td>small-sample rates driving fake edges</td></tr>
+<tr><td>The cover probability</td><td>a normal dispersion model around the projected margin, with sigma chosen on train</td><td>choosing sigma on the evaluation window</td></tr>
+<tr><td>The skill</td><td>1 − (model Brier ÷ benchmark Brier), with a week-cluster bootstrap</td><td>treating correlated games as independent</td></tr>
+<tr><td>The multiplicity control</td><td>Holm adjustment across the registered families</td><td>finding a winner by trying many variants</td></tr>
+<tr><td>The calibration slope</td><td>a logistic fit of outcome on the log-odds of the model probability, train only</td><td>staking inflated probabilities</td></tr>
+<tr><td>The reconciliation</td><td>32 club records recomputed from games and compared to the official page; the build fails on any mismatch</td><td>a corpus that silently drifts from the official record</td></tr>
+</tbody></table></div>
+
+<h2>4. Determinism</h2>
+<p>The data build uses a fixed seed ({summary['model'].get('seed', 20261119)}) and no wall-clock value, so two consecutive runs produce byte-identical CSVs.
+The bootstrap uses a linear congruential generator implemented in the build rather than a library, so the intervals reproduce on any machine with
+Python 3.11 and no third-party packages. <code>verify.py</code> re-runs the build and fails if the committed files differ.</p>
+
+<h2>5. Related desks in this repository</h2>
+<p>Own5 is a multi-session repository. This board is additive. The nearest neighbours, all read-only from here:</p>
+<div class="tw"><table><thead><tr><th>Desk</th><th>What it covers</th><th>Link</th></tr></thead><tbody>
+<tr><td>NFL Verified Line Desk</td><td>a 7,117-game corpus, a 136-row log audit and a 744-game walk-forward model</td><td><a href="https://sassnarep3-star.github.io/Own5/nfl-line-audit/">nfl-line-audit</a></td></tr>
+<tr><td>NFL Decision-Readiness Desk</td><td>a 79-requirement ledger with gates and clearing numbers</td><td><a href="https://sassnarep3-star.github.io/Own5/nfl-desk-067f2314/">nfl-desk-067f2314</a></td></tr>
+<tr><td>NFL Venue &amp; Schedule-Announcement Desk</td><td>venue transcription from official game centres</td><td><a href="https://sassnarep3-star.github.io/Own5/nfl-venue-390e13fd/">nfl-venue-390e13fd</a></td></tr>
+<tr><td>NFL integration hub</td><td>the cross-desk index</td><td><a href="https://sassnarep3-star.github.io/Own5/nfl-integration-a620f5a5/">nfl-integration-a620f5a5</a></td></tr>
+</tbody></table></div>
+
+</main>
+<footer>
+<p>Policy P-01: the public site carries derived aggregates, our own model outputs and operator-attributed prices only; row-level official data stays private.
+No bets are placed, no performance is claimed, and no strategy on this site is certified. This is research, not betting advice.
+Own5 is a multi-session repository: this board is one additive desk and links to the others from the <a href="method.html">Method &amp; sources</a> page.</p>
+</footer>
+</body></html>

@@ -1,0 +1,9 @@
+source_id,name,url,type,read_utc,notes
+S01,NFL Official 2026 League Standings,https://www.nfl.com/standings/league/2026/REG,OFFICIAL,2026-11-19T06:55:00Z,W-L-T-PCT-PF-PA-NET for all 32 clubs read 2026-11-19. Capture may reflect a partial Week-10 update (BUF shows 8-1 despite a Week-10 win) — flagged FZ-01.
+S02,NFL Week 10 Schedule / Results 2026,https://www.nfl.com/schedules/2026/by-week/week-10,OFFICIAL,2026-11-19T07:10:00Z,14 finals + CHI/DEN/PHI/TB byes.
+S03,NFL Week 11 Schedule 2026,https://www.nfl.com/schedules/2026/by-week/week-11,OFFICIAL,2026-11-19T07:20:00Z,13 fixtures + ATL/CLE/GB/LAR/NE/SEA byes. Times/networks captured where printed.
+S04,NFL Week 11 Scores 2026,https://www.nfl.com/scores/2026/week-11,OFFICIAL,2026-11-19T07:30:00Z,Confirms the 13 Week-11 matchups; MIN@SF is the Mexico City international game.
+S05,NFL Official Injury Report Week 11,https://www.nfl.com/injuries/league/2026/reg11,OFFICIAL,2026-11-19T07:40:00Z,Player/practice/game status read for IND,HOU,PIT,PHI,AZ,KC,BAL,CAR,TB,DET (10 of 32 clubs). Unread clubs listed NOT READ.
+S06,2026 NFL Rulebook,https://operations.nfl.com/rules-officiating/2026-nfl-rulebook,OFFICIAL,2026-11-19T08:00:00Z,Rule 4 (60 min, 4x15) and Rule 16 (OT) referenced for market grading context.
+S07,DraftKings General Betting Rules,https://sportsbook.draftkings.com/help/general-betting-rules/general-rules,INDUSTRY,2026-11-19T08:05:00Z,Referenced only for market-rule context (OT counts, push refund on whole numbers). Not used as a price source.
+S08,SciPy pearsonr documentation,https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html,METHODOLOGY,2026-11-19T08:10:00Z,Method reference for correlation computation.
