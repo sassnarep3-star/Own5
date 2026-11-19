@@ -3854,3 +3854,42 @@ a decision that did not happen. Rebuilt, re-verified (3,014 checks, 0 problems) 
 follow-up PR.
 | Follow-up | [#145](https://github.com/sassnarep3-star/Own5/pull/145) merged 2026-11-19, merge commit `ff6fc6f3`; Pages built for it. Corrections: F-12 evidence link, merge record. |
 | Follow-up 2 | [#147](https://github.com/sassnarep3-star/Own5/pull/147) merged 2026-11-19, merge commit `016e7ee`; Pages **built** for `016e7ee`. Correction: P01 decision state. |
+
+---
+
+
+---
+
+---
+
+## Session 6e13b9ff — NFL Brief Traceability & Decision Desk (claimed 2026-11-19 UTC)
+
+Session ID `6e13b9ff`, branch `arena/6e13b9ff-own5` (base `2f02e1e` = current `main` tip).
+
+**Claimed namespace (strictly additive, zero overlap with any other session):**
+- `nfl-desk-6e13b9ff/**` (GitHub Pages desk: landing page with decision-readiness table + category subpages, deterministic stdlib-only build, fail-closed verify, unit tests, CSS)
+- `data/nfl-desk-6e13b9ff/**` (CSV/JSON data layer: full-brief requirements coverage, gates/readiness, questions register, suggestions register, fresh official verification, flagged, sources)
+- `research/nfl-6e13b9ff/**` (executive summary, methodology/verification log)
+- `.github/workflows/nfl-desk-6e13b9ff.yml` (scoped build+verify+tests on PR/push)
+- Append-only block in `COORDINATION.md` and one additive row in `README.md`
+
+**Read-only (never edited):** root `index.html`, `pages/**`, `assets/**`, `scripts/**`, `tools/**`, `tests/**`, `docs/**`, `data/**` outside `data/nfl-desk-6e13b9ff/`, all existing workflows, every other `nfl-*` / `nba-*` / `sf-*` / `rental-*` / `own5-*` namespace.
+
+**Purpose (this session's brief):** (1) repo review line by line with irregularities flagged; (2) a landing-page decision-readiness table with one row per requirement of this session's brief, each showing the blocking gate, the number that would clear it, and the observed value where one exists; (3) a complete requirements-coverage matrix (every line of the brief → status → in-repo evidence → official source or blank+flagged); (4) a questions/information/answers register (what must be answered before any decision) and a reviewable suggestions register (options + recommendation + what-would-change-our-mind; nothing implemented without an owner decision); (5) first-hand official-source verification performed this session on 2026-11-19 (standings, Week 11 slate, Week 11 injury-report availability, Week 12 schedule), every row linked to its official URL with read timestamps; (6) executive summary; (7) Flagged for Review page — no inferred values, blanks are explicit and flagged; (8) PR to `main`, autonomous merge after verify PASS, GitHub Pages live check, record here.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| E6-01 | Claim scope in COORDINATION.md + push claim before build work | in progress | 6e13b9ff | COORDINATION.md | This block; claim pushed before any build work. |
+| E6-02 | Fresh official reads (2026-11-19): standings, W11 slate, W11 injury report, W12 schedule + line-by-line verification rows | in progress | 6e13b9ff | data/nfl-desk-6e13b9ff/verification.csv, data/nfl-desk-6e13b9ff/standings_wk11.csv, data/nfl-desk-6e13b9ff/sources.csv | Every row source_url + read_utc; unconfirmable → blank+flagged. |
+| E6-03 | Full-brief requirements coverage + decision-readiness (gate / number-to-clear / observed) | in progress | 6e13b9ff | data/nfl-desk-6e13b9ff/requirements_coverage.csv, readiness.csv | One row per line of this session's brief; in-repo evidence paths must exist (checked by verify). |
+| E6-04 | Questions register + suggestions register (site improvements; nothing implemented without decision) | in progress | 6e13b9ff | data/nfl-desk-6e13b9ff/questions.csv, suggestions.csv | Options + recommendation + what-would-change-our-mind. |
+| E6-05 | Build: landing (decision-readiness table) + category subpages, deterministic stdlib | in progress | 6e13b9ff | nfl-desk-6e13b9ff/build_desk.py | No JS required for content. |
+| E6-06 | Fail-closed verify (row source links exist, official-domain allowlist for official claims, no broken internal links, pinned counts) | in progress | 6e13b9ff | nfl-desk-6e13b9ff/verify_desk.py | Gates the build. |
+| E6-07 | Unit tests incl. negative controls | in progress | 6e13b9ff | nfl-desk-6e13b9ff/tests/test_desk.py | Stdlib unittest. |
+| E6-08 | Executive summary + Flagged for Review | in progress | 6e13b9ff | research/nfl-6e13b9ff/**, flagged page | Restates only computed/officially-sourced values. |
+| E6-09 | Scoped CI workflow | in progress | 6e13b9ff | .github/workflows/nfl-desk-6e13b9ff.yml | Build + verify + tests on PR/push only for this scope. |
+| E6-10 | Rebase on main, PR, autonomous merge, live Pages check, record | in progress | 6e13b9ff | COORDINATION.md, README.md (one row) | Merge only after verify PASS + live URL check. |
+
+**Cross-session requests**
+
+- None. All work is additive inside the claimed namespace; no other session's files are edited.
