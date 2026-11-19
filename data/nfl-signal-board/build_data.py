@@ -134,6 +134,18 @@ def clamp(x: float, lo: float, hi: float) -> float:
     return max(lo, min(hi, x))
 
 
+def r12(x):
+    """Round a float to 12 significant digits so the published JSON is identical across Python
+    patch releases (CPython 3.11.2 and 3.11.18 differ in the last bit of these fitted values)."""
+    if isinstance(x, float):
+        return float(f"{x:.12g}")
+    if isinstance(x, (list, tuple)):
+        return [r12(v) for v in x]
+    if isinstance(x, dict):
+        return {k: r12(v) for k, v in x.items()}
+    return x
+
+
 def fmt(x: float | None, nd: int = 4) -> str:
     if x is None or (isinstance(x, float) and (math.isnan(x) or math.isinf(x))):
         return ""
@@ -1598,7 +1610,7 @@ def main() -> int:
         },
         "counts": cov, "source_hashes": hashes,
     }
-    (HERE / "derive_summary.json").write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n")
+    (HERE / "derive_summary.json").write_text(json.dumps(r12(summary), indent=2, sort_keys=True) + "\n")
 
     print(f"corpus games 2015+: {meta['corpus_games']}  reconciled {recon['clubs_reconciled']}/32")
     print(f"spread convention: {meta['spread_sign']} (MAE {mae_pos:.2f} vs {mae_neg:.2f})")

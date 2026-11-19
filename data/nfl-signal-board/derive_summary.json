@@ -34,34 +34,34 @@
     "week10": "7863d883dd1a239ab808506d767c8a991522be8fae98338df8a281a1fc3f013b"
   },
   "headline": {
-    "calibration_slope": 0.10994724790085353,
+    "calibration_slope": 0.109947247901,
     "captured_injury_rows": 253,
     "certified_strategies": 0,
-    "control_base_rate_skill": 0.0008612372453407069,
+    "control_base_rate_skill": 0.000861237245341,
     "control_half_skill": 0.0,
     "designated_rows": 16,
     "injury_clubs": 24,
-    "ml_brier_skill_all": -0.05791945885624172,
+    "ml_brier_skill_all": -0.0579194588562,
     "ml_brier_skill_ci": [
-      -0.07734292806854337,
-      -0.038731647450998
+      -0.0773429280685,
+      -0.038731647451
     ],
     "operator_prices": 78,
     "originated_markets": 78,
     "priced_fixtures": 13,
     "rows_with_raw_ev_over_2pct": 35,
-    "side_brier_skill_all": -0.03541398009205343,
+    "side_brier_skill_all": -0.0354139800921,
     "side_brier_skill_ci": [
-      -0.050816533848880185,
-      -0.020231997927819156
+      -0.0508165338489,
+      -0.0202319979278
     ],
-    "side_brier_skill_holdout": -0.06166706297311264,
+    "side_brier_skill_holdout": -0.0616670629731,
     "stakeable_rows": 0,
     "totals_bias_ci": [
-      -0.03316912972085386,
-      0.8437294812869337
+      -0.0331691297209,
+      0.843729481287
     ],
-    "totals_bias_points": 0.4161992741669416
+    "totals_bias_points": 0.416199274167
   },
   "log136": {
     "absent": 3,
@@ -71,12 +71,12 @@
     "rows": 136
   },
   "model": {
-    "a_elo": -1.0201528325597269,
-    "b_elo": 0.056241209150948955,
+    "a_elo": -1.02015283256,
+    "b_elo": 0.0562412091509,
     "calibration": {
-      "intercept": -0.05241118734038598,
+      "intercept": -0.0524111873404,
       "n": 2550,
-      "slope": 0.10994724790085353
+      "slope": 0.109947247901
     },
     "calibration_note": "fitted on train only (n=2550): slope 0.110, intercept -0.052. A slope well below 1 means the raw probabilities are over-confident, so raw edges overstate EV.",
     "chosen_side_variant": "p_model_cover_fixed",
@@ -85,54 +85,54 @@
     "holdout_n": 422,
     "recon_clubs": 32,
     "row_count_evaluated": 3045,
-    "sd_elo": 13.26256160280154,
+    "sd_elo": 13.2625616028,
     "sd_fixed": 13.86,
-    "sd_points_mix": 13.450576334715914,
-    "sd_total": 13.695630830590456,
+    "sd_points_mix": 13.4505763347,
+    "sd_total": 13.6956308306,
     "sigma_buckets": [
       [
         50,
-        12.915078786302775
+        12.9150787863
       ],
       [
         100,
-        13.252314605113252
+        13.2523146051
       ],
       [
         175,
-        13.670118732350113
+        13.6701187324
       ],
       [
         10000,
-        13.303594534676883
+        13.3035945347
       ]
     ],
-    "spread_mae_neg": 14.617063212727016,
-    "spread_mae_pos": 10.248627340560327,
+    "spread_mae_neg": 14.6170632127,
+    "spread_mae_pos": 10.2486273406,
     "spread_sign": "home-favoured-positive",
-    "tot_bias": 0.4161992741669416,
+    "tot_bias": 0.416199274167,
     "tot_bias_ci": [
-      -0.03316912972085386,
-      0.8437294812869337
+      -0.0331691297209,
+      0.843729481287
     ],
     "tot_bias_clusters": 201,
-    "tot_corr": -0.17125409089168733,
+    "tot_corr": -0.171254090892,
     "train_n": 2623,
     "variant_table": [
       {
-        "brier_train": 0.25782138852935566,
+        "brier_train": 0.257821388529,
         "variant": "fixed 13.86"
       },
       {
-        "brier_train": 0.25858377241914354,
+        "brier_train": 0.258583772419,
         "variant": "elo-sd"
       },
       {
-        "brier_train": 0.25858884752991307,
+        "brier_train": 0.25858884753,
         "variant": "elo-bucketed"
       },
       {
-        "brier_train": 0.2657961787036286,
+        "brier_train": 0.265796178704,
         "variant": "points"
       }
     ]
@@ -165,8 +165,8 @@
     "week10": "7863d883dd1a239ab808506d767c8a991522be8fae98338df8a281a1fc3f013b"
   },
   "spread_mae": {
-    "negative_convention": 14.617063212727016,
-    "positive_convention": 10.248627340560327
+    "negative_convention": 14.6170632127,
+    "positive_convention": 10.2486273406
   },
   "spread_sign": "home-favoured-positive"
 }
