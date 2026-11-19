@@ -240,8 +240,9 @@ def page_index(d):
   <div class="kpi"><div class="v">{f4['brier_skill_vs_close']}</div>
     <div class="k">model Brier skill vs the de-vigged close</div>
     <div class="s">95% game-cluster interval [{f4['skill_lo95']}, {f4['skill_hi95']}], n={f4['n_games']}</div></div>
-  <div class="kpi"><div class="v">{f4['n_bets']}</div><div class="k">settled bets in the staking column</div>
-    <div class="s">ROI {f4['staking_roi']} [{f4['staking_roi_lo95']}, {f4['staking_roi_hi95']}] — signal and staking disagree</div></div>
+  <div class="kpi"><div class="v">{f4['n_bets']}</div>
+    <div class="k">backtest bets behind the staking column (not prospective)</div>
+    <div class="s">ROI {f4['staking_roi']} [{f4['staking_roi_lo95']}, {f4['staking_roi_hi95']}] — signal and staking disagree; 0 bets settled prospectively</div></div>
   <div class="kpi"><div class="v">0</div><div class="k">certified strategies</div>
     <div class="s">nothing has cleared the pre-registered gate</div></div>
   <div class="kpi"><div class="v">{met}<span style="font-size:.9rem">/{len(reqs)}</span></div>

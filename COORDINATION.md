@@ -4296,7 +4296,38 @@ Session ID `9e54d765`, branch `arena/9e54d765-own5` (base `d634b08`).
 | S9-06 | Registers: requirements, questions, suggestions, sources, flagged | done | 9e54d765 | nfl-desk-9e54d765/data/{requirements,questions,suggestions,sources,flagged}.csv | R01–R71, Q01–Q14, S01–S14, 13 sources, F01–F15. |
 | S9-07 | Site: dashboard landing + 11 category pages, table-first, executive summary, Flagged for Review | done | 9e54d765 | nfl-desk-9e54d765/*.html, style.css, build_site.py | 12 pages; a source link on every table row; blanks rendered as "not read". |
 | S9-08 | Fail-closed verifier + unit tests + scoped CI | done | 9e54d765 | nfl-desk-9e54d765/{verify.py,tests/}, .github/workflows/nfl-desk-9e54d765-verify.yml | 165 verification checks; 99 unit tests incl. numeric negative controls. |
-| S9-09 | PR to main, autonomous merge, Pages deploy verification, record | in progress | 9e54d765 | COORDINATION.md, README.md | Merge only after verify PASS + live URL check. |
+| S9-09 | PR to main, autonomous merge, Pages deploy verification, record | done | 9e54d765 | COORDINATION.md, README.md | See the deployment record directly below. |
+
+**Pull request & deployment record (session 9e54d765)**
+
+- **PR #176** → `main` ("NFL verified origination desk v4 — session 9e54d765"). All checks green on the
+  merge candidate: `Rebuild, verify, test` (rebuild → `git diff --exit-code` → 174-check verify →
+  99 unit tests), plus the repo-wide `desk-verify`, `Build review, verify evidence, rerun selected
+  desks`, `Build, evidence integrity and browser smoke tests` and every `verify` job — the previously
+  red `decision-desk.yml` verify job also passed on this head.
+- **Merged without waiting for review**, as the brief directs: merge commit **`61044c5`**
+  (`61044c5f07aa9b338d77db4f93be04c8cf21e908`), merged 2026-11-19T11:46:35Z.
+- **Conflict resolved before merging:** `origin/main` had moved (PR #175) and `COORDINATION.md`
+  conflicted. Both sessions' blocks were kept verbatim in append order; no other session's text was
+  removed. No conflict occurred in any data or site file.
+- **Two fixes made between the first push and the merge**, both found by checking rather than assuming:
+  1. `availability_counts.csv` published a **machine-local path** as the source for the 2026 Week 10
+     capture. It now publishes that file's own `source_url` (`https://www.nfl.com/injuries/`), and
+     `verify.py` gained a check that rejects any `/home/` or `/tmp/` path in nine published tables.
+     Found by rebuilding in a clean clone at a different path — the CI rebuild-diff would have caught
+     it too, which is why the diff step exists.
+  2. The dashboard labelled the backtest's 4,576 bets as "settled bets", which contradicts the
+     `n_settled = 0` rule. Relabelled "backtest bets … (not prospective)" and pinned by a site test.
+- **Pages deploy confirmed:** `https://sassnarep3-star.github.io/Own5/nfl-desk-9e54d765/` served the
+  desk (title, nav, KPIs and the source strip all present). The scoped `pages-smoke` job
+  (`.github/workflows/nfl-desk-9e54d765-verify.yml`) checks all 12 pages on `main`.
+- **Flagged items are published, not blocking:** F01–F15, with F01 (no 2026 score after week 9 in the
+  pinned dataset), F02 (a Week 11 capture that served Week 10) and F03 (the spread sign convention)
+  marked HIGH or MEDIUM. None of them blocks the site; each states its impact and what was done.
+- **Cross-session requests: none.** The desk reads only `data/decision-desk/raw/games.csv.gz`,
+  `data/decision-desk/official/official_injuries_wk10.csv` and two stamped captures in other sessions'
+  namespaces, and writes nothing outside `nfl-desk-9e54d765/**`, `research/nfl-9e54d765/**` and this
+  file. Other sessions are invited to reuse the two repository-level findings above.
 
 ### Session 9e54d765 — headline result (for the board)
 
