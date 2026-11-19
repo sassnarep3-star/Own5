@@ -1,0 +1,77 @@
+name: NFL Signal Board — rebuild, verify, test
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'nfl-signal-board/**'
+      - 'data/nfl-signal-board/**'
+      - 'tests/test_nfl_signal_board.py'
+      - '.github/workflows/nfl-signal-board.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'nfl-signal-board/**'
+      - 'data/nfl-signal-board/**'
+      - 'tests/test_nfl_signal_board.py'
+      - '.github/workflows/nfl-signal-board.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nfl-signal-board-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    name: Verify the board (fail closed)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Confirm the pinned inputs are present
+        run: |
+          set -euo pipefail
+          test -f data/nfl-signal-board/raw/odds_20261119T1110Z.csv
+          test -f data/nfl-signal-board/raw/standings_2026_reg.csv
+          test -f nfl-line-audit/data/corpus_games.csv
+          test -f nfl-line-audit/captures/official/injury_reg11_20261119T0653Z.json
+          echo "pinned inputs present"
+
+      - name: Unit tests
+        run: python3 -m unittest tests.test_nfl_signal_board -v
+
+      - name: Rebuild the data layer (must reproduce the committed CSVs)
+        run: |
+          set -euo pipefail
+          python3 data/nfl-signal-board/build_data.py
+          git diff --exit-code -- data/nfl-signal-board/
+          echo "data build reproduces the committed files"
+
+      - name: Rebuild the site (must reproduce the committed pages)
+        run: |
+          set -euo pipefail
+          python3 nfl-signal-board/build_site.py
+          git diff --exit-code -- nfl-signal-board/
+          echo "site build reproduces the committed pages"
+
+      - name: Fail-closed verifier
+        run: python3 nfl-signal-board/verify.py
+
+      - name: Publish the evidence bundle on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nfl-signal-board-evidence
+          path: |
+            data/nfl-signal-board/*.csv
+            data/nfl-signal-board/*.json
+            nfl-signal-board/*.html
+          retention-days: 14

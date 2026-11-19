@@ -821,14 +821,18 @@ def build_origination(corpus: list[dict], spread_positive: bool, meta: dict,
                                                   ("home", home, fair_home_line, mk_home_line, p_mk_home, m_home)):
             # Convention: a printed line of -12.5 means "this side must win by 12.5", i.e. the cover
             # threshold on the margin is +12.5. So the threshold is the NEGATED printed line, for both sides.
+            # A printed line of L on the home side means the home side must win by L. So the cover event is
+            #   home covers  <=>  home_margin >  L
+            #   away covers  <=>  home_margin <  L
+            # Both use the same threshold L; only the inequality flips, which is what makes the pair sum to 1.
             if mkline is None:
                 p = None
             else:
-                cover_at = -mkline
-                p = 1.0 - norm_cdf((cover_at - mu) / sd_elo)
+                z = (mk_home_line - mu) / sd_elo
+                p = (1.0 - norm_cdf(z)) if sel == "home" else norm_cdf(z)
             ev = None
             if opp is not None and mkline is not None and p is not None:
-                ev = ev_two_way(p, push_prob(-mkline, mu, sd_elo), float(opp["price_american"]))
+                ev = ev_two_way(p, push_prob(mk_home_line, mu, sd_elo), float(opp["price_american"]))
             sf = stake_frac(ev)
             out.append({**base,
                         "market_id": f"{f['fixture_id']}-S-{sel[0].upper()}", "market_order": "1 side",
