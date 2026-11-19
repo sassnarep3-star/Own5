@@ -4468,3 +4468,21 @@ whose nav is scoped to this desk only.
 
 **Cross-session requests (logged, not edited).** As X-B-01…X-B-04 above, plus:
 - **X-B-05 → `repo-review` owner:** run `python3 repo-review/run_verifiers.py` after this merge; the sweep is dated 2026-11-18 and this namespace adds a verifier it does not list.
+
+### 1fab8a48 — merge and deployment record (2026-11-19T11:44Z)
+
+| Item | Value |
+|------|-------|
+| PR | [#175](https://github.com/sassnarep3-star/Own5/pull/175) `arena/1fab8a48-own5` → `main`; **MERGED** via `gh pr merge 175 --merge` (no approval wait, no `--auto`) at 2026-11-19T11:43:35Z |
+| Merge commit | `6e78cc55eee3c5d8d7ddb39d68813626426d57fc` |
+| Checks on the final head | **all pass** — *Verify the board (fail closed)*, *Build, evidence integrity and browser smoke tests*, *Build review, verify evidence, rerun selected desks*, *build-and-audit*, 2x *desk-verify*, 6x *verify* |
+| Pages | `built` for exactly `6e78cc55eee3c5d8d7ddb39d68813626426d57fc` at 2026-11-19T11:44:19Z (source `main` @ `/`, legacy build) |
+| Live verification | fetched from the sandbox: `/nfl-signal-board/` (landing, headline and all counters render) and `/nfl-signal-board/flagged.html` (all 15 flags with evidence links); `data/nfl-signal-board/origination.csv` and `research/nfl-1fab8a48/EXECUTIVE_SUMMARY.md` return 200 on the main blob |
+| Verifier | `nfl-signal-board/verify.py` -> **1773 checks, 0 failures** locally and in CI |
+| Tests | `tests/test_nfl_signal_board.py` -> **19 OK** locally and in CI |
+
+**Four defects this session found in its own work and published rather than hiding** (full detail on the site's Research page and in the PR body):
+- SB-R1 the spread sign (a +0.038 phantom skill); SB-R2 a wrong side benchmark, caught by the 0.5 control; SB-R3 the away-side cover inequality (the market pair summed to 1.2519, caught by a unit test);
+- SB-R4 **the CI byte-check failure**: CI runs Python 3.11.**18** against this sandbox's 3.11.**2**, and two fitted logistic coefficients differed in the last bit, so `derive_summary.json` was not reproducible across patch releases. Published floats are now rounded to 12 significant digits and both generated trees are pinned to LF with a scoped `.gitattributes` (the index was renormalised). The workflow was red three times before this was isolated; the diff was recovered by having the job post it to the PR, because this sandbox cannot download Actions logs or artifacts.
+
+**Scope respected.** Only `nfl-signal-board/**`, `data/nfl-signal-board/**`, `research/nfl-1fab8a48/**`, `tests/test_nfl_signal_board.py`, `.github/workflows/nfl-signal-board.yml`, one additive `README.md` row and this append-only block. No other session's file was edited. Cross-session requests X-B-01…X-B-05 remain open with their owners.
