@@ -3947,3 +3947,4 @@ NYG/WAS PCT because it used W/G — the official page counts ties as half-wins; 
 (0 MISMATCH rows) rather than explained away.
 
 **Follow-up:** record-only PR #150 carries this completion record (K-082 -> MET, F6-21 -> resolved, honest source-link labels).
+| Follow-up 3 | [#149](https://github.com/sassnarep3-star/Own5/pull/149) merged 2026-11-19, merge commit `f039d08`; Pages **built**. Venue cell now shows both official labels. Rebased onto `bfa7b3d` (PR #146, session 6e13b9ff) and later onto `21beb57` (PR #150); COORDINATION.md append conflicts resolved **keeping both sides** — sessions 6e13b9ff and 188c3719 blocks are intact. |
