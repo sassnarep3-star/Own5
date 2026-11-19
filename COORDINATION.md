@@ -3743,3 +3743,42 @@ at `audit_repo.py` line 162 is gone. No action required.
 - None opened by this session. X51-14 is closed by this takeover.
 
 **Merge record.** Recorded below after the PR merges.
+
+
+---
+## Session 7e228db8 — NFL Verification & Decision Desk (claimed 2026-11-19 UTC)
+
+Session ID `7e228db8`, branch `arena/7e228db8-own5` (base `fe9ed18` = current `main`, i.e. PR #139 merge).
+
+**Claimed namespace (strictly additive, zero overlap with any active session):**
+- `nfl-desk-7e228db8/**` (desk site: landing + category subpages, deterministic stdlib-only build, verify harness, unit tests)
+- `data/nfl-desk-7e228db8/**` (verified CSV/JSON data + hash-pinned raw captures)
+- `research/nfl-7e228db8/**` (executive summary, methodology, verification log, flagged register)
+- `.github/workflows/nfl-7e228db8.yml` (**new file only**; existing workflows are not edited)
+- Append-only blocks in `COORDINATION.md` and one additive row in `README.md`
+
+**Declared takeover (logged before work):** the committed-artefact drift fix for desk `nfl-desk-35a1feb2/**` (its sibling-desk inventory regenerates on every merge that adds a desk, so its "committed artefacts match the deterministic build" CI step fails on `main`; session `35a1feb2` has had no commits since 2026-11-14, >60-minute rule). Handoff noted here; `nfl-desk-35a1feb2` owner may review on the Flagged page. Session `c8cb6ae8` is active on `.github/workflows/*.yml` smoke fixes (X51-14, merged as PR #139) — none of those files are touched by this session beyond the one new workflow file.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| V7-01 | Claim scope in COORDINATION.md + push claim | in progress | 7e228db8 | COORDINATION.md | This block. Claim pushed before any build work. |
+| V7-02 | Line-by-line repo review + verifier sweep of every sibling desk (2026-11-19) | in progress | 7e228db8 | nfl-desk-7e228db8/data/*, research/nfl-7e228db8/* | Read-only sweep of all desks; failures and irregularities flagged, not edited. |
+| V7-03 | Fresh official reads (2026-11-19): standings, Week 11 schedule, Week 10 finals, league injury report, game centre venue evidence | in progress | 7e228db8 | data/nfl-desk-7e228db8/raw/* | nfl.com via page-fetch tool; every read timestamped + hashed. |
+| V7-04 | Verified results feed: Week 10 finals reconciled to official standings (32-club cross-check) | in progress | 7e228db8 | data/nfl-desk-7e228db8/*.csv | Opponent-aware inputs for origination. |
+| V7-05 | Originate Week 11 lines: side → total → moneyline; fair/market/difference as separate columns; probability + inputs stored per row | in progress | 7e228db8 | data/nfl-desk-7e228db8/lines_week11.csv | Market columns blank + flagged (no verified operator price). |
+| V7-06 | Price-snapshot store: opening snapshot per originated market with inputs hash; closing blank+flagged | in progress | 7e228db8 | data/nfl-desk-7e228db8/price_snapshots.csv | Immutable append-only store. |
+| V7-07 | Correlations computed only from official standings, n published per row | in progress | 7e228db8 | data/nfl-desk-7e228db8/correlations.csv | In-repo computation with assertions. |
+| V7-08 | Leaderboard: signal separated from staking; pre-registration; control baselines (random, favourites); no backtest numbers on the board | in progress | 7e228db8 | data/nfl-desk-7e228db8/leaderboard.csv, gates.csv | Board stays empty until gates pass. |
+| V7-09 | Decision-readiness table (one row per requirement), suggestions register, questions register | in progress | 7e228db8 | data/nfl-desk-7e228db8/readiness.csv, suggestions.csv, questions.csv | Suggestions and questions reviewable before implementation. |
+| V7-10 | Desk site build: landing page with decision-readiness table + category subpages, no JS required for content | in progress | 7e228db8 | nfl-desk-7e228db8/build_desk.py, nfl-desk-7e228db8/*.html | Deterministic; every row sourced or explicit blank+flag. |
+| V7-11 | Verify script (fail-closed) + unit tests incl. negative control | in progress | 7e228db8 | nfl-desk-7e228db8/verify_desk.py, nfl-desk-7e228db8/tests/ | Drift alarm pinned to expected counts. |
+| V7-12 | Executive summary + Flagged for Review page | in progress | 7e228db8 | research/nfl-7e228db8/*, nfl-desk-7e228db8/executive-summary.html, flagged.html | Restates only computed/officially-sourced values. |
+| V7-13 | Scoped CI workflow (new file `nfl-7e228db8.yml`) | in progress | 7e228db8 | .github/workflows/nfl-7e228db8.yml | Rebuild + verify + tests; capture-then-grep smoke style. |
+| V7-14 | Takeover: fix `nfl-desk-35a1feb2` committed-artefact drift (refresh sibling inventory + scope the diff check) | in progress | 7e228db8 | nfl-desk-35a1feb2/{data/sibling_desks.csv,index.html,verify.py}, noted handoff | Handoff recorded above; owner review requested. |
+| V7-15 | Rebase on main, PR, autonomous merge, confirm Pages deploy live, record result | in progress | 7e228db8 | COORDINATION.md, README.md (one row) | Merge only after verify PASS + live URL check. |
+
+**Cross-session requests**
+
+- None yet.
+
+**Merge record.** Recorded below after the PR merges.
