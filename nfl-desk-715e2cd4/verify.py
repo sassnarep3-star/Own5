@@ -43,7 +43,7 @@ REQUIRED_COUNTS = {
     "gates.csv": 10,
     "questions.csv": 15,
     "suggestions.csv": 16,
-    "flagged.csv": 22,
+    "flagged.csv": 23,
     "sources.csv": 12,
     "correlations.csv": 7,
     "captures.csv": 6,

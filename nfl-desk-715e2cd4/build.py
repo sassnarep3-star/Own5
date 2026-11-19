@@ -609,6 +609,24 @@ no-op, and a second change to the same URL on the same day must be logged as a r
                       num_cols=(3,),
                       caption="Identical bytes re-read on the same day are refused, so this log cannot grow "
                               "without a real change."))
+    body.append("<h2>Scheduled byte-level capture: the automation that is written but cannot run here</h2>")
+    body.append("""<p class="lede"><code>snapshot_fetch.py</code> fetches five official pages (injury reports
+reg 10 and 11, standings, Week 11 schedule, transactions), stores the raw bytes gzipped by UTC stamp and appends
+the sha256, byte length, HTTP status and fetch clock to an append-only index. A re-fetch with identical bytes is
+recorded as UNCHANGED rather than as a revision. It never parses a value out of the page: parsing turns a capture
+into a claim, and claims are made only from hand-verified extracts.</p>""")
+    rows = []
+    idx = os.path.join(DATA, "capture_store", "index.csv")
+    if os.path.exists(idx):
+        with open(idx, encoding="utf-8") as fh:
+            for r in csv.DictReader(fh):
+                rows.append([r["capture_id"], r["slug"], r["fetched_utc"], r["http_status"],
+                             r["bytes"], r["sha256"][:16] + ("…" if r["sha256"] else ""),
+                             r["status"], r["note"]])
+    body.append(table(["ID", "Page", "Fetched (UTC)", "HTTP", "Bytes", "SHA-256", "Status", "Note"], rows,
+                      status_cols=(6,), num_cols=(3, 4),
+                      caption="Every attempt is recorded, including failures. These five failed TLS negotiation "
+                              "from the build sandbox, which is a fact about the environment, not about the source."))
     return shell("diff.html", "What changed", "".join(body),
                  "Snapshot diff first, then the capture log that makes the diff trustworthy.")
 
