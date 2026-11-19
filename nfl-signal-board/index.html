@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Overview — Own5 NFL Signal Board</title>
+<meta name="description" content="Official-source NFL line origination, decision readiness, luck-removal panel and pre-registered strategy register. Every row is source-linked or blank-and-flagged.">
+<style>
+:root{--bg:#0b0f14;--panel:#121922;--ink:#e8eef6;--dim:#93a4b8;--line:#243040;--ok:#3fb950;--warn:#d29922;--bad:#f85149;--accent:#58a6ff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+header{background:linear-gradient(180deg,#101823,#0b0f14);border-bottom:1px solid var(--line);padding:18px 20px}
+header .wrap{max-width:1180px;margin:0 auto}
+h1{font-size:21px;margin:0 0 4px;letter-spacing:-.2px}
+.sub{color:var(--dim);font-size:13px}
+nav{max-width:1180px;margin:0 auto;padding:10px 20px;display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--line)}
+nav a{padding:5px 10px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--dim);background:#0f151d}
+nav a.on{color:#0b0f14;background:var(--accent);border-color:var(--accent);font-weight:600}
+main{max-width:1180px;margin:0 auto;padding:22px 20px 60px}
+h2{font-size:17px;margin:30px 0 6px;padding-top:8px;border-top:1px solid var(--line)}
+h2:first-child{border-top:0;margin-top:6px}
+h3{font-size:14px;margin:18px 0 6px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em}
+p{color:#c9d6e5;max-width:76ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:10px;margin:12px 0 6px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.card .v{font-size:22px;font-weight:700;letter-spacing:-.4px}
+.card .k{font-size:11.5px;color:var(--dim);text-transform:uppercase;letter-spacing:.05em;margin-top:2px}
+.card.ok .v{color:var(--ok)}.card.warn .v{color:var(--warn)}.card.bad .v{color:var(--bad)}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:10px;margin:10px 0 4px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;font-size:13.2px}
+th,td{padding:7px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#16202b;color:var(--dim);font-weight:600;font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;position:sticky;top:0}
+tbody tr:hover{background:#161f2a}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+td.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}
+tr.blank td{color:#6d7e91;font-style:italic}
+.tag{display:inline-block;padding:1px 7px;border-radius:999px;font-size:11px;font-weight:600;white-space:nowrap}
+.t-met{background:#0d2f16;color:var(--ok);border:1px solid #1d5c2b}
+.t-part{background:#332508;color:var(--warn);border:1px solid #6b4e12}
+.t-block{background:#3a1114;color:var(--bad);border:1px solid #7d1f24}
+.t-info{background:#0d2137;color:var(--accent);border:1px solid #1d4a7d}
+.t-gray{background:#1a2330;color:var(--dim);border:1px solid var(--line)}
+.hero{background:linear-gradient(135deg,#12202f,#0e1621);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:10px 0 4px}
+.hero .big{font-size:30px;font-weight:800;letter-spacing:-.8px}
+.hero .neg{color:var(--bad)}
+.note{font-size:12.5px;color:var(--dim);margin:6px 0 0}
+.callout{border-left:3px solid var(--warn);background:#191307;padding:10px 14px;border-radius:0 8px 8px 0;margin:12px 0}
+.callout.bad{border-color:var(--bad);background:#1b0d0e}
+.callout.ok{border-color:var(--ok);background:#0c1a10}
+footer{max-width:1180px;margin:0 auto;padding:24px 20px;color:var(--dim);font-size:12px;border-top:1px solid var(--line)}
+.skip{position:absolute;left:-9999px}
+@media(max-width:700px){.cards{grid-template-columns:repeat(2,1fr)}th,td{padding:6px 7px;font-size:12.4px}main{padding:16px 12px 50px}nav{padding:8px 12px}header{padding:14px 12px}}
+</style></head>
+<body>
+<header><div class="wrap">
+<h1>Own5 · NFL Signal Board</h1>
+<div class="sub">Session <code>1fab8a48</code> · official-source verification 2026-11-19 UTC · every table row is source-linked, and any value that could not be confirmed is
+<strong>left blank and flagged</strong>, never inferred. Start here.</div>
+</div></header>
+<nav><a href="index.html" class=on>Overview</a><a href="readiness.html">Decision readiness</a><a href="origination.html">Origination &amp; prices</a><a href="model.html">Model &amp; luck panel</a><a href="leaderboard.html">Leaderboard &amp; pre-registration</a><a href="availability.html">Availability &amp; depth</a><a href="correlations.html">Correlations</a><a href="results.html">Results &amp; corpus</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="research.html">Research register</a><a href="flagged.html">Flagged for review</a><a href="method.html">Method &amp; sources</a></nav>
+<main>
+<h2>Overview</h2>
+
+<div class="hero">
+  <div class="sub">The headline, unsoftened</div>
+  <div class="big neg">The model does not beat the market.</div>
+  <p>On 2,951 priced games from 2015 to 2026, our side probability scores a
+  <strong>Brier skill of -0.0354</strong> against a coin flip at the closing line
+  (95% cluster interval -0.0508 to -0.0202). The moneyline scores
+  <strong>-0.0579</strong> against the de-vigged close. The calibration slope on train is
+  <strong>0.110</strong>: the raw probabilities are badly over-confident, so the raw edges on the
+  origination page (up to +0.76 EV per unit) are an artefact and <strong>no stake is taken from any of them</strong>.</p>
+  <p class="note">That is the useful result. It is published first because a site that hides it is worse than no site.
+  All 78 market rows, 13 fixtures and 78 operator prices are below with clocks and links.</p>
+</div>
+
+<div class="cards">
+  <div class="card"><div class="v">13</div><div class="k">Week 11 fixtures originated</div></div>
+  <div class="card"><div class="v">78</div><div class="k">market rows (side → total → ML)</div></div>
+  <div class="card"><div class="v">78</div><div class="k">operator prices read today</div></div>
+  <div class="card ok"><div class="v">32/32</div><div class="k">clubs reconcile to standings</div></div>
+  <div class="card"><div class="v">253</div><div class="k">injury-report rows captured</div></div>
+  <div class="card bad"><div class="v">0</div><div class="k">certified strategies</div></div>
+</div>
+<div class="cards">
+  <div class="card"><div class="v">49</div><div class="k">requirements met</div></div>
+  <div class="card warn"><div class="v">4</div><div class="k">partial</div></div>
+  <div class="card bad"><div class="v">27</div><div class="k">blocked</div></div>
+  <div class="card"><div class="v">15</div><div class="k">flagged for review</div></div>
+  <div class="card"><div class="v">18</div><div class="k">questions needing answers</div></div>
+  <div class="card"><div class="v">12</div><div class="k">reviewable suggestions</div></div>
+</div>
+
+<h2>What you can decide today, and what blocks the rest</h2>
+<p>One row per requirement in the brief. Each row carries the gate that blocks it and the number that would clear it.
+The full table, with the observed value on every row, is on the <a href="readiness.html">Decision readiness</a> page.</p>
+<div class="tw"><table class=""><thead><tr><th class="">ID</th><th class="">Requirement</th><th class="">Status</th><th class="">Gate that blocks it</th><th class="">Number that would clear it</th><th class="">Observed today</th><th class="">Source</th></tr></thead><tbody><tr><td class="">R02</td><td class="">Verified results feed so backtests and ROI can be computed at all</td><td class=""><span class="tag t-met">MET</span></td><td class="">every game used by the model has a sourced result and a reconciliation</td><td class="">32/32 clubs reconcile to the official standings</td><td class="">3045 usable games; 2026: 32/32 clubs reconcile on W-L-T, PF and PA</td><td class=""><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/nfl-signal-board/derive_summary.json" rel="noopener">source ↗</a></td></tr><tr><td class="">R03</td><td class="">Originate the side first, then the total, then the moneyline</td><td class=""><span class="tag t-met">MET</span></td><td class="">three markets per fixture, published in that order</td><td class="">market_order column is 1 side / 2 total / 3 moneyline for all 13 fixtures</td><td class="">13 fixtures x 6 rows = 78 market rows in dependency order</td><td class=""><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/nfl-signal-board/derive_summary.json" rel="noopener">source ↗</a></td></tr><tr><td class="">R04</td><td class="">Publish the model fair line, the market line and the difference as separate columns</td><td class=""><span class="tag t-met">MET</span></td><td class="">no cell mixes two concepts</td><td class="">three separate columns populated or blank-with-reason</td><td class="">fair_line, market_line and difference_fair_minus_market are separate on every row</td><td class=""><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/nfl-signal-board/derive_summary.json" rel="noopener">source ↗</a></td></tr><tr><td class="">R09</td><td class="">Pre-register every strategy; forbid backtest numbers on the leaderboard</td><td class=""><span class="tag t-met">MET</span></td><td class="">frozen rule text + artifact hash before results</td><td class="">every leaderboard row points to a frozen registration</td><td class="">8 strategies registered and hashed before kickoff; the leaderboard shows no backtest figure</td><td class=""><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/nfl-signal-board/derive_summary.json" rel="noopener">source ↗</a></td></tr><tr><td class="">R15</td><td class="">Store every model output as a probability plus its inputs, not just a pick</td><td class=""><span class="tag t-met">MET</span></td><td class="">probability + input hash per output</td><td class="">inputs_sha256 on 100% of model rows</td><td class="">all 78 rows carry fair_prob and a sha256 over the exact input dict</td><td class=""><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/nfl-signal-board/derive_summary.json" rel="noopener">source ↗</a></td></tr><tr><td class="">R16</td><td class="">Compute and publish the removal-of-luck panel</td><td class=""><span class="tag t-met">MET</span></td><td class="">proper scores with cluster intervals and control baselines</td><td class="">panel published with n</td><td class="">panel published: 13 rows, n and cluster counts on every statistical row</td><td class=""><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/nfl-signal-board/derive_summary.json" rel="noopener">source ↗</a></td></tr><tr><td class="">R19</td><td class="">Turn the 136-game log into the pre-registered backtest corpus</td><td class=""><span class="tag t-met">MET</span></td><td class="">every log row reconciles to an official result</td><td class="">0 disagreeing rows</td><td class="">audited 136 rows: 117 agree, 16 blank, 3 absent, 0 disagree</td><td class=""><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/nfl-signal-board/derive_summary.json" rel="noopener">source ↗</a></td></tr><tr><td class="">R36</td><td class="">Rank with proper scores and uncertainty, not win rate</td><td class=""><span class="tag t-met">MET</span></td><td class="">Brier skill with a cluster lower bound and multiplicity control</td><td class="">rank key = skill lower bound</td><td class="">ranking key is the cluster lower bound; win rate is not shown as a ranking input</td><td class=""><a href="https://github.com/sassnarep3-star/Own5/blob/main/data/nfl-signal-board/derive_summary.json" rel="noopener">source ↗</a></td></tr></tbody></table></div>
+<h2>How to read this board</h2>
+<div class="cards">
+  <div class="card"><div class="v">1</div><div class="k"><a href="origination.html">Origination &amp; prices</a> — fair, market and the difference as separate columns, with the read clock</div></div>
+  <div class="card"><div class="v">2</div><div class="k"><a href="model.html">Model &amp; luck panel</a> — the walk-forward scores, calibration, controls and the removal-of-luck panel</div></div>
+  <div class="card"><div class="v">3</div><div class="k"><a href="leaderboard.html">Leaderboard</a> — signal and staking kept apart; every strategy starts at 0 settled bets</div></div>
+  <div class="card"><div class="v">4</div><div class="k"><a href="availability.html">Availability &amp; depth</a> — what the official report says, and what it cannot tell us</div></div>
+  <div class="card"><div class="v">5</div><div class="k"><a href="questions.html">Questions</a> — the information we do not have, with a discovery route for each</div></div>
+  <div class="card"><div class="v">6</div><div class="k"><a href="flagged.html">Flagged for review</a> — every irregularity and every unverified blank, with links</div></div>
+</div>
+
+<div class="callout bad">
+<strong>Three things this board refuses to do.</strong>
+It does not put a backtest figure on the leaderboard. It does not name a replacement starter without an official inactive list or game book.
+It does not publish a percentage for what "Questionable" means, because the join that would measure it has not been run.
+</div>
+
+<h2>The honest state of each pillar</h2>
+<div class="tw"><table class=""><thead><tr><th class="">Pillar</th><th class="">What is actually built</th><th class="num">Scale</th><th class="">Verdict</th></tr></thead><tbody><tr><td class="">Line origination</td><td class="">side → total → moneyline for 13 fixtures, fair / market / difference in separate columns, a sha256 of the exact inputs on every row</td><td class="num">78 rows</td><td class="">PARTIAL — the market column is one operator, and no price is stakeable while the calibration slope is 0.11</td></tr><tr><td class="">Results corpus</td><td class="">the pinned 1999–2026 game corpus reconciled to today&#x27;s official standings, plus an audit of the 136-row log the brief names</td><td class="num">32/32 clubs, 136 log rows audited</td><td class="">MET for the 2026 season to date</td></tr><tr><td class="">Luck removal</td><td class="">proper scores with a week-cluster bootstrap, two control baselines, and a published count of how many bets a win rate needs</td><td class="num">n=2,951</td><td class="">MET — and it says the model loses</td></tr><tr><td class="">Strategy competition</td><td class="">8 pre-registered strategies, 4 divisions, signal and staking separated, a two-sided change-our-mind field</td><td class="num">0 settled bets</td><td class="">BLOCKED until 300+ bets settle per division</td></tr><tr><td class="">Availability &amp;amp; depth</td><td class="">253 official report rows across 24 clubs, counted and stamped; no replacement is named</td><td class="num">16 game-status cells</td><td class="">BLOCKED — the inactive list and game book are not held</td></tr><tr><td class="">Correlations</td><td class="">computed from today&#x27;s official standings only, n printed on every coefficient</td><td class="num">4 coefficients, n=32</td><td class="">PARTIAL — these are team-level, not parlay-leg, correlations</td></tr></tbody></table></div>
+<div class="callout">
+<strong>Scope note.</strong> This repository already contains 50+ prior desks built by parallel sessions. This board is additive and does not
+edit their files. Where an earlier desk's claim and an official page disagree, the official page wins and the disagreement is listed on
+<a href="flagged.html">Flagged for review</a>. Where two desks disagree with each other, both are recorded and neither is adopted here.
+</div>
+
+</main>
+<footer>
+<p>Policy P-01: the public site carries derived aggregates, our own model outputs and operator-attributed prices only; row-level official data stays private.
+No bets are placed, no performance is claimed, and no strategy on this site is certified. This is research, not betting advice.
+Own5 is a multi-session repository: this board is one additive desk and links to the others from the <a href="method.html">Method &amp; sources</a> page.</p>
+</footer>
+</body></html>

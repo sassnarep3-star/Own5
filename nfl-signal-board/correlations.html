@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Correlations — Own5 NFL Signal Board</title>
+<meta name="description" content="Official-source NFL line origination, decision readiness, luck-removal panel and pre-registered strategy register. Every row is source-linked or blank-and-flagged.">
+<style>
+:root{--bg:#0b0f14;--panel:#121922;--ink:#e8eef6;--dim:#93a4b8;--line:#243040;--ok:#3fb950;--warn:#d29922;--bad:#f85149;--accent:#58a6ff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+header{background:linear-gradient(180deg,#101823,#0b0f14);border-bottom:1px solid var(--line);padding:18px 20px}
+header .wrap{max-width:1180px;margin:0 auto}
+h1{font-size:21px;margin:0 0 4px;letter-spacing:-.2px}
+.sub{color:var(--dim);font-size:13px}
+nav{max-width:1180px;margin:0 auto;padding:10px 20px;display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--line)}
+nav a{padding:5px 10px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--dim);background:#0f151d}
+nav a.on{color:#0b0f14;background:var(--accent);border-color:var(--accent);font-weight:600}
+main{max-width:1180px;margin:0 auto;padding:22px 20px 60px}
+h2{font-size:17px;margin:30px 0 6px;padding-top:8px;border-top:1px solid var(--line)}
+h2:first-child{border-top:0;margin-top:6px}
+h3{font-size:14px;margin:18px 0 6px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em}
+p{color:#c9d6e5;max-width:76ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:10px;margin:12px 0 6px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.card .v{font-size:22px;font-weight:700;letter-spacing:-.4px}
+.card .k{font-size:11.5px;color:var(--dim);text-transform:uppercase;letter-spacing:.05em;margin-top:2px}
+.card.ok .v{color:var(--ok)}.card.warn .v{color:var(--warn)}.card.bad .v{color:var(--bad)}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:10px;margin:10px 0 4px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;font-size:13.2px}
+th,td{padding:7px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#16202b;color:var(--dim);font-weight:600;font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;position:sticky;top:0}
+tbody tr:hover{background:#161f2a}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+td.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}
+tr.blank td{color:#6d7e91;font-style:italic}
+.tag{display:inline-block;padding:1px 7px;border-radius:999px;font-size:11px;font-weight:600;white-space:nowrap}
+.t-met{background:#0d2f16;color:var(--ok);border:1px solid #1d5c2b}
+.t-part{background:#332508;color:var(--warn);border:1px solid #6b4e12}
+.t-block{background:#3a1114;color:var(--bad);border:1px solid #7d1f24}
+.t-info{background:#0d2137;color:var(--accent);border:1px solid #1d4a7d}
+.t-gray{background:#1a2330;color:var(--dim);border:1px solid var(--line)}
+.hero{background:linear-gradient(135deg,#12202f,#0e1621);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:10px 0 4px}
+.hero .big{font-size:30px;font-weight:800;letter-spacing:-.8px}
+.hero .neg{color:var(--bad)}
+.note{font-size:12.5px;color:var(--dim);margin:6px 0 0}
+.callout{border-left:3px solid var(--warn);background:#191307;padding:10px 14px;border-radius:0 8px 8px 0;margin:12px 0}
+.callout.bad{border-color:var(--bad);background:#1b0d0e}
+.callout.ok{border-color:var(--ok);background:#0c1a10}
+footer{max-width:1180px;margin:0 auto;padding:24px 20px;color:var(--dim);font-size:12px;border-top:1px solid var(--line)}
+.skip{position:absolute;left:-9999px}
+@media(max-width:700px){.cards{grid-template-columns:repeat(2,1fr)}th,td{padding:6px 7px;font-size:12.4px}main{padding:16px 12px 50px}nav{padding:8px 12px}header{padding:14px 12px}}
+</style></head>
+<body>
+<header><div class="wrap">
+<h1>Own5 · NFL Signal Board</h1>
+<div class="sub">Session <code>1fab8a48</code> · official-source verification 2026-11-19 UTC · every table row is source-linked, and any value that could not be confirmed is
+<strong>left blank and flagged</strong>, never inferred. Only officially sourced numbers, with n on every coefficient.</div>
+</div></header>
+<nav><a href="index.html">Overview</a><a href="readiness.html">Decision readiness</a><a href="origination.html">Origination &amp; prices</a><a href="model.html">Model &amp; luck panel</a><a href="leaderboard.html">Leaderboard &amp; pre-registration</a><a href="availability.html">Availability &amp; depth</a><a href="correlations.html" class=on>Correlations</a><a href="results.html">Results &amp; corpus</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="research.html">Research register</a><a href="flagged.html">Flagged for review</a><a href="method.html">Method &amp; sources</a></nav>
+<main>
+<h2>Correlations</h2>
+
+<p>Correlations are computed only from numbers on an official page, and <strong>n is printed with every value</strong>. The inputs here are today's
+official league standings: 32 clubs, each with a record and points for/against. Nothing is imported from a third-party dataset.</p>
+<div class="callout">
+<strong>What these are not.</strong> They are team-level, season-to-date relationships. They are <em>not</em> parlay-leg correlations, and using them as
+if they were is exactly the error the brief warns about: multiplying marginal probabilities is invalid when the legs are dependent. The leg-level
+coefficient needs play-by-play, which is not held here (Q09).
+</div>
+<div class="tw"><table class=""><thead><tr><th class="">Relationship</th><th class="">x</th><th class="">y</th><th class="num">Pearson r</th><th class="num">n</th><th class="">Window</th><th class="">Source</th></tr></thead><tbody><tr><td class="">Net points per game vs winning percentage</td><td class="">NET/G</td><td class="">PCT</td><td class="num">0.8825</td><td class="num">32</td><td class="">the 2026 regular season to date, today's official standings</td><td class=""><a href="https://www.nfl.com/standings/league/2026/REG" rel="noopener">source ↗</a></td></tr><tr><td class="">Points for per game vs winning percentage</td><td class="">PF/G</td><td class="">PCT</td><td class="num">0.7153</td><td class="num">32</td><td class="">the 2026 regular season to date, today's official standings</td><td class=""><a href="https://www.nfl.com/standings/league/2026/REG" rel="noopener">source ↗</a></td></tr><tr><td class="">Points against per game vs winning percentage</td><td class="">PA/G</td><td class="">PCT</td><td class="num">-0.7043</td><td class="num">32</td><td class="">the 2026 regular season to date, today's official standings</td><td class=""><a href="https://www.nfl.com/standings/league/2026/REG" rel="noopener">source ↗</a></td></tr><tr><td class="">Points for per game vs points against per game</td><td class="">PF/G</td><td class="">PA/G</td><td class="num">-0.2911</td><td class="num">32</td><td class="">the 2026 regular season to date, today's official standings</td><td class=""><a href="https://www.nfl.com/standings/league/2026/REG" rel="noopener">source ↗</a></td></tr></tbody></table></div>
+<h2>Correlation rules used by this board</h2>
+<div class="tw"><table><thead><tr><th>Rule</th><th>Why</th><th>Enforced where</th></tr></thead><tbody>
+<tr><td>No value without n</td><td>A coefficient without a sample cannot be judged</td><td>This table; the verifier fails a row with a value and no n</td></tr>
+<tr><td>No third-party inputs</td><td>The brief allows official numbers only</td><td>The four rows above read only the standings page</td></tr>
+<tr><td>No leg correlation claimed without play-by-play</td><td>Marginal probabilities do not multiply under dependence</td><td>Same-game and cross-game parlays stay blocked</td></tr>
+<tr><td>n is not rows of a table</td><td>The unit here is a club, not a table row</td><td>n counts clubs, and says so</td></tr>
+</tbody></table></div>
+
+</main>
+<footer>
+<p>Policy P-01: the public site carries derived aggregates, our own model outputs and operator-attributed prices only; row-level official data stays private.
+No bets are placed, no performance is claimed, and no strategy on this site is certified. This is research, not betting advice.
+Own5 is a multi-session repository: this board is one additive desk and links to the others from the <a href="method.html">Method &amp; sources</a> page.</p>
+</footer>
+</body></html>

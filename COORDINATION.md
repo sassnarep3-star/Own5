@@ -4269,6 +4269,7 @@ probability. The Week-11 fair lines published now are the recalculated ones.
 - **Desk status:** all claimed tasks done. Nothing left open in this namespace. Cross-session requests
   X-D6-01/02/03 remain with their owners.
 
+
 ## Session arena/2b6d55c1-own5 (NFL Origin Desk — full brief implementation), Z-ids
 
 **Branch:** `arena/2b6d55c1-own5` (branched from main `d634b08`, current == origin/main). **Scope (additive namespace only):**
@@ -4382,3 +4383,88 @@ None new beyond the desk's own published flags (F01–F24 on `nfl-origin-desk/fl
 - **Merge:** `--merge`, state **MERGED** at 2026-11-19T11:13:57Z, merge commit **`2156369`**.
 - **Pages:** `pages build and deployment` for `main` reported **success** after the merge. The sandbox cannot reach `*.github.io`, so the live URL was not fetched from here.
 - **Known open items (not blocking, flagged):** F-B01 to F-B09 in `nfl-brief-traceability/flags.csv`; cross-session requests X-1911-01 to X-1911-03 remain with their owners.
+
+---
+
+## Session 1fab8a48 — Own5 NFL Signal Board: claim (2026-11-19 UTC)
+
+**Session ID:** `1fab8a48` · **Branch:** `arena/1fab8a48-own5` (base `d634b08f1fbc4e1fc7d442a726b3fef47c56f6d2` = current `main`).
+Claim pushed **before** any build work.
+
+**Why this session exists.** The brief asks for one thing the existing 58 desks do not yet do: a single,
+re-verified **public front door** for the whole NFL programme — a clean dashboard that states, for each
+requirement in the brief, (a) what we can decide today, (b) what blocks it, (c) the exact number that would
+clear it, and (d) an explicit list of the information we do **not** have with discovery routes. Plus a
+**pre-registration register** (frozen, hashed, committed before results), a **honest line-origination record**
+with fair / market / residual columns where every market cell is either sourced or blank-and-flagged, and a
+**"removal of luck" panel** computed from real official data with published n and cluster-robust intervals.
+
+The honest headline this session must also publish is the one several desks independently found and this
+session re-derives: **the model currently loses to the market on proper scoring (Brier skill < 0)**. The
+board must not hide that.
+
+**Claimed scope (strictly additive; no other namespace is edited):**
+- `nfl-signal-board/**` (deterministic stdlib site build, fail-closed verifier, unit tests)
+- `research/nfl-1fab8a48/**` (executive summary, method notes, line-by-line verification log, flagged register)
+- `data/nfl-signal-board/**` (this desk's own CSVs and captures only)
+- `.github/workflows/nfl-signal-board.yml` (scoped rebuild + verify + tests)
+- One additive row in `README.md`; this append-only block in `COORDINATION.md`
+
+**Read-only:** every other desk/namespace (`nfl-*`, `nba-*`, `own5-*`, `line-lab`, `repo-review`, `docs/`,
+root `index.html`, `pages/**`, `assets/**`, `data/**` outside my namespace, `scripts/**`, `tools/**`, all
+existing workflows). Existing defects owned by other sessions are reported in the cross-session list below,
+never edited.
+
+**No duplicate work:** PR #144 (`arena/3ddb3f07-own5`, "NFL front door … 15-page deterministic site") is open
+and unmerged. This session does **not** build a "front door" desk, does not touch its files, and treats its
+claims as unverified until they appear on `main`. This session's scope is the **signal / decision** layer
+(origination residuals, pre-registration register, luck-removal panel, questions register) plus a dashboard
+whose nav is scoped to this desk only.
+
+| ID | Task | Status | Owner | Files | Notes |
+|----|------|--------|-------|-------|-------|
+| B1 | Claim scope + push claim | in progress | `1fab8a48` | COORDINATION.md | This block. |
+| B2 | Fresh official read (today) with hashes and clocks | pending | `1fab8a48` | `data/nfl-signal-board/raw/**` | Every row keeps read timestamp + sha256; unconfirmed values blank + flagged. |
+| B3 | Verified results corpus reconciled to the official standings | pending | `1fab8a48` | `data/nfl-signal-board/corpus.csv` | Reconciliation printed, 32/32 required to pass the gate. |
+| B4 | Origination: side → total → moneyline, fair/market/residual separate | pending | `1fab8a48` | `data/nfl-signal-board/origination.csv` | Market cells blank+flagged unless an admitted official quote exists. |
+| B5 | Pre-registration register (frozen, hashed) + walk-forward backtest | pending | `1fab8a48` | `data/nfl-signal-board/preregistration.json`, `backtest.csv` | Commit hash = registration. No backtest number on the leaderboard. |
+| B6 | Removal-of-luck panel (proper scores, cluster CI, multiplicity) | pending | `1fab8a48` | `data/nfl-signal-board/luck.csv` | n published; control baselines included. |
+| B7 | Decision-readiness table + questions/information register + suggestions | pending | `1fab8a48` | `data/nfl-signal-board/{readiness,questions,suggestions}.csv` | One row per brief line; gate + clearing number + observed value. |
+| B8 | Site: dashboard landing + category subpages, table-first | pending | `1fab8a48` | `nfl-signal-board/**` | No JS required for content; mobile-clean. |
+| B9 | Fail-closed verifier + unit tests + scoped CI | pending | `1fab8a48` | `nfl-signal-board/verify.py`, `.github/workflows/nfl-signal-board.yml` | Negative controls: corrupted data must fail. |
+| B10 | PR → autonomous merge → Pages verification → record | pending | `1fab8a48` | COORDINATION.md, `README` row | Merge only after verify PASS and the site rebuilds byte-identically. |
+
+**Cross-session requests (logged, not edited).**
+- **X-B-01 → `repo-review` owner:** the sweep's `verifier_runs.csv` is stale (2026-11-18) and its verifier
+  fails because the audit does not list every `verify.py`; 43 exist, 5 of them named `verify_desk.py`/
+  `verify_nfl_desk.py`, which the `*/verify.py` glob cannot see. Discovery route: match
+  `(verify.py|verify_desk.py|verify_nfl_desk.py|verify_*.py)`.
+- **X-B-02 → `decision-desk.yml` owner:** still red on `main` for the reason logged by 560ed315/51cf3786
+  (row-length defects in `data/nfl-desk-f2e20e96/*.csv`; `.github/workflows/decision-desk.yml` byte-check).
+- **X-B-03 → root `index.html` generator owner (cd43258e):** root nav has no entry for any desk after
+  `nfl-integration-a620f5a5`; this desk is linked from `README.md` only, as with the other 50+ desks.
+- **X-B-04 → `nba-commission` owner:** broken internal link `nfl-desk-e1d60f5d/pages/suggestions.html` →
+  `pages/flagged.html` (standing X51-05).
+
+### 1fab8a48 — status update 2026-11-19T11:4xZ (B1–B10 except merge/record)
+
+| ID | Status | Evidence |
+|----|--------|----------|
+| B1 | done | claim commit `081c718`, pushed before any build work |
+| B2 | done | 4 raw captures in `data/nfl-signal-board/raw/` (standings 32 clubs, 13 fixtures, 78 operator prices, 14 Week 10 finals), all sha256-pinned in `derive_summary.json` |
+| B3 | done | 2026-11-19 read reconciles **32/32 clubs** on W-L-T, PF and PA; the build asserts it and the verifier fails on drift |
+| B4 | done | 78 rows, side→total→moneyline, fair/market/difference separate, `inputs_sha256` on 100%, closes PENDING by rule |
+| B5 | done | 8 registrations hashed (`REG-1FAB8A48-V1`, artifact sha256 `d7ae3b32…`); walk-forward train 2015–2024 / holdout 2025–2026, tuning reads train only |
+| B6 | done | side skill −0.0354 [−0.0508, −0.0202] n=2,951; ML −0.0579 [−0.0773, −0.0387] n=3,030; control A exactly 0.0000; calibration slope 0.110 |
+| B7 | done | 80 requirements, 18 questions, 12 suggestions (empty owner-decision cells), 10-row research register, 15 flags |
+| B8 | done | 13 pages, no JS, mobile-clean, 0 broken internal links |
+| B9 | done | `verify.py` **1773 checks, 0 failures** incl. negative controls; 19 unit tests OK; `.github/workflows/nfl-signal-board.yml` rebuilds and byte-diffs both layers |
+| B10 | in progress | PR next; merge only after verify PASS (it is) and a clean byte-identical rebuild (it is) |
+
+**Corrections published by this session (not silently fixed).**
+- SB-R1: the pinned corpus's `closing_spread_home` is home-favoured-**positive** (MAE 10.25 vs 14.62). A first pass read it the other way and produced a *positive* side skill; fixed, and the error is published on the site.
+- SB-R2: the side benchmark was first set to the de-vigged moneyline probability. The constant-0.5 control beat it by 0.139, which is impossible for a cover-probability benchmark. The control caught the defect; the benchmark is now a coin flip at the closing line and the control returns exactly 0.0000.
+- SB-R3: the home-side cover probability was computed with the away-side inequality (the pair summed to 1.2519). Caught by a unit test that asserts the pair sums to 1; fixed.
+
+**Cross-session requests (logged, not edited).** As X-B-01…X-B-04 above, plus:
+- **X-B-05 → `repo-review` owner:** run `python3 repo-review/run_verifiers.py` after this merge; the sweep is dated 2026-11-18 and this namespace adds a verifier it does not list.
