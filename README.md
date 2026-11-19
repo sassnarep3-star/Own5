@@ -614,3 +614,18 @@ Owns the price-snapshot store and the injury point-in-time ledger:
 - **CI takeover (handoff in COORDINATION.md):** fixed the pre-existing decision-desk PR failure (F-05) and the B34 rebuild failure — repo-wide point-in-time audit artifacts are no longer regenerated on PR rebuilds; stale derived outputs re-committed.
 
 Rebuild and verify: `python3 nfl-desk-6cbf25fa/build.py && python3 nfl-desk-6cbf25fa/verify.py && python3 -m unittest discover -s nfl-desk-6cbf25fa/tests -v` (543 checks, 11 tests incl. negative controls). CI: `.github/workflows/nfl-6cbf25fa.yml`.
+
+## NFL line-origination desk · session 715e2cd4 (2026-11-19)
+
+**Live page (after merge):** https://sassnarep3-star.github.io/Own5/nfl-desk-715e2cd4/ · **Flagged for Review:** https://sassnarep3-star.github.io/Own5/nfl-desk-715e2cd4/flagged.html
+
+An independent, additive desk that originates its own NFL lines and then tries to disprove them:
+
+- **Origination:** 13 Week 11 fixtures × 3 markets = **39 originated markets**, in the required order side → total → moneyline, with fair line, market line and residual as **separate columns**. Market columns are blank because no licensed feed exists (F-01); policy P-01 forbids scraping operator odds before their terms are read.
+- **Verified results:** a **136-game pre-registered corpus** (weeks 1-9) that **reconciles 32/32 clubs exactly** to the official 2026 REG standings on W-L-T-PF-PA, plus a **14-game chronological holdout** (Week 10). Every result carries an official game-centre URL.
+- **Honest scorecard:** the side beats a constant home-margin baseline by 21.96% MAE but on n=14; **both total estimators lose to a constant league-mean total** (skill −0.121 and −0.084). Both failures are on the landing page.
+- **Governance:** 6 pre-registered strategies with two-sided "what would change our mind" fields, signal and staking scored in **separate columns**, **0 certified**, no backtest figure anywhere on the leaderboard (LB-01), 10 gates (G0-G9), 4 frozen demotion triggers, 3 control baselines.
+- **Availability, without invention:** 253 official Week 11 report rows published with practice and game status; depth rank, starter flag, snap share, replacement and inactive columns are **blank for all 253 rows** because no official depth source was captured. The 1st-4th string matrix is deliberately **not built** (F-07).
+- **Registers:** 66 requirements with blocking gate and clearing number, 15 questions (8 blocking), 16 reviewable suggestions, 22 flags, 12 dated sources.
+
+Rebuild and verify: `python3 nfl-desk-715e2cd4/pipeline.py && python3 nfl-desk-715e2cd4/build.py && python3 nfl-desk-715e2cd4/verify.py && python3 -m unittest discover -s nfl-desk-715e2cd4/tests -v` (3,011 checks, 25 tests including 9 negative controls). CI: `.github/workflows/nfl-desk-715e2cd4.yml`.

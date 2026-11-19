@@ -1,0 +1,5 @@
+rule_id,trigger,threshold,method,action
+D1,Rolling 200-bet benchmark-relative Brier lower bound,Falls to 0.00 or below,1.96-sigma game-cluster bound,Returns the strategy to paper immediately and records the demotion date
+D2,Closing-line value,Mean CLV <= 0 over 100 consecutive bets,Two-sided 95% interval,Demote: a model that cannot beat the close is not adding information
+D3,Calibration drift,>= 2 consecutive calibration bins outside their 95% intervals,Hosmer-Lemeshow style bins,Demote pending recalibration
+D4,Data drift,A parser row-count or required-field alarm fires,pipeline.py drift alarm,Freeze new origination for that market until the source is re-read
