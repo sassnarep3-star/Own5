@@ -47,15 +47,16 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - name: "Wait for GitHub Pages deploy, then check all desk URLs"
+      - name: "Wait for a stable GitHub Pages deploy, then check all desk URLs"
         run: |
           base="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
           root="$base/nfl-desk-067f2314/"
-          # 1) Wait for the deployment to serve the root desk page (deploy runs after push).
+          marker="Own5 NFL Line-Origination Dashboard"
+          # 1) Wait for a deploy to serve the root desk page (deploy runs after push).
           deploy_ok=0
-          for attempt in $(seq 1 72); do
+          for attempt in $(seq 1 90); do
             if curl --fail --silent --location "$root" -o /tmp/root.html; then
-              if grep -q "Own5 NFL Line-Origination Dashboard" /tmp/root.html; then
+              if grep -q "$marker" /tmp/root.html; then
                 echo "Deploy detected at $root"
                 deploy_ok=1
                 break
@@ -67,39 +68,49 @@ jobs:
             echo "GitHub Pages deploy for nfl-desk-067f2314 never became ready" >&2
             exit 1
           fi
-          # 2) Once deployed, every desk page must serve the marker (with retries for mid-rebuild 404s).
-          for path in \
-            "/nfl-desk-067f2314/" \
-            "/nfl-desk-067f2314/schedule.html" \
-            "/nfl-desk-067f2314/lines.html" \
-            "/nfl-desk-067f2314/standings.html" \
-            "/nfl-desk-067f2314/leaderboard.html" \
-            "/nfl-desk-067f2314/injuries.html" \
-            "/nfl-desk-067f2314/gates.html" \
-            "/nfl-desk-067f2314/snapshots.html" \
-            "/nfl-desk-067f2314/correlations.html" \
-            "/nfl-desk-067f2314/results.html" \
-            "/nfl-desk-067f2314/sources.html" \
-            "/nfl-desk-067f2314/questions.html" \
-            "/nfl-desk-067f2314/suggestions.html" \
-            "/nfl-desk-067f2314/flagged.html" \
-            "/nfl-desk-067f2314/executive-summary.html" \
-            "/nfl-desk-067f2314/verification-log.html"; do
-            url="$base$path"
-            ok=0
-            for attempt in $(seq 1 12); do
+          # 2) Wait for a STABLE deploy: concurrent merges can trigger overlapping
+          #    Pages rebuilds, so retry the full page set until every page passes.
+          paths=(
+            "/nfl-desk-067f2314/"
+            "/nfl-desk-067f2314/schedule.html"
+            "/nfl-desk-067f2314/lines.html"
+            "/nfl-desk-067f2314/standings.html"
+            "/nfl-desk-067f2314/leaderboard.html"
+            "/nfl-desk-067f2314/injuries.html"
+            "/nfl-desk-067f2314/gates.html"
+            "/nfl-desk-067f2314/snapshots.html"
+            "/nfl-desk-067f2314/correlations.html"
+            "/nfl-desk-067f2314/results.html"
+            "/nfl-desk-067f2314/sources.html"
+            "/nfl-desk-067f2314/questions.html"
+            "/nfl-desk-067f2314/suggestions.html"
+            "/nfl-desk-067f2314/flagged.html"
+            "/nfl-desk-067f2314/executive-summary.html"
+            "/nfl-desk-067f2314/verification-log.html"
+          )
+          stable=0
+          for sweep in $(seq 1 40); do
+            all_ok=1
+            failed=""
+            for path in "${paths[@]}"; do
+              url="$base$path"
               if curl --fail --silent --location "$url" -o /tmp/page.html; then
-                if grep -q "Own5 NFL Line-Origination Dashboard" /tmp/page.html; then
-                  echo "OK $url"
-                  ok=1
-                  break
+                if grep -q "$marker" /tmp/page.html; then
+                  continue
                 fi
               fi
-              sleep 5
+              all_ok=0
+              failed="$failed $url"
             done
-            if [ "$ok" -ne 1 ]; then
-              echo "Not ready after retries: $url" >&2
-              exit 1
+            if [ "$all_ok" -eq 1 ]; then
+              echo "All desk pages verified live (stable deploy)."
+              stable=1
+              break
             fi
+            echo "Sweep $sweep: not yet stable; retrying. Failed:$failed"
+            sleep 15
           done
-          echo "All desk pages verified live."
+          if [ "$stable" -ne 1 ]; then
+            echo "Desk pages never reached a stable deployed state" >&2
+            exit 1
+          fi
