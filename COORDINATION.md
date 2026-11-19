@@ -4269,6 +4269,7 @@ probability. The Week-11 fair lines published now are the recalculated ones.
 - **Desk status:** all claimed tasks done. Nothing left open in this namespace. Cross-session requests
   X-D6-01/02/03 remain with their owners.
 
+
 ## Session arena/2b6d55c1-own5 (NFL Origin Desk — full brief implementation), Z-ids
 
 **Branch:** `arena/2b6d55c1-own5` (branched from main `d634b08`, current == origin/main). **Scope (additive namespace only):**
@@ -4382,3 +4383,65 @@ None new beyond the desk's own published flags (F01–F24 on `nfl-origin-desk/fl
 - **Merge:** `--merge`, state **MERGED** at 2026-11-19T11:13:57Z, merge commit **`2156369`**.
 - **Pages:** `pages build and deployment` for `main` reported **success** after the merge. The sandbox cannot reach `*.github.io`, so the live URL was not fetched from here.
 - **Known open items (not blocking, flagged):** F-B01 to F-B09 in `nfl-brief-traceability/flags.csv`; cross-session requests X-1911-01 to X-1911-03 remain with their owners.
+
+---
+
+## Session 1fab8a48 — Own5 NFL Signal Board: claim (2026-11-19 UTC)
+
+**Session ID:** `1fab8a48` · **Branch:** `arena/1fab8a48-own5` (base `d634b08f1fbc4e1fc7d442a726b3fef47c56f6d2` = current `main`).
+Claim pushed **before** any build work.
+
+**Why this session exists.** The brief asks for one thing the existing 58 desks do not yet do: a single,
+re-verified **public front door** for the whole NFL programme — a clean dashboard that states, for each
+requirement in the brief, (a) what we can decide today, (b) what blocks it, (c) the exact number that would
+clear it, and (d) an explicit list of the information we do **not** have with discovery routes. Plus a
+**pre-registration register** (frozen, hashed, committed before results), a **honest line-origination record**
+with fair / market / residual columns where every market cell is either sourced or blank-and-flagged, and a
+**"removal of luck" panel** computed from real official data with published n and cluster-robust intervals.
+
+The honest headline this session must also publish is the one several desks independently found and this
+session re-derives: **the model currently loses to the market on proper scoring (Brier skill < 0)**. The
+board must not hide that.
+
+**Claimed scope (strictly additive; no other namespace is edited):**
+- `nfl-signal-board/**` (deterministic stdlib site build, fail-closed verifier, unit tests)
+- `research/nfl-1fab8a48/**` (executive summary, method notes, line-by-line verification log, flagged register)
+- `data/nfl-signal-board/**` (this desk's own CSVs and captures only)
+- `.github/workflows/nfl-signal-board.yml` (scoped rebuild + verify + tests)
+- One additive row in `README.md`; this append-only block in `COORDINATION.md`
+
+**Read-only:** every other desk/namespace (`nfl-*`, `nba-*`, `own5-*`, `line-lab`, `repo-review`, `docs/`,
+root `index.html`, `pages/**`, `assets/**`, `data/**` outside my namespace, `scripts/**`, `tools/**`, all
+existing workflows). Existing defects owned by other sessions are reported in the cross-session list below,
+never edited.
+
+**No duplicate work:** PR #144 (`arena/3ddb3f07-own5`, "NFL front door … 15-page deterministic site") is open
+and unmerged. This session does **not** build a "front door" desk, does not touch its files, and treats its
+claims as unverified until they appear on `main`. This session's scope is the **signal / decision** layer
+(origination residuals, pre-registration register, luck-removal panel, questions register) plus a dashboard
+whose nav is scoped to this desk only.
+
+| ID | Task | Status | Owner | Files | Notes |
+|----|------|--------|-------|-------|-------|
+| B1 | Claim scope + push claim | in progress | `1fab8a48` | COORDINATION.md | This block. |
+| B2 | Fresh official read (today) with hashes and clocks | pending | `1fab8a48` | `data/nfl-signal-board/raw/**` | Every row keeps read timestamp + sha256; unconfirmed values blank + flagged. |
+| B3 | Verified results corpus reconciled to the official standings | pending | `1fab8a48` | `data/nfl-signal-board/corpus.csv` | Reconciliation printed, 32/32 required to pass the gate. |
+| B4 | Origination: side → total → moneyline, fair/market/residual separate | pending | `1fab8a48` | `data/nfl-signal-board/origination.csv` | Market cells blank+flagged unless an admitted official quote exists. |
+| B5 | Pre-registration register (frozen, hashed) + walk-forward backtest | pending | `1fab8a48` | `data/nfl-signal-board/preregistration.json`, `backtest.csv` | Commit hash = registration. No backtest number on the leaderboard. |
+| B6 | Removal-of-luck panel (proper scores, cluster CI, multiplicity) | pending | `1fab8a48` | `data/nfl-signal-board/luck.csv` | n published; control baselines included. |
+| B7 | Decision-readiness table + questions/information register + suggestions | pending | `1fab8a48` | `data/nfl-signal-board/{readiness,questions,suggestions}.csv` | One row per brief line; gate + clearing number + observed value. |
+| B8 | Site: dashboard landing + category subpages, table-first | pending | `1fab8a48` | `nfl-signal-board/**` | No JS required for content; mobile-clean. |
+| B9 | Fail-closed verifier + unit tests + scoped CI | pending | `1fab8a48` | `nfl-signal-board/verify.py`, `.github/workflows/nfl-signal-board.yml` | Negative controls: corrupted data must fail. |
+| B10 | PR → autonomous merge → Pages verification → record | pending | `1fab8a48` | COORDINATION.md, `README` row | Merge only after verify PASS and the site rebuilds byte-identically. |
+
+**Cross-session requests (logged, not edited).**
+- **X-B-01 → `repo-review` owner:** the sweep's `verifier_runs.csv` is stale (2026-11-18) and its verifier
+  fails because the audit does not list every `verify.py`; 43 exist, 5 of them named `verify_desk.py`/
+  `verify_nfl_desk.py`, which the `*/verify.py` glob cannot see. Discovery route: match
+  `(verify.py|verify_desk.py|verify_nfl_desk.py|verify_*.py)`.
+- **X-B-02 → `decision-desk.yml` owner:** still red on `main` for the reason logged by 560ed315/51cf3786
+  (row-length defects in `data/nfl-desk-f2e20e96/*.csv`; `.github/workflows/decision-desk.yml` byte-check).
+- **X-B-03 → root `index.html` generator owner (cd43258e):** root nav has no entry for any desk after
+  `nfl-integration-a620f5a5`; this desk is linked from `README.md` only, as with the other 50+ desks.
+- **X-B-04 → `nba-commission` owner:** broken internal link `nfl-desk-e1d60f5d/pages/suggestions.html` →
+  `pages/flagged.html` (standing X51-05).
