@@ -3686,10 +3686,68 @@ checks re-run green (543 checks, 0 alarms; 11 unit tests). No data values change
 
 **Merge record (follow-up).** Recorded below after this PR merges.
 
+
+---
+## Session c8cb6ae8 — CI smoke-check pipefail fix (X51-14 takeover; 2026-11-19 UTC)
+
+Session ID `c8cb6ae8`, branch `arena/c8cb6ae8-own5` (base `2f02e1e` = current `main`).
+
+**Takeover.** Cross-session request **X51-14** (logged 2026-11-18 by session `arena-51cf3786`)
+requested the capture-then-grep fix for the `curl … | grep -q` pattern under `set -o pipefail`
+in 10 workflows. The owning sessions' claims are stale (>60 minutes with no commits as of
+2026-11-19), so this session takes over X51-14 per the takeover rule. The handoff is recorded
+here.
+
+**Root cause (confirmed).** Under `set -o pipefail`, `curl … | grep -q 'X'` fails whenever `grep`
+matches early and exits, because `curl` then receives SIGPIPE and the pipeline's exit status is
+non-zero — a false "Published page did not become ready" failure on large pages, even though the
+page contains the expected text. The page content is correct; only the check is wrong.
+
+**Fix applied (mechanical, one line per file).** In each affected workflow the smoke check now
+captures the body first, then greps the captured string:
+`if body="$(curl --fail --silent --show-error --location "$url")" && grep -q 'X' <<< "$body"; then`
+This is the same pattern already validated in `nfl-integration-a620f5a5.yml`.
+
+**Files changed (scope: CI smoke checks only; no data, no site content):**
+- `.github/workflows/nfl-560ed315.yml` (pattern `OWN5`)
+- `.github/workflows/nfl-desk-35a1feb2.yml` (`OWN5`)
+- `.github/workflows/nfl-desk-3fb93d11.yml` (`OWN5`)
+- `.github/workflows/nfl-desk-864d5668.yml` (`Own5`)
+- `.github/workflows/nfl-desk-c98c6270.yml` (`Own5`)
+- `.github/workflows/nfl-desk-d38e90c5.yml` (`Own5`)
+- `.github/workflows/nfl-desk-e1d60f5d.yml` (`OWN5`)
+- `.github/workflows/nfl-desk-e46fb855.yml` (`OWN5`)
+- `.github/workflows/nfl-readiness-cba42531.yml` (`OWN5`)
+- `.github/workflows/pages.yml` (`Own5`)
+
+**Verification performed.**
+- After the edit, `grep -rn "curl.*| grep -q" .github/workflows/*.yml` returns no live code match
+  (the only remaining hit is the explanatory comment inside the already-fixed `nfl-integration-a620f5a5.yml`).
+- Each replacement preserves the original grep pattern and indentation; `git diff` reviewed line-by-line.
+- No data values or rendered site content changed.
+
+**X51-15 status (re-checked, resolved).** The four previously malformed CSVs under
+`data/nfl-desk-f2e20e96/` (`questions.csv`, `readiness.csv`, `sources.csv`, `suggestions.csv`) now
+parse with header-matched row lengths (Python `csv` check: 0 mismatched lines in all four). The
+decision-desk audit (`tools/decision_desk/audit_repo.py`) now exits 0, so the prior blocking failure
+at `audit_repo.py` line 162 is gone. No action required.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| C8-01 | Take over X51-14 and fix `curl \| grep -q` pipefail in 10 workflows | done | c8cb6ae8 | .github/workflows/{nfl-560ed315,nfl-desk-35a1feb2,nfl-desk-3fb93d11,nfl-desk-864d5668,nfl-desk-c98c6270,nfl-desk-d38e90c5,nfl-desk-e1d60f5d,nfl-desk-e46fb855,nfl-readiness-cba42531,pages}.yml | Capture-then-grep; verified no live pipefail match remains. |
+| C8-02 | Confirm X51-15 resolved (f2e20e96 CSVs parse; decision-desk audit exits 0) | done | c8cb6ae8 | (read-only) data/nfl-desk-f2e20e96/*.csv, tools/decision_desk/audit_repo.py | 0 mismatched rows; audit exit 0. No edits. |
+| C8-03 | Commit, push, PR to main, autonomous merge, confirm Pages, record result | in progress | c8cb6ae8 | COORDINATION.md, README.md (append row) | Merge only after checks/deploy green. |
+
+**Cross-session requests**
+
+- None opened by this session. X51-14 is closed by this takeover.
+
+**Merge record.** Recorded below after the PR merges.
+
 ---
 ## Session arena/188c3719-own5 — NFL Origin Desk final integration and publication (2026-11-19)
 
-**Branch:** `arena/188c3719-own5` (branched from main `2f02e1e7975ee61780b39e1ef9bc83591ccb55e2`). **Scope:** `COORDINATION.md` (this block only). **No other file is touched.** The NFL Origin Desk (`nfl-origin-desk/**`, `data/nfl-origin-desk/**`, `scripts/build_origin_desk.py`, `scripts/verify_origin_desk.py`) is owned by sessions `arena/abb5f8be-own5` (O1–O7 done, PR #112) and `arena/2025930f-own5` (V1–V8 done); this session does not edit it and does not duplicate its work.
+**Branch:** `arena/188c3719-own5` (branched from main `2f02e1e7975ee61780b39e1ef9bc83591ccb55e2`, rebased onto `fe9ed18`). **Scope:** `COORDINATION.md` (this block only). **No other file is touched.** The NFL Origin Desk (`nfl-origin-desk/**`, `data/nfl-origin-desk/**`, `scripts/build_origin_desk.py`, `scripts/verify_origin_desk.py`) is owned by sessions `arena/abb5f8be-own5` (O1–O7 done, PR #112) and `arena/2025930f-own5` (V1–V8 done); this session does not edit it and does not duplicate its work.
 
 **Why this session exists.** The origin desk already implements the user brief in full (own lines side→total→moneyline, fair/market/difference columns, signal/staking-separated leaderboard, gates G0–G12, correlations with n, decision-readiness table, questions register, suggestions register, executive summary, flagged register). Every row is source-linked or blank-and-flagged; nothing is inferred. This session's contribution is the independent re-verification and the final PR→merge→Pages→record loop.
 
@@ -3697,15 +3755,14 @@ checks re-run green (543 checks, 0 alarms; 11 unit tests). No data values change
 
 | ID | Task | Status | Owner | Files touched | Notes |
 |----|------|--------|-------|---------------|-------|
-| I1 | Claim scope in COORDINATION.md + push claim | in progress | arena/188c3719-own5 | COORDINATION.md | This block. Claim pushed before any other work. |
+| I1 | Claim scope in COORDINATION.md + push claim | done | arena/188c3719-own5 | COORDINATION.md | Claim block pushed 2026-11-19 (commit d27e216), then merged with origin/main (fe9ed18) preserving session c8cb6ae8's block. |
 | I2 | Independent line-by-line review of the origin desk (13 CSVs + build/verify scripts) | done | arena/188c3719-own5 | `data/nfl-origin-desk/*.csv`, `scripts/build_origin_desk.py`, `scripts/verify_origin_desk.py` | Reviewed: requirements R001–R080, questions Q01–Q18, lines W09-01–W09-15 (market columns blank+flagged), strategies S1–S7 (0 certified; pre_reg_commit NOT RECORDED per F15), gates G0–G12, leaderboard (4 divisions, not certified), correlations (4 official-source rows, n=32, from standings read 2026-11-18), injuries (derived values blanked per F18), suggestions (16), sources (23, tiered OFFICIAL/INDUSTRY/METHODOLOGY), flagged (24 items F01–F24). No value inferred; unverifiable values left blank and flagged. |
 | I3 | Re-run build and fail-closed verify | done | arena/188c3719-own5 | `scripts/build_origin_desk.py`, `scripts/verify_origin_desk.py`, `nfl-origin-desk/*` | Build deterministic: 13 HTML pages + style.css + .nojekyll, byte-identical to HEAD (no git diff). Verify PASSED: 13 CSVs, 13 HTML pages, every row source-linked or explicit blank+flag, 0 broken internal links, 0 failures. |
-| I4 | Open PR arena/188c3719-own5 → main, autonomous merge | in progress | arena/188c3719-own5 | COORDINATION.md | `gh pr merge <N> --merge`, no approval wait, no --auto. |
+| I4 | Open PR arena/188c3719-own5 → main, autonomous merge | in progress | arena/188c3719-own5 | COORDINATION.md | PR #140 opened; `gh pr merge <N> --merge`, no approval wait, no --auto. |
 | I5 | Confirm GitHub Pages builds for the merge commit | pending | arena/188c3719-own5 | COORDINATION.md | Pages API: source = main branch root; confirm build status `built` with no error. |
 | I6 | Record PR link, merge commit and Pages result in COORDINATION.md | pending | arena/188c3719-own5 | COORDINATION.md | Follow-up block after I4–I5 complete. |
 
 ## Cross-session requests
 
 - None. All work is in this session's COORDINATION.md block only; no file owned by another session is edited. The origin desk remains owned by sessions `arena/abb5f8be-own5` and `arena/2025930f-own5`.
-
 
