@@ -497,6 +497,15 @@ FLAGS = [
     ("F15", "irregularity", "The pinned 2026 snapshot stops at week 9 while the standings page shows 10 weeks",
      "Week 10 was appended from the official page read today, so the corpus is one week fresher than the snapshot; the two sources are labelled per row.",
      "https://www.nfl.com/schedules/2026/by-week/week-10", "RESOLVED — labelled per row"),
+    ("F16", "defect", "corpus_games.csv was declared but never written",
+     "build_corpus() returned the rows and main() never called write_corpus(), so the published corpus existed only as a summary count. Found by the verifier's row-count pin, not by inspection. Fixed: the table now publishes all 7,117 pinned games (952 usable) with a source link on every row.",
+     "https://github.com/sassnarep3-star/Own5/blob/main/nfl-line-audit/data/corpus_games.csv", "RESOLVED — writer called, row count pinned at 7,117"),
+    ("F17", "irregularity", "The closing total sits 1.26 points below realised scoring",
+     "Week-clustered CI 0.40-2.05 over 49 clusters, n=744; same sign in 2023, 2024, 2025 and 2026, shrinking each year; not concentrated by total size. A mechanical every-over bet returns +0.33% on this sample. Treated as a market observation: the screen that found it used the holdout, which spends the holdout for this hypothesis. Any test must be pre-registered on 2026 games only with a frozen threshold.",
+     "https://github.com/sassnarep3-star/Own5/blob/main/nfl-line-audit/data/line_bias.csv", "OPEN — hypothesis only, not a strategy"),
+    ("F18", "defect", "A 0.72 dispersion fudge factor survived in the origination path",
+     "The backtest was switched to a measured residual sd, but build_origination still scaled sigma_total by 0.72 to get a margin sd, and every originated side probability published earlier used it. Replaced with the measured residual sd of the margin; all 13 fair spreads and their probabilities are recomputed in the published table.",
+     "https://github.com/sassnarep3-star/Own5/blob/main/nfl-line-audit/data/origination_week11.csv", "RESOLVED — measured sigma_margin carried in every row's input hash"),
 ]
 
 

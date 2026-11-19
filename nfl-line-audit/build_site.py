@@ -531,7 +531,7 @@ registration commit published first. No threshold is proposed here.</p></section
     body += '<p class="note">A correction is not a complaint: it is the evidence that the re-derivation was done. Flagged items do not block the merge and are published for review.</p>'
     body += table(flags, ["id", "type", "title", "detail", "evidence_url", "status"])
     write("flagged.html", page("Flagged for review", "flagged.html", body,
-                               "Fifteen items, including three corrections to numbers other desks published."))
+                               "Eighteen items: defects this desk found in its own pipeline, corrections to numbers published elsewhere, and unverifiable cells."))
 
     # ---------------------------------------------------------------- sources
     body = '<p class="sub">Every external source used, with the exact read stamp and what it supports. Source classes: OFFICIAL (the league), OPERATOR (a named licensed sportsbook), AGGREGATOR (a research dataset, never presented as official), REPO.</p>'
@@ -582,7 +582,7 @@ reports the outcome honestly: <b>the line beats the model</b>.</p>
 <li>Pre-registration committed before evaluation; the commit hash is the registration and the verifier recomputes it.</li>
 <li>Backtest numbers are forbidden on the leaderboard by rule and by build.</li>
 <li>Demotion gate: three automatic triggers, published before use.</li>
-<li>15 flagged items with evidence links, including corrections to other desks' published numbers.</li>
+<li>18 flagged items with evidence links, including three defects this desk found in its own pipeline.</li>
 </ul></article>
 <article><h3>What to decide next</h3><ul>
 <li>Whether to keep chasing the closing line with public data, or to reposition the model as a residual generator (S03).</li>

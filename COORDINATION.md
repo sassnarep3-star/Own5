@@ -4108,3 +4108,41 @@ and hashes itself today.
   for desks newer than `nfl-integration-a620f5a5`. Not edited here.
 - X-D6-03 → `nfl-desk-e1d60f5d` / `nfl-desk-864d5668` / `nfl-desk-ccc5caf2` owners: broken internal links
   (repo-review X51-05). Not edited here.
+
+### d6c404d4 — status update 2026-11-19T08:1xZ (tasks complete, PR next)
+
+**Done.** Registration `REG-D6C404D4-V1` committed (`c4731d1`); engine, `build_data.py`,
+`build_registers.py`, `build_site.py`, `verify.py`; 30 data tables; 15 static pages; 4 research notes;
+capture workflow `.github/workflows/nfl-line-audit.yml`; README hub row.
+
+**Headline, published and not softened:** 744-game walk-forward Brier skill vs the de-vigged close is
+**−0.0782** (tune −0.1064 / holdout −0.0561). No family certifies. S2 and S3 are significantly worse
+(Holm p=0.0008). Side MAE model 10.2–11.3 vs line 9.5–10.6 in every season.
+
+**Corrections published to the repo record (flags F08, F10, plus new F16/F17 added below):**
+- spread sign in the pinned dataset is home-favoured-POSITIVE (MAE 10.24 vs 14.69, n=5,201) — opposite to operator print;
+- an earlier draft of this desk certified S1–S3 on mean-edge p-values; replaced by benchmark-relative Brier skill
+  with a game-cluster bootstrap and Holm. Nothing certifies after the fix;
+- `ARI`→`AZ` alias missing → Arizona split in two → 31/32 reconciliation. Fixed; now 32/32.
+
+**New finding, with its caveat:** the closing total sits **1.26 pts below** realised scoring (week-clustered
+CI 0.40–2.05, 49 clusters, n=744), so a mechanical every-over bet returns **+0.33%**. Effect has the same
+sign in all four seasons, shrinking; not concentrated by total size. The discovery screen looked at the
+holdout, so the holdout is spent for that hypothesis. Next step is a pre-registered 2026-only test with a
+frozen threshold committed before kickoff. Published on Market & model page, not on the leaderboard.
+
+**Verifier:** 80 checks, 0 failures. Row-count pins, preregistration sha256, 12 pinned-input hashes,
+per-row source links on every register, no settled bets, no backtest column on the leaderboard, no broken
+internal links.
+
+**Scope respected.** Only `nfl-line-audit/**`, `research/nfl-d6c404d4/**`,
+`.github/workflows/nfl-line-audit.yml`, one README hub row and this block. No shared index/nav file touched;
+X-D6-01/02/03 remain open for their owners.
+
+**Flags added this turn (F16–F18)** — see `nfl-line-audit/data/flagged.csv`:
+F16 the `corpus_games.csv` writer was never called, so the 952-game corpus existed only as a summary
+number until this turn (found by the verifier's row-count pin); F17 the closing-line bias is a market
+observation, not a strategy, and any use of it must be pre-registered on 2026 data only; F18 a
+`src = "0.72 × sigma_total"` fudge factor for margin dispersion survived into the origination path after
+the backtest was fixed — replaced with the measured residual sd, which moved every originated side
+probability. The Week-11 fair lines published now are the recalculated ones.

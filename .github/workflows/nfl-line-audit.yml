@@ -1,0 +1,72 @@
+name: nfl-line-audit
+
+# Runs on GitHub's runners because they can reach nfl.com and the operator pages; the
+# agent sandbox cannot (SSL_ERROR_SYSCALL). Two jobs:
+#   1. verify  - rebuild-free check of the committed artifacts (every push)
+#   2. capture - timestamped market + official captures on a schedule, committed back
+
+on:
+  push:
+    paths:
+      - 'nfl-line-audit/**'
+      - '.github/workflows/nfl-line-audit.yml'
+  schedule:
+    # 6-hourly captures; the Thursday kickoff slot is covered by the 22:30 UTC run
+    - cron: '30 4,10,16,22 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nfl-line-audit-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify committed artifacts
+        run: python3 nfl-line-audit/verify.py
+
+  capture:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Capture operator and official pages (timestamped, never overwritten)
+        run: |
+          set -euo pipefail
+          STAMP="$(date -u +%Y%m%dT%H%MZ)"
+          OUT="nfl-line-audit/captures/ci"
+          mkdir -p "$OUT"
+          fetch() { # url, name
+            if curl -fsSL --retry 3 --max-time 60 -A 'Mozilla/5.0 (compatible; own5-line-audit/1.0)' "$1" -o "$OUT/$2"; then
+              echo "ok   $2"
+              sha256sum "$OUT/$2" > "$OUT/$2.sha256"
+            else
+              echo "fail $2 ($1)" | tee -a "$OUT/failures.log"
+              rm -f "$OUT/$2"
+            fi
+          }
+          fetch "https://www.nfl.com/schedules/2026/by-week/week-11" "nfl_week11_slate_${STAMP}.html"
+          fetch "https://www.nfl.com/injuries/league/2026/reg11" "nfl_injuries_reg11_${STAMP}.html"
+          fetch "https://sportsbook.draftkings.com/leagues/football/nfl" "draftkings_nfl_${STAMP}.html"
+          fetch "https://sportsbook.fanduel.com/navigation/nfl" "fanduel_nfl_${STAMP}.html"
+          printf 'read_utc=%s\nrunner=%s\n' "$(date -u +%Y-%m-%dT%H:%M:%SZ)" "$(uname -n)" > "$OUT/read_${STAMP}.txt"
+      - name: Commit captures (additive only)
+        run: |
+          set -euo pipefail
+          git config user.name  'nfl-line-audit bot'
+          git config user.email 'nfl-line-audit@users.noreply.github.com'
+          git add nfl-line-audit/captures/ci
+          if git diff --cached --quiet; then
+            echo "nothing to commit"
+          else
+            git commit -m "nfl-line-audit: scheduled captures $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push
+          fi

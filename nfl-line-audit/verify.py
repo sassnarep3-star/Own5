@@ -137,7 +137,7 @@ def main():
     expect("suggestions.csv", 12)
     expect("research.csv", 9)
     expect("sources.csv", 14)
-    expect("flagged.csv", 15)
+    expect("flagged.csv", 18)
     expect("week10_finals.csv", 14)
     expect("holdout_screen.csv", 7)
     expect("line_bias.csv", 10)
