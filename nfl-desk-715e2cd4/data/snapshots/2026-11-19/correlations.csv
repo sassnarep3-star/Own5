@@ -1,0 +1,8 @@
+pair,metric,value,n,ci_low,ci_high,unit_of_analysis,source_url,note
+Points for per game vs win percentage,Pearson r,0.7153,32,0.4884,0.8516,club level (n=32 clubs),https://www.nfl.com/standings/league/2026/REG,computed in-repo from the official 2026 REG standings read 2026-11-19
+Points against per game vs win percentage,Pearson r,-0.7043,32,-0.8454,-0.4713,club level (n=32 clubs),https://www.nfl.com/standings/league/2026/REG,computed in-repo from the official 2026 REG standings read 2026-11-19
+Net points per game vs win percentage,Pearson r,0.8825,32,0.7711,0.9415,club level (n=32 clubs),https://www.nfl.com/standings/league/2026/REG,computed in-repo from the official 2026 REG standings read 2026-11-19
+Points for per game vs points against per game,Pearson r,-0.2911,32,-0.5808,0.0641,club level (n=32 clubs),https://www.nfl.com/standings/league/2026/REG,computed in-repo from the official 2026 REG standings read 2026-11-19
+Game margin vs game total (136-game corpus),Pearson r,-0.1222,136,-0.2847,0.0471,game level (n=136 games),https://www.nfl.com/schedules/2026/by-week/week-10,computed in-repo from the pre-registered 136-game official corpus
+Absolute margin vs game total (136-game corpus),Pearson r,-0.0162,136,-0.1841,0.1525,game level (n=136 games),https://www.nfl.com/schedules/2026/by-week/week-10,computed in-repo from the pre-registered 136-game official corpus
+Home points vs away points (136-game corpus),Pearson r,0.0763,136,-0.0932,0.2416,game level (n=136 games),https://www.nfl.com/schedules/2026/by-week/week-10,computed in-repo from the pre-registered 136-game official corpus

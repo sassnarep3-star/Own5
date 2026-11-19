@@ -1,0 +1,41 @@
+name: NFL desk 715e2cd4 — rebuild, verify, test
+
+on:
+  push:
+    branches: [main, "arena/715e2cd4-own5"]
+    paths:
+      - "nfl-desk-715e2cd4/**"
+      - "research/nfl-715e2cd4/**"
+      - ".github/workflows/nfl-desk-715e2cd4.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "nfl-desk-715e2cd4/**"
+      - "research/nfl-715e2cd4/**"
+      - ".github/workflows/nfl-desk-715e2cd4.yml"
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Rebuild data tables from the raw extracts
+        run: python3 nfl-desk-715e2cd4/pipeline.py
+      - name: Rebuild the site
+        run: python3 nfl-desk-715e2cd4/build.py
+      - name: Fail-closed verification (sources, blanks, links, counts, policy)
+        run: python3 nfl-desk-715e2cd4/verify.py
+      - name: Unit tests and negative controls
+        run: python3 -m unittest discover -s nfl-desk-715e2cd4/tests -v
+      - name: Confirm the committed site matches a clean rebuild
+        run: git diff --exit-code -- nfl-desk-715e2cd4/
+      - name: Confirm no market price and no performance figure (policy spot check)
+        run: |
+          set -euo pipefail
+          if grep -rq "market_home_spread\":\"-" nfl-desk-715e2cd4/data/ 2>/dev/null; then
+            echo "a market price appeared without a licensed feed"; exit 1
+          fi
+          echo "policy spot check passed"
