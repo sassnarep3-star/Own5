@@ -4333,3 +4333,5 @@ None new beyond the desk's own published flags (F01–F24 on `nfl-origin-desk/fl
 
 **Verification:** `python3 nfl-brief-traceability/verify.py` → 23 checks, 0 failures (negative controls confirm each flagged defect is real). Every repo link in the page resolves on disk. Official links are only those re-read this session.
 **Scope:** only `nfl-brief-traceability/**` and this block. No other desk's files edited.
+
+**PR:** [#170](https://github.com/sassnarep3-star/Own5/pull/170) `arena/1911d7cd-own5` → `main` (mergeable, CLEAN at open). Merge result to be read from the PR state; this session merges only after the repo's checks pass.
