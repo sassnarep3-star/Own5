@@ -162,6 +162,16 @@ check(spec["model_spec_version"].startswith("v1-frozen-2026-11-19"), "model spec
 check(spec["order"] == "side first, then total, then moneyline", "spec: origination order drifted")
 check(spec["corpus_finals"] == 150, "spec: corpus drifted from 150")
 
+# rendered pages must quote the live CSV counts (guards against hardcoded copy drifting)
+sweep = rows("verifier_sweep.csv")
+idx = (HERE / "index.html").read_text(encoding="utf-8")
+check(f"verifier sweep ({len(sweep)} scripts" in idx,
+      f"index.html sweep count does not match verifier_sweep.csv ({len(sweep)} rows)")
+fl = rows("flagged.csv")
+open_flags = sum(1 for r in fl if (r.get("status") or "").strip().lower() == "open")
+check(f"<strong>{open_flags}</strong>" in idx,
+      f"index.html open-flags count does not match flagged.csv ({open_flags} open rows)")
+
 print(f"verify: {checks} checks, {len(failures)} failures")
 for f in failures[:40]:
     print("FAIL", f)

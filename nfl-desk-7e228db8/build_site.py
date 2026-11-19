@@ -142,7 +142,7 @@ rebuild: <code>python3 nfl-desk-7e228db8/build_desk.py &amp;&amp; python3 nfl-de
       'Suggestions are reviewable on the <a href="suggestions.html">Suggestions page</a> — nothing is implemented '
       'without a recorded decision. Irregularities found by the line-by-line review are on the '
       '<a href="flagged.html">Flagged for Review page</a> (open + high counts above). The repo-wide verifier '
-      "sweep (37 scripts, 2026-11-19) is published on the <a href='flagged.html'>Flagged page</a>.")}
+      "sweep (" + str(len(sweep)) + " scripts, 2026-11-19) is published on the <a href='flagged.html'>Flagged page</a>.")}
 </section>
 <section>
 <h2>What would change our mind</h2>
