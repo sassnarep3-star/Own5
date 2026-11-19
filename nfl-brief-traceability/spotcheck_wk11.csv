@@ -1,0 +1,27 @@
+team,player_official,player_in_repo_capture,comparison,repo_source_url,repo_fetched_at_utc,official_url,result
+IND,Jaylon Carlies,Jaylon Carlies,all fields match,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T07:03:00Z,official nfl.com page: https://www.nfl.com/injuries/,PASS
+IND,Sauce Gardner,Sauce Gardner,all fields match,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T07:03:00Z,official nfl.com page: https://www.nfl.com/injuries/,PASS
+IND,Anthony Gould,Anthony Gould,all fields match,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T07:03:00Z,official nfl.com page: https://www.nfl.com/injuries/,PASS
+IND,Charlie Heck,Charlie Heck,all fields match,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T07:03:00Z,official nfl.com page: https://www.nfl.com/injuries/,PASS
+IND,Will Mallory,Will Mallory,all fields match,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T07:03:00Z,official nfl.com page: https://www.nfl.com/injuries/,PASS
+IND,Bernhard Raimann,Bernhard Raimann,all fields match,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T07:03:00Z,official nfl.com page: https://www.nfl.com/injuries/,PASS
+IND,Luke Rhodes,Luke Rhodes,all fields match,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T07:03:00Z,official nfl.com page: https://www.nfl.com/injuries/,PASS
+IND,Jerry Tillery,Jerry Tillery,all fields match,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T07:03:00Z,official nfl.com page: https://www.nfl.com/injuries/,PASS
+IND,Jalen Travis,Jalen Travis,all fields match,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T07:03:00Z,official nfl.com page: https://www.nfl.com/injuries/,PASS
+IND,Dalton Tucker,Dalton Tucker,all fields match,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T07:03:00Z,official nfl.com page: https://www.nfl.com/injuries/,PASS
+IND,Charvarius Ward,Charvarius Ward,all fields match,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T07:03:00Z,official nfl.com page: https://www.nfl.com/injuries/,PASS
+HOU,Azeez Al-Shaair,Azeez Al-Shaair,all fields match,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T07:03:00Z,official nfl.com page: https://www.nfl.com/injuries/,PASS
+HOU,Reed Blankenship,Reed Blankenship,all fields match,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T07:03:00Z,official nfl.com page: https://www.nfl.com/injuries/,PASS
+HOU,Tank Dell,Tank Dell,all fields match,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T07:03:00Z,official nfl.com page: https://www.nfl.com/injuries/,PASS
+HOU,Blake Fisher,Blake Fisher,all fields match,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T07:03:00Z,official nfl.com page: https://www.nfl.com/injuries/,PASS
+HOU,Marvin Harrison Jr.,Marvin Harrison Jr.,all fields match,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T07:03:00Z,official nfl.com page: https://www.nfl.com/injuries/,PASS
+HOU,Jacob Hummel,Jake Hummel,"player_name: official=""Jacob Hummel"" repo=""Jake Hummel""",https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T07:03:00Z,official nfl.com page: https://www.nfl.com/injuries/,FAIL
+HOU,Danielle Hunter,Danielle Hunter,all fields match,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T07:03:00Z,official nfl.com page: https://www.nfl.com/injuries/,PASS
+HOU,Brevin Jordan,Brevin Jordan,all fields match,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T07:03:00Z,official nfl.com page: https://www.nfl.com/injuries/,PASS
+HOU,Kamari Lassiter,Kamari Lassiter,all fields match,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T07:03:00Z,official nfl.com page: https://www.nfl.com/injuries/,PASS
+HOU,Woody Marks,Woody Marks,all fields match,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T07:03:00Z,official nfl.com page: https://www.nfl.com/injuries/,PASS
+HOU,David Montgomery,David Montgomery,all fields match,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T07:03:00Z,official nfl.com page: https://www.nfl.com/injuries/,PASS
+HOU,Febechi Nwaiwu,Febechi Nwaiwu,all fields match,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T07:03:00Z,official nfl.com page: https://www.nfl.com/injuries/,PASS
+HOU,Keylan Rutledge,Keylan Rutledge,all fields match,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T07:03:00Z,official nfl.com page: https://www.nfl.com/injuries/,PASS
+HOU,Jaylin Smith,Jaylin Smith,all fields match,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T07:03:00Z,official nfl.com page: https://www.nfl.com/injuries/,PASS
+HOU,Wyatt Teller,Wyatt Teller,all fields match,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T07:03:00Z,official nfl.com page: https://www.nfl.com/injuries/,PASS
