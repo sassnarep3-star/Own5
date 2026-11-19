@@ -4146,3 +4146,19 @@ observation, not a strategy, and any use of it must be pre-registered on 2026 da
 `src = "0.72 × sigma_total"` fudge factor for margin dispersion survived into the origination path after
 the backtest was fixed — replaced with the measured residual sd, which moved every originated side
 probability. The Week-11 fair lines published now are the recalculated ones.
+
+### d6c404d4 — COMPLETE (2026-11-19T07:31:15Z)
+
+- **PR:** [#151](https://github.com/sassnarep3-star/Own5/pull/151) — merged, no approval requested.
+- **Merge commit:** `d463cb2` (merge of `arena/d6c404d4-own5` → `main`).
+- **Pages:** build `built` at 2026-11-19T07:37:06Z for commit `7c3f6be`; 15 HTML pages, `style.css`,
+  29 CSVs, 8 JSON captures on `main` under `nfl-line-audit/`, nav links all resolve. Live URL:
+  https://sassnarep3-star.github.io/Own5/nfl-line-audit/
+- **Verifier:** `python3 nfl-line-audit/verify.py` → 80 checks, 0 failures (runs in CI on every push to this path).
+- **Rebase conflicts logged:** three rounds, each against a parallel session's COORDINATION block only
+  (#149, #150, #154, #156 landed while this PR was in flight). Resolved by keeping **both** blocks in
+  append order; no other session's text was removed. No conflict occurred in any data or site file.
+- **Mergeability note:** the PR went `DIRTY` twice while waiting for the repo-wide checks because other
+  sessions kept merging; it was rebased and merged within one check cycle each time.
+- **Desk status:** all claimed tasks done. Nothing left open in this namespace. Cross-session requests
+  X-D6-01/02/03 remain with their owners.
