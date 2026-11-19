@@ -3946,4 +3946,7 @@ NYG/WAS PCT because it used W/G — the official page counts ties as half-wins; 
 "LA" while the schedule page prints "LAR". Both were corrected to the official conventions and re-verified
 (0 MISMATCH rows) rather than explained away.
 
-**Follow-up:** record-only PR #150 carries this completion record (K-082 -> MET, F6-21 -> resolved, honest source-link labels).
+**Follow-up:** record-only PR #150 carried this completion record (K-082 -> MET, F6-21 -> resolved, honest
+source-link labels) and **merged 2026-11-19T07:21:37Z as `21beb57e`**; its `pages build and deployment` run
+also finished **success**. One closing record-only PR follows on this branch to record #150's merge above; its
+own result is recorded by its merge commit on `main` (green-check rule applied identically).
