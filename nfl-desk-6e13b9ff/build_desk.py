@@ -16,6 +16,7 @@ REPO = os.path.dirname(HERE)
 DATA = os.path.join(REPO, "data", "nfl-desk-6e13b9ff")
 RESEARCH = os.path.join(REPO, "research", "nfl-6e13b9ff")
 BLOB = "https://github.com/sassnarep3-star/Own5/blob/main/"
+OFFICIAL_HOSTS = ("https://www.nfl.com/", "https://nfl.com/", "https://static.nfl.com/")
 
 NAV = [
     ("index.html", "Dashboard"),
@@ -82,7 +83,8 @@ NOT_OFFICIAL_BADGE = '<span class="badge b-disc">NOT OFFICIAL</span>'
 def src_link(url):
     if not url:
         return '<span class="small">BLANK &mdash; unverified</span>'
-    return f'<a href="{esc(url)}" rel="noopener">official source</a>'
+    label = "official source" if url.startswith(OFFICIAL_HOSTS) else "source link"
+    return f'<a href="{esc(url)}" rel="noopener">{label}</a>'
 
 
 def flag_cell(flag, flags):

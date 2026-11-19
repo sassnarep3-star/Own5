@@ -737,10 +737,9 @@ def write_coverage():
         "61 verification rows: 32 standings + all-32 diff + 13 fixtures + slate/byes/records cross-checks + 26-row TNF capture + 6 Week-12 spots + forecast-freeze check",
         ev("data/nfl-desk-6e13b9ff/verification.csv"))
     add(C_GOV, "Autonomous PR to main, merge after verify PASS, Pages live check, record in COORDINATION.md",
-        "PARTIAL", "G-PR verify PASS + green checks + live URL check",
-        "merged PR + successful Pages deploy + recorded links",
-        "In progress in this PR; merge record to follow in COORDINATION.md",
-        ev("COORDINATION.md"), "", "F6-21")
+        "MET", NA, NA,
+        "PR #146 merged 2026-11-19T07:17:27Z (bfa7b3d8) after 12 green checks; Pages build run 44478471703 success; live desk verified; recorded in COORDINATION.md",
+        ev("COORDINATION.md"))
     add(C_GOV, "No manual input; autonomous end-to-end execution",
         "MET", NA, NA,
         "All research, authoring, build, verification, tests and PR flow executed by this session without user input",
@@ -1045,10 +1044,10 @@ def write_registers(extra_flags):
          "research/arena-f1d30421/leaderboard.md (flag F9)",
          "Competition cannot launch without a funded, escrowed pool decision.",
          "https://github.com/sassnarep3-star/Own5/blob/main/research/arena-f1d30421/leaderboard.md", READ2, "open"],
-        ["F6-21", "This session's merge/Pages record pending at PR time",
-         "COORDINATION.md (session 6e13b9ff block)",
-         "Row K-082 flips to MET in a record-only follow-up once the merge and Pages checks are recorded.",
-         "https://github.com/sassnarep3-star/Own5/blob/main/COORDINATION.md", READ2, "open (auto-close in follow-up)"],
+        ["F6-21", "This session's merge/Pages record (was pending at PR time)",
+         "COORDINATION.md (session 6e13b9ff block, completion record)",
+         "Recorded: PR #146 merged (bfa7b3d8) after green checks; Pages build 44478471703 success; live URL verified; row K-082 = MET.",
+         "https://github.com/sassnarep3-star/Own5/pull/146", READ2, "resolved (2026-11-19)"],
     ]
     flags = flags + extra_flags
     w("flagged.csv",
