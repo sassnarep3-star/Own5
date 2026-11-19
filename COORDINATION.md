@@ -3852,3 +3852,5 @@ Suggestion **P01** carried the decision state "Approved / not yet funded". No ap
 operator, so it now reads **"Proposed (no decision recorded, no funding)"**. No suggestion on this desk may claim
 a decision that did not happen. Rebuilt, re-verified (3,014 checks, 0 problems) and retested (25 tests) before the
 follow-up PR.
+| Follow-up | [#145](https://github.com/sassnarep3-star/Own5/pull/145) merged 2026-11-19, merge commit `ff6fc6f3`; Pages built for it. Corrections: F-12 evidence link, merge record. |
+| Follow-up 2 | [#147](https://github.com/sassnarep3-star/Own5/pull/147) merged 2026-11-19, merge commit `016e7ee`; Pages **built** for `016e7ee`. Correction: P01 decision state. |
