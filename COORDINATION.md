@@ -4303,7 +4303,9 @@ an official source or explicitly blank-and-flagged; never inferred.
 | Z10 | Deterministic static site build (landing + category subpages) | unclaimed→in progress | 2b6d55c1 | nfl-desk-2b6d55c1/build_desk.py, *.html, style.css | No JS required for content. |
 | Z11 | Fail-closed verify + unit tests (negative controls) + scoped CI | unclaimed→in progress | 2b6d55c1 | nfl-desk-2b6d55c1/verify_desk.py, tests/**, workflow | Every row sourced or blank+flag. |
 | Z12 | Executive summary + Flagged for Review page | unclaimed→in progress | 2b6d55c1 | research/nfl-2b6d55c1/**, executive-summary.html, flagged.html | Computed/official values only. |
-| Z13 | PR → main, autonomous merge, Pages live check, record result | unclaimed→in progress | 2b6d55c1 | COORDINATION.md, README.md | Merge only after verify PASS + live URL check. |
+| Z13 | PR → main, autonomous merge, Pages live check, record result | done | 2b6d55c1 | COORDINATION.md, README.md | PR #172 (`arena/2b6d55c1-own5` → `main`), merged autonomously without approval wait via `gh pr merge 172 --merge`; merge commit `347b87df5423287ca8a53dfaf485c286b8820779`. Verify PASS (767 checks, 0 failures); unit tests 13/13 OK before merge. |
+
+**Merge result:** PR #172 merged to `main` at commit `347b87d` (Merge pull request #172 from sassnarep3-star/arena/2b6d55c1-own5). Desk live at https://sassnarep3-star.github.io/Own5/nfl-desk-2b6d55c1/ — GitHub Pages deploy to be confirmed live.
 
 **Cross-session requests:** none. All work is additive inside `nfl-desk-2b6d55c1/**`; no other session's files are touched.
 ## Session arena/7619c7a6-own5 — NFL Origin Desk review & verification (claimed 2026-11-19 UTC)
