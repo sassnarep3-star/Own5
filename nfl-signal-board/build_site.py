@@ -97,6 +97,7 @@ def site_url(path: str) -> str:
 
 
 def page(slug: str, title: str, body: str, sub: str = "") -> None:
+    title = html.unescape(title)   # callers pass "&amp;" for in-page use; <title>/<h2> re-escape once
     nav = "".join(
         f'<a href="{h}"{" class=on" if h == slug else ""}>{n}</a>' for h, n in NAV
     )
