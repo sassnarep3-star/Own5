@@ -4301,3 +4301,11 @@ Claimed review + verification of the NFL Origin Desk static site (landing page +
 ### 7619c7a6 — irregularities flagged for review
 
 None new beyond the desk's own published flags (F01–F24 on `nfl-origin-desk/flagged.html`, each with source links). All are non-blocking; verified values carry official source links, unverified values are blank.
+## Session 1911d7cd — NFL brief traceability, reproducibility & official spot-check (claimed 2026-11-19 UTC, branch `arena/1911d7cd-own5`, base `d634b08`)
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| B1 | Brief traceability matrix: every item in the user's NFL brief mapped to the artifact that covers it, with an honest status (done / partial / blocked / not started) | in progress | 1911d7cd | `nfl-brief-traceability/**`, this block | Does not re-build existing desks; links to them. |
+| B2 | Reproduce the nfl-line-audit headline numbers from pinned inputs and report any drift | in progress | 1911d7cd | `nfl-brief-traceability/reproduce.log` | Must leave git diff empty on tracked desk files, otherwise the drift is flagged, not committed. |
+| B3 | Official spot-check: Week 11 injury report (nfl.com/injuries) vs repo capture, row by row for IND and HOU | in progress | 1911d7cd | `nfl-brief-traceability/spotcheck_wk11.csv` | Source: https://www.nfl.com/injuries/ (read 2026-11-19 via fetch). |
+| B4 | Investigate red `Verify nfl-desk-067f2314` job on `main` (run 44487132313) | in progress | 1911d7cd | `nfl-brief-traceability/ci_investigation.md` | Fix only if inside this session's scope; otherwise log to Cross-session requests. |
