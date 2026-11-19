@@ -1,0 +1,11 @@
+source_id,title,url,tier,read_at_utc,used_for
+S8-01,2026 NFL League Standings,https://www.nfl.com/standings/league/2026/REG,OFFICIAL,2026-11-19T11:10:00Z,32-club standings; correlations; model inputs; reconciliation target
+S8-02,Week 11 schedule 2026,https://www.nfl.com/schedules/2026/by-week/week-11,OFFICIAL,2026-11-19T11:10:00Z,"13 fixtures, kickoffs, networks, 6 byes, Mexico City marker"
+S8-03,Week 10 scores 2026,https://www.nfl.com/scores/2026/reg10,OFFICIAL,2026-11-19T11:11:00Z,14 finals direct-read; Munich marker; Week-10 byes
+S8-04,Official injury report Week 11,https://www.nfl.com/injuries/league/2026/reg11,OFFICIAL,2026-11-19T11:12:00Z,7 chunks; 253 player rows; 26 clubs; 9 Out / 7 Questionable
+S8-05,Week 9 schedule 2026,https://www.nfl.com/schedules/2026/by-week/week-9,OFFICIAL,2026-11-19T11:15:00Z,15 finals direct-read spot-check of adopted corpus
+S8-06,Adopted results feed (repo),https://github.com/sassnarep3-star/Own5/blob/main/data/nfl-desk-7e228db8/results_feed_2026_through_wk10.csv,REPOSITORY,2026-11-19T11:16:00Z,150 finals; adopted after 32/32 reconciliation + wk9/wk10 direct-read match
+S8-07,"Venue table (repo, official captures)",https://github.com/sassnarep3-star/Own5/blob/main/nfl-venue-390e13fd/data/venues.csv,REPOSITORY,2026-11-19T11:16:00Z,13 Week-11 venues adopted; per-row official game-centre URLs
+S8-08,Shared task board,https://github.com/sassnarep3-star/Own5/blob/main/COORDINATION.md,REPOSITORY,2026-11-19T11:07:00Z,"session claims, cross-session requests, prior verification records"
+S8-09,Week 11 game centre IND@HOU (venue context),https://www.nfl.com/games/colts-at-texans-2026-reg-11,OFFICIAL,2026-11-19T11:10:00Z,TNF fixture identity; venue string recorded by venue desk as RELIANT STADIUM
+S8-10,NFL terms (capture restrictions),https://www.nfl.com/legal/fantasy-terms,OFFICIAL,2026-11-19T11:07:00Z,context for price/automated-capture policy questions

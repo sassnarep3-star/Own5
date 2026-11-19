@@ -1,0 +1,11 @@
+metric_id,metric,value,n,note,source_file
+L8-01,"Brier (home-win), walk-forward model",0.2427,149,"chronological, prior-games-only inputs; ties excluded",results_2026_through_wk10.csv
+L8-02,"Brier, baseline p=0.5",0.2500,149,coin flip,results_2026_through_wk10.csv
+L8-03,"Brier, baseline expanding home-win rate",0.2600,149,prior-games home-win rate (no lookahead),results_2026_through_wk10.csv
+L8-04,Brier skill vs p=0.5 (1 - model/base),0.0291,149,positive = better than coin,results_2026_through_wk10.csv
+L8-05,Brier skill vs expanding home rate,0.0664,149,"week-cluster bootstrap 95% CI [0.0283, 0.1029], 1000 resamples, seed 8920611",results_2026_through_wk10.csv
+L8-06,"Side MAE (pts), walk-forward",10.5713,149,mean |expected margin - actual margin|,results_2026_through_wk10.csv
+L8-07,Home win rate (official finals),0.4564,149,68 home wins of 149 decisive; 1 ties excluded,results_2026_through_wk10.csv
+L8-08,Mean home margin (HFA estimate),-0.9800,150,"pts, official finals",results_2026_through_wk10.csv
+L8-09,Margin sigma,13.4905,150,"sd of home margins, official finals",results_2026_through_wk10.csv
+L8-10,Total sigma,14.1823,150,"sd of game totals, official finals",results_2026_through_wk10.csv

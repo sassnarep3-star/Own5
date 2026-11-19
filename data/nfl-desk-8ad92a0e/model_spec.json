@@ -1,0 +1,25 @@
+{
+  "games": 13,
+  "hfa_estimate_pts": -0.98,
+  "hfa_n": 150,
+  "inputs_sha256": {
+    "results": "71b29eccf2a0de9f",
+    "schedule": "a594e085065e3cd4",
+    "standings": "f2dd7fcda16db9b9"
+  },
+  "league_scoring_mean": 23.0767,
+  "market_policy": "P-8AD-01: market price columns remain blank until a licensed operator price source is onboarded",
+  "markets_per_game": 3,
+  "model_id": "m8-2026-11-19-walkforward-v1",
+  "shrinkage_k": 8.0,
+  "sigma_fallback": 14.0,
+  "sigma_margin": 13.4905,
+  "sigma_total": 14.1823,
+  "walkforward_brier": 0.2427,
+  "walkforward_n_scored": 149,
+  "walkforward_skill_ci95": [
+    0.0283,
+    0.1029
+  ],
+  "walkforward_skill_vs_home_rate": 0.0664
+}

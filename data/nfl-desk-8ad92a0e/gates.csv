@@ -1,0 +1,13 @@
+gate_id,gate,rule,threshold,status,source_url
+G8-01,Pre-registration,"Strategy text, window and gates committed before evaluation; git hash is the registration",commit exists before kickoff,PASS for registered strategies (this commit),https://github.com/sassnarep3-star/Own5
+G8-02,Sample size,Settled prospective scores >= 100 per strategy before any rank,n>=100,FAIL - 0 settled scores,https://www.nfl.com/standings/league/2026/REG
+G8-03,Proper score,Benchmark-relative Brier skill with game-cluster 95% CI lower bound > 0,CI low > 0,FAIL - no market benchmark; internal skill only,https://www.nfl.com/standings/league/2026/REG
+G8-04,Multiplicity,Holm/Bonferroni correction across the number of trials,adjusted p < 0.05,FAIL - no trials graded,https://www.nfl.com/standings/league/2026/REG
+G8-05,Data split,Chronological train/validation/final-holdout; holdout untouched by design,3 disjoint windows,PARTIAL - walk-forward in 2026 window only,https://www.nfl.com/standings/league/2026/REG
+G8-06,Market gate,Verified operator price at open and close for every graded market,39 open + 39 close captured,FAIL - no price source (F8-01),https://www.nfl.com/standings/league/2026/REG
+G8-07,Demotion gate,Rolling 100-score CI low <= 0 sends a live strategy back to paper,rule frozen,RULE ADOPTED - not triggered (nothing live),https://www.nfl.com/standings/league/2026/REG
+G8-08,Joint-evidence gate,Parlays/prop combos need validated joint probability + operator void/push rules,both available,FAIL - neither available,https://www.nfl.com/standings/league/2026/REG
+G8-09,Control gate,Every leaderboard run includes random and favourites-only controls,2 controls present,PASS - CTRL-01/CTRL-02 registered,https://www.nfl.com/standings/league/2026/REG
+G8-10,Dual-total gate,Two total estimators published until walk-forward decides (n>=100 holdout),gap collapses after decision,OPEN - single estimator published,https://www.nfl.com/standings/league/2026/REG
+G8-11,No-backtest gate,Backtest numbers may never appear on the leaderboard,0 backtest cells on board,PASS - enforced by verify.py,https://www.nfl.com/standings/league/2026/REG
+G8-12,Funding gate,Reward amounts only with a recorded funding decision,funded pool,FAIL - pool unfunded (F8-17),https://github.com/sassnarep3-star/Own5

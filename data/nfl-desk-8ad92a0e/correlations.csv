@@ -1,0 +1,10 @@
+corr_id,var_x,var_y,r,n,ci95_low,ci95_high,method,source_url
+C8-01,PF,W,0.6750,32,0.4268,0.8287,"Pearson r, Fisher-z 95% CI",https://www.nfl.com/standings/league/2026/REG
+C8-02,PA,W,-0.6285,32,-0.8015,-0.3583,"Pearson r, Fisher-z 95% CI",https://www.nfl.com/standings/league/2026/REG
+C8-03,NET,PCT,0.8755,32,0.7583,0.9379,"Pearson r, Fisher-z 95% CI",https://www.nfl.com/standings/league/2026/REG
+C8-04,PF,PA,-0.1483,32,-0.4726,0.2113,"Pearson r, Fisher-z 95% CI",https://www.nfl.com/standings/league/2026/REG
+C8-05,PF/G,W,0.7029,32,0.4692,0.8446,"Pearson r, Fisher-z 95% CI",https://www.nfl.com/standings/league/2026/REG
+C8-06,PA/G,W,-0.6917,32,-0.8382,-0.4520,"Pearson r, Fisher-z 95% CI",https://www.nfl.com/standings/league/2026/REG
+C8-07,NET/G,PCT,0.8824,32,0.7710,0.9415,"Pearson r, Fisher-z 95% CI",https://www.nfl.com/standings/league/2026/REG
+C8-08,PF/G,PA/G,-0.2911,32,-0.5808,0.0641,"Pearson r, Fisher-z 95% CI",https://www.nfl.com/standings/league/2026/REG
+C8-09,away_pts,home_pts,0.0502,150,-0.1109,0.2088,"Pearson r, Fisher-z 95% CI",https://www.nfl.com/scores/2026/reg10

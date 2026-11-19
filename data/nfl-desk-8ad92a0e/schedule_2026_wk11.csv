@@ -1,0 +1,20 @@
+game_id,weekday,date,kickoff_et,network,away,home,neutral_site,bye_club,source_url,read_at_utc
+W11-01,Thursday,2026-11-19,8:15 PM,PRIME,IND,HOU,,,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-19T11:10:00Z
+W11-02,Sunday,2026-11-22,1:00 PM,CBS,MIA,BUF,,,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-19T11:10:00Z
+W11-03,Sunday,2026-11-22,1:00 PM,FOX,BAL,CAR,,,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-19T11:10:00Z
+W11-04,Sunday,2026-11-22,1:00 PM,FOX,NO,CHI,,,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-19T11:10:00Z
+W11-05,Sunday,2026-11-22,1:00 PM,FOX,TEN,DAL,,,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-19T11:10:00Z
+W11-06,Sunday,2026-11-22,1:00 PM,FOX,TB,DET,,,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-19T11:10:00Z
+W11-07,Sunday,2026-11-22,1:00 PM,CBS,AZ,KC,,,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-19T11:10:00Z
+W11-08,Sunday,2026-11-22,1:00 PM,CBS,PIT,PHI,,,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-19T11:10:00Z
+W11-09,Sunday,2026-11-22,4:05 PM,FOX,NYJ,LAC,,,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-19T11:10:00Z
+W11-10,Sunday,2026-11-22,4:25 PM,CBS,JAX,NYG,,,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-19T11:10:00Z
+W11-11,Sunday,2026-11-22,4:25 PM,CBS,LV,DEN,,,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-19T11:10:00Z
+W11-12,Sunday,2026-11-22,8:20 PM,NBC,MIN,SF,MEXICO CITY,,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-19T11:10:00Z
+W11-13,Monday,2026-11-23,8:15 PM,ESPN,CIN,WAS,,,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-19T11:10:00Z
+,Bye,,,,ATL,,,ATL,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-19T11:10:00Z
+,Bye,,,,CLE,,,CLE,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-19T11:10:00Z
+,Bye,,,,GB,,,GB,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-19T11:10:00Z
+,Bye,,,,LA,,,LA,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-19T11:10:00Z
+,Bye,,,,NE,,,NE,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-19T11:10:00Z
+,Bye,,,,SEA,,,SEA,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-19T11:10:00Z

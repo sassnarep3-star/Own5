@@ -1,0 +1,40 @@
+game_id,order,away,home,market,model_fair_line,expected_home_margin_or_total,model_prob_home_or_over,market_line,market_price,difference,inputs_sha256,source_url
+W11-01,1-SIDE,IND,HOU,SIDE,-1.2,1.2,0.5349,,,,ee0ba6fccf54c2ad,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-01,2-TOTAL,IND,HOU,TOTAL,47.7,47.7,0.5000,,,,ee0ba6fccf54c2ad,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-01,3-MONEYLINE,IND,HOU,MONEYLINE,HOME 0.5349 / AWAY 0.4651,HOME 0.5349,0.5349,,,,ee0ba6fccf54c2ad,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-02,1-SIDE,MIA,BUF,SIDE,-3.8,3.8,0.6121,,,,d86a85e1eb754b2e,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-02,2-TOTAL,MIA,BUF,TOTAL,47.0,47.0,0.5000,,,,d86a85e1eb754b2e,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-02,3-MONEYLINE,MIA,BUF,MONEYLINE,HOME 0.6121 / AWAY 0.3879,HOME 0.6121,0.6121,,,,d86a85e1eb754b2e,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-03,1-SIDE,BAL,CAR,SIDE,0.1,-0.1,0.4973,,,,d7a1e351560916c7,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-03,2-TOTAL,BAL,CAR,TOTAL,47.5,47.5,0.5000,,,,d7a1e351560916c7,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-03,3-MONEYLINE,BAL,CAR,MONEYLINE,HOME 0.4973 / AWAY 0.5027,HOME 0.4973,0.4973,,,,d7a1e351560916c7,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-04,1-SIDE,NO,CHI,SIDE,-1.7,1.7,0.5500,,,,174f23a23dd6c829,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-04,2-TOTAL,NO,CHI,TOTAL,47.1,47.1,0.5000,,,,174f23a23dd6c829,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-04,3-MONEYLINE,NO,CHI,MONEYLINE,HOME 0.5500 / AWAY 0.4500,HOME 0.5500,0.5500,,,,174f23a23dd6c829,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-05,1-SIDE,TEN,DAL,SIDE,-1.2,1.2,0.5369,,,,ba52c291b0920f7a,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-05,2-TOTAL,TEN,DAL,TOTAL,48.8,48.8,0.5000,,,,ba52c291b0920f7a,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-05,3-MONEYLINE,TEN,DAL,MONEYLINE,HOME 0.5369 / AWAY 0.4631,HOME 0.5369,0.5369,,,,ba52c291b0920f7a,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-06,1-SIDE,TB,DET,SIDE,-0.0,0.0,0.5006,,,,e10c6f25c88ee70a,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-06,2-TOTAL,TB,DET,TOTAL,46.3,46.3,0.5000,,,,e10c6f25c88ee70a,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-06,3-MONEYLINE,TB,DET,MONEYLINE,HOME 0.5006 / AWAY 0.4994,HOME 0.5006,0.5006,,,,e10c6f25c88ee70a,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-07,1-SIDE,AZ,KC,SIDE,-4.3,4.3,0.6256,,,,0270a8cdc60beb67,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-07,2-TOTAL,AZ,KC,TOTAL,45.8,45.8,0.5000,,,,0270a8cdc60beb67,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-07,3-MONEYLINE,AZ,KC,MONEYLINE,HOME 0.6256 / AWAY 0.3744,HOME 0.6256,0.6256,,,,0270a8cdc60beb67,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-08,1-SIDE,PIT,PHI,SIDE,3.6,-3.6,0.3949,,,,814c535fc9c4d8e5,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-08,2-TOTAL,PIT,PHI,TOTAL,43.7,43.7,0.5000,,,,814c535fc9c4d8e5,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-08,3-MONEYLINE,PIT,PHI,MONEYLINE,HOME 0.3949 / AWAY 0.6051,HOME 0.3949,0.3949,,,,814c535fc9c4d8e5,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-09,1-SIDE,NYJ,LAC,SIDE,2.1,-2.1,0.4379,,,,2c4e3d5434af4143,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-09,2-TOTAL,NYJ,LAC,TOTAL,44.8,44.8,0.5000,,,,2c4e3d5434af4143,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-09,3-MONEYLINE,NYJ,LAC,MONEYLINE,HOME 0.4379 / AWAY 0.5621,HOME 0.4379,0.4379,,,,2c4e3d5434af4143,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-10,1-SIDE,JAX,NYG,SIDE,4.5,-4.5,0.3707,,,,b9acf29566976f5d,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-10,2-TOTAL,JAX,NYG,TOTAL,45.6,45.6,0.5000,,,,b9acf29566976f5d,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-10,3-MONEYLINE,JAX,NYG,MONEYLINE,HOME 0.3707 / AWAY 0.6293,HOME 0.3707,0.3707,,,,b9acf29566976f5d,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-11,1-SIDE,LV,DEN,SIDE,-0.4,0.4,0.5127,,,,d99440948a51db42,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-11,2-TOTAL,LV,DEN,TOTAL,47.4,47.4,0.5000,,,,d99440948a51db42,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-11,3-MONEYLINE,LV,DEN,MONEYLINE,HOME 0.5127 / AWAY 0.4873,HOME 0.5127,0.5127,,,,d99440948a51db42,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-12,1-SIDE,MIN,SF,SIDE,-0.0,0.0,0.5015,,,,78a16ee4bf42007d,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-12,2-TOTAL,MIN,SF,TOTAL,44.6,44.6,0.5000,,,,78a16ee4bf42007d,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-12,3-MONEYLINE,MIN,SF,MONEYLINE,HOME 0.5015 / AWAY 0.4985,HOME 0.5015,0.5015,,,,78a16ee4bf42007d,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-13,1-SIDE,CIN,WAS,SIDE,4.3,-4.3,0.3757,,,,7108e88b0a3168a7,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-13,2-TOTAL,CIN,WAS,TOTAL,47.9,47.9,0.5000,,,,7108e88b0a3168a7,https://www.nfl.com/schedules/2026/by-week/week-11
+W11-13,3-MONEYLINE,CIN,WAS,MONEYLINE,HOME 0.3757 / AWAY 0.6243,HOME 0.3757,0.3757,,,,7108e88b0a3168a7,https://www.nfl.com/schedules/2026/by-week/week-11
