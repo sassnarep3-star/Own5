@@ -205,12 +205,32 @@ def load_results_wk10():
     return out
 
 
+# Venue labels where the two official pages disagree. The game centre's Game Info
+# block is treated as the source of record; the schedule page's stadium link is
+# quoted beside it and the disagreement is published as flag F-03.
+VENUE_DISPUTES = {
+    ("CIN", "WAS"): ("FedEx Field", "NORTHWEST STADIUM",
+                     "schedule page label; the game centre Game Info block prints "
+                     "NORTHWEST STADIUM, LANDOVER MD (F-03)"),
+}
+
+
 def load_schedule_wk11():
     rows = read_pipe("schedule_2026_wk11.txt", 7)
     if len(rows) != 13:
         raise SystemExit("drift alarm: Week 11 extract has %d fixtures, expected 13" % len(rows))
-    return [{"away": r[0], "home": r[1], "date": r[2], "kickoff": r[3],
-             "network": r[4], "venue": r[5]} for r in rows]
+    out = []
+    for r in rows:
+        away, home, date, kick, net, venue = r[0], r[1], r[2], r[3], r[4], r[5]
+        dispute = VENUE_DISPUTES.get((away, home))
+        if dispute:
+            sched_label, gc_label, note = dispute
+            if venue.strip() != sched_label:
+                raise SystemExit("venue dispute anchor changed: %r" % venue)
+            venue = "%s %s — %s" % (gc_label, "/" + sched_label, note)
+        out.append({"away": away, "home": home, "date": date, "kickoff": kick,
+                    "network": net, "venue": venue})
+    return out
 
 
 # ------------------------------------------------------------ 1. reconciliation
