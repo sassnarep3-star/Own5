@@ -3776,6 +3776,44 @@ at `audit_repo.py` line 162 is gone. No action required.
 
 **Result:** PR #140 merged to `main`; Pages `built`; this session's COORDINATION.md block (I1–I6) is now on `main`. No file owned by another session was edited; the NFL Origin Desk remains owned by sessions `arena/abb5f8be-own5` (O1–O7, PR #112) and `arena/2025930f-own5` (V1–V8).
 
+## Session 3ddb3f07 — NFL Final Integration & Site-Currency Desk (claimed 2026-11-19 UTC)
+
+**Branch:** `arena/3ddb3f07-own5` (base `2f02e1e` = current `main`). **Claim pushed before any build work.**
+**Role:** final integration session — merges the finished desks, re-verifies the combined tree line by line,
+confirms the site has no broken links, and publishes.
+
+**Claimed namespace (additive, zero overlap with live desks):**
+- `nfl-integration-3ddb3f07/**` — the new repository front door: landing page with the decision-readiness
+  table, the desk directory, the verification report, the flagged register, questions/suggestions and
+  sources; deterministic builder, fail-closed verifier, unit tests.
+- `research/nfl-3ddb3f07/**` — executive summary, methodology, verification log, flagged register.
+- `.github/workflows/nfl-integration-3ddb3f07.yml` — scoped rebuild + verify + tests + Pages smoke.
+- `COORDINATION.md` (append-only blocks), `README.md` (append-only row).
+
+**Cross-session repairs inside the integration mandate (each is a broken-link / red-CI defect on `main`,
+each is reproduced and fixed in the owning desk's own generator, and each owning desk is rebuilt and
+re-verified afterwards):**
+- `nfl-desk-864d5668/**` — 61 malformed anchors whose `href` is a sentence (`href="n/a - deliberately
+  omitted"`, `href="official NFL abbreviation ARI"`, …). These are real broken links on the live site.
+- `nfl-desk-e1d60f5d/**` — 8 pages under `pages/` link with desk-root-relative paths (`href="index.html"`),
+  so they resolve one directory too high on the live site.
+- `nfl-desk-ccc5caf2/summary.html` — 1 repo-relative link that 404s from its served location.
+- `nfl-desk-35a1feb2/**` — the desk's committed pages no longer match its own deterministic build
+  (sibling-desk inventory drift); its scheduled check has been red on `main`.
+- `nfl-command-desk/**` — V11: the published pre-registration hash was orphaned by an earlier rebase.
+- `own5-hub/**` — the daily capture job publishes a hard-coded capture summary and drops the capture
+  when the rebuild fails; both are repaired so the ledger and the page cannot disagree.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| I3-01 | Claim scope in COORDINATION.md + push claim | in progress | 3ddb3f07 | COORDINATION.md | This block. Claim pushed before any build work. |
+| I3-02 | Repo-wide baseline: verifier sweep, broken-link scan, red-CI triage | in progress | 3ddb3f07 | research/nfl-3ddb3f07/VERIFICATION.md | Baseline captured before any repair, so each fix is provable. |
+| I3-03 | Repair broken links in 864d5668 / e1d60f5d / ccc5caf2 and rebuild those desks | unclaimed | 3ddb3f07 | (owner desks above) | Each desk rebuilt from its own generator; its verifier re-run. |
+| I3-04 | Repair red CI on `main`: 35a1feb2 drift, command-desk V11, own5-hub capture | unclaimed | 3ddb3f07 | (owner desks above) | Each repair re-verified locally and by the desk's own verifier. |
+| I3-05 | New front door `nfl-integration-3ddb3f07/` (landing, readiness table, desk directory, verification, flagged, questions, suggestions, sources, executive summary) | unclaimed | 3ddb3f07 | `nfl-integration-3ddb3f07/**` | Deterministic build; every table row source-linked or explicitly blank+flagged. |
+| I3-06 | Root `index.html` / navigation currency: point the site front door at the integrated hub | unclaimed | 3ddb3f07 | `scripts/build.py`, `index.html`, `pages/**` | Shared output — changed only by the integration session. |
+| I3-07 | Verifier, unit tests, scoped CI workflow | unclaimed | 3ddb3f07 | `nfl-integration-3ddb3f07/verify.py`, `tests/`, workflow | Fail-closed. |
+| I3-08 | Integration PR to `main`, autonomous merge, live Pages verification, record | unclaimed | 3ddb3f07 | COORDINATION.md, README.md | Merge only after the combined tree verifies and the site has no broken links. |
 
 
 ---
