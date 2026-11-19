@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Executive summary · Own5 NFL front door</title>
+<meta name="description" content="Own5 NFL line-origination front door: one row per requirement, one source per row, no strategy certified.">
+<link rel="stylesheet" href="style.css"></head><body>
+<aside class="side"><a class="brand" href="index.html"><i>O5</i><span>OWN5<small>NFL FRONT DOOR</small></span></a>
+<nav><span class="nav-cap">Hub</span><a href="index.html"><b>01</b>Overview</a><a href="executive-summary.html" class="on" aria-current="page"><b>02</b>Executive summary</a><span class="nav-cap">Evidence</span><a href="requirements.html"><b>03</b>Requirements &amp; readiness</a><a href="gates.html"><b>04</b>Validation gates</a><span class="nav-cap">Analysis</span><a href="lines.html"><b>05</b>Originated lines</a><a href="availability.html"><b>06</b>Injuries &amp; depth</a><a href="correlations.html"><b>07</b>Correlations</a><a href="leaderboard.html"><b>08</b>Leaderboard &amp; strategies</a><a href="luck.html"><b>09</b>Removal of luck</a><span class="nav-cap">Registers</span><a href="questions.html"><b>10</b>Questions</a><a href="suggestions.html"><b>11</b>Suggestions</a><a href="flagged.html"><b>12</b>Flagged for Review</a><a href="sources.html"><b>13</b>Official sources</a><span class="nav-cap">Repository</span><a href="desks.html"><b>14</b>Desk directory</a><a href="verification.html"><b>15</b>Verification report</a></nav>
+<p>Every value is read from an official publisher on a dated capture, or it is blank and
+flagged. Nothing here is a betting recommendation.</p></aside>
+<main><header class="top"><div><span class="eyebrow">NFL · INTEGRATION REVIEW</span>
+<h1>Executive summary</h1><p class="sub">What is established, what is computed, what is missing, and what must be decided.</p></div>
+<div class="stamp">Built 2026-11-19<br>Paper research</div></header>
+
+<section class="panel prose">
+<h2>1 · Where the project stands</h2>
+<p>The repository originates NFL lines, tracks official availability, computes correlations
+from official inputs only and ranks strategies behind fail-closed gates. It has
+<strong>78 requirements</strong> in the canonical register:
+<strong>46 met</strong>, <strong>21 partial</strong>,
+<strong>9 not met</strong>. No strategy is certified.</p>
+<p>The corpus holds <strong>145 settled games</strong> read from the official schedule
+pages. The desk that owns them reconciles all 32 clubs against the official standings.</p>
+</section>
+
+<section class="panel prose">
+<h2>2 · What is published, and what is deliberately blank</h2>
+<ul>
+<li><strong>Origination.</strong> 39 markets are originated in the required order —
+side first, then the total, then the moneyline — each with the model's fair line, the
+market line and the difference in three separate columns. The difference is published
+against an aggregator reference, which is labelled as such and is not an operator quote.</li>
+<li><strong>Prices.</strong> 0 of 195 price snapshots are verified. No
+operator price is admitted, so market residual, closing-line value and real-price ROI are
+blank by policy (FLAG-P1, question Q-01, suggestion SG-01).</li>
+<li><strong>Depth.</strong> 11 of 12 club depth charts were parsed
+from the clubs' own published pages, with the raw text and its hash kept. The depth of the
+replacement is recorded per replacement: 2nd string (14).</li>
+<li><strong>Correlations.</strong> 5 coefficients are published from
+official inputs, each with its sample size and definition; the pairs that would need a
+non-official input are withheld and listed as withheld.</li>
+</ul>
+</section>
+
+<section class="panel prose">
+<h2>3 · Removing luck from the ranking</h2>
+<p>2 prospective panels are published with the observed hit rate, the interval
+implied by the model's own probabilities, the Brier score against a coin flip and the
+cluster-bootstrapped skill interval. <strong>7 of 7</strong>
+strategy families are on paper. 6 of 12 gates are met across the
+catalogue; a strategy needs every one of them, plus a price, before it can be ranked.</p>
+<p>Control baselines (random picks, favourites only) are graded on the same games, so a
+lucky staking run cannot be mistaken for a good signal.</p>
+</section>
+
+<section class="panel prose">
+<h2>4 · What blocks a decision today</h2>
+<ul>
+<li><strong>No admitted price source</strong> — blocks market residual, closing-line
+value, ROI and every price-relative score.</li>
+<li><strong>Availability is a snapshot, not a series</strong> — the injury report is read
+and captured with a clock time and a hash, but a full Wednesday-to-kickoff series for
+every club is not yet retained.</li>
+<li><strong>Depth is not universal</strong> — the clubs whose depth chart is an image
+cannot be parsed, and their rows are blank rather than guessed.</li>
+<li><strong>One season</strong> — holdout and ablation studies need more history than a
+single 2026 season.</li>
+</ul>
+<p>All 34 flagged items (9 blocking) are published on
+<a href="flagged.html">Flagged for Review</a> with their sources; the open questions are
+on <a href="questions.html">Questions</a> and the reviewable options are on
+<a href="suggestions.html">Suggestions</a>.</p>
+</section>
+
+<section class="panel prose">
+<h2>5 · How this site is built</h2>
+<p>Every table is read at build time from the desk that owns it, and the file that was read
+is recorded with its sha256 on the <a href="verification.html">verification report</a>.
+Every row carries an official source link or an explicit unverified marker; a value that
+cannot be confirmed is printed blank. The repository is re-verified end to end on every
+build: the <a href="desks.html">desk directory</a> lists every desk, and each desk's own
+verifier is re-run and its result published.</p>
+</section>
+
+<footer>Own5 NFL front door · built 2026-11-19 from the repository's verified tables ·
+not affiliated with the NFL · blank cells are unverified, never zero ·
+<a href="https://github.com/sassnarep3-star/Own5/blob/main/COORDINATION.md">coordination log</a> ·
+<a href="https://github.com/sassnarep3-star/Own5/blob/main/README.md">repository</a></footer>
+</main></body></html>
