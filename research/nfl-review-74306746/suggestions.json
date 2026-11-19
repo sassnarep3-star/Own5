@@ -1,0 +1,159 @@
+[
+  {
+    "id": "S-01",
+    "title": "Reconcile operator-price provenance before using any market comparison",
+    "priority": "BLOCKING",
+    "problem": "The engine holds 78 close-labelled FanDuel rows while the market desk has 0/78 operator open/close rows populated. Hashes reproduce the committed text files, but no operator page was fetched here and no opening quotes exist in the engine register.",
+    "options": [
+      {"label": "A — Establish permitted first-party capture", "text": "The owners document source, rights, jurisdiction, capture method, raw page bytes, timestamp and the exact open/close convention for each quote."},
+      {"label": "B — Use a licensed feed", "text": "Replace the unverified capture claim with a licensed feed and durable, timestamped opening/closing snapshots."},
+      {"label": "C — Fail closed (recommended now)", "text": "Keep market line, residual, CLV and realized ROI blank/blocked until A or B is supported."}
+    ],
+    "recommendation": "C now; test A/B within the owners' scopes. Do not silently delete or relabel the existing rows.",
+    "decision": "Not made by this review; both price owners need to reconcile the records.",
+    "would_change_our_mind_up": "Every required market has an independently auditable permitted open and close with source, time, region, raw evidence and settlement terms; both stores agree.",
+    "would_change_our_mind_down": "A source/terms audit shows the recorded values cannot be reproduced or retained; keep them out of any price-dependent claim.",
+    "official_url": "https://www.nfl.com/schedules/2026/by-week/week-10",
+    "official_label": "NFL Week 10 schedule (fixture context only)",
+    "evidence": [
+      {"path": "nfl-engine-39086ec8/data/price_snapshots.csv", "label": "Engine price rows"},
+      {"path": "nfl-market-desk/data/price_snapshots.csv", "label": "Market price rows"},
+      {"path": "nfl-market-desk/data/price_policy.csv", "label": "Market price policy"}
+    ],
+    "status": "AWAITING OWNER REVIEW — no changes implemented"
+  },
+  {
+    "id": "S-02",
+    "title": "Make the roster readiness claim match the roster register",
+    "priority": "BLOCKING",
+    "problem": "R-13 says 32/32 roster captures, while its cited sweep contains one populated roster count/URL and 31 blank rows.",
+    "options": [
+      {"label": "A — Complete the sweep", "text": "Capture all 32 official roster/reserve records with row-level URL, UTC time, counts and explicit non-capture reasons."},
+      {"label": "B — Narrow the claim (recommended if data are not available)", "text": "Keep the 32 club index, but mark the 31 uncaptured roster inputs unknown and leave roster-derived availability fields blank."}
+    ],
+    "recommendation": "Do not trust the 32/32 statement until it reconciles mechanically to populated source rows.",
+    "decision": "Market-desk owner decision; not applied here.",
+    "would_change_our_mind_up": "A row-count test proves 32/32 have valid official source URLs, capture times and a nonblank, scoped capture result.",
+    "would_change_our_mind_down": "A source is unavailable or image-only; preserve the gap as unknown rather than infer a roster/depth value.",
+    "official_url": "https://www.nfl.com/teams/new-england-patriots/roster",
+    "official_label": "Patriots roster reference cited in the sweep (not re-fetched)",
+    "evidence": [
+      {"path": "nfl-market-desk/data/decision_readiness.csv", "label": "R-13 readiness row"},
+      {"path": "nfl-market-desk/data/roster_sweep_32.csv", "label": "Roster sweep"}
+    ],
+    "status": "AWAITING OWNER REVIEW — no changes implemented"
+  },
+  {
+    "id": "S-03",
+    "title": "Pin fixture-to-origination coverage in the command desk",
+    "priority": "BLOCKING",
+    "problem": "The command desk fixture file has 13 games but its Week 11 origination file has 12 and omits Arizona at Kansas City.",
+    "options": [
+      {"label": "A — Add a sourced origination row", "text": "If the owner intends full-slate coverage, add the missing game's model inputs, fair line/probability and blank+flagged market fields."},
+      {"label": "B — Explicitly scope the output", "text": "If the desk intentionally excludes a game, publish the reason and mark that fixture out-of-scope rather than implying full coverage."}
+    ],
+    "recommendation": "Whichever scope is chosen, add a verifier that reconciles all non-bye fixtures to origination rows.",
+    "decision": "Command-desk owner decision; no owner file edited.",
+    "would_change_our_mind_up": "A row-level comparison finds all 13 fixtures represented or explicitly excluded with a sourced reason.",
+    "would_change_our_mind_down": "A fixture cannot be sourced or modeled under the declared scope; keep its lines blank and flagged.",
+    "official_url": "https://www.nfl.com/games/cardinals-at-chiefs-2026-reg-11",
+    "official_label": "NFL Cardinals at Chiefs Game Center (not re-fetched)",
+    "evidence": [
+      {"path": "nfl-command-desk/data/fixtures_wk11.csv", "label": "Command fixture set"},
+      {"path": "nfl-command-desk/data/origination_wk11.csv", "label": "Command origination"},
+      {"path": "nfl-desk-35fc3437/data/lines_originated_wk11.csv", "label": "Cross-desk 13-row comparison"}
+    ],
+    "status": "AWAITING OWNER REVIEW — no changes implemented"
+  },
+  {
+    "id": "S-04",
+    "title": "Keep actual lineup features behind per-game official evidence",
+    "priority": "BLOCKING",
+    "problem": "Game Book URLs exist for a Week 10 slate, but the inspected parsed starters/inactives cover one game. A separate nflverse 2026 snap-count aggregate is third-party and covers regular-season weeks 1–9 only; the market desk's 0-row statement is scoped to that separate namespace.",
+    "options": [
+      {"label": "A — Parse official Game Books", "text": "For each modeled game, record actual starter and game-day status from the official PDF, with source URL and read time; add official snap counts only when sourced."},
+      {"label": "B — Keep personnel features disabled", "text": "If full official coverage is not available or permitted, keep starter/replacement/depth effects blank and block the feature."}
+    ],
+    "recommendation": "B until A is complete. Use published depth order only as a labeled source, never infer from jersey number, experience or salary.",
+    "decision": "Awaiting owning desks' scope reconciliation.",
+    "would_change_our_mind_up": "Game-level coverage and source checks pass for every fixture in the modeled window; actual status and snap inputs are kept distinct from depth-chart rank.",
+    "would_change_our_mind_down": "Any game lacks an official usable record or source rights; leave that game's value blank and exclude the dependent feature.",
+    "official_url": "https://static.www.nfl.com/image/upload/v1794829722/gamecenter/ab789e15-4feb-11f1-abca-2c54536568a9.pdf",
+    "official_label": "JAX–TEN NFL Game Book reference (not fetched)",
+    "evidence": [
+      {"path": "data/nfl-desk-f2e20e96/week10_results.csv", "label": "Game Book URL manifest"},
+      {"path": "data/nfl-desk-f2e20e96/starters_jax_ten.csv", "label": "JAX–TEN starters"},
+      {"path": "nfl-market-desk/data/decision_readiness.csv", "label": "Market desk gamebook gate"},
+      {"path": "data/decision-desk/raw/snap_counts_2026.csv.gz", "label": "Third-party weeks 1–9 snap counts"},
+      {"path": "data/decision-desk/raw/provenance.json", "label": "Recorded aggregation provenance"}
+    ],
+    "status": "AWAITING OWNER REVIEW — no changes implemented"
+  },
+  {
+    "id": "S-05",
+    "title": "Normalize standings, results and correlations to a single dated snapshot",
+    "priority": "REVIEW",
+    "problem": "Results counts and official-input correlation values vary among desks that read the NFL standings/schedule at different times.",
+    "options": [
+      {"label": "A — Maintain dated immutable snapshots (recommended)", "text": "Keep each read immutable; publish its capture time, hash, exact rows and linked formula inputs, then compare only aligned snapshots."},
+      {"label": "B — Refresh one canonical snapshot", "text": "Choose a source-owning desk and refresh its dated snapshot, then regenerate derived correlations and comparisons from that copy."}
+    ],
+    "recommendation": "Do not call date-skewed values a data defect until recomputed from the same input snapshot and definitions.",
+    "decision": "No shared snapshot selected by this review.",
+    "would_change_our_mind_up": "All 32 teams and relevant final games reconcile on one timestamped snapshot with identical formulas and n definitions.",
+    "would_change_our_mind_down": "The captured source cannot be recovered for a past window; keep the historical rows distinct and mark the comparison unknown.",
+    "official_url": "https://www.nfl.com/standings/league/2026/REG",
+    "official_label": "NFL standings input URL (not re-fetched)",
+    "evidence": [
+      {"path": "nfl-command-desk/data/standings.csv", "label": "Nov 18 standings capture"},
+      {"path": "nfl-market-desk/data/standings_official.csv", "label": "Nov 15 standings capture"},
+      {"path": "nfl-engine-39086ec8/data/correlations_official.csv", "label": "Nov 14 engine correlations"},
+      {"path": "nfl-desk-35fc3437/data/correlations.csv", "label": "Nov 18 35fc3437 correlations"}
+    ],
+    "status": "AWAITING OWNER REVIEW — no changes implemented"
+  },
+  {
+    "id": "S-06",
+    "title": "Preserve paper-only status until each registered strategy clears every gate",
+    "priority": "BLOCKING",
+    "problem": "The inspected command and market leaderboards show zero certified strategies; price provenance, sample/uncertainty and owner/terms questions remain open.",
+    "options": [
+      {"label": "A — Continue paper/shadow evaluation (recommended)", "text": "Keep prospective forecasts, signal scores and notional staking separated; block promotion until every pre-registered gate passes."},
+      {"label": "B — Revisit only after evidence is complete", "text": "Require sourced market opens/closes, results, proper-score improvement with uncertainty/multiplicity control, minimum n, demotion rules, and any legal/owner decisions before certification."}
+    ],
+    "recommendation": "A. Do not infer certification from hit rate, displayed ROI, a high rank or a passing internal data verifier.",
+    "decision": "No strategy promotion authorized by this review.",
+    "would_change_our_mind_up": "The registered prospective/holdout rule passes its predeclared gates on source-verified inputs and remains stable under the published demotion and control tests.",
+    "would_change_our_mind_down": "Any gate fails, inputs drift, or the price/settlement source cannot be validated; demote or retain PAPER.",
+    "official_url": "https://www.nfl.com/standings/league/2026/REG",
+    "official_label": "NFL standings (recorded input context only; not model validation)",
+    "evidence": [
+      {"path": "nfl-command-desk/data/leaderboard.csv", "label": "Command leaderboard"},
+      {"path": "nfl-market-desk/data/leaderboard.csv", "label": "Market leaderboard"},
+      {"path": "nfl-command-desk/data/gates.csv", "label": "Command gates"},
+      {"path": "nfl-market-desk/data/gates.csv", "label": "Market gates"}
+    ],
+    "status": "AWAITING OWNER REVIEW — no changes implemented"
+  },
+  {
+    "id": "S-07",
+    "title": "Keep source-rights and reward questions separate from model evidence",
+    "priority": "REVIEW",
+    "problem": "A prior NFL terms interpretation is in the repository, but this review did not read the terms page or operator terms. Funded rewards, jurisdictions, eligibility and risk limits are owner/legal decisions.",
+    "options": [
+      {"label": "A — Obtain documented terms and jurisdiction review", "text": "Record source-specific storage/display permissions and have the owner determine eligible jurisdictions, risk limits and any reward charter."},
+      {"label": "B — Leave affected activity disabled (recommended until A)", "text": "Do not automate restricted captures, publish sensitive rows, issue rewards or represent the model as live until required decisions are documented."}
+    ],
+    "recommendation": "B until A is completed; this review offers no legal interpretation.",
+    "decision": "Not made; requires owner and appropriate legal review.",
+    "would_change_our_mind_up": "Written source permissions and owner decisions resolve the exact use, audience, location and funding questions.",
+    "would_change_our_mind_down": "Terms prohibit the use or eligibility remains unresolved; do not collect, display or issue rewards for that activity.",
+    "official_url": "https://www.nfl.com/legal/terms",
+    "official_label": "NFL terms URL cited by prior desk (not read in this review)",
+    "evidence": [
+      {"path": "nfl-desk-b8227c47/", "label": "Prior terms/capture review"},
+      {"path": "nfl-readiness-cba42531/data/questions.csv", "label": "Owner/legal question register"}
+    ],
+    "status": "AWAITING OWNER REVIEW — no changes implemented"
+  }
+]

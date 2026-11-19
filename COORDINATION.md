@@ -4022,3 +4022,40 @@ NYG/WAS PCT because it used W/G — the official page counts ties as half-wins; 
 
 **Follow-up:** record-only PR #150 carries this completion record (K-082 -> MET, F6-21 -> resolved, honest source-link labels).
 | Follow-up 3 | [#149](https://github.com/sassnarep3-star/Own5/pull/149) merged 2026-11-19, merge commit `f039d08`; Pages **built**. Venue cell now shows both official labels. Rebased onto `bfa7b3d` (PR #146, session 6e13b9ff) and later onto `21beb57` (PR #150); COORDINATION.md append conflicts resolved **keeping both sides** — sessions 6e13b9ff and 188c3719 blocks are intact. |
+
+---
+
+## Session 74306746 — NFL repository verification & decision-desk integration review (claimed 2026-11-19 UTC)
+
+Session ID `74306746`, current branch `arena/74306746-own5`, based on `2f02e1e7975ee61780b39e1ef9bc83591ccb55e2` (`main`). This is an additive, independent review of the already-published NFL decision desks; it does not re-enter or alter another session's data/site scope.
+
+**Claimed scope (only these files):**
+- `nfl-review-74306746/**` — compact GitHub Pages review/entry page; cross-links to the existing canonical desk(s), reports only reproducible repository checks, and flags anything not freshly verifiable.
+- `research/nfl-review-74306746/**` — executive summary, verification log, question/suggestion handoff and source limitations.
+- `.github/workflows/nfl-review-74306746.yml` — scoped deterministic build, verification and tests.
+- `COORDINATION.md` — append-only claim and completion records.
+- `README.md` — one additive row to expose this integration review after its checks pass.
+
+**Read-only:** all existing `nfl-*`, `own5-hub/`, `repo-review/`, root, `data/`, `scripts/`, `tools/`, `tests/`, existing workflows, and all other session namespaces. Any defect in those files will be logged as a cross-session request; no other owner's files will be changed.
+
+**Purpose:** do a current-checkout audit of the existing NFL line-originator experience instead of creating another competing model/data desk. Re-run its verifiers/tests, inventory the exact official-source coverage and blockers already in the repository, provide one simple navigation/review page, and distinguish verified source facts from repo-derived checks, historical captures, and unknowns. No new NFL value will be filled from inference or an unverified source.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|---|---|---|---|---|---|
+| A743-01 | Claim scope in this shared board | in progress | 74306746 | `COORDINATION.md` | Claim commit is pushed before review work. |
+| A743-02 | Re-run canonical desk checks; audit provenance, requirements, questions, suggestions and known gaps without editing their data | unclaimed | 74306746 | `research/nfl-review-74306746/**` | Report exact commands/results; distinguish shallow-history/environment failures from data failures. |
+| A743-03 | Publish a compact review/entry page with categories, official-source links, and Flagged for Review | unclaimed | 74306746 | `nfl-review-74306746/**` | Existing desks remain canonical; do not duplicate raw tables. |
+| A743-04 | Deterministic build, fail-closed verifier, unit tests, scoped CI | unclaimed | 74306746 | `nfl-review-74306746/**`, `.github/workflows/nfl-review-74306746.yml` | Verify only claims this review can reproduce. |
+| A743-05 | Final integration, README entry, PR, merge and Pages verification | unclaimed | 74306746 | `COORDINATION.md`, `README.md` | Only after local checks pass; no changes to shared page generators/navigation. |
+
+**Cross-session requests:** none at claim time. Findings that require edits outside this scope will be logged here for the owning session.
+
+### Session 74306746 — local completion record (2026-11-19 UTC)
+
+- A743-01 through A743-04 are complete on `arena/74306746-own5`; the original scope claim remains at commit `239cebb0864d52791ddf8517dfd2db0093b58805`. The README now has an additive entry for the review. The generated site contains six static pages, with its registers, builder, verifier, nine unit tests and scoped workflow in the claimed paths.
+- Final local review checks: `build_site.py` built six pages; `verify.py` passed with 20 cited table rows, 10 source groups, 10 readiness rows, 8 questions, 7 suggestions and 8 flags; all 9 review-package tests passed; `git diff --check` passed.
+- Re-ran the seven selected canonical verifier/test pairs listed in the scoped workflow: command desk 50 verifier checks + 26 tests; market desk 10 checks + 27 tests; engine 1,215 checks + 68 tests; 35fc3437 verifier + 9 tests; venue verifier + 12 tests; 38430fe3 verifier + 7 tests; 6cbf25fa 543 checks + 11 tests. All passed. Existing test `ResourceWarning`s are recorded in `research/nfl-review-74306746/verification-log.md`.
+- The review preserves the Week 10 distinction: 14 Game Book URL fields, but only JAX–TEN has parsed starter (44) and inactive (12) rows. The repository's separate nflverse aggregator file has 12,693 snap rows for 136 games / 32 clubs through regular-season Week 9 only (provenance dated 2026-11-12); it is not Week 10/11 direct NFL Game Book extraction. The market desk's own zero-inactive/zero-snap count remains namespace-scoped. All of these values were read locally; no external pages were fetched.
+- `origin/main` advanced beyond the review's starting snapshot while this session was in progress. This work remains pinned to `2f02e1e7975ee61780b39e1ef9bc83591ccb55e2`; subsequent main commits and desks are outside this report's evidence scope. The site banner and registers state this boundary explicitly.
+- The review is additive/read-only. No owner-desk data, site, source or workflow was changed. The independent review does not resolve the operator-price provenance conflict, the roster claim discrepancy, the command-desk AZ–KC coverage gap, legal questions, or strategy certification; strategies remain PAPER/shadow.
+- This record documents local completion only. PR/merge and GitHub Pages publication verification remain the final integration step for A743-05; no live deployment is claimed here.
