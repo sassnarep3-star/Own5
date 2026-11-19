@@ -4059,3 +4059,52 @@ Session ID `74306746`, current branch `arena/74306746-own5`, based on `2f02e1e79
 - `origin/main` advanced beyond the review's starting snapshot while this session was in progress. This work remains pinned to `2f02e1e7975ee61780b39e1ef9bc83591ccb55e2`; subsequent main commits and desks are outside this report's evidence scope. The site banner and registers state this boundary explicitly.
 - The review is additive/read-only. No owner-desk data, site, source or workflow was changed. The independent review does not resolve the operator-price provenance conflict, the roster claim discrepancy, the command-desk AZ–KC coverage gap, legal questions, or strategy certification; strategies remain PAPER/shadow.
 - This record documents local completion only. PR/merge and GitHub Pages publication verification remain the final integration step for A743-05; no live deployment is claimed here.
+## Session d6c404d4 — NFL Verified Line Desk v3 (claimed 2026-11-19T06:5xZ)
+
+Session ID `d6c404d4`, branch `arena/d6c404d4-own5` (base `2f02e1e` = current `main`).
+Claim pushed **before** any build work.
+
+**Why this session exists.** The brief requires: originate our own lines (side → total → moneyline) with
+fair/market/difference as separate columns; a price-snapshot store; a verified results feed; a strategy
+leaderboard ranked by proper scores with luck removed, signal split from staking, and a demotion gate;
+injury/depth tracking from official sources only; a questions/suggestions register; an executive summary;
+and a live, table-first site. Prior desks each implemented part of that. This session implements it in one
+new additive namespace with **real computed numbers** from committed, official-verified inputs, plus a fresh
+official read on 2026-11-19, and publishes a **line-by-line verification record**.
+
+**Claimed scope (strictly additive; no other namespace is edited):**
+- `nfl-line-audit/**` (site: deterministic stdlib build, fail-closed verifier, unit tests)
+- `research/nfl-d6c404d4/**` (executive summary, method, verification log, flagged register)
+- `.github/workflows/nfl-line-audit.yml` (scoped rebuild + verify + tests)
+- Append-only block in `COORDINATION.md`; one additive row in `README.md`
+
+**Read-only:** every other desk/namespace (`nfl-*`, `nba-*`, `own5-hub`, `repo-review`, `docs/`, root
+`index.html`, `pages/**`, `assets/**`, `data/**` outside my namespace, `scripts/**`, `tools/**`, all existing
+workflows). Existing defects owned by other sessions are reported here, not edited (see cross-session list).
+
+**No duplicate work:** PR #136 (`arena/47e3185b-own5`, availability graph) is open and unmerged; this session
+does not build an availability-graph desk, does not touch its files, and treats its claims as unverified
+third-party-to-me until they appear on `main`. This session's availability work is limited to what it reads
+and hashes itself today.
+
+| ID | Task | Status | Owner | Files | Notes |
+|----|------|--------|-------|-------|-------|
+| L1 | Claim scope + push claim | done | d6c404d4 | COORDINATION.md | This block. |
+| L2 | Fresh official read (2026-11-19): standings, week results, schedule, injury report | in progress | d6c404d4 | research/nfl-d6c404d4/verification-log.md, nfl-line-audit/data/*.csv | Every row keeps its read timestamp; unconfirmed values stay blank + flagged. |
+| L3 | Verified results corpus: 136-game committed log re-checked + current week finals, reconciled 32/32 to the official standings | in progress | d6c404d4 | nfl-line-audit/data/corpus*.csv | Reconciliation printed, not asserted. |
+| L4 | Origination: opponent-aware ratings → side, then total, then moneyline; fair/market/residual separate; probability + inputs hash per row | in progress | d6c404d4 | nfl-line-audit/data/origination.csv, price_snapshots.csv | Market columns blank + flagged unless an official price source exists. |
+| L5 | Pre-registration + backtest on the corpus; proper scores, clustered CI, multiplicity; signal vs staking split; demotion gate | in progress | d6c404d4 | nfl-line-audit/data/{preregistration,leaderboard,backtest,luck}.csv | No backtest number may appear on the leaderboard (rule enforced by verifier). |
+| L6 | Correlations from officially sourced numbers only, n published | in progress | d6c404d4 | nfl-line-audit/data/correlations.csv | Recomputed from today's standings read. |
+| L7 | Availability: stamped official injury reads + deltas vs the 2026-11-18 captures; depth coverage register from official club pages; no jersey-order inference | in progress | d6c404d4 | nfl-line-audit/data/availability*.csv | Unread clubs listed as NOT READ, not inferred. |
+| L8 | Requirements ledger (one row per brief line → gate → number to clear → observed), questions, suggestions, research register with two-sided change-our-mind | in progress | d6c404d4 | nfl-line-audit/data/{requirements,questions,suggestions,research}.csv | Decision columns blank for the owner; nothing auto-approved. |
+| L9 | Site: dashboard landing + category pages, table-first, mobile-clean; Flagged for Review; executive summary | in progress | d6c404d4 | nfl-line-audit/** | Deterministic build, no JS required for content. |
+| L10 | Fail-closed verifier + unit tests + scoped CI | in progress | d6c404d4 | nfl-line-audit/verify.py, tests/**, .github/workflows/nfl-line-audit.yml | Negative controls: corrupted data must fail. |
+| L11 | PR to main, autonomous merge, Pages deploy verification, record | in progress | d6c404d4 | COORDINATION.md, README.md | Merge only after verify PASS. |
+
+**Cross-session requests (logged, not edited).**
+- X-D6-01 → `decision-desk.yml` owner: still red on `main` for the reason recorded by 51cf3786 (row-length
+  defects in `data/nfl-desk-f2e20e96/*.csv`). Not this session's files.
+- X-D6-02 → root `index.html` generator owner (cd43258e): stamp still `AS OF 2026-11-02`; nav has no entry
+  for desks newer than `nfl-integration-a620f5a5`. Not edited here.
+- X-D6-03 → `nfl-desk-e1d60f5d` / `nfl-desk-864d5668` / `nfl-desk-ccc5caf2` owners: broken internal links
+  (repo-review X51-05). Not edited here.
