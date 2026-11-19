@@ -3686,3 +3686,26 @@ checks re-run green (543 checks, 0 alarms; 11 unit tests). No data values change
 
 **Merge record (follow-up).** Recorded below after this PR merges.
 
+---
+## Session arena/188c3719-own5 — NFL Origin Desk final integration and publication (2026-11-19)
+
+**Branch:** `arena/188c3719-own5` (branched from main `2f02e1e7975ee61780b39e1ef9bc83591ccb55e2`). **Scope:** `COORDINATION.md` (this block only). **No other file is touched.** The NFL Origin Desk (`nfl-origin-desk/**`, `data/nfl-origin-desk/**`, `scripts/build_origin_desk.py`, `scripts/verify_origin_desk.py`) is owned by sessions `arena/abb5f8be-own5` (O1–O7 done, PR #112) and `arena/2025930f-own5` (V1–V8 done); this session does not edit it and does not duplicate its work.
+
+**Why this session exists.** The origin desk already implements the user brief in full (own lines side→total→moneyline, fair/market/difference columns, signal/staking-separated leaderboard, gates G0–G12, correlations with n, decision-readiness table, questions register, suggestions register, executive summary, flagged register). Every row is source-linked or blank-and-flagged; nothing is inferred. This session's contribution is the independent re-verification and the final PR→merge→Pages→record loop.
+
+**Mandate (user brief):** originate own NFL lines; run a leaderboard competition with validation gates; compute correlations only from official sources with n published; separate signal from staking; maintain decision-readiness table (one row per requirement → blocking gate → number to clear → observed status); questions/information/answers register; reviewable suggestions register; executive summary; GitHub Pages live site — every table row source-linked or blank-and-flagged, never inferred.
+
+| ID | Task | Status | Owner | Files touched | Notes |
+|----|------|--------|-------|---------------|-------|
+| I1 | Claim scope in COORDINATION.md + push claim | in progress | arena/188c3719-own5 | COORDINATION.md | This block. Claim pushed before any other work. |
+| I2 | Independent line-by-line review of the origin desk (13 CSVs + build/verify scripts) | done | arena/188c3719-own5 | `data/nfl-origin-desk/*.csv`, `scripts/build_origin_desk.py`, `scripts/verify_origin_desk.py` | Reviewed: requirements R001–R080, questions Q01–Q18, lines W09-01–W09-15 (market columns blank+flagged), strategies S1–S7 (0 certified; pre_reg_commit NOT RECORDED per F15), gates G0–G12, leaderboard (4 divisions, not certified), correlations (4 official-source rows, n=32, from standings read 2026-11-18), injuries (derived values blanked per F18), suggestions (16), sources (23, tiered OFFICIAL/INDUSTRY/METHODOLOGY), flagged (24 items F01–F24). No value inferred; unverifiable values left blank and flagged. |
+| I3 | Re-run build and fail-closed verify | done | arena/188c3719-own5 | `scripts/build_origin_desk.py`, `scripts/verify_origin_desk.py`, `nfl-origin-desk/*` | Build deterministic: 13 HTML pages + style.css + .nojekyll, byte-identical to HEAD (no git diff). Verify PASSED: 13 CSVs, 13 HTML pages, every row source-linked or explicit blank+flag, 0 broken internal links, 0 failures. |
+| I4 | Open PR arena/188c3719-own5 → main, autonomous merge | in progress | arena/188c3719-own5 | COORDINATION.md | `gh pr merge <N> --merge`, no approval wait, no --auto. |
+| I5 | Confirm GitHub Pages builds for the merge commit | pending | arena/188c3719-own5 | COORDINATION.md | Pages API: source = main branch root; confirm build status `built` with no error. |
+| I6 | Record PR link, merge commit and Pages result in COORDINATION.md | pending | arena/188c3719-own5 | COORDINATION.md | Follow-up block after I4–I5 complete. |
+
+## Cross-session requests
+
+- None. All work is in this session's COORDINATION.md block only; no file owned by another session is edited. The origin desk remains owned by sessions `arena/abb5f8be-own5` and `arena/2025930f-own5`.
+
+
