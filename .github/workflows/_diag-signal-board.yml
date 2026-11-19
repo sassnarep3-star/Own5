@@ -16,17 +16,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: python3 -VV
-      - name: run build and show the diff inline
+      - name: python version
+        run: python3 -VV
+      - name: run the build, then hash every output file
         run: |
           python3 data/nfl-signal-board/build_data.py
           echo "=== STATUS ==="
-          git status --porcelain -- data/nfl-signal-board/ || true
-          echo "=== STAT ==="
-          git diff --stat -- data/nfl-signal-board/ || true
-          echo "=== FULL DIFF (first 200 lines) ==="
-          git diff -- data/nfl-signal-board/ | head -200 || true
-          echo "=== FILE LINE ENDINGS ==="
-          file data/nfl-signal-board/*.csv | head -20
-          echo "=== GIT CONFIG ==="
-          git config --list --show-origin | head -20
+          git status --porcelain -- data/nfl-signal-board/
+          echo "=== PER-FILE HASHES IN CI ==="
+          sha256sum data/nfl-signal-board/*.csv data/nfl-signal-board/*.json | sed 's#data/nfl-signal-board/##'
