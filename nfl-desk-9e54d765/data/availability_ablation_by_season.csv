@@ -1,0 +1,5 @@
+season,n_games,brier_without,brier_with,difference,log_loss_without,log_loss_with,note,source_url
+2023,272,0.242688,0.242688,0.0,0.679437,0.679437,refitted on all earlier seasons only,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz
+2024,272,0.23987,0.246249,0.006379,0.672355,0.68625,refitted on all earlier seasons only,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz
+2025,271,0.246736,0.248081,0.001345,0.688016,0.691171,refitted on all earlier seasons only,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz
+2026,135,0.235969,0.235156,-0.000812,0.664957,0.662555,refitted on all earlier seasons only,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz

@@ -1,0 +1,2 @@
+snapshot_role,status,reason,clear_by,source_url
+CLOSE,NOT READ,"the closing number exists only at kickoff; the 13 fixtures kick off from 2026-11-19T20:15 ET onward, after this build","one capture at kickoff minus 10 minutes per fixture, stamped and hashed; the column stays empty until then",https://www.nfl.com/schedules/2026/by-week/week-11

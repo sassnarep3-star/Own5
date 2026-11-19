@@ -1,0 +1,52 @@
+{
+  "built_utc": "2026-11-19T11:10:00Z",
+  "counts": {
+    "availability_ablation.csv": 3,
+    "availability_ablation_by_season.csv": 4,
+    "availability_ablation_games.csv": 950,
+    "availability_coefficients.csv": 4,
+    "availability_counts.csv": 1955,
+    "availability_summary.csv": 26,
+    "availability_week11.csv": 255,
+    "backtest_by_season.csv": 21,
+    "backtest_families.csv": 5,
+    "backtest_totals.csv": 1,
+    "closing_policy.csv": 1,
+    "corpus_coverage.csv": 18,
+    "correlations.csv": 5,
+    "deficiency_matrix.csv": 26,
+    "depth_usage_2026.csv": 882,
+    "designation_reliability.csv": 22,
+    "flagged.csv": 15,
+    "injury_delta.csv": 560,
+    "injury_drift_intraday.csv": 0,
+    "leaderboard.csv": 6,
+    "luck_panel.csv": 6,
+    "market_snapshots.csv": 156,
+    "origination_week11.csv": 52,
+    "questions.csv": 14,
+    "ratings_2026.csv": 35,
+    "replacement_depth_2026.csv": 246,
+    "requirements.csv": 71,
+    "results_2026.csv": 150,
+    "sign_convention.csv": 2,
+    "sources.csv": 13,
+    "standings_pinned_only.csv": 32,
+    "standings_reconciliation.csv": 32,
+    "suggestions.csv": 14,
+    "team_view_week11.csv": 26,
+    "walkforward_games.csv": 7103,
+    "week10_reread.csv": 14
+  },
+  "desk": "9e54d765",
+  "headline": {
+    "certified_strategies": 0,
+    "interval": [
+      "-0.103409",
+      "-0.068589"
+    ],
+    "model_brier_skill_vs_close": "-0.085545",
+    "n_games": "5186"
+  },
+  "registration_sha256": "62cc993ef1147faa0d13e536fa7ed73131d8e195a3f705caee2f4e019fecea56"
+}

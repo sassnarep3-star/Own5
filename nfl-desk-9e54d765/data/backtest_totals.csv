@@ -1,0 +1,2 @@
+family,market,n_games,brier_model,brier_benchmark,brier_skill_vs_close,skill_lo95,skill_hi95,what_would_change_our_mind,source_url
+F6_TOTAL_OPPONENT_AWARE,total (P over),5114,0.257966,0.250097,-0.03146,-0.043728,-0.02008,the total model stops losing to the de-vigged over price,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz

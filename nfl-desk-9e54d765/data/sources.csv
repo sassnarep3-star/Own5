@@ -1,0 +1,14 @@
+id,name,url,read_utc,source_class,used_for
+S01,"NFL official league standings, 2026 regular season",https://www.nfl.com/standings/league/2026/REG,2026-11-19T11:10:00Z,OFFICIAL,32-club W/L/T and PF/PA reconciliation of the results log
+S02,NFL official Week 11 schedule page,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-19T11:10:00Z,OFFICIAL,"13 fixtures, kickoff as printed, network, neutral-site flag, bye clubs"
+S03,NFL official Week 10 schedule and results page,https://www.nfl.com/schedules/2026/by-week/week-10,2026-11-19T11:10:00Z,OFFICIAL,"14 Week 10 final scores, read today and appended to the log"
+S04,NFL official Week 11 injury report,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T11:10:00Z,OFFICIAL,"253 designation rows, 24 clubs, 2 clubs printed ""No Injuries Reported"""
+S05,DraftKings Sportsbook NFL game lines,https://sportsbook.draftkings.com/leagues/football/nfl,2026-11-19T11:00:00Z,NAMED-OPERATOR,"spread, total and moneyline for the 13 Week 11 fixtures"
+S06,FanDuel Sportsbook NFL odds,https://sportsbook.fanduel.com/navigation/nfl,2026-11-19T11:01:00Z,NAMED-OPERATOR,second named-operator quote for the same 13 fixtures
+S07,nflverse-data games.csv.gz (pinned in-repo dataset),https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,2026-11-19T11:22:00Z,PINNED-DATASET,"7,103 scored REG games 1999-2026 for fitting and walk-forward evaluation; reconciled to S01 for 2026"
+S08,nflverse-data snap counts 2026 (pinned in-repo dataset),https://github.com/nflverse/nflverse-data/releases/download/snap_counts/snap_counts.csv.gz,2026-11-19T11:22:00Z,PINNED-DATASET,playing-time share as the depth/starter proxy and the join that tests designation reliability
+S09,nflverse-data injury reports 2023-2026 (pinned in-repo dataset),https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_{season}.csv.gz,2026-11-19T11:22:00Z,PINNED-DATASET,multi-season designation rows for the reliability study and the availability counts
+S10,"NFL Game Center, Colts at Texans, Week 11",https://www.nfl.com/games/colts-at-texans-2026-reg-11,2026-11-19T11:10:00Z,OFFICIAL,"venue and stadium as printed (HOUSTON, TX / RELIANT STADIUM) and the club injury blocks printed on the game page"
+S11,desk 6cbf25fa stamped capture (2026-11-18T03:55:13Z),https://www.nfl.com/injuries/league/2026/reg11,2026-11-18T03:55:13Z,PRIOR-CAPTURE,the prior read for the two-clock delta; the file records that it asked for reg11 and received reg10 content
+S12,desk 6e13b9ff stamped capture (2026-11-19T06:57:28Z),https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T06:57:28Z,PRIOR-CAPTURE,"the earlier read of the same day, used to measure intra-day drift"
+S13,decision-desk stamped Week 10 capture (2026-11-12T16:52:39Z),https://www.nfl.com/injuries/league/2026/reg10,2026-11-12T16:52:39Z,PRIOR-CAPTURE,the Week 10 designation set stamped before that week's first kickoff

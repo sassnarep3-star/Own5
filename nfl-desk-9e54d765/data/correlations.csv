@@ -1,0 +1,6 @@
+id,pair,r,ci_lo,ci_hi,n,source_class,source_url,interpretation
+C01,points_for vs points_against (club totals),-0.1483,-0.4726,0.2113,32,OFFICIAL,https://www.nfl.com/standings/league/2026/REG,no material relationship at n=32: a club scoring more does not systematically concede more
+C02,net_points vs points_for (club totals),0.7501,0.5436,0.871,32,OFFICIAL,https://www.nfl.com/standings/league/2026/REG,net points is dominated by offence this season
+C03,game margin vs game total (same game),0.02,-0.0308,0.0706,1495,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,"small but not zero at n>1,000: the side and the total of one game are not independent, so a side+total parlay cannot be priced by multiplying marginals"
+C04,home offence rating vs away offence rating (matchup),-0.0286,-0.0792,0.0221,1495,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,the schedule pairs good offences with good offences about as often as chance allows; no dependence to exploit
+C05,"season vs home-win rate (league, 1999-2026)",-0.539,-0.7594,-0.2077,28,PINNED-DATASET,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz,"home advantage is drifting down in this window; it is a measured trend with n=28 seasons, not a stable constant"

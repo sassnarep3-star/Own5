@@ -1,0 +1,4 @@
+variant,n_games,brier,log_loss,difference_vs_without,diff_lo95,diff_hi95,note,source_url
+WITHOUT availability features,950,0.242081,0.677799,,,,pooled over the 2023-2026 chronological holdouts,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz
+WITH availability features,950,0.244176,0.682336,0.002095,,,pooled over the 2023-2026 chronological holdouts,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz
+DIFFERENCE (with minus without),950,0.002095,,0.002095,0.000852,0.003384,mean paired squared-error difference with a game-cluster bootstrap 95% interval; negative means the availability term helped. No fixed point penalty is applied anywhere in this desk.,https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv.gz
