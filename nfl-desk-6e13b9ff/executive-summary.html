@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Executive summary - NFL Brief Traceability Desk</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <h1>NFL Brief Traceability &amp; Decision Desk</h1>
+    <p class="sub">Session 6e13b9ff &middot; every row source-linked or blank+flagged &middot; official reads 2026-11-19T06:51:41Z / 2026-11-19T06:57:28Z</p>
+    <nav class="top"><a href="index.html">Dashboard</a><a href="requirements.html">Requirements</a><a href="captures.html">Official captures</a><a href="verification.html">Verification</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged</a><a href="sources.html">Sources</a><a href="executive-summary.html" class="here">Executive summary</a></nav>
+  </div>
+</header>
+<main class="wrap">
+<div class="panel"><h1>Executive Summary — NFL Brief Traceability &amp; Decision Desk (session 6e13b9ff)</h1>
+<p><strong>As of:</strong> 2026-11-19 (UTC) · <strong>Branch:</strong> <code>arena/6e13b9ff-own5</code> · <strong>Read stamps:</strong> 2026-11-19T06:51:41Z (standings, Week-11 slate) and 2026-11-19T06:57:28Z (Week-11 injury report, Week-12 slate, IND@HOU game centre).</p>
+<h2>What this session did</h2>
+<p>1. <strong>Claimed first</strong> in <code>COORDINATION.md</code> (protocol followed; scope strictly additive), then built a new desk at <code>nfl-desk-6e13b9ff/</code> with data under <code>data/nfl-desk-6e13b9ff/</code>. 2. <strong>Re-read the official sources first-hand today</strong>, line by line: all 32 standings rows, the complete 13-game Week-11 slate plus 6 byes, the newly published Week-11 injury report (26 designation rows for tonight&#x27;s IND@HOU game), six Week-12 spot fixtures, and the IND@HOU game centre. Every row carries its official URL and read stamp — see <code>verification.csv</code> (61 rows) and the capture CSVs. 3. <strong>Mapped every line of this session&#x27;s brief</strong> (84 requirement rows, <code>requirements_coverage.csv</code>) to a status with the blocking gate, the number that would clear it, the observed value, and in-repo evidence that must exist (the verifier fails otherwise). 4. <strong>Published the registers the brief asks for:</strong> 18 questions (<code>questions.csv</code>), 14 reviewable suggestions (<code>suggestions.csv</code>), 20 flagged items (<code>flagged.csv</code>), 6 official sources (<code>sources.csv</code>), plus this summary. Nothing in the suggestions register is implemented — each waits for an owner decision. 5. <strong>Fail-closed verification:</strong> <code>verify_desk.py</code> enforces per-row evidence-or-flag, official-host allowlist for <code>source_url</code>, PCT/NET arithmetic on all 32 standings rows, fresh-vs-prior capture diffs, pinned row counts, and internal link integrity. Unit tests include negative controls.</p>
+<h2>Headline numbers (all sourced; blanks stay blank)</h2>
+<div class="tablewrap"><table><thead><tr>
+<th>Fact</th>
+<th>Value</th>
+<th>Source</th>
+</tr></thead><tbody>
+<tr><td>Requirements of this brief in the coverage matrix</td><td>84</td><td><code>data/nfl-desk-6e13b9ff/requirements_coverage.csv</code></td></tr>
+<tr><td>First-hand verification rows today</td><td>61</td><td><code>data/nfl-desk-6e13b9ff/verification.csv</code></td></tr>
+<tr><td>2026 standings rows re-read and diffed vs 2026-11-18 capture</td><td>32/32 agree</td><td>nfl.com standings (official)</td></tr>
+<tr><td>Week-11 slate</td><td>13 games + 6 byes (ATL, CLE, GB, LAR, NE, SEA — bye section prints &quot;LAR&quot;; standings page uses &quot;LA&quot;)</td><td>nfl.com schedule (official)</td></tr>
+<tr><td>Week-11 injury report status</td><td>Published at <code>reg11</code> (served Week 10 on 2026-11-18 → flag F6-11 resolved)</td><td>nfl.com injuries (official)</td></tr>
+<tr><td>TNF IND@HOU designations (first-hand)</td><td>IND: Out 5 / Questionable 5 / blank 2; HOU: Out 4 / Questionable 4 / blank 7</td><td>nfl.com injuries (official)</td></tr>
+<tr><td>Forecast freeze</td><td>All 39 Week-11 markets opened 2026-11-18T03:55:13Z, before tonight&#x27;s 8:15 PM ET kickoff</td><td>price snapshot store + official schedule</td></tr>
+<tr><td>Venue (IND@HOU), game centre vs schedule page</td><td>&quot;RELIANT STADIUM&quot; vs &quot;NRG Stadium&quot; — both official; recorded, not resolved (F6-04)</td><td>nfl.com game centre (official)</td></tr>
+</tbody></table></div>
+<h2>The gates that block the most (number that would clear each)</h2>
+<p>1. <strong>G-10 price-data policy + source</strong> — blocks fair/market/difference columns, residuals, vig-free decomposition, ROI/CLV. Clears with 1 signed policy + 1 source returning open+close for all markets. Observed: 39 schema rows, 0 priced (F6-15). 2. <strong>G-DEPTH depth-order route</strong> — blocks the backup-deficiency and matchup-deficiency features. Clears with one route verified for all 32 clubs. Observed: club-page verification incomplete; snap route runs only on an aggregator mirror (F6-16, F6-18). 3. <strong>G-CORPUS count reconciliation</strong> — blocks backtest publication. Clears with one pinned count (brief says 136, spec says 148, coordination record says 150) (F6-01). 4. <strong>G-CAPTURE-HEALTH</strong> — blocks every replay/backtest claim. Clears with 7 consecutive green daily capture runs. Observed: latest scheduled run failed at the rebuild step (F6-02); a second scheduled check is red (F6-03). 5. <strong>G-FUND rewards</strong> — clears with an approved pool amount; pool still blank (F6-20). <strong>G-JOINT</strong> — combos stay held at the gate (0 combo rows scored). <strong>G-TERMS / G-POLICY</strong> — public/private split and capture compliance need owner decisions.</p>
+<h2>What is in good shape</h2>
+<p>Origination runs two consecutive slates (W10, W11) under a frozen spec with probabilities + inputs stored; signal/staking split, controls (random + favorites), four proper-score divisions, pre-registration, what-would-change-our-mind fields and the demotion gate are all in place; the luck-removal panel is published; results feed verifies Week-10 finals 14/14 with official Game Book links; the point-in-time injury ledger keeps stamps and deltas; designation archives exist 2023-2026 (aggregator-labelled); official-standings correlations publish n=32.</p>
+<h2>Recommendations (nothing implemented without a decision)</h2>
+<p>See <code>suggestions.html</code> — 14 options, each with recommendation and what-would-change-our-mind. Top three: <strong>S6-01</strong> pick the price source this week; <strong>S6-03</strong> make the daily capture green again; <strong>S6-04</strong> triage the 14 open PRs (oldest since 2026-11-02).</p>
+<h2>Irregularities (20, published on the Flagged page; none blocks this merge)</h2>
+<p>Highlights: three circulating corpus counts (F6-01); two red scheduled checks on <code>main</code> (F6-02, F6-03); venue string conflict across two official pages (F6-04); Week-12 heading/date mismatches (F6-05); a prior base-rate claim that failed its own claim-check (F6-10); stale coordination rows after merged PRs (F6-13); the availability-graph build sitting in unmerged PR #136 (F6-12); root banner still stamped 2026-11-02 (F6-08).</p>
+<h2>Verification performed</h2>
+<p><code>build_desk.py</code> (deterministic, stdlib) → <code>verify_desk.py</code> (fail-closed; runs after build) → <code>python -m unittest</code> (negative controls: a dropped row, a filled price cell, a broken link or a missing evidence file must fail). CI workflow <code>.github/workflows/nfl-desk-6e13b9ff.yml</code> runs build + verify + tests on every change to this scope.</p>
+<h2>Sources</h2>
+<p>All external reads this session were first-hand from official nfl.com pages (register: <code>data/nfl-desk-6e13b9ff/sources.csv</code>). In-repo evidence links point to committed files; where a value could not be confirmed from an official source it is left blank and flagged — nothing is inferred.</p></div>
+<footer class="site">
+  <p>Data layer: <code>data/nfl-desk-6e13b9ff/</code> &middot; built by <code>nfl-desk-6e13b9ff/build_desk.py</code> &middot;
+  gated by <code>verify_desk.py</code> (fail-closed) &middot; no value on this site is inferred: blanks are flagged, never filled.</p>
+</footer>
+</main>
+</body>
+</html>

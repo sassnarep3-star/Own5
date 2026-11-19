@@ -3879,16 +3879,16 @@ Session ID `6e13b9ff`, branch `arena/6e13b9ff-own5` (base `2f02e1e` = current `m
 
 | ID | Task | Status | Owner | Files touched | Notes |
 |----|------|--------|-------|---------------|-------|
-| E6-01 | Claim scope in COORDINATION.md + push claim before build work | in progress | 6e13b9ff | COORDINATION.md | This block; claim pushed before any build work. |
-| E6-02 | Fresh official reads (2026-11-19): standings, W11 slate, W11 injury report, W12 schedule + line-by-line verification rows | in progress | 6e13b9ff | data/nfl-desk-6e13b9ff/verification.csv, data/nfl-desk-6e13b9ff/standings_wk11.csv, data/nfl-desk-6e13b9ff/sources.csv | Every row source_url + read_utc; unconfirmable → blank+flagged. |
-| E6-03 | Full-brief requirements coverage + decision-readiness (gate / number-to-clear / observed) | in progress | 6e13b9ff | data/nfl-desk-6e13b9ff/requirements_coverage.csv, readiness.csv | One row per line of this session's brief; in-repo evidence paths must exist (checked by verify). |
-| E6-04 | Questions register + suggestions register (site improvements; nothing implemented without decision) | in progress | 6e13b9ff | data/nfl-desk-6e13b9ff/questions.csv, suggestions.csv | Options + recommendation + what-would-change-our-mind. |
-| E6-05 | Build: landing (decision-readiness table) + category subpages, deterministic stdlib | in progress | 6e13b9ff | nfl-desk-6e13b9ff/build_desk.py | No JS required for content. |
-| E6-06 | Fail-closed verify (row source links exist, official-domain allowlist for official claims, no broken internal links, pinned counts) | in progress | 6e13b9ff | nfl-desk-6e13b9ff/verify_desk.py | Gates the build. |
-| E6-07 | Unit tests incl. negative controls | in progress | 6e13b9ff | nfl-desk-6e13b9ff/tests/test_desk.py | Stdlib unittest. |
-| E6-08 | Executive summary + Flagged for Review | in progress | 6e13b9ff | research/nfl-6e13b9ff/**, flagged page | Restates only computed/officially-sourced values. |
-| E6-09 | Scoped CI workflow | in progress | 6e13b9ff | .github/workflows/nfl-desk-6e13b9ff.yml | Build + verify + tests on PR/push only for this scope. |
-| E6-10 | Rebase on main, PR, autonomous merge, live Pages check, record | in progress | 6e13b9ff | COORDINATION.md, README.md (one row) | Merge only after verify PASS + live URL check. |
+| E6-01 | Claim scope in COORDINATION.md + push claim before build work | done | 6e13b9ff | COORDINATION.md | This block; claim commit pushed before any build work. |
+| E6-02 | Fresh official reads (2026-11-19): standings, W11 slate, W11 injury report, W12 schedule + line-by-line verification rows | done | 6e13b9ff | data/nfl-desk-6e13b9ff/verification.csv, data/nfl-desk-6e13b9ff/standings_fresh_2026-11-19.csv, data/nfl-desk-6e13b9ff/sources.csv | 61 verification rows, 0 MISMATCH after fixing two transcription/convention bugs caught by the checks (tie-half PCT; bye code LAR as printed). Reads 2026-11-19T06:51:41Z / 06:57:28Z. |
+| E6-03 | Full-brief requirements coverage + decision-readiness (gate / number-to-clear / observed) | done | 6e13b9ff | data/nfl-desk-6e13b9ff/requirements_coverage.csv (gate/number/observed columns) | 84 rows: 38 MET / 33 PARTIAL / 5 BLOCKED / 5 OPEN / 3 RULE-ADOPTED; every evidence path existence-checked by verify_desk.py. |
+| E6-04 | Questions register + suggestions register (site improvements; nothing implemented without decision) | done | 6e13b9ff | data/nfl-desk-6e13b9ff/questions.csv, suggestions.csv | 18 questions (BLOCKING/PARTIAL/OPEN), 14 suggestions all PROPOSED (none implemented). |
+| E6-05 | Build: landing (decision-readiness table) + category subpages, deterministic stdlib | done | 6e13b9ff | nfl-desk-6e13b9ff/build_desk.py | 9 pages; landing carries the full 84-row decision-readiness table. |
+| E6-06 | Fail-closed verify (row source links exist, official-domain allowlist for official claims, no broken internal links, pinned counts) | done | 6e13b9ff | nfl-desk-6e13b9ff/verify_desk.py | PASS: 2293 checks, 0 failures (headers, pinned counts, vocab, evidence existence, official-host allowlist, arithmetic, zero MISMATCH, link integrity in both quote styles). |
+| E6-07 | Unit tests incl. negative controls | done | 6e13b9ff | nfl-desk-6e13b9ff/tests/test_desk.py | 11 tests OK including 10 negative controls (dropped row, bad source, MISMATCH row, unknown flag, corrupt PCT, implemented suggestion, broken href, missing evidence root, readiness row removed, plus determinism). |
+| E6-08 | Executive summary + Flagged for Review | done | 6e13b9ff | research/nfl-6e13b9ff/**, flagged page | research/nfl-6e13b9ff/EXECUTIVE_SUMMARY.md + flagged page (20 items). |
+| E6-09 | Scoped CI workflow | done | 6e13b9ff | .github/workflows/nfl-desk-6e13b9ff.yml | .github/workflows/nfl-desk-6e13b9ff.yml: re-author + rebuild + diff + verify + tests, scoped to this namespace. |
+| E6-10 | Rebase on main, PR, autonomous merge, live Pages check, record | in progress | 6e13b9ff | COORDINATION.md, README.md (one row) | PR opened from arena/6e13b9ff-own5; merge + Pages live check + final record follow in this block. |
 
 **Cross-session requests**
 

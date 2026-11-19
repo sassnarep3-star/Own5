@@ -1,0 +1,7 @@
+src_id,name,official,url,accessed_utc,used_for
+SRC-01,2026 NFL League Standings (official),yes,https://www.nfl.com/standings/league/2026/REG,2026-11-19T06:51:41Z,32 standings rows (fresh capture + arithmetic + prior-capture diff)
+SRC-02,NFL Week 11 Schedule 2026 (official),yes,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-19T06:51:41Z,"13 fixtures, kickoff/network, 6 bye teams, record cross-checks"
+SRC-03,Official NFL Injury Report - Week 11 (official),yes,https://www.nfl.com/injuries/league/2026/reg11,2026-11-19T06:57:28Z,26 TNF designation rows (IND/HOU); publication status vs 2026-11-18
+SRC-04,NFL Week 12 Schedule 2026 (official),yes,https://www.nfl.com/schedules/2026/by-week/week-12,2026-11-19T06:57:28Z,"6 spot fixtures (partial read, chunk 0 of 3); heading quirks F6-05"
+SRC-05,Colts at Texans 2026 REG 11 game centre (official),yes,https://www.nfl.com/games/colts-at-texans-2026-reg-11,2026-11-19T06:57:28Z,"venue Game Info (F6-04), injury-card corroboration, records cross-check"
+SRC-06,Week 11 schedule (bye/record capture for cross-check),yes,https://www.nfl.com/schedules/2026/by-week/week-11,2026-11-19T06:51:41Z,diff inputs for slate and byes vs committed prior capture
