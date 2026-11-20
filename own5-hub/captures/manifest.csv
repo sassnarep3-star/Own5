@@ -14,3 +14,6 @@ captured_utc,name,url,http_status,bytes,sha256_raw,raw_file,pins_passed,pins_det
 2026-11-19T21:40:39Z,injuries,https://www.nfl.com/injuries/,200,373959,bb2adbcc9099567fca52b5d1ddaedae424fc01b3ae39ee936c3e813c4b193c3e,captures/raw/injuries/20261119T214039Z.html.gz,yes,ok
 2026-11-19T21:40:39Z,standings,https://www.nfl.com/standings/league/2026/REG,200,246443,ab12ade828f26709781b2028366c3b93ffd7bfbf215e91abd92c313b6adf121a,,yes,ok
 2026-11-19T21:40:39Z,reserve,https://www.nfl.com/transactions/league/reserve-list/2026/11,200,247942,26dfc0c6ea8b6f996eb78d563960c7fba5e24513a03aadfa62a8f5f6adbdee08,,yes,ok
+2026-11-20T21:18:55Z,injuries,https://www.nfl.com/injuries/,200,383576,8bddd4edd4163a6993eee79d46c33ea70f05e1973b8adf7c8cf14a0f635bfed5,captures/raw/injuries/20261120T211855Z.html.gz,yes,ok
+2026-11-20T21:18:55Z,standings,https://www.nfl.com/standings/league/2026/REG,200,246443,e97f36ad8cca52e5ee8728768f523b77c528edbb3e339ced429f986c1b33a106,,yes,ok
+2026-11-20T21:18:55Z,reserve,https://www.nfl.com/transactions/league/reserve-list/2026/11,200,247955,aae223ebcc3bc4edd1ade6e3ac3b417ab54ffadc7a002d3087d5a2da3265b2de,,yes,ok
